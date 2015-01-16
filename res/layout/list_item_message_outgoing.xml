@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="@dimen/conversation_chat_bubble_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.ObservingImageView android:id="@id/message_photo" android:layout_width="@dimen/conversation_chat_bubble_avatar_size" android:layout_height="@dimen/conversation_chat_bubble_avatar_size" android:layout_marginRight="@dimen/conversation_chat_bubble_outgoing_sender_margin_left" android:scaleType="centerCrop" android:layout_alignParentLeft="true" />
+    <com.bbm.ui.InlineImageTextView android:textAppearance="@style/ConversationSender" android:ellipsize="end" android:id="@id/message_sender" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/message_date" android:layout_toRightOf="@id/message_photo" android:layout_alignParentTop="true" android:textIsSelectable="false" />
+    <TextView android:textAppearance="@style/ConversationDate" android:id="@id/message_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBaseline="@id/message_sender" android:layout_alignParentRight="true" android:textIsSelectable="false" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_chat_bubble_outgoing_status_margin_left" android:layout_toRightOf="@id/message_photo" android:layout_below="@id/message_sender">
+        <ImageView android:id="@id/message_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conversation_chat_bubble_status_margin_top" android:layout_marginRight="@dimen/conversation_chat_bubble_outgoing_status_margin_right" />
+        <com.bbm.ui.LinkifyTextView android:textSize="@dimen/fontSizeSmall" android:textColor="@color/conversation_chat_content" android:id="@id/message_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conversation_chat_bubble_message_body_top" android:layout_toRightOf="@id/message_status" android:textIsSelectable="false" />
+    </RelativeLayout>
+</RelativeLayout>

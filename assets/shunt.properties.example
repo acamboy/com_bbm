@@ -1,0 +1,4 @@
+host=127.0.0.1
+port=2206
+groupPort=2207
+shunt=true

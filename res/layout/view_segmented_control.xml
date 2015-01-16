@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:background="@drawable/segmented_control_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/optionLeft" android:background="@drawable/segmented_control_item_background" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5">
+        <TextView android:textSize="@dimen/segmented_control_options_left_text_size" android:textColor="@color/black" android:gravity="center" android:id="@id/optionLeftText" android:paddingLeft="@dimen/segmented_control_options_left_padding_left" android:paddingTop="@dimen/segmented_control_options_left_padding_top" android:paddingRight="@dimen/segmented_control_options_left_padding_right" android:paddingBottom="@dimen/segmented_control_options_left_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/optionRight" android:background="@drawable/segmented_control_item_background" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5">
+        <TextView android:textSize="@dimen/segmented_control_options_right_text_size" android:textColor="@color/black" android:gravity="center" android:id="@id/optionRightText" android:paddingLeft="@dimen/segmented_control_options_right_padding_left" android:paddingTop="@dimen/segmented_control_options_right_padding_top" android:paddingRight="@dimen/segmented_control_options_right_padding_right" android:paddingBottom="@dimen/segmented_control_options_right_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

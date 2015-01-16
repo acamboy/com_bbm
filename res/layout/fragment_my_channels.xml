@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView android:id="@id/channels_grid" android:layout_width="fill_parent" android:layout_height="0.0dip" android:cacheColorHint="@color/white" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/noChannel" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_invitations" android:contentDescription="@string/blank" />
+        <TextView android:textSize="@dimen/no_invites_text_size" android:textColor="@android:color/black" android:id="@id/noChannelText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/no_invites_image_margin" android:text="@string/channels_no_channels" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <Button android:id="@id/browseButton" android:layout_width="fill_parent" android:layout_marginTop="@dimen/no_invites_label_margin" android:text="@string/browse_channel" style="@style/EmptyViewButton" />
+            <Button android:id="@id/createButton" android:layout_width="fill_parent" android:layout_marginTop="@dimen/no_invites_label_margin" android:text="@string/create_channel" style="@style/EmptyViewButton" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

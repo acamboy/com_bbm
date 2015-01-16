@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/channel_invite_to_bbm" android:background="@color/black" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/channel_invite_to_bbm_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:layout_centerInParent="true" style="?android:attr/progressBarStyleLarge" />
+    <com.bbm.ui.ObservingImageView android:id="@id/channel_invite_to_bbm_user_avatar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true" android:contentDescription="@string/blank" />
+    <com.bbm.ui.InlineImageTextView android:textSize="@dimen/channel_invite_to_bbm_font" android:textStyle="bold" android:textColor="@color/channel_invite_to_bbm_user_name_color" android:ellipsize="end" android:id="@id/channel_invite_to_bbm_user_name" android:background="@drawable/gradient_overlay_invite_to_bbm" android:padding="@dimen/channel_invite_to_bbm_padding" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_alignParentTop="true" android:textIsSelectable="false" />
+    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/groups_fragment_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/groups_empty_layout" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="@dimen/group_status_text_size" android:textColor="@color/message" android:layout_gravity="center_vertical" android:id="@id/group_status" android:paddingTop="@dimen/group_status_padding" android:paddingBottom="@dimen/group_status_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/group_status_text" android:layout_centerInParent="true" />
+        <ImageView android:id="@id/groups_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_groups" android:layout_above="@id/group_status" android:layout_centerHorizontal="true" android:contentDescription="@string/blank" />
+        <Button android:id="@id/add_group_button" android:text="@string/add_group_button" android:layout_below="@id/group_status" android:layout_centerHorizontal="true" style="@style/EmptyViewButton" />
+    </RelativeLayout>
+    <GridView android:id="@id/groups_grid" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="3.0dip" android:verticalSpacing="3.0dip" android:numColumns="3" />
+</LinearLayout>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="country_names">
+        <item>@string/AF</item>
+        <item>@string/AL</item>
+        <item>@string/DZ</item>
+        <item>@string/AS</item>
+        <item>@string/AD</item>
+        <item>@string/AO</item>
+        <item>@string/AI</item>
+        <item>@string/AG</item>
+        <item>@string/AR</item>
+        <item>@string/AM</item>
+        <item>@string/AW</item>
+        <item>@string/AU</item>
+        <item>@string/AT</item>
+        <item>@string/AZ</item>
+        <item>@string/BS</item>
+        <item>@string/BH</item>
+        <item>@string/BD</item>
+        <item>@string/BB</item>
+        <item>@string/BY</item>
+        <item>@string/BE</item>
+        <item>@string/BZ</item>
+        <item>@string/BJ</item>
+        <item>@string/BM</item>
+        <item>@string/BT</item>
+        <item>@string/BO</item>
+        <item>@string/BA</item>
+        <item>@string/BW</item>
+        <item>@string/BR</item>
+        <item>@string/VG</item>
+        <item>@string/BN</item>
+        <item>@string/BG</item>
+        <item>@string/BF</item>
+        <item>@string/MM</item>
+        <item>@string/BI</item>
+        <item>@string/KH</item>
+        <item>@string/CM</item>
+        <item>@string/CA</item>
+        <item>@string/CV</item>
+        <item>@string/KY</item>
+        <item>@string/CF</item>
+        <item>@string/TD</item>
+        <item>@string/CL</item>
+        <item>@string/CN</item>
+        <item>@string/CO</item>
+        <item>@string/KM</item>
+        <item>@string/CG</item>
+        <item>@string/CD</item>
+        <item>@string/CK</item>
+        <item>@string/CR</item>
+        <item>@string/HR</item>
+        <item>@string/CU</item>
+        <item>@string/CY</item>
+        <item>@string/CZ</item>
+        <item>@string/DK</item>
+        <item>@string/DJ</item>
+        <item>@string/DM</item>
+        <item>@string/DO</item>
+        <item>@string/TL</item>
+        <item>@string/EC</item>
+        <item>@string/EG</item>
+        <item>@string/SV</item>
+        <item>@string/GQ</item>
+        <item>@string/ER</item>
+        <item>@string/EE</item>
+        <item>@string/ET</item>
+        <item>@string/FK</item>
+        <item>@string/FO</item>
+        <item>@string/FJ</item>
+        <item>@string/FI</item>
+        <item>@string/FR</item>
+        <item>@string/GF</item>
+        <item>@string/PF</item>
+        <item>@string/GA</item>
+        <item>@string/GM</item>
+        <item>@string/GE</item>
+        <item>@string/DE</item>
+        <item>@string/GH</item>
+        <item>@string/GI</item>
+        <item>@string/GR</item>
+        <item>@string/GL</item>
+        <item>@string/GD</item>
+        <item>@string/GU</item>
+        <item>@string/GT</item>
+        <item>@string/GN</item>
+        <item>@string/GW</item>
+        <item>@string/GY</item>
+        <item>@string/HT</item>
+        <item>@string/HN</item>
+        <item>@string/HK</item>
+        <item>@string/HU</item>
+        <item>@string/IS</item>
+        <item>@string/IN</item>
+        <item>@string/ID</item>
+        <item>@string/IR</item>
+        <item>@string/IQ</item>
+        <item>@string/IE</item>
+        <item>@string/IL</item>
+        <item>@string/IT</item>
+        <item>@string/CI</item>
+        <item>@string/JM</item>
+        <item>@string/JP</item>
+        <item>@string/JO</item>
+        <item>@string/KZ</item>
+        <item>@string/KE</item>
+        <item>@string/KI</item>
+        <item>@string/KW</item>
+        <item>@string/KG</item>
+        <item>@string/LA</item>
+        <item>@string/LV</item>
+        <item>@string/LB</item>
+        <item>@string/LS</item>
+        <item>@string/LR</item>
+        <item>@string/LY</item>
+        <item>@string/LI</item>
+        <item>@string/LT</item>
+        <item>@string/LU</item>
+        <item>@string/MO</item>
+        <item>@string/MK</item>
+        <item>@string/MG</item>
+        <item>@string/MW</item>
+        <item>@string/MY</item>
+        <item>@string/MV</item>
+        <item>@string/ML</item>
+        <item>@string/MT</item>
+        <item>@string/MH</item>
+        <item>@string/MQ</item>
+        <item>@string/MR</item>
+        <item>@string/MU</item>
+        <item>@string/MX</item>
+        <item>@string/FM</item>
+        <item>@string/MD</item>
+        <item>@string/MC</item>
+        <item>@string/MN</item>
+        <item>@string/ME</item>
+        <item>@string/MS</item>
+        <item>@string/MA</item>
+        <item>@string/MZ</item>
+        <item>@string/NA</item>
+        <item>@string/NR</item>
+        <item>@string/NP</item>
+        <item>@string/NL</item>
+        <item>@string/NC</item>
+        <item>@string/NZ</item>
+        <item>@string/NI</item>
+        <item>@string/NE</item>
+        <item>@string/NG</item>
+        <item>@string/NU</item>
+        <item>@string/KP</item>
+        <item>@string/MP</item>
+        <item>@string/NO</item>
+        <item>@string/OM</item>
+        <item>@string/PK</item>
+        <item>@string/PW</item>
+        <item>@string/PS</item>
+        <item>@string/PA</item>
+        <item>@string/PG</item>
+        <item>@string/PY</item>
+        <item>@string/PE</item>
+        <item>@string/PH</item>
+        <item>@string/PL</item>
+        <item>@string/PT</item>
+        <item>@string/PR</item>
+        <item>@string/QA</item>
+        <item>@string/RE</item>
+        <item>@string/RO</item>
+        <item>@string/RU</item>
+        <item>@string/RW</item>
+        <item>@string/WS</item>
+        <item>@string/SM</item>
+        <item>@string/ST</item>
+        <item>@string/SA</item>
+        <item>@string/SN</item>
+        <item>@string/RS</item>
+        <item>@string/SC</item>
+        <item>@string/SL</item>
+        <item>@string/SG</item>
+        <item>@string/SK</item>
+        <item>@string/SI</item>
+        <item>@string/SB</item>
+        <item>@string/SO</item>
+        <item>@string/ZA</item>
+        <item>@string/KR</item>
+        <item>@string/ES</item>
+        <item>@string/LK</item>
+        <item>@string/KN</item>
+        <item>@string/LC</item>
+        <item>@string/PM</item>
+        <item>@string/VC</item>
+        <item>@string/SD</item>
+        <item>@string/SR</item>
+        <item>@string/SZ</item>
+        <item>@string/SE</item>
+        <item>@string/CH</item>
+        <item>@string/SY</item>
+        <item>@string/TW</item>
+        <item>@string/TJ</item>
+        <item>@string/TZ</item>
+        <item>@string/TH</item>
+        <item>@string/TG</item>
+        <item>@string/TK</item>
+        <item>@string/TO</item>
+        <item>@string/TT</item>
+        <item>@string/TN</item>
+        <item>@string/TR</item>
+        <item>@string/TM</item>
+        <item>@string/TC</item>
+        <item>@string/UG</item>
+        <item>@string/UA</item>
+        <item>@string/AE</item>
+        <item>@string/GB</item>
+        <item>@string/US</item>
+        <item>@string/UY</item>
+        <item>@string/VI</item>
+        <item>@string/UZ</item>
+        <item>@string/VU</item>
+        <item>@string/VA</item>
+        <item>@string/VE</item>
+        <item>@string/VN</item>
+        <item>@string/WF</item>
+        <item>@string/YE</item>
+        <item>@string/ZM</item>
+        <item>@string/ZW</item>
+    </string-array>
+    <string-array name="file_picker_filter_type_list">
+        <item>चित्र</item>
+        <item>डाउनलोड करें</item>
+        <item>संगीत</item>
+        <item>वीडियो</item>
+        <item>अन्य</item>
+    </string-array>
+    <string-array name="file_picker_sort_order">
+        <item>आरोही</item>
+        <item>अवरोही</item>
+    </string-array>
+    <string-array name="file_picker_sort_types">
+        <item>नाम</item>
+        <item>दिनांक</item>
+        <item>@string/file_picker_type</item>
+        <item>आकार</item>
+    </string-array>
+    <string-array name="group_admin_actions_list">
+        <item>समूह वर्णन अपडेट करें</item>
+        <item>किसी अन्य को व्यवस्थापक बनाएं</item>
+        <item>अन्य को आमंत्रित करने से सदस्यों को रोकें</item>
+        <item>चैट्स और चित्रों को हटाएं</item>
+        <item>चित्र विवरणों को बदलें</item>
+        <item>समूह (और सभी डेटा) हटाएं</item>
+    </string-array>
+    <string-array name="group_list_item_sort">
+        <item>नियत दिनांक</item>
+        <item>प्राथमिकता</item>
+        <item>श्रेणी</item>
+        <item>इसे असाइन किया गया</item>
+    </string-array>
+    <string-array name="invite_activity_security_question">
+        <item></item>
+        <item>मेरा जन्मदिन किस महीने में है?</item>
+        <item>मेरे पास कौन-सा पालतू पशु है?</item>
+        <item>मैंने कौन से प्राथमिक स्कूल में पढ़ाई की है?</item>
+        <item>मैं वर्तमान में किस शहर में रहता/रहती हूं?</item>
+        <item></item>
+    </string-array>
+    <string-array name="invite_activity_security_title">
+        <item>कोई नहीं</item>
+        <item>जन्मदिन</item>
+        <item>पालतू</item>
+        <item>स्कूल</item>
+        <item>शहर</item>
+        <item>कस्टम</item>
+    </string-array>
+    <string-array name="legal_option_list_label">
+        <item>ओपन सोर्स लाइसेंस</item>
+        <item>गोपनीयता नीति</item>
+        <item>सेवा की शर्तें</item>
+    </string-array>
+    <string-array name="legal_option_list_url">
+        <item>http://www.blackberry.com/bbmthirdparty</item>
+        <item>http://www.blackberry.com/legal/privacy</item>
+        <item>http://www.blackberry.com/legal/bbm-tos</item>
+    </string-array>
+    <string-array name="pref_led_notifications_colours">
+        <item>@string/pref_led_notifications_red</item>
+        <item>@string/pref_led_notifications_white</item>
+        <item>@string/pref_led_notifications_yellow</item>
+        <item>@string/pref_led_notifications_green</item>
+        <item>@string/pref_led_notifications_cyan</item>
+        <item>@string/pref_led_notifications_blue</item>
+        <item>@string/pref_led_notifications_purple</item>
+        <item>कोई नहीं</item>
+    </string-array>
+    <string-array name="settings_activity_contacts_layout_values">
+        <item>ग्रिड</item>
+        <item>सूची</item>
+    </string-array>
+    <string-array name="time_period_array">
+        <item>पिछला दिन</item>
+        <item>पिछले सप्ताह</item>
+        <item>पिछले 4 सप्ताह</item>
+        <item>पिछला माह</item>
+    </string-array>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/shunt_view" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/service_status_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Service Status: ???" />
+    <TextView android:id="@id/shunt_status_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Shunt Status: ???" />
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Host:" />
+    <EditText android:id="@id/host_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:singleLine="true" />
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Port:" />
+    <NumberPicker android:id="@id/port_picker" android:layout_width="fill_parent" android:layout_height="100.0dip" />
+    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Group Port:" />
+    <NumberPicker android:id="@id/group_port_picker" android:layout_width="fill_parent" android:layout_height="100.0dip" />
+    <Button android:id="@id/connect_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Connect to Shunt" />
+    <Button android:id="@id/bbmcore_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Launch bbmcore" />
+</LinearLayout>

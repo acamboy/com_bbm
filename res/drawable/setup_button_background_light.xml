@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/setup2_button_color_pressed" />
+            <padding android:left="20.0dip" android:top="1.0px" android:right="20.0dip" android:bottom="1.0px" />
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/setup2_button_color_pressed" />
+            <padding android:left="20.0dip" android:top="1.0px" android:right="20.0dip" android:bottom="1.0px" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/setup2_button_color" />
+            <padding android:left="20.0dip" android:top="1.0px" android:right="20.0dip" android:bottom="1.0px" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/view_appwidget_chat_row" android:background="@drawable/list_item_default_background" android:paddingRight="@dimen/contact_list_item_padding_right" android:paddingBottom="@dimen/contact_list_item_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/chat_photo" android:layout_marginLeft="5.0dip" android:layout_centerVertical="true" android:contentDescription="@string/blank" style="@style/ListItemAvatar">
+        <LinearLayout android:orientation="vertical" android:id="@id/chat_photo_container_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/chat_photo_left_top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" />
+            <ImageView android:id="@id/chat_photo_left_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/chat_photo_container_right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/chat_photo_right_top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" />
+            <ImageView android:id="@id/chat_photo_right_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" />
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/chat_photo_participants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@id/chat_title_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_toLeftOf="@id/chat_date" android:layout_toRightOf="@id/chat_photo" android:layout_alignParentTop="true" style="@style/ListItemTitleField" />
+    <TextView android:textStyle="bold" android:id="@id/chat_title_bold" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignLeft="@id/chat_title_normal" android:layout_alignTop="@id/chat_title_normal" android:layout_alignRight="@id/chat_title_normal" android:layout_alignBottom="@id/chat_title_normal" style="@style/ListItemTitleField" />
+    <TextView android:textSize="@dimen/contact_list_date_text_size" android:textColor="@color/listItemDate" android:gravity="center_vertical" android:id="@id/chat_date" android:layout_width="wrap_content" android:layout_height="@dimen/contact_list_item_title_height" android:layout_marginLeft="@dimen/contact_list_date_margin_left" android:layout_marginTop="@dimen/contact_list_date_margin_top" android:layout_alignParentRight="true" android:textIsSelectable="false" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_toRightOf="@id/chat_photo" android:layout_below="@id/chat_title_normal">
+        <ImageView android:id="@id/chat_message_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="2.0dip" />
+        <TextView android:textSize="@dimen/fontSizeListItemSubTitle" android:textColor="@color/listItemSubtitle" android:ellipsize="end" android:id="@id/chat_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" android:textIsSelectable="false" />
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/is_in_call_widget_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bbm_voice_in_call_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

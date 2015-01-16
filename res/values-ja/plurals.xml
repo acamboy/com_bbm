@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">%1$s 個の連絡先に送信された一括送信メッセージ</item>
+        <item quantity="one">1個の連絡先に送信された一括送信メッセージ</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">%1$s個のアイテム</item>
+        <item quantity="zero">0個のアイテム</item>
+        <item quantity="one">1個のアイテム</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(%1$d件が招待待ちです)</item>
+        <item quantity="one">(1件が招待待ちです)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">%1$s件の結果</item>
+        <item quantity="one">1件の結果</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">%1$s個のアクティブなチャット</item>
+        <item quantity="one">1個のアクティブなチャット</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">%1$s件の新着通知</item>
+        <item quantity="one">1件の新着通知</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">%1$s件の新しい招待</item>
+        <item quantity="one">1件の新しい招待</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">%1$s個の新しいアイテム</item>
+        <item quantity="one">1個の新しいアイテム</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">%1$s件の連絡先</item>
+        <item quantity="one">1件の連絡先</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">%1$s個のグループ</item>
+        <item quantity="one">1個のグループ</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">%1$s件のコメント</item>
+        <item quantity="one">1件のコメント</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">いいね! %1$s人、</item>
+        <item quantity="one">いいね! 1人、</item>
+    </plurals>
+</resources>

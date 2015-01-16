@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">Körözvényadási üzenet elküldve %1$s partnernek</item>
+        <item quantity="one">Körözvényadási üzenet elküldve 1 partnernek</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">%1$s elem</item>
+        <item quantity="zero">0 elem</item>
+        <item quantity="one">1 elem</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(%1$d meghívó várakozik)</item>
+        <item quantity="one">(1 meghívó várakozik)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">%1$s eredmény</item>
+        <item quantity="one">1 találat</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">%1$s aktív csevegés</item>
+        <item quantity="one">{1} aktív csevegés</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">%1$s új értesítés</item>
+        <item quantity="one">1 új értesítés</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">%1$s új meghívás</item>
+        <item quantity="one">1 új meghívás</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">%1$s új elem</item>
+        <item quantity="one">1 új elem</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">%1$s partner</item>
+        <item quantity="one">{1} partner</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">%1$s csoport</item>
+        <item quantity="one">1 csoport</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">%1$s hozzászólás</item>
+        <item quantity="one">1 hozzászólás</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">%1$s tetszik,</item>
+        <item quantity="one">1 tetszik,</item>
+    </plurals>
+</resources>

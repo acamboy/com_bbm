@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/blocked_items_list" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@color/white" android:divider="@drawable/list_item_default_divider" android:footerDividersEnabled="true" />
+    <RelativeLayout android:orientation="vertical" android:id="@id/empty_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+        <ImageView android:id="@id/empty_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_blocked_guy" android:layout_above="@id/empty_label" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/chats_status_text_size" android:textColor="@color/message" android:gravity="center_horizontal" android:id="@id/empty_label" android:paddingTop="@dimen/chats_status_padding" android:paddingBottom="@dimen/chats_status_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_blocked_invites" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

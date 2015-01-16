@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/featured_posts_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/postbreak_border" android:dividerHeight="@dimen/post_item_seperator_height" android:layout_alignParentTop="true" android:headerDividersEnabled="false" android:footerDividersEnabled="false" />
+    <RelativeLayout android:id="@id/featured_channels_spinner" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textSize="@dimen/search_results_message_text_size" android:id="@id/featured_channels_message_text" android:paddingLeft="@dimen/search_results_message_text_left_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/search_results_searching" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ProgressBar android:id="@id/featured_channel_spinner" android:layout_width="@dimen/search_results_progress_bar_size" android:layout_height="@dimen/search_results_progress_bar_size" android:indeterminate="true" android:layout_alignParentRight="true" style="?android:attr/progressBarStyleLarge" />
+    </RelativeLayout>
+</RelativeLayout>

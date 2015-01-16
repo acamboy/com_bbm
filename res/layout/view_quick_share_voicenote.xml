@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/fontSizeMedium" android:textColor="@color/quick_share_voice_note_label" android:gravity="center_horizontal" android:id="@id/record_label" android:paddingLeft="@dimen/quick_voice_note_label_padding" android:paddingRight="@dimen/quick_voice_note_label_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/quick_voice_note_label_top_margin" android:text="@string/quick_share_voice_note_label_default" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/recording_status_icon" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/quick_voice_note_recording_status_container_margin_top" android:layout_marginRight="@dimen/quick_voice_note_recording_status_container_margin_right" android:src="@drawable/selector_quick_share_voicenote_recording_status_icon" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/blank" />
+    <RelativeLayout android:id="@id/buttons_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/record_label" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/cancel_button" android:background="@null" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quick_share_cancel_voicenote" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <FrameLayout android:orientation="vertical" android:id="@id/record_button_container" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:layout_gravity="center" android:id="@id/record_button" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/quick_share_voicenote_record" />
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

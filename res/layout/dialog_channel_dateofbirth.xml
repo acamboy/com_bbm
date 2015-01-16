@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/dialog_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dob_dialog_margin_left" android:layout_marginRight="@dimen/dob_dialog_margin_right"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/dob_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/fontSizeLarge" android:textColor="@color/blue_link" android:gravity="center_vertical" android:id="@id/dialog_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/date_of_birth" android:textIsSelectable="false" />
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/divider_common" />
+            <TextView android:textColor="@color/black" android:id="@id/dob_verify_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/verify_date_of_birth" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/setup_margin" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:indeterminateOnly="true" style="?android:attr/progressBarStyleLarge" />
+            <TextView android:textColor="@color/black" android:id="@id/dob_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/enter_date_of_birth" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/dob_date_picker" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip">
+                <Spinner android:id="@id/dob_year" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <Spinner android:id="@id/dob_month" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                <Spinner android:id="@id/dob_day" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            </LinearLayout>
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" layout="@layout/divider_common" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/dob_buttons" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/fontSizeLarge" android:textColor="@color/black" android:gravity="center" android:id="@id/dob_cancel" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" android:layout_weight="1.0" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/divider_one_px" android:scaleType="fitXY" android:layout_weight="0.001" android:contentDescription="@string/blank" />
+                <TextView android:textSize="@dimen/fontSizeLarge" android:textColor="@color/black" android:gravity="center" android:id="@id/dob_submit" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/submit_button" android:layout_weight="1.0" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/fontSizeLarge" android:textColor="@color/black" android:gravity="center" android:id="@id/dob_error_button" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/close" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

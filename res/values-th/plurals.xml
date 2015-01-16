@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">ข้อความบรอดแคสต์ถูกส่งไปยังผู้ติดต่อ %1$s รายแล้ว</item>
+        <item quantity="one">ข้อความบรอดแคสต์ถูกส่งไปยังผู้ติดต่อ 1 รายแล้ว</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">%1$s รายการ</item>
+        <item quantity="zero">0 รายการ</item>
+        <item quantity="one">1 รายการ</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(การเชิญที่รอดำเนินการ %1$d รายการ)</item>
+        <item quantity="one">(การเชิญที่รอดำเนินการ 1 รายการ)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">ผลลัพธ์ %1$s รายการ</item>
+        <item quantity="one">ผลลัพธ์ 1 รายการ</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">การแชทที่ใช้งานอยู่ %1$s รายการ</item>
+        <item quantity="one">การแชทที่ใช้งานอยู่ 1 รายการ</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">การแจ้งเตือนใหม่ %1$s รายการ</item>
+        <item quantity="one">การแจ้งเตือนใหม่ 1 รายการ</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">การเชิญใหม่ %1$s รายการ</item>
+        <item quantity="one">การเชิญใหม่ 1 รายการ</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">รายการใหม่ %1$s รายการ</item>
+        <item quantity="one">รายการใหม่ 1 รายการ</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">ผู้ติดต่อ %1$s ราย</item>
+        <item quantity="one">ผู้ติดต่อ 1 ราย</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">%1$s กลุ่ม</item>
+        <item quantity="one">1 กลุ่ม</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">ความเห็น %1$s ราย</item>
+        <item quantity="one">ความเห็น 1 ราย</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">ถูกใจ %1$s ราย</item>
+        <item quantity="one">ถูกใจ 1 ราย</item>
+    </plurals>
+</resources>

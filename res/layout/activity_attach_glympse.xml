@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/attachRoot" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/glypse_expires_at_text_size" android:gravity="center_horizontal" android:id="@id/gText" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/glypse_expires_at_top_margin" android:layout_marginBottom="@dimen/glypse_expires_at_bottom_margin" />
+    <com.glympse.android.controls.GTimerView android:layout_gravity="center_vertical" android:id="@id/gTimer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

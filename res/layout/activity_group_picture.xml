@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView android:id="@id/pictures_grid" android:padding="@dimen/group_picture_grid_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:horizontalSpacing="@dimen/group_picture_grid_horizontal_spacing" android:verticalSpacing="@dimen/group_picture_grid_vertical_spacing" android:numColumns="@integer/group_picture_grid_columns_count" android:layout_above="@id/footer_action_bar" />
+    <RelativeLayout android:orientation="vertical" android:id="@id/groupPicEmpty" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@id/groupPicEmptyImage" android:background="@drawable/ic_nopic" android:layout_width="@dimen/group_picture_empty_image_size" android:layout_height="@dimen/group_picture_empty_image_size" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:contentDescription="@string/blank" />
+        <TextView android:textSize="@dimen/group_picture_empty_label_text_size" android:textColor="@color/black" android:id="@id/groupPicEmptyBlurb" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/group_picture_empty_label_margin_top" android:layout_marginBottom="@dimen/group_picture_empty_label_margin_bottom" android:text="@string/no_pictures" android:layout_below="@id/groupPicEmptyImage" android:layout_centerHorizontal="true" />
+        <Button android:id="@id/groupPicEmptyButton" android:text="@string/add_picture" android:layout_below="@id/groupPicEmptyBlurb" android:layout_centerHorizontal="true" style="@style/EmptyViewButton" />
+    </RelativeLayout>
+    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+</RelativeLayout>

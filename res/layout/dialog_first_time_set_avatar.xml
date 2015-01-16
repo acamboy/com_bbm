@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/first_time_set_avatar_text_size" android:padding="@dimen/first_time_set_avatar_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/personalize_profile_dialog_message" />
+    <ImageView android:layout_width="@dimen/first_time_set_avatar_avatar_size" android:layout_height="@dimen/first_time_set_avatar_avatar_size" android:layout_margin="@dimen/first_time_set_avatar_padding" android:src="@drawable/default_avatar" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/divider_common" />
+    <Button android:textSize="@dimen/first_time_set_avatar_button_text_size" android:id="@id/button_camera" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/take_a_photo" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/divider_common" />
+    <Button android:textSize="@dimen/first_time_set_avatar_button_text_size" android:id="@id/button_gallery" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/add_from_gallery" />
+</LinearLayout>

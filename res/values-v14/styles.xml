@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar" />
+    <style name="Theme.Glympse" parent="@style/Theme.Glympse14" />
+    <style name="Theme.GlympseBase" parent="@android:style/Theme.Holo.Light.DarkActionBar" />
+    <style name="Theme.Glympse14" parent="@style/Theme.Glympse11" />
+</resources>

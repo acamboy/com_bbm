@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="#ff000000" android:paddingTop="1.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/tab_back" android:background="@drawable/back_tab" android:clickable="true" android:layout_width="30.0dip" android:layout_height="wrap_content" android:layout_weight="0.75">
+        <FrameLayout android:id="@id/frameLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_centerHorizontal="true">
+            <ImageView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:src="@drawable/back" android:contentDescription="@string/blank" />
+        </FrameLayout>
+        <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/back" android:shadowColor="#ff000000" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_below="@id/frameLayout1" android:layout_centerHorizontal="true" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="0.0dip" android:src="@drawable/core_actionbar_cut_precolored" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/blank" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab_blank2" android:background="@drawable/actions_bar" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.2" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab_send" android:background="@drawable/footer_actionbar_action_background" android:clickable="true" android:layout_width="20.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/ic_tab_send_message" android:contentDescription="@string/blank" />
+        </FrameLayout>
+        <TextView android:textSize="10.0sp" android:textColor="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sms_activity_send_message" android:shadowColor="#ff000000" android:shadowDy="1.0" android:shadowRadius="1.0" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tab_blank3" android:background="@drawable/actions_bar" android:clickable="true" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+</LinearLayout>

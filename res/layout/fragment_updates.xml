@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.bbm.ui.ThreeButtonSegmentedControl android:layout_gravity="top|center" android:id="@id/updateFragmentSelector" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:segmentLeftOption="@string/update_all" custom:segmentMiddleOption="@string/update_contacts" custom:segmentRightOption="@string/update_channels" />
+    <FrameLayout android:id="@id/channel_update_fragment_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/own_profile_fragment_container_margin_top" android:layout_below="@id/updateFragmentSelector" />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/activity_search_channel_view_layout" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.bbm.ui.TwoButtonSegmentedControl android:layout_gravity="top|center" android:id="@id/channel_view_two_button_segmented_control" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:segmentLeftOption="@string/profile_selector_details" custom:segmentRightOption="@string/profile_selector_members" />
+    <ImageView android:id="@id/groupProfileFragmentDropShadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/group_profile_drop_shadow_margin_left" android:layout_marginRight="@dimen/group_profile_drop_shadow_margin_right" android:src="@drawable/divider_shadow" android:scaleType="fitXY" android:layout_below="@id/channel_view_two_button_segmented_control" android:contentDescription="@string/blank" />
+    <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer_action_bar" android:layout_below="@id/groupProfileFragmentDropShadow">
+        <com.bbm.ui.activities.UnmeasuredLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <FrameLayout android:id="@id/search_content_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </com.bbm.ui.activities.UnmeasuredLayout>
+    </LinearLayout>
+    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+</RelativeLayout>

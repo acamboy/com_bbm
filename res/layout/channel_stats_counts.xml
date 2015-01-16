@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/channel_stats_subscribers_layout" android:padding="@dimen/owned_channel_lobby_pane_horizontal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+        <TextView android:textColor="@color/blue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subscribers_caption" />
+        <TextView android:textColor="@color/blue" android:layout_gravity="center_horizontal" android:id="@id/channel_stats_number_of_subscribers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/owned_channel_lobby_pane_horizontal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <TextView android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/visits_caption" />
+        <TextView android:textColor="@color/black" android:layout_gravity="center_horizontal" android:id="@id/channel_stats_number_of_visits" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/owned_channel_lobby_pane_horizontal_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+        <TextView android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/posts_caption" />
+        <TextView android:textColor="@color/black" android:layout_gravity="center_horizontal" android:id="@id/channel_stats_number_of_posts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/list_invite_target_root" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/invite_tag_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/selector_invite_tag_background_left" android:contentDescription="@string/blank" />
+    <RelativeLayout android:id="@id/invite_tag_right" android:background="@drawable/selector_invite_tag_background_right" android:layout_width="@dimen/invite_tag_right_width" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/invite_tag_text_size" android:textColor="@drawable/selector_invite_grid_item_text_color" android:ellipsize="marquee" android:gravity="center" android:id="@id/list_invite_target_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/invite_tag_text_horizontal_margin" android:layout_marginRight="@dimen/invite_tag_text_horizontal_margin" android:singleLine="true" android:layout_centerInParent="true" android:textIsSelectable="false" />
+        <ImageView android:id="@id/list_invite_target_delete" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/selector_invite_tag_delete_button" android:scaleType="fitXY" android:layout_alignParentRight="true" android:contentDescription="@string/blank" />
+    </RelativeLayout>
+</LinearLayout>

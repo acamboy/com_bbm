@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.ObservingImageView android:id="@id/channel_picker_item_avatar" android:layout_width="@dimen/avatar_size" android:layout_height="@dimen/avatar_size" android:scaleType="centerCrop" android:contentDescription="@string/blank" />
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/channel_picker_textview_margin_left" android:layout_weight="1.0">
+        <TextView android:id="@id/channel_picker_item_title" style="@style/ChannelPickerItemTitleField" />
+        <TextView android:id="@id/channel_picker_item_description" style="@style/ChannelPickerItemSubtitleField" />
+    </LinearLayout>
+</LinearLayout>

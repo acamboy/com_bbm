@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">Wiadomość nadawcza została wysłana do %1$s kontaktów.</item>
+        <item quantity="one">Wiadomość nadawcza została wysłana do 1 kontaktu.</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">Elementów: %1$s</item>
+        <item quantity="zero">Elementów: 0</item>
+        <item quantity="one">1 element</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(Liczba oczekujących zaproszeń: %1$d)</item>
+        <item quantity="one">(1 oczekujące zaproszenie)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">Wyniki: %1$s</item>
+        <item quantity="one">1 wynik</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">Liczba aktywnych czatów: %1$s</item>
+        <item quantity="one">1 aktywny czat</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">Nowych powiadomień: %1$s</item>
+        <item quantity="one">1 nowe powiadomienie</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">Liczba nowych zaproszeń: %1$s</item>
+        <item quantity="one">1 nowe zaproszenie</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">Liczba nowych elementów: %1$s</item>
+        <item quantity="one">1 nowy element</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">Liczba kontaktów: %1$s</item>
+        <item quantity="one">1 kontakt</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">Liczba grup: %1$s</item>
+        <item quantity="one">1 grupa</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">%1$s komentarzy</item>
+        <item quantity="one">1 komentarz</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">%1$s oznaczeń Lubię,</item>
+        <item quantity="one">1 oznaczenie Lubię,</item>
+    </plurals>
+</resources>

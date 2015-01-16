@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/fragment_own_profile_details_root" android:background="@color/channel_wall_background_color" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/channel_preview_posts_list" android:background="@color/channel_post_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/postbreak_border" android:dividerHeight="@dimen/post_item_seperator_height" android:headerDividersEnabled="false" android:footerDividersEnabled="false" />
+    <TextView android:textSize="@dimen/channel_doesnt_exist_text_size" android:textColor="@color/red" android:gravity="center" android:id="@id/no_posts_view" android:paddingLeft="@dimen/channel_no_posts_view_left_padding" android:paddingTop="@dimen/channel_no_posts_view_top_padding" android:paddingRight="@dimen/channel_no_posts_view_left_padding" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/no_posts" android:layout_centerInParent="true" />
+</RelativeLayout>

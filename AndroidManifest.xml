@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="internalOnly" package="com.bbm">
+    <compatible-screens>
+        <screen android:screenDensity="ldpi" android:screenSize="small"/>
+        <screen android:screenDensity="mdpi" android:screenSize="small"/>
+        <screen android:screenDensity="hdpi" android:screenSize="small"/>
+        <screen android:screenDensity="xhdpi" android:screenSize="small"/>
+        <screen android:screenDensity="480" android:screenSize="small"/>
+        <screen android:screenDensity="ldpi" android:screenSize="normal"/>
+        <screen android:screenDensity="mdpi" android:screenSize="normal"/>
+        <screen android:screenDensity="hdpi" android:screenSize="normal"/>
+        <screen android:screenDensity="xhdpi" android:screenSize="normal"/>
+        <screen android:screenDensity="480" android:screenSize="normal"/>
+        <screen android:screenDensity="ldpi" android:screenSize="large"/>
+        <screen android:screenDensity="mdpi" android:screenSize="large"/>
+        <screen android:screenDensity="hdpi" android:screenSize="large"/>
+        <screen android:screenDensity="xhdpi" android:screenSize="large"/>
+        <screen android:screenDensity="480" android:screenSize="large"/>
+    </compatible-screens>
+    <supports-screens android:xlargeScreens="false"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="com.bbm.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.bbm.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="true"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false"/>
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:largeHeap="true" android:name="com.bbm.Alaska" android:theme="@style/AppTheme">
+        <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.bbm.ui.activities.MainActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <action android:name="com.bbm.ui.activities.action.SECTION_CHANGED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="ext" android:pathPrefix="/rim.com:bbm" android:scheme="vnd.android.nfc"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:launchMode="singleTask" android:name="com.bbm.ui.widget.TapOnWidgetActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.ui.activities.StartupActivity" android:screenOrientation="portrait" android:theme="@style/AppSplashActivity" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/activity_bbid_error_title" android:name="com.bbm.ui.activities.BbidErrorActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoTitle" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.bbm.ui.activities.ConversationActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:label="@string/invite_to_bbm" android:name="com.bbm.ui.activities.InviteActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:label="@string/open_in_bbm" android:name="com.bbm.ui.activities.OpenInBbmActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.pin.bbm.com" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="pin.bbm.com" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="www.pin.bbm.com" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="pin.bbm.com" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="shop.bbm.com" android:scheme="http"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="shop.bbm.com" android:scheme="https"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="bbm"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="bbmi"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="pin"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.bbm.ui.activities.TapToInviteActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:launchMode="singleInstance" android:name="com.bbm.ui.voice.activities.IncomingCallActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+        <activity android:label="@string/select_contact" android:name="com.bbm.ui.activities.SelectContactActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysVisible|adjustPan"/>
+        <activity android:label="@string/select_group" android:name="com.bbm.ui.activities.SelectGroupActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/select_category" android:name="com.bbm.ui.activities.SelectCategoryActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.ui.activities.ProfileActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.ui.activities.AvatarViewerActivity"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.ui.activities.ImageViewerActivity"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.ui.activities.OwnProfileActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/settings_activity_title" android:name="com.bbm.ui.activities.SettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.ui.activities.LegalActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.activities.ReportProblemActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.ui.activities.ShowBarCodeActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.ui.activities.ShowGroupBarCodeActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.setup.DeviceSwitchActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoTitle"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.setup.SetupErrorActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoTitle"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.setup.LoginWrapperActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.Transparent"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.setup.SetupWrapperActivity" android:screenOrientation="portrait" android:theme="@style/AppSplashActivity"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.setup.LoadingActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoTitle"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.setup.UpgradeActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoTitle"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.setup.PykAddFriendsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.setup.PykInviteFriendsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.setup.ContactListAccessPromptActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoTitle"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.setup.WhatsNewActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoTitle"/>
+        <activity android:label="@string/title_activity_new_group" android:name="com.bbm.ui.activities.NewGroupActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/group_add_list_title" android:name="com.bbm.ui.activities.NewListActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:label="@string/group_add_list_item_title" android:name="com.bbm.ui.activities.NewListItemActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:label="@string/group_edit_list_title" android:name="com.bbm.ui.activities.EditListItemActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:label="@string/title_activity_groups_icon" android:name="com.bbm.ui.activities.GroupsIconActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/select" android:name="com.bbm.ui.activities.ProfileIconSourceActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/search_results_channels_activity" android:name="com.bbm.ui.activities.SearchResultsChannelsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:label="@string/title_activity_profile_icon" android:name="com.bbm.ui.activities.ProfileDefaultIconActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation" android:name="com.google.zxing.client.android.CaptureActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.google.zxing.client.android.CaptureActivity"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.blackberry.ids.LoginActivity" android:screenOrientation="portrait" android:theme="@style/AppTheme.NoTitle" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.blackberry.ids.EditActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/title_activity_change_status" android:name="com.bbm.ui.activities.ChangeStatusActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_sent_pending_invite" android:name="com.bbm.ui.activities.SentPendingInviteActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_received_pending_invite" android:name="com.bbm.ui.activities.ReceivedPendingInviteActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_received_pending_invite" android:name="com.bbm.ui.activities.ReceivedPendingGroupInviteActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/bbm_contacts" android:name="com.bbm.ui.activities.ShareActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/*"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="image/*"/>
+                <data android:mimeType="multipart/*"/>
+                <data android:mimeType="text/*"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name="com.bbm.ui.activities.FilePickerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.ui.activities.FileSearchActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/bbm_groups" android:name="com.bbm.ui.activities.GroupPictureShareActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/title_activity_owned_channel_lobby" android:name="com.bbm.ui.activities.OwnedChannelLobbyActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/app_name" android:name="com.bbm.ui.activities.GroupProfileActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_groups_lobby" android:name="com.bbm.ui.activities.GroupLobbyActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_group_picture" android:name="com.bbm.ui.activities.GroupPictureActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_group_lists" android:name="com.bbm.ui.activities.GroupListsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_group_lists" android:name="com.bbm.ui.activities.GroupListItemsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/title_activity_group_lists" android:name="com.bbm.ui.activities.GroupListsCommentActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/title_activity_group_event_details" android:name="com.bbm.ui.activities.GroupEventDetailsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:label="@string/title_activity_group_events" android:name="com.bbm.ui.activities.GroupEventsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_group_events" android:name="com.bbm.ui.activities.GroupEventsAddActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:label="@string/title_activity_group_picture" android:name="com.bbm.ui.activities.GroupPictureCommentsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize"/>
+        <activity android:label="@string/title_activity_group_picture" android:name="com.bbm.ui.activities.GroupPictureUploadActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:label="@string/group_settings_title" android:name="com.bbm.ui.activities.GroupSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/group_settings_title" android:name="com.bbm.ui.activities.GroupAdminEditActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/group_settings_title" android:name="com.bbm.ui.activities.GroupAdminAddActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/group_settings_title" android:name="com.bbm.ui.activities.GroupAdminPasswordActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/group_settings_password" android:name="com.bbm.ui.activities.GroupAdminValidatePasswordActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/blank" android:name="com.bbm.ui.activities.AudioPlayerActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/setas_activity_item_bbm_picture" android:name="com.bbm.ui.activities.SetAsActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.ATTACH_DATA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation" android:hardwareAccelerated="false" android:label="CropLabel" android:name="com.cropimage.CropImage" android:screenOrientation="portrait"/>
+        <activity android:label="@string/blank" android:name="com.bbm.ui.activities.GroupSelectNewAdminActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_activity_new_channel" android:name="com.bbm.ui.activities.NewChannelActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.activities.ViewChannelPostActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.bbm.ui.activities.ChannelPostPhotoGalleryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar"/>
+        <activity android:label="@string/title_preview_channel_activity" android:name="com.bbm.ui.activities.PreviewChannelActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_set_channel_avatar" android:name="com.bbm.ui.activities.SetChannelAvatarActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_category" android:name="com.bbm.ui.activities.NewChannelCategoryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.activities.ChannelsSearchActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:name="com.bbm.ui.activities.SearchResultsChannelsDetailActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:name="com.bbm.ui.activities.ViewSubscribedChannelActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/title_activity_sponsored_ad" android:name="com.bbm.ui.activities.SponsoredAdActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.activities.ChannelOwnerProfileActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/title_channel_details_activity" android:name="com.bbm.ui.activities.ChannelDetailsActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.bbm.ui.activities.ChannelStatsActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar"/>
+        <activity android:name="com.bbm.ui.activities.ChannelSubscribersActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.activities.ChannelReportsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.channel.activities.ChannelInviteToBBM" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar"/>
+        <activity android:name="com.bbm.ui.activities.ChannelPickerActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.bbm.ui.activities.ViewOwnedChannelActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.bbm.ui.activities.AddChannelPostActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.activities.ViewChannelActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.activities.ChannelChatListActivity" android:screenOrientation="portrait"/>
+        <service android:enabled="true" android:exported="false" android:name="com.bbm.BbmService"/>
+        <service android:name="com.bbm.ui.widget.AppWidgetService" android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <receiver android:name="com.bbm.ui.widget.BbmAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/appwidget_info"/>
+        </receiver>
+        <receiver android:name="com.bbm.receiver.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.HOME"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.bbm.receiver.LocationTimeZoneChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.bbm.receiver.NetworkChangeMonitor">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.bbm.receiver.LocationTimeZoneChangedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.bbm.receiver.MixPanelUpdates"/>
+        <receiver android:name="com.bbm.receiver.ConnectivityChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="com.bbm.BBMAccountService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/account_authenticator"/>
+        </service>
+;
+<service android:name="com.google.analytics.tracking.android.CampaignTrackingService"/>
+        <receiver android:exported="true" android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <activity android:label="@string/settings_activity_blocked_contacts" android:name="com.bbm.ui.activities.BlockedContactsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.activities.GroupChatListActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.activities.GroupConversationActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <activity android:name="com.bbm.ui.activities.BroadcastActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.activities.GroupChatHistorySettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.activities.FirstLaunchOverlayActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.bbm.ui.activities.ChannelIntroActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:name="com.bbm.ui.voice.MediaServiceChangeReceiver"/>	;
+<service android:name="com.google.analytics.tracking.android.CampaignTrackingService"/>
+        <receiver android:exported="true" android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="com.sec.android.app.multiwindow" android:required="false"/>
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true"/>
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W" android:value="632.0dip"/>
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H" android:value="598.0dip"/>
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W" android:value="632.0dip"/>
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H" android:value="598.0dip"/>
+        <service android:enabled="true" android:exported="false" android:label="GlympseApiService" android:name="com.glympse.android.hal.GlympseService"/>
+        <receiver android:exported="false" android:name="com.bbm.receiver.GlympseReceiver">
+            <intent-filter>
+                <action android:name="com.glympse.android.hal.service.STARTED"/>
+                <action android:name="com.glympse.android.hal.service.NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.glympse.android.kit.send.GlympseSendWizard"/>
+        <activity android:label="@string/glympse" android:name="com.bbm.ui.activities.AttachGlympseActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/blank" android:name="com.bbm.ui.activities.GlympseViewerActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="@string/google_maps_api_key"/>
+        <receiver android:name="com.bbm.iceberg.ContactsManagerUpdates"/>
+        <activity android:label="@string/channel_settings" android:name="com.bbm.ui.activities.ChannelSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/channel_settings_chat_hours" android:name="com.bbm.ui.activities.ChannelOfficeHoursSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.bbm.ui.activities.BBMFragmentTestActivity"/>
+        <activity android:configChanges="orientation" android:label="@string/sticker_store_store_heading" android:name="com.bbm.ui.activities.StoreActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="orientation" android:name="com.bbm.ui.activities.StickerDetailsActivity" android:screenOrientation="portrait" android:theme="@style/ThemeStickerPackDialog"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:name="com.glympse.android.hal.GCMReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="com.bbm"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.bbm.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="android.support.v4.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
+    </application>
+</manifest>

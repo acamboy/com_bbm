@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/invites_fragment_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <com.bbm.ui.ThreeButtonSegmentedControl android:layout_gravity="center_horizontal" android:id="@id/listSelector" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:segmentLeftOption="@string/invites_find_friends" custom:segmentMiddleOption="@string/invites_received" custom:segmentRightOption="@string/invites_sent" />
+    <ImageView android:id="@id/greyDividingLine" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/grey_divider_line" android:scaleType="fitXY" android:contentDescription="@string/blank">
+        <requestFocus android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ImageView>
+    <FrameLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/findFriendsView" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.bbm.ui.SearchEditText android:id="@id/searchContacts" android:layout_width="fill_parent" android:layout_height="@dimen/contacts_search_area_height" custom:hint="@string/contacts_search" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/grey_divider_line" android:scaleType="fitXY" android:contentDescription="@string/blank">
+                <requestFocus />
+            </ImageView>
+            <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView android:id="@id/findFriendsList" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView android:id="@id/invitesListReceived" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/white" android:divider="@drawable/list_item_default_divider" />
+        <com.tonicartos.widget.stickygridheaders.StickyGridHeadersGridView android:id="@id/invitesListSent" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/white" android:divider="@drawable/list_item_default_divider" />
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/noInvite" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/no_invitations" android:contentDescription="@string/blank" />
+            <TextView android:textSize="@dimen/no_invites_text_size" android:textColor="@android:color/black" android:id="@id/noInviteText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/no_invites_image_margin" android:text="@string/invite_no_new_invitations" />
+            <Button android:id="@id/inviteButton" android:layout_marginTop="@dimen/no_invites_label_margin" android:text="@string/invite_to_bbm" style="@style/EmptyViewButton" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.ObservingImageView android:id="@id/user_self_avatar" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <TextView android:textSize="24.0sp" android:id="@id/user_self_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/user_self_avatar" android:layout_alignParentTop="true" android:textIsSelectable="false" />
+    <TextView android:textSize="18.0sp" android:id="@id/user_self_mood" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/user_self_avatar" android:layout_below="@id/user_self_name" android:textIsSelectable="false" />
+</merge>

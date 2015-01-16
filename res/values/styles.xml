@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ActionBarButton" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/fontSizeActionBarButton</item>
+        <item name="android:textColor">@drawable/selector_header_action_text_color</item>
+    </style>
+    <style name="ActionBarStyle" parent="@android:style/Widget.ActionBar">
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="android:divider">@drawable/actionbar_divider</item>
+        <item name="android:height">@dimen/avatar_size</item>
+        <item name="android:titleTextStyle">@style/ActionBarTitleTextStyle</item>
+        <item name="android:showDividers">beginning</item>
+    </style>
+    <style name="ActionBarTitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/fontSizeActionBarTitle</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="ActionBarTitleTextStyle" parent="@android:style/TextAppearance.WindowTitle">
+        <item name="android:textSize">19.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="Animations" />
+    <style name="Animations.GrowFromBottom" parent="@style/Animations">
+        <item name="android:windowEnterAnimation">@anim/glympse_grow_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/glympse_shrink_from_top</item>
+    </style>
+    <style name="Animations.GrowFromTop" parent="@style/Animations">
+        <item name="android:windowEnterAnimation">@anim/glympse_grow_from_top</item>
+        <item name="android:windowExitAnimation">@anim/glympse_shrink_from_bottom</item>
+    </style>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Black" />
+    <style name="AppSplashActivity" parent="@style/AppTheme">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@drawable/splash_background</item>
+    </style>
+    <style name="AppSplashDialog" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:background">@null</item>
+    </style>
+    <style name="AppTheme" parent="@style/AppBaseTheme">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+        <item name="android:actionModeBackground">@color/actionmode_background</item>
+        <item name="android:actionModeCloseButtonStyle">@style/NoCloseButton</item>
+    </style>
+    <style name="AppTheme.NoTitle" parent="@style/AppTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.Transparent" parent="@style/AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="BB10Edit" parent="@style/BB10EditNoBox">
+        <item name="android:background">@drawable/edit_background</item>
+    </style>
+    <style name="BB10EditBoxActivated" parent="@style/BB10EditNoBox">
+        <item name="android:background">@drawable/edit_background_box_activated</item>
+    </style>
+    <style name="BB10EditMood" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">#ff83888e</item>
+        <item name="android:background">@drawable/edit_background</item>
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:paddingRight">5.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+    </style>
+    <style name="BB10EditNoBox" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">#ff83888e</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:paddingTop">5.0dip</item>
+        <item name="android:paddingRight">5.0dip</item>
+        <item name="android:paddingBottom">5.0dip</item>
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+    </style>
+    <style name="BlackAndNormalSizeTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/black_and_normal_size_text_view_text_size</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textIsSelectable">false</item>
+    </style>
+    <style name="BlueButton">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/button_blue_background</item>
+        <item name="android:paddingLeft">@dimen/cascades_button_padding_left</item>
+        <item name="android:paddingRight">@dimen/cascades_button_padding_right</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/cascades_narrow_button_height</item>
+        <item name="android:minWidth">50.0dip</item>
+        <item name="android:minHeight">40.0dip</item>
+    </style>
+    <style name="BottomActionBar" parent="@android:style/TextAppearance">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textColor">@drawable/selector_footer_action_text_color</item>
+        <item name="android:shadowColor">#ff000000</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="BottomBar">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/common_bar_light_gray_bottom</item>
+        <item name="android:padding">3.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="BottomBarContainer">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="CascadesButton">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@drawable/selector_cascades_button_text_color</item>
+        <item name="android:background">@drawable/selector_cascades_button_bg</item>
+        <item name="android:paddingLeft">@dimen/cascades_button_padding_left</item>
+        <item name="android:paddingRight">@dimen/cascades_button_padding_right</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/cascades_narrow_button_height</item>
+        <item name="android:minWidth">50.0dip</item>
+        <item name="android:minHeight">40.0dip</item>
+    </style>
+    <style name="CascadesButton.Narrow" parent="@style/CascadesButton">
+        <item name="android:textSize">@dimen/fontSizeMedium</item>
+        <item name="android:paddingLeft">@dimen/cascades_narrow_button_padding_left</item>
+        <item name="android:paddingTop">0.0dip</item>
+        <item name="android:paddingRight">@dimen/cascades_narrow_button_padding_right</item>
+        <item name="android:paddingBottom">0.0dip</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:minHeight">0.0dip</item>
+    </style>
+    <style name="CascadesButton.Small" parent="@style/CascadesButton">
+        <item name="android:textSize">@dimen/fontSizeXSmall</item>
+        <item name="android:textColor">@drawable/selector_cascades_button_text_color</item>
+        <item name="android:background">@drawable/selector_cascades_button_bg</item>
+        <item name="android:paddingLeft">@dimen/cascades_small_button_padding_left</item>
+        <item name="android:paddingTop">0.0dip</item>
+        <item name="android:paddingRight">@dimen/cascades_small_button_padding_right</item>
+        <item name="android:paddingBottom">0.0dip</item>
+        <item name="android:layout_height">@dimen/cascades_small_button_height</item>
+        <item name="android:minWidth">0.0dip</item>
+        <item name="android:minHeight">0.0dip</item>
+    </style>
+    <style name="CascadesProgressBar" parent="@android:style/Widget.ProgressBar">
+        <item name="android:maxHeight">10.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/cascades_progress_horizontal</item>
+        <item name="android:minHeight">10.0dip</item>
+    </style>
+    <style name="CascadesSpinner">
+        <item name="android:background">@drawable/selector_cascades_spinner_header</item>
+        <item name="android:paddingLeft">@dimen/cascades_spinner_padding_left</item>
+        <item name="android:paddingRight">@dimen/cascades_spinner_padding_right</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+    <style name="ChannelDetailsContactInfo" parent="@style/ChannelDetailsInfo">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="ChannelDetailsGridLayout">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:columnCount">2</item>
+        <item name="android:columnOrderPreserved">false</item>
+        <item name="android:useDefaultMargins">true</item>
+        <item name="android:alignmentMode">alignBounds</item>
+    </style>
+    <style name="ChannelDetailsInfo" parent="@android:style/Widget.TextView">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_gravity">fill_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_marginLeft">@dimen/list_header_view_horizontal_margin</item>
+    </style>
+    <style name="ChannelListItemTitleField">
+        <item name="android:textSize">@dimen/fontSizeListItemTitle</item>
+        <item name="android:textColor">@color/listItemTitle</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_height">@dimen/contact_list_item_title_height</item>
+        <item name="android:lines">1</item>
+        <item name="android:drawablePadding">2.0dip</item>
+        <item name="android:textIsSelectable">false</item>
+    </style>
+    <style name="ChannelPickerItemSubtitleField">
+        <item name="android:textSize">@dimen/fontSizeListItemSubTitle</item>
+        <item name="android:textColor">@color/listItemSubtitle</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lines">1</item>
+        <item name="android:drawablePadding">2.0dip</item>
+        <item name="android:textIsSelectable">false</item>
+    </style>
+    <style name="ChannelPickerItemTitleField">
+        <item name="android:textSize">@dimen/fontSizeListItemTitle</item>
+        <item name="android:textColor">@color/listItemTitle</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lines">1</item>
+        <item name="android:drawablePadding">2.0dip</item>
+        <item name="android:textIsSelectable">false</item>
+    </style>
+    <style name="Common" />
+    <style name="Common.Label" parent="@style/Common">
+        <item name="android:textSize">@dimen/fontSizeMedium</item>
+        <item name="android:textColor">@color/lableColor</item>
+    </style>
+    <style name="Common.Label.Small" parent="@style/Common.Label">
+        <item name="android:textSize">@dimen/fontSizeSmall</item>
+    </style>
+    <style name="Common.Switch" parent="@style/Common.Label">
+        <item name="android:paddingLeft">@dimen/settings_item_padding_left</item>
+        <item name="android:paddingTop">@dimen/settings_item_padding_top</item>
+        <item name="android:paddingRight">@dimen/settings_item_padding_right</item>
+        <item name="android:paddingBottom">@dimen/settings_item_padding_bottom</item>
+        <item name="android:switchTextAppearance">@style/SwitchTextAppearance</item>
+    </style>
+    <style name="CommonButtonGreen" parent="@style/_CommonButtonBase">
+        <item name="android:textColor">@color/greenButtonText</item>
+        <item name="android:background">@drawable/common_button_green</item>
+    </style>
+    <style name="CommonButtonLightGray" parent="@style/_CommonButtonBase">
+        <item name="android:textColor">@color/grayButtonText</item>
+        <item name="android:background">@drawable/common_button_light_gray</item>
+    </style>
+    <style name="ContactsCountFont" parent="@android:style/TextAppearance.WindowTitle">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="ContactsHeaderFont" parent="@android:style/TextAppearance.WindowTitle">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="ContactsSearchFont" parent="@android:style/TextAppearance.WindowTitle">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="ConversationDate" parent="@android:style/TextAppearance">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:textColor">#ff686868</item>
+    </style>
+    <style name="ConversationSender" parent="@android:style/TextAppearance">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff262626</item>
+    </style>
+    <style name="EmptyViewButton" parent="@style/CascadesButton">
+        <item name="android:paddingLeft">40.0dip</item>
+        <item name="android:paddingRight">40.0dip</item>
+        <item name="android:layout_height">@dimen/empty_view_button_height</item>
+    </style>
+    <style name="FirstLaunchAfterUpgradeSubtitle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/first_launch_after_upgrade_subtitle_font_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginLeft">@dimen/first_launch_after_upgrade_subtitle_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/first_launch_after_upgrade_subtitle_margin_right</item>
+        <item name="android:text">@string/first_launch_after_upgrade_subtitle</item>
+    </style>
+    <style name="FirstLaunchAfterUpgradeTitle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/first_launch_after_upgrade_title_font_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/first_launch_after_upgrade_title_margin_top</item>
+        <item name="android:text">@string/first_launch_after_upgrade_title</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+    <style name="GlympseAnimation" parent="@android:style/Animation.Activity" />
+    <style name="GlympseBusyImage" />
+    <style name="GlympseButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/glympse_white_button_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/glympse_button_white_small</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:endColor">@color/glympse_white_button_text_shadow</item>
+    </style>
+    <style name="GlympseButton.BigBlue" parent="@style/GlympseButton.Blue">
+        <item name="android:textSize">20.0dip</item>
+        <item name="android:background">@drawable/glympse_button_blue_large</item>
+    </style>
+    <style name="GlympseButton.BigOrange" parent="@style/GlympseButton.Orange">
+        <item name="android:textSize">20.0dip</item>
+        <item name="android:background">@drawable/glympse_button_orange_large</item>
+    </style>
+    <style name="GlympseButton.Blue" parent="@style/GlympseButton">
+        <item name="android:textColor">@color/glympse_blue_button_text</item>
+        <item name="android:background">@drawable/glympse_button_blue_small</item>
+        <item name="android:endColor">@color/glympse_blue_button_text_shadow</item>
+    </style>
+    <style name="GlympseButton.Orange" parent="@style/GlympseButton">
+        <item name="android:textColor">@color/glympse_orange_button_text</item>
+        <item name="android:background">@drawable/glympse_button_orange_small</item>
+        <item name="android:endColor">@color/glympse_orange_button_text_shadow</item>
+    </style>
+    <style name="GlympseCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@color/glympse_window_text</item>
+    </style>
+    <style name="GlympseClearableEditText" parent="@style/GlympseEditText">
+        <item name="android:background">@drawable/glympse_edit_white_bg</item>
+    </style>
+    <style name="GlympseEditText" parent="@android:style/Widget.EditText">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/glympse_x_edit_text</item>
+        <item name="android:textColorHighlight">@color/glympse_x_editTextHighlight</item>
+        <item name="android:textColorHint">@color/glympse_x_editTextHint</item>
+        <item name="android:textColorLink">@color/glympse_x_editTextLink</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:background">@drawable/glympse_edit_white_bg</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+    <style name="GlympseImageButton" parent="@android:style/Widget.ImageButton">
+        <item name="android:background">@null</item>
+    </style>
+    <style name="GlympseItemTextAppearance" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="GlympseListView" parent="@android:style/Widget.ListView">
+        <item name="android:background">@color/glympse_row_even</item>
+        <item name="android:fadingEdge">vertical</item>
+        <item name="android:fadingEdgeLength">10.0dip</item>
+        <item name="android:cacheColorHint">#ff808080</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0.0px</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:footerDividersEnabled">false</item>
+        <item name="android:requiresFadingEdge">vertical</item>
+    </style>
+    <style name="GlympsePhoto">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">@drawable/glympse_thumb_container</item>
+    </style>
+    <style name="GlympseScrollView" parent="@android:style/Widget.ScrollView">
+        <item name="android:background">@color/glympse_row_even</item>
+        <item name="android:fadingEdge">vertical</item>
+        <item name="android:fadingEdgeLength">10.0dip</item>
+        <item name="android:cacheColorHint">#ff808080</item>
+        <item name="android:requiresFadingEdge">vertical</item>
+    </style>
+    <style name="GlympseTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">14.0dip</item>
+        <item name="android:textColor">@color/glympse_window_text</item>
+    </style>
+    <style name="GlympseTextView.DialogTitle" parent="@style/GlympseTextView">
+        <item name="android:textSize">20.0dip</item>
+        <item name="android:textColor">@color/glympse_heading_text</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="GlympseTimer" />
+    <style name="GlympseToggleButton" parent="@android:style/Widget.Button.Toggle">
+        <item name="android:disabledAlpha">0.0</item>
+        <item name="android:textSize">16.0dip</item>
+        <item name="android:textColor">@color/glympse_white_button_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/glympse_toggle_button</item>
+        <item name="android:textOn">on</item>
+        <item name="android:textOff">off</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowDx">0.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+    </style>
+    <style name="GlympseWhiteTextView" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="GlympseWindowTitle">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="GlympseWindowTitleBackground">
+        <item name="android:background">@drawable/glympse_actionbar_bg</item>
+    </style>
+    <style name="InviteContactSuggestionStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:paddingTop">10.0dip</item>
+        <item name="android:paddingRight">5.0dip</item>
+        <item name="android:paddingBottom">10.0dip</item>
+        <item name="android:textIsSelectable">false</item>
+    </style>
+    <style name="InvitePinLabel" parent="@android:style/TextAppearance">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+    </style>
+    <style name="InviteSuggestionStyle" parent="@style/InviteContactSuggestionStyle">
+        <item name="android:background">@drawable/invite_suggestion_background</item>
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="ListItemAvatar">
+        <item name="android:layout_width">@dimen/avatar_size</item>
+        <item name="android:layout_height">@dimen/avatar_size</item>
+        <item name="android:layout_marginRight">3.0dip</item>
+    </style>
+    <style name="ListItemMultiSelectionBorder" parent="@style/ListItemSelectionBorder">
+        <item name="android:background">@drawable/multi_selection_border</item>
+    </style>
+    <style name="ListItemSelectionBorder">
+        <item name="android:background">@drawable/selection_border</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+    </style>
+    <style name="ListItemSubtitleField">
+        <item name="android:textSize">@dimen/fontSizeListItemSubTitle</item>
+        <item name="android:textColor">@color/listItemSubtitle</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lines">1</item>
+        <item name="android:drawablePadding">2.0dip</item>
+        <item name="android:textIsSelectable">false</item>
+    </style>
+    <style name="ListItemTitleField">
+        <item name="android:textSize">@dimen/fontSizeListItemTitle</item>
+        <item name="android:textColor">@color/listItemTitle</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/contact_list_item_title_height</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">2.0dip</item>
+        <item name="android:textIsSelectable">false</item>
+    </style>
+    <style name="MainTabBarLabel" parent="@android:style/TextAppearance">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textColor">@drawable/selector_main_tab_bar_label</item>
+    </style>
+    <style name="MessageContextActionButton" parent="@style/EmptyViewButton">
+        <item name="android:paddingLeft">@dimen/conversation_glympse_message_button_padding_left</item>
+        <item name="android:paddingRight">@dimen/conversation_glympse_message_button_padding_right</item>
+        <item name="android:layout_height">@dimen/empty_view_button_height</item>
+    </style>
+    <style name="MessagePictureProgressBar" parent="@android:style/Widget.ProgressBar">
+        <item name="android:maxHeight">20.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_horizontal</item>
+        <item name="android:minHeight">20.0dip</item>
+    </style>
+    <style name="NoCloseButton" parent="@android:style/Widget.ActionButton.CloseMode">
+        <item name="android:textSize">@dimen/actionmode_closeButtonSize</item>
+        <item name="android:textColor">@color/actionmode_closeButtonColor</item>
+        <item name="android:background">@drawable/header_action_bar_button_background</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:src">@android:color/transparent</item>
+        <item name="android:text">@string/cancel</item>
+    </style>
+    <style name="PostCountsText">
+        <item name="android:textSize">@dimen/post_item_meta_info_text_height</item>
+        <item name="android:textColor">@color/channel_post_meta_info_color</item>
+        <item name="android:textIsSelectable">false</item>
+    </style>
+    <style name="PostsPaneContent">
+        <item name="android:textSize">@dimen/posts_pane_content_font_size</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:gravity">left|center</item>
+    </style>
+    <style name="PostsPaneTitle">
+        <item name="android:textSize">@dimen/posts_pane_title_font_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="ProfileButton" parent="@style/CascadesButton">
+        <item name="android:paddingLeft">10.0dip</item>
+        <item name="android:paddingRight">10.0dip</item>
+    </style>
+    <style name="PurchaseButton" parent="@style/CascadesButton">
+        <item name="android:textColor">@drawable/selector_purchase_button_text_color</item>
+        <item name="android:background">@drawable/selector_purchase_button_bg</item>
+    </style>
+    <style name="QuickShareGlympseButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">@dimen/fontSizeSmall</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/selector_quick_share_glympse_button</item>
+    </style>
+    <style name="ReportsPaneContent">
+        <item name="android:textSize">@dimen/reports_pane_content_font_size</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">left|center</item>
+    </style>
+    <style name="ReportsPaneTitle">
+        <item name="android:textSize">@dimen/reports_pane_title_font_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="SettingsButton" parent="@style/CascadesButton">
+        <item name="android:minWidth">120.0dip</item>
+    </style>
+    <style name="SettingsDrillDown">
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/drill_down_button</item>
+    </style>
+    <style name="Setup2ActionFooter">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/setup2_bottom_bar_background</item>
+        <item name="android:paddingLeft">30.0dip</item>
+        <item name="android:paddingRight">30.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">140.0dip</item>
+    </style>
+    <style name="Setup2Button">
+        <item name="android:textSize">@dimen/setup_primary_action_button_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">@drawable/selector_setup2_button_bg</item>
+        <item name="android:paddingTop">15.0dip</item>
+        <item name="android:paddingBottom">15.0dip</item>
+        <item name="android:layout_width">0.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+    <style name="Setup2Button.Inverse" parent="@style/Setup2Button">
+        <item name="android:background">@drawable/selector_setup2_button_inverse</item>
+    </style>
+    <style name="Setup2Button.Light" parent="@style/Setup2Button.Inverse">
+        <item name="android:background">@drawable/selector_setup2_button_light</item>
+    </style>
+    <style name="Setup2ErrorMessage" parent="@style/Setup2Text">
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">5.0dip</item>
+        <item name="android:paddingRight">5.0dip</item>
+    </style>
+    <style name="Setup2Text">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textColor">@color/setup2_textFg</item>
+    </style>
+    <style name="Setup2Text.ExtraLarge" parent="@style/Setup2Text">
+        <item name="android:textSize">32.0sp</item>
+    </style>
+    <style name="SlideMenuSubtitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/slide_menu_subtitle_text</item>
+    </style>
+    <style name="SlideMenuTitle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">22.0sp</item>
+        <item name="android:textColor">@drawable/selector_footer_action_text_color</item>
+    </style>
+    <style name="SwitchTextAppearance" parent="@android:style/TextAppearance.Holo.Small">
+        <item name="android:textColor">@color/lableColor</item>
+    </style>
+    <style name="TextAppearance.GlympseHolo.Widget.ActionBar.Menu" parent="@android:style/TextAppearance.Small">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:capitalize">characters</item>
+    </style>
+    <style name="Theme.DateTimePickerView" parent="@android:style/Theme.Holo.NoActionBar">
+        <item name="android:editTextStyle">@style/Widget.EditText.Black</item>
+    </style>
+    <style name="Theme.Glympse" parent="@style/Theme.Glympse4" />
+    <style name="Theme.Glympse.Dialog" parent="@style/Theme.Glympse">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+    <style name="Theme.Glympse4" parent="@style/Theme.GlympseBase">
+        <item name="android:buttonStyle">@style/GlympseButton</item>
+        <item name="android:buttonStyleToggle">@style/GlympseToggleButton</item>
+        <item name="android:windowBackground">@color/glympse_x_windowBackground</item>
+        <item name="android:windowTitleSize">@dimen/glympse_legacy_title_height</item>
+        <item name="android:windowTitleStyle">@style/GlympseWindowTitle</item>
+        <item name="android:windowTitleBackgroundStyle">@style/GlympseWindowTitleBackground</item>
+        <item name="android:checkboxStyle">@style/GlympseCheckBox</item>
+        <item name="android:editTextStyle">@style/GlympseEditText</item>
+        <item name="android:imageButtonStyle">@style/GlympseImageButton</item>
+        <item name="android:listViewStyle">@style/GlympseListView</item>
+        <item name="android:scrollViewStyle">@style/GlympseScrollView</item>
+        <item name="android:textViewStyle">@style/GlympseTextView</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="glympseBusyImageStyle">@style/GlympseBusyImage</item>
+        <item name="glympseButtonStyle">@style/GlympseButton</item>
+        <item name="glympseCheckBoxStyle">@style/GlympseCheckBox</item>
+        <item name="glympseClearableEditTextStyle">@style/GlympseClearableEditText</item>
+        <item name="glympseEditTextStyle">@style/GlympseEditText</item>
+        <item name="glympsePhotoStyle">@style/GlympsePhoto</item>
+        <item name="glympseTextViewStyle">@style/GlympseTextView</item>
+        <item name="glympseTimerStyle">@style/GlympseTimer</item>
+        <item name="glympseToggleButtonStyle">@style/GlympseToggleButton</item>
+    </style>
+    <style name="Theme.GlympseBase" parent="@android:style/Theme.Light" />
+    <style name="ThemeBorderlessDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@null</item>
+    </style>
+    <style name="ThemeStickerPackDialog" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowBackground">@drawable/sticker_pack_dialog_transparency</item>
+    </style>
+    <style name="Widget.EditText.Black" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="_CommonButtonBase">
+        <item name="android:textSize">@dimen/buttonTextSize</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>

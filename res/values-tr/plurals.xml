@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">Yayın Mesajı %1$s kişiye gönderildi</item>
+        <item quantity="one">Yayın Mesajı 1 kişiye gönderildi</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">%1$s Öğe</item>
+        <item quantity="zero">0 Öğe</item>
+        <item quantity="one">1 Öğe</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(%1$d davet bekliyor)</item>
+        <item quantity="one">(1 davet bekliyor)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">%1$s Sonuç</item>
+        <item quantity="one">1 Sonuç</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">%1$s Etkin Sohbet</item>
+        <item quantity="one">1 Etkin Sohbet</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">%1$s Yeni Bildirim</item>
+        <item quantity="one">1 Yeni Bildirim</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">%1$s Yeni Davet</item>
+        <item quantity="one">1 Yeni Davet</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">%1$s Yeni Öğe</item>
+        <item quantity="one">1 Yeni Öğe</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">%1$s Kişi</item>
+        <item quantity="one">1 Kişi</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">%1$s Grup</item>
+        <item quantity="one">1 Grup</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">%1$s Yorum</item>
+        <item quantity="one">1 Yorum</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">%1$s Beğeni,</item>
+        <item quantity="one">1 Beğeni,</item>
+    </plurals>
+</resources>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">Yleislähetysviesti lähetetty %1$s yhteyshenkilölle</item>
+        <item quantity="one">Yleislähetysviesti lähetetty yhdelle yhteyshenkilölle</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">%1$s kohdetta</item>
+        <item quantity="zero">0 kohdetta</item>
+        <item quantity="one">1 kohde</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(%1$d odottavaa kutsua)</item>
+        <item quantity="one">(1 odottava kutsu)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">%1$s tulosta</item>
+        <item quantity="one">1 tulos</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">%1$s aktiivista keskustelua</item>
+        <item quantity="one">1 aktiivinen keskustelu</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">%1$s uutta ilmoitusta</item>
+        <item quantity="one">1 uusi ilmoitus</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">%1$s uutta kutsua</item>
+        <item quantity="one">1 uusi kutsu</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">%1$s uutta kohdetta</item>
+        <item quantity="one">1 uusi kohde</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">%1$s yhteystietoa</item>
+        <item quantity="one">1 yhteystieto</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">%1$s ryhmää</item>
+        <item quantity="one">1 ryhmä</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">%1$s kommenttia</item>
+        <item quantity="one">1 kommentti</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">%1$s tykkäystä,</item>
+        <item quantity="one">1 tykkäys</item>
+    </plurals>
+</resources>

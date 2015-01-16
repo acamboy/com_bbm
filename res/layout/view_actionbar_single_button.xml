@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="@integer/actionbar_weight_sum" android:layout_above="@id/actionbar_divider_line">
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/actionbar_single_button_button_padding_weight" />
+        <Button android:gravity="center" android:id="@id/header_action_bar_negative_button" android:background="@drawable/header_action_bar_button_background" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/cancel_narrowbutton" android:layout_weight="@integer/actionbar_single_button_button_weight" style="@style/ActionBarButton" />
+        <View android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="@integer/actionbar_single_button_button_padding_weight" />
+        <TextView android:textAppearance="@style/ActionBarTitle" android:id="@id/header_action_bar_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/group_add_list_title" android:singleLine="true" android:layout_weight="@integer/actionbar_single_button_text_weight" />
+    </LinearLayout>
+    <include layout="@layout/view_merge_header_actionbar_divider_line" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/drop_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/actionbar_drop_shadow" android:scaleType="fitXY" android:layout_above="@id/footer_action_bar" android:contentDescription="@string/blank" />
+    <com.bbm.ui.FooterActionBar android:id="@id/footer_action_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</merge>

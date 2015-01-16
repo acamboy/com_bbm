@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">Mesaj difuzat trimis către %1$s contacte</item>
+        <item quantity="one">Mesaj difuzat trimis către 1 contact</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">%1$s elemente</item>
+        <item quantity="zero">0 elemente</item>
+        <item quantity="one">1 element</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(%1$d de invitaţii în aşteptare)</item>
+        <item quantity="one">(1 invitaţie în aşteptare)</item>
+        <item quantity="few">(%1$d invitaţii în aşteptare)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">%1$s de rezultate</item>
+        <item quantity="one">1 rezultat</item>
+        <item quantity="few">%1$s rezultate</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">%1$s de chaturi active</item>
+        <item quantity="one">1 chat activ</item>
+        <item quantity="few">%1$s chaturi active</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">%1$s de notificări noi</item>
+        <item quantity="one">1 notificare nouă</item>
+        <item quantity="few">%1$s notificări noi</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">%1$s de invitaţii noi</item>
+        <item quantity="one">1 invitaţie nouă</item>
+        <item quantity="few">%1$s invitaţii noi</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">%1$s elemente noi</item>
+        <item quantity="one">1 element nou</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">%1$s de contacte</item>
+        <item quantity="one">1 contact</item>
+        <item quantity="few">%1$s contacte</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">%1$s de grupuri</item>
+        <item quantity="one">1 grup</item>
+        <item quantity="few">%1$s grupuri</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">%1$s de comentarii</item>
+        <item quantity="one">1 comentariu</item>
+        <item quantity="few">%1$s comentarii</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">%1$s de aprecieri,</item>
+        <item quantity="one">1 apreciere,</item>
+        <item quantity="few">%1$s aprecieri,</item>
+    </plurals>
+</resources>

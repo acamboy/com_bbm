@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">已傳送廣播訊息給 %1$s 個連絡人</item>
+        <item quantity="one">廣播訊息傳送給 1 位連絡人</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">%1$s 個項目</item>
+        <item quantity="zero">0 個項目</item>
+        <item quantity="one">1 個項目</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(%1$d 個邀請正在等待)</item>
+        <item quantity="one">(1 個邀請正在等待)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">%1$s 個結果</item>
+        <item quantity="one">1 個結果</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">%1$s 個進行中的聊天</item>
+        <item quantity="one">1 個進行中的聊天</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">%1$s 條新通知</item>
+        <item quantity="one">1 條新通知</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">%1$s 個新邀請</item>
+        <item quantity="one">1 個新邀請</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">%1$s 個新項目</item>
+        <item quantity="one">1 個新項目</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">%1$s 名連絡人</item>
+        <item quantity="one">1 名連絡人</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">%1$s 個群組</item>
+        <item quantity="one">1 個群組</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">%1$s 個回應</item>
+        <item quantity="one">1 個留言</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">%1$s 個讚，</item>
+        <item quantity="one">1 個讚，</item>
+    </plurals>
+</resources>

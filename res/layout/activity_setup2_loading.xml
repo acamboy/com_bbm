@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/loading_root" android:background="@color/setup2_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:layout_gravity="center_horizontal" android:id="@id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" style="?android:attr/progressBarStyleLargeInverse" />
+    <com.bbm.setup.ReportProblemView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/setup_margin" />
+    <TextView android:textColor="@color/setup2_loading_title_text" android:gravity="center" android:id="@id/loading_title" android:background="@color/setup2_loading_title_background" android:padding="@dimen/setup_loading_title_bar_padding" android:layout_width="fill_parent" android:layout_height="@dimen/setup_loading_title_bar_height" />
+    <FrameLayout android:id="@id/loading_container" android:background="@color/setup2_bottom_bar_background" android:layout_width="fill_parent" android:layout_height="@dimen/setup_loading_bottom_bar_height" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:id="@id/feature_voice" android:paddingLeft="@dimen/setup_loading_feature_horizontal_padding" android:paddingRight="@dimen/setup_loading_feature_horizontal_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/setup_loading_feature_image_size" android:layout_height="@dimen/setup_loading_feature_image_size" android:src="@drawable/feature_voice" />
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/setup_loading_feature_text_margin" android:layout_weight="1.0">
+                <TextView android:textColor="@color/setup2_loading_feature_text" android:id="@id/feature_voice_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feature_voice" android:maxLines="1" />
+                <TextView android:textColor="@color/setup2_loading_feature_text" android:id="@id/feature_voice_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feature_voice_description" android:maxLines="3" android:minLines="1" android:lineSpacingExtra="@dimen/setup_loading_feature_text_line_spacing_extra" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/feature_stickers" android:paddingLeft="@dimen/setup_loading_feature_horizontal_padding" android:paddingRight="@dimen/setup_loading_feature_horizontal_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/setup_loading_feature_image_size" android:layout_height="@dimen/setup_loading_feature_image_size" android:src="@drawable/feature_stickers" android:layout_weight="0.2" />
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/setup_loading_feature_text_margin" android:layout_weight="0.8">
+                <TextView android:textColor="@color/setup2_loading_feature_text" android:id="@id/feature_stickers_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feature_stickers" android:maxLines="1" />
+                <TextView android:textColor="@color/setup2_loading_feature_text" android:id="@id/feature_stickers_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feature_stickers_description" android:maxLines="3" android:minLines="1" android:lineSpacingExtra="@dimen/setup_loading_feature_text_line_spacing_extra" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/feature_glympse" android:paddingLeft="@dimen/setup_loading_feature_horizontal_padding" android:paddingRight="@dimen/setup_loading_feature_horizontal_padding" android:layout_width="fill_parent" android:layout_height="fill_parent" android:alpha="0.0">
+            <ImageView android:layout_gravity="center" android:layout_width="@dimen/setup_loading_feature_image_size" android:layout_height="@dimen/setup_loading_feature_image_size" android:src="@drawable/feature_glympse" android:layout_weight="0.2" />
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/setup_loading_feature_text_margin" android:layout_weight="0.8">
+                <TextView android:textColor="@color/setup2_loading_feature_text" android:id="@id/feature_glympse_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feature_glympse" android:maxLines="1" />
+                <TextView android:textColor="@color/setup2_loading_feature_text" android:id="@id/feature_glympse_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feature_glympse_description" android:maxLines="3" android:minLines="1" android:lineSpacingExtra="@dimen/setup_loading_feature_text_line_spacing_extra" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

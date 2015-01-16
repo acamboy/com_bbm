@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/conversation_chat_bubble_padding" android:paddingRight="@dimen/conversation_chat_bubble_padding" android:paddingBottom="@dimen/conversation_chat_bubble_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="left" android:id="@id/message_header" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/message_status" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.bbm.ui.InlineImageTextView android:textSize="@dimen/fontSizeMedium" android:textStyle="bold" android:textColor="@color/brightstyle_primaryTextColor" android:ellipsize="end" android:layout_gravity="center_vertical" android:id="@id/message_sender" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_chat_bubble_outgoing_status_margin_left" android:layout_marginRight="@dimen/conversation_chat_bubble_outgoing_status_margin_right" android:singleLine="true" android:layout_weight="1.0" android:textIsSelectable="false" />
+        <TextView android:textSize="@dimen/fontSizeXSmall" android:textColor="@color/brightstyle_timestampTextColor" android:layout_gravity="center_vertical" android:id="@id/message_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:lines="1" android:textIsSelectable="false" />
+    </LinearLayout>
+    <com.bbm.ui.ObservingImageView android:layout_gravity="left" android:id="@id/message_sticker" android:layout_width="wrap_content" android:layout_height="@dimen/conversation_sticker_message_height" android:scaleType="fitStart" android:adjustViewBounds="true" />
+</LinearLayout>

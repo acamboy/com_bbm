@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/notifications_subtitle_day_size" android:textStyle="bold" android:textColor="@android:color/black" android:ellipsize="marquee" android:gravity="center_vertical" android:id="@id/label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/notification_details_margin" android:layout_marginRight="@dimen/notification_details_margin" android:text="@string/contacts" android:maxLines="1" android:layout_weight="0.5" />
+    <TextView android:textSize="@dimen/notifications_subtitle_date_size" android:textColor="@android:color/darker_gray" android:gravity="right|center" android:id="@id/count" android:paddingLeft="@dimen/list_header_view_count_padding" android:paddingRight="@dimen/notification_details_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contacts_count" android:layout_weight="0.5" />
+</LinearLayout>

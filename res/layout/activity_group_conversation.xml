@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:id="@id/conversation_root" android:background="@color/conversation_pane_background" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.bbm.ui.EmoticonPanelViewLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/message_root_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer_action_bar">
+            <com.bbm.ui.activities.TopAlignedListLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/conversation_chat_bubble_padding" android:layout_weight="1.0">
+                <ListView android:id="@id/list_messages" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="#00000000" android:stackFromBottom="true" android:transcriptMode="normal" android:cacheColorHint="#00000000" android:divider="@null" android:dividerHeight="0.0dip" android:foregroundGravity="fill_horizontal|top|center" />
+            </com.bbm.ui.activities.TopAlignedListLayout>
+            <com.bbm.ui.EmoticonInputPanel android:id="@id/emoticon_input_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:inputHint="@string/conversation_enter_a_message" />
+        </LinearLayout>
+        <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+    </RelativeLayout>
+</view>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/list_item_security_question_background" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:id="@id/list_security_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:textIsSelectable="false" />
+    <TextView android:textSize="10.0sp" android:textColor="@android:color/black" android:id="@id/list_security_question" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/list_security_title" android:layout_alignParentLeft="true" android:textIsSelectable="false" />
+    <ImageView android:id="@id/list_security_badge" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/picker_checkmark" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/blank" />
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">Emitirana poruka poslana za %1$s kontakata</item>
+        <item quantity="one">Emitirana poruka poslana 1 kontaktu</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">%1$s stavki</item>
+        <item quantity="zero">0 stavki</item>
+        <item quantity="one">1 stavka</item>
+        <item quantity="few">>%1$s stavke</item>
+        <item quantity="many">>%1$s stavki</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(%1$d pozivnice na čekanju)</item>
+        <item quantity="one">(1 pozivnica na čekanju)</item>
+        <item quantity="few">(%1$d pozivnica na čekanju)</item>
+        <item quantity="many">(%1$d pozivnice na čekanju)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">%1$s rezultata</item>
+        <item quantity="one">1 rezultat</item>
+        <item quantity="few">%1$s rezultata</item>
+        <item quantity="many">%1$s rezultata</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">%1$s aktivnih čavrljanja</item>
+        <item quantity="one">1 aktivno čavrljanje</item>
+        <item quantity="few">%1$s aktivna čavrljanja</item>
+        <item quantity="many">%1$s aktivnih čavrljanja</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">%1$s novih obavijesti</item>
+        <item quantity="one">1 nova obavijest</item>
+        <item quantity="few">%1$s nove obavijesti</item>
+        <item quantity="many">%1$s novih obavijesti</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">%1$s novih pozivnica</item>
+        <item quantity="one">1 nova pozivnica</item>
+        <item quantity="few">%1$s nove pozivnice</item>
+        <item quantity="many">%1$s novih pozivnica</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">%1$s nove stavke</item>
+        <item quantity="one">1 nova stavka</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">%1$s kontakata</item>
+        <item quantity="one">1 kontakt</item>
+        <item quantity="few">%1$s kontakta</item>
+        <item quantity="many">%1$s kontakata</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">%1$s grupa</item>
+        <item quantity="one">1 grupa</item>
+        <item quantity="few">%1$s grupe</item>
+        <item quantity="many">%1$s grupa</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">%1$s komentara</item>
+        <item quantity="one">1 komentar</item>
+        <item quantity="few">%1$s komentara</item>
+        <item quantity="many">%1$s komentara</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">%1$s osoba kažu da im se sviđa,</item>
+        <item quantity="one">1 osoba kaže da joj se sviđa,</item>
+        <item quantity="few">%1$s osobe kažu da im se sviđa,</item>
+        <item quantity="many">%1$s osoba kažu da im se sviđa,</item>
+    </plurals>
+</resources>

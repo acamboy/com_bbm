@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/list_item_default_background" android:paddingRight="@dimen/contact_list_item_padding_right" android:paddingBottom="@dimen/contact_list_item_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/chat_photo" android:layout_width="@dimen/avatar_size" android:layout_height="@dimen/avatar_size" android:layout_marginRight="2.0dip">
+        <LinearLayout android:orientation="vertical" android:id="@id/chat_photo_container_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.bbm.ui.ObservingImageView android:id="@id/chat_photo_left_top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" />
+            <com.bbm.ui.ObservingImageView android:id="@id/chat_photo_left_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/chat_photo_container_right" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <com.bbm.ui.ObservingImageView android:id="@id/chat_photo_right_top" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" />
+            <com.bbm.ui.ObservingImageView android:id="@id/chat_photo_right_bottom" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_weight="1.0" />
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:gravity="center" android:id="@id/chat_photo_participants" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.bbm.ui.InlineImageTextView android:id="@id/chat_title" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" style="@style/ListItemTitleField" />
+            <TextView android:textSize="@dimen/contact_list_date_text_size" android:textColor="@color/listItemDate" android:layout_gravity="center_vertical" android:id="@id/chat_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/contact_list_date_margin_left" android:textIsSelectable="false" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.bbm.ui.InlineImageTextView android:textColor="@color/brightstyle_secondaryTextColor" android:id="@id/chat_message" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/ListItemSubtitleField" />
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/in_call_progress_chats_tab" android:visibility="gone" android:layout_width="@dimen/voice_in_call_progress_bar_size" android:layout_height="@dimen/voice_in_call_progress_bar_size" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center" android:id="@id/is_in_call_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:src="@drawable/bbm_voice_in_call_icon" />
+</LinearLayout>

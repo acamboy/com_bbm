@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">Массовое сообщение отправлено контактам (%1$s)</item>
+        <item quantity="one">Массовое сообщение отправлено 1 контакту</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">Элементов: %1$s</item>
+        <item quantity="zero">0 элементов</item>
+        <item quantity="one">1 элемент</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(ожидающих приглашений: %1$d)</item>
+        <item quantity="one">(1 ожидающее приглашение)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">Результаты: %1$s</item>
+        <item quantity="one">1 результат</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">Активных чатов: %1$s</item>
+        <item quantity="one">1 активный чат</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">Новые уведомления: %1$s</item>
+        <item quantity="one">1 новое уведомление</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">Новых приглашений: %1$s</item>
+        <item quantity="one">Новые приглашения: 1</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">Новые элементы: %1$s</item>
+        <item quantity="one">Новые элементы: 1</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">Контактов: %1$s</item>
+        <item quantity="one">1 контакт</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">Групп: %1$s</item>
+        <item quantity="one">1 группа</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">Комментарии: %1$s</item>
+        <item quantity="one">Комментарий: 1</item>
+        <item quantity="few">Комментарии: %1$s</item>
+        <item quantity="many">Комментарии: %1$s</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">Нравится: %1$s,</item>
+        <item quantity="one">Нравится: 1,</item>
+        <item quantity="few">Нравится: %1$s,</item>
+        <item quantity="many">Нравится: %1$s,</item>
+    </plurals>
+</resources>

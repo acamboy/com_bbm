@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@color/channel_intro_overlay_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/fontSizeLarge" android:textColor="@color/channel_intro_overlay_foreground" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/channel_intro_activity_margin" android:text="@string/introducing_channels_title" />
+    <TextView android:textSize="@dimen/fontSizeMedium" android:textColor="@color/channel_intro_overlay_foreground" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/channel_intro_activity_margin" android:text="@string/introducing_channels_first_part" />
+    <TextView android:textSize="@dimen/fontSizeMedium" android:textColor="@color/channel_intro_overlay_foreground" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/channel_intro_activity_margin" android:text="@string/introducing_channels_second_part" />
+    <TextView android:textSize="@dimen/fontSizeMedium" android:textColor="@color/channel_intro_overlay_foreground" android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/channel_intro_activity_margin" android:text="@string/overlay_tap_to_continue" />
+</LinearLayout>

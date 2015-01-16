@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/invite_scroll_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/footer_action_bar">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/view_merge_invite_pin_input" />
+            <RelativeLayout android:id="@id/invite_options" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/invite_top_container">
+                <TextView android:textSize="@dimen/invite_activity_invite_message_label_text_size" android:id="@id/invite_message_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/invite_activity_default_margin" android:layout_marginTop="@dimen/invite_activity_default_margin" android:layout_marginRight="@dimen/invite_activity_default_margin" android:text="@string/invite_message_label" />
+                <TextView android:textSize="@dimen/invite_activity_group_invite_message_text_size" android:id="@id/invite_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/invite_activity_default_margin" android:layout_below="@id/invite_message_label" />
+                <ImageView android:id="@id/invite_security_message_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/divider_one_px" android:scaleType="fitXY" android:layout_below="@id/invite_message" android:contentDescription="@string/blank" />
+                <Spinner android:id="@id/invite_security_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/invite_activity_default_margin" android:layout_marginTop="@dimen/invite_activity_default_margin" android:layout_marginRight="@dimen/invite_activity_default_margin" android:layout_below="@id/invite_security_message_divider" style="@style/CascadesSpinner" />
+                <LinearLayout android:orientation="vertical" android:id="@id/invite_security_custom_container" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/invite_activity_default_margin" android:layout_below="@id/invite_security_spinner" android:layout_alignParentBottom="true" android:windowSoftInputMode="stateAlwaysVisible">
+                    <EditText android:id="@id/invite_security_custom_question" android:visibility="gone" android:nextFocusLeft="@id/invite_security_custom_container" android:nextFocusRight="@id/invite_security_custom_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/invite_activity_default_margin" android:hint="@string/invite_activity_security_custom_question" android:inputType="text" android:imeOptions="flagNoExtractUi" style="@style/BB10Edit" />
+                    <TextView android:textSize="@dimen/fontSizeXSmall" android:textColor="@color/black" android:id="@id/invite_security_question_label" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/invite_activity_default_margin" />
+                    <EditText android:id="@id/invite_security_custom_response" android:nextFocusLeft="@id/invite_security_custom_container" android:nextFocusRight="@id/invite_security_custom_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/invite_activity_default_margin" android:hint="@string/invite_activity_security_custom_response" style="@style/BB10Edit" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+</RelativeLayout>

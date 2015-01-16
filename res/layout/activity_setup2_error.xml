@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/setup2_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/report_problem">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/setup_text_edge_margin">
+            <TextView android:gravity="center" android:id="@id/error" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/setup_error_title" style="@style/Setup2Text.ExtraLarge" />
+            <TextView android:gravity="center" android:id="@id/errorDescription" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Setup2ErrorMessage" />
+        </LinearLayout>
+    </ScrollView>
+    <com.bbm.setup.ReportProblemView android:id="@id/report_problem" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/setup_margin" android:layout_above="@id/setup_footer" />
+    <LinearLayout android:id="@id/setup_footer" android:layout_alignParentBottom="true" style="@style/Setup2ActionFooter">
+        <Button android:id="@id/button_retry" android:text="@string/retry" style="@style/Setup2Button.Inverse" />
+    </LinearLayout>
+</RelativeLayout>

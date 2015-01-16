@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/actionbar_divider_line">
+        <com.bbm.ui.InlineImageTextView android:textSize="@dimen/fontSizeActionBarTitle" android:textColor="@android:color/white" android:ellipsize="marquee" android:id="@id/actionbar_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/header_actionbar_text_default_left_right_margin" android:layout_marginRight="@dimen/header_actionbar_text_default_left_right_margin" android:maxLines="1" />
+    </RelativeLayout>
+    <include layout="@layout/view_merge_header_actionbar_divider_line" />
+</RelativeLayout>

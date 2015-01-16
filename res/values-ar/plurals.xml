@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">تم إرسال رسالة بث إلى %1$sجهة اتصال</item>
+        <item quantity="one">تم إرسال رسالة بث إلى جهة اتصال واحدة</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">عنصرًا%1$s</item>
+        <item quantity="zero">0 عنصر</item>
+        <item quantity="one">عنصر واحد</item>
+        <item quantity="two">عنصران</item>
+        <item quantity="few">عناصر%1$s</item>
+        <item quantity="many">عنصر%1$s</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(%1$d من الدعوات قيد الانتظار)</item>
+        <item quantity="zero">( دعوة قيد الانتظار0)</item>
+        <item quantity="one">(دعوة واحدة قيد الانتظار)</item>
+        <item quantity="two">( دعوة قيد الانتظار2)</item>
+        <item quantity="few">( دعوات قيد الانتظار%1$d)</item>
+        <item quantity="many">( دعوة قيد الانتظار%1$d)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">نتيجة %1$s</item>
+        <item quantity="zero">0 نتيجة</item>
+        <item quantity="one">واحدة نتيجة</item>
+        <item quantity="two">نتيجتين</item>
+        <item quantity="few">نتائج%1$s</item>
+        <item quantity="many">نتيجة %1$s</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">%1$s من الدردشات النشطة</item>
+        <item quantity="zero">لا تتوفر دردشات نشطة</item>
+        <item quantity="one">دردشة واحدة نشطة</item>
+        <item quantity="two">دردشتان نشطتان</item>
+        <item quantity="few">%1$s دردشات نشطة</item>
+        <item quantity="many">%1$s دردشة نشطة</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">%1$s إشعار جديد</item>
+        <item quantity="zero">لا يوجد إشعار جديد</item>
+        <item quantity="one">إشعار واحد جديد</item>
+        <item quantity="two">إشعاران جديدان</item>
+        <item quantity="few">%1$s إشعارات جديدة</item>
+        <item quantity="many">%1$s إشعار جديد</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">%1$s من الدعوات الجديدة</item>
+        <item quantity="zero">لا تتوفر دعوات جديدة</item>
+        <item quantity="one">دعوة واحدة جديدة</item>
+        <item quantity="two">دعوتان جديدتان</item>
+        <item quantity="few">%1$s دعوات جديدة</item>
+        <item quantity="many">%1$s دعوة جديدة</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">عناصر جديدة: %1$s</item>
+        <item quantity="one">عنصر واحد جديد</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">%1$s من جهات الاتصال</item>
+        <item quantity="zero">لا تتوفر جهات اتصال</item>
+        <item quantity="one">جهة اتصال واحدة</item>
+        <item quantity="two">جهتا اتصال</item>
+        <item quantity="few">%1$s جهات اتصال</item>
+        <item quantity="many">%1$s جهة اتصال</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">%1$s من المجموعات</item>
+        <item quantity="zero">لا تتوفر مجموعات</item>
+        <item quantity="one">مجموعة واحدة</item>
+        <item quantity="two">مجموعتان</item>
+        <item quantity="few">%1$s مجموعات</item>
+        <item quantity="many">%1$s مجموعة</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">%1$s تعليق</item>
+        <item quantity="zero">0 تعليق</item>
+        <item quantity="one">تعليق واحد</item>
+        <item quantity="two">تعليقان</item>
+        <item quantity="few">%1$s تعليقات</item>
+        <item quantity="many">%1$s تعليقًا</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">%1$s إعجاب،</item>
+        <item quantity="zero">0 إعجاب،</item>
+        <item quantity="one">إعجاب واحد،</item>
+        <item quantity="two">إعجابان</item>
+        <item quantity="few">%1$s إعجابات،</item>
+        <item quantity="many">%1$s إعجابًا،</item>
+    </plurals>
+</resources>

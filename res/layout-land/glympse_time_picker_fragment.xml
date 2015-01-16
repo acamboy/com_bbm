@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.glympse.android.controls.GTimerView android:id="@id/glympse_timer" android:paddingLeft="210.0dip" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="22.0dip" android:ellipsize="start" android:id="@id/glympse_text_expires" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:singleLine="true" android:layout_alignTop="@id/glympse_timer" android:layout_alignParentLeft="true" />
+    <Button android:id="@id/glympse_button_confirm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="25.0dip" android:minWidth="160.0dip" android:text="@string/glympse_time_picker_button" android:singleLine="true" android:layout_alignBottom="@id/glympse_timer" android:layout_alignParentLeft="true" style="@style/GlympseButton.Orange" />
+</RelativeLayout>

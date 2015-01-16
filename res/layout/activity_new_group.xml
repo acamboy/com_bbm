@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageButton android:id="@id/groupIconButton" android:background="@drawable/ic_add" android:layout_width="@dimen/new_group_activity_group_icon_width" android:layout_height="@dimen/new_group_activity_group_icon_height" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:contentDescription="@string/blank" />
+    <EditText android:id="@id/groupName" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/new_group_activity_group_name_margin_top" android:hint="@string/groupsDefaultName" android:singleLine="true" android:layout_below="@id/groupIconButton" android:layout_alignLeft="@id/groupIconButton" android:inputType="textShortMessage" style="@style/BB10Edit">
+        <requestFocus />
+    </EditText>
+    <EditText android:id="@id/groupDescription" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/new_group_activity_group_description_margin_top" android:hint="@string/groupsDefaultDescription" android:singleLine="true" android:layout_below="@id/groupName" android:layout_alignLeft="@id/groupName" android:layout_alignRight="@id/groupName" android:inputType="textShortMessage" style="@style/BB10Edit" />
+    <Switch android:id="@id/allow_members_invite" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/new_group_activity_group_allow_to_invite_margin_top" android:text="@string/groupsButtonLabel" android:layout_below="@id/groupDescription" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" style="@style/Common.Label" />
+</RelativeLayout>

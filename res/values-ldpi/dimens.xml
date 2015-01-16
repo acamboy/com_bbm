@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="first_launch_after_upgrade_bottom_container_padding">5.0dip</dimen>
+    <dimen name="first_launch_after_upgrade_image_padding_bottom">5.0dip</dimen>
+    <dimen name="first_launch_after_upgrade_image_padding_top">45.0dip</dimen>
+    <dimen name="first_launch_after_upgrade_title_margin_top">5.0dip</dimen>
+    <dimen name="first_time_set_avatar_avatar_size">70.0dip</dimen>
+    <dimen name="first_time_set_avatar_button_text_size">18.0sp</dimen>
+    <dimen name="first_time_set_avatar_padding">5.0dip</dimen>
+    <dimen name="first_time_set_avatar_text_size">20.0sp</dimen>
+    <dimen name="group_picture_comment_top_comment_container_height">120.0dip</dimen>
+</resources>

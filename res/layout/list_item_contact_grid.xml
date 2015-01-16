@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.bbm.ui.ContactsGridItem android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.SquaredObservingImageView android:layout_gravity="center" android:id="@id/contact_avatar" android:layout_width="@dimen/avatar_size" android:layout_height="@dimen/avatar_size" android:scaleType="centerCrop" />
+    <ImageView android:layout_gravity="top|right|center" android:id="@id/contact_splat" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_badge" android:contentDescription="@string/blank" />
+    <com.bbm.ui.InlineImageTextView android:textSize="@dimen/contacts_name_text_size" android:textColor="@color/white" android:gravity="center_vertical" android:id="@id/contact_name" android:background="@color/contacts_contact_name_overlay" android:paddingLeft="@dimen/contacts_name_padding_left" android:paddingRight="@dimen/contacts_name_padding_left" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:textIsSelectable="false" />
+    <View android:id="@id/selection_border" android:background="@drawable/selection_border" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <View android:id="@id/multi_selection_border" android:background="@drawable/multi_selection_border" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</com.bbm.ui.ContactsGridItem>

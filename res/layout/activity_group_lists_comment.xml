@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<view android:id="@id/viewRoot" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:baselineAligned="false" class="com.bbm.ui.EmoticonPanelViewLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer_action_bar">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <ListView android:id="@id/list_comment_list" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+                <TextView android:textSize="@dimen/group_lists_comment_no_comments_text_size" android:textColor="@color/group_lists_comment_no_comment_color" android:id="@id/list_no_comment_text" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_comments" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <com.bbm.ui.EmoticonInputPanel android:id="@id/emoticon_input_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:inputHint="@string/enter_comment" />
+        </LinearLayout>
+        <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+    </RelativeLayout>
+</view>

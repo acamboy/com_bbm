@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/list_item_default_background" android:paddingRight="@dimen/updates_fragment_padding_right" android:paddingBottom="@dimen/updates_fragment_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.ObservingImageView android:id="@id/update_photo" android:layout_width="@dimen/avatar_size" android:layout_height="@dimen/avatar_size" android:layout_marginRight="@dimen/updates_fragment_photo_margin_right" android:src="@drawable/ic_launcher" android:scaleType="centerCrop" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/updates_fragment_root_message_content_margin_top" android:layout_toRightOf="@id/update_photo" android:layout_centerVertical="true">
+        <com.bbm.ui.LinkifyTextView android:textSize="@dimen/updates_fragment_message_text_size" android:textColor="@color/black" android:id="@id/update_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" />
+        <TextView android:textSize="@dimen/updates_fragment_timestamp_text_size" android:textColor="@color/update_fragment_timestamp_color" android:id="@id/update_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/update_message" android:layout_alignLeft="@id/update_message" android:textIsSelectable="false" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:drawable="@drawable/main_tab_bar_tab_overflow_shadow" />
+            <item>
+                <bitmap android:src="@drawable/main_tab_bar_tab_overflow_shadow" />
+            </item>
+            <item>
+                <bitmap android:gravity="top|center" android:src="@drawable/actionbar_highlight" />
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_activated="true">
+        <layer-list>
+            <item android:drawable="@drawable/main_tab_bar_tab_overflow_shadow" />
+            <item>
+                <bitmap android:src="@drawable/main_tab_bar_tab_overflow_shadow" />
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <gradient android:startColor="#ff000000" android:endColor="#ff000000" android:angle="90.0" />
+                </shape>
+            </item>
+            <item android:drawable="@drawable/main_tab_bar_tab_overflow_shadow" />
+        </layer-list>
+    </item>
+</selector>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/channel_post_comment_root_view" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.bbm.ui.EmoticonPanelViewLayout"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/emoticon_panel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <com.bbm.ui.EmoticonInputPanel android:id="@id/emoticon_input_panelinPost" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:inputHint="@string/enter_comment" />
+        <FrameLayout android:id="@id/footer_frame_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+        </FrameLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/channel_post_comment_listview_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/channel_posts_comments_message_bar">
+        <com.bbm.ui.views.ChannelPostCommentListView android:id="@id/channel_post_comment_listview" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@color/comment_separator_color" android:dividerHeight="@dimen/channel_post_separator_height" android:headerDividersEnabled="false" />
+        <ViewStub android:id="@id/channel_removed" android:layout="@layout/activity_channel_child" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/channel_posts_comments_message_bar" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/emoticon_panel">
+        <TextView android:textSize="@dimen/channel_posts_comments_message_text_size" android:id="@id/channel_posts_comments_message_text" android:paddingLeft="@dimen/channel_posts_comments_message_text_left_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/channel_posts_comments_message_image" android:visibility="gone" android:layout_width="@dimen/channel_posts_comments_retry_button_size" android:layout_height="@dimen/channel_posts_comments_retry_button_size" android:src="@drawable/message_bar_retry_button" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/blank" />
+        <ProgressBar android:id="@id/channel_posts_comments_progress_bar" android:layout_width="@dimen/channel_posts_comments_progress_bar_size" android:layout_height="@dimen/channel_posts_comments_progress_bar_size" android:indeterminate="true" android:layout_alignParentRight="true" style="?android:attr/progressBarStyleLargeInverse" />
+    </RelativeLayout>
+</RelativeLayout>

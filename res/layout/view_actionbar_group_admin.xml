@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/actionbar_divider_line">
+        <TextView android:textSize="18.0sp" android:textColor="#ffffffff" android:id="@id/header_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <include layout="@layout/view_merge_header_actionbar_divider_line" />
+</RelativeLayout>

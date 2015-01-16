@@ -1,0 +1,41 @@
+.class Lcom/glympse/android/lib/hh;
+.super Ljava/lang/Object;
+.source "ServerPost.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field private kC:Lcom/glympse/android/lib/GServerPost;
+
+
+# direct methods
+.method public constructor <init>(Lcom/glympse/android/lib/GServerPost;)V
+    .locals 0
+
+    .prologue
+    .line 1190
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1191
+    iput-object p1, p0, Lcom/glympse/android/lib/hh;->kC:Lcom/glympse/android/lib/GServerPost;
+
+    .line 1192
+    return-void
+.end method
+
+
+# virtual methods
+.method public run()V
+    .locals 1
+
+    .prologue
+    .line 1196
+    iget-object v0, p0, Lcom/glympse/android/lib/hh;->kC:Lcom/glympse/android/lib/GServerPost;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GServerPost;->doPost()V
+
+    .line 1197
+    return-void
+.end method

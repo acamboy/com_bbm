@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light" />
+    <style name="Theme.Glympse" parent="@style/Theme.Glympse11" />
+    <style name="Theme.GlympseBase" parent="@android:style/Theme.Holo.Light" />
+    <style name="Theme.Glympse11" parent="@style/Theme.Glympse4">
+        <item name="android:actionBarStyle">@style/Widget.Glympse.ActionBar</item>
+    </style>
+    <style name="Widget.Glympse.ActionBar" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">@drawable/glympse_actionbar_bg</item>
+        <item name="android:displayOptions">useLogo|showHome|homeAsUp</item>
+    </style>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/fontSizeMedium" android:textColor="@color/white" android:layout_gravity="center" android:id="@id/quick_share_glympse_google_play_services_overlay_info" android:paddingLeft="@dimen/quick_voice_note_label_padding" android:paddingRight="@dimen/quick_voice_note_label_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/quick_voice_note_label_top_margin" android:text="@string/google_play_services_are_not_available" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <Button android:layout_gravity="center" android:id="@id/upgrading_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/quick_voice_note_label_top_margin" android:text="@string/button_upgrade_google_play_services" style="@style/MessageContextActionButton" />
+</LinearLayout>

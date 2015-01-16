@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="showBack" format="boolean" />
+    <attr name="backText" format="string" />
+    <attr name="showOverflow" format="boolean" />
+    <attr name="showSplat" format="boolean" />
+    <attr name="text" format="string" />
+    <attr name="icon" format="reference" />
+    <attr name="adSize" format="string" />
+    <attr name="adSizes" format="string" />
+    <attr name="adUnitId" format="string" />
+    <attr name="layoutType" format="string">
+        <enum name="record" value="0" />
+        <enum name="playback" value="1" />
+    </attr>
+    <attr name="dateLabel" format="string" />
+    <attr name="type" format="integer">
+        <enum name="dateTime" value="0" />
+        <enum name="dateOnly" value="1" />
+        <enum name="timeOnly" value="2" />
+    </attr>
+    <attr name="hasQuickShareBar" format="boolean" />
+    <attr name="hasStickerPicker" format="boolean" />
+    <attr name="inputHint" format="string" />
+    <attr name="hasOverflowAction" format="boolean" />
+    <attr name="backActionIconRes" format="reference" />
+    <attr name="backActionLabel" format="string" />
+    <attr name="glympseBusyImageStyle" format="reference" />
+    <attr name="glympseButtonStyle" format="reference" />
+    <attr name="glympseCheckBoxStyle" format="reference" />
+    <attr name="glympseClearableEditTextStyle" format="reference" />
+    <attr name="glympseEditTextStyle" format="reference" />
+    <attr name="glympsePhotoStyle" format="reference" />
+    <attr name="glympseTextViewStyle" format="reference" />
+    <attr name="glympseTimerStyle" format="reference" />
+    <attr name="glympseToggleButtonStyle" format="reference" />
+    <attr name="leftLabel" format="string" />
+    <attr name="rightLabel" format="string" />
+    <attr name="showLeftLabel" format="boolean" />
+    <attr name="showRightLabel" format="boolean" />
+    <attr name="mapType">
+        <enum name="none" value="0" />
+        <enum name="normal" value="1" />
+        <enum name="satellite" value="2" />
+        <enum name="terrain" value="3" />
+        <enum name="hybrid" value="4" />
+    </attr>
+    <attr name="cameraBearing" format="float" />
+    <attr name="cameraTargetLat" format="float" />
+    <attr name="cameraTargetLng" format="float" />
+    <attr name="cameraTilt" format="float" />
+    <attr name="cameraZoom" format="float" />
+    <attr name="uiCompass" format="boolean" />
+    <attr name="uiRotateGestures" format="boolean" />
+    <attr name="uiScrollGestures" format="boolean" />
+    <attr name="uiTiltGestures" format="boolean" />
+    <attr name="uiZoomControls" format="boolean" />
+    <attr name="uiZoomGestures" format="boolean" />
+    <attr name="useViewLifecycle" format="boolean" />
+    <attr name="zOrderOnTop" format="boolean" />
+    <attr name="hint" format="string" />
+    <attr name="cancelText" format="string" />
+    <attr name="leftOption" format="string" />
+    <attr name="rightOption" format="string" />
+    <attr name="mode">
+        <enum name="left" value="0" />
+        <enum name="right" value="1" />
+    </attr>
+    <attr name="viewAbove" format="reference" />
+    <attr name="viewBehind" format="reference" />
+    <attr name="behindOffset" format="dimension" />
+    <attr name="behindWidth" format="dimension" />
+    <attr name="behindScrollScale" format="float" />
+    <attr name="touchModeAbove">
+        <enum name="margin" value="0" />
+        <enum name="fullscreen" value="1" />
+    </attr>
+    <attr name="touchModeBehind">
+        <enum name="margin" value="0" />
+        <enum name="fullscreen" value="1" />
+    </attr>
+    <attr name="shadowDrawable" format="reference" />
+    <attr name="shadowWidth" format="dimension" />
+    <attr name="fadeEnabled" format="boolean" />
+    <attr name="fadeDegree" format="float" />
+    <attr name="selectorEnabled" format="boolean" />
+    <attr name="selectorDrawable" format="reference" />
+    <attr name="segmentLeftOption" format="string" />
+    <attr name="segmentMiddleOption" format="string" />
+    <attr name="segmentRightOption" format="string" />
+</resources>

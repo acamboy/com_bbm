@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">%1$s명의 대화 상대에게 브로드캐스트 메시지가 전송됨</item>
+        <item quantity="one">1명의 대화 상대에게 브로드캐스트 메시지가 전송됨</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">%1$s개 항목</item>
+        <item quantity="zero">0개 항목</item>
+        <item quantity="one">1개 항목</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(%1$d개 초대 대기 중)</item>
+        <item quantity="one">(1개 초대 대기 중)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">결과 %1$s개</item>
+        <item quantity="one">결과 1개</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">진행 중인 채팅 %1$s개</item>
+        <item quantity="one">진행 중인 채팅 1개</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">새 알림 %1$s개</item>
+        <item quantity="one">새 알림 1개</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">새 초대 %1$s개</item>
+        <item quantity="one">새 초대 1개</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">새 항목 %1$s개</item>
+        <item quantity="one">새 항목 1개</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">대화 상대 %1$s명</item>
+        <item quantity="one">대화 상대 1명</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">그룹 %1$s개</item>
+        <item quantity="one">그룹 1개</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">댓글 %1$s개</item>
+        <item quantity="one">댓글 1개</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">좋아요 %1$s개</item>
+        <item quantity="one">좋아요 1개</item>
+    </plurals>
+</resources>

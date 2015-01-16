@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/view_channel_removed_overlay" android:background="@color/contacts_contact_name_overlay" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.gesture.GestureOverlayView android:layout_width="fill_parent" android:layout_height="fill_parent" android:gestureColor="@color/transparent" android:eventsInterceptionEnabled="true" />
+    <TextView android:textSize="@dimen/channel_doesnt_exist_text_size" android:textColor="@color/white" android:id="@id/view_channel_removed_overlay_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/channel_removed" android:layout_centerInParent="true" android:textIsSelectable="false" />
+</RelativeLayout>

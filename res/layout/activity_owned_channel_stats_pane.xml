@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <FrameLayout android:id="@id/channel_subscribers_frame" android:background="@color/owned_channels_lobby_stats_subscribers_color" android:paddingLeft="@dimen/owned_channel_lobby_pane_horizontal_padding" android:paddingRight="@dimen/owned_channel_lobby_pane_horizontal_padding" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_marginBottom="1.0px" android:layout_weight="1.0">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/owned_channel_lobby_stats_count_font_size" android:textStyle="bold" android:textColor="@color/white" android:id="@id/channel_number_of_subscribers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <TextView android:textSize="@dimen/owned_channel_lobby_stats_caption_font_size" android:textColor="@color/white" android:id="@id/channel_subscribers_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/subscribers_caption" />
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@id/channel_visits_frame" android:background="@color/owned_channels_lobby_stats_visits_color" android:paddingLeft="@dimen/owned_channel_lobby_pane_horizontal_padding" android:paddingRight="@dimen/owned_channel_lobby_pane_horizontal_padding" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_marginBottom="1.0px" android:layout_weight="1.0">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/owned_channel_lobby_stats_count_font_size" android:textStyle="bold" android:textColor="@color/white" android:id="@id/channel_number_of_visits" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <TextView android:textSize="@dimen/owned_channel_lobby_stats_caption_font_size" android:textColor="@color/white" android:id="@id/channel_visits_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/visits_caption" />
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@id/channel_posts_frame" android:background="@color/owned_channels_lobby_stats_posts_color" android:paddingLeft="@dimen/owned_channel_lobby_pane_horizontal_padding" android:paddingRight="@dimen/owned_channel_lobby_pane_horizontal_padding" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0">
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/owned_channel_lobby_stats_count_font_size" android:textStyle="bold" android:textColor="@color/white" android:id="@id/channel_number_of_posts" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+                <TextView android:textSize="@dimen/owned_channel_lobby_stats_caption_font_size" android:textColor="@color/white" android:id="@id/channel_posts_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/posts_caption" />
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:textSize="@dimen/lobby_caption_font_size" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@id/channel_bottom_caption" android:background="@color/black" android:paddingTop="@dimen/lobby_caption_top_padding" android:paddingBottom="@dimen/lobby_caption_bottom_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/stats_caption" />
+    </LinearLayout>
+</RelativeLayout>

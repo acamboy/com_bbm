@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/sticker_pack_dialog_font_size" android:padding="@dimen/sticker_pack_dialog_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sticker_store_details_screen_already_purchased" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/divider_common" />
+    <Button android:textSize="@dimen/sticker_pack_dialog_font_size" android:id="@id/stickerpack_install" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sticker_store_details_screen_purchase_install" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/divider_common" />
+    <Button android:textSize="@dimen/sticker_pack_dialog_font_size" android:id="@id/stickerpack_restore" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/restore_sticker_purchases" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/divider_common" />
+    <Button android:textSize="@dimen/sticker_pack_dialog_font_size" android:id="@id/stickerpack_cancel" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/cancel" />
+</LinearLayout>

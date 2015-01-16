@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/pane_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/footer_action_bar">
+        <LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/footer_action_bar" android:layout_alignParentTop="true">
+            <com.bbm.ui.views.ShadowFrame android:id="@id/channel_stats_counts" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lobby_padding" android:layout_marginTop="@dimen/lobby_padding" android:layout_marginRight="@dimen/lobby_padding" android:layout_marginBottom="@dimen/lobby_padding" />
+            <Spinner android:id="@id/channel_stats_time_period" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lobby_padding" android:layout_marginRight="@dimen/lobby_padding" android:layout_marginBottom="@dimen/lobby_padding" style="@style/CascadesSpinner" />
+            <com.bbm.ui.views.ShadowFrame android:id="@id/channel_stats_engagement" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lobby_padding" android:layout_marginRight="@dimen/lobby_padding" android:layout_marginBottom="@dimen/lobby_padding" />
+            <com.bbm.ui.views.ShadowFrame android:id="@id/channel_stats_joins" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/lobby_padding" android:layout_marginRight="@dimen/lobby_padding" android:layout_marginBottom="@dimen/lobby_padding" />
+        </LinearLayout>
+    </ScrollView>
+    <ViewStub android:id="@id/channel_removed" android:layout="@layout/activity_channel_child" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+</RelativeLayout>

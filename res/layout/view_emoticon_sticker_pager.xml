@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/tab_buttons" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="@dimen/emoticon_sticker_tab_bar_height">
+        <ImageButton android:id="@id/shop_button" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/selector_stickers_pager_cart" android:layout_weight="1.0" android:contentDescription="@string/blank" />
+        <ImageButton android:id="@id/emoticon_button" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/selector_stickers_pager_emoticon" android:layout_weight="1.0" android:contentDescription="@string/blank" />
+        <ImageButton android:id="@id/sticker_button" android:background="@null" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/selector_stickers_pager_sticker" android:layout_weight="1.0" android:contentDescription="@string/blank" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/page_indicator_container" android:layout_below="@id/tab_buttons">
+        <com.bbm.ui.EmoticonPicker android:id="@id/emoticon_picker" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <com.bbm.ui.CustomViewPager android:id="@id/emoticon_sticker_viewpager" android:background="@color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/top_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tab_buttons">
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/emoticon_sticker_pager_top_divider" android:scaleType="fitXY" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/bottom_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/page_indicator_container">
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/emoticon_sticker_pager_bottom_divider" android:scaleType="fitXY" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/page_indicator_container" android:layout_width="fill_parent" android:layout_height="@dimen/emoticon_sticker_page_indicator_container_height" android:layout_alignParentBottom="true">
+        <view android:id="@id/page_indicator_scroller" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="fill_parent" class="com.bbm.ui.EmoticonStickerPager$PageIndicatorScrollView">
+            <LinearLayout android:orientation="horizontal" android:id="@id/page_indicator" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        </view>
+    </LinearLayout>
+</RelativeLayout>

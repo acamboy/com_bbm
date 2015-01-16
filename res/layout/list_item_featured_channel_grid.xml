@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="@dimen/channel_grid_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.SquaredObservingImageView android:layout_gravity="center" android:id="@id/channel_avatar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <ImageView android:id="@id/channel_splat" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_badge_40_40" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:contentDescription="@string/blank" />
+    <RelativeLayout android:id="@id/channel_name_overlay" android:background="@color/contacts_contact_name_overlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignBottom="@id/channel_avatar">
+        <com.bbm.ui.ObservingImageView android:id="@id/channel_show_verified" android:visibility="gone" android:layout_width="@dimen/contacts_busy_icon_size" android:layout_height="@dimen/contacts_busy_icon_size" android:src="@drawable/ic_official" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/blank" />
+        <com.bbm.ui.InlineImageTextView android:textSize="@dimen/contacts_name_text_size" android:textColor="@color/white" android:id="@id/channel_name" android:paddingLeft="@dimen/contacts_name_padding_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:minLines="1" android:layout_toRightOf="@id/channel_show_verified" android:layout_centerVertical="true" android:textIsSelectable="false" />
+    </RelativeLayout>
+</RelativeLayout>

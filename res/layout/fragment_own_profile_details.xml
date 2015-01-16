@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/fragment_own_profile_details_root" android:paddingLeft="@dimen/own_profile_root_padding_left" android:paddingRight="@dimen/own_profile_root_padding_right" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.bbm.ui.SendEditText android:textSize="@dimen/own_profile_mood_text_size" android:id="@id/own_profile_mood" android:nextFocusLeft="@id/fragment_own_profile_details_root" android:nextFocusRight="@id/fragment_own_profile_details_root" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/own_profile_mood_margin_top" android:hint="@string/profile_mood_hint" android:imeOptions="actionDone" style="@style/BB10EditMood" />
+        <Spinner android:id="@id/own_profile_status_spinner" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/own_profile_spinner_padding_top" android:minHeight="@dimen/own_profile_location_container_height" style="@style/CascadesSpinner" />
+        <RelativeLayout android:orientation="horizontal" android:paddingTop="@dimen/own_profile_location_container_padding_bottom" android:paddingBottom="@dimen/own_profile_location_container_padding_bottom" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <TextView android:id="@id/my_pin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/profile_default_pin" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <Button android:id="@id/copy_pin_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@android:string/copy" android:layout_alignParentRight="true" style="@style/ProfileButton" />
+            <Button android:id="@id/share_pin_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/own_profile_share_pin_button_margin_right" android:text="@string/share" android:layout_toLeftOf="@id/copy_pin_button" style="@style/ProfileButton" />
+        </RelativeLayout>
+        <com.bbm.ui.LocationTimezoneContainer android:id="@id/own_profile_location_container" android:background="@drawable/profile_list_background" android:paddingTop="@dimen/own_profile_location_container_padding_top" android:paddingBottom="@dimen/own_profile_location_container_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/ownProfileRoot" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/channel_post_top_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/footer_action_bar" android:layout_alignParentTop="true">
+        <ViewStub android:id="@id/channel_post_error_layout_stub" android:layout="@layout/view_channel_post_error" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ListView android:id="@id/channel_post_list" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@drawable/postbreak_border" android:dividerHeight="@dimen/post_item_seperator_height" android:headerDividersEnabled="false" android:footerDividersEnabled="false" />
+        <View android:background="@color/channel_wall_background_color" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <ViewStub android:id="@id/channel_removed" android:layout="@layout/activity_channel_child" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+</RelativeLayout>

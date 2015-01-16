@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/channel_preview_header" android:background="@drawable/list_item_default_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.SquaredObservingImageView android:layout_gravity="center_vertical" android:id="@id/channel_avatar" android:src="@drawable/default_avatar" android:layout_alignParentLeft="true" style="@style/ListItemAvatar" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/channel_name_verify" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@id/join_channel" android:layout_toRightOf="@id/channel_avatar" android:layout_alignParentTop="true">
+        <com.bbm.ui.InlineImageTextView android:layout_gravity="left" android:id="@id/channel_name" android:paddingLeft="@dimen/featured_post_item_channel_name_padding_left" android:clickable="false" android:layout_width="wrap_content" style="@style/ChannelListItemTitleField" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/channel_show_verified" android:layout_width="@dimen/channel_details_name_size" android:layout_height="@dimen/channel_details_name_size" android:src="@drawable/ic_official" android:scaleType="centerInside" android:contentDescription="@string/blank" />
+    </LinearLayout>
+    <ImageButton android:layout_gravity="center_vertical" android:id="@id/join_channel" android:background="@null" android:src="@drawable/selector_join_channel_action" android:layout_alignParentRight="true" android:contentDescription="@string/blank" style="@style/ListItemAvatar" />
+    <com.bbm.ui.InlineImageTextView android:id="@id/channel_description" android:paddingLeft="@dimen/featured_post_item_channel_name_padding_left" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/join_channel" android:layout_toRightOf="@id/channel_avatar" android:layout_below="@id/channel_name_verify" style="@style/ListItemSubtitleField" />
+    <include android:id="@id/website_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/channel_avatar" layout="@layout/divider_common" />
+</RelativeLayout>

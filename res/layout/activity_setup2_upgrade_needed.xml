@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/setup2_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="0.0dip" android:fillViewport="true" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/setup_text_size" android:textColor="@color/setup2_textFg" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/setup_text_edge_margin" android:layout_marginRight="@dimen/setup_text_edge_margin" android:layout_marginBottom="@dimen/setup_margin" android:text="@string/cannot_switch_bbm_to_the_current_device" />
+            <TextView android:textSize="@dimen/setup_text_size" android:textColor="@color/setup2_textFg" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/setup_text_edge_margin" android:layout_marginRight="@dimen/setup_text_edge_margin" android:text="@string/a_newer_version_of_bbm_is_required" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout style="@style/Setup2ActionFooter">
+        <Button android:id="@id/upgrade_button" android:text="@string/button_upgrade_google_play_services" style="@style/Setup2Button.Inverse" />
+    </LinearLayout>
+</LinearLayout>

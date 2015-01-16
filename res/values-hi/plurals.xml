@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">प्रसारण संदेश %1$s संपर्कों को भेजा गया</item>
+        <item quantity="one">प्रसारण संदेश 1 संपर्क को भेजा गया</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">%1$s आइटम</item>
+        <item quantity="zero">0 आइटम</item>
+        <item quantity="one">1 आइटम</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(%1$d आमंत्रण प्रतीक्षारत)</item>
+        <item quantity="one">(1 आमंत्रण प्रतीक्षारत)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">%1$s परिणाम</item>
+        <item quantity="one">1 परिणाम</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">%1$s सक्रिय चैट्स</item>
+        <item quantity="one">1 सक्रिय चैट</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">%1$s नई सूचनाएं</item>
+        <item quantity="one">1 नई सूचना</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">%1$s नए आमंत्रण</item>
+        <item quantity="one">1 नया आमंत्रण</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">%1$s नए आइटम</item>
+        <item quantity="one">1 नया आइटम</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">%1$s संपर्क</item>
+        <item quantity="one">1 संपर्क</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">%1$s समूह</item>
+        <item quantity="one">1 समूह</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">%1$s टिप्पणियां</item>
+        <item quantity="one">1 टिप्पणी</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">%1$s ने पसंद किया,</item>
+        <item quantity="one">1 ने पसंद किया,</item>
+    </plurals>
+</resources>

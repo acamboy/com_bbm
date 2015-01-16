@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/channel_owner_settings" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <Switch android:id="@id/allow_bbm_chats" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Common.Switch" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/day_hours" android:paddingLeft="@dimen/settings_item_padding_left" android:paddingRight="@dimen/settings_item_padding_right" android:paddingBottom="@dimen/settings_item_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.bbm.ui.DateTimePickerView android:id="@id/start_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.75" custom:dateLabel="@string/channel_office_hours_from" custom:type="timeOnly" />
+        <Space android:layout_width="@dimen/settings_item_padding_left" android:layout_height="wrap_content" android:layout_weight="0.001" />
+        <com.bbm.ui.DateTimePickerView android:id="@id/end_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.75" custom:dateLabel="@string/channel_office_hours_to" custom:type="timeOnly" />
+    </LinearLayout>
+</LinearLayout>

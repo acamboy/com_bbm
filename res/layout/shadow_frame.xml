@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/shadow_frame_vertical_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/shadow_frame_right_shadow" android:layout_toRightOf="@id/shadow_frame_left_shadow">
+        <View android:id="@id/shadow_frame_top_shadow" android:background="#ffaaaaaa" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <ViewStub android:id="@id/contents" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <View android:id="@id/shadow_frame_bottom_shadow_1" android:background="@color/lobby_grey" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <View android:id="@id/shadow_frame_bottom_shadow_2" android:background="#ff666666" android:layout_width="fill_parent" android:layout_height="2.0px" />
+        <View android:id="@id/shadow_frame_bottom_shadow_3" android:background="#ffaaaaaa" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_marginLeft="2.0px" android:layout_marginRight="2.0px" />
+    </LinearLayout>
+    <View android:id="@id/shadow_frame_left_shadow" android:background="#ffaaaaaa" android:layout_width="1.0px" android:layout_height="wrap_content" android:layout_marginBottom="2.0px" android:layout_alignTop="@id/shadow_frame_vertical_layout" android:layout_alignBottom="@id/shadow_frame_vertical_layout" android:layout_alignParentLeft="true" />
+    <View android:id="@id/shadow_frame_right_shadow" android:background="#ffaaaaaa" android:layout_width="1.0px" android:layout_height="wrap_content" android:layout_marginBottom="2.0px" android:layout_alignTop="@id/shadow_frame_vertical_layout" android:layout_alignBottom="@id/shadow_frame_vertical_layout" android:layout_alignParentRight="true" />
+</RelativeLayout>

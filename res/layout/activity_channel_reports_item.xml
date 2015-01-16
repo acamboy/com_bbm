@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:background="@color/white" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.SquaredObservingImageView android:id="@id/channel_reports_post_image" android:layout_width="@dimen/channel_reports_photo_size" android:layout_height="@dimen/channel_reports_photo_size" android:layout_marginLeft="5.0dip" android:src="@drawable/ic_navigationbar_channel" android:scaleType="centerCrop" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/channel_reports_flagcount" android:layout_width="@dimen/channel_reports_flagcount_size" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/channel_reports_post_number_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/report_pressed" android:scaleType="fitCenter" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/channel_reports_post_number_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toLeftOf="@id/channel_reports_flagcount" android:layout_toRightOf="@id/channel_reports_post_image">
+        <com.bbm.ui.InlineImageTextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@color/black" android:id="@id/channel_reports_post_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+        <com.bbm.ui.InlineImageTextView android:textSize="14.0sp" android:textColor="@color/black" android:id="@id/channel_reports_post_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="12.0sp" android:id="@id/channel_reports_post_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" />
+    </LinearLayout>
+    <ImageView android:id="@id/channel_view_grey_bar" android:background="@color/grey" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="2.0sp" android:layout_alignParentBottom="true" android:contentDescription="@string/blank" />
+    <ViewStub android:id="@id/channel_removed" android:layout="@layout/activity_channel_child" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

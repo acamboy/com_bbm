@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">Uitsaai-boodskap na %1$s kontakte gestuur</item>
+        <item quantity="one">Uitsaai-boodskap na 1 kontak gestuur</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">%1$s items</item>
+        <item quantity="zero">0 item</item>
+        <item quantity="one">1 item</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">(%1$d hangende uitnodigings)</item>
+        <item quantity="one">(1 hangende uitnodiging)</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">%1$s Resultate</item>
+        <item quantity="one">1 Resultaat</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">%1$s Aktiewe kletse</item>
+        <item quantity="one">1 Aktiewe klets</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">%1$s Nuwe kennisgewings</item>
+        <item quantity="one">1 Nuwe kennisgewing</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">%1$s Nuwe uitnodigings</item>
+        <item quantity="one">1 Nuwe uitnodiging</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">%1$s Nuwe items</item>
+        <item quantity="one">1 Nuwe item</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">%1$s Kontakte</item>
+        <item quantity="one">1 Kontak</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">%1$s Groepe</item>
+        <item quantity="one">1 Groep</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">%1$s Kommentaar</item>
+        <item quantity="one">1 Kommentaar</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">%1$s Aantal hou van,</item>
+        <item quantity="one">1 Aantal hou van,</item>
+    </plurals>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <fragment android:id="@id/glympse_viewer_map" android:layout_width="fill_parent" android:layout_height="fill_parent" class="com.glympse.map.lib.Map" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer_action_bar">
+        <com.bbm.ui.GlympseUserSelector android:id="@id/glympse_viewer_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+</RelativeLayout>

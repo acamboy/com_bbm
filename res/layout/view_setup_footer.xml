@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/setup_footer_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/setup_footer_button_left" android:background="@drawable/setup_button" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/message_button_cancel" android:layout_weight="1.0" />
+    <Button android:textSize="20.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:id="@id/setup_footer_button_right" android:background="@drawable/setup_button" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/button_continue" android:layout_weight="1.0" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/tab">
+            <com.bbm.ui.activities.UnmeasuredLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <FrameLayout android:id="@id/content_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+            </com.bbm.ui.activities.UnmeasuredLayout>
+        </LinearLayout>
+        <ImageView android:id="@id/drop_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/actionbar_drop_shadow" android:scaleType="fitXY" android:layout_above="@id/tab" android:contentDescription="@string/blank" />
+        <com.bbm.ui.MainTabBarView android:id="@id/tab" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/content_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/repeat_screen_overlay" android:scaleType="fitXY" android:contentDescription="@string/blank" />
+</FrameLayout>

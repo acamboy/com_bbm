@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/settings_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer_action_bar" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/channel_owner_settings" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Switch android:id="@id/allow_bbm_chats" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/channel_settings_allow_chats" android:onClick="onAllowChatClicked" style="@style/Common.Switch" />
+                <RelativeLayout android:id="@id/chat_schedule" android:paddingLeft="@dimen/settings_item_padding_left" android:paddingRight="@dimen/settings_item_padding_right" android:paddingBottom="@dimen/settings_item_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_small_padding_top" android:baselineAligned="false">
+                    <TextView android:textSize="@dimen/fontSizeMedium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/channel_settings_chat_hours" android:layout_alignParentLeft="true" />
+                    <TextView android:textSize="@dimen/fontSizeMedium" android:textColor="@color/blue" android:id="@id/chat_hours" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:onClick="onViewSchedule" />
+                </RelativeLayout>
+                <TextView android:textSize="@dimen/fontSizeXSmall" android:textColor="@color/channel_settings_info_label_color" android:paddingLeft="@dimen/settings_item_padding_left" android:paddingRight="@dimen/settings_item_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/channel_settings_chat_hours_info" />
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_small_padding_top" android:layout_marginBottom="@dimen/settings_item_small_padding_bottom" layout="@layout/divider_common" />
+                <Switch android:id="@id/allow_bbm_comments" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/channel_settings_allow_comments" style="@style/Common.Switch" />
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_small_padding_top" android:layout_marginBottom="@dimen/settings_item_small_padding_bottom" layout="@layout/divider_common" />
+                <Switch android:enabled="false" android:id="@id/approve_bbm_comments" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/channel_settings_approve_comments" style="@style/Common.Switch" />
+                <TextView android:textSize="@dimen/fontSizeXSmall" android:textColor="@color/channel_settings_info_label_color" android:paddingLeft="@dimen/settings_item_padding_left" android:paddingRight="@dimen/settings_item_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/channel_settings_approve_comments_info" />
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_small_padding_top" android:layout_marginBottom="@dimen/settings_item_small_padding_bottom" layout="@layout/divider_common" />
+                <Switch android:id="@id/searchable_channel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/channel_settings_searchable" style="@style/Common.Switch" />
+                <TextView android:textSize="@dimen/fontSizeXSmall" android:textColor="@color/channel_settings_info_label_color" android:paddingLeft="@dimen/settings_item_padding_left" android:paddingRight="@dimen/settings_item_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/channel_settings_searchable_info" />
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_small_padding_top" android:layout_marginBottom="@dimen/settings_item_small_padding_bottom" layout="@layout/divider_common" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Switch android:id="@id/include_activities_in_updates" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/channel_settings_show_activity_in_updates" style="@style/Common.Switch" />
+                <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_small_padding_top" android:layout_marginBottom="@dimen/settings_item_small_padding_bottom" layout="@layout/divider_common" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ViewStub android:id="@id/channel_removed" android:layout="@layout/activity_channel_child" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+</RelativeLayout>

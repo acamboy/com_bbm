@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.SquaredObservingImageView android:id="@id/subscriber_avatar" android:layout_width="@dimen/subscriber_avatar_size" android:layout_height="@dimen/subscriber_avatar_size" android:scaleType="fitXY" android:contentDescription="@string/blank" />
+    <com.bbm.ui.InlineImageTextView android:textSize="@dimen/subscriber_name_size" android:textColor="@color/black" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/subscriber_name" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:singleLine="true" />
+</LinearLayout>

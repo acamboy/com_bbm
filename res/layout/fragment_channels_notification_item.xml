@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.bbm.ui.SquaredObservingImageView android:id="@id/notification_image" android:layout_width="@dimen/notification_image_size" android:layout_height="@dimen/notification_image_size" android:src="@drawable/default_avatar" android:scaleType="centerCrop" android:layout_weight="0.0" />
+        <com.bbm.ui.LinkifyTextView android:textSize="@dimen/notification_text_size" android:textColor="@color/black" android:gravity="center_vertical" android:id="@id/notification_text" android:layout_width="0.0px" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_weight="1.0" />
+        <ImageView android:id="@id/notification_delete_button" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/selector_clear_channel_notification_button" android:layout_weight="0.0" android:contentDescription="@string/blank" />
+    </LinearLayout>
+    <include android:id="@id/channel_view_grey_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/divider_common" />
+</LinearLayout>

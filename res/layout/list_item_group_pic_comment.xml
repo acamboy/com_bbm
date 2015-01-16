@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:paddingRight="@dimen/contact_list_item_padding_right" android:paddingBottom="@dimen/contact_list_item_padding_bottom" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.bbm.ui.ObservingImageView android:textSize="@dimen/fontSizeMedium" android:id="@id/comment_avatar" android:layout_marginRight="@dimen/group_picture_comment_list_item_avatar_margin_right" android:scaleType="centerCrop" style="@style/ListItemAvatar" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/comment_avatar" android:layout_centerVertical="true">
+        <com.bbm.ui.InlineImageTextView android:id="@id/comment_name" android:layout_alignParentTop="true" style="@style/ListItemTitleField" />
+        <com.bbm.ui.LinkifyTextView android:textSize="@dimen/fontSizeXSmall" android:textColor="@drawable/text_item_font_color_selector" android:id="@id/comment_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/comment_name" />
+        <TextView android:textSize="@dimen/fontSizeXSmall" android:textColor="@color/black" android:id="@id/comment_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/comment_message" style="@style/ListItemSubtitleField" />
+    </RelativeLayout>
+</RelativeLayout>

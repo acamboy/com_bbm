@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textAppearance="@style/InvitePinLabel" android:id="@id/invite_to" android:paddingLeft="@dimen/invite_activity_default_margin" android:paddingTop="@dimen/invite_activity_top_margin" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/invite_pin" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/invite_top_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/invite_to">
+        <GridLayout android:orientation="vertical" android:id="@id/invite_grid" android:paddingLeft="@dimen/invite_activity_horizontal_grid_spacing" android:paddingRight="@dimen/invite_activity_horizontal_grid_spacing" android:layout_width="fill_parent" android:layout_height="wrap_content" android:rowOrderPreserved="false" android:columnCount="2" android:useDefaultMargins="true" android:alignmentMode="alignBounds" />
+        <EditText android:id="@id/invite_pin" android:paddingLeft="@dimen/invite_activity_default_margin" android:paddingRight="@dimen/invite_activity_default_margin" android:nextFocusLeft="@id/invite_to" android:nextFocusRight="@id/invite_to" android:layout_width="fill_parent" android:layout_height="wrap_content" android:ems="10" android:inputType="textVisiblePassword|textNoSuggestions" android:imeOptions="actionDone" style="@style/BB10EditNoBox" />
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/divider_one_px" android:scaleType="fitXY" android:contentDescription="@string/blank" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/invite_suggestion_container" android:background="#ffdddddd" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/invite_top_container" android:layout_alignParentLeft="true">
+        <TextView android:id="@id/invite_pin_suggestion" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textIsSelectable="false" style="@style/InviteSuggestionStyle" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/list_item_default_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.ObservingImageView android:id="@id/contact_avatar" android:scaleType="centerCrop" android:layout_centerVertical="true" style="@style/ListItemAvatar" />
+    <LinearLayout android:orientation="vertical" android:paddingRight="@dimen/contact_list_item_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/contact_avatar" android:layout_centerVertical="true">
+        <com.bbm.ui.InlineImageTextView android:id="@id/contact_name" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListItemTitleField" />
+        <com.bbm.ui.InlineImageTextView android:id="@id/contact_message" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListItemSubtitleField" />
+    </LinearLayout>
+    <ImageView android:id="@id/divider" android:background="@drawable/list_item_default_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/contact_avatar" android:layout_alignParentBottom="true" android:contentDescription="@string/blank" />
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="@dimen/glympse_viewer_selector_item_padding" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/glympse_user_selector_item_avatar_border" android:padding="@dimen/glympse_viewer_selector_item_avatar_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/glympse_viewer_selector_item_avatar_margin_right" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <com.glympse.android.ui.GLYAvatarView android:id="@id/glympse_user_selector_item_avatar" android:layout_width="@dimen/avatar_size" android:layout_height="@dimen/avatar_size" android:contentDescription="@string/blank" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/glympse_user_selector_item_avatar_border" android:layout_centerVertical="true">
+        <com.bbm.ui.InlineImageTextView android:textSize="@dimen/fontSizeSmall" android:textColor="@color/white" android:ellipsize="marquee" android:id="@id/glympse_user_selector_item_display_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/fontSizeSmall" android:textStyle="bold" android:textColor="@color/white" android:id="@id/glympse_user_selector_item_duration" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/fontSizeXSmall" android:textColor="@color/white" android:id="@id/glympse_user_selector_item_updated" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/fontSizeXSmall" android:textColor="@color/white" android:id="@id/glympse_user_selector_item_speed" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

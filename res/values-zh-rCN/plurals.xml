@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="broadcast_activity_done">
+        <item quantity="other">广播消息已发送至 %1$s 个联系人</item>
+        <item quantity="one">广播消息已发送至 1 个联系人</item>
+    </plurals>
+    <plurals name="file_picker_items">
+        <item quantity="other">%1$s 个项目</item>
+        <item quantity="zero">0 个项目</item>
+        <item quantity="one">1 个项目</item>
+    </plurals>
+    <plurals name="invites_received_chat_item_count">
+        <item quantity="other">（%1$d 个邀请等待中）</item>
+        <item quantity="one">（1 个邀请等待中）</item>
+    </plurals>
+    <plurals name="search_number_of_results">
+        <item quantity="other">%1$s 个结果</item>
+        <item quantity="one">1 个结果</item>
+    </plurals>
+    <plurals name="slide_menu_active_chats">
+        <item quantity="other">%1$s 个活动的聊天</item>
+        <item quantity="one">1 个活动的聊天</item>
+    </plurals>
+    <plurals name="slide_menu_new_channelupdates">
+        <item quantity="other">%1$s 个新通知</item>
+        <item quantity="one">1 个新通知</item>
+    </plurals>
+    <plurals name="slide_menu_new_invites">
+        <item quantity="other">%1$s 个新邀请</item>
+        <item quantity="one">1 个新邀请</item>
+    </plurals>
+    <plurals name="slide_menu_new_updates">
+        <item quantity="other">%1$s 个新项目</item>
+        <item quantity="one">1 个新项目</item>
+    </plurals>
+    <plurals name="slide_menu_total_contacts">
+        <item quantity="other">%1$s 个联系人</item>
+        <item quantity="one">1 个联系人</item>
+    </plurals>
+    <plurals name="slide_menu_total_groups">
+        <item quantity="other">%1$s 组</item>
+        <item quantity="one">1 组</item>
+    </plurals>
+    <plurals name="update_channel_stats_comments">
+        <item quantity="other">%1$s 条评论</item>
+        <item quantity="one">1 条评论</item>
+    </plurals>
+    <plurals name="update_channel_stats_likes">
+        <item quantity="other">%1$s 个赞</item>
+        <item quantity="one">1 个赞</item>
+    </plurals>
+</resources>
