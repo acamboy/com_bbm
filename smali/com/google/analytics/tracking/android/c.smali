@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 165
+    .line 168
     iput-object p1, p0, Lcom/google/analytics/tracking/android/c;->a:Lcom/google/analytics/tracking/android/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +29,7 @@
     .locals 2
 
     .prologue
-    .line 169
+    .line 172
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "service connected, binder: "
@@ -46,13 +46,13 @@
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/aq;->c(Ljava/lang/String;)V
 
-    .line 171
+    .line 174
     :try_start_0
     invoke-interface {p2}, Landroid/os/IBinder;->getInterfaceDescriptor()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 174
+    .line 177
     const-string v1, "com.google.android.gms.analytics.internal.IAnalyticsService"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -61,12 +61,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 176
+    .line 179
     const-string v0, "bound to service"
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/aq;->c(Ljava/lang/String;)V
 
-    .line 177
+    .line 180
     iget-object v0, p0, Lcom/google/analytics/tracking/android/c;->a:Lcom/google/analytics/tracking/android/b;
 
     invoke-static {p2}, Lcom/google/android/gms/analytics/internal/IAnalyticsService$Stub;->asInterface(Landroid/os/IBinder;)Lcom/google/android/gms/analytics/internal/IAnalyticsService;
@@ -75,7 +75,7 @@
 
     iput-object v1, v0, Lcom/google/analytics/tracking/android/b;->e:Lcom/google/android/gms/analytics/internal/IAnalyticsService;
 
-    .line 178
+    .line 181
     iget-object v0, p0, Lcom/google/analytics/tracking/android/c;->a:Lcom/google/analytics/tracking/android/b;
 
     iget-object v0, v0, Lcom/google/analytics/tracking/android/b;->b:Lcom/google/analytics/tracking/android/d;
@@ -84,14 +84,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 189
+    .line 192
     :goto_0
     return-void
 
     :catch_0
     move-exception v0
 
-    .line 186
+    .line 189
     :cond_0
     iget-object v0, p0, Lcom/google/analytics/tracking/android/c;->a:Lcom/google/analytics/tracking/android/b;
 
@@ -99,14 +99,14 @@
 
     invoke-virtual {v0, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 187
+    .line 190
     iget-object v0, p0, Lcom/google/analytics/tracking/android/c;->a:Lcom/google/analytics/tracking/android/b;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/google/analytics/tracking/android/b;->a:Landroid/content/ServiceConnection;
 
-    .line 188
+    .line 191
     iget-object v0, p0, Lcom/google/analytics/tracking/android/c;->a:Lcom/google/analytics/tracking/android/b;
 
     iget-object v0, v0, Lcom/google/analytics/tracking/android/b;->c:Lcom/google/analytics/tracking/android/e;
@@ -122,7 +122,7 @@
     .locals 2
 
     .prologue
-    .line 193
+    .line 196
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "service disconnected: "
@@ -139,20 +139,20 @@
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/aq;->c(Ljava/lang/String;)V
 
-    .line 194
+    .line 197
     iget-object v0, p0, Lcom/google/analytics/tracking/android/c;->a:Lcom/google/analytics/tracking/android/b;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/google/analytics/tracking/android/b;->a:Landroid/content/ServiceConnection;
 
-    .line 195
+    .line 198
     iget-object v0, p0, Lcom/google/analytics/tracking/android/c;->a:Lcom/google/analytics/tracking/android/b;
 
     iget-object v0, v0, Lcom/google/analytics/tracking/android/b;->b:Lcom/google/analytics/tracking/android/d;
 
     invoke-interface {v0}, Lcom/google/analytics/tracking/android/d;->b()V
 
-    .line 196
+    .line 199
     return-void
 .end method

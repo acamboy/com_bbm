@@ -3,8 +3,8 @@
 .source "PagerTitleStrip.java"
 
 # interfaces
-.implements Landroid/support/v4/view/bt;
-.implements Landroid/support/v4/view/bu;
+.implements Landroid/support/v4/view/by;
+.implements Landroid/support/v4/view/bz;
 
 
 # instance fields

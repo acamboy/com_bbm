@@ -1,49 +1,64 @@
 .class final Lcom/bbm/ui/e/bk;
-.super Ljava/lang/Object;
-.source "SharedAdHolder.java"
+.super Lcom/bbm/j/a;
+.source "MessagesDelegateAdapter.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/e/bj;
+.field final synthetic a:Lcom/bbm/ui/e/be;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/e/bj;)V
+.method constructor <init>(Lcom/bbm/ui/e/be;)V
     .locals 0
 
     .prologue
-    .line 87
-    iput-object p1, p0, Lcom/bbm/ui/e/bk;->a:Lcom/bbm/ui/e/bj;
+    .line 299
+    iput-object p1, p0, Lcom/bbm/ui/e/bk;->a:Lcom/bbm/ui/e/be;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 2
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/e/bk;->a:Lcom/bbm/ui/e/bj;
+    .line 299
+    iget-object v0, p0, Lcom/bbm/ui/e/bk;->a:Lcom/bbm/ui/e/be;
 
-    invoke-static {v0}, Lcom/bbm/ui/e/bj;->a(Lcom/bbm/ui/e/bj;)Z
+    invoke-static {v0}, Lcom/bbm/ui/e/be;->b(Lcom/bbm/ui/e/be;)Lcom/bbm/d/a;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/bbm/ui/e/bk;->a:Lcom/bbm/ui/e/be;
 
-    .line 91
-    iget-object v0, p0, Lcom/bbm/ui/e/bk;->a:Lcom/bbm/ui/e/bj;
+    invoke-static {v1}, Lcom/bbm/ui/e/be;->a(Lcom/bbm/ui/e/be;)Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/ui/e/bj;->b(Lcom/bbm/ui/e/bj;)V
+    move-result-object v1
 
-    .line 93
-    :cond_0
-    return-void
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->K(Ljava/lang/String;)Lcom/bbm/d/eu;
+
+    move-result-object v0
+
+    iget-boolean v0, v0, Lcom/bbm/d/eu;->k:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
 .end method

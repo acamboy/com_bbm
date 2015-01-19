@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private aT:Ljava/io/File;
+.field private aS:Ljava/io/File;
 
 
 # direct methods
@@ -21,7 +21,7 @@
     .line 20
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/w;->aT:Ljava/io/File;
+    iput-object v0, p0, Lcom/glympse/android/hal/w;->aS:Ljava/io/File;
 
     .line 56
     if-eqz p3, :cond_2
@@ -67,7 +67,7 @@
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    iput-object v1, p0, Lcom/glympse/android/hal/w;->aT:Ljava/io/File;
+    iput-object v1, p0, Lcom/glympse/android/hal/w;->aS:Ljava/io/File;
 
     .line 76
     :goto_0
@@ -75,7 +75,7 @@
 
     .line 80
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/w;->aT:Ljava/io/File;
+    iget-object v0, p0, Lcom/glympse/android/hal/w;->aS:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
     :try_end_0
@@ -153,7 +153,7 @@
 
     invoke-direct {v2, v1, v0}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    iput-object v2, p0, Lcom/glympse/android/hal/w;->aT:Ljava/io/File;
+    iput-object v2, p0, Lcom/glympse/android/hal/w;->aS:Ljava/io/File;
 
     goto :goto_0
 
@@ -287,11 +287,11 @@
 
     .prologue
     .line 96
-    iget-object v0, p0, Lcom/glympse/android/hal/w;->aT:Ljava/io/File;
+    iget-object v0, p0, Lcom/glympse/android/hal/w;->aS:Ljava/io/File;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/hal/w;->aT:Ljava/io/File;
+    iget-object v0, p0, Lcom/glympse/android/hal/w;->aS:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -320,7 +320,7 @@
     :try_start_0
     new-instance v0, Ljava/io/File;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/w;->aT:Ljava/io/File;
+    iget-object v1, p0, Lcom/glympse/android/hal/w;->aS:Ljava/io/File;
 
     invoke-direct {v0, v1, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -362,7 +362,7 @@
 
     .line 263
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/w;->aT:Ljava/io/File;
+    iget-object v0, p0, Lcom/glympse/android/hal/w;->aS:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
@@ -420,7 +420,7 @@
     :try_start_0
     new-instance v0, Ljava/io/File;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/w;->aT:Ljava/io/File;
+    iget-object v1, p0, Lcom/glympse/android/hal/w;->aS:Ljava/io/File;
 
     invoke-direct {v0, v1, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -443,7 +443,7 @@
 .end method
 
 .method public readBinary(Ljava/lang/String;)[B
-    .locals 7
+    .locals 8
 
     .prologue
     const/4 v0, 0x0
@@ -455,7 +455,7 @@
     :try_start_0
     new-instance v3, Ljava/io/File;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/w;->aT:Ljava/io/File;
+    iget-object v1, p0, Lcom/glympse/android/hal/w;->aS:Ljava/io/File;
 
     invoke-direct {v3, v1, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
@@ -475,9 +475,9 @@
     :cond_1
     invoke-virtual {v3}, Ljava/io/File;->length()J
 
-    move-result-wide v1
+    move-result-wide v6
 
-    long-to-int v5, v1
+    long-to-int v5, v6
 
     .line 172
     new-array v1, v5, [B
@@ -667,7 +667,7 @@
     :try_start_0
     new-instance v1, Ljava/io/File;
 
-    iget-object v3, p0, Lcom/glympse/android/hal/w;->aT:Ljava/io/File;
+    iget-object v3, p0, Lcom/glympse/android/hal/w;->aS:Ljava/io/File;
 
     invoke-direct {v1, v3, p1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 

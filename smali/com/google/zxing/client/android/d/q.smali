@@ -79,9 +79,7 @@
 
     check-cast v0, Lcom/google/zxing/client/a/ac;
 
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/ac;->b()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/google/zxing/client/a/ac;->a:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/zxing/client/android/r;->a(Ljava/lang/String;)Z
 
@@ -130,9 +128,7 @@
     check-cast v0, Lcom/google/zxing/client/a/ac;
 
     .line 67
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/ac;->b()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/google/zxing/client/a/ac;->a:Ljava/lang/String;
 
     .line 68
     packed-switch p1, :pswitch_data_0
@@ -175,7 +171,7 @@
     .end packed-switch
 .end method
 
-.method public final e()Z
+.method public final d()Z
     .locals 6
 
     .prologue
@@ -187,9 +183,7 @@
     check-cast v0, Lcom/google/zxing/client/a/ac;
 
     .line 92
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/ac;->b()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/google/zxing/client/a/ac;->a:Ljava/lang/String;
 
     sget-object v2, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 

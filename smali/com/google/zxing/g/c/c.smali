@@ -694,21 +694,21 @@
 
     int-to-double v8, v8
 
-    int-to-double v11, v4
+    int-to-double v12, v4
 
-    div-double/2addr v8, v11
+    div-double/2addr v8, v12
 
-    const-wide/high16 v11, 0x3fe0000000000000L
+    const-wide/high16 v12, 0x3fe0000000000000L
 
-    sub-double/2addr v8, v11
+    sub-double/2addr v8, v12
 
     invoke-static {v8, v9}, Ljava/lang/Math;->abs(D)D
 
     move-result-wide v8
 
-    const-wide/high16 v11, 0x4034000000000000L
+    const-wide/high16 v12, 0x4034000000000000L
 
-    mul-double/2addr v8, v11
+    mul-double/2addr v8, v12
 
     double-to-int v4, v8
 
@@ -1171,9 +1171,7 @@
     move-result-object v1
 
     .line 257
-    invoke-virtual {v1}, Lcom/google/zxing/g/a/q;->c()I
-
-    move-result v2
+    iget v2, v1, Lcom/google/zxing/g/a/q;->c:I
 
     .line 259
     invoke-virtual {v1, p1}, Lcom/google/zxing/g/a/q;->a(Lcom/google/zxing/g/a/n;)Lcom/google/zxing/g/a/s;
@@ -1280,23 +1278,19 @@
     .line 101
     sget-object v7, Lcom/google/zxing/g/a/p;->f:Lcom/google/zxing/g/a/p;
 
-    invoke-virtual {v7}, Lcom/google/zxing/g/a/p;->a()I
-
-    move-result v7
+    iget v7, v7, Lcom/google/zxing/g/a/p;->k:I
 
     invoke-virtual {v3, v7, v9}, Lcom/google/zxing/b/a;->b(II)V
 
-    invoke-virtual {v2}, Lcom/google/zxing/b/d;->a()I
+    iget-object v2, v2, Lcom/google/zxing/b/d;->B:[I
 
-    move-result v2
+    aget v2, v2, v1
 
     invoke-virtual {v3, v2, v10}, Lcom/google/zxing/b/a;->b(II)V
 
     .line 106
     :cond_0
-    invoke-virtual {v0}, Lcom/google/zxing/g/a/p;->a()I
-
-    move-result v2
+    iget v2, v0, Lcom/google/zxing/g/a/p;->k:I
 
     invoke-virtual {v3, v2, v9}, Lcom/google/zxing/b/a;->b(II)V
 
@@ -1403,7 +1397,7 @@
 
     sget-object v0, Lcom/google/zxing/g/a/p;->b:Lcom/google/zxing/g/a/p;
 
-    goto/16 :goto_0
+    goto :goto_0
 
     :cond_7
     sget-object v0, Lcom/google/zxing/g/a/p;->e:Lcom/google/zxing/g/a/p;
@@ -1806,9 +1800,7 @@
     move-result-object v1
 
     .line 138
-    invoke-virtual {v2}, Lcom/google/zxing/g/a/q;->c()I
-
-    move-result v3
+    iget v3, v2, Lcom/google/zxing/g/a/q;->c:I
 
     invoke-virtual {v1}, Lcom/google/zxing/g/a/s;->b()I
 
@@ -1820,9 +1812,7 @@
     invoke-static {v3, v5}, Lcom/google/zxing/g/c/c;->a(ILcom/google/zxing/b/a;)V
 
     .line 144
-    invoke-virtual {v2}, Lcom/google/zxing/g/a/q;->c()I
-
-    move-result v4
+    iget v4, v2, Lcom/google/zxing/g/a/q;->c:I
 
     invoke-virtual {v1}, Lcom/google/zxing/g/a/s;->a()I
 
@@ -1847,7 +1837,7 @@
     iput-object v2, v3, Lcom/google/zxing/g/c/g;->c:Lcom/google/zxing/g/a/q;
 
     .line 156
-    invoke-virtual {v2}, Lcom/google/zxing/g/a/q;->d()I
+    invoke-virtual {v2}, Lcom/google/zxing/g/a/q;->a()I
 
     move-result v0
 
@@ -1879,8 +1869,6 @@
     goto/16 :goto_7
 
     .line 111
-    nop
-
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

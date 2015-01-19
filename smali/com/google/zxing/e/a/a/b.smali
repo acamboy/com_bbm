@@ -388,9 +388,7 @@
     .line 110
     sput-object v0, Lcom/google/zxing/e/a/a/b;->l:[[I
 
-    array-length v1, v0
-
-    add-int/lit8 v1, v1, -0x1
+    const/16 v1, 0x9
 
     aget-object v0, v0, v1
 
@@ -401,6 +399,8 @@
     return-void
 
     .line 51
+    nop
+
     :array_0
     .array-data 4
         0x7

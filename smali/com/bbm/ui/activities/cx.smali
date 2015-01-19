@@ -1,40 +1,41 @@
 .class final Lcom/bbm/ui/activities/cx;
-.super Ljava/util/TimerTask;
-.source "ChannelPostPhotoGalleryActivity.java"
+.super Lcom/bbm/ui/cn;
+.source "ChannelOfficeHoursSettingsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 63
-    iput-object p1, p0, Lcom/bbm/ui/activities/cx;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+    .line 178
+    iput-object p1, p0, Lcom/bbm/ui/activities/cx;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
-    invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a()V
+    .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/cx;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+    .line 181
+    iget-object v0, p0, Lcom/bbm/ui/activities/cx;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
-    new-instance v1, Lcom/bbm/ui/activities/cy;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->e(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/cy;-><init>(Lcom/bbm/ui/activities/cx;)V
+    .line 182
+    iget-object v0, p0, Lcom/bbm/ui/activities/cx;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->runOnUiThread(Ljava/lang/Runnable;)V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->finish()V
 
-    .line 75
+    .line 183
     return-void
 .end method

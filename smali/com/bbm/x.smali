@@ -1,160 +1,181 @@
-.class public final Lcom/bbm/x;
+.class final Lcom/bbm/x;
 .super Ljava/lang/Object;
-.source "LocationSynchronizer.java"
+.source "LifecycleLogger.java"
+
+# interfaces
+.implements Landroid/app/Application$ActivityLifecycleCallbacks;
 
 
 # instance fields
-.field a:J
-
-.field b:Landroid/location/Location;
-
-.field c:Ljava/util/Timer;
-
-.field d:Ljava/lang/String;
-
-.field e:Lcom/bbm/d/a;
-
-.field f:Landroid/content/Context;
-
-.field g:Landroid/os/Handler;
-
-.field public final h:Lcom/bbm/j/k;
+.field final synthetic a:Lcom/bbm/w;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/d/a;Landroid/content/Context;)V
-    .locals 2
+.method constructor <init>(Lcom/bbm/w;)V
+    .locals 0
 
     .prologue
-    .line 64
+    .line 9
+    iput-object p1, p0, Lcom/bbm/x;->a:Lcom/bbm/w;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/bbm/x;->a:J
-
-    .line 28
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/bbm/x;->b:Landroid/location/Location;
-
-    .line 29
-    new-instance v0, Ljava/util/Timer;
-
-    invoke-direct {v0}, Ljava/util/Timer;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/x;->c:Ljava/util/Timer;
-
-    .line 36
-    new-instance v0, Lcom/bbm/y;
-
-    invoke-direct {v0, p0}, Lcom/bbm/y;-><init>(Lcom/bbm/x;)V
-
-    iput-object v0, p0, Lcom/bbm/x;->h:Lcom/bbm/j/k;
-
-    .line 65
-    iput-object p1, p0, Lcom/bbm/x;->e:Lcom/bbm/d/a;
-
-    .line 66
-    iput-object p2, p0, Lcom/bbm/x;->f:Landroid/content/Context;
-
-    .line 67
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
-
-    iput-object v0, p0, Lcom/bbm/x;->g:Landroid/os/Handler;
-
-    .line 68
     return-void
-.end method
-
-.method static a(Landroid/content/Context;Ljava/lang/String;)Landroid/location/Location;
-    .locals 4
-
-    .prologue
-    .line 76
-    const-string v0, "location"
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/location/LocationManager;
-
-    .line 77
-    new-instance v2, Landroid/location/Criteria;
-
-    invoke-direct {v2}, Landroid/location/Criteria;-><init>()V
-
-    .line 78
-    const/4 v1, 0x0
-
-    .line 79
-    const/4 v3, 0x1
-
-    invoke-virtual {v2, v3}, Landroid/location/Criteria;->setAccuracy(I)V
-
-    .line 82
-    :try_start_0
-    invoke-virtual {v0, p1}, Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    .line 88
-    :goto_0
-    return-object v0
-
-    .line 84
-    :catch_0
-    move-exception v0
-
-    const-string v2, "Can\'t get Last Known Location from Location Manager"
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-static {v0, v2, v3}, Lcom/bbm/w;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    move-object v0, v1
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method final a()V
+.method public final onActivityCreated(Landroid/app/Activity;Landroid/os/Bundle;)V
     .locals 2
 
     .prologue
-    .line 144
-    iget-object v0, p0, Lcom/bbm/x;->c:Ljava/util/Timer;
+    .line 12
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
+    move-result-object v0
 
-    .line 145
-    iget-object v0, p0, Lcom/bbm/x;->c:Ljava/util/Timer;
+    const-string v1, "  onActivityCreated"
 
-    invoke-virtual {v0}, Ljava/util/Timer;->purge()I
+    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 146
-    const-wide/16 v0, 0x0
+    .line 13
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    iput-wide v0, p0, Lcom/bbm/x;->a:J
+    move-result-object v0
 
-    .line 147
-    const/4 v0, 0x0
+    const-string v1, "  onActivityCreated"
 
-    iput-object v0, p0, Lcom/bbm/x;->b:Landroid/location/Location;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 148
+    .line 14
+    const-string v0, "onCreate"
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 15
+    return-void
+.end method
+
+.method public final onActivityDestroyed(Landroid/app/Activity;)V
+    .locals 2
+
+    .prologue
+    .line 44
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-string v1, "  onActivityDestroyed"
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/Class;Ljava/lang/String;)V
+
+    .line 45
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    const-string v1, "  onActivityDestroyed"
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/Class;Ljava/lang/String;)V
+
+    .line 46
+    const-string v0, "onDestroy"
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 47
+    return-void
+.end method
+
+.method public final onActivityPaused(Landroid/app/Activity;)V
+    .locals 2
+
+    .prologue
+    .line 29
+    const-string v0, "onPause"
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 30
+    return-void
+.end method
+
+.method public final onActivityResumed(Landroid/app/Activity;)V
+    .locals 2
+
+    .prologue
+    .line 24
+    const-string v0, "onResume"
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 25
+    return-void
+.end method
+
+.method public final onActivitySaveInstanceState(Landroid/app/Activity;Landroid/os/Bundle;)V
+    .locals 2
+
+    .prologue
+    .line 39
+    const-string v0, "onSaveInstanceState"
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 40
+    return-void
+.end method
+
+.method public final onActivityStarted(Landroid/app/Activity;)V
+    .locals 2
+
+    .prologue
+    .line 19
+    const-string v0, "onStart"
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 20
+    return-void
+.end method
+
+.method public final onActivityStopped(Landroid/app/Activity;)V
+    .locals 2
+
+    .prologue
+    .line 34
+    const-string v0, "onStop"
+
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 35
     return-void
 .end method

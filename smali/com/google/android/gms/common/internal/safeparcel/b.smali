@@ -64,7 +64,7 @@
 .end method
 
 .method public static a(Landroid/os/Parcel;ID)V
-    .locals 1
+    .locals 2
 
     const/16 v0, 0x8
 
@@ -88,7 +88,7 @@
 .end method
 
 .method public static a(Landroid/os/Parcel;IJ)V
-    .locals 1
+    .locals 2
 
     const/16 v0, 0x8
 

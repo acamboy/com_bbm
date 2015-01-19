@@ -15,7 +15,7 @@
 .end method
 
 .method public static dismissNotification(Lcom/glympse/android/rpc/GRpcComponent;Lcom/glympse/android/api/GGlympse;ILjava/lang/String;)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 39
@@ -25,9 +25,9 @@
 
     move-result-object v0
 
-    int-to-long v1, p2
+    int-to-long v2, p2
 
-    invoke-static {v1, v2}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(J)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v2, v3}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(J)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v1
 
@@ -45,7 +45,7 @@
     .locals 2
 
     .prologue
-    .line 70
+    .line 93
     const-string v0, "expire_ticket"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -59,10 +59,10 @@
     :goto_0
     invoke-static {p0, v1, v0}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 72
+    .line 95
     return-void
 
-    .line 70
+    .line 93
     :cond_0
     invoke-interface {p1}, Lcom/glympse/android/api/GTicket;->getId()Ljava/lang/String;
 
@@ -79,7 +79,7 @@
     .locals 2
 
     .prologue
-    .line 97
+    .line 120
     const-string v0, "get_calendar_events"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -90,7 +90,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 98
+    .line 121
     return-void
 .end method
 
@@ -98,7 +98,7 @@
     .locals 2
 
     .prologue
-    .line 102
+    .line 125
     const-string v0, "get_call_log"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -109,7 +109,26 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 103
+    .line 126
+    return-void
+.end method
+
+.method public static getDestinations(Lcom/glympse/android/rpc/GRpcComponent;)V
+    .locals 2
+
+    .prologue
+    .line 78
+    const-string v0, "get_destinations"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
+
+    .line 79
     return-void
 .end method
 
@@ -117,7 +136,7 @@
     .locals 2
 
     .prologue
-    .line 55
+    .line 73
     const-string v0, "get_favorites"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -128,7 +147,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 56
+    .line 74
     return-void
 .end method
 
@@ -138,20 +157,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 160
+    .line 193
     if-nez p0, :cond_0
 
-    .line 180
+    .line 213
     :goto_0
     return-void
 
-    .line 167
+    .line 200
     :cond_0
     invoke-interface {p0, v2}, Lcom/glympse/android/rpc/GRpcComponent;->getObjectCache(Lcom/glympse/android/rpc/GConnection;)Lcom/glympse/android/lib/GMemoryCache;
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/glympse/android/rpc/z;->e(Lcom/glympse/android/api/GInvite;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/glympse/android/rpc/ad;->d(Lcom/glympse/android/api/GInvite;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -161,27 +180,27 @@
 
     check-cast v0, Lcom/glympse/android/api/GImage;
 
-    .line 168
+    .line 201
     if-eqz v0, :cond_1
 
     move-object v1, p1
 
-    .line 171
+    .line 204
     check-cast v1, Lcom/glympse/android/lib/GInvitePrivate;
 
-    .line 172
+    .line 205
     invoke-interface {v1, v0}, Lcom/glympse/android/lib/GInvitePrivate;->setAvatar(Lcom/glympse/android/api/GImage;)V
 
-    .line 173
+    .line 206
     const/4 v0, 0x2
 
-    const/16 v1, 0x10
+    const/16 v1, 0x20
 
     invoke-interface {p0, v2, v0, v1, p1}, Lcom/glympse/android/rpc/GRpcComponent;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
 
     goto :goto_0
 
-    .line 179
+    .line 212
     :cond_1
     const-string v0, "get_invite_avatar"
 
@@ -202,7 +221,7 @@
     .locals 2
 
     .prologue
-    .line 92
+    .line 115
     const-string v0, "get_pending_notifications"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -213,7 +232,26 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 93
+    .line 116
+    return-void
+.end method
+
+.method public static getPhoneFavorites(Lcom/glympse/android/rpc/GRpcComponent;)V
+    .locals 2
+
+    .prologue
+    .line 130
+    const-string v0, "get_phone_favorites"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
+
+    .line 131
     return-void
 .end method
 
@@ -221,7 +259,7 @@
     .locals 3
 
     .prologue
-    .line 148
+    .line 181
     const-string v0, "get_recent_tickets"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -242,7 +280,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 151
+    .line 184
     return-void
 .end method
 
@@ -250,7 +288,7 @@
     .locals 2
 
     .prologue
-    .line 82
+    .line 105
     const-string v0, "get_sharing_state"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -261,7 +299,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 83
+    .line 106
     return-void
 .end method
 
@@ -269,7 +307,7 @@
     .locals 2
 
     .prologue
-    .line 107
+    .line 135
     const-string v0, "get_social_tokens"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -280,7 +318,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 108
+    .line 136
     return-void
 .end method
 
@@ -288,7 +326,7 @@
     .locals 2
 
     .prologue
-    .line 87
+    .line 110
     const-string v0, "get_system_health"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -299,7 +337,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 88
+    .line 111
     return-void
 .end method
 
@@ -307,7 +345,7 @@
     .locals 2
 
     .prologue
-    .line 119
+    .line 147
     const-string v0, "get_user_avatar"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -324,15 +362,15 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 120
+    .line 148
     return-void
 .end method
 
 .method public static getUserSnapshot(Lcom/glympse/android/rpc/GRpcComponent;Lcom/glympse/android/api/GUser;IILjava/lang/String;)V
-    .locals 5
+    .locals 6
 
     .prologue
-    .line 124
+    .line 157
     const-string v0, "get_user_snapshot"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -349,9 +387,9 @@
 
     move-result-object v2
 
-    int-to-long v3, p3
+    int-to-long v4, p3
 
-    invoke-static {v3, v4}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(J)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {v4, v5}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(J)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v3
 
@@ -365,7 +403,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 129
+    .line 162
     return-void
 .end method
 
@@ -373,7 +411,7 @@
     .locals 3
 
     .prologue
-    .line 112
+    .line 140
     const-string v0, "get_users"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -402,7 +440,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 115
+    .line 143
     return-void
 .end method
 
@@ -421,14 +459,14 @@
     .end annotation
 
     .prologue
-    .line 188
+    .line 221
     if-nez p0, :cond_0
 
-    .line 194
+    .line 227
     :goto_0
     return-void
 
-    .line 193
+    .line 226
     :cond_0
     invoke-interface {p0, p1, p2}, Lcom/glympse/android/rpc/GRpcComponent;->invoke(Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
@@ -439,7 +477,7 @@
     .locals 2
 
     .prologue
-    .line 76
+    .line 99
     const-string v0, "modify_ticket"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -456,7 +494,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 78
+    .line 101
     return-void
 .end method
 
@@ -506,14 +544,14 @@
     .locals 3
 
     .prologue
-    .line 140
+    .line 173
     invoke-interface {p1}, Lcom/glympse/android/api/GUserTicket;->getTicket()Lcom/glympse/android/api/GTicket;
 
     move-result-object v0
 
     check-cast v0, Lcom/glympse/android/lib/GTicketPrivate;
 
-    .line 141
+    .line 174
     const-string v1, "request_invite_response"
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -534,7 +572,7 @@
 
     invoke-static {p0, v1, v0}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 144
+    .line 177
     return-void
 .end method
 
@@ -542,7 +580,7 @@
     .locals 3
 
     .prologue
-    .line 133
+    .line 166
     const-string v0, "ticket_invite_response"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -567,7 +605,77 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 136
+    .line 169
+    return-void
+.end method
+
+.method public static sendErrorResponse(Lcom/glympse/android/rpc/GRpcComponent;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GArray;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glympse/android/rpc/GRpcComponent;",
+            "Lcom/glympse/android/rpc/GConnection;",
+            "Lcom/glympse/android/core/GArray",
+            "<",
+            "Ljava/lang/Object;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 64
+    const-string v0, "error_response"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p0, p1, v0, p2}, Lcom/glympse/android/rpc/GRpcComponent;->invoke(Lcom/glympse/android/rpc/GConnection;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
+
+    .line 65
+    return-void
+.end method
+
+.method public static sendFavoritesList(Lcom/glympse/android/rpc/GRpcComponent;Lcom/glympse/android/api/GGlympse;Lcom/glympse/android/rpc/GConnection;)V
+    .locals 2
+
+    .prologue
+    .line 46
+    const-string v0, "favorites_list"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1}, Lcom/glympse/android/rpc/RpcMessages;->packParameters(Ljava/lang/Object;)Lcom/glympse/android/core/GArray;
+
+    move-result-object v1
+
+    invoke-interface {p0, p2, v0, v1}, Lcom/glympse/android/rpc/GRpcComponent;->invoke(Lcom/glympse/android/rpc/GConnection;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
+
+    .line 47
+    return-void
+.end method
+
+.method public static sendInviteAvatar(Lcom/glympse/android/rpc/GRpcComponent;Lcom/glympse/android/api/GGlympse;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/api/GInvite;)V
+    .locals 2
+
+    .prologue
+    .line 58
+    const-string v0, "invite_avatar"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1, p3}, Lcom/glympse/android/rpc/RpcMessages;->packParameters(Ljava/lang/Object;Ljava/lang/Object;)Lcom/glympse/android/core/GArray;
+
+    move-result-object v1
+
+    invoke-interface {p0, p2, v0, v1}, Lcom/glympse/android/rpc/GRpcComponent;->invoke(Lcom/glympse/android/rpc/GConnection;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
+
+    .line 59
     return-void
 .end method
 
@@ -575,7 +683,7 @@
     .locals 2
 
     .prologue
-    .line 60
+    .line 83
     const-string v0, "send_request"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -588,7 +696,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 61
+    .line 84
     return-void
 .end method
 
@@ -607,7 +715,7 @@
     .end annotation
 
     .prologue
-    .line 46
+    .line 52
     const-string v0, "social_tokens_list"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -616,7 +724,7 @@
 
     invoke-interface {p0, p1, v0, p2}, Lcom/glympse/android/rpc/GRpcComponent;->invoke(Lcom/glympse/android/rpc/GConnection;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 47
+    .line 53
     return-void
 .end method
 
@@ -624,7 +732,7 @@
     .locals 2
 
     .prologue
-    .line 65
+    .line 88
     const-string v0, "send_ticket"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -637,7 +745,7 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 66
+    .line 89
     return-void
 .end method
 
@@ -645,7 +753,7 @@
     .locals 2
 
     .prologue
-    .line 155
+    .line 188
     const-string v0, "set_battery_force"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -656,6 +764,31 @@
 
     invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
 
-    .line 156
+    .line 189
+    return-void
+.end method
+
+.method public static stopWatchingUser(Lcom/glympse/android/rpc/GRpcComponent;Lcom/glympse/android/api/GUser;)V
+    .locals 2
+
+    .prologue
+    .line 152
+    const-string v0, "stop_watching_user"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1}, Lcom/glympse/android/api/GUser;->getId()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/glympse/android/rpc/RpcMessages;->packParameters(Ljava/lang/Object;)Lcom/glympse/android/core/GArray;
+
+    move-result-object v1
+
+    invoke-static {p0, v0, v1}, Lcom/glympse/android/rpc/RpcMethods;->invoke(Lcom/glympse/android/rpc/GRpcComponent;Ljava/lang/String;Lcom/glympse/android/core/GArray;)V
+
+    .line 153
     return-void
 .end method

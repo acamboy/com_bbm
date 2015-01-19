@@ -68,7 +68,15 @@
 
 .field public static final CONTEXT_SINK_INVITE_CODE:J = 0x1000000000001L
 
+.field public static final CONTEXT_TICKET_CALLBACK_ACTION:J = 0x1000000000005L
+
+.field public static final CONTEXT_TICKET_CALLBACK_PACKAGE:J = 0x1000000000004L
+
+.field public static final CONTEXT_TICKET_CONTEXT:J = 0x1000000000007L
+
 .field public static final CONTEXT_TICKET_FLAGS:J = 0x1000000000003L
+
+.field public static final CONTEXT_TICKET_LAUNCH_MODE:J = 0x1000000000006L
 
 .field public static final CONTEXT_TICKET_RETURN_CANCEL_URL:J = 0x1000000000002L
 
@@ -84,19 +92,23 @@
 
 .field public static final LINKED_ACCOUNTS:I = 0x4
 
+.field public static final METHOD_ARGUMENT_TYPE_BOOL:I = 0x6
+
+.field public static final METHOD_ARGUMENT_TYPE_DOUBLE:I = 0x5
+
+.field public static final METHOD_ARGUMENT_TYPE_FLOAT:I = 0x4
+
+.field public static final METHOD_ARGUMENT_TYPE_INT:I = 0x2
+
+.field public static final METHOD_ARGUMENT_TYPE_LONG:I = 0x3
+
+.field public static final METHOD_ARGUMENT_TYPE_STRING:I = 0x1
+
 .field public static final PERSON_SORT_BY_FIRST_NAME:I = 0x1
 
 .field public static final PERSON_SORT_BY_FULL_NAME:I = 0x2
 
 .field public static final PERSON_SORT_BY_LAST_NAME:I = 0x0
-
-.field public static final SCREEN_FAVORITES:I = 0x3
-
-.field public static final SCREEN_HISTORY:I = 0x2
-
-.field public static final SCREEN_SEND:I = 0x1
-
-.field public static final SCREEN_UNKNOWN:I = 0x0
 
 .field public static final SERVER_MODE_CUSTOM:I = 0x4
 
@@ -130,7 +142,7 @@
     .locals 1
 
     .prologue
-    .line 212
+    .line 196
     const-string v0, "api"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -144,7 +156,7 @@
     .locals 1
 
     .prologue
-    .line 192
+    .line 176
     const-string v0, "cal"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -158,7 +170,7 @@
     .locals 1
 
     .prologue
-    .line 207
+    .line 191
     const-string v0, "cta"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -172,7 +184,7 @@
     .locals 1
 
     .prologue
-    .line 197
+    .line 181
     const-string v0, "cte"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -186,7 +198,7 @@
     .locals 1
 
     .prologue
-    .line 202
+    .line 186
     const-string v0, "cts"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -200,7 +212,7 @@
     .locals 1
 
     .prologue
-    .line 152
+    .line 136
     const-string v0, "fav"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -214,7 +226,7 @@
     .locals 1
 
     .prologue
-    .line 222
+    .line 206
     const-string v0, "fav_vr"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -228,8 +240,22 @@
     .locals 1
 
     .prologue
-    .line 157
+    .line 141
     const-string v0, "hst"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static SOURCE_HISTORY_VR()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 216
+    const-string v0, "hst_vr"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -242,7 +268,7 @@
     .locals 1
 
     .prologue
-    .line 182
+    .line 166
     const-string v0, "int"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -256,7 +282,7 @@
     .locals 1
 
     .prologue
-    .line 162
+    .line 146
     const-string v0, "map"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -270,7 +296,7 @@
     .locals 1
 
     .prologue
-    .line 147
+    .line 131
     const-string v0, "new"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -284,7 +310,7 @@
     .locals 1
 
     .prologue
-    .line 227
+    .line 211
     const-string v0, "new_vr"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -298,7 +324,7 @@
     .locals 1
 
     .prologue
-    .line 187
+    .line 171
     const-string v0, "nfc"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -312,7 +338,7 @@
     .locals 1
 
     .prologue
-    .line 177
+    .line 161
     const-string v0, "re"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -326,7 +352,7 @@
     .locals 1
 
     .prologue
-    .line 172
+    .line 156
     const-string v0, "req"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -340,7 +366,7 @@
     .locals 1
 
     .prologue
-    .line 217
+    .line 201
     const-string v0, "shortcut"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -354,7 +380,7 @@
     .locals 1
 
     .prologue
-    .line 167
+    .line 151
     const-string v0, "url"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -368,7 +394,7 @@
     .locals 1
 
     .prologue
-    .line 232
+    .line 221
     const-string v0, "wru_sms"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;

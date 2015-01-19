@@ -1,21 +1,47 @@
 .class final Landroid/support/v4/app/t;
 .super Ljava/lang/Object;
-.source "Fragment.java"
-
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+.source "FragmentActivity.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/app/FragmentState;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field a:Ljava/lang/Object;
+
+.field b:Ljava/lang/Object;
+
+.field c:Landroid/support/v4/b/n;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/support/v4/b/n",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/Object;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field d:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/support/v4/app/Fragment;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field e:Landroid/support/v4/b/n;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/support/v4/b/n",
+            "<",
+            "Ljava/lang/String;",
+            "Landroid/support/v4/app/as;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
@@ -23,32 +49,8 @@
     .locals 0
 
     .prologue
-    .line 137
+    .line 132
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 137
-    new-instance v0, Landroid/support/v4/app/FragmentState;
-
-    invoke-direct {v0, p1}, Landroid/support/v4/app/FragmentState;-><init>(Landroid/os/Parcel;)V
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 137
-    new-array v0, p1, [Landroid/support/v4/app/FragmentState;
-
-    return-object v0
 .end method

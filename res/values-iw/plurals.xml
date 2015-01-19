@@ -4,14 +4,31 @@
         <item quantity="other">הודעת השידור נשלחה ל-%1$s אנשי קשר</item>
         <item quantity="one">הודעת השידור נשלחה לאיש קשר אחד</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d מנויים</item>
+        <item quantity="zero">אין מנויים</item>
+        <item quantity="one">מנוי %1$d</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d חברים</item>
+        <item quantity="one">חבר %1$d</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">שניות</item>
+        <item quantity="one">שניה</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">קוצב הזמן הוגדר ל-%1$d שניות.</item>
+        <item quantity="one">קוצב הזמן הוגדר לשנייה %1$d.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s פריטים</item>
         <item quantity="zero">0 פריטים</item>
         <item quantity="one">1 פריט</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d הזמנות ממתינות)</item>
-        <item quantity="one">(הזמנה אחת ממתינה)</item>
+        <item quantity="other">(%1$d בהמתנה)</item>
+        <item quantity="one">(1 ממתין)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s תוצאות</item>

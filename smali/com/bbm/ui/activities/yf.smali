@@ -1,74 +1,48 @@
-.class final Lcom/bbm/ui/activities/yf;
-.super Lcom/bbm/ui/by;
-.source "OwnedChannelLobbyActivity.java"
+.class public final Lcom/bbm/ui/activities/yf;
+.super Ljava/lang/Object;
+.source "MessageBubbleColorAssignment.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+.field public a:I
+
+.field public b:I
+
+.field public c:I
+
+.field public d:I
+
+.field public e:I
+
+.field public f:I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
+.method public constructor <init>(IIIIII)V
     .locals 0
 
     .prologue
-    .line 44
-    iput-object p1, p0, Lcom/bbm/ui/activities/yf;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+    .line 24
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    .line 25
+    iput p1, p0, Lcom/bbm/ui/activities/yf;->a:I
 
-    return-void
-.end method
+    .line 26
+    iput p2, p0, Lcom/bbm/ui/activities/yf;->b:I
 
+    .line 27
+    iput p3, p0, Lcom/bbm/ui/activities/yf;->c:I
 
-# virtual methods
-.method public final a()V
-    .locals 1
+    .line 28
+    iput p4, p0, Lcom/bbm/ui/activities/yf;->d:I
 
-    .prologue
-    .line 54
-    iget-object v0, p0, Lcom/bbm/ui/activities/yf;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+    .line 29
+    iput p5, p0, Lcom/bbm/ui/activities/yf;->e:I
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->finish()V
+    .line 30
+    iput p6, p0, Lcom/bbm/ui/activities/yf;->f:I
 
-    .line 55
-    return-void
-.end method
-
-.method public final a(I)V
-    .locals 1
-
-    .prologue
-    .line 59
-    iget-object v0, p0, Lcom/bbm/ui/activities/yf;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    invoke-static {v0, p1}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;I)V
-
-    .line 61
-    return-void
-.end method
-
-.method public final b()V
-    .locals 2
-
-    .prologue
-    .line 47
-    iget-object v0, p0, Lcom/bbm/ui/activities/yf;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->k()Lcom/bbm/ui/c/fq;
-
-    move-result-object v0
-
-    .line 48
-    iget-object v1, p0, Lcom/bbm/ui/activities/yf;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;Lcom/bbm/ui/c/fq;)V
-
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/activities/yf;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->w()V
-
-    .line 50
+    .line 31
     return-void
 .end method

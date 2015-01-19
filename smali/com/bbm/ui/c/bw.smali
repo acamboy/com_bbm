@@ -1,22 +1,30 @@
 .class final Lcom/bbm/ui/c/bw;
 .super Ljava/lang/Object;
-.source "ContactsFragment.java"
+.source "ChatsFragment.java"
 
 # interfaces
-.implements Lcom/bbm/ui/cm;
+.implements Lcom/bbm/util/d/c;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/bl;
+.field final synthetic a:Z
+
+.field final synthetic b:Ljava/util/List;
+
+.field final synthetic c:Lcom/bbm/ui/c/bo;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/bl;)V
+.method constructor <init>(Lcom/bbm/ui/c/bo;ZLjava/util/List;)V
     .locals 0
 
     .prologue
-    .line 157
-    iput-object p1, p0, Lcom/bbm/ui/c/bw;->a:Lcom/bbm/ui/c/bl;
+    .line 1267
+    iput-object p1, p0, Lcom/bbm/ui/c/bw;->c:Lcom/bbm/ui/c/bo;
+
+    iput-boolean p2, p0, Lcom/bbm/ui/c/bw;->a:Z
+
+    iput-object p3, p0, Lcom/bbm/ui/c/bw;->b:Ljava/util/List;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,43 +33,36 @@
 
 
 # virtual methods
-.method public final a(Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 3
+.method public final a()V
+    .locals 1
 
     .prologue
-    .line 160
-    iget-object v0, p0, Lcom/bbm/ui/c/bw;->a:Lcom/bbm/ui/c/bl;
+    .line 1270
+    iget-boolean v0, p0, Lcom/bbm/ui/c/bw;->a:Z
 
-    invoke-static {v0}, Lcom/bbm/ui/c/bl;->b(Lcom/bbm/ui/c/bl;)Landroid/content/Context;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    .line 1271
+    iget-object v0, p0, Lcom/bbm/ui/c/bw;->c:Lcom/bbm/ui/c/bo;
 
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const v1, 0x7f0300b6
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v1
-
-    .line 162
-    const v0, 0x7f0a040a
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {v0}, Lcom/bbm/ui/c/bo;->b(Lcom/bbm/ui/c/bo;)Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageView;
+    invoke-static {v0}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
 
-    .line 163
-    const v2, 0x7f0200d0
+    move-result-object v0
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v0}, Lcom/bbm/n/b;->a()V
 
-    .line 164
-    return-object v1
+    .line 1273
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/c/bw;->c:Lcom/bbm/ui/c/bo;
+
+    iget-object v0, p0, Lcom/bbm/ui/c/bw;->b:Ljava/util/List;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/bo;->a(Ljava/util/List;)V
+
+    .line 1274
+    return-void
 .end method

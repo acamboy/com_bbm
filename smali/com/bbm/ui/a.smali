@@ -1,5 +1,5 @@
 .class public final Lcom/bbm/ui/a;
-.super Lcom/bbm/ui/activities/agx;
+.super Lcom/bbm/ui/activities/ala;
 .source "ActivityTransitionLifeCycleListener.java"
 
 
@@ -15,7 +15,7 @@
 
     .prologue
     .line 7
-    invoke-direct {p0}, Lcom/bbm/ui/activities/agx;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ala;-><init>()V
 
     .line 12
     return-void
@@ -23,16 +23,16 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/activities/agw;)V
+.method public final a(Lcom/bbm/ui/activities/akz;)V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
     .line 26
-    const v0, 0x7f0a00a0
+    const v0, 0x7f0b00bf
 
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/activities/agw;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p1, v0}, Lcom/bbm/ui/activities/akz;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -85,9 +85,9 @@
     :pswitch_0
     const/high16 v0, 0x7f040000
 
-    const v1, 0x7f040014
+    const v1, 0x7f040016
 
-    invoke-virtual {p1, v0, v1}, Lcom/bbm/ui/activities/agw;->overridePendingTransition(II)V
+    invoke-virtual {p1, v0, v1}, Lcom/bbm/ui/activities/akz;->overridePendingTransition(II)V
 
     goto :goto_0
 
@@ -97,13 +97,13 @@
 
     const v1, 0x7f04000f
 
-    invoke-virtual {p1, v0, v1}, Lcom/bbm/ui/activities/agw;->overridePendingTransition(II)V
+    invoke-virtual {p1, v0, v1}, Lcom/bbm/ui/activities/akz;->overridePendingTransition(II)V
 
     goto :goto_0
 
     .line 44
     :pswitch_2
-    invoke-virtual {p1, v2, v2}, Lcom/bbm/ui/activities/agw;->overridePendingTransition(II)V
+    invoke-virtual {p1, v2, v2}, Lcom/bbm/ui/activities/akz;->overridePendingTransition(II)V
 
     goto :goto_0
 
@@ -118,7 +118,7 @@
     .end packed-switch
 .end method
 
-.method public final c(Lcom/bbm/ui/activities/agw;)V
+.method public final c(Lcom/bbm/ui/activities/akz;)V
     .locals 3
 
     .prologue
@@ -154,11 +154,11 @@
 
     .line 60
     :pswitch_0
-    const v0, 0x7f040013
+    const v0, 0x7f040015
 
-    const v1, 0x7f040012
+    const v1, 0x7f040014
 
-    invoke-virtual {p1, v0, v1}, Lcom/bbm/ui/activities/agw;->overridePendingTransition(II)V
+    invoke-virtual {p1, v0, v1}, Lcom/bbm/ui/activities/akz;->overridePendingTransition(II)V
 
     goto :goto_0
 
@@ -168,13 +168,13 @@
 
     const v1, 0x7f04000e
 
-    invoke-virtual {p1, v0, v1}, Lcom/bbm/ui/activities/agw;->overridePendingTransition(II)V
+    invoke-virtual {p1, v0, v1}, Lcom/bbm/ui/activities/akz;->overridePendingTransition(II)V
 
     goto :goto_0
 
     .line 66
     :pswitch_2
-    invoke-virtual {p1, v2, v2}, Lcom/bbm/ui/activities/agw;->overridePendingTransition(II)V
+    invoke-virtual {p1, v2, v2}, Lcom/bbm/ui/activities/akz;->overridePendingTransition(II)V
 
     goto :goto_0
 

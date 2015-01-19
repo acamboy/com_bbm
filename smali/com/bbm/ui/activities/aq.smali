@@ -1,6 +1,9 @@
 .class final Lcom/bbm/ui/activities/aq;
-.super Lcom/bbm/j/k;
+.super Ljava/lang/Object;
 .source "BroadcastActivity.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -9,93 +12,32 @@
 
 # direct methods
 .method constructor <init>(Lcom/bbm/ui/activities/BroadcastActivity;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 217
+    .line 479
     iput-object p1, p0, Lcom/bbm/ui/activities/aq;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 3
+.method public final run()V
+    .locals 1
 
     .prologue
-    const/16 v1, 0x8
-
-    .line 221
+    .line 482
     iget-object v0, p0, Lcom/bbm/ui/activities/aq;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->f(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/util/cm;
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->p(Lcom/bbm/ui/activities/BroadcastActivity;)Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/cm;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->requestLayout()V
 
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 222
-    iget-object v0, p0, Lcom/bbm/ui/activities/aq;->a:Lcom/bbm/ui/activities/BroadcastActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->h(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/ui/CustomListView;
-
-    move-result-object v2
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/aq;->a:Lcom/bbm/ui/activities/BroadcastActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->g(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/d/b/m;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/d/b/m;->f()Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    invoke-virtual {v2, v0}, Lcom/bbm/ui/CustomListView;->setVisibility(I)V
-
-    .line 228
-    :goto_1
+    .line 483
     return-void
-
-    .line 222
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    .line 225
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/aq;->a:Lcom/bbm/ui/activities/BroadcastActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->h(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/ui/CustomListView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/CustomListView;->setVisibility(I)V
-
-    goto :goto_1
 .end method

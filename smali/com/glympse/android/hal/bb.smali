@@ -1,350 +1,363 @@
 .class Lcom/glympse/android/hal/bb;
 .super Ljava/lang/Object;
-.source "ProximityProvider.java"
+.source "ProfileListener.java"
 
 # interfaces
-.implements Lcom/glympse/android/core/GProximityProvider;
-
-
-# static fields
-.field private static final cE:Ljava/lang/String; = "com.glympse.android.hal.proximity.REGION"
+.implements Lcom/glympse/android/api/GEventListener;
 
 
 # instance fields
-.field private cF:Lcom/glympse/android/core/GProximityListener;
+.field protected cI:Lcom/glympse/android/api/GGlympse;
 
-.field private cG:Ljava/util/Hashtable;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Hashtable",
-            "<",
-            "Lcom/glympse/android/core/GRegion;",
-            "Lcom/glympse/android/hal/bc;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private ca:Landroid/location/LocationManager;
-
-.field private e:Landroid/content/Context;
+.field protected cJ:Lcom/glympse/android/api/GUser;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 33
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
-    iput-object p1, p0, Lcom/glympse/android/hal/bb;->e:Landroid/content/Context;
-
-    .line 35
-    iget-object v0, p0, Lcom/glympse/android/hal/bb;->e:Landroid/content/Context;
-
-    const-string v1, "location"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/location/LocationManager;
-
-    iput-object v0, p0, Lcom/glympse/android/hal/bb;->ca:Landroid/location/LocationManager;
-
-    .line 36
-    new-instance v0, Ljava/util/Hashtable;
-
-    invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/hal/bb;->cG:Ljava/util/Hashtable;
-
-    .line 37
     return-void
-.end method
-
-.method static synthetic a(Lcom/glympse/android/hal/bb;)Lcom/glympse/android/core/GProximityListener;
-    .locals 1
-
-    .prologue
-    .line 22
-    iget-object v0, p0, Lcom/glympse/android/hal/bb;->cF:Lcom/glympse/android/core/GProximityListener;
-
-    return-object v0
 .end method
 
 
 # virtual methods
-.method public detachRegions()Lcom/glympse/android/core/GArray;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/glympse/android/core/GArray",
-            "<",
-            "Lcom/glympse/android/core/GRegion;",
-            ">;"
-        }
-    .end annotation
+.method public a()V
+    .locals 0
 
     .prologue
-    .line 104
-    new-instance v1, Lcom/glympse/android/hal/GVector;
+    .line 69
+    return-void
+.end method
 
-    iget-object v0, p0, Lcom/glympse/android/hal/bb;->cG:Ljava/util/Hashtable;
+.method public b()V
+    .locals 0
 
-    invoke-virtual {v0}, Ljava/util/Hashtable;->size()I
+    .prologue
+    .line 74
+    return-void
+.end method
 
-    move-result v0
+.method public eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
+    .locals 3
 
-    invoke-direct {v1, v0}, Lcom/glympse/android/hal/GVector;-><init>(I)V
+    .prologue
+    const/4 v2, 0x1
 
-    .line 105
-    iget-object v0, p0, Lcom/glympse/android/hal/bb;->cG:Ljava/util/Hashtable;
+    const/4 v1, 0x2
 
-    invoke-virtual {v0}, Ljava/util/Hashtable;->keys()Ljava/util/Enumeration;
+    .line 99
+    packed-switch p2, :pswitch_data_0
 
-    move-result-object v0
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 107
-    invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 111
+    .line 174
     :cond_0
-    invoke-virtual {v1}, Lcom/glympse/android/hal/GVector;->iterator()Ljava/util/Iterator;
+    :goto_0
+    :pswitch_0
+    return-void
 
-    move-result-object v2
-
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
+    .line 103
+    :pswitch_1
+    and-int/lit16 v0, p3, 0x80
 
     if-eqz v0, :cond_1
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/core/GRegion;
-
-    .line 113
-    invoke-virtual {p0, v0}, Lcom/glympse/android/hal/bb;->stopMonitoring(Lcom/glympse/android/core/GRegion;)V
-
-    goto :goto_1
-
-    .line 115
-    :cond_1
-    return-object v1
-.end method
-
-.method public locationChanged(Lcom/glympse/android/core/GLocation;)V
-    .locals 0
-
-    .prologue
-    .line 99
-    return-void
-.end method
-
-.method public setProximityListener(Lcom/glympse/android/core/GProximityListener;)V
-    .locals 0
-
-    .prologue
-    .line 45
-    iput-object p1, p0, Lcom/glympse/android/hal/bb;->cF:Lcom/glympse/android/core/GProximityListener;
-
-    .line 46
-    return-void
-.end method
-
-.method public startMonitoring(Lcom/glympse/android/core/GArray;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/glympse/android/core/GArray",
-            "<",
-            "Lcom/glympse/android/core/GRegion;",
-            ">;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 71
-    invoke-interface {p1}, Lcom/glympse/android/core/GArray;->iterator()Ljava/util/Iterator;
+    .line 106
+    invoke-interface {p1}, Lcom/glympse/android/api/GGlympse;->getHistoryManager()Lcom/glympse/android/api/GHistoryManager;
 
     move-result-object v1
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/api/GEventListener;
+
+    invoke-interface {v1, v0}, Lcom/glympse/android/api/GHistoryManager;->simulateAddedEvents(Lcom/glympse/android/api/GEventListener;)V
+
+    goto :goto_0
+
+    .line 108
+    :cond_1
+    const/high16 v0, 0x20000
+
+    and-int/2addr v0, p3
+
+    if-eqz v0, :cond_3
+
+    .line 110
+    check-cast p4, Lcom/glympse/android/api/GTicket;
+
+    .line 113
+    invoke-interface {p4}, Lcom/glympse/android/api/GTicket;->isMine()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {p4}, Lcom/glympse/android/api/GTicket;->getState()I
+
+    move-result v0
+
+    and-int/lit8 v0, v0, 0x12
+
+    if-eqz v0, :cond_2
+
+    .line 115
+    invoke-virtual {p0, v1}, Lcom/glympse/android/hal/bb;->notify(I)V
+
+    .line 120
+    :cond_2
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/api/GEventListener;
+
+    invoke-interface {p4, v0}, Lcom/glympse/android/api/GTicket;->addListener(Lcom/glympse/android/api/GEventListener;)Z
+
+    goto :goto_0
+
+    .line 122
+    :cond_3
+    const/high16 v0, 0x40000
+
+    and-int/2addr v0, p3
+
+    if-eqz v0, :cond_0
+
+    .line 124
+    check-cast p4, Lcom/glympse/android/api/GTicket;
+
+    .line 127
+    invoke-interface {p1}, Lcom/glympse/android/api/GGlympse;->isStarted()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 129
+    invoke-virtual {p0, v1}, Lcom/glympse/android/hal/bb;->notify(I)V
+
+    .line 133
+    :cond_4
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/api/GEventListener;
+
+    invoke-interface {p4, v0}, Lcom/glympse/android/api/GTicket;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
+
+    goto :goto_0
+
+    .line 139
+    :pswitch_2
+    and-int/lit8 v0, p3, 0x1
+
+    if-eqz v0, :cond_0
+
+    .line 141
+    invoke-virtual {p0, v2}, Lcom/glympse/android/hal/bb;->notify(I)V
+
+    goto :goto_0
+
+    .line 147
+    :pswitch_3
+    and-int/lit8 v0, p3, 0x1
+
+    if-eqz v0, :cond_0
+
+    .line 149
+    invoke-virtual {p0, v2}, Lcom/glympse/android/hal/bb;->notify(I)V
+
+    goto :goto_0
+
+    .line 155
+    :pswitch_4
+    check-cast p4, Lcom/glympse/android/api/GTicket;
+
+    .line 157
+    and-int/lit8 v0, p3, 0x10
+
+    if-eqz v0, :cond_5
+
+    .line 159
+    invoke-interface {p4}, Lcom/glympse/android/api/GTicket;->isMine()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    .line 161
+    invoke-virtual {p0, v1}, Lcom/glympse/android/hal/bb;->notify(I)V
+
+    .line 164
+    :cond_5
+    const/high16 v0, 0x1000000
+
+    and-int/2addr v0, p3
+
+    if-eqz v0, :cond_0
+
+    .line 166
+    invoke-interface {p4}, Lcom/glympse/android/api/GTicket;->isMine()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/core/GRegion;
-
-    .line 73
-    invoke-virtual {p0, v0}, Lcom/glympse/android/hal/bb;->startMonitoring(Lcom/glympse/android/core/GRegion;)V
+    .line 168
+    invoke-virtual {p0, v1}, Lcom/glympse/android/hal/bb;->notify(I)V
 
     goto :goto_0
 
-    .line 75
-    :cond_0
-    return-void
+    .line 99
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_2
+        :pswitch_4
+        :pswitch_0
+        :pswitch_0
+        :pswitch_3
+    .end packed-switch
 .end method
 
-.method public startMonitoring(Lcom/glympse/android/core/GRegion;)V
-    .locals 10
+.method protected notify(I)V
+    .locals 1
 
     .prologue
-    const/4 v3, 0x0
+    .line 84
+    iget-object v0, p0, Lcom/glympse/android/hal/bb;->cJ:Lcom/glympse/android/api/GUser;
 
-    .line 50
-    iget-object v0, p0, Lcom/glympse/android/hal/bb;->cG:Ljava/util/Hashtable;
+    invoke-interface {v0}, Lcom/glympse/android/api/GUser;->getId()Ljava/lang/String;
 
-    invoke-virtual {v0, p1}, Ljava/util/Hashtable;->contains(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v0
+    if-nez v0, :cond_0
 
-    if-eqz v0, :cond_0
-
-    .line 67
+    .line 91
     :goto_0
     return-void
 
-    .line 57
+    .line 90
     :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "com.glympse.android.hal.proximity.REGION_"
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 58
-    iget-object v1, p0, Lcom/glympse/android/hal/bb;->e:Landroid/content/Context;
-
-    new-instance v2, Landroid/content/Intent;
-
-    invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v1, v3, v2, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v8
-
-    .line 59
-    new-instance v9, Lcom/glympse/android/hal/bc;
-
-    invoke-direct {v9, p0, v8, p1}, Lcom/glympse/android/hal/bc;-><init>(Lcom/glympse/android/hal/bb;Landroid/app/PendingIntent;Lcom/glympse/android/core/GRegion;)V
-
-    .line 60
-    iget-object v1, p0, Lcom/glympse/android/hal/bb;->e:Landroid/content/Context;
-
-    new-instance v2, Landroid/content/IntentFilter;
-
-    invoke-direct {v2, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v9, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
-
-    .line 63
-    iget-object v0, p0, Lcom/glympse/android/hal/bb;->ca:Landroid/location/LocationManager;
-
-    invoke-interface {p1}, Lcom/glympse/android/core/GRegion;->getLatitude()D
-
-    move-result-wide v1
-
-    invoke-interface {p1}, Lcom/glympse/android/core/GRegion;->getLongitude()D
-
-    move-result-wide v3
-
-    invoke-interface {p1}, Lcom/glympse/android/core/GRegion;->getRadius()D
-
-    move-result-wide v5
-
-    double-to-float v5, v5
-
-    const-wide/16 v6, -0x1
-
-    invoke-virtual/range {v0 .. v8}, Landroid/location/LocationManager;->addProximityAlert(DDFJLandroid/app/PendingIntent;)V
-
-    .line 66
-    iget-object v0, p0, Lcom/glympse/android/hal/bb;->cG:Ljava/util/Hashtable;
-
-    invoke-virtual {v0, p1, v9}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/glympse/android/hal/bb;->send(I)V
 
     goto :goto_0
 .end method
 
-.method public stopMonitoring(Lcom/glympse/android/core/GRegion;)V
-    .locals 3
+.method public send(I)V
+    .locals 0
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/glympse/android/hal/bb;->cG:Ljava/util/Hashtable;
+    return-void
+.end method
 
-    invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public setActive(Z)V
+    .locals 0
+
+    .prologue
+    .line 64
+    return-void
+.end method
+
+.method public start(Lcom/glympse/android/api/GGlympse;)V
+    .locals 2
+
+    .prologue
+    .line 33
+    iput-object p1, p0, Lcom/glympse/android/hal/bb;->cI:Lcom/glympse/android/api/GGlympse;
+
+    .line 36
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/glympse/android/hal/bc;
+    check-cast v0, Lcom/glympse/android/api/GEventListener;
 
-    .line 80
-    if-nez v0, :cond_0
+    .line 37
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cI:Lcom/glympse/android/api/GGlympse;
 
-    .line 93
-    :goto_0
+    invoke-interface {v1, v0}, Lcom/glympse/android/api/GGlympse;->addListener(Lcom/glympse/android/api/GEventListener;)Z
+
+    .line 38
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cI:Lcom/glympse/android/api/GGlympse;
+
+    invoke-interface {v1}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Lcom/glympse/android/api/GUserManager;->getSelf()Lcom/glympse/android/api/GUser;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/glympse/android/hal/bb;->cJ:Lcom/glympse/android/api/GUser;
+
+    .line 39
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cJ:Lcom/glympse/android/api/GUser;
+
+    invoke-interface {v1, v0}, Lcom/glympse/android/api/GUser;->addListener(Lcom/glympse/android/api/GEventListener;)Z
+
+    .line 40
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cJ:Lcom/glympse/android/api/GUser;
+
+    invoke-interface {v1}, Lcom/glympse/android/api/GUser;->getAvatar()Lcom/glympse/android/api/GImage;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Lcom/glympse/android/api/GImage;->addListener(Lcom/glympse/android/api/GEventListener;)Z
+
+    .line 43
+    invoke-virtual {p0}, Lcom/glympse/android/hal/bb;->a()V
+
+    .line 44
     return-void
+.end method
 
-    .line 86
-    :cond_0
-    iget-object v1, p0, Lcom/glympse/android/hal/bb;->ca:Landroid/location/LocationManager;
+.method public stop()V
+    .locals 2
 
-    invoke-virtual {v0}, Lcom/glympse/android/hal/bc;->K()Landroid/app/PendingIntent;
+    .prologue
+    .line 49
+    invoke-virtual {p0}, Lcom/glympse/android/hal/bb;->b()V
 
-    move-result-object v2
+    .line 52
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v1, v2}, Landroid/location/LocationManager;->removeProximityAlert(Landroid/app/PendingIntent;)V
+    move-result-object v0
 
-    .line 89
-    iget-object v1, p0, Lcom/glympse/android/hal/bb;->e:Landroid/content/Context;
+    check-cast v0, Lcom/glympse/android/api/GEventListener;
 
-    invoke-virtual {v1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+    .line 53
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cI:Lcom/glympse/android/api/GGlympse;
 
-    .line 92
-    iget-object v0, p0, Lcom/glympse/android/hal/bb;->cG:Ljava/util/Hashtable;
+    invoke-interface {v1, v0}, Lcom/glympse/android/api/GGlympse;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 54
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cJ:Lcom/glympse/android/api/GUser;
 
-    goto :goto_0
+    invoke-interface {v1, v0}, Lcom/glympse/android/api/GUser;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
+
+    .line 55
+    iget-object v1, p0, Lcom/glympse/android/hal/bb;->cJ:Lcom/glympse/android/api/GUser;
+
+    invoke-interface {v1}, Lcom/glympse/android/api/GUser;->getAvatar()Lcom/glympse/android/api/GImage;
+
+    move-result-object v1
+
+    invoke-interface {v1, v0}, Lcom/glympse/android/api/GImage;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
+
+    .line 58
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/glympse/android/hal/bb;->cI:Lcom/glympse/android/api/GGlympse;
+
+    .line 59
+    return-void
 .end method

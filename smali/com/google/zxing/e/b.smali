@@ -2026,7 +2026,7 @@
 
 # virtual methods
 .method public final a(ILcom/google/zxing/b/a;Ljava/util/Map;)Lcom/google/zxing/m;
-    .locals 21
+    .locals 20
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -2060,8 +2060,6 @@
     new-array v11, v2, [I
 
     const/4 v7, 0x0
-
-    array-length v12, v11
 
     move v9, v6
 
@@ -2100,7 +2098,7 @@
     goto :goto_0
 
     :cond_0
-    add-int/lit8 v2, v12, -0x1
+    const/4 v2, 0x5
 
     if-ne v8, v2, :cond_3
 
@@ -2119,9 +2117,9 @@
 
     aget-object v4, v4, v3
 
-    const/16 v13, 0xb3
+    const/16 v12, 0xb3
 
-    invoke-static {v11, v4, v13}, Lcom/google/zxing/e/b;->a([I[II)I
+    invoke-static {v11, v4, v12}, Lcom/google/zxing/e/b;->a([I[II)I
 
     move-result v4
 
@@ -2208,17 +2206,17 @@
 
     const/4 v4, 0x0
 
-    add-int/lit8 v5, v12, -0x2
+    const/4 v5, 0x4
 
     invoke-static {v11, v3, v11, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    add-int/lit8 v3, v12, -0x2
+    const/4 v3, 0x4
 
     const/4 v4, 0x0
 
     aput v4, v11, v3
 
-    add-int/lit8 v3, v12, -0x1
+    const/4 v3, 0x5
 
     const/4 v4, 0x0
 
@@ -2325,7 +2323,7 @@
 
     move v3, v9
 
-    move/from16 v20, v11
+    move/from16 v19, v11
 
     move v11, v4
 
@@ -2333,7 +2331,7 @@
 
     move v8, v6
 
-    move/from16 v6, v20
+    move/from16 v6, v19
 
     .line 272
     :goto_7
@@ -2386,25 +2384,21 @@
 
     .line 298
     :cond_7
-    move-object/from16 v0, v17
-
-    array-length v0, v0
-
-    move/from16 v18, v0
-
     const/4 v8, 0x0
 
     move v9, v10
 
     :goto_8
+    const/16 v18, 0x6
+
     move/from16 v0, v18
 
     if-ge v8, v0, :cond_8
 
-    aget v19, v17, v8
+    aget v18, v17, v8
 
     .line 299
-    add-int v9, v9, v19
+    add-int v9, v9, v18
 
     .line 298
     add-int/lit8 v8, v8, 0x1
@@ -2433,11 +2427,11 @@
     packed-switch v7, :pswitch_data_2
 
     :goto_9
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 405
     :goto_a
@@ -2462,11 +2456,11 @@
 
     move v11, v12
 
-    move/from16 v20, v7
+    move/from16 v19, v7
 
     move v7, v4
 
-    move/from16 v4, v20
+    move/from16 v4, v19
 
     .line 409
     goto :goto_7
@@ -2492,11 +2486,11 @@
 
     invoke-virtual {v15, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     goto :goto_a
 
@@ -2513,11 +2507,11 @@
 
     invoke-virtual {v15, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     goto :goto_a
 
@@ -2536,21 +2530,21 @@
 
     :goto_c
     :pswitch_5
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 345
     goto :goto_a
 
     :pswitch_6
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 329
     goto :goto_a
@@ -2562,11 +2556,11 @@
     .line 332
     const/16 v7, 0x64
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 333
     goto :goto_a
@@ -2575,11 +2569,11 @@
     :pswitch_8
     const/16 v7, 0x64
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 336
     goto :goto_a
@@ -2588,11 +2582,11 @@
     :pswitch_9
     const/16 v7, 0x63
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 339
     goto :goto_a
@@ -2616,11 +2610,11 @@
 
     invoke-virtual {v15, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     goto :goto_a
 
@@ -2639,21 +2633,21 @@
 
     :goto_d
     :pswitch_c
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 375
     goto/16 :goto_a
 
     :pswitch_d
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 359
     goto/16 :goto_a
@@ -2665,11 +2659,11 @@
     .line 362
     const/16 v7, 0x65
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 363
     goto/16 :goto_a
@@ -2678,11 +2672,11 @@
     :pswitch_f
     const/16 v7, 0x65
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 366
     goto/16 :goto_a
@@ -2691,11 +2685,11 @@
     :pswitch_10
     const/16 v7, 0x63
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 369
     goto/16 :goto_a
@@ -2726,11 +2720,11 @@
     :cond_f
     invoke-virtual {v15, v12}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     goto/16 :goto_a
 
@@ -2754,21 +2748,21 @@
     :pswitch_14
     const/16 v7, 0x64
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 395
     goto/16 :goto_a
 
     :pswitch_15
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 389
     goto/16 :goto_a
@@ -2777,11 +2771,11 @@
     :pswitch_16
     const/16 v7, 0x65
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     .line 392
     goto/16 :goto_a
@@ -2790,11 +2784,11 @@
     :pswitch_17
     const/4 v4, 0x1
 
-    move/from16 v20, v4
+    move/from16 v19, v4
 
     move v4, v7
 
-    move/from16 v7, v20
+    move/from16 v7, v19
 
     goto/16 :goto_a
 

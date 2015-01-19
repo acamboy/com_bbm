@@ -57,6 +57,15 @@
 
     iput v1, p1, Landroid/view/inputmethod/EditorInfo;->imeOptions:I
 
-    .line 28
+    .line 29
+    iget v1, p1, Landroid/view/inputmethod/EditorInfo;->imeOptions:I
+
+    const/high16 v2, 0x2000000
+
+    or-int/2addr v1, v2
+
+    iput v1, p1, Landroid/view/inputmethod/EditorInfo;->imeOptions:I
+
+    .line 30
     return-object v0
 .end method

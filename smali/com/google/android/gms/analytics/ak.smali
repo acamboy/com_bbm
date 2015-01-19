@@ -127,11 +127,13 @@
 .end method
 
 .method public static J(Ljava/lang/String;)Ljava/lang/String;
-    .locals 6
+    .locals 7
 
-    const/4 v0, 0x0
+    const/16 v6, 0x9
 
     const/4 v1, 0x0
+
+    const/4 v0, 0x0
 
     const/4 v4, 0x1
 
@@ -140,8 +142,6 @@
     move-result v2
 
     if-eqz v2, :cond_0
-
-    move-object v0, v1
 
     :goto_0
     return-object v0
@@ -190,70 +190,64 @@
 
     move-result-object v2
 
-    const/16 v1, 0x9
+    new-array v3, v6, [Ljava/lang/String;
 
-    new-array v3, v1, [Ljava/lang/String;
+    const-string v0, "dclid"
 
-    const-string v1, "dclid"
+    aput-object v0, v3, v1
 
-    aput-object v1, v3, v0
+    const-string v0, "utm_source"
 
-    const-string v1, "utm_source"
+    aput-object v0, v3, v4
 
-    aput-object v1, v3, v4
-
-    const/4 v1, 0x2
+    const/4 v0, 0x2
 
     const-string v4, "gclid"
 
-    aput-object v4, v3, v1
+    aput-object v4, v3, v0
 
-    const/4 v1, 0x3
+    const/4 v0, 0x3
 
     const-string v4, "utm_campaign"
 
-    aput-object v4, v3, v1
+    aput-object v4, v3, v0
 
-    const/4 v1, 0x4
+    const/4 v0, 0x4
 
     const-string v4, "utm_medium"
 
-    aput-object v4, v3, v1
+    aput-object v4, v3, v0
 
-    const/4 v1, 0x5
+    const/4 v0, 0x5
 
     const-string v4, "utm_term"
 
-    aput-object v4, v3, v1
+    aput-object v4, v3, v0
 
-    const/4 v1, 0x6
+    const/4 v0, 0x6
 
     const-string v4, "utm_content"
 
-    aput-object v4, v3, v1
+    aput-object v4, v3, v0
 
-    const/4 v1, 0x7
+    const/4 v0, 0x7
 
     const-string v4, "utm_id"
 
-    aput-object v4, v3, v1
+    aput-object v4, v3, v0
 
-    const/16 v1, 0x8
+    const/16 v0, 0x8
 
     const-string v4, "gmob_t"
 
-    aput-object v4, v3, v1
+    aput-object v4, v3, v0
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    move v1, v0
-
     :goto_1
-    array-length v0, v3
-
-    if-ge v1, v0, :cond_6
+    if-ge v1, v6, :cond_6
 
     aget-object v0, v3, v1
 
@@ -309,13 +303,6 @@
 
     goto :goto_1
 
-    :catch_0
-    move-exception v0
-
-    move-object v0, v1
-
-    goto/16 :goto_0
-
     :cond_5
     const-string v2, "="
 
@@ -325,14 +312,17 @@
 
     if-nez v2, :cond_2
 
-    move-object v0, v1
-
     goto/16 :goto_0
 
     :cond_6
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    goto/16 :goto_0
+
+    :catch_0
+    move-exception v1
 
     goto/16 :goto_0
 .end method

@@ -40,7 +40,7 @@
     invoke-interface {v0}, Lcom/glympse/android/lib/json/GJsonParser;->clearStack()V
 
     .line 37
-    invoke-virtual {v1}, Lcom/glympse/android/lib/json/b;->cZ()Lcom/glympse/android/core/GPrimitive;
+    invoke-virtual {v1}, Lcom/glympse/android/lib/json/b;->de()Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 

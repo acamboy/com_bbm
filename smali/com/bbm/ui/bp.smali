@@ -1,55 +1,179 @@
-.class final Lcom/bbm/ui/bp;
-.super Ljava/lang/Object;
-.source "EmoticonStickerPager.java"
-
-# interfaces
-.implements Landroid/support/v4/view/bu;
+.class public final enum Lcom/bbm/ui/bp;
+.super Ljava/lang/Enum;
+.source "EmoticonInputPanel.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/EmoticonStickerPager;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/bp;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/bbm/ui/bp;
+
+.field public static final enum b:Lcom/bbm/ui/bp;
+
+.field public static final enum c:Lcom/bbm/ui/bp;
+
+.field public static final enum d:Lcom/bbm/ui/bp;
+
+.field public static final enum e:Lcom/bbm/ui/bp;
+
+.field public static final enum f:Lcom/bbm/ui/bp;
+
+.field private static final synthetic g:[Lcom/bbm/ui/bp;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/EmoticonStickerPager;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
     .prologue
-    .line 126
-    iput-object p1, p0, Lcom/bbm/ui/bp;->a:Lcom/bbm/ui/EmoticonStickerPager;
+    const/4 v7, 0x4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v6, 0x3
+
+    const/4 v5, 0x2
+
+    const/4 v4, 0x1
+
+    const/4 v3, 0x0
+
+    .line 44
+    new-instance v0, Lcom/bbm/ui/bp;
+
+    const-string v1, "Emoticon"
+
+    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/bp;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/bp;->a:Lcom/bbm/ui/bp;
+
+    new-instance v0, Lcom/bbm/ui/bp;
+
+    const-string v1, "Keyboard"
+
+    invoke-direct {v0, v1, v4}, Lcom/bbm/ui/bp;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/bp;->b:Lcom/bbm/ui/bp;
+
+    new-instance v0, Lcom/bbm/ui/bp;
+
+    const-string v1, "Timebomb"
+
+    invoke-direct {v0, v1, v5}, Lcom/bbm/ui/bp;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/bp;->c:Lcom/bbm/ui/bp;
+
+    new-instance v0, Lcom/bbm/ui/bp;
+
+    const-string v1, "Quickshare"
+
+    invoke-direct {v0, v1, v6}, Lcom/bbm/ui/bp;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/bp;->d:Lcom/bbm/ui/bp;
+
+    new-instance v0, Lcom/bbm/ui/bp;
+
+    const-string v1, "None"
+
+    invoke-direct {v0, v1, v7}, Lcom/bbm/ui/bp;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/bp;->e:Lcom/bbm/ui/bp;
+
+    new-instance v0, Lcom/bbm/ui/bp;
+
+    const-string v1, "KeyboardShowing"
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/bp;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/bp;->f:Lcom/bbm/ui/bp;
+
+    const/4 v0, 0x6
+
+    new-array v0, v0, [Lcom/bbm/ui/bp;
+
+    sget-object v1, Lcom/bbm/ui/bp;->a:Lcom/bbm/ui/bp;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/bbm/ui/bp;->b:Lcom/bbm/ui/bp;
+
+    aput-object v1, v0, v4
+
+    sget-object v1, Lcom/bbm/ui/bp;->c:Lcom/bbm/ui/bp;
+
+    aput-object v1, v0, v5
+
+    sget-object v1, Lcom/bbm/ui/bp;->d:Lcom/bbm/ui/bp;
+
+    aput-object v1, v0, v6
+
+    sget-object v1, Lcom/bbm/ui/bp;->e:Lcom/bbm/ui/bp;
+
+    aput-object v1, v0, v7
+
+    const/4 v1, 0x5
+
+    sget-object v2, Lcom/bbm/ui/bp;->f:Lcom/bbm/ui/bp;
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/bbm/ui/bp;->g:[Lcom/bbm/ui/bp;
 
     return-void
 .end method
 
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
-# virtual methods
-.method public final a(I)V
+    .prologue
+    .line 44
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/bp;
     .locals 1
 
     .prologue
-    .line 138
-    iget-object v0, p0, Lcom/bbm/ui/bp;->a:Lcom/bbm/ui/EmoticonStickerPager;
+    .line 44
+    const-class v0, Lcom/bbm/ui/bp;
 
-    invoke-static {v0, p1}, Lcom/bbm/ui/EmoticonStickerPager;->a(Lcom/bbm/ui/EmoticonStickerPager;I)V
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    .line 139
-    return-void
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/bp;
+
+    return-object v0
 .end method
 
-.method public final a(IF)V
-    .locals 0
+.method public static values()[Lcom/bbm/ui/bp;
+    .locals 1
 
     .prologue
-    .line 134
-    return-void
-.end method
+    .line 44
+    sget-object v0, Lcom/bbm/ui/bp;->g:[Lcom/bbm/ui/bp;
 
-.method public final b(I)V
-    .locals 0
+    invoke-virtual {v0}, [Lcom/bbm/ui/bp;->clone()Ljava/lang/Object;
 
-    .prologue
-    .line 130
-    return-void
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/ui/bp;
+
+    return-object v0
 .end method

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/yp;
 .super Ljava/lang/Object;
-.source "PreviewChannelActivity.java"
+.source "NewChannelActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/fu;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
     .locals 0
 
     .prologue
-    .line 123
-    iput-object p1, p0, Lcom/bbm/ui/activities/yp;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    .line 161
+    iput-object p1, p0, Lcom/bbm/ui/activities/yp;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,17 +25,37 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
     .prologue
-    .line 126
-    iget-object v0, p0, Lcom/bbm/ui/activities/yp;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    .line 164
+    iget-object v0, p0, Lcom/bbm/ui/activities/yp;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    iget v1, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->a(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/Switch;
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/PreviewChannelActivity;->b(Lcom/bbm/ui/activities/PreviewChannelActivity;I)V
+    move-result-object v0
 
-    .line 127
+    invoke-virtual {v0}, Landroid/widget/Switch;->isChecked()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 165
+    iget-object v0, p0, Lcom/bbm/ui/activities/yp;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->b(Lcom/bbm/ui/activities/NewChannelActivity;)V
+
+    .line 169
+    :goto_0
     return-void
+
+    .line 167
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/yp;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->c(Lcom/bbm/ui/activities/NewChannelActivity;)V
+
+    goto :goto_0
 .end method

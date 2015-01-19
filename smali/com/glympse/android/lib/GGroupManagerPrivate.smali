@@ -13,6 +13,9 @@
 .method public abstract addPendingGroup(Lcom/glympse/android/lib/GGroupPrivate;)V
 .end method
 
+.method public abstract checkServerSyncComplete()V
+.end method
+
 .method public abstract createInvite(Lcom/glympse/android/lib/GGroupPrivate;Lcom/glympse/android/lib/GInvitePrivate;)V
 .end method
 

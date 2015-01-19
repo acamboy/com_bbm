@@ -1,4 +1,4 @@
-.class final Lcom/bbm/ui/views/d;
+.class public final Lcom/bbm/ui/views/d;
 .super Ljava/lang/Object;
 .source "ChannelFeaturedPostsView.java"
 
@@ -11,7 +11,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/views/a;)V
+.method public constructor <init>(Lcom/bbm/ui/views/a;)V
     .locals 0
 
     .prologue
@@ -23,7 +23,7 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/views/d;Landroid/view/View;Lcom/bbm/d/de;)V
+.method static synthetic a(Lcom/bbm/ui/views/d;Landroid/view/View;Lcom/bbm/d/ee;)V
     .locals 1
 
     .prologue
@@ -36,7 +36,7 @@
 
     check-cast p1, Landroid/widget/ImageView;
 
-    invoke-static {p2, v0, p1}, Lcom/bbm/util/r;->b(Lcom/bbm/d/de;Landroid/app/Activity;Landroid/widget/ImageView;)V
+    invoke-static {p2, v0, p1}, Lcom/bbm/util/s;->a(Lcom/bbm/d/ee;Landroid/app/Activity;Landroid/widget/ImageView;)V
 
     return-void
 .end method
@@ -52,7 +52,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/bbm/util/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v0, p1}, Lcom/bbm/util/ac;->a(Landroid/content/Context;Ljava/lang/String;)V
 
     return-void
 .end method

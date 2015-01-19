@@ -1,85 +1,92 @@
 .class final Lcom/bbm/ui/activities/bz;
-.super Ljava/lang/Object;
-.source "ChannelChildActivity.java"
+.super Lcom/bbm/d/b/m;
+.source "ChangeStatusActivity.java"
 
-# interfaces
-.implements Lcom/slidingmenu/lib/a/b;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/m",
+        "<",
+        "Lcom/bbm/d/gg;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/by;
+.field final synthetic a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/by;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChangeStatusActivity;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
-    .line 36
-    iput-object p1, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/by;
+    .line 252
+    iput-object p1, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method protected final synthetic a(Ljava/lang/Object;)Z
+    .locals 3
 
     .prologue
-    .line 40
-    const-string v0, "onHardwareMenuButtonClicked"
+    .line 252
+    check-cast p1, Lcom/bbm/d/gg;
 
-    const-class v1, Lcom/bbm/ui/activities/by;
+    iget-object v0, p1, Lcom/bbm/d/gg;->d:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    iget-object v1, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    .line 41
-    iget-object v0, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/by;
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getResources()Landroid/content/res/Resources;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/by;->t()Lcom/slidingmenu/lib/SlidingMenu;
+    move-result-object v1
 
-    move-result-object v0
+    const v2, 0x7f0e050e
 
-    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->h()Z
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_0
 
-    .line 42
-    iget-object v0, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/by;
+    iget-object v0, p1, Lcom/bbm/d/gg;->d:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/by;->v()V
+    iget-object v1, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    .line 49
-    :cond_0
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0e050f
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
     :goto_0
-    return-void
+    return v0
 
-    .line 44
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/by;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/by;->k()Lcom/bbm/ui/c/fq;
-
-    move-result-object v0
-
-    .line 45
-    iget-object v1, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/by;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/by;->a(Lcom/bbm/ui/c/fq;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 46
-    iget-object v0, p0, Lcom/bbm/ui/activities/bz;->a:Lcom/bbm/ui/activities/by;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/by;->w()V
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

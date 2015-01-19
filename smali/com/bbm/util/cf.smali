@@ -1,111 +1,128 @@
-.class public Lcom/bbm/util/cf;
+.class final Lcom/bbm/util/cf;
 .super Ljava/lang/Object;
-.source "LocationServicesUtil.java"
+.source "LinkifyUtil.java"
+
+# interfaces
+.implements Landroid/text/util/Linkify$MatchFilter;
+
+
+# instance fields
+.field final synthetic a:[Landroid/text/style/ClickableSpan;
+
+.field final synthetic b:Landroid/text/Spannable;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>([Landroid/text/style/ClickableSpan;Landroid/text/Spannable;)V
     .locals 0
 
     .prologue
-    .line 19
+    .line 100
+    iput-object p1, p0, Lcom/bbm/util/cf;->a:[Landroid/text/style/ClickableSpan;
+
+    iput-object p2, p0, Lcom/bbm/util/cf;->b:Landroid/text/Spannable;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
     return-void
 .end method
 
-.method public static a(Landroid/app/Activity;Landroid/view/View$OnClickListener;)V
-    .locals 2
 
-    .prologue
-    .line 97
-    new-instance v0, Lcom/bbm/ui/b/o;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
-
-    .line 99
-    const v1, 0x7f0e04a6
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->setTitle(I)V
-
-    .line 100
-    const v1, 0x7f0e04a3
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->e(I)V
-
-    .line 101
-    const v1, 0x7f0e04a4
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->b(I)V
-
-    .line 102
-    const v1, 0x7f0e04a5
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->a(I)V
-
-    .line 104
-    new-instance v1, Lcom/bbm/util/cg;
-
-    invoke-direct {v1, v0}, Lcom/bbm/util/cg;-><init>(Lcom/bbm/ui/b/o;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->b(Landroid/view/View$OnClickListener;)V
-
-    .line 112
-    new-instance v1, Lcom/bbm/util/ch;
-
-    invoke-direct {v1, v0, p0, p1}, Lcom/bbm/util/ch;-><init>(Lcom/bbm/ui/b/o;Landroid/app/Activity;Landroid/view/View$OnClickListener;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->a(Landroid/view/View$OnClickListener;)V
-
-    .line 127
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->show()V
-
-    .line 128
-    return-void
-.end method
-
-.method public static a(Landroid/content/Context;)Z
-    .locals 4
+# virtual methods
+.method public final acceptMatch(Ljava/lang/CharSequence;II)Z
+    .locals 7
 
     .prologue
     const/4 v1, 0x0
 
-    .line 83
-    .line 84
-    const-string v0, "location"
+    .line 104
+    iget-object v2, p0, Lcom/bbm/util/cf;->a:[Landroid/text/style/ClickableSpan;
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/location/LocationManager;
-
-    .line 87
-    :try_start_0
-    const-string v2, "gps"
-
-    invoke-virtual {v0, v2}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
-    :try_end_0
-    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v0
-
-    .line 93
-    :goto_0
-    return v0
-
-    .line 89
-    :catch_0
-    move-exception v0
-
-    const-string v2, "Can\'t check if Location Provider is enabled"
-
-    new-array v3, v1, [Ljava/lang/Object;
-
-    invoke-static {v0, v2, v3}, Lcom/bbm/w;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    array-length v3, v2
 
     move v0, v1
 
+    :goto_0
+    if-ge v0, v3, :cond_1
+
+    aget-object v4, v2, v0
+
+    .line 105
+    iget-object v5, p0, Lcom/bbm/util/cf;->b:Landroid/text/Spannable;
+
+    invoke-interface {v5, v4}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v5
+
+    .line 106
+    iget-object v6, p0, Lcom/bbm/util/cf;->b:Landroid/text/Spannable;
+
+    invoke-interface {v6, v4}, Landroid/text/Spannable;->getSpanEnd(Ljava/lang/Object;)I
+
+    move-result v4
+
+    .line 107
+    if-ge p2, v4, :cond_0
+
+    if-le p3, v5, :cond_0
+
+    move v0, v1
+
+    .line 124
+    :goto_1
+    return v0
+
+    .line 104
+    :cond_0
+    add-int/lit8 v0, v0, 0x1
+
     goto :goto_0
+
+    :cond_1
+    move v0, v1
+
+    .line 115
+    :goto_2
+    if-ge p2, p3, :cond_3
+
+    .line 116
+    invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
+
+    move-result v2
+
+    invoke-static {v2}, Ljava/lang/Character;->isDigit(C)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 117
+    add-int/lit8 v0, v0, 0x1
+
+    .line 115
+    :cond_2
+    add-int/lit8 p2, p2, 0x1
+
+    goto :goto_2
+
+    .line 120
+    :cond_3
+    const/4 v2, 0x7
+
+    if-lt v0, v2, :cond_4
+
+    const/16 v2, 0xd
+
+    if-gt v0, v2, :cond_4
+
+    .line 121
+    const/4 v0, 0x1
+
+    goto :goto_1
+
+    :cond_4
+    move v0, v1
+
+    .line 124
+    goto :goto_1
 .end method

@@ -1,90 +1,204 @@
-.class final Lcom/bbm/ui/activities/ex;
+.class public final Lcom/bbm/ui/activities/ex;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
-
-# interfaces
-.implements Lcom/bbm/j/s;
+.source "ChatListItem.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ew;
+.field public final a:Lcom/bbm/d/eu;
+
+.field public final b:Lcom/bbm/g/q;
+
+.field public final c:Lcom/bbm/d/ee;
+
+.field public final d:Z
+
+.field public e:Ljava/lang/Boolean;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ew;)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/d/eu;Lcom/bbm/d/ee;Z)V
+    .locals 2
 
     .prologue
-    .line 903
-    iput-object p1, p0, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/ui/activities/ew;
+    const/4 v1, 0x0
 
+    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 12
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ex;->e:Ljava/lang/Boolean;
+
+    .line 44
+    iput-object p1, p0, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/d/eu;
+
+    .line 45
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ex;->e:Ljava/lang/Boolean;
+
+    .line 46
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ex;->b:Lcom/bbm/g/q;
+
+    .line 47
+    iput-object p2, p0, Lcom/bbm/ui/activities/ex;->c:Lcom/bbm/d/ee;
+
+    .line 48
+    iput-boolean p3, p0, Lcom/bbm/ui/activities/ex;->d:Z
+
+    .line 49
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/bbm/d/eu;Z)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    const/4 v1, 0x0
+
+    .line 18
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 12
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ex;->e:Ljava/lang/Boolean;
+
+    .line 19
+    iput-object p1, p0, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/d/eu;
+
+    .line 20
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ex;->e:Ljava/lang/Boolean;
+
+    .line 21
+    iput-object v2, p0, Lcom/bbm/ui/activities/ex;->b:Lcom/bbm/g/q;
+
+    .line 22
+    iput-object v2, p0, Lcom/bbm/ui/activities/ex;->c:Lcom/bbm/d/ee;
+
+    .line 23
+    iput-boolean p2, p0, Lcom/bbm/ui/activities/ex;->d:Z
+
+    .line 24
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/bbm/g/q;)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    const/4 v1, 0x0
+
+    .line 30
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 12
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ex;->e:Ljava/lang/Boolean;
+
+    .line 31
+    iput-object p1, p0, Lcom/bbm/ui/activities/ex;->b:Lcom/bbm/g/q;
+
+    .line 32
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ex;->e:Ljava/lang/Boolean;
+
+    .line 33
+    iput-object v2, p0, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/d/eu;
+
+    .line 34
+    iput-object v2, p0, Lcom/bbm/ui/activities/ex;->c:Lcom/bbm/d/ee;
+
+    .line 35
+    iput-boolean v1, p0, Lcom/bbm/ui/activities/ex;->d:Z
+
+    .line 36
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 3
+.method public final a()Ljava/lang/String;
+    .locals 1
 
     .prologue
-    .line 906
-    iget-object v0, p0, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/ui/activities/ew;
+    .line 52
+    iget-object v0, p0, Lcom/bbm/ui/activities/ex;->e:Ljava/lang/Boolean;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ew;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+    move-result v0
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/ui/activities/ew;
+    .line 53
+    iget-object v0, p0, Lcom/bbm/ui/activities/ex;->b:Lcom/bbm/g/q;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/ew;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    iget-object v0, v0, Lcom/bbm/g/q;->m:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->P(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/dz;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/d/dz;->l:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->t(Ljava/lang/String;)Lcom/bbm/d/ec;
-
-    move-result-object v0
-
-    .line 908
-    iget-object v1, v0, Lcom/bbm/d/ec;->r:Lcom/bbm/util/bc;
-
-    sget-object v2, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
-
-    if-ne v1, v2, :cond_0
-
-    .line 909
-    const/4 v0, 0x0
-
-    .line 914
+    .line 55
     :goto_0
-    return v0
+    return-object v0
 
-    .line 912
     :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/ui/activities/ew;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/d/eu;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/ew;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    iget-object v0, v0, Lcom/bbm/d/eu;->b:Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ConversationActivity;->v()V
+    goto :goto_0
+.end method
 
-    .line 913
-    iget-object v1, p0, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/ui/activities/ew;
+.method public final b()J
+    .locals 2
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/ew;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .prologue
+    .line 95
+    iget-object v0, p0, Lcom/bbm/ui/activities/ex;->e:Ljava/lang/Boolean;
 
-    iget-object v0, v0, Lcom/bbm/d/ec;->i:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Landroid/content/Context;Ljava/lang/String;)V
+    move-result v0
 
-    .line 914
-    const/4 v0, 0x1
+    if-eqz v0, :cond_0
+
+    .line 96
+    iget-object v0, p0, Lcom/bbm/ui/activities/ex;->b:Lcom/bbm/g/q;
+
+    iget-wide v0, v0, Lcom/bbm/g/q;->j:J
+
+    .line 98
+    :goto_0
+    return-wide v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/ex;->a:Lcom/bbm/d/eu;
+
+    iget-wide v0, v0, Lcom/bbm/d/eu;->o:J
 
     goto :goto_0
 .end method

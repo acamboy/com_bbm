@@ -182,7 +182,7 @@
     return-void
 .end method
 
-.method protected abstract c(Ljava/lang/Object;)Ljava/lang/ref/Reference;
+.method public abstract c(Ljava/lang/Object;)Ljava/lang/ref/Reference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TV;)",

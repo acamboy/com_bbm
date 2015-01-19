@@ -1,9 +1,17 @@
 .class final Lcom/bbm/ui/activities/hm;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/a;
 .source "ConversationActivity.java"
 
-# interfaces
-.implements Lcom/bbm/ui/voice/l;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
@@ -15,169 +23,98 @@
     .locals 0
 
     .prologue
-    .line 653
+    .line 2637
     iput-object p1, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 4
 
     .prologue
-    .line 658
+    const/4 v3, 0x0
+
+    .line 2637
     iget-object v0, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->w(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ImageButton;
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->i:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 659
     iget-object v0, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->w(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ImageButton;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->w(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/a;
 
     move-result-object v0
 
-    const v1, 0x7f020034
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
-
-    .line 664
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    const-string v1, "keyguard"
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/app/KeyguardManager;
+    check-cast v0, Lcom/bbm/d/eu;
 
-    .line 665
-    if-eqz v0, :cond_1
-
-    invoke-virtual {v0}, Landroid/app/KeyguardManager;->inKeyguardRestrictedInputMode()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 666
-    iget-object v0, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->finish()V
-
-    .line 668
-    :cond_1
-    return-void
-.end method
-
-.method public final b()V
-    .locals 2
-
-    .prologue
-    .line 672
-    iget-object v0, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/l/a;->a(Landroid/content/Context;)Lcom/bbm/l/a;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->x(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/eu;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/l/a;->c(Lcom/bbm/d/eu;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/l/a;->a(Landroid/content/Context;)Lcom/bbm/l/a;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->x(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/eu;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/l/a;->b(Lcom/bbm/d/eu;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 674
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->w(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ImageButton;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 675
-    iget-object v0, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->w(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ImageButton;
-
-    move-result-object v0
-
-    const v1, 0x7f020035
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
-
-    .line 677
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    .line 679
-    :cond_2
-    return-void
-.end method
-
-.method public final c()V
-    .locals 2
-
-    .prologue
-    .line 684
-    iget-object v0, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->w(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ImageButton;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/d/eu;->r:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 685
-    iget-object v0, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->w(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ImageButton;
+    move-result v1
+
+    const/4 v2, 0x1
+
+    if-ne v1, v2, :cond_0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/hm;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+
+    move-result-object v1
+
+    invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    const v1, 0x7f020034
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setImageResource(I)V
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
 
-    .line 687
+    move-result-object v0
+
+    iget-object v1, v0, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
+
+    sget-object v2, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+
+    if-ne v1, v2, :cond_0
+
+    iget-boolean v0, v0, Lcom/bbm/d/gr;->m:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    :goto_0
+    return-object v0
+
     :cond_0
-    return-void
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

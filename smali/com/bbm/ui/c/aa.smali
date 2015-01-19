@@ -1,70 +1,90 @@
-.class final Lcom/bbm/ui/c/aa;
+.class final synthetic Lcom/bbm/ui/c/aa;
 .super Ljava/lang/Object;
-.source "ChannelDetailsFragment.java"
-
-# interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.source "BlockedContactsFragment.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/c/q;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/q;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 957
-    iput-object p1, p0, Lcom/bbm/ui/c/aa;->a:Lcom/bbm/ui/c/q;
+    .line 224
+    invoke-static {}, Lcom/bbm/util/bi;->values()[Lcom/bbm/util/bi;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/c/aa;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/c/aa;->a:[I
+
+    sget-object v1, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+
+    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/c/aa;->a:[I
+
+    sget-object v1, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
+
+    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/c/aa;->a:[I
+
+    sget-object v1, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+
+    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_2
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final onLongClick(Landroid/view/View;)Z
-    .locals 2
+    goto :goto_2
 
-    .prologue
-    .line 960
-    iget-object v0, p0, Lcom/bbm/ui/c/aa;->a:Lcom/bbm/ui/c/q;
+    :catch_1
+    move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->h(Lcom/bbm/ui/c/q;)Lcom/bbm/ui/activities/by;
+    goto :goto_1
 
-    move-result-object v0
+    :catch_2
+    move-exception v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/by;->k()Lcom/bbm/ui/c/fq;
-
-    move-result-object v0
-
-    .line 961
-    iget-object v1, p0, Lcom/bbm/ui/c/aa;->a:Lcom/bbm/ui/c/q;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/q;->b(Lcom/bbm/ui/c/fq;)V
-
-    .line 962
-    iget-object v0, p0, Lcom/bbm/ui/c/aa;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->h(Lcom/bbm/ui/c/q;)Lcom/bbm/ui/activities/by;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    .line 963
-    iget-object v0, p0, Lcom/bbm/ui/c/aa;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->h(Lcom/bbm/ui/c/q;)Lcom/bbm/ui/activities/by;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/by;->w()V
-
-    .line 964
-    const/4 v0, 0x1
-
-    return v0
+    goto :goto_0
 .end method

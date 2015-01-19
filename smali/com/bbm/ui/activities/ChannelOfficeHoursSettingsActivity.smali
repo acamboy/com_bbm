@@ -1,5 +1,5 @@
 .class public Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-.super Lcom/bbm/ui/activities/eg;
+.super Lcom/bbm/ui/activities/ey;
 .source "ChannelOfficeHoursSettingsActivity.java"
 
 
@@ -9,7 +9,7 @@
         "<ViewHolder:",
         "Ljava/lang/Object;",
         ">",
-        "Lcom/bbm/ui/activities/eg;"
+        "Lcom/bbm/ui/activities/ey;"
     }
 .end annotation
 
@@ -21,20 +21,20 @@
 
 .field private final c:I
 
-.field private j:Landroid/widget/Switch;
+.field private d:Landroid/widget/Switch;
 
-.field private k:Landroid/view/ViewGroup;
+.field private e:Landroid/view/ViewGroup;
 
-.field private l:Lcom/bbm/ui/activities/cg;
+.field private f:Lcom/bbm/ui/activities/cy;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity",
-            "<TViewHolder;>.com/bbm/ui/activities/cg;"
+            "<TViewHolder;>.com/bbm/ui/activities/cy;"
         }
     .end annotation
 .end field
 
-.field private m:Ljava/util/ArrayList;
+.field private g:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
@@ -45,26 +45,26 @@
     .end annotation
 .end field
 
-.field private n:Ljava/util/ArrayList;
+.field private h:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
             "<",
             "Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity",
-            "<TViewHolder;>.com/bbm/ui/activities/ch;>;"
+            "<TViewHolder;>.com/bbm/ui/activities/cz;>;"
         }
     .end annotation
 .end field
 
-.field private final o:Ljava/text/DateFormatSymbols;
+.field private final i:Ljava/text/DateFormatSymbols;
 
-.field private final p:Ljava/text/SimpleDateFormat;
+.field private final j:Ljava/text/SimpleDateFormat;
 
-.field private final q:Landroid/view/View$OnClickListener;
+.field private final k:Landroid/view/View$OnClickListener;
 
-.field private final r:Lcom/bbm/ui/az;
+.field private final l:Lcom/bbm/ui/be;
 
-.field private final s:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.field private final m:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # direct methods
@@ -72,10 +72,10 @@
     .locals 3
 
     .prologue
-    .line 135
+    .line 137
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/eg;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ey;-><init>(Ljava/lang/Class;)V
 
     .line 39
     const-string v0, "09:00"
@@ -102,14 +102,14 @@
 
     iput v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->c:I
 
-    .line 54
+    .line 56
     new-instance v0, Ljava/text/DateFormatSymbols;
 
     invoke-direct {v0}, Ljava/text/DateFormatSymbols;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->o:Ljava/text/DateFormatSymbols;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->i:Ljava/text/DateFormatSymbols;
 
-    .line 55
+    .line 57
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "HH:mm"
@@ -118,54 +118,54 @@
 
     invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->p:Ljava/text/SimpleDateFormat;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->j:Ljava/text/SimpleDateFormat;
 
-    .line 77
-    new-instance v0, Lcom/bbm/ui/activities/cb;
+    .line 79
+    new-instance v0, Lcom/bbm/ui/activities/ct;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/cb;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ct;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->q:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->k:Landroid/view/View$OnClickListener;
 
-    .line 84
-    new-instance v0, Lcom/bbm/ui/activities/cc;
+    .line 86
+    new-instance v0, Lcom/bbm/ui/activities/cu;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/cc;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/cu;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->r:Lcom/bbm/ui/az;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->l:Lcom/bbm/ui/be;
 
-    .line 110
-    new-instance v0, Lcom/bbm/ui/activities/cd;
+    .line 112
+    new-instance v0, Lcom/bbm/ui/activities/cv;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/cd;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/cv;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->s:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->m:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
-    .line 136
+    .line 138
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/eg;->e:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ey;->y:Z
 
-    .line 137
+    .line 139
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Lcom/bbm/ui/activities/cg;
+.method static synthetic a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Lcom/bbm/ui/activities/cy;
     .locals 1
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->l:Lcom/bbm/ui/activities/cg;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->f:Lcom/bbm/ui/activities/cy;
 
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;Lcom/bbm/ui/activities/cg;)Lcom/bbm/ui/activities/cg;
+.method static synthetic a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;Lcom/bbm/ui/activities/cy;)Lcom/bbm/ui/activities/cy;
     .locals 0
 
     .prologue
     .line 34
-    iput-object p1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->l:Lcom/bbm/ui/activities/cg;
+    iput-object p1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->f:Lcom/bbm/ui/activities/cy;
 
     return-object p1
 .end method
@@ -178,28 +178,28 @@
 
     const/4 v4, 0x0
 
-    .line 280
+    .line 282
     const-string v0, ":"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 281
+    .line 283
     aget-object v1, v0, v4
 
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 282
+    .line 284
     aget-object v0, v0, v5
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 283
+    .line 285
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v2
@@ -259,12 +259,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 239
+    .line 241
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->m:Ljava/util/ArrayList;
+    iput-object v1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->g:Ljava/util/ArrayList;
 
     move v2, v0
 
@@ -307,7 +307,7 @@
 
     invoke-virtual {v3, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->m:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->g:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v2, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
     :try_end_0
@@ -328,11 +328,11 @@
     :catch_0
     move-exception v1
 
-    invoke-static {v1}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
-    .line 242
+    .line 244
     :cond_1
     :goto_3
     invoke-virtual {p1}, Lorg/json/JSONArray;->length()I
@@ -341,7 +341,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 244
+    .line 246
     :try_start_1
     invoke-virtual {p1, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -353,8 +353,8 @@
 
     move-result v1
 
-    .line 245
-    iget-object v2, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->m:Ljava/util/ArrayList;
+    .line 247
+    iget-object v2, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->g:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
@@ -364,27 +364,27 @@
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 242
+    .line 244
     :goto_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 246
+    .line 248
     :catch_1
     move-exception v1
 
-    invoke-static {v1}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_4
 
-    .line 252
+    .line 254
     :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->m:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->g:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/bbm/util/x;->a(Ljava/util/List;)V
+    invoke-static {v0}, Lcom/bbm/util/ac;->a(Ljava/util/List;)V
 
-    .line 253
+    .line 255
     return-void
 .end method
 
@@ -392,8 +392,8 @@
     .locals 2
 
     .prologue
-    .line 218
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->k:Landroid/view/ViewGroup;
+    .line 220
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->e:Landroid/view/ViewGroup;
 
     if-nez p1, :cond_0
 
@@ -402,10 +402,10 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 219
+    .line 221
     return-void
 
-    .line 218
+    .line 220
     :cond_0
     const/16 v0, 0x8
 
@@ -417,7 +417,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->m:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->g:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -442,42 +442,42 @@
 
     const/4 v2, 0x0
 
-    .line 302
+    .line 304
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->n:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->h:Ljava/util/ArrayList;
 
-    .line 303
+    .line 305
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v4
 
     move v3, v2
 
-    .line 305
+    .line 307
     :goto_0
     const/4 v0, 0x7
 
     if-ge v3, v0, :cond_1
 
-    .line 306
-    const v0, 0x7f0300e0
+    .line 308
+    const v0, 0x7f0300ee
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->k:Landroid/view/ViewGroup;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->e:Landroid/view/ViewGroup;
 
     invoke-virtual {v4, v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v5
 
-    .line 307
-    new-instance v6, Lcom/bbm/ui/activities/ch;
+    .line 309
+    new-instance v6, Lcom/bbm/ui/activities/cz;
 
-    invoke-direct {v6, p0}, Lcom/bbm/ui/activities/ch;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
+    invoke-direct {v6, p0}, Lcom/bbm/ui/activities/cz;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
 
-    .line 308
-    const v0, 0x7f0a010d
+    .line 310
+    const v0, 0x7f0b0151
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -485,30 +485,19 @@
 
     check-cast v0, Landroid/widget/Switch;
 
-    iput-object v0, v6, Lcom/bbm/ui/activities/ch;->a:Landroid/widget/Switch;
-
-    .line 309
-    const v0, 0x7f0a0476
-
-    invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, v6, Lcom/bbm/ui/activities/ch;->b:Landroid/view/View;
-
-    .line 310
-    const v0, 0x7f0a0477
-
-    invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/DateTimePickerView;
-
-    iput-object v0, v6, Lcom/bbm/ui/activities/ch;->c:Lcom/bbm/ui/DateTimePickerView;
+    iput-object v0, v6, Lcom/bbm/ui/activities/cz;->a:Landroid/widget/Switch;
 
     .line 311
-    const v0, 0x7f0a0478
+    const v0, 0x7f0b0503
+
+    invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, v6, Lcom/bbm/ui/activities/cz;->b:Landroid/view/View;
+
+    .line 312
+    const v0, 0x7f0b0504
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -516,58 +505,69 @@
 
     check-cast v0, Lcom/bbm/ui/DateTimePickerView;
 
-    iput-object v0, v6, Lcom/bbm/ui/activities/ch;->d:Lcom/bbm/ui/DateTimePickerView;
+    iput-object v0, v6, Lcom/bbm/ui/activities/cz;->c:Lcom/bbm/ui/DateTimePickerView;
 
-    .line 312
-    iget-object v7, v6, Lcom/bbm/ui/activities/ch;->a:Landroid/widget/Switch;
+    .line 313
+    const v0, 0x7f0b0505
 
-    iget-object v8, v6, Lcom/bbm/ui/activities/ch;->b:Landroid/view/View;
+    invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iget-object v9, v6, Lcom/bbm/ui/activities/ch;->c:Lcom/bbm/ui/DateTimePickerView;
+    move-result-object v0
 
-    iget-object v10, v6, Lcom/bbm/ui/activities/ch;->d:Lcom/bbm/ui/DateTimePickerView;
+    check-cast v0, Lcom/bbm/ui/DateTimePickerView;
+
+    iput-object v0, v6, Lcom/bbm/ui/activities/cz;->d:Lcom/bbm/ui/DateTimePickerView;
+
+    .line 314
+    iget-object v7, v6, Lcom/bbm/ui/activities/cz;->a:Landroid/widget/Switch;
+
+    iget-object v8, v6, Lcom/bbm/ui/activities/cz;->b:Landroid/view/View;
+
+    iget-object v9, v6, Lcom/bbm/ui/activities/cz;->c:Lcom/bbm/ui/DateTimePickerView;
+
+    iget-object v10, v6, Lcom/bbm/ui/activities/cz;->d:Lcom/bbm/ui/DateTimePickerView;
 
     invoke-virtual {v9, v12}, Lcom/bbm/ui/DateTimePickerView;->setMode(I)V
 
     invoke-virtual {v10, v12}, Lcom/bbm/ui/DateTimePickerView;->setMode(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->q:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->k:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v7, v0}, Landroid/widget/Switch;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->r:Lcom/bbm/ui/az;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->l:Lcom/bbm/ui/be;
 
-    invoke-virtual {v9, v0}, Lcom/bbm/ui/DateTimePickerView;->setOnDateTimePickerViewChangeListener(Lcom/bbm/ui/az;)V
+    invoke-virtual {v9, v0}, Lcom/bbm/ui/DateTimePickerView;->setOnDateTimePickerViewChangeListener(Lcom/bbm/ui/be;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->r:Lcom/bbm/ui/az;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->l:Lcom/bbm/ui/be;
 
-    invoke-virtual {v10, v0}, Lcom/bbm/ui/DateTimePickerView;->setOnDateTimePickerViewChangeListener(Lcom/bbm/ui/az;)V
+    invoke-virtual {v10, v0}, Lcom/bbm/ui/DateTimePickerView;->setOnDateTimePickerViewChangeListener(Lcom/bbm/ui/be;)V
 
-    new-instance v0, Lcom/bbm/ui/activities/cg;
+    new-instance v0, Lcom/bbm/ui/activities/cy;
 
-    sget-object v1, Lcom/bbm/ui/activities/ci;->c:Lcom/bbm/ui/activities/ci;
+    sget-object v1, Lcom/bbm/ui/activities/da;->c:Lcom/bbm/ui/activities/da;
 
-    invoke-direct {v0, p0, v3, v1}, Lcom/bbm/ui/activities/cg;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;ILcom/bbm/ui/activities/ci;)V
+    invoke-direct {v0, p0, v3, v1}, Lcom/bbm/ui/activities/cy;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;ILcom/bbm/ui/activities/da;)V
 
     invoke-virtual {v7, v0}, Landroid/widget/Switch;->setTag(Ljava/lang/Object;)V
 
-    new-instance v0, Lcom/bbm/ui/activities/cg;
+    new-instance v0, Lcom/bbm/ui/activities/cy;
 
-    sget-object v1, Lcom/bbm/ui/activities/ci;->a:Lcom/bbm/ui/activities/ci;
+    sget-object v1, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/da;
 
-    invoke-direct {v0, p0, v3, v1}, Lcom/bbm/ui/activities/cg;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;ILcom/bbm/ui/activities/ci;)V
+    invoke-direct {v0, p0, v3, v1}, Lcom/bbm/ui/activities/cy;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;ILcom/bbm/ui/activities/da;)V
 
     invoke-virtual {v9, v0}, Lcom/bbm/ui/DateTimePickerView;->setTag(Ljava/lang/Object;)V
 
-    new-instance v0, Lcom/bbm/ui/activities/cg;
+    new-instance v0, Lcom/bbm/ui/activities/cy;
 
-    sget-object v1, Lcom/bbm/ui/activities/ci;->b:Lcom/bbm/ui/activities/ci;
+    sget-object v1, Lcom/bbm/ui/activities/da;->b:Lcom/bbm/ui/activities/da;
 
-    invoke-direct {v0, p0, v3, v1}, Lcom/bbm/ui/activities/cg;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;ILcom/bbm/ui/activities/ci;)V
+    invoke-direct {v0, p0, v3, v1}, Lcom/bbm/ui/activities/cy;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;ILcom/bbm/ui/activities/da;)V
 
     invoke-virtual {v10, v0}, Lcom/bbm/ui/DateTimePickerView;->setTag(Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->m:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->g:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -575,7 +575,7 @@
 
     check-cast v0, Lorg/json/JSONObject;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->o:Ljava/text/DateFormatSymbols;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->i:Ljava/text/DateFormatSymbols;
 
     invoke-virtual {v1}, Ljava/text/DateFormatSymbols;->getShortWeekdays()[Ljava/lang/String;
 
@@ -660,42 +660,42 @@
 
     invoke-virtual {v10, v0}, Lcom/bbm/ui/DateTimePickerView;->setMinDateTime(Ljava/util/Date;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->s:Landroid/widget/CompoundButton$OnCheckedChangeListener;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->m:Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
     invoke-virtual {v7, v0}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->q:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->k:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v9, v0}, Lcom/bbm/ui/DateTimePickerView;->setOnDateTimePickerViewClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->q:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->k:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v10, v0}, Lcom/bbm/ui/DateTimePickerView;->setOnDateTimePickerViewClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 313
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->n:Ljava/util/ArrayList;
+    .line 315
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->h:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v3, v6}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 314
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->k:Landroid/view/ViewGroup;
+    .line 316
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->e:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, v5}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 305
+    .line 307
     add-int/lit8 v0, v3, 0x1
 
     move v3, v0
 
     goto/16 :goto_0
 
-    .line 312
+    .line 314
     :cond_0
     const/16 v1, 0x8
 
     goto :goto_1
 
-    .line 316
+    .line 318
     :cond_1
     return-void
 .end method
@@ -705,7 +705,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->p:Ljava/text/SimpleDateFormat;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->j:Ljava/text/SimpleDateFormat;
 
     return-object v0
 .end method
@@ -714,12 +714,12 @@
     .locals 4
 
     .prologue
-    .line 356
+    .line 358
     invoke-virtual {p0}, Ljava/util/Date;->getTime()J
 
     move-result-wide v0
 
-    .line 357
+    .line 359
     invoke-virtual {p0}, Ljava/util/Date;->getHours()I
 
     move-result v2
@@ -732,13 +732,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 358
+    .line 360
     :cond_0
     const-wide/32 v2, 0xea60
 
     sub-long/2addr v0, v2
 
-    .line 360
+    .line 362
     :cond_1
     new-instance v2, Ljava/util/Date;
 
@@ -752,7 +752,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->n:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->h:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -761,12 +761,12 @@
     .locals 4
 
     .prologue
-    .line 364
+    .line 366
     invoke-virtual {p0}, Ljava/util/Date;->getTime()J
 
     move-result-wide v0
 
-    .line 365
+    .line 367
     invoke-virtual {p0}, Ljava/util/Date;->getHours()I
 
     move-result v2
@@ -781,13 +781,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 366
+    .line 368
     :cond_0
     const-wide/32 v2, 0xea60
 
     add-long/2addr v0, v2
 
-    .line 368
+    .line 370
     :cond_1
     new-instance v2, Ljava/util/Date;
 
@@ -803,7 +803,7 @@
     .line 34
     new-instance v0, Lorg/json/JSONArray;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->m:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->g:Ljava/util/ArrayList;
 
     invoke-direct {v0, v1}, Lorg/json/JSONArray;-><init>(Ljava/util/Collection;)V
 
@@ -823,7 +823,7 @@
 
     const-string v0, "alwaysAvailable"
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->j:Landroid/widget/Switch;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->d:Landroid/widget/Switch;
 
     invoke-virtual {v2}, Landroid/widget/Switch;->isChecked()Z
 
@@ -844,17 +844,17 @@
     .locals 1
 
     .prologue
-    .line 209
+    .line 211
     check-cast p1, Landroid/widget/Switch;
 
     invoke-virtual {p1}, Landroid/widget/Switch;->isChecked()Z
 
     move-result v0
 
-    .line 210
+    .line 212
     invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Z)V
 
-    .line 211
+    .line 213
     return-void
 .end method
 
@@ -864,15 +864,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 141
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/eg;->onCreate(Landroid/os/Bundle;)V
+    .line 143
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onCreate(Landroid/os/Bundle;)V
 
-    .line 142
-    const v0, 0x7f030010
+    .line 144
+    const v0, 0x7f030011
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->setContentView(I)V
 
-    .line 145
+    .line 147
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -883,7 +883,7 @@
 
     move-result-object v0
 
-    .line 146
+    .line 148
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -894,7 +894,7 @@
 
     move-result v1
 
-    .line 148
+    .line 150
     :try_start_0
     new-instance v2, Lorg/json/JSONArray;
 
@@ -904,9 +904,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 153
+    .line 155
     :goto_0
-    const v0, 0x7f0a00c1
+    const v0, 0x7f0b0105
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -914,10 +914,10 @@
 
     check-cast v0, Landroid/widget/Switch;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->j:Landroid/widget/Switch;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->d:Landroid/widget/Switch;
 
-    .line 154
-    const v0, 0x7f0a00c3
+    .line 156
+    const v0, 0x7f0b0107
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -925,44 +925,44 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->k:Landroid/view/ViewGroup;
-
-    .line 155
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b()V
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->e:Landroid/view/ViewGroup;
 
     .line 157
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->j:Landroid/widget/Switch;
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b()V
+
+    .line 159
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->d:Landroid/widget/Switch;
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setChecked(Z)V
 
-    .line 158
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->j:Landroid/widget/Switch;
+    .line 160
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->d:Landroid/widget/Switch;
 
-    new-instance v2, Lcom/bbm/ui/activities/ce;
+    new-instance v2, Lcom/bbm/ui/activities/cw;
 
-    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/ce;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/cw;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 164
+    .line 166
     invoke-direct {p0, v1}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Z)V
 
-    .line 167
+    .line 169
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
 
-    .line 168
-    const v0, 0x7f030107
+    .line 170
+    const v0, 0x7f030119
 
     invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setCustomView(I)V
 
-    .line 169
+    .line 171
     invoke-virtual {v1}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
 
     move-result-object v0
 
-    const v2, 0x7f0a04f3
+    const v2, 0x7f0b058e
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -970,18 +970,18 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 170
-    const v2, 0x7f0e01f4
+    .line 172
+    const v2, 0x7f0e0203
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
-    .line 171
+    .line 173
     const/16 v0, 0x10
 
     invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setDisplayOptions(I)V
 
-    .line 174
-    const v0, 0x7f0a00a0
+    .line 176
+    const v0, 0x7f0b00bf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -989,24 +989,24 @@
 
     check-cast v0, Lcom/bbm/ui/FooterActionBar;
 
-    .line 175
+    .line 177
     invoke-virtual {v0, v3}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
 
-    .line 176
-    new-instance v1, Lcom/bbm/ui/activities/cf;
+    .line 178
+    new-instance v1, Lcom/bbm/ui/activities/cx;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/cf;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/cx;-><init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/by;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
 
-    .line 184
+    .line 186
     return-void
 
-    .line 149
+    .line 151
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -1015,10 +1015,10 @@
     .locals 0
 
     .prologue
-    .line 201
-    invoke-super {p0}, Lcom/bbm/ui/activities/eg;->onPause()V
+    .line 203
+    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onPause()V
 
-    .line 202
+    .line 204
     return-void
 .end method
 
@@ -1026,9 +1026,9 @@
     .locals 0
 
     .prologue
-    .line 192
-    invoke-super {p0}, Lcom/bbm/ui/activities/eg;->onResume()V
+    .line 194
+    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onResume()V
 
-    .line 193
+    .line 195
     return-void
 .end method

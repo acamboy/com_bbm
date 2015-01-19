@@ -1,222 +1,152 @@
-.class final Lcom/bbm/ui/activities/ze;
-.super Ljava/lang/Object;
-.source "ProfileActivity.java"
+.class public final Lcom/bbm/ui/activities/ze;
+.super Lcom/bbm/ui/ej;
+.source "NewChannelCategoryActivity.java"
 
-# interfaces
-.implements Lcom/bbm/ui/fe;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/ui/ej",
+        "<",
+        "Lcom/bbm/d/eh;",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
+.field final synthetic b:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
+.method public constructor <init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;Lcom/bbm/j/r;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 205
-    iput-object p1, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 214
+    iput-object p1, p0, Lcom/bbm/ui/activities/ze;->b:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 215
+    invoke-direct {p0, p2}, Lcom/bbm/ui/ej;-><init>(Lcom/bbm/j/r;)V
 
+    .line 216
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 5
+.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 4
 
     .prologue
-    const v4, 0x7f0a01fb
+    const/4 v3, 0x0
 
-    .line 210
-    iget-object v0, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 220
+    iget-object v0, p0, Lcom/bbm/ui/activities/ze;->b:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ProfileActivity;->getFragmentManager()Landroid/app/FragmentManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 211
-    iget-object v1, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    const v1, 0x7f0300b8
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/ProfileActivity;->a(Lcom/bbm/ui/activities/ProfileActivity;Landroid/app/FragmentTransaction;)V
+    invoke-virtual {v0, v1, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 213
-    packed-switch p1, :pswitch_data_0
-
-    .line 239
-    :goto_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    .line 240
-    iget-object v1, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ProfileActivity;->e(Lcom/bbm/ui/activities/ProfileActivity;)V
-
-    .line 241
-    iget-object v1, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-static {v1, p1}, Lcom/bbm/ui/activities/ProfileActivity;->a(Lcom/bbm/ui/activities/ProfileActivity;I)I
-
-    .line 242
-    iget-object v1, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ProfileActivity;->v()V
-
-    .line 243
-    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
-
-    .line 245
-    iget-object v0, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ProfileActivity;->invalidateOptionsMenu()V
-
-    .line 246
-    return-void
-
-    .line 216
-    :pswitch_0
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    .line 217
-    const-string v2, "user_uri"
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/ProfileActivity;->g(Lcom/bbm/ui/activities/ProfileActivity;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 218
-    iget-object v2, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ProfileActivity;->h(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/ui/c/fi;
-
-    move-result-object v2
-
-    if-nez v2, :cond_0
-
-    .line 219
-    iget-object v2, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    new-instance v3, Lcom/bbm/ui/c/fi;
-
-    invoke-direct {v3}, Lcom/bbm/ui/c/fi;-><init>()V
-
-    invoke-static {v2, v3}, Lcom/bbm/ui/activities/ProfileActivity;->a(Lcom/bbm/ui/activities/ProfileActivity;Lcom/bbm/ui/c/fi;)Lcom/bbm/ui/c/fi;
-
-    .line 221
-    :cond_0
-    iget-object v2, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ProfileActivity;->h(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/ui/c/fi;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lcom/bbm/ui/c/fi;->setArguments(Landroid/os/Bundle;)V
+    move-result-object v1
 
     .line 222
-    const-string v1, "profile details selected"
+    new-instance v2, Lcom/bbm/ui/activities/zg;
 
-    const-class v2, Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-static {v1, v2}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-direct {v2, p0, v3}, Lcom/bbm/ui/activities/zg;-><init>(Lcom/bbm/ui/activities/ze;B)V
 
     .line 223
-    iget-object v1, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    const v0, 0x7f0b0460
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ProfileActivity;->h(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/ui/c/fi;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v0, v4, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    check-cast v0, Landroid/widget/TextView;
 
-    goto :goto_0
+    iput-object v0, v2, Lcom/bbm/ui/activities/zg;->a:Landroid/widget/TextView;
+
+    .line 224
+    const v0, 0x7f0b0461
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, v2, Lcom/bbm/ui/activities/zg;->b:Landroid/widget/ImageView;
+
+    .line 225
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 227
-    :pswitch_1
-    new-instance v1, Landroid/os/Bundle;
+    return-object v1
+.end method
 
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+.method protected final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 228
-    const-string v2, "user_uri"
+    .prologue
+    .line 212
+    check-cast p1, Lcom/bbm/d/eh;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    iget-object v0, p1, Lcom/bbm/d/eh;->a:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/bbm/ui/activities/ProfileActivity;->g(Lcom/bbm/ui/activities/ProfileActivity;)Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v3
+.method protected final synthetic a(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 4
 
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    .prologue
+    const v3, 0x7f0b0009
 
-    .line 229
-    iget-object v2, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 212
+    check-cast p2, Lcom/bbm/d/eh;
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/ProfileActivity;->i(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/ui/c/fk;
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    move-result-object v2
+    move-result-object v0
 
-    if-nez v2, :cond_1
+    check-cast v0, Lcom/bbm/ui/activities/zg;
 
-    .line 230
-    iget-object v2, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    iget-object v1, v0, Lcom/bbm/ui/activities/zg;->a:Landroid/widget/TextView;
 
-    new-instance v3, Lcom/bbm/ui/c/fk;
+    iget-object v2, p2, Lcom/bbm/d/eh;->b:Ljava/lang/String;
 
-    invoke-direct {v3}, Lcom/bbm/ui/c/fk;-><init>()V
+    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {v2, v3}, Lcom/bbm/ui/activities/ProfileActivity;->a(Lcom/bbm/ui/activities/ProfileActivity;Lcom/bbm/ui/c/fk;)Lcom/bbm/ui/c/fk;
-
-    .line 232
-    :cond_1
-    iget-object v2, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ProfileActivity;->i(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/ui/c/fk;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lcom/bbm/ui/c/fk;->setArguments(Landroid/os/Bundle;)V
-
-    .line 233
-    iget-object v1, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ProfileActivity;->v()V
-
-    .line 234
-    const-string v1, "profile updates selected"
-
-    const-class v2, Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-static {v1, v2}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 235
-    iget-object v1, p0, Lcom/bbm/ui/activities/ze;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ProfileActivity;->i(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/ui/c/fk;
+    invoke-virtual {p1, v3}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0, v4, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    check-cast v1, Lcom/bbm/j/k;
 
-    goto/16 :goto_0
+    new-instance v2, Lcom/bbm/ui/activities/zf;
 
-    .line 213
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    invoke-direct {v2, p0, v0, p2}, Lcom/bbm/ui/activities/zf;-><init>(Lcom/bbm/ui/activities/ze;Lcom/bbm/ui/activities/zg;Lcom/bbm/d/eh;)V
+
+    invoke-virtual {v2}, Lcom/bbm/j/k;->c()V
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Lcom/bbm/j/k;->e()V
+
+    :cond_0
+    invoke-virtual {p1, v3, v2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+
+    return-void
 .end method

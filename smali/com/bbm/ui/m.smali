@@ -1,54 +1,69 @@
-.class final Lcom/bbm/ui/m;
+.class final synthetic Lcom/bbm/ui/m;
 .super Ljava/lang/Object;
-.source "BBSpinnerAdapter.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
+.source "AudioProgressBar.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Ljava/lang/String;",
-        ">;"
-    }
-.end annotation
-
-
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/l;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/l;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 88
-    iput-object p1, p0, Lcom/bbm/ui/m;->a:Lcom/bbm/ui/l;
+    .line 38
+    invoke-static {}, Lcom/bbm/ui/n;->values()[Lcom/bbm/ui/n;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/m;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/m;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/n;->a:Lcom/bbm/ui/n;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/n;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/m;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/n;->b:Lcom/bbm/ui/n;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/n;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_1
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+    goto :goto_1
 
-    .prologue
-    .line 88
-    check-cast p1, Ljava/lang/String;
+    :catch_1
+    move-exception v0
 
-    check-cast p2, Ljava/lang/String;
-
-    invoke-virtual {p1, p2}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
+    goto :goto_0
 .end method

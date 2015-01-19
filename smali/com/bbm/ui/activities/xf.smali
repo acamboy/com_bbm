@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/xf;
 .super Ljava/lang/Object;
-.source "NewListItemActivity.java"
+.source "MainActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/b/ah;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/k;
-
-.field final synthetic b:Lcom/bbm/ui/activities/xd;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/xd;Lcom/bbm/ui/b/k;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
     .locals 0
 
     .prologue
-    .line 535
-    iput-object p1, p0, Lcom/bbm/ui/activities/xf;->b:Lcom/bbm/ui/activities/xd;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/xf;->a:Lcom/bbm/ui/b/k;
+    .line 2491
+    iput-object p1, p0, Lcom/bbm/ui/activities/xf;->a:Lcom/bbm/ui/activities/MainActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,60 +25,25 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a()V
+    .locals 3
 
     .prologue
-    .line 539
-    const-string v0, "mItemAssignTo onSpinnerItemClicked Dialog Left Button Clicked"
+    .line 2495
+    iget-object v0, p0, Lcom/bbm/ui/activities/xf;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/NewListItemActivity;
+    const/16 v1, 0x3e8
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
-    .line 541
-    iget-object v0, p0, Lcom/bbm/ui/activities/xf;->b:Lcom/bbm/ui/activities/xd;
+    move-result-object v2
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/xd;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    invoke-virtual {v2}, Lcom/bbm/d/a;->h()Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/NewListItemActivity;->u:Lcom/bbm/ui/l;
+    move-result-object v2
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/xf;->b:Lcom/bbm/ui/activities/xd;
+    invoke-static {v0, v1, v2}, Lcom/bbm/h/aq;->a(Landroid/app/Activity;ILjava/lang/String;)V
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/xd;->a:Lcom/bbm/ui/activities/NewListItemActivity;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/NewListItemActivity;->u:Lcom/bbm/ui/l;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/l;->b()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/l;->a(I)V
-
-    .line 542
-    iget-object v0, p0, Lcom/bbm/ui/activities/xf;->b:Lcom/bbm/ui/activities/xd;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/xd;->a:Lcom/bbm/ui/activities/NewListItemActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/NewListItemActivity;->o:Landroid/widget/Spinner;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/xf;->b:Lcom/bbm/ui/activities/xd;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/xd;->a:Lcom/bbm/ui/activities/NewListItemActivity;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/NewListItemActivity;->u:Lcom/bbm/ui/l;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/l;->a()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
-
-    .line 543
-    iget-object v0, p0, Lcom/bbm/ui/activities/xf;->a:Lcom/bbm/ui/b/k;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/k;->dismiss()V
-
-    .line 544
+    .line 2496
     return-void
 .end method

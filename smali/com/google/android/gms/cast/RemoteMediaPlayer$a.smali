@@ -31,7 +31,7 @@
 
 # virtual methods
 .method public a(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)V
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/google/android/gms/cast/RemoteMediaPlayer$a;->xu:Lcom/google/android/gms/common/api/GoogleApiClient;
 

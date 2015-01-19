@@ -3,7 +3,7 @@
 .source "Map.java"
 
 # interfaces
-.implements Lcom/google/android/gms/maps/GoogleMap$OnMarkerClickListener;
+.implements Lcom/bbm/compat/maps/e;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 49
+    .line 44
     iput-object p1, p0, Lcom/glympse/map/lib/Map$1;->this$0:Lcom/glympse/map/lib/Map;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,18 +25,18 @@
 
 
 # virtual methods
-.method public onMarkerClick(Lcom/google/android/gms/maps/model/Marker;)Z
+.method public onMarkerClick(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
-    .line 52
+    .line 47
     sget v0, Lcom/glympse/map/lib/Map;->flags:I
 
     or-int/lit8 v0, v0, 0x0
 
     sput v0, Lcom/glympse/map/lib/Map;->flags:I
 
-    .line 53
+    .line 48
     iget-object v0, p0, Lcom/glympse/map/lib/Map$1;->this$0:Lcom/glympse/map/lib/Map;
 
     # getter for: Lcom/glympse/map/lib/Map;->_worldView:Lcom/glympse/map/lib/WorldView;
@@ -44,9 +44,9 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, p1}, Lcom/glympse/map/lib/WorldView;->startFollowing(Lcom/google/android/gms/maps/model/Marker;)V
+    invoke-virtual {v0, p1}, Lcom/glympse/map/lib/WorldView;->startFollowing(Ljava/lang/Object;)V
 
-    .line 54
+    .line 49
     const/4 v0, 0x1
 
     return v0

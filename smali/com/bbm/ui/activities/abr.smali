@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/abr;
 .super Ljava/lang/Object;
-.source "SelectContactActivity.java"
+.source "OwnedChannelLobbyActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/c/gn;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)V
     .locals 0
 
     .prologue
-    .line 370
-    iput-object p1, p0, Lcom/bbm/ui/activities/abr;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    .line 64
+    iput-object p1, p0, Lcom/bbm/ui/activities/abr;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,36 +25,17 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
     .locals 2
 
     .prologue
-    .line 374
-    const-string v0, "mHeaderActionBar NegativeButton Clicked"
+    .line 67
+    iget-object v0, p0, Lcom/bbm/ui/activities/abr;->a:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/SelectContactActivity;
+    iget v1, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;I)V
 
-    .line 376
-    iget-object v0, p0, Lcom/bbm/ui/activities/abr;->a:Lcom/bbm/ui/activities/SelectContactActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/eo;->a(Landroid/app/Activity;Z)V
-
-    .line 377
-    iget-object v0, p0, Lcom/bbm/ui/activities/abr;->a:Lcom/bbm/ui/activities/SelectContactActivity;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/SelectContactActivity;->setResult(I)V
-
-    .line 378
-    iget-object v0, p0, Lcom/bbm/ui/activities/abr;->a:Lcom/bbm/ui/activities/SelectContactActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->finish()V
-
-    .line 379
+    .line 68
     return-void
 .end method

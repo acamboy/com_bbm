@@ -4,14 +4,31 @@
         <item quantity="other">Körözvényadási üzenet elküldve %1$s partnernek</item>
         <item quantity="one">Körözvényadási üzenet elküldve 1 partnernek</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d feliratkozó</item>
+        <item quantity="zero">Nincs feliratkozó</item>
+        <item quantity="one">%1$d feliratkozó</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d tag</item>
+        <item quantity="one">%1$d tag</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">másodperc</item>
+        <item quantity="one">másodperc</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Időzítő beállítva %1$d másodpercre.</item>
+        <item quantity="one">Időzítő beállítva %1$d másodpercre.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s elem</item>
         <item quantity="zero">0 elem</item>
         <item quantity="one">1 elem</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d meghívó várakozik)</item>
-        <item quantity="one">(1 meghívó várakozik)</item>
+        <item quantity="other">(%1$d függőben levő)</item>
+        <item quantity="one">(1 függőben levő)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s eredmény</item>

@@ -1,34 +1,22 @@
 .class final Lcom/bbm/ui/bt;
 .super Ljava/lang/Object;
-.source "EmoticonStickerPager.java"
+.source "EmoticonPicker.java"
 
 # interfaces
-.implements Ljava/util/Comparator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcom/bbm/d/eq;",
-        ">;"
-    }
-.end annotation
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/bs;
+.field final synthetic a:Lcom/bbm/ui/EmoticonPicker;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/bs;)V
+.method constructor <init>(Lcom/bbm/ui/EmoticonPicker;)V
     .locals 0
 
     .prologue
-    .line 258
-    iput-object p1, p0, Lcom/bbm/ui/bt;->a:Lcom/bbm/ui/bs;
+    .line 64
+    iput-object p1, p0, Lcom/bbm/ui/bt;->a:Lcom/bbm/ui/EmoticonPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,35 +25,79 @@
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 258
-    check-cast p1, Lcom/bbm/d/eq;
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/bt;->a:Lcom/bbm/ui/EmoticonPicker;
 
-    check-cast p2, Lcom/bbm/d/eq;
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonPicker;->a(Lcom/bbm/ui/EmoticonPicker;)Lcom/bbm/ui/bv;
 
-    iget-wide v0, p2, Lcom/bbm/d/eq;->f:J
+    move-result-object v0
 
-    iget-wide v2, p1, Lcom/bbm/d/eq;->f:J
+    if-eqz v0, :cond_0
 
-    sub-long/2addr v0, v2
+    .line 69
+    const-string v0, "Emoticon Clicked"
 
-    invoke-static {v0, v1}, Lcom/bbm/util/eo;->a(J)I
+    const-class v1, Lcom/bbm/ui/EmoticonPicker;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 70
+    iget-object v0, p0, Lcom/bbm/ui/bt;->a:Lcom/bbm/ui/EmoticonPicker;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonPicker;->a(Lcom/bbm/ui/EmoticonPicker;)Lcom/bbm/ui/bv;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lcom/bbm/ui/bt;->a:Lcom/bbm/ui/EmoticonPicker;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonPicker;->c(Lcom/bbm/ui/EmoticonPicker;)Ljava/util/List;
+
+    move-result-object v2
+
+    iget-object v0, p0, Lcom/bbm/ui/bt;->a:Lcom/bbm/ui/EmoticonPicker;
+
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonPicker;->b(Lcom/bbm/ui/EmoticonPicker;)Ljava/util/Map;
+
+    move-result-object v0
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-interface {v0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    iget-object v0, p2, Lcom/bbm/d/eq;->a:Ljava/lang/String;
+    move-result-object v0
 
-    iget-object v1, p1, Lcom/bbm/d/eq;->a:Ljava/lang/String;
+    check-cast v0, Lcom/bbm/util/c/e;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    iget-object v0, v0, Lcom/bbm/util/c/e;->d:Ljava/lang/String;
 
-    move-result v0
+    invoke-interface {v1, v0}, Lcom/bbm/ui/bv;->a(Ljava/lang/String;)V
 
+    .line 72
     :cond_0
-    return v0
+    return-void
 .end method

@@ -12,7 +12,7 @@
     .locals 0
 
     .prologue
-    .line 48
+    .line 52
     iput-object p1, p0, Lcom/bbm/ui/f/b;->a:Lcom/bbm/ui/f/a;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -26,7 +26,7 @@
     .locals 3
 
     .prologue
-    .line 51
+    .line 55
     const-string v0, "Received broadcast about deleted notification: %s"
 
     const/4 v1, 0x1
@@ -37,13 +37,13 @@
 
     aput-object p2, v1, v2
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 52
+    .line 56
     iget-object v0, p0, Lcom/bbm/ui/f/b;->a:Lcom/bbm/ui/f/a;
 
     invoke-static {v0}, Lcom/bbm/ui/f/a;->a(Lcom/bbm/ui/f/a;)V
 
-    .line 53
+    .line 57
     return-void
 .end method

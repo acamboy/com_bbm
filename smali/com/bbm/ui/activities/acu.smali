@@ -1,100 +1,183 @@
-.class final enum Lcom/bbm/ui/activities/acu;
-.super Ljava/lang/Enum;
-.source "SetChannelAvatarActivity.java"
+.class final Lcom/bbm/ui/activities/acu;
+.super Lcom/bbm/ui/cn;
+.source "ProfileActivity.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/ui/activities/acu;",
-        ">;"
-    }
-.end annotation
-
-
-# static fields
-.field public static final enum a:Lcom/bbm/ui/activities/acu;
-
-.field private static final synthetic b:[Lcom/bbm/ui/activities/acu;
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
+    .locals 0
 
     .prologue
-    .line 163
-    new-instance v0, Lcom/bbm/ui/activities/acu;
+    .line 304
+    iput-object p1, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-    const-string v1, "PICTURE"
-
-    invoke-direct {v0, v1}, Lcom/bbm/ui/activities/acu;-><init>(Ljava/lang/String;)V
-
-    sput-object v0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/acu;
-
-    .line 162
-    const/4 v0, 0x1
-
-    new-array v0, v0, [Lcom/bbm/ui/activities/acu;
-
-    const/4 v1, 0x0
-
-    sget-object v2, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/acu;
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/bbm/ui/activities/acu;->b:[Lcom/bbm/ui/activities/acu;
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;)V
+
+# virtual methods
+.method public final a()V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     .prologue
-    .line 162
-    const/4 v0, 0x0
+    .line 308
+    iget-object v0, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-    invoke-direct {p0, p1, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ProfileActivity;->h()V
 
+    .line 309
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/activities/acu;
-    .locals 1
+.method public final a(I)V
+    .locals 4
 
     .prologue
-    .line 162
-    const-class v0, Lcom/bbm/ui/activities/acu;
+    .line 313
+    packed-switch p1, :pswitch_data_0
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 330
+    :goto_0
+    return-void
+
+    .line 315
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    const/16 v1, 0x3e8
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/ProfileActivity;->g(Lcom/bbm/ui/activities/ProfileActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/h/aq;->a(Landroid/app/Activity;ILjava/lang/String;)V
+
+    goto :goto_0
+
+    .line 318
+    :pswitch_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ProfileActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/acu;
+    const-string v1, "from_conv"
 
-    return-object v0
-.end method
+    const/4 v2, 0x0
 
-.method public static values()[Lcom/bbm/ui/activities/acu;
-    .locals 1
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
-    .prologue
-    .line 162
-    sget-object v0, Lcom/bbm/ui/activities/acu;->b:[Lcom/bbm/ui/activities/acu;
+    move-result v0
 
-    invoke-virtual {v0}, [Lcom/bbm/ui/activities/acu;->clone()Ljava/lang/Object;
+    if-eqz v0, :cond_0
+
+    .line 319
+    iget-object v0, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ProfileActivity;->finish()V
+
+    goto :goto_0
+
+    .line 321
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ProfileActivity;->g(Lcom/bbm/ui/activities/ProfileActivity;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 325
+    :pswitch_2
+    iget-object v0, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileActivity;->k(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/bbm/ui/activities/acu;
+    iget-object v1, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-    return-object v0
+    invoke-static {v1}, Lcom/bbm/ui/activities/ProfileActivity;->g(Lcom/bbm/ui/activities/ProfileActivity;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
+
+    move-result-object v0
+
+    .line 326
+    iget-object v1, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ProfileActivity;->k(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/d/a;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/bbm/d/bh;
+
+    invoke-direct {v2}, Lcom/bbm/d/bh;-><init>()V
+
+    invoke-static {v0}, Lcom/bbm/d/b/a;->a(Lcom/bbm/d/gr;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Lcom/bbm/d/bh;->c(Ljava/lang/String;)Lcom/bbm/d/bh;
+
+    move-result-object v0
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    invoke-virtual {v2}, Lcom/bbm/ui/activities/ProfileActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0e04cc
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Lcom/bbm/d/bh;->a(Ljava/lang/String;)Lcom/bbm/d/bh;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+
+    .line 327
+    iget-object v0, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/acu;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    const v2, 0x7f0e04a6
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/ProfileActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 313
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
 .end method

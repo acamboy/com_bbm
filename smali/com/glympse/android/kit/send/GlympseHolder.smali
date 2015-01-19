@@ -4,23 +4,11 @@
 
 
 # static fields
-.field private static gx:Lcom/glympse/android/kit/send/GlympseHolder;
+.field private static gE:Lcom/glympse/android/kit/send/GlympseHolder;
 
 
 # instance fields
-.field private A:Ljava/util/Hashtable;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Hashtable",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/glympse/android/hal/GUiControlListener;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private gu:Ljava/util/Hashtable;
+.field private gB:Ljava/util/Hashtable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Hashtable",
@@ -32,7 +20,7 @@
     .end annotation
 .end field
 
-.field private gv:Ljava/util/Hashtable;
+.field private gC:Ljava/util/Hashtable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Hashtable",
@@ -44,13 +32,25 @@
     .end annotation
 .end field
 
-.field private gw:Ljava/util/Hashtable;
+.field private gD:Ljava/util/Hashtable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Hashtable",
             "<",
             "Ljava/lang/String;",
             "Lcom/glympse/android/api/GTicket;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private z:Ljava/util/Hashtable;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Hashtable",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/glympse/android/hal/GUiControlListener;",
             ">;"
         }
     .end annotation
@@ -65,7 +65,7 @@
     .line 117
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/kit/send/GlympseHolder;->gx:Lcom/glympse/android/kit/send/GlympseHolder;
+    sput-object v0, Lcom/glympse/android/kit/send/GlympseHolder;->gE:Lcom/glympse/android/kit/send/GlympseHolder;
 
     return-void
 .end method
@@ -80,44 +80,44 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 12
-    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gu:Ljava/util/Hashtable;
+    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gB:Ljava/util/Hashtable;
 
     .line 14
-    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gv:Ljava/util/Hashtable;
+    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gC:Ljava/util/Hashtable;
 
     .line 16
-    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gw:Ljava/util/Hashtable;
+    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gD:Ljava/util/Hashtable;
 
     .line 18
-    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->A:Ljava/util/Hashtable;
+    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->z:Ljava/util/Hashtable;
 
     .line 22
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gu:Ljava/util/Hashtable;
+    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gB:Ljava/util/Hashtable;
 
     .line 23
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gv:Ljava/util/Hashtable;
+    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gC:Ljava/util/Hashtable;
 
     .line 24
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gw:Ljava/util/Hashtable;
+    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gD:Ljava/util/Hashtable;
 
     .line 25
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->A:Ljava/util/Hashtable;
+    iput-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->z:Ljava/util/Hashtable;
 
     .line 26
     return-void
@@ -133,7 +133,7 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/glympse/android/kit/send/GlympseHolder;->gx:Lcom/glympse/android/kit/send/GlympseHolder;
+    sget-object v0, Lcom/glympse/android/kit/send/GlympseHolder;->gE:Lcom/glympse/android/kit/send/GlympseHolder;
 
     if-nez v0, :cond_0
 
@@ -142,11 +142,11 @@
 
     invoke-direct {v0}, Lcom/glympse/android/kit/send/GlympseHolder;-><init>()V
 
-    sput-object v0, Lcom/glympse/android/kit/send/GlympseHolder;->gx:Lcom/glympse/android/kit/send/GlympseHolder;
+    sput-object v0, Lcom/glympse/android/kit/send/GlympseHolder;->gE:Lcom/glympse/android/kit/send/GlympseHolder;
 
     .line 114
     :cond_0
-    sget-object v0, Lcom/glympse/android/kit/send/GlympseHolder;->gx:Lcom/glympse/android/kit/send/GlympseHolder;
+    sget-object v0, Lcom/glympse/android/kit/send/GlympseHolder;->gE:Lcom/glympse/android/kit/send/GlympseHolder;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -170,7 +170,7 @@
 
     .prologue
     .line 96
-    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->A:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->z:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -183,7 +183,7 @@
 
     .prologue
     .line 58
-    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gv:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gC:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -196,7 +196,7 @@
 
     .prologue
     .line 39
-    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gu:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gB:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -209,7 +209,7 @@
 
     .prologue
     .line 77
-    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gw:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gD:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -217,12 +217,12 @@
     return-void
 .end method
 
-.method d(Ljava/lang/String;)Lcom/glympse/android/lite/GGlympseLite;
+.method g(Ljava/lang/String;)Lcom/glympse/android/lite/GGlympseLite;
     .locals 1
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gu:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gB:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -233,12 +233,12 @@
     return-object v0
 .end method
 
-.method e(Ljava/lang/String;)Lcom/glympse/android/api/GGlympse;
+.method h(Ljava/lang/String;)Lcom/glympse/android/api/GGlympse;
     .locals 1
 
     .prologue
     .line 63
-    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gv:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gC:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -249,12 +249,12 @@
     return-object v0
 .end method
 
-.method f(Ljava/lang/String;)Lcom/glympse/android/api/GTicket;
+.method i(Ljava/lang/String;)Lcom/glympse/android/api/GTicket;
     .locals 1
 
     .prologue
     .line 82
-    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gw:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gD:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -265,12 +265,12 @@
     return-object v0
 .end method
 
-.method g(Ljava/lang/String;)Lcom/glympse/android/hal/GUiControlListener;
+.method j(Ljava/lang/String;)Lcom/glympse/android/hal/GUiControlListener;
     .locals 1
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->A:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->z:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -286,7 +286,7 @@
 
     .prologue
     .line 91
-    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->A:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->z:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -299,7 +299,7 @@
 
     .prologue
     .line 53
-    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gv:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gC:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -312,7 +312,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gu:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gB:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -325,7 +325,7 @@
 
     .prologue
     .line 72
-    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gw:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/kit/send/GlympseHolder;->gD:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

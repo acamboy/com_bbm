@@ -4,17 +4,17 @@
 
 
 # static fields
-.field public static final glympse_button_confirm:I = 0x7f0a03b8
+.field public static final glympse_button_confirm:I = 0x7f0b0437
 
-.field public static final glympse_cet_edit:I = 0x7f0a0014
+.field public static final glympse_cet_edit:I = 0x7f0b0006
 
-.field public static final glympse_text_expires:I = 0x7f0a03b7
+.field public static final glympse_text_expires:I = 0x7f0b0435
 
-.field public static final glympse_timer:I = 0x7f0a03b6
+.field public static final glympse_timer:I = 0x7f0b0436
 
-.field public static final inner_glympse_button:I = 0x7f0a03b4
+.field public static final inner_glympse_button:I = 0x7f0b0433
 
-.field public static final layout_root:I = 0x7f0a03b5
+.field public static final layout_root:I = 0x7f0b0434
 
 
 # direct methods

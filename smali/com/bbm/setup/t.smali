@@ -1,19 +1,19 @@
 .class final Lcom/bbm/setup/t;
 .super Lcom/bbm/j/k;
-.source "SetupActivityLifeCycleListener.java"
+.source "SetupBbidErrorActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/setup/s;
+.field final synthetic a:Lcom/bbm/setup/SetupBbidErrorActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/setup/s;)V
+.method constructor <init>(Lcom/bbm/setup/SetupBbidErrorActivity;)V
     .locals 1
 
     .prologue
-    .line 26
-    iput-object p1, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/s;
+    .line 27
+    iput-object p1, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
 
     const/4 v0, 0x0
 
@@ -25,123 +25,164 @@
 
 # virtual methods
 .method protected final a()V
-    .locals 4
+    .locals 3
 
     .prologue
-    const/4 v3, 0x0
+    const v2, 0x7f0e06cc
 
-    .line 29
-    iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/s;
+    .line 30
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
 
-    invoke-static {v0}, Lcom/bbm/setup/s;->a(Lcom/bbm/setup/s;)Landroid/app/Activity;
+    sget-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/app/Activity;->getApplication()Landroid/app/Application;
+    invoke-virtual {v0}, Lcom/bbm/setup/z;->a()Lcom/bbm/setup/af;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/r;
+    iget-object v0, v0, Lcom/bbm/setup/af;->a:Lcom/bbm/setup/ag;
 
     .line 31
-    const-string v1, "SALCL monitor running"
+    sget-object v1, Lcom/bbm/setup/ag;->i:Lcom/bbm/setup/ag;
 
-    new-array v2, v3, [Ljava/lang/Object;
+    if-eq v0, v1, :cond_0
 
-    invoke-static {v1, v2}, Lcom/bbm/w;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    .line 33
+    iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
 
-    .line 32
-    invoke-interface {v0}, Lcom/bbm/r;->w()Z
+    invoke-virtual {v0}, Lcom/bbm/setup/SetupBbidErrorActivity;->b()V
+
+    .line 63
+    :goto_0
+    return-void
+
+    .line 37
+    :cond_0
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/f/ae;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/f/ae;->k:Lcom/bbm/al;
+
+    .line 41
+    sget-object v1, Lcom/bbm/setup/v;->a:[I
+
+    invoke-virtual {v0}, Lcom/bbm/al;->ordinal()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    aget v0, v1, v0
 
-    .line 33
-    iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/s;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0}, Lcom/bbm/setup/s;->a(Lcom/bbm/setup/s;)Landroid/app/Activity;
+    .line 56
+    iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
 
-    move-result-object v0
-
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
+    invoke-virtual {v0, v2}, Lcom/bbm/setup/SetupBbidErrorActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/bbm/Alaska;->p()Lcom/bbm/setup/x;
+    .line 57
+    iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
 
-    move-result-object v1
+    const v2, 0x7f0e06cb
 
-    invoke-virtual {v1}, Lcom/bbm/setup/x;->a()Lcom/bbm/setup/ac;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/setup/ac;->a:Lcom/bbm/setup/ad;
-
-    invoke-static {v0, v1}, Lcom/bbm/setup/r;->a(Landroid/content/Context;Lcom/bbm/setup/ad;)Lcom/google/b/a/l;
+    invoke-virtual {v0, v2}, Lcom/bbm/setup/SetupBbidErrorActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 37
-    const-string v1, "SALCL shouldOpenSetupActivity"
-
-    new-array v2, v3, [Ljava/lang/Object;
-
-    invoke-static {v1, v2}, Lcom/bbm/w;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 38
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 39
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-static {v0}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;
 
     move-result-object v0
 
-    check-cast v0, Landroid/content/Intent;
+    .line 61
+    :goto_1
+    iget-object v2, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
 
-    .line 41
-    const-string v1, "SALCL Triggering setup from SetupActivityLifeCycleListener"
-
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-static {v2}, Lcom/bbm/setup/SetupBbidErrorActivity;->a(Lcom/bbm/setup/SetupBbidErrorActivity;)Landroid/widget/TextView;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/bbm/w;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 42
-    iget-object v1, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/s;
+    .line 62
+    iget-object v1, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
 
-    invoke-static {v1}, Lcom/bbm/setup/s;->b(Lcom/bbm/setup/s;)Z
-
-    .line 43
-    iget-object v1, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/s;
-
-    invoke-static {v1}, Lcom/bbm/setup/s;->a(Lcom/bbm/setup/s;)Landroid/app/Activity;
+    invoke-static {v1}, Lcom/bbm/setup/SetupBbidErrorActivity;->b(Lcom/bbm/setup/SetupBbidErrorActivity;)Landroid/widget/TextView;
 
     move-result-object v1
 
-    const/16 v2, 0xffd
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+    goto :goto_0
 
-    .line 44
-    iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/s;
+    .line 45
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
 
-    invoke-static {v0}, Lcom/bbm/setup/s;->a(Lcom/bbm/setup/s;)Landroid/app/Activity;
+    const-string v1, "connectivity"
+
+    invoke-virtual {v0, v1}, Lcom/bbm/setup/SetupBbidErrorActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    const v1, 0x7f040003
+    check-cast v0, Landroid/net/ConnectivityManager;
 
-    const v2, 0x7f040004
+    .line 46
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->overridePendingTransition(II)V
+    move-result-object v0
 
     .line 47
-    :cond_0
-    return-void
+    if-eqz v0, :cond_1
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 48
+    iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
+
+    invoke-virtual {v0, v2}, Lcom/bbm/setup/SetupBbidErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 49
+    iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
+
+    const v2, 0x7f0e0501
+
+    invoke-virtual {v0, v2}, Lcom/bbm/setup/SetupBbidErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    .line 51
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
+
+    const v1, 0x7f0e055e
+
+    invoke-virtual {v0, v1}, Lcom/bbm/setup/SetupBbidErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 52
+    iget-object v0, p0, Lcom/bbm/setup/t;->a:Lcom/bbm/setup/SetupBbidErrorActivity;
+
+    const v2, 0x7f0e07e7
+
+    invoke-virtual {v0, v2}, Lcom/bbm/setup/SetupBbidErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    .line 41
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
 .end method

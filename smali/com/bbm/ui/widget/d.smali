@@ -29,7 +29,7 @@
     .locals 0
 
     .prologue
-    .line 162
+    .line 161
     iput-object p1, p0, Lcom/bbm/ui/widget/d;->b:Lcom/bbm/ui/widget/c;
 
     iput-object p2, p0, Lcom/bbm/ui/widget/d;->a:[J
@@ -45,7 +45,7 @@
     .locals 5
 
     .prologue
-    .line 162
+    .line 161
     check-cast p1, Ljava/lang/Integer;
 
     check-cast p2, Ljava/lang/Integer;

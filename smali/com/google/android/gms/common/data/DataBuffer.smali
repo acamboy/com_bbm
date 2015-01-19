@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field protected final zU:Lcom/google/android/gms/common/data/DataHolder;
+.field public final zU:Lcom/google/android/gms/common/data/DataHolder;
 
 
 # direct methods

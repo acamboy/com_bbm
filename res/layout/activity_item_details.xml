@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/stickerdetail_dialog_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/sticker_pack_dialog_padding_side" android:layout_marginTop="@dimen/sticker_pack_dialog_padding_end" android:layout_marginRight="@dimen/sticker_pack_dialog_padding_side" android:layout_marginBottom="@dimen/sticker_pack_dialog_padding_end"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/store_fragment_container" android:layout_width="fill_parent" android:layout_height="0.0px" android:layout_weight="1.0" />
+    <Button android:id="@id/store_close" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="@dimen/sticker_pack_padding_small" android:text="@string/close" style="@style/CascadesButton" />
+</LinearLayout>

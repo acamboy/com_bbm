@@ -1,41 +1,38 @@
-.class public final Lcom/bbm/setup/aj;
-.super Ljava/lang/Object;
-.source "WhatsNewDetector.java"
+.class final Lcom/bbm/setup/aj;
+.super Lcom/bbm/j/k;
+.source "TransportErrorMonitor.java"
 
 
 # instance fields
-.field public a:Lcom/bbm/j/k;
-
-.field b:Lcom/bbm/r;
-
-.field c:Lcom/bbm/ae;
+.field final synthetic a:Lcom/bbm/setup/ah;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/r;)V
+.method constructor <init>(Lcom/bbm/setup/ah;)V
     .locals 1
 
     .prologue
-    .line 51
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 38
+    iput-object p1, p0, Lcom/bbm/setup/aj;->a:Lcom/bbm/setup/ah;
 
-    .line 26
-    new-instance v0, Lcom/bbm/setup/ak;
+    const/4 v0, 0x0
 
-    invoke-direct {v0, p0}, Lcom/bbm/setup/ak;-><init>(Lcom/bbm/setup/aj;)V
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
-    iput-object v0, p0, Lcom/bbm/setup/aj;->a:Lcom/bbm/j/k;
+    return-void
+.end method
 
-    .line 52
-    iput-object p1, p0, Lcom/bbm/setup/aj;->b:Lcom/bbm/r;
 
-    .line 53
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/ae;
+# virtual methods
+.method protected final a()V
+    .locals 1
 
-    move-result-object v0
+    .prologue
+    .line 40
+    iget-object v0, p0, Lcom/bbm/setup/aj;->a:Lcom/bbm/setup/ah;
 
-    iput-object v0, p0, Lcom/bbm/setup/aj;->c:Lcom/bbm/ae;
+    invoke-static {v0}, Lcom/bbm/setup/ah;->a(Lcom/bbm/setup/ah;)V
 
-    .line 54
+    .line 41
     return-void
 .end method

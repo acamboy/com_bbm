@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cL:Z
+.field private static cR:Z
 
-.field private static dL:Ljava/lang/Class;
+.field private static dR:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -24,12 +24,12 @@
     .line 2018
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_NfcEvent;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_NfcEvent;->cR:Z
 
     .line 2019
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcEvent;->dL:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcEvent;->dR:Ljava/lang/Class;
 
     return-void
 .end method
@@ -49,14 +49,14 @@
 
     .prologue
     .line 2024
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_NfcEvent;->cL:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_NfcEvent;->cR:Z
 
     if-nez v0, :cond_0
 
     .line 2026
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_NfcEvent;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_NfcEvent;->cR:Z
 
     .line 2030
     :try_start_0
@@ -66,7 +66,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcEvent;->dL:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_NfcEvent;->dR:Ljava/lang/Class;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -88,12 +88,12 @@
     goto :goto_0
 .end method
 
-.method static synthetic O()Ljava/lang/Class;
+.method static synthetic P()Ljava/lang/Class;
     .locals 1
 
     .prologue
     .line 2016
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcEvent;->dL:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_NfcEvent;->dR:Ljava/lang/Class;
 
     return-object v0
 .end method

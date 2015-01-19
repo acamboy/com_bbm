@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field final synthetic gj:Ljava/lang/ClassLoader;
+.field final synthetic gq:Ljava/lang/ClassLoader;
 
 
 # direct methods
@@ -13,7 +13,7 @@
 
     .prologue
     .line 1363
-    iput-object p2, p0, Lcom/glympse/android/hal/utils/Base64$1;->gj:Ljava/lang/ClassLoader;
+    iput-object p2, p0, Lcom/glympse/android/hal/utils/Base64$1;->gq:Ljava/lang/ClassLoader;
 
     invoke-direct {p0, p1}, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
 
@@ -42,7 +42,7 @@
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lcom/glympse/android/hal/utils/Base64$1;->gj:Ljava/lang/ClassLoader;
+    iget-object v2, p0, Lcom/glympse/android/hal/utils/Base64$1;->gq:Ljava/lang/ClassLoader;
 
     invoke-static {v0, v1, v2}, Ljava/lang/Class;->forName(Ljava/lang/String;ZLjava/lang/ClassLoader;)Ljava/lang/Class;
 

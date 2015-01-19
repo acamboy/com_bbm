@@ -1,58 +1,85 @@
 .class final Lcom/bbm/ui/c/cl;
-.super Ljava/lang/Object;
-.source "GroupDetailsFragment.java"
+.super Lcom/bbm/j/a;
+.source "ContactsFragment.java"
 
-# interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/cj;
+.field final synthetic a:Lcom/bbm/ui/c/ch;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/cj;)V
+.method constructor <init>(Lcom/bbm/ui/c/ch;)V
     .locals 0
 
     .prologue
-    .line 56
-    iput-object p1, p0, Lcom/bbm/ui/c/cl;->a:Lcom/bbm/ui/c/cj;
+    .line 645
+    iput-object p1, p0, Lcom/bbm/ui/c/cl;->a:Lcom/bbm/ui/c/ch;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
-    .locals 2
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/c/cl;->a:Lcom/bbm/ui/c/cj;
+    .line 645
+    iget-object v0, p0, Lcom/bbm/ui/c/cl;->a:Lcom/bbm/ui/c/ch;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/cj;->d(Lcom/bbm/ui/c/cj;)Landroid/widget/TextView;
+    invoke-virtual {v0}, Lcom/bbm/ui/c/ch;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    if-ne p1, v0, :cond_0
+    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
 
-    if-nez p2, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 61
-    const-string v0, "onFocusChange"
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    const-class v1, Lcom/bbm/ui/c/cj;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    iget-object v0, v0, Lcom/slidingmenu/lib/SlidingMenu;->a:Lcom/slidingmenu/lib/CustomViewAbove;
 
-    .line 62
-    iget-object v0, p0, Lcom/bbm/ui/c/cl;->a:Lcom/bbm/ui/c/cj;
+    iget-object v0, v0, Lcom/slidingmenu/lib/CustomViewAbove;->a:Lcom/bbm/util/ct;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/cj;->e(Lcom/bbm/ui/c/cj;)V
+    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
 
-    .line 64
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
     :cond_0
-    return-void
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

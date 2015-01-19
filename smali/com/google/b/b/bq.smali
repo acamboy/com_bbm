@@ -41,7 +41,7 @@
 .end method
 
 .method public final a(J)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 67

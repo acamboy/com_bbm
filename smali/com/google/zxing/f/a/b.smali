@@ -164,147 +164,147 @@
 .end method
 
 .method private static a(I[IILjava/lang/StringBuilder;)I
-    .locals 14
+    .locals 15
 
     .prologue
     .line 361
-    const/16 v1, 0x385
+    const/16 v2, 0x385
 
-    if-ne p0, v1, :cond_7
+    if-ne p0, v2, :cond_7
 
     .line 364
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
     .line 365
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
     .line 366
-    const/4 v1, 0x6
+    const/4 v2, 0x6
 
-    new-array v9, v1, [C
+    new-array v10, v2, [C
 
     .line 367
-    const/4 v1, 0x6
+    const/4 v2, 0x6
 
-    new-array v10, v1, [I
+    new-array v11, v2, [I
 
     .line 368
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     .line 369
-    add-int/lit8 v5, p2, 0x1
+    add-int/lit8 v6, p2, 0x1
 
-    aget v1, p1, p2
+    aget v2, p1, p2
 
     .line 370
     :goto_0
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    aget v7, p1, v7
+    aget v8, p1, v8
 
-    if-ge v5, v7, :cond_3
+    if-ge v6, v8, :cond_3
 
-    if-nez v2, :cond_3
+    if-nez v3, :cond_3
 
     .line 371
-    add-int/lit8 v7, v6, 0x1
+    add-int/lit8 v8, v7, 0x1
 
-    aput v1, v10, v6
+    aput v2, v11, v7
 
     .line 373
-    const-wide/16 v11, 0x384
+    const-wide/16 v12, 0x384
 
-    mul-long/2addr v3, v11
+    mul-long/2addr v4, v12
 
-    int-to-long v11, v1
+    int-to-long v12, v2
 
-    add-long/2addr v3, v11
+    add-long/2addr v4, v12
 
     .line 374
-    add-int/lit8 v6, v5, 0x1
+    add-int/lit8 v7, v6, 0x1
 
-    aget v1, p1, v5
+    aget v2, p1, v6
 
     .line 376
-    const/16 v5, 0x384
+    const/16 v6, 0x384
 
-    if-eq v1, v5, :cond_0
+    if-eq v2, v6, :cond_0
 
-    const/16 v5, 0x385
+    const/16 v6, 0x385
 
-    if-eq v1, v5, :cond_0
+    if-eq v2, v6, :cond_0
 
-    const/16 v5, 0x386
+    const/16 v6, 0x386
 
-    if-eq v1, v5, :cond_0
+    if-eq v2, v6, :cond_0
 
-    const/16 v5, 0x39c
+    const/16 v6, 0x39c
 
-    if-eq v1, v5, :cond_0
+    if-eq v2, v6, :cond_0
 
-    const/16 v5, 0x3a0
+    const/16 v6, 0x3a0
 
-    if-eq v1, v5, :cond_0
+    if-eq v2, v6, :cond_0
 
-    const/16 v5, 0x39b
+    const/16 v6, 0x39b
 
-    if-eq v1, v5, :cond_0
+    if-eq v2, v6, :cond_0
 
-    const/16 v5, 0x39a
+    const/16 v6, 0x39a
 
-    if-ne v1, v5, :cond_1
+    if-ne v2, v6, :cond_1
 
     .line 383
     :cond_0
-    add-int/lit8 v5, v6, -0x1
+    add-int/lit8 v6, v7, -0x1
 
     .line 384
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    move v6, v7
+    move v7, v8
 
     goto :goto_0
 
     .line 386
     :cond_1
-    rem-int/lit8 v5, v7, 0x5
+    rem-int/lit8 v6, v8, 0x5
 
-    if-nez v5, :cond_d
+    if-nez v6, :cond_d
 
-    if-lez v7, :cond_d
+    if-lez v8, :cond_d
 
     .line 389
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     :goto_1
-    const/4 v7, 0x6
+    const/4 v8, 0x6
 
-    if-ge v5, v7, :cond_2
+    if-ge v6, v8, :cond_2
 
     .line 390
-    rsub-int/lit8 v7, v5, 0x5
+    rsub-int/lit8 v8, v6, 0x5
 
-    const-wide/16 v11, 0x100
+    const-wide/16 v12, 0x100
 
-    rem-long v11, v3, v11
+    rem-long v12, v4, v12
 
-    long-to-int v8, v11
+    long-to-int v9, v12
 
-    int-to-char v8, v8
+    int-to-char v9, v9
 
-    aput-char v8, v9, v7
+    aput-char v9, v10, v8
 
     .line 391
-    const/16 v7, 0x8
+    const/16 v8, 0x8
 
-    shr-long v7, v3, v7
+    shr-long v8, v4, v8
 
     .line 389
-    add-int/lit8 v3, v5, 0x1
+    add-int/lit8 v4, v6, 0x1
 
-    move v5, v3
+    move v6, v4
 
-    move-wide v3, v7
+    move-wide v4, v8
 
     goto :goto_1
 
@@ -312,61 +312,61 @@
     :cond_2
     move-object/from16 v0, p3
 
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append([C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v10}, Ljava/lang/StringBuilder;->append([C)Ljava/lang/StringBuilder;
 
     .line 394
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    move v13, v6
+    move v14, v7
 
-    move v6, v5
+    move v7, v6
 
-    move v5, v13
+    move v6, v14
 
     goto :goto_0
 
     .line 400
     :cond_3
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    aget v2, p1, v2
+    aget v3, p1, v3
 
-    if-ne v5, v2, :cond_4
+    if-ne v6, v3, :cond_4
 
-    const/16 v2, 0x384
+    const/16 v3, 0x384
 
-    if-ge v1, v2, :cond_4
+    if-ge v2, v3, :cond_4
 
     .line 401
-    add-int/lit8 v2, v6, 0x1
+    add-int/lit8 v3, v7, 0x1
 
-    aput v1, v10, v6
+    aput v2, v11, v7
 
-    move v6, v2
+    move v7, v3
 
     .line 407
     :cond_4
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     :goto_2
-    if-ge v1, v6, :cond_5
+    if-ge v2, v7, :cond_5
 
     .line 408
-    aget v2, v10, v1
+    aget v3, v11, v2
 
-    int-to-char v2, v2
+    int-to-char v3, v3
 
     move-object/from16 v0, p3
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 407
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
     :cond_5
-    move/from16 p2, v5
+    move/from16 p2, v6
 
     .line 448
     :cond_6
@@ -374,140 +374,140 @@
 
     .line 411
     :cond_7
-    const/16 v1, 0x39c
+    const/16 v2, 0x39c
 
-    if-ne p0, v1, :cond_6
+    if-ne p0, v2, :cond_6
 
     .line 414
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     .line 415
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     .line 416
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 417
     :cond_8
     :goto_3
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    aget v5, p1, v5
+    aget v6, p1, v6
 
     move/from16 v0, p2
 
-    if-ge v0, v5, :cond_6
+    if-ge v0, v6, :cond_6
 
-    if-nez v3, :cond_6
+    if-nez v4, :cond_6
 
     .line 418
-    add-int/lit8 v5, p2, 0x1
+    add-int/lit8 v6, p2, 0x1
 
-    aget v6, p1, p2
+    aget v7, p1, p2
 
     .line 419
-    const/16 v7, 0x384
+    const/16 v8, 0x384
 
-    if-ge v6, v7, :cond_9
+    if-ge v7, v8, :cond_9
 
     .line 420
-    add-int/lit8 v4, v4, 0x1
+    add-int/lit8 v5, v5, 0x1
 
     .line 422
-    const-wide/16 v7, 0x384
+    const-wide/16 v8, 0x384
 
-    mul-long/2addr v1, v7
+    mul-long/2addr v2, v8
 
-    int-to-long v6, v6
+    int-to-long v8, v7
 
-    add-long/2addr v1, v6
+    add-long/2addr v2, v8
 
-    move/from16 p2, v5
+    move/from16 p2, v6
 
     .line 435
     :goto_4
-    rem-int/lit8 v5, v4, 0x5
+    rem-int/lit8 v6, v5, 0x5
 
-    if-nez v5, :cond_8
+    if-nez v6, :cond_8
 
-    if-lez v4, :cond_8
+    if-lez v5, :cond_8
 
     .line 438
-    const/4 v4, 0x6
-
-    new-array v7, v4, [C
-
-    .line 439
-    const/4 v4, 0x0
-
-    :goto_5
     const/4 v5, 0x6
 
-    if-ge v4, v5, :cond_b
-
-    .line 440
-    rsub-int/lit8 v5, v4, 0x5
-
-    const-wide/16 v8, 0xff
-
-    and-long/2addr v8, v1
-
-    long-to-int v6, v8
-
-    int-to-char v6, v6
-
-    aput-char v6, v7, v5
-
-    .line 441
-    const/16 v5, 0x8
-
-    shr-long v5, v1, v5
+    new-array v8, v5, [C
 
     .line 439
-    add-int/lit8 v1, v4, 0x1
+    const/4 v5, 0x0
 
-    move v4, v1
+    :goto_5
+    const/4 v6, 0x6
 
-    move-wide v1, v5
+    if-ge v5, v6, :cond_b
+
+    .line 440
+    rsub-int/lit8 v6, v5, 0x5
+
+    const-wide/16 v10, 0xff
+
+    and-long/2addr v10, v2
+
+    long-to-int v7, v10
+
+    int-to-char v7, v7
+
+    aput-char v7, v8, v6
+
+    .line 441
+    const/16 v6, 0x8
+
+    shr-long v6, v2, v6
+
+    .line 439
+    add-int/lit8 v2, v5, 0x1
+
+    move v5, v2
+
+    move-wide v2, v6
 
     goto :goto_5
 
     .line 424
     :cond_9
-    const/16 v7, 0x384
+    const/16 v8, 0x384
 
-    if-eq v6, v7, :cond_a
+    if-eq v7, v8, :cond_a
 
-    const/16 v7, 0x385
+    const/16 v8, 0x385
 
-    if-eq v6, v7, :cond_a
+    if-eq v7, v8, :cond_a
 
-    const/16 v7, 0x386
+    const/16 v8, 0x386
 
-    if-eq v6, v7, :cond_a
+    if-eq v7, v8, :cond_a
 
-    const/16 v7, 0x39c
+    const/16 v8, 0x39c
 
-    if-eq v6, v7, :cond_a
+    if-eq v7, v8, :cond_a
 
-    const/16 v7, 0x3a0
+    const/16 v8, 0x3a0
 
-    if-eq v6, v7, :cond_a
+    if-eq v7, v8, :cond_a
 
-    const/16 v7, 0x39b
+    const/16 v8, 0x39b
 
-    if-eq v6, v7, :cond_a
+    if-eq v7, v8, :cond_a
 
-    const/16 v7, 0x39a
+    const/16 v8, 0x39a
 
-    if-ne v6, v7, :cond_c
+    if-ne v7, v8, :cond_c
 
     .line 431
     :cond_a
-    add-int/lit8 p2, v5, -0x1
+    add-int/lit8 p2, v6, -0x1
 
     .line 432
-    const/4 v3, 0x1
+    const/4 v4, 0x1
 
     goto :goto_4
 
@@ -515,22 +515,22 @@
     :cond_b
     move-object/from16 v0, p3
 
-    invoke-virtual {v0, v7}, Ljava/lang/StringBuilder;->append([C)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append([C)Ljava/lang/StringBuilder;
 
     .line 444
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     goto :goto_3
 
     :cond_c
-    move/from16 p2, v5
+    move/from16 p2, v6
 
     goto :goto_4
 
     :cond_d
-    move v5, v6
-
     move v6, v7
+
+    move v7, v8
 
     goto/16 :goto_0
 .end method

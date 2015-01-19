@@ -1,5 +1,5 @@
 .class public Lcom/glympse/android/controls/GTimePickerFragment;
-.super Landroid/support/v4/app/d;
+.super Landroid/support/v4/app/m;
 .source "GTimePickerFragment.java"
 
 
@@ -49,7 +49,7 @@
     const/4 v0, -0x1
 
     .line 39
-    invoke-direct {p0}, Landroid/support/v4/app/d;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/app/m;-><init>()V
 
     .line 176
     iput v0, p0, Lcom/glympse/android/controls/GTimePickerFragment;->_durationModeValue:I
@@ -146,7 +146,7 @@
 .end method
 
 .method static synthetic access$302(Lcom/glympse/android/controls/GTimePickerFragment;J)J
-    .locals 0
+    .locals 1
 
     .prologue
     .line 31
@@ -156,7 +156,7 @@
 .end method
 
 .method static synthetic access$402(Lcom/glympse/android/controls/GTimePickerFragment;J)J
-    .locals 0
+    .locals 1
 
     .prologue
     .line 31
@@ -216,7 +216,7 @@
 .end method
 
 .method private setExpireTimeText()V
-    .locals 9
+    .locals 10
 
     .prologue
     .line 357
@@ -281,7 +281,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/glympse/android/controls/GTimePickerFragment;->getActivity()Landroid/support/v4/app/h;
+    invoke-virtual {p0}, Lcom/glympse/android/controls/GTimePickerFragment;->getActivity()Landroid/support/v4/app/q;
 
     move-result-object v5
 
@@ -291,9 +291,9 @@
 
     new-instance v6, Ljava/util/Date;
 
-    iget-wide v7, p0, Lcom/glympse/android/controls/GTimePickerFragment;->_expireTime:J
+    iget-wide v8, p0, Lcom/glympse/android/controls/GTimePickerFragment;->_expireTime:J
 
-    invoke-direct {v6, v7, v8}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v6, v8, v9}, Ljava/util/Date;-><init>(J)V
 
     invoke-virtual {v5, v6}, Ljava/text/DateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
@@ -602,7 +602,7 @@
     const/4 v1, 0x0
 
     .line 336
-    invoke-super {p0}, Landroid/support/v4/app/d;->onDestroy()V
+    invoke-super {p0}, Landroid/support/v4/app/m;->onDestroy()V
 
     .line 339
     iget-boolean v0, p0, Lcom/glympse/android/controls/GTimePickerFragment;->_confirmed:Z
@@ -669,7 +669,7 @@
 
     .line 325
     :cond_0
-    invoke-super {p0}, Landroid/support/v4/app/d;->onDestroyView()V
+    invoke-super {p0}, Landroid/support/v4/app/m;->onDestroyView()V
 
     .line 328
     iput-object v1, p0, Lcom/glympse/android/controls/GTimePickerFragment;->_timerView:Lcom/glympse/android/controls/GTimerView;

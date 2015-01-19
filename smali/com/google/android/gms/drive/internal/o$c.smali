@@ -64,7 +64,7 @@
 .end method
 
 .method public a(Lcom/google/android/gms/drive/internal/OnDownloadProgressResponse;)V
-    .locals 5
+    .locals 6
 
     iget-object v0, p0, Lcom/google/android/gms/drive/internal/o$c;->DL:Lcom/google/android/gms/drive/DriveFile$DownloadProgressListener;
 
@@ -74,13 +74,13 @@
 
     invoke-virtual {p1}, Lcom/google/android/gms/drive/internal/OnDownloadProgressResponse;->eY()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {p1}, Lcom/google/android/gms/drive/internal/OnDownloadProgressResponse;->eZ()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/google/android/gms/drive/DriveFile$DownloadProgressListener;->onProgress(JJ)V
+    invoke-interface {v0, v2, v3, v4, v5}, Lcom/google/android/gms/drive/DriveFile$DownloadProgressListener;->onProgress(JJ)V
 
     :cond_0
     return-void

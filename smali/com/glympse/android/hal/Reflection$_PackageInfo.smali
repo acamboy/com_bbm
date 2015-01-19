@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static cL:Z
+.field private static cR:Z
 
-.field private static dM:Ljava/lang/reflect/Field;
+.field private static dS:Ljava/lang/reflect/Field;
 
-.field private static dN:Ljava/lang/reflect/Field;
+.field private static dT:Ljava/lang/reflect/Field;
 
 
 # direct methods
@@ -21,13 +21,13 @@
     .line 460
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->cR:Z
 
     .line 461
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dM:Ljava/lang/reflect/Field;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dS:Ljava/lang/reflect/Field;
 
     .line 462
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dN:Ljava/lang/reflect/Field;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dT:Ljava/lang/reflect/Field;
 
     return-void
 .end method
@@ -47,14 +47,14 @@
 
     .prologue
     .line 467
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->cL:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->cR:Z
 
     if-nez v0, :cond_0
 
     .line 469
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->cR:Z
 
     .line 473
     :try_start_0
@@ -66,7 +66,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dM:Ljava/lang/reflect/Field;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dS:Ljava/lang/reflect/Field;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
@@ -81,7 +81,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dN:Ljava/lang/reflect/Field;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dT:Ljava/lang/reflect/Field;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -112,13 +112,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_PackageInfo;->Load()V
 
     .line 495
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dM:Ljava/lang/reflect/Field;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dS:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_0
 
     .line 499
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dM:Ljava/lang/reflect/Field;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dS:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -162,13 +162,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_PackageInfo;->Load()V
 
     .line 517
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dN:Ljava/lang/reflect/Field;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dT:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_0
 
     .line 521
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dN:Ljava/lang/reflect/Field;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_PackageInfo;->dT:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

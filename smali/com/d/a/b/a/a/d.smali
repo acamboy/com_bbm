@@ -108,7 +108,7 @@
 .end method
 
 .method private a(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 6
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
@@ -124,12 +124,12 @@
     move-result-wide v0
 
     .line 484
-    iget-object v3, p0, Lcom/d/a/b/a/a/d;->c:Ljava/util/concurrent/locks/ReentrantLock;
+    iget-object v4, p0, Lcom/d/a/b/a/a/d;->c:Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 485
-    invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->lockInterruptibly()V
+    invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->lockInterruptibly()V
 
-    move-wide v1, v0
+    move-wide v2, v0
 
     .line 488
     :goto_0
@@ -143,14 +143,14 @@
     if-nez v0, :cond_1
 
     .line 489
-    const-wide/16 v4, 0x0
+    const-wide/16 v0, 0x0
 
-    cmp-long v0, v1, v4
+    cmp-long v0, v2, v0
 
     if-gtz v0, :cond_0
 
     .line 490
-    invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+    invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     const/4 v0, 0x0
 
@@ -163,26 +163,26 @@
     :try_start_1
     iget-object v0, p0, Lcom/d/a/b/a/a/d;->f:Ljava/util/concurrent/locks/Condition;
 
-    invoke-interface {v0, v1, v2}, Ljava/util/concurrent/locks/Condition;->awaitNanos(J)J
+    invoke-interface {v0, v2, v3}, Ljava/util/concurrent/locks/Condition;->awaitNanos(J)J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v0
 
-    move-wide v1, v0
+    move-wide v2, v0
 
     goto :goto_0
 
     .line 493
     :cond_1
-    invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+    invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     goto :goto_1
 
     :catchall_0
     move-exception v0
 
-    invoke-virtual {v3}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+    invoke-virtual {v4}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
     throw v0
 .end method
@@ -1236,7 +1236,7 @@
 .end method
 
 .method public offer(Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)Z
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TE;J",

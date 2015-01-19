@@ -178,7 +178,7 @@
 .end method
 
 .method private declared-synchronized b(Ljava/util/List;J)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1398,7 +1398,7 @@
 .end method
 
 .method private t(J)V
-    .locals 6
+    .locals 7
 
     const-string v0, "Error opening database for deleteOlderThan."
 
@@ -1486,7 +1486,7 @@
 .end method
 
 .method public a(Ljava/util/List;J)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

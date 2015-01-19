@@ -1,203 +1,159 @@
 .class final Lcom/bbm/aa;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/k;
 .source "LocationSynchronizer.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Landroid/location/Location;
-
-.field final synthetic b:J
-
-.field final synthetic c:Lcom/bbm/z;
+.field final synthetic a:Lcom/bbm/z;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/z;Landroid/location/Location;J)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/z;)V
+    .locals 1
 
     .prologue
-    .line 111
-    iput-object p1, p0, Lcom/bbm/aa;->c:Lcom/bbm/z;
+    .line 36
+    iput-object p1, p0, Lcom/bbm/aa;->a:Lcom/bbm/z;
 
-    iput-object p2, p0, Lcom/bbm/aa;->a:Landroid/location/Location;
+    const/4 v0, 0x0
 
-    iput-wide p3, p0, Lcom/bbm/aa;->b:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 9
+.method protected final a()V
+    .locals 8
 
     .prologue
-    .line 114
-    iget-object v6, p0, Lcom/bbm/aa;->a:Landroid/location/Location;
+    .line 40
+    :try_start_0
+    iget-object v0, p0, Lcom/bbm/aa;->a:Lcom/bbm/z;
 
-    .line 115
-    invoke-virtual {v6}, Landroid/location/Location;->getAccuracy()F
+    iget-object v0, v0, Lcom/bbm/z;->e:Lcom/bbm/d/a;
 
-    move-result v0
+    const-string v1, "locationReporting"
 
-    invoke-static {v0}, Ljava/lang/Float;->toString(F)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v6}, Landroid/location/Location;->getLatitude()D
+    .line 41
+    iget-object v1, v0, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
 
-    move-result-wide v2
+    sget-object v2, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
-    invoke-static {v2, v3}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+    if-ne v1, v2, :cond_0
+
+    .line 42
+    iget-object v0, v0, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
+
+    const-string v1, "value"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    .line 43
+    const-string v1, "enabled"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v1
+
+    .line 46
+    iget-object v2, p0, Lcom/bbm/aa;->a:Lcom/bbm/z;
+
+    iget-object v2, v2, Lcom/bbm/z;->f:Landroid/content/Context;
+
+    invoke-static {v2}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v2
 
-    invoke-virtual {v6}, Landroid/location/Location;->getLongitude()D
+    .line 47
+    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    move-result-wide v3
+    move-result-object v2
 
-    invoke-static {v3, v4}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+    .line 48
+    const-string v3, "allow_geolocation_collect"
 
-    move-result-object v3
+    invoke-interface {v2, v3, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    iget-wide v4, p0, Lcom/bbm/aa;->b:J
+    .line 49
+    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    const-wide/16 v7, 0x3e8
-
-    div-long/2addr v4, v7
-
-    new-instance v0, Lcom/bbm/d/bz;
-
-    invoke-direct/range {v0 .. v5}, Lcom/bbm/d/bz;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
-
-    .line 117
-    invoke-virtual {v6}, Landroid/location/Location;->getProvider()Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "network"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 118
-    const-string v1, "Wlan"
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/bz;->a(Ljava/lang/String;)Lcom/bbm/d/bz;
-
-    .line 128
-    :cond_0
-    :goto_0
-    iget-object v1, p0, Lcom/bbm/aa;->c:Lcom/bbm/z;
-
-    iget-object v1, v1, Lcom/bbm/z;->a:Lcom/bbm/x;
-
-    iget-wide v1, v1, Lcom/bbm/x;->a:J
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v1, v1, v3
-
+    .line 51
     if-eqz v1, :cond_1
 
-    iget-wide v1, p0, Lcom/bbm/aa;->b:J
+    .line 52
+    iget-object v1, p0, Lcom/bbm/aa;->a:Lcom/bbm/z;
 
-    iget-object v3, p0, Lcom/bbm/aa;->c:Lcom/bbm/z;
+    const-string v2, "sampleInterval"
 
-    iget-object v3, v3, Lcom/bbm/z;->a:Lcom/bbm/x;
+    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-wide v3, v3, Lcom/bbm/x;->a:J
+    move-result-object v0
 
-    sub-long/2addr v1, v3
+    iput-object v0, v1, Lcom/bbm/z;->d:Ljava/lang/String;
 
-    const-wide/32 v3, 0x1499700
+    .line 53
+    iget-object v4, p0, Lcom/bbm/aa;->a:Lcom/bbm/z;
 
-    cmp-long v1, v1, v3
+    invoke-virtual {v4}, Lcom/bbm/z;->a()V
 
-    if-gtz v1, :cond_1
+    new-instance v0, Ljava/util/Timer;
 
-    iget-object v1, p0, Lcom/bbm/aa;->c:Lcom/bbm/z;
+    invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
-    iget-object v1, v1, Lcom/bbm/z;->a:Lcom/bbm/x;
+    iput-object v0, v4, Lcom/bbm/z;->c:Ljava/util/Timer;
 
-    iget-object v1, v1, Lcom/bbm/x;->b:Landroid/location/Location;
+    new-instance v1, Lcom/bbm/ab;
 
-    if-eqz v1, :cond_2
+    invoke-direct {v1, v4}, Lcom/bbm/ab;-><init>(Lcom/bbm/z;)V
 
-    iget-object v1, p0, Lcom/bbm/aa;->c:Lcom/bbm/z;
+    iget-object v0, v4, Lcom/bbm/z;->c:Ljava/util/Timer;
 
-    iget-object v1, v1, Lcom/bbm/z;->a:Lcom/bbm/x;
+    const-wide/16 v2, 0x0
 
-    iget-object v1, v1, Lcom/bbm/x;->b:Landroid/location/Location;
+    iget-object v4, v4, Lcom/bbm/z;->d:Ljava/lang/String;
 
-    invoke-virtual {v1, v6}, Landroid/location/Location;->distanceTo(Landroid/location/Location;)F
+    invoke-static {v4}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
-    move-result v1
+    move-result-object v4
 
-    float-to-double v1, v1
+    invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
 
-    const-wide v3, 0x40a7700000000000L
+    move-result-wide v4
 
-    cmpl-double v1, v1, v3
+    const-wide/16 v6, 0x3e8
 
-    if-lez v1, :cond_2
+    mul-long/2addr v4, v6
 
-    .line 130
-    :cond_1
-    iget-object v1, p0, Lcom/bbm/aa;->c:Lcom/bbm/z;
+    invoke-virtual/range {v0 .. v5}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;JJ)V
 
-    iget-object v1, v1, Lcom/bbm/z;->a:Lcom/bbm/x;
-
-    iget-wide v2, p0, Lcom/bbm/aa;->b:J
-
-    iput-wide v2, v1, Lcom/bbm/x;->a:J
-
-    .line 131
-    iget-object v1, p0, Lcom/bbm/aa;->c:Lcom/bbm/z;
-
-    iget-object v1, v1, Lcom/bbm/z;->a:Lcom/bbm/x;
-
-    iput-object v6, v1, Lcom/bbm/x;->b:Landroid/location/Location;
-
-    .line 132
-    iget-object v1, p0, Lcom/bbm/aa;->c:Lcom/bbm/z;
-
-    iget-object v1, v1, Lcom/bbm/z;->a:Lcom/bbm/x;
-
-    iget-object v1, v1, Lcom/bbm/x;->e:Lcom/bbm/d/a;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-
-    .line 135
-    :cond_2
+    .line 61
+    :cond_0
+    :goto_0
     return-void
 
-    .line 119
-    :cond_3
-    invoke-virtual {v6}, Landroid/location/Location;->getProvider()Ljava/lang/String;
+    .line 55
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/aa;->a:Lcom/bbm/z;
 
-    move-result-object v1
+    invoke-virtual {v0}, Lcom/bbm/z;->a()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    const-string v2, "gps"
+    goto :goto_0
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 58
+    :catch_0
+    move-exception v0
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 120
-    const-string v1, "Gps"
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/bz;->a(Ljava/lang/String;)Lcom/bbm/d/bz;
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

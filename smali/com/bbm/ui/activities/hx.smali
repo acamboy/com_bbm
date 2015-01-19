@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/hx;
 .super Ljava/lang/Object;
-.source "FilePickerActivity.java"
+.source "ConversationActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/p;
+.implements Lcom/slidingmenu/lib/a/b;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/FilePickerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/FilePickerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 216
-    iput-object p1, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    .line 2893
+    iput-object p1, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,44 +25,50 @@
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)V"
-        }
-    .end annotation
+.method public final a()V
+    .locals 2
 
     .prologue
-    .line 220
-    invoke-static {}, Lcom/bbm/ui/activities/il;->values()[Lcom/bbm/ui/activities/il;
+    .line 2897
+    const-string v0, "onHardwareMenuButtonClicked"
 
-    move-result-object v0
+    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
 
-    aget-object v0, v0, p1
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->a(Lcom/bbm/ui/activities/il;)Lcom/bbm/ui/activities/il;
+    .line 2898
+    iget-object v0, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 221
-    iget-object v0, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->a(Lcom/bbm/ui/activities/FilePickerActivity;)Z
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+
+    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 222
-    iget-object v0, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    .line 2899
+    iget-object v0, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->b(Lcom/bbm/ui/activities/FilePickerActivity;)V
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    .line 224
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->c(Lcom/bbm/ui/activities/FilePickerActivity;)Z
+    const/4 v1, 0x1
 
-    .line 225
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+
+    .line 2903
+    :goto_0
     return-void
+
+    .line 2901
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/hx;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->G(Lcom/bbm/ui/activities/ConversationActivity;)V
+
+    goto :goto_0
 .end method

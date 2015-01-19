@@ -16,7 +16,7 @@
     .locals 1
 
     .prologue
-    .line 21
+    .line 20
     iput-object p1, p0, Lcom/bbm/ui/e;->a:Landroid/view/View;
 
     iput p2, p0, Lcom/bbm/ui/e;->b:I
@@ -36,7 +36,7 @@
     .locals 3
 
     .prologue
-    .line 24
+    .line 23
     iget-object v0, p0, Lcom/bbm/ui/e;->a:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -54,15 +54,15 @@
     :goto_0
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 27
+    .line 26
     iget-object v0, p0, Lcom/bbm/ui/e;->a:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    .line 28
+    .line 27
     return-void
 
-    .line 24
+    .line 23
     :cond_0
     iget v0, p0, Lcom/bbm/ui/e;->b:I
 
@@ -87,7 +87,7 @@
     .locals 1
 
     .prologue
-    .line 32
+    .line 31
     const/4 v0, 0x1
 
     return v0

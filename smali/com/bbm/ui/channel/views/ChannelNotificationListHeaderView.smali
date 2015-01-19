@@ -48,14 +48,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f030113
+    const v1, 0x7f030128
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 27
-    const v0, 0x7f0a013b
+    const v0, 0x7f0b0184
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/channel/views/ChannelNotificationListHeaderView;->findViewById(I)Landroid/view/View;
 
@@ -66,7 +66,7 @@
     iput-object v0, p0, Lcom/bbm/ui/channel/views/ChannelNotificationListHeaderView;->a:Landroid/widget/TextView;
 
     .line 28
-    const v0, 0x7f0a0516
+    const v0, 0x7f0b05bf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/channel/views/ChannelNotificationListHeaderView;->findViewById(I)Landroid/view/View;
 

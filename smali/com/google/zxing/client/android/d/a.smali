@@ -20,18 +20,18 @@
     .locals 9
 
     .prologue
-    const/4 v8, 0x4
+    const/4 v8, 0x3
 
-    const/4 v7, 0x3
+    const/4 v7, 0x2
 
-    const/4 v6, 0x2
+    const/4 v6, 0x1
 
-    const/4 v5, 0x1
+    const/4 v5, 0x4
 
     const/4 v1, 0x0
 
     .line 42
-    new-array v2, v8, [Ljava/text/DateFormat;
+    new-array v2, v5, [Ljava/text/DateFormat;
 
     new-instance v0, Ljava/text/SimpleDateFormat;
 
@@ -51,7 +51,7 @@
 
     invoke-direct {v0, v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    aput-object v0, v2, v5
+    aput-object v0, v2, v6
 
     new-instance v0, Ljava/text/SimpleDateFormat;
 
@@ -61,7 +61,7 @@
 
     invoke-direct {v0, v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    aput-object v0, v2, v6
+    aput-object v0, v2, v7
 
     new-instance v0, Ljava/text/SimpleDateFormat;
 
@@ -71,22 +71,20 @@
 
     invoke-direct {v0, v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    aput-object v0, v2, v7
+    aput-object v0, v2, v8
 
     .line 49
     sput-object v2, Lcom/google/zxing/client/android/d/a;->c:[Ljava/text/DateFormat;
 
-    array-length v3, v2
-
     move v0, v1
 
     :goto_0
-    if-ge v0, v3, :cond_0
+    if-ge v0, v5, :cond_0
 
-    aget-object v4, v2, v0
+    aget-object v3, v2, v0
 
     .line 50
-    invoke-virtual {v4, v1}, Ljava/text/DateFormat;->setLenient(Z)V
+    invoke-virtual {v3, v1}, Ljava/text/DateFormat;->setLenient(Z)V
 
     .line 49
     add-int/lit8 v0, v0, 0x1
@@ -95,7 +93,7 @@
 
     .line 54
     :cond_0
-    new-array v0, v8, [I
+    new-array v0, v5, [I
 
     sget v2, Lcom/google/zxing/client/android/y;->button_add_contact:I
 
@@ -103,15 +101,15 @@
 
     sget v1, Lcom/google/zxing/client/android/y;->button_show_map:I
 
-    aput v1, v0, v5
+    aput v1, v0, v6
 
     sget v1, Lcom/google/zxing/client/android/y;->button_dial:I
 
-    aput v1, v0, v6
+    aput v1, v0, v7
 
     sget v1, Lcom/google/zxing/client/android/y;->button_email:I
 
-    aput v1, v0, v7
+    aput v1, v0, v8
 
     sput-object v0, Lcom/google/zxing/client/android/d/a;->d:[I
 

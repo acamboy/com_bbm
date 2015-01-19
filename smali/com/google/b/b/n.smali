@@ -219,7 +219,7 @@
 .end method
 
 .method constructor <init>(Lcom/google/b/b/e;)V
-    .locals 13
+    .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -229,178 +229,247 @@
     .end annotation
 
     .prologue
-    const-wide/16 v9, 0x1
+    const/4 v6, -0x1
 
-    const/4 v2, 0x1
+    const-wide/16 v10, -0x1
 
-    const/4 v1, 0x0
+    const/4 v5, 0x1
+
+    const-wide/16 v2, 0x0
+
+    const/4 v4, 0x0
 
     .line 236
     invoke-direct {p0}, Ljava/util/AbstractMap;-><init>()V
 
     .line 237
-    invoke-virtual {p1}, Lcom/google/b/b/e;->e()I
+    iget v0, p1, Lcom/google/b/b/e;->h:I
 
-    move-result v0
+    if-ne v0, v6, :cond_6
 
-    const/high16 v3, 0x10000
+    const/4 v0, 0x4
 
-    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
+    :goto_0
+    const/high16 v1, 0x10000
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
     iput v0, p0, Lcom/google/b/b/n;->f:I
 
     .line 239
-    invoke-virtual {p1}, Lcom/google/b/b/e;->h()Lcom/google/b/b/aq;
+    invoke-virtual {p1}, Lcom/google/b/b/e;->b()Lcom/google/b/b/aq;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/b/b/n;->i:Lcom/google/b/b/aq;
 
     .line 240
-    invoke-virtual {p1}, Lcom/google/b/b/e;->i()Lcom/google/b/b/aq;
+    invoke-virtual {p1}, Lcom/google/b/b/e;->c()Lcom/google/b/b/aq;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/b/b/n;->j:Lcom/google/b/b/aq;
 
     .line 242
-    invoke-virtual {p1}, Lcom/google/b/b/e;->b()Lcom/google/b/a/c;
+    iget-object v0, p1, Lcom/google/b/b/e;->q:Lcom/google/b/a/c;
+
+    invoke-virtual {p1}, Lcom/google/b/b/e;->b()Lcom/google/b/b/aq;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/google/b/b/aq;->a()Lcom/google/b/a/c;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/google/b/a/i;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Lcom/google/b/a/c;
 
     iput-object v0, p0, Lcom/google/b/b/n;->g:Lcom/google/b/a/c;
 
     .line 243
-    invoke-virtual {p1}, Lcom/google/b/b/e;->c()Lcom/google/b/a/c;
+    iget-object v0, p1, Lcom/google/b/b/e;->r:Lcom/google/b/a/c;
+
+    invoke-virtual {p1}, Lcom/google/b/b/e;->c()Lcom/google/b/b/aq;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/google/b/b/aq;->a()Lcom/google/b/a/c;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/google/b/a/i;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Lcom/google/b/a/c;
 
     iput-object v0, p0, Lcom/google/b/b/n;->h:Lcom/google/b/a/c;
 
     .line 245
-    invoke-virtual {p1}, Lcom/google/b/b/e;->f()J
+    iget-wide v0, p1, Lcom/google/b/b/e;->n:J
 
-    move-result-wide v3
+    cmp-long v0, v0, v2
 
-    iput-wide v3, p0, Lcom/google/b/b/n;->k:J
+    if-eqz v0, :cond_0
+
+    iget-wide v0, p1, Lcom/google/b/b/e;->o:J
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_7
+
+    :cond_0
+    move-wide v0, v2
+
+    :goto_1
+    iput-wide v0, p0, Lcom/google/b/b/n;->k:J
 
     .line 246
-    invoke-virtual {p1}, Lcom/google/b/b/e;->g()Lcom/google/b/b/cf;
+    iget-object v0, p1, Lcom/google/b/b/e;->k:Lcom/google/b/b/cf;
+
+    sget-object v1, Lcom/google/b/b/j;->a:Lcom/google/b/b/j;
+
+    invoke-static {v0, v1}, Lcom/google/b/a/i;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Lcom/google/b/b/cf;
 
     iput-object v0, p0, Lcom/google/b/b/n;->l:Lcom/google/b/b/cf;
 
     .line 247
-    invoke-virtual {p1}, Lcom/google/b/b/e;->k()J
+    iget-wide v0, p1, Lcom/google/b/b/e;->o:J
 
-    move-result-wide v3
+    cmp-long v0, v0, v10
 
-    iput-wide v3, p0, Lcom/google/b/b/n;->m:J
+    if-nez v0, :cond_9
+
+    move-wide v0, v2
+
+    :goto_2
+    iput-wide v0, p0, Lcom/google/b/b/n;->m:J
 
     .line 248
-    invoke-virtual {p1}, Lcom/google/b/b/e;->j()J
+    iget-wide v0, p1, Lcom/google/b/b/e;->n:J
 
-    move-result-wide v3
+    cmp-long v0, v0, v10
 
-    iput-wide v3, p0, Lcom/google/b/b/n;->n:J
+    if-nez v0, :cond_a
+
+    move-wide v0, v2
+
+    :goto_3
+    iput-wide v0, p0, Lcom/google/b/b/n;->n:J
 
     .line 249
-    invoke-virtual {p1}, Lcom/google/b/b/e;->l()J
+    iget-wide v0, p1, Lcom/google/b/b/e;->p:J
 
-    move-result-wide v3
+    cmp-long v0, v0, v10
 
-    iput-wide v3, p0, Lcom/google/b/b/n;->o:J
+    if-nez v0, :cond_b
+
+    :goto_4
+    iput-wide v2, p0, Lcom/google/b/b/n;->o:J
 
     .line 251
-    invoke-virtual {p1}, Lcom/google/b/b/e;->m()Lcom/google/b/b/by;
+    iget-object v0, p1, Lcom/google/b/b/e;->s:Lcom/google/b/b/by;
+
+    sget-object v1, Lcom/google/b/b/i;->a:Lcom/google/b/b/i;
+
+    invoke-static {v0, v1}, Lcom/google/b/a/i;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
+
+    check-cast v0, Lcom/google/b/b/by;
 
     iput-object v0, p0, Lcom/google/b/b/n;->q:Lcom/google/b/b/by;
 
     .line 252
     iget-object v0, p0, Lcom/google/b/b/n;->q:Lcom/google/b/b/by;
 
-    sget-object v3, Lcom/google/b/b/i;->a:Lcom/google/b/b/i;
+    sget-object v1, Lcom/google/b/b/i;->a:Lcom/google/b/b/i;
 
-    if-ne v0, v3, :cond_5
+    if-ne v0, v1, :cond_c
 
     sget-object v0, Lcom/google/b/b/n;->w:Ljava/util/Queue;
 
-    :goto_0
+    :goto_5
     iput-object v0, p0, Lcom/google/b/b/n;->p:Ljava/util/Queue;
 
     .line 256
-    invoke-virtual {p0}, Lcom/google/b/b/n;->f()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-direct {p0}, Lcom/google/b/b/n;->o()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    :cond_0
-    move v0, v2
-
-    :goto_1
-    invoke-virtual {p1, v0}, Lcom/google/b/b/e;->a(Z)Lcom/google/b/a/v;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/google/b/b/n;->r:Lcom/google/b/a/v;
-
-    .line 257
-    iget-object v4, p0, Lcom/google/b/b/n;->i:Lcom/google/b/b/aq;
-
-    invoke-virtual {p0}, Lcom/google/b/b/n;->d()Z
+    invoke-virtual {p0}, Lcom/google/b/b/n;->g()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    invoke-direct {p0}, Lcom/google/b/b/n;->o()Z
+    invoke-virtual {p0}, Lcom/google/b/b/n;->d()Z
 
     move-result v0
 
-    if-eqz v0, :cond_7
+    if-eqz v0, :cond_d
 
     :cond_1
-    move v0, v2
+    move v0, v5
 
-    :goto_2
-    invoke-direct {p0}, Lcom/google/b/b/n;->n()Z
+    :goto_6
+    iget-object v1, p1, Lcom/google/b/b/e;->t:Lcom/google/b/a/v;
 
-    move-result v3
+    if-eqz v1, :cond_e
 
-    if-nez v3, :cond_2
+    iget-object v0, p1, Lcom/google/b/b/e;->t:Lcom/google/b/a/v;
+
+    :goto_7
+    iput-object v0, p0, Lcom/google/b/b/n;->r:Lcom/google/b/a/v;
+
+    .line 257
+    iget-object v2, p0, Lcom/google/b/b/n;->i:Lcom/google/b/b/aq;
 
     invoke-virtual {p0}, Lcom/google/b/b/n;->f()Z
 
-    move-result v3
+    move-result v0
 
-    if-eqz v3, :cond_8
+    if-nez v0, :cond_2
+
+    invoke-virtual {p0}, Lcom/google/b/b/n;->d()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_10
 
     :cond_2
-    move v3, v2
+    move v0, v5
 
-    :goto_3
-    invoke-static {v4, v0, v3}, Lcom/google/b/b/v;->a(Lcom/google/b/b/aq;ZZ)Lcom/google/b/b/v;
+    :goto_8
+    invoke-virtual {p0}, Lcom/google/b/b/n;->c()Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    invoke-virtual {p0}, Lcom/google/b/b/n;->g()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_11
+
+    :cond_3
+    move v1, v5
+
+    :goto_9
+    invoke-static {v2, v0, v1}, Lcom/google/b/b/v;->a(Lcom/google/b/b/aq;ZZ)Lcom/google/b/b/v;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/b/b/n;->s:Lcom/google/b/b/v;
 
     .line 258
-    invoke-virtual {p1}, Lcom/google/b/b/e;->n()Lcom/google/b/a/s;
-
-    move-result-object v0
+    iget-object v0, p1, Lcom/google/b/b/e;->u:Lcom/google/b/a/s;
 
     invoke-interface {v0}, Lcom/google/b/a/s;->a()Ljava/lang/Object;
 
@@ -416,193 +485,250 @@
     iput-object v0, p0, Lcom/google/b/b/n;->u:Lcom/google/b/b/k;
 
     .line 261
-    invoke-virtual {p1}, Lcom/google/b/b/e;->d()I
+    iget v0, p1, Lcom/google/b/b/e;->g:I
 
-    move-result v0
+    if-ne v0, v6, :cond_12
 
-    const/high16 v3, 0x40000000
+    const/16 v0, 0x10
 
-    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
+    :goto_a
+    const/high16 v1, 0x40000000
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
     .line 262
     invoke-virtual {p0}, Lcom/google/b/b/n;->a()Z
 
-    move-result v3
+    move-result v1
 
-    if-eqz v3, :cond_3
+    if-eqz v1, :cond_4
 
     invoke-virtual {p0}, Lcom/google/b/b/n;->b()Z
 
-    move-result v3
+    move-result v1
 
-    if-nez v3, :cond_3
+    if-nez v1, :cond_4
 
     .line 263
-    iget-wide v3, p0, Lcom/google/b/b/n;->k:J
+    iget-wide v2, p0, Lcom/google/b/b/n;->k:J
 
-    long-to-int v3, v3
+    long-to-int v1, v2
 
-    invoke-static {v0, v3}, Ljava/lang/Math;->min(II)I
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
-    :cond_3
-    move v3, v2
+    :cond_4
+    move v1, v5
 
-    move v4, v1
+    move v2, v4
 
     .line 274
-    :goto_4
-    iget v5, p0, Lcom/google/b/b/n;->f:I
+    :goto_b
+    iget v3, p0, Lcom/google/b/b/n;->f:I
 
-    if-ge v3, v5, :cond_9
+    if-ge v1, v3, :cond_13
 
     invoke-virtual {p0}, Lcom/google/b/b/n;->a()Z
 
-    move-result v5
+    move-result v3
 
-    if-eqz v5, :cond_4
+    if-eqz v3, :cond_5
 
-    mul-int/lit8 v5, v3, 0x14
+    mul-int/lit8 v3, v1, 0x14
 
-    int-to-long v5, v5
+    int-to-long v6, v3
 
-    iget-wide v7, p0, Lcom/google/b/b/n;->k:J
+    iget-wide v8, p0, Lcom/google/b/b/n;->k:J
 
-    cmp-long v5, v5, v7
+    cmp-long v3, v6, v8
 
-    if-gtz v5, :cond_9
+    if-gtz v3, :cond_13
 
     .line 275
-    :cond_4
-    add-int/lit8 v4, v4, 0x1
+    :cond_5
+    add-int/lit8 v2, v2, 0x1
 
     .line 276
-    shl-int/lit8 v3, v3, 0x1
+    shl-int/lit8 v1, v1, 0x1
 
-    goto :goto_4
+    goto :goto_b
+
+    .line 237
+    :cond_6
+    iget v0, p1, Lcom/google/b/b/e;->h:I
+
+    goto/16 :goto_0
+
+    .line 245
+    :cond_7
+    iget-object v0, p1, Lcom/google/b/b/e;->k:Lcom/google/b/b/cf;
+
+    if-nez v0, :cond_8
+
+    iget-wide v0, p1, Lcom/google/b/b/e;->i:J
+
+    goto/16 :goto_1
+
+    :cond_8
+    iget-wide v0, p1, Lcom/google/b/b/e;->j:J
+
+    goto/16 :goto_1
+
+    .line 247
+    :cond_9
+    iget-wide v0, p1, Lcom/google/b/b/e;->o:J
+
+    goto/16 :goto_2
+
+    .line 248
+    :cond_a
+    iget-wide v0, p1, Lcom/google/b/b/e;->n:J
+
+    goto/16 :goto_3
+
+    .line 249
+    :cond_b
+    iget-wide v2, p1, Lcom/google/b/b/e;->p:J
+
+    goto/16 :goto_4
 
     .line 252
-    :cond_5
+    :cond_c
     new-instance v0, Ljava/util/concurrent/ConcurrentLinkedQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentLinkedQueue;-><init>()V
 
-    goto/16 :goto_0
+    goto/16 :goto_5
 
-    :cond_6
-    move v0, v1
+    :cond_d
+    move v0, v4
 
     .line 256
-    goto :goto_1
+    goto/16 :goto_6
 
-    :cond_7
-    move v0, v1
+    :cond_e
+    if-eqz v0, :cond_f
+
+    invoke-static {}, Lcom/google/b/a/v;->b()Lcom/google/b/a/v;
+
+    move-result-object v0
+
+    goto/16 :goto_7
+
+    :cond_f
+    sget-object v0, Lcom/google/b/b/e;->d:Lcom/google/b/a/v;
+
+    goto/16 :goto_7
+
+    :cond_10
+    move v0, v4
 
     .line 257
-    goto :goto_2
+    goto/16 :goto_8
 
-    :cond_8
-    move v3, v1
+    :cond_11
+    move v1, v4
 
-    goto :goto_3
+    goto/16 :goto_9
+
+    .line 261
+    :cond_12
+    iget v0, p1, Lcom/google/b/b/e;->g:I
+
+    goto :goto_a
 
     .line 278
-    :cond_9
-    rsub-int/lit8 v4, v4, 0x20
+    :cond_13
+    rsub-int/lit8 v2, v2, 0x20
 
-    iput v4, p0, Lcom/google/b/b/n;->d:I
+    iput v2, p0, Lcom/google/b/b/n;->d:I
 
     .line 279
-    add-int/lit8 v4, v3, -0x1
+    add-int/lit8 v2, v1, -0x1
 
-    iput v4, p0, Lcom/google/b/b/n;->c:I
+    iput v2, p0, Lcom/google/b/b/n;->c:I
 
     .line 281
-    new-array v4, v3, [Lcom/google/b/b/an;
+    new-array v2, v1, [Lcom/google/b/b/an;
 
-    iput-object v4, p0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
+    iput-object v2, p0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
 
     .line 283
-    div-int v4, v0, v3
+    div-int v2, v0, v1
 
     .line 284
-    mul-int v5, v4, v3
+    mul-int v3, v2, v1
 
-    if-ge v5, v0, :cond_e
+    if-ge v3, v0, :cond_18
 
     .line 285
-    add-int/lit8 v0, v4, 0x1
-
-    :goto_5
-    move v6, v2
+    add-int/lit8 v0, v2, 0x1
 
     .line 289
-    :goto_6
-    if-ge v6, v0, :cond_a
+    :goto_c
+    if-ge v5, v0, :cond_14
 
     .line 290
-    shl-int/lit8 v2, v6, 0x1
+    shl-int/lit8 v5, v5, 0x1
 
-    move v6, v2
-
-    goto :goto_6
+    goto :goto_c
 
     .line 293
-    :cond_a
+    :cond_14
     invoke-virtual {p0}, Lcom/google/b/b/n;->a()Z
 
     move-result v0
 
-    if-eqz v0, :cond_b
+    if-eqz v0, :cond_15
 
     .line 295
-    iget-wide v4, p0, Lcom/google/b/b/n;->k:J
+    iget-wide v2, p0, Lcom/google/b/b/n;->k:J
 
-    int-to-long v7, v3
+    int-to-long v6, v1
 
-    div-long/2addr v4, v7
+    div-long/2addr v2, v6
 
-    add-long/2addr v4, v9
+    const-wide/16 v6, 0x1
+
+    add-long/2addr v2, v6
 
     .line 296
-    iget-wide v7, p0, Lcom/google/b/b/n;->k:J
+    iget-wide v6, p0, Lcom/google/b/b/n;->k:J
 
-    int-to-long v2, v3
+    int-to-long v0, v1
 
-    rem-long/2addr v7, v2
+    rem-long/2addr v6, v0
 
-    move v3, v1
-
-    move-wide v0, v4
+    move-wide v0, v2
 
     .line 297
-    :goto_7
+    :goto_d
     iget-object v2, p0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
 
     array-length v2, v2
 
-    if-ge v3, v2, :cond_c
+    if-ge v4, v2, :cond_16
 
     .line 298
-    int-to-long v4, v3
+    int-to-long v2, v4
 
-    cmp-long v2, v4, v7
+    cmp-long v2, v2, v6
 
-    if-nez v2, :cond_d
+    if-nez v2, :cond_17
 
     .line 299
-    sub-long v1, v0, v9
+    const-wide/16 v2, 0x1
+
+    sub-long v2, v0, v2
 
     .line 301
-    :goto_8
-    iget-object v4, p0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
+    :goto_e
+    iget-object v1, p0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
 
-    invoke-virtual {p1}, Lcom/google/b/b/e;->n()Lcom/google/b/a/s;
-
-    move-result-object v0
+    iget-object v0, p1, Lcom/google/b/b/e;->u:Lcom/google/b/a/s;
 
     invoke-interface {v0}, Lcom/google/b/a/s;->a()Ljava/lang/Object;
 
@@ -610,40 +736,32 @@
 
     check-cast v0, Lcom/google/b/b/c;
 
-    invoke-direct {p0, v6, v1, v2, v0}, Lcom/google/b/b/n;->a(IJLcom/google/b/b/c;)Lcom/google/b/b/an;
+    invoke-direct {p0, v5, v2, v3, v0}, Lcom/google/b/b/n;->a(IJLcom/google/b/b/c;)Lcom/google/b/b/an;
 
     move-result-object v0
 
-    aput-object v0, v4, v3
+    aput-object v0, v1, v4
 
     .line 297
-    add-int/lit8 v0, v3, 0x1
+    add-int/lit8 v4, v4, 0x1
 
-    move v3, v0
+    move-wide v0, v2
 
-    move-wide v11, v1
-
-    move-wide v0, v11
-
-    goto :goto_7
+    goto :goto_d
 
     .line 305
-    :cond_b
-    :goto_9
+    :cond_15
+    :goto_f
     iget-object v0, p0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
 
     array-length v0, v0
 
-    if-ge v1, v0, :cond_c
+    if-ge v4, v0, :cond_16
 
     .line 306
-    iget-object v2, p0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
+    iget-object v1, p0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
 
-    const-wide/16 v3, -0x1
-
-    invoke-virtual {p1}, Lcom/google/b/b/e;->n()Lcom/google/b/a/s;
-
-    move-result-object v0
+    iget-object v0, p1, Lcom/google/b/b/e;->u:Lcom/google/b/a/s;
 
     invoke-interface {v0}, Lcom/google/b/a/s;->a()Ljava/lang/Object;
 
@@ -651,61 +769,34 @@
 
     check-cast v0, Lcom/google/b/b/c;
 
-    invoke-direct {p0, v6, v3, v4, v0}, Lcom/google/b/b/n;->a(IJLcom/google/b/b/c;)Lcom/google/b/b/an;
+    invoke-direct {p0, v5, v10, v11, v0}, Lcom/google/b/b/n;->a(IJLcom/google/b/b/c;)Lcom/google/b/b/an;
 
     move-result-object v0
 
-    aput-object v0, v2, v1
+    aput-object v0, v1, v4
 
     .line 305
-    add-int/lit8 v1, v1, 0x1
+    add-int/lit8 v4, v4, 0x1
 
-    goto :goto_9
+    goto :goto_f
 
     .line 310
-    :cond_c
+    :cond_16
     return-void
 
-    :cond_d
-    move-wide v1, v0
+    :cond_17
+    move-wide v2, v0
 
-    goto :goto_8
+    goto :goto_e
 
-    :cond_e
-    move v0, v4
+    :cond_18
+    move v0, v2
 
-    goto :goto_5
-.end method
-
-.method private a(I)Lcom/google/b/b/an;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)",
-            "Lcom/google/b/b/an",
-            "<TK;TV;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 1931
-    iget-object v0, p0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
-
-    iget v1, p0, Lcom/google/b/b/n;->d:I
-
-    ushr-int v1, p1, v1
-
-    iget v2, p0, Lcom/google/b/b/n;->c:I
-
-    and-int/2addr v1, v2
-
-    aget-object v0, v0, v1
-
-    return-object v0
+    goto :goto_c
 .end method
 
 .method private a(IJLcom/google/b/b/c;)Lcom/google/b/b/an;
-    .locals 6
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(IJ",
@@ -718,19 +809,47 @@
 
     .prologue
     .line 1936
-    new-instance v0, Lcom/google/b/b/an;
+    new-instance v1, Lcom/google/b/b/an;
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move v2, p1
+    move v3, p1
 
-    move-wide v3, p2
+    move-wide v4, p2
 
-    move-object v5, p4
+    move-object v6, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/b/b/an;-><init>(Lcom/google/b/b/n;IJLcom/google/b/b/c;)V
+    invoke-direct/range {v1 .. v6}, Lcom/google/b/b/an;-><init>(Lcom/google/b/b/n;IJLcom/google/b/b/c;)V
 
-    return-object v0
+    return-object v1
+.end method
+
+.method static a(Lcom/google/b/b/am;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<K:",
+            "Ljava/lang/Object;",
+            "V:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Lcom/google/b/b/am",
+            "<TK;TV;>;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 1989
+    sget-object v0, Lcom/google/b/b/al;->a:Lcom/google/b/b/al;
+
+    .line 1990
+    invoke-interface {p0, v0}, Lcom/google/b/b/am;->a(Lcom/google/b/b/am;)V
+
+    .line 1991
+    invoke-interface {p0, v0}, Lcom/google/b/b/am;->b(Lcom/google/b/b/am;)V
+
+    .line 1992
+    return-void
 .end method
 
 .method static a(Lcom/google/b/b/am;Lcom/google/b/b/am;)V
@@ -760,51 +879,6 @@
     return-void
 .end method
 
-.method private b(Ljava/lang/Object;)I
-    .locals 3
-
-    .prologue
-    .line 1899
-    iget-object v0, p0, Lcom/google/b/b/n;->g:Lcom/google/b/a/c;
-
-    invoke-virtual {v0, p1}, Lcom/google/b/a/c;->a(Ljava/lang/Object;)I
-
-    move-result v0
-
-    .line 1900
-    shl-int/lit8 v1, v0, 0xf
-
-    xor-int/lit16 v1, v1, -0x3283
-
-    add-int/2addr v0, v1
-
-    ushr-int/lit8 v1, v0, 0xa
-
-    xor-int/2addr v0, v1
-
-    shl-int/lit8 v1, v0, 0x3
-
-    add-int/2addr v0, v1
-
-    ushr-int/lit8 v1, v0, 0x6
-
-    xor-int/2addr v0, v1
-
-    shl-int/lit8 v1, v0, 0x2
-
-    shl-int/lit8 v2, v0, 0xe
-
-    add-int/2addr v1, v2
-
-    add-int/2addr v0, v1
-
-    ushr-int/lit8 v1, v0, 0x10
-
-    xor-int/2addr v0, v1
-
-    return v0
-.end method
-
 .method static b(Lcom/google/b/b/am;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
@@ -820,16 +894,16 @@
     .end annotation
 
     .prologue
-    .line 1989
+    .line 2002
     sget-object v0, Lcom/google/b/b/al;->a:Lcom/google/b/b/al;
 
-    .line 1990
-    invoke-interface {p0, v0}, Lcom/google/b/b/am;->a(Lcom/google/b/b/am;)V
+    .line 2003
+    invoke-interface {p0, v0}, Lcom/google/b/b/am;->c(Lcom/google/b/b/am;)V
 
-    .line 1991
-    invoke-interface {p0, v0}, Lcom/google/b/b/am;->b(Lcom/google/b/b/am;)V
+    .line 2004
+    invoke-interface {p0, v0}, Lcom/google/b/b/am;->d(Lcom/google/b/b/am;)V
 
-    .line 1992
+    .line 2005
     return-void
 .end method
 
@@ -857,34 +931,6 @@
     invoke-interface {p1, p0}, Lcom/google/b/b/am;->d(Lcom/google/b/b/am;)V
 
     .line 1998
-    return-void
-.end method
-
-.method static c(Lcom/google/b/b/am;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<K:",
-            "Ljava/lang/Object;",
-            "V:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 2002
-    sget-object v0, Lcom/google/b/b/al;->a:Lcom/google/b/b/al;
-
-    .line 2003
-    invoke-interface {p0, v0}, Lcom/google/b/b/am;->c(Lcom/google/b/b/am;)V
-
-    .line 2004
-    invoke-interface {p0, v0}, Lcom/google/b/b/am;->d(Lcom/google/b/b/am;)V
-
-    .line 2005
     return-void
 .end method
 
@@ -949,218 +995,78 @@
     return-object v0
 .end method
 
-.method private n()Z
-    .locals 4
-
-    .prologue
-    .line 325
-    iget-wide v0, p0, Lcom/google/b/b/n;->n:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private o()Z
-    .locals 4
-
-    .prologue
-    .line 329
-    iget-wide v0, p0, Lcom/google/b/b/n;->m:J
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 
 # virtual methods
-.method final a(Lcom/google/b/b/am;J)Ljava/lang/Object;
+.method final a(Ljava/lang/Object;)I
     .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;J)TV;"
-        }
-    .end annotation
 
     .prologue
-    const/4 v0, 0x0
+    .line 1899
+    iget-object v0, p0, Lcom/google/b/b/n;->g:Lcom/google/b/a/c;
 
-    .line 1947
-    invoke-interface {p1}, Lcom/google/b/b/am;->d()Ljava/lang/Object;
-
-    move-result-object v1
-
-    if-nez v1, :cond_1
-
-    .line 1958
-    :cond_0
-    :goto_0
-    return-object v0
-
-    .line 1950
-    :cond_1
-    invoke-interface {p1}, Lcom/google/b/b/am;->a()Lcom/google/b/b/ba;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/google/b/b/ba;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    .line 1951
-    if-eqz v1, :cond_0
-
-    .line 1955
-    invoke-virtual {p0, p1, p2, p3}, Lcom/google/b/b/n;->b(Lcom/google/b/b/am;J)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    move-object v0, v1
-
-    .line 1958
-    goto :goto_0
-.end method
-
-.method public final a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Object;",
-            ")TV;"
-        }
-    .end annotation
-
-    .prologue
-    .line 3988
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/google/b/b/n;->b(Ljava/lang/Object;)I
+    invoke-virtual {v0, p1}, Lcom/google/b/a/c;->a(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 3989
-    invoke-direct {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
+    .line 1900
+    shl-int/lit8 v1, v0, 0xf
 
-    move-result-object v1
+    xor-int/lit16 v1, v1, -0x3283
 
-    invoke-virtual {v1, p1, v0}, Lcom/google/b/b/an;->a(Ljava/lang/Object;I)Ljava/lang/Object;
+    add-int/2addr v0, v1
 
-    move-result-object v0
+    ushr-int/lit8 v1, v0, 0xa
 
-    .line 3990
-    if-nez v0, :cond_0
+    xor-int/2addr v0, v1
 
-    .line 3991
-    iget-object v1, p0, Lcom/google/b/b/n;->t:Lcom/google/b/b/c;
+    shl-int/lit8 v1, v0, 0x3
 
-    invoke-interface {v1}, Lcom/google/b/b/c;->b()V
+    add-int/2addr v0, v1
 
-    .line 3995
-    :goto_0
-    return-object v0
+    ushr-int/lit8 v1, v0, 0x6
 
-    .line 3993
-    :cond_0
-    iget-object v1, p0, Lcom/google/b/b/n;->t:Lcom/google/b/b/c;
+    xor-int/2addr v0, v1
 
-    invoke-interface {v1}, Lcom/google/b/b/c;->a()V
+    shl-int/lit8 v1, v0, 0x2
 
-    goto :goto_0
+    shl-int/lit8 v2, v0, 0xe
+
+    add-int/2addr v1, v2
+
+    add-int/2addr v0, v1
+
+    ushr-int/lit8 v1, v0, 0x10
+
+    xor-int/2addr v0, v1
+
+    return v0
 .end method
 
-.method final a(Lcom/google/b/b/am;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 1910
-    invoke-interface {p1}, Lcom/google/b/b/am;->c()I
-
-    move-result v0
-
-    .line 1911
-    invoke-direct {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1, v0}, Lcom/google/b/b/an;->a(Lcom/google/b/b/am;I)Z
-
-    .line 1912
-    return-void
-.end method
-
-.method final a(Lcom/google/b/b/ba;)V
+.method final a(I)Lcom/google/b/b/an;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(",
-            "Lcom/google/b/b/ba",
-            "<TK;TV;>;)V"
+            "(I)",
+            "Lcom/google/b/b/an",
+            "<TK;TV;>;"
         }
     .end annotation
 
     .prologue
-    .line 1904
-    invoke-interface {p1}, Lcom/google/b/b/ba;->b()Lcom/google/b/b/am;
+    .line 1931
+    iget-object v0, p0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
 
-    move-result-object v0
+    iget v1, p0, Lcom/google/b/b/n;->d:I
 
-    .line 1905
-    invoke-interface {v0}, Lcom/google/b/b/am;->c()I
+    ushr-int v1, p1, v1
 
-    move-result v1
+    iget v2, p0, Lcom/google/b/b/n;->c:I
 
-    .line 1906
-    invoke-direct {p0, v1}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
+    and-int/2addr v1, v2
 
-    move-result-object v2
+    aget-object v0, v0, v1
 
-    invoke-interface {v0}, Lcom/google/b/b/am;->d()Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0, v1, p1}, Lcom/google/b/b/an;->a(Ljava/lang/Object;ILcom/google/b/b/ba;)Z
-
-    .line 1907
-    return-void
+    return-object v0
 .end method
 
 .method final a()Z
@@ -1182,6 +1088,73 @@
     return v0
 
     :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method final a(Lcom/google/b/b/am;J)Z
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/b/b/am",
+            "<TK;TV;>;J)Z"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v0, 0x1
+
+    .line 1967
+    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 1968
+    invoke-virtual {p0}, Lcom/google/b/b/n;->d()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    invoke-interface {p1}, Lcom/google/b/b/am;->e()J
+
+    move-result-wide v2
+
+    sub-long v2, p2, v2
+
+    iget-wide v4, p0, Lcom/google/b/b/n;->m:J
+
+    cmp-long v1, v2, v4
+
+    if-ltz v1, :cond_1
+
+    .line 1976
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 1972
+    :cond_1
+    invoke-virtual {p0}, Lcom/google/b/b/n;->c()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {p1}, Lcom/google/b/b/am;->h()J
+
+    move-result-wide v2
+
+    sub-long v2, p2, v2
+
+    iget-wide v4, p0, Lcom/google/b/b/n;->n:J
+
+    cmp-long v1, v2, v4
+
+    if-gez v1, :cond_0
+
+    .line 1976
+    :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
@@ -1209,74 +1182,493 @@
     goto :goto_0
 .end method
 
-.method final b(Lcom/google/b/b/am;J)Z
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/b/am",
-            "<TK;TV;>;J)Z"
-        }
-    .end annotation
+.method final c()Z
+    .locals 4
 
     .prologue
+    .line 325
+    iget-wide v0, p0, Lcom/google/b/b/n;->n:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
     const/4 v0, 0x1
 
-    .line 1967
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 1968
-    invoke-direct {p0}, Lcom/google/b/b/n;->o()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    invoke-interface {p1}, Lcom/google/b/b/am;->e()J
-
-    move-result-wide v1
-
-    sub-long v1, p2, v1
-
-    iget-wide v3, p0, Lcom/google/b/b/n;->m:J
-
-    cmp-long v1, v1, v3
-
-    if-ltz v1, :cond_1
-
-    .line 1976
-    :cond_0
     :goto_0
     return v0
 
-    .line 1972
-    :cond_1
-    invoke-direct {p0}, Lcom/google/b/b/n;->n()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {p1}, Lcom/google/b/b/am;->h()J
-
-    move-result-wide v1
-
-    sub-long v1, p2, v1
-
-    iget-wide v3, p0, Lcom/google/b/b/n;->n:J
-
-    cmp-long v1, v1, v3
-
-    if-gez v1, :cond_0
-
-    .line 1976
-    :cond_2
+    :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method final c()Z
+.method public clear()V
+    .locals 9
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 4269
+    iget-object v4, p0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
+
+    array-length v5, v4
+
+    move v3, v1
+
+    :goto_0
+    if-ge v3, v5, :cond_9
+
+    aget-object v6, v4, v3
+
+    .line 4270
+    iget v0, v6, Lcom/google/b/b/an;->b:I
+
+    if-eqz v0, :cond_8
+
+    invoke-virtual {v6}, Lcom/google/b/b/an;->lock()V
+
+    :try_start_0
+    iget-object v7, v6, Lcom/google/b/b/an;->f:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    move v2, v1
+
+    :goto_1
+    invoke-virtual {v7}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+
+    move-result v0
+
+    if-ge v2, v0, :cond_2
+
+    invoke-virtual {v7, v2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/google/b/b/am;
+
+    :goto_2
+    if-eqz v0, :cond_1
+
+    invoke-interface {v0}, Lcom/google/b/b/am;->a()Lcom/google/b/b/ba;
+
+    move-result-object v8
+
+    invoke-interface {v8}, Lcom/google/b/b/ba;->d()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_0
+
+    sget-object v8, Lcom/google/b/b/bs;->a:Lcom/google/b/b/bs;
+
+    invoke-virtual {v6, v0, v8}, Lcom/google/b/b/an;->a(Lcom/google/b/b/am;Lcom/google/b/b/bs;)V
+
+    :cond_0
+    invoke-interface {v0}, Lcom/google/b/b/am;->b()Lcom/google/b/b/am;
+
+    move-result-object v0
+
+    goto :goto_2
+
+    :cond_1
+    add-int/lit8 v0, v2, 0x1
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_2
+    move v0, v1
+
+    :goto_3
+    invoke-virtual {v7}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+
+    move-result v2
+
+    if-ge v0, v2, :cond_3
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v7, v0, v2}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->set(ILjava/lang/Object;)V
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_3
+
+    :cond_3
+    iget-object v0, v6, Lcom/google/b/b/an;->a:Lcom/google/b/b/n;
+
+    invoke-virtual {v0}, Lcom/google/b/b/n;->h()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    :cond_4
+    iget-object v0, v6, Lcom/google/b/b/an;->h:Ljava/lang/ref/ReferenceQueue;
+
+    invoke-virtual {v0}, Ljava/lang/ref/ReferenceQueue;->poll()Ljava/lang/ref/Reference;
+
+    move-result-object v0
+
+    if-nez v0, :cond_4
+
+    :cond_5
+    iget-object v0, v6, Lcom/google/b/b/an;->a:Lcom/google/b/b/n;
+
+    invoke-virtual {v0}, Lcom/google/b/b/n;->i()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    :cond_6
+    iget-object v0, v6, Lcom/google/b/b/an;->i:Ljava/lang/ref/ReferenceQueue;
+
+    invoke-virtual {v0}, Ljava/lang/ref/ReferenceQueue;->poll()Ljava/lang/ref/Reference;
+
+    move-result-object v0
+
+    if-nez v0, :cond_6
+
+    :cond_7
+    iget-object v0, v6, Lcom/google/b/b/an;->l:Ljava/util/Queue;
+
+    invoke-interface {v0}, Ljava/util/Queue;->clear()V
+
+    iget-object v0, v6, Lcom/google/b/b/an;->m:Ljava/util/Queue;
+
+    invoke-interface {v0}, Ljava/util/Queue;->clear()V
+
+    iget-object v0, v6, Lcom/google/b/b/an;->k:Ljava/util/concurrent/atomic/AtomicInteger;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v2}, Ljava/util/concurrent/atomic/AtomicInteger;->set(I)V
+
+    iget v0, v6, Lcom/google/b/b/an;->d:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, v6, Lcom/google/b/b/an;->d:I
+
+    const/4 v0, 0x0
+
+    iput v0, v6, Lcom/google/b/b/an;->b:I
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    invoke-virtual {v6}, Lcom/google/b/b/an;->unlock()V
+
+    invoke-virtual {v6}, Lcom/google/b/b/an;->c()V
+
+    .line 4269
+    :cond_8
+    add-int/lit8 v0, v3, 0x1
+
+    move v3, v0
+
+    goto/16 :goto_0
+
+    .line 4270
+    :catchall_0
+    move-exception v0
+
+    invoke-virtual {v6}, Lcom/google/b/b/an;->unlock()V
+
+    invoke-virtual {v6}, Lcom/google/b/b/an;->c()V
+
+    throw v0
+
+    .line 4272
+    :cond_9
+    return-void
+.end method
+
+.method public containsKey(Ljava/lang/Object;)Z
+    .locals 2
+
+    .prologue
+    .line 4159
+    if-nez p1, :cond_0
+
+    .line 4160
+    const/4 v0, 0x0
+
+    .line 4163
+    :goto_0
+    return v0
+
+    .line 4162
+    :cond_0
+    invoke-virtual {p0, p1}, Lcom/google/b/b/n;->a(Ljava/lang/Object;)I
+
+    move-result v0
+
+    .line 4163
+    invoke-virtual {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1, v0}, Lcom/google/b/b/an;->b(Ljava/lang/Object;I)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public containsValue(Ljava/lang/Object;)Z
+    .locals 18
+
+    .prologue
+    .line 4169
+    if-nez p1, :cond_0
+
+    .line 4170
+    const/4 v2, 0x0
+
+    .line 4204
+    :goto_0
+    return v2
+
+    .line 4178
+    :cond_0
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/google/b/b/n;->r:Lcom/google/b/a/v;
+
+    invoke-virtual {v2}, Lcom/google/b/a/v;->a()J
+
+    move-result-wide v12
+
+    .line 4179
+    move-object/from16 v0, p0
+
+    iget-object v9, v0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
+
+    .line 4180
+    const-wide/16 v6, -0x1
+
+    .line 4181
+    const/4 v2, 0x0
+
+    move v8, v2
+
+    move-wide v10, v6
+
+    :goto_1
+    const/4 v2, 0x3
+
+    if-ge v8, v2, :cond_8
+
+    .line 4182
+    const-wide/16 v4, 0x0
+
+    .line 4183
+    array-length v14, v9
+
+    const/4 v2, 0x0
+
+    move-wide v6, v4
+
+    move v5, v2
+
+    :goto_2
+    if-ge v5, v14, :cond_7
+
+    aget-object v15, v9, v5
+
+    .line 4186
+    iget v2, v15, Lcom/google/b/b/an;->b:I
+
+    .line 4188
+    iget-object v0, v15, Lcom/google/b/b/an;->f:Ljava/util/concurrent/atomic/AtomicReferenceArray;
+
+    move-object/from16 v16, v0
+
+    .line 4189
+    const/4 v2, 0x0
+
+    move v3, v2
+
+    :goto_3
+    invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
+
+    move-result v2
+
+    if-ge v3, v2, :cond_6
+
+    .line 4190
+    move-object/from16 v0, v16
+
+    invoke-virtual {v0, v3}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Lcom/google/b/b/am;
+
+    move-object v4, v2
+
+    :goto_4
+    if-eqz v4, :cond_5
+
+    .line 4191
+    invoke-interface {v4}, Lcom/google/b/b/am;->d()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-nez v2, :cond_2
+
+    invoke-virtual {v15}, Lcom/google/b/b/an;->a()V
+
+    const/4 v2, 0x0
+
+    .line 4192
+    :cond_1
+    :goto_5
+    if-eqz v2, :cond_4
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lcom/google/b/b/n;->h:Lcom/google/b/a/c;
+
+    move-object/from16 v17, v0
+
+    move-object/from16 v0, v17
+
+    move-object/from16 v1, p1
+
+    invoke-virtual {v0, v1, v2}, Lcom/google/b/a/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    .line 4193
+    const/4 v2, 0x1
+
+    goto :goto_0
+
+    .line 4191
+    :cond_2
+    invoke-interface {v4}, Lcom/google/b/b/am;->a()Lcom/google/b/b/ba;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Lcom/google/b/b/ba;->get()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-nez v2, :cond_3
+
+    invoke-virtual {v15}, Lcom/google/b/b/an;->a()V
+
+    const/4 v2, 0x0
+
+    goto :goto_5
+
+    :cond_3
+    iget-object v0, v15, Lcom/google/b/b/an;->a:Lcom/google/b/b/n;
+
+    move-object/from16 v17, v0
+
+    move-object/from16 v0, v17
+
+    invoke-virtual {v0, v4, v12, v13}, Lcom/google/b/b/n;->a(Lcom/google/b/b/am;J)Z
+
+    move-result v17
+
+    if-eqz v17, :cond_1
+
+    invoke-virtual {v15, v12, v13}, Lcom/google/b/b/an;->a(J)V
+
+    const/4 v2, 0x0
+
+    goto :goto_5
+
+    .line 4190
+    :cond_4
+    invoke-interface {v4}, Lcom/google/b/b/am;->b()Lcom/google/b/b/am;
+
+    move-result-object v2
+
+    move-object v4, v2
+
+    goto :goto_4
+
+    .line 4189
+    :cond_5
+    add-int/lit8 v2, v3, 0x1
+
+    move v3, v2
+
+    goto :goto_3
+
+    .line 4197
+    :cond_6
+    iget v2, v15, Lcom/google/b/b/an;->d:I
+
+    int-to-long v2, v2
+
+    add-long/2addr v6, v2
+
+    .line 4183
+    add-int/lit8 v2, v5, 0x1
+
+    move v5, v2
+
+    goto :goto_2
+
+    .line 4199
+    :cond_7
+    cmp-long v2, v6, v10
+
+    if-eqz v2, :cond_8
+
+    .line 4181
+    add-int/lit8 v2, v8, 0x1
+
+    move v8, v2
+
+    move-wide v10, v6
+
+    goto :goto_1
+
+    .line 4204
+    :cond_8
+    const/4 v2, 0x0
+
+    goto/16 :goto_0
+.end method
+
+.method final d()Z
+    .locals 4
+
+    .prologue
+    .line 329
+    iget-wide v0, p0, Lcom/google/b/b/n;->m:J
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method final e()Z
     .locals 4
 
     .prologue
@@ -1298,285 +1690,6 @@
     const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method public clear()V
-    .locals 4
-
-    .prologue
-    .line 4269
-    iget-object v1, p0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
-
-    array-length v2, v1
-
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, v2, :cond_0
-
-    aget-object v3, v1, v0
-
-    .line 4270
-    invoke-virtual {v3}, Lcom/google/b/b/an;->a()V
-
-    .line 4269
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 4272
-    :cond_0
-    return-void
-.end method
-
-.method public containsKey(Ljava/lang/Object;)Z
-    .locals 2
-
-    .prologue
-    .line 4159
-    if-nez p1, :cond_0
-
-    .line 4160
-    const/4 v0, 0x0
-
-    .line 4163
-    :goto_0
-    return v0
-
-    .line 4162
-    :cond_0
-    invoke-direct {p0, p1}, Lcom/google/b/b/n;->b(Ljava/lang/Object;)I
-
-    move-result v0
-
-    .line 4163
-    invoke-direct {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p1, v0}, Lcom/google/b/b/an;->b(Ljava/lang/Object;I)Z
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method public containsValue(Ljava/lang/Object;)Z
-    .locals 19
-
-    .prologue
-    .line 4169
-    if-nez p1, :cond_0
-
-    .line 4170
-    const/4 v3, 0x0
-
-    .line 4204
-    :goto_0
-    return v3
-
-    .line 4178
-    :cond_0
-    move-object/from16 v0, p0
-
-    iget-object v3, v0, Lcom/google/b/b/n;->r:Lcom/google/b/a/v;
-
-    invoke-virtual {v3}, Lcom/google/b/a/v;->a()J
-
-    move-result-wide v11
-
-    .line 4179
-    move-object/from16 v0, p0
-
-    iget-object v13, v0, Lcom/google/b/b/n;->e:[Lcom/google/b/b/an;
-
-    .line 4180
-    const-wide/16 v6, -0x1
-
-    .line 4181
-    const/4 v3, 0x0
-
-    move v8, v3
-
-    move-wide v9, v6
-
-    :goto_1
-    const/4 v3, 0x3
-
-    if-ge v8, v3, :cond_5
-
-    .line 4182
-    const-wide/16 v4, 0x0
-
-    .line 4183
-    array-length v14, v13
-
-    const/4 v3, 0x0
-
-    move-wide v6, v4
-
-    move v5, v3
-
-    :goto_2
-    if-ge v5, v14, :cond_4
-
-    aget-object v15, v13, v5
-
-    .line 4186
-    iget v3, v15, Lcom/google/b/b/an;->b:I
-
-    .line 4188
-    iget-object v0, v15, Lcom/google/b/b/an;->f:Ljava/util/concurrent/atomic/AtomicReferenceArray;
-
-    move-object/from16 v16, v0
-
-    .line 4189
-    const/4 v3, 0x0
-
-    move v4, v3
-
-    :goto_3
-    invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->length()I
-
-    move-result v3
-
-    if-ge v4, v3, :cond_3
-
-    .line 4190
-    move-object/from16 v0, v16
-
-    invoke-virtual {v0, v4}, Ljava/util/concurrent/atomic/AtomicReferenceArray;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    check-cast v3, Lcom/google/b/b/am;
-
-    :goto_4
-    if-eqz v3, :cond_2
-
-    .line 4191
-    invoke-virtual {v15, v3, v11, v12}, Lcom/google/b/b/an;->a(Lcom/google/b/b/am;J)Ljava/lang/Object;
-
-    move-result-object v17
-
-    .line 4192
-    if-eqz v17, :cond_1
-
-    move-object/from16 v0, p0
-
-    iget-object v0, v0, Lcom/google/b/b/n;->h:Lcom/google/b/a/c;
-
-    move-object/from16 v18, v0
-
-    move-object/from16 v0, v18
-
-    move-object/from16 v1, p1
-
-    move-object/from16 v2, v17
-
-    invoke-virtual {v0, v1, v2}, Lcom/google/b/a/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v17
-
-    if-eqz v17, :cond_1
-
-    .line 4193
-    const/4 v3, 0x1
-
-    goto :goto_0
-
-    .line 4190
-    :cond_1
-    invoke-interface {v3}, Lcom/google/b/b/am;->b()Lcom/google/b/b/am;
-
-    move-result-object v3
-
-    goto :goto_4
-
-    .line 4189
-    :cond_2
-    add-int/lit8 v3, v4, 0x1
-
-    move v4, v3
-
-    goto :goto_3
-
-    .line 4197
-    :cond_3
-    iget v3, v15, Lcom/google/b/b/an;->d:I
-
-    int-to-long v3, v3
-
-    add-long/2addr v6, v3
-
-    .line 4183
-    add-int/lit8 v3, v5, 0x1
-
-    move v5, v3
-
-    goto :goto_2
-
-    .line 4199
-    :cond_4
-    cmp-long v3, v6, v9
-
-    if-eqz v3, :cond_5
-
-    .line 4181
-    add-int/lit8 v3, v8, 0x1
-
-    move v8, v3
-
-    move-wide v9, v6
-
-    goto :goto_1
-
-    .line 4204
-    :cond_5
-    const/4 v3, 0x0
-
-    goto :goto_0
-.end method
-
-.method final d()Z
-    .locals 1
-
-    .prologue
-    .line 337
-    invoke-direct {p0}, Lcom/google/b/b/n;->o()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/google/b/b/n;->a()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method final e()Z
-    .locals 1
-
-    .prologue
-    .line 341
-    invoke-direct {p0}, Lcom/google/b/b/n;->n()Z
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public entrySet()Ljava/util/Set;
@@ -1615,14 +1728,14 @@
     .locals 1
 
     .prologue
-    .line 345
-    invoke-direct {p0}, Lcom/google/b/b/n;->n()Z
+    .line 337
+    invoke-virtual {p0}, Lcom/google/b/b/n;->d()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-virtual {p0}, Lcom/google/b/b/n;->c()Z
+    invoke-virtual {p0}, Lcom/google/b/b/n;->a()Z
 
     move-result v0
 
@@ -1644,12 +1757,29 @@
     .locals 1
 
     .prologue
-    .line 349
-    invoke-direct {p0}, Lcom/google/b/b/n;->o()Z
+    .line 345
+    invoke-virtual {p0}, Lcom/google/b/b/n;->c()Z
 
     move-result v0
 
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/google/b/b/n;->e()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
     return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method public get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1675,12 +1805,12 @@
 
     .line 3982
     :cond_0
-    invoke-direct {p0, p1}, Lcom/google/b/b/n;->b(Ljava/lang/Object;)I
+    invoke-virtual {p0, p1}, Lcom/google/b/b/n;->a(Ljava/lang/Object;)I
 
     move-result v0
 
     .line 3983
-    invoke-direct {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
+    invoke-virtual {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
 
     move-result-object v1
 
@@ -1736,7 +1866,7 @@
 .end method
 
 .method public isEmpty()Z
-    .locals 9
+    .locals 10
 
     .prologue
     const-wide/16 v4, 0x0
@@ -1775,9 +1905,9 @@
 
     iget v7, v7, Lcom/google/b/b/an;->d:I
 
-    int-to-long v7, v7
+    int-to-long v8, v7
 
-    add-long/2addr v2, v7
+    add-long/2addr v2, v8
 
     .line 3941
     add-int/lit8 v0, v0, 0x1
@@ -1810,9 +1940,9 @@
 
     iget v7, v7, Lcom/google/b/b/an;->d:I
 
-    int-to-long v7, v7
+    int-to-long v8, v7
 
-    sub-long/2addr v2, v7
+    sub-long/2addr v2, v8
 
     .line 3949
     add-int/lit8 v0, v0, 0x1
@@ -1862,50 +1992,6 @@
     goto :goto_0
 .end method
 
-.method final m()V
-    .locals 4
-
-    .prologue
-    .line 2014
-    :goto_0
-    iget-object v0, p0, Lcom/google/b/b/n;->p:Ljava/util/Queue;
-
-    invoke-interface {v0}, Ljava/util/Queue;->poll()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/google/b/b/bz;
-
-    if-eqz v0, :cond_0
-
-    .line 2016
-    :try_start_0
-    iget-object v0, p0, Lcom/google/b/b/n;->q:Lcom/google/b/b/by;
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 2017
-    :catch_0
-    move-exception v0
-
-    .line 2018
-    sget-object v1, Lcom/google/b/b/n;->a:Ljava/util/logging/Logger;
-
-    sget-object v2, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
-
-    const-string v3, "Exception thrown by removal listener"
-
-    invoke-virtual {v1, v2, v3, v0}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    .line 2021
-    :cond_0
-    return-void
-.end method
-
 .method public put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
@@ -1922,12 +2008,12 @@
     invoke-static {p2}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 4211
-    invoke-direct {p0, p1}, Lcom/google/b/b/n;->b(Ljava/lang/Object;)I
+    invoke-virtual {p0, p1}, Lcom/google/b/b/n;->a(Ljava/lang/Object;)I
 
     move-result v0
 
     .line 4212
-    invoke-direct {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
+    invoke-virtual {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
 
     move-result-object v1
 
@@ -2007,12 +2093,12 @@
     invoke-static {p2}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 4219
-    invoke-direct {p0, p1}, Lcom/google/b/b/n;->b(Ljava/lang/Object;)I
+    invoke-virtual {p0, p1}, Lcom/google/b/b/n;->a(Ljava/lang/Object;)I
 
     move-result v0
 
     .line 4220
-    invoke-direct {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
+    invoke-virtual {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
 
     move-result-object v1
 
@@ -2048,12 +2134,12 @@
 
     .line 4235
     :cond_0
-    invoke-direct {p0, p1}, Lcom/google/b/b/n;->b(Ljava/lang/Object;)I
+    invoke-virtual {p0, p1}, Lcom/google/b/b/n;->a(Ljava/lang/Object;)I
 
     move-result v0
 
     .line 4236
-    invoke-direct {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
+    invoke-virtual {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
 
     move-result-object v1
 
@@ -2083,12 +2169,12 @@
 
     .line 4244
     :cond_1
-    invoke-direct {p0, p1}, Lcom/google/b/b/n;->b(Ljava/lang/Object;)I
+    invoke-virtual {p0, p1}, Lcom/google/b/b/n;->a(Ljava/lang/Object;)I
 
     move-result v0
 
     .line 4245
-    invoke-direct {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
+    invoke-virtual {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
 
     move-result-object v1
 
@@ -2115,12 +2201,12 @@
     invoke-static {p2}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 4263
-    invoke-direct {p0, p1}, Lcom/google/b/b/n;->b(Ljava/lang/Object;)I
+    invoke-virtual {p0, p1}, Lcom/google/b/b/n;->a(Ljava/lang/Object;)I
 
     move-result v0
 
     .line 4264
-    invoke-direct {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
+    invoke-virtual {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
 
     move-result-object v1
 
@@ -2158,12 +2244,12 @@
 
     .line 4255
     :cond_0
-    invoke-direct {p0, p1}, Lcom/google/b/b/n;->b(Ljava/lang/Object;)I
+    invoke-virtual {p0, p1}, Lcom/google/b/b/n;->a(Ljava/lang/Object;)I
 
     move-result v0
 
     .line 4256
-    invoke-direct {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
+    invoke-virtual {p0, v0}, Lcom/google/b/b/n;->a(I)Lcom/google/b/b/an;
 
     move-result-object v1
 

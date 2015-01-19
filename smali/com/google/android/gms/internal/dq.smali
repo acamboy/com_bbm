@@ -129,7 +129,7 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/cast/CastDevice;JLcom/google/android/gms/cast/Cast$Listener;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;)V
-    .locals 7
+    .locals 8
 
     const/4 v6, 0x0
 
@@ -143,7 +143,7 @@
 
     move-object v3, p7
 
-    move-object v4, p8
+    move-object/from16 v4, p8
 
     invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/internal/eh;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;[Ljava/lang/String;)V
 
@@ -179,9 +179,9 @@
 
     new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
 
     iput-object v0, p0, Lcom/google/android/gms/internal/dq;->xN:Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -233,7 +233,7 @@
 .end method
 
 .method private a(Ljava/lang/String;DZ)V
-    .locals 7
+    .locals 8
 
     const/4 v1, 0x1
 
@@ -268,9 +268,9 @@
     invoke-virtual {v0}, Lcom/google/android/gms/cast/Cast$Listener;->onApplicationStatusChanged()V
 
     :cond_1
-    iget-wide v3, p0, Lcom/google/android/gms/internal/dq;->xe:D
+    iget-wide v4, p0, Lcom/google/android/gms/internal/dq;->xe:D
 
-    cmpl-double v0, p2, v3
+    cmpl-double v0, p2, v4
 
     if-eqz v0, :cond_5
 
@@ -659,7 +659,7 @@
 .end method
 
 .method public final a(D)V
-    .locals 6
+    .locals 7
 
     invoke-static {p1, p2}, Ljava/lang/Double;->isInfinite(D)Z
 
@@ -697,17 +697,17 @@
     :cond_1
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dq;->eb()Landroid/os/IInterface;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lcom/google/android/gms/internal/ds;
+    check-cast v1, Lcom/google/android/gms/internal/ds;
 
-    iget-wide v3, p0, Lcom/google/android/gms/internal/dq;->xe:D
+    iget-wide v4, p0, Lcom/google/android/gms/internal/dq;->xe:D
 
-    iget-boolean v5, p0, Lcom/google/android/gms/internal/dq;->xf:Z
+    iget-boolean v6, p0, Lcom/google/android/gms/internal/dq;->xf:Z
 
-    move-wide v1, p1
+    move-wide v2, p1
 
-    invoke-interface/range {v0 .. v5}, Lcom/google/android/gms/internal/ds;->a(DDZ)V
+    invoke-interface/range {v1 .. v6}, Lcom/google/android/gms/internal/ds;->a(DDZ)V
 
     return-void
 .end method
@@ -793,9 +793,9 @@
 
     const-string v0, "com.google.android.gms.cast.EXTRA_CAST_FLAGS"
 
-    iget-wide v1, p0, Lcom/google/android/gms/internal/dq;->xJ:J
+    iget-wide v2, p0, Lcom/google/android/gms/internal/dq;->xJ:J
 
-    invoke-virtual {v5, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {v5, v0, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     iget-object v0, p0, Lcom/google/android/gms/internal/dq;->xO:Ljava/lang/String;
 
@@ -924,7 +924,7 @@
 .end method
 
 .method public final a(Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/common/api/a$c;)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -995,7 +995,7 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->incrementAndGet()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dq;->eb()Landroid/os/IInterface;
 
@@ -1003,11 +1003,11 @@
 
     check-cast v0, Lcom/google/android/gms/internal/ds;
 
-    invoke-interface {v0, p1, p2, v1, v2}, Lcom/google/android/gms/internal/ds;->a(Ljava/lang/String;Ljava/lang/String;J)V
+    invoke-interface {v0, p1, p2, v2, v3}, Lcom/google/android/gms/internal/ds;->a(Ljava/lang/String;Ljava/lang/String;J)V
 
     iget-object v0, p0, Lcom/google/android/gms/internal/dq;->xR:Ljava/util/Map;
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
@@ -1297,11 +1297,11 @@
 
     check-cast v0, Lcom/google/android/gms/internal/ds;
 
-    iget-wide v1, p0, Lcom/google/android/gms/internal/dq;->xe:D
+    iget-wide v2, p0, Lcom/google/android/gms/internal/dq;->xe:D
 
-    iget-boolean v3, p0, Lcom/google/android/gms/internal/dq;->xf:Z
+    iget-boolean v1, p0, Lcom/google/android/gms/internal/dq;->xf:Z
 
-    invoke-interface {v0, p1, v1, v2, v3}, Lcom/google/android/gms/internal/ds;->a(ZDZ)V
+    invoke-interface {v0, p1, v2, v3, v1}, Lcom/google/android/gms/internal/ds;->a(ZDZ)V
 
     return-void
 .end method

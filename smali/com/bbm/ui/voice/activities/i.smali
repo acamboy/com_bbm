@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 480
+    .line 506
     iput-object p1, p0, Lcom/bbm/ui/voice/activities/i;->b:Lcom/bbm/ui/voice/activities/h;
 
     iput-object p2, p0, Lcom/bbm/ui/voice/activities/i;->a:Lcom/google/b/f/a/l;
@@ -33,7 +33,7 @@
     .locals 2
 
     .prologue
-    .line 485
+    .line 511
     :try_start_0
     iget-object v0, p0, Lcom/bbm/ui/voice/activities/i;->a:Lcom/google/b/f/a/l;
 
@@ -43,29 +43,29 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 486
+    .line 512
     iget-object v1, p0, Lcom/bbm/ui/voice/activities/i;->b:Lcom/bbm/ui/voice/activities/h;
 
     iget-object v1, v1, Lcom/bbm/ui/voice/activities/h;->a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/f/q;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
+    invoke-static {v1, v0}, Lcom/bbm/ui/f/r;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v0
 
-    .line 488
+    .line 514
     invoke-virtual {v0}, Landroid/app/PendingIntent;->send()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 493
+    .line 518
     :goto_0
     return-void
 
-    .line 490
+    .line 515
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

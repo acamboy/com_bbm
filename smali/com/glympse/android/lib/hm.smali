@@ -1,69 +1,48 @@
 .class Lcom/glympse/android/lib/hm;
 .super Ljava/lang/Object;
-.source "SinkLite.java"
+.source "ServerPost.java"
 
 # interfaces
 .implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private rP:Lcom/glympse/android/lib/hl;
+.field private lf:Lcom/glympse/android/lib/GServerPost;
 
-.field private rQ:Lcom/glympse/android/lite/GGlympseLite;
-
-.field private rR:I
-
-.field private rS:Ljava/lang/Object;
-
-.field private rT:Ljava/lang/Object;
+.field private sb:Lcom/glympse/android/lib/GApiEndpoint;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/hl;Lcom/glympse/android/lite/GGlympseLite;ILjava/lang/Object;Ljava/lang/Object;)V
+.method public constructor <init>(Lcom/glympse/android/lib/GServerPost;Lcom/glympse/android/lib/GApiEndpoint;)V
     .locals 0
 
     .prologue
-    .line 194
+    .line 1211
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 195
-    iput-object p1, p0, Lcom/glympse/android/lib/hm;->rP:Lcom/glympse/android/lib/hl;
+    .line 1212
+    iput-object p1, p0, Lcom/glympse/android/lib/hm;->lf:Lcom/glympse/android/lib/GServerPost;
 
-    .line 196
-    iput-object p2, p0, Lcom/glympse/android/lib/hm;->rQ:Lcom/glympse/android/lite/GGlympseLite;
+    .line 1213
+    iput-object p2, p0, Lcom/glympse/android/lib/hm;->sb:Lcom/glympse/android/lib/GApiEndpoint;
 
-    .line 197
-    iput p3, p0, Lcom/glympse/android/lib/hm;->rR:I
-
-    .line 198
-    iput-object p4, p0, Lcom/glympse/android/lib/hm;->rS:Ljava/lang/Object;
-
-    .line 199
-    iput-object p5, p0, Lcom/glympse/android/lib/hm;->rT:Ljava/lang/Object;
-
-    .line 200
+    .line 1214
     return-void
 .end method
 
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 2
 
     .prologue
-    .line 204
-    iget-object v0, p0, Lcom/glympse/android/lib/hm;->rP:Lcom/glympse/android/lib/hl;
+    .line 1218
+    iget-object v0, p0, Lcom/glympse/android/lib/hm;->lf:Lcom/glympse/android/lib/GServerPost;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/hm;->rQ:Lcom/glympse/android/lite/GGlympseLite;
+    iget-object v1, p0, Lcom/glympse/android/lib/hm;->sb:Lcom/glympse/android/lib/GApiEndpoint;
 
-    iget v2, p0, Lcom/glympse/android/lib/hm;->rR:I
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GServerPost;->removeEndpoint(Lcom/glympse/android/lib/GApiEndpoint;)Z
 
-    iget-object v3, p0, Lcom/glympse/android/lib/hm;->rS:Ljava/lang/Object;
-
-    iget-object v4, p0, Lcom/glympse/android/lib/hm;->rT:Ljava/lang/Object;
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/glympse/android/lib/hl;->a(Lcom/glympse/android/lite/GGlympseLite;ILjava/lang/Object;Ljava/lang/Object;)V
-
-    .line 205
+    .line 1219
     return-void
 .end method

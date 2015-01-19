@@ -1,29 +1,23 @@
 .class final Landroid/support/v4/app/s;
 .super Ljava/lang/Object;
-.source "FragmentManager.java"
+.source "FragmentActivity.java"
 
 # interfaces
-.implements Landroid/os/Parcelable$Creator;
+.implements Landroid/support/v4/app/u;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/app/FragmentManagerState;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Landroid/support/v4/app/q;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/app/q;)V
     .locals 0
 
     .prologue
-    .line 374
+    .line 106
+    iput-object p1, p0, Landroid/support/v4/app/s;->a:Landroid/support/v4/app/q;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,24 +25,47 @@
 
 
 # virtual methods
-.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+.method public final a(I)Landroid/view/View;
     .locals 1
 
     .prologue
-    .line 374
-    new-instance v0, Landroid/support/v4/app/FragmentManagerState;
+    .line 109
+    iget-object v0, p0, Landroid/support/v4/app/s;->a:Landroid/support/v4/app/q;
 
-    invoke-direct {v0, p1}, Landroid/support/v4/app/FragmentManagerState;-><init>(Landroid/os/Parcel;)V
+    invoke-virtual {v0, p1}, Landroid/support/v4/app/q;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
 
     return-object v0
 .end method
 
-.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
+.method public final a()Z
     .locals 1
 
     .prologue
-    .line 374
-    new-array v0, p1, [Landroid/support/v4/app/FragmentManagerState;
+    .line 114
+    iget-object v0, p0, Landroid/support/v4/app/s;->a:Landroid/support/v4/app/q;
 
-    return-object v0
+    invoke-virtual {v0}, Landroid/support/v4/app/q;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    .line 115
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/view/Window;->peekDecorView()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

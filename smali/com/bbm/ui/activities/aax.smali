@@ -1,62 +1,40 @@
 .class final Lcom/bbm/ui/activities/aax;
-.super Ljava/lang/Object;
-.source "SearchResultsChannelsActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnKeyListener;
+.super Landroid/os/Handler;
+.source "OpenInBbmActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
     .locals 0
 
     .prologue
-    .line 329
-    iput-object p1, p0, Lcom/bbm/ui/activities/aax;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+    .line 581
+    iput-object p1, p0, Lcom/bbm/ui/activities/aax;->a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
+.method public final handleMessage(Landroid/os/Message;)V
     .locals 2
 
     .prologue
-    .line 333
-    const-string v0, "mOnKeyListener onKey"
+    .line 584
+    iget-object v1, p0, Lcom/bbm/ui/activities/aax;->a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    check-cast v0, Landroid/app/AlertDialog$Builder;
 
-    .line 334
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Lcom/bbm/ui/activities/OpenInBbmActivity;Landroid/app/AlertDialog$Builder;)V
 
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    const/16 v0, 0x42
-
-    if-ne p2, v0, :cond_0
-
-    .line 335
-    iget-object v0, p0, Lcom/bbm/ui/activities/aax;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->h(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
-
-    .line 337
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    .line 585
+    return-void
 .end method

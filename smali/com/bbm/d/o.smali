@@ -8,8 +8,11 @@
     value = {
         "Lcom/bbm/j/a",
         "<",
-        "Lcom/bbm/util/au;",
-        ">;"
+        "Ljava/util/Map",
+        "<",
+        "Ljava/lang/String;",
+        "Ljava/lang/String;",
+        ">;>;"
     }
 .end annotation
 
@@ -23,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 143
+    .line 109
     iput-object p1, p0, Lcom/bbm/d/o;->a:Lcom/bbm/d/a;
 
     invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
@@ -34,31 +37,78 @@
 
 # virtual methods
 .method protected final synthetic a()Ljava/lang/Object;
-    .locals 2
+    .locals 7
 
     .prologue
-    .line 143
+    const/4 v3, 0x0
+
+    .line 109
     iget-object v0, p0, Lcom/bbm/d/o;->a:Lcom/bbm/d/a;
 
-    const-string v1, "channelsState"
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->z(Ljava/lang/String;)Lcom/bbm/util/bg;
+    invoke-virtual {v0}, Lcom/bbm/d/a;->N()Lcom/bbm/j/w;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/bg;->e()Lorg/json/JSONObject;
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
 
     move-result-object v0
 
-    const-string v1, "state"
+    check-cast v0, Ljava/util/List;
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    new-instance v4, Ljava/util/HashMap;
 
-    move-result-object v0
+    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    invoke-static {v0}, Lcom/bbm/util/au;->a(Ljava/lang/String;)Lcom/bbm/util/au;
+    move v2, v3
 
-    move-result-object v0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    return-object v0
+    move-result v1
+
+    if-ge v2, v1, :cond_1
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/bbm/d/eu;
+
+    iget-boolean v5, v1, Lcom/bbm/d/eu;->k:Z
+
+    if-nez v5, :cond_0
+
+    iget-boolean v5, v1, Lcom/bbm/d/eu;->i:Z
+
+    if-nez v5, :cond_0
+
+    iget-object v5, v1, Lcom/bbm/d/eu;->r:Ljava/util/List;
+
+    invoke-interface {v5}, Ljava/util/List;->size()I
+
+    move-result v5
+
+    const/4 v6, 0x1
+
+    if-ne v5, v6, :cond_0
+
+    iget-object v5, v1, Lcom/bbm/d/eu;->r:Ljava/util/List;
+
+    invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v5
+
+    iget-object v1, v1, Lcom/bbm/d/eu;->b:Ljava/lang/String;
+
+    invoke-virtual {v4, v5, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    :cond_0
+    add-int/lit8 v1, v2, 0x1
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_1
+    return-object v4
 .end method

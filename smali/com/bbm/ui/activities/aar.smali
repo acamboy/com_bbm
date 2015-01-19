@@ -1,26 +1,26 @@
 .class final Lcom/bbm/ui/activities/aar;
 .super Ljava/lang/Object;
-.source "ReportProblemActivity.java"
+.source "OpenInBbmActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/o;
+.field final synthetic a:Ljava/lang/String;
 
-.field final synthetic b:Lcom/bbm/ui/activities/aap;
+.field final synthetic b:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/aap;Lcom/bbm/ui/b/o;)V
+.method constructor <init>(Lcom/bbm/ui/activities/OpenInBbmActivity;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 629
-    iput-object p1, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/aap;
+    .line 276
+    iput-object p1, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/aar;->a:Lcom/bbm/ui/b/o;
+    iput-object p2, p0, Lcom/bbm/ui/activities/aar;->a:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,83 +29,57 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final run()V
+    .locals 2
 
     .prologue
-    const/4 v3, 0x0
+    .line 278
+    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    .line 633
-    const-string v0, "errorDialog RightButton Clicked"
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->isFinishing()Z
 
-    const-class v1, Lcom/bbm/ui/activities/ReportProblemActivity;
+    move-result v0
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    if-nez v0, :cond_0
 
-    .line 635
-    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/aap;
+    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/aap;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ReportProblemActivity;->n(Lcom/bbm/ui/activities/ReportProblemActivity;)Landroid/widget/ProgressBar;
+    invoke-static {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Lcom/bbm/ui/activities/OpenInBbmActivity;)Lcom/bbm/f/ac;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Landroid/widget/ProgressBar;->setVisibility(I)V
+    if-eqz v0, :cond_0
 
-    .line 636
-    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/aap;
+    .line 279
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/aap;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
+    move-result-object v0
 
-    new-instance v1, Lcom/bbm/ui/activities/aap;
+    iget-object v0, v0, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/aap;
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
 
-    iget-object v2, v2, Lcom/bbm/ui/activities/aap;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
+    iget-object v1, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    invoke-direct {v1, v2, v3}, Lcom/bbm/ui/activities/aap;-><init>(Lcom/bbm/ui/activities/ReportProblemActivity;B)V
-
-    invoke-static {v1}, Lcom/google/b/a/l;->b(Ljava/lang/Object;)Lcom/google/b/a/l;
+    invoke-static {v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Lcom/bbm/ui/activities/OpenInBbmActivity;)Lcom/bbm/f/ac;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ReportProblemActivity;->b(Lcom/bbm/ui/activities/ReportProblemActivity;Lcom/google/b/a/l;)Lcom/google/b/a/l;
+    invoke-interface {v0, v1}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
 
-    .line 637
-    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/aap;
+    .line 280
+    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/aap;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->b(Lcom/bbm/ui/activities/OpenInBbmActivity;)Lcom/bbm/f/ac;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ReportProblemActivity;->b(Lcom/bbm/ui/activities/ReportProblemActivity;)Lcom/google/b/a/l;
+    .line 281
+    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/bbm/ui/activities/aar;->a:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->a(Lcom/bbm/ui/activities/OpenInBbmActivity;Ljava/lang/String;)V
 
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/aap;
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Lcom/bbm/ui/activities/aao;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/aar;->b:Lcom/bbm/ui/activities/aap;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/aap;->a(Lcom/bbm/ui/activities/aap;)Lcom/bbm/ui/activities/aao;
-
-    move-result-object v2
-
-    aput-object v2, v1, v3
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/aap;->b([Ljava/lang/Object;)Lcom/bbm/util/a;
-
-    .line 638
-    iget-object v0, p0, Lcom/bbm/ui/activities/aar;->a:Lcom/bbm/ui/b/o;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
-
-    .line 639
+    .line 283
+    :cond_0
     return-void
 .end method

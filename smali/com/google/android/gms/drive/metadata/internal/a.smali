@@ -50,7 +50,7 @@
     return-void
 .end method
 
-.method protected synthetic b(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/lang/Object;
+.method public synthetic b(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/lang/Object;
     .locals 1
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/gms/drive/metadata/internal/a;->d(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/lang/Boolean;
@@ -60,7 +60,7 @@
     return-object v0
 .end method
 
-.method protected d(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/lang/Boolean;
+.method public d(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/lang/Boolean;
     .locals 1
 
     invoke-virtual {p0}, Lcom/google/android/gms/drive/metadata/internal/a;->getName()Ljava/lang/String;

@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/zy;
 .super Ljava/lang/Object;
-.source "ReceivedPendingGroupInviteActivity.java"
+.source "NewListItemActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/j;
-
-.field final synthetic b:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewListItemActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;Lcom/bbm/ui/b/j;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
     .locals 0
 
     .prologue
-    .line 126
-    iput-object p1, p0, Lcom/bbm/ui/activities/zy;->b:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/zy;->a:Lcom/bbm/ui/b/j;
+    .line 147
+    iput-object p1, p0, Lcom/bbm/ui/activities/zy;->a:Lcom/bbm/ui/activities/NewListItemActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,64 +25,31 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
     .prologue
-    .line 130
-    const-string v0, "handleInviteIgnore Dialog RightButton Clicked"
-
-    const-class v1, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 132
-    iget-object v0, p0, Lcom/bbm/ui/activities/zy;->a:Lcom/bbm/ui/b/j;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/j;->b()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    const-string v0, "DeclineSendResponse"
-
-    .line 133
-    :goto_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/zy;->b:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->a(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)Lcom/bbm/d;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
-
-    invoke-static {}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2, v0}, Lcom/bbm/g/ac;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/az;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
-
-    .line 134
-    iget-object v0, p0, Lcom/bbm/ui/activities/zy;->a:Lcom/bbm/ui/b/j;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/j;->dismiss()V
-
-    .line 135
-    iget-object v0, p0, Lcom/bbm/ui/activities/zy;->b:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->finish()V
-
-    .line 136
+    .line 152
     return-void
+.end method
 
-    .line 132
-    :cond_0
-    const-string v0, "DeclineDontSendResponse"
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    goto :goto_0
+    .prologue
+    .line 157
+    return-void
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 1
+
+    .prologue
+    .line 161
+    iget-object v0, p0, Lcom/bbm/ui/activities/zy;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewListItemActivity;->a(Lcom/bbm/ui/activities/NewListItemActivity;)V
+
+    .line 162
+    return-void
 .end method

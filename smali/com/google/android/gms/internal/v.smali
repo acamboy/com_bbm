@@ -1719,17 +1719,17 @@
 
     iget-object v0, v0, Lcom/google/android/gms/internal/v$a;->kS:Lcom/google/android/gms/internal/co;
 
-    iget-wide v1, p1, Lcom/google/android/gms/internal/cn;->ph:J
+    iget-wide v2, p1, Lcom/google/android/gms/internal/cn;->ph:J
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/internal/co;->g(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/google/android/gms/internal/co;->g(J)V
 
     iget-object v0, p0, Lcom/google/android/gms/internal/v;->kI:Lcom/google/android/gms/internal/v$a;
 
     iget-object v0, v0, Lcom/google/android/gms/internal/v$a;->kS:Lcom/google/android/gms/internal/co;
 
-    iget-wide v1, p1, Lcom/google/android/gms/internal/cn;->pi:J
+    iget-wide v2, p1, Lcom/google/android/gms/internal/cn;->pi:J
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/internal/co;->h(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/google/android/gms/internal/co;->h(J)V
 
     iget-object v0, p0, Lcom/google/android/gms/internal/v;->kI:Lcom/google/android/gms/internal/v$a;
 

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/uy;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "InviteActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnKeyListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
     .locals 0
 
     .prologue
-    .line 374
-    iput-object p1, p0, Lcom/bbm/ui/activities/uy;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 131
+    iput-object p1, p0, Lcom/bbm/ui/activities/uy;->a:Lcom/bbm/ui/activities/InviteActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,37 +25,18 @@
 
 
 # virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
     .prologue
-    .line 378
-    const-string v0, "mOnKeyListener onKey"
-
-    const-class v1, Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 379
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result v0
+    .line 135
+    iget-object v0, p0, Lcom/bbm/ui/activities/uy;->a:Lcom/bbm/ui/activities/InviteActivity;
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
 
-    const/16 v0, 0x42
-
-    if-ne p2, v0, :cond_0
-
-    .line 380
-    iget-object v0, p0, Lcom/bbm/ui/activities/uy;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->k(Lcom/bbm/ui/activities/MainActivity;)V
-
-    .line 382
-    :cond_0
+    .line 136
     const/4 v0, 0x0
 
     return v0

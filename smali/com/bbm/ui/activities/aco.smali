@@ -1,37 +1,43 @@
-.class public final Lcom/bbm/ui/activities/aco;
+.class final Lcom/bbm/ui/activities/aco;
 .super Ljava/lang/Object;
-.source "SetAsActivity.java"
+.source "ProfileActivity.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final a:I
-
-.field final b:I
-
-.field final c:I
-
-.field final synthetic d:Lcom/bbm/ui/activities/SetAsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/SetAsActivity;III)V
+.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 352
-    iput-object p1, p0, Lcom/bbm/ui/activities/aco;->d:Lcom/bbm/ui/activities/SetAsActivity;
+    .line 609
+    iput-object p1, p0, Lcom/bbm/ui/activities/aco;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 353
-    iput p2, p0, Lcom/bbm/ui/activities/aco;->a:I
+    return-void
+.end method
 
-    .line 354
-    iput p3, p0, Lcom/bbm/ui/activities/aco;->b:I
 
-    .line 355
-    iput p4, p0, Lcom/bbm/ui/activities/aco;->c:I
+# virtual methods
+.method public final run()V
+    .locals 1
 
-    .line 356
+    .prologue
+    .line 612
+    iget-object v0, p0, Lcom/bbm/ui/activities/aco;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileActivity;->l(Lcom/bbm/ui/activities/ProfileActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->requestLayout()V
+
+    .line 613
     return-void
 .end method

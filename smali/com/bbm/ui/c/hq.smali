@@ -1,118 +1,80 @@
 .class final Lcom/bbm/ui/c/hq;
-.super Lcom/bbm/d/b/f;
-.source "UpdatesFragment.java"
+.super Ljava/lang/Object;
+.source "StickerDetailsFragment.java"
+
+# interfaces
+.implements Lcom/bbm/util/bz;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/f",
-        "<",
-        "Lcom/bbm/util/ee;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Lcom/bbm/util/b/d;
+
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Lcom/bbm/ui/c/gr;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/bbm/ui/c/gr;Lcom/bbm/util/b/d;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 209
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    .line 415
+    iput-object p1, p0, Lcom/bbm/ui/c/hq;->c:Lcom/bbm/ui/c/gr;
+
+    iput-object p2, p0, Lcom/bbm/ui/c/hq;->a:Lcom/bbm/util/b/d;
+
+    iput-object p3, p0, Lcom/bbm/ui/c/hq;->b:Ljava/lang/String;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()Ljava/util/List;
+.method public final a(Lcom/bbm/d/ff;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/util/ee;",
-            ">;"
-        }
-    .end annotation
 
     .prologue
-    .line 212
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    .line 418
+    iget-object v0, p0, Lcom/bbm/ui/c/hq;->a:Lcom/bbm/util/b/d;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/bbm/d;->b:Lcom/bbm/d/a;
+    .line 419
+    iget-object v0, p0, Lcom/bbm/ui/c/hq;->a:Lcom/bbm/util/b/d;
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->f()Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/c/hq;->b:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-virtual {v0, v1, p1}, Lcom/bbm/util/b/d;->a(Ljava/lang/String;Lcom/bbm/d/ff;)V
 
-    .line 213
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/d;->b:Lcom/bbm/d/a;
-
-    invoke-virtual {v1}, Lcom/bbm/d/a;->e()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 214
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 215
+    .line 422
     :cond_0
-    new-instance v0, Ljava/util/ArrayList;
+    if-eqz p1, :cond_1
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    .line 423
+    iget-object v0, p0, Lcom/bbm/ui/c/hq;->c:Lcom/bbm/ui/c/gr;
 
-    .line 231
-    :goto_0
-    return-object v0
+    invoke-static {v0}, Lcom/bbm/ui/c/gr;->c(Lcom/bbm/ui/c/gr;)Landroid/widget/ImageView;
 
-    .line 219
+    move-result-object v0
+
+    iget-object v1, p1, Lcom/bbm/d/ff;->b:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 426
     :cond_1
-    new-instance v0, Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/bbm/ui/c/hq;->c:Lcom/bbm/ui/c/gr;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-static {v0}, Lcom/bbm/ui/c/gr;->d(Lcom/bbm/ui/c/gr;)Z
 
-    .line 222
-    invoke-static {v0}, Lcom/bbm/ui/c/hm;->a(Ljava/util/ArrayList;)Z
+    .line 427
+    iget-object v0, p0, Lcom/bbm/ui/c/hq;->c:Lcom/bbm/ui/c/gr;
 
-    move-result v1
+    invoke-static {v0}, Lcom/bbm/ui/c/gr;->e(Lcom/bbm/ui/c/gr;)V
 
-    .line 225
-    if-eqz v1, :cond_2
-
-    .line 226
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    goto :goto_0
-
-    .line 228
-    :cond_2
-    invoke-static {}, Lcom/bbm/ui/c/hm;->e()Ljava/util/Comparator;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
-
-    goto :goto_0
+    .line 428
+    return-void
 .end method

@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 1877
+    .line 1888
     iput-object p1, p0, Lcom/blackberry/ids/IDS$13;->a:Lcom/blackberry/ids/RequestId;
 
     iput-object p2, p0, Lcom/blackberry/ids/IDS$13;->b:Ljava/util/concurrent/ArrayBlockingQueue;
@@ -33,14 +33,14 @@
     .locals 4
 
     .prologue
-    .line 1880
+    .line 1891
     const/4 v0, -0x1
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 1882
+    .line 1893
     :try_start_0
     iget-object v0, p0, Lcom/blackberry/ids/IDS$13;->a:Lcom/blackberry/ids/RequestId;
 
@@ -55,16 +55,16 @@
 
     move-result-object v0
 
-    .line 1888
+    .line 1899
     iget-object v1, p0, Lcom/blackberry/ids/IDS$13;->b:Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-virtual {v1, v0}, Ljava/util/concurrent/ArrayBlockingQueue;->add(Ljava/lang/Object;)Z
 
-    .line 1889
+    .line 1900
     :goto_0
     return-void
 
-    .line 1884
+    .line 1895
     :catch_0
     move-exception v0
 
@@ -79,7 +79,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1888
+    .line 1899
     iget-object v0, p0, Lcom/blackberry/ids/IDS$13;->b:Ljava/util/concurrent/ArrayBlockingQueue;
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ArrayBlockingQueue;->add(Ljava/lang/Object;)Z

@@ -1,30 +1,26 @@
 .class final Lcom/bbm/ui/activities/uv;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "InAppUpgradeActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/b/g;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:I
+.field final synthetic a:Landroid/content/Context;
 
-.field final synthetic b:Lcom/bbm/ui/b/b;
-
-.field final synthetic c:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic b:Landroid/content/DialogInterface$OnClickListener;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;ILcom/bbm/ui/b/b;)V
+.method constructor <init>(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;)V
     .locals 0
 
     .prologue
-    .line 2433
-    iput-object p1, p0, Lcom/bbm/ui/activities/uv;->c:Lcom/bbm/ui/activities/MainActivity;
+    .line 30
+    iput-object p1, p0, Lcom/bbm/ui/activities/uv;->a:Landroid/content/Context;
 
-    iput p2, p0, Lcom/bbm/ui/activities/uv;->a:I
-
-    iput-object p3, p0, Lcom/bbm/ui/activities/uv;->b:Lcom/bbm/ui/b/b;
+    iput-object p2, p0, Lcom/bbm/ui/activities/uv;->b:Landroid/content/DialogInterface$OnClickListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,60 +29,42 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 3
 
     .prologue
-    .line 2437
-    iget v0, p0, Lcom/bbm/ui/activities/uv;->a:I
+    .line 34
+    const/4 v0, -0x1
 
-    const v1, 0x7f0a0025
+    if-ne p2, v0, :cond_0
 
-    if-ne v0, v1, :cond_1
+    .line 35
+    new-instance v0, Landroid/content/Intent;
 
-    .line 2438
-    iget-object v0, p0, Lcom/bbm/ui/activities/uv;->c:Lcom/bbm/ui/activities/MainActivity;
+    const-string v1, "android.intent.action.VIEW"
 
-    new-instance v1, Landroid/content/Intent;
+    const-string v2, "http://global.blackberry.com/static-pages/bbm/upgrade/index.html"
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/uv;->c:Lcom/bbm/ui/activities/MainActivity;
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    const-class v3, Lcom/bbm/ui/activities/NewChannelActivity;
+    move-result-object v2
 
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->startActivity(Landroid/content/Intent;)V
+    .line 36
+    iget-object v1, p0, Lcom/bbm/ui/activities/uv;->a:Landroid/content/Context;
 
-    .line 2442
-    :cond_0
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 40
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/uv;->b:Lcom/bbm/ui/b/b;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/b;->dismiss()V
-
-    .line 2443
     return-void
 
-    .line 2439
-    :cond_1
-    iget v0, p0, Lcom/bbm/ui/activities/uv;->a:I
+    .line 38
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/uv;->b:Landroid/content/DialogInterface$OnClickListener;
 
-    const v1, 0x7f0a0027
-
-    if-ne v0, v1, :cond_0
-
-    .line 2440
-    iget-object v0, p0, Lcom/bbm/ui/activities/uv;->c:Lcom/bbm/ui/activities/MainActivity;
-
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/uv;->c:Lcom/bbm/ui/activities/MainActivity;
-
-    const-class v3, Lcom/bbm/ui/activities/ChannelOwnerProfileActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-interface {v0, p1, p2}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
     goto :goto_0
 .end method

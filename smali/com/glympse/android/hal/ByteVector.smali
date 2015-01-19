@@ -7,15 +7,15 @@
 
 
 # static fields
-.field private static final P:I = 0x80
+.field private static final O:I = 0x80
 
 
 # instance fields
-.field private M:[B
+.field private L:[B
+
+.field private M:I
 
 .field private N:I
-
-.field private O:I
 
 
 # direct methods
@@ -29,19 +29,19 @@
     .line 22
     const/16 v0, 0x80
 
-    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     .line 23
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     new-array v0, v0, [B
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iput-object v0, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
     .line 24
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     .line 25
     return-void
@@ -62,17 +62,17 @@
     move p1, v0
 
     :cond_0
-    iput p1, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iput p1, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     .line 30
-    iget v1, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iget v1, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     new-array v1, v1, [B
 
-    iput-object v1, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iput-object v1, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
     .line 31
-    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     .line 32
     return-void
@@ -111,25 +111,25 @@
 
     .line 79
     :cond_1
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     add-int/2addr v0, p3
 
     invoke-virtual {p0, v0}, Lcom/glympse/android/hal/ByteVector;->ensureCapacity(I)V
 
     .line 80
-    iget-object v0, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iget-object v0, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
-    iget v1, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iget v1, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     invoke-static {p1, p2, v0, v1, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 81
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     add-int/2addr v0, p3
 
-    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     goto :goto_0
 .end method
@@ -141,19 +141,19 @@
     .line 91
     const/16 v0, 0x80
 
-    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     .line 92
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     new-array v0, v0, [B
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iput-object v0, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
     .line 93
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     .line 94
     return-void
@@ -166,12 +166,12 @@
     const/4 v3, 0x0
 
     .line 36
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     if-le p1, v0, :cond_1
 
     .line 39
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     mul-int/lit8 v0, v0, 0x3
 
@@ -179,31 +179,31 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     .line 40
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     if-ge v0, p1, :cond_0
 
     .line 42
-    iput p1, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iput p1, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     .line 46
     :cond_0
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     new-array v0, v0, [B
 
     .line 48
-    iget-object v1, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iget-object v1, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
-    iget v2, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iget v2, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 50
-    iput-object v0, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iput-object v0, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
     .line 52
     :cond_1
@@ -215,7 +215,7 @@
 
     .prologue
     .line 56
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     if-gt p1, v0, :cond_0
 
@@ -231,7 +231,7 @@
 
     .line 60
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iget-object v0, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
     aget-byte v0, v0, p1
 
@@ -243,7 +243,7 @@
 
     .prologue
     .line 166
-    iget-object v0, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iget-object v0, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
     aget-byte v0, v0, p1
 
@@ -257,14 +257,14 @@
     const/4 v3, 0x0
 
     .line 150
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     new-array v0, v0, [B
 
     .line 151
-    iget-object v1, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iget-object v1, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
-    iget v2, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iget v2, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -277,33 +277,33 @@
 
     .prologue
     .line 157
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     sub-int/2addr v0, p1
 
-    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     .line 158
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     new-array v0, v0, [B
 
     .line 159
-    iget-object v1, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iget-object v1, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
     const/4 v2, 0x0
 
-    iget v3, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iget v3, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
     invoke-static {v1, p1, v0, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 160
-    iput-object v0, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iput-object v0, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
     .line 161
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->O:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
 
-    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iput v0, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     .line 162
     return-void
@@ -314,7 +314,7 @@
 
     .prologue
     .line 86
-    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iget v0, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     return v0
 .end method
@@ -354,11 +354,11 @@
 
     .line 110
     :try_start_0
-    iget-object v2, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iget-object v2, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
     const/4 v3, 0x0
 
-    iget v4, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iget v4, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     invoke-static {v2, v3, v4}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
 
@@ -377,11 +377,11 @@
     :try_start_1
     new-instance v1, Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iget-object v3, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
     const/4 v4, 0x0
 
-    iget v5, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iget v5, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     invoke-direct {v1, v3, v4, v5, p1}, Ljava/lang/String;-><init>([BIILjava/lang/String;)V
 
@@ -422,11 +422,11 @@
     move-result-object v2
 
     .line 128
-    iget-object v3, p0, Lcom/glympse/android/hal/ByteVector;->M:[B
+    iget-object v3, p0, Lcom/glympse/android/hal/ByteVector;->L:[B
 
     const/4 v4, 0x0
 
-    iget v5, p0, Lcom/glympse/android/hal/ByteVector;->N:I
+    iget v5, p0, Lcom/glympse/android/hal/ByteVector;->M:I
 
     invoke-static {v3, v4, v5}, Ljava/nio/ByteBuffer;->wrap([BII)Ljava/nio/ByteBuffer;
 

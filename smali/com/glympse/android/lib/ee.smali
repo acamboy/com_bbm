@@ -1,70 +1,42 @@
-.class public Lcom/glympse/android/lib/ee;
-.super Ljava/lang/Object;
-.source "InternalStructs.java"
-
-# interfaces
-.implements Lcom/glympse/android/core/GCommon;
+.class Lcom/glympse/android/lib/ee;
+.super Lcom/glympse/android/lib/fb;
+.source "ImageCache.java"
 
 
 # instance fields
-.field public mB:J
+.field private nM:Lcom/glympse/android/lib/ea;
 
-.field public my:Lcom/glympse/android/hal/GVector;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/glympse/android/hal/GVector",
-            "<",
-            "Lcom/glympse/android/lib/GTicketPrivate;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public no:J
-
-.field public np:Ljava/util/Hashtable;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Hashtable",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/glympse/android/lib/GTicketPrivate;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field final synthetic nO:Lcom/glympse/android/lib/ea;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 3
+.method public constructor <init>(Lcom/glympse/android/lib/ea;Lcom/glympse/android/lib/ea;)V
+    .locals 0
 
     .prologue
-    const-wide/16 v1, 0x0
+    .line 440
+    iput-object p1, p0, Lcom/glympse/android/lib/ee;->nO:Lcom/glympse/android/lib/ea;
 
-    .line 52
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/glympse/android/lib/fb;-><init>()V
 
-    .line 53
-    iput-wide v1, p0, Lcom/glympse/android/lib/ee;->no:J
+    .line 441
+    iput-object p2, p0, Lcom/glympse/android/lib/ee;->nM:Lcom/glympse/android/lib/ea;
 
-    .line 54
-    new-instance v0, Lcom/glympse/android/hal/GVector;
+    .line 442
+    return-void
+.end method
 
-    invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/ee;->my:Lcom/glympse/android/hal/GVector;
+# virtual methods
+.method public onProcess()V
+    .locals 1
 
-    .line 55
-    new-instance v0, Ljava/util/Hashtable;
+    .prologue
+    .line 446
+    iget-object v0, p0, Lcom/glympse/android/lib/ee;->nM:Lcom/glympse/android/lib/ea;
 
-    invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
+    invoke-virtual {v0}, Lcom/glympse/android/lib/ea;->bZ()V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/ee;->np:Ljava/util/Hashtable;
-
-    .line 56
-    iput-wide v1, p0, Lcom/glympse/android/lib/ee;->mB:J
-
-    .line 57
+    .line 447
     return-void
 .end method

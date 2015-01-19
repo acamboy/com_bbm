@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field final synthetic n:Lcom/glympse/android/hal/a;
+.field final synthetic m:Lcom/glympse/android/hal/a;
 
 
 # direct methods
@@ -16,7 +16,7 @@
 
     .prologue
     .line 157
-    iput-object p1, p0, Lcom/glympse/android/hal/d;->n:Lcom/glympse/android/hal/a;
+    iput-object p1, p0, Lcom/glympse/android/hal/d;->m:Lcom/glympse/android/hal/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,7 +42,7 @@
     const/4 v1, 0x0
 
     .line 163
-    iget-object v0, p0, Lcom/glympse/android/hal/d;->n:Lcom/glympse/android/hal/a;
+    iget-object v0, p0, Lcom/glympse/android/hal/d;->m:Lcom/glympse/android/hal/a;
 
     invoke-static {v0}, Lcom/glympse/android/hal/a;->c(Lcom/glympse/android/hal/a;)Lcom/glympse/android/lib/GAccountImportListener;
 
@@ -51,7 +51,7 @@
     if-eqz v0, :cond_0
 
     .line 165
-    iget-object v0, p0, Lcom/glympse/android/hal/d;->n:Lcom/glympse/android/hal/a;
+    iget-object v0, p0, Lcom/glympse/android/hal/d;->m:Lcom/glympse/android/hal/a;
 
     invoke-static {v0}, Lcom/glympse/android/hal/a;->c(Lcom/glympse/android/hal/a;)Lcom/glympse/android/lib/GAccountImportListener;
 
@@ -61,7 +61,7 @@
 
     .line 169
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/d;->n:Lcom/glympse/android/hal/a;
+    iget-object v0, p0, Lcom/glympse/android/hal/d;->m:Lcom/glympse/android/hal/a;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/a;->cancel()V
 

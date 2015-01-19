@@ -364,7 +364,7 @@
     goto :goto_1
 .end method
 
-.method protected final a(ILjava/lang/String;)V
+.method public final a(ILjava/lang/String;)V
     .locals 2
 
     .prologue

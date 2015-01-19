@@ -12,7 +12,7 @@
 # static fields
 .field static final a:Ljava/lang/String;
 
-.field private static final i:Ljava/lang/String;
+.field private static final k:Ljava/lang/String;
 
 
 # instance fields
@@ -40,49 +40,49 @@
 
 .field public c:Lcom/tonicartos/widget/stickygridheaders/h;
 
-.field protected d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+.field d:Lcom/tonicartos/widget/stickygridheaders/i;
 
-.field protected e:Z
+.field e:Lcom/tonicartos/widget/stickygridheaders/j;
 
-.field protected f:I
+.field protected f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
-.field protected g:I
+.field protected g:Z
 
-.field h:Z
+.field protected h:I
 
-.field private j:Z
+.field protected i:I
 
-.field private final k:Landroid/graphics/Rect;
+.field j:Z
 
 .field private l:Z
 
-.field private m:Z
+.field private final m:Landroid/graphics/Rect;
 
-.field private n:I
+.field private n:Z
 
-.field private o:J
+.field private o:Z
 
-.field private p:Landroid/database/DataSetObserver;
+.field private p:I
 
-.field private q:I
+.field private q:J
 
-.field private r:Z
+.field private r:Landroid/database/DataSetObserver;
 
 .field private s:I
 
 .field private t:Z
 
-.field private u:F
+.field private u:I
 
-.field private v:I
+.field private v:Z
 
-.field private w:Z
+.field private w:F
 
 .field private x:I
 
-.field private y:Lcom/tonicartos/widget/stickygridheaders/i;
+.field private y:Z
 
-.field private z:Lcom/tonicartos/widget/stickygridheaders/j;
+.field private z:I
 
 
 # direct methods
@@ -90,7 +90,7 @@
     .locals 2
 
     .prologue
-    .line 60
+    .line 61
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Error supporting platform "
@@ -113,9 +113,9 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:Ljava/lang/String;
+    sput-object v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Ljava/lang/String;
 
-    .line 77
+    .line 78
     const-class v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -131,12 +131,12 @@
     .locals 1
 
     .prologue
-    .line 180
+    .line 181
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 181
+    .line 182
     return-void
 .end method
 
@@ -144,12 +144,12 @@
     .locals 1
 
     .prologue
-    .line 184
+    .line 185
     const v0, 0x1010071
 
     invoke-direct {p0, p1, p2, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 185
+    .line 186
     return-void
 .end method
 
@@ -161,73 +161,73 @@
 
     const/4 v2, 0x0
 
-    .line 188
+    .line 189
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/GridView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 102
-    iput-boolean v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
+    .line 103
+    iput-boolean v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
 
-    .line 104
+    .line 105
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
-    .line 112
+    .line 113
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->o:J
+    iput-wide v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:J
 
-    .line 114
+    .line 115
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/d;
 
     invoke-direct {v0, p0}, Lcom/tonicartos/widget/stickygridheaders/d;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;)V
 
-    iput-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->p:Landroid/database/DataSetObserver;
+    iput-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Landroid/database/DataSetObserver;
 
-    .line 132
-    iput-boolean v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
+    .line 133
+    iput-boolean v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->v:Z
 
-    .line 143
-    iput v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
+    .line 144
+    iput v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:I
 
-    .line 159
+    .line 160
     iput v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->F:I
 
-    .line 177
-    iput-boolean v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:Z
-
-    .line 189
-    invoke-super {p0, p0}, Landroid/widget/GridView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
+    .line 178
+    iput-boolean v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
 
     .line 190
+    invoke-super {p0, p0}, Landroid/widget/GridView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
+
+    .line 191
     invoke-virtual {p0, v2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setVerticalFadingEdgeEnabled(Z)V
 
-    .line 192
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->w:Z
+    .line 193
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->y:Z
 
     if-nez v0, :cond_0
 
-    .line 193
+    .line 194
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->v:I
+    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
 
-    .line 196
+    .line 197
     :cond_0
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
 
-    .line 197
+    .line 198
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
     move-result v0
 
     iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->I:I
 
-    .line 198
+    .line 199
     return-void
 .end method
 
@@ -235,18 +235,18 @@
     .locals 2
 
     .prologue
-    .line 58
+    .line 59
     const/4 v0, -0x2
 
     if-ne p1, v0, :cond_0
 
-    iget-wide v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->o:J
+    iget-wide v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:J
 
     :goto_0
     return-wide v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getFirstVisiblePosition()I
 
@@ -265,39 +265,39 @@
     .locals 22
 
     .prologue
-    .line 815
+    .line 814
     const/4 v2, -0x2
 
     move/from16 v0, p2
 
     if-ne v0, v2, :cond_0
 
-    .line 840
+    .line 839
     :goto_0
     return-object p1
 
-    .line 819
+    .line 818
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getDownTime()J
 
     move-result-wide v2
 
-    .line 820
+    .line 819
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v4
 
-    .line 821
+    .line 820
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v6
 
-    .line 822
+    .line 821
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v7
 
-    .line 823
+    .line 822
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v10
@@ -321,7 +321,7 @@
 
     goto :goto_1
 
-    .line 824
+    .line 823
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
@@ -350,43 +350,43 @@
 
     goto :goto_2
 
-    .line 825
+    .line 824
     :cond_2
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getMetaState()I
 
     move-result v10
 
-    .line 826
+    .line 825
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getXPrecision()F
 
     move-result v11
 
-    .line 827
+    .line 826
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getYPrecision()F
 
     move-result v12
 
-    .line 828
+    .line 827
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getDeviceId()I
 
     move-result v13
 
-    .line 829
+    .line 828
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getEdgeFlags()I
 
     move-result v14
 
-    .line 830
+    .line 829
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getSource()I
 
     move-result v15
 
-    .line 831
+    .line 830
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getFlags()I
 
     move-result v16
 
-    .line 833
+    .line 832
     move-object/from16 v0, p0
 
     move/from16 v1, p2
@@ -395,7 +395,7 @@
 
     move-result-object v18
 
-    .line 834
+    .line 833
     const/16 v17, 0x0
 
     :goto_3
@@ -403,7 +403,7 @@
 
     if-ge v0, v7, :cond_3
 
-    .line 835
+    .line 834
     aget-object v19, v9, v17
 
     move-object/from16 v0, v19
@@ -430,12 +430,12 @@
 
     iput v0, v1, Landroid/view/MotionEvent$PointerCoords;->y:F
 
-    .line 834
+    .line 833
     add-int/lit8 v17, v17, 0x1
 
     goto :goto_3
 
-    .line 837
+    .line 836
     :cond_3
     invoke-static/range {v2 .. v16}, Landroid/view/MotionEvent;->obtain(JJII[I[Landroid/view/MotionEvent$PointerCoords;IFFIIII)Landroid/view/MotionEvent;
 
@@ -448,7 +448,7 @@
     .locals 0
 
     .prologue
-    .line 58
+    .line 59
     invoke-direct {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d()V
 
     return-void
@@ -458,7 +458,7 @@
     .locals 1
 
     .prologue
-    .line 58
+    .line 59
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->H:Ljava/lang/Runnable;
@@ -470,24 +470,24 @@
     .locals 1
 
     .prologue
-    .line 58
-    sget-object v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:Ljava/lang/String;
+    .line 59
+    sget-object v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Ljava/lang/String;
 
     return-object v0
 .end method
 
 .method private b(I)V
-    .locals 13
+    .locals 14
 
     .prologue
     const/4 v5, 0x0
 
-    .line 701
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    .line 698
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     invoke-virtual {v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->getCount()I
 
@@ -495,42 +495,42 @@
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
 
     if-nez v0, :cond_1
 
-    .line 806
+    .line 805
     :cond_0
     :goto_0
     return-void
 
-    .line 705
+    .line 702
     :cond_1
     invoke-virtual {p0, v5}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 706
+    .line 703
     if-eqz v0, :cond_0
 
-    .line 713
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
+    .line 710
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:I
 
     sub-int v0, p1, v0
 
-    .line 714
+    .line 711
     if-gez v0, :cond_2
 
     move v0, p1
 
-    .line 718
+    .line 715
     :cond_2
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:I
 
     add-int/2addr v1, p1
 
-    .line 719
-    iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    .line 716
+    iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     invoke-virtual {v2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->getCount()I
 
@@ -540,59 +540,64 @@
 
     move v1, p1
 
-    .line 723
+    .line 720
     :cond_3
     iget v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->J:I
 
     if-eqz v2, :cond_7
 
-    .line 724
+    .line 721
     iget v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->J:I
 
     if-gez v2, :cond_6
 
-    .line 726
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    .line 723
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     invoke-virtual {v0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b(I)J
 
-    .line 727
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
+    move-result-wide v2
+
+    .line 724
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:I
 
     invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 728
+    .line 725
+    if-eqz v0, :cond_10
+
+    .line 726
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
     move-result v0
 
     if-gtz v0, :cond_5
 
-    .line 729
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    .line 727
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b(I)J
 
     move-result-wide v2
 
-    move-wide v11, v2
+    move-wide v12, v2
 
     move v2, v1
 
-    move-wide v0, v11
+    move-wide v0, v12
 
-    .line 744
+    .line 743
     :goto_1
-    iget-wide v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->o:J
+    iget-wide v6, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:J
 
-    cmp-long v3, v3, v0
+    cmp-long v3, v6, v0
 
     if-eqz v3, :cond_4
 
-    .line 745
-    iget-object v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    .line 744
+    iget-object v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     iget-object v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
@@ -600,46 +605,46 @@
 
     move-result-object v2
 
-    invoke-direct {p0, v2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d(Landroid/view/View;)V
+    invoke-direct {p0, v2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->c(Landroid/view/View;)V
 
-    .line 747
+    .line 746
     invoke-direct {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->c()V
 
-    .line 748
-    iput-wide v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->o:J
+    .line 747
+    iput-wide v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:J
 
-    .line 751
+    .line 750
     :cond_4
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getChildCount()I
 
     move-result v6
 
-    .line 752
+    .line 751
     if-eqz v6, :cond_0
 
-    .line 753
+    .line 752
     const/4 v3, 0x0
 
-    .line 754
+    .line 753
     const v1, 0x1869f
 
     move v4, v5
 
-    .line 757
+    .line 756
     :goto_2
     if-ge v4, v6, :cond_9
 
-    .line 758
+    .line 757
     invoke-super {p0, v4}, Landroid/widget/GridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 761
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
+    .line 760
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->n:Z
 
     if-eqz v0, :cond_8
 
-    .line 762
+    .line 761
     invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
     move-result v0
@@ -650,12 +655,12 @@
 
     sub-int/2addr v0, v7
 
-    .line 767
+    .line 766
     :goto_3
     if-ltz v0, :cond_f
 
-    .line 768
-    iget-object v7, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    .line 767
+    iget-object v7, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     invoke-virtual {p0, v2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getPositionForView(Landroid/view/View;)I
 
@@ -663,11 +668,11 @@
 
     invoke-virtual {v7, v8}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->getItemId(I)J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    const-wide/16 v9, -0x1
+    const-wide/16 v10, -0x1
 
-    cmp-long v7, v7, v9
+    cmp-long v7, v8, v10
 
     if-nez v7, :cond_f
 
@@ -675,9 +680,9 @@
 
     move-object v1, v2
 
-    .line 757
+    .line 756
     :goto_4
-    iget v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
+    iget v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:I
 
     add-int/2addr v2, v4
 
@@ -689,20 +694,21 @@
 
     goto :goto_2
 
-    .line 732
+    .line 730
     :cond_5
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     invoke-virtual {v0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b(I)J
 
     move-result-wide v0
 
+    :goto_5
     move v2, p1
 
-    .line 734
+    .line 733
     goto :goto_1
 
-    .line 735
+    .line 734
     :cond_6
     invoke-virtual {p0, v5}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getChildAt(I)Landroid/view/View;
 
@@ -712,32 +718,32 @@
 
     move-result v1
 
-    .line 736
+    .line 735
     if-lez v1, :cond_7
 
     iget v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->J:I
 
     if-ge v1, v2, :cond_7
 
-    .line 737
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    .line 736
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     invoke-virtual {v1, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b(I)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    move-wide v11, v1
+    move-wide v12, v2
 
     move v2, v0
 
-    move-wide v0, v11
+    move-wide v0, v12
 
-    .line 738
+    .line 737
     goto :goto_1
 
-    .line 740
+    .line 739
     :cond_7
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     invoke-virtual {v0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b(I)J
 
@@ -747,7 +753,7 @@
 
     goto :goto_1
 
-    .line 764
+    .line 763
     :cond_8
     invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
@@ -755,16 +761,16 @@
 
     goto :goto_3
 
-    .line 778
+    .line 777
     :cond_9
     invoke-direct {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getHeaderHeight()I
 
     move-result v0
 
-    .line 782
+    .line 781
     if-eqz v3, :cond_e
 
-    .line 783
+    .line 782
     if-nez p1, :cond_a
 
     invoke-super {p0, v5}, Landroid/widget/GridView;->getChildAt(I)Landroid/view/View;
@@ -777,22 +783,22 @@
 
     if-lez v1, :cond_a
 
-    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
+    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->n:Z
 
     if-nez v1, :cond_a
 
-    .line 785
-    iput v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    .line 784
+    iput v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
     goto/16 :goto_0
 
-    .line 787
+    .line 786
     :cond_a
-    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
+    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->n:Z
 
     if-eqz v1, :cond_c
 
-    .line 788
+    .line 787
     invoke-virtual {v3}, Landroid/view/View;->getTop()I
 
     move-result v1
@@ -807,10 +813,10 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    iput v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
-    .line 790
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    .line 789
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getPaddingTop()I
 
@@ -824,17 +830,17 @@
 
     add-int/2addr v0, v1
 
-    :goto_5
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    :goto_6
+    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
     goto/16 :goto_0
 
     :cond_b
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
-    goto :goto_5
+    goto :goto_6
 
-    .line 794
+    .line 793
     :cond_c
     invoke-virtual {v3}, Landroid/view/View;->getTop()I
 
@@ -844,34 +850,34 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    iput v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
-    .line 795
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    .line 794
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
     if-gez v1, :cond_d
 
-    :goto_6
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    :goto_7
+    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
     goto/16 :goto_0
 
     :cond_d
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
-    goto :goto_6
+    goto :goto_7
+
+    .line 799
+    :cond_e
+    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
     .line 800
-    :cond_e
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
-
-    .line 801
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->n:Z
 
     if-eqz v0, :cond_0
 
-    .line 802
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    .line 801
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getPaddingTop()I
 
@@ -879,7 +885,7 @@
 
     add-int/2addr v0, v1
 
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
     goto/16 :goto_0
 
@@ -889,13 +895,18 @@
     move-object v1, v3
 
     goto/16 :goto_4
+
+    :cond_10
+    move-wide v0, v2
+
+    goto/16 :goto_5
 .end method
 
 .method static synthetic c(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;)I
     .locals 1
 
     .prologue
-    .line 58
+    .line 59
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWindowAttachCount()I
 
     move-result v0
@@ -911,22 +922,22 @@
 
     const/4 v5, 0x0
 
-    .line 663
+    .line 660
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     if-nez v0, :cond_0
 
-    .line 692
+    .line 689
     :goto_0
     return-void
 
-    .line 668
+    .line 665
     :cond_0
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
 
     if-eqz v0, :cond_1
 
-    .line 669
+    .line 666
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
     move-result v0
@@ -935,7 +946,7 @@
 
     move-result v0
 
-    .line 675
+    .line 672
     :goto_1
     iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
@@ -943,21 +954,21 @@
 
     move-result-object v1
 
-    .line 678
+    .line 675
     if-eqz v1, :cond_2
 
     iget v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     if-lez v2, :cond_2
 
-    .line 679
+    .line 676
     iget v1, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     invoke-static {v1, v3}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v1
 
-    .line 683
+    .line 680
     :goto_2
     iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
@@ -971,17 +982,17 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/View;->measure(II)V
 
-    .line 684
+    .line 681
     iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     invoke-virtual {v2, v0, v1}, Landroid/view/View;->measure(II)V
 
-    .line 686
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
+    .line 683
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
 
     if-eqz v0, :cond_3
 
-    .line 687
+    .line 684
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getLeft()I
@@ -1002,7 +1013,7 @@
 
     goto :goto_0
 
-    .line 671
+    .line 668
     :cond_1
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
@@ -1026,7 +1037,7 @@
 
     goto :goto_1
 
-    .line 681
+    .line 678
     :cond_2
     invoke-static {v5, v5}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
@@ -1034,7 +1045,7 @@
 
     goto :goto_2
 
-    .line 689
+    .line 686
     :cond_3
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
@@ -1069,11 +1080,30 @@
     goto :goto_0
 .end method
 
+.method private c(Landroid/view/View;)V
+    .locals 1
+
+    .prologue
+    .line 808
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
+
+    invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->b(Landroid/view/View;)V
+
+    .line 809
+    invoke-virtual {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->a(Landroid/view/View;)V
+
+    .line 810
+    iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
+
+    .line 811
+    return-void
+.end method
+
 .method static synthetic d(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;)I
     .locals 1
 
     .prologue
-    .line 58
+    .line 59
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWindowAttachCount()I
 
     move-result v0
@@ -1085,41 +1115,22 @@
     .locals 2
 
     .prologue
-    .line 695
+    .line 692
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
-    .line 696
+    .line 693
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d(Landroid/view/View;)V
+    invoke-direct {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->c(Landroid/view/View;)V
 
-    .line 697
+    .line 694
     const-wide/high16 v0, -0x8000000000000000L
 
-    iput-wide v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->o:J
+    iput-wide v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:J
 
-    .line 698
-    return-void
-.end method
-
-.method private d(Landroid/view/View;)V
-    .locals 1
-
-    .prologue
-    .line 809
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
-
-    invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->c(Landroid/view/View;)V
-
-    .line 810
-    invoke-virtual {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->b(Landroid/view/View;)V
-
-    .line 811
-    iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
-
-    .line 812
+    .line 695
     return-void
 .end method
 
@@ -1127,19 +1138,19 @@
     .locals 1
 
     .prologue
-    .line 649
+    .line 646
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 650
+    .line 647
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v0
 
-    .line 652
+    .line 649
     :goto_0
     return v0
 
@@ -1157,28 +1168,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 213
+    .line 214
     const/4 v0, -0x2
 
     if-ne p1, v0, :cond_0
 
-    .line 214
+    .line 215
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
-    .line 225
+    .line 226
     :goto_0
     return-object v0
 
-    .line 217
+    .line 218
     :cond_0
     if-gez p1, :cond_1
 
     move-object v0, v1
 
-    .line 218
+    .line 219
     goto :goto_0
 
-    .line 222
+    .line 223
     :cond_1
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getChildAt(I)Landroid/view/View;
@@ -1195,7 +1206,7 @@
 
     goto :goto_0
 
-    .line 225
+    .line 226
     :catch_0
     move-exception v0
 
@@ -1205,124 +1216,89 @@
 .end method
 
 .method public final a()V
-    .locals 3
+    .locals 4
 
     .prologue
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    .line 507
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    .line 508
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->p:Landroid/database/DataSetObserver;
+    iget-object v1, v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
+
+    iget-object v2, v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->c:Landroid/database/DataSetObserver;
+
+    invoke-interface {v1, v2}, Lcom/tonicartos/widget/stickygridheaders/a;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
+
+    iget-object v1, v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+
+    invoke-virtual {v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->removeAllViewsInLayout()V
+
+    iput-object v3, v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+
+    iget-object v1, v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->f:Landroid/view/View;
+
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->f:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->clearFocus()V
+
+    iput-object v3, v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->f:Landroid/view/View;
+
+    :cond_0
+    iget-object v1, v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->g:Landroid/view/View;
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->g:Landroid/view/View;
+
+    invoke-virtual {v1}, Landroid/view/View;->clearFocus()V
+
+    iput-object v3, v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->g:Landroid/view/View;
+
+    .line 509
+    :cond_1
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Landroid/database/DataSetObserver;
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 508
-    iput-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
-
-    .line 509
-    invoke-direct {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d()V
-
     .line 510
-    invoke-super {p0, v2}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
+    iput-object v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     .line 511
+    invoke-direct {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d()V
+
+    .line 512
+    invoke-super {p0, v3}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    .line 514
+    invoke-virtual {p0, v3}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
+
+    .line 515
+    invoke-virtual {p0, v3}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+
+    .line 516
+    invoke-virtual {p0, v3}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
+
+    .line 517
     return-void
 .end method
 
-.method public final a(Landroid/view/View;)Z
-    .locals 3
-
-    .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 450
-    iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->y:Lcom/tonicartos/widget/stickygridheaders/i;
-
-    if-eqz v2, :cond_1
-
-    .line 451
-    invoke-virtual {p0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->playSoundEffect(I)V
-
-    .line 452
-    if-eqz p1, :cond_0
-
-    .line 453
-    invoke-virtual {p1, v0}, Landroid/view/View;->sendAccessibilityEvent(I)V
-
-    .line 455
-    :cond_0
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->y:Lcom/tonicartos/widget/stickygridheaders/i;
-
-    .line 459
-    :goto_0
-    return v0
-
-    :cond_1
-    move v0, v1
-
-    goto :goto_0
-.end method
-
-.method public final a(Landroid/view/View;J)Z
-    .locals 3
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 463
-    .line 464
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:Lcom/tonicartos/widget/stickygridheaders/j;
-
-    if-eqz v0, :cond_2
-
-    .line 465
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:Lcom/tonicartos/widget/stickygridheaders/j;
-
-    invoke-interface {v0, p2, p3}, Lcom/tonicartos/widget/stickygridheaders/j;->a(J)Z
-
-    move-result v0
-
-    .line 468
-    :goto_0
-    if-eqz v0, :cond_1
-
-    .line 469
-    if-eqz p1, :cond_0
-
-    .line 470
-    const/4 v2, 0x2
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->sendAccessibilityEvent(I)V
-
-    .line 472
-    :cond_0
-    invoke-virtual {p0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->performHapticFeedback(I)Z
-
-    .line 475
-    :cond_1
-    return v0
-
-    :cond_2
-    move v0, v1
-
-    goto :goto_0
-.end method
-
-.method final b(Landroid/view/View;)V
+.method final a(Landroid/view/View;)V
     .locals 6
 
     .prologue
-    .line 1058
+    .line 1068
     if-nez p1, :cond_0
 
-    .line 1081
+    .line 1091
     :goto_0
     return-void
 
-    .line 1063
+    .line 1073
     :cond_0
     :try_start_0
     const-class v0, Landroid/view/View;
@@ -1333,12 +1309,12 @@
 
     move-result-object v0
 
-    .line 1064
+    .line 1074
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 1065
+    .line 1075
     const-class v1, Landroid/view/View;
 
     const-string v2, "dispatchAttachedToWindow"
@@ -1367,12 +1343,12 @@
 
     move-result-object v1
 
-    .line 1067
+    .line 1077
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 1068
+    .line 1078
     const/4 v2, 0x2
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -1406,63 +1382,8 @@
 
     goto :goto_0
 
-    .line 1069
-    :catch_0
-    move-exception v0
-
-    .line 1070
-    new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
-
-    invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
-
-    throw v1
-
-    .line 1071
-    :catch_1
-    move-exception v0
-
-    .line 1072
-    new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
-
-    invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
-
-    throw v1
-
-    .line 1073
-    :catch_2
-    move-exception v0
-
-    .line 1074
-    new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
-
-    invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
-
-    throw v1
-
-    .line 1075
-    :catch_3
-    move-exception v0
-
-    .line 1076
-    new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
-
-    invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
-
-    throw v1
-
-    .line 1077
-    :catch_4
-    move-exception v0
-
-    .line 1078
-    new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
-
-    invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
-
-    throw v1
-
     .line 1079
-    :catch_5
+    :catch_0
     move-exception v0
 
     .line 1080
@@ -1471,20 +1392,75 @@
     invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
 
     throw v1
+
+    .line 1081
+    :catch_1
+    move-exception v0
+
+    .line 1082
+    new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
+
+    invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
+
+    throw v1
+
+    .line 1083
+    :catch_2
+    move-exception v0
+
+    .line 1084
+    new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
+
+    invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
+
+    throw v1
+
+    .line 1085
+    :catch_3
+    move-exception v0
+
+    .line 1086
+    new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
+
+    invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
+
+    throw v1
+
+    .line 1087
+    :catch_4
+    move-exception v0
+
+    .line 1088
+    new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
+
+    invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
+
+    throw v1
+
+    .line 1089
+    :catch_5
+    move-exception v0
+
+    .line 1090
+    new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
+
+    invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
+
+    throw v1
 .end method
 
-.method final c(Landroid/view/View;)V
+.method final b(Landroid/view/View;)V
     .locals 3
 
     .prologue
-    .line 1085
+    .line 1095
     if-nez p1, :cond_0
 
-    .line 1101
+    .line 1111
     :goto_0
     return-void
 
-    .line 1090
+    .line 1100
     :cond_0
     :try_start_0
     const-class v0, Landroid/view/View;
@@ -1499,12 +1475,12 @@
 
     move-result-object v0
 
-    .line 1091
+    .line 1101
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 1092
+    .line 1102
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -1518,44 +1494,44 @@
 
     goto :goto_0
 
-    .line 1093
+    .line 1103
     :catch_0
     move-exception v0
 
-    .line 1094
+    .line 1104
     new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
 
     invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
 
     throw v1
 
-    .line 1095
+    .line 1105
     :catch_1
     move-exception v0
 
-    .line 1096
+    .line 1106
     new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
 
     invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
 
     throw v1
 
-    .line 1097
+    .line 1107
     :catch_2
     move-exception v0
 
-    .line 1098
+    .line 1108
     new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
 
     invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
 
     throw v1
 
-    .line 1099
+    .line 1109
     :catch_3
     move-exception v0
 
-    .line 1100
+    .line 1110
     new-instance v1, Lcom/tonicartos/widget/stickygridheaders/l;
 
     invoke-direct {v1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/l;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Ljava/lang/Exception;)V
@@ -1567,27 +1543,27 @@
     .locals 12
 
     .prologue
-    .line 845
+    .line 844
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x8
 
     if-ge v0, v1, :cond_0
 
-    .line 846
+    .line 845
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getFirstVisiblePosition()I
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->b(I)V
 
-    .line 849
+    .line 848
     :cond_0
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     if-eqz v0, :cond_3
 
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
 
     if-eqz v0, :cond_3
 
@@ -1603,38 +1579,38 @@
 
     move v3, v0
 
-    .line 851
+    .line 850
     :goto_0
     invoke-direct {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getHeaderHeight()I
 
     move-result v7
 
-    .line 852
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    .line 851
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
     sub-int v5, v0, v7
 
-    .line 856
+    .line 855
     if-eqz v3, :cond_1
 
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->v:Z
 
     if-eqz v0, :cond_1
 
-    .line 857
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
+    .line 856
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
 
     if-eqz v0, :cond_4
 
-    .line 858
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 857
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 859
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 858
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
@@ -1642,16 +1618,16 @@
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
-    .line 864
+    .line 863
     :goto_1
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
-    .line 865
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 864
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getHeight()I
 
@@ -1659,27 +1635,27 @@
 
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 867
+    .line 866
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 868
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 867
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;)Z
 
-    .line 872
+    .line 871
     :cond_1
     invoke-super {p0, p1}, Landroid/widget/GridView;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 875
+    .line 874
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 876
+    .line 875
     const/4 v1, 0x0
 
-    .line 877
+    .line 876
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getFirstVisiblePosition()I
 
     move-result v0
@@ -1691,40 +1667,40 @@
 
     if-gt v0, v2, :cond_5
 
-    .line 878
+    .line 877
     invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getItemIdAtPosition(I)J
 
     move-result-wide v8
 
-    .line 879
+    .line 878
     const-wide/16 v10, -0x1
 
     cmp-long v2, v8, v10
 
     if-nez v2, :cond_2
 
-    .line 880
+    .line 879
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
     invoke-interface {v6, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 882
+    .line 881
     :cond_2
-    iget v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
+    iget v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:I
 
     add-int/2addr v0, v2
 
-    .line 883
-    iget v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
+    .line 882
+    iget v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:I
 
     add-int/2addr v1, v2
 
-    .line 884
+    .line 883
     goto :goto_2
 
-    .line 849
+    .line 848
     :cond_3
     const/4 v0, 0x0
 
@@ -1732,9 +1708,9 @@
 
     goto :goto_0
 
-    .line 861
+    .line 860
     :cond_4
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getPaddingLeft()I
 
@@ -1742,8 +1718,8 @@
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 862
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 861
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
@@ -1759,7 +1735,7 @@
 
     goto :goto_1
 
-    .line 887
+    .line 886
     :cond_5
     const/4 v0, 0x0
 
@@ -1770,9 +1746,9 @@
 
     move-result v0
 
-    if-ge v4, v0, :cond_c
+    if-ge v4, v0, :cond_f
 
-    .line 888
+    .line 887
     invoke-interface {v6, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -1787,7 +1763,7 @@
 
     move-result-object v2
 
-    .line 891
+    .line 890
     :try_start_0
     invoke-virtual {v2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -1797,9 +1773,46 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-object v1, v2
+    .line 895
+    if-eqz v0, :cond_6
+
+    if-nez v2, :cond_8
 
     .line 896
+    :cond_6
+    const-string v0, "Header or frame is null"
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 886
+    :cond_7
+    :goto_4
+    add-int/lit8 v0, v4, 0x1
+
+    move v4, v0
+
+    goto :goto_3
+
+    .line 900
+    :cond_8
+    invoke-virtual {v2}, Landroid/view/View;->getVisibility()I
+
+    move-result v1
+
+    if-nez v1, :cond_7
+
+    .line 901
+    instance-of v1, v2, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$HeaderFillerView;
+
+    if-eqz v1, :cond_9
+
+    move-object v1, v2
+
+    .line 905
     check-cast v1, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$HeaderFillerView;
 
     invoke-virtual {v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$HeaderFillerView;->getHeaderId()I
@@ -1808,40 +1821,35 @@
 
     int-to-long v8, v1
 
-    iget-wide v10, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->o:J
+    iget-wide v10, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:J
 
     cmp-long v1, v8, v10
 
-    if-nez v1, :cond_7
+    if-nez v1, :cond_a
 
     invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
     move-result v1
 
-    if-gez v1, :cond_7
+    if-gez v1, :cond_a
 
-    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
+    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
 
-    if-eqz v1, :cond_7
+    if-eqz v1, :cond_a
 
     const/4 v1, 0x1
 
-    .line 898
-    :goto_4
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    .line 907
+    :goto_5
+    if-nez v1, :cond_7
 
-    move-result v8
+    .line 908
+    :cond_9
+    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
 
-    if-nez v8, :cond_6
+    if-eqz v1, :cond_b
 
-    if-nez v1, :cond_6
-
-    .line 899
-    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
-
-    if-eqz v1, :cond_8
-
-    .line 904
+    .line 914
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
     move-result v1
@@ -1852,8 +1860,8 @@
 
     move-result v1
 
-    .line 910
-    :goto_5
+    .line 920
+    :goto_6
     const/4 v8, 0x0
 
     const/4 v9, 0x0
@@ -1862,7 +1870,7 @@
 
     move-result v8
 
-    .line 911
+    .line 921
     const/4 v9, 0x0
 
     const/4 v10, 0x0
@@ -1881,15 +1889,15 @@
 
     invoke-virtual {v0, v9, v10}, Landroid/view/View;->measure(II)V
 
-    .line 912
+    .line 922
     invoke-virtual {v0, v1, v8}, Landroid/view/View;->measure(II)V
 
-    .line 914
-    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
+    .line 924
+    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
 
-    if-eqz v1, :cond_9
+    if-eqz v1, :cond_c
 
-    .line 915
+    .line 925
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getLeft()I
 
     move-result v1
@@ -1906,21 +1914,21 @@
 
     invoke-virtual {v0, v1, v8, v9, v10}, Landroid/view/View;->layout(IIII)V
 
-    .line 921
-    :goto_6
-    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
+    .line 931
+    :goto_7
+    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_d
 
-    .line 922
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 932
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     const/4 v8, 0x0
 
     iput v8, v1, Landroid/graphics/Rect;->left:I
 
-    .line 923
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 933
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
@@ -1928,9 +1936,9 @@
 
     iput v8, v1, Landroid/graphics/Rect;->right:I
 
-    .line 929
-    :goto_7
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 939
+    :goto_8
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/view/View;->getBottom()I
 
@@ -1938,8 +1946,8 @@
 
     iput v8, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 930
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 940
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
@@ -1947,20 +1955,20 @@
 
     iput v8, v1, Landroid/graphics/Rect;->top:I
 
-    .line 931
+    .line 941
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 932
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 942
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;)Z
 
-    .line 933
-    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
+    .line 943
+    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
 
-    if-eqz v1, :cond_b
+    if-eqz v1, :cond_e
 
-    .line 934
+    .line 944
     const/4 v1, 0x0
 
     invoke-virtual {v2}, Landroid/view/View;->getTop()I
@@ -1971,29 +1979,23 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 938
-    :goto_8
+    .line 948
+    :goto_9
     invoke-virtual {v0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    .line 939
+    .line 949
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    .line 887
-    :cond_6
-    add-int/lit8 v0, v4, 0x1
-
-    move v4, v0
-
-    goto/16 :goto_3
-
-    .line 896
-    :cond_7
-    const/4 v1, 0x0
 
     goto/16 :goto_4
 
-    .line 906
-    :cond_8
+    .line 905
+    :cond_a
+    const/4 v1, 0x0
+
+    goto :goto_5
+
+    .line 916
+    :cond_b
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
     move-result v1
@@ -2016,10 +2018,10 @@
 
     move-result v1
 
-    goto/16 :goto_5
+    goto :goto_6
 
-    .line 917
-    :cond_9
+    .line 927
+    :cond_c
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getLeft()I
 
     move-result v1
@@ -2048,11 +2050,11 @@
 
     invoke-virtual {v0, v1, v8, v9, v10}, Landroid/view/View;->layout(IIII)V
 
-    goto :goto_6
+    goto :goto_7
 
-    .line 925
-    :cond_a
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 935
+    :cond_d
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getPaddingLeft()I
 
@@ -2060,8 +2062,8 @@
 
     iput v8, v1, Landroid/graphics/Rect;->left:I
 
-    .line 926
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 936
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
@@ -2075,10 +2077,10 @@
 
     iput v8, v1, Landroid/graphics/Rect;->right:I
 
-    goto :goto_7
+    goto :goto_8
 
-    .line 936
-    :cond_b
+    .line 946
+    :cond_e
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getPaddingLeft()I
 
     move-result v1
@@ -2093,46 +2095,46 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    goto :goto_8
-
-    .line 942
-    :cond_c
-    if-eqz v3, :cond_11
-
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
-
-    if-eqz v0, :cond_11
-
-    .line 943
-    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
-
-    .line 951
-    :cond_d
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
-
-    if-eqz v0, :cond_12
+    goto :goto_9
 
     .line 952
+    :cond_f
+    if-eqz v3, :cond_14
+
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->v:Z
+
+    if-eqz v0, :cond_14
+
+    .line 953
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    .line 961
+    :cond_10
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
+
+    if-eqz v0, :cond_15
+
+    .line 962
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
     move-result v0
 
-    .line 956
-    :goto_9
+    .line 966
+    :goto_a
     iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
-    if-eq v1, v0, :cond_e
+    if-eq v1, v0, :cond_11
 
-    .line 958
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
+    .line 968
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
 
-    if-eqz v0, :cond_13
+    if-eqz v0, :cond_16
 
-    .line 959
+    .line 969
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
     move-result v0
@@ -2143,8 +2145,8 @@
 
     move-result v0
 
-    .line 964
-    :goto_a
+    .line 974
+    :goto_b
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -2153,7 +2155,7 @@
 
     move-result v1
 
-    .line 965
+    .line 975
     iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     const/4 v3, 0x0
@@ -2174,17 +2176,17 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/view/View;->measure(II)V
 
-    .line 966
+    .line 976
     iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     invoke-virtual {v2, v0, v1}, Landroid/view/View;->measure(II)V
 
-    .line 967
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
+    .line 977
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
 
-    if-eqz v0, :cond_14
+    if-eqz v0, :cond_17
 
-    .line 968
+    .line 978
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getLeft()I
@@ -2205,22 +2207,22 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->layout(IIII)V
 
-    .line 975
-    :cond_e
-    :goto_b
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
+    .line 985
+    :cond_11
+    :goto_c
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
 
-    if-eqz v0, :cond_15
+    if-eqz v0, :cond_18
 
-    .line 976
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 986
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 977
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 987
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
@@ -2228,21 +2230,21 @@
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
-    .line 982
-    :goto_c
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 992
+    :goto_d
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     add-int v1, v5, v7
 
     iput v1, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 983
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
+    .line 993
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->n:Z
 
-    if-eqz v0, :cond_16
+    if-eqz v0, :cond_19
 
-    .line 984
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 994
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getPaddingTop()I
 
@@ -2250,34 +2252,34 @@
 
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
-    .line 989
-    :goto_d
+    .line 999
+    :goto_e
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 990
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 1000
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;)Z
 
-    .line 992
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
+    .line 1002
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
 
-    if-eqz v0, :cond_17
+    if-eqz v0, :cond_1a
 
-    .line 993
+    .line 1003
     const/4 v0, 0x0
 
     int-to-float v1, v5
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 998
-    :goto_e
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    .line 1008
+    :goto_f
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
-    if-eq v0, v7, :cond_f
+    if-eq v0, v7, :cond_12
 
-    .line 999
+    .line 1009
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -2294,7 +2296,7 @@
 
     int-to-float v4, v0
 
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
     mul-int/lit16 v0, v0, 0xff
 
@@ -2306,36 +2308,36 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Canvas;->saveLayerAlpha(FFFFII)I
 
-    .line 1003
-    :cond_f
+    .line 1013
+    :cond_12
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1005
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    .line 1015
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
-    if-eq v0, v7, :cond_10
+    if-eq v0, v7, :cond_13
 
-    .line 1006
+    .line 1016
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1008
-    :cond_10
+    .line 1018
+    :cond_13
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1009
-    :goto_f
+    .line 1019
+    :goto_10
     return-void
 
-    .line 944
-    :cond_11
-    if-nez v3, :cond_d
-
-    goto :goto_f
-
     .line 954
-    :cond_12
+    :cond_14
+    if-nez v3, :cond_10
+
+    goto :goto_10
+
+    .line 964
+    :cond_15
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
     move-result v0
@@ -2352,10 +2354,10 @@
 
     sub-int/2addr v0, v1
 
-    goto/16 :goto_9
+    goto/16 :goto_a
 
-    .line 961
-    :cond_13
+    .line 971
+    :cond_16
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
     move-result v0
@@ -2378,10 +2380,10 @@
 
     move-result v0
 
-    goto/16 :goto_a
+    goto/16 :goto_b
 
-    .line 970
-    :cond_14
+    .line 980
+    :cond_17
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getLeft()I
@@ -2414,11 +2416,11 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->layout(IIII)V
 
-    goto/16 :goto_b
+    goto/16 :goto_c
 
-    .line 979
-    :cond_15
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 989
+    :cond_18
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getPaddingLeft()I
 
@@ -2426,8 +2428,8 @@
 
     iput v1, v0, Landroid/graphics/Rect;->left:I
 
-    .line 980
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 990
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getWidth()I
 
@@ -2441,20 +2443,20 @@
 
     iput v1, v0, Landroid/graphics/Rect;->right:I
 
-    goto/16 :goto_c
+    goto/16 :goto_d
 
-    .line 986
-    :cond_16
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->k:Landroid/graphics/Rect;
+    .line 996
+    :cond_19
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Landroid/graphics/Rect;
 
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
-    goto/16 :goto_d
+    goto/16 :goto_e
 
-    .line 995
-    :cond_17
+    .line 1005
+    :cond_1a
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getPaddingLeft()I
 
     move-result v0
@@ -2465,20 +2467,20 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    goto/16 :goto_e
+    goto/16 :goto_f
 
-    .line 893
+    .line 892
     :catch_0
     move-exception v0
 
-    goto :goto_f
+    goto :goto_10
 .end method
 
 .method public getStickiedHeader()Landroid/view/View;
     .locals 1
 
     .prologue
-    .line 234
+    .line 235
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     return-object v0
@@ -2488,8 +2490,8 @@
     .locals 1
 
     .prologue
-    .line 238
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
+    .line 239
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->v:Z
 
     if-nez v0, :cond_0
 
@@ -2517,7 +2519,7 @@
     .end annotation
 
     .prologue
-    .line 243
+    .line 244
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->A:Landroid/widget/AdapterView$OnItemClickListener;
 
     move-object v1, p1
@@ -2530,7 +2532,7 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/widget/AdapterView$OnItemClickListener;->onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
-    .line 244
+    .line 245
     return-void
 .end method
 
@@ -2547,7 +2549,7 @@
     .end annotation
 
     .prologue
-    .line 248
+    .line 249
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->B:Landroid/widget/AdapterView$OnItemLongClickListener;
 
     move-object v1, p1
@@ -2578,7 +2580,7 @@
     .end annotation
 
     .prologue
-    .line 253
+    .line 254
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->C:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     move-object v1, p1
@@ -2591,7 +2593,7 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/widget/AdapterView$OnItemSelectedListener;->onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
 
-    .line 254
+    .line 255
     return-void
 .end method
 
@@ -2601,19 +2603,19 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1013
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->v:I
+    .line 1023
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
 
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_3
 
-    .line 1015
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->n:I
+    .line 1025
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->p:I
 
     if-lez v1, :cond_0
 
-    .line 1016
+    .line 1026
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
@@ -2636,26 +2638,26 @@
 
     move-result v2
 
-    .line 1018
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->n:I
+    .line 1028
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->p:I
 
     div-int v1, v2, v1
 
-    .line 1021
+    .line 1031
     if-lez v1, :cond_1
 
-    .line 1022
+    .line 1032
     :goto_0
     if-eq v1, v0, :cond_4
 
-    .line 1023
-    iget v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->n:I
+    .line 1033
+    iget v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->p:I
 
     mul-int/2addr v3, v1
 
     add-int/lit8 v4, v1, -0x1
 
-    iget v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
+    iget v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->u:I
 
     mul-int/2addr v4, v5
 
@@ -2663,48 +2665,48 @@
 
     if-le v3, v2, :cond_4
 
-    .line 1025
+    .line 1035
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 1038
+    .line 1048
     :cond_0
     const/4 v0, 0x2
 
-    .line 1040
+    .line 1050
     :cond_1
     :goto_1
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
+    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:I
 
-    .line 1048
+    .line 1058
     :goto_2
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     if-eqz v0, :cond_2
 
-    .line 1049
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    .line 1059
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:I
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a(I)V
 
-    .line 1052
+    .line 1062
     :cond_2
     invoke-direct {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->c()V
 
-    .line 1054
+    .line 1064
     invoke-super {p0, p1, p2}, Landroid/widget/GridView;->onMeasure(II)V
 
-    .line 1055
+    .line 1065
     return-void
 
-    .line 1044
+    .line 1054
     :cond_3
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->v:I
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
 
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
+    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:I
 
     goto :goto_2
 
@@ -2725,12 +2727,12 @@
     .end annotation
 
     .prologue
-    .line 258
+    .line 259
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->C:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     invoke-interface {v0, p1}, Landroid/widget/AdapterView$OnItemSelectedListener;->onNothingSelected(Landroid/widget/AdapterView;)V
 
-    .line 259
+    .line 260
     return-void
 .end method
 
@@ -2738,25 +2740,25 @@
     .locals 1
 
     .prologue
-    .line 263
+    .line 264
     check-cast p1, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView$SavedState;
 
-    .line 265
+    .line 266
     invoke-virtual {p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView$SavedState;->getSuperState()Landroid/os/Parcelable;
 
     move-result-object v0
 
     invoke-super {p0, v0}, Landroid/widget/GridView;->onRestoreInstanceState(Landroid/os/Parcelable;)V
 
-    .line 266
+    .line 267
     iget-boolean v0, p1, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView$SavedState;->a:Z
 
-    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
-
-    .line 268
-    invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->requestLayout()V
+    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
 
     .line 269
+    invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->requestLayout()V
+
+    .line 270
     return-void
 .end method
 
@@ -2764,22 +2766,22 @@
     .locals 2
 
     .prologue
-    .line 273
+    .line 274
     invoke-super {p0}, Landroid/widget/GridView;->onSaveInstanceState()Landroid/os/Parcelable;
 
     move-result-object v0
 
-    .line 275
+    .line 276
     new-instance v1, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView$SavedState;
 
     invoke-direct {v1, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView$SavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 276
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
+    .line 277
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
 
     iput-boolean v0, v1, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView$SavedState;->a:Z
 
-    .line 277
+    .line 278
     return-object v1
 .end method
 
@@ -2787,17 +2789,17 @@
     .locals 2
 
     .prologue
-    .line 283
+    .line 284
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->E:Landroid/widget/AbsListView$OnScrollListener;
 
     if-eqz v0, :cond_0
 
-    .line 284
+    .line 285
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->E:Landroid/widget/AbsListView$OnScrollListener;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/widget/AbsListView$OnScrollListener;->onScroll(Landroid/widget/AbsListView;III)V
 
-    .line 287
+    .line 288
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -2805,10 +2807,10 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 288
+    .line 289
     invoke-direct {p0, p2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->b(I)V
 
-    .line 290
+    .line 291
     :cond_1
     return-void
 .end method
@@ -2817,26 +2819,26 @@
     .locals 1
 
     .prologue
-    .line 294
+    .line 295
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->E:Landroid/widget/AbsListView$OnScrollListener;
 
     if-eqz v0, :cond_0
 
-    .line 295
+    .line 296
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->E:Landroid/widget/AbsListView$OnScrollListener;
 
     invoke-interface {v0, p1, p2}, Landroid/widget/AbsListView$OnScrollListener;->onScrollStateChanged(Landroid/widget/AbsListView;I)V
 
-    .line 298
+    .line 299
     :cond_0
     iput p2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->F:I
 
-    .line 299
+    .line 300
     return-void
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 11
+    .locals 12
 
     .prologue
     const/4 v3, -0x2
@@ -2847,34 +2849,34 @@
 
     const/4 v4, -0x1
 
-    .line 303
+    .line 304
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v6
 
-    .line 304
-    iget-boolean v7, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:Z
-
     .line 305
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:Z
+    iget-boolean v7, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
+
+    .line 306
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
 
     if-eqz v0, :cond_2
 
-    .line 306
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    .line 307
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->a(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 307
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    .line 308
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     if-ne v0, v3, :cond_4
 
     move-object v0, v1
 
-    .line 309
+    .line 310
     :goto_0
     if-eq v6, v5, :cond_0
 
@@ -2882,16 +2884,16 @@
 
     if-ne v6, v8, :cond_1
 
-    .line 310
+    .line 311
     :cond_0
-    iput-boolean v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:Z
+    iput-boolean v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
 
-    .line 312
+    .line 313
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 313
-    iget v8, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    .line 314
+    iget v8, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     invoke-direct {p0, p1, v8}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->a(Landroid/view/MotionEvent;I)Landroid/view/MotionEvent;
 
@@ -2899,10 +2901,10 @@
 
     invoke-virtual {v1, v8}, Landroid/view/View;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 314
+    .line 315
     invoke-virtual {v1}, Landroid/view/View;->invalidate()V
 
-    .line 315
+    .line 316
     new-instance v8, Lcom/tonicartos/widget/stickygridheaders/e;
 
     invoke-direct {v8, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/e;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Landroid/view/View;)V
@@ -2911,11 +2913,11 @@
 
     move-result v9
 
-    int-to-long v9, v9
+    int-to-long v10, v9
 
-    invoke-virtual {v1, v8, v9, v10}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v1, v8, v10, v11}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 320
+    .line 321
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
     move-result v1
@@ -2936,13 +2938,13 @@
 
     invoke-virtual {p0, v2, v1, v8, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->invalidate(IIII)V
 
-    .line 324
+    .line 325
     :cond_2
     and-int/lit16 v0, v6, 0xff
 
     packed-switch v0, :pswitch_data_0
 
-    .line 446
+    .line 447
     :cond_3
     :goto_1
     invoke-super {p0, p1}, Landroid/widget/GridView;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -2952,9 +2954,9 @@
     :goto_2
     return v0
 
-    .line 307
+    .line 308
     :cond_4
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getChildAt(I)Landroid/view/View;
 
@@ -2962,20 +2964,20 @@
 
     goto :goto_0
 
-    .line 326
+    .line 327
     :pswitch_0
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->c:Lcom/tonicartos/widget/stickygridheaders/h;
 
     if-nez v0, :cond_5
 
-    .line 327
+    .line 328
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/h;
 
     invoke-direct {v0, p0}, Lcom/tonicartos/widget/stickygridheaders/h;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;)V
 
     iput-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->c:Lcom/tonicartos/widget/stickygridheaders/h;
 
-    .line 329
+    .line 330
     :cond_5
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->c:Lcom/tonicartos/widget/stickygridheaders/h;
 
@@ -2987,26 +2989,26 @@
 
     invoke-virtual {p0, v0, v6, v7}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 331
+    .line 332
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
     float-to-int v0, v0
 
-    .line 332
+    .line 333
     int-to-float v1, v0
 
-    iput v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->u:F
+    iput v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->w:F
 
-    .line 333
+    .line 334
     int-to-float v6, v0
 
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->G:Landroid/view/View;
 
     if-eqz v0, :cond_a
 
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->q:I
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
 
     int-to-float v0, v0
 
@@ -3018,10 +3020,10 @@
 
     :cond_6
     :goto_3
-    iput v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    iput v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
-    .line 334
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    .line 335
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     if-eq v0, v4, :cond_3
 
@@ -3031,18 +3033,18 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 338
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    .line 339
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->a(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 341
+    .line 342
     if-eqz v0, :cond_9
 
-    .line 342
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    .line 343
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     invoke-direct {p0, p1, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->a(Landroid/view/MotionEvent;I)Landroid/view/MotionEvent;
 
@@ -3054,29 +3056,29 @@
 
     if-eqz v1, :cond_7
 
-    .line 343
-    iput-boolean v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:Z
-
     .line 344
+    iput-boolean v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
+
+    .line 345
     invoke-virtual {v0, v5}, Landroid/view/View;->setPressed(Z)V
 
-    .line 346
+    .line 347
     :cond_7
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 347
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    .line 348
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     if-eq v1, v3, :cond_8
 
-    .line 348
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    .line 349
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 350
+    .line 351
     :cond_8
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
@@ -3098,16 +3100,16 @@
 
     invoke-virtual {p0, v2, v1, v3, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->invalidate(IIII)V
 
-    .line 353
+    .line 354
     :cond_9
-    iput v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:I
+    iput v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:I
 
     move v0, v5
 
-    .line 354
+    .line 355
     goto :goto_2
 
-    .line 333
+    .line 334
     :cond_a
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getFirstVisiblePosition()I
 
@@ -3124,11 +3126,11 @@
 
     invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getItemIdAtPosition(I)J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    const-wide/16 v9, -0x1
+    const-wide/16 v10, -0x1
 
-    cmp-long v7, v7, v9
+    cmp-long v7, v8, v10
 
     if-nez v7, :cond_b
 
@@ -3157,11 +3159,11 @@
     if-gez v7, :cond_6
 
     :cond_b
-    iget v7, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
+    iget v7, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:I
 
     add-int/2addr v0, v7
 
-    iget v7, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
+    iget v7, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:I
 
     add-int/2addr v1, v7
 
@@ -3172,9 +3174,9 @@
 
     goto :goto_3
 
-    .line 356
+    .line 357
     :pswitch_1
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     if-eq v0, v4, :cond_3
 
@@ -3182,7 +3184,7 @@
 
     move-result v0
 
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->u:F
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->w:F
 
     sub-float/2addr v0, v1
 
@@ -3198,135 +3200,135 @@
 
     if-lez v0, :cond_3
 
-    .line 360
-    iput v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:I
+    .line 361
+    iput v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:I
 
-    .line 362
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    .line 363
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->a(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 363
+    .line 364
     if-eqz v0, :cond_d
 
-    .line 364
+    .line 365
     invoke-virtual {v0, v2}, Landroid/view/View;->setPressed(Z)V
 
-    .line 365
+    .line 366
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 367
+    .line 368
     :cond_d
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getHandler()Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 368
+    .line 369
     if-eqz v0, :cond_e
 
-    .line 369
+    .line 370
     iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->b:Lcom/tonicartos/widget/stickygridheaders/g;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 371
+    .line 372
     :cond_e
-    iput v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    iput v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     goto/16 :goto_1
 
-    .line 376
+    .line 377
     :pswitch_2
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:I
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:I
 
     if-ne v0, v3, :cond_f
 
-    .line 377
-    iput v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:I
+    .line 378
+    iput v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:I
 
     move v0, v5
 
-    .line 378
+    .line 379
     goto/16 :goto_2
 
-    .line 380
-    :cond_f
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:I
-
-    if-eq v0, v4, :cond_3
-
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
-
-    if-eq v0, v4, :cond_3
-
     .line 381
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    :cond_f
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:I
+
+    if-eq v0, v4, :cond_3
+
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
+
+    if-eq v0, v4, :cond_3
+
+    .line 382
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->a(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 385
+    .line 386
     if-nez v7, :cond_15
 
-    .line 386
+    .line 387
     if-eqz v1, :cond_15
 
-    .line 387
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:I
+    .line 388
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:I
 
     if-eqz v0, :cond_10
 
-    .line 388
+    .line 389
     invoke-virtual {v1, v2}, Landroid/view/View;->setPressed(Z)V
 
-    .line 391
+    .line 392
     :cond_10
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->D:Lcom/tonicartos/widget/stickygridheaders/k;
 
     if-nez v0, :cond_11
 
-    .line 392
+    .line 393
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/k;
 
     invoke-direct {v0, p0, v2}, Lcom/tonicartos/widget/stickygridheaders/k;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;B)V
 
     iput-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->D:Lcom/tonicartos/widget/stickygridheaders/k;
 
-    .line 395
+    .line 396
     :cond_11
     iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->D:Lcom/tonicartos/widget/stickygridheaders/k;
 
-    .line 396
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:I
+    .line 397
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->h:I
 
     iput v0, v2, Lcom/tonicartos/widget/stickygridheaders/k;->a:I
 
-    .line 397
+    .line 398
     invoke-virtual {v2}, Lcom/tonicartos/widget/stickygridheaders/k;->a()V
 
-    .line 399
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:I
+    .line 400
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:I
 
     if-eqz v0, :cond_12
 
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:I
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:I
 
     if-ne v0, v5, :cond_18
 
-    .line 400
+    .line 401
     :cond_12
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
 
-    .line 401
+    .line 402
     if-eqz v3, :cond_13
 
-    .line 402
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:I
+    .line 403
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:I
 
     if-nez v0, :cond_16
 
@@ -3335,32 +3337,32 @@
     :goto_5
     invoke-virtual {v3, v0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 406
+    .line 407
     :cond_13
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->e:Z
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:Z
 
     if-nez v0, :cond_17
 
-    .line 411
-    iput v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:I
-
     .line 412
-    invoke-virtual {v1, v5}, Landroid/view/View;->setPressed(Z)V
+    iput v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:I
 
     .line 413
-    invoke-virtual {p0, v5}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setPressed(Z)V
+    invoke-virtual {v1, v5}, Landroid/view/View;->setPressed(Z)V
 
     .line 414
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->H:Ljava/lang/Runnable;
-
-    if-eqz v0, :cond_14
+    invoke-virtual {p0, v5}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setPressed(Z)V
 
     .line 415
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->H:Ljava/lang/Runnable;
 
+    if-eqz v0, :cond_14
+
+    .line 416
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->H:Ljava/lang/Runnable;
+
     invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 417
+    .line 418
     :cond_14
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/f;
 
@@ -3368,51 +3370,51 @@
 
     iput-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->H:Ljava/lang/Runnable;
 
-    .line 433
+    .line 434
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->H:Ljava/lang/Runnable;
 
     invoke-static {}, Landroid/view/ViewConfiguration;->getPressedStateDuration()I
 
     move-result v1
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, v0, v2, v3}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 443
+    .line 444
     :cond_15
     :goto_6
-    iput v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:I
+    iput v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:I
 
     move v0, v5
 
-    .line 444
+    .line 445
     goto/16 :goto_2
 
-    .line 402
+    .line 403
     :cond_16
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->b:Lcom/tonicartos/widget/stickygridheaders/g;
 
     goto :goto_5
 
-    .line 436
+    .line 437
     :cond_17
-    iput v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:I
+    iput v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->i:I
 
     goto :goto_6
 
-    .line 438
+    .line 439
     :cond_18
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->e:Z
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->g:Z
 
     if-nez v0, :cond_15
 
-    .line 439
+    .line 440
     invoke-virtual {v2}, Lcom/tonicartos/widget/stickygridheaders/k;->run()V
 
     goto :goto_6
 
-    .line 324
+    .line 325
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -3425,7 +3427,7 @@
     .locals 0
 
     .prologue
-    .line 58
+    .line 59
     check-cast p1, Landroid/widget/ListAdapter;
 
     invoke-virtual {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setAdapter(Landroid/widget/ListAdapter;)V
@@ -3437,43 +3439,43 @@
     .locals 2
 
     .prologue
-    .line 480
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->p:Landroid/database/DataSetObserver;
-
-    if-eqz v0, :cond_0
-
     .line 481
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->p:Landroid/database/DataSetObserver;
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Landroid/database/DataSetObserver;
+
+    if-eqz v0, :cond_0
+
+    .line 482
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Landroid/database/DataSetObserver;
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 484
+    .line 485
     :cond_0
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Z
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->o:Z
 
     if-nez v0, :cond_1
 
-    .line 485
+    .line 486
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
+    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->n:Z
 
-    .line 489
+    .line 490
     :cond_1
     instance-of v0, p1, Lcom/tonicartos/widget/stickygridheaders/a;
 
     if-eqz v0, :cond_2
 
-    .line 490
+    .line 491
     check-cast p1, Lcom/tonicartos/widget/stickygridheaders/a;
 
-    .line 500
+    .line 501
     :goto_0
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
@@ -3483,33 +3485,33 @@
 
     invoke-direct {v0, v1, p0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;-><init>(Landroid/content/Context;Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Lcom/tonicartos/widget/stickygridheaders/a;)V
 
-    iput-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    iput-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
-    .line 501
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    .line 502
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->p:Landroid/database/DataSetObserver;
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Landroid/database/DataSetObserver;
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 502
+    .line 503
     invoke-direct {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d()V
 
-    .line 503
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    .line 504
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     invoke-super {p0, v0}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 504
+    .line 505
     return-void
 
-    .line 491
+    .line 492
     :cond_2
     instance-of v0, p1, Lcom/tonicartos/widget/stickygridheaders/q;
 
     if-eqz v0, :cond_3
 
-    .line 493
+    .line 494
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/r;
 
     check-cast p1, Lcom/tonicartos/widget/stickygridheaders/q;
@@ -3520,7 +3522,7 @@
 
     goto :goto_0
 
-    .line 497
+    .line 498
     :cond_3
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/o;
 
@@ -3535,18 +3537,18 @@
     .locals 1
 
     .prologue
-    .line 514
-    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
+    .line 520
+    iget-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
 
     if-eq p1, v0, :cond_0
 
-    .line 515
-    iput-boolean p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->j:Z
+    .line 521
+    iput-boolean p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
 
-    .line 516
+    .line 522
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->requestLayout()V
 
-    .line 518
+    .line 524
     :cond_0
     return-void
 .end method
@@ -3555,18 +3557,18 @@
     .locals 1
 
     .prologue
-    .line 522
+    .line 528
     invoke-super {p0, p1}, Landroid/widget/GridView;->setClipToPadding(Z)V
 
-    .line 523
-    iput-boolean p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->l:Z
+    .line 529
+    iput-boolean p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->n:Z
 
-    .line 524
+    .line 530
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->m:Z
+    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->o:Z
 
-    .line 525
+    .line 531
     return-void
 .end method
 
@@ -3574,13 +3576,13 @@
     .locals 0
 
     .prologue
-    .line 529
+    .line 535
     invoke-super {p0, p1}, Landroid/widget/GridView;->setColumnWidth(I)V
 
-    .line 530
-    iput p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->n:I
+    .line 536
+    iput p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->p:I
 
-    .line 531
+    .line 537
     return-void
 .end method
 
@@ -3588,10 +3590,10 @@
     .locals 0
 
     .prologue
-    .line 539
-    iput-boolean p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->r:Z
+    .line 545
+    iput-boolean p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
 
-    .line 540
+    .line 546
     return-void
 .end method
 
@@ -3599,13 +3601,13 @@
     .locals 0
 
     .prologue
-    .line 544
+    .line 550
     invoke-super {p0, p1}, Landroid/widget/GridView;->setHorizontalSpacing(I)V
 
-    .line 545
-    iput p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->s:I
+    .line 551
+    iput p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->u:I
 
-    .line 546
+    .line 552
     return-void
 .end method
 
@@ -3613,32 +3615,32 @@
     .locals 1
 
     .prologue
-    .line 550
+    .line 556
     invoke-super {p0, p1}, Landroid/widget/GridView;->setNumColumns(I)V
 
-    .line 551
+    .line 557
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->w:Z
+    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->y:Z
 
-    .line 552
-    iput p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->v:I
+    .line 558
+    iput p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->x:I
 
-    .line 553
+    .line 559
     const/4 v0, -0x1
 
     if-eq p1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     if-eqz v0, :cond_0
 
-    .line 554
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
+    .line 560
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     invoke-virtual {v0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a(I)V
 
-    .line 556
+    .line 562
     :cond_0
     return-void
 .end method
@@ -3647,10 +3649,10 @@
     .locals 0
 
     .prologue
-    .line 559
-    iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->y:Lcom/tonicartos/widget/stickygridheaders/i;
+    .line 565
+    iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->d:Lcom/tonicartos/widget/stickygridheaders/i;
 
-    .line 560
+    .line 566
     return-void
 .end method
 
@@ -3658,23 +3660,23 @@
     .locals 1
 
     .prologue
-    .line 563
+    .line 569
     invoke-virtual {p0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->isLongClickable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 564
+    .line 570
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setLongClickable(Z)V
 
-    .line 566
+    .line 572
     :cond_0
-    iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->z:Lcom/tonicartos/widget/stickygridheaders/j;
+    iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->e:Lcom/tonicartos/widget/stickygridheaders/j;
 
-    .line 567
+    .line 573
     return-void
 .end method
 
@@ -3682,22 +3684,22 @@
     .locals 1
 
     .prologue
-    .line 571
+    .line 577
     iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->A:Landroid/widget/AdapterView$OnItemClickListener;
 
-    .line 572
+    .line 578
     if-nez p1, :cond_0
 
-    .line 574
+    .line 579
     const/4 v0, 0x0
 
     invoke-super {p0, v0}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 580
+    .line 583
     :goto_0
     return-void
 
-    .line 578
+    .line 581
     :cond_0
     invoke-super {p0, p0}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
@@ -3708,13 +3710,13 @@
     .locals 1
 
     .prologue
-    .line 585
+    .line 588
     iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->B:Landroid/widget/AdapterView$OnItemLongClickListener;
 
-    .line 586
+    .line 589
     if-nez p1, :cond_0
 
-    .line 588
+    .line 590
     const/4 v0, 0x0
 
     invoke-super {p0, v0}, Landroid/widget/GridView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
@@ -3740,16 +3742,16 @@
     .line 599
     if-nez p1, :cond_0
 
-    .line 601
+    .line 600
     const/4 v0, 0x0
 
     invoke-super {p0, v0}, Landroid/widget/GridView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
-    .line 607
+    .line 604
     :goto_0
     return-void
 
-    .line 605
+    .line 602
     :cond_0
     invoke-super {p0, p0}, Landroid/widget/GridView;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
@@ -3760,10 +3762,10 @@
     .locals 0
 
     .prologue
-    .line 611
+    .line 608
     iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->E:Landroid/widget/AbsListView$OnScrollListener;
 
-    .line 612
+    .line 609
     return-void
 .end method
 
@@ -3771,18 +3773,18 @@
     .locals 1
 
     .prologue
-    .line 615
+    .line 612
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->t:Z
+    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->v:Z
 
-    .line 616
+    .line 613
     return-void
 
-    .line 615
+    .line 612
     :cond_0
     const/4 v0, 0x0
 
@@ -3793,12 +3795,12 @@
     .locals 0
 
     .prologue
-    .line 620
+    .line 617
     invoke-super {p0, p1}, Landroid/widget/GridView;->setVerticalSpacing(I)V
 
-    .line 621
+    .line 618
     iput p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->J:I
 
-    .line 622
+    .line 619
     return-void
 .end method

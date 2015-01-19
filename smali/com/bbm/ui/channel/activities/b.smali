@@ -12,7 +12,7 @@
     .locals 1
 
     .prologue
-    .line 101
+    .line 99
     iput-object p1, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     const/4 v0, 0x0
@@ -32,8 +32,8 @@
 
     const/4 v2, 0x0
 
-    .line 104
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 102
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
@@ -43,30 +43,30 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/eu;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
 
     move-result-object v3
 
+    .line 103
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+
+    invoke-virtual {v0}, Lcom/bbm/d/a;->h()Ljava/lang/String;
+
+    move-result-object v0
+
     .line 105
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    iget-object v1, v3, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
 
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d;->b:Lcom/bbm/d/a;
-
-    invoke-virtual {v0}, Lcom/bbm/d/a;->e()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 107
-    iget-object v1, v3, Lcom/bbm/d/eu;->y:Lcom/bbm/util/bc;
-
-    sget-object v4, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v4, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-ne v1, v4, :cond_7
 
-    .line 108
-    iget-object v1, v3, Lcom/bbm/d/eu;->x:Ljava/lang/String;
+    .line 106
+    iget-object v1, v3, Lcom/bbm/d/gr;->B:Ljava/lang/String;
 
     invoke-static {v1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -74,13 +74,13 @@
 
     move v1, v0
 
-    .line 111
+    .line 109
     :goto_0
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d;->b:Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
 
     iget-object v4, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
@@ -88,17 +88,17 @@
 
     move-result-object v4
 
-    invoke-virtual {v0, v4}, Lcom/bbm/d/a;->F(Ljava/lang/String;)Lcom/bbm/util/bc;
+    invoke-virtual {v0, v4}, Lcom/bbm/d/a;->L(Ljava/lang/String;)Lcom/bbm/util/bi;
 
     move-result-object v0
 
-    sget-object v4, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v4, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-eq v0, v4, :cond_0
 
     if-eqz v1, :cond_1
 
-    .line 112
+    .line 110
     :cond_0
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
@@ -108,7 +108,7 @@
 
     invoke-virtual {v0, v6}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 113
+    .line 111
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     invoke-static {v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->d(Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;)Lcom/bbm/ui/ObservingImageView;
@@ -117,23 +117,23 @@
 
     invoke-virtual {v0, v2}, Lcom/bbm/ui/ObservingImageView;->setVisibility(I)V
 
-    .line 114
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 112
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcom/bbm/d/a;->a(Lcom/bbm/d/eu;)Lcom/bbm/j/r;
+    invoke-virtual {v0, v3}, Lcom/bbm/d/a;->a(Lcom/bbm/d/gr;)Lcom/bbm/j/r;
 
     move-result-object v4
 
-    .line 115
+    .line 113
     invoke-interface {v4}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/dw;
+    check-cast v0, Lcom/bbm/d/ff;
 
-    iget-object v0, v0, Lcom/bbm/d/dw;->b:Landroid/graphics/drawable/Drawable;
+    iget-object v0, v0, Lcom/bbm/d/ff;->b:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -141,14 +141,14 @@
 
     if-nez v0, :cond_3
 
-    .line 116
+    .line 114
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     invoke-static {v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->d(Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;)Lcom/bbm/ui/ObservingImageView;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v4
 
@@ -160,11 +160,11 @@
 
     invoke-virtual {v0, v4}, Lcom/bbm/ui/ObservingImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 121
+    .line 119
     :goto_1
     if-eqz v1, :cond_4
 
-    .line 122
+    .line 120
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     invoke-static {v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->e(Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;)Lcom/bbm/ui/FooterActionBar;
@@ -173,14 +173,14 @@
 
     invoke-virtual {v0}, Lcom/bbm/ui/FooterActionBar;->a()V
 
-    .line 129
+    .line 127
     :cond_1
     :goto_2
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d;->b:Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
 
     iget-object v4, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
@@ -188,17 +188,17 @@
 
     move-result-object v4
 
-    invoke-virtual {v0, v4}, Lcom/bbm/d/a;->F(Ljava/lang/String;)Lcom/bbm/util/bc;
+    invoke-virtual {v0, v4}, Lcom/bbm/d/a;->L(Ljava/lang/String;)Lcom/bbm/util/bi;
 
     move-result-object v0
 
-    sget-object v4, Lcom/bbm/util/bc;->b:Lcom/bbm/util/bc;
+    sget-object v4, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
 
     if-ne v0, v4, :cond_2
 
     if-nez v1, :cond_2
 
-    .line 130
+    .line 128
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     invoke-static {v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->c(Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;)Landroid/widget/ProgressBar;
@@ -207,7 +207,7 @@
 
     invoke-virtual {v0, v6}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 131
+    .line 129
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     invoke-static {v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->d(Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;)Lcom/bbm/ui/ObservingImageView;
@@ -216,49 +216,49 @@
 
     invoke-virtual {v0, v2}, Lcom/bbm/ui/ObservingImageView;->setVisibility(I)V
 
-    .line 132
+    .line 130
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     invoke-static {v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->g(Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    .line 133
-    iget-object v0, v3, Lcom/bbm/d/eu;->y:Lcom/bbm/util/bc;
+    .line 131
+    iget-object v0, v3, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
 
-    sget-object v1, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v1, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-ne v0, v1, :cond_5
 
-    .line 134
+    .line 132
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     invoke-static {v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->d(Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;)Lcom/bbm/ui/ObservingImageView;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v1
 
-    invoke-virtual {v1, v3}, Lcom/bbm/d/a;->a(Lcom/bbm/d/eu;)Lcom/bbm/j/r;
+    invoke-virtual {v1, v3}, Lcom/bbm/d/a;->a(Lcom/bbm/d/gr;)Lcom/bbm/j/r;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/j/r;)V
 
-    .line 147
+    .line 145
     :cond_2
     :goto_3
     return-void
 
-    .line 118
+    .line 116
     :cond_3
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
@@ -270,7 +270,7 @@
 
     goto :goto_1
 
-    .line 124
+    .line 122
     :cond_4
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
@@ -284,13 +284,13 @@
 
     move-result-object v4
 
-    const v5, 0x7f0a0045
+    const v5, 0x7f0b003a
 
     invoke-virtual {v0, v4, v5}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
 
     goto :goto_2
 
-    .line 136
+    .line 134
     :cond_5
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
@@ -298,7 +298,7 @@
 
     move-result-object v0
 
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v1
 
@@ -312,7 +312,7 @@
 
     goto :goto_3
 
-    .line 139
+    .line 137
     :cond_6
     new-instance v0, Lcom/bbm/util/b/g;
 
@@ -330,8 +330,8 @@
 
     invoke-direct {v0, v1, v2}, Lcom/bbm/util/b/g;-><init>(Landroid/app/Activity;I)V
 
-    .line 140
-    new-instance v1, Lcom/bbm/util/bj;
+    .line 138
+    new-instance v1, Lcom/bbm/util/bq;
 
     iget-object v2, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
@@ -339,14 +339,14 @@
 
     const/16 v4, 0x3c
 
-    sget-object v5, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bm;
+    sget-object v5, Lcom/bbm/util/bt;->b:Lcom/bbm/util/bt;
 
-    invoke-direct {v1, v2, v3, v4, v5}, Lcom/bbm/util/bj;-><init>(Lcom/bbm/ui/activities/agw;ZILcom/bbm/util/bm;)V
+    invoke-direct {v1, v2, v3, v4, v5}, Lcom/bbm/util/bq;-><init>(Lcom/bbm/ui/activities/akz;ZILcom/bbm/util/bt;)V
 
-    .line 141
-    invoke-virtual {v0, v1}, Lcom/bbm/util/b/g;->a(Lcom/bbm/util/bj;)V
+    .line 139
+    invoke-virtual {v0, v1}, Lcom/bbm/util/b/g;->a(Lcom/bbm/util/bq;)V
 
-    .line 142
+    .line 140
     iget-object v1, p0, Lcom/bbm/ui/channel/activities/b;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     invoke-static {v1}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->g(Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;)Ljava/lang/String;

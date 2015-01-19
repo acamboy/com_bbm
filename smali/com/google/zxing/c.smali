@@ -11,26 +11,13 @@
 
 # direct methods
 .method public constructor <init>(Lcom/google/zxing/b;)V
-    .locals 2
+    .locals 0
 
     .prologue
     .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 34
-    if-nez p1, :cond_0
-
-    .line 35
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "Binarizer must be non-null."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 37
-    :cond_0
     iput-object p1, p0, Lcom/google/zxing/c;->a:Lcom/google/zxing/b;
 
     .line 38

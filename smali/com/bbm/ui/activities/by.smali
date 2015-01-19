@@ -1,202 +1,168 @@
-.class public abstract Lcom/bbm/ui/activities/by;
-.super Lcom/bbm/ui/activities/eg;
-.source "ChannelChildActivity.java"
+.class final Lcom/bbm/ui/activities/by;
+.super Ljava/lang/Object;
+.source "ChangeStatusActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field private a:Ljava/lang/String;
+.field final synthetic a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/bbm/ui/activities/ChangeStatusActivity;)V
     .locals 0
 
     .prologue
-    .line 18
-    invoke-direct {p0}, Lcom/bbm/ui/activities/eg;-><init>()V
+    .line 210
+    iput-object p1, p0, Lcom/bbm/ui/activities/by;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    .line 19
-    return-void
-.end method
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.method public constructor <init>(Ljava/lang/Class;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/Class",
-            "<+",
-            "Landroid/app/Activity;",
-            ">;)V"
-        }
-    .end annotation
-
-    .prologue
-    .line 22
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/eg;-><init>(Ljava/lang/Class;)V
-
-    .line 23
     return-void
 .end method
 
 
 # virtual methods
-.method protected a(Lcom/bbm/ui/c/fq;)Z
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 54
-    const/4 v0, 0x0
+    .line 214
+    const-string v0, "Done button onClick"
 
-    return v0
-.end method
+    const-class v1, Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-.method protected b()Ljava/lang/String;
-    .locals 1
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .prologue
-    .line 28
-    iget-object v0, p0, Lcom/bbm/ui/activities/by;->a:Ljava/lang/String;
+    .line 215
+    iget-object v0, p0, Lcom/bbm/ui/activities/by;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    return-object v0
-.end method
-
-.method protected c_()Z
-    .locals 2
-
-    .prologue
-    .line 66
-    iget-object v0, p0, Lcom/bbm/ui/activities/by;->a:Ljava/lang/String;
-
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->x(Ljava/lang/String;)Lcom/bbm/util/bc;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getCurrentFocus()Landroid/view/View;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/util/bc;->b:Lcom/bbm/util/bc;
-
-    if-eq v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method protected d()V
-    .locals 2
-
-    .prologue
-    .line 71
-    const v0, 0x7f0a00b5
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/by;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    .line 72
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
+    .line 216
+    iget-object v0, p0, Lcom/bbm/ui/activities/by;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    move-result v1
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getCurrentFocus()Landroid/view/View;
 
-    if-eqz v1, :cond_0
+    move-result-object v0
 
-    .line 73
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    move-result-object v0
 
-    .line 74
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->z:Lcom/slidingmenu/lib/a/c;
+    const-class v1, Landroid/widget/EditText;
 
-    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    if-ne v0, v1, :cond_0
 
-    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->c()V
+    .line 218
+    iget-object v0, p0, Lcom/bbm/ui/activities/by;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    .line 76
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getCurrentFocus()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getId()I
+
+    move-result v0
+
+    const v1, 0x7f0b00f3
+
+    if-ne v0, v1, :cond_1
+
+    .line 219
+    iget-object v0, p0, Lcom/bbm/ui/activities/by;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->h(Lcom/bbm/ui/activities/ChangeStatusActivity;)V
+
+    .line 235
     :cond_0
+    :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/by;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->finish()V
+
+    .line 236
     return-void
-.end method
 
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 2
+    .line 221
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/by;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    .prologue
-    .line 33
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/eg;->onCreate(Landroid/os/Bundle;)V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getCurrentFocus()Landroid/view/View;
 
-    .line 34
-    const/4 v0, 0x0
+    move-result-object v0
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    check-cast v0, Landroid/widget/EditText;
+
+    .line 222
+    if-eqz v0, :cond_2
+
+    .line 223
+    invoke-virtual {v0}, Landroid/widget/EditText;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
+    check-cast v1, Landroid/view/View;
 
-    invoke-virtual {p0}, Landroid/app/Activity;->getIntent()Landroid/content/Intent;
+    .line 224
+    if-eqz v1, :cond_2
 
-    move-result-object v0
+    invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
-    const-string v1, "bbm_channel_uri"
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+    if-eqz v2, :cond_2
 
-    move-result-object v0
+    .line 225
+    iget-object v2, p0, Lcom/bbm/ui/activities/by;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    :cond_0
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v2}, Lcom/bbm/ui/activities/ChangeStatusActivity;->f(Lcom/bbm/ui/activities/ChangeStatusActivity;)Landroid/widget/ListView;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/widget/ListView;->getPositionForView(Landroid/view/View;)I
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    .line 226
+    iget-object v2, p0, Lcom/bbm/ui/activities/by;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    if-eqz p1, :cond_1
+    invoke-static {v2}, Lcom/bbm/ui/activities/ChangeStatusActivity;->a(Lcom/bbm/ui/activities/ChangeStatusActivity;)Lcom/bbm/ui/activities/cb;
 
-    const-string v0, "bbm_channel_uri"
+    move-result-object v2
 
-    invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Lcom/bbm/ui/activities/cb;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/bbm/d/gg;
+
+    .line 228
+    iget-object v2, p0, Lcom/bbm/ui/activities/by;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
-    :cond_1
-    iput-object v0, p0, Lcom/bbm/ui/activities/by;->a:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    .line 36
-    new-instance v0, Lcom/bbm/ui/activities/bz;
+    move-result-object v0
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/bz;-><init>(Lcom/bbm/ui/activities/by;)V
+    invoke-static {v2, v1, v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->a(Lcom/bbm/ui/activities/ChangeStatusActivity;Lcom/bbm/d/gg;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/by;->a(Lcom/slidingmenu/lib/a/b;)V
+    .line 231
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/ui/activities/by;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    .line 51
-    return-void
-.end method
+    const/4 v1, 0x1
 
-.method protected onSaveInstanceState(Landroid/os/Bundle;)V
-    .locals 2
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
 
-    .prologue
-    .line 59
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/eg;->onSaveInstanceState(Landroid/os/Bundle;)V
-
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/by;->a:Ljava/lang/String;
-
-    const-string v1, "bbm_channel_uri"
-
-    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 61
-    return-void
+    goto :goto_0
 .end method

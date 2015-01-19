@@ -8,7 +8,7 @@
     .locals 0
 
     .prologue
-    .line 384
+    .line 741
     invoke-direct {p0}, Landroid/support/v4/view/av;-><init>()V
 
     return-void
@@ -16,53 +16,12 @@
 
 
 # virtual methods
-.method final a()J
-    .locals 2
-
-    .prologue
-    .line 387
-    invoke-static {}, Landroid/animation/ValueAnimator;->getFrameDelay()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public final a(Landroid/view/View;ILandroid/graphics/Paint;)V
-    .locals 0
-
-    .prologue
-    .line 395
-    invoke-virtual {p1, p2, p3}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    .line 396
-    return-void
-.end method
-
-.method public a(Landroid/view/View;Landroid/graphics/Paint;)V
+.method public final b(Landroid/view/View;)I
     .locals 1
 
     .prologue
-    .line 405
-    invoke-virtual {p1}, Landroid/view/View;->getLayerType()I
-
-    move-result v0
-
-    invoke-virtual {p1, v0, p2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
-
-    .line 407
-    invoke-virtual {p1}, Landroid/view/View;->invalidate()V
-
-    .line 408
-    return-void
-.end method
-
-.method public final e(Landroid/view/View;)I
-    .locals 1
-
-    .prologue
-    .line 399
-    invoke-virtual {p1}, Landroid/view/View;->getLayerType()I
+    .line 744
+    invoke-virtual {p1}, Landroid/view/View;->getOverScrollMode()I
 
     move-result v0
 

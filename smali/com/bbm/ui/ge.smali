@@ -1,30 +1,22 @@
 .class final Lcom/bbm/ui/ge;
 .super Ljava/lang/Object;
-.source "StoreItemView.java"
+.source "SmsActionBarView.java"
 
 # interfaces
-.implements Lcom/bbm/util/bs;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/gf;
-
-.field final synthetic c:Lcom/bbm/ui/StoreItemView;
+.field final synthetic a:Lcom/bbm/ui/SmsActionBarView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/StoreItemView;Ljava/lang/String;Lcom/bbm/ui/gf;)V
+.method constructor <init>(Lcom/bbm/ui/SmsActionBarView;)V
     .locals 0
 
     .prologue
-    .line 279
-    iput-object p1, p0, Lcom/bbm/ui/ge;->c:Lcom/bbm/ui/StoreItemView;
-
-    iput-object p2, p0, Lcom/bbm/ui/ge;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/bbm/ui/ge;->b:Lcom/bbm/ui/gf;
+    .line 81
+    iput-object p1, p0, Lcom/bbm/ui/ge;->a:Lcom/bbm/ui/SmsActionBarView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,44 +25,61 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/d/dw;)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 282
-    iget-object v0, p0, Lcom/bbm/ui/ge;->c:Lcom/bbm/ui/StoreItemView;
+    .line 84
+    iget-object v0, p0, Lcom/bbm/ui/ge;->a:Lcom/bbm/ui/SmsActionBarView;
 
-    invoke-static {v0}, Lcom/bbm/ui/StoreItemView;->g(Lcom/bbm/ui/StoreItemView;)Lcom/bbm/util/b/d;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 283
-    iget-object v0, p0, Lcom/bbm/ui/ge;->c:Lcom/bbm/ui/StoreItemView;
-
-    invoke-static {v0}, Lcom/bbm/ui/StoreItemView;->g(Lcom/bbm/ui/StoreItemView;)Lcom/bbm/util/b/d;
+    invoke-static {v0}, Lcom/bbm/ui/SmsActionBarView;->a(Lcom/bbm/ui/SmsActionBarView;)Landroid/widget/RelativeLayout;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/ge;->a:Ljava/lang/String;
+    if-ne p1, v0, :cond_1
 
-    invoke-virtual {v0, v1, p1}, Lcom/bbm/util/b/d;->a(Ljava/lang/String;Lcom/bbm/d/dw;)V
+    .line 85
+    const-string v0, "Back clicked"
 
-    .line 285
+    const-class v1, Lcom/bbm/ui/SmsActionBarView;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 86
+    iget-object v0, p0, Lcom/bbm/ui/ge;->a:Lcom/bbm/ui/SmsActionBarView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/SmsActionBarView;->a(I)V
+
+    .line 95
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/ge;->b:Lcom/bbm/ui/gf;
-
-    if-eqz v0, :cond_1
-
-    .line 286
-    iget-object v0, p0, Lcom/bbm/ui/ge;->b:Lcom/bbm/ui/gf;
-
-    iget-object v1, p0, Lcom/bbm/ui/ge;->a:Ljava/lang/String;
-
-    invoke-interface {v0, p1, v1}, Lcom/bbm/ui/gf;->a(Lcom/bbm/d/dw;Ljava/lang/String;)V
-
-    .line 288
-    :cond_1
+    :goto_0
     return-void
+
+    .line 91
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/ge;->a:Lcom/bbm/ui/SmsActionBarView;
+
+    invoke-static {v0}, Lcom/bbm/ui/SmsActionBarView;->b(Lcom/bbm/ui/SmsActionBarView;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    if-ne p1, v0, :cond_0
+
+    .line 92
+    const-string v0, "Send clicked"
+
+    const-class v1, Lcom/bbm/ui/SmsActionBarView;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 93
+    iget-object v0, p0, Lcom/bbm/ui/ge;->a:Lcom/bbm/ui/SmsActionBarView;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/SmsActionBarView;->a(I)V
+
+    goto :goto_0
 .end method

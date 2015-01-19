@@ -1,44 +1,63 @@
 .class final Lcom/bbm/ui/activities/xy;
-.super Ljava/lang/Object;
-.source "OwnProfileActivity.java"
-
-# interfaces
-.implements Lcom/bbm/ui/c/ey;
+.super Lcom/bbm/j/k;
+.source "MainActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/OwnProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnProfileActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+    .locals 1
 
     .prologue
-    .line 127
-    iput-object p1, p0, Lcom/bbm/ui/activities/xy;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    .line 371
+    iput-object p1, p0, Lcom/bbm/ui/activities/xy;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method protected final a()V
+    .locals 2
 
     .prologue
-    .line 131
-    iget-object v0, p0, Lcom/bbm/ui/activities/xy;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    .line 374
+    invoke-static {}, Lcom/bbm/ui/activities/MainActivity;->k()Lcom/bbm/d/a;
 
-    invoke-static {v0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
+    move-result-object v0
 
-    .line 132
-    iget-object v0, p0, Lcom/bbm/ui/activities/xy;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    const-string v1, "rateBbmNotification"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->b()V
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
 
-    .line 133
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/util/bm;->d()Lorg/json/JSONObject;
+
+    move-result-object v0
+
+    const-string v1, "enabled"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    .line 375
+    if-eqz v0, :cond_0
+
+    .line 376
+    iget-object v0, p0, Lcom/bbm/ui/activities/xy;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->e(Lcom/bbm/ui/activities/MainActivity;)V
+
+    .line 378
+    :cond_0
     return-void
 .end method

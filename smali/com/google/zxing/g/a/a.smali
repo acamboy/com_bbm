@@ -309,7 +309,7 @@
     .line 118
     if-eqz v0, :cond_4
 
-    invoke-virtual {v0}, Lcom/google/zxing/g/a/q;->d()I
+    invoke-virtual {v0}, Lcom/google/zxing/g/a/q;->a()I
 
     move-result v3
 
@@ -364,7 +364,7 @@
     .line 132
     if-eqz v0, :cond_7
 
-    invoke-virtual {v0}, Lcom/google/zxing/g/a/q;->d()I
+    invoke-virtual {v0}, Lcom/google/zxing/g/a/q;->a()I
 
     move-result v1
 

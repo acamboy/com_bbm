@@ -1,55 +1,96 @@
 .class Lcom/glympse/android/hal/y;
 .super Ljava/lang/Object;
-.source "GCMReceiver.java"
+.source "GLinkedList.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/Iterator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Ljava/util/Iterator",
+        "<TT;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic aZ:Lcom/glympse/android/hal/GCMReceiver;
+.field private aZ:Ljava/util/Iterator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Iterator",
+            "<TT;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method private constructor <init>(Lcom/glympse/android/hal/GCMReceiver;)V
+.method public constructor <init>(Ljava/util/Iterator;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Iterator",
+            "<TT;>;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 286
-    iput-object p1, p0, Lcom/glympse/android/hal/y;->aZ:Lcom/glympse/android/hal/GCMReceiver;
-
+    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 97
+    iput-object p1, p0, Lcom/glympse/android/hal/y;->aZ:Ljava/util/Iterator;
 
-.method synthetic constructor <init>(Lcom/glympse/android/hal/GCMReceiver;Lcom/glympse/android/hal/GCMReceiver$1;)V
-    .locals 0
-
-    .prologue
-    .line 286
-    invoke-direct {p0, p1}, Lcom/glympse/android/hal/y;-><init>(Lcom/glympse/android/hal/GCMReceiver;)V
-
+    .line 98
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public hasNext()Z
+    .locals 1
 
     .prologue
-    .line 291
-    invoke-static {}, Lcom/glympse/android/hal/GCMReceiver;->o()I
+    .line 102
+    iget-object v0, p0, Lcom/glympse/android/hal/y;->aZ:Ljava/util/Iterator;
 
-    .line 292
-    const-wide/16 v0, 0x2
+    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static {v0, v1}, Lcom/glympse/android/hal/GCMReceiver;->b(J)J
+    move-result v0
 
-    .line 295
-    invoke-static {}, Lcom/glympse/android/hal/GCMReceiver;->register()V
+    return v0
+.end method
 
-    .line 296
+.method public next()Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+
+    .prologue
+    .line 107
+    iget-object v0, p0, Lcom/glympse/android/hal/y;->aZ:Ljava/util/Iterator;
+
+    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public remove()V
+    .locals 0
+
+    .prologue
+    .line 113
     return-void
 .end method

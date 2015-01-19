@@ -8,7 +8,7 @@
 
 # direct methods
 .method public constructor <init>(JJ)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 5
@@ -19,7 +19,7 @@
 .end method
 
 .method static synthetic a(Lcom/blackberry/ids/ClearTokenCallback;JJII)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 3

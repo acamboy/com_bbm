@@ -67,9 +67,9 @@
 
     move-result v4
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     const/4 v0, 0x0
 
@@ -97,14 +97,14 @@
     :pswitch_0
     invoke-static {p1, v5}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
 
-    move-result v3
+    move-result v1
 
     goto :goto_0
 
     :pswitch_1
     invoke-static {p1, v5}, Lcom/google/android/gms/common/internal/safeparcel/a;->h(Landroid/os/Parcel;I)J
 
-    move-result-wide v1
+    move-result-wide v2
 
     goto :goto_0
 
@@ -149,7 +149,7 @@
     :cond_1
     new-instance v4, Lcom/google/android/gms/drive/internal/AuthorizeAccessRequest;
 
-    invoke-direct {v4, v3, v1, v2, v0}, Lcom/google/android/gms/drive/internal/AuthorizeAccessRequest;-><init>(IJLcom/google/android/gms/drive/DriveId;)V
+    invoke-direct {v4, v1, v2, v3, v0}, Lcom/google/android/gms/drive/internal/AuthorizeAccessRequest;-><init>(IJLcom/google/android/gms/drive/DriveId;)V
 
     return-object v4
 

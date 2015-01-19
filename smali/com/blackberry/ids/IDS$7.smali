@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 1544
+    .line 1555
     iput-object p1, p0, Lcom/blackberry/ids/IDS$7;->a:Lcom/blackberry/ids/RequestId;
 
     iput-object p2, p0, Lcom/blackberry/ids/IDS$7;->b:Ljava/util/concurrent/CountDownLatch;
@@ -33,7 +33,7 @@
     .locals 4
 
     .prologue
-    .line 1547
+    .line 1558
     const-string v0, "IDS.do_manage_identity ui thread finished request_id=%s"
 
     const/4 v1, 0x1
@@ -48,11 +48,11 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 1548
+    .line 1559
     iget-object v0, p0, Lcom/blackberry/ids/IDS$7;->b:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 1549
+    .line 1560
     return-void
 .end method

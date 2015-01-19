@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/age;
 .super Ljava/lang/Object;
-.source "ViewChannelPostActivity.java"
+.source "SetAsActivity.java"
 
 # interfaces
-.implements Lcom/bbm/j/s;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/fq;
-
-.field final synthetic b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SetAsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/ui/c/fq;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SetAsActivity;)V
     .locals 0
 
     .prologue
-    .line 1089
-    iput-object p1, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/c/fq;
+    .line 74
+    iput-object p1, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,134 +25,227 @@
 
 
 # virtual methods
-.method public final a()Z
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
     .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    const/4 v2, 0x1
+    const/4 v4, 0x0
 
-    const/4 v1, 0x0
+    .line 79
+    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
 
-    .line 1092
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/di;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SetAsActivity;->a(Lcom/bbm/ui/activities/SetAsActivity;)Lcom/bbm/ui/activities/agg;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
-
-    .line 1093
-    iget-object v3, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->m(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/a;
+    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/agg;->a(I)Lcom/bbm/ui/activities/agi;
 
     move-result-object v0
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    iget v0, v0, Lcom/bbm/ui/activities/agi;->a:I
 
-    invoke-virtual {v4}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b()Ljava/lang/String;
+    packed-switch v0, :pswitch_data_0
 
-    move-result-object v4
-
-    invoke-virtual {v0, v4, v2}, Lcom/bbm/d/a;->d(Ljava/lang/String;Z)Lcom/bbm/j/x;
-
-    move-result-object v0
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
-
-    invoke-static {v4}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-interface {v0, v4}, Lcom/bbm/j/x;->b(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/di;
-
-    invoke-static {v3, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/d/di;)Lcom/bbm/d/di;
-
-    .line 1094
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/di;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d/di;->s:Lcom/bbm/util/bc;
-
-    sget-object v3, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
-
-    if-ne v0, v3, :cond_0
-
-    move v0, v1
-
-    .line 1105
-    :goto_0
-    return v0
-
-    .line 1098
+    .line 121
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    :goto_0
+    return-void
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/de;
+    .line 82
+    :pswitch_0
+    const-string v0, "set as bbm pic OnItemClick"
 
-    move-result-object v0
+    const-class v1, Lcom/bbm/ui/activities/SetAsActivity;
 
-    if-nez v0, :cond_1
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 1099
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 83
+    :try_start_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    const/4 v1, 0x1
 
-    invoke-static {v3}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->m(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/a;
+    new-instance v2, Ljava/io/File;
 
-    move-result-object v3
+    iget-object v3, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
-
-    invoke-virtual {v4}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Lcom/bbm/d/a;->O(Ljava/lang/String;)Lcom/bbm/d/de;
+    invoke-static {v3}, Lcom/bbm/ui/activities/SetAsActivity;->b(Lcom/bbm/ui/activities/SetAsActivity;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/d/de;)Lcom/bbm/d/de;
+    invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1100
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    invoke-static {v2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/de;
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v1, v2, v3}, Lcom/bbm/ui/es;->a(Landroid/app/Activity;ILandroid/net/Uri;Z)Z
+
+    move-result v0
+
+    .line 89
+    if-eqz v0, :cond_0
+
+    .line 90
+    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SetAsActivity;->finish()V
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 92
+    :catch_0
+    move-exception v0
+
+    .line 93
+    iget-object v1, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/SetAsActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
+
+    invoke-virtual {v2}, Lcom/bbm/ui/activities/SetAsActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0e0123
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2, v4}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;I)V
+
+    .line 94
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    .line 100
+    :pswitch_1
+    const-string v0, "set contact picture onClick"
+
+    const-class v1, Lcom/bbm/ui/activities/SetAsActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 101
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.intent.action.PICK"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 102
+    const-string v1, "vnd.android.cursor.dir/contact"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 103
+    iget-object v1, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/SetAsActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto :goto_0
+
+    .line 108
+    :pswitch_2
+    :try_start_1
+    const-string v0, "set as wallpaper OnItemClick"
+
+    const-class v1, Lcom/bbm/ui/activities/SetAsActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 109
+    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
+
+    invoke-static {v0}, Landroid/app/WallpaperManager;->getInstance(Landroid/content/Context;)Landroid/app/WallpaperManager;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d/de;->Q:Lcom/bbm/util/bc;
+    .line 110
+    new-instance v1, Ljava/io/File;
 
-    sget-object v3, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
+    iget-object v2, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
 
-    if-ne v0, v3, :cond_1
+    invoke-static {v2}, Lcom/bbm/ui/activities/SetAsActivity;->b(Lcom/bbm/ui/activities/SetAsActivity;)Ljava/lang/String;
 
-    move v0, v1
+    move-result-object v2
 
-    .line 1101
-    goto :goto_0
+    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1104
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/age;->b:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 111
+    new-instance v2, Ljava/io/FileInputStream;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/c/fq;
+    invoke-direct {v2, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/ui/c/fq;)V
+    .line 113
+    invoke-virtual {v0, v2}, Landroid/app/WallpaperManager;->setStream(Ljava/io/InputStream;)V
 
-    move v0, v2
+    .line 114
+    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
 
-    .line 1105
-    goto :goto_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
+
+    const v2, 0x7f0e06b0
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/SetAsActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 115
+    iget-object v0, p0, Lcom/bbm/ui/activities/age;->a:Lcom/bbm/ui/activities/SetAsActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SetAsActivity;->finish()V
+    :try_end_1
+    .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
+
+    goto/16 :goto_0
+
+    .line 116
+    :catch_1
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
+
+    goto/16 :goto_0
+
+    .line 118
+    :catch_2
+    move-exception v0
+
+    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+
+    goto/16 :goto_0
+
+    .line 79
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
 .end method

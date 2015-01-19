@@ -1,26 +1,26 @@
 .class final Lcom/bbm/ui/activities/tj;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "GroupPictureUploadActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/a;
+.field final synthetic a:Landroid/graphics/Bitmap;
 
-.field final synthetic b:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic b:Lcom/bbm/ui/activities/ti;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;Lcom/bbm/ui/b/a;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ti;Landroid/graphics/Bitmap;)V
     .locals 0
 
     .prologue
-    .line 554
-    iput-object p1, p0, Lcom/bbm/ui/activities/tj;->b:Lcom/bbm/ui/activities/MainActivity;
+    .line 239
+    iput-object p1, p0, Lcom/bbm/ui/activities/tj;->b:Lcom/bbm/ui/activities/ti;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/tj;->a:Lcom/bbm/ui/b/a;
+    iput-object p2, p0, Lcom/bbm/ui/activities/tj;->a:Landroid/graphics/Bitmap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,71 +29,23 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final run()V
+    .locals 2
 
     .prologue
-    const/4 v3, 0x1
+    .line 242
+    iget-object v0, p0, Lcom/bbm/ui/activities/tj;->b:Lcom/bbm/ui/activities/ti;
 
-    .line 557
-    const-string v0, "setActionBarForFragment Dialog RightButton Clicked"
+    iget-object v0, v0, Lcom/bbm/ui/activities/ti;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 559
-    iget-object v0, p0, Lcom/bbm/ui/activities/tj;->b:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->f(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Landroid/widget/ImageView;
 
     move-result-object v0
 
-    .line 560
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    iget-object v1, p0, Lcom/bbm/ui/activities/tj;->a:Landroid/graphics/Bitmap;
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 561
-    iget-object v1, p0, Lcom/bbm/ui/activities/tj;->a:Lcom/bbm/ui/b/a;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/b/a;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 562
-    const-string v1, "show_channels_geolocation"
-
-    const/4 v2, 0x0
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    .line 564
-    :cond_0
-    const-string v1, "allow_geolocation_collect"
-
-    invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    .line 565
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    .line 566
-    invoke-static {}, Lcom/bbm/ui/activities/MainActivity;->s()Lcom/bbm/d/a;
-
-    invoke-static {v3}, Lcom/bbm/d/a;->b(Z)V
-
-    .line 567
-    iget-object v0, p0, Lcom/bbm/ui/activities/tj;->a:Lcom/bbm/ui/b/a;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/a;->dismiss()V
-
-    .line 568
-    iget-object v0, p0, Lcom/bbm/ui/activities/tj;->b:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->m(Lcom/bbm/ui/activities/MainActivity;)V
-
-    .line 569
+    .line 243
     return-void
 .end method

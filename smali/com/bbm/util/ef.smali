@@ -1,185 +1,100 @@
-.class public final enum Lcom/bbm/util/ef;
-.super Ljava/lang/Enum;
+.class final Lcom/bbm/util/ef;
+.super Ljava/lang/Object;
 .source "UpdatesFragmentUtil.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/util/ef;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field public static final enum a:Lcom/bbm/util/ef;
+# instance fields
+.field final synthetic a:Ljava/util/Set;
 
-.field public static final enum b:Lcom/bbm/util/ef;
+.field final synthetic b:Lcom/bbm/util/fe;
 
-.field public static final enum c:Lcom/bbm/util/ef;
-
-.field public static final enum d:Lcom/bbm/util/ef;
-
-.field public static final enum e:Lcom/bbm/util/ef;
-
-.field public static final enum f:Lcom/bbm/util/ef;
-
-.field private static final synthetic g:[Lcom/bbm/util/ef;
+.field final synthetic c:Landroid/content/Context;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 8
-
-    .prologue
-    const/4 v7, 0x4
-
-    const/4 v6, 0x3
-
-    const/4 v5, 0x2
-
-    const/4 v4, 0x1
-
-    const/4 v3, 0x0
-
-    .line 124
-    new-instance v0, Lcom/bbm/util/ef;
-
-    const-string v1, "CONTACT"
-
-    invoke-direct {v0, v1, v3}, Lcom/bbm/util/ef;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/util/ef;->a:Lcom/bbm/util/ef;
-
-    .line 125
-    new-instance v0, Lcom/bbm/util/ef;
-
-    const-string v1, "GROUP"
-
-    invoke-direct {v0, v1, v4}, Lcom/bbm/util/ef;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/ef;
-
-    .line 126
-    new-instance v0, Lcom/bbm/util/ef;
-
-    const-string v1, "CHANNEL"
-
-    invoke-direct {v0, v1, v5}, Lcom/bbm/util/ef;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/util/ef;->c:Lcom/bbm/util/ef;
-
-    .line 127
-    new-instance v0, Lcom/bbm/util/ef;
-
-    const-string v1, "SPONSOREDPOST"
-
-    invoke-direct {v0, v1, v6}, Lcom/bbm/util/ef;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/util/ef;->d:Lcom/bbm/util/ef;
-
-    .line 128
-    new-instance v0, Lcom/bbm/util/ef;
-
-    const-string v1, "CHANNELPROMOTION"
-
-    invoke-direct {v0, v1, v7}, Lcom/bbm/util/ef;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/util/ef;->e:Lcom/bbm/util/ef;
-
-    .line 129
-    new-instance v0, Lcom/bbm/util/ef;
-
-    const-string v1, "CHANNELPROMOTIONALL"
-
-    const/4 v2, 0x5
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/util/ef;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/util/ef;->f:Lcom/bbm/util/ef;
-
-    .line 123
-    const/4 v0, 0x6
-
-    new-array v0, v0, [Lcom/bbm/util/ef;
-
-    sget-object v1, Lcom/bbm/util/ef;->a:Lcom/bbm/util/ef;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/bbm/util/ef;->b:Lcom/bbm/util/ef;
-
-    aput-object v1, v0, v4
-
-    sget-object v1, Lcom/bbm/util/ef;->c:Lcom/bbm/util/ef;
-
-    aput-object v1, v0, v5
-
-    sget-object v1, Lcom/bbm/util/ef;->d:Lcom/bbm/util/ef;
-
-    aput-object v1, v0, v6
-
-    sget-object v1, Lcom/bbm/util/ef;->e:Lcom/bbm/util/ef;
-
-    aput-object v1, v0, v7
-
-    const/4 v1, 0x5
-
-    sget-object v2, Lcom/bbm/util/ef;->f:Lcom/bbm/util/ef;
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/bbm/util/ef;->g:[Lcom/bbm/util/ef;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
+.method constructor <init>(Ljava/util/Set;Lcom/bbm/util/fe;Landroid/content/Context;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     .prologue
-    .line 123
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 591
+    iput-object p1, p0, Lcom/bbm/util/ef;->a:Ljava/util/Set;
+
+    iput-object p2, p0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/fe;
+
+    iput-object p3, p0, Lcom/bbm/util/ef;->c:Landroid/content/Context;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/util/ef;
-    .locals 1
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 123
-    const-class v0, Lcom/bbm/util/ef;
+    const/4 v2, 0x1
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    .line 595
+    const-string v0, "updates Expanded View clicked"
 
-    move-result-object v0
+    const-class v1, Lcom/bbm/util/ee;
 
-    check-cast v0, Lcom/bbm/util/ef;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    return-object v0
-.end method
+    .line 596
+    iget-object v0, p0, Lcom/bbm/util/ef;->a:Ljava/util/Set;
 
-.method public static values()[Lcom/bbm/util/ef;
-    .locals 1
+    iget-object v1, p0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/fe;
 
-    .prologue
-    .line 123
-    sget-object v0, Lcom/bbm/util/ef;->g:[Lcom/bbm/util/ef;
+    iget-object v1, v1, Lcom/bbm/util/fe;->o:Ljava/lang/String;
 
-    invoke-virtual {v0}, [Lcom/bbm/util/ef;->clone()Ljava/lang/Object;
+    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
-    move-result-object v0
+    move-result v0
 
-    check-cast v0, [Lcom/bbm/util/ef;
+    if-eqz v0, :cond_0
 
-    return-object v0
+    .line 597
+    iget-object v0, p0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/fe;
+
+    iget-object v1, p0, Lcom/bbm/util/ef;->c:Landroid/content/Context;
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/ee;->b(Lcom/bbm/util/fe;Landroid/content/Context;Z)V
+
+    .line 598
+    iget-object v0, p0, Lcom/bbm/util/ef;->a:Ljava/util/Set;
+
+    iget-object v1, p0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/fe;
+
+    iget-object v1, v1, Lcom/bbm/util/fe;->o:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
+
+    .line 604
+    :goto_0
+    return-void
+
+    .line 600
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/fe;
+
+    iget-object v1, p0, Lcom/bbm/util/ef;->c:Landroid/content/Context;
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/ee;->a(Lcom/bbm/util/fe;Landroid/content/Context;Z)V
+
+    .line 601
+    iget-object v0, p0, Lcom/bbm/util/ef;->a:Ljava/util/Set;
+
+    iget-object v1, p0, Lcom/bbm/util/ef;->b:Lcom/bbm/util/fe;
+
+    iget-object v1, v1, Lcom/bbm/util/fe;->o:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
 .end method

@@ -105,7 +105,7 @@
     .locals 1
 
     .prologue
-    .line 576
+    .line 551
     const/16 v0, 0x61
 
     if-lt p0, v0, :cond_0
@@ -123,11 +123,11 @@
 
     if-gt p0, v0, :cond_2
 
-    .line 577
+    .line 552
     :cond_1
     const/4 v0, 0x1
 
-    .line 579
+    .line 554
     :goto_0
     return v0
 
@@ -147,7 +147,7 @@
 
     const/4 v7, 0x0
 
-    .line 592
+    .line 567
     iget-object v0, p1, Lcom/a/a/ae;->a:Ljava/lang/String;
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -156,17 +156,17 @@
 
     move-result-object v4
 
-    .line 593
+    .line 568
     iget-object v3, p1, Lcom/a/a/ae;->d:Ljava/lang/String;
 
-    .line 594
+    .line 569
     const-string v0, "CHARSET"
 
     invoke-virtual {p1, v0}, Lcom/a/a/ae;->b(Ljava/lang/String;)Ljava/util/Collection;
 
     move-result-object v0
 
-    .line 597
+    .line 572
     if-eqz v0, :cond_1
 
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
@@ -179,7 +179,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 599
+    .line 574
     :goto_0
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -187,12 +187,12 @@
 
     if-eqz v2, :cond_e
 
-    .line 600
+    .line 575
     const-string v0, "UTF-8"
 
     move-object v2, v0
 
-    .line 604
+    .line 579
     :goto_1
     const-string v0, "ADR"
 
@@ -218,7 +218,7 @@
 
     if-eqz v0, :cond_4
 
-    .line 607
+    .line 582
     :cond_0
     const-string v1, "ISO-8859-1"
 
@@ -278,10 +278,10 @@
     :cond_1
     move-object v0, v1
 
-    .line 597
+    .line 572
     goto :goto_0
 
-    .line 607
+    .line 582
     :cond_2
     invoke-direct {p0, v3}, Lcom/a/a/z;->d(Ljava/lang/String;)Ljava/lang/String;
 
@@ -346,7 +346,7 @@
 
     goto :goto_4
 
-    .line 611
+    .line 586
     :cond_4
     iget-object v0, p0, Lcom/a/a/z;->b:Ljava/lang/String;
 
@@ -380,23 +380,23 @@
 
     if-eqz v0, :cond_6
 
-    .line 618
+    .line 593
     :cond_5
     invoke-direct {p0, v3}, Lcom/a/a/z;->c(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 619
+    .line 594
     const-string v1, "ISO-8859-1"
 
     invoke-static {v0, v1, v2}, Lcom/a/a/ag;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 622
+    .line 597
     iput-object v0, p1, Lcom/a/a/ae;->d:Ljava/lang/String;
 
-    .line 623
+    .line 598
     new-array v0, v8, [Ljava/lang/String;
 
     aput-object v1, v0, v7
@@ -407,7 +407,7 @@
 
     iput-object v0, p1, Lcom/a/a/ae;->e:Ljava/util/List;
 
-    .line 624
+    .line 599
     iget-object v0, p0, Lcom/a/a/z;->g:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -427,12 +427,12 @@
 
     check-cast v0, Lcom/a/a/x;
 
-    .line 625
+    .line 600
     invoke-interface {v0, p1}, Lcom/a/a/x;->a(Lcom/a/a/ae;)V
 
     goto :goto_5
 
-    .line 628
+    .line 602
     :cond_6
     iget-object v0, p0, Lcom/a/a/z;->b:Ljava/lang/String;
 
@@ -454,7 +454,7 @@
 
     if-eqz v0, :cond_8
 
-    .line 633
+    .line 607
     :cond_7
     :try_start_0
     invoke-virtual {p0, v3}, Lcom/a/a/z;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -463,7 +463,7 @@
 
     move-result-object v0
 
-    .line 635
+    .line 609
     const/4 v1, 0x0
 
     :try_start_1
@@ -476,7 +476,7 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 640
+    .line 613
     :try_start_2
     iget-object v0, p0, Lcom/a/a/z;->g:Ljava/util/List;
 
@@ -497,14 +497,14 @@
 
     check-cast v0, Lcom/a/a/x;
 
-    .line 641
+    .line 614
     invoke-interface {v0, p1}, Lcom/a/a/x;->a(Lcom/a/a/ae;)V
     :try_end_2
     .catch Ljava/lang/OutOfMemoryError; {:try_start_2 .. :try_end_2} :catch_0
 
     goto :goto_6
 
-    .line 645
+    .line 617
     :catch_0
     move-exception v0
 
@@ -514,7 +514,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 646
+    .line 618
     iget-object v0, p0, Lcom/a/a/z;->g:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -534,12 +534,12 @@
 
     check-cast v0, Lcom/a/a/x;
 
-    .line 647
+    .line 619
     invoke-interface {v0, p1}, Lcom/a/a/x;->a(Lcom/a/a/ae;)V
 
     goto :goto_7
 
-    .line 638
+    .line 611
     :catch_1
     move-exception v0
 
@@ -566,7 +566,7 @@
     :try_end_3
     .catch Ljava/lang/OutOfMemoryError; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 652
+    .line 623
     :cond_8
     iget-object v0, p0, Lcom/a/a/z;->b:Ljava/lang/String;
 
@@ -598,7 +598,7 @@
 
     if-nez v0, :cond_9
 
-    .line 654
+    .line 625
     const-string v0, "vCard"
 
     const-string v4, "The encoding \"%s\" is unsupported by vCard %s"
@@ -623,7 +623,7 @@
 
     invoke-static {v0, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 681
+    .line 653
     :cond_9
     invoke-virtual {p0}, Lcom/a/a/z;->c()I
 
@@ -633,7 +633,7 @@
 
     move-object v0, v1
 
-    .line 684
+    .line 656
     :goto_8
     iget-object v1, p0, Lcom/a/a/z;->d:Lcom/a/a/aa;
 
@@ -641,7 +641,7 @@
 
     move-result-object v1
 
-    .line 691
+    .line 663
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
@@ -670,21 +670,21 @@
 
     if-nez v4, :cond_b
 
-    .line 694
+    .line 666
     invoke-virtual {p0}, Lcom/a/a/z;->a()Ljava/lang/String;
 
-    .line 696
+    .line 668
     if-nez v0, :cond_a
 
-    .line 697
+    .line 669
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 698
+    .line 670
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 700
+    .line 672
     :cond_a
     invoke-virtual {v1, v8}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
@@ -694,22 +694,22 @@
 
     goto :goto_8
 
-    .line 706
+    .line 677
     :cond_b
     if-eqz v0, :cond_d
 
-    .line 707
+    .line 678
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 711
+    .line 682
     :goto_9
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 712
+    .line 683
     invoke-virtual {p0, v0}, Lcom/a/a/z;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -720,13 +720,13 @@
 
     move-result-object v0
 
-    .line 714
+    .line 685
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 715
+    .line 686
     iput-object v1, p1, Lcom/a/a/ae;->e:Ljava/util/List;
 
-    .line 716
+    .line 687
     iget-object v0, p0, Lcom/a/a/z;->g:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -746,12 +746,12 @@
 
     check-cast v0, Lcom/a/a/x;
 
-    .line 717
+    .line 688
     invoke-interface {v0, p1}, Lcom/a/a/x;->a(Lcom/a/a/ae;)V
 
     goto :goto_a
 
-    .line 720
+    .line 691
     :cond_c
     return-void
 
@@ -774,7 +774,7 @@
 
     const/4 v4, 0x0
 
-    .line 792
+    .line 761
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -787,14 +787,14 @@
 
     if-eqz v0, :cond_4
 
-    .line 794
+    .line 763
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 795
+    .line 764
     :cond_0
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
@@ -802,12 +802,12 @@
 
     if-ne v1, v5, :cond_0
 
-    .line 797
+    .line 766
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 798
+    .line 767
     add-int/lit8 v0, v0, 0x1
 
     invoke-virtual {p1, v4, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -816,21 +816,21 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 799
+    .line 768
     const-string v0, "\r\n"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 802
+    .line 771
     :goto_0
     invoke-virtual {p0}, Lcom/a/a/z;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 803
+    .line 772
     if-nez v0, :cond_1
 
-    .line 804
+    .line 773
     new-instance v0, Lcom/a/a/a/b;
 
     const-string v1, "File ended during parsing a Quoted-Printable String"
@@ -839,7 +839,7 @@
 
     throw v0
 
-    .line 806
+    .line 775
     :cond_1
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -853,14 +853,14 @@
 
     if-eqz v2, :cond_3
 
-    .line 808
+    .line 777
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
 
     add-int/lit8 v2, v2, -0x1
 
-    .line 809
+    .line 778
     :cond_2
     invoke-virtual {v0, v2}, Ljava/lang/String;->charAt(I)C
 
@@ -868,7 +868,7 @@
 
     if-ne v3, v5, :cond_2
 
-    .line 811
+    .line 780
     add-int/lit8 v2, v2, 0x1
 
     invoke-virtual {v0, v4, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -877,23 +877,23 @@
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 812
+    .line 781
     const-string v0, "\r\n"
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
 
-    .line 815
+    .line 783
     :cond_3
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 816
+    .line 784
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 822
+    .line 789
     :cond_4
     return-object p1
 .end method
@@ -902,15 +902,15 @@
     .locals 3
 
     .prologue
-    .line 836
+    .line 802
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 837
+    .line 803
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 840
+    .line 806
     :goto_0
     iget-object v1, p0, Lcom/a/a/z;->d:Lcom/a/a/aa;
 
@@ -918,7 +918,7 @@
 
     move-result-object v1
 
-    .line 841
+    .line 807
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -927,18 +927,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 842
+    .line 808
     invoke-static {v1}, Lcom/a/a/z;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 846
+    .line 812
     if-nez v2, :cond_0
 
-    .line 847
+    .line 813
     invoke-virtual {p0}, Lcom/a/a/z;->a()Ljava/lang/String;
 
-    .line 855
+    .line 821
     const-string v2, " "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -949,7 +949,7 @@
 
     goto :goto_0
 
-    .line 858
+    .line 824
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -964,21 +964,21 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 554
+    .line 529
     const-string v1, "-"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 555
+    .line 530
     array-length v1, v2
 
     const/4 v3, 0x2
 
     if-eq v1, v3, :cond_0
 
-    .line 556
+    .line 531
     new-instance v0, Lcom/a/a/a/b;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1005,22 +1005,22 @@
 
     throw v0
 
-    .line 558
+    .line 533
     :cond_0
     aget-object v3, v2, v0
 
-    .line 559
+    .line 534
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v4
 
     move v1, v0
 
-    .line 560
+    .line 535
     :goto_0
     if-ge v1, v4, :cond_2
 
-    .line 561
+    .line 536
     invoke-virtual {v3, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
@@ -1031,7 +1031,7 @@
 
     if-nez v5, :cond_1
 
-    .line 562
+    .line 537
     new-instance v0, Lcom/a/a/a/b;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1058,28 +1058,28 @@
 
     throw v0
 
-    .line 560
+    .line 535
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 565
+    .line 540
     :cond_2
     const/4 v1, 0x1
 
     aget-object v1, v2, v1
 
-    .line 566
+    .line 541
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 567
+    .line 542
     :goto_1
     if-ge v0, v2, :cond_4
 
-    .line 568
+    .line 543
     invoke-virtual {v1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
@@ -1090,7 +1090,7 @@
 
     if-nez v3, :cond_3
 
-    .line 569
+    .line 544
     new-instance v0, Lcom/a/a/a/b;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1117,19 +1117,19 @@
 
     throw v0
 
-    .line 567
+    .line 542
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 572
+    .line 547
     :cond_4
     const-string v0, "LANGUAGE"
 
     invoke-virtual {p0, v0, p1}, Lcom/a/a/ae;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 573
+    .line 548
     return-void
 .end method
 
@@ -1139,27 +1139,27 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 911
+    .line 876
     const-string v0, ":"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 912
+    .line 877
     if-ltz v1, :cond_1
 
-    .line 913
+    .line 878
     const-string v0, ";"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 917
+    .line 882
     if-ne v1, v2, :cond_0
 
-    .line 926
+    .line 889
     :goto_0
     const/4 v1, 0x0
 
@@ -1173,22 +1173,22 @@
 
     move-result-object v0
 
-    .line 928
+    .line 891
     :goto_1
     return-object v0
 
-    .line 920
+    .line 884
     :cond_0
     if-eq v0, v2, :cond_2
 
-    .line 921
+    .line 885
     invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
     goto :goto_0
 
-    .line 928
+    .line 891
     :cond_1
     const/4 v0, 0x0
 
@@ -1206,28 +1206,28 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 214
+    .line 212
     const-string v1, "8BIT"
 
     iput-object v1, p0, Lcom/a/a/z;->b:Ljava/lang/String;
 
-    .line 215
+    .line 213
     const-string v1, "UTF-8"
 
     iput-object v1, p0, Lcom/a/a/z;->c:Ljava/lang/String;
 
-    .line 217
+    .line 215
     invoke-virtual {p0, v0}, Lcom/a/a/z;->a(Z)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 228
+    .line 226
     :goto_0
     return v0
 
-    .line 221
+    .line 219
     :cond_0
     iget-object v0, p0, Lcom/a/a/z;->g:Ljava/util/List;
 
@@ -1248,16 +1248,16 @@
 
     check-cast v0, Lcom/a/a/x;
 
-    .line 222
+    .line 220
     invoke-interface {v0}, Lcom/a/a/x;->c()V
 
     goto :goto_1
 
-    .line 224
+    .line 222
     :cond_1
     invoke-direct {p0}, Lcom/a/a/z;->g()V
 
-    .line 225
+    .line 223
     iget-object v0, p0, Lcom/a/a/z;->g:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1277,12 +1277,12 @@
 
     check-cast v0, Lcom/a/a/x;
 
-    .line 226
+    .line 224
     invoke-interface {v0}, Lcom/a/a/x;->d()V
 
     goto :goto_2
 
-    .line 228
+    .line 226
     :cond_2
     const/4 v0, 0x1
 
@@ -1293,10 +1293,10 @@
     .locals 3
 
     .prologue
-    .line 280
+    .line 276
     const/4 v0, 0x0
 
-    .line 283
+    .line 279
     :try_start_0
     invoke-direct {p0}, Lcom/a/a/z;->h()Z
     :try_end_0
@@ -1304,11 +1304,11 @@
 
     move-result v0
 
-    .line 289
+    .line 284
     :goto_0
     if-nez v0, :cond_0
 
-    .line 291
+    .line 286
     :try_start_1
     invoke-direct {p0}, Lcom/a/a/z;->h()Z
     :try_end_1
@@ -1318,7 +1318,7 @@
 
     goto :goto_0
 
-    .line 286
+    .line 281
     :catch_0
     move-exception v1
 
@@ -1330,7 +1330,7 @@
 
     goto :goto_0
 
-    .line 294
+    .line 288
     :catch_1
     move-exception v1
 
@@ -1342,7 +1342,7 @@
 
     goto :goto_0
 
-    .line 297
+    .line 291
     :cond_0
     return-void
 .end method
@@ -1361,17 +1361,17 @@
 
     const/4 v4, 0x0
 
-    .line 307
+    .line 301
     const-string v0, "8BIT"
 
     iput-object v0, p0, Lcom/a/a/z;->b:Ljava/lang/String;
 
-    .line 309
+    .line 303
     invoke-virtual {p0}, Lcom/a/a/z;->b()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 310
+    .line 304
     new-instance v3, Lcom/a/a/ae;
 
     invoke-direct {v3}, Lcom/a/a/ae;-><init>()V
@@ -1442,7 +1442,7 @@
 
     move-object v0, v3
 
-    .line 312
+    .line 306
     :goto_3
     iget-object v1, v0, Lcom/a/a/ae;->a:Ljava/lang/String;
 
@@ -1452,10 +1452,10 @@
 
     move-result-object v1
 
-    .line 313
+    .line 307
     iget-object v3, v0, Lcom/a/a/ae;->d:Ljava/lang/String;
 
-    .line 315
+    .line 309
     const-string v5, "BEGIN"
 
     invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1464,7 +1464,7 @@
 
     if-eqz v5, :cond_f
 
-    .line 316
+    .line 310
     const-string v0, "VCARD"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -1473,17 +1473,17 @@
 
     if-eqz v0, :cond_e
 
-    .line 317
+    .line 311
     invoke-direct {p0}, Lcom/a/a/z;->i()V
 
     :goto_4
     move v2, v4
 
-    .line 334
+    .line 324
     :cond_2
     return v2
 
-    .line 310
+    .line 304
     :cond_3
     const-string v0, ""
 
@@ -1670,7 +1670,7 @@
 
     throw v0
 
-    .line 320
+    .line 313
     :cond_e
     new-instance v0, Lcom/a/a/a/b;
 
@@ -1692,7 +1692,7 @@
 
     throw v0
 
-    .line 323
+    .line 315
     :cond_f
     const-string v5, "END"
 
@@ -1702,7 +1702,7 @@
 
     if-eqz v5, :cond_10
 
-    .line 324
+    .line 316
     const-string v0, "VCARD"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -1711,7 +1711,7 @@
 
     if-nez v0, :cond_2
 
-    .line 328
+    .line 319
     new-instance v0, Lcom/a/a/a/b;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1732,7 +1732,7 @@
 
     throw v0
 
-    .line 332
+    .line 322
     :cond_10
     iget-object v2, v0, Lcom/a/a/ae;->d:Ljava/lang/String;
 
@@ -1861,7 +1861,7 @@
 
     goto/16 :goto_4
 
-    .line 310
+    .line 304
     nop
 
     :pswitch_data_0
@@ -1876,7 +1876,7 @@
     .locals 2
 
     .prologue
-    .line 357
+    .line 345
     iget-object v0, p0, Lcom/a/a/z;->g:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1896,16 +1896,16 @@
 
     check-cast v0, Lcom/a/a/x;
 
-    .line 358
+    .line 346
     invoke-interface {v0}, Lcom/a/a/x;->c()V
 
     goto :goto_0
 
-    .line 360
+    .line 348
     :cond_0
     invoke-direct {p0}, Lcom/a/a/z;->g()V
 
-    .line 361
+    .line 349
     iget-object v0, p0, Lcom/a/a/z;->g:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1925,12 +1925,12 @@
 
     check-cast v0, Lcom/a/a/x;
 
-    .line 362
+    .line 350
     invoke-interface {v0}, Lcom/a/a/x;->d()V
 
     goto :goto_1
 
-    .line 364
+    .line 352
     :cond_1
     return-void
 .end method
@@ -1955,15 +1955,15 @@
     .locals 5
 
     .prologue
-    .line 862
+    .line 828
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 863
+    .line 829
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 866
+    .line 832
     :goto_0
     iget-object v1, p0, Lcom/a/a/z;->d:Lcom/a/a/aa;
 
@@ -1971,10 +1971,10 @@
 
     move-result-object v1
 
-    .line 867
+    .line 833
     if-nez v1, :cond_0
 
-    .line 868
+    .line 834
     new-instance v0, Lcom/a/a/a/b;
 
     const-string v1, "File ended during parsing BASE64 binary"
@@ -1983,13 +1983,13 @@
 
     throw v0
 
-    .line 878
+    .line 844
     :cond_0
     invoke-static {v1}, Lcom/a/a/z;->e(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 879
+    .line 845
     invoke-virtual {p0}, Lcom/a/a/z;->e()Ljava/util/Set;
 
     move-result-object v3
@@ -2000,14 +2000,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 880
+    .line 846
     const-string v2, "vCard"
 
     const-string v3, "Found a next property during parsing a BASE64 string, which must not contain semi-colon or colon. Treat the line as next property."
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 883
+    .line 849
     const-string v2, "vCard"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2030,7 +2030,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 896
+    .line 862
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2038,18 +2038,18 @@
 
     return-object v0
 
-    .line 888
+    .line 854
     :cond_2
     invoke-virtual {p0}, Lcom/a/a/z;->a()Ljava/lang/String;
 
-    .line 890
+    .line 856
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 891
+    .line 857
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_0
@@ -2059,7 +2059,7 @@
     .locals 2
 
     .prologue
-    .line 940
+    .line 903
     iget-object v0, p1, Lcom/a/a/ae;->d:Ljava/lang/String;
 
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -2076,7 +2076,7 @@
 
     if-nez v0, :cond_0
 
-    .line 942
+    .line 905
     iget-object v0, p0, Lcom/a/a/z;->g:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2096,12 +2096,12 @@
 
     check-cast v0, Lcom/a/a/x;
 
-    .line 943
+    .line 906
     invoke-interface {v0, p1}, Lcom/a/a/x;->a(Lcom/a/a/ae;)V
 
     goto :goto_0
 
-    .line 948
+    .line 910
     :cond_0
     new-instance v0, Lcom/a/a/a/a;
 
@@ -2111,7 +2111,7 @@
 
     throw v0
 
-    .line 945
+    .line 908
     :cond_1
     return-void
 .end method
@@ -2126,19 +2126,19 @@
 
     const/4 v5, 0x0
 
-    .line 458
+    .line 441
     const-string v0, "="
 
     invoke-virtual {p2, v0, v3}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 459
+    .line 442
     array-length v1, v0
 
     if-ne v1, v3, :cond_9
 
-    .line 460
+    .line 443
     aget-object v1, v0, v5
 
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -2151,14 +2151,14 @@
 
     move-result-object v1
 
-    .line 461
+    .line 444
     aget-object v0, v0, v6
 
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 462
+    .line 445
     const-string v2, "TYPE"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2167,14 +2167,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 463
+    .line 446
     invoke-virtual {p0, p1, v0}, Lcom/a/a/z;->c(Lcom/a/a/ae;Ljava/lang/String;)V
 
-    .line 487
+    .line 463
     :goto_0
     return-void
 
-    .line 465
+    .line 447
     :cond_0
     const-string v2, "VALUE"
 
@@ -2184,7 +2184,7 @@
 
     if-eqz v2, :cond_2
 
-    .line 466
+    .line 448
     sget-object v1, Lcom/a/a/ac;->c:Ljava/util/Set;
 
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -2250,7 +2250,7 @@
 
     goto :goto_0
 
-    .line 468
+    .line 449
     :cond_2
     const-string v2, "ENCODING"
 
@@ -2260,7 +2260,7 @@
 
     if-eqz v2, :cond_5
 
-    .line 469
+    .line 450
     sget-object v1, Lcom/a/a/ac;->d:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -2319,7 +2319,7 @@
 
     throw v1
 
-    .line 471
+    .line 451
     :cond_5
     const-string v2, "CHARSET"
 
@@ -2329,7 +2329,7 @@
 
     if-eqz v2, :cond_6
 
-    .line 472
+    .line 452
     iput-object v0, p0, Lcom/a/a/z;->c:Ljava/lang/String;
 
     const-string v1, "CHARSET"
@@ -2338,7 +2338,7 @@
 
     goto/16 :goto_0
 
-    .line 474
+    .line 453
     :cond_6
     const-string v2, "LANGUAGE"
 
@@ -2348,12 +2348,12 @@
 
     if-eqz v2, :cond_7
 
-    .line 475
+    .line 454
     invoke-static {p1, v0}, Lcom/a/a/z;->d(Lcom/a/a/ae;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 477
+    .line 455
     :cond_7
     const-string v2, "X-"
 
@@ -2363,12 +2363,12 @@
 
     if-eqz v2, :cond_8
 
-    .line 478
+    .line 456
     invoke-virtual {p0, p1, v1, v0}, Lcom/a/a/z;->a(Lcom/a/a/ae;Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 481
+    .line 458
     :cond_8
     new-instance v0, Lcom/a/a/a/b;
 
@@ -2396,7 +2396,7 @@
 
     throw v0
 
-    .line 483
+    .line 460
     :cond_9
     aget-object v0, v0, v5
 
@@ -2409,10 +2409,10 @@
     .locals 0
 
     .prologue
-    .line 587
+    .line 562
     invoke-virtual {p1, p2, p3}, Lcom/a/a/ae;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 588
+    .line 563
     return-void
 .end method
 
@@ -2420,12 +2420,12 @@
     .locals 1
 
     .prologue
-    .line 1024
+    .line 986
     iget-object v0, p0, Lcom/a/a/z;->g:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1025
+    .line 987
     return-void
 .end method
 
@@ -2433,10 +2433,10 @@
     .locals 2
 
     .prologue
-    .line 1028
+    .line 990
     if-nez p1, :cond_0
 
-    .line 1029
+    .line 991
     new-instance v0, Ljava/lang/NullPointerException;
 
     const-string v1, "InputStream must not be null."
@@ -2445,7 +2445,7 @@
 
     throw v0
 
-    .line 1032
+    .line 994
     :cond_0
     new-instance v0, Ljava/io/InputStreamReader;
 
@@ -2453,17 +2453,17 @@
 
     invoke-direct {v0, p1, v1}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 1033
+    .line 995
     new-instance v1, Lcom/a/a/aa;
 
     invoke-direct {v1, v0}, Lcom/a/a/aa;-><init>(Ljava/io/Reader;)V
 
     iput-object v1, p0, Lcom/a/a/z;->d:Lcom/a/a/aa;
 
-    .line 1035
+    .line 997
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 1036
+    .line 998
     iget-object v0, p0, Lcom/a/a/z;->g:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -2483,34 +2483,34 @@
 
     check-cast v0, Lcom/a/a/x;
 
-    .line 1037
+    .line 999
     invoke-interface {v0}, Lcom/a/a/x;->a()V
 
     goto :goto_0
 
-    .line 1042
+    .line 1004
     :cond_1
     monitor-enter p0
 
-    .line 1043
+    .line 1005
     :try_start_0
     iget-boolean v0, p0, Lcom/a/a/z;->h:Z
 
     if-eqz v0, :cond_2
 
-    .line 1044
+    .line 1006
     const-string v0, "vCard"
 
     const-string v1, "Cancel request has come. exitting parse operation."
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1045
+    .line 1007
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1049
+    .line 1011
     :goto_1
     iget-object v0, p0, Lcom/a/a/z;->g:Ljava/util/List;
 
@@ -2531,16 +2531,16 @@
 
     check-cast v0, Lcom/a/a/x;
 
-    .line 1054
+    .line 1016
     invoke-interface {v0}, Lcom/a/a/x;->b()V
 
     goto :goto_2
 
-    .line 1047
+    .line 1009
     :cond_2
     monitor-exit p0
 
-    .line 1048
+    .line 1010
     invoke-direct {p0}, Lcom/a/a/z;->f()Z
 
     move-result v0
@@ -2549,7 +2549,7 @@
 
     goto :goto_1
 
-    .line 1047
+    .line 1009
     :catchall_0
     move-exception v0
 
@@ -2557,7 +2557,7 @@
 
     throw v0
 
-    .line 1056
+    .line 1018
     :cond_3
     return-void
 .end method
@@ -2572,20 +2572,20 @@
 
     const/4 v0, 0x0
 
-    .line 241
+    .line 239
     :cond_0
     invoke-virtual {p0}, Lcom/a/a/z;->a()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 242
+    .line 240
     if-nez v2, :cond_1
 
-    .line 258
+    .line 255
     :goto_0
     return v0
 
-    .line 245
+    .line 242
     :cond_1
     invoke-virtual {v2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -2597,17 +2597,17 @@
 
     if-lez v3, :cond_0
 
-    .line 246
+    .line 243
     const-string v3, ":"
 
     invoke-virtual {v2, v3, v6}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 250
+    .line 247
     array-length v4, v3
 
-    .line 256
+    .line 253
     if-ne v4, v6, :cond_2
 
     aget-object v4, v3, v0
@@ -2640,14 +2640,14 @@
 
     move v0, v1
 
-    .line 258
+    .line 255
     goto :goto_0
 
-    .line 260
+    .line 256
     :cond_2
     if-nez p1, :cond_3
 
-    .line 261
+    .line 257
     new-instance v0, Lcom/a/a/a/b;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2674,11 +2674,11 @@
 
     throw v0
 
-    .line 265
+    .line 261
     :cond_3
     if-nez p1, :cond_0
 
-    .line 267
+    .line 263
     new-instance v0, Lcom/a/a/a/b;
 
     const-string v1, "Reached where must not be reached."
@@ -2692,16 +2692,16 @@
     .locals 2
 
     .prologue
-    .line 193
+    .line 192
     :cond_0
     invoke-virtual {p0}, Lcom/a/a/z;->a()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 194
+    .line 193
     if-nez v0, :cond_1
 
-    .line 195
+    .line 194
     new-instance v0, Lcom/a/a/a/b;
 
     const-string v1, "Reached end of buffer."
@@ -2710,7 +2710,7 @@
 
     throw v0
 
-    .line 197
+    .line 195
     :cond_1
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -2722,7 +2722,7 @@
 
     if-lez v1, :cond_0
 
-    .line 198
+    .line 196
     return-object v0
 .end method
 
@@ -2730,7 +2730,7 @@
     .locals 0
 
     .prologue
-    .line 956
+    .line 918
     return-object p1
 .end method
 
@@ -2738,10 +2738,10 @@
     .locals 0
 
     .prologue
-    .line 493
+    .line 469
     invoke-virtual {p0, p1, p2}, Lcom/a/a/z;->c(Lcom/a/a/ae;Ljava/lang/String;)V
 
-    .line 494
+    .line 470
     return-void
 .end method
 
@@ -2749,7 +2749,7 @@
     .locals 1
 
     .prologue
-    .line 985
+    .line 947
     const/4 v0, 0x0
 
     return v0
@@ -2759,7 +2759,7 @@
     .locals 5
 
     .prologue
-    .line 500
+    .line 476
     sget-object v0, Lcom/a/a/ac;->b:Ljava/util/Set;
 
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -2790,12 +2790,12 @@
 
     if-nez v0, :cond_0
 
-    .line 503
+    .line 479
     iget-object v0, p0, Lcom/a/a/z;->e:Ljava/util/Set;
 
     invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 504
+    .line 480
     const-string v0, "vCard"
 
     const-string v1, "TYPE unsupported by %s: "
@@ -2826,13 +2826,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 506
+    .line 482
     :cond_0
     const-string v0, "TYPE"
 
     invoke-virtual {p1, v0, p2}, Lcom/a/a/ae;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 507
+    .line 483
     return-void
 .end method
 
@@ -2840,7 +2840,7 @@
     .locals 1
 
     .prologue
-    .line 992
+    .line 954
     const-string v0, "2.1"
 
     return-object v0
@@ -2859,7 +2859,7 @@
     .end annotation
 
     .prologue
-    .line 996
+    .line 958
     sget-object v0, Lcom/a/a/ac;->a:Ljava/util/Set;
 
     return-object v0

@@ -16,12 +16,12 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 71
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/bbm/ui/InlineImageEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 74
+    .line 72
     return-void
 .end method
 
@@ -29,12 +29,12 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 75
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/bbm/ui/InlineImageEditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 78
+    .line 76
     return-void
 .end method
 
@@ -42,44 +42,55 @@
     .locals 1
 
     .prologue
-    .line 81
+    .line 79
     invoke-direct {p0, p1, p2}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 28
-    new-instance v0, Lcom/bbm/ui/cq;
+    new-instance v0, Lcom/bbm/ui/df;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/cq;-><init>(Lcom/bbm/ui/InlineImageEditText;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/df;-><init>(Lcom/bbm/ui/InlineImageEditText;)V
 
     iput-object v0, p0, Lcom/bbm/ui/InlineImageEditText;->b:Landroid/util/Printer;
 
-    .line 62
-    new-instance v0, Lcom/bbm/ui/cr;
+    .line 60
+    new-instance v0, Lcom/bbm/ui/dg;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/cr;-><init>(Lcom/bbm/ui/InlineImageEditText;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/dg;-><init>(Lcom/bbm/ui/InlineImageEditText;)V
 
     iput-object v0, p0, Lcom/bbm/ui/InlineImageEditText;->c:Lcom/bbm/j/u;
 
-    .line 82
-    new-instance v0, Lcom/bbm/ui/ct;
+    .line 80
+    invoke-virtual {p0}, Lcom/bbm/ui/InlineImageEditText;->isInEditMode()Z
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/ct;-><init>(Lcom/bbm/ui/InlineImageEditText;)V
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 107
+    :goto_0
+    return-void
+
+    .line 84
+    :cond_0
+    new-instance v0, Lcom/bbm/ui/di;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/di;-><init>(Lcom/bbm/ui/InlineImageEditText;)V
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/InlineImageEditText;->setEditableFactory(Landroid/text/Editable$Factory;)V
 
-    .line 83
+    .line 85
     iget-object v0, p0, Lcom/bbm/ui/InlineImageEditText;->c:Lcom/bbm/j/u;
 
     invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
 
-    .line 84
-    new-instance v0, Lcom/bbm/ui/cs;
+    .line 86
+    new-instance v0, Lcom/bbm/ui/dh;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/cs;-><init>(Lcom/bbm/ui/InlineImageEditText;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/dh;-><init>(Lcom/bbm/ui/InlineImageEditText;)V
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/InlineImageEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 106
-    return-void
+    goto :goto_0
 .end method
 
 .method static synthetic a(Lcom/bbm/ui/InlineImageEditText;)Ljava/lang/String;
@@ -113,13 +124,13 @@
 
     move-result v0
 
-    const-class v2, Lcom/bbm/ui/do;
+    const-class v2, Lcom/bbm/ui/ee;
 
     invoke-interface {p0, v1, v0, v2}, Landroid/text/Editable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/bbm/ui/do;
+    check-cast v0, [Lcom/bbm/ui/ee;
 
     .line 132
     array-length v2, v0
@@ -156,10 +167,10 @@
     .locals 5
 
     .prologue
-    .line 109
+    .line 110
     const/4 v0, 0x0
 
-    .line 110
+    .line 111
     new-instance v1, Ljava/util/StringTokenizer;
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -170,7 +181,7 @@
 
     invoke-direct {v1, v2, v3}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 112
+    .line 113
     :goto_0
     invoke-virtual {v1}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
 

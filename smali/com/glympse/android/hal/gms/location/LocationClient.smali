@@ -4,22 +4,13 @@
 
 
 # static fields
-.field private static eV:Ljava/lang/reflect/Method;
-
-.field private static eW:Ljava/lang/reflect/Method;
-
 .field private static fA:Ljava/lang/reflect/Method;
 
 .field private static fB:Ljava/lang/reflect/Method;
 
-.field private static fD:Ljava/lang/Class;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/Class",
-            "<*>;"
-        }
-    .end annotation
-.end field
+.field private static fC:Ljava/lang/reflect/Method;
+
+.field private static fD:Ljava/lang/reflect/Method;
 
 .field private static fE:Ljava/lang/reflect/Method;
 
@@ -27,18 +18,11 @@
 
 .field private static fG:Ljava/lang/reflect/Method;
 
-.field private static fH:Ljava/lang/Class;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/Class",
-            "<*>;"
-        }
-    .end annotation
-.end field
+.field private static fH:Ljava/lang/reflect/Method;
 
 .field private static fI:Ljava/lang/reflect/Method;
 
-.field private static fJ:Ljava/lang/Class;
+.field private static fK:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -46,12 +30,14 @@
         }
     .end annotation
 .end field
-
-.field private static fK:Ljava/lang/reflect/Method;
 
 .field private static fL:Ljava/lang/reflect/Method;
 
-.field private static fr:Ljava/lang/Class;
+.field private static fM:Ljava/lang/reflect/Method;
+
+.field private static fN:Ljava/lang/reflect/Method;
+
+.field private static fO:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -60,7 +46,35 @@
     .end annotation
 .end field
 
-.field private static fs:Ljava/lang/reflect/Constructor;
+.field private static fP:Ljava/lang/reflect/Method;
+
+.field private static fQ:Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class",
+            "<*>;"
+        }
+    .end annotation
+.end field
+
+.field private static fR:Ljava/lang/reflect/Method;
+
+.field private static fS:Ljava/lang/reflect/Method;
+
+.field private static fc:Ljava/lang/reflect/Method;
+
+.field private static fd:Ljava/lang/reflect/Method;
+
+.field private static fy:Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class",
+            "<*>;"
+        }
+    .end annotation
+.end field
+
+.field private static fz:Ljava/lang/reflect/Constructor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor",
@@ -69,23 +83,9 @@
     .end annotation
 .end field
 
-.field private static ft:Ljava/lang/reflect/Method;
-
-.field private static fu:Ljava/lang/reflect/Method;
-
-.field private static fv:Ljava/lang/reflect/Method;
-
-.field private static fw:Ljava/lang/reflect/Method;
-
-.field private static fx:Ljava/lang/reflect/Method;
-
-.field private static fy:Ljava/lang/reflect/Method;
-
-.field private static fz:Ljava/lang/reflect/Method;
-
 
 # instance fields
-.field private fC:Ljava/lang/Object;
+.field private fJ:Ljava/lang/Object;
 
 
 # direct methods
@@ -96,70 +96,70 @@
     const/4 v0, 0x0
 
     .line 30
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     .line 31
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fs:Ljava/lang/reflect/Constructor;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fz:Ljava/lang/reflect/Constructor;
 
     .line 32
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->eV:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fc:Ljava/lang/reflect/Method;
 
     .line 33
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->eW:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fd:Ljava/lang/reflect/Method;
 
     .line 34
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->ft:Ljava/lang/reflect/Method;
-
-    .line 35
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fu:Ljava/lang/reflect/Method;
-
-    .line 36
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fv:Ljava/lang/reflect/Method;
-
-    .line 37
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fw:Ljava/lang/reflect/Method;
-
-    .line 38
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fx:Ljava/lang/reflect/Method;
-
-    .line 39
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/reflect/Method;
-
-    .line 40
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fz:Ljava/lang/reflect/Method;
-
-    .line 41
     sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fA:Ljava/lang/reflect/Method;
 
-    .line 42
+    .line 35
     sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fB:Ljava/lang/reflect/Method;
 
-    .line 211
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fD:Ljava/lang/Class;
+    .line 36
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/reflect/Method;
 
-    .line 212
+    .line 37
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fD:Ljava/lang/reflect/Method;
+
+    .line 38
     sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fE:Ljava/lang/reflect/Method;
 
-    .line 213
+    .line 39
     sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fF:Ljava/lang/reflect/Method;
 
-    .line 214
+    .line 40
     sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fG:Ljava/lang/reflect/Method;
 
-    .line 273
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fH:Ljava/lang/Class;
+    .line 41
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fH:Ljava/lang/reflect/Method;
 
-    .line 274
+    .line 42
     sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fI:Ljava/lang/reflect/Method;
 
+    .line 211
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fK:Ljava/lang/Class;
+
+    .line 212
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fL:Ljava/lang/reflect/Method;
+
+    .line 213
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fM:Ljava/lang/reflect/Method;
+
+    .line 214
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fN:Ljava/lang/reflect/Method;
+
+    .line 273
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fO:Ljava/lang/Class;
+
+    .line 274
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fP:Ljava/lang/reflect/Method;
+
     .line 322
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fQ:Ljava/lang/Class;
 
     .line 323
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fK:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fR:Ljava/lang/reflect/Method;
 
     .line 324
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fL:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fS:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -174,11 +174,11 @@
     .line 44
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Object;
 
     .line 52
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fs:Ljava/lang/reflect/Constructor;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fz:Ljava/lang/reflect/Constructor;
 
     const/4 v1, 0x3
 
@@ -208,7 +208,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -222,82 +222,72 @@
     goto :goto_0
 .end method
 
-.method static synthetic M()Ljava/lang/reflect/Method;
-    .locals 1
-
-    .prologue
-    .line 24
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fE:Ljava/lang/reflect/Method;
-
-    return-object v0
-.end method
-
 .method static synthetic N()Ljava/lang/reflect/Method;
     .locals 1
 
     .prologue
     .line 24
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fF:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fL:Ljava/lang/reflect/Method;
 
     return-object v0
 .end method
 
-.method static synthetic O()Ljava/lang/Class;
+.method static synthetic O()Ljava/lang/reflect/Method;
     .locals 1
 
     .prologue
     .line 24
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fD:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fM:Ljava/lang/reflect/Method;
 
     return-object v0
 .end method
 
-.method static synthetic Y()Ljava/lang/reflect/Method;
+.method static synthetic P()Ljava/lang/Class;
     .locals 1
 
     .prologue
     .line 24
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fG:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fK:Ljava/lang/Class;
 
     return-object v0
 .end method
 
-.method static synthetic Z()Ljava/lang/Class;
+.method static synthetic Z()Ljava/lang/reflect/Method;
     .locals 1
 
     .prologue
     .line 24
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fH:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fN:Ljava/lang/reflect/Method;
 
     return-object v0
 .end method
 
-.method static synthetic aa()Ljava/lang/reflect/Method;
+.method static synthetic aa()Ljava/lang/Class;
     .locals 1
 
     .prologue
     .line 24
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fI:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fO:Ljava/lang/Class;
 
     return-object v0
 .end method
 
-.method static synthetic ab()Ljava/lang/Class;
+.method static synthetic ab()Ljava/lang/reflect/Method;
     .locals 1
 
     .prologue
     .line 24
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fP:Ljava/lang/reflect/Method;
 
     return-object v0
 .end method
 
-.method static synthetic ac()Ljava/lang/reflect/Method;
+.method static synthetic ac()Ljava/lang/Class;
     .locals 1
 
     .prologue
     .line 24
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fK:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fQ:Ljava/lang/Class;
 
     return-object v0
 .end method
@@ -307,7 +297,17 @@
 
     .prologue
     .line 24
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fL:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fR:Ljava/lang/reflect/Method;
+
+    return-object v0
+.end method
+
+.method static synthetic ae()Ljava/lang/reflect/Method;
+    .locals 1
+
+    .prologue
+    .line 24
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fS:Ljava/lang/reflect/Method;
 
     return-object v0
 .end method
@@ -320,7 +320,7 @@
 
     .line 180
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fA:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fH:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -375,7 +375,7 @@
 
     .line 193
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fB:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fI:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
 
@@ -453,7 +453,7 @@
 
     .line 168
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fz:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fG:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -508,7 +508,7 @@
     move-result-object v0
 
     .line 395
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fD:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fK:Ljava/lang/Class;
 
     const-string v1, "onLocationChanged"
 
@@ -526,7 +526,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fE:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fL:Ljava/lang/reflect/Method;
 
     .line 396
     const-class v0, Ljava/lang/Object;
@@ -539,7 +539,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fF:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fM:Ljava/lang/reflect/Method;
 
     .line 397
     const-class v0, Ljava/lang/Object;
@@ -560,7 +560,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fG:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fN:Ljava/lang/reflect/Method;
 
     .line 399
     const-string v0, "com.google.android.gms.location.LocationClient$OnAddGeofencesResultListener"
@@ -570,7 +570,7 @@
     move-result-object v0
 
     .line 400
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fH:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fO:Ljava/lang/Class;
 
     const-string v1, "onAddGeofencesResult"
 
@@ -594,7 +594,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fI:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fP:Ljava/lang/reflect/Method;
 
     .line 402
     const-string v0, "com.google.android.gms.location.LocationClient$OnRemoveGeofencesResultListener"
@@ -604,7 +604,7 @@
     move-result-object v0
 
     .line 403
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fQ:Ljava/lang/Class;
 
     const-string v1, "onRemoveGeofencesByPendingIntentResult"
 
@@ -628,10 +628,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fK:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fR:Ljava/lang/reflect/Method;
 
     .line 404
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fQ:Ljava/lang/Class;
 
     const-string v1, "onRemoveGeofencesByRequestIdsResult"
 
@@ -655,7 +655,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fL:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fS:Ljava/lang/reflect/Method;
 
     .line 406
     const-string v0, "com.google.android.gms.location.LocationClient"
@@ -665,7 +665,7 @@
     move-result-object v0
 
     .line 407
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     const/4 v1, 0x3
 
@@ -693,10 +693,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fs:Ljava/lang/reflect/Constructor;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fz:Ljava/lang/reflect/Constructor;
 
     .line 411
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     const-string v1, "connect"
 
@@ -706,10 +706,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->eV:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fc:Ljava/lang/reflect/Method;
 
     .line 412
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     const-string v1, "disconnect"
 
@@ -719,10 +719,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->eW:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fd:Ljava/lang/reflect/Method;
 
     .line 413
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     const-string v1, "requestLocationUpdates"
 
@@ -732,13 +732,13 @@
 
     const/4 v3, 0x0
 
-    sget-object v4, Lcom/glympse/android/hal/gms/location/LocationRequest;->fP:Ljava/lang/Class;
+    sget-object v4, Lcom/glympse/android/hal/gms/location/LocationRequest;->fW:Ljava/lang/Class;
 
     aput-object v4, v2, v3
 
     const/4 v3, 0x1
 
-    sget-object v4, Lcom/glympse/android/hal/gms/location/LocationClient;->fD:Ljava/lang/Class;
+    sget-object v4, Lcom/glympse/android/hal/gms/location/LocationClient;->fK:Ljava/lang/Class;
 
     aput-object v4, v2, v3
 
@@ -746,10 +746,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->ft:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fA:Ljava/lang/reflect/Method;
 
     .line 416
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     const-string v1, "removeLocationUpdates"
 
@@ -759,7 +759,7 @@
 
     const/4 v3, 0x0
 
-    sget-object v4, Lcom/glympse/android/hal/gms/location/LocationClient;->fD:Ljava/lang/Class;
+    sget-object v4, Lcom/glympse/android/hal/gms/location/LocationClient;->fK:Ljava/lang/Class;
 
     aput-object v4, v2, v3
 
@@ -767,10 +767,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fu:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fB:Ljava/lang/reflect/Method;
 
     .line 418
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     const-string v1, "getLastLocation"
 
@@ -780,10 +780,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fv:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/reflect/Method;
 
     .line 419
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     const-string v1, "addGeofences"
 
@@ -805,7 +805,7 @@
 
     const/4 v3, 0x2
 
-    sget-object v4, Lcom/glympse/android/hal/gms/location/LocationClient;->fH:Ljava/lang/Class;
+    sget-object v4, Lcom/glympse/android/hal/gms/location/LocationClient;->fO:Ljava/lang/Class;
 
     aput-object v4, v2, v3
 
@@ -813,10 +813,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fw:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fD:Ljava/lang/reflect/Method;
 
     .line 421
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     const-string v1, "removeGeofences"
 
@@ -832,7 +832,7 @@
 
     const/4 v3, 0x1
 
-    sget-object v4, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Class;
+    sget-object v4, Lcom/glympse/android/hal/gms/location/LocationClient;->fQ:Ljava/lang/Class;
 
     aput-object v4, v2, v3
 
@@ -840,10 +840,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fx:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fE:Ljava/lang/reflect/Method;
 
     .line 423
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     const-string v1, "removeGeofences"
 
@@ -859,7 +859,7 @@
 
     const/4 v3, 0x1
 
-    sget-object v4, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Class;
+    sget-object v4, Lcom/glympse/android/hal/gms/location/LocationClient;->fQ:Ljava/lang/Class;
 
     aput-object v4, v2, v3
 
@@ -867,10 +867,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fF:Ljava/lang/reflect/Method;
 
     .line 425
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     const-string v1, "hasError"
 
@@ -888,10 +888,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fz:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fG:Ljava/lang/reflect/Method;
 
     .line 426
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     const-string v1, "getGeofenceTransition"
 
@@ -909,10 +909,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fA:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fH:Ljava/lang/reflect/Method;
 
     .line 427
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     const-string v1, "getTriggeringGeofences"
 
@@ -930,7 +930,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fB:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fI:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -949,11 +949,11 @@
 
     .prologue
     .line 379
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fw:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fD:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
@@ -973,11 +973,11 @@
 
     .prologue
     .line 384
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fr:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->ft:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fA:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
@@ -1061,9 +1061,9 @@
     move-result-object v0
 
     .line 133
-    sget-object v2, Lcom/glympse/android/hal/gms/location/LocationClient;->fw:Ljava/lang/reflect/Method;
+    sget-object v2, Lcom/glympse/android/hal/gms/location/LocationClient;->fD:Ljava/lang/reflect/Method;
 
-    iget-object v3, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/Object;
+    iget-object v3, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Object;
 
     const/4 v4, 0x3
 
@@ -1094,9 +1094,9 @@
     .prologue
     .line 66
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->eV:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fc:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Object;
 
     const/4 v2, 0x0
 
@@ -1120,9 +1120,9 @@
     .prologue
     .line 77
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->eW:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fd:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Object;
 
     const/4 v2, 0x0
 
@@ -1148,9 +1148,9 @@
 
     .line 113
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fv:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/reflect/Method;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Object;
 
     const/4 v3, 0x0
 
@@ -1185,9 +1185,9 @@
     move-result-object v0
 
     .line 157
-    sget-object v1, Lcom/glympse/android/hal/gms/location/LocationClient;->fy:Ljava/lang/reflect/Method;
+    sget-object v1, Lcom/glympse/android/hal/gms/location/LocationClient;->fF:Ljava/lang/reflect/Method;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Object;
 
     const/4 v3, 0x2
 
@@ -1237,9 +1237,9 @@
     move-result-object v0
 
     .line 145
-    sget-object v1, Lcom/glympse/android/hal/gms/location/LocationClient;->fx:Ljava/lang/reflect/Method;
+    sget-object v1, Lcom/glympse/android/hal/gms/location/LocationClient;->fE:Ljava/lang/reflect/Method;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Object;
 
     const/4 v3, 0x2
 
@@ -1273,9 +1273,9 @@
     .prologue
     .line 101
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fu:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fB:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Object;
 
     const/4 v2, 0x1
 
@@ -1309,9 +1309,9 @@
     .prologue
     .line 88
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->ft:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationClient;->fA:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fC:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient;->fJ:Ljava/lang/Object;
 
     const/4 v2, 0x2
 
@@ -1319,7 +1319,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p1, Lcom/glympse/android/hal/gms/location/LocationRequest;->fV:Ljava/lang/Object;
+    iget-object v4, p1, Lcom/glympse/android/hal/gms/location/LocationRequest;->gc:Ljava/lang/Object;
 
     aput-object v4, v2, v3
 

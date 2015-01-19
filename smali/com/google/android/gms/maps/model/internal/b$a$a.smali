@@ -258,7 +258,7 @@
 .end method
 
 .method public getRadius()D
-    .locals 5
+    .locals 6
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -287,13 +287,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
     invoke-virtual {v1}, Landroid/os/Parcel;->recycle()V
 
-    return-wide v3
+    return-wide v4
 
     :catchall_0
     move-exception v0

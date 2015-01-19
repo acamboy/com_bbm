@@ -23,13 +23,13 @@
 
 .field public static final enum d:Lcom/google/zxing/g/a/n;
 
-.field private static final e:[Lcom/google/zxing/g/a/n;
+.field private static final f:[Lcom/google/zxing/g/a/n;
 
 .field private static final synthetic g:[Lcom/google/zxing/g/a/n;
 
 
 # instance fields
-.field private final f:I
+.field public final e:I
 
 
 # direct methods
@@ -123,7 +123,7 @@
 
     aput-object v1, v0, v5
 
-    sput-object v0, Lcom/google/zxing/g/a/n;->e:[Lcom/google/zxing/g/a/n;
+    sput-object v0, Lcom/google/zxing/g/a/n;->f:[Lcom/google/zxing/g/a/n;
 
     return-void
 .end method
@@ -141,7 +141,7 @@
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 41
-    iput p3, p0, Lcom/google/zxing/g/a/n;->f:I
+    iput p3, p0, Lcom/google/zxing/g/a/n;->e:I
 
     .line 42
     return-void
@@ -154,7 +154,7 @@
     .line 53
     if-ltz p0, :cond_0
 
-    sget-object v0, Lcom/google/zxing/g/a/n;->e:[Lcom/google/zxing/g/a/n;
+    sget-object v0, Lcom/google/zxing/g/a/n;->f:[Lcom/google/zxing/g/a/n;
 
     array-length v0, v0
 
@@ -170,7 +170,7 @@
 
     .line 56
     :cond_1
-    sget-object v0, Lcom/google/zxing/g/a/n;->e:[Lcom/google/zxing/g/a/n;
+    sget-object v0, Lcom/google/zxing/g/a/n;->f:[Lcom/google/zxing/g/a/n;
 
     aget-object v0, v0, p0
 
@@ -207,16 +207,4 @@
     check-cast v0, [Lcom/google/zxing/g/a/n;
 
     return-object v0
-.end method
-
-
-# virtual methods
-.method public final a()I
-    .locals 1
-
-    .prologue
-    .line 45
-    iget v0, p0, Lcom/google/zxing/g/a/n;->f:I
-
-    return v0
 .end method

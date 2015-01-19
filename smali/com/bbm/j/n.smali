@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 56
+    .line 55
     iput-object p1, p0, Lcom/bbm/j/n;->a:Lcom/bbm/j/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,15 +29,15 @@
     .locals 2
 
     .prologue
-    .line 59
+    .line 58
     iget-object v0, p0, Lcom/bbm/j/n;->a:Lcom/bbm/j/k;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lcom/bbm/j/k;->j:Z
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->f_()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e_()V
 
-    .line 60
+    .line 59
     return-void
 .end method

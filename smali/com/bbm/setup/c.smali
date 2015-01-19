@@ -3,7 +3,7 @@
 .source "ContactListAccessPromptActivity.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 70
+    .line 105
     iput-object p1, p0, Lcom/bbm/setup/c;->a:Lcom/bbm/setup/ContactListAccessPromptActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,20 +25,15 @@
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
+.method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 1
 
     .prologue
-    .line 73
+    .line 108
     iget-object v0, p0, Lcom/bbm/setup/c;->a:Lcom/bbm/setup/ContactListAccessPromptActivity;
 
-    invoke-static {v0}, Lcom/bbm/setup/ContactListAccessPromptActivity;->a(Lcom/bbm/setup/ContactListAccessPromptActivity;)Z
+    invoke-virtual {v0}, Lcom/bbm/setup/ContactListAccessPromptActivity;->b()V
 
-    .line 74
-    iget-object v0, p0, Lcom/bbm/setup/c;->a:Lcom/bbm/setup/ContactListAccessPromptActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/setup/ContactListAccessPromptActivity;->finish()V
-
-    .line 75
+    .line 109
     return-void
 .end method

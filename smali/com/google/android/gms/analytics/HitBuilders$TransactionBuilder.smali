@@ -69,7 +69,7 @@
 .end method
 
 .method public setRevenue(D)Lcom/google/android/gms/analytics/HitBuilders$TransactionBuilder;
-    .locals 2
+    .locals 3
 
     const-string v0, "&tr"
 
@@ -83,7 +83,7 @@
 .end method
 
 .method public setShipping(D)Lcom/google/android/gms/analytics/HitBuilders$TransactionBuilder;
-    .locals 2
+    .locals 3
 
     const-string v0, "&ts"
 
@@ -97,7 +97,7 @@
 .end method
 
 .method public setTax(D)Lcom/google/android/gms/analytics/HitBuilders$TransactionBuilder;
-    .locals 2
+    .locals 3
 
     const-string v0, "&tt"
 

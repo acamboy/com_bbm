@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private aV:Landroid/os/HandlerThread;
+.field private _handler:Lcom/glympse/android/core/GHandler;
 
-.field private f:Lcom/glympse/android/core/GHandler;
+.field private aU:Landroid/os/HandlerThread;
 
 
 # direct methods
@@ -32,7 +32,7 @@
     const/4 v1, 0x0
 
     .line 58
-    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aV:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aU:Landroid/os/HandlerThread;
 
     if-nez v0, :cond_0
 
@@ -43,7 +43,7 @@
     .line 64
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aV:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aU:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->quit()Z
     :try_end_0
@@ -51,10 +51,10 @@
 
     .line 69
     :goto_1
-    iput-object v1, p0, Lcom/glympse/android/hal/EventThread;->aV:Landroid/os/HandlerThread;
+    iput-object v1, p0, Lcom/glympse/android/hal/EventThread;->aU:Landroid/os/HandlerThread;
 
     .line 70
-    iput-object v1, p0, Lcom/glympse/android/hal/EventThread;->f:Lcom/glympse/android/core/GHandler;
+    iput-object v1, p0, Lcom/glympse/android/hal/EventThread;->_handler:Lcom/glympse/android/core/GHandler;
 
     goto :goto_0
 
@@ -69,7 +69,7 @@
 
     .prologue
     .line 75
-    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aV:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aU:Landroid/os/HandlerThread;
 
     if-nez v0, :cond_0
 
@@ -82,7 +82,7 @@
 
     .line 79
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->f:Lcom/glympse/android/core/GHandler;
+    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->_handler:Lcom/glympse/android/core/GHandler;
 
     if-nez v0, :cond_1
 
@@ -90,7 +90,7 @@
     :try_start_0
     new-instance v0, Landroid/os/Handler;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/EventThread;->aV:Landroid/os/HandlerThread;
+    iget-object v1, p0, Lcom/glympse/android/hal/EventThread;->aU:Landroid/os/HandlerThread;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
@@ -99,18 +99,18 @@
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
     .line 84
-    new-instance v1, Lcom/glympse/android/hal/ae;
+    new-instance v1, Lcom/glympse/android/hal/ad;
 
-    invoke-direct {v1, v0}, Lcom/glympse/android/hal/ae;-><init>(Landroid/os/Handler;)V
+    invoke-direct {v1, v0}, Lcom/glympse/android/hal/ad;-><init>(Landroid/os/Handler;)V
 
-    iput-object v1, p0, Lcom/glympse/android/hal/EventThread;->f:Lcom/glympse/android/core/GHandler;
+    iput-object v1, p0, Lcom/glympse/android/hal/EventThread;->_handler:Lcom/glympse/android/core/GHandler;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 90
     :cond_1
     :goto_1
-    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->f:Lcom/glympse/android/core/GHandler;
+    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->_handler:Lcom/glympse/android/core/GHandler;
 
     goto :goto_0
 
@@ -127,7 +127,7 @@
     const/4 v1, 0x0
 
     .line 41
-    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aV:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aU:Landroid/os/HandlerThread;
 
     if-nez v0, :cond_0
 
@@ -138,7 +138,7 @@
     .line 47
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aV:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aU:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->join()V
     :try_end_0
@@ -146,10 +146,10 @@
 
     .line 52
     :goto_1
-    iput-object v1, p0, Lcom/glympse/android/hal/EventThread;->aV:Landroid/os/HandlerThread;
+    iput-object v1, p0, Lcom/glympse/android/hal/EventThread;->aU:Landroid/os/HandlerThread;
 
     .line 53
-    iput-object v1, p0, Lcom/glympse/android/hal/EventThread;->f:Lcom/glympse/android/core/GHandler;
+    iput-object v1, p0, Lcom/glympse/android/hal/EventThread;->_handler:Lcom/glympse/android/core/GHandler;
 
     goto :goto_0
 
@@ -164,7 +164,7 @@
 
     .prologue
     .line 25
-    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aV:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aU:Landroid/os/HandlerThread;
 
     if-eqz v0, :cond_0
 
@@ -183,10 +183,10 @@
 
     invoke-direct {v0, v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/EventThread;->aV:Landroid/os/HandlerThread;
+    iput-object v0, p0, Lcom/glympse/android/hal/EventThread;->aU:Landroid/os/HandlerThread;
 
     .line 32
-    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aV:Landroid/os/HandlerThread;
+    iget-object v0, p0, Lcom/glympse/android/hal/EventThread;->aU:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
     :try_end_0

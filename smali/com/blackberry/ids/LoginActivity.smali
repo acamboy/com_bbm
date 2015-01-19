@@ -195,7 +195,7 @@
 
     const/4 v2, 0x1
 
-    .line 527
+    .line 534
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
@@ -216,11 +216,11 @@
 
     move v2, v7
 
-    .line 601
+    .line 608
     :goto_0
     return v2
 
-    .line 531
+    .line 538
     :cond_0
     const-string v0, "LoginActivity request_id=%s done"
 
@@ -232,7 +232,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 532
+    .line 539
     const-string v0, "LoginActivity - debug request_id=%s done: %s"
 
     new-array v1, v9, [Ljava/lang/Object;
@@ -245,45 +245,45 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 534
+    .line 541
     invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 535
+    .line 542
     const-string v0, "code"
 
     invoke-virtual {v1, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 536
+    .line 543
     if-eqz v0, :cond_3
 
-    .line 537
+    .line 544
     const-string v3, ":"
 
     invoke-virtual {v0, v3, v9}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 538
+    .line 545
     aget-object v4, v0, v7
 
-    .line 539
+    .line 546
     aget-object v5, v0, v2
 
-    .line 540
+    .line 547
     const-string v0, "challengecode"
 
     invoke-virtual {v1, v0}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 541
+    .line 548
     if-nez v6, :cond_1
 
-    .line 542
+    .line 549
     const-string v0, "LoginActivity - RequestId :%d, Response didn\'t have challenge code"
 
     new-array v1, v2, [Ljava/lang/Object;
@@ -294,7 +294,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 545
+    .line 552
     :cond_1
     iget-object v3, p0, Lcom/blackberry/ids/LoginActivity;->g:Ljava/lang/String;
 
@@ -302,7 +302,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v1
 
@@ -317,19 +317,19 @@
 
     invoke-static {v0, v8}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Lcom/blackberry/ids/BBIDStorage;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v0
 
     iget-object v3, p0, Lcom/blackberry/ids/LoginActivity;->k:Ljava/lang/String;
 
-    invoke-virtual {v0, v3}, Lcom/blackberry/ids/BBIDStorage;->g(Ljava/lang/String;)V
+    invoke-virtual {v0, v3}, Lcom/blackberry/ids/BBIDStorage;->b(Ljava/lang/String;)V
 
     monitor-exit v1
     :try_end_0
@@ -345,7 +345,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->f()Ljava/util/concurrent/ExecutorService;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->g()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
@@ -412,7 +412,7 @@
 
     goto :goto_1
 
-    .line 547
+    .line 554
     :cond_3
     const-string v0, "error"
 
@@ -420,15 +420,15 @@
 
     move-result-object v0
 
-    .line 548
+    .line 555
     if-eqz v0, :cond_4
 
-    .line 549
+    .line 556
     invoke-static {v0}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 551
+    .line 558
     :cond_4
     const-string v3, "error_description"
 
@@ -436,15 +436,15 @@
 
     move-result-object v1
 
-    .line 553
+    .line 560
     if-eqz v1, :cond_5
 
-    .line 554
+    .line 561
     invoke-static {v1}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 559
+    .line 566
     :cond_5
     :try_start_1
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -453,7 +453,7 @@
 
     move-result v3
 
-    .line 567
+    .line 574
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -481,10 +481,10 @@
 
     move-result-object v0
 
-    .line 572
+    .line 579
     sparse-switch v3, :sswitch_data_0
 
-    .line 594
+    .line 601
     const-string v1, "LoginActivity request_id=%s Request Failed with server error : %d"
 
     new-array v4, v9, [Ljava/lang/Object;
@@ -501,14 +501,14 @@
 
     invoke-static {v1, v4}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 596
+    .line 603
     const v1, 0xc354
 
     invoke-virtual {p0, v1, v0, v2}, Lcom/blackberry/ids/LoginActivity;->a(ILjava/lang/String;Z)V
 
     goto/16 :goto_0
 
-    .line 561
+    .line 568
     :catch_0
     move-exception v1
 
@@ -538,13 +538,13 @@
 
     goto/16 :goto_0
 
-    .line 567
+    .line 574
     :cond_6
     const-string v0, "no error description"
 
     goto :goto_2
 
-    .line 574
+    .line 581
     :sswitch_0
     const v1, 0xc3e8
 
@@ -552,7 +552,7 @@
 
     goto/16 :goto_0
 
-    .line 579
+    .line 586
     :sswitch_1
     const-string v1, "LoginActivity request_id=%s Request Failed with server error : %d"
 
@@ -570,14 +570,14 @@
 
     invoke-static {v1, v4}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 581
+    .line 588
     const v1, 0xc3ea
 
     invoke-virtual {p0, v1, v0, v2}, Lcom/blackberry/ids/LoginActivity;->a(ILjava/lang/String;Z)V
 
     goto/16 :goto_0
 
-    .line 588
+    .line 595
     :sswitch_2
     const-string v1, "LoginActivity request_id=%s Request Failed with server error : %d"
 
@@ -595,14 +595,14 @@
 
     invoke-static {v1, v4}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 590
+    .line 597
     const v1, 0xc3ec
 
     invoke-virtual {p0, v1, v0, v2}, Lcom/blackberry/ids/LoginActivity;->a(ILjava/lang/String;Z)V
 
     goto/16 :goto_0
 
-    .line 572
+    .line 579
     nop
 
     :sswitch_data_0
@@ -822,12 +822,12 @@
 
     const/4 v4, 0x0
 
-    .line 654
+    .line 661
     iget-boolean v0, p0, Lcom/blackberry/ids/LoginActivity;->h:Z
 
     if-eqz v0, :cond_6
 
-    .line 655
+    .line 662
     const-string v0, "LoginActivity with Intent failed request_id=%s result=%d info=%s"
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -846,10 +846,10 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 657
+    .line 664
     if-eqz p3, :cond_0
 
-    .line 660
+    .line 667
     const-string v0, "LoginActivity - fail request_id=%s - Releasing challenge semaphore"
 
     new-array v1, v5, [Ljava/lang/Object;
@@ -860,31 +860,31 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 661
+    .line 668
     invoke-virtual {p0}, Lcom/blackberry/ids/LoginActivity;->a()V
 
-    .line 662
+    .line 669
     sget-object v0, Lcom/blackberry/ids/IDS;->a:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 665
+    .line 672
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 666
+    .line 673
     const-string v1, "IDS_ACTIVTY_RESULT"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 667
+    .line 674
     const-string v1, "IDS_ACTIVTY_INFO"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 669
+    .line 676
     const v1, 0xc34f
 
     if-eq p1, v1, :cond_1
@@ -893,7 +893,7 @@
 
     if-ne p1, v1, :cond_5
 
-    .line 670
+    .line 677
     :cond_1
     const-string v1, "LoginActivity with Intent failed request_id=%s result=%d -- USING BACK PRESS CB INTENT"
 
@@ -911,10 +911,10 @@
 
     invoke-static {v1, v2}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 671
+    .line 678
     invoke-virtual {p0, v4, v0}, Lcom/blackberry/ids/LoginActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 677
+    .line 684
     :goto_0
     const v0, 0xc3ea
 
@@ -924,35 +924,35 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 678
+    .line 685
     :cond_2
     sget-object v0, Lcom/blackberry/ids/UserAuthState$AuthState;->NOT_AUTHENTICATED:Lcom/blackberry/ids/UserAuthState$AuthState;
 
     invoke-static {v0}, Lcom/blackberry/ids/UserAuthState;->b(Lcom/blackberry/ids/UserAuthState$AuthState;)V
 
-    .line 680
+    .line 687
     :cond_3
     const v0, 0xc3ec
 
     if-ne p1, v0, :cond_4
 
-    .line 681
+    .line 688
     sget-object v0, Lcom/blackberry/ids/UserAuthState$AuthState;->NO_LONGER_VALID:Lcom/blackberry/ids/UserAuthState$AuthState;
 
     invoke-static {v0}, Lcom/blackberry/ids/UserAuthState;->b(Lcom/blackberry/ids/UserAuthState$AuthState;)V
 
-    .line 689
+    .line 696
     :cond_4
     :goto_1
     iput-boolean v5, p0, Lcom/blackberry/ids/LoginActivity;->i:Z
 
-    .line 690
+    .line 697
     invoke-virtual {p0}, Lcom/blackberry/ids/LoginActivity;->finish()V
 
-    .line 691
+    .line 698
     return-void
 
-    .line 673
+    .line 680
     :cond_5
     const/4 v1, -0x2
 
@@ -960,7 +960,7 @@
 
     goto :goto_0
 
-    .line 684
+    .line 691
     :cond_6
     const-string v0, "LoginActivity failed request_id=%s result=%d info=%s"
 
@@ -980,7 +980,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 686
+    .line 693
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity;->f:Lcom/blackberry/ids/RequestId;
 
     invoke-static {p0, v0, p1, p2}, Lcom/blackberry/ids/ChallengeListener;->challengeFailed(Landroid/content/Context;Lcom/blackberry/ids/RequestId;ILjava/lang/String;)V
@@ -992,12 +992,12 @@
     .locals 2
 
     .prologue
-    .line 729
+    .line 736
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity;->l:Landroid/webkit/WebView;
 
     if-eqz v0, :cond_0
 
-    .line 730
+    .line 737
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity;->l:Landroid/webkit/WebView;
 
     invoke-static {p2}, Lcom/blackberry/ids/StringUtils;->a(Ljava/lang/String;)[B
@@ -1006,7 +1006,7 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/webkit/WebView;->postUrl(Ljava/lang/String;[B)V
 
-    .line 732
+    .line 739
     :cond_0
     return-void
 .end method
@@ -1021,7 +1021,7 @@
 
     const/4 v3, 0x1
 
-    .line 504
+    .line 511
     const-string v0, "LoginActivity request_id=%s onBackPressed -- Exiting webview"
 
     new-array v1, v3, [Ljava/lang/Object;
@@ -1032,32 +1032,32 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 506
+    .line 513
     iput-object v5, p0, Lcom/blackberry/ids/LoginActivity;->l:Landroid/webkit/WebView;
 
-    .line 507
+    .line 514
     iget-boolean v0, p0, Lcom/blackberry/ids/WebActivity;->d:Z
 
     if-eqz v0, :cond_1
 
-    .line 508
+    .line 515
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity;->n:Lcom/blackberry/ids/WebActivity$PingAsync;
 
     if-eqz v0, :cond_0
 
-    .line 509
+    .line 516
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity;->n:Lcom/blackberry/ids/WebActivity$PingAsync;
 
     invoke-virtual {v0, v3}, Lcom/blackberry/ids/WebActivity$PingAsync;->cancel(Z)Z
 
-    .line 511
+    .line 518
     :cond_0
     iput-object v5, p0, Lcom/blackberry/ids/LoginActivity;->n:Lcom/blackberry/ids/WebActivity$PingAsync;
 
-    .line 512
+    .line 519
     iput-boolean v4, p0, Lcom/blackberry/ids/WebActivity;->d:Z
 
-    .line 515
+    .line 522
     :cond_1
     const-string v0, "User pressed back."
 
@@ -1065,7 +1065,7 @@
 
     invoke-virtual {p0, v1, v0, v3}, Lcom/blackberry/ids/LoginActivity;->a(ILjava/lang/String;Z)V
 
-    .line 517
+    .line 524
     return-void
 .end method
 
@@ -1159,31 +1159,57 @@
 
     iput-boolean v1, p0, Lcom/blackberry/ids/LoginActivity;->h:Z
 
-    .line 174
+    .line 172
     :cond_0
+    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 173
+    const-string v1, "ERROR - LoginActivity called before IDS was initialized!"
+
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v1, v2}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 174
+    const/4 v1, -0x1
+
+    const-string v2, "Not initialized"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {p0, v1, v2, v3}, Lcom/blackberry/ids/LoginActivity;->a(ILjava/lang/String;Z)V
+
+    .line 181
+    :cond_1
     iget-boolean v1, p0, Lcom/blackberry/ids/LoginActivity;->h:Z
 
     const/4 v2, 0x1
 
-    if-ne v1, v2, :cond_3
+    if-ne v1, v2, :cond_4
 
-    .line 176
+    .line 183
     new-instance v0, Lcom/blackberry/ids/RequestId;
 
     invoke-direct {v0}, Lcom/blackberry/ids/RequestId;-><init>()V
 
     iput-object v0, p0, Lcom/blackberry/ids/LoginActivity;->f:Lcom/blackberry/ids/RequestId;
 
-    .line 177
+    .line 184
     sget-object v0, Lcom/blackberry/ids/IDS;->a:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->tryAcquire()Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
-    .line 178
+    .line 185
     const-string v0, "LoginActivity request_id=%s onCreate With next Intent : Cannot continue Challenge is already pending"
 
     const/4 v1, 0x1
@@ -1198,7 +1224,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 180
+    .line 187
     const v0, 0xc3f0
 
     const-string v1, "A challenge activity is already pending."
@@ -1207,12 +1233,12 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/blackberry/ids/LoginActivity;->a(ILjava/lang/String;Z)V
 
-    .line 474
+    .line 481
     :goto_0
     return-void
 
-    .line 183
-    :cond_1
+    .line 190
+    :cond_2
     const-string v0, "LoginActivity - onCreate request_id=%s - Acquired challenge semaphore"
 
     const/4 v1, 0x1
@@ -1227,15 +1253,15 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 185
+    .line 192
     invoke-virtual {p0}, Lcom/blackberry/ids/LoginActivity;->b()I
 
     move-result v0
 
-    .line 186
-    if-eqz v0, :cond_2
+    .line 193
+    if-eqz v0, :cond_3
 
-    .line 187
+    .line 194
     const-string v1, "Error while acquiring challenge queue lock"
 
     const/4 v2, 0x1
@@ -1244,72 +1270,70 @@
 
     goto :goto_0
 
-    .line 191
-    :cond_2
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    .line 198
+    :cond_3
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 192
+    .line 199
     :try_start_0
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->b()Ljava/lang/String;
+    iget-object v5, v0, Lcom/blackberry/ids/BBIDStorage;->b:Ljava/lang/String;
 
-    move-result-object v5
-
-    .line 193
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    .line 200
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->c()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->a()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 194
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    .line 201
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->d()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 195
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    .line 202
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->h()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->e()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 196
+    .line 203
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 197
-    invoke-static {}, Lcom/blackberry/ids/IDS;->d()Landroid/net/Uri;
+    .line 204
+    invoke-static {}, Lcom/blackberry/ids/IDS;->e()Landroid/net/Uri;
 
     move-result-object v6
 
-    .line 198
-    invoke-static {}, Lcom/blackberry/ids/IDS;->c()Ljava/lang/String;
+    .line 205
+    invoke-static {}, Lcom/blackberry/ids/IDS;->d()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 199
-    invoke-static {}, Lcom/blackberry/ids/IDS;->e()Ljava/lang/String;
+    .line 206
+    invoke-static {}, Lcom/blackberry/ids/IDS;->f()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 200
+    .line 207
     const-string v8, "LoginActivity request_id=%s onCreate With next Intent"
 
     const/4 v9, 0x1
@@ -1324,37 +1348,37 @@
 
     invoke-static {v8, v9}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 226
+    .line 233
     :goto_1
     iget-object v8, p0, Lcom/blackberry/ids/LoginActivity;->f:Lcom/blackberry/ids/RequestId;
 
     sput-object v8, Lcom/blackberry/ids/WebActivity;->c:Lcom/blackberry/ids/RequestId;
 
-    .line 231
+    .line 238
     new-instance v8, Landroid/webkit/WebView;
 
     invoke-direct {v8, p0}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
-    .line 236
+    .line 243
     new-instance v9, Lcom/blackberry/ids/WebActivity$CookieTracker;
 
     invoke-direct {v9}, Lcom/blackberry/ids/WebActivity$CookieTracker;-><init>()V
 
     iput-object v9, p0, Lcom/blackberry/ids/LoginActivity;->e:Lcom/blackberry/ids/WebActivity$CookieTracker;
 
-    .line 237
+    .line 244
     iget-object v9, p0, Lcom/blackberry/ids/LoginActivity;->e:Lcom/blackberry/ids/WebActivity$CookieTracker;
 
     invoke-virtual {v9}, Lcom/blackberry/ids/WebActivity$CookieTracker;->setAcceptCookies()V
 
-    .line 245
+    .line 252
     iget-object v9, p0, Lcom/blackberry/ids/LoginActivity;->e:Lcom/blackberry/ids/WebActivity$CookieTracker;
 
     iget-object v10, p0, Lcom/blackberry/ids/LoginActivity;->f:Lcom/blackberry/ids/RequestId;
 
     invoke-virtual {v9, v10}, Lcom/blackberry/ids/WebActivity$CookieTracker;->clearCookies(Lcom/blackberry/ids/RequestId;)V
 
-    .line 249
+    .line 256
     invoke-virtual {v8}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v9
@@ -1363,24 +1387,24 @@
 
     invoke-virtual {v9, v10}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    .line 250
+    .line 257
     new-instance v9, Lcom/blackberry/ids/LoginActivity$JSInterface;
 
     invoke-direct {v9, p0}, Lcom/blackberry/ids/LoginActivity$JSInterface;-><init>(Lcom/blackberry/ids/LoginActivity;)V
 
-    .line 251
+    .line 258
     const-string v10, "HTMLOUT"
 
     invoke-virtual {v8, v9, v10}, Landroid/webkit/WebView;->addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 265
+    .line 272
     new-instance v9, Lcom/blackberry/ids/LoginActivity$2;
 
     invoke-direct {v9, p0, v8, v2}, Lcom/blackberry/ids/LoginActivity$2;-><init>(Lcom/blackberry/ids/LoginActivity;Landroid/webkit/WebView;Ljava/lang/String;)V
 
     invoke-virtual {v8, v9}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 342
+    .line 349
     invoke-virtual {v6}, Landroid/net/Uri;->buildUpon()Landroid/net/Uri$Builder;
 
     move-result-object v6
@@ -1399,7 +1423,7 @@
 
     move-result-object v6
 
-    .line 347
+    .line 354
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1424,10 +1448,10 @@
 
     move-result-object v4
 
-    .line 348
-    if-eqz v3, :cond_6
+    .line 355
+    if-eqz v3, :cond_7
 
-    .line 349
+    .line 356
     const-string v0, "LoginActivity - RequestId : %d, using refresh token for user identification"
 
     const/4 v9, 0x1
@@ -1450,7 +1474,7 @@
 
     invoke-static {v0, v9}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 351
+    .line 358
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1473,7 +1497,7 @@
 
     move-result-object v0
 
-    .line 361
+    .line 368
     :goto_2
     new-instance v3, Lcom/blackberry/ids/PostBody;
 
@@ -1509,7 +1533,7 @@
 
     move-result-object v0
 
-    .line 364
+    .line 371
     const-string v2, "body = %s"
 
     const/4 v3, 0x1
@@ -1522,7 +1546,7 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 366
+    .line 373
     const-string v2, "postUrl %s"
 
     const/4 v3, 0x1
@@ -1535,22 +1559,22 @@
 
     invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 368
+    .line 375
     invoke-virtual {v8}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Landroid/webkit/WebSettings;->setUserAgentString(Ljava/lang/String;)V
 
-    .line 370
+    .line 377
     iget-boolean v1, p0, Lcom/blackberry/ids/LoginActivity;->h:Z
 
-    if-nez v1, :cond_8
+    if-nez v1, :cond_9
 
-    .line 371
+    .line 378
     invoke-virtual {p0, v8}, Lcom/blackberry/ids/LoginActivity;->setContentView(Landroid/view/View;)V
 
-    .line 372
+    .line 379
     invoke-static {v0}, Lcom/blackberry/ids/StringUtils;->a(Ljava/lang/String;)[B
 
     move-result-object v0
@@ -1559,7 +1583,7 @@
 
     goto/16 :goto_0
 
-    .line 196
+    .line 203
     :catchall_0
     move-exception v0
 
@@ -1567,9 +1591,9 @@
 
     throw v0
 
-    .line 203
-    :cond_3
-    if-eqz v0, :cond_4
+    .line 210
+    :cond_4
+    if-eqz v0, :cond_5
 
     const-string v1, "IDS_INTERNAL"
 
@@ -1577,10 +1601,10 @@
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_6
 
-    .line 206
-    :cond_4
+    .line 213
+    :cond_5
     const-string v0, "LoginActivity - ERROR - next intent not present and this activity is not ivoked internally - ignore silently"
 
     const/4 v1, 0x0
@@ -1589,18 +1613,18 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 207
+    .line 214
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/blackberry/ids/LoginActivity;->i:Z
 
-    .line 208
+    .line 215
     invoke-virtual {p0}, Lcom/blackberry/ids/LoginActivity;->finish()V
 
     goto/16 :goto_0
 
-    .line 211
-    :cond_5
+    .line 218
+    :cond_6
     new-instance v0, Lcom/blackberry/ids/RequestId;
 
     const-string v1, "com.blackberry.ids.REQUEST_ID"
@@ -1615,7 +1639,7 @@
 
     iput-object v0, p0, Lcom/blackberry/ids/LoginActivity;->f:Lcom/blackberry/ids/RequestId;
 
-    .line 212
+    .line 219
     const-string v0, "com.blackberry.ids.BASE_URI"
 
     invoke-virtual {v7, v0}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -1624,49 +1648,49 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    .line 213
+    .line 220
     const-string v1, "com.blackberry.ids.CLIENT_ID"
 
     invoke-virtual {v7, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 214
+    .line 221
     const-string v1, "com.blackberry.ids.APP_GUID"
 
     invoke-virtual {v7, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 215
+    .line 222
     const-string v1, "com.blackberry.ids.NEXT_REQTOKEN"
 
     invoke-virtual {v7, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 216
+    .line 223
     const-string v1, "com.blackberry.ids.REDIRECT_URI"
 
     invoke-virtual {v7, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 217
+    .line 224
     const-string v1, "com.blackberry.ids.USER_AGENT"
 
     invoke-virtual {v7, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 218
+    .line 225
     const-string v1, "com.blackberry.ids.EXTRA_CHALLENGE_CODE"
 
     invoke-virtual {v7, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 219
+    .line 226
     const-string v8, "LoginActivity request_id=%s onCreate"
 
     const/4 v9, 0x1
@@ -1699,11 +1723,11 @@
 
     goto/16 :goto_1
 
-    .line 352
-    :cond_6
-    if-eqz v0, :cond_7
+    .line 359
+    :cond_7
+    if-eqz v0, :cond_8
 
-    .line 353
+    .line 360
     const-string v3, "LoginActivity - RequestId : %d, using challenge code for user identification"
 
     const/4 v9, 0x1
@@ -1726,7 +1750,7 @@
 
     invoke-static {v3, v9}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 355
+    .line 362
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1751,8 +1775,8 @@
 
     goto/16 :goto_2
 
-    .line 357
-    :cond_7
+    .line 364
+    :cond_8
     const-string v0, "LoginActivity - RequestId : %d, No user identification found, fresh login ?"
 
     const/4 v3, 0x1
@@ -1775,7 +1799,7 @@
 
     invoke-static {v0, v3}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 359
+    .line 366
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/blackberry/ids/LoginActivity;->o:Z
@@ -1784,25 +1808,25 @@
 
     goto/16 :goto_2
 
-    .line 376
-    :cond_8
+    .line 383
+    :cond_9
     iput-object v8, p0, Lcom/blackberry/ids/LoginActivity;->l:Landroid/webkit/WebView;
 
-    .line 378
+    .line 385
     new-instance v1, Landroid/widget/RelativeLayout;
 
     invoke-direct {v1, p0}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lcom/blackberry/ids/LoginActivity;->a:Landroid/widget/RelativeLayout;
 
-    .line 379
+    .line 386
     iget-object v1, p0, Lcom/blackberry/ids/LoginActivity;->a:Landroid/widget/RelativeLayout;
 
     const/16 v2, 0x63
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->setId(I)V
 
-    .line 380
+    .line 387
     iget-object v1, p0, Lcom/blackberry/ids/LoginActivity;->a:Landroid/widget/RelativeLayout;
 
     new-instance v2, Landroid/view/ViewGroup$LayoutParams;
@@ -1815,7 +1839,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/RelativeLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 384
+    .line 391
     const-string v1, "IDS_ACTIVITY_BBM_BG"
 
     const/4 v2, 0x0
@@ -1824,21 +1848,21 @@
 
     move-result v1
 
-    .line 385
-    if-eqz v1, :cond_9
+    .line 392
+    if-eqz v1, :cond_a
 
-    .line 386
+    .line 393
     iget-object v2, p0, Lcom/blackberry/ids/LoginActivity;->a:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v2, v1}, Landroid/widget/RelativeLayout;->setBackgroundColor(I)V
 
-    .line 387
+    .line 394
     iget-object v2, p0, Lcom/blackberry/ids/LoginActivity;->l:Landroid/webkit/WebView;
 
     invoke-virtual {v2, v1}, Landroid/webkit/WebView;->setBackgroundColor(I)V
 
-    .line 390
-    :cond_9
+    .line 397
+    :cond_a
     const-string v1, "IDS_ACTIVITY_BBM_IMG"
 
     const/4 v2, 0x0
@@ -1847,24 +1871,24 @@
 
     move-result v1
 
-    .line 392
+    .line 399
     new-instance v2, Landroid/widget/ImageView;
 
     invoke-direct {v2, p0}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/blackberry/ids/LoginActivity;->b:Landroid/widget/ImageView;
 
-    .line 393
+    .line 400
     iget-object v2, p0, Lcom/blackberry/ids/LoginActivity;->b:Landroid/widget/ImageView;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setId(I)V
 
-    .line 394
-    if-eqz v1, :cond_a
+    .line 401
+    if-eqz v1, :cond_b
 
-    .line 395
+    .line 402
     invoke-virtual {p0}, Lcom/blackberry/ids/LoginActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -1873,12 +1897,12 @@
 
     move-result-object v2
 
-    .line 396
+    .line 403
     iget-object v3, p0, Lcom/blackberry/ids/LoginActivity;->b:Landroid/widget/ImageView;
 
     invoke-virtual {v3, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 397
+    .line 404
     new-instance v2, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/4 v3, -0x2
@@ -1887,22 +1911,22 @@
 
     invoke-direct {v2, v3, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 400
+    .line 407
     const/16 v3, 0xd
 
     const/4 v4, -0x1
 
     invoke-virtual {v2, v3, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 402
+    .line 409
     iget-object v3, p0, Lcom/blackberry/ids/LoginActivity;->a:Landroid/widget/RelativeLayout;
 
     iget-object v4, p0, Lcom/blackberry/ids/LoginActivity;->b:Landroid/widget/ImageView;
 
     invoke-virtual {v3, v4, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 406
-    :cond_a
+    .line 413
+    :cond_b
     new-instance v2, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/4 v3, -0x1
@@ -1911,31 +1935,31 @@
 
     invoke-direct {v2, v3, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 409
+    .line 416
     const/16 v3, 0x8
 
     invoke-virtual {v8, v3}, Landroid/webkit/WebView;->setVisibility(I)V
 
-    .line 410
+    .line 417
     iget-object v3, p0, Lcom/blackberry/ids/LoginActivity;->a:Landroid/widget/RelativeLayout;
 
     invoke-virtual {v3, v8, v2}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 413
+    .line 420
     new-instance v2, Landroid/widget/ProgressBar;
 
     invoke-direct {v2, p0}, Landroid/widget/ProgressBar;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lcom/blackberry/ids/LoginActivity;->m:Landroid/widget/ProgressBar;
 
-    .line 414
+    .line 421
     iget-object v2, p0, Lcom/blackberry/ids/LoginActivity;->m:Landroid/widget/ProgressBar;
 
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 417
+    .line 424
     const-string v2, "IDS_ACTIVITY_BBM_SPINNER"
 
     const/4 v3, 0x0
@@ -1944,10 +1968,10 @@
 
     move-result v2
 
-    .line 419
-    if-eqz v2, :cond_b
+    .line 426
+    if-eqz v2, :cond_c
 
-    .line 420
+    .line 427
     iget-object v3, p0, Lcom/blackberry/ids/LoginActivity;->m:Landroid/widget/ProgressBar;
 
     invoke-virtual {p0}, Lcom/blackberry/ids/LoginActivity;->getResources()Landroid/content/res/Resources;
@@ -1960,8 +1984,8 @@
 
     invoke-virtual {v3, v2}, Landroid/widget/ProgressBar;->setIndeterminateDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 424
-    :cond_b
+    .line 431
+    :cond_c
     const-string v2, "IDS_ACTIVITY_BBM_SPINNER_DELAY"
 
     const/4 v3, -0x1
@@ -1970,10 +1994,10 @@
 
     move-result v2
 
-    .line 428
-    if-eqz v1, :cond_c
+    .line 435
+    if-eqz v1, :cond_d
 
-    .line 429
+    .line 436
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/4 v3, -0x2
@@ -1982,26 +2006,26 @@
 
     invoke-direct {v1, v3, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 432
+    .line 439
     const/16 v3, 0xe
 
     const/4 v4, -0x1
 
     invoke-virtual {v1, v3, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 434
+    .line 441
     const/4 v3, 0x3
 
     const/4 v4, 0x1
 
     invoke-virtual {v1, v3, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 435
+    .line 442
     invoke-virtual {p0}, Lcom/blackberry/ids/LoginActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    .line 436
+    .line 443
     const/4 v4, 0x1
 
     const/high16 v5, 0x41200000
@@ -2016,30 +2040,30 @@
 
     float-to-int v3, v3
 
-    .line 438
+    .line 445
     iput v3, v1, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 439
+    .line 446
     iget-object v3, p0, Lcom/blackberry/ids/LoginActivity;->a:Landroid/widget/RelativeLayout;
 
     iget-object v4, p0, Lcom/blackberry/ids/LoginActivity;->m:Landroid/widget/ProgressBar;
 
     invoke-virtual {v3, v4, v1}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 449
+    .line 456
     :goto_3
     iget-object v1, p0, Lcom/blackberry/ids/LoginActivity;->a:Landroid/widget/RelativeLayout;
 
     invoke-virtual {p0, v1}, Lcom/blackberry/ids/LoginActivity;->setContentView(Landroid/view/View;)V
 
-    .line 452
+    .line 459
     new-instance v1, Lcom/blackberry/ids/WebActivity$PingAsync;
 
     invoke-direct {v1, p0}, Lcom/blackberry/ids/WebActivity$PingAsync;-><init>(Lcom/blackberry/ids/WebActivity;)V
 
     iput-object v1, p0, Lcom/blackberry/ids/LoginActivity;->n:Lcom/blackberry/ids/WebActivity$PingAsync;
 
-    .line 453
+    .line 460
     iget-object v1, p0, Lcom/blackberry/ids/LoginActivity;->n:Lcom/blackberry/ids/WebActivity$PingAsync;
 
     const/4 v3, 0x2
@@ -2056,10 +2080,10 @@
 
     invoke-virtual {v1, v3}, Lcom/blackberry/ids/WebActivity$PingAsync;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 455
-    if-gtz v2, :cond_d
+    .line 462
+    if-gtz v2, :cond_e
 
-    .line 456
+    .line 463
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity;->m:Landroid/widget/ProgressBar;
 
     const/4 v1, 0x0
@@ -2068,8 +2092,8 @@
 
     goto/16 :goto_0
 
-    .line 441
-    :cond_c
+    .line 448
+    :cond_d
     new-instance v1, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/4 v3, -0x2
@@ -2078,14 +2102,14 @@
 
     invoke-direct {v1, v3, v4}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 444
+    .line 451
     const/16 v3, 0xd
 
     const/4 v4, -0x1
 
     invoke-virtual {v1, v3, v4}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 446
+    .line 453
     iget-object v3, p0, Lcom/blackberry/ids/LoginActivity;->a:Landroid/widget/RelativeLayout;
 
     iget-object v4, p0, Lcom/blackberry/ids/LoginActivity;->m:Landroid/widget/ProgressBar;
@@ -2094,13 +2118,13 @@
 
     goto :goto_3
 
-    .line 459
-    :cond_d
+    .line 466
+    :cond_e
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    .line 460
+    .line 467
     new-instance v1, Lcom/blackberry/ids/LoginActivity$3;
 
     invoke-direct {v1, p0}, Lcom/blackberry/ids/LoginActivity$3;-><init>(Lcom/blackberry/ids/LoginActivity;)V
@@ -2120,17 +2144,17 @@
 
     const/4 v3, 0x1
 
-    .line 478
+    .line 485
     invoke-super {p0}, Lcom/blackberry/ids/WebActivity;->onDestroy()V
 
-    .line 483
+    .line 490
     invoke-virtual {p0}, Lcom/blackberry/ids/LoginActivity;->isFinishing()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 484
+    .line 491
     const-string v0, "LoginActivity request_id=%s onDestroy - Final"
 
     new-array v1, v3, [Ljava/lang/Object;
@@ -2141,29 +2165,29 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 485
+    .line 492
     iget-boolean v0, p0, Lcom/blackberry/ids/LoginActivity;->i:Z
 
     if-nez v0, :cond_0
 
-    .line 486
+    .line 493
     const-string v0, "LoginActivity failed mysteriously"
 
     const v1, 0xc34f
 
     invoke-virtual {p0, v1, v0, v3}, Lcom/blackberry/ids/LoginActivity;->a(ILjava/lang/String;Z)V
 
-    .line 498
+    .line 505
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity;->j:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Lcom/blackberry/ids/LoginActivity;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 499
+    .line 506
     return-void
 
-    .line 490
+    .line 497
     :cond_1
     const-string v0, "LoginActivity request_id=%s onDestroy - Might be a restart"
 
@@ -2175,12 +2199,12 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 492
+    .line 499
     iget-boolean v0, p0, Lcom/blackberry/ids/LoginActivity;->h:Z
 
     if-eqz v0, :cond_0
 
-    .line 493
+    .line 500
     const-string v0, "LoginActivity request_id=%s onDestroy - Releasing challenge semaphore during restart"
 
     new-array v1, v3, [Ljava/lang/Object;
@@ -2191,7 +2215,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 495
+    .line 502
     sget-object v0, Lcom/blackberry/ids/IDS;->a:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V

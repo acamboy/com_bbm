@@ -3,7 +3,7 @@
 .source "CallEventHolder.java"
 
 # interfaces
-.implements Lcom/bbm/ui/e/al;
+.implements Lcom/bbm/ui/e/bd;
 
 
 # instance fields
@@ -25,19 +25,19 @@
     .locals 0
 
     .prologue
-    .line 48
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
+    .line 35
     iput-object p2, p0, Lcom/bbm/ui/e/c;->d:Landroid/view/View$OnTouchListener;
 
-    .line 50
+    .line 36
     iput-object p1, p0, Lcom/bbm/ui/e/c;->e:Landroid/content/Context;
 
-    .line 51
+    .line 37
     iput-object p3, p0, Lcom/bbm/ui/e/c;->f:Lcom/bbm/d/a;
 
-    .line 52
+    .line 38
     return-void
 .end method
 
@@ -47,8 +47,8 @@
     .locals 3
 
     .prologue
-    .line 56
-    const v0, 0x7f0300cc
+    .line 42
+    const v0, 0x7f0300d8
 
     const/4 v1, 0x0
 
@@ -56,8 +56,8 @@
 
     move-result-object v1
 
-    .line 57
-    const v0, 0x7f0a0443
+    .line 43
+    const v0, 0x7f0b0492
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -67,8 +67,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/e/c;->a:Landroid/widget/TextView;
 
-    .line 58
-    const v0, 0x7f0a0442
+    .line 44
+    const v0, 0x7f0b0494
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -78,8 +78,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/e/c;->b:Landroid/widget/TextView;
 
-    .line 59
-    const v0, 0x7f0a0441
+    .line 45
+    const v0, 0x7f0b04c9
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -89,14 +89,14 @@
 
     iput-object v0, p0, Lcom/bbm/ui/e/c;->c:Landroid/widget/ImageView;
 
-    .line 60
+    .line 46
     iget-object v0, p0, Lcom/bbm/ui/e/c;->b:Landroid/widget/TextView;
 
     iget-object v2, p0, Lcom/bbm/ui/e/c;->d:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 62
+    .line 48
     return-object v1
 .end method
 
@@ -104,9 +104,9 @@
     .locals 6
 
     .prologue
-    const v0, 0x7f02009a
+    const v0, 0x7f0200a3
 
-    .line 73
+    .line 59
     iget-object v1, p0, Lcom/bbm/ui/e/c;->a:Landroid/widget/TextView;
 
     const-string v2, ""
@@ -123,51 +123,43 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 75
-    iget-object v1, p1, Lcom/bbm/ui/e/j;->a:Lcom/bbm/d/dz;
+    .line 61
+    iget-object v1, p1, Lcom/bbm/ui/e/j;->a:Lcom/bbm/d/fi;
 
-    .line 77
+    .line 63
     iget-object v2, p0, Lcom/bbm/ui/e/c;->c:Landroid/widget/ImageView;
 
     iget-object v3, p0, Lcom/bbm/ui/e/c;->f:Lcom/bbm/d/a;
 
-    iget-object v4, v1, Lcom/bbm/d/dz;->b:Ljava/lang/String;
+    iget-object v4, v1, Lcom/bbm/d/fi;->b:Ljava/lang/String;
 
-    invoke-virtual {v3, v4}, Lcom/bbm/d/a;->R(Ljava/lang/String;)Lcom/bbm/d/db;
+    invoke-virtual {v3, v4}, Lcom/bbm/d/a;->X(Ljava/lang/String;)Lcom/bbm/d/dz;
 
     move-result-object v3
 
-    iget-object v4, v3, Lcom/bbm/d/db;->c:Ljava/lang/String;
+    iget-object v4, v3, Lcom/bbm/d/dz;->c:Lcom/bbm/d/eb;
 
-    const-string v5, "Ended"
+    sget-object v5, Lcom/bbm/d/eb;->a:Lcom/bbm/d/eb;
 
-    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-eq v4, v5, :cond_0
 
-    move-result v5
+    sget-object v5, Lcom/bbm/d/eb;->b:Lcom/bbm/d/eb;
 
-    if-nez v5, :cond_0
-
-    const-string v5, "Disconnected"
-
-    invoke-virtual {v5, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_4
+    if-ne v4, v5, :cond_4
 
     :cond_0
-    iget-boolean v0, v3, Lcom/bbm/d/db;->e:Z
+    iget-boolean v0, v3, Lcom/bbm/d/dz;->e:Z
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f02009b
+    const v0, 0x7f0200a4
 
     :cond_1
     :goto_0
     invoke-virtual {v2, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 80
-    iget-wide v2, v1, Lcom/bbm/d/dz;->q:J
+    .line 66
+    iget-wide v2, v1, Lcom/bbm/d/fi;->s:J
 
     const-wide/16 v4, 0x0
 
@@ -175,20 +167,20 @@
 
     if-lez v0, :cond_2
 
-    .line 81
+    .line 67
     iget-object v0, p0, Lcom/bbm/ui/e/c;->a:Landroid/widget/TextView;
 
     iget-object v2, p0, Lcom/bbm/ui/e/c;->e:Landroid/content/Context;
 
-    iget-wide v3, v1, Lcom/bbm/d/dz;->q:J
+    iget-wide v4, v1, Lcom/bbm/d/fi;->s:J
 
-    invoke-static {v2, v3, v4}, Lcom/bbm/util/az;->b(Landroid/content/Context;J)Ljava/lang/String;
+    invoke-static {v2, v4, v5}, Lcom/bbm/util/bd;->b(Landroid/content/Context;J)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 84
+    .line 70
     :cond_2
     iget-object v0, p0, Lcom/bbm/ui/e/c;->b:Landroid/widget/TextView;
 
@@ -196,31 +188,27 @@
 
     iget-object v3, p0, Lcom/bbm/ui/e/c;->f:Lcom/bbm/d/a;
 
-    invoke-static {v2, v3, v1}, Lcom/bbm/d/b/a;->a(Landroid/content/Context;Lcom/bbm/d/a;Lcom/bbm/d/dz;)Landroid/text/Spanned;
+    invoke-static {v2, v3, v1}, Lcom/bbm/d/b/a;->b(Landroid/content/Context;Lcom/bbm/d/a;Lcom/bbm/d/fi;)Landroid/text/Spanned;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 85
+    .line 71
     return-void
 
-    .line 77
+    .line 63
     :cond_3
-    const v0, 0x7f02009d
+    const v0, 0x7f0200a6
 
     goto :goto_0
 
     :cond_4
-    const-string v3, "Missed"
+    sget-object v3, Lcom/bbm/d/eb;->c:Lcom/bbm/d/eb;
 
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    if-ne v4, v3, :cond_1
 
-    move-result v3
-
-    if-eqz v3, :cond_1
-
-    const v0, 0x7f02009c
+    const v0, 0x7f0200a5
 
     goto :goto_0
 .end method

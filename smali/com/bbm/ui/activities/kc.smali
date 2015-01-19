@@ -1,203 +1,275 @@
 .class final Lcom/bbm/ui/activities/kc;
-.super Lcom/bbm/j/k;
-.source "GroupChatListActivity.java"
+.super Lcom/bbm/ui/activities/ke;
+.source "FilePickerActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupChatListActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/FilePickerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupChatListActivity;)V
-    .locals 1
+.method public constructor <init>(Lcom/bbm/ui/activities/FilePickerActivity;Landroid/content/Context;)V
+    .locals 0
 
     .prologue
-    .line 246
-    iput-object p1, p0, Lcom/bbm/ui/activities/kc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
+    .line 659
+    iput-object p1, p0, Lcom/bbm/ui/activities/kc;->a:Lcom/bbm/ui/activities/FilePickerActivity;
 
-    const/4 v0, 0x0
+    .line 660
+    invoke-direct {p0, p2}, Lcom/bbm/ui/activities/ke;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
-
+    .line 661
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 5
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 7
 
     .prologue
-    .line 249
-    invoke-static {}, Lcom/bbm/ui/activities/GroupChatListActivity;->g()Lcom/bbm/g/ab;
+    const/4 v6, 0x0
+
+    .line 665
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/kc;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/kc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
+    check-cast v0, Ljava/io/File;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupChatListActivity;->i()Ljava/lang/String;
+    .line 669
+    if-nez p2, :cond_0
+
+    .line 670
+    iget-object v1, p0, Lcom/bbm/ui/activities/kc;->b:Landroid/content/Context;
+
+    invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->t(Ljava/lang/String;)Lcom/bbm/g/a;
+    const v2, 0x7f0300c7
+
+    invoke-virtual {v1, v2, p3, v6}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object p2
+
+    .line 672
+    new-instance v2, Lcom/bbm/ui/activities/kd;
+
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/kd;-><init>(Lcom/bbm/ui/activities/kc;)V
+
+    .line 673
+    const v1, 0x7f0b0499
+
+    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 250
-    iget-object v0, v1, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
+    check-cast v1, Landroid/widget/ImageView;
 
-    sget-object v2, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    iput-object v1, v2, Lcom/bbm/ui/activities/kd;->a:Landroid/widget/ImageView;
 
-    if-eq v0, v2, :cond_0
+    .line 674
+    const v1, 0x7f0b049e
 
-    .line 269
+    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    iput-object v1, v2, Lcom/bbm/ui/activities/kd;->b:Landroid/widget/TextView;
+
+    .line 675
+    const v1, 0x7f0b049f
+
+    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
+
+    iput-object v1, v2, Lcom/bbm/ui/activities/kd;->c:Landroid/widget/TextView;
+
+    .line 676
+    invoke-virtual {p2, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    .line 678
+    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/AbsListView$LayoutParams;
+
+    .line 679
+    invoke-static {}, Lcom/bbm/ui/activities/FilePickerActivity;->l()I
+
+    move-result v3
+
+    iput v3, v1, Landroid/widget/AbsListView$LayoutParams;->height:I
+
+    move-object v1, v2
+
+    .line 684
     :goto_0
-    return-void
+    iget-object v2, v1, Lcom/bbm/ui/activities/kd;->b:Landroid/widget/TextView;
 
-    .line 254
-    :cond_0
-    const/4 v0, 0x0
+    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
 
-    .line 255
-    iget-object v2, v1, Lcom/bbm/g/a;->c:Ljava/lang/String;
+    move-result-object v3
 
-    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 686
+    invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
 
     move-result v2
 
-    if-nez v2, :cond_1
+    if-eqz v2, :cond_1
 
-    .line 256
-    iget-object v0, v1, Lcom/bbm/g/a;->c:Ljava/lang/String;
+    .line 687
+    iget-object v2, v1, Lcom/bbm/ui/activities/kd;->a:Landroid/widget/ImageView;
 
-    invoke-static {v0}, Landroid/graphics/drawable/Drawable;->createFromPath(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    const v3, 0x7f020112
 
-    move-result-object v0
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 258
-    :cond_1
-    if-nez v0, :cond_2
-
-    .line 259
-    iget-object v0, p0, Lcom/bbm/ui/activities/kc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupChatListActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    .line 260
-    const v2, 0x7f070007
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
-
-    move-result-object v2
-
-    .line 261
-    iget-wide v3, v1, Lcom/bbm/g/a;->g:J
-
-    long-to-int v0, v3
-
-    invoke-virtual {v2, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    .line 262
-    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
-
-    .line 264
-    :cond_2
-    iget-object v2, p0, Lcom/bbm/ui/activities/kc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupChatListActivity;->b(Lcom/bbm/ui/activities/GroupChatListActivity;)Lcom/bbm/ui/ObservingImageView;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Lcom/bbm/ui/ObservingImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 265
-    iget-object v0, p0, Lcom/bbm/ui/activities/kc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatListActivity;->c(Lcom/bbm/ui/activities/GroupChatListActivity;)Lcom/bbm/ui/InlineImageTextView;
-
-    move-result-object v0
-
-    iget-object v2, v1, Lcom/bbm/g/a;->q:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/InlineImageTextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 266
-    iget-object v0, p0, Lcom/bbm/ui/activities/kc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatListActivity;->d(Lcom/bbm/ui/activities/GroupChatListActivity;)Lcom/bbm/ui/InlineImageTextView;
-
-    move-result-object v0
-
-    iget-object v2, v1, Lcom/bbm/g/a;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/InlineImageTextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 267
-    iget-object v0, p0, Lcom/bbm/ui/activities/kc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatListActivity;->d(Lcom/bbm/ui/activities/GroupChatListActivity;)Lcom/bbm/ui/InlineImageTextView;
-
-    move-result-object v2
-
-    iget-object v0, v1, Lcom/bbm/g/a;->e:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    .line 688
+    invoke-static {v0}, Lcom/bbm/ui/activities/kc;->a(Ljava/io/File;)I
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    .line 689
+    iget-object v1, v1, Lcom/bbm/ui/activities/kd;->c:Landroid/widget/TextView;
 
-    const/16 v0, 0x8
+    iget-object v2, p0, Lcom/bbm/ui/activities/kc;->b:Landroid/content/Context;
 
-    :goto_1
-    invoke-virtual {v2, v0}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
-
-    .line 268
-    iget-object v0, p0, Lcom/bbm/ui/activities/kc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatListActivity;->e(Lcom/bbm/ui/activities/GroupChatListActivity;)Landroid/widget/TextView;
-
-    move-result-object v1
-
-    invoke-static {}, Lcom/bbm/ui/activities/GroupChatListActivity;->g()Lcom/bbm/g/ab;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/kc;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/GroupChatListActivity;->i()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/bbm/g/ab;->g(Ljava/lang/String;)Lcom/bbm/j/w;
+    const v3, 0x7f0d0006
 
-    move-result-object v0
+    const/4 v4, 0x1
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    new-array v4, v4, [Ljava/lang/Object;
 
-    move-result-object v0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    check-cast v0, Ljava/util/List;
+    move-result-object v5
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    aput-object v5, v4, v6
 
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    invoke-virtual {v2, v3, v0, v4}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
+    .line 702
+    :goto_1
+    return-object p2
+
+    .line 681
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/bbm/ui/activities/kd;
+
     goto :goto_0
 
-    .line 267
-    :cond_3
-    const/4 v0, 0x0
+    .line 692
+    :cond_1
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/bbm/util/bk;->c(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 693
+    invoke-static {}, Lcom/bbm/ui/activities/FilePickerActivity;->m()Lcom/bbm/util/b/g;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v3
+
+    iget-object v4, v1, Lcom/bbm/ui/activities/kd;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {v2, v3, v4}, Lcom/bbm/util/b/g;->a(Ljava/lang/Object;Landroid/widget/ImageView;)V
+
+    .line 697
+    :goto_2
+    iget-object v1, v1, Lcom/bbm/ui/activities/kd;->c:Landroid/widget/TextView;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/kc;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+
+    invoke-virtual {v0}, Ljava/io/File;->lastModified()J
+
+    move-result-wide v4
+
+    const v6, 0x10014
+
+    invoke-static {v3, v4, v5, v6}, Lcom/bbm/util/be;->a(Landroid/content/Context;JI)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string v3, ", "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/kc;->b:Landroid/content/Context;
+
+    invoke-virtual {v0}, Ljava/io/File;->length()J
+
+    move-result-wide v4
+
+    invoke-static {v3, v4, v5}, Lcom/bbm/util/bk;->a(Landroid/content/Context;J)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_1
+
+    .line 695
+    :cond_2
+    iget-object v2, v1, Lcom/bbm/ui/activities/kd;->a:Landroid/widget/ImageView;
+
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v3}, Lcom/bbm/util/bk;->a(Ljava/lang/String;)I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    goto :goto_2
 .end method

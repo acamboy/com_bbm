@@ -86,46 +86,46 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 7
+    .locals 6
 
     .prologue
-    const-wide/16 v5, 0x0
+    const-wide/16 v4, 0x0
 
     .line 198
     invoke-virtual {p0}, Lcom/google/b/a/q;->a()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    invoke-virtual {v0, v2, v3, v1}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
 
-    move-result-wide v3
+    move-result-wide v0
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v0, v4
 
     if-lez v0, :cond_0
 
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
     :goto_0
-    long-to-double v1, v1
+    long-to-double v2, v2
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
     const-wide/16 v4, 0x1
 
-    invoke-virtual {v3, v4, v5, v0}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    invoke-virtual {v1, v4, v5, v0}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    long-to-double v3, v3
+    long-to-double v4, v4
 
-    div-double/2addr v1, v3
+    div-double/2addr v2, v4
 
-    const-string v3, "%.4g %s"
+    const-string v1, "%.4g %s"
 
     const/4 v4, 0x2
 
@@ -133,21 +133,21 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v2, v3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    move-result-object v1
+    move-result-object v2
 
-    aput-object v1, v4, v5
+    aput-object v2, v4, v5
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    sget-object v2, Lcom/google/b/a/r;->a:[I
+    sget-object v3, Lcom/google/b/a/r;->a:[I
 
     invoke-virtual {v0}, Ljava/util/concurrent/TimeUnit;->ordinal()I
 
     move-result v0
 
-    aget v0, v2, v0
+    aget v0, v3, v0
 
     packed-switch v0, :pswitch_data_0
 
@@ -160,13 +160,13 @@
     :cond_0
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    invoke-virtual {v0, v2, v3, v1}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
 
-    move-result-wide v3
+    move-result-wide v0
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v0, v4
 
     if-lez v0, :cond_1
 
@@ -177,13 +177,13 @@
     :cond_1
     sget-object v0, Ljava/util/concurrent/TimeUnit;->MICROSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->NANOSECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-virtual {v0, v1, v2, v3}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
+    invoke-virtual {v0, v2, v3, v1}, Ljava/util/concurrent/TimeUnit;->convert(JLjava/util/concurrent/TimeUnit;)J
 
-    move-result-wide v3
+    move-result-wide v0
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v0, v4
 
     if-lez v0, :cond_2
 
@@ -200,9 +200,9 @@
     const-string v0, "ns"
 
     :goto_1
-    aput-object v0, v4, v1
+    aput-object v0, v4, v2
 
-    invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-static {v1, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 

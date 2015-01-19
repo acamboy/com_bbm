@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/abz;
 .super Ljava/lang/Object;
-.source "SelectContactActivity.java"
+.source "PaymentSwitcherActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/PaymentSwitcherActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PaymentSwitcherActivity;)V
     .locals 0
 
     .prologue
-    .line 297
-    iput-object p1, p0, Lcom/bbm/ui/activities/abz;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    .line 32
+    iput-object p1, p0, Lcom/bbm/ui/activities/abz;->a:Lcom/bbm/ui/activities/PaymentSwitcherActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,34 +26,20 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 301
-    const-string v0, "mSearchCancel Clicked"
+    .line 34
+    iget-object v0, p0, Lcom/bbm/ui/activities/abz;->a:Lcom/bbm/ui/activities/PaymentSwitcherActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/SelectContactActivity;
+    const/16 v1, 0x3e8
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    const/4 v2, 0x0
 
-    .line 303
-    iget-object v0, p0, Lcom/bbm/ui/activities/abz;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/activities/PaymentSwitcherActivity;->setResult(ILandroid/content/Intent;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->n(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/EditText;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/PaymentSwitcherActivity;->finish()V
 
-    move-result-object v0
-
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 304
-    iget-object v0, p0, Lcom/bbm/ui/activities/abz;->a:Lcom/bbm/ui/activities/SelectContactActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/eo;->a(Landroid/app/Activity;Z)V
-
-    .line 305
+    .line 35
     return-void
 .end method

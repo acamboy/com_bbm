@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final a:Ljava/util/Set;
+.field private static final f:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set",
@@ -29,15 +29,15 @@
 
 
 # instance fields
-.field private final b:I
+.field public final a:I
 
-.field private final c:Z
+.field public final b:Z
 
-.field private final d:Z
+.field public final c:Z
 
-.field private final e:Z
+.field public final d:Z
 
-.field private final f:Z
+.field public e:Ljava/lang/StringBuilder;
 
 .field private final g:Z
 
@@ -53,11 +53,11 @@
 
 .field private final m:Z
 
-.field private final n:Ljava/lang/String;
+.field private final n:Z
 
 .field private final o:Ljava/lang/String;
 
-.field private p:Ljava/lang/StringBuilder;
+.field private final p:Ljava/lang/String;
 
 .field private q:Z
 
@@ -102,14 +102,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/a/a/b;->a:Ljava/util/Set;
+    sput-object v0, Lcom/a/a/b;->f:Ljava/util/Set;
 
-    .line 1019
+    .line 985
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 1020
+    .line 986
     sput-object v0, Lcom/a/a/b;->r:Ljava/util/Map;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -122,7 +122,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1021
+    .line 987
     sget-object v0, Lcom/a/a/b;->r:Ljava/util/Map;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -135,7 +135,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1022
+    .line 988
     sget-object v0, Lcom/a/a/b;->r:Ljava/util/Map;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -148,7 +148,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1023
+    .line 989
     sget-object v0, Lcom/a/a/b;->r:Ljava/util/Map;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -161,7 +161,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1024
+    .line 990
     return-void
 .end method
 
@@ -190,27 +190,27 @@
 
     const v4, -0x3fffffff
 
-    .line 139
+    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 140
-    iput v4, p0, Lcom/a/a/b;->b:I
+    .line 139
+    iput v4, p0, Lcom/a/a/b;->a:I
 
-    .line 142
+    .line 141
     invoke-static {v4}, Lcom/a/a/c;->c(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 143
+    .line 142
     const-string v0, "vCard"
 
     const-string v3, "Should not use vCard 4.0 when building vCard. It is not officially published yet."
 
     invoke-static {v0, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
+    .line 146
     :cond_0
     invoke-static {v4}, Lcom/a/a/c;->b(I)Z
 
@@ -228,72 +228,72 @@
     move v0, v2
 
     :goto_0
-    iput-boolean v0, p0, Lcom/a/a/b;->c:Z
+    iput-boolean v0, p0, Lcom/a/a/b;->b:Z
 
-    .line 148
+    .line 147
     invoke-static {}, Lcom/a/a/c;->a()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/a/a/b;->g:Z
-
-    .line 149
-    invoke-static {}, Lcom/a/a/c;->h()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/a/a/b;->f:Z
-
-    .line 150
-    invoke-static {}, Lcom/a/a/c;->f()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/a/a/b;->d:Z
-
-    .line 151
-    invoke-static {}, Lcom/a/a/c;->g()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/a/a/b;->e:Z
-
-    .line 152
-    invoke-static {}, Lcom/a/a/c;->b()Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/a/a/b;->h:Z
-
-    .line 153
-    invoke-static {}, Lcom/a/a/c;->c()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/a/a/b;->i:Z
 
-    .line 154
-    invoke-static {}, Lcom/a/a/c;->d()Z
+    .line 148
+    invoke-static {}, Lcom/a/a/c;->h()Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/a/a/b;->k:Z
+    iput-boolean v0, p0, Lcom/a/a/b;->c:Z
 
-    .line 155
-    invoke-static {}, Lcom/a/a/c;->e()Z
+    .line 149
+    invoke-static {}, Lcom/a/a/c;->f()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/a/a/b;->g:Z
+
+    .line 150
+    invoke-static {}, Lcom/a/a/c;->g()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/a/a/b;->h:Z
+
+    .line 151
+    invoke-static {}, Lcom/a/a/c;->b()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/a/a/b;->j:Z
 
-    .line 156
-    invoke-static {}, Lcom/a/a/c;->f()Z
+    .line 152
+    invoke-static {}, Lcom/a/a/c;->c()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/a/a/b;->k:Z
+
+    .line 153
+    invoke-static {}, Lcom/a/a/c;->d()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/a/a/b;->l:Z
 
-    .line 162
+    .line 154
+    invoke-static {}, Lcom/a/a/c;->e()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/a/a/b;->d:Z
+
+    .line 155
+    invoke-static {}, Lcom/a/a/c;->f()Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/a/a/b;->m:Z
+
+    .line 161
     invoke-static {v4}, Lcom/a/a/c;->b(I)Z
 
     move-result v0
@@ -310,42 +310,42 @@
 
     :cond_2
     :goto_1
-    iput-boolean v2, p0, Lcom/a/a/b;->m:Z
+    iput-boolean v2, p0, Lcom/a/a/b;->n:Z
 
-    .line 165
+    .line 164
     invoke-static {}, Lcom/a/a/c;->h()Z
 
-    .line 166
+    .line 165
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 186
+    .line 182
     const-string v0, "vCard"
 
     const-string v2, "Use the charset \"UTF-8\" for export."
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 189
+    .line 186
     const-string v0, "UTF-8"
-
-    iput-object v0, p0, Lcom/a/a/b;->n:Ljava/lang/String;
-
-    .line 190
-    const-string v0, "CHARSET=UTF-8"
 
     iput-object v0, p0, Lcom/a/a/b;->o:Ljava/lang/String;
 
-    .line 197
+    .line 187
+    const-string v0, "CHARSET=UTF-8"
+
+    iput-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/String;
+
+    .line 193
     :goto_2
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iput-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     iput-boolean v1, p0, Lcom/a/a/b;->q:Z
 
@@ -353,9 +353,9 @@
 
     const-string v1, "VCARD"
 
-    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget v0, p0, Lcom/a/a/b;->b:I
+    iget v0, p0, Lcom/a/a/b;->a:I
 
     invoke-static {v0}, Lcom/a/a/c;->c(I)Z
 
@@ -367,29 +367,29 @@
 
     const-string v1, "4.0"
 
-    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 198
+    .line 194
     :goto_3
     return-void
 
     :cond_3
     move v0, v1
 
-    .line 147
+    .line 146
     goto/16 :goto_0
 
     :cond_4
     move v2, v1
 
-    .line 162
+    .line 161
     goto :goto_1
 
-    .line 193
+    .line 189
     :cond_5
-    iput-object v5, p0, Lcom/a/a/b;->n:Ljava/lang/String;
+    iput-object v5, p0, Lcom/a/a/b;->o:Ljava/lang/String;
 
-    .line 194
+    .line 190
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v2, "CHARSET="
@@ -404,13 +404,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/a/a/b;->o:Ljava/lang/String;
+    iput-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/String;
 
     goto :goto_2
 
-    .line 197
+    .line 193
     :cond_6
-    iget v0, p0, Lcom/a/a/b;->b:I
+    iget v0, p0, Lcom/a/a/b;->a:I
 
     invoke-static {v0}, Lcom/a/a/c;->b(I)Z
 
@@ -422,12 +422,12 @@
 
     const-string v1, "3.0"
 
-    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 
     :cond_7
-    iget v0, p0, Lcom/a/a/b;->b:I
+    iget v0, p0, Lcom/a/a/b;->a:I
 
     invoke-static {v0}, Lcom/a/a/c;->a(I)Z
 
@@ -446,7 +446,7 @@
 
     const-string v1, "2.1"
 
-    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_3
 .end method
@@ -457,29 +457,29 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2158
+    .line 2086
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2159
+    .line 2087
     const-string v0, ""
 
-    .line 2193
+    .line 2120
     :goto_0
     return-object v0
 
-    .line 2162
+    .line 2090
     :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2165
+    .line 2093
     :try_start_0
-    iget-object v0, p0, Lcom/a/a/b;->n:Ljava/lang/String;
+    iget-object v0, p0, Lcom/a/a/b;->o:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
     :try_end_0
@@ -491,14 +491,14 @@
 
     move v3, v2
 
-    .line 2175
+    .line 2102
     :cond_1
     :goto_1
     array-length v5, v0
 
     if-ge v3, v5, :cond_2
 
-    .line 2176
+    .line 2103
     const-string v5, "=%02X"
 
     const/4 v6, 0x1
@@ -519,28 +519,28 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2177
+    .line 2104
     add-int/lit8 v3, v3, 0x1
 
-    .line 2178
+    .line 2105
     add-int/lit8 v1, v1, 0x3
 
-    .line 2180
+    .line 2107
     const/16 v5, 0x43
 
     if-lt v1, v5, :cond_1
 
-    .line 2188
+    .line 2115
     const-string v1, "=\r\n"
 
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move v1, v2
 
-    .line 2189
+    .line 2116
     goto :goto_1
 
-    .line 2171
+    .line 2098
     :catch_0
     move-exception v0
 
@@ -552,7 +552,7 @@
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/a/a/b;->n:Ljava/lang/String;
+    iget-object v3, p0, Lcom/a/a/b;->o:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -570,7 +570,7 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2173
+    .line 2100
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
@@ -581,7 +581,7 @@
 
     goto :goto_1
 
-    .line 2193
+    .line 2120
     :cond_2
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -594,70 +594,70 @@
     .locals 9
 
     .prologue
-    .line 219
+    .line 213
     const-string v0, "data3"
 
     invoke-virtual {p0, v0}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 220
+    .line 214
     const-string v1, "data5"
 
     invoke-virtual {p0, v1}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 221
+    .line 215
     const-string v2, "data2"
 
     invoke-virtual {p0, v2}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 222
+    .line 216
     const-string v3, "data4"
 
     invoke-virtual {p0, v3}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 223
+    .line 217
     const-string v4, "data6"
 
     invoke-virtual {p0, v4}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 224
+    .line 218
     const-string v5, "data9"
 
     invoke-virtual {p0, v5}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 226
+    .line 220
     const-string v6, "data8"
 
     invoke-virtual {p0, v6}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 228
+    .line 222
     const-string v7, "data7"
 
     invoke-virtual {p0, v7}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 230
+    .line 224
     const-string v8, "data1"
 
     invoke-virtual {p0, v8}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 231
+    .line 225
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -732,17 +732,17 @@
 
     const/4 v0, 0x0
 
-    .line 2146
-    iget-boolean v2, p0, Lcom/a/a/b;->m:Z
+    .line 2074
+    iget-boolean v2, p0, Lcom/a/a/b;->n:Z
 
     if-nez v2, :cond_1
 
-    .line 2154
+    .line 2082
     :cond_0
     :goto_0
     return v0
 
-    .line 2149
+    .line 2077
     :cond_1
     array-length v3, p1
 
@@ -753,7 +753,7 @@
 
     aget-object v4, p1, v2
 
-    .line 2150
+    .line 2078
     new-array v5, v1, [Ljava/lang/String;
 
     aput-object v4, v5, v0
@@ -766,10 +766,10 @@
 
     move v0, v1
 
-    .line 2151
+    .line 2079
     goto :goto_0
 
-    .line 2149
+    .line 2077
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
@@ -792,8 +792,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 240
-    .line 242
+    .line 234
+    .line 236
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -814,17 +814,17 @@
 
     check-cast v0, Landroid/content/ContentValues;
 
-    .line 243
+    .line 237
     if-eqz v0, :cond_0
 
-    .line 244
+    .line 238
     const-string v4, "is_super_primary"
 
     invoke-virtual {v0, v4}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v4
 
-    .line 247
+    .line 241
     if-eqz v4, :cond_1
 
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
@@ -833,29 +833,29 @@
 
     if-lez v4, :cond_1
 
-    .line 269
+    .line 261
     :goto_1
     if-nez v0, :cond_4
 
-    .line 270
+    .line 262
     if-eqz v1, :cond_3
 
-    .line 280
+    .line 271
     :goto_2
     return-object v1
 
-    .line 252
+    .line 245
     :cond_1
     if-nez v2, :cond_5
 
-    .line 255
+    .line 248
     const-string v4, "is_primary"
 
     invoke-virtual {v0, v4}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v4
 
-    .line 256
+    .line 249
     if-eqz v4, :cond_2
 
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
@@ -872,10 +872,10 @@
 
     move-object v2, v0
 
-    .line 258
+    .line 251
     goto :goto_0
 
-    .line 262
+    .line 254
     :cond_2
     if-nez v1, :cond_5
 
@@ -888,10 +888,10 @@
     :goto_3
     move-object v1, v0
 
-    .line 267
+    .line 259
     goto :goto_0
 
-    .line 276
+    .line 267
     :cond_3
     new-instance v1, Landroid/content/ContentValues;
 
@@ -921,83 +921,83 @@
     .prologue
     const/16 v5, 0x5c
 
-    .line 2204
+    .line 2131
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 2205
+    .line 2132
     const-string v0, ""
 
-    .line 2273
+    .line 2195
     :goto_0
     return-object v0
 
-    .line 2208
+    .line 2135
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2209
+    .line 2136
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 2210
+    .line 2137
     const/4 v0, 0x0
 
     :goto_1
     if-ge v0, v2, :cond_6
 
-    .line 2211
+    .line 2138
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    .line 2212
+    .line 2139
     sparse-switch v3, :sswitch_data_0
 
-    .line 2268
+    .line 2190
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2210
+    .line 2137
     :cond_1
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 2214
+    .line 2141
     :sswitch_0
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2215
+    .line 2142
     const/16 v3, 0x3b
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 2219
+    .line 2146
     :sswitch_1
     add-int/lit8 v3, v0, 0x1
 
     if-ge v3, v2, :cond_2
 
-    .line 2220
+    .line 2147
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    .line 2221
+    .line 2148
     const/16 v4, 0xa
 
     if-eq v3, v4, :cond_1
 
-    .line 2222
+    .line 2149
     :cond_2
     :sswitch_2
     const-string v3, "\\n"
@@ -1006,60 +1006,60 @@
 
     goto :goto_2
 
-    .line 2239
+    .line 2164
     :sswitch_3
-    iget-boolean v4, p0, Lcom/a/a/b;->c:Z
+    iget-boolean v4, p0, Lcom/a/a/b;->b:Z
 
     if-eqz v4, :cond_3
 
-    .line 2240
+    .line 2165
     const-string v3, "\\\\"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 2249
+    .line 2173
     :cond_3
     :sswitch_4
-    iget-boolean v4, p0, Lcom/a/a/b;->f:Z
+    iget-boolean v4, p0, Lcom/a/a/b;->c:Z
 
     if-eqz v4, :cond_4
 
-    .line 2250
+    .line 2174
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 2251
+    .line 2175
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 2254
+    .line 2177
     :cond_4
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 2259
+    .line 2182
     :sswitch_5
-    iget-boolean v4, p0, Lcom/a/a/b;->c:Z
+    iget-boolean v4, p0, Lcom/a/a/b;->b:Z
 
     if-eqz v4, :cond_5
 
-    .line 2260
+    .line 2183
     const-string v3, "\\,"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 2263
+    .line 2185
     :cond_5
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 2273
+    .line 2195
     :cond_6
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1067,7 +1067,7 @@
 
     goto :goto_0
 
-    .line 2212
+    .line 2139
     nop
 
     :sswitch_data_0
@@ -1092,48 +1092,48 @@
 
     const/4 v6, 0x0
 
-    .line 584
+    .line 567
     const-string v0, "data9"
 
     invoke-virtual {p1, v0}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 586
+    .line 569
     const-string v0, "data8"
 
     invoke-virtual {p1, v0}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 588
+    .line 571
     const-string v0, "data7"
 
     invoke-virtual {p1, v0}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 590
-    iget-boolean v3, p0, Lcom/a/a/b;->l:Z
+    .line 573
+    iget-boolean v3, p0, Lcom/a/a/b;->m:Z
 
     if-eqz v3, :cond_0
 
-    .line 591
+    .line 574
     invoke-static {v2}, Lcom/a/a/ag;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 592
+    .line 575
     invoke-static {v1}, Lcom/a/a/ag;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 593
+    .line 576
     invoke-static {v0}, Lcom/a/a/ag;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 602
+    .line 584
     :cond_0
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1153,82 +1153,82 @@
 
     if-eqz v3, :cond_2
 
-    .line 605
-    iget-boolean v0, p0, Lcom/a/a/b;->f:Z
+    .line 587
+    iget-boolean v0, p0, Lcom/a/a/b;->c:Z
 
     if-eqz v0, :cond_1
 
-    .line 606
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 588
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v1, "SOUND"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 607
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 589
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v1, ";"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 608
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 590
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v1, "X-IRMC-N"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 609
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 591
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v1, ":"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 610
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 592
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v1, ";"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 611
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 593
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v1, ";"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 612
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 594
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v1, ";"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 613
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 595
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v1, ";"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 614
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 596
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v1, "\r\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 789
+    .line 764
     :cond_1
     :goto_0
     return-void
 
-    .line 619
+    .line 601
     :cond_2
-    iget v3, p0, Lcom/a/a/b;->b:I
+    iget v3, p0, Lcom/a/a/b;->a:I
 
     invoke-static {v3}, Lcom/a/a/c;->c(I)Z
 
@@ -1236,8 +1236,8 @@
 
     if-nez v3, :cond_4
 
-    .line 622
-    iget v3, p0, Lcom/a/a/b;->b:I
+    .line 603
+    iget v3, p0, Lcom/a/a/b;->a:I
 
     invoke-static {v3}, Lcom/a/a/c;->b(I)Z
 
@@ -1245,22 +1245,22 @@
 
     if-eqz v3, :cond_d
 
-    .line 623
-    iget v3, p0, Lcom/a/a/b;->b:I
+    .line 604
+    iget v3, p0, Lcom/a/a/b;->a:I
 
     invoke-static {v3, v2, v1, v0}, Lcom/a/a/ag;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 626
-    iget-object v4, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 607
+    iget-object v4, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v5, "SORT-STRING"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 627
-    iget v4, p0, Lcom/a/a/b;->b:I
+    .line 608
+    iget v4, p0, Lcom/a/a/b;->a:I
 
     invoke-static {v4}, Lcom/a/a/c;->b(I)Z
 
@@ -1278,30 +1278,30 @@
 
     if-eqz v4, :cond_3
 
-    .line 632
-    iget-object v4, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 613
+    iget-object v4, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v5, ";"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 633
-    iget-object v4, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 614
+    iget-object v4, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Lcom/a/a/b;->o:Ljava/lang/String;
+    iget-object v5, p0, Lcom/a/a/b;->p:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 635
+    .line 616
     :cond_3
-    iget-object v4, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v4, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v5, ":"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 636
-    iget-object v4, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 617
+    iget-object v4, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-direct {p0, v3}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1309,29 +1309,29 @@
 
     invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 637
-    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 618
+    iget-object v3, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, "\r\n"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 715
+    .line 693
     :cond_4
     :goto_1
-    iget-boolean v3, p0, Lcom/a/a/b;->i:Z
+    iget-boolean v3, p0, Lcom/a/a/b;->k:Z
 
     if-eqz v3, :cond_1
 
-    .line 716
+    .line 694
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-nez v3, :cond_7
 
-    .line 717
-    iget-boolean v3, p0, Lcom/a/a/b;->g:Z
+    .line 695
+    iget-boolean v3, p0, Lcom/a/a/b;->i:Z
 
     if-eqz v3, :cond_16
 
@@ -1347,24 +1347,24 @@
 
     move v4, v7
 
-    .line 721
+    .line 699
     :goto_2
     if-eqz v4, :cond_17
 
-    .line 722
+    .line 700
     invoke-direct {p0, v0}, Lcom/a/a/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 727
+    .line 704
     :goto_3
-    iget-object v5, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v5, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v8, "X-PHONETIC-FIRST-NAME"
 
     invoke-virtual {v5, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 728
+    .line 705
     new-array v5, v7, [Ljava/lang/String;
 
     aput-object v0, v5, v6
@@ -1375,59 +1375,59 @@
 
     if-eqz v0, :cond_5
 
-    .line 729
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 706
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v5, ";"
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 730
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 707
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
-    iget-object v5, p0, Lcom/a/a/b;->o:Ljava/lang/String;
+    iget-object v5, p0, Lcom/a/a/b;->p:Ljava/lang/String;
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 732
+    .line 709
     :cond_5
     if-eqz v4, :cond_6
 
-    .line 733
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 710
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, ";"
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 734
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 711
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, "ENCODING=QUOTED-PRINTABLE"
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 736
+    .line 713
     :cond_6
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, ":"
 
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 737
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 714
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 738
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 715
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, "\r\n"
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 740
+    .line 717
     :cond_7
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1435,8 +1435,8 @@
 
     if-nez v0, :cond_a
 
-    .line 741
-    iget-boolean v0, p0, Lcom/a/a/b;->g:Z
+    .line 718
+    iget-boolean v0, p0, Lcom/a/a/b;->i:Z
 
     if-eqz v0, :cond_18
 
@@ -1452,24 +1452,24 @@
 
     move v3, v7
 
-    .line 745
+    .line 722
     :goto_4
     if-eqz v3, :cond_19
 
-    .line 746
+    .line 723
     invoke-direct {p0, v1}, Lcom/a/a/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 751
+    .line 727
     :goto_5
-    iget-object v4, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v4, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v5, "X-PHONETIC-MIDDLE-NAME"
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 752
+    .line 728
     new-array v4, v7, [Ljava/lang/String;
 
     aput-object v1, v4, v6
@@ -1480,59 +1480,59 @@
 
     if-eqz v1, :cond_8
 
-    .line 753
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 729
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, ";"
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 754
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 730
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
-    iget-object v4, p0, Lcom/a/a/b;->o:Ljava/lang/String;
+    iget-object v4, p0, Lcom/a/a/b;->p:Ljava/lang/String;
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 756
+    .line 732
     :cond_8
     if-eqz v3, :cond_9
 
-    .line 757
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 733
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, ";"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 758
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 734
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, "ENCODING=QUOTED-PRINTABLE"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 760
+    .line 736
     :cond_9
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, ":"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 761
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 737
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 762
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 738
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v1, "\r\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 764
+    .line 740
     :cond_a
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1540,8 +1540,8 @@
 
     if-nez v0, :cond_1
 
-    .line 765
-    iget-boolean v0, p0, Lcom/a/a/b;->g:Z
+    .line 741
+    iget-boolean v0, p0, Lcom/a/a/b;->i:Z
 
     if-eqz v0, :cond_1a
 
@@ -1557,24 +1557,24 @@
 
     move v1, v7
 
-    .line 769
+    .line 745
     :goto_6
     if-eqz v1, :cond_1b
 
-    .line 770
+    .line 746
     invoke-direct {p0, v2}, Lcom/a/a/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 775
+    .line 750
     :goto_7
-    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, "X-PHONETIC-LAST-NAME"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 776
+    .line 751
     new-array v3, v7, [Ljava/lang/String;
 
     aput-object v2, v3, v6
@@ -1585,53 +1585,53 @@
 
     if-eqz v2, :cond_b
 
-    .line 777
-    iget-object v2, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 752
+    iget-object v2, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, ";"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 778
-    iget-object v2, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 753
+    iget-object v2, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/a/a/b;->o:Ljava/lang/String;
+    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 780
+    .line 755
     :cond_b
     if-eqz v1, :cond_c
 
-    .line 781
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 756
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, ";"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 782
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 757
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, "ENCODING=QUOTED-PRINTABLE"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 784
+    .line 759
     :cond_c
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, ":"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 785
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 760
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 786
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 761
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v1, "\r\n"
 
@@ -1639,35 +1639,35 @@
 
     goto/16 :goto_0
 
-    .line 639
+    .line 619
     :cond_d
-    iget-boolean v3, p0, Lcom/a/a/b;->d:Z
+    iget-boolean v3, p0, Lcom/a/a/b;->g:Z
 
     if-eqz v3, :cond_4
 
-    .line 653
-    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 633
+    iget-object v3, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, "SOUND"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 654
-    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 634
+    iget-object v3, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, ";"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 655
-    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 635
+    iget-object v3, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, "X-IRMC-N"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 657
-    iget-boolean v3, p0, Lcom/a/a/b;->k:Z
+    .line 637
+    iget-boolean v3, p0, Lcom/a/a/b;->l:Z
 
     if-nez v3, :cond_13
 
@@ -1704,26 +1704,26 @@
     :cond_e
     move v3, v7
 
-    .line 669
+    .line 649
     :goto_8
     if-eqz v3, :cond_14
 
-    .line 670
+    .line 650
     invoke-direct {p0, v2}, Lcom/a/a/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 671
+    .line 651
     invoke-direct {p0, v1}, Lcom/a/a/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 672
+    .line 652
     invoke-direct {p0, v0}, Lcom/a/a/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 680
+    .line 659
     :goto_9
     const/4 v8, 0x3
 
@@ -1743,43 +1743,43 @@
 
     if-eqz v8, :cond_f
 
-    .line 682
-    iget-object v8, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 661
+    iget-object v8, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v9, ";"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 683
-    iget-object v8, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 662
+    iget-object v8, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
-    iget-object v9, p0, Lcom/a/a/b;->o:Ljava/lang/String;
+    iget-object v9, p0, Lcom/a/a/b;->p:Ljava/lang/String;
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 685
+    .line 664
     :cond_f
-    iget-object v8, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v9, ":"
 
     invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 688
+    .line 667
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v8
 
     if-nez v8, :cond_1c
 
-    .line 689
-    iget-object v8, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 668
+    iget-object v8, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move v4, v6
 
-    .line 692
+    .line 671
     :goto_a
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1787,18 +1787,18 @@
 
     if-nez v8, :cond_10
 
-    .line 693
+    .line 672
     if-eqz v4, :cond_15
 
     move v4, v6
 
-    .line 699
+    .line 677
     :goto_b
-    iget-object v8, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v8, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 701
+    .line 679
     :cond_10
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1806,51 +1806,51 @@
 
     if-nez v3, :cond_12
 
-    .line 702
+    .line 680
     if-nez v4, :cond_11
 
-    .line 703
-    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 681
+    iget-object v3, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 705
+    .line 683
     :cond_11
-    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 708
+    .line 686
     :cond_12
-    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v3, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, ";"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 709
-    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 687
+    iget-object v3, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, ";"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 710
-    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 688
+    iget-object v3, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, ";"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 711
-    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 689
+    iget-object v3, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, ";"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 712
-    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 690
+    iget-object v3, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, "\r\n"
 
@@ -1861,30 +1861,30 @@
     :cond_13
     move v3, v6
 
-    .line 657
+    .line 637
     goto/16 :goto_8
 
-    .line 675
+    .line 654
     :cond_14
     invoke-direct {p0, v2}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 676
+    .line 655
     invoke-direct {p0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 677
+    .line 656
     invoke-direct {p0, v0}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
     goto/16 :goto_9
 
-    .line 697
+    .line 675
     :cond_15
-    iget-object v8, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v8, v10}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
@@ -1893,10 +1893,10 @@
     :cond_16
     move v4, v6
 
-    .line 717
+    .line 695
     goto/16 :goto_2
 
-    .line 725
+    .line 702
     :cond_17
     invoke-direct {p0, v0}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1907,10 +1907,10 @@
     :cond_18
     move v3, v6
 
-    .line 741
+    .line 718
     goto/16 :goto_4
 
-    .line 749
+    .line 725
     :cond_19
     invoke-direct {p0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1921,10 +1921,10 @@
     :cond_1a
     move v1, v6
 
-    .line 765
+    .line 741
     goto/16 :goto_6
 
-    .line 773
+    .line 748
     :cond_1b
     invoke-direct {p0, v2}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1938,7 +1938,7 @@
     goto :goto_a
 .end method
 
-.method private c(Ljava/lang/String;Ljava/lang/String;)V
+.method private b(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
     .prologue
@@ -1946,8 +1946,8 @@
 
     const/4 v3, 0x0
 
-    .line 552
-    iget-boolean v0, p0, Lcom/a/a/b;->k:Z
+    .line 535
+    iget-boolean v0, p0, Lcom/a/a/b;->l:Z
 
     if-nez v0, :cond_2
 
@@ -1963,7 +1963,7 @@
 
     move v1, v2
 
-    .line 555
+    .line 538
     :goto_0
     if-eqz v1, :cond_3
 
@@ -1971,13 +1971,13 @@
 
     move-result-object v0
 
-    .line 559
+    .line 542
     :goto_1
-    iget-object v4, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v4, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v4, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 564
+    .line 547
     new-array v2, v2, [Ljava/lang/String;
 
     aput-object p2, v2, v3
@@ -1988,61 +1988,61 @@
 
     if-eqz v2, :cond_0
 
-    .line 565
-    iget-object v2, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 548
+    iget-object v2, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, ";"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 566
-    iget-object v2, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 549
+    iget-object v2, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
-    iget-object v3, p0, Lcom/a/a/b;->o:Ljava/lang/String;
+    iget-object v3, p0, Lcom/a/a/b;->p:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 568
+    .line 551
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 569
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 552
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, ";"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 570
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 553
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, "ENCODING=QUOTED-PRINTABLE"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 572
+    .line 555
     :cond_1
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, ":"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 573
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 556
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 574
+    .line 557
     return-void
 
     :cond_2
     move v1, v3
 
-    .line 552
+    .line 535
     goto :goto_0
 
-    .line 555
+    .line 538
     :cond_3
     invoke-direct {p0, p2}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
@@ -2067,27 +2067,27 @@
     .end annotation
 
     .prologue
-    .line 393
+    .line 383
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/a/a/b;->b:I
+    iget v1, v0, Lcom/a/a/b;->a:I
 
     invoke-static {v1}, Lcom/a/a/c;->c(I)Z
 
     move-result v1
 
-    if-eqz v1, :cond_a
+    if-eqz v1, :cond_9
 
-    .line 394
+    .line 384
     move-object/from16 v0, p0
 
-    iget-boolean v1, v0, Lcom/a/a/b;->f:Z
+    iget-boolean v1, v0, Lcom/a/a/b;->c:Z
 
     if-nez v1, :cond_0
 
     move-object/from16 v0, p0
 
-    iget-boolean v1, v0, Lcom/a/a/b;->l:Z
+    iget-boolean v1, v0, Lcom/a/a/b;->m:Z
 
     if-eqz v1, :cond_1
 
@@ -2099,30 +2099,27 @@
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    if-eqz p1, :cond_2
-
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_3
 
-    :cond_2
     const-string v1, "FN"
 
     const-string v2, ""
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 548
-    :cond_3
+    .line 531
+    :cond_2
     :goto_0
     return-object p0
 
-    .line 394
-    :cond_4
+    .line 384
+    :cond_3
     invoke-static/range {p1 .. p1}, Lcom/a/a/b;->b(Ljava/util/List;)Landroid/content/ContentValues;
 
     move-result-object v7
@@ -2167,37 +2164,37 @@
 
     move-result v8
 
-    if-eqz v8, :cond_6
+    if-eqz v8, :cond_5
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v8
 
-    if-eqz v8, :cond_6
+    if-eqz v8, :cond_5
 
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v8
 
-    if-eqz v8, :cond_6
+    if-eqz v8, :cond_5
 
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v8
 
-    if-eqz v8, :cond_6
+    if-eqz v8, :cond_5
 
     invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v8
 
-    if-eqz v8, :cond_6
+    if-eqz v8, :cond_5
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_5
+    if-eqz v2, :cond_4
 
     const-string v1, "FN"
 
@@ -2205,14 +2202,14 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    :cond_5
+    :cond_4
     move-object v2, v1
 
-    :cond_6
+    :cond_5
     const-string v8, "data9"
 
     invoke-virtual {v7, v8}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
@@ -2263,7 +2260,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     move-object/from16 v16, v0
 
@@ -2275,24 +2272,24 @@
 
     move-result v16
 
-    if-eqz v16, :cond_7
+    if-eqz v16, :cond_6
 
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v16
 
-    if-eqz v16, :cond_7
+    if-eqz v16, :cond_6
 
     invoke-static {v10}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v16
 
-    if-nez v16, :cond_8
+    if-nez v16, :cond_7
 
-    :cond_7
+    :cond_6
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v0, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     move-object/from16 v16, v0
 
@@ -2356,7 +2353,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v9, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v9, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v10, "SORT-AS="
 
@@ -2370,10 +2367,10 @@
 
     invoke-virtual {v9, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    :cond_8
+    :cond_7
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v9, ":"
 
@@ -2381,13 +2378,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v8, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v9, ";"
 
@@ -2395,13 +2392,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v8, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v9, ";"
 
@@ -2409,13 +2406,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v8, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v9, ";"
 
@@ -2423,13 +2420,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v8, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v9, ";"
 
@@ -2437,13 +2434,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v8, v15}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v8, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v9, "\r\n"
 
@@ -2453,7 +2450,7 @@
 
     move-result v8
 
-    if-eqz v8, :cond_9
+    if-eqz v8, :cond_8
 
     const-string v1, "vCard"
 
@@ -2463,7 +2460,7 @@
 
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/a/a/b;->b:I
+    iget v1, v0, Lcom/a/a/b;->a:I
 
     invoke-static {v1}, Lcom/a/a/c;->d(I)I
 
@@ -2483,7 +2480,7 @@
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v2, v1}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v2, v1}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_1
     move-object/from16 v0, p0
@@ -2492,7 +2489,7 @@
 
     goto/16 :goto_0
 
-    :cond_9
+    :cond_8
     move-object/from16 v0, p0
 
     invoke-direct {v0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
@@ -2501,7 +2498,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v2, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, "FN"
 
@@ -2509,7 +2506,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v2, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, ":"
 
@@ -2517,13 +2514,13 @@
 
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v2, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, "\r\n"
 
@@ -2531,130 +2528,127 @@
 
     goto :goto_1
 
-    .line 397
-    :cond_a
-    if-eqz p1, :cond_b
-
+    .line 387
+    :cond_9
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->isEmpty()Z
 
     move-result v1
 
-    if-eqz v1, :cond_d
+    if-eqz v1, :cond_b
 
-    .line 398
-    :cond_b
+    .line 388
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/a/a/b;->b:I
+    iget v1, v0, Lcom/a/a/b;->a:I
 
     invoke-static {v1}, Lcom/a/a/c;->b(I)Z
 
     move-result v1
 
-    if-eqz v1, :cond_c
+    if-eqz v1, :cond_a
 
-    .line 402
+    .line 392
     const-string v1, "N"
 
     const-string v2, ""
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 403
+    .line 393
     const-string v1, "FN"
 
     const-string v2, ""
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 405
-    :cond_c
+    .line 394
+    :cond_a
     move-object/from16 v0, p0
 
-    iget-boolean v1, v0, Lcom/a/a/b;->f:Z
+    iget-boolean v1, v0, Lcom/a/a/b;->c:Z
 
-    if-eqz v1, :cond_3
+    if-eqz v1, :cond_2
 
-    .line 406
+    .line 395
     const-string v1, "N"
 
     const-string v2, ""
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 411
-    :cond_d
+    .line 400
+    :cond_b
     invoke-static/range {p1 .. p1}, Lcom/a/a/b;->b(Ljava/util/List;)Landroid/content/ContentValues;
 
     move-result-object v11
 
-    .line 413
+    .line 402
     const-string v1, "data3"
 
     invoke-virtual {v11, v1}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 414
+    .line 403
     const-string v1, "data5"
 
     invoke-virtual {v11, v1}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 415
+    .line 404
     const-string v1, "data2"
 
     invoke-virtual {v11, v1}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 416
+    .line 405
     const-string v1, "data4"
 
     invoke-virtual {v11, v1}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 417
+    .line 406
     const-string v1, "data6"
 
     invoke-virtual {v11, v1}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 418
+    .line 407
     const-string v1, "data1"
 
     invoke-virtual {v11, v1}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 420
+    .line 409
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_e
+    if-eqz v1, :cond_c
 
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_1c
+    if-nez v1, :cond_1a
 
-    .line 421
-    :cond_e
+    .line 410
+    :cond_c
     const/4 v1, 0x5
 
     new-array v1, v1, [Ljava/lang/String;
@@ -2685,12 +2679,12 @@
 
     move-result v12
 
-    .line 423
+    .line 412
     move-object/from16 v0, p0
 
-    iget-boolean v1, v0, Lcom/a/a/b;->k:Z
+    iget-boolean v1, v0, Lcom/a/a/b;->l:Z
 
-    if-nez v1, :cond_15
+    if-nez v1, :cond_13
 
     const/4 v1, 0x1
 
@@ -2704,7 +2698,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_d
 
     const/4 v1, 0x1
 
@@ -2718,7 +2712,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_d
 
     const/4 v1, 0x1
 
@@ -2732,7 +2726,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_d
 
     const/4 v1, 0x1
 
@@ -2746,7 +2740,7 @@
 
     move-result v1
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_d
 
     const/4 v1, 0x1
 
@@ -2760,25 +2754,25 @@
 
     move-result v1
 
-    if-nez v1, :cond_15
+    if-nez v1, :cond_13
 
-    :cond_f
+    :cond_d
     const/4 v1, 0x1
 
     move v7, v1
 
-    .line 432
+    .line 421
     :goto_2
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1f
+    if-eqz v1, :cond_1d
 
-    .line 433
+    .line 422
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/a/a/b;->b:I
+    iget v1, v0, Lcom/a/a/b;->a:I
 
     invoke-static {v1}, Lcom/a/a/c;->d(I)I
 
@@ -2788,7 +2782,7 @@
 
     move-result-object v1
 
-    .line 440
+    .line 428
     :goto_3
     const/4 v8, 0x1
 
@@ -2804,12 +2798,12 @@
 
     move-result v13
 
-    .line 442
+    .line 430
     move-object/from16 v0, p0
 
-    iget-boolean v8, v0, Lcom/a/a/b;->k:Z
+    iget-boolean v8, v0, Lcom/a/a/b;->l:Z
 
-    if-nez v8, :cond_16
+    if-nez v8, :cond_14
 
     const/4 v8, 0x1
 
@@ -2823,45 +2817,45 @@
 
     move-result v8
 
-    if-nez v8, :cond_16
+    if-nez v8, :cond_14
 
     const/4 v8, 0x1
 
     move v10, v8
 
-    .line 451
+    .line 439
     :goto_4
-    if-eqz v7, :cond_17
+    if-eqz v7, :cond_15
 
-    .line 452
+    .line 440
     move-object/from16 v0, p0
 
     invoke-direct {v0, v2}, Lcom/a/a/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 453
+    .line 441
     move-object/from16 v0, p0
 
     invoke-direct {v0, v4}, Lcom/a/a/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 454
+    .line 442
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/a/a/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 455
+    .line 443
     move-object/from16 v0, p0
 
     invoke-direct {v0, v5}, Lcom/a/a/b;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 456
+    .line 444
     move-object/from16 v0, p0
 
     invoke-direct {v0, v6}, Lcom/a/a/b;->a(Ljava/lang/String;)Ljava/lang/String;
@@ -2878,9 +2872,9 @@
 
     move-object v3, v2
 
-    .line 466
+    .line 453
     :goto_5
-    if-eqz v10, :cond_18
+    if-eqz v10, :cond_16
 
     move-object/from16 v0, p0
 
@@ -2888,213 +2882,213 @@
 
     move-result-object v2
 
-    .line 470
+    .line 457
     :goto_6
     move-object/from16 v0, p0
 
-    iget-object v9, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v9, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v14, "N"
 
     invoke-virtual {v9, v14}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 471
+    .line 458
     move-object/from16 v0, p0
 
-    iget-boolean v9, v0, Lcom/a/a/b;->f:Z
+    iget-boolean v9, v0, Lcom/a/a/b;->c:Z
 
-    if-eqz v9, :cond_19
+    if-eqz v9, :cond_17
 
-    .line 472
-    if-eqz v12, :cond_10
+    .line 459
+    if-eqz v12, :cond_e
 
-    .line 473
+    .line 460
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v3, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, ";"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 474
+    .line 461
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v3, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/a/a/b;->o:Ljava/lang/String;
+    iget-object v4, v0, Lcom/a/a/b;->p:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 476
-    :cond_10
-    if-eqz v7, :cond_11
+    .line 463
+    :cond_e
+    if-eqz v7, :cond_f
 
-    .line 477
+    .line 464
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v3, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, ";"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 478
+    .line 465
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v3, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, "ENCODING=QUOTED-PRINTABLE"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 480
-    :cond_11
+    .line 467
+    :cond_f
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v3, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, ":"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 482
+    .line 469
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v3, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 483
+    .line 470
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, ";"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 484
+    .line 471
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, ";"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 485
+    .line 472
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, ";"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 486
+    .line 473
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, ";"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 508
+    .line 494
     :goto_7
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, "\r\n"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 511
+    .line 497
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, "FN"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 512
-    if-eqz v13, :cond_12
+    .line 498
+    if-eqz v13, :cond_10
 
-    .line 513
+    .line 499
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, ";"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 514
+    .line 500
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/a/a/b;->o:Ljava/lang/String;
+    iget-object v3, v0, Lcom/a/a/b;->p:Ljava/lang/String;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 516
-    :cond_12
-    if-eqz v10, :cond_13
+    .line 502
+    :cond_10
+    if-eqz v10, :cond_11
 
-    .line 517
+    .line 503
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, ";"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 518
+    .line 504
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, "ENCODING=QUOTED-PRINTABLE"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 520
-    :cond_13
+    .line 506
+    :cond_11
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v3, ":"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 521
+    .line 507
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 522
+    .line 508
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, "\r\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 547
-    :cond_14
+    .line 530
+    :cond_12
     :goto_8
     move-object/from16 v0, p0
 
@@ -3102,52 +3096,52 @@
 
     goto/16 :goto_0
 
-    .line 423
-    :cond_15
+    .line 412
+    :cond_13
     const/4 v1, 0x0
 
     move v7, v1
 
     goto/16 :goto_2
 
-    .line 442
-    :cond_16
+    .line 430
+    :cond_14
     const/4 v8, 0x0
 
     move v10, v8
 
     goto/16 :goto_4
 
-    .line 459
-    :cond_17
+    .line 446
+    :cond_15
     move-object/from16 v0, p0
 
     invoke-direct {v0, v2}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 460
+    .line 447
     move-object/from16 v0, p0
 
     invoke-direct {v0, v4}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 461
+    .line 448
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 462
+    .line 449
     move-object/from16 v0, p0
 
     invoke-direct {v0, v5}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 463
+    .line 450
     move-object/from16 v0, p0
 
     invoke-direct {v0, v6}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
@@ -3166,8 +3160,8 @@
 
     goto/16 :goto_5
 
-    .line 466
-    :cond_18
+    .line 453
+    :cond_16
     move-object/from16 v0, p0
 
     invoke-direct {v0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;)Ljava/lang/String;
@@ -3176,206 +3170,206 @@
 
     goto/16 :goto_6
 
-    .line 489
-    :cond_19
-    if-eqz v12, :cond_1a
+    .line 475
+    :cond_17
+    if-eqz v12, :cond_18
 
-    .line 490
+    .line 476
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v9, ";"
 
     invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 491
+    .line 477
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     move-object/from16 v0, p0
 
-    iget-object v9, v0, Lcom/a/a/b;->o:Ljava/lang/String;
+    iget-object v9, v0, Lcom/a/a/b;->p:Ljava/lang/String;
 
     invoke-virtual {v1, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 493
-    :cond_1a
-    if-eqz v7, :cond_1b
+    .line 479
+    :cond_18
+    if-eqz v7, :cond_19
 
-    .line 494
+    .line 480
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v7, ";"
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 495
+    .line 481
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v7, "ENCODING=QUOTED-PRINTABLE"
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 497
-    :cond_1b
+    .line 483
+    :cond_19
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v7, ":"
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 498
+    .line 484
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 499
+    .line 485
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v7, ";"
 
     invoke-virtual {v1, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 500
+    .line 486
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 501
+    .line 487
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v5, ";"
 
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 502
+    .line 488
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 503
+    .line 489
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v5, ";"
 
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 504
+    .line 490
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 505
+    .line 491
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v4, ";"
 
     invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 506
+    .line 492
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_7
 
-    .line 524
-    :cond_1c
+    .line 509
+    :cond_1a
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-nez v1, :cond_1d
+    if-nez v1, :cond_1b
 
-    .line 527
+    .line 512
     const-string v1, "N"
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v1, v8}, Lcom/a/a/b;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v8}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 528
+    .line 513
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, ";"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 529
+    .line 514
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, ";"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 530
+    .line 515
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, ";"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 531
+    .line 516
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, ";"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 532
+    .line 517
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, "\r\n"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 535
+    .line 520
     const-string v1, "FN"
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v1, v8}, Lcom/a/a/b;->c(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v8}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 536
+    .line 521
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, v0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, "\r\n"
 
@@ -3383,181 +3377,69 @@
 
     goto/16 :goto_8
 
-    .line 539
-    :cond_1d
+    .line 523
+    :cond_1b
     move-object/from16 v0, p0
 
-    iget v1, v0, Lcom/a/a/b;->b:I
+    iget v1, v0, Lcom/a/a/b;->a:I
 
     invoke-static {v1}, Lcom/a/a/c;->b(I)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1e
+    if-eqz v1, :cond_1c
 
-    .line 540
+    .line 524
     const-string v1, "N"
 
     const-string v2, ""
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 541
+    .line 525
     const-string v1, "FN"
 
     const-string v2, ""
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_8
 
-    .line 543
-    :cond_1e
+    .line 526
+    :cond_1c
     move-object/from16 v0, p0
 
-    iget-boolean v1, v0, Lcom/a/a/b;->f:Z
+    iget-boolean v1, v0, Lcom/a/a/b;->c:Z
 
-    if-eqz v1, :cond_14
+    if-eqz v1, :cond_12
 
-    .line 544
+    .line 527
     const-string v1, "N"
 
     const-string v2, ""
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_8
 
-    :cond_1f
+    :cond_1d
     move-object v1, v8
 
     goto/16 :goto_3
 .end method
 
 .method public final a(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 2
-
-    .prologue
-    .line 1796
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 1797
-    const-string v1, "PHOTO"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1798
-    const-string v1, ";"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1799
-    iget-boolean v1, p0, Lcom/a/a/b;->c:Z
-
-    if-eqz v1, :cond_3
-
-    .line 1800
-    const-string v1, "ENCODING=B"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1805
-    :goto_0
-    const-string v1, ";"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1806
-    iget v1, p0, Lcom/a/a/b;->b:I
-
-    invoke-static {v1}, Lcom/a/a/c;->c(I)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    iget v1, p0, Lcom/a/a/b;->b:I
-
-    invoke-static {v1}, Lcom/a/a/c;->b(I)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-boolean v1, p0, Lcom/a/a/b;->j:Z
-
-    if-eqz v1, :cond_2
-
-    :cond_0
-    iget-boolean v1, p0, Lcom/a/a/b;->f:Z
-
-    if-nez v1, :cond_2
-
-    :cond_1
-    const-string v1, "TYPE="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    :cond_2
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1807
-    const-string v1, ":"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1808
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1830
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1831
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
-
-    const-string v1, "\r\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1832
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
-
-    const-string v1, "\r\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 1833
-    return-void
-
-    .line 1803
-    :cond_3
-    const-string v1, "ENCODING=BASE64"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto :goto_0
-.end method
-
-.method public final b(Ljava/lang/String;Ljava/lang/String;)V
     .locals 3
 
     .prologue
-    .line 1978
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    .line 1912
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3565,23 +3447,23 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v2, ":"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v1, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     const-string v1, "\r\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1979
+    .line 1913
     return-void
 .end method
 
@@ -3589,60 +3471,60 @@
     .locals 2
 
     .prologue
-    .line 2278
+    .line 2200
     iget-boolean v0, p0, Lcom/a/a/b;->q:Z
 
     if-nez v0, :cond_1
 
-    .line 2279
-    iget-boolean v0, p0, Lcom/a/a/b;->f:Z
+    .line 2201
+    iget-boolean v0, p0, Lcom/a/a/b;->c:Z
 
     if-eqz v0, :cond_0
 
-    .line 2280
+    .line 2202
     const-string v0, "X-CLASS"
 
     const-string v1, "PUBLIC"
 
-    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2281
+    .line 2203
     const-string v0, "X-REDUCTION"
 
     const-string v1, ""
 
-    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2282
+    .line 2204
     const-string v0, "X-NO"
 
     const-string v1, ""
 
-    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2283
+    .line 2205
     const-string v0, "X-DCM-HMN-MODE"
 
     const-string v1, ""
 
-    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2285
+    .line 2207
     :cond_0
     const-string v0, "END"
 
     const-string v1, "VCARD"
 
-    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->b(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {p0, v0, v1}, Lcom/a/a/b;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2286
+    .line 2208
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/a/a/b;->q:Z
 
-    .line 2288
+    .line 2210
     :cond_1
-    iget-object v0, p0, Lcom/a/a/b;->p:Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/a/a/b;->e:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 

@@ -1,39 +1,40 @@
 .class final Lcom/bbm/ui/dl;
 .super Ljava/lang/Object;
-.source "MainTabBarView.java"
+.source "LinkifyTextView.java"
+
+# interfaces
+.implements Lcom/bbm/ui/dq;
 
 
 # instance fields
-.field a:Landroid/view/ViewGroup;
-
-.field b:Landroid/widget/ImageView;
-
-.field c:Landroid/widget/TextView;
-
-.field d:Landroid/widget/ImageView;
-
-.field final synthetic e:Lcom/bbm/ui/MainTabBarView;
+.field final synthetic a:Lcom/bbm/ui/LinkifyTextView;
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/ui/MainTabBarView;)V
+.method constructor <init>(Lcom/bbm/ui/LinkifyTextView;)V
     .locals 0
 
     .prologue
-    .line 391
-    iput-object p1, p0, Lcom/bbm/ui/dl;->e:Lcom/bbm/ui/MainTabBarView;
+    .line 73
+    iput-object p1, p0, Lcom/bbm/ui/dl;->a:Lcom/bbm/ui/LinkifyTextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/bbm/ui/MainTabBarView;B)V
-    .locals 0
+
+# virtual methods
+.method public final a(Ljava/lang/CharSequence;)Landroid/text/Spannable;
+    .locals 1
 
     .prologue
-    .line 391
-    invoke-direct {p0, p1}, Lcom/bbm/ui/dl;-><init>(Lcom/bbm/ui/MainTabBarView;)V
+    .line 77
+    iget-object v0, p0, Lcom/bbm/ui/dl;->a:Lcom/bbm/ui/LinkifyTextView;
 
-    return-void
+    invoke-static {v0, p1}, Lcom/bbm/ui/LinkifyTextView;->a(Lcom/bbm/ui/LinkifyTextView;Ljava/lang/CharSequence;)Landroid/text/Spannable;
+
+    move-result-object v0
+
+    return-object v0
 .end method

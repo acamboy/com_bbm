@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@drawable/list_item_pyk_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.bbm.ui.ObservingImageView android:id="@id/contact_avatar" android:scaleType="fitCenter" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/ListItemAvatar" />
-    <ImageView android:id="@id/image_invite" android:background="@color/transparent" android:layout_width="@dimen/find_friend_button_size" android:layout_height="@dimen/find_friend_button_size" android:layout_marginRight="@dimen/find_friend_button_padding_right" android:src="@drawable/selector_find_friend_bbm" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-    <LinearLayout android:orientation="vertical" android:paddingRight="@dimen/contact_list_item_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/image_invite" android:layout_toRightOf="@id/contact_avatar" android:layout_centerVertical="true">
-        <com.bbm.ui.InlineImageTextView android:id="@id/contact_name" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListItemTitleField" />
-        <com.bbm.ui.InlineImageTextView android:id="@id/contact_message" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListItemSubtitleField" />
+<LinearLayout android:orientation="vertical" android:background="@drawable/list_item_pyk_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.bbm.ui.ObservingImageView android:id="@id/contact_avatar" android:scaleType="fitCenter" android:layout_centerVertical="true" style="@style/ListItemAvatar" />
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:paddingRight="@dimen/contact_list_item_padding_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <com.bbm.ui.InlineImageTextView android:id="@id/contact_name" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListItemTitleField" />
+            <com.bbm.ui.InlineImageTextView android:id="@id/contact_message" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/ListItemSubtitleField" />
+        </LinearLayout>
+        <TextView android:textSize="@dimen/contact_list_date_text_size" android:textColor="@color/listItemDate" android:layout_gravity="center_vertical" android:id="@id/invite_date" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="@dimen/contact_list_item_title_height" android:layout_marginLeft="@dimen/contact_list_date_margin_left" android:layout_marginTop="@dimen/contact_list_date_margin_top" android:layout_marginRight="@dimen/find_friend_button_padding_right" android:textIsSelectable="false" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/image_invite" android:background="@color/transparent" android:layout_width="@dimen/find_friend_button_size" android:layout_height="@dimen/find_friend_button_size" android:layout_marginRight="@dimen/find_friend_button_padding_right" android:src="@drawable/selector_find_friend_bbm" android:scaleType="centerInside" />
     </LinearLayout>
-    <ImageView android:id="@id/divider" android:background="@drawable/list_item_default_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/contact_list_item_divider_margin_top" android:layout_below="@id/contact_avatar" android:layout_alignParentBottom="true" />
-</RelativeLayout>
+    <ImageView android:id="@id/divider" android:background="@drawable/list_item_default_divider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/contact_list_item_divider_margin_top" android:layout_below="@id/contact_avatar" />
+</LinearLayout>

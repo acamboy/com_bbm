@@ -599,11 +599,11 @@
     move v4, v0
 
     :goto_7
+    const/4 v3, 0x0
+
     const/4 v2, 0x0
 
     const/4 v1, 0x0
-
-    const/4 v3, 0x0
 
     const/4 v0, 0x0
 
@@ -613,7 +613,7 @@
 
     if-le v8, v11, :cond_c
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     :cond_7
     :goto_8
@@ -663,7 +663,7 @@
 
     if-ge v8, v11, :cond_7
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     goto :goto_8
 
@@ -672,7 +672,7 @@
 
     if-ge v9, v11, :cond_8
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
     goto :goto_9
 
@@ -681,7 +681,7 @@
 
     if-le v8, v11, :cond_10
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     :cond_f
     :goto_a
@@ -698,7 +698,7 @@
 
     if-ge v8, v11, :cond_f
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     goto :goto_a
 
@@ -707,18 +707,18 @@
 
     if-ge v9, v11, :cond_8
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
     goto :goto_9
 
     :cond_12
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     :cond_13
     :goto_b
-    if-eqz v2, :cond_20
+    if-eqz v3, :cond_20
 
-    if-eqz v1, :cond_1f
+    if-eqz v2, :cond_1f
 
     invoke-static {}, Lcom/google/zxing/i;->a()Lcom/google/zxing/i;
 
@@ -756,7 +756,7 @@
     throw v0
 
     :cond_17
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     goto :goto_b
 
@@ -770,7 +770,7 @@
     throw v0
 
     :cond_19
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
     goto :goto_b
 
@@ -790,16 +790,16 @@
     :cond_1b
     if-ge v8, v9, :cond_1c
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
     const/4 v0, 0x1
 
     goto :goto_b
 
     :cond_1c
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
     goto :goto_b
 
@@ -820,23 +820,23 @@
     throw v0
 
     :cond_1f
-    iget-object v2, p0, Lcom/google/zxing/e/a/a;->e:[I
+    iget-object v3, p0, Lcom/google/zxing/e/a/a;->e:[I
 
     iget-object v4, p0, Lcom/google/zxing/e/a/a;->c:[F
 
-    invoke-static {v2, v4}, Lcom/google/zxing/e/a/e;->a([I[F)V
+    invoke-static {v3, v4}, Lcom/google/zxing/e/a/e;->a([I[F)V
 
     :cond_20
-    if-eqz v1, :cond_21
+    if-eqz v2, :cond_21
 
-    iget-object v1, p0, Lcom/google/zxing/e/a/a;->e:[I
+    iget-object v2, p0, Lcom/google/zxing/e/a/a;->e:[I
 
-    iget-object v2, p0, Lcom/google/zxing/e/a/a;->c:[F
+    iget-object v3, p0, Lcom/google/zxing/e/a/a;->c:[F
 
-    invoke-static {v1, v2}, Lcom/google/zxing/e/a/e;->b([I[F)V
+    invoke-static {v2, v3}, Lcom/google/zxing/e/a/e;->b([I[F)V
 
     :cond_21
-    if-eqz v3, :cond_23
+    if-eqz v1, :cond_23
 
     if-eqz v0, :cond_22
 
@@ -1625,7 +1625,7 @@
 
 # virtual methods
 .method public final a(ILcom/google/zxing/b/a;Ljava/util/Map;)Lcom/google/zxing/m;
-    .locals 9
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -1778,15 +1778,15 @@
 
     iget v2, v1, Lcom/google/zxing/e/a/b;->a:I
 
-    int-to-long v7, v2
+    int-to-long v8, v2
 
-    mul-long/2addr v4, v7
+    mul-long/2addr v4, v8
 
     iget v2, v0, Lcom/google/zxing/e/a/b;->a:I
 
-    int-to-long v7, v2
+    int-to-long v8, v2
 
-    add-long/2addr v4, v7
+    add-long/2addr v4, v8
 
     invoke-static {v4, v5}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 

@@ -1,9 +1,17 @@
 .class final Lcom/bbm/ui/activities/qa;
-.super Ljava/lang/Object;
-.source "GroupPictureCommentsActivity.java"
+.super Lcom/bbm/d/b/m;
+.source "GroupLobbyActivity.java"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/m",
+        "<",
+        "Lcom/bbm/g/q;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
@@ -11,54 +19,38 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/pz;)V
+.method constructor <init>(Lcom/bbm/ui/activities/pz;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
-    .line 700
+    .line 420
     iput-object p1, p0, Lcom/bbm/ui/activities/qa;->a:Lcom/bbm/ui/activities/pz;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method protected final synthetic a(Ljava/lang/Object;)Z
+    .locals 2
 
     .prologue
-    .line 704
-    new-instance v0, Landroid/view/animation/AlphaAnimation;
+    .line 420
+    check-cast p1, Lcom/bbm/g/q;
 
-    const/high16 v1, 0x3f800000
+    iget-object v0, p1, Lcom/bbm/g/q;->d:Ljava/lang/String;
 
-    const/4 v2, 0x0
-
-    invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
-
-    .line 705
-    const-wide/16 v1, 0x5dc
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
-
-    .line 706
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
-
-    .line 707
     iget-object v1, p0, Lcom/bbm/ui/activities/qa;->a:Lcom/bbm/ui/activities/pz;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/pz;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    iget-object v1, v1, Lcom/bbm/ui/activities/pz;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->w(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/RelativeLayout;
+    iget-object v1, v1, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
-    invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->startAnimation(Landroid/view/animation/Animation;)V
+    move-result v0
 
-    .line 708
-    return-void
+    return v0
 .end method

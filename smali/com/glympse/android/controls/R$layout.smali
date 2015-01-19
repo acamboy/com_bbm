@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static final glympse_button:I = 0x7f03009b
+.field public static final glympse_button:I = 0x7f0300a5
 
-.field public static final glympse_container:I = 0x7f03009c
+.field public static final glympse_container:I = 0x7f0300a6
 
-.field public static final glympse_time_picker_fragment:I = 0x7f03009d
+.field public static final glympse_time_picker_fragment:I = 0x7f0300a7
 
 
 # direct methods

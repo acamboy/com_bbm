@@ -1,126 +1,84 @@
-.class public abstract Lcom/bbm/d/b/o;
-.super Lcom/bbm/d/b/f;
-.source "SortedList.java"
+.class final Lcom/bbm/d/b/o;
+.super Ljava/lang/Object;
+.source "PartnerAppFetcher.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<T:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lcom/bbm/d/b/f",
-        "<TT;>;"
-    }
-.end annotation
+# interfaces
+.implements Lcom/bbm/f/ac;
 
 
 # instance fields
-.field a:Lcom/bbm/j/r;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/bbm/j/r",
-            "<",
-            "Ljava/util/List",
-            "<TT;>;>;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcom/bbm/d/b/n;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/j/r;)V
+.method constructor <init>(Lcom/bbm/d/b/n;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bbm/j/r",
-            "<",
-            "Ljava/util/List",
-            "<TT;>;>;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 16
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    .line 34
+    iput-object p1, p0, Lcom/bbm/d/b/o;->a:Lcom/bbm/d/b/n;
 
-    .line 17
-    iput-object p1, p0, Lcom/bbm/d/b/o;->a:Lcom/bbm/j/r;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     return-void
 .end method
 
 
 # virtual methods
-.method public abstract a(Ljava/lang/Object;Ljava/lang/Object;)I
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TT;TT;)I"
-        }
-    .end annotation
-.end method
-
-.method protected final a()Ljava/util/List;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<TT;>;"
-        }
-    .end annotation
+.method public final a()V
+    .locals 0
 
     .prologue
-    .line 22
-    iget-object v0, p0, Lcom/bbm/d/b/o;->a:Lcom/bbm/j/r;
+    .line 36
+    return-void
+.end method
 
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 4
+
+    .prologue
+    .line 40
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
+
+    const-string v1, "partnerAppAddResponse"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 41
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
+
+    .line 42
+    const-string v1, "result"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
+    .line 43
+    const-string v1, "TPA: PartnerAppAddResponse - result: "
 
-    .line 23
-    new-instance v2, Ljava/util/ArrayList;
+    const/4 v2, 0x1
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    new-array v2, v2, [Ljava/lang/Object;
 
-    move-result v1
+    const/4 v3, 0x0
 
-    invoke-direct {v2, v1}, Ljava/util/ArrayList;-><init>(I)V
+    aput-object v0, v2, v3
 
-    .line 24
-    const/4 v1, 0x0
+    invoke-static {v1, v2}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    :goto_0
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    .line 47
+    iget-object v0, p0, Lcom/bbm/d/b/o;->a:Lcom/bbm/d/b/n;
 
-    move-result v3
+    iget-object v0, v0, Lcom/bbm/d/b/n;->e:Lcom/bbm/j/u;
 
-    if-ge v1, v3, :cond_0
+    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
 
-    .line 25
-    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 24
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    .line 27
+    .line 49
     :cond_0
-    new-instance v0, Lcom/bbm/d/b/p;
-
-    invoke-direct {v0, p0}, Lcom/bbm/d/b/p;-><init>(Lcom/bbm/d/b/o;)V
-
-    invoke-static {v2, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
-
-    .line 42
-    return-object v2
+    return-void
 .end method

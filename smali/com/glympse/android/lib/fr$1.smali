@@ -1,3 +1,3 @@
 .class synthetic Lcom/glympse/android/lib/fr$1;
 .super Ljava/lang/Object;
-.source "MemoryCache.java"
+.source "LocationManager.java"

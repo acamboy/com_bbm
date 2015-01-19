@@ -55,30 +55,30 @@
 .end method
 
 .method public static a(Ljava/lang/Double;)Lcom/google/android/gms/tagmanager/dh;
-    .locals 3
+    .locals 4
 
     new-instance v0, Lcom/google/android/gms/tagmanager/dh;
 
     invoke-virtual {p0}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/tagmanager/dh;-><init>(D)V
+    invoke-direct {v0, v2, v3}, Lcom/google/android/gms/tagmanager/dh;-><init>(D)V
 
     return-object v0
 .end method
 
 .method public static bH(Ljava/lang/String;)Lcom/google/android/gms/tagmanager/dh;
-    .locals 3
+    .locals 4
 
     :try_start_0
     new-instance v0, Lcom/google/android/gms/tagmanager/dh;
 
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/tagmanager/dh;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Lcom/google/android/gms/tagmanager/dh;-><init>(J)V
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -93,9 +93,9 @@
 
     invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/tagmanager/dh;-><init>(D)V
+    invoke-direct {v0, v2, v3}, Lcom/google/android/gms/tagmanager/dh;-><init>(D)V
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -130,7 +130,7 @@
 .end method
 
 .method public static v(J)Lcom/google/android/gms/tagmanager/dh;
-    .locals 1
+    .locals 2
 
     new-instance v0, Lcom/google/android/gms/tagmanager/dh;
 
@@ -158,13 +158,13 @@
 
     new-instance v0, Ljava/lang/Long;
 
-    iget-wide v1, p0, Lcom/google/android/gms/tagmanager/dh;->XG:J
+    iget-wide v2, p0, Lcom/google/android/gms/tagmanager/dh;->XG:J
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Long;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Ljava/lang/Long;-><init>(J)V
 
-    iget-wide v1, p1, Lcom/google/android/gms/tagmanager/dh;->XG:J
+    iget-wide v2, p1, Lcom/google/android/gms/tagmanager/dh;->XG:J
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
@@ -278,15 +278,15 @@
 .end method
 
 .method public hashCode()I
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/lang/Long;
 
     invoke-virtual {p0}, Lcom/google/android/gms/tagmanager/dh;->longValue()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Long;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Ljava/lang/Long;-><init>(J)V
 
     invoke-virtual {v0}, Ljava/lang/Long;->hashCode()I
 

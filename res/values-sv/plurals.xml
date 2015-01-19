@@ -4,14 +4,31 @@
         <item quantity="other">Massmeddelande skickat till %1$s kontakter</item>
         <item quantity="one">Massmeddelande skickat till 1 kontakt</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d prenumeranter</item>
+        <item quantity="zero">Ingen prenumerant</item>
+        <item quantity="one">%1$d prenumerant</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d medlemmar</item>
+        <item quantity="one">%1$d medlem</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">sekunder</item>
+        <item quantity="one">sekund</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Tid har ställts in som %1$d sekunder.</item>
+        <item quantity="one">Tid har ställts in som %1$d sekund.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s objekt</item>
         <item quantity="zero">0 objekt</item>
         <item quantity="one">1 objekt</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d väntande inbjudningar)</item>
-        <item quantity="one">(1 väntande inbjudning)</item>
+        <item quantity="other">(%1$d väntande)</item>
+        <item quantity="one">(1 väntande)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s resultat</item>

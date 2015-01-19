@@ -151,21 +151,21 @@
 .end method
 
 .method b(Ljava/lang/String;J)V
-    .locals 6
+    .locals 8
 
-    new-instance v0, Lcom/google/android/gms/tagmanager/as$1;
-
-    move-object v1, p0
+    new-instance v1, Lcom/google/android/gms/tagmanager/as$1;
 
     move-object v2, p0
 
-    move-wide v3, p2
+    move-object v3, p0
 
-    move-object v5, p1
+    move-wide v4, p2
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/tagmanager/as$1;-><init>(Lcom/google/android/gms/tagmanager/as;Lcom/google/android/gms/tagmanager/ar;JLjava/lang/String;)V
+    move-object v6, p1
 
-    invoke-virtual {p0, v0}, Lcom/google/android/gms/tagmanager/as;->a(Ljava/lang/Runnable;)V
+    invoke-direct/range {v1 .. v6}, Lcom/google/android/gms/tagmanager/as$1;-><init>(Lcom/google/android/gms/tagmanager/as;Lcom/google/android/gms/tagmanager/ar;JLjava/lang/String;)V
+
+    invoke-virtual {p0, v1}, Lcom/google/android/gms/tagmanager/as;->a(Ljava/lang/Runnable;)V
 
     return-void
 .end method

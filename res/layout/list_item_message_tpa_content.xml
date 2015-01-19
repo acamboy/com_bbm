@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:padding="@dimen/conversation_chat_bubble_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.bbm.ui.InlineImageTextView android:textAppearance="@style/ConversationSender" android:ellipsize="end" android:id="@id/message_tpa_content_sender" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_toLeftOf="@id/message_tpa_content_date" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:textIsSelectable="false" />
+        <TextView android:textAppearance="@style/ConversationDate" android:id="@id/message_tpa_content_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/conversation_chat_bubble_date_padding" android:layout_toLeftOf="@id/message_photo" android:layout_alignBaseline="@id/message_sender" android:layout_alignWithParentIfMissing="true" android:textIsSelectable="false" />
+    </RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/settings_item_small_padding_top" android:layout_marginBottom="@dimen/settings_item_small_padding_bottom" layout="@layout/divider_common" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/message_tpa_content_vendor_icon" android:layout_width="@dimen/conversation_chat_bubble_context_avatar_size" android:layout_height="@dimen/conversation_chat_bubble_context_avatar_size" android:src="@drawable/partner_default" android:scaleType="centerCrop" android:contentDescription="@string/blank" />
+        <ImageView android:id="@id/message_tpa_content_status" android:paddingLeft="@dimen/settings_item_padding_left" android:paddingTop="@dimen/glypse_status_padding_top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:contentDescription="@string/blank" />
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/settings_item_padding_left" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.bbm.ui.LinkifyTextView android:textColor="@color/conversation_chat_content" android:ellipsize="marquee" android:id="@id/message_tpa_content_custom_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/conversation_glympse_message_expire_time_margin_top" android:textIsSelectable="false" />
+            <com.bbm.ui.LinkifyTextView android:textStyle="italic" android:textColor="@color/conversation_send_text_color_disabled" android:ellipsize="marquee" android:id="@id/message_tpa_content_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textIsSelectable="false" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

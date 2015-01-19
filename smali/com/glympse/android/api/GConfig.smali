@@ -13,6 +13,9 @@
 .method public abstract allowSpeedSharing(Z)V
 .end method
 
+.method public abstract getAccountCreationTime()J
+.end method
+
 .method public abstract getContents()Lcom/glympse/android/core/GPrimitive;
 .end method
 
@@ -23,6 +26,9 @@
 .end method
 
 .method public abstract getInviteLifetime()J
+.end method
+
+.method public abstract getMaximumNicknameLength()I
 .end method
 
 .method public abstract getMaximumTicketDuration()I

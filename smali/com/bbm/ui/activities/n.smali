@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 238
+    .line 226
     iput-object p1, p0, Lcom/bbm/ui/activities/n;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +29,7 @@
     .locals 3
 
     .prologue
-    .line 241
+    .line 229
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/bbm/ui/activities/n;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
@@ -38,7 +38,7 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 242
+    .line 230
     const-string v1, "imageUrl"
 
     iget-object v2, p0, Lcom/bbm/ui/activities/n;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
@@ -49,13 +49,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 243
+    .line 231
     iget-object v1, p0, Lcom/bbm/ui/activities/n;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/AddChannelPostActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 244
+    .line 232
     return-void
 .end method

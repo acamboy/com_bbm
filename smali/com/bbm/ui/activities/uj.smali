@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/uj;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "GroupsIconActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/fu;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupsIconActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupsIconActivity;)V
     .locals 0
 
     .prologue
-    .line 2046
-    iput-object p1, p0, Lcom/bbm/ui/activities/uj;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 134
+    iput-object p1, p0, Lcom/bbm/ui/activities/uj;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,58 +25,29 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 2049
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    .line 138
+    const-string v0, "headerButtonActionBar Negative Button Clicked"
 
-    .line 2050
-    packed-switch v0, :pswitch_data_0
+    const-class v1, Lcom/bbm/ui/activities/GroupsIconActivity;
 
-    .line 2074
-    iget-object v1, p0, Lcom/bbm/ui/activities/uj;->a:Lcom/bbm/ui/activities/MainActivity;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/MainActivity;->d(Lcom/bbm/ui/activities/MainActivity;I)Z
+    .line 140
+    iget-object v0, p0, Lcom/bbm/ui/activities/uj;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
 
-    .line 2077
-    :goto_0
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/GroupsIconActivity;->setResult(I)V
+
+    .line 141
+    iget-object v0, p0, Lcom/bbm/ui/activities/uj;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupsIconActivity;->finish()V
+
+    .line 142
     return-void
-
-    .line 2052
-    :pswitch_0
-    const-string v0, "Add Category handleSlideMenuItemClick"
-
-    const-class v1, Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 2053
-    iget-object v0, p0, Lcom/bbm/ui/activities/uj;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->v()V
-
-    .line 2054
-    iget-object v0, p0, Lcom/bbm/ui/activities/uj;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    new-instance v1, Lcom/bbm/ui/activities/uk;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/uk;-><init>(Lcom/bbm/ui/activities/uj;)V
-
-    new-instance v2, Lcom/bbm/ui/activities/ul;
-
-    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/ul;-><init>(Lcom/bbm/ui/activities/uj;)V
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/ui/activities/SelectCategoryActivity;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnDismissListener;Lcom/bbm/ui/activities/abo;)V
-
-    goto :goto_0
-
-    .line 2050
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x7f0a004a
-        :pswitch_0
-    .end packed-switch
 .end method

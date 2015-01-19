@@ -62,7 +62,7 @@
 .end method
 
 .method public a(Lcom/google/android/gms/tagmanager/ca;J)V
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

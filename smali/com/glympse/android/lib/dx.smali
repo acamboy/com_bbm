@@ -1,105 +1,404 @@
 .class Lcom/glympse/android/lib/dx;
 .super Ljava/lang/Object;
-.source "Image.java"
+.source "HistoryStorage.java"
 
 # interfaces
-.implements Lcom/glympse/android/lib/GImagePrivate;
+.implements Lcom/glympse/android/core/GCommon;
 
 
 # instance fields
-.field private cb:I
+.field _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-.field private hE:Lcom/glympse/android/lib/CommonSink;
+.field private jO:Lcom/glympse/android/lib/hw;
 
-.field private iG:Lcom/glympse/android/lib/GImageCache;
+.field private lu:Lcom/glympse/android/lib/GCorrectedTime;
 
-.field private jS:Ljava/lang/String;
+.field private nd:Z
 
-.field private mZ:I
+.field public nk:J
 
-.field private na:Lcom/glympse/android/core/GDrawable;
+.field public nt:J
 
-.field private nb:Ljava/lang/String;
+.field private nu:J
+
+.field private nv:J
+
+.field public nw:J
+
+.field public nx:Lcom/glympse/android/hal/GVector;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/glympse/android/hal/GVector",
+            "<",
+            "Lcom/glympse/android/lib/GTicketPrivate;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 36
+    const-wide/16 v2, 0x0
+
+    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
-    const/4 v0, 0x3
-
-    iput v0, p0, Lcom/glympse/android/lib/dx;->mZ:I
-
-    .line 38
+    .line 58
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/glympse/android/lib/dx;->cb:I
+    iput-boolean v0, p0, Lcom/glympse/android/lib/dx;->nd:Z
 
-    .line 39
-    new-instance v0, Lcom/glympse/android/lib/CommonSink;
+    .line 59
+    iput-wide v2, p0, Lcom/glympse/android/lib/dx;->nw:J
 
-    const-string v1, "Image"
+    .line 60
+    new-instance v0, Lcom/glympse/android/hal/GVector;
 
-    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    move-result-object v1
+    iput-object v0, p0, Lcom/glympse/android/lib/dx;->nx:Lcom/glympse/android/hal/GVector;
 
-    invoke-direct {v0, v1}, Lcom/glympse/android/lib/CommonSink;-><init>(Ljava/lang/String;)V
+    .line 61
+    iput-wide v2, p0, Lcom/glympse/android/lib/dx;->nk:J
 
-    iput-object v0, p0, Lcom/glympse/android/lib/dx;->hE:Lcom/glympse/android/lib/CommonSink;
+    .line 62
+    iput-wide v2, p0, Lcom/glympse/android/lib/dx;->nu:J
 
-    .line 40
+    .line 63
+    iput-wide v2, p0, Lcom/glympse/android/lib/dx;->nv:J
+
+    .line 64
     return-void
 .end method
 
-.method public constructor <init>(Ljava/lang/String;Lcom/glympse/android/core/GDrawable;)V
-    .locals 2
+.method public static b(Lcom/glympse/android/hal/GDirectory;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 43
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 322
+    const-string v0, "history_v2"
 
-    .line 44
-    const/4 v0, 0x3
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
-    iput v0, p0, Lcom/glympse/android/lib/dx;->mZ:I
+    move-result-object v0
 
-    .line 45
-    if-eqz p2, :cond_0
+    invoke-static {p1, v0}, Lcom/glympse/android/lib/hw;->e(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v0, 0x2
+    move-result-object v0
 
-    :goto_0
-    iput v0, p0, Lcom/glympse/android/lib/dx;->cb:I
+    invoke-interface {p0, v0}, Lcom/glympse/android/hal/GDirectory;->deleteFile(Ljava/lang/String;)Z
 
-    .line 46
-    iput-object p1, p0, Lcom/glympse/android/lib/dx;->jS:Ljava/lang/String;
+    .line 323
+    return-void
+.end method
 
-    .line 47
-    iput-object p2, p0, Lcom/glympse/android/lib/dx;->na:Lcom/glympse/android/core/GDrawable;
+.method private bW()V
+    .locals 4
 
-    .line 48
-    new-instance v0, Lcom/glympse/android/lib/CommonSink;
+    .prologue
+    .line 299
+    iget-object v0, p0, Lcom/glympse/android/lib/dx;->lu:Lcom/glympse/android/lib/GCorrectedTime;
 
-    const-string v1, "Image"
+    invoke-interface {v0}, Lcom/glympse/android/lib/GCorrectedTime;->getTime()J
 
-    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    move-result-wide v0
 
-    move-result-object v1
+    .line 300
+    iget-wide v2, p0, Lcom/glympse/android/lib/dx;->nt:J
 
-    invoke-direct {v0, v1}, Lcom/glympse/android/lib/CommonSink;-><init>(Ljava/lang/String;)V
+    sub-long v2, v0, v2
 
-    iput-object v0, p0, Lcom/glympse/android/lib/dx;->hE:Lcom/glympse/android/lib/CommonSink;
+    iput-wide v2, p0, Lcom/glympse/android/lib/dx;->nu:J
 
-    .line 49
+    .line 301
+    const-wide/32 v2, 0xdbba00
+
+    sub-long/2addr v0, v2
+
+    iput-wide v0, p0, Lcom/glympse/android/lib/dx;->nv:J
+
+    .line 302
+    return-void
+.end method
+
+.method private bd()V
+    .locals 8
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 256
+    iget-object v0, p0, Lcom/glympse/android/lib/dx;->jO:Lcom/glympse/android/lib/hw;
+
+    invoke-virtual {v0}, Lcom/glympse/android/lib/hw;->load()Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
+
+    .line 257
+    if-nez v0, :cond_1
+
+    .line 292
+    :cond_0
     return-void
 
-    .line 45
+    .line 264
+    :cond_1
+    invoke-direct {p0}, Lcom/glympse/android/lib/dx;->bW()V
+
+    .line 267
+    const-string v2, "locExpTs"
+
+    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Lcom/glympse/android/core/GPrimitive;->getLong(Ljava/lang/String;)J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lcom/glympse/android/lib/dx;->nw:J
+
+    .line 270
+    iget-object v2, p0, Lcom/glympse/android/lib/dx;->nx:Lcom/glympse/android/hal/GVector;
+
+    invoke-virtual {v2}, Lcom/glympse/android/hal/GVector;->removeAllElements()V
+
+    .line 271
+    const-string v2, "expired"
+
+    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v2
+
+    .line 272
+    if-eqz v2, :cond_0
+
+    .line 274
+    invoke-interface {v2}, Lcom/glympse/android/core/GPrimitive;->size()I
+
+    move-result v3
+
+    move v0, v1
+
+    .line 275
+    :goto_0
+    if-ge v0, v3, :cond_0
+
+    .line 277
+    invoke-interface {v2, v0}, Lcom/glympse/android/core/GPrimitive;->get(I)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v4
+
+    .line 278
+    new-instance v5, Lcom/glympse/android/lib/hz;
+
+    invoke-direct {v5, v1}, Lcom/glympse/android/lib/hz;-><init>(Z)V
+
+    .line 279
+    invoke-interface {v5, v4}, Lcom/glympse/android/lib/GTicketPrivate;->decode(Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 282
+    invoke-direct {p0, v5}, Lcom/glympse/android/lib/dx;->e(Lcom/glympse/android/api/GTicket;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    .line 285
+    iget-object v4, p0, Lcom/glympse/android/lib/dx;->nx:Lcom/glympse/android/hal/GVector;
+
+    invoke-virtual {v4, v5}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
+
+    .line 288
+    iget-wide v6, p0, Lcom/glympse/android/lib/dx;->nk:J
+
+    invoke-interface {v5}, Lcom/glympse/android/lib/GTicketPrivate;->getExpireTime()J
+
+    move-result-wide v4
+
+    invoke-static {v6, v7, v4, v5}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v4
+
+    iput-wide v4, p0, Lcom/glympse/android/lib/dx;->nk:J
+
+    .line 275
+    :cond_2
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method private d(Lcom/glympse/android/hal/GVector;)V
+    .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glympse/android/hal/GVector",
+            "<",
+            "Lcom/glympse/android/api/GTicket;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v10, 0x2
+
+    const/4 v4, 0x0
+
+    .line 203
+    iget-boolean v0, p0, Lcom/glympse/android/lib/dx;->nd:Z
+
+    if-nez v0, :cond_0
+
+    .line 248
+    :goto_0
+    return-void
+
+    .line 209
+    :cond_0
+    invoke-direct {p0}, Lcom/glympse/android/lib/dx;->bW()V
+
+    .line 212
+    const-wide/16 v0, 0x0
+
+    .line 213
+    new-instance v5, Lcom/glympse/android/lib/Primitive;
+
+    invoke-direct {v5, v10}, Lcom/glympse/android/lib/Primitive;-><init>(I)V
+
+    .line 214
+    invoke-virtual {p1}, Lcom/glympse/android/hal/GVector;->length()I
+
+    move-result v6
+
+    .line 215
+    if-lez v6, :cond_2
+
+    .line 217
+    new-instance v7, Lcom/glympse/android/lib/Primitive;
+
+    const/4 v2, 0x1
+
+    invoke-direct {v7, v2}, Lcom/glympse/android/lib/Primitive;-><init>(I)V
+
+    move-wide v2, v0
+
+    move v1, v4
+
+    .line 218
+    :goto_1
+    if-ge v1, v6, :cond_1
+
+    .line 220
+    invoke-virtual {p1, v1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/lib/GTicketPrivate;
+
+    .line 221
+    new-instance v8, Lcom/glympse/android/lib/Primitive;
+
+    invoke-direct {v8, v10}, Lcom/glympse/android/lib/Primitive;-><init>(I)V
+
+    .line 222
+    invoke-interface {v0, v8, v4}, Lcom/glympse/android/lib/GTicketPrivate;->encode(Lcom/glympse/android/core/GPrimitive;I)V
+
+    .line 224
+    invoke-interface {v0}, Lcom/glympse/android/lib/GTicketPrivate;->isActive()Z
+
+    move-result v8
+
+    if-eqz v8, :cond_1
+
+    .line 226
+    invoke-interface {v0}, Lcom/glympse/android/lib/GTicketPrivate;->getExpireTime()J
+
+    move-result-wide v8
+
+    invoke-static {v2, v3, v8, v9}, Ljava/lang/Math;->max(JJ)J
+
+    move-result-wide v2
+
+    .line 218
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_1
+
+    .line 240
+    :cond_1
+    const-string v0, "expired"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v5, v0, v7}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+
+    move-wide v0, v2
+
+    .line 244
+    :cond_2
+    const-string v2, "locExpTs"
+
+    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v5, v2, v0, v1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
+
+    .line 247
+    iget-object v0, p0, Lcom/glympse/android/lib/dx;->jO:Lcom/glympse/android/lib/hw;
+
+    invoke-virtual {v0, v5}, Lcom/glympse/android/lib/hw;->save(Lcom/glympse/android/core/GPrimitive;)V
+
+    goto :goto_0
+.end method
+
+.method private e(Lcom/glympse/android/api/GTicket;)Z
+    .locals 4
+
+    .prologue
+    .line 313
+    invoke-interface {p1}, Lcom/glympse/android/api/GTicket;->getExpireTime()J
+
+    move-result-wide v0
+
+    .line 314
+    invoke-interface {p1}, Lcom/glympse/android/api/GTicket;->isCompleted()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-wide v2, p0, Lcom/glympse/android/lib/dx;->nu:J
+
+    cmp-long v2, v2, v0
+
+    if-gtz v2, :cond_0
+
+    iget-wide v2, p0, Lcom/glympse/android/lib/dx;->nv:J
+
+    cmp-long v0, v0, v2
+
+    if-gtz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
     :cond_0
     const/4 v0, 0x0
 
@@ -108,393 +407,234 @@
 
 
 # virtual methods
-.method public addListener(Lcom/glympse/android/api/GEventListener;)Z
-    .locals 1
-
-    .prologue
-    .line 180
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->addListener(Lcom/glympse/android/api/GEventListener;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public associateContext(JLjava/lang/Object;)V
-    .locals 1
-
-    .prologue
-    .line 205
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0, p1, p2, p3}, Lcom/glympse/android/lib/CommonSink;->associateContext(JLjava/lang/Object;)V
-
-    .line 206
-    return-void
-.end method
-
-.method public attachCache(Lcom/glympse/android/lib/GImageCache;)V
+.method public a(ZLcom/glympse/android/hal/GVector;)V
     .locals 0
-
-    .prologue
-    .line 151
-    iput-object p1, p0, Lcom/glympse/android/lib/dx;->iG:Lcom/glympse/android/lib/GImageCache;
-
-    .line 152
-    return-void
-.end method
-
-.method public clearContext(J)V
-    .locals 1
-
-    .prologue
-    .line 215
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->clearContext(J)V
-
-    .line 216
-    return-void
-.end method
-
-.method public deriveContext(Lcom/glympse/android/api/GEventSink;)V
-    .locals 1
-
-    .prologue
-    .line 225
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->deriveContext(Lcom/glympse/android/api/GEventSink;)V
-
-    .line 226
-    return-void
-.end method
-
-.method public eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
-    .locals 6
-
-    .prologue
-    .line 195
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/glympse/android/api/GEventSink;
-
-    move-object v2, p1
-
-    move v3, p2
-
-    move v4, p3
-
-    move-object v5, p4
-
-    invoke-virtual/range {v0 .. v5}, Lcom/glympse/android/lib/CommonSink;->eventsOccurred(Lcom/glympse/android/api/GEventSink;Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
-
-    .line 196
-    return-void
-.end method
-
-.method public getContext(J)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 210
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->getContext(J)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getContextKeys()Ljava/util/Enumeration;
-    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()",
-            "Ljava/util/Enumeration",
+            "(Z",
+            "Lcom/glympse/android/hal/GVector",
             "<",
-            "Ljava/lang/Long;",
-            ">;"
+            "Lcom/glympse/android/api/GTicket;",
+            ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 220
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->hE:Lcom/glympse/android/lib/CommonSink;
+    .line 97
+    if-nez p1, :cond_0
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/CommonSink;->getContextKeys()Ljava/util/Enumeration;
+    .line 100
+    invoke-direct {p0, p2}, Lcom/glympse/android/lib/dx;->d(Lcom/glympse/android/hal/GVector;)V
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getDrawable()Lcom/glympse/android/core/GDrawable;
-    .locals 1
-
-    .prologue
-    .line 67
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->na:Lcom/glympse/android/core/GDrawable;
-
-    return-object v0
-.end method
-
-.method public getHashCode()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 171
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->nb:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public getListeners()Lcom/glympse/android/core/GArray;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/glympse/android/core/GArray",
-            "<",
-            "Lcom/glympse/android/api/GEventListener;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 190
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0}, Lcom/glympse/android/lib/CommonSink;->getListeners()Lcom/glympse/android/core/GArray;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getState()I
-    .locals 1
-
-    .prologue
-    .line 57
-    iget v0, p0, Lcom/glympse/android/lib/dx;->cb:I
-
-    return v0
-.end method
-
-.method public getSupportedCache()I
-    .locals 1
-
-    .prologue
-    .line 161
-    iget v0, p0, Lcom/glympse/android/lib/dx;->mZ:I
-
-    return v0
-.end method
-
-.method public getUrl()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 62
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->jS:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public hasContext(J)Z
-    .locals 1
-
-    .prologue
-    .line 200
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->hasContext(J)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public load()Z
-    .locals 3
-
-    .prologue
-    const/4 v0, 0x1
-
-    .line 73
-    const/4 v1, 0x2
-
-    iget v2, p0, Lcom/glympse/android/lib/dx;->cb:I
-
-    if-eq v1, v2, :cond_0
-
-    iget v1, p0, Lcom/glympse/android/lib/dx;->cb:I
-
-    if-ne v0, v1, :cond_1
-
-    .line 95
+    .line 102
     :cond_0
+    return-void
+.end method
+
+.method public b(Lcom/glympse/android/hal/GVector;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glympse/android/hal/GVector",
+            "<",
+            "Lcom/glympse/android/api/GTicket;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 87
+    invoke-direct {p0, p1}, Lcom/glympse/android/lib/dx;->d(Lcom/glympse/android/hal/GVector;)V
+
+    .line 90
+    iget-object v0, p0, Lcom/glympse/android/lib/dx;->jO:Lcom/glympse/android/lib/hw;
+
+    invoke-virtual {v0}, Lcom/glympse/android/lib/hw;->stop()V
+
+    .line 91
+    iput-object v1, p0, Lcom/glympse/android/lib/dx;->jO:Lcom/glympse/android/lib/hw;
+
+    .line 92
+    iput-object v1, p0, Lcom/glympse/android/lib/dx;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    .line 93
+    return-void
+.end method
+
+.method public c(Lcom/glympse/android/hal/GVector;)V
+    .locals 9
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glympse/android/hal/GVector",
+            "<",
+            "Lcom/glympse/android/api/GTicket;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 123
+    invoke-virtual {p1}, Lcom/glympse/android/hal/GVector;->size()I
+
+    move-result v4
+
+    move v3, v2
+
+    .line 124
     :goto_0
-    return v0
+    if-ge v3, v4, :cond_2
 
-    .line 79
-    :cond_1
-    iget-object v1, p0, Lcom/glympse/android/lib/dx;->jS:Ljava/lang/String;
+    .line 127
+    invoke-virtual {p1, v3}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
-    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/lib/GTicketPrivate;
+
+    .line 130
+    invoke-interface {v0}, Lcom/glympse/android/lib/GTicketPrivate;->isActive()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 83
-    const/4 v1, 0x0
+    .line 132
+    invoke-interface {v0}, Lcom/glympse/android/lib/GTicketPrivate;->getInvites()Lcom/glympse/android/core/GArray;
 
-    iput-object v1, p0, Lcom/glympse/android/lib/dx;->na:Lcom/glympse/android/core/GDrawable;
+    move-result-object v5
 
-    goto :goto_0
+    .line 137
+    invoke-interface {v5}, Lcom/glympse/android/core/GArray;->length()I
 
-    .line 89
-    :cond_2
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->iG:Lcom/glympse/android/lib/GImageCache;
+    move-result v6
 
-    if-nez v0, :cond_3
+    move v1, v2
 
-    .line 91
-    const/4 v0, 0x0
+    .line 138
+    :goto_1
+    if-ge v1, v6, :cond_1
 
-    goto :goto_0
-
-    .line 95
-    :cond_3
-    iget-object v1, p0, Lcom/glympse/android/lib/dx;->iG:Lcom/glympse/android/lib/GImageCache;
-
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 140
+    invoke-interface {v5, v1}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/glympse/android/api/GImage;
+    check-cast v0, Lcom/glympse/android/lib/GInvitePrivate;
 
-    iget-object v2, p0, Lcom/glympse/android/lib/dx;->jS:Ljava/lang/String;
+    .line 144
+    const/4 v7, 0x2
 
-    invoke-interface {v1, v0, v2}, Lcom/glympse/android/lib/GImageCache;->extract(Lcom/glympse/android/api/GImage;Ljava/lang/String;)Z
+    invoke-interface {v0}, Lcom/glympse/android/lib/GInvitePrivate;->getState()I
 
-    move-result v0
+    move-result v8
 
-    goto :goto_0
-.end method
+    if-ne v7, v8, :cond_0
 
-.method public removeListener(Lcom/glympse/android/api/GEventListener;)Z
-    .locals 1
+    .line 148
+    const/16 v7, 0x8
 
-    .prologue
-    .line 185
-    iget-object v0, p0, Lcom/glympse/android/lib/dx;->hE:Lcom/glympse/android/lib/CommonSink;
+    invoke-interface {v0, v7}, Lcom/glympse/android/lib/GInvitePrivate;->setState(I)V
 
-    invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
+    .line 149
+    iget-object v7, p0, Lcom/glympse/android/lib/dx;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    move-result v0
+    invoke-interface {v7}, Lcom/glympse/android/lib/GGlympsePrivate;->getTicketProtocol()Lcom/glympse/android/lib/GTicketProtocol;
 
-    return v0
-.end method
+    move-result-object v7
 
-.method public setDrawable(Lcom/glympse/android/core/GDrawable;)V
-    .locals 0
+    invoke-interface {v7, v0}, Lcom/glympse/android/lib/GTicketProtocol;->updateInvite(Lcom/glympse/android/api/GInvite;)V
 
-    .prologue
-    .line 146
-    iput-object p1, p0, Lcom/glympse/android/lib/dx;->na:Lcom/glympse/android/core/GDrawable;
-
-    .line 147
-    return-void
-.end method
-
-.method public setHashCode(Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 166
-    iput-object p1, p0, Lcom/glympse/android/lib/dx;->nb:Ljava/lang/String;
-
-    .line 167
-    return-void
-.end method
-
-.method public setState(I)V
-    .locals 0
-
-    .prologue
-    .line 136
-    iput p1, p0, Lcom/glympse/android/lib/dx;->cb:I
-
-    .line 137
-    return-void
-.end method
-
-.method public setSupportedCache(I)V
-    .locals 0
-
-    .prologue
-    .line 156
-    iput p1, p0, Lcom/glympse/android/lib/dx;->mZ:I
-
-    .line 157
-    return-void
-.end method
-
-.method public setUrl(Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 141
-    iput-object p1, p0, Lcom/glympse/android/lib/dx;->jS:Ljava/lang/String;
-
-    .line 142
-    return-void
-.end method
-
-.method public unload()Z
-    .locals 3
-
-    .prologue
-    const/4 v1, 0x1
-
-    const/4 v0, 0x0
-
-    .line 101
-    iget v2, p0, Lcom/glympse/android/lib/dx;->cb:I
-
-    if-ne v1, v2, :cond_1
-
-    .line 127
+    .line 138
     :cond_0
-    :goto_0
-    return v0
+    add-int/lit8 v0, v1, 0x1
 
-    .line 107
+    move v1, v0
+
+    goto :goto_1
+
+    .line 124
     :cond_1
-    iget-object v2, p0, Lcom/glympse/android/lib/dx;->iG:Lcom/glympse/android/lib/GImageCache;
+    add-int/lit8 v0, v3, 0x1
 
-    if-eqz v2, :cond_0
+    move v3, v0
 
-    .line 115
-    const/4 v2, 0x0
-
-    iput-object v2, p0, Lcom/glympse/android/lib/dx;->na:Lcom/glympse/android/core/GDrawable;
-
-    .line 121
-    iput v0, p0, Lcom/glympse/android/lib/dx;->cb:I
-
-    move v0, v1
-
-    .line 127
     goto :goto_0
+
+    .line 155
+    :cond_2
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/glympse/android/lib/dx;->nw:J
+
+    .line 158
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/glympse/android/lib/dx;->nd:Z
+
+    .line 159
+    return-void
+.end method
+
+.method public start(Lcom/glympse/android/lib/GGlympsePrivate;)V
+    .locals 4
+
+    .prologue
+    .line 69
+    iput-object p1, p0, Lcom/glympse/android/lib/dx;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    .line 70
+    invoke-interface {p1}, Lcom/glympse/android/lib/GGlympsePrivate;->getCorrectedTime()Lcom/glympse/android/lib/GCorrectedTime;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/glympse/android/lib/dx;->lu:Lcom/glympse/android/lib/GCorrectedTime;
+
+    .line 73
+    invoke-interface {p1}, Lcom/glympse/android/lib/GGlympsePrivate;->getHistoryLookback()J
+
+    move-result-wide v0
+
+    .line 74
+    const-wide/16 v2, -0x1
+
+    cmp-long v2, v2, v0
+
+    if-nez v2, :cond_0
+
+    const-wide v0, 0x9a7ec800L
+
+    :cond_0
+    iput-wide v0, p0, Lcom/glympse/android/lib/dx;->nt:J
+
+    .line 79
+    new-instance v0, Lcom/glympse/android/lib/hw;
+
+    invoke-direct {v0}, Lcom/glympse/android/lib/hw;-><init>()V
+
+    iput-object v0, p0, Lcom/glympse/android/lib/dx;->jO:Lcom/glympse/android/lib/hw;
+
+    .line 80
+    iget-object v0, p0, Lcom/glympse/android/lib/dx;->jO:Lcom/glympse/android/lib/hw;
+
+    const/4 v1, 0x0
+
+    const-string v2, "history_v2"
+
+    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, p1, v1, v2}, Lcom/glympse/android/lib/hw;->a(Lcom/glympse/android/lib/GGlympsePrivate;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 81
+    invoke-direct {p0}, Lcom/glympse/android/lib/dx;->bd()V
+
+    .line 82
+    return-void
 .end method

@@ -1,70 +1,85 @@
 .class final Lcom/bbm/f/o;
-.super Lcom/bbm/j/a;
+.super Ljava/lang/Object;
 .source "NativeServiceLayer.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/j/a",
-        "<",
-        "Lcom/blackberry/ids/UserAuthState$AuthState;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lcom/rim/bbm/BbmPlatformService$IDSDelegate;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/f/i;
+.field final synthetic a:Lcom/bbm/f/j;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/f/i;)V
+.method constructor <init>(Lcom/bbm/f/j;)V
     .locals 0
 
     .prologue
-    .line 397
-    iput-object p1, p0, Lcom/bbm/f/o;->a:Lcom/bbm/f/i;
+    .line 371
+    iput-object p1, p0, Lcom/bbm/f/o;->a:Lcom/bbm/f/j;
 
-    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    return-void
+.end method
+
+.method private a()V
+    .locals 1
+
+    .prologue
+    .line 394
+    iget-object v0, p0, Lcom/bbm/f/o;->a:Lcom/bbm/f/j;
+
+    iget-object v0, v0, Lcom/bbm/f/j;->c:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->c()V
+
+    .line 395
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a()Ljava/lang/Object;
-    .locals 3
+.method public final bbidPropertiesUpdated(Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;)V
+    .locals 0
 
     .prologue
-    .line 397
-    invoke-static {}, Lcom/blackberry/ids/IDS;->getCurrentAuthState()Lcom/blackberry/ids/UserAuthState$AuthState;
+    .line 390
+    invoke-direct {p0}, Lcom/bbm/f/o;->a()V
 
-    move-result-object v0
+    .line 391
+    return-void
+.end method
 
-    new-instance v1, Ljava/lang/StringBuilder;
+.method public final bbmTokenUpdated(Lcom/rim/bbm/BbmPlatformService$BbmTokenState;)V
+    .locals 0
 
-    const-string v2, "BBID reports authentication state "
+    .prologue
+    .line 385
+    invoke-direct {p0}, Lcom/bbm/f/o;->a()V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 386
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lcom/blackberry/ids/UserAuthState$AuthState;->toString()Ljava/lang/String;
+.method public final onIdsErrorStateChange()V
+    .locals 0
 
-    move-result-object v2
+    .prologue
+    .line 375
+    invoke-direct {p0}, Lcom/bbm/f/o;->a()V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 376
+    return-void
+.end method
 
-    move-result-object v1
+.method public final pinUpdated(Lcom/rim/bbm/BbmPlatformService$PinState;)V
+    .locals 0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .prologue
+    .line 380
+    invoke-direct {p0}, Lcom/bbm/f/o;->a()V
 
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    invoke-static {v1, v2}, Lcom/bbm/w;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    return-object v0
+    .line 381
+    return-void
 .end method

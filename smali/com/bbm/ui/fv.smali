@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/fv;
 .super Ljava/lang/Object;
-.source "StickyHeaderHelper.java"
+.source "SearchEditText.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/ft;
+.field final synthetic a:Lcom/bbm/ui/SearchEditText;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/ft;)V
+.method constructor <init>(Lcom/bbm/ui/SearchEditText;)V
     .locals 0
 
     .prologue
-    .line 41
-    iput-object p1, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/ft;
+    .line 114
+    iput-object p1, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/SearchEditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,50 +25,67 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 44
-    iget-object v0, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/ft;
+    .line 118
+    const-string v0, "Cancel clicked"
 
-    invoke-static {v0}, Lcom/bbm/ui/ft;->d(Lcom/bbm/ui/ft;)Ljava/util/List;
+    const-class v1, Lcom/bbm/ui/SearchEditText;
 
-    .line 45
-    iget-object v0, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/ft;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    const/4 v1, 0x0
+    .line 120
+    iget-object v0, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/SearchEditText;
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/ft;->a(Lcom/bbm/ui/ft;Z)Z
-
-    .line 46
-    iget-object v0, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/ft;
-
-    invoke-static {v0}, Lcom/bbm/ui/ft;->e(Lcom/bbm/ui/ft;)V
-
-    .line 47
-    iget-object v0, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/ft;
-
-    invoke-static {v0}, Lcom/bbm/ui/ft;->f(Lcom/bbm/ui/ft;)Lcom/bbm/ui/dm;
+    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->d(Lcom/bbm/ui/SearchEditText;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/dm;->notifyDataSetChanged()V
+    const-string v1, ""
 
-    .line 48
-    iget-object v0, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/ft;
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/ft;->g(Lcom/bbm/ui/ft;)Lcom/bbm/ui/dm;
+    .line 121
+    iget-object v0, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/SearchEditText;
+
+    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->e(Lcom/bbm/ui/SearchEditText;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/dm;->notifyDataSetChanged()V
+    const-string v1, "input_method"
 
-    .line 49
-    iget-object v0, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/ft;
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/ft;->notifyDataSetChanged()V
+    move-result-object v0
 
-    .line 50
+    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+
+    .line 122
+    iget-object v1, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/SearchEditText;
+
+    invoke-static {v1}, Lcom/bbm/ui/SearchEditText;->d(Lcom/bbm/ui/SearchEditText;)Landroid/widget/EditText;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+
+    .line 123
+    iget-object v0, p0, Lcom/bbm/ui/fv;->a:Lcom/bbm/ui/SearchEditText;
+
+    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->d(Lcom/bbm/ui/SearchEditText;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
+
+    .line 124
     return-void
 .end method

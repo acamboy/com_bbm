@@ -1,311 +1,100 @@
 .class final Lcom/bbm/ui/c/at;
-.super Lcom/bbm/d/b/q;
-.source "ChannelsNotificationsFragment.java"
+.super Ljava/lang/Object;
+.source "ChannelDetailsFragment.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/q",
-        "<",
-        "Lcom/bbm/ui/fz",
-        "<",
-        "Lcom/bbm/d/dh;",
-        "Ljava/lang/Long;",
-        ">;>;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/ar;
+.field final synthetic a:Lcom/bbm/ui/c/ag;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/ar;)V
+.method constructor <init>(Lcom/bbm/ui/c/ag;)V
     .locals 0
 
     .prologue
-    .line 87
-    iput-object p1, p0, Lcom/bbm/ui/c/at;->a:Lcom/bbm/ui/c/ar;
+    .line 983
+    iput-object p1, p0, Lcom/bbm/ui/c/at;->a:Lcom/bbm/ui/c/ag;
 
-    invoke-direct {p0}, Lcom/bbm/d/b/q;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-.method private static a(JLjava/util/List;)Lcom/bbm/ui/fz;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/ui/fz",
-            "<",
-            "Lcom/bbm/d/dh;",
-            "Ljava/lang/Long;",
-            ">;>;)",
-            "Lcom/bbm/ui/fz",
-            "<",
-            "Lcom/bbm/d/dh;",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 123
-    const/4 v0, 0x0
-
-    .line 124
-    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v3
-
-    move v2, v0
-
-    :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/fz;
-
-    .line 125
-    iget-object v1, v0, Lcom/bbm/ui/fz;->b:Ljava/lang/Object;
-
-    check-cast v1, Ljava/lang/Long;
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v4
-
-    cmp-long v1, v4, p0
-
-    if-nez v1, :cond_0
-
-    .line 134
-    :goto_1
-    return-object v0
-
-    .line 127
-    :cond_0
-    iget-object v0, v0, Lcom/bbm/ui/fz;->b:Ljava/lang/Object;
-
-    check-cast v0, Ljava/lang/Long;
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    cmp-long v0, v0, p0
-
-    if-gtz v0, :cond_1
-
-    .line 128
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    .line 131
-    goto :goto_0
-
-    .line 132
-    :cond_1
-    new-instance v0, Lcom/bbm/ui/fz;
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/bbm/ui/fz;-><init>(Ljava/lang/Object;)V
-
-    .line 133
-    invoke-interface {p2, v2, v0}, Ljava/util/List;->add(ILjava/lang/Object;)V
-
-    goto :goto_1
-.end method
-
-.method private static a(Lcom/bbm/ui/fz;Lcom/bbm/d/dh;)V
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bbm/ui/fz",
-            "<",
-            "Lcom/bbm/d/dh;",
-            "Ljava/lang/Long;",
-            ">;",
-            "Lcom/bbm/d/dh;",
-            ")V"
-        }
-    .end annotation
-
-    .prologue
-    .line 112
-    const/4 v0, 0x0
-
-    .line 113
-    iget-object v1, p0, Lcom/bbm/ui/fz;->a:Ljava/util/List;
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    move v1, v0
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/dh;
-
-    .line 114
-    iget-wide v3, v0, Lcom/bbm/d/dh;->e:J
-
-    iget-wide v5, p1, Lcom/bbm/d/dh;->e:J
-
-    cmp-long v0, v3, v5
-
-    if-ltz v0, :cond_0
-
-    .line 115
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    .line 118
-    goto :goto_0
-
-    .line 119
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/fz;->a:Ljava/util/List;
-
-    invoke-interface {v0, v1, p1}, Ljava/util/List;->add(ILjava/lang/Object;)V
-
-    .line 120
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()Ljava/util/List;
-    .locals 11
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/ui/fz",
-            "<",
-            "Lcom/bbm/d/dh;",
-            "Ljava/lang/Long;",
-            ">;>;"
-        }
-    .end annotation
+.method public final onLongClick(Landroid/view/View;)Z
+    .locals 8
 
     .prologue
-    const-wide/16 v3, 0x0
+    const/4 v7, 0x0
 
-    .line 96
-    new-instance v5, Ljava/util/ArrayList;
+    .line 986
+    iget-object v0, p0, Lcom/bbm/ui/c/at;->a:Lcom/bbm/ui/c/ag;
 
-    invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
-
-    .line 98
-    iget-object v0, p0, Lcom/bbm/ui/c/at;->a:Lcom/bbm/ui/c/ar;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ar;->b(Lcom/bbm/ui/c/ar;)Lcom/bbm/j/w;
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->h(Lcom/bbm/ui/c/ag;)Lcom/bbm/ui/activities/cq;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    iget-object v0, v0, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
+
+    .line 987
+    iget-object v1, p0, Lcom/bbm/ui/c/at;->a:Lcom/bbm/ui/c/ag;
+
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    new-instance v3, Lcom/bbm/ui/slidingmenu/a;
+
+    const v4, 0x7f0b001b
+
+    const v5, 0x7f020276
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    const v6, 0x7f0e019c
+
+    invoke-virtual {v1, v6}, Lcom/bbm/ui/c/ag;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-direct {v3, v4, v5, v6, v7}, Lcom/bbm/ui/slidingmenu/a;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    new-instance v3, Lcom/bbm/ui/c/au;
+
+    invoke-direct {v3, v1}, Lcom/bbm/ui/c/au;-><init>(Lcom/bbm/ui/c/ag;)V
+
+    iput-object v3, v0, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
+
+    invoke-virtual {v0, v2, v7, v7}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
+
+    .line 988
+    iget-object v0, p0, Lcom/bbm/ui/c/at;->a:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->h(Lcom/bbm/ui/c/ag;)Lcom/bbm/ui/activities/cq;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
+    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
 
-    .line 100
-    invoke-static {}, Lcom/bbm/util/az;->a()J
+    .line 989
+    iget-object v0, p0, Lcom/bbm/ui/c/at;->a:Lcom/bbm/ui/c/ag;
 
-    move-result-wide v6
-
-    .line 102
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v8
-
-    :goto_0
-    invoke-interface {v8}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->h(Lcom/bbm/ui/c/ag;)Lcom/bbm/ui/activities/cq;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/dh;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/cq;->o()V
 
-    .line 103
-    iget-wide v1, v0, Lcom/bbm/d/dh;->e:J
-
-    sub-long v1, v6, v1
-
-    cmp-long v9, v1, v3
-
-    if-lez v9, :cond_1
-
-    const-wide/32 v9, 0x5265c00
-
-    div-long/2addr v1, v9
-
-    const-wide/16 v9, 0x1
-
-    add-long/2addr v1, v9
-
-    .line 104
-    :goto_1
-    invoke-static {v1, v2, v5}, Lcom/bbm/ui/c/at;->a(JLjava/util/List;)Lcom/bbm/ui/fz;
-
-    move-result-object v1
-
-    .line 105
-    invoke-static {v1, v0}, Lcom/bbm/ui/c/at;->a(Lcom/bbm/ui/fz;Lcom/bbm/d/dh;)V
-
-    goto :goto_0
-
-    .line 108
-    :cond_0
-    return-object v5
-
-    :cond_1
-    move-wide v1, v3
-
-    goto :goto_1
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    .prologue
-    .line 90
-    const/4 v0, 0x0
+    .line 990
+    const/4 v0, 0x1
 
     return v0
 .end method

@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field private f:Lcom/glympse/android/core/GHandler;
+.field private _handler:Lcom/glympse/android/core/GHandler;
 
-.field private gz:Lcom/glympse/android/core/GPrimitive;
+.field private g:Lcom/glympse/android/lib/GAccountImportListener;
 
-.field private h:Lcom/glympse/android/lib/GAccountImportListener;
+.field private gG:Lcom/glympse/android/core/GPrimitive;
 
 
 # direct methods
@@ -23,10 +23,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 388
-    iput-object p1, p0, Lcom/glympse/android/lib/i;->f:Lcom/glympse/android/core/GHandler;
+    iput-object p1, p0, Lcom/glympse/android/lib/i;->_handler:Lcom/glympse/android/core/GHandler;
 
     .line 389
-    iput-object p2, p0, Lcom/glympse/android/lib/i;->gz:Lcom/glympse/android/core/GPrimitive;
+    iput-object p2, p0, Lcom/glympse/android/lib/i;->gG:Lcom/glympse/android/core/GPrimitive;
 
     .line 390
     return-void
@@ -47,7 +47,7 @@
 
     .prologue
     .line 399
-    iget-object v0, p0, Lcom/glympse/android/lib/i;->h:Lcom/glympse/android/lib/GAccountImportListener;
+    iget-object v0, p0, Lcom/glympse/android/lib/i;->g:Lcom/glympse/android/lib/GAccountImportListener;
 
     if-nez v0, :cond_0
 
@@ -60,13 +60,13 @@
 
     .line 404
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/i;->f:Lcom/glympse/android/core/GHandler;
+    iget-object v0, p0, Lcom/glympse/android/lib/i;->_handler:Lcom/glympse/android/core/GHandler;
 
     new-instance v1, Lcom/glympse/android/lib/h;
 
-    iget-object v2, p0, Lcom/glympse/android/lib/i;->h:Lcom/glympse/android/lib/GAccountImportListener;
+    iget-object v2, p0, Lcom/glympse/android/lib/i;->g:Lcom/glympse/android/lib/GAccountImportListener;
 
-    iget-object v3, p0, Lcom/glympse/android/lib/i;->gz:Lcom/glympse/android/core/GPrimitive;
+    iget-object v3, p0, Lcom/glympse/android/lib/i;->gG:Lcom/glympse/android/core/GPrimitive;
 
     invoke-direct {v1, v2, v3}, Lcom/glympse/android/lib/h;-><init>(Lcom/glympse/android/lib/GAccountImportListener;Lcom/glympse/android/core/GPrimitive;)V
 
@@ -83,7 +83,7 @@
 
     .prologue
     .line 394
-    iput-object p1, p0, Lcom/glympse/android/lib/i;->h:Lcom/glympse/android/lib/GAccountImportListener;
+    iput-object p1, p0, Lcom/glympse/android/lib/i;->g:Lcom/glympse/android/lib/GAccountImportListener;
 
     .line 395
     return-void

@@ -67,9 +67,9 @@
     iput-wide v2, p0, Lcom/bbm/ui/FpsMeter;->e:J
 
     .line 18
-    new-instance v0, Lcom/bbm/ui/bz;
+    new-instance v0, Lcom/bbm/ui/co;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/bz;-><init>(Lcom/bbm/ui/FpsMeter;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/co;-><init>(Lcom/bbm/ui/FpsMeter;)V
 
     iput-object v0, p0, Lcom/bbm/ui/FpsMeter;->f:Landroid/view/View$OnTouchListener;
 
@@ -257,9 +257,9 @@
 
     move-result-object v0
 
-    iget-wide v3, p0, Lcom/bbm/ui/FpsMeter;->d:J
+    iget-wide v4, p0, Lcom/bbm/ui/FpsMeter;->d:J
 
-    invoke-virtual {v0, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 

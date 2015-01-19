@@ -861,9 +861,9 @@
 .end method
 
 .method public final kH()J
-    .locals 13
+    .locals 14
 
-    const-wide/16 v11, 0xff
+    const-wide/16 v12, 0xff
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/jy;->kL()B
 
@@ -899,11 +899,11 @@
 
     int-to-long v8, v0
 
-    and-long/2addr v8, v11
+    and-long/2addr v8, v12
 
     int-to-long v0, v1
 
-    and-long/2addr v0, v11
+    and-long/2addr v0, v12
 
     const/16 v10, 0x8
 
@@ -913,7 +913,7 @@
 
     int-to-long v8, v2
 
-    and-long/2addr v8, v11
+    and-long/2addr v8, v12
 
     const/16 v2, 0x10
 
@@ -923,7 +923,7 @@
 
     int-to-long v2, v3
 
-    and-long/2addr v2, v11
+    and-long/2addr v2, v12
 
     const/16 v8, 0x18
 
@@ -933,7 +933,7 @@
 
     int-to-long v2, v4
 
-    and-long/2addr v2, v11
+    and-long/2addr v2, v12
 
     const/16 v4, 0x20
 
@@ -943,7 +943,7 @@
 
     int-to-long v2, v5
 
-    and-long/2addr v2, v11
+    and-long/2addr v2, v12
 
     const/16 v4, 0x28
 
@@ -953,7 +953,7 @@
 
     int-to-long v2, v6
 
-    and-long/2addr v2, v11
+    and-long/2addr v2, v12
 
     const/16 v4, 0x30
 
@@ -963,7 +963,7 @@
 
     int-to-long v2, v7
 
-    and-long/2addr v2, v11
+    and-long/2addr v2, v12
 
     const/16 v4, 0x38
 

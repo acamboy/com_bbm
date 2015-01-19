@@ -1,106 +1,130 @@
-.class public final Lcom/bbm/i;
-.super Ljava/lang/Object;
-.source "BbmSetupErrorListener.java"
-
-# interfaces
-.implements Lcom/bbm/f/y;
+.class final Lcom/bbm/i;
+.super Lcom/bbm/j/k;
+.source "BbmService.java"
 
 
 # instance fields
-.field public final a:Lcom/bbm/util/cm;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/bbm/util/cm",
-            "<",
-            "Lcom/google/b/a/l",
-            "<",
-            "Lcom/bbm/aj;",
-            ">;>;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcom/bbm/BbmService;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/f/a;)V
-    .locals 2
+.method constructor <init>(Lcom/bbm/BbmService;)V
+    .locals 1
 
     .prologue
-    .line 14
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 90
+    iput-object p1, p0, Lcom/bbm/i;->a:Lcom/bbm/BbmService;
 
-    .line 11
-    new-instance v0, Lcom/bbm/util/cm;
+    const/4 v0, 0x0
 
-    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/bbm/util/cm;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/bbm/i;->a:Lcom/bbm/util/cm;
-
-    .line 15
-    invoke-interface {p1, p0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/y;)V
-
-    .line 16
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 0
-
-    .prologue
-    .line 35
-    return-void
-.end method
-
-.method public final a(Lcom/bbm/f/x;)V
+.method protected final a()V
     .locals 2
 
     .prologue
-    .line 20
-    invoke-virtual {p1}, Lcom/bbm/f/x;->f()Ljava/lang/String;
+    .line 94
+    const-string v0, "BBMService mSettingsMontior run"
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 95
+    iget-object v0, p0, Lcom/bbm/i;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->b(Lcom/bbm/BbmService;)V
+
+    .line 96
+    iget-object v0, p0, Lcom/bbm/i;->a:Lcom/bbm/BbmService;
+
+    invoke-virtual {v0}, Lcom/bbm/BbmService;->a()V
+
+    .line 97
+    iget-object v0, p0, Lcom/bbm/i;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->c(Lcom/bbm/BbmService;)Lcom/bbm/j/a;
 
     move-result-object v0
 
-    .line 21
-    const-string v1, "setupError"
+    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v0
+    check-cast v0, Lcom/bbm/f/ae;
+
+    iget-boolean v0, v0, Lcom/bbm/f/ae;->i:Z
+
+    if-eqz v0, :cond_1
+
+    .line 98
+    iget-object v0, p0, Lcom/bbm/i;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->d(Lcom/bbm/BbmService;)V
+
+    .line 99
+    iget-object v0, p0, Lcom/bbm/i;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->e(Lcom/bbm/BbmService;)V
+
+    .line 100
+    iget-object v0, p0, Lcom/bbm/i;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->f(Lcom/bbm/BbmService;)Lcom/bbm/m/a;
+
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 22
-    invoke-virtual {p1}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
+    .line 101
+    iget-object v0, p0, Lcom/bbm/i;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->f(Lcom/bbm/BbmService;)Lcom/bbm/m/a;
 
     move-result-object v0
 
-    const-string v1, "error"
+    invoke-virtual {v0}, Lcom/bbm/m/a;->a()V
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 24
-    invoke-static {v0}, Lcom/bbm/aj;->a(Ljava/lang/String;)Lcom/bbm/aj;
-
-    move-result-object v0
-
-    .line 25
-    iget-object v1, p0, Lcom/bbm/i;->a:Lcom/bbm/util/cm;
-
-    invoke-static {v0}, Lcom/google/b/a/l;->b(Ljava/lang/Object;)Lcom/google/b/a/l;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/bbm/util/cm;->b(Ljava/lang/Object;)V
-
-    .line 27
+    .line 111
     :cond_0
+    :goto_0
     return-void
+
+    .line 104
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/i;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->g(Lcom/bbm/BbmService;)V
+
+    .line 105
+    iget-object v0, p0, Lcom/bbm/i;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->h(Lcom/bbm/BbmService;)V
+
+    .line 107
+    iget-object v0, p0, Lcom/bbm/i;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->f(Lcom/bbm/BbmService;)Lcom/bbm/m/a;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 108
+    iget-object v0, p0, Lcom/bbm/i;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->f(Lcom/bbm/BbmService;)Lcom/bbm/m/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/m/a;->b()V
+
+    goto :goto_0
 .end method

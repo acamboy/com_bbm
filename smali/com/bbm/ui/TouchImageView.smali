@@ -134,15 +134,15 @@
     .locals 1
 
     .prologue
-    .line 178
+    .line 175
     cmpg-float v0, p2, p1
 
     if-gtz v0, :cond_0
 
-    .line 179
+    .line 176
     const/4 p0, 0x0
 
-    .line 181
+    .line 178
     :cond_0
     return p0
 .end method
@@ -162,11 +162,11 @@
     .line 52
     new-instance v0, Landroid/view/ScaleGestureDetector;
 
-    new-instance v1, Lcom/bbm/ui/gk;
+    new-instance v1, Lcom/bbm/ui/hi;
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, v2}, Lcom/bbm/ui/gk;-><init>(Lcom/bbm/ui/TouchImageView;B)V
+    invoke-direct {v1, p0, v2}, Lcom/bbm/ui/hi;-><init>(Lcom/bbm/ui/TouchImageView;B)V
 
     invoke-direct {v0, p1, v1}, Landroid/view/ScaleGestureDetector;-><init>(Landroid/content/Context;Landroid/view/ScaleGestureDetector$OnScaleGestureListener;)V
 
@@ -197,9 +197,9 @@
     invoke-virtual {p0, v0}, Lcom/bbm/ui/TouchImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     .line 58
-    new-instance v0, Lcom/bbm/ui/gj;
+    new-instance v0, Lcom/bbm/ui/hh;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/gj;-><init>(Lcom/bbm/ui/TouchImageView;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/hh;-><init>(Lcom/bbm/ui/TouchImageView;)V
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/TouchImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -213,50 +213,50 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 159
+    .line 157
     cmpg-float v1, p2, p1
 
     if-gtz v1, :cond_1
 
-    .line 161
+    .line 159
     sub-float v1, p1, p2
 
     move v2, v1
 
     move v1, v0
 
-    .line 168
+    .line 165
     :goto_0
     cmpg-float v3, p0, v1
 
     if-gez v3, :cond_2
 
-    .line 169
+    .line 166
     neg-float v0, p0
 
     add-float/2addr v0, v1
 
-    .line 174
+    .line 171
     :cond_0
     :goto_1
     return v0
 
-    .line 164
+    .line 161
     :cond_1
     sub-float v1, p1, p2
 
     move v2, v0
 
-    .line 165
+    .line 162
     goto :goto_0
 
-    .line 171
+    .line 168
     :cond_2
     cmpl-float v1, p0, v2
 
     if-lez v1, :cond_0
 
-    .line 172
+    .line 169
     neg-float v0, p0
 
     add-float/2addr v0, v2
@@ -272,28 +272,28 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 144
+    .line 142
     iget-object v0, p0, Lcom/bbm/ui/TouchImageView;->a:Landroid/graphics/Matrix;
 
     iget-object v1, p0, Lcom/bbm/ui/TouchImageView;->j:[F
 
     invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 145
+    .line 143
     iget-object v0, p0, Lcom/bbm/ui/TouchImageView;->j:[F
 
     const/4 v1, 0x2
 
     aget v0, v0, v1
 
-    .line 146
+    .line 144
     iget-object v1, p0, Lcom/bbm/ui/TouchImageView;->j:[F
 
     const/4 v2, 0x5
 
     aget v1, v1, v2
 
-    .line 148
+    .line 146
     iget v2, p0, Lcom/bbm/ui/TouchImageView;->k:I
 
     int-to-float v2, v2
@@ -308,7 +308,7 @@
 
     move-result v0
 
-    .line 149
+    .line 147
     iget v2, p0, Lcom/bbm/ui/TouchImageView;->l:I
 
     int-to-float v2, v2
@@ -323,7 +323,7 @@
 
     move-result v1
 
-    .line 151
+    .line 149
     cmpl-float v2, v0, v5
 
     if-nez v2, :cond_0
@@ -332,13 +332,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 152
+    .line 150
     :cond_0
     iget-object v2, p0, Lcom/bbm/ui/TouchImageView;->a:Landroid/graphics/Matrix;
 
     invoke-virtual {v2, v0, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 154
+    .line 152
     :cond_1
     return-void
 .end method
@@ -349,24 +349,24 @@
     .prologue
     const/high16 v5, 0x40000000
 
-    .line 186
+    .line 183
     invoke-super {p0, p1, p2}, Lcom/bbm/ui/ObservingImageView;->onMeasure(II)V
 
-    .line 187
+    .line 184
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/bbm/ui/TouchImageView;->k:I
 
-    .line 188
+    .line 185
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/bbm/ui/TouchImageView;->l:I
 
-    .line 193
+    .line 190
     iget v0, p0, Lcom/bbm/ui/TouchImageView;->q:I
 
     iget v1, p0, Lcom/bbm/ui/TouchImageView;->k:I
@@ -388,23 +388,23 @@
 
     if-nez v0, :cond_2
 
-    .line 231
+    .line 228
     :cond_1
     :goto_0
     return-void
 
-    .line 197
+    .line 194
     :cond_2
     iget v0, p0, Lcom/bbm/ui/TouchImageView;->l:I
 
     iput v0, p0, Lcom/bbm/ui/TouchImageView;->q:I
 
-    .line 198
+    .line 195
     iget v0, p0, Lcom/bbm/ui/TouchImageView;->k:I
 
     iput v0, p0, Lcom/bbm/ui/TouchImageView;->p:I
 
-    .line 200
+    .line 197
     iget v0, p0, Lcom/bbm/ui/TouchImageView;->m:F
 
     const/high16 v1, 0x3f800000
@@ -413,12 +413,12 @@
 
     if-nez v0, :cond_3
 
-    .line 204
+    .line 201
     invoke-virtual {p0}, Lcom/bbm/ui/TouchImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 205
+    .line 202
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -433,17 +433,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 208
+    .line 205
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v1
 
-    .line 209
+    .line 206
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v0
 
-    .line 213
+    .line 210
     iget v2, p0, Lcom/bbm/ui/TouchImageView;->k:I
 
     int-to-float v2, v2
@@ -452,7 +452,7 @@
 
     div-float/2addr v2, v3
 
-    .line 214
+    .line 211
     iget v3, p0, Lcom/bbm/ui/TouchImageView;->l:I
 
     int-to-float v3, v3
@@ -461,17 +461,17 @@
 
     div-float/2addr v3, v4
 
-    .line 215
+    .line 212
     invoke-static {v2, v3}, Ljava/lang/Math;->min(FF)F
 
     move-result v2
 
-    .line 216
+    .line 213
     iget-object v3, p0, Lcom/bbm/ui/TouchImageView;->a:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v2, v2}, Landroid/graphics/Matrix;->setScale(FF)V
 
-    .line 219
+    .line 216
     iget v3, p0, Lcom/bbm/ui/TouchImageView;->l:I
 
     int-to-float v3, v3
@@ -482,7 +482,7 @@
 
     sub-float v0, v3, v0
 
-    .line 220
+    .line 217
     iget v3, p0, Lcom/bbm/ui/TouchImageView;->k:I
 
     int-to-float v3, v3
@@ -493,18 +493,18 @@
 
     sub-float v1, v3, v1
 
-    .line 221
+    .line 218
     div-float/2addr v0, v5
 
-    .line 222
+    .line 219
     div-float/2addr v1, v5
 
-    .line 224
+    .line 221
     iget-object v2, p0, Lcom/bbm/ui/TouchImageView;->a:Landroid/graphics/Matrix;
 
     invoke-virtual {v2, v1, v0}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 226
+    .line 223
     iget v2, p0, Lcom/bbm/ui/TouchImageView;->k:I
 
     int-to-float v2, v2
@@ -515,7 +515,7 @@
 
     iput v1, p0, Lcom/bbm/ui/TouchImageView;->n:F
 
-    .line 227
+    .line 224
     iget v1, p0, Lcom/bbm/ui/TouchImageView;->l:I
 
     int-to-float v1, v1
@@ -526,12 +526,12 @@
 
     iput v0, p0, Lcom/bbm/ui/TouchImageView;->o:F
 
-    .line 228
+    .line 225
     iget-object v0, p0, Lcom/bbm/ui/TouchImageView;->a:Landroid/graphics/Matrix;
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/TouchImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
-    .line 230
+    .line 227
     :cond_3
     invoke-virtual {p0}, Lcom/bbm/ui/TouchImageView;->a()V
 

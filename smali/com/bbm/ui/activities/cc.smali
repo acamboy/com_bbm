@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/cc;
 .super Ljava/lang/Object;
-.source "ChannelOfficeHoursSettingsActivity.java"
+.source "ChangeStatusActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/az;
+.implements Landroid/view/View$OnKeyListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/cb;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/cb;)V
     .locals 0
 
     .prologue
-    .line 84
-    iput-object p1, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+    .line 315
+    iput-object p1, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/cb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,149 +25,77 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/Date;Ljava/util/Date;)V
-    .locals 6
+.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
+    .locals 3
 
     .prologue
-    .line 88
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+    const/4 v2, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Lcom/bbm/ui/activities/cg;
+    .line 319
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
-    move-result-object v0
+    move-result v0
 
-    iget v1, v0, Lcom/bbm/ui/activities/cg;->a:I
+    const/4 v1, 0x1
 
-    .line 89
-    iget-object v0, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+    if-ne v0, v1, :cond_1
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Lcom/bbm/ui/activities/cg;
+    const/16 v0, 0x42
 
-    move-result-object v0
+    if-ne p2, v0, :cond_1
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/cg;->b:Lcom/bbm/ui/activities/ci;
+    .line 321
+    iget-object v0, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/cb;
 
-    .line 90
-    new-instance v3, Lorg/json/JSONObject;
+    iget-object v0, v0, Lcom/bbm/ui/activities/cb;->b:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->b(Lcom/bbm/ui/activities/ChangeStatusActivity;)Landroid/view/ActionMode;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    if-eqz v0, :cond_0
+
+    .line 322
+    iget-object v0, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/cb;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/cb;->b:Lcom/bbm/ui/activities/ChangeStatusActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->b(Lcom/bbm/ui/activities/ChangeStatusActivity;)Landroid/view/ActionMode;
 
     move-result-object v0
 
-    check-cast v0, Lorg/json/JSONObject;
+    invoke-virtual {v0}, Landroid/view/ActionMode;->finish()V
 
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v3, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    .line 91
-    iget-object v0, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->c(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/text/SimpleDateFormat;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 93
-    iget-object v0, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->d(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/ch;
-
-    .line 95
-    sget-object v5, Lcom/bbm/ui/activities/ci;->a:Lcom/bbm/ui/activities/ci;
-
-    if-ne v2, v5, :cond_1
-
-    .line 96
-    const-string v2, "startTime"
-
-    invoke-virtual {v3, v2, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 97
-    iget-object v2, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1, v3}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    .line 98
-    iget-object v0, v0, Lcom/bbm/ui/activities/ch;->d:Lcom/bbm/ui/DateTimePickerView;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {p2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Ljava/util/Date;)Ljava/util/Date;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/DateTimePickerView;->setMinDateTime(Ljava/util/Date;)V
-
-    .line 107
+    .line 324
     :cond_0
-    :goto_0
-    return-void
+    iget-object v0, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/cb;
 
-    .line 99
-    :cond_1
-    sget-object v5, Lcom/bbm/ui/activities/ci;->b:Lcom/bbm/ui/activities/ci;
+    iget-object v0, v0, Lcom/bbm/ui/activities/cb;->b:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    if-ne v2, v5, :cond_0
+    const-string v1, "input_method"
 
-    .line 100
-    const-string v2, "endTime"
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    invoke-virtual {v3, v2, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    move-result-object v0
 
-    .line 101
-    iget-object v2, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
+    .line 325
+    iget-object v1, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/cb;
 
-    move-result-object v2
+    iget-object v1, v1, Lcom/bbm/ui/activities/cb;->b:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    invoke-virtual {v2, v1, v3}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
-
-    .line 102
-    iget-object v0, v0, Lcom/bbm/ui/activities/ch;->c:Lcom/bbm/ui/DateTimePickerView;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/cc;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-static {p2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Ljava/util/Date;)Ljava/util/Date;
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/ChangeStatusActivity;->getCurrentFocus()Landroid/view/View;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/DateTimePickerView;->setMaxDateTime(Ljava/util/Date;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
-    goto :goto_0
+    move-result-object v1
 
-    .line 104
-    :catch_0
-    move-exception v0
+    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
+    .line 328
+    :cond_1
+    return v2
 .end method

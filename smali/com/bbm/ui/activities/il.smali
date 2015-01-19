@@ -1,146 +1,75 @@
-.class final enum Lcom/bbm/ui/activities/il;
-.super Ljava/lang/Enum;
-.source "FilePickerActivity.java"
+.class final Lcom/bbm/ui/activities/il;
+.super Lcom/bbm/util/cp;
+.source "ConversationActivity.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/ui/activities/il;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Landroid/app/ProgressDialog;
 
-
-# static fields
-.field public static final enum a:Lcom/bbm/ui/activities/il;
-
-.field public static final enum b:Lcom/bbm/ui/activities/il;
-
-.field public static final enum c:Lcom/bbm/ui/activities/il;
-
-.field public static final enum d:Lcom/bbm/ui/activities/il;
-
-.field private static final synthetic e:[Lcom/bbm/ui/activities/il;
+.field final synthetic b:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x3
-
-    const/4 v4, 0x2
-
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    .line 103
-    new-instance v0, Lcom/bbm/ui/activities/il;
-
-    const-string v1, "SortByName"
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/activities/il;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/activities/il;->a:Lcom/bbm/ui/activities/il;
-
-    new-instance v0, Lcom/bbm/ui/activities/il;
-
-    const-string v1, "SortByDate"
-
-    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/activities/il;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/activities/il;->b:Lcom/bbm/ui/activities/il;
-
-    new-instance v0, Lcom/bbm/ui/activities/il;
-
-    const-string v1, "SortByType"
-
-    invoke-direct {v0, v1, v4}, Lcom/bbm/ui/activities/il;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/activities/il;->c:Lcom/bbm/ui/activities/il;
-
-    new-instance v0, Lcom/bbm/ui/activities/il;
-
-    const-string v1, "SortBySize"
-
-    invoke-direct {v0, v1, v5}, Lcom/bbm/ui/activities/il;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/activities/il;->d:Lcom/bbm/ui/activities/il;
-
-    .line 102
-    const/4 v0, 0x4
-
-    new-array v0, v0, [Lcom/bbm/ui/activities/il;
-
-    sget-object v1, Lcom/bbm/ui/activities/il;->a:Lcom/bbm/ui/activities/il;
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/bbm/ui/activities/il;->b:Lcom/bbm/ui/activities/il;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/bbm/ui/activities/il;->c:Lcom/bbm/ui/activities/il;
-
-    aput-object v1, v0, v4
-
-    sget-object v1, Lcom/bbm/ui/activities/il;->d:Lcom/bbm/ui/activities/il;
-
-    aput-object v1, v0, v5
-
-    sput-object v0, Lcom/bbm/ui/activities/il;->e:[Lcom/bbm/ui/activities/il;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;Landroid/app/ProgressDialog;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     .prologue
-    .line 102
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 3209
+    iput-object p1, p0, Lcom/bbm/ui/activities/il;->b:Lcom/bbm/ui/activities/ConversationActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/il;->a:Landroid/app/ProgressDialog;
+
+    invoke-direct {p0}, Lcom/bbm/util/cp;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/activities/il;
-    .locals 1
+
+# virtual methods
+.method public final a()V
+    .locals 3
 
     .prologue
-    .line 102
-    const-class v0, Lcom/bbm/ui/activities/il;
+    .line 3212
+    iget-object v0, p0, Lcom/bbm/ui/activities/il;->a:Landroid/app/ProgressDialog;
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+
+    .line 3213
+    iget-object v0, p0, Lcom/bbm/ui/activities/il;->b:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/il;
+    iget-object v1, p0, Lcom/bbm/ui/activities/il;->b:Lcom/bbm/ui/activities/ConversationActivity;
 
-    return-object v0
+    const v2, 0x7f0e050a
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/ConversationActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 3214
+    return-void
 .end method
 
-.method public static values()[Lcom/bbm/ui/activities/il;
+.method public final a(Landroid/location/Location;)V
     .locals 1
 
     .prologue
-    .line 102
-    sget-object v0, Lcom/bbm/ui/activities/il;->e:[Lcom/bbm/ui/activities/il;
+    .line 3218
+    iget-object v0, p0, Lcom/bbm/ui/activities/il;->b:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-virtual {v0}, [Lcom/bbm/ui/activities/il;->clone()Ljava/lang/Object;
+    invoke-static {v0, p1}, Lcom/bbm/ui/activities/ConversationActivity;->a(Lcom/bbm/ui/activities/ConversationActivity;Landroid/location/Location;)V
 
-    move-result-object v0
+    .line 3219
+    iget-object v0, p0, Lcom/bbm/ui/activities/il;->a:Landroid/app/ProgressDialog;
 
-    check-cast v0, [Lcom/bbm/ui/activities/il;
+    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    return-object v0
+    .line 3220
+    return-void
 .end method

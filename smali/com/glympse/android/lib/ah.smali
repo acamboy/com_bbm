@@ -1,105 +1,45 @@
-.class Lcom/glympse/android/lib/ah;
-.super Ljava/lang/Object;
-.source "ContactsManager.java"
-
-# interfaces
-.implements Lcom/glympse/android/hal/GContactsListener;
+.class abstract Lcom/glympse/android/lib/ah;
+.super Lcom/glympse/android/lib/ag;
+.source "ContactLocal.java"
 
 
 # instance fields
-.field private iF:Lcom/glympse/android/lib/af;
+.field protected ew:Ljava/lang/String;
+
+.field protected iX:Ljava/lang/String;
+
+.field protected iY:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/af;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 256
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 16
+    invoke-direct {p0}, Lcom/glympse/android/lib/ag;-><init>()V
 
-    .line 257
-    iput-object p1, p0, Lcom/glympse/android/lib/ah;->iF:Lcom/glympse/android/lib/af;
-
-    .line 258
     return-void
 .end method
 
 
 # virtual methods
-.method public contactsProviderUpdateComplete(Lcom/glympse/android/hal/GContactsProvider;)V
-    .locals 5
+.method public getAddress()Ljava/lang/String;
+    .locals 1
 
     .prologue
-    const/4 v1, 0x0
+    .line 26
+    iget-object v0, p0, Lcom/glympse/android/lib/ah;->ew:Ljava/lang/String;
 
-    .line 266
-    const/4 v2, 0x1
+    return-object v0
+.end method
 
-    .line 267
-    iget-object v0, p0, Lcom/glympse/android/lib/ah;->iF:Lcom/glympse/android/lib/af;
+.method public getNormalizedAddress()Ljava/lang/String;
+    .locals 1
 
-    invoke-static {v0}, Lcom/glympse/android/lib/af;->a(Lcom/glympse/android/lib/af;)Lcom/glympse/android/hal/GVector;
+    .prologue
+    .line 31
+    iget-object v0, p0, Lcom/glympse/android/lib/ah;->iY:Ljava/lang/String;
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->length()I
-
-    move-result v4
-
-    move v3, v1
-
-    .line 268
-    :goto_0
-    if-ge v3, v4, :cond_0
-
-    .line 270
-    iget-object v0, p0, Lcom/glympse/android/lib/ah;->iF:Lcom/glympse/android/lib/af;
-
-    invoke-static {v0}, Lcom/glympse/android/lib/af;->a(Lcom/glympse/android/lib/af;)Lcom/glympse/android/hal/GVector;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lcom/glympse/android/hal/GVector;->at(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/hal/GContactsProvider;
-
-    .line 271
-    invoke-interface {v0}, Lcom/glympse/android/hal/GContactsProvider;->getPeople()Lcom/glympse/android/hal/GVector;
-
-    move-result-object v0
-
-    if-nez v0, :cond_2
-
-    move v0, v1
-
-    .line 268
-    :goto_1
-    add-int/lit8 v2, v3, 0x1
-
-    move v3, v2
-
-    move v2, v0
-
-    goto :goto_0
-
-    .line 277
-    :cond_0
-    if-eqz v2, :cond_1
-
-    .line 279
-    iget-object v0, p0, Lcom/glympse/android/lib/ah;->iF:Lcom/glympse/android/lib/af;
-
-    invoke-static {v0}, Lcom/glympse/android/lib/af;->b(Lcom/glympse/android/lib/af;)V
-
-    .line 281
-    :cond_1
-    return-void
-
-    :cond_2
-    move v0, v2
-
-    goto :goto_1
+    return-object v0
 .end method

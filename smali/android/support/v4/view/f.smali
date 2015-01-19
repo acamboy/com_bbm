@@ -36,16 +36,14 @@
     .line 260
     iget-object v0, p0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/a;
 
-    invoke-static {p1}, Landroid/support/v4/view/a;->a(Landroid/view/View;)Landroid/support/v4/view/a/h;
+    invoke-static {p1}, Landroid/support/v4/view/a;->a(Landroid/view/View;)Landroid/support/v4/view/a/i;
 
     move-result-object v0
 
     .line 262
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/support/v4/view/a/h;->a()Ljava/lang/Object;
-
-    move-result-object v0
+    iget-object v0, v0, Landroid/support/v4/view/a/i;->a:Ljava/lang/Object;
 
     :goto_0
     return-object v0
@@ -107,7 +105,7 @@
     .line 223
     iget-object v0, p0, Landroid/support/v4/view/f;->a:Landroid/support/v4/view/a;
 
-    invoke-static {p1, p2}, Landroid/support/v4/view/a;->b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
 
     move-result v0
 

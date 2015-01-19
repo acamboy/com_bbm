@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static final a:Landroid/graphics/Bitmap$CompressFormat;
+.field private static final b:Landroid/graphics/Bitmap$CompressFormat;
 
-.field private static d:Ljava/lang/ref/WeakReference;
+.field private static e:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference",
@@ -19,21 +19,7 @@
 
 
 # instance fields
-.field private b:Landroid/util/LruCache;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/util/LruCache",
-            "<",
-            "Ljava/lang/String;",
-            "Lcom/bbm/d/dw;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field private c:Lcom/bbm/util/b/f;
-
-.field private e:Ljava/util/HashSet;
+.field a:Ljava/util/HashSet;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/HashSet",
@@ -46,6 +32,20 @@
     .end annotation
 .end field
 
+.field private c:Landroid/util/LruCache;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/util/LruCache",
+            "<",
+            "Ljava/lang/String;",
+            "Lcom/bbm/d/ff;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private d:Lcom/bbm/util/b/f;
+
 
 # direct methods
 .method static constructor <clinit>()V
@@ -55,7 +55,7 @@
     .line 54
     sget-object v0, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
-    sput-object v0, Lcom/bbm/util/b/d;->a:Landroid/graphics/Bitmap$CompressFormat;
+    sput-object v0, Lcom/bbm/util/b/d;->b:Landroid/graphics/Bitmap$CompressFormat;
 
     return-void
 .end method
@@ -68,9 +68,9 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 72
-    iput-object p1, p0, Lcom/bbm/util/b/d;->c:Lcom/bbm/util/b/f;
+    iput-object p1, p0, Lcom/bbm/util/b/d;->d:Lcom/bbm/util/b/f;
 
-    invoke-static {}, Lcom/bbm/util/eo;->b()Z
+    invoke-static {}, Lcom/bbm/util/fh;->b()Z
 
     move-result v0
 
@@ -80,18 +80,18 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/util/b/d;->e:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/bbm/util/b/d;->a:Ljava/util/HashSet;
 
     :cond_0
     new-instance v0, Lcom/bbm/util/b/e;
 
-    iget-object v1, p0, Lcom/bbm/util/b/d;->c:Lcom/bbm/util/b/f;
+    iget-object v1, p0, Lcom/bbm/util/b/d;->d:Lcom/bbm/util/b/f;
 
     iget v1, v1, Lcom/bbm/util/b/f;->a:I
 
     invoke-direct {v0, p0, v1}, Lcom/bbm/util/b/e;-><init>(Lcom/bbm/util/b/d;I)V
 
-    iput-object v0, p0, Lcom/bbm/util/b/d;->b:Landroid/util/LruCache;
+    iput-object v0, p0, Lcom/bbm/util/b/d;->c:Landroid/util/LruCache;
 
     .line 73
     return-void
@@ -104,19 +104,19 @@
     .end annotation
 
     .prologue
-    .line 330
-    invoke-static {}, Lcom/bbm/util/eo;->c()Z
+    .line 332
+    invoke-static {}, Lcom/bbm/util/fh;->c()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 331
+    .line 333
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->getByteCount()I
 
     move-result v0
 
-    .line 334
+    .line 336
     :goto_0
     return v0
 
@@ -154,7 +154,7 @@
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    sput-object v0, Lcom/bbm/util/b/d;->d:Ljava/lang/ref/WeakReference;
+    sput-object v0, Lcom/bbm/util/b/d;->e:Ljava/lang/ref/WeakReference;
 
     .line 92
     new-instance v0, Lcom/bbm/util/b/d;
@@ -169,7 +169,7 @@
 
     .prologue
     .line 47
-    iget-object v0, p0, Lcom/bbm/util/b/d;->e:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/bbm/util/b/d;->a:Ljava/util/HashSet;
 
     return-object v0
 .end method
@@ -179,141 +179,14 @@
 
     .prologue
     .line 47
-    sget-object v0, Lcom/bbm/util/b/d;->a:Landroid/graphics/Bitmap$CompressFormat;
+    sget-object v0, Lcom/bbm/util/b/d;->b:Landroid/graphics/Bitmap$CompressFormat;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final a(Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-    .locals 7
-
-    .prologue
-    .line 214
-    const/4 v2, 0x0
-
-    .line 216
-    iget-object v0, p0, Lcom/bbm/util/b/d;->e:Ljava/util/HashSet;
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/bbm/util/b/d;->e:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_3
-
-    .line 218
-    new-instance v0, Ljava/util/HashSet;
-
-    iget-object v1, p0, Lcom/bbm/util/b/d;->e:Ljava/util/HashSet;
-
-    invoke-direct {v0, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    .line 219
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    .line 224
-    :cond_0
-    :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 225
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/ref/SoftReference;
-
-    .line 226
-    invoke-virtual {v0}, Ljava/lang/ref/SoftReference;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/graphics/Bitmap;
-
-    .line 228
-    if-eqz v1, :cond_2
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->isMutable()Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    .line 230
-    iget v3, p1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
-
-    if-eqz v3, :cond_1
-
-    iget v3, p1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
-
-    iget v5, p1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
-
-    div-int/2addr v3, v5
-
-    iget v5, p1, Landroid/graphics/BitmapFactory$Options;->outHeight:I
-
-    iget v6, p1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
-
-    div-int/2addr v5, v6
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v6
-
-    if-ne v6, v3, :cond_1
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v3
-
-    if-ne v3, v5, :cond_1
-
-    const/4 v3, 0x1
-
-    :goto_1
-    if-eqz v3, :cond_0
-
-    .line 234
-    iget-object v2, p0, Lcom/bbm/util/b/d;->e:Ljava/util/HashSet;
-
-    invoke-virtual {v2, v0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
-
-    .line 244
-    :goto_2
-    return-object v1
-
-    .line 230
-    :cond_1
-    const/4 v3, 0x0
-
-    goto :goto_1
-
-    .line 239
-    :cond_2
-    iget-object v1, p0, Lcom/bbm/util/b/d;->e:Ljava/util/HashSet;
-
-    invoke-virtual {v1, v0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_3
-    move-object v1, v2
-
-    goto :goto_2
-.end method
-
-.method public final a(Ljava/lang/String;)Lcom/bbm/d/dw;
+.method public final a(Ljava/lang/String;)Lcom/bbm/d/ff;
     .locals 2
 
     .prologue
@@ -321,18 +194,18 @@
     const/4 v0, 0x0
 
     .line 198
-    iget-object v1, p0, Lcom/bbm/util/b/d;->b:Landroid/util/LruCache;
+    iget-object v1, p0, Lcom/bbm/util/b/d;->c:Landroid/util/LruCache;
 
     if-eqz v1, :cond_0
 
     .line 199
-    iget-object v0, p0, Lcom/bbm/util/b/d;->b:Landroid/util/LruCache;
+    iget-object v0, p0, Lcom/bbm/util/b/d;->c:Landroid/util/LruCache;
 
     invoke-virtual {v0, p1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/dw;
+    check-cast v0, Lcom/bbm/d/ff;
 
     .line 206
     :cond_0
@@ -344,17 +217,17 @@
 
     .prologue
     .line 258
-    iget-object v0, p0, Lcom/bbm/util/b/d;->b:Landroid/util/LruCache;
+    iget-object v0, p0, Lcom/bbm/util/b/d;->c:Landroid/util/LruCache;
 
     if-eqz v0, :cond_0
 
     .line 259
-    iget-object v0, p0, Lcom/bbm/util/b/d;->b:Landroid/util/LruCache;
+    iget-object v0, p0, Lcom/bbm/util/b/d;->c:Landroid/util/LruCache;
 
     invoke-virtual {v0}, Landroid/util/LruCache;->evictAll()V
 
     .line 260
-    iget-object v0, p0, Lcom/bbm/util/b/d;->e:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/bbm/util/b/d;->a:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
@@ -370,7 +243,7 @@
     .line 248
     if-eqz p1, :cond_0
 
-    sget-object v0, Lcom/bbm/util/b/d;->d:Ljava/lang/ref/WeakReference;
+    sget-object v0, Lcom/bbm/util/b/d;->e:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -378,7 +251,7 @@
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/bbm/util/b/d;->d:Ljava/lang/ref/WeakReference;
+    sget-object v0, Lcom/bbm/util/b/d;->e:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -393,7 +266,7 @@
     if-eqz v0, :cond_0
 
     .line 249
-    sget-object v0, Lcom/bbm/util/b/d;->d:Ljava/lang/ref/WeakReference;
+    sget-object v0, Lcom/bbm/util/b/d;->e:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->clear()V
 
@@ -405,7 +278,7 @@
     return-void
 .end method
 
-.method public final a(Ljava/lang/String;Lcom/bbm/d/dw;)V
+.method public final a(Ljava/lang/String;Lcom/bbm/d/ff;)V
     .locals 2
 
     .prologue
@@ -421,27 +294,27 @@
 
     .line 179
     :cond_1
-    iget-object v0, p0, Lcom/bbm/util/b/d;->b:Landroid/util/LruCache;
+    iget-object v0, p0, Lcom/bbm/util/b/d;->c:Landroid/util/LruCache;
 
     if-eqz v0, :cond_0
 
     .line 180
-    instance-of v0, p2, Lcom/bbm/util/cw;
+    instance-of v0, p2, Lcom/bbm/util/dh;
 
     if-eqz v0, :cond_2
 
     move-object v0, p2
 
     .line 183
-    check-cast v0, Lcom/bbm/util/cw;
+    check-cast v0, Lcom/bbm/util/dh;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/util/cw;->a(Z)V
+    invoke-virtual {v0, v1}, Lcom/bbm/util/dh;->a(Z)V
 
     .line 185
     :cond_2
-    iget-object v0, p0, Lcom/bbm/util/b/d;->b:Landroid/util/LruCache;
+    iget-object v0, p0, Lcom/bbm/util/b/d;->c:Landroid/util/LruCache;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

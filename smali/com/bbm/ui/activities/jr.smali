@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/jr;
 .super Ljava/lang/Object;
-.source "GroupChatHistorySettingsActivity.java"
+.source "EditListItemActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/EditListItemActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/EditListItemActivity;)V
     .locals 0
 
     .prologue
-    .line 65
-    iput-object p1, p0, Lcom/bbm/ui/activities/jr;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    .line 266
+    iput-object p1, p0, Lcom/bbm/ui/activities/jr;->a:Lcom/bbm/ui/activities/EditListItemActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,18 +29,30 @@
     .locals 2
 
     .prologue
-    .line 69
-    const-string v0, "headerActionBar Negative Button Clicked"
+    .line 270
+    const-string v0, "mHeaderActionBar Positive Button Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    const-class v1, Lcom/bbm/ui/activities/EditListItemActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 71
-    iget-object v0, p0, Lcom/bbm/ui/activities/jr;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    .line 272
+    const-string v0, "positivebutton onClick"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->l()V
+    const-class v1, Lcom/bbm/ui/activities/EditListItemActivity;
 
-    .line 72
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 273
+    iget-object v0, p0, Lcom/bbm/ui/activities/jr;->a:Lcom/bbm/ui/activities/EditListItemActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/EditListItemActivity;->c(Lcom/bbm/ui/activities/EditListItemActivity;)V
+
+    .line 274
+    iget-object v0, p0, Lcom/bbm/ui/activities/jr;->a:Lcom/bbm/ui/activities/EditListItemActivity;
+
+    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
+
+    .line 275
     return-void
 .end method

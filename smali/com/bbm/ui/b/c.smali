@@ -1,81 +1,63 @@
 .class final Lcom/bbm/ui/b/c;
-.super Lcom/bbm/j/k;
+.super Ljava/lang/Object;
 .source "BBChannelDateOfBirthDialog.java"
+
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemSelectedListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/b;
+.field final synthetic a:Lcom/bbm/ui/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/b/b;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/b/a;)V
+    .locals 0
 
     .prologue
-    .line 95
-    iput-object p1, p0, Lcom/bbm/ui/b/c;->a:Lcom/bbm/ui/b/b;
+    .line 113
+    iput-object p1, p0, Lcom/bbm/ui/b/c;->a:Lcom/bbm/ui/b/a;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 2
+.method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 98
-    iget-object v0, p0, Lcom/bbm/ui/b/c;->a:Lcom/bbm/ui/b/b;
+    .line 116
+    iget-object v0, p0, Lcom/bbm/ui/b/c;->a:Lcom/bbm/ui/b/a;
 
-    invoke-static {v0}, Lcom/bbm/ui/b/b;->a(Lcom/bbm/ui/b/b;)Lcom/bbm/d/a;
+    invoke-static {v0}, Lcom/bbm/ui/b/a;->c(Lcom/bbm/ui/b/a;)V
 
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d/a;->f:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/util/au;
-
-    .line 99
-    sget-object v1, Lcom/bbm/util/au;->b:Lcom/bbm/util/au;
-
-    if-ne v0, v1, :cond_0
-
-    .line 100
-    iget-object v0, p0, Lcom/bbm/ui/b/c;->a:Lcom/bbm/ui/b/b;
-
-    invoke-static {v0}, Lcom/bbm/ui/b/b;->b(Lcom/bbm/ui/b/b;)Lcom/bbm/ui/b/g;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 101
-    iget-object v0, p0, Lcom/bbm/ui/b/c;->a:Lcom/bbm/ui/b/b;
-
-    invoke-static {v0}, Lcom/bbm/ui/b/b;->b(Lcom/bbm/ui/b/b;)Lcom/bbm/ui/b/g;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/ui/b/g;->a()V
-
-    .line 106
-    :cond_0
-    :goto_0
+    .line 117
     return-void
+.end method
 
-    .line 103
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/b/c;->a:Lcom/bbm/ui/b/b;
+.method public final onNothingSelected(Landroid/widget/AdapterView;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;)V"
+        }
+    .end annotation
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/b;->dismiss()V
-
-    goto :goto_0
+    .prologue
+    .line 122
+    return-void
 .end method

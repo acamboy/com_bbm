@@ -1,6 +1,17 @@
-.class public final Lcom/bbm/h;
-.super Landroid/os/Binder;
+.class final Lcom/bbm/h;
+.super Lcom/bbm/j/a;
 .source "BbmService.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Lcom/bbm/f/ag;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
@@ -8,131 +19,40 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/BbmService;)V
+.method constructor <init>(Lcom/bbm/BbmService;)V
     .locals 0
 
     .prologue
-    .line 118
+    .line 75
     iput-object p1, p0, Lcom/bbm/h;->a:Lcom/bbm/BbmService;
 
-    invoke-direct {p0}, Landroid/os/Binder;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Lcom/bbm/f/a;
+.method protected final synthetic a()Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 124
+    .line 75
     iget-object v0, p0, Lcom/bbm/h;->a:Lcom/bbm/BbmService;
 
-    invoke-static {v0}, Lcom/bbm/BbmService;->h(Lcom/bbm/BbmService;)Lcom/bbm/f/c;
+    invoke-static {v0}, Lcom/bbm/BbmService;->a(Lcom/bbm/BbmService;)Lcom/bbm/f/ad;
 
     move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/f/ad;->g()Lcom/bbm/j/r;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/f/ag;
 
     return-object v0
-.end method
-
-.method public final b()Lcom/bbm/f/a;
-    .locals 1
-
-    .prologue
-    .line 128
-    iget-object v0, p0, Lcom/bbm/h;->a:Lcom/bbm/BbmService;
-
-    invoke-static {v0}, Lcom/bbm/BbmService;->i(Lcom/bbm/BbmService;)Lcom/bbm/f/c;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final c()Lcom/bbm/f/a;
-    .locals 1
-
-    .prologue
-    .line 132
-    iget-object v0, p0, Lcom/bbm/h;->a:Lcom/bbm/BbmService;
-
-    invoke-static {v0}, Lcom/bbm/BbmService;->j(Lcom/bbm/BbmService;)Lcom/bbm/f/c;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final d()Lcom/bbm/f/ab;
-    .locals 1
-
-    .prologue
-    .line 137
-    iget-object v0, p0, Lcom/bbm/h;->a:Lcom/bbm/BbmService;
-
-    invoke-static {v0}, Lcom/bbm/BbmService;->a(Lcom/bbm/BbmService;)Lcom/bbm/f/z;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/f/z;->g()Lcom/bbm/f/ab;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final e()Lcom/bbm/j/r;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/bbm/j/r",
-            "<",
-            "Lcom/bbm/f/aa;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 141
-    iget-object v0, p0, Lcom/bbm/h;->a:Lcom/bbm/BbmService;
-
-    invoke-static {v0}, Lcom/bbm/BbmService;->c(Lcom/bbm/BbmService;)Lcom/bbm/j/a;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final f()V
-    .locals 1
-
-    .prologue
-    .line 144
-    iget-object v0, p0, Lcom/bbm/h;->a:Lcom/bbm/BbmService;
-
-    invoke-static {v0}, Lcom/bbm/BbmService;->a(Lcom/bbm/BbmService;)Lcom/bbm/f/z;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/f/z;->i()V
-
-    return-void
-.end method
-
-.method public final g()V
-    .locals 1
-
-    .prologue
-    .line 146
-    iget-object v0, p0, Lcom/bbm/h;->a:Lcom/bbm/BbmService;
-
-    invoke-static {v0}, Lcom/bbm/BbmService;->a(Lcom/bbm/BbmService;)Lcom/bbm/f/z;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/f/z;->h()V
-
-    return-void
 .end method

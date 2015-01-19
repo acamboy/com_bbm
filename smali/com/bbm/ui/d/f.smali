@@ -14,7 +14,7 @@
     .locals 0
 
     .prologue
-    .line 31
+    .line 29
     iput-object p1, p0, Lcom/bbm/ui/d/f;->b:Lcom/bbm/ui/d/e;
 
     iput-object p2, p0, Lcom/bbm/ui/d/f;->a:Ljava/lang/String;
@@ -30,34 +30,34 @@
     .locals 3
 
     .prologue
-    .line 34
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 32
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/bbm/ui/d/f;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->y(Ljava/lang/String;)Lcom/bbm/d/dx;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->D(Ljava/lang/String;)Lcom/bbm/d/fg;
 
     move-result-object v0
 
-    .line 35
-    iget-object v0, v0, Lcom/bbm/d/dx;->b:Lcom/bbm/util/bc;
+    .line 33
+    iget-object v0, v0, Lcom/bbm/d/fg;->b:Lcom/bbm/util/bi;
 
-    sget-object v1, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v1, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-eq v0, v1, :cond_0
 
-    .line 36
+    .line 34
     const/4 v0, 0x0
 
-    .line 40
+    .line 38
     :goto_0
     return v0
 
-    .line 38
+    .line 36
     :cond_0
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
@@ -71,12 +71,12 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/d/d;->a(Ljava/lang/Object;Lcom/bbm/ui/d/c;)V
 
-    .line 39
+    .line 37
     iget-object v0, p0, Lcom/bbm/ui/d/f;->b:Lcom/bbm/ui/d/e;
 
     invoke-virtual {v0}, Lcom/bbm/ui/d/e;->a()V
 
-    .line 40
+    .line 38
     const/4 v0, 0x1
 
     goto :goto_0

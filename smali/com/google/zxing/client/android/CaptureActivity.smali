@@ -7,11 +7,11 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String;
+.field private static final i:Ljava/lang/String;
 
-.field private static final b:[Ljava/lang/String;
+.field private static final j:[Ljava/lang/String;
 
-.field private static final c:Ljava/util/Set;
+.field private static final k:Ljava/util/Set;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Set",
@@ -24,29 +24,33 @@
 
 
 # instance fields
-.field private d:Lcom/google/zxing/client/android/a/e;
+.field a:Lcom/google/zxing/client/android/a/e;
 
-.field private e:Lcom/google/zxing/client/android/d;
+.field b:Lcom/google/zxing/client/android/d;
 
-.field private f:Lcom/google/zxing/m;
+.field c:Lcom/google/zxing/client/android/ViewfinderView;
 
-.field private g:Lcom/google/zxing/client/android/ViewfinderView;
+.field d:Lcom/google/zxing/m;
 
-.field private h:Landroid/view/View;
+.field e:Lcom/google/zxing/client/android/q;
 
-.field private i:Lcom/google/zxing/m;
+.field f:Ljava/lang/String;
 
-.field private j:Z
+.field g:Lcom/google/zxing/client/android/c/c;
 
-.field private k:Lcom/google/zxing/client/android/q;
+.field h:Lcom/google/zxing/client/android/n;
 
-.field private l:Ljava/lang/String;
+.field private l:Lcom/google/zxing/m;
 
-.field private m:Ljava/lang/String;
+.field private m:Landroid/view/View;
 
 .field private n:Z
 
-.field private o:Ljava/util/Collection;
+.field private o:Ljava/lang/String;
+
+.field private p:Z
+
+.field private q:Ljava/util/Collection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Collection",
@@ -57,11 +61,7 @@
     .end annotation
 .end field
 
-.field private p:Ljava/lang/String;
-
-.field private q:Lcom/google/zxing/client/android/c/c;
-
-.field private r:Lcom/google/zxing/client/android/n;
+.field private r:Ljava/lang/String;
 
 .field private s:Landroid/content/Intent;
 
@@ -80,7 +80,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/zxing/client/android/CaptureActivity;->a:Ljava/lang/String;
+    sput-object v0, Lcom/google/zxing/client/android/CaptureActivity;->i:Ljava/lang/String;
 
     .line 93
     const/4 v0, 0x2
@@ -99,7 +99,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/google/zxing/client/android/CaptureActivity;->b:[Ljava/lang/String;
+    sput-object v0, Lcom/google/zxing/client/android/CaptureActivity;->j:[Ljava/lang/String;
 
     .line 104
     sget-object v0, Lcom/google/zxing/n;->e:Lcom/google/zxing/n;
@@ -114,7 +114,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/zxing/client/android/CaptureActivity;->c:Ljava/util/Set;
+    sput-object v0, Lcom/google/zxing/client/android/CaptureActivity;->k:Ljava/util/Set;
 
     return-void
 .end method
@@ -144,26 +144,76 @@
     return-object v0
 .end method
 
-.method private a(ILjava/lang/Object;J)V
+.method private a()V
     .locals 3
 
     .prologue
+    .line 701
+    new-instance v0, Landroid/app/AlertDialog$Builder;
+
+    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    .line 702
+    sget v1, Lcom/google/zxing/client/android/y;->app_name:I
+
+    invoke-virtual {p0, v1}, Lcom/google/zxing/client/android/CaptureActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    .line 703
+    sget v1, Lcom/google/zxing/client/android/y;->msg_camera_framework_bug:I
+
+    invoke-virtual {p0, v1}, Lcom/google/zxing/client/android/CaptureActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    .line 704
+    sget v1, Lcom/google/zxing/client/android/y;->button_ok:I
+
+    new-instance v2, Lcom/google/zxing/client/android/j;
+
+    invoke-direct {v2, p0}, Lcom/google/zxing/client/android/j;-><init>(Landroid/app/Activity;)V
+
+    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    .line 705
+    new-instance v1, Lcom/google/zxing/client/android/j;
+
+    invoke-direct {v1, p0}, Lcom/google/zxing/client/android/j;-><init>(Landroid/app/Activity;)V
+
+    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
+
+    .line 706
+    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
+
+    .line 707
+    return-void
+.end method
+
+.method private a(ILjava/lang/Object;J)V
+    .locals 5
+
+    .prologue
     .line 666
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
     invoke-static {v0, p1, p2}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
     .line 667
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    cmp-long v1, p3, v1
+    cmp-long v1, p3, v2
 
     if-lez v1, :cond_0
 
     .line 668
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
+    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
     invoke-virtual {v1, v0, p3, p4}, Lcom/google/zxing/client/android/d;->sendMessageDelayed(Landroid/os/Message;J)Z
 
@@ -173,14 +223,14 @@
 
     .line 670
     :cond_0
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
+    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
     invoke-virtual {v1, v0}, Lcom/google/zxing/client/android/d;->sendMessage(Landroid/os/Message;)Z
 
     goto :goto_0
 .end method
 
-.method private static a(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lcom/google/zxing/o;Lcom/google/zxing/o;)V
+.method static a(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lcom/google/zxing/o;Lcom/google/zxing/o;)V
     .locals 6
 
     .prologue
@@ -221,7 +271,7 @@
 
     .line 678
     :cond_0
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/client/android/a/e;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->a:Lcom/google/zxing/client/android/a/e;
 
     invoke-virtual {v0}, Lcom/google/zxing/client/android/a/e;->a()Z
 
@@ -230,7 +280,7 @@
     if-eqz v0, :cond_1
 
     .line 679
-    sget-object v0, Lcom/google/zxing/client/android/CaptureActivity;->a:Ljava/lang/String;
+    sget-object v0, Lcom/google/zxing/client/android/CaptureActivity;->i:Ljava/lang/String;
 
     const-string v1, "initCamera() while already open -- late SurfaceView callback?"
 
@@ -243,27 +293,27 @@
     .line 683
     :cond_1
     :try_start_0
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/client/android/a/e;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->a:Lcom/google/zxing/client/android/a/e;
 
     invoke-virtual {v0, p1}, Lcom/google/zxing/client/android/a/e;->a(Landroid/view/SurfaceHolder;)V
 
     .line 685
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
     if-nez v0, :cond_2
 
     .line 686
     new-instance v0, Lcom/google/zxing/client/android/d;
 
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->o:Ljava/util/Collection;
+    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->q:Ljava/util/Collection;
 
-    iget-object v2, p0, Lcom/google/zxing/client/android/CaptureActivity;->p:Ljava/lang/String;
+    iget-object v2, p0, Lcom/google/zxing/client/android/CaptureActivity;->r:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/client/android/a/e;
+    iget-object v3, p0, Lcom/google/zxing/client/android/CaptureActivity;->a:Lcom/google/zxing/client/android/a/e;
 
     invoke-direct {v0, p0, v1, v2, v3}, Lcom/google/zxing/client/android/d;-><init>(Lcom/google/zxing/client/android/CaptureActivity;Ljava/util/Collection;Ljava/lang/String;Lcom/google/zxing/client/android/a/e;)V
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
     .line 688
     :cond_2
@@ -281,12 +331,12 @@
     move-exception v0
 
     .line 690
-    sget-object v1, Lcom/google/zxing/client/android/CaptureActivity;->a:Ljava/lang/String;
+    sget-object v1, Lcom/google/zxing/client/android/CaptureActivity;->i:Ljava/lang/String;
 
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 691
-    invoke-direct {p0}, Lcom/google/zxing/client/android/CaptureActivity;->e()V
+    invoke-direct {p0}, Lcom/google/zxing/client/android/CaptureActivity;->a()V
 
     goto :goto_0
 
@@ -295,14 +345,14 @@
     move-exception v0
 
     .line 695
-    sget-object v1, Lcom/google/zxing/client/android/CaptureActivity;->a:Ljava/lang/String;
+    sget-object v1, Lcom/google/zxing/client/android/CaptureActivity;->i:Ljava/lang/String;
 
     const-string v2, "Unexpected error initializing camera"
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 696
-    invoke-direct {p0}, Lcom/google/zxing/client/android/CaptureActivity;->e()V
+    invoke-direct {p0}, Lcom/google/zxing/client/android/CaptureActivity;->a()V
 
     goto :goto_0
 .end method
@@ -312,12 +362,12 @@
 
     .prologue
     .line 388
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
     if-nez v0, :cond_0
 
     .line 389
-    iput-object p1, p0, Lcom/google/zxing/client/android/CaptureActivity;->f:Lcom/google/zxing/m;
+    iput-object p1, p0, Lcom/google/zxing/client/android/CaptureActivity;->l:Lcom/google/zxing/m;
 
     .line 400
     :goto_0
@@ -328,27 +378,27 @@
     if-eqz p1, :cond_1
 
     .line 392
-    iput-object p1, p0, Lcom/google/zxing/client/android/CaptureActivity;->f:Lcom/google/zxing/m;
+    iput-object p1, p0, Lcom/google/zxing/client/android/CaptureActivity;->l:Lcom/google/zxing/m;
 
     .line 394
     :cond_1
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->f:Lcom/google/zxing/m;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->l:Lcom/google/zxing/m;
 
     if-eqz v0, :cond_2
 
     .line 395
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
     sget v1, Lcom/google/zxing/client/android/w;->decode_succeeded:I
 
-    iget-object v2, p0, Lcom/google/zxing/client/android/CaptureActivity;->f:Lcom/google/zxing/m;
+    iget-object v2, p0, Lcom/google/zxing/client/android/CaptureActivity;->l:Lcom/google/zxing/m;
 
     invoke-static {v0, v1, v2}, Landroid/os/Message;->obtain(Landroid/os/Handler;ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
     .line 396
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
+    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
     invoke-virtual {v1, v0}, Lcom/google/zxing/client/android/d;->sendMessage(Landroid/os/Message;)Z
 
@@ -356,12 +406,65 @@
     :cond_2
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->f:Lcom/google/zxing/m;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->l:Lcom/google/zxing/m;
 
     goto :goto_0
 .end method
 
-.method private a(Lcom/google/zxing/m;Lcom/google/zxing/client/android/d/j;Landroid/graphics/Bitmap;)V
+.method private b()V
+    .locals 2
+
+    .prologue
+    .line 717
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->m:Landroid/view/View;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 718
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->c:Lcom/google/zxing/client/android/ViewfinderView;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/google/zxing/client/android/ViewfinderView;->setVisibility(I)V
+
+    .line 719
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/m;
+
+    .line 720
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(J)V
+    .locals 3
+
+    .prologue
+    .line 710
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
+
+    if-eqz v0, :cond_0
+
+    .line 711
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
+
+    sget v1, Lcom/google/zxing/client/android/w;->restart_preview:I
+
+    invoke-virtual {v0, v1, p1, p2}, Lcom/google/zxing/client/android/d;->sendEmptyMessageDelayed(IJ)Z
+
+    .line 713
+    :cond_0
+    invoke-direct {p0}, Lcom/google/zxing/client/android/CaptureActivity;->b()V
+
+    .line 714
+    return-void
+.end method
+
+.method final a(Lcom/google/zxing/m;Lcom/google/zxing/client/android/d/j;Landroid/graphics/Bitmap;)V
     .locals 9
 
     .prologue
@@ -372,12 +475,12 @@
     const/4 v3, 0x0
 
     .line 504
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->g:Lcom/google/zxing/client/android/ViewfinderView;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->c:Lcom/google/zxing/client/android/ViewfinderView;
 
     invoke-virtual {v0, v8}, Lcom/google/zxing/client/android/ViewfinderView;->setVisibility(I)V
 
     .line 505
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->h:Landroid/view/View;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->m:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
@@ -435,9 +538,9 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 519
-    invoke-virtual {p2}, Lcom/google/zxing/client/android/d/j;->f()Lcom/google/zxing/client/a/r;
+    iget-object v1, p2, Lcom/google/zxing/client/android/d/j;->a:Lcom/google/zxing/client/a/q;
 
-    move-result-object v1
+    iget-object v1, v1, Lcom/google/zxing/client/a/q;->o:Lcom/google/zxing/client/a/r;
 
     invoke-virtual {v1}, Lcom/google/zxing/client/a/r;->toString()Ljava/lang/String;
 
@@ -532,7 +635,7 @@
     check-cast v1, Ljava/util/Map$Entry;
 
     .line 535
-    sget-object v6, Lcom/google/zxing/client/android/CaptureActivity;->c:Ljava/util/Set;
+    sget-object v6, Lcom/google/zxing/client/android/CaptureActivity;->k:Ljava/util/Set;
 
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -666,11 +769,9 @@
     if-eqz v1, :cond_4
 
     .line 559
-    invoke-virtual {p2}, Lcom/google/zxing/client/android/d/j;->c()Lcom/google/zxing/client/a/q;
+    iget-object v1, p2, Lcom/google/zxing/client/android/d/j;->a:Lcom/google/zxing/client/a/q;
 
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/google/zxing/client/android/CaptureActivity;->q:Lcom/google/zxing/client/android/c/c;
+    iget-object v2, p0, Lcom/google/zxing/client/android/CaptureActivity;->g:Lcom/google/zxing/client/android/c/c;
 
     invoke-static {v0, v1, v2, p0}, Lcom/google/zxing/client/android/d/a/c;->a(Landroid/widget/TextView;Lcom/google/zxing/client/a/q;Lcom/google/zxing/client/android/c/c;Landroid/content/Context;)V
 
@@ -746,19 +847,19 @@
     return-void
 .end method
 
-.method private b(Lcom/google/zxing/m;Lcom/google/zxing/client/android/d/j;Landroid/graphics/Bitmap;)V
+.method final b(Lcom/google/zxing/m;Lcom/google/zxing/client/android/d/j;Landroid/graphics/Bitmap;)V
     .locals 8
 
     .prologue
     const-wide/16 v0, 0x0
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     .line 583
     if-eqz p3, :cond_0
 
     .line 584
-    iget-object v2, p0, Lcom/google/zxing/client/android/CaptureActivity;->g:Lcom/google/zxing/client/android/ViewfinderView;
+    iget-object v2, p0, Lcom/google/zxing/client/android/CaptureActivity;->c:Lcom/google/zxing/client/android/ViewfinderView;
 
     invoke-virtual {v2, p3}, Lcom/google/zxing/client/android/ViewfinderView;->a(Landroid/graphics/Bitmap;)V
 
@@ -770,18 +871,18 @@
 
     if-nez v2, :cond_5
 
-    move-wide v1, v0
+    move-wide v2, v0
 
     .line 602
     :goto_0
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->k:Lcom/google/zxing/client/android/q;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
 
-    sget-object v4, Lcom/google/zxing/client/android/q;->a:Lcom/google/zxing/client/android/q;
+    sget-object v1, Lcom/google/zxing/client/android/q;->a:Lcom/google/zxing/client/android/q;
 
-    if-ne v0, v4, :cond_8
+    if-ne v0, v1, :cond_8
 
     .line 606
-    new-instance v4, Landroid/content/Intent;
+    new-instance v5, Landroid/content/Intent;
 
     invoke-virtual {p0}, Lcom/google/zxing/client/android/CaptureActivity;->getIntent()Landroid/content/Intent;
 
@@ -791,32 +892,32 @@
 
     move-result-object v0
 
-    invoke-direct {v4, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 607
     const/high16 v0, 0x80000
 
-    invoke-virtual {v4, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    invoke-virtual {v5, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 608
     const-string v0, "SCAN_RESULT"
 
     invoke-virtual {p1}, Lcom/google/zxing/m;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v1
 
-    invoke-virtual {v4, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v5, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 609
     const-string v0, "SCAN_RESULT_FORMAT"
 
-    iget-object v5, p1, Lcom/google/zxing/m;->d:Lcom/google/zxing/a;
+    iget-object v1, p1, Lcom/google/zxing/m;->d:Lcom/google/zxing/a;
 
-    invoke-virtual {v5}, Lcom/google/zxing/a;->toString()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/google/zxing/a;->toString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v1
 
-    invoke-virtual {v4, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v5, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 610
     iget-object v0, p1, Lcom/google/zxing/m;->b:[B
@@ -824,26 +925,26 @@
     .line 611
     if-eqz v0, :cond_1
 
-    array-length v5, v0
+    array-length v1, v0
 
-    if-lez v5, :cond_1
+    if-lez v1, :cond_1
 
     .line 612
-    const-string v5, "SCAN_RESULT_BYTES"
+    const-string v1, "SCAN_RESULT_BYTES"
 
-    invoke-virtual {v4, v5, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
+    invoke-virtual {v5, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
 
     .line 614
     :cond_1
-    iget-object v5, p1, Lcom/google/zxing/m;->e:Ljava/util/Map;
+    iget-object v1, p1, Lcom/google/zxing/m;->e:Ljava/util/Map;
 
     .line 615
-    if-eqz v5, :cond_6
+    if-eqz v1, :cond_6
 
     .line 616
     sget-object v0, Lcom/google/zxing/n;->h:Lcom/google/zxing/n;
 
-    invoke-interface {v5, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-interface {v1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -854,7 +955,7 @@
 
     sget-object v6, Lcom/google/zxing/n;->h:Lcom/google/zxing/n;
 
-    invoke-interface {v5, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v6
 
@@ -862,13 +963,13 @@
 
     move-result-object v6
 
-    invoke-virtual {v4, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v5, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 620
     :cond_2
     sget-object v0, Lcom/google/zxing/n;->b:Lcom/google/zxing/n;
 
-    invoke-interface {v5, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -884,13 +985,13 @@
 
     move-result v0
 
-    invoke-virtual {v4, v6, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v5, v6, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 624
     :cond_3
     sget-object v0, Lcom/google/zxing/n;->d:Lcom/google/zxing/n;
 
-    invoke-interface {v5, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -902,13 +1003,13 @@
     .line 626
     const-string v6, "SCAN_RESULT_ERROR_CORRECTION_LEVEL"
 
-    invoke-virtual {v4, v6, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v5, v6, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 628
     :cond_4
     sget-object v0, Lcom/google/zxing/n;->c:Lcom/google/zxing/n;
 
-    invoke-interface {v5, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -920,42 +1021,44 @@
     .line 631
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v5
+    move-result-object v6
+
+    move v1, v4
 
     :goto_1
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_6
 
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, [B
 
     .line 632
-    new-instance v6, Ljava/lang/StringBuilder;
+    new-instance v4, Ljava/lang/StringBuilder;
 
     const-string v7, "SCAN_RESULT_BYTE_SEGMENTS_"
 
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v4, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v6
+    move-result-object v4
 
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v4
 
-    invoke-virtual {v4, v6, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
+    invoke-virtual {v5, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
 
     .line 633
-    add-int/lit8 v0, v3, 0x1
+    add-int/lit8 v0, v1, 0x1
 
-    move v3, v0
+    move v1, v0
 
     .line 634
     goto :goto_1
@@ -966,13 +1069,13 @@
 
     move-result-object v2
 
-    const-string v4, "RESULT_DISPLAY_DURATION_MS"
+    const-string v3, "RESULT_DISPLAY_DURATION_MS"
 
-    invoke-virtual {v2, v4, v0, v1}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
+    invoke-virtual {v2, v3, v0, v1}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v0
 
-    move-wide v1, v0
+    move-wide v2, v0
 
     goto/16 :goto_0
 
@@ -980,7 +1083,7 @@
     :cond_6
     sget v0, Lcom/google/zxing/client/android/w;->return_scan_result:I
 
-    invoke-direct {p0, v0, v4, v1, v2}, Lcom/google/zxing/client/android/CaptureActivity;->a(ILjava/lang/Object;J)V
+    invoke-direct {p0, v0, v5, v2, v3}, Lcom/google/zxing/client/android/CaptureActivity;->a(ILjava/lang/Object;J)V
 
     .line 663
     :cond_7
@@ -989,53 +1092,53 @@
 
     .line 639
     :cond_8
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->k:Lcom/google/zxing/client/android/q;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
 
-    sget-object v4, Lcom/google/zxing/client/android/q;->b:Lcom/google/zxing/client/android/q;
+    sget-object v1, Lcom/google/zxing/client/android/q;->b:Lcom/google/zxing/client/android/q;
 
-    if-ne v0, v4, :cond_9
+    if-ne v0, v1, :cond_9
 
     .line 643
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->l:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->o:Ljava/lang/String;
 
-    const-string v4, "/scan"
+    const-string v1, "/scan"
 
-    invoke-virtual {v0, v4}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
+    invoke-virtual {v0, v1}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
     move-result v0
 
     .line 644
-    new-instance v4, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v5, p0, Lcom/google/zxing/client/android/CaptureActivity;->l:Ljava/lang/String;
+    iget-object v5, p0, Lcom/google/zxing/client/android/CaptureActivity;->o:Ljava/lang/String;
 
-    invoke-virtual {v5, v3, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v5, v4, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v3, "?q="
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v0
+
+    const-string v1, "?q="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
     invoke-virtual {p2}, Lcom/google/zxing/client/android/d/j;->b()Ljava/lang/CharSequence;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v3, "&source=zxing"
+    const-string v1, "&source=zxing"
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1044,27 +1147,27 @@
     move-result-object v0
 
     .line 645
-    sget v3, Lcom/google/zxing/client/android/w;->launch_product_query:I
+    sget v1, Lcom/google/zxing/client/android/w;->launch_product_query:I
 
-    invoke-direct {p0, v3, v0, v1, v2}, Lcom/google/zxing/client/android/CaptureActivity;->a(ILjava/lang/Object;J)V
+    invoke-direct {p0, v1, v0, v2, v3}, Lcom/google/zxing/client/android/CaptureActivity;->a(ILjava/lang/Object;J)V
 
     goto :goto_2
 
     .line 647
     :cond_9
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->k:Lcom/google/zxing/client/android/q;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
 
-    sget-object v3, Lcom/google/zxing/client/android/q;->c:Lcom/google/zxing/client/android/q;
+    sget-object v1, Lcom/google/zxing/client/android/q;->c:Lcom/google/zxing/client/android/q;
 
-    if-ne v0, v3, :cond_7
+    if-ne v0, v1, :cond_7
 
     .line 651
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->m:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->f:Ljava/lang/String;
 
     if-eqz v0, :cond_7
 
     .line 652
-    iget-boolean v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->n:Z
+    iget-boolean v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->p:Z
 
     if-eqz v0, :cond_a
 
@@ -1075,11 +1178,11 @@
     :try_start_0
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
     const-string v4, "UTF-8"
 
-    invoke-static {v3, v4}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v4}, Ljava/net/URLEncoder;->encode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1087,18 +1190,18 @@
 
     .line 658
     :goto_4
-    iget-object v3, p0, Lcom/google/zxing/client/android/CaptureActivity;->m:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->f:Ljava/lang/String;
 
     const-string v4, "{CODE}"
 
-    invoke-virtual {v3, v4, v0}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+    invoke-virtual {v1, v4, v0}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 659
-    sget v3, Lcom/google/zxing/client/android/w;->launch_product_query:I
+    sget v1, Lcom/google/zxing/client/android/w;->launch_product_query:I
 
-    invoke-direct {p0, v3, v0, v1, v2}, Lcom/google/zxing/client/android/CaptureActivity;->a(ILjava/lang/Object;J)V
+    invoke-direct {p0, v1, v0, v2, v3}, Lcom/google/zxing/client/android/CaptureActivity;->a(ILjava/lang/Object;J)V
 
     goto :goto_2
 
@@ -1111,551 +1214,9 @@
     goto :goto_3
 
     :catch_0
-    move-exception v3
+    move-exception v1
 
     goto :goto_4
-.end method
-
-.method private e()V
-    .locals 3
-
-    .prologue
-    .line 701
-    new-instance v0, Landroid/app/AlertDialog$Builder;
-
-    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    .line 702
-    sget v1, Lcom/google/zxing/client/android/y;->app_name:I
-
-    invoke-virtual {p0, v1}, Lcom/google/zxing/client/android/CaptureActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    .line 703
-    sget v1, Lcom/google/zxing/client/android/y;->msg_camera_framework_bug:I
-
-    invoke-virtual {p0, v1}, Lcom/google/zxing/client/android/CaptureActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
-
-    .line 704
-    sget v1, Lcom/google/zxing/client/android/y;->button_ok:I
-
-    new-instance v2, Lcom/google/zxing/client/android/j;
-
-    invoke-direct {v2, p0}, Lcom/google/zxing/client/android/j;-><init>(Landroid/app/Activity;)V
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 705
-    new-instance v1, Lcom/google/zxing/client/android/j;
-
-    invoke-direct {v1, p0}, Lcom/google/zxing/client/android/j;-><init>(Landroid/app/Activity;)V
-
-    invoke-virtual {v0, v1}, Landroid/app/AlertDialog$Builder;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 706
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
-
-    .line 707
-    return-void
-.end method
-
-.method private f()V
-    .locals 2
-
-    .prologue
-    .line 717
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->h:Landroid/view/View;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 718
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->g:Lcom/google/zxing/client/android/ViewfinderView;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/google/zxing/client/android/ViewfinderView;->setVisibility(I)V
-
-    .line 719
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->i:Lcom/google/zxing/m;
-
-    .line 720
-    return-void
-.end method
-
-
-# virtual methods
-.method final a()Lcom/google/zxing/client/android/ViewfinderView;
-    .locals 1
-
-    .prologue
-    .line 130
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->g:Lcom/google/zxing/client/android/ViewfinderView;
-
-    return-object v0
-.end method
-
-.method public final a(J)V
-    .locals 2
-
-    .prologue
-    .line 710
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
-
-    if-eqz v0, :cond_0
-
-    .line 711
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
-
-    sget v1, Lcom/google/zxing/client/android/w;->restart_preview:I
-
-    invoke-virtual {v0, v1, p1, p2}, Lcom/google/zxing/client/android/d;->sendEmptyMessageDelayed(IJ)Z
-
-    .line 713
-    :cond_0
-    invoke-direct {p0}, Lcom/google/zxing/client/android/CaptureActivity;->f()V
-
-    .line 714
-    return-void
-.end method
-
-.method public final a(Lcom/google/zxing/m;Landroid/graphics/Bitmap;)V
-    .locals 10
-
-    .prologue
-    const/4 v9, 0x2
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 430
-    iget-object v2, p0, Lcom/google/zxing/client/android/CaptureActivity;->r:Lcom/google/zxing/client/android/n;
-
-    invoke-virtual {v2}, Lcom/google/zxing/client/android/n;->a()V
-
-    .line 431
-    iput-object p1, p0, Lcom/google/zxing/client/android/CaptureActivity;->i:Lcom/google/zxing/m;
-
-    .line 432
-    invoke-static {p1}, Lcom/google/zxing/client/a/u;->c(Lcom/google/zxing/m;)Lcom/google/zxing/client/a/q;
-
-    move-result-object v3
-
-    sget-object v2, Lcom/google/zxing/client/android/d/m;->a:[I
-
-    iget-object v4, v3, Lcom/google/zxing/client/a/q;->o:Lcom/google/zxing/client/a/r;
-
-    invoke-virtual {v4}, Lcom/google/zxing/client/a/r;->ordinal()I
-
-    move-result v4
-
-    aget v2, v2, v4
-
-    packed-switch v2, :pswitch_data_0
-
-    new-instance v2, Lcom/google/zxing/client/android/d/p;
-
-    invoke-direct {v2, p0, v3, p1}, Lcom/google/zxing/client/android/d/p;-><init>(Landroid/app/Activity;Lcom/google/zxing/client/a/q;Lcom/google/zxing/m;)V
-
-    move-object v3, v2
-
-    .line 434
-    :goto_0
-    if-eqz p2, :cond_1
-
-    move v2, v0
-
-    .line 435
-    :goto_1
-    if-eqz v2, :cond_0
-
-    .line 436
-    iget-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->q:Lcom/google/zxing/client/android/c/c;
-
-    invoke-virtual {v4, p1, v3}, Lcom/google/zxing/client/android/c/c;->a(Lcom/google/zxing/m;Lcom/google/zxing/client/android/d/j;)V
-
-    .line 438
-    iget-object v4, p1, Lcom/google/zxing/m;->c:[Lcom/google/zxing/o;
-
-    if-eqz v4, :cond_0
-
-    array-length v5, v4
-
-    if-lez v5, :cond_0
-
-    new-instance v5, Landroid/graphics/Canvas;
-
-    invoke-direct {v5, p2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
-
-    new-instance v6, Landroid/graphics/Paint;
-
-    invoke-direct {v6}, Landroid/graphics/Paint;-><init>()V
-
-    invoke-virtual {p0}, Lcom/google/zxing/client/android/CaptureActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v7
-
-    sget v8, Lcom/google/zxing/client/android/u;->result_points:I
-
-    invoke-virtual {v7, v8}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v7
-
-    invoke-virtual {v6, v7}, Landroid/graphics/Paint;->setColor(I)V
-
-    array-length v7, v4
-
-    if-ne v7, v9, :cond_2
-
-    const/high16 v7, 0x40800000
-
-    invoke-virtual {v6, v7}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    aget-object v7, v4, v1
-
-    aget-object v0, v4, v0
-
-    invoke-static {v5, v6, v7, v0}, Lcom/google/zxing/client/android/CaptureActivity;->a(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lcom/google/zxing/o;Lcom/google/zxing/o;)V
-
-    .line 441
-    :cond_0
-    :goto_2
-    sget-object v0, Lcom/google/zxing/client/android/c;->a:[I
-
-    iget-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->k:Lcom/google/zxing/client/android/q;
-
-    invoke-virtual {v4}, Lcom/google/zxing/client/android/q;->ordinal()I
-
-    move-result v4
-
-    aget v0, v0, v4
-
-    packed-switch v0, :pswitch_data_1
-
-    .line 466
-    :goto_3
-    return-void
-
-    .line 432
-    :pswitch_0
-    new-instance v2, Lcom/google/zxing/client/android/d/a;
-
-    invoke-direct {v2, p0, v3}, Lcom/google/zxing/client/android/d/a;-><init>(Landroid/app/Activity;Lcom/google/zxing/client/a/q;)V
-
-    move-object v3, v2
-
-    goto :goto_0
-
-    :pswitch_1
-    new-instance v2, Lcom/google/zxing/client/android/d/c;
-
-    invoke-direct {v2, p0, v3}, Lcom/google/zxing/client/android/d/c;-><init>(Landroid/app/Activity;Lcom/google/zxing/client/a/q;)V
-
-    move-object v3, v2
-
-    goto :goto_0
-
-    :pswitch_2
-    new-instance v2, Lcom/google/zxing/client/android/d/g;
-
-    invoke-direct {v2, p0, v3, p1}, Lcom/google/zxing/client/android/d/g;-><init>(Landroid/app/Activity;Lcom/google/zxing/client/a/q;Lcom/google/zxing/m;)V
-
-    move-object v3, v2
-
-    goto :goto_0
-
-    :pswitch_3
-    new-instance v2, Lcom/google/zxing/client/android/d/q;
-
-    invoke-direct {v2, p0, v3}, Lcom/google/zxing/client/android/d/q;-><init>(Landroid/app/Activity;Lcom/google/zxing/client/a/q;)V
-
-    move-object v3, v2
-
-    goto :goto_0
-
-    :pswitch_4
-    new-instance v2, Lcom/google/zxing/client/android/d/r;
-
-    invoke-direct {v2, p0, v3}, Lcom/google/zxing/client/android/d/r;-><init>(Lcom/google/zxing/client/android/CaptureActivity;Lcom/google/zxing/client/a/q;)V
-
-    move-object v3, v2
-
-    goto :goto_0
-
-    :pswitch_5
-    new-instance v2, Lcom/google/zxing/client/android/d/d;
-
-    invoke-direct {v2, p0, v3}, Lcom/google/zxing/client/android/d/d;-><init>(Landroid/app/Activity;Lcom/google/zxing/client/a/q;)V
-
-    move-object v3, v2
-
-    goto :goto_0
-
-    :pswitch_6
-    new-instance v2, Lcom/google/zxing/client/android/d/o;
-
-    invoke-direct {v2, p0, v3}, Lcom/google/zxing/client/android/d/o;-><init>(Landroid/app/Activity;Lcom/google/zxing/client/a/q;)V
-
-    move-object v3, v2
-
-    goto :goto_0
-
-    :pswitch_7
-    new-instance v2, Lcom/google/zxing/client/android/d/n;
-
-    invoke-direct {v2, p0, v3}, Lcom/google/zxing/client/android/d/n;-><init>(Landroid/app/Activity;Lcom/google/zxing/client/a/q;)V
-
-    move-object v3, v2
-
-    goto :goto_0
-
-    :pswitch_8
-    new-instance v2, Lcom/google/zxing/client/android/d/b;
-
-    invoke-direct {v2, p0, v3}, Lcom/google/zxing/client/android/d/b;-><init>(Landroid/app/Activity;Lcom/google/zxing/client/a/q;)V
-
-    move-object v3, v2
-
-    goto/16 :goto_0
-
-    :pswitch_9
-    new-instance v2, Lcom/google/zxing/client/android/d/e;
-
-    invoke-direct {v2, p0, v3, p1}, Lcom/google/zxing/client/android/d/e;-><init>(Landroid/app/Activity;Lcom/google/zxing/client/a/q;Lcom/google/zxing/m;)V
-
-    move-object v3, v2
-
-    goto/16 :goto_0
-
-    :cond_1
-    move v2, v1
-
-    .line 434
-    goto/16 :goto_1
-
-    .line 438
-    :cond_2
-    array-length v7, v4
-
-    const/4 v8, 0x4
-
-    if-ne v7, v8, :cond_4
-
-    iget-object v7, p1, Lcom/google/zxing/m;->d:Lcom/google/zxing/a;
-
-    sget-object v8, Lcom/google/zxing/a;->o:Lcom/google/zxing/a;
-
-    if-eq v7, v8, :cond_3
-
-    iget-object v7, p1, Lcom/google/zxing/m;->d:Lcom/google/zxing/a;
-
-    sget-object v8, Lcom/google/zxing/a;->h:Lcom/google/zxing/a;
-
-    if-ne v7, v8, :cond_4
-
-    :cond_3
-    aget-object v7, v4, v1
-
-    aget-object v0, v4, v0
-
-    invoke-static {v5, v6, v7, v0}, Lcom/google/zxing/client/android/CaptureActivity;->a(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lcom/google/zxing/o;Lcom/google/zxing/o;)V
-
-    aget-object v0, v4, v9
-
-    const/4 v7, 0x3
-
-    aget-object v4, v4, v7
-
-    invoke-static {v5, v6, v0, v4}, Lcom/google/zxing/client/android/CaptureActivity;->a(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lcom/google/zxing/o;Lcom/google/zxing/o;)V
-
-    goto :goto_2
-
-    :cond_4
-    const/high16 v0, 0x41200000
-
-    invoke-virtual {v6, v0}, Landroid/graphics/Paint;->setStrokeWidth(F)V
-
-    array-length v7, v4
-
-    move v0, v1
-
-    :goto_4
-    if-ge v0, v7, :cond_0
-
-    aget-object v8, v4, v0
-
-    iget v9, v8, Lcom/google/zxing/o;->a:F
-
-    iget v8, v8, Lcom/google/zxing/o;->b:F
-
-    invoke-virtual {v5, v9, v8, v6}, Landroid/graphics/Canvas;->drawPoint(FFLandroid/graphics/Paint;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_4
-
-    .line 444
-    :pswitch_a
-    invoke-direct {p0, p1, v3, p2}, Lcom/google/zxing/client/android/CaptureActivity;->b(Lcom/google/zxing/m;Lcom/google/zxing/client/android/d/j;Landroid/graphics/Bitmap;)V
-
-    goto/16 :goto_3
-
-    .line 447
-    :pswitch_b
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->m:Ljava/lang/String;
-
-    if-eqz v0, :cond_5
-
-    .line 448
-    invoke-direct {p0, p1, v3, p2}, Lcom/google/zxing/client/android/CaptureActivity;->b(Lcom/google/zxing/m;Lcom/google/zxing/client/android/d/j;Landroid/graphics/Bitmap;)V
-
-    goto/16 :goto_3
-
-    .line 454
-    :pswitch_c
-    invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 455
-    if-eqz v2, :cond_5
-
-    const-string v2, "preferences_bulk_mode"
-
-    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    .line 456
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {p0}, Lcom/google/zxing/client/android/CaptureActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    sget v3, Lcom/google/zxing/client/android/y;->msg_bulk_mode_scanned:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v2, " ("
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v2, p1, Lcom/google/zxing/m;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const/16 v2, 0x29
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 458
-    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
-
-    .line 460
-    const-wide/16 v0, 0x3e8
-
-    invoke-virtual {p0, v0, v1}, Lcom/google/zxing/client/android/CaptureActivity;->a(J)V
-
-    goto/16 :goto_3
-
-    .line 462
-    :cond_5
-    invoke-direct {p0, p1, v3, p2}, Lcom/google/zxing/client/android/CaptureActivity;->a(Lcom/google/zxing/m;Lcom/google/zxing/client/android/d/j;Landroid/graphics/Bitmap;)V
-
-    goto/16 :goto_3
-
-    .line 432
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-        :pswitch_8
-        :pswitch_9
-    .end packed-switch
-
-    .line 441
-    :pswitch_data_1
-    .packed-switch 0x1
-        :pswitch_a
-        :pswitch_a
-        :pswitch_b
-        :pswitch_c
-    .end packed-switch
-.end method
-
-.method public final b()Landroid/os/Handler;
-    .locals 1
-
-    .prologue
-    .line 134
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
-
-    return-object v0
-.end method
-
-.method final c()Lcom/google/zxing/client/android/a/e;
-    .locals 1
-
-    .prologue
-    .line 138
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/client/android/a/e;
-
-    return-object v0
-.end method
-
-.method public final d()V
-    .locals 1
-
-    .prologue
-    .line 723
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->g:Lcom/google/zxing/client/android/ViewfinderView;
-
-    invoke-virtual {v0}, Lcom/google/zxing/client/android/ViewfinderView;->a()V
-
-    .line 724
-    return-void
 .end method
 
 .method public final onActivityResult(IILandroid/content/Intent;)V
@@ -1683,7 +1244,7 @@
     if-ltz v0, :cond_0
 
     .line 379
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->q:Lcom/google/zxing/client/android/c/c;
+    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->g:Lcom/google/zxing/client/android/c/c;
 
     invoke-virtual {v1, v0}, Lcom/google/zxing/client/android/c/c;->a(I)Lcom/google/zxing/client/android/c/b;
 
@@ -1854,17 +1415,17 @@
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 168
-    iput-boolean v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->j:Z
+    iput-boolean v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->n:Z
 
     .line 169
     new-instance v0, Lcom/google/zxing/client/android/c/c;
 
     invoke-direct {v0, p0}, Lcom/google/zxing/client/android/c/c;-><init>(Landroid/app/Activity;)V
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->q:Lcom/google/zxing/client/android/c/c;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->g:Lcom/google/zxing/client/android/c/c;
 
     .line 170
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->q:Lcom/google/zxing/client/android/c/c;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->g:Lcom/google/zxing/client/android/c/c;
 
     invoke-virtual {v0}, Lcom/google/zxing/client/android/c/c;->a()V
 
@@ -1873,7 +1434,7 @@
 
     invoke-direct {v0, p0}, Lcom/google/zxing/client/android/n;-><init>(Landroid/app/Activity;)V
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->r:Lcom/google/zxing/client/android/n;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->h:Lcom/google/zxing/client/android/n;
 
     .line 173
     sget v0, Lcom/google/zxing/client/android/z;->preferences:I
@@ -2012,7 +1573,7 @@
 
     .prologue
     .line 340
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->r:Lcom/google/zxing/client/android/n;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->h:Lcom/google/zxing/client/android/n;
 
     invoke-virtual {v0}, Lcom/google/zxing/client/android/n;->d()V
 
@@ -2046,7 +1607,7 @@
 
     .line 348
     :sswitch_1
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->k:Lcom/google/zxing/client/android/q;
+    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
 
     sget-object v2, Lcom/google/zxing/client/android/q;->a:Lcom/google/zxing/client/android/q;
 
@@ -2062,33 +1623,33 @@
 
     .line 353
     :cond_1
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->k:Lcom/google/zxing/client/android/q;
+    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
 
     sget-object v2, Lcom/google/zxing/client/android/q;->d:Lcom/google/zxing/client/android/q;
 
     if-eq v1, v2, :cond_2
 
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->k:Lcom/google/zxing/client/android/q;
+    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
 
     sget-object v2, Lcom/google/zxing/client/android/q;->c:Lcom/google/zxing/client/android/q;
 
     if-ne v1, v2, :cond_0
 
     :cond_2
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->i:Lcom/google/zxing/m;
+    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/m;
 
     if-eqz v1, :cond_0
 
     .line 354
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {p0, v1, v2}, Lcom/google/zxing/client/android/CaptureActivity;->a(J)V
+    invoke-virtual {p0, v2, v3}, Lcom/google/zxing/client/android/CaptureActivity;->a(J)V
 
     goto :goto_0
 
     .line 364
     :sswitch_2
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/client/android/a/e;
+    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->a:Lcom/google/zxing/client/android/a/e;
 
     invoke-virtual {v1, v3}, Lcom/google/zxing/client/android/a/e;->a(Z)V
 
@@ -2096,7 +1657,7 @@
 
     .line 367
     :sswitch_3
-    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/client/android/a/e;
+    iget-object v1, p0, Lcom/google/zxing/client/android/CaptureActivity;->a:Lcom/google/zxing/client/android/a/e;
 
     invoke-virtual {v1, v0}, Lcom/google/zxing/client/android/a/e;->a(Z)V
 
@@ -2116,37 +1677,75 @@
 .end method
 
 .method protected final onPause()V
-    .locals 1
+    .locals 4
 
     .prologue
     .line 324
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
     if-eqz v0, :cond_0
 
     .line 325
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
-    invoke-virtual {v0}, Lcom/google/zxing/client/android/d;->a()V
+    sget-object v1, Lcom/google/zxing/client/android/e;->c:Lcom/google/zxing/client/android/e;
+
+    iput-object v1, v0, Lcom/google/zxing/client/android/d;->b:Lcom/google/zxing/client/android/e;
+
+    iget-object v1, v0, Lcom/google/zxing/client/android/d;->c:Lcom/google/zxing/client/android/a/e;
+
+    invoke-virtual {v1}, Lcom/google/zxing/client/android/a/e;->d()V
+
+    iget-object v1, v0, Lcom/google/zxing/client/android/d;->a:Lcom/google/zxing/client/android/i;
+
+    invoke-virtual {v1}, Lcom/google/zxing/client/android/i;->a()Landroid/os/Handler;
+
+    move-result-object v1
+
+    sget v2, Lcom/google/zxing/client/android/w;->quit:I
+
+    invoke-static {v1, v2}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
+
+    :try_start_0
+    iget-object v1, v0, Lcom/google/zxing/client/android/d;->a:Lcom/google/zxing/client/android/i;
+
+    const-wide/16 v2, 0x1f4
+
+    invoke-virtual {v1, v2, v3}, Lcom/google/zxing/client/android/i;->join(J)V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
+    sget v1, Lcom/google/zxing/client/android/w;->decode_succeeded:I
+
+    invoke-virtual {v0, v1}, Lcom/google/zxing/client/android/d;->removeMessages(I)V
+
+    sget v1, Lcom/google/zxing/client/android/w;->decode_failed:I
+
+    invoke-virtual {v0, v1}, Lcom/google/zxing/client/android/d;->removeMessages(I)V
 
     .line 326
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
     .line 328
     :cond_0
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->r:Lcom/google/zxing/client/android/n;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->h:Lcom/google/zxing/client/android/n;
 
     invoke-virtual {v0}, Lcom/google/zxing/client/android/n;->b()V
 
     .line 329
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/client/android/a/e;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->a:Lcom/google/zxing/client/android/a/e;
 
     invoke-virtual {v0}, Lcom/google/zxing/client/android/a/e;->b()V
 
     .line 330
-    iget-boolean v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->j:Z
+    iget-boolean v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->n:Z
 
     if-nez v0, :cond_1
 
@@ -2173,6 +1772,11 @@
 
     .line 336
     return-void
+
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
 .end method
 
 .method protected final onResume()V
@@ -2197,7 +1801,7 @@
 
     invoke-direct {v0, v3}, Lcom/google/zxing/client/android/a/e;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/client/android/a/e;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->a:Lcom/google/zxing/client/android/a/e;
 
     .line 235
     sget v0, Lcom/google/zxing/client/android/w;->viewfinder_view:I
@@ -2208,12 +1812,12 @@
 
     check-cast v0, Lcom/google/zxing/client/android/ViewfinderView;
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->g:Lcom/google/zxing/client/android/ViewfinderView;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->c:Lcom/google/zxing/client/android/ViewfinderView;
 
     .line 236
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->g:Lcom/google/zxing/client/android/ViewfinderView;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->c:Lcom/google/zxing/client/android/ViewfinderView;
 
-    iget-object v3, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/client/android/a/e;
+    iget-object v3, p0, Lcom/google/zxing/client/android/CaptureActivity;->a:Lcom/google/zxing/client/android/a/e;
 
     invoke-virtual {v0, v3}, Lcom/google/zxing/client/android/ViewfinderView;->setCameraManager(Lcom/google/zxing/client/android/a/e;)V
 
@@ -2224,16 +1828,16 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->h:Landroid/view/View;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->m:Landroid/view/View;
 
     .line 240
-    iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/d;
+    iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->b:Lcom/google/zxing/client/android/d;
 
     .line 241
-    iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->i:Lcom/google/zxing/m;
+    iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/m;
 
     .line 243
-    invoke-direct {p0}, Lcom/google/zxing/client/android/CaptureActivity;->f()V
+    invoke-direct {p0}, Lcom/google/zxing/client/android/CaptureActivity;->b()V
 
     .line 245
     sget v0, Lcom/google/zxing/client/android/w;->preview_view:I
@@ -2250,7 +1854,7 @@
     move-result-object v0
 
     .line 247
-    iget-boolean v3, p0, Lcom/google/zxing/client/android/CaptureActivity;->j:Z
+    iget-boolean v3, p0, Lcom/google/zxing/client/android/CaptureActivity;->n:Z
 
     if-eqz v3, :cond_2
 
@@ -2259,7 +1863,7 @@
 
     .line 258
     :goto_0
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->r:Lcom/google/zxing/client/android/n;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->h:Lcom/google/zxing/client/android/n;
 
     invoke-virtual {v0}, Lcom/google/zxing/client/android/n;->c()V
 
@@ -2271,13 +1875,13 @@
     .line 262
     sget-object v0, Lcom/google/zxing/client/android/q;->d:Lcom/google/zxing/client/android/q;
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->k:Lcom/google/zxing/client/android/q;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
 
     .line 263
-    iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->o:Ljava/util/Collection;
+    iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->q:Ljava/util/Collection;
 
     .line 264
-    iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->p:Ljava/lang/String;
+    iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->r:Ljava/lang/String;
 
     .line 266
     if-eqz v3, :cond_1
@@ -2304,14 +1908,14 @@
     .line 274
     sget-object v0, Lcom/google/zxing/client/android/q;->a:Lcom/google/zxing/client/android/q;
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->k:Lcom/google/zxing/client/android/q;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
 
     .line 275
     invoke-static {v3}, Lcom/google/zxing/client/android/g;->a(Landroid/content/Intent;)Ljava/util/Collection;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->o:Ljava/util/Collection;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->q:Ljava/util/Collection;
 
     .line 277
     const-string v0, "SCAN_WIDTH"
@@ -2350,7 +1954,7 @@
     if-lez v1, :cond_0
 
     .line 281
-    iget-object v2, p0, Lcom/google/zxing/client/android/CaptureActivity;->d:Lcom/google/zxing/client/android/a/e;
+    iget-object v2, p0, Lcom/google/zxing/client/android/CaptureActivity;->a:Lcom/google/zxing/client/android/a/e;
 
     invoke-virtual {v2, v0, v1}, Lcom/google/zxing/client/android/a/e;->a(II)V
 
@@ -2363,7 +1967,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->p:Ljava/lang/String;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->r:Ljava/lang/String;
 
     .line 308
     :cond_1
@@ -2403,15 +2007,15 @@
     .line 290
     sget-object v0, Lcom/google/zxing/client/android/q;->b:Lcom/google/zxing/client/android/q;
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->k:Lcom/google/zxing/client/android/q;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
 
     .line 291
-    iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->l:Ljava/lang/String;
+    iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->o:Ljava/lang/String;
 
     .line 292
     sget-object v0, Lcom/google/zxing/client/android/g;->a:Ljava/util/Collection;
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->o:Ljava/util/Collection;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->q:Ljava/util/Collection;
 
     goto :goto_1
 
@@ -2419,7 +2023,7 @@
     :cond_4
     if-eqz v4, :cond_6
 
-    sget-object v5, Lcom/google/zxing/client/android/CaptureActivity;->b:[Ljava/lang/String;
+    sget-object v5, Lcom/google/zxing/client/android/CaptureActivity;->j:[Ljava/lang/String;
 
     array-length v6, v5
 
@@ -2444,13 +2048,13 @@
     .line 298
     sget-object v0, Lcom/google/zxing/client/android/q;->c:Lcom/google/zxing/client/android/q;
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->k:Lcom/google/zxing/client/android/q;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->e:Lcom/google/zxing/client/android/q;
 
     .line 299
-    iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->l:Ljava/lang/String;
+    iput-object v4, p0, Lcom/google/zxing/client/android/CaptureActivity;->o:Ljava/lang/String;
 
     .line 300
-    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->l:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->o:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -2463,7 +2067,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->m:Ljava/lang/String;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->f:Ljava/lang/String;
 
     .line 302
     const-string v0, "raw"
@@ -2477,14 +2081,14 @@
     move v0, v1
 
     :goto_4
-    iput-boolean v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->n:Z
+    iput-boolean v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->p:Z
 
     .line 303
     invoke-static {v4}, Lcom/google/zxing/client/android/g;->a(Landroid/net/Uri;)Ljava/util/Collection;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->o:Ljava/util/Collection;
+    iput-object v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->q:Ljava/util/Collection;
 
     goto :goto_1
 
@@ -2522,7 +2126,7 @@
     if-nez p1, :cond_0
 
     .line 405
-    sget-object v0, Lcom/google/zxing/client/android/CaptureActivity;->a:Ljava/lang/String;
+    sget-object v0, Lcom/google/zxing/client/android/CaptureActivity;->i:Ljava/lang/String;
 
     const-string v1, "*** WARNING *** surfaceCreated() gave us a null surface!"
 
@@ -2530,14 +2134,14 @@
 
     .line 407
     :cond_0
-    iget-boolean v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->j:Z
+    iget-boolean v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->n:Z
 
     if-nez v0, :cond_1
 
     .line 408
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->j:Z
+    iput-boolean v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->n:Z
 
     .line 409
     invoke-direct {p0, p1}, Lcom/google/zxing/client/android/CaptureActivity;->a(Landroid/view/SurfaceHolder;)V
@@ -2554,7 +2158,7 @@
     .line 415
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->j:Z
+    iput-boolean v0, p0, Lcom/google/zxing/client/android/CaptureActivity;->n:Z
 
     .line 416
     return-void

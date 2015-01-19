@@ -19,20 +19,20 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
     .line 78
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 79
-    cmp-long v0, v3, v3
+    cmp-long v0, v4, v4
 
     if-ltz v0, :cond_0
 
@@ -42,7 +42,7 @@
     invoke-static {v0}, Lcom/google/b/a/o;->a(Z)V
 
     .line 80
-    cmp-long v0, v3, v3
+    cmp-long v0, v4, v4
 
     if-ltz v0, :cond_1
 
@@ -52,7 +52,7 @@
     invoke-static {v0}, Lcom/google/b/a/o;->a(Z)V
 
     .line 81
-    cmp-long v0, v3, v3
+    cmp-long v0, v4, v4
 
     if-ltz v0, :cond_2
 
@@ -62,7 +62,7 @@
     invoke-static {v0}, Lcom/google/b/a/o;->a(Z)V
 
     .line 82
-    cmp-long v0, v3, v3
+    cmp-long v0, v4, v4
 
     if-ltz v0, :cond_3
 
@@ -72,7 +72,7 @@
     invoke-static {v0}, Lcom/google/b/a/o;->a(Z)V
 
     .line 83
-    cmp-long v0, v3, v3
+    cmp-long v0, v4, v4
 
     if-ltz v0, :cond_4
 
@@ -82,7 +82,7 @@
     invoke-static {v0}, Lcom/google/b/a/o;->a(Z)V
 
     .line 84
-    cmp-long v0, v3, v3
+    cmp-long v0, v4, v4
 
     if-ltz v0, :cond_5
 
@@ -90,22 +90,22 @@
     invoke-static {v1}, Lcom/google/b/a/o;->a(Z)V
 
     .line 86
-    iput-wide v3, p0, Lcom/google/b/b/m;->a:J
+    iput-wide v4, p0, Lcom/google/b/b/m;->a:J
 
     .line 87
-    iput-wide v3, p0, Lcom/google/b/b/m;->b:J
+    iput-wide v4, p0, Lcom/google/b/b/m;->b:J
 
     .line 88
-    iput-wide v3, p0, Lcom/google/b/b/m;->c:J
+    iput-wide v4, p0, Lcom/google/b/b/m;->c:J
 
     .line 89
-    iput-wide v3, p0, Lcom/google/b/b/m;->d:J
+    iput-wide v4, p0, Lcom/google/b/b/m;->d:J
 
     .line 90
-    iput-wide v3, p0, Lcom/google/b/b/m;->e:J
+    iput-wide v4, p0, Lcom/google/b/b/m;->e:J
 
     .line 91
-    iput-wide v3, p0, Lcom/google/b/b/m;->f:J
+    iput-wide v4, p0, Lcom/google/b/b/m;->f:J
 
     .line 92
     return-void
@@ -150,7 +150,7 @@
 
 # virtual methods
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v0, 0x0
@@ -164,51 +164,51 @@
     check-cast p1, Lcom/google/b/b/m;
 
     .line 255
-    iget-wide v1, p0, Lcom/google/b/b/m;->a:J
+    iget-wide v2, p0, Lcom/google/b/b/m;->a:J
 
-    iget-wide v3, p1, Lcom/google/b/b/m;->a:J
+    iget-wide v4, p1, Lcom/google/b/b/m;->a:J
 
-    cmp-long v1, v1, v3
-
-    if-nez v1, :cond_0
-
-    iget-wide v1, p0, Lcom/google/b/b/m;->b:J
-
-    iget-wide v3, p1, Lcom/google/b/b/m;->b:J
-
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_0
 
-    iget-wide v1, p0, Lcom/google/b/b/m;->c:J
+    iget-wide v2, p0, Lcom/google/b/b/m;->b:J
 
-    iget-wide v3, p1, Lcom/google/b/b/m;->c:J
+    iget-wide v4, p1, Lcom/google/b/b/m;->b:J
 
-    cmp-long v1, v1, v3
-
-    if-nez v1, :cond_0
-
-    iget-wide v1, p0, Lcom/google/b/b/m;->d:J
-
-    iget-wide v3, p1, Lcom/google/b/b/m;->d:J
-
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_0
 
-    iget-wide v1, p0, Lcom/google/b/b/m;->e:J
+    iget-wide v2, p0, Lcom/google/b/b/m;->c:J
 
-    iget-wide v3, p1, Lcom/google/b/b/m;->e:J
+    iget-wide v4, p1, Lcom/google/b/b/m;->c:J
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_0
 
-    iget-wide v1, p0, Lcom/google/b/b/m;->f:J
+    iget-wide v2, p0, Lcom/google/b/b/m;->d:J
 
-    iget-wide v3, p1, Lcom/google/b/b/m;->f:J
+    iget-wide v4, p1, Lcom/google/b/b/m;->d:J
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
+
+    if-nez v1, :cond_0
+
+    iget-wide v2, p0, Lcom/google/b/b/m;->e:J
+
+    iget-wide v4, p1, Lcom/google/b/b/m;->e:J
+
+    cmp-long v1, v2, v4
+
+    if-nez v1, :cond_0
+
+    iget-wide v2, p0, Lcom/google/b/b/m;->f:J
+
+    iget-wide v4, p1, Lcom/google/b/b/m;->f:J
+
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_0
 

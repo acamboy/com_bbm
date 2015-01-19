@@ -69,7 +69,7 @@
     .end annotation
 
     .prologue
-    .line 47
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 33
@@ -77,17 +77,17 @@
 
     iput-boolean v0, p0, Lcom/bbm/util/c/h;->a:Z
 
-    .line 48
+    .line 47
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0, p1}, Landroid/util/SparseArray;-><init>(I)V
 
     iput-object v0, p0, Lcom/bbm/util/c/h;->b:Landroid/util/SparseArray;
 
-    .line 49
+    .line 48
     iput-object p2, p0, Lcom/bbm/util/c/h;->c:Lcom/bbm/util/c/h;
 
-    .line 50
+    .line 49
     return-void
 .end method
 
@@ -112,10 +112,10 @@
 
     const/4 v9, 0x0
 
-    .line 122
+    .line 120
     iget-object v4, p0, Lcom/bbm/util/c/h;->b:Landroid/util/SparseArray;
 
-    .line 125
+    .line 123
     invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
 
     move-result v8
@@ -130,11 +130,11 @@
 
     move v4, p2
 
-    .line 127
+    .line 125
     :goto_0
     if-ge v6, v8, :cond_9
 
-    .line 131
+    .line 129
     iget-object v0, p0, Lcom/bbm/util/c/h;->c:Lcom/bbm/util/c/h;
 
     if-nez v0, :cond_0
@@ -143,7 +143,7 @@
 
     move-result-object v0
 
-    .line 135
+    .line 133
     :goto_1
     invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
 
@@ -151,17 +151,17 @@
 
     if-eqz v5, :cond_3
 
-    .line 136
+    .line 134
     invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/bbm/util/c/i;
 
-    .line 137
+    .line 135
     if-eqz v3, :cond_1
 
-    .line 138
+    .line 136
     new-instance v0, Lcom/bbm/util/c/i;
 
     invoke-direct {v0, v4, v1, v3}, Lcom/bbm/util/c/i;-><init>(IILjava/lang/Object;)V
@@ -170,11 +170,11 @@
 
     move-result-object v0
 
-    .line 209
+    .line 203
     :goto_2
     return-object v0
 
-    .line 131
+    .line 129
     :cond_0
     iget-object v0, p0, Lcom/bbm/util/c/h;->c:Lcom/bbm/util/c/h;
 
@@ -186,23 +186,23 @@
 
     goto :goto_1
 
-    .line 141
+    .line 139
     :cond_1
     iget v0, v0, Lcom/bbm/util/c/i;->b:I
 
-    .line 145
+    .line 143
     iget-boolean v1, p0, Lcom/bbm/util/c/h;->a:Z
 
     if-eqz v1, :cond_2
 
     if-ge v0, v8, :cond_2
 
-    .line 146
+    .line 144
     invoke-interface {p1, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v1
 
-    .line 148
+    .line 146
     :goto_3
     if-ge v0, v8, :cond_2
 
@@ -212,21 +212,21 @@
 
     if-nez v1, :cond_2
 
-    .line 149
+    .line 147
     invoke-interface {p1, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v1
 
-    .line 148
+    .line 146
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_3
 
-    .line 154
+    .line 152
     :cond_2
     add-int/lit8 v4, v0, -0x1
 
-    .line 156
+    .line 154
     iget-object v1, p0, Lcom/bbm/util/c/h;->b:Landroid/util/SparseArray;
 
     move v3, v0
@@ -237,7 +237,7 @@
 
     move-object v1, v2
 
-    .line 127
+    .line 125
     :goto_4
     add-int/lit8 v6, v5, 0x1
 
@@ -251,30 +251,30 @@
 
     goto :goto_0
 
-    .line 163
+    .line 161
     :cond_3
     invoke-interface {p1, v6}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
 
-    .line 165
+    .line 163
     if-nez v0, :cond_4
 
     move-object v5, v2
 
-    .line 166
+    .line 164
     :goto_5
     if-nez v5, :cond_8
 
-    .line 168
+    .line 166
     invoke-virtual {v7, v9}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 169
+    .line 167
     if-eqz v0, :cond_5
 
-    .line 170
+    .line 168
     new-instance v1, Lcom/bbm/util/c/i;
 
     invoke-direct {v1, v4, v6, v0}, Lcom/bbm/util/c/i;-><init>(IILjava/lang/Object;)V
@@ -285,7 +285,7 @@
 
     goto :goto_2
 
-    .line 165
+    .line 163
     :cond_4
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -305,11 +305,11 @@
 
     goto :goto_5
 
-    .line 174
+    .line 171
     :cond_5
     if-eqz v3, :cond_6
 
-    .line 175
+    .line 172
     new-instance v0, Lcom/bbm/util/c/i;
 
     invoke-direct {v0, v4, v1, v3}, Lcom/bbm/util/c/i;-><init>(IILjava/lang/Object;)V
@@ -320,16 +320,16 @@
 
     goto :goto_2
 
-    .line 178
+    .line 174
     :cond_6
     add-int/lit8 v0, p3, -0x1
 
     if-ge v6, v0, :cond_7
 
-    .line 181
+    .line 177
     add-int/lit8 v0, v4, 0x1
 
-    .line 182
+    .line 178
     iget-object v1, p0, Lcom/bbm/util/c/h;->b:Landroid/util/SparseArray;
 
     move v3, v0
@@ -340,10 +340,10 @@
 
     move-object v1, v2
 
-    .line 184
+    .line 180
     goto :goto_4
 
-    .line 186
+    .line 182
     :cond_7
     invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
 
@@ -351,7 +351,7 @@
 
     goto :goto_2
 
-    .line 195
+    .line 190
     :cond_8
     invoke-virtual {v5}, Landroid/util/SparseArray;->size()I
 
@@ -365,12 +365,12 @@
 
     if-eqz v0, :cond_c
 
-    .line 196
+    .line 191
     invoke-virtual {v5, v9}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 197
+    .line 192
     add-int/lit8 v0, v6, 0x1
 
     move v3, v4
@@ -381,16 +381,16 @@
 
     goto :goto_4
 
-    .line 202
+    .line 197
     :cond_9
     invoke-virtual {v7, v9}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 203
+    .line 198
     if-eqz v0, :cond_a
 
-    .line 204
+    .line 199
     new-instance v1, Lcom/bbm/util/c/i;
 
     invoke-direct {v1, v4, v8, v0}, Lcom/bbm/util/c/i;-><init>(IILjava/lang/Object;)V
@@ -401,11 +401,11 @@
 
     goto/16 :goto_2
 
-    .line 206
+    .line 200
     :cond_a
     if-eqz v3, :cond_b
 
-    .line 207
+    .line 201
     new-instance v0, Lcom/bbm/util/c/i;
 
     invoke-direct {v0, v4, v1, v3}, Lcom/bbm/util/c/i;-><init>(IILjava/lang/Object;)V
@@ -416,7 +416,7 @@
 
     goto/16 :goto_2
 
-    .line 209
+    .line 203
     :cond_b
     invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
 
@@ -451,39 +451,39 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 63
+    .line 62
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v4
 
-    .line 64
+    .line 63
     iget-object v0, p0, Lcom/bbm/util/c/h;->b:Landroid/util/SparseArray;
 
     move v1, v2
 
     move-object v3, v0
 
-    .line 65
+    .line 64
     :goto_0
     if-ge v1, v4, :cond_2
 
-    .line 66
+    .line 65
     invoke-virtual {p1, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v5
 
-    .line 67
+    .line 66
     const/16 v0, 0x20
 
     if-ne v5, v0, :cond_1
 
-    .line 68
+    .line 67
     invoke-virtual {v3, v2, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 69
+    .line 68
     iget-object v0, p0, Lcom/bbm/util/c/h;->b:Landroid/util/SparseArray;
 
-    .line 65
+    .line 64
     :cond_0
     :goto_1
     add-int/lit8 v1, v1, 0x1
@@ -492,7 +492,7 @@
 
     goto :goto_0
 
-    .line 73
+    .line 72
     :cond_1
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -508,17 +508,17 @@
 
     check-cast v0, Landroid/util/SparseArray;
 
-    .line 74
+    .line 73
     if-nez v0, :cond_0
 
-    .line 75
+    .line 74
     new-instance v0, Landroid/util/SparseArray;
 
     const/4 v6, 0x5
 
     invoke-direct {v0, v6}, Landroid/util/SparseArray;-><init>(I)V
 
-    .line 76
+    .line 75
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
@@ -531,10 +531,10 @@
 
     goto :goto_1
 
-    .line 80
+    .line 79
     :cond_2
     invoke-virtual {v3, v2, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 81
+    .line 80
     return-void
 .end method

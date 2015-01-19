@@ -1,131 +1,147 @@
 .class final Lcom/bbm/ui/activities/xc;
-.super Ljava/lang/Object;
-.source "NewListItemActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/u;
+.source "MainActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/k;
-
-.field final synthetic b:Lcom/bbm/ui/activities/xa;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/xa;Lcom/bbm/ui/b/k;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
     .locals 0
 
     .prologue
-    .line 450
-    iput-object p1, p0, Lcom/bbm/ui/activities/xc;->b:Lcom/bbm/ui/activities/xa;
+    .line 311
+    iput-object p1, p0, Lcom/bbm/ui/activities/xc;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/xc;->a:Lcom/bbm/ui/b/k;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method protected final b()Z
+    .locals 5
 
     .prologue
-    .line 453
-    const-string v0, "mItemCategory onSpinnerItemClicked Dialog Right Button Clicked"
+    const/4 v1, 0x0
 
-    const-class v1, Lcom/bbm/ui/activities/NewListItemActivity;
+    const/4 v0, 0x1
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 455
-    iget-object v0, p0, Lcom/bbm/ui/activities/xc;->a:Lcom/bbm/ui/b/k;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/k;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 457
-    iget-object v1, p0, Lcom/bbm/ui/activities/xc;->b:Lcom/bbm/ui/activities/xa;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/xa;->a:Lcom/bbm/ui/activities/NewListItemActivity;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/NewListItemActivity;->t:Lcom/bbm/ui/l;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/l;->b(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 459
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 460
-    const/4 v2, 0x0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 314
+    invoke-static {}, Lcom/bbm/Alaska;->l()Lcom/bbm/ag;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2}, Lcom/bbm/ag;->v()Z
 
-    .line 461
-    const/4 v2, 0x1
+    move-result v2
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    if-eqz v2, :cond_1
 
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 462
-    iget-object v2, p0, Lcom/bbm/ui/activities/xc;->b:Lcom/bbm/ui/activities/xa;
-
-    iget-object v2, v2, Lcom/bbm/ui/activities/xa;->a:Lcom/bbm/ui/activities/NewListItemActivity;
-
-    iget-object v2, v2, Lcom/bbm/ui/activities/NewListItemActivity;->t:Lcom/bbm/ui/l;
-
-    invoke-virtual {v2, v0, v1}, Lcom/bbm/ui/l;->a(Ljava/lang/String;Ljava/util/ArrayList;)V
-
-    .line 464
+    .line 348
     :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/xc;->b:Lcom/bbm/ui/activities/xa;
+    :goto_0
+    return v0
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/xa;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    .line 317
+    :cond_1
+    iget-object v2, p0, Lcom/bbm/ui/activities/xc;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/NewListItemActivity;->t:Lcom/bbm/ui/l;
+    invoke-static {v2}, Lcom/bbm/ui/activities/MainActivity;->b(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/e;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/l;->a(Ljava/lang/String;)V
+    move-result-object v2
 
-    .line 465
-    iget-object v0, p0, Lcom/bbm/ui/activities/xc;->b:Lcom/bbm/ui/activities/xa;
+    iget-object v2, v2, Lcom/bbm/e;->b:Lcom/bbm/d/a;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/xa;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    invoke-virtual {v2}, Lcom/bbm/d/a;->h()Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/NewListItemActivity;->n:Landroid/widget/Spinner;
+    move-result-object v2
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/xc;->b:Lcom/bbm/ui/activities/xa;
+    .line 319
+    const-string v3, ""
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/xa;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/NewListItemActivity;->t:Lcom/bbm/ui/l;
+    move-result v3
 
-    invoke-virtual {v1}, Lcom/bbm/ui/l;->a()I
+    if-nez v3, :cond_4
+
+    .line 320
+    iget-object v3, p0, Lcom/bbm/ui/activities/xc;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    invoke-static {v3}, Lcom/bbm/ui/activities/MainActivity;->b(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/e;
+
+    move-result-object v3
+
+    iget-object v3, v3, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+
+    invoke-virtual {v3, v2}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
+
+    move-result-object v2
+
+    .line 321
+    iget-object v3, v2, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
+
+    sget-object v4, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+
+    if-ne v3, v4, :cond_2
+
+    move v0, v1
+
+    .line 322
+    goto :goto_0
+
+    .line 325
+    :cond_2
+    iget-object v1, v2, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
+
+    sget-object v3, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
+
+    if-eq v1, v3, :cond_0
+
+    .line 333
+    iget-object v1, v2, Lcom/bbm/d/gr;->a:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/Spinner;->setSelection(I)V
+    if-eqz v1, :cond_3
 
-    .line 466
-    iget-object v0, p0, Lcom/bbm/ui/activities/xc;->a:Lcom/bbm/ui/b/k;
+    .line 334
+    new-instance v1, Landroid/os/Handler;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/k;->dismiss()V
+    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
-    .line 467
-    return-void
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    .line 335
+    new-instance v2, Lcom/bbm/ui/activities/xd;
+
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/xd;-><init>(Lcom/bbm/ui/activities/xc;)V
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    goto :goto_0
+
+    .line 344
+    :cond_3
+    invoke-static {}, Lcom/bbm/Alaska;->l()Lcom/bbm/ag;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/bbm/ag;->w()V
+
+    goto :goto_0
+
+    :cond_4
+    move v0, v1
+
+    .line 348
+    goto :goto_0
 .end method

@@ -1,4 +1,4 @@
-.class final Lcom/b/a/a/j;
+.class public final Lcom/b/a/a/j;
 .super Ljava/lang/Object;
 .source "DbxChooser.java"
 
@@ -13,7 +13,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/b/a/a/i;Landroid/app/Activity;)V
+.method public constructor <init>(Lcom/b/a/a/i;Landroid/app/Activity;)V
     .locals 0
 
     .prologue
@@ -84,23 +84,23 @@
     goto :goto_0
 .end method
 
-.method public final c()Landroid/support/v4/app/n;
+.method public final c()Landroid/support/v4/app/v;
     .locals 1
 
     .prologue
     .line 171
     iget-object v0, p0, Lcom/b/a/a/j;->a:Landroid/app/Activity;
 
-    instance-of v0, v0, Landroid/support/v4/app/h;
+    instance-of v0, v0, Landroid/support/v4/app/q;
 
     if-eqz v0, :cond_0
 
     .line 172
     iget-object v0, p0, Lcom/b/a/a/j;->a:Landroid/app/Activity;
 
-    check-cast v0, Landroid/support/v4/app/h;
+    check-cast v0, Landroid/support/v4/app/q;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/h;->getSupportFragmentManager()Landroid/support/v4/app/n;
+    invoke-virtual {v0}, Landroid/support/v4/app/q;->getSupportFragmentManager()Landroid/support/v4/app/v;
 
     move-result-object v0
 

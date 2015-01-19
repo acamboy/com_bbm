@@ -1,9 +1,6 @@
 .class final Lcom/bbm/ui/activities/w;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/k;
 .source "AvatarViewerActivity.java"
-
-# interfaces
-.implements Lcom/slidingmenu/lib/a/b;
 
 
 # instance fields
@@ -12,57 +9,59 @@
 
 # direct methods
 .method constructor <init>(Lcom/bbm/ui/activities/AvatarViewerActivity;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 106
+    .line 39
     iput-object p1, p0, Lcom/bbm/ui/activities/w;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method protected final a()V
+    .locals 4
 
     .prologue
-    .line 110
-    const-string v0, "onHardwareMenuButtonClicked"
-
-    const-class v1, Lcom/bbm/ui/activities/AvatarViewerActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 111
+    .line 43
     iget-object v0, p0, Lcom/bbm/ui/activities/w;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->t()Lcom/slidingmenu/lib/SlidingMenu;
+    invoke-static {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->a(Lcom/bbm/ui/activities/AvatarViewerActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->h()Z
+    invoke-virtual {v0}, Lcom/bbm/d/a;->j()Lcom/bbm/d/gr;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    .line 44
+    iget-object v1, p0, Lcom/bbm/ui/activities/w;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    .line 112
-    iget-object v0, p0, Lcom/bbm/ui/activities/w;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    invoke-static {v1}, Lcom/bbm/ui/activities/AvatarViewerActivity;->b(Lcom/bbm/ui/activities/AvatarViewerActivity;)Lcom/bbm/ui/ObservingImageView;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->v()V
+    move-result-object v1
 
-    .line 117
-    :goto_0
+    iget-object v2, p0, Lcom/bbm/ui/activities/w;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/AvatarViewerActivity;->a(Lcom/bbm/ui/activities/AvatarViewerActivity;)Lcom/bbm/d/a;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lcom/bbm/d/gr;->B:Ljava/lang/String;
+
+    iget-object v0, v0, Lcom/bbm/d/gr;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3, v0}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/j/r;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/j/r;)V
+
+    .line 45
     return-void
-
-    .line 115
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/w;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->w()V
-
-    goto :goto_0
 .end method

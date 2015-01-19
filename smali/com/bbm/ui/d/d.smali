@@ -3,7 +3,7 @@
 .source "ChannelIncomingManager.java"
 
 # interfaces
-.implements Lcom/bbm/f/y;
+.implements Lcom/bbm/f/ac;
 
 
 # instance fields
@@ -55,10 +55,10 @@
 
     const/4 v1, 0x1
 
-    .line 33
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 21
+    .line 19
     new-instance v0, Lcom/google/b/c/q;
 
     invoke-direct {v0}, Lcom/google/b/c/q;-><init>()V
@@ -77,7 +77,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/d/d;->a:Ljava/util/Map;
 
-    .line 25
+    .line 23
     new-instance v0, Lcom/google/b/c/q;
 
     invoke-direct {v0}, Lcom/google/b/c/q;-><init>()V
@@ -96,7 +96,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/d/d;->b:Ljava/util/Map;
 
-    .line 29
+    .line 27
     new-instance v3, Lcom/google/b/c/q;
 
     invoke-direct {v3}, Lcom/google/b/c/q;-><init>()V
@@ -158,12 +158,12 @@
 
     iput-object v0, p0, Lcom/bbm/ui/d/d;->c:Ljava/util/Map;
 
-    .line 34
+    .line 32
     new-instance v1, Lcom/bbm/ui/d/b;
 
     invoke-direct {v1}, Lcom/bbm/ui/d/b;-><init>()V
 
-    .line 35
+    .line 33
     iget-object v0, v1, Lcom/bbm/ui/d/b;->a:[Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -187,7 +187,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 36
+    .line 34
     invoke-virtual {p0, v0, v1, p0}, Lcom/bbm/ui/d/d;->b(Ljava/lang/String;Lcom/bbm/ui/d/c;Ljava/lang/Object;)V
 
     goto :goto_1
@@ -195,14 +195,14 @@
     :cond_2
     move v0, v2
 
-    .line 29
+    .line 27
     goto :goto_0
 
-    .line 38
+    .line 36
     :cond_3
-    invoke-interface {p1, p0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/y;)V
+    invoke-interface {p1, p0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
 
-    .line 39
+    .line 37
     return-void
 .end method
 
@@ -212,20 +212,18 @@
     .locals 0
 
     .prologue
-    .line 65
+    .line 63
     return-void
 .end method
 
-.method public final a(Lcom/bbm/f/x;)V
+.method public final a(Lcom/bbm/f/ab;)V
     .locals 2
 
     .prologue
+    .line 41
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
+
     .line 43
-    invoke-virtual {p1}, Lcom/bbm/f/x;->f()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 45
     iget-object v1, p0, Lcom/bbm/ui/d/d;->b:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -234,7 +232,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 46
+    .line 44
     iget-object v1, p0, Lcom/bbm/ui/d/d;->b:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -243,17 +241,15 @@
 
     check-cast v0, Lcom/bbm/ui/d/c;
 
-    .line 47
+    .line 45
     if-eqz v0, :cond_0
 
-    .line 48
-    invoke-interface {v0, p1}, Lcom/bbm/ui/d/c;->a(Lcom/bbm/f/x;)V
+    .line 46
+    invoke-interface {v0, p1}, Lcom/bbm/ui/d/c;->a(Lcom/bbm/f/ab;)V
 
-    .line 52
+    .line 50
     :cond_0
-    invoke-virtual {p1}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
-
-    move-result-object v0
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
     const-string v1, "cookie"
 
@@ -263,7 +259,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 54
+    .line 52
     iget-object v1, p0, Lcom/bbm/ui/d/d;->a:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -272,7 +268,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 55
+    .line 53
     iget-object v1, p0, Lcom/bbm/ui/d/d;->a:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -281,13 +277,13 @@
 
     check-cast v0, Lcom/bbm/ui/d/c;
 
-    .line 56
+    .line 54
     if-eqz v0, :cond_1
 
-    .line 57
-    invoke-interface {v0, p1}, Lcom/bbm/ui/d/c;->a(Lcom/bbm/f/x;)V
+    .line 55
+    invoke-interface {v0, p1}, Lcom/bbm/ui/d/c;->a(Lcom/bbm/f/ab;)V
 
-    .line 60
+    .line 58
     :cond_1
     return-void
 .end method
@@ -296,7 +292,7 @@
     .locals 1
 
     .prologue
-    .line 94
+    .line 90
     iget-object v0, p0, Lcom/bbm/ui/d/d;->c:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -305,7 +301,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 95
+    .line 91
     iget-object v0, p0, Lcom/bbm/ui/d/d;->c:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -314,10 +310,10 @@
 
     check-cast v0, Ljava/util/Set;
 
-    .line 96
+    .line 92
     invoke-interface {v0, p2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 98
+    .line 94
     :cond_0
     return-void
 .end method
@@ -326,12 +322,12 @@
     .locals 2
 
     .prologue
-    .line 68
+    .line 66
     iget-object v0, p0, Lcom/bbm/ui/d/d;->a:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
+    .line 68
     iget-object v0, p0, Lcom/bbm/ui/d/d;->c:Ljava/util/Map;
 
     invoke-interface {v0, p3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -340,7 +336,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 71
+    .line 69
     iget-object v0, p0, Lcom/bbm/ui/d/d;->c:Ljava/util/Map;
 
     invoke-interface {v0, p3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -349,20 +345,20 @@
 
     check-cast v0, Ljava/util/Set;
 
-    .line 77
+    .line 74
     :goto_0
     invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 78
+    .line 75
     return-void
 
-    .line 74
+    .line 71
     :cond_0
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 75
+    .line 72
     iget-object v1, p0, Lcom/bbm/ui/d/d;->c:Ljava/util/Map;
 
     invoke-interface {v1, p3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -374,12 +370,12 @@
     .locals 2
 
     .prologue
-    .line 81
+    .line 78
     iget-object v0, p0, Lcom/bbm/ui/d/d;->b:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 83
+    .line 80
     iget-object v0, p0, Lcom/bbm/ui/d/d;->c:Ljava/util/Map;
 
     invoke-interface {v0, p3}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
@@ -388,7 +384,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 84
+    .line 81
     iget-object v0, p0, Lcom/bbm/ui/d/d;->c:Ljava/util/Map;
 
     invoke-interface {v0, p3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -397,20 +393,20 @@
 
     check-cast v0, Ljava/util/Set;
 
-    .line 90
+    .line 86
     :goto_0
     invoke-interface {v0, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 91
+    .line 87
     return-void
 
-    .line 87
+    .line 83
     :cond_0
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 88
+    .line 84
     iget-object v1, p0, Lcom/bbm/ui/d/d;->c:Ljava/util/Map;
 
     invoke-interface {v1, p3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;

@@ -12,8 +12,8 @@
     .locals 3
 
     .prologue
-    .line 139
-    invoke-static {}, Lcom/bbm/ui/e/av;->values()[Lcom/bbm/ui/e/av;
+    .line 153
+    invoke-static {}, Lcom/bbm/d/fm;->values()[Lcom/bbm/d/fm;
 
     move-result-object v0
 
@@ -26,9 +26,9 @@
     :try_start_0
     sget-object v0, Lcom/bbm/ui/f/h;->a:[I
 
-    sget-object v1, Lcom/bbm/ui/e/av;->s:Lcom/bbm/ui/e/av;
+    sget-object v1, Lcom/bbm/d/fm;->r:Lcom/bbm/d/fm;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/e/av;->ordinal()I
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
 
     move-result v1
 

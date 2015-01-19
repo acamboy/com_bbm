@@ -1,68 +1,141 @@
-.class public final Lcom/bbm/d/cd;
-.super Lcom/bbm/d/da;
+.class public final enum Lcom/bbm/d/cd;
+.super Ljava/lang/Enum;
 .source "BbmdsProtocol.java"
 
 
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/d/cd;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/bbm/d/cd;
+
+.field public static final enum b:Lcom/bbm/d/cd;
+
+.field private static final synthetic d:[Lcom/bbm/d/cd;
+
+
+# instance fields
+.field private final c:Ljava/lang/String;
+
+
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 5
 
     .prologue
-    .line 3322
-    const-string v0, "requestChannelCommentDelete"
+    const/4 v4, 0x1
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/da;-><init>(Ljava/lang/String;)V
+    const/4 v3, 0x0
 
-    .line 3324
-    const-string v0, "channelUri"
+    .line 2782
+    new-instance v0, Lcom/bbm/d/cd;
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/cd;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    const-string v1, "Read"
 
-    .line 3325
-    const-string v0, "postId"
+    const-string v2, "Read"
 
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/cd;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-direct {v0, v1, v3, v2}, Lcom/bbm/d/cd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 3326
+    sput-object v0, Lcom/bbm/d/cd;->a:Lcom/bbm/d/cd;
+
+    .line 2783
+    new-instance v0, Lcom/bbm/d/cd;
+
+    const-string v1, "Unspecified"
+
+    const-string v2, ""
+
+    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/d/cd;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/d/cd;->b:Lcom/bbm/d/cd;
+
+    .line 2781
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lcom/bbm/d/cd;
+
+    sget-object v1, Lcom/bbm/d/cd;->a:Lcom/bbm/d/cd;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/bbm/d/cd;->b:Lcom/bbm/d/cd;
+
+    aput-object v1, v0, v4
+
+    sput-object v0, Lcom/bbm/d/cd;->d:[Lcom/bbm/d/cd;
+
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Ljava/lang/String;)Lcom/bbm/d/cd;
-    .locals 1
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 3336
-    const-string v0, "commentId"
+    .line 2787
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/cd;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    .line 2788
+    iput-object p3, p0, Lcom/bbm/d/cd;->c:Ljava/lang/String;
 
-    .line 3337
-    return-object p0
+    .line 2789
+    return-void
 .end method
 
-.method public final bridge synthetic a()Lcom/bbm/f/x;
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/d/cd;
     .locals 1
 
     .prologue
-    .line 3320
-    invoke-super {p0}, Lcom/bbm/d/da;->a()Lcom/bbm/f/x;
+    .line 2781
+    const-class v0, Lcom/bbm/d/cd;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/cd;
 
     return-object v0
 .end method
 
-.method public final b(Ljava/lang/String;)Lcom/bbm/d/cd;
+.method public static values()[Lcom/bbm/d/cd;
     .locals 1
 
     .prologue
-    .line 3348
-    const-string v0, "cookie"
+    .line 2781
+    sget-object v0, Lcom/bbm/d/cd;->d:[Lcom/bbm/d/cd;
 
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/cd;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {v0}, [Lcom/bbm/d/cd;->clone()Ljava/lang/Object;
 
-    .line 3349
-    return-object p0
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/d/cd;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 2798
+    iget-object v0, p0, Lcom/bbm/d/cd;->c:Ljava/lang/String;
+
+    return-object v0
 .end method

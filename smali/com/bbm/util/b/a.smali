@@ -17,15 +17,31 @@
     .locals 1
 
     .prologue
-    .line 54
+    .line 52
     invoke-direct {p0, p1, p2, p2}, Lcom/bbm/util/b/g;-><init>(Landroid/app/Activity;II)V
 
-    .line 34
+    .line 32
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/bbm/util/b/a;->a:Z
 
-    .line 55
+    .line 53
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/app/Activity;II)V
+    .locals 1
+
+    .prologue
+    .line 42
+    invoke-direct {p0, p1, p2, p3}, Lcom/bbm/util/b/g;-><init>(Landroid/app/Activity;II)V
+
+    .line 32
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bbm/util/b/a;->a:Z
+
+    .line 43
     return-void
 .end method
 
@@ -35,8 +51,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 341
-    .line 342
+    .line 303
+    .line 305
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -45,25 +61,51 @@
 
     if-nez p2, :cond_1
 
-    .line 352
+    .line 322
     :cond_0
     return v0
 
-    .line 345
+    .line 310
     :cond_1
-    if-gt p1, p3, :cond_2
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/bbm/util/b/h;->a(Landroid/content/Context;)I
+
+    move-result v1
+
+    .line 311
+    :goto_0
+    div-int v2, p1, v0
+
+    if-gt v2, v1, :cond_2
+
+    div-int v2, p0, v0
+
+    if-le v2, v1, :cond_3
+
+    .line 312
+    :cond_2
+    mul-int/lit8 v0, v0, 0x2
+
+    goto :goto_0
+
+    .line 315
+    :cond_3
+    if-gt p1, p3, :cond_4
 
     if-le p0, p2, :cond_0
 
-    .line 346
-    :cond_2
+    .line 316
+    :cond_4
     div-int/lit8 v1, p1, 0x2
 
-    .line 347
+    .line 317
     div-int/lit8 v2, p0, 0x2
 
-    .line 348
-    :goto_0
+    .line 318
+    :goto_1
     div-int v3, v1, v0
 
     if-le v3, p3, :cond_0
@@ -72,10 +114,10 @@
 
     if-le v3, p2, :cond_0
 
-    .line 349
+    .line 319
     mul-int/lit8 v0, v0, 0x2
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method public static a([BIILcom/bbm/util/b/d;ZZ)Landroid/graphics/Bitmap;
@@ -84,254 +126,214 @@
     .prologue
     const/4 v5, 0x1
 
-    const/4 v2, 0x0
+    const/4 v1, 0x0
 
     const/4 v4, 0x0
 
-    .line 160
-    new-instance v3, Landroid/graphics/BitmapFactory$Options;
+    .line 152
+    new-instance v2, Landroid/graphics/BitmapFactory$Options;
 
-    invoke-direct {v3}, Landroid/graphics/BitmapFactory$Options;-><init>()V
+    invoke-direct {v2}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 161
-    iput-boolean v5, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+    .line 153
+    iput-boolean v5, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 162
+    .line 154
     array-length v0, p0
 
-    invoke-static {p0, v4, v0, v3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {p0, v4, v0, v2}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 165
-    iput v5, v3, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+    .line 157
+    iput v5, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 167
+    .line 159
     if-eqz p5, :cond_0
 
-    .line 168
-    iget v0, v3, Landroid/graphics/BitmapFactory$Options;->outWidth:I
+    .line 160
+    iget v0, v2, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    iget v1, v3, Landroid/graphics/BitmapFactory$Options;->outHeight:I
+    iget v3, v2, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    invoke-static {v0, v1, p1, p2}, Lcom/bbm/util/b/a;->a(IIII)I
+    invoke-static {v0, v3, p1, p2}, Lcom/bbm/util/b/a;->a(IIII)I
 
     move-result v0
 
-    iput v0, v3, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
+    iput v0, v2, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 172
+    .line 164
     :cond_0
     if-eqz p4, :cond_1
 
-    invoke-static {}, Lcom/bbm/util/eo;->b()Z
+    invoke-static {}, Lcom/bbm/util/fh;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    iget-object v0, v3, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
+    iget-object v0, v2, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
 
-    const-string v1, "image/gif"
+    const-string v3, "image/gif"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 173
-    invoke-static {v3, p3}, Lcom/bbm/util/b/h;->a(Landroid/graphics/BitmapFactory$Options;Lcom/bbm/util/b/d;)V
+    .line 165
+    invoke-static {v2, p3}, Lcom/bbm/util/b/h;->a(Landroid/graphics/BitmapFactory$Options;Lcom/bbm/util/b/d;)V
 
-    .line 176
+    .line 168
     :cond_1
-    iput-boolean v5, v3, Landroid/graphics/BitmapFactory$Options;->inMutable:Z
+    iput-boolean v5, v2, Landroid/graphics/BitmapFactory$Options;->inMutable:Z
 
-    .line 177
-    iput-boolean v4, v3, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
+    .line 169
+    iput-boolean v4, v2, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 183
-    iget-object v0, v3, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
+    .line 175
+    iget-object v0, v2, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    iget-object v0, v3, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
+    iget-object v0, v2, Landroid/graphics/BitmapFactory$Options;->outMimeType:Ljava/lang/String;
 
-    const-string v1, "image/jpeg"
+    const-string v3, "image/jpeg"
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 184
+    .line 176
     sget-object v0, Landroid/graphics/Bitmap$Config;->RGB_565:Landroid/graphics/Bitmap$Config;
 
-    iput-object v0, v3, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
+    iput-object v0, v2, Landroid/graphics/BitmapFactory$Options;->inPreferredConfig:Landroid/graphics/Bitmap$Config;
 
-    .line 185
-    iput-boolean v5, v3, Landroid/graphics/BitmapFactory$Options;->inDither:Z
+    .line 177
+    iput-boolean v5, v2, Landroid/graphics/BitmapFactory$Options;->inDither:Z
 
-    .line 191
+    .line 182
     :cond_2
     const/4 v0, 0x0
 
     :try_start_0
-    array-length v1, p0
+    array-length v3, p0
 
-    invoke-static {p0, v0, v1, v3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {p0, v0, v3, v2}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v1
+    move-result-object v0
 
-    .line 206
-    if-nez v1, :cond_3
+    .line 197
+    if-nez v0, :cond_3
 
-    .line 207
-    iput-object v2, v3, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
+    .line 198
+    iput-object v1, v2, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
-    .line 208
+    .line 199
     array-length v0, p0
 
-    invoke-static {p0, v4, v0, v3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    .line 212
-    :cond_3
-    :goto_0
-    if-eqz v1, :cond_5
-
-    .line 214
-    const/4 v0, 0x0
-
-    :try_start_1
-    invoke-static {v1, p1, p2, v0}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
-    :try_end_1
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_2
+    invoke-static {p0, v4, v0, v2}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 221
-    :goto_1
-    if-eqz v0, :cond_4
-
-    .line 224
-    :goto_2
+    .line 203
+    :cond_3
+    :goto_0
     return-object v0
 
-    .line 192
+    .line 183
     :catch_0
     move-exception v0
 
-    :try_start_2
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    :try_start_1
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
-    .line 198
-    if-eqz p3, :cond_6
+    .line 189
+    if-eqz p3, :cond_4
 
-    .line 199
+    .line 190
     invoke-virtual {p3}, Lcom/bbm/util/b/d;->a()V
 
-    .line 200
+    .line 191
     const/4 v0, 0x0
 
-    array-length v1, p0
+    array-length v3, p0
 
-    invoke-static {p0, v0, v1, v3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    invoke-static {p0, v0, v3, v2}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    move-result-object v1
+    move-result-object v0
 
-    .line 206
-    :goto_3
-    if-nez v1, :cond_3
+    .line 197
+    :goto_1
+    if-nez v0, :cond_3
 
-    .line 207
-    iput-object v2, v3, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
+    .line 198
+    iput-object v1, v2, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
-    .line 208
+    .line 199
     array-length v0, p0
 
-    invoke-static {p0, v4, v0, v3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {p0, v4, v0, v2}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    move-result-object v1
+    move-result-object v0
 
     goto :goto_0
 
-    .line 202
+    .line 193
     :catch_1
     move-exception v0
 
-    :try_start_3
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    :try_start_2
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 206
-    iput-object v2, v3, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
+    .line 197
+    iput-object v1, v2, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
-    .line 208
+    .line 199
     array-length v0, p0
 
-    invoke-static {p0, v4, v0, v3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {p0, v4, v0, v2}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    move-result-object v1
+    move-result-object v0
 
     goto :goto_0
 
-    .line 206
+    .line 197
     :catchall_0
     move-exception v0
 
-    .line 207
-    iput-object v2, v3, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
+    .line 198
+    iput-object v1, v2, Landroid/graphics/BitmapFactory$Options;->inBitmap:Landroid/graphics/Bitmap;
 
-    .line 208
+    .line 199
     array-length v1, p0
 
-    invoke-static {p0, v4, v1, v3}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    invoke-static {p0, v4, v1, v2}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     throw v0
-
-    .line 215
-    :catch_2
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
-    move-object v0, v2
-
-    .line 217
-    goto :goto_1
 
     :cond_4
     move-object v0, v1
 
-    .line 224
-    goto :goto_2
-
-    :cond_5
-    move-object v0, v2
-
     goto :goto_1
-
-    :cond_6
-    move-object v1, v2
-
-    goto :goto_3
 .end method
 
 
 # virtual methods
-.method protected final a(Ljava/lang/Object;II)Lcom/bbm/d/dw;
+.method protected final a(Ljava/lang/Object;IILandroid/widget/ImageView$ScaleType;)Lcom/bbm/d/ff;
     .locals 10
 
     .prologue
@@ -339,28 +341,28 @@
 
     const/4 v8, 0x0
 
-    .line 64
+    .line 62
     if-lez p2, :cond_0
 
     if-gtz p3, :cond_5
 
-    .line 65
+    .line 63
     :cond_0
     iget v1, p0, Lcom/bbm/util/b/a;->h:I
 
-    .line 66
+    .line 64
     iget v2, p0, Lcom/bbm/util/b/a;->i:I
 
-    .line 69
+    .line 67
     :goto_0
     check-cast p1, Ljava/lang/String;
 
-    .line 74
+    .line 72
     if-lez v1, :cond_3
 
     if-lez v2, :cond_3
 
-    .line 78
+    .line 74
     :try_start_0
     const-string v0, "file://"
 
@@ -370,7 +372,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 79
+    .line 75
     new-instance v0, Ljava/net/URL;
 
     invoke-direct {v0, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
@@ -383,29 +385,29 @@
 
     move-result-object p1
 
-    .line 81
-    invoke-static {p1}, Lcom/bbm/util/be;->f(Ljava/lang/String;)[B
+    .line 77
+    invoke-static {p1}, Lcom/bbm/util/bk;->f(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 83
-    invoke-static {v0}, Lcom/bbm/ui/ca;->a([B)Lcom/bbm/ui/ca;
+    .line 79
+    invoke-static {v0}, Lcom/bbm/ui/cp;->a([B)Lcom/bbm/ui/cp;
 
     move-result-object v3
 
-    .line 84
+    .line 80
     if-eqz v3, :cond_1
 
-    .line 85
-    new-instance v0, Lcom/bbm/d/dw;
+    .line 81
+    new-instance v0, Lcom/bbm/d/ff;
 
-    invoke-direct {v0, v3}, Lcom/bbm/d/dw;-><init>(Lcom/bbm/ui/ca;)V
+    invoke-direct {v0, v3}, Lcom/bbm/d/ff;-><init>(Lcom/bbm/ui/cp;)V
 
-    .line 125
+    .line 117
     :goto_1
     return-object v0
 
-    .line 90
+    .line 84
     :cond_1
     iget-object v3, p0, Lcom/bbm/util/b/a;->k:Ljava/lang/ref/WeakReference;
 
@@ -429,8 +431,8 @@
 
     if-eqz v3, :cond_3
 
-    .line 91
-    new-instance v6, Lcom/bbm/d/dw;
+    .line 85
+    new-instance v6, Lcom/bbm/d/ff;
 
     iget-object v3, p0, Lcom/bbm/util/b/a;->k:Ljava/lang/ref/WeakReference;
 
@@ -454,24 +456,24 @@
 
     move-result-object v0
 
-    invoke-direct {v6, v7, v0}, Lcom/bbm/d/dw;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    invoke-direct {v6, v7, v0}, Lcom/bbm/d/ff;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
     move-object v0, v6
 
     goto :goto_1
 
-    .line 96
+    .line 90
     :cond_2
     new-instance v0, Ljava/net/URL;
 
     invoke-direct {v0, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 97
+    .line 91
     invoke-virtual {v0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v0
 
-    .line 98
+    .line 92
     invoke-virtual {v0}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v3
@@ -480,29 +482,29 @@
 
     move-result v0
 
-    invoke-static {v3, v0}, Lcom/bbm/util/bv;->a(Ljava/io/InputStream;I)[B
+    invoke-static {v3, v0}, Lcom/bbm/util/cc;->a(Ljava/io/InputStream;I)[B
 
     move-result-object v0
 
-    .line 100
-    invoke-static {v0}, Lcom/bbm/ui/ca;->a([B)Lcom/bbm/ui/ca;
+    .line 94
+    invoke-static {v0}, Lcom/bbm/ui/cp;->a([B)Lcom/bbm/ui/cp;
 
     move-result-object v3
 
-    .line 101
+    .line 95
     if-eqz v3, :cond_4
 
-    .line 102
-    new-instance v0, Lcom/bbm/d/dw;
+    .line 96
+    new-instance v0, Lcom/bbm/d/ff;
 
-    invoke-direct {v0, v3}, Lcom/bbm/d/dw;-><init>(Lcom/bbm/ui/ca;)V
+    invoke-direct {v0, v3}, Lcom/bbm/d/ff;-><init>(Lcom/bbm/ui/cp;)V
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     goto :goto_1
 
-    .line 113
+    .line 105
     :catch_0
     move-exception v0
 
@@ -512,25 +514,25 @@
 
     aput-object p1, v2, v8
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/w;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 115
+    .line 107
     iget-object v0, p0, Lcom/bbm/util/b/i;->b:Lcom/bbm/util/b/d;
 
-    .line 116
+    .line 108
     if-eqz v0, :cond_3
 
-    .line 118
+    .line 110
     invoke-virtual {v0}, Lcom/bbm/util/b/d;->a()V
 
-    .line 125
+    .line 117
     :cond_3
     :goto_2
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 107
+    .line 99
     :cond_4
     :try_start_1
     iget-object v3, p0, Lcom/bbm/util/b/a;->k:Ljava/lang/ref/WeakReference;
@@ -555,8 +557,8 @@
 
     if-eqz v3, :cond_3
 
-    .line 108
-    new-instance v6, Lcom/bbm/d/dw;
+    .line 100
+    new-instance v6, Lcom/bbm/d/ff;
 
     iget-object v3, p0, Lcom/bbm/util/b/a;->k:Ljava/lang/ref/WeakReference;
 
@@ -580,7 +582,7 @@
 
     move-result-object v0
 
-    invoke-direct {v6, v7, v0}, Lcom/bbm/d/dw;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
+    invoke-direct {v6, v7, v0}, Lcom/bbm/d/ff;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
     :try_end_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
@@ -589,7 +591,7 @@
 
     goto/16 :goto_1
 
-    .line 120
+    .line 112
     :catch_1
     move-exception v0
 
@@ -599,7 +601,7 @@
 
     aput-object p1, v2, v8
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/w;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_2
 
@@ -611,22 +613,22 @@
     goto/16 :goto_0
 .end method
 
-.method protected final a(Landroid/widget/ImageView;Lcom/bbm/d/dw;Ljava/lang/Object;)V
-    .locals 3
+.method protected final a(Landroid/widget/ImageView;Lcom/bbm/d/ff;Ljava/lang/Object;)V
+    .locals 4
 
     .prologue
-    .line 137
+    .line 129
     if-eqz p2, :cond_0
 
-    .line 138
-    invoke-super {p0, p1, p2, p3}, Lcom/bbm/util/b/g;->a(Landroid/widget/ImageView;Lcom/bbm/d/dw;Ljava/lang/Object;)V
+    .line 130
+    invoke-super {p0, p1, p2, p3}, Lcom/bbm/util/b/g;->a(Landroid/widget/ImageView;Lcom/bbm/d/ff;Ljava/lang/Object;)V
 
-    .line 140
+    .line 132
     instance-of v0, p1, Lcom/bbm/ui/ObservingImageView;
 
     if-eqz v0, :cond_0
 
-    .line 141
+    .line 133
     const-string v0, "alpha"
 
     const/4 v1, 0x2
@@ -639,19 +641,19 @@
 
     move-result-object v0
 
-    const-wide/16 v1, 0x96
+    const-wide/16 v2, 0x96
 
-    invoke-virtual {v0, v1, v2}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 144
+    .line 136
     :cond_0
     return-void
 
-    .line 141
+    .line 133
     nop
 
     :array_0
@@ -665,7 +667,7 @@
     .locals 2
 
     .prologue
-    .line 333
+    .line 295
     iget v0, p0, Lcom/bbm/util/b/a;->i:I
 
     if-lez v0, :cond_0
@@ -674,18 +676,18 @@
 
     if-lez v0, :cond_0
 
-    .line 334
+    .line 296
     iget v0, p0, Lcom/bbm/util/b/a;->h:I
 
     iget v1, p0, Lcom/bbm/util/b/a;->i:I
 
     invoke-super {p0, p1, p2, v0, v1}, Lcom/bbm/util/b/g;->a(Ljava/lang/Object;Landroid/widget/ImageView;II)V
 
-    .line 338
+    .line 300
     :goto_0
     return-void
 
-    .line 336
+    .line 298
     :cond_0
     invoke-super {p0, p1, p2}, Lcom/bbm/util/b/g;->a(Ljava/lang/Object;Landroid/widget/ImageView;)V
 

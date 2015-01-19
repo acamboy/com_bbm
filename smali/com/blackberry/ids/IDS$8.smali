@@ -21,7 +21,7 @@
     .locals 0
 
     .prologue
-    .line 1555
+    .line 1566
     iput-object p1, p0, Lcom/blackberry/ids/IDS$8;->a:Lcom/blackberry/ids/RequestId;
 
     iput-object p2, p0, Lcom/blackberry/ids/IDS$8;->b:Lcom/blackberry/ids/IManageIdentityCallback;
@@ -45,7 +45,7 @@
 
     const/4 v10, 0x0
 
-    .line 1558
+    .line 1569
     const-string v0, "enter uiThread.do_manage_identity request_id=%s"
 
     new-array v1, v11, [Ljava/lang/Object;
@@ -56,9 +56,9 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 1560
+    .line 1571
     :try_start_0
-    invoke-static {}, Lcom/blackberry/ids/IDS;->h()Landroid/content/Context;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->i()Landroid/content/Context;
 
     move-result-object v0
 
@@ -70,62 +70,60 @@
 
     invoke-static {v0, v1, v2, v3}, Lcom/blackberry/ids/ManageIdentityListener;->start(Landroid/content/Context;Lcom/blackberry/ids/IManageIdentityCallback;Lcom/blackberry/ids/IFailureCallback;Ljava/lang/Runnable;)V
 
-    .line 1561
-    invoke-static {}, Lcom/blackberry/ids/IDS;->h()Landroid/content/Context;
+    .line 1572
+    invoke-static {}, Lcom/blackberry/ids/IDS;->i()Landroid/content/Context;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/blackberry/ids/IDS$8;->a:Lcom/blackberry/ids/RequestId;
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->i()Landroid/net/Uri;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->j()Landroid/net/Uri;
 
     move-result-object v2
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/blackberry/ids/BBIDStorage;->b()Ljava/lang/String;
+    iget-object v3, v3, Lcom/blackberry/ids/BBIDStorage;->b:Ljava/lang/String;
 
-    move-result-object v3
-
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/blackberry/ids/BBIDStorage;->c()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/blackberry/ids/BBIDStorage;->a()Ljava/lang/String;
 
     move-result-object v4
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->j()Ljava/lang/String;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->k()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/blackberry/ids/BBIDStorage;->e()Ljava/lang/String;
+    invoke-virtual {v6}, Lcom/blackberry/ids/BBIDStorage;->b()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lcom/blackberry/ids/BBIDStorage;->f()Ljava/lang/String;
+    invoke-virtual {v7}, Lcom/blackberry/ids/BBIDStorage;->c()Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v8
 
-    invoke-virtual {v8}, Lcom/blackberry/ids/BBIDStorage;->g()Ljava/lang/String;
+    invoke-virtual {v8}, Lcom/blackberry/ids/BBIDStorage;->d()Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->k()Ljava/lang/String;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->l()Ljava/lang/String;
 
     move-result-object v9
 
@@ -133,7 +131,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1574
+    .line 1585
     const-string v0, "exit uiThread.do_manage_identity request_id=%s"
 
     new-array v1, v11, [Ljava/lang/Object;
@@ -144,10 +142,10 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 1575
+    .line 1586
     return-void
 
-    .line 1574
+    .line 1585
     :catchall_0
     move-exception v0
 

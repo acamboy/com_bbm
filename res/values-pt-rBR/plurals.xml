@@ -4,14 +4,31 @@
         <item quantity="other">Mensagem de transmissão enviada para %1$s contatos</item>
         <item quantity="one">Mensagem de transmissão enviada para um contato</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d Assinantes</item>
+        <item quantity="zero">Nenhum assinante</item>
+        <item quantity="one">%1$d Assinante</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d Membros</item>
+        <item quantity="one">%1$d Membro</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">segundos</item>
+        <item quantity="one">segundo</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Temporizador definido para %1$d segundos.</item>
+        <item quantity="one">Temporizador definido para %1$d segundo.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s itens</item>
         <item quantity="zero">0 item</item>
         <item quantity="one">1 item</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d convites pendentes)</item>
-        <item quantity="one">(1 convite pendente)</item>
+        <item quantity="other">(%1$d pendente)</item>
+        <item quantity="one">(1 pendente)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s resultados</item>

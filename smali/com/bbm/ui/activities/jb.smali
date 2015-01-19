@@ -1,132 +1,63 @@
 .class final Lcom/bbm/ui/activities/jb;
-.super Lcom/bbm/d/b/f;
-.source "GroupAdminAddActivity.java"
+.super Ljava/lang/Object;
+.source "ConversationActivity.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/f",
-        "<",
-        "Lcom/bbm/g/u;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lcom/bbm/ui/b/u;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminAddActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 183
-    iput-object p1, p0, Lcom/bbm/ui/activities/jb;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
+    .line 4587
+    iput-object p1, p0, Lcom/bbm/ui/activities/jb;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()Ljava/util/List;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/g/u;",
-            ">;"
-        }
-    .end annotation
+.method public final a(ZLcom/bbm/d/gw;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 188
-    new-instance v1, Ljava/util/ArrayList;
+    .line 4589
+    if-nez p1, :cond_0
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 190
-    iget-object v0, p0, Lcom/bbm/ui/activities/jb;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->b(Lcom/bbm/ui/activities/GroupAdminAddActivity;)Lcom/bbm/g/ab;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/jb;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->i()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Lcom/bbm/g/ab;->g(Ljava/lang/String;)Lcom/bbm/j/w;
-
-    move-result-object v0
-
-    .line 191
-    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 192
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    .line 202
+    .line 4597
     :goto_0
-    return-object v0
+    return-void
 
-    .line 195
+    .line 4592
     :cond_0
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    if-nez p2, :cond_1
+
+    .line 4593
+    iget-object v0, p0, Lcom/bbm/ui/activities/jb;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->z(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/gr;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
+    iget-object v0, v0, Lcom/bbm/d/gr;->B:Ljava/lang/String;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-static {v0, p3}, Lcom/bbm/util/db;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v2
+    goto :goto_0
 
+    .line 4595
     :cond_1
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v0, p2, Lcom/bbm/d/gw;->d:Ljava/lang/String;
 
-    move-result v0
+    invoke-static {v0, p3}, Lcom/bbm/util/db;->b(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v0, :cond_2
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/g/u;
-
-    .line 196
-    iget-boolean v3, v0, Lcom/bbm/g/u;->a:Z
-
-    if-nez v3, :cond_1
-
-    .line 197
-    new-instance v3, Lcom/bbm/g/u;
-
-    invoke-direct {v3, v0}, Lcom/bbm/g/u;-><init>(Lcom/bbm/g/u;)V
-
-    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
-
-    :cond_2
-    move-object v0, v1
-
-    .line 202
     goto :goto_0
 .end method

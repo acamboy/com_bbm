@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/adx;
 .super Ljava/lang/Object;
-.source "ShareActivity.java"
+.source "ReportProblemActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ShareActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ReportProblemActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ShareActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ReportProblemActivity;)V
     .locals 0
 
     .prologue
-    .line 69
-    iput-object p1, p0, Lcom/bbm/ui/activities/adx;->a:Lcom/bbm/ui/activities/ShareActivity;
+    .line 115
+    iput-object p1, p0, Lcom/bbm/ui/activities/adx;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,49 +25,98 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
 
     .prologue
-    .line 72
-    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    .line 118
+    const-string v0, "mHeaderActionBar NegativeButton Clicked"
+
+    const-class v1, Lcom/bbm/ui/activities/ReportProblemActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 120
+    iget-object v0, p0, Lcom/bbm/ui/activities/adx;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ReportProblemActivity;->a(Lcom/bbm/ui/activities/ReportProblemActivity;)Lcom/google/b/a/l;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/aea;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
 
-    .line 73
+    move-result v0
+
     if-eqz v0, :cond_0
 
-    .line 74
-    iget-object v1, p0, Lcom/bbm/ui/activities/adx;->a:Lcom/bbm/ui/activities/ShareActivity;
+    .line 121
+    iget-object v0, p0, Lcom/bbm/ui/activities/adx;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/aea;->c:Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ReportProblemActivity;->a(Lcom/bbm/ui/activities/ReportProblemActivity;)Lcom/google/b/a/l;
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/ShareActivity;->a(Lcom/bbm/ui/activities/ShareActivity;Ljava/lang/String;)V
+    move-result-object v0
 
-    .line 78
-    :goto_0
-    return-void
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
 
-    .line 76
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/aeg;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/aeg;->b()Z
+
+    .line 122
+    iget-object v0, p0, Lcom/bbm/ui/activities/adx;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
+
+    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ReportProblemActivity;->a(Lcom/bbm/ui/activities/ReportProblemActivity;Lcom/google/b/a/l;)Lcom/google/b/a/l;
+
+    .line 124
     :cond_0
-    const-string v0, "Unable to get ViewHolder from View - will not start chat"
+    iget-object v0, p0, Lcom/bbm/ui/activities/adx;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
 
-    const/4 v1, 0x0
+    invoke-static {v0}, Lcom/bbm/ui/activities/ReportProblemActivity;->b(Lcom/bbm/ui/activities/ReportProblemActivity;)Lcom/google/b/a/l;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
 
-    goto :goto_0
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 125
+    iget-object v0, p0, Lcom/bbm/ui/activities/adx;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ReportProblemActivity;->b(Lcom/bbm/ui/activities/ReportProblemActivity;)Lcom/google/b/a/l;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/aei;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/aei;->b()Z
+
+    .line 126
+    iget-object v0, p0, Lcom/bbm/ui/activities/adx;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
+
+    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ReportProblemActivity;->b(Lcom/bbm/ui/activities/ReportProblemActivity;Lcom/google/b/a/l;)Lcom/google/b/a/l;
+
+    .line 128
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/adx;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ReportProblemActivity;->finish()V
+
+    .line 129
+    return-void
 .end method

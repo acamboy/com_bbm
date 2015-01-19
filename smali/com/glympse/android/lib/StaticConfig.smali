@@ -22,15 +22,17 @@
 
 .field public static final CLIENT_API_BUGFIX:I = 0x0
 
-.field public static final CLIENT_API_BUILD:I = 0x3e
+.field public static final CLIENT_API_BUILD:I = 0x44
 
 .field public static final CLIENT_API_ITER:I = 0x0
 
 .field public static final CLIENT_API_MAJOR:I = 0x2
 
-.field public static final CLIENT_API_MINOR:I = 0x7
+.field public static final CLIENT_API_MINOR:I = 0xd
 
 .field public static final CLIENT_API_STATUS:I = 0x0
+
+.field public static final CONTACTS_MAX_MERGE_SPAN:I = 0x10
 
 .field public static final DEBUG_LOG_LEVEL:I = 0x7
 
@@ -50,7 +52,7 @@
 
 .field public static final HTTP_API_STATUS_RETRIES:I = 0x4
 
-.field public static final HTTP_IMAGE_DOWNLOAD_RETRIES:I = 0xc
+.field public static final HTTP_IMAGE_DOWNLOAD_RETRIES:I = 0x5
 
 .field public static final HTTP_IMAGE_UPLOAD_RETRIES:I = 0xc
 
@@ -81,6 +83,8 @@
 .field public static final MAX_LOGSIZE_WITHOUT_WIFI:I = 0x100000
 
 .field public static final MAX_MEMORY_IMAGE_CACHE_SIZE:I = 0x50
+
+.field public static final MAX_NICKNAME_LENGTH:I = 0x40
 
 .field public static final MAX_PENDING_TRACK:J = 0xa4cb800L
 
@@ -194,7 +198,7 @@
     .locals 1
 
     .prologue
-    .line 455
+    .line 466
     const-string v0, "https://upload.glympse.com/"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -222,7 +226,7 @@
     .locals 2
 
     .prologue
-    .line 417
+    .line 428
     invoke-static {}, Lcom/glympse/android/hal/Platform;->getOsName()Ljava/lang/String;
 
     move-result-object v0

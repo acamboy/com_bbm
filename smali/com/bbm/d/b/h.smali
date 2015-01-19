@@ -32,7 +32,7 @@
     .line 26
     iget-object v0, p0, Lcom/bbm/d/b/h;->a:Lcom/bbm/d/b/f;
 
-    invoke-static {v0}, Lcom/bbm/d/b/f;->a(Lcom/bbm/d/b/f;)V
+    invoke-virtual {v0}, Lcom/bbm/d/b/f;->c()V
 
     .line 27
     return-void

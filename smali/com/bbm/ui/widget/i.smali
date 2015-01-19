@@ -1,89 +1,108 @@
 .class public final Lcom/bbm/ui/widget/i;
-.super Ljava/lang/Object;
-.source "WidgetMonitor.java"
-
-
-# instance fields
-.field final a:Landroid/os/Handler;
-
-.field public b:Lcom/bbm/j/k;
-
-.field public final c:Landroid/content/BroadcastReceiver;
-
-.field public final d:Landroid/content/Context;
-
-.field e:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/ui/widget/b;",
-            ">;"
-        }
-    .end annotation
-.end field
+.super Landroid/widget/PopupWindow;
+.source "TechTipPopupWindow.java"
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>(Landroid/content/Context;III)V
+    .locals 4
 
     .prologue
-    .line 56
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v3, -0x1
 
-    .line 35
-    new-instance v0, Landroid/os/Handler;
+    .line 21
+    invoke-direct {p0}, Landroid/widget/PopupWindow;-><init>()V
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    .line 22
+    invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f030153
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+    .line 24
+    const v0, 0x7f0b069f
 
-    iput-object v0, p0, Lcom/bbm/ui/widget/i;->a:Landroid/os/Handler;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    .line 36
-    const/4 v0, 0x0
+    move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/widget/i;->b:Lcom/bbm/j/k;
+    check-cast v0, Landroid/widget/TextView;
 
-    .line 37
+    .line 25
+    invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(I)V
+
+    .line 27
+    const v0, 0x7f0b06a0
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    .line 28
+    invoke-virtual {v0, p3}, Landroid/widget/TextView;->setText(I)V
+
+    .line 30
+    const v0, 0x7f0b06a1
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    .line 31
+    invoke-virtual {v0, p4}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 33
     new-instance v0, Lcom/bbm/ui/widget/j;
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/widget/j;-><init>(Lcom/bbm/ui/widget/i;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/widget/i;->c:Landroid/content/BroadcastReceiver;
+    invoke-virtual {v1, v0}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 57
-    iput-object p1, p0, Lcom/bbm/ui/widget/i;->d:Landroid/content/Context;
+    .line 43
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/widget/i;->setContentView(Landroid/view/View;)V
 
-    .line 58
+    .line 44
+    invoke-virtual {p0, v3}, Lcom/bbm/ui/widget/i;->setWidth(I)V
+
+    .line 45
+    invoke-virtual {p0, v3}, Lcom/bbm/ui/widget/i;->setHeight(I)V
+
+    .line 46
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/widget/i;->setFocusable(Z)V
+
+    .line 47
+    const v0, 0x7f0f0070
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/widget/i;->setAnimationStyle(I)V
+
+    .line 48
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final a(Landroid/view/View;)V
     .locals 1
 
     .prologue
-    .line 85
-    iget-object v0, p0, Lcom/bbm/ui/widget/i;->b:Lcom/bbm/j/k;
-
-    if-eqz v0, :cond_0
-
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/widget/i;->b:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
-
-    .line 88
-    :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/widget/i;->b:Lcom/bbm/j/k;
+    .line 51
+    invoke-virtual {p0, p1, v0, v0, v0}, Lcom/bbm/ui/widget/i;->showAtLocation(Landroid/view/View;III)V
 
-    .line 89
+    .line 52
     return-void
 .end method

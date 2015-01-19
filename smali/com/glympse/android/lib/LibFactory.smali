@@ -8,7 +8,7 @@
     .locals 0
 
     .prologue
-    .line 26
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -18,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 30
+    .line 32
     new-instance v0, Lcom/glympse/android/lib/m;
 
     invoke-direct {v0, p0}, Lcom/glympse/android/lib/m;-><init>(Ljava/lang/String;)V
@@ -27,7 +27,7 @@
 .end method
 
 .method public static createCalendarEvent(Ljava/lang/String;ZJLjava/lang/String;Lcom/glympse/android/api/GInvite;Lcom/glympse/android/core/GArray;)Lcom/glympse/android/lib/GCalendarEvent;
-    .locals 8
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -44,34 +44,34 @@
     .end annotation
 
     .prologue
-    .line 137
-    new-instance v0, Lcom/glympse/android/lib/z;
+    .line 143
+    new-instance v1, Lcom/glympse/android/lib/ac;
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move v2, p1
+    move v3, p1
 
-    move-wide v3, p2
+    move-wide v4, p2
 
-    move-object v5, p4
+    move-object v6, p4
 
-    move-object v6, p5
+    move-object v7, p5
 
-    move-object v7, p6
+    move-object/from16 v8, p6
 
-    invoke-direct/range {v0 .. v7}, Lcom/glympse/android/lib/z;-><init>(Ljava/lang/String;ZJLjava/lang/String;Lcom/glympse/android/api/GInvite;Lcom/glympse/android/core/GArray;)V
+    invoke-direct/range {v1 .. v8}, Lcom/glympse/android/lib/ac;-><init>(Ljava/lang/String;ZJLjava/lang/String;Lcom/glympse/android/api/GInvite;Lcom/glympse/android/core/GArray;)V
 
-    return-object v0
+    return-object v1
 .end method
 
 .method public static createCalendarManager()Lcom/glympse/android/lib/GCalendarManager;
     .locals 1
 
     .prologue
-    .line 131
-    new-instance v0, Lcom/glympse/android/lib/aa;
+    .line 137
+    new-instance v0, Lcom/glympse/android/lib/ad;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/aa;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/lib/ad;-><init>()V
 
     return-object v0
 .end method
@@ -80,10 +80,10 @@
     .locals 1
 
     .prologue
-    .line 176
-    new-instance v0, Lcom/glympse/android/lib/ac;
+    .line 187
+    new-instance v0, Lcom/glympse/android/lib/af;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/ac;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/lib/af;-><init>()V
 
     return-object v0
 .end method
@@ -92,10 +92,10 @@
     .locals 1
 
     .prologue
-    .line 115
-    new-instance v0, Lcom/glympse/android/lib/af;
+    .line 122
+    new-instance v0, Lcom/glympse/android/lib/ai;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/af;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/lib/ai;-><init>()V
 
     return-object v0
 .end method
@@ -104,10 +104,10 @@
     .locals 1
 
     .prologue
-    .line 191
-    new-instance v0, Lcom/glympse/android/lib/bh;
+    .line 202
+    new-instance v0, Lcom/glympse/android/lib/bl;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/lib/bh;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/lib/bl;-><init>(Ljava/lang/String;)V
 
     return-object v0
 .end method
@@ -116,19 +116,43 @@
     .locals 1
 
     .prologue
-    .line 166
-    new-instance v0, Lcom/glympse/android/lib/bj;
+    .line 177
+    new-instance v0, Lcom/glympse/android/lib/bn;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/bj;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/lib/bn;-><init>()V
 
     return-object v0
+.end method
+
+.method public static createGeoTrigger(Ljava/lang/String;ZLcom/glympse/android/api/GTicket;Lcom/glympse/android/core/GLatLng;DI)Lcom/glympse/android/api/GGeoTrigger;
+    .locals 10
+
+    .prologue
+    .line 271
+    new-instance v1, Lcom/glympse/android/lib/by;
+
+    move-object v2, p0
+
+    move v3, p1
+
+    move-object v4, p2
+
+    move-object v5, p3
+
+    move-wide v6, p4
+
+    move/from16 v8, p6
+
+    invoke-direct/range {v1 .. v8}, Lcom/glympse/android/lib/by;-><init>(Ljava/lang/String;ZLcom/glympse/android/api/GTicket;Lcom/glympse/android/core/GLatLng;DI)V
+
+    return-object v1
 .end method
 
 .method public static createGlympse(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/glympse/android/api/GGlympse;
     .locals 2
 
     .prologue
-    .line 40
+    .line 42
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -137,12 +161,12 @@
 
     move-result-object v0
 
-    .line 44
-    new-instance v1, Lcom/glympse/android/lib/by;
-
-    invoke-direct {v1, v0, p1, p2, p3}, Lcom/glympse/android/lib/by;-><init>(Lcom/glympse/android/hal/GContextHolder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
     .line 46
+    new-instance v1, Lcom/glympse/android/lib/bz;
+
+    invoke-direct {v1, v0, p1, p2, p3}, Lcom/glympse/android/lib/bz;-><init>(Lcom/glympse/android/hal/GContextHolder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 48
     return-object v1
 .end method
 
@@ -150,12 +174,12 @@
     .locals 1
 
     .prologue
-    .line 51
-    new-instance v0, Lcom/glympse/android/lib/by;
-
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/glympse/android/lib/by;-><init>(Lcom/glympse/android/hal/GContextHolder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
     .line 53
+    new-instance v0, Lcom/glympse/android/lib/bz;
+
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/glympse/android/lib/bz;-><init>(Lcom/glympse/android/hal/GContextHolder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 55
     return-object v0
 .end method
 
@@ -163,10 +187,10 @@
     .locals 1
 
     .prologue
-    .line 215
-    new-instance v0, Lcom/glympse/android/lib/ca;
+    .line 226
+    new-instance v0, Lcom/glympse/android/lib/cb;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/lib/ca;-><init>(Lcom/glympse/android/api/GGlympse;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/lib/cb;-><init>(Lcom/glympse/android/api/GGlympse;)V
 
     return-object v0
 .end method
@@ -175,10 +199,10 @@
     .locals 1
 
     .prologue
-    .line 95
-    new-instance v0, Lcom/glympse/android/lib/cp;
+    .line 97
+    new-instance v0, Lcom/glympse/android/lib/cq;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/lib/cp;-><init>(Z)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/lib/cq;-><init>(Z)V
 
     return-object v0
 .end method
@@ -187,10 +211,10 @@
     .locals 1
 
     .prologue
-    .line 110
-    new-instance v0, Lcom/glympse/android/lib/de;
+    .line 117
+    new-instance v0, Lcom/glympse/android/lib/dg;
 
-    invoke-direct {v0, p0, p1}, Lcom/glympse/android/lib/de;-><init>(Lcom/glympse/android/api/GUser;Lcom/glympse/android/api/GTicket;)V
+    invoke-direct {v0, p0, p1}, Lcom/glympse/android/lib/dg;-><init>(Lcom/glympse/android/api/GUser;Lcom/glympse/android/api/GTicket;)V
 
     return-object v0
 .end method
@@ -199,12 +223,12 @@
     .locals 2
 
     .prologue
-    .line 181
-    new-instance v0, Lcom/glympse/android/lib/dx;
+    .line 192
+    new-instance v0, Lcom/glympse/android/lib/dz;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1, p0}, Lcom/glympse/android/lib/dx;-><init>(Ljava/lang/String;Lcom/glympse/android/core/GDrawable;)V
+    invoke-direct {v0, v1, p0}, Lcom/glympse/android/lib/dz;-><init>(Ljava/lang/String;Lcom/glympse/android/core/GDrawable;)V
 
     return-object v0
 .end method
@@ -213,10 +237,10 @@
     .locals 1
 
     .prologue
-    .line 186
-    new-instance v0, Lcom/glympse/android/lib/dx;
+    .line 197
+    new-instance v0, Lcom/glympse/android/lib/dz;
 
-    invoke-direct {v0, p0, p1}, Lcom/glympse/android/lib/dx;-><init>(Ljava/lang/String;Lcom/glympse/android/core/GDrawable;)V
+    invoke-direct {v0, p0, p1}, Lcom/glympse/android/lib/dz;-><init>(Ljava/lang/String;Lcom/glympse/android/core/GDrawable;)V
 
     return-object v0
 .end method
@@ -225,10 +249,34 @@
     .locals 1
 
     .prologue
-    .line 100
-    invoke-static {p0, p1, p2}, Lcom/glympse/android/lib/Invite;->createInvite(ILjava/lang/String;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+    .line 102
+    invoke-static {p0, p1, p2}, Lcom/glympse/android/lib/ej;->createInvite(ILjava/lang/String;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
 
     move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static createInvite(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+    .locals 1
+
+    .prologue
+    .line 107
+    invoke-static {p0, p1, p2, p3}, Lcom/glympse/android/lib/ej;->createInvite(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static createJobQueue(Lcom/glympse/android/core/GHandler;)Lcom/glympse/android/lib/GJobQueue;
+    .locals 1
+
+    .prologue
+    .line 246
+    new-instance v0, Lcom/glympse/android/lib/fc;
+
+    invoke-direct {v0, p0}, Lcom/glympse/android/lib/fc;-><init>(Lcom/glympse/android/core/GHandler;)V
 
     return-object v0
 .end method
@@ -237,36 +285,34 @@
     .locals 3
 
     .prologue
-    .line 120
+    .line 127
     invoke-static {p1}, Lcom/glympse/android/hal/HalFactory;->createLocalContactsProvider(Landroid/content/Context;)Lcom/glympse/android/hal/GContactsProvider;
 
     move-result-object v0
 
-    .line 123
+    .line 130
     check-cast p0, Lcom/glympse/android/lib/GGlympsePrivate;
 
     invoke-interface {p0}, Lcom/glympse/android/lib/GGlympsePrivate;->getContentResolver()Lcom/glympse/android/lib/GContentResolver;
 
     move-result-object v1
 
-    new-instance v2, Lcom/glympse/android/lib/gi;
+    new-instance v2, Lcom/glympse/android/lib/gn;
 
-    invoke-direct {v2, v0}, Lcom/glympse/android/lib/gi;-><init>(Lcom/glympse/android/hal/GContactsProvider;)V
+    invoke-direct {v2, v0}, Lcom/glympse/android/lib/gn;-><init>(Lcom/glympse/android/hal/GContactsProvider;)V
 
     invoke-interface {v1, v2}, Lcom/glympse/android/lib/GContentResolver;->registerProvider(Lcom/glympse/android/lib/GContentProvider;)V
 
-    .line 125
+    .line 132
     return-object v0
 .end method
 
 .method public static createLocation(JDD)Lcom/glympse/android/lib/GLocationPrivate;
-    .locals 12
+    .locals 14
 
     .prologue
-    .line 58
-    new-instance v0, Lcom/glympse/android/lib/Location;
-
-    const/high16 v7, 0x7fc00000
+    .line 60
+    new-instance v1, Lcom/glympse/android/lib/Location;
 
     const/high16 v8, 0x7fc00000
 
@@ -276,25 +322,27 @@
 
     const/high16 v11, 0x7fc00000
 
-    move-wide v1, p0
+    const/high16 v12, 0x7fc00000
 
-    move-wide v3, p2
+    move-wide v2, p0
 
-    move-wide/from16 v5, p4
+    move-wide/from16 v4, p2
 
-    invoke-direct/range {v0 .. v11}, Lcom/glympse/android/lib/Location;-><init>(JDDFFFFF)V
+    move-wide/from16 v6, p4
 
-    return-object v0
+    invoke-direct/range {v1 .. v12}, Lcom/glympse/android/lib/Location;-><init>(JDDFFFFF)V
+
+    return-object v1
 .end method
 
 .method public static createMemoryCache(II)Lcom/glympse/android/lib/GMemoryCache;
     .locals 1
 
     .prologue
-    .line 147
-    new-instance v0, Lcom/glympse/android/lib/fr;
+    .line 158
+    new-instance v0, Lcom/glympse/android/lib/fv;
 
-    invoke-direct {v0, p0, p1}, Lcom/glympse/android/lib/fr;-><init>(II)V
+    invoke-direct {v0, p0, p1}, Lcom/glympse/android/lib/fv;-><init>(II)V
 
     return-object v0
 .end method
@@ -303,7 +351,7 @@
     .locals 2
 
     .prologue
-    .line 153
+    .line 164
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -312,10 +360,10 @@
 
     move-result-object v0
 
-    .line 156
-    new-instance v1, Lcom/glympse/android/lib/gc;
+    .line 167
+    new-instance v1, Lcom/glympse/android/lib/gh;
 
-    invoke-direct {v1, v0, p1}, Lcom/glympse/android/lib/gc;-><init>(Lcom/glympse/android/hal/GContextHolder;Ljava/lang/String;)V
+    invoke-direct {v1, v0, p1}, Lcom/glympse/android/lib/gh;-><init>(Lcom/glympse/android/hal/GContextHolder;Ljava/lang/String;)V
 
     return-object v1
 .end method
@@ -324,7 +372,7 @@
     .locals 1
 
     .prologue
-    .line 161
+    .line 172
     new-instance v0, Lcom/glympse/android/lib/PersistentChannel;
 
     invoke-direct {v0, p0}, Lcom/glympse/android/lib/PersistentChannel;-><init>(Lcom/glympse/android/core/GHandler;)V
@@ -333,106 +381,118 @@
 .end method
 
 .method public static createPerson(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/glympse/android/lib/GPerson;
-    .locals 7
+    .locals 8
 
     .prologue
-    .line 171
-    new-instance v0, Lcom/glympse/android/lib/PersonLocal;
+    .line 182
+    new-instance v1, Lcom/glympse/android/lib/PersonLocal;
 
-    move-wide v1, p0
+    move-wide v2, p0
 
-    move-object v3, p2
+    move-object v4, p2
 
-    move-object v4, p3
+    move-object v5, p3
 
-    move-object v5, p4
+    move-object v6, p4
 
-    move-object v6, p5
+    move-object v7, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/lib/PersonLocal;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/lib/PersonLocal;-><init>(JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    return-object v1
+.end method
+
+.method public static createPhoneFavorite(Ljava/lang/String;Ljava/lang/String;I)Lcom/glympse/android/lib/GPhoneFavorite;
+    .locals 1
+
+    .prologue
+    .line 148
+    new-instance v0, Lcom/glympse/android/lib/gv;
+
+    invoke-direct {v0, p0, p1, p2}, Lcom/glympse/android/lib/gv;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
     return-object v0
 .end method
 
 .method public static createPlace(DDLjava/lang/String;)Lcom/glympse/android/api/GPlace;
-    .locals 6
+    .locals 8
 
     .prologue
-    .line 105
-    new-instance v0, Lcom/glympse/android/lib/gq;
+    .line 112
+    new-instance v1, Lcom/glympse/android/lib/gw;
 
-    move-wide v1, p0
+    move-wide v2, p0
 
-    move-wide v3, p2
+    move-wide v4, p2
 
-    move-object v5, p4
+    move-object v6, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/glympse/android/lib/gq;-><init>(DDLjava/lang/String;)V
+    invoke-direct/range {v1 .. v6}, Lcom/glympse/android/lib/gw;-><init>(DDLjava/lang/String;)V
 
-    return-object v0
+    return-object v1
 .end method
 
 .method public static createProfile(IIIIDI)Lcom/glympse/android/core/GLocationProfile;
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 68
-    new-instance v0, Lcom/glympse/android/lib/fq;
-
-    invoke-direct {v0}, Lcom/glympse/android/lib/fq;-><init>()V
-
-    .line 69
-    invoke-virtual {v0, p0}, Lcom/glympse/android/lib/fq;->l(I)V
-
     .line 70
-    invoke-virtual {v0, p1}, Lcom/glympse/android/lib/fq;->setMode(I)V
+    new-instance v0, Lcom/glympse/android/lib/fu;
+
+    invoke-direct {v0}, Lcom/glympse/android/lib/fu;-><init>()V
 
     .line 71
-    invoke-virtual {v0, p2}, Lcom/glympse/android/lib/fq;->setSource(I)V
+    invoke-virtual {v0, p0}, Lcom/glympse/android/lib/fu;->o(I)V
 
     .line 72
-    invoke-virtual {v0, p3}, Lcom/glympse/android/lib/fq;->setPriority(I)V
+    invoke-virtual {v0, p1}, Lcom/glympse/android/lib/fu;->setMode(I)V
 
     .line 73
-    invoke-virtual {v0, p4, p5}, Lcom/glympse/android/lib/fq;->b(D)V
+    invoke-virtual {v0, p2}, Lcom/glympse/android/lib/fu;->setSource(I)V
 
     .line 74
-    invoke-virtual {v0, p6}, Lcom/glympse/android/lib/fq;->m(I)V
+    invoke-virtual {v0, p3}, Lcom/glympse/android/lib/fu;->setPriority(I)V
 
     .line 75
+    invoke-virtual {v0, p4, p5}, Lcom/glympse/android/lib/fu;->b(D)V
+
+    .line 76
+    invoke-virtual {v0, p6}, Lcom/glympse/android/lib/fu;->p(I)V
+
+    .line 77
     return-object v0
 .end method
 
 .method public static createRegion(DDDLjava/lang/String;)Lcom/glympse/android/core/GRegion;
-    .locals 10
+    .locals 12
 
     .prologue
-    .line 63
-    new-instance v0, Lcom/glympse/android/lib/gv;
+    .line 65
+    new-instance v1, Lcom/glympse/android/lib/hb;
 
-    const-wide/16 v7, 0x0
+    const-wide/16 v8, 0x0
 
-    move-wide v1, p0
+    move-wide v2, p0
 
-    move-wide v3, p2
+    move-wide v4, p2
 
-    move-wide v5, p4
+    move-wide/from16 v6, p4
 
-    move-object/from16 v9, p6
+    move-object/from16 v10, p6
 
-    invoke-direct/range {v0 .. v9}, Lcom/glympse/android/lib/gv;-><init>(DDDDLjava/lang/String;)V
+    invoke-direct/range {v1 .. v10}, Lcom/glympse/android/lib/hb;-><init>(DDDDLjava/lang/String;)V
 
-    return-object v0
+    return-object v1
 .end method
 
 .method public static createSearchEngine()Lcom/glympse/android/lib/GSearchEngine;
     .locals 1
 
     .prologue
-    .line 142
-    new-instance v0, Lcom/glympse/android/lib/gy;
+    .line 153
+    new-instance v0, Lcom/glympse/android/lib/he;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/gy;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/lib/he;-><init>()V
 
     return-object v0
 .end method
@@ -443,7 +503,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 197
+    .line 208
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
@@ -452,15 +512,15 @@
 
     move-result-object v0
 
-    .line 199
-    new-instance v1, Lcom/glympse/android/lib/hp;
+    .line 210
+    new-instance v1, Lcom/glympse/android/lib/hw;
 
-    invoke-direct {v1}, Lcom/glympse/android/lib/hp;-><init>()V
+    invoke-direct {v1}, Lcom/glympse/android/lib/hw;-><init>()V
 
-    .line 200
-    invoke-virtual {v1, v0, v2, v2, p1}, Lcom/glympse/android/lib/hp;->a(Lcom/glympse/android/hal/GContextHolder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    .line 211
+    invoke-virtual {v1, v0, v2, v2, p1}, Lcom/glympse/android/lib/hw;->a(Lcom/glympse/android/hal/GContextHolder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 201
+    .line 212
     return-object v1
 .end method
 
@@ -468,10 +528,10 @@
     .locals 1
 
     .prologue
-    .line 90
-    new-instance v0, Lcom/glympse/android/lib/hs;
+    .line 92
+    new-instance v0, Lcom/glympse/android/lib/hz;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/lib/hs;-><init>(Z)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/lib/hz;-><init>(Z)V
 
     return-object v0
 .end method
@@ -480,10 +540,10 @@
     .locals 1
 
     .prologue
-    .line 220
-    new-instance v0, Lcom/glympse/android/lib/ic;
+    .line 231
+    new-instance v0, Lcom/glympse/android/lib/ik;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/glympse/android/lib/ic;-><init>(ILjava/lang/String;Lcom/glympse/android/api/GPlace;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/glympse/android/lib/ik;-><init>(ILjava/lang/String;Lcom/glympse/android/api/GPlace;)V
 
     return-object v0
 .end method
@@ -492,10 +552,10 @@
     .locals 1
 
     .prologue
-    .line 80
-    new-instance v0, Lcom/glympse/android/lib/in;
+    .line 82
+    new-instance v0, Lcom/glympse/android/lib/iv;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/in;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/lib/iv;-><init>()V
 
     return-object v0
 .end method
@@ -504,10 +564,10 @@
     .locals 1
 
     .prologue
-    .line 230
-    new-instance v0, Lcom/glympse/android/lib/io;
+    .line 241
+    new-instance v0, Lcom/glympse/android/lib/iw;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/io;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/lib/iw;-><init>()V
 
     return-object v0
 .end method
@@ -516,8 +576,8 @@
     .locals 1
 
     .prologue
-    .line 225
-    invoke-static {p0}, Lcom/glympse/android/lib/is;->y(Ljava/lang/String;)Lcom/glympse/android/lib/GUri;
+    .line 236
+    invoke-static {p0}, Lcom/glympse/android/lib/je;->F(Ljava/lang/String;)Lcom/glympse/android/lib/GUri;
 
     move-result-object v0
 
@@ -528,19 +588,67 @@
     .locals 1
 
     .prologue
-    .line 85
-    new-instance v0, Lcom/glympse/android/lib/ix;
+    .line 87
+    new-instance v0, Lcom/glympse/android/lib/jj;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/ix;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/lib/jj;-><init>()V
 
     return-object v0
+.end method
+
+.method public static generateReturnUri(Lcom/glympse/android/api/GGlympse;Ljava/lang/String;Lcom/glympse/android/api/GTicket;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 266
+    invoke-static {p0, p1, p2, p3, p4}, Lcom/glympse/android/lib/UrlGenerator;->generateReturnUri(Lcom/glympse/android/api/GGlympse;Ljava/lang/String;Lcom/glympse/android/api/GTicket;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static guessInviteType(Ljava/lang/String;)I
+    .locals 1
+
+    .prologue
+    .line 261
+    invoke-static {p0}, Lcom/glympse/android/lib/ej;->v(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static inviteTypeEnumToString(I)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 251
+    invoke-static {p0}, Lcom/glympse/android/lib/ej;->n(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static inviteTypeStringToEnum(Ljava/lang/String;)I
+    .locals 1
+
+    .prologue
+    .line 256
+    invoke-static {p0}, Lcom/glympse/android/lib/ej;->t(Ljava/lang/String;)I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public static wipeUsers(Landroid/content/Context;Ljava/lang/String;)V
     .locals 2
 
     .prologue
-    .line 206
+    .line 217
     const/4 v0, 0x0
 
     const/4 v1, 0x1
@@ -549,13 +657,13 @@
 
     move-result-object v0
 
-    .line 207
+    .line 218
     if-eqz v0, :cond_0
 
-    .line 209
-    invoke-static {v0, p1}, Lcom/glympse/android/lib/jf;->b(Lcom/glympse/android/hal/GDirectory;Ljava/lang/String;)V
+    .line 220
+    invoke-static {v0, p1}, Lcom/glympse/android/lib/jr;->b(Lcom/glympse/android/hal/GDirectory;Ljava/lang/String;)V
 
-    .line 211
+    .line 222
     :cond_0
     return-void
 .end method

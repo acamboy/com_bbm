@@ -1,36 +1,65 @@
 .class final Landroid/support/v4/widget/aa;
-.super Landroid/support/v4/widget/y;
-.source "SlidingPaneLayout.java"
+.super Ljava/lang/Object;
+.source "MaterialProgressDrawable.java"
+
+# interfaces
+.implements Landroid/graphics/drawable/Drawable$Callback;
+
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/widget/v;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/widget/v;)V
     .locals 0
 
     .prologue
-    .line 1388
-    invoke-direct {p0}, Landroid/support/v4/widget/y;-><init>()V
+    .line 389
+    iput-object p1, p0, Landroid/support/v4/widget/aa;->a:Landroid/support/v4/widget/v;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
+.method public final invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
     .locals 1
 
     .prologue
-    .line 1391
-    invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 392
+    iget-object v0, p0, Landroid/support/v4/widget/aa;->a:Landroid/support/v4/widget/v;
 
-    move-result-object v0
+    invoke-virtual {v0}, Landroid/support/v4/widget/v;->invalidateSelf()V
 
-    check-cast v0, Landroid/support/v4/widget/u;
+    .line 393
+    return-void
+.end method
 
-    iget-object v0, v0, Landroid/support/v4/widget/u;->d:Landroid/graphics/Paint;
+.method public final scheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;J)V
+    .locals 1
 
-    invoke-static {p2, v0}, Landroid/support/v4/view/as;->a(Landroid/view/View;Landroid/graphics/Paint;)V
+    .prologue
+    .line 397
+    iget-object v0, p0, Landroid/support/v4/widget/aa;->a:Landroid/support/v4/widget/v;
 
-    .line 1392
+    invoke-virtual {v0, p2, p3, p4}, Landroid/support/v4/widget/v;->scheduleSelf(Ljava/lang/Runnable;J)V
+
+    .line 398
+    return-void
+.end method
+
+.method public final unscheduleDrawable(Landroid/graphics/drawable/Drawable;Ljava/lang/Runnable;)V
+    .locals 1
+
+    .prologue
+    .line 402
+    iget-object v0, p0, Landroid/support/v4/widget/aa;->a:Landroid/support/v4/widget/v;
+
+    invoke-virtual {v0, p2}, Landroid/support/v4/widget/v;->unscheduleSelf(Ljava/lang/Runnable;)V
+
+    .line 403
     return-void
 .end method

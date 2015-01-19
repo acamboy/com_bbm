@@ -1,6 +1,9 @@
 .class final Lcom/bbm/ui/widget/j;
-.super Landroid/content/BroadcastReceiver;
-.source "WidgetMonitor.java"
+.super Ljava/lang/Object;
+.source "TechTipPopupWindow.java"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
@@ -12,46 +15,35 @@
     .locals 0
 
     .prologue
-    .line 37
+    .line 33
     iput-object p1, p0, Lcom/bbm/ui/widget/j;->a:Lcom/bbm/ui/widget/i;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 1
 
     .prologue
-    .line 41
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 43
-    const-string v1, "com.bbm.action.UPDATE_WIDGET"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 36
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 44
+    .line 37
     iget-object v0, p0, Lcom/bbm/ui/widget/j;->a:Lcom/bbm/ui/widget/i;
 
-    iget-object v0, v0, Lcom/bbm/ui/widget/i;->a:Landroid/os/Handler;
+    invoke-virtual {v0}, Lcom/bbm/ui/widget/i;->dismiss()V
 
-    new-instance v1, Lcom/bbm/ui/widget/k;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/widget/k;-><init>(Lcom/bbm/ui/widget/j;)V
-
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    .line 51
+    .line 39
     :cond_0
-    return-void
+    const/4 v0, 0x1
+
+    return v0
 .end method

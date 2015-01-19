@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/uf;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "GroupSettingsActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ue;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupSettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ue;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupSettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 274
-    iput-object p1, p0, Lcom/bbm/ui/activities/uf;->a:Lcom/bbm/ui/activities/ue;
+    .line 187
+    iput-object p1, p0, Lcom/bbm/ui/activities/uf;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,19 +25,40 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 277
-    iget-object v0, p0, Lcom/bbm/ui/activities/uf;->a:Lcom/bbm/ui/activities/ue;
+    .line 190
+    const-string v0, "createButton Clicked"
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ue;->a:Lcom/bbm/ui/activities/MainActivity;
+    const-class v1, Lcom/bbm/ui/activities/GroupSettingsActivity;
 
-    const/4 v1, 0x0
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->onShowDialog(Landroid/view/View;)V
+    .line 192
+    new-instance v0, Landroid/content/Intent;
 
-    .line 278
+    iget-object v1, p0, Lcom/bbm/ui/activities/uf;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+
+    const-class v2, Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 193
+    const-string v1, "groupUri"
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/uf;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+
+    iget-object v2, v2, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 194
+    iget-object v1, p0, Lcom/bbm/ui/activities/uf;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/GroupSettingsActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 196
     return-void
 .end method

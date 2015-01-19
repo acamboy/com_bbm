@@ -1,56 +1,109 @@
 .class final Landroid/support/v4/widget/w;
-.super Ljava/lang/Object;
-.source "SlidingPaneLayout.java"
-
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+.super Landroid/view/animation/Animation;
+.source "MaterialProgressDrawable.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/widget/SlidingPaneLayout$SavedState;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Landroid/support/v4/widget/ac;
+
+.field final synthetic b:Landroid/support/v4/widget/v;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/widget/v;Landroid/support/v4/widget/ac;)V
     .locals 0
 
     .prologue
-    .line 1322
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 295
+    iput-object p1, p0, Landroid/support/v4/widget/w;->b:Landroid/support/v4/widget/v;
+
+    iput-object p2, p0, Landroid/support/v4/widget/w;->a:Landroid/support/v4/widget/ac;
+
+    invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 2
+.method public final applyTransformation(FLandroid/view/animation/Transformation;)V
+    .locals 4
 
     .prologue
-    .line 1322
-    new-instance v0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
+    .line 299
+    iget-object v0, p0, Landroid/support/v4/widget/w;->a:Landroid/support/v4/widget/ac;
 
-    const/4 v1, 0x0
+    iget v0, v0, Landroid/support/v4/widget/ac;->m:F
 
-    invoke-direct {v0, p1, v1}, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;-><init>(Landroid/os/Parcel;B)V
+    const v1, 0x3f4ccccd
 
-    return-object v0
-.end method
+    div-float/2addr v0, v1
 
-.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
+    float-to-double v0, v0
 
-    .prologue
-    .line 1322
-    new-array v0, p1, [Landroid/support/v4/widget/SlidingPaneLayout$SavedState;
+    invoke-static {v0, v1}, Ljava/lang/Math;->floor(D)D
 
-    return-object v0
+    move-result-wide v0
+
+    const-wide/high16 v2, 0x3ff0000000000000L
+
+    add-double/2addr v0, v2
+
+    double-to-float v0, v0
+
+    .line 301
+    iget-object v1, p0, Landroid/support/v4/widget/w;->a:Landroid/support/v4/widget/ac;
+
+    iget v1, v1, Landroid/support/v4/widget/ac;->k:F
+
+    iget-object v2, p0, Landroid/support/v4/widget/w;->a:Landroid/support/v4/widget/ac;
+
+    iget v2, v2, Landroid/support/v4/widget/ac;->l:F
+
+    iget-object v3, p0, Landroid/support/v4/widget/w;->a:Landroid/support/v4/widget/ac;
+
+    iget v3, v3, Landroid/support/v4/widget/ac;->k:F
+
+    sub-float/2addr v2, v3
+
+    mul-float/2addr v2, p1
+
+    add-float/2addr v1, v2
+
+    .line 304
+    iget-object v2, p0, Landroid/support/v4/widget/w;->a:Landroid/support/v4/widget/ac;
+
+    invoke-virtual {v2, v1}, Landroid/support/v4/widget/ac;->a(F)V
+
+    .line 305
+    iget-object v1, p0, Landroid/support/v4/widget/w;->a:Landroid/support/v4/widget/ac;
+
+    iget v1, v1, Landroid/support/v4/widget/ac;->m:F
+
+    iget-object v2, p0, Landroid/support/v4/widget/w;->a:Landroid/support/v4/widget/ac;
+
+    iget v2, v2, Landroid/support/v4/widget/ac;->m:F
+
+    sub-float/2addr v0, v2
+
+    mul-float/2addr v0, p1
+
+    add-float/2addr v0, v1
+
+    .line 307
+    iget-object v1, p0, Landroid/support/v4/widget/w;->a:Landroid/support/v4/widget/ac;
+
+    invoke-virtual {v1, v0}, Landroid/support/v4/widget/ac;->c(F)V
+
+    .line 308
+    iget-object v0, p0, Landroid/support/v4/widget/w;->a:Landroid/support/v4/widget/ac;
+
+    const/high16 v1, 0x3f800000
+
+    sub-float/2addr v1, p1
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ac;->d(F)V
+
+    .line 309
+    return-void
 .end method

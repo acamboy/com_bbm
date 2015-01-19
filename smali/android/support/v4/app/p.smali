@@ -1,23 +1,29 @@
 .class final Landroid/support/v4/app/p;
 .super Ljava/lang/Object;
-.source "FragmentManager.java"
+.source "Fragment.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/os/Parcelable$Creator;
 
 
-# instance fields
-.field final synthetic a:Landroid/support/v4/app/o;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Landroid/support/v4/app/Fragment$SavedState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/app/o;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 437
-    iput-object p1, p0, Landroid/support/v4/app/p;->a:Landroid/support/v4/app/o;
-
+    .line 349
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,15 +31,24 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 440
-    iget-object v0, p0, Landroid/support/v4/app/p;->a:Landroid/support/v4/app/o;
+    .line 349
+    new-instance v0, Landroid/support/v4/app/Fragment$SavedState;
 
-    invoke-virtual {v0}, Landroid/support/v4/app/o;->d()Z
+    invoke-direct {v0, p1}, Landroid/support/v4/app/Fragment$SavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 441
-    return-void
+    return-object v0
+.end method
+
+.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 349
+    new-array v0, p1, [Landroid/support/v4/app/Fragment$SavedState;
+
+    return-object v0
 .end method

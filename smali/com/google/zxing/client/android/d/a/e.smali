@@ -47,9 +47,7 @@
 
     iget-object v0, p0, Lcom/google/zxing/client/android/d/a/e;->a:Lcom/google/zxing/client/a/ac;
 
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/ac;->b()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/google/zxing/client/a/ac;->a:Ljava/lang/String;
 
     invoke-direct {v3, v0}, Ljava/net/URI;-><init>(Ljava/lang/String;)V
     :try_end_0

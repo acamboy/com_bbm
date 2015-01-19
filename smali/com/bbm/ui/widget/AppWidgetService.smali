@@ -22,7 +22,7 @@
     .locals 1
 
     .prologue
-    .line 72
+    .line 73
     new-instance v0, Lcom/google/b/c/q;
 
     invoke-direct {v0}, Lcom/google/b/c/q;-><init>()V
@@ -55,18 +55,18 @@
     .locals 4
 
     .prologue
-    .line 81
+    .line 82
     sget-object v1, Lcom/bbm/ui/widget/AppWidgetService;->a:Ljava/util/Map;
 
     monitor-enter v1
 
-    .line 82
+    .line 83
     :try_start_0
     new-instance v2, Lcom/bbm/ui/widget/a;
 
     invoke-direct {v2, p1, p0}, Lcom/bbm/ui/widget/a;-><init>(ILandroid/content/Context;)V
 
-    .line 83
+    .line 84
     sget-object v0, Lcom/bbm/ui/widget/AppWidgetService;->a:Ljava/util/Map;
 
     invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -75,10 +75,10 @@
 
     check-cast v0, Lcom/bbm/ui/widget/b;
 
-    .line 85
+    .line 86
     if-nez v0, :cond_0
 
-    .line 86
+    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v3, "WIDGET: Created new ChatRemoteViewsFactory for widget "
@@ -97,19 +97,19 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v0, v3}, Lcom/bbm/w;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v3}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 87
+    .line 88
     new-instance v0, Lcom/bbm/ui/widget/b;
 
     invoke-direct {v0, p0, p1}, Lcom/bbm/ui/widget/b;-><init>(Landroid/content/Context;I)V
 
-    .line 90
+    .line 91
     sget-object v3, Lcom/bbm/ui/widget/AppWidgetService;->a:Ljava/util/Map;
 
     invoke-interface {v3, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 92
+    .line 93
     :cond_0
     monitor-exit v1
     :try_end_0
@@ -117,7 +117,7 @@
 
     return-object v0
 
-    .line 93
+    .line 94
     :catchall_0
     move-exception v0
 
@@ -132,7 +132,7 @@
     .locals 2
 
     .prologue
-    .line 76
+    .line 77
     const-string v0, "appWidgetId"
 
     const/4 v1, -0x1
@@ -141,7 +141,7 @@
 
     move-result v0
 
-    .line 77
+    .line 78
     invoke-virtual {p0}, Lcom/bbm/ui/widget/AppWidgetService;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v1

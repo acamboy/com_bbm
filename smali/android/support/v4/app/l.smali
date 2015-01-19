@@ -1,47 +1,21 @@
 .class final Landroid/support/v4/app/l;
 .super Ljava/lang/Object;
-.source "FragmentActivity.java"
+.source "BackStackRecord.java"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
-# instance fields
-.field a:Ljava/lang/Object;
-
-.field b:Ljava/lang/Object;
-
-.field c:Landroid/support/v4/b/m;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/support/v4/b/m",
-            "<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field d:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Landroid/support/v4/app/Fragment;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field e:Landroid/support/v4/b/m;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Landroid/support/v4/b/m",
-            "<",
-            "Ljava/lang/String;",
-            "Landroid/support/v4/app/z;",
-            ">;"
-        }
-    .end annotation
-.end field
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Landroid/support/v4/app/BackStackState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
@@ -49,8 +23,32 @@
     .locals 0
 
     .prologue
-    .line 126
+    .line 177
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 177
+    new-instance v0, Landroid/support/v4/app/BackStackState;
+
+    invoke-direct {v0, p1}, Landroid/support/v4/app/BackStackState;-><init>(Landroid/os/Parcel;)V
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 177
+    new-array v0, p1, [Landroid/support/v4/app/BackStackState;
+
+    return-object v0
 .end method

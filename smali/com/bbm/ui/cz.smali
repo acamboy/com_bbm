@@ -1,76 +1,83 @@
 .class final Lcom/bbm/ui/cz;
-.super Landroid/text/style/ClickableSpan;
-.source "LinkifyTextView.java"
+.super Landroid/database/DataSetObserver;
+.source "IncrementalListAdapter.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/LinkifyTextView;
-
-.field private final b:Landroid/text/style/ClickableSpan;
+.field final synthetic a:Lcom/bbm/ui/cx;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/LinkifyTextView;Landroid/text/style/ClickableSpan;)V
+.method constructor <init>(Lcom/bbm/ui/cx;)V
     .locals 0
 
     .prologue
-    .line 155
-    iput-object p1, p0, Lcom/bbm/ui/cz;->a:Lcom/bbm/ui/LinkifyTextView;
+    .line 503
+    iput-object p1, p0, Lcom/bbm/ui/cz;->a:Lcom/bbm/ui/cx;
 
-    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
-    .line 156
-    iput-object p2, p0, Lcom/bbm/ui/cz;->b:Landroid/text/style/ClickableSpan;
-
-    .line 157
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onChanged()V
     .locals 1
 
     .prologue
-    .line 161
-    iget-object v0, p0, Lcom/bbm/ui/cz;->a:Lcom/bbm/ui/LinkifyTextView;
+    .line 509
+    iget-object v0, p0, Lcom/bbm/ui/cz;->a:Lcom/bbm/ui/cx;
 
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->b(Lcom/bbm/ui/LinkifyTextView;)Z
+    invoke-static {v0}, Lcom/bbm/ui/cx;->l(Lcom/bbm/ui/cx;)V
 
-    move-result v0
+    .line 510
+    iget-object v0, p0, Lcom/bbm/ui/cz;->a:Lcom/bbm/ui/cx;
 
-    if-nez v0, :cond_0
+    invoke-virtual {v0}, Lcom/bbm/ui/cx;->d()V
 
-    .line 163
-    iget-object v0, p0, Lcom/bbm/ui/cz;->b:Landroid/text/style/ClickableSpan;
+    .line 511
+    invoke-super {p0}, Landroid/database/DataSetObserver;->onChanged()V
 
-    invoke-virtual {v0, p1}, Landroid/text/style/ClickableSpan;->onClick(Landroid/view/View;)V
+    .line 512
+    iget-object v0, p0, Lcom/bbm/ui/cz;->a:Lcom/bbm/ui/cx;
 
-    .line 167
-    :goto_0
+    invoke-static {v0}, Lcom/bbm/ui/cx;->m(Lcom/bbm/ui/cx;)Landroid/database/DataSetObservable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
+
+    .line 513
     return-void
-
-    .line 165
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/cz;->a:Lcom/bbm/ui/LinkifyTextView;
-
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->c(Lcom/bbm/ui/LinkifyTextView;)Z
-
-    goto :goto_0
 .end method
 
-.method public final updateDrawState(Landroid/text/TextPaint;)V
+.method public final onInvalidated()V
     .locals 1
 
     .prologue
-    .line 171
-    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
+    .line 518
+    iget-object v0, p0, Lcom/bbm/ui/cz;->a:Lcom/bbm/ui/cx;
 
-    .line 172
-    const/4 v0, 0x0
+    invoke-static {v0}, Lcom/bbm/ui/cx;->l(Lcom/bbm/ui/cx;)V
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
+    .line 519
+    iget-object v0, p0, Lcom/bbm/ui/cz;->a:Lcom/bbm/ui/cx;
 
-    .line 173
+    invoke-virtual {v0}, Lcom/bbm/ui/cx;->d()V
+
+    .line 520
+    invoke-super {p0}, Landroid/database/DataSetObserver;->onInvalidated()V
+
+    .line 521
+    iget-object v0, p0, Lcom/bbm/ui/cz;->a:Lcom/bbm/ui/cx;
+
+    invoke-static {v0}, Lcom/bbm/ui/cx;->m(Lcom/bbm/ui/cx;)Landroid/database/DataSetObservable;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyInvalidated()V
+
+    .line 522
     return-void
 .end method

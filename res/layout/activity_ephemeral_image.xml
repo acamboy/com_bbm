@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.bbm.ui.ObservingImageView android:id="@id/image_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:keepScreenOn="true" android:contentDescription="@string/blank" />
+    <LinearLayout android:layout_gravity="top" android:background="@color/ephemeral_picture_overlay" android:padding="@dimen/padding_ephemeral_fullscreen_image_view_overlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+        <ProgressBar android:id="@id/countdown_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/EphemeralProgressBar" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:id="@id/image_description_layout" android:background="@color/ephemeral_picture_overlay" android:padding="@dimen/padding_ephemeral_fullscreen_image_view_overlay" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.bbm.ui.InlineImageTextView android:textSize="@dimen/group_picture_comment_caption_text_size" android:textColor="@color/white" android:gravity="center" android:id="@id/image_caption" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="false" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,55 +1,58 @@
 .class final Landroid/support/v4/app/aj;
-.super Ljava/lang/Object;
-.source "NotificationCompat.java"
+.super Landroid/transition/Transition$EpicenterCallback;
+.source "FragmentTransitionCompat21.java"
 
-# interfaces
-.implements Landroid/support/v4/app/ai;
+
+# instance fields
+.field final synthetic a:Landroid/support/v4/app/al;
+
+.field private b:Landroid/graphics/Rect;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/app/al;)V
     .locals 0
 
     .prologue
-    .line 85
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 207
+    iput-object p1, p0, Landroid/support/v4/app/aj;->a:Landroid/support/v4/app/al;
+
+    invoke-direct {p0}, Landroid/transition/Transition$EpicenterCallback;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/support/v4/app/ag;)Landroid/app/Notification;
-    .locals 5
+.method public final onGetEpicenter(Landroid/transition/Transition;)Landroid/graphics/Rect;
+    .locals 1
 
     .prologue
-    .line 87
-    iget-object v0, p1, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
+    .line 212
+    iget-object v0, p0, Landroid/support/v4/app/aj;->b:Landroid/graphics/Rect;
 
-    .line 88
-    iget-object v1, p1, Landroid/support/v4/app/ag;->a:Landroid/content/Context;
+    if-nez v0, :cond_0
 
-    iget-object v2, p1, Landroid/support/v4/app/ag;->b:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroid/support/v4/app/aj;->a:Landroid/support/v4/app/al;
 
-    iget-object v3, p1, Landroid/support/v4/app/ag;->c:Ljava/lang/CharSequence;
+    iget-object v0, v0, Landroid/support/v4/app/al;->a:Landroid/view/View;
 
-    iget-object v4, p1, Landroid/support/v4/app/ag;->d:Landroid/app/PendingIntent;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    .line 213
+    iget-object v0, p0, Landroid/support/v4/app/aj;->a:Landroid/support/v4/app/al;
 
-    .line 91
-    iget v1, p1, Landroid/support/v4/app/ag;->j:I
+    iget-object v0, v0, Landroid/support/v4/app/al;->a:Landroid/view/View;
 
-    if-lez v1, :cond_0
+    invoke-static {v0}, Landroid/support/v4/app/ag;->a(Landroid/view/View;)Landroid/graphics/Rect;
 
-    .line 92
-    iget v1, v0, Landroid/app/Notification;->flags:I
+    move-result-object v0
 
-    or-int/lit16 v1, v1, 0x80
+    iput-object v0, p0, Landroid/support/v4/app/aj;->b:Landroid/graphics/Rect;
 
-    iput v1, v0, Landroid/app/Notification;->flags:I
-
-    .line 94
+    .line 215
     :cond_0
+    iget-object v0, p0, Landroid/support/v4/app/aj;->b:Landroid/graphics/Rect;
+
     return-object v0
 .end method

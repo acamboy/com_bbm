@@ -3,7 +3,7 @@
 .source "BroadcastActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnFocusChangeListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 385
+    .line 271
     iput-object p1, p0, Lcom/bbm/ui/activities/ah;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,23 +25,35 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onFocusChange(Landroid/view/View;Z)V
     .locals 2
 
     .prologue
-    .line 389
-    const-string v0, "mKeyboardButtonArea Clicked"
+    .line 275
+    if-nez p2, :cond_0
 
-    const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 391
+    .line 276
     iget-object v0, p0, Lcom/bbm/ui/activities/ah;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->l(Lcom/bbm/ui/activities/BroadcastActivity;)V
 
-    .line 392
+    .line 277
+    iget-object v0, p0, Lcom/bbm/ui/activities/ah;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->m(Lcom/bbm/ui/activities/BroadcastActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 282
+    :goto_0
+    return-void
+
+    .line 279
+    :cond_0
     iget-object v0, p0, Lcom/bbm/ui/activities/ah;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->m(Lcom/bbm/ui/activities/BroadcastActivity;)Landroid/widget/LinearLayout;
@@ -52,6 +64,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 393
-    return-void
+    .line 280
+    iget-object v0, p0, Lcom/bbm/ui/activities/ah;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+
+    invoke-static {v0}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;)V
+
+    goto :goto_0
 .end method

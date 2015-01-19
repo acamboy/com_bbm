@@ -138,17 +138,6 @@
 .method protected abstract a(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
-.method protected final a(Z)V
-    .locals 0
-
-    .prologue
-    .line 284
-    iput-boolean p1, p0, Lcom/blackberry/ids/WebActivity;->d:Z
-
-    .line 285
-    return-void
-.end method
-
 .method final b()I
     .locals 7
 
@@ -160,7 +149,7 @@
     const/4 v0, 0x0
 
     .line 131
-    invoke-static {}, Lcom/blackberry/ids/IDS;->f()Ljava/util/concurrent/ExecutorService;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->g()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v1
 
@@ -615,16 +604,6 @@
         0x11196 -> :sswitch_0
         0x11197 -> :sswitch_1
     .end sparse-switch
-.end method
-
-.method protected final c()Z
-    .locals 1
-
-    .prologue
-    .line 280
-    iget-boolean v0, p0, Lcom/blackberry/ids/WebActivity;->d:Z
-
-    return v0
 .end method
 
 .method protected onDestroy()V

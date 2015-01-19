@@ -1,50 +1,39 @@
 .class final Lcom/bbm/ui/activities/agm;
 .super Ljava/lang/Object;
-.source "ViewOwnedChannelActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "SetChannelAvatarActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
+.field public final a:I
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lcom/bbm/ui/activities/ago;
+
+.field final synthetic d:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewOwnedChannelActivity;)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;Ljava/lang/String;Lcom/bbm/ui/activities/ago;)V
+    .locals 1
 
     .prologue
-    .line 57
-    iput-object p1, p0, Lcom/bbm/ui/activities/agm;->a:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
+    .line 171
+    iput-object p1, p0, Lcom/bbm/ui/activities/agm;->d:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 172
+    const v0, 0x7f0201f5
 
+    iput v0, p0, Lcom/bbm/ui/activities/agm;->a:I
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .line 173
+    iput-object p2, p0, Lcom/bbm/ui/activities/agm;->b:Ljava/lang/String;
 
-    .prologue
-    .line 60
-    const-string v0, "mResendButtonListener Clicked"
+    .line 174
+    iput-object p3, p0, Lcom/bbm/ui/activities/agm;->c:Lcom/bbm/ui/activities/ago;
 
-    const-class v1, Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 61
-    iget-object v0, p0, Lcom/bbm/ui/activities/agm;->a:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewOwnedChannelActivity;->a(Lcom/bbm/ui/activities/ViewOwnedChannelActivity;)Lcom/bbm/j/u;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
-
-    .line 62
+    .line 175
     return-void
 .end method

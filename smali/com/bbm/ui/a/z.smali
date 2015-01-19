@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/a/z;
 .super Ljava/lang/Object;
-.source "UpdatesAdapter.java"
+.source "GroupMessageListAdapter.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/util/dw;
-
-.field final synthetic b:Lcom/bbm/ui/a/w;
+.field final synthetic a:Lcom/bbm/ui/a/x;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/a/w;Lcom/bbm/util/dw;)V
+.method constructor <init>(Lcom/bbm/ui/a/x;)V
     .locals 0
 
     .prologue
-    .line 173
-    iput-object p1, p0, Lcom/bbm/ui/a/z;->b:Lcom/bbm/ui/a/w;
-
-    iput-object p2, p0, Lcom/bbm/ui/a/z;->a:Lcom/bbm/util/dw;
+    .line 167
+    iput-object p1, p0, Lcom/bbm/ui/a/z;->a:Lcom/bbm/ui/a/x;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,51 +25,20 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final run()V
+    .locals 1
 
     .prologue
-    .line 176
-    const-string v0, "mHypeButtonOnClickListener Clicked"
+    .line 170
+    iget-object v0, p0, Lcom/bbm/ui/a/z;->a:Lcom/bbm/ui/a/x;
 
-    const-class v1, Lcom/bbm/ui/a/w;
+    invoke-static {v0}, Lcom/bbm/ui/a/x;->e(Lcom/bbm/ui/a/x;)Z
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 171
+    iget-object v0, p0, Lcom/bbm/ui/a/z;->a:Lcom/bbm/ui/a/x;
 
-    .line 177
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-virtual {v0}, Lcom/bbm/ui/a/x;->notifyDataSetChanged()V
 
-    move-result-object v1
-
-    iget-object v0, p0, Lcom/bbm/ui/a/z;->a:Lcom/bbm/util/dw;
-
-    iget-object v2, v0, Lcom/bbm/util/dw;->e:Ljava/lang/String;
-
-    iget-object v0, p0, Lcom/bbm/ui/a/z;->a:Lcom/bbm/util/dw;
-
-    iget-boolean v0, v0, Lcom/bbm/util/dw;->h:Z
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    iget-object v3, p0, Lcom/bbm/ui/a/z;->a:Lcom/bbm/util/dw;
-
-    iget-object v3, v3, Lcom/bbm/util/dw;->f:Ljava/lang/String;
-
-    invoke-static {v2, v0, v3}, Lcom/bbm/d/y;->a(Ljava/lang/String;ZLjava/lang/String;)Lcom/bbm/d/ar;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-
-    .line 178
+    .line 172
     return-void
-
-    .line 177
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

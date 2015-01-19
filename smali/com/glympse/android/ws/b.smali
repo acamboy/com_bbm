@@ -7,11 +7,11 @@
 
 
 # instance fields
-.field private qi:Lcom/glympse/android/ws/GWebSocketListener;
+.field private qL:Lcom/glympse/android/ws/GWebSocketListener;
 
-.field private qj:Lcom/glympse/android/ws/GWebSocket;
+.field private qM:Lcom/glympse/android/ws/GWebSocket;
 
-.field private vu:[B
+.field private ws:[B
 
 
 # direct methods
@@ -19,24 +19,24 @@
     .locals 1
 
     .prologue
-    .line 656
+    .line 662
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 652
+    .line 658
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/ws/b;->qi:Lcom/glympse/android/ws/GWebSocketListener;
+    iput-object v0, p0, Lcom/glympse/android/ws/b;->qL:Lcom/glympse/android/ws/GWebSocketListener;
 
-    .line 657
-    iput-object p1, p0, Lcom/glympse/android/ws/b;->qj:Lcom/glympse/android/ws/GWebSocket;
+    .line 663
+    iput-object p1, p0, Lcom/glympse/android/ws/b;->qM:Lcom/glympse/android/ws/GWebSocket;
 
-    .line 658
-    iput-object p2, p0, Lcom/glympse/android/ws/b;->qi:Lcom/glympse/android/ws/GWebSocketListener;
+    .line 664
+    iput-object p2, p0, Lcom/glympse/android/ws/b;->qL:Lcom/glympse/android/ws/GWebSocketListener;
 
-    .line 659
-    iput-object p3, p0, Lcom/glympse/android/ws/b;->vu:[B
+    .line 665
+    iput-object p3, p0, Lcom/glympse/android/ws/b;->ws:[B
 
-    .line 660
+    .line 666
     return-void
 .end method
 
@@ -46,15 +46,15 @@
     .locals 3
 
     .prologue
-    .line 664
-    iget-object v0, p0, Lcom/glympse/android/ws/b;->qi:Lcom/glympse/android/ws/GWebSocketListener;
+    .line 670
+    iget-object v0, p0, Lcom/glympse/android/ws/b;->qL:Lcom/glympse/android/ws/GWebSocketListener;
 
-    iget-object v1, p0, Lcom/glympse/android/ws/b;->qj:Lcom/glympse/android/ws/GWebSocket;
+    iget-object v1, p0, Lcom/glympse/android/ws/b;->qM:Lcom/glympse/android/ws/GWebSocket;
 
-    iget-object v2, p0, Lcom/glympse/android/ws/b;->vu:[B
+    iget-object v2, p0, Lcom/glympse/android/ws/b;->ws:[B
 
     invoke-interface {v0, v1, v2}, Lcom/glympse/android/ws/GWebSocketListener;->messageReceived(Lcom/glympse/android/ws/GWebSocket;[B)V
 
-    .line 665
+    .line 671
     return-void
 .end method

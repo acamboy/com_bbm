@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/tf;
 .super Ljava/lang/Object;
-.source "LegalActivity.java"
+.source "GroupPictureUploadActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/LegalActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/LegalActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)V
     .locals 0
 
     .prologue
-    .line 22
-    iput-object p1, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/LegalActivity;
+    .line 134
+    iput-object p1, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,51 +25,75 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
     .prologue
-    .line 25
-    const-string v0, "mOnClickListener Clicked"
-
-    const-class v1, Lcom/bbm/ui/activities/LegalActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 27
-    if-eqz p1, :cond_0
-
-    instance-of v0, p1, Landroid/widget/Button;
-
-    if-eqz v0, :cond_0
-
-    .line 28
-    check-cast p1, Landroid/widget/Button;
-
-    .line 29
-    invoke-virtual {p1}, Landroid/widget/Button;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    .line 30
-    new-instance v1, Landroid/content/Intent;
-
-    const-string v2, "android.intent.action.VIEW"
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    .line 31
-    iget-object v0, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/LegalActivity;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/LegalActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 33
-    :cond_0
+    .line 138
     return-void
+.end method
+
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .prologue
+    .line 142
+    return-void
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 2
+
+    .prologue
+    .line 146
+    iget-object v0, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->e(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->d(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
+
+    .line 147
+    iget-object v0, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/tf;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->d(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Landroid/widget/EditText;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->a(Lcom/bbm/ui/activities/GroupPictureUploadActivity;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 148
+    return-void
+
+    .line 146
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

@@ -1,45 +1,69 @@
-.class final Lcom/bbm/h/ad;
+.class final synthetic Lcom/bbm/h/ad;
 .super Ljava/lang/Object;
-.source "InvitesFragment.java"
-
-# interfaces
-.implements Lcom/bbm/ui/b/ab;
+.source "AddContactsFragment.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/iceberg/j;
-
-.field final synthetic b:Lcom/bbm/h/w;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/h/w;Lcom/bbm/iceberg/j;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 283
-    iput-object p1, p0, Lcom/bbm/h/ad;->b:Lcom/bbm/h/w;
+    .line 200
+    invoke-static {}, Lcom/bbm/ui/c/ix;->values()[Lcom/bbm/ui/c/ix;
 
-    iput-object p2, p0, Lcom/bbm/h/ad;->a:Lcom/bbm/iceberg/j;
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    array-length v0, v0
 
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/h/ad;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/h/ad;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/c/ix;->b:Lcom/bbm/ui/c/ix;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/c/ix;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/h/ad;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/c/ix;->a:Lcom/bbm/ui/c/ix;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/c/ix;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_1
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final a()V
-    .locals 2
+    goto :goto_1
 
-    .prologue
-    .line 286
-    iget-object v0, p0, Lcom/bbm/h/ad;->b:Lcom/bbm/h/w;
+    :catch_1
+    move-exception v0
 
-    iget-object v1, p0, Lcom/bbm/h/ad;->a:Lcom/bbm/iceberg/j;
-
-    invoke-static {v0, v1}, Lcom/bbm/h/w;->d(Lcom/bbm/h/w;Lcom/bbm/iceberg/j;)V
-
-    .line 287
-    return-void
+    goto :goto_0
 .end method

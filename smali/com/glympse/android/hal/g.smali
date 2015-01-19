@@ -9,11 +9,25 @@
 
 
 # static fields
-.field private static final B:Ljava/lang/String; = "com.glympse.android.hal.activity.CHANGED"
+.field private static final A:Ljava/lang/String; = "com.glympse.android.hal.activity.CHANGED"
 
 
 # instance fields
-.field private A:Ljava/util/Hashtable;
+.field private e:Landroid/content/Context;
+
+.field private t:Z
+
+.field private u:Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
+
+.field private v:Z
+
+.field private w:Ljava/lang/String;
+
+.field private x:Landroid/content/Intent;
+
+.field private y:Lcom/glympse/android/hal/h;
+
+.field private z:Ljava/util/Hashtable;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Hashtable",
@@ -24,20 +38,6 @@
         }
     .end annotation
 .end field
-
-.field private e:Landroid/content/Context;
-
-.field private u:Z
-
-.field private v:Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
-
-.field private w:Z
-
-.field private x:Ljava/lang/String;
-
-.field private y:Landroid/content/Intent;
-
-.field private z:Lcom/glympse/android/hal/h;
 
 
 # direct methods
@@ -56,45 +56,45 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/g;->u:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/g;->t:Z
 
     .line 97
-    iget-boolean v0, p0, Lcom/glympse/android/hal/g;->u:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/g;->t:Z
 
     if-eqz v0, :cond_0
 
     .line 99
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/g;->w:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/g;->v:Z
 
     .line 100
     new-instance v0, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
 
     invoke-direct {v0, p1, p0, p0}, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;-><init>(Landroid/content/Context;Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/g;->v:Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
+    iput-object v0, p0, Lcom/glympse/android/hal/g;->u:Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
 
     .line 101
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/g;->A:Ljava/util/Hashtable;
+    iput-object v0, p0, Lcom/glympse/android/hal/g;->z:Ljava/util/Hashtable;
 
     .line 104
     invoke-direct {p0}, Lcom/glympse/android/hal/g;->d()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/g;->x:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/hal/g;->w:Ljava/lang/String;
 
     .line 105
     invoke-direct {p0}, Lcom/glympse/android/hal/g;->e()Landroid/content/Intent;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/g;->y:Landroid/content/Intent;
+    iput-object v0, p0, Lcom/glympse/android/hal/g;->x:Landroid/content/Intent;
 
     .line 107
     :cond_0
@@ -180,14 +180,14 @@
     .line 232
     iget-object v0, p0, Lcom/glympse/android/hal/g;->e:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/g;->y:Landroid/content/Intent;
+    iget-object v1, p0, Lcom/glympse/android/hal/g;->x:Landroid/content/Intent;
 
     invoke-static {v0, v2, v1, v2}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
 
     move-result-object v0
 
     .line 233
-    iget-object v1, p0, Lcom/glympse/android/hal/g;->v:Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
+    iget-object v1, p0, Lcom/glympse/android/hal/g;->u:Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
 
     invoke-virtual {v1, p1, p2, v0}, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->requestActivityUpdates(JLandroid/app/PendingIntent;)V
 
@@ -200,7 +200,7 @@
 
     .prologue
     .line 32
-    iget-object v0, p0, Lcom/glympse/android/hal/g;->A:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/g;->z:Ljava/util/Hashtable;
 
     return-object v0
 .end method
@@ -254,7 +254,7 @@
     .line 244
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/g;->x:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/hal/g;->w:Ljava/lang/String;
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
@@ -337,7 +337,7 @@
 
     .prologue
     .line 115
-    iget-boolean v0, p0, Lcom/glympse/android/hal/g;->u:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/g;->t:Z
 
     return v0
 .end method
@@ -349,10 +349,10 @@
     .line 257
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/g;->w:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/g;->v:Z
 
     .line 260
-    iget-object v0, p0, Lcom/glympse/android/hal/g;->A:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/g;->z:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->entrySet()Ljava/util/Set;
 
@@ -384,18 +384,18 @@
     check-cast v0, Lcom/glympse/android/hal/i;
 
     .line 265
-    iget-object v2, v0, Lcom/glympse/android/hal/i;->E:Landroid/app/PendingIntent;
+    iget-object v2, v0, Lcom/glympse/android/hal/i;->D:Landroid/app/PendingIntent;
 
     if-nez v2, :cond_0
 
     .line 267
-    iget-wide v2, v0, Lcom/glympse/android/hal/i;->D:J
+    iget-wide v2, v0, Lcom/glympse/android/hal/i;->C:J
 
     invoke-direct {p0, v2, v3}, Lcom/glympse/android/hal/g;->a(J)Landroid/app/PendingIntent;
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/glympse/android/hal/i;->E:Landroid/app/PendingIntent;
+    iput-object v2, v0, Lcom/glympse/android/hal/i;->D:Landroid/app/PendingIntent;
 
     goto :goto_0
 
@@ -419,10 +419,10 @@
     .line 274
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/g;->w:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/g;->v:Z
 
     .line 278
-    iget-object v0, p0, Lcom/glympse/android/hal/g;->A:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/g;->z:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->entrySet()Ljava/util/Set;
 
@@ -455,7 +455,7 @@
     .line 281
     const/4 v2, 0x0
 
-    iput-object v2, v0, Lcom/glympse/android/hal/i;->E:Landroid/app/PendingIntent;
+    iput-object v2, v0, Lcom/glympse/android/hal/i;->D:Landroid/app/PendingIntent;
 
     goto :goto_0
 
@@ -465,17 +465,17 @@
 .end method
 
 .method public registerUpdates(Lcom/glympse/android/hal/GActivityListener;J)V
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v3, 0x0
 
     .line 120
-    iget-boolean v0, p0, Lcom/glympse/android/hal/g;->u:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/g;->t:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/hal/g;->A:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/g;->z:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->contains(Ljava/lang/Object;)Z
 
@@ -495,17 +495,17 @@
     invoke-direct {v0, p0, v3}, Lcom/glympse/android/hal/i;-><init>(Lcom/glympse/android/hal/g;Lcom/glympse/android/hal/g$1;)V
 
     .line 126
-    iput-wide p2, v0, Lcom/glympse/android/hal/i;->D:J
+    iput-wide p2, v0, Lcom/glympse/android/hal/i;->C:J
 
     .line 127
-    iget-object v1, p0, Lcom/glympse/android/hal/g;->A:Ljava/util/Hashtable;
+    iget-object v1, p0, Lcom/glympse/android/hal/g;->z:Ljava/util/Hashtable;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 130
     const/4 v1, 0x1
 
-    iget-object v2, p0, Lcom/glympse/android/hal/g;->A:Ljava/util/Hashtable;
+    iget-object v2, p0, Lcom/glympse/android/hal/g;->z:Ljava/util/Hashtable;
 
     invoke-virtual {v2}, Ljava/util/Hashtable;->size()I
 
@@ -514,7 +514,7 @@
     if-ne v1, v2, :cond_2
 
     .line 132
-    iget-object v1, p0, Lcom/glympse/android/hal/g;->v:Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
+    iget-object v1, p0, Lcom/glympse/android/hal/g;->u:Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
 
     invoke-virtual {v1}, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->connect()V
 
@@ -523,16 +523,16 @@
 
     invoke-direct {v1, p0, v3}, Lcom/glympse/android/hal/h;-><init>(Lcom/glympse/android/hal/g;Lcom/glympse/android/hal/g$1;)V
 
-    iput-object v1, p0, Lcom/glympse/android/hal/g;->z:Lcom/glympse/android/hal/h;
+    iput-object v1, p0, Lcom/glympse/android/hal/g;->y:Lcom/glympse/android/hal/h;
 
     .line 135
     iget-object v1, p0, Lcom/glympse/android/hal/g;->e:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/g;->z:Lcom/glympse/android/hal/h;
+    iget-object v2, p0, Lcom/glympse/android/hal/g;->y:Lcom/glympse/android/hal/h;
 
     new-instance v3, Landroid/content/IntentFilter;
 
-    iget-object v4, p0, Lcom/glympse/android/hal/g;->x:Ljava/lang/String;
+    iget-object v4, p0, Lcom/glympse/android/hal/g;->w:Ljava/lang/String;
 
     invoke-direct {v3, v4}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
@@ -540,7 +540,7 @@
 
     .line 138
     :cond_2
-    iget-boolean v1, p0, Lcom/glympse/android/hal/g;->w:Z
+    iget-boolean v1, p0, Lcom/glympse/android/hal/g;->v:Z
 
     if-eqz v1, :cond_0
 
@@ -549,7 +549,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/glympse/android/hal/i;->E:Landroid/app/PendingIntent;
+    iput-object v1, v0, Lcom/glympse/android/hal/i;->D:Landroid/app/PendingIntent;
 
     goto :goto_0
 .end method
@@ -559,7 +559,7 @@
 
     .prologue
     .line 146
-    iget-boolean v0, p0, Lcom/glympse/android/hal/g;->u:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/g;->t:Z
 
     if-nez v0, :cond_1
 
@@ -570,7 +570,7 @@
 
     .line 151
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/hal/g;->A:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/g;->z:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -582,29 +582,29 @@
     if-eqz v0, :cond_0
 
     .line 156
-    iget-object v1, p0, Lcom/glympse/android/hal/g;->A:Ljava/util/Hashtable;
+    iget-object v1, p0, Lcom/glympse/android/hal/g;->z:Ljava/util/Hashtable;
 
     invoke-virtual {v1, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 158
-    iget-boolean v1, p0, Lcom/glympse/android/hal/g;->w:Z
+    iget-boolean v1, p0, Lcom/glympse/android/hal/g;->v:Z
 
     if-eqz v1, :cond_2
 
-    iget-object v1, v0, Lcom/glympse/android/hal/i;->E:Landroid/app/PendingIntent;
+    iget-object v1, v0, Lcom/glympse/android/hal/i;->D:Landroid/app/PendingIntent;
 
     if-eqz v1, :cond_2
 
     .line 160
-    iget-object v1, p0, Lcom/glympse/android/hal/g;->v:Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
+    iget-object v1, p0, Lcom/glympse/android/hal/g;->u:Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
 
-    iget-object v0, v0, Lcom/glympse/android/hal/i;->E:Landroid/app/PendingIntent;
+    iget-object v0, v0, Lcom/glympse/android/hal/i;->D:Landroid/app/PendingIntent;
 
     invoke-virtual {v1, v0}, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->removeActivityUpdates(Landroid/app/PendingIntent;)V
 
     .line 164
     :cond_2
-    iget-object v0, p0, Lcom/glympse/android/hal/g;->A:Ljava/util/Hashtable;
+    iget-object v0, p0, Lcom/glympse/android/hal/g;->z:Ljava/util/Hashtable;
 
     invoke-virtual {v0}, Ljava/util/Hashtable;->size()I
 
@@ -613,26 +613,26 @@
     if-nez v0, :cond_0
 
     .line 166
-    iget-object v0, p0, Lcom/glympse/android/hal/g;->v:Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
+    iget-object v0, p0, Lcom/glympse/android/hal/g;->u:Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->disconnect()V
 
     .line 167
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/g;->w:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/g;->v:Z
 
     .line 169
     iget-object v0, p0, Lcom/glympse/android/hal/g;->e:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/g;->z:Lcom/glympse/android/hal/h;
+    iget-object v1, p0, Lcom/glympse/android/hal/g;->y:Lcom/glympse/android/hal/h;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 170
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/g;->z:Lcom/glympse/android/hal/h;
+    iput-object v0, p0, Lcom/glympse/android/hal/g;->y:Lcom/glympse/android/hal/h;
 
     goto :goto_0
 .end method

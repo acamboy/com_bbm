@@ -1,5 +1,5 @@
 .class public Lcom/bbm/ui/activities/ChannelReportsActivity;
-.super Lcom/bbm/ui/activities/by;
+.super Lcom/bbm/ui/activities/cq;
 .source "ChannelReportsActivity.java"
 
 
@@ -13,20 +13,22 @@
         value = {
             "Lcom/bbm/j/a",
             "<",
-            "Lcom/bbm/d/de;",
+            "Lcom/bbm/d/ee;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private j:Landroid/view/View;
+.field d:Landroid/view/View;
 
-.field private k:Lcom/bbm/ui/ft;
+.field private e:Landroid/view/View;
+
+.field private f:Lcom/bbm/ui/gx;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/ui/ft",
+            "Lcom/bbm/ui/gx",
             "<",
-            "Lcom/bbm/ui/activities/dl;",
+            "Lcom/bbm/ui/activities/ed;",
             "Ljava/lang/String;",
             "Ljava/lang/Long;",
             ">;"
@@ -34,57 +36,55 @@
     .end annotation
 .end field
 
-.field private l:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+.field private g:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-.field private m:Lcom/bbm/j/w;
+.field private h:Lcom/bbm/j/w;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/bbm/j/w",
             "<",
-            "Lcom/bbm/d/dt;",
+            "Lcom/bbm/d/fc;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private n:Lcom/bbm/j/w;
+.field private i:Lcom/bbm/j/w;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/bbm/j/w",
             "<",
-            "Lcom/bbm/d/du;",
+            "Lcom/bbm/d/fd;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private o:Z
+.field private j:Z
 
-.field private p:Z
+.field private k:Z
 
-.field private final q:Lcom/bbm/d/b/q;
+.field private final l:Lcom/bbm/d/b/t;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/d/b/q",
+            "Lcom/bbm/d/b/t",
             "<",
-            "Lcom/bbm/ui/fz",
+            "Lcom/bbm/ui/hc",
             "<",
-            "Lcom/bbm/ui/activities/dl;",
+            "Lcom/bbm/ui/activities/ed;",
             "Ljava/lang/Long;",
             ">;>;"
         }
     .end annotation
 .end field
 
-.field private final r:Lcom/bbm/j/k;
+.field private final m:Lcom/bbm/j/k;
 
-.field private s:Landroid/view/View;
+.field private final n:Landroid/view/View$OnClickListener;
 
-.field private final t:Landroid/view/View$OnClickListener;
+.field private final o:Landroid/widget/AdapterView$OnItemLongClickListener;
 
-.field private final u:Landroid/widget/AdapterView$OnItemLongClickListener;
-
-.field private v:Lcom/bbm/ui/activities/dm;
+.field private p:Lcom/bbm/ui/activities/ee;
 
 
 # direct methods
@@ -92,52 +92,52 @@
     .locals 1
 
     .prologue
-    .line 67
-    invoke-direct {p0}, Lcom/bbm/ui/activities/by;-><init>()V
+    .line 65
+    invoke-direct {p0}, Lcom/bbm/ui/activities/cq;-><init>()V
 
-    .line 72
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 70
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->b:Lcom/bbm/d/a;
 
-    .line 78
-    new-instance v0, Lcom/bbm/ui/activities/cz;
+    .line 76
+    new-instance v0, Lcom/bbm/ui/activities/dr;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/cz;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/dr;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->c:Lcom/bbm/j/a;
 
     .line 134
-    new-instance v0, Lcom/bbm/ui/activities/da;
+    new-instance v0, Lcom/bbm/ui/activities/ds;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/da;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ds;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->q:Lcom/bbm/d/b/q;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->l:Lcom/bbm/d/b/t;
 
-    .line 423
-    new-instance v0, Lcom/bbm/ui/activities/de;
+    .line 430
+    new-instance v0, Lcom/bbm/ui/activities/dw;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/de;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/dw;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->r:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->m:Lcom/bbm/j/k;
 
-    .line 498
-    new-instance v0, Lcom/bbm/ui/activities/dg;
+    .line 506
+    new-instance v0, Lcom/bbm/ui/activities/dy;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/dg;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/dy;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->t:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->n:Landroid/view/View$OnClickListener;
 
-    .line 512
-    new-instance v0, Lcom/bbm/ui/activities/dh;
+    .line 520
+    new-instance v0, Lcom/bbm/ui/activities/dz;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/dh;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/dz;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->u:Landroid/widget/AdapterView$OnItemLongClickListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->o:Landroid/widget/AdapterView$OnItemLongClickListener;
 
-    .line 564
+    .line 572
     return-void
 .end method
 
@@ -145,8 +145,8 @@
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->m:Lcom/bbm/j/w;
+    .line 65
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->h:Lcom/bbm/j/w;
 
     return-object v0
 .end method
@@ -155,50 +155,72 @@
     .locals 0
 
     .prologue
-    .line 67
-    iput-object p1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->m:Lcom/bbm/j/w;
+    .line 65
+    iput-object p1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->h:Lcom/bbm/j/w;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ChannelReportsActivity;Lcom/bbm/ui/activities/dm;)Lcom/bbm/ui/activities/dm;
+.method static synthetic a(Lcom/bbm/ui/activities/ChannelReportsActivity;Lcom/bbm/ui/activities/ee;)Lcom/bbm/ui/activities/ee;
     .locals 0
 
     .prologue
-    .line 67
-    iput-object p1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->v:Lcom/bbm/ui/activities/dm;
+    .line 65
+    iput-object p1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->p:Lcom/bbm/ui/activities/ee;
 
     return-object p1
 .end method
 
 .method static synthetic a(Lcom/bbm/ui/activities/ChannelReportsActivity;Ljava/lang/String;)Ljava/lang/String;
-    .locals 5
+    .locals 1
 
     .prologue
-    .line 67
+    .line 65
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/ChannelReportsActivity;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method private a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 8
+
+    .prologue
+    const-wide/16 v6, 0x0
+
+    .line 246
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    .line 248
+    :try_start_0
     invoke-static {p1}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x3e8
+
+    div-long/2addr v2, v4
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    :try_end_0
+    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
+
     move-result-object v0
 
+    .line 252
+    :goto_0
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v0
+    move-result-wide v2
 
-    const-wide/16 v2, 0x3e8
-
-    div-long/2addr v0, v2
-
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v1
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v6
 
     if-lez v1, :cond_0
 
@@ -206,37 +228,52 @@
 
     move-result-wide v0
 
-    invoke-static {p0, v0, v1}, Lcom/bbm/util/az;->b(Landroid/content/Context;J)Ljava/lang/String;
+    invoke-static {p0, v0, v1}, Lcom/bbm/util/bd;->b(Landroid/content/Context;J)Ljava/lang/String;
 
     move-result-object v0
 
-    :goto_0
+    :goto_1
     return-object v0
 
+    .line 249
+    :catch_0
+    move-exception v1
+
+    const-string v2, "Caught Cannot parse date"
+
+    const/4 v3, 0x0
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    invoke-static {v1, v2, v3}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 252
     :cond_0
     const-string v0, ""
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ChannelReportsActivity;Lcom/bbm/ui/c/fq;Lcom/bbm/ui/activities/dl;Ljava/lang/String;Ljava/lang/String;)V
+.method static synthetic a(Lcom/bbm/ui/activities/ChannelReportsActivity;Lcom/bbm/ui/c/gj;Lcom/bbm/ui/activities/ed;Ljava/lang/String;Ljava/lang/String;)V
     .locals 8
 
     .prologue
-    const v7, 0x7f020252
+    const v7, 0x7f02026d
 
     const/4 v6, 0x0
 
-    .line 67
+    .line 65
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
     new-instance v0, Lcom/bbm/ui/slidingmenu/a;
 
-    const v2, 0x7f0a002b
+    const v2, 0x7f0b0020
 
-    const v3, 0x7f02027d
+    const v3, 0x7f0202a3
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -246,7 +283,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0e044b
+    const v5, 0x7f0e0493
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -256,9 +293,9 @@
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v0, p2, Lcom/bbm/ui/activities/dl;->b:Ljava/lang/String;
+    iget-object v0, p2, Lcom/bbm/ui/activities/ed;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -274,7 +311,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e02e2
+    const v4, 0x7f0e0302
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -287,19 +324,19 @@
 
     invoke-direct {v2, v6, p3, p4}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p1, v1, v2, v0}, Lcom/bbm/ui/c/fq;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
+    invoke-virtual {p1, v1, v2, v0}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
 
-    new-instance v0, Lcom/bbm/ui/activities/di;
+    new-instance v0, Lcom/bbm/ui/activities/ea;
 
-    invoke-direct {v0, p0, p2}, Lcom/bbm/ui/activities/di;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;Lcom/bbm/ui/activities/dl;)V
+    invoke-direct {v0, p0, p2}, Lcom/bbm/ui/activities/ea;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;Lcom/bbm/ui/activities/ed;)V
 
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/fq;->a(Lcom/bbm/ui/c/fu;)V
+    iput-object v0, p1, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
 
-    new-instance v0, Lcom/bbm/ui/activities/dj;
+    new-instance v0, Lcom/bbm/ui/activities/eb;
 
-    invoke-direct {v0, p0, p2}, Lcom/bbm/ui/activities/dj;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;Lcom/bbm/ui/activities/dl;)V
+    invoke-direct {v0, p0, p2}, Lcom/bbm/ui/activities/eb;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;Lcom/bbm/ui/activities/ed;)V
 
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/fq;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/gj;->a(Landroid/view/View$OnClickListener;)V
 
     return-void
 
@@ -314,7 +351,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e02de
+    const v4, 0x7f0e02fe
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -329,8 +366,8 @@
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->n:Lcom/bbm/j/w;
+    .line 65
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->i:Lcom/bbm/j/w;
 
     return-object v0
 .end method
@@ -339,8 +376,8 @@
     .locals 0
 
     .prologue
-    .line 67
-    iput-object p1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->n:Lcom/bbm/j/w;
+    .line 65
+    iput-object p1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->i:Lcom/bbm/j/w;
 
     return-object p1
 .end method
@@ -349,8 +386,8 @@
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->l:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    .line 65
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->g:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     return-object v0
 .end method
@@ -359,8 +396,8 @@
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->j:Landroid/view/View;
+    .line 65
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->e:Landroid/view/View;
 
     return-object v0
 .end method
@@ -369,53 +406,32 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 65
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->p:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->k:Z
 
     return v0
 .end method
 
-.method static synthetic f(Lcom/bbm/ui/activities/ChannelReportsActivity;)Lcom/bbm/ui/ft;
+.method static synthetic f(Lcom/bbm/ui/activities/ChannelReportsActivity;)Lcom/bbm/ui/gx;
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->k:Lcom/bbm/ui/ft;
+    .line 65
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->f:Lcom/bbm/ui/gx;
 
     return-object v0
-.end method
-
-.method private g()V
-    .locals 2
-
-    .prologue
-    .line 484
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->s:Landroid/view/View;
-
-    if-eqz v0, :cond_0
-
-    .line 485
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->s:Landroid/view/View;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
-
-    .line 487
-    :cond_0
-    return-void
 .end method
 
 .method static synthetic g(Lcom/bbm/ui/activities/ChannelReportsActivity;)Z
     .locals 1
 
     .prologue
-    .line 67
+    .line 65
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->o:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->j:Z
 
     return v0
 .end method
@@ -424,8 +440,8 @@
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->t:Landroid/view/View$OnClickListener;
+    .line 65
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->n:Landroid/view/View$OnClickListener;
 
     return-object v0
 .end method
@@ -434,8 +450,8 @@
     .locals 1
 
     .prologue
-    .line 67
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->p:Z
+    .line 65
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->k:Z
 
     return v0
 .end method
@@ -444,8 +460,8 @@
     .locals 1
 
     .prologue
-    .line 67
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->o:Z
+    .line 65
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->j:Z
 
     return v0
 .end method
@@ -454,8 +470,8 @@
     .locals 2
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->m:Lcom/bbm/j/w;
+    .line 65
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->h:Lcom/bbm/j/w;
 
     invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
 
@@ -467,7 +483,7 @@
 
     move-result v1
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->n:Lcom/bbm/j/w;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->i:Lcom/bbm/j/w;
 
     invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
 
@@ -481,7 +497,7 @@
 
     add-int/2addr v0, v1
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->l:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->g:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     if-lez v0, :cond_0
 
@@ -498,48 +514,50 @@
     goto :goto_0
 .end method
 
-.method static synthetic l(Lcom/bbm/ui/activities/ChannelReportsActivity;)Lcom/bbm/ui/activities/dm;
+.method static synthetic l(Lcom/bbm/ui/activities/ChannelReportsActivity;)Lcom/bbm/ui/activities/ee;
     .locals 1
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->v:Lcom/bbm/ui/activities/dm;
+    .line 65
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->p:Lcom/bbm/ui/activities/ee;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final a(ILcom/bbm/ui/activities/dl;)V
+.method protected final a(ILcom/bbm/ui/activities/ed;)V
     .locals 5
 
     .prologue
-    .line 549
+    .line 557
     packed-switch p1, :pswitch_data_0
 
-    .line 556
+    .line 564
     :goto_0
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->z:Lcom/slidingmenu/lib/a/c;
+    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
     iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->c()V
+    const/4 v1, 0x1
 
-    .line 561
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+
+    .line 569
     return-void
 
-    .line 551
+    .line 559
     :pswitch_0
-    iget-object v0, p2, Lcom/bbm/ui/activities/dl;->b:Ljava/lang/String;
+    iget-object v0, p2, Lcom/bbm/ui/activities/ed;->b:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 552
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 560
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
@@ -547,19 +565,19 @@
 
     move-result-object v1
 
-    iget-object v2, p2, Lcom/bbm/ui/activities/dl;->a:Ljava/lang/String;
+    iget-object v2, p2, Lcom/bbm/ui/activities/ed;->a:Ljava/lang/String;
 
-    new-instance v3, Lcom/bbm/d/al;
+    new-instance v3, Lcom/bbm/d/ap;
 
-    invoke-direct {v3, v1, v2}, Lcom/bbm/d/al;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v1, v2}, Lcom/bbm/d/ap;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v3}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
+    invoke-virtual {v0, v3}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
 
     goto :goto_0
 
-    .line 554
+    .line 562
     :cond_0
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
@@ -567,23 +585,21 @@
 
     move-result-object v1
 
-    iget-object v2, p2, Lcom/bbm/ui/activities/dl;->b:Ljava/lang/String;
+    iget-object v2, p2, Lcom/bbm/ui/activities/ed;->b:Ljava/lang/String;
 
-    iget-object v3, p2, Lcom/bbm/ui/activities/dl;->a:Ljava/lang/String;
+    iget-object v3, p2, Lcom/bbm/ui/activities/ed;->a:Ljava/lang/String;
 
-    new-instance v4, Lcom/bbm/d/ak;
+    new-instance v4, Lcom/bbm/d/ao;
 
-    invoke-direct {v4, v1, v2, v3}, Lcom/bbm/d/ak;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v4, v1, v2, v3}, Lcom/bbm/d/ao;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v4}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
+    invoke-virtual {v0, v4}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
 
     goto :goto_0
 
-    .line 549
-    nop
-
+    .line 557
     :pswitch_data_0
-    .packed-switch 0x7f0a002b
+    .packed-switch 0x7f0b0020
         :pswitch_0
     .end packed-switch
 .end method
@@ -592,24 +608,45 @@
     .locals 0
 
     .prologue
-    .line 475
+    .line 483
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->onBackPressed()V
 
-    .line 476
+    .line 484
     return-void
 .end method
 
-.method protected final f()V
+.method public final f()V
+    .locals 2
+
+    .prologue
+    .line 492
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->d:Landroid/view/View;
+
+    if-eqz v0, :cond_0
+
+    .line 493
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->d:Landroid/view/View;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    .line 495
+    :cond_0
+    return-void
+.end method
+
+.method protected final g()V
     .locals 0
 
     .prologue
-    .line 544
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->f()V
+    .line 552
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->g()V
 
-    .line 545
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->g()V
+    .line 553
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->f()V
 
-    .line 546
+    .line 554
     return-void
 .end method
 
@@ -617,29 +654,29 @@
     .locals 7
 
     .prologue
-    const v6, 0x7f0b00d7
+    const v6, 0x7f0a00e3
 
     const/4 v5, 0x1
 
     const/4 v4, 0x0
 
-    .line 391
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/by;->onCreate(Landroid/os/Bundle;)V
+    .line 399
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/cq;->onCreate(Landroid/os/Bundle;)V
 
-    .line 392
-    const v0, 0x7f030019
+    .line 400
+    const v0, 0x7f03001a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->setContentView(I)V
 
-    .line 393
+    .line 401
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->getBaseContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->a:Landroid/content/Context;
 
-    .line 395
-    const v0, 0x7f0a0102
+    .line 403
+    const v0, 0x7f0b0146
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->findViewById(I)Landroid/view/View;
 
@@ -647,56 +684,56 @@
 
     check-cast v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->l:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->g:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-    .line 396
-    const v0, 0x7f0a0100
+    .line 404
+    const v0, 0x7f0b0144
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->j:Landroid/view/View;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->e:Landroid/view/View;
 
-    .line 398
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->k:Lcom/bbm/ui/ft;
+    .line 406
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->f:Lcom/bbm/ui/gx;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/bbm/ui/activities/dd;
+    new-instance v0, Lcom/bbm/ui/activities/dv;
 
     iget-object v1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->a:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->q:Lcom/bbm/d/b/q;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->l:Lcom/bbm/d/b/t;
 
-    invoke-static {}, Lcom/bbm/util/bi;->a()Lcom/bbm/util/bi;
+    invoke-static {}, Lcom/bbm/util/bp;->a()Lcom/bbm/util/bp;
 
     move-result-object v3
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lcom/bbm/ui/activities/dd;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;Landroid/content/Context;Lcom/bbm/j/r;Lcom/bbm/util/cx;)V
+    invoke-direct {v0, p0, v1, v2, v3}, Lcom/bbm/ui/activities/dv;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;Landroid/content/Context;Lcom/bbm/j/r;Lcom/bbm/util/di;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->k:Lcom/bbm/ui/ft;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->f:Lcom/bbm/ui/gx;
 
-    .line 402
+    .line 410
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->l:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->g:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->k:Lcom/bbm/ui/ft;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->f:Lcom/bbm/ui/gx;
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 403
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->k:Lcom/bbm/ui/ft;
+    .line 411
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->f:Lcom/bbm/ui/gx;
 
-    invoke-virtual {v0, v5}, Lcom/bbm/ui/ft;->c(I)V
+    invoke-virtual {v0, v5}, Lcom/bbm/ui/gx;->b(I)V
 
-    .line 404
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->l:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    .line 412
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->g:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-virtual {v0, v5}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setNumColumns(I)V
 
-    .line 405
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->l:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    .line 413
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->g:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->getResources()Landroid/content/res/Resources;
 
@@ -708,8 +745,8 @@
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setHorizontalSpacing(I)V
 
-    .line 406
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->l:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    .line 414
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->g:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->getResources()Landroid/content/res/Resources;
 
@@ -721,61 +758,57 @@
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setVerticalSpacing(I)V
 
-    .line 407
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->l:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    .line 415
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->g:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-virtual {v0, v4}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setStickyHeaderIsTranscluent(Z)V
 
-    .line 408
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->l:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    .line 416
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->g:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-virtual {v0, v4}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setAreHeadersSticky(Z)V
 
-    .line 409
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->l:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    .line 417
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->g:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->u:Landroid/widget/AdapterView$OnItemLongClickListener;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->o:Landroid/widget/AdapterView$OnItemLongClickListener;
 
     invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
-    .line 414
+    .line 421
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 415
-    new-instance v1, Lcom/bbm/ui/v;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v2
+    .line 422
+    new-instance v1, Lcom/bbm/ui/aa;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->b()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-direct {v1, v2, v0, v3}, Lcom/bbm/ui/v;-><init>(Landroid/content/Context;Landroid/app/ActionBar;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v0, v2}, Lcom/bbm/ui/aa;-><init>(Landroid/app/Activity;Landroid/app/ActionBar;Ljava/lang/String;)V
 
-    .line 416
-    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ChannelReportsActivity;->a(Lcom/bbm/ui/activities/agy;)V
+    .line 423
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ChannelReportsActivity;->a(Lcom/bbm/ui/activities/alb;)V
 
-    .line 417
+    .line 424
     invoke-virtual {v0}, Landroid/app/ActionBar;->getCustomView()Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v1, Lcom/bbm/util/av;
+    new-instance v1, Lcom/bbm/util/az;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->b()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-direct {v1, p0, v2}, Lcom/bbm/util/av;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v2}, Lcom/bbm/util/az;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 419
-    const v0, 0x7f0a00a0
+    .line 426
+    const v0, 0x7f0b00bf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->findViewById(I)Landroid/view/View;
 
@@ -785,13 +818,13 @@
 
     invoke-virtual {v0, v4}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
 
-    new-instance v1, Lcom/bbm/ui/activities/df;
+    new-instance v1, Lcom/bbm/ui/activities/dx;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/df;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/dx;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/by;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
 
-    .line 420
+    .line 427
     return-void
 .end method
 
@@ -799,20 +832,20 @@
     .locals 1
 
     .prologue
-    .line 448
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->onPause()V
+    .line 456
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onPause()V
 
-    .line 449
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->k:Lcom/bbm/ui/ft;
+    .line 457
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->f:Lcom/bbm/ui/gx;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/ft;->f()V
+    invoke-virtual {v0}, Lcom/bbm/ui/gx;->e()V
 
-    .line 450
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->r:Lcom/bbm/j/k;
+    .line 458
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->m:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
 
-    .line 451
+    .line 459
     return-void
 .end method
 
@@ -820,20 +853,22 @@
     .locals 1
 
     .prologue
-    .line 441
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->onResume()V
+    .line 449
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onResume()V
 
-    .line 442
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->k:Lcom/bbm/ui/ft;
+    .line 450
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->f:Lcom/bbm/ui/gx;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/ft;->e()V
+    iget-object v0, v0, Lcom/bbm/ui/gx;->d:Lcom/bbm/ui/cx;
 
-    .line 443
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->r:Lcom/bbm/j/k;
+    invoke-virtual {v0}, Lcom/bbm/ui/cx;->c()V
+
+    .line 451
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->m:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 444
+    .line 452
     return-void
 .end method
 
@@ -841,14 +876,14 @@
     .locals 3
 
     .prologue
-    .line 490
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->g()V
+    .line 498
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->f()V
 
-    .line 491
-    iput-object p1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->s:Landroid/view/View;
+    .line 499
+    iput-object p1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->d:Landroid/view/View;
 
-    .line 492
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->s:Landroid/view/View;
+    .line 500
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->d:Landroid/view/View;
 
     iget-object v1, p0, Lcom/bbm/ui/activities/ChannelReportsActivity;->a:Landroid/content/Context;
 
@@ -856,7 +891,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f09003a
+    const v2, 0x7f090041
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -864,6 +899,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 493
+    .line 501
     return-void
 .end method

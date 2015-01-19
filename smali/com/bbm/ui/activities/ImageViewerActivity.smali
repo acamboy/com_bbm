@@ -1,40 +1,40 @@
 .class public Lcom/bbm/ui/activities/ImageViewerActivity;
-.super Lcom/bbm/ui/activities/eg;
+.super Lcom/bbm/ui/activities/ey;
 .source "ImageViewerActivity.java"
 
 
 # instance fields
-.field final a:Lcom/bbm/ui/c/fu;
+.field a:Ljava/lang/String;
 
-.field private b:Lcom/bbm/ui/FooterActionBar;
+.field b:Ljava/lang/String;
 
-.field private c:Lcom/bbm/ui/TouchImageView;
+.field c:Ljava/lang/String;
 
-.field private j:Landroid/widget/ImageView;
+.field d:Z
 
-.field private k:Ljava/lang/String;
+.field final e:Lcom/bbm/ui/c/gn;
 
-.field private l:Ljava/lang/String;
+.field private f:Lcom/bbm/ui/FooterActionBar;
 
-.field private m:Ljava/lang/String;
+.field private g:Lcom/bbm/ui/TouchImageView;
 
-.field private n:Ljava/lang/String;
+.field private h:Landroid/widget/ImageView;
 
-.field private o:Lcom/bbm/ui/c/fq;
+.field private i:Ljava/lang/String;
 
-.field private p:Ljava/util/Timer;
+.field private j:Lcom/bbm/ui/c/gj;
 
-.field private q:Z
+.field private k:Ljava/util/Timer;
 
-.field private r:Z
+.field private l:Z
 
-.field private final s:Landroid/os/Handler;
+.field private final m:Landroid/os/Handler;
 
-.field private final t:Landroid/view/View$OnClickListener;
+.field private final n:Landroid/view/View$OnClickListener;
 
-.field private final u:Lcom/bbm/ui/by;
+.field private final o:Lcom/bbm/ui/cn;
 
-.field private final v:Lcom/bbm/j/k;
+.field private final p:Lcom/bbm/j/k;
 
 
 # direct methods
@@ -45,55 +45,55 @@
     const/4 v1, 0x0
 
     .line 48
-    invoke-direct {p0}, Lcom/bbm/ui/activities/eg;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ey;-><init>()V
 
-    .line 68
+    .line 67
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->p:Ljava/util/Timer;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/util/Timer;
 
-    .line 69
-    iput-boolean v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->q:Z
+    .line 68
+    iput-boolean v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Z
 
-    .line 71
-    iput-boolean v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->r:Z
+    .line 70
+    iput-boolean v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->d:Z
 
-    .line 73
+    .line 72
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->s:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->m:Landroid/os/Handler;
 
-    .line 75
-    new-instance v0, Lcom/bbm/ui/activities/sd;
+    .line 74
+    new-instance v0, Lcom/bbm/ui/activities/um;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/sd;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/um;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->t:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->n:Landroid/view/View$OnClickListener;
 
-    .line 92
-    new-instance v0, Lcom/bbm/ui/activities/se;
+    .line 91
+    new-instance v0, Lcom/bbm/ui/activities/un;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/se;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/un;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->u:Lcom/bbm/ui/by;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->o:Lcom/bbm/ui/cn;
 
-    .line 114
-    new-instance v0, Lcom/bbm/ui/activities/sf;
+    .line 113
+    new-instance v0, Lcom/bbm/ui/activities/uo;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/sf;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/uo;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Lcom/bbm/ui/c/fu;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->e:Lcom/bbm/ui/c/gn;
 
-    .line 136
-    new-instance v0, Lcom/bbm/ui/activities/sg;
+    .line 135
+    new-instance v0, Lcom/bbm/ui/activities/up;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/sg;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/up;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->v:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->p:Lcom/bbm/j/k;
 
     return-void
 .end method
@@ -103,7 +103,7 @@
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->f:Lcom/bbm/ui/FooterActionBar;
 
     return-object v0
 .end method
@@ -112,46 +112,46 @@
     .locals 4
 
     .prologue
-    .line 400
+    .line 392
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 402
-    invoke-static {p1}, Lcom/bbm/util/b/h;->e(Ljava/lang/String;)Ljava/lang/String;
+    .line 394
+    invoke-static {p1}, Lcom/bbm/util/b/h;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/util/b/h;->d(Ljava/lang/String;)Ljava/io/File;
+    invoke-static {v0}, Lcom/bbm/util/b/h;->c(Ljava/lang/String;)Ljava/io/File;
+
+    move-result-object v0
+
+    .line 396
+    :try_start_0
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 404
-    :try_start_0
-    invoke-virtual {v2}, Ljava/io/File;->getPath()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {p1, v0}, Lcom/bbm/util/be;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v2}, Lcom/bbm/util/bk;->a(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 411
-    const-string v0, "android.intent.action.SEND"
+    .line 402
+    const-string v2, "android.intent.action.SEND"
 
-    invoke-virtual {v1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 412
-    const-string v0, "android.intent.extra.STREAM"
+    .line 403
+    const-string v2, "android.intent.extra.STREAM"
 
-    invoke-static {v2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v3
 
-    invoke-virtual {v1, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 413
-    invoke-static {v2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
+    .line 404
+    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v0
 
@@ -159,32 +159,29 @@
 
     move-result-object v0
 
-    .line 414
-    invoke-static {v0}, Lcom/bbm/util/df;->a(Ljava/lang/String;)Ljava/lang/String;
+    .line 405
+    invoke-static {v0}, Lcom/bbm/util/dq;->a(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
+    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_0
+    if-eqz v2, :cond_0
 
     const-string v0, "image/jpeg"
 
-    .line 415
+    .line 406
     :cond_0
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 416
-    if-eqz v2, :cond_1
-
-    .line 417
+    .line 407
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v2, 0x7f0e041d
+    const v2, 0x7f0e045f
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -196,73 +193,15 @@
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 419
-    :cond_1
+    .line 410
     :goto_0
     return-void
 
-    .line 406
+    .line 397
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-.end method
-
-.method private a(Landroid/content/Intent;)Z
-    .locals 3
-
-    .prologue
-    .line 380
-    const/4 v0, 0x1
-
-    .line 382
-    :try_start_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
-
-    invoke-static {v1}, Lcom/bbm/util/b/h;->e(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "image/gif"
-
-    invoke-static {v1, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    .line 383
-    invoke-static {p0, v1}, Lcom/bbm/util/b/h;->a(Landroid/content/Context;Z)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 384
-    iget-object v2, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
-
-    invoke-static {v2, v1}, Lcom/bbm/util/be;->a(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 385
-    const-string v2, "extra_image_path"
-
-    invoke-virtual {p1, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 391
-    :goto_0
-    return v0
-
-    .line 387
-    :catch_0
-    move-exception v0
-
-    move-object v1, v0
-
-    .line 388
-    const/4 v0, 0x0
-
-    .line 389
-    invoke-static {v1}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -272,7 +211,7 @@
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->j:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->h:Landroid/widget/ImageView;
 
     return-object v0
 .end method
@@ -282,7 +221,7 @@
 
     .prologue
     .line 48
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->h()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->f()V
 
     return-void
 .end method
@@ -292,9 +231,9 @@
 
     .prologue
     .line 48
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->i()V
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->b()V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
     invoke-static {p0, v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Landroid/content/Context;Ljava/lang/String;)V
 
@@ -306,7 +245,7 @@
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->i:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -316,9 +255,46 @@
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Lcom/bbm/ui/TouchImageView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->g:Lcom/bbm/ui/TouchImageView;
 
     return-object v0
+.end method
+
+.method private f()V
+    .locals 4
+
+    .prologue
+    .line 326
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/util/Timer;
+
+    if-eqz v0, :cond_0
+
+    .line 327
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/util/Timer;
+
+    invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
+
+    .line 329
+    :cond_0
+    new-instance v0, Ljava/util/Timer;
+
+    invoke-direct {v0}, Ljava/util/Timer;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/util/Timer;
+
+    .line 330
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/util/Timer;
+
+    new-instance v1, Lcom/bbm/ui/activities/ut;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ut;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
+
+    const-wide/16 v2, 0x1b58
+
+    invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
+
+    .line 344
+    return-void
 .end method
 
 .method static synthetic g(Lcom/bbm/ui/activities/ImageViewerActivity;)Z
@@ -328,7 +304,7 @@
     .line 48
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->q:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Z
 
     return v0
 .end method
@@ -338,86 +314,108 @@
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->s:Landroid/os/Handler;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->m:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method private h()V
-    .locals 4
+
+# virtual methods
+.method final a(Landroid/content/Intent;)Z
+    .locals 3
 
     .prologue
-    .line 332
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->p:Ljava/util/Timer;
+    .line 373
+    const/4 v0, 0x1
 
-    if-eqz v0, :cond_0
+    .line 375
+    :try_start_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
-    .line 334
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->p:Ljava/util/Timer;
+    invoke-static {v1}, Lcom/bbm/util/b/h;->d(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
+    move-result-object v1
 
-    .line 336
-    :cond_0
-    new-instance v0, Ljava/util/Timer;
+    const-string v2, "image/gif"
 
-    invoke-direct {v0}, Ljava/util/Timer;-><init>()V
+    invoke-static {v1, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->p:Ljava/util/Timer;
+    move-result v1
 
-    .line 337
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->p:Ljava/util/Timer;
+    .line 376
+    invoke-static {p0, v1}, Lcom/bbm/util/b/h;->a(Landroid/content/Context;Z)Ljava/lang/String;
 
-    new-instance v1, Lcom/bbm/ui/activities/sk;
+    move-result-object v1
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/sk;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
+    .line 377
+    iget-object v2, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
-    const-wide/16 v2, 0x1b58
+    invoke-static {v2, v1}, Lcom/bbm/util/bk;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
+    .line 378
+    const-string v2, "extra_image_path"
 
-    .line 350
-    return-void
+    invoke-virtual {p1, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 383
+    :goto_0
+    return v0
+
+    .line 379
+    :catch_0
+    move-exception v0
+
+    move-object v1, v0
+
+    .line 380
+    const/4 v0, 0x0
+
+    .line 381
+    invoke-static {v1}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
 .end method
 
-.method private i()V
+.method final b()V
     .locals 5
 
     .prologue
     const/4 v4, 0x0
 
-    .line 422
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->r:Z
+    .line 413
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->d:Z
 
     if-eqz v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->q:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Z
 
     if-eqz v0, :cond_1
 
-    .line 423
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->r:Z
+    .line 414
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->d:Z
 
     if-eqz v0, :cond_0
 
     :try_start_0
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->q:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Z
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->i:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/eu;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
 
     move-result-object v1
 
-    iget-object v2, v1, Lcom/bbm/d/eu;->x:Ljava/lang/String;
+    iget-object v2, v1, Lcom/bbm/d/gr;->B:Ljava/lang/String;
 
-    iget-object v1, v1, Lcom/bbm/d/eu;->a:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/gr;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v1}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/j/r;
 
@@ -427,22 +425,22 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/dw;
+    check-cast v0, Lcom/bbm/d/ff;
 
     :goto_0
-    iget-boolean v1, v0, Lcom/bbm/d/dw;->a:Z
+    iget-boolean v1, v0, Lcom/bbm/d/ff;->a:Z
 
     invoke-static {p0, v1}, Lcom/bbm/util/b/h;->a(Landroid/content/Context;Z)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
+    iput-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
     new-instance v1, Ljava/io/FileOutputStream;
 
     new-instance v2, Ljava/io/File;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -452,7 +450,7 @@
 
     invoke-direct {v2, v1}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    invoke-virtual {v0}, Lcom/bbm/d/dw;->c()[B
+    invoke-virtual {v0}, Lcom/bbm/d/ff;->c()[B
 
     move-result-object v3
 
@@ -466,16 +464,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 424
+    .line 415
     :cond_0
     :goto_1
-    iput-boolean v4, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->q:Z
+    iput-boolean v4, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Z
 
-    .line 426
+    .line 417
     :cond_1
     return-void
 
-    .line 423
+    .line 414
     :cond_2
     const/4 v0, 0x0
 
@@ -483,13 +481,13 @@
 
     :cond_3
     :try_start_1
-    invoke-virtual {v0}, Lcom/bbm/d/dw;->b()Landroid/graphics/drawable/BitmapDrawable;
+    invoke-virtual {v0}, Lcom/bbm/d/ff;->b()Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    invoke-virtual {v0}, Lcom/bbm/d/dw;->b()Landroid/graphics/drawable/BitmapDrawable;
+    invoke-virtual {v0}, Lcom/bbm/d/ff;->b()Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v0
 
@@ -522,110 +520,16 @@
 
     aput-object v0, v2, v4
 
-    invoke-static {v1, v2}, Lcom/bbm/w;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_1
-.end method
-
-
-# virtual methods
-.method public final b()V
-    .locals 2
-
-    .prologue
-    .line 353
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->i()V
-
-    .line 355
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/bbm/util/b/h;->e(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 356
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 357
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->n:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/bbm/util/b/h;->e(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 359
-    :cond_1
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    .line 360
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->m:Ljava/lang/String;
-
-    .line 363
-    :cond_3
-    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
-
-    invoke-static {v1, p0, v0}, Lcom/bbm/util/b/h;->a(Ljava/lang/String;Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 364
-    return-void
-.end method
-
-.method public final g()V
-    .locals 3
-
-    .prologue
-    .line 367
-    new-instance v0, Landroid/content/Intent;
-
-    const-class v1, Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 368
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->i()V
-
-    .line 369
-    const-string v1, "extra_image_path"
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 371
-    iget-boolean v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->r:Z
-
-    if-nez v1, :cond_0
-
-    .line 373
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Landroid/content/Intent;)Z
-
-    .line 376
-    :cond_0
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 377
-    return-void
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 12
 
     .prologue
-    const v11, 0x7f0e0629
+    const v11, 0x7f0e06db
 
     const/4 v10, 0x0
 
@@ -633,19 +537,19 @@
 
     const/4 v2, 0x0
 
-    .line 149
+    .line 148
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ImageViewerActivity;->requestWindowFeature(I)Z
 
-    .line 150
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/eg;->onCreate(Landroid/os/Bundle;)V
+    .line 149
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onCreate(Landroid/os/Bundle;)V
 
-    .line 151
-    const v0, 0x7f030036
+    .line 150
+    const v0, 0x7f030039
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->setContentView(I)V
 
-    .line 152
-    const v0, 0x7f0a01b8
+    .line 151
+    const v0, 0x7f0b0208
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->findViewById(I)Landroid/view/View;
 
@@ -653,10 +557,10 @@
 
     check-cast v0, Lcom/bbm/ui/TouchImageView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Lcom/bbm/ui/TouchImageView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->g:Lcom/bbm/ui/TouchImageView;
 
-    .line 153
-    const v0, 0x7f0a00a0
+    .line 152
+    const v0, 0x7f0b00bf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->findViewById(I)Landroid/view/View;
 
@@ -664,10 +568,10 @@
 
     check-cast v0, Lcom/bbm/ui/FooterActionBar;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->f:Lcom/bbm/ui/FooterActionBar;
 
-    .line 154
-    const v0, 0x7f0a0123
+    .line 153
+    const v0, 0x7f0b0137
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->findViewById(I)Landroid/view/View;
 
@@ -675,9 +579,9 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->j:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->h:Landroid/widget/ImageView;
 
-    .line 156
+    .line 155
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -690,7 +594,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 157
+    .line 156
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -701,16 +605,16 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->r:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->d:Z
 
-    .line 162
+    .line 161
     :cond_0
     :goto_0
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->r:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->d:Z
 
     if-eqz v0, :cond_5
 
-    .line 163
+    .line 162
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -721,10 +625,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->i:Ljava/lang/String;
 
-    .line 164
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Ljava/lang/String;
+    .line 163
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->i:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
@@ -736,18 +640,18 @@
 
     if-nez v0, :cond_1
 
-    .line 165
+    .line 164
     const-string v0, "extra_avatar_user_uri"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->i:Ljava/lang/String;
 
-    .line 167
+    .line 166
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->i:Ljava/lang/String;
 
     if-eqz v0, :cond_4
 
@@ -756,18 +660,18 @@
     :goto_1
     const-string v3, "No avatar URI specified in Intent"
 
-    invoke-static {p0, v0, v3}, Lcom/bbm/util/eo;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
+    invoke-static {p0, v0, v3}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
-    .line 263
+    .line 261
     :cond_2
     :goto_2
     return-void
 
-    .line 158
+    .line 157
     :cond_3
     if-eqz p1, :cond_0
 
@@ -777,24 +681,24 @@
 
     if-nez v0, :cond_0
 
-    .line 159
+    .line 158
     const-string v0, "extra_is_avatar"
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->r:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->d:Z
 
     goto :goto_0
 
     :cond_4
     move v0, v2
 
-    .line 167
+    .line 166
     goto :goto_1
 
-    .line 171
+    .line 170
     :cond_5
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->getIntent()Landroid/content/Intent;
 
@@ -806,9 +710,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
-    .line 172
+    .line 171
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -819,9 +723,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->m:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->b:Ljava/lang/String;
 
-    .line 173
+    .line 172
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -832,10 +736,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->n:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Ljava/lang/String;
 
-    .line 174
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
+    .line 173
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
     if-nez v0, :cond_6
 
@@ -847,18 +751,18 @@
 
     if-nez v0, :cond_6
 
-    .line 175
+    .line 174
     const-string v0, "extra_image_path"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
-    .line 178
+    .line 177
     :cond_6
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->m:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->b:Ljava/lang/String;
 
     if-nez v0, :cond_7
 
@@ -870,18 +774,18 @@
 
     if-nez v0, :cond_7
 
-    .line 179
+    .line 178
     const-string v0, "extra_mime_type"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->m:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->b:Ljava/lang/String;
 
-    .line 182
+    .line 181
     :cond_7
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->n:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Ljava/lang/String;
 
     if-nez v0, :cond_8
 
@@ -893,18 +797,18 @@
 
     if-nez v0, :cond_8
 
-    .line 183
+    .line 182
     const-string v0, "extra_suggested_filename"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->n:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Ljava/lang/String;
 
-    .line 186
+    .line 185
     :cond_8
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
     if-eqz v0, :cond_a
 
@@ -913,89 +817,81 @@
     :goto_3
     const-string v3, "No image path specified in Intent"
 
-    invoke-static {p0, v0, v3}, Lcom/bbm/util/eo;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
+    invoke-static {p0, v0, v3}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 193
+    .line 192
     :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/ui/ca;->a(Ljava/lang/String;)Lcom/bbm/ui/ca;
+    invoke-static {v0}, Lcom/bbm/ui/cp;->a(Ljava/lang/String;)Lcom/bbm/ui/cp;
 
     move-result-object v0
 
-    .line 194
+    .line 193
     if-eqz v0, :cond_b
 
-    .line 195
-    iget-object v3, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Lcom/bbm/ui/TouchImageView;
+    .line 194
+    iget-object v3, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->g:Lcom/bbm/ui/TouchImageView;
 
-    new-instance v4, Lcom/bbm/d/dw;
+    new-instance v4, Lcom/bbm/d/ff;
 
-    invoke-direct {v4, v0}, Lcom/bbm/d/dw;-><init>(Lcom/bbm/ui/ca;)V
+    invoke-direct {v4, v0}, Lcom/bbm/d/ff;-><init>(Lcom/bbm/ui/cp;)V
 
-    invoke-virtual {v3, v4}, Lcom/bbm/ui/TouchImageView;->setObservableImage(Lcom/bbm/d/dw;)V
+    invoke-virtual {v3, v4}, Lcom/bbm/ui/TouchImageView;->setObservableImage(Lcom/bbm/d/ff;)V
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 216
+    .line 215
     :cond_9
     :goto_4
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->z:Lcom/slidingmenu/lib/a/c;
+    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
     iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    .line 220
-    iput-boolean v2, p0, Lcom/bbm/ui/activities/eg;->e:Z
+    .line 219
+    iput-boolean v2, p0, Lcom/bbm/ui/activities/ey;->y:Z
 
-    .line 225
-    new-instance v3, Lcom/bbm/ui/activities/sh;
+    .line 224
+    new-instance v3, Lcom/bbm/ui/activities/uq;
 
-    invoke-direct {v3, p0, v0}, Lcom/bbm/ui/activities/sh;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;Lcom/slidingmenu/lib/SlidingMenu;)V
+    invoke-direct {v3, p0, v0}, Lcom/bbm/ui/activities/uq;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;Lcom/slidingmenu/lib/SlidingMenu;)V
 
-    iget-object v4, p0, Lcom/slidingmenu/lib/a/a;->z:Lcom/slidingmenu/lib/a/c;
+    invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Lcom/slidingmenu/lib/i;)V
 
-    iget-object v4, v4, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+    .line 231
+    new-instance v3, Lcom/bbm/ui/activities/ur;
 
-    invoke-virtual {v4, v3}, Lcom/slidingmenu/lib/SlidingMenu;->setOnClosedListener(Lcom/slidingmenu/lib/i;)V
+    invoke-direct {v3, p0, v0}, Lcom/bbm/ui/activities/ur;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;Lcom/slidingmenu/lib/SlidingMenu;)V
 
-    .line 232
-    new-instance v3, Lcom/bbm/ui/activities/si;
+    invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Lcom/slidingmenu/lib/k;)V
 
-    invoke-direct {v3, p0, v0}, Lcom/bbm/ui/activities/si;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;Lcom/slidingmenu/lib/SlidingMenu;)V
-
-    iget-object v4, p0, Lcom/slidingmenu/lib/a/a;->z:Lcom/slidingmenu/lib/a/c;
-
-    iget-object v4, v4, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
-
-    invoke-virtual {v4, v3}, Lcom/slidingmenu/lib/SlidingMenu;->setOnOpenedListener(Lcom/slidingmenu/lib/k;)V
-
-    .line 240
+    .line 239
     invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->setMode(I)V
 
+    .line 241
+    iget-object v0, p0, Lcom/bbm/ui/activities/ey;->A:Lcom/bbm/ui/c/gj;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->j:Lcom/bbm/ui/c/gj;
+
     .line 242
-    iget-object v0, p0, Lcom/bbm/ui/activities/eg;->g:Lcom/bbm/ui/c/fq;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->o:Lcom/bbm/ui/c/fq;
-
-    .line 243
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     new-instance v1, Lcom/bbm/ui/slidingmenu/a;
 
-    const v3, 0x7f02025f
+    const v3, 0x7f02027c
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    const v4, 0x7f0e05d7
+    const v4, 0x7f0e0684
 
     invoke-virtual {p0, v4}, Lcom/bbm/ui/activities/ImageViewerActivity;->getString(I)Ljava/lang/String;
 
@@ -1007,13 +903,13 @@
 
     new-instance v1, Lcom/bbm/ui/slidingmenu/a;
 
-    const v3, 0x7f020263
+    const v3, 0x7f020280
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    const v4, 0x7f0e05fb
+    const v4, 0x7f0e06aa
 
     invoke-virtual {p0, v4}, Lcom/bbm/ui/activities/ImageViewerActivity;->getString(I)Ljava/lang/String;
 
@@ -1025,7 +921,7 @@
 
     new-instance v1, Lcom/bbm/ui/slidingmenu/a;
 
-    const v3, 0x7f020264
+    const v3, 0x7f020281
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1039,61 +935,61 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->o:Lcom/bbm/ui/c/fq;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->j:Lcom/bbm/ui/c/gj;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/fq;->a(Ljava/util/List;)V
+    invoke-virtual {v1, v0, v10, v10}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
 
-    .line 245
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    .line 244
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->f:Lcom/bbm/ui/FooterActionBar;
 
     new-instance v1, Lcom/bbm/ui/ActionBarItem;
 
-    const v3, 0x7f0202a3
+    const v3, 0x7f0202ca
 
     invoke-direct {v1, p0, v3, v11}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
 
     invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
 
-    .line 246
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    .line 245
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->f:Lcom/bbm/ui/FooterActionBar;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->u:Lcom/bbm/ui/by;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->o:Lcom/bbm/ui/cn;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/by;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
 
-    .line 248
-    new-instance v0, Lcom/bbm/ui/activities/sj;
+    .line 247
+    new-instance v0, Lcom/bbm/ui/activities/us;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/sj;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/us;-><init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Lcom/slidingmenu/lib/a/b;)V
 
-    .line 261
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->z:Lcom/slidingmenu/lib/a/c;
+    .line 259
+    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
     iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
     invoke-virtual {v0, v2}, Lcom/slidingmenu/lib/SlidingMenu;->setTouchInterceptEnabled(Z)V
 
-    .line 262
-    iput-boolean v2, p0, Lcom/bbm/ui/activities/eg;->e:Z
+    .line 260
+    iput-boolean v2, p0, Lcom/bbm/ui/activities/ey;->y:Z
 
     goto/16 :goto_2
 
     :cond_a
     move v0, v2
 
-    .line 186
+    .line 185
     goto/16 :goto_3
 
-    .line 197
+    .line 196
     :cond_b
     :try_start_1
     new-instance v0, Landroid/graphics/Point;
 
     invoke-direct {v0}, Landroid/graphics/Point;-><init>()V
 
-    .line 198
+    .line 197
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->getWindowManager()Landroid/view/WindowManager;
 
     move-result-object v3
@@ -1105,13 +1001,11 @@
     invoke-virtual {v3, v0}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
     .line 199
-    iget-object v3, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
-    const/4 v4, 0x0
+    sget-object v4, Landroid/widget/ImageView$ScaleType;->CENTER_INSIDE:Landroid/widget/ImageView$ScaleType;
 
-    const/4 v5, 0x0
-
-    invoke-static {v3, v0, v4, v5}, Lcom/bbm/util/b/h;->a(Ljava/lang/String;Landroid/graphics/Point;Lcom/bbm/util/b/d;Z)Landroid/graphics/Bitmap;
+    invoke-static {v3, v0, v4}, Lcom/bbm/util/b/h;->a(Ljava/lang/String;Landroid/graphics/Point;Landroid/widget/ImageView$ScaleType;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -1163,12 +1057,19 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v3, v4}, Lcom/bbm/w;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v3, v4}, Lcom/bbm/y;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 203
-    iget-object v3, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Lcom/bbm/ui/TouchImageView;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->g:Lcom/bbm/ui/TouchImageView;
 
     invoke-virtual {v3, v0}, Lcom/bbm/ui/TouchImageView;->setObservableImage(Landroid/graphics/Bitmap;)V
+
+    .line 204
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->g:Lcom/bbm/ui/TouchImageView;
+
+    const/high16 v3, 0x40800000
+
+    invoke-virtual {v0, v3}, Lcom/bbm/ui/TouchImageView;->setMaxZoom(F)V
     :try_end_1
     .catch Ljava/lang/OutOfMemoryError; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
@@ -1186,38 +1087,62 @@
 
     aput-object v0, v4, v2
 
-    invoke-static {v3, v4}, Lcom/bbm/w;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v3, v4}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto/16 :goto_4
 
-    .line 210
+    .line 209
     :catch_1
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto/16 :goto_4
 .end method
 
 .method protected onDestroy()V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 454
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Lcom/bbm/ui/TouchImageView;
+    const/4 v1, 0x0
+
+    .line 445
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->g:Lcom/bbm/ui/TouchImageView;
 
     if-eqz v0, :cond_0
 
-    .line 455
-    const/4 v0, 0x0
+    .line 446
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->g:Lcom/bbm/ui/TouchImageView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Lcom/bbm/ui/TouchImageView;
+    invoke-virtual {v0}, Lcom/bbm/ui/TouchImageView;->b()V
+
+    .line 447
+    iput-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->g:Lcom/bbm/ui/TouchImageView;
+
+    .line 449
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->h:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 451
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->f:Lcom/bbm/ui/FooterActionBar;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
+
+    .line 452
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Lcom/slidingmenu/lib/a/b;)V
+
+    .line 453
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Lcom/slidingmenu/lib/i;)V
+
+    .line 454
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Lcom/slidingmenu/lib/k;)V
+
+    .line 456
+    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onDestroy()V
 
     .line 457
-    :cond_0
-    invoke-super {p0}, Lcom/bbm/ui/activities/eg;->onDestroy()V
-
-    .line 458
     return-void
 .end method
 
@@ -1227,38 +1152,38 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 430
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->v:Lcom/bbm/j/k;
+    .line 421
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->p:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
 
-    .line 431
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->p:Ljava/util/Timer;
+    .line 422
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/util/Timer;
 
     invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
 
-    .line 432
-    iput-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->p:Ljava/util/Timer;
+    .line 423
+    iput-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/util/Timer;
 
-    .line 433
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->s:Landroid/os/Handler;
+    .line 424
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->m:Landroid/os/Handler;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 434
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Lcom/bbm/ui/TouchImageView;
+    .line 425
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->g:Lcom/bbm/ui/TouchImageView;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/TouchImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 435
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->o:Lcom/bbm/ui/c/fq;
+    .line 426
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->j:Lcom/bbm/ui/c/gj;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/fq;->a(Lcom/bbm/ui/c/fu;)V
+    iput-object v1, v0, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
 
-    .line 436
-    invoke-super {p0}, Lcom/bbm/ui/activities/eg;->onPause()V
+    .line 427
+    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onPause()V
 
-    .line 437
+    .line 428
     return-void
 .end method
 
@@ -1266,45 +1191,45 @@
     .locals 2
 
     .prologue
-    .line 441
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    .line 432
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->f:Lcom/bbm/ui/FooterActionBar;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
 
-    .line 442
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->h()V
+    .line 433
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ImageViewerActivity;->f()V
 
-    .line 443
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->r:Z
+    .line 434
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->d:Z
 
     if-eqz v0, :cond_0
 
-    .line 444
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->v:Lcom/bbm/j/k;
+    .line 435
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->p:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 447
+    .line 438
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Lcom/bbm/ui/TouchImageView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->g:Lcom/bbm/ui/TouchImageView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->t:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->n:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/TouchImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 448
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->o:Lcom/bbm/ui/c/fq;
+    .line 439
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->j:Lcom/bbm/ui/c/gj;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Lcom/bbm/ui/c/fu;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->e:Lcom/bbm/ui/c/gn;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/fq;->a(Lcom/bbm/ui/c/fu;)V
+    iput-object v1, v0, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
 
-    .line 449
-    invoke-super {p0}, Lcom/bbm/ui/activities/eg;->onResume()V
+    .line 440
+    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onResume()V
 
-    .line 450
+    .line 441
     return-void
 .end method
 
@@ -1312,15 +1237,15 @@
     .locals 2
 
     .prologue
-    .line 267
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/eg;->onSaveInstanceState(Landroid/os/Bundle;)V
+    .line 265
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 268
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
+    .line 266
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -1328,20 +1253,20 @@
 
     if-nez v0, :cond_0
 
-    .line 269
+    .line 267
     const-string v0, "extra_image_path"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->k:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->a:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 271
+    .line 269
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->m:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->b:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->m:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->b:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -1349,20 +1274,20 @@
 
     if-nez v0, :cond_1
 
-    .line 272
+    .line 270
     const-string v0, "extra_mime_type"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->m:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->b:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 274
+    .line 272
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->n:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->n:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -1370,20 +1295,20 @@
 
     if-nez v0, :cond_2
 
-    .line 275
+    .line 273
     const-string v0, "extra_suggested_filename"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->c:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 277
+    .line 275
     :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->i:Ljava/lang/String;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->i:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
@@ -1391,21 +1316,21 @@
 
     if-nez v0, :cond_3
 
-    .line 278
+    .line 276
     const-string v0, "extra_avatar_user_uri"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->l:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->i:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 280
+    .line 278
     :cond_3
     const-string v0, "extra_is_avatar"
 
-    iget-boolean v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->r:Z
+    iget-boolean v1, p0, Lcom/bbm/ui/activities/ImageViewerActivity;->d:Z
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 281
+    .line 279
     return-void
 .end method

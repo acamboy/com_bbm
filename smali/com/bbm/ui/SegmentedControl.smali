@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private a:Landroid/widget/LinearLayout;
+.field public a:Landroid/widget/LinearLayout;
 
-.field private b:Landroid/widget/LinearLayout;
+.field public b:Landroid/widget/LinearLayout;
 
 .field private c:I
 
-.field private d:Lcom/bbm/ui/fe;
+.field private d:Lcom/bbm/ui/fz;
 
 .field private final e:Landroid/view/View$OnClickListener;
 
@@ -59,12 +59,12 @@
     .line 26
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/SegmentedControl;->d:Lcom/bbm/ui/fe;
+    iput-object v0, p0, Lcom/bbm/ui/SegmentedControl;->d:Lcom/bbm/ui/fz;
 
     .line 115
-    new-instance v0, Lcom/bbm/ui/fd;
+    new-instance v0, Lcom/bbm/ui/fy;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/fd;-><init>(Lcom/bbm/ui/SegmentedControl;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/fy;-><init>(Lcom/bbm/ui/SegmentedControl;)V
 
     iput-object v0, p0, Lcom/bbm/ui/SegmentedControl;->e:Landroid/view/View$OnClickListener;
 
@@ -73,12 +73,12 @@
 
     move-result-object v0
 
-    const v1, 0x7f030133
+    const v1, 0x7f03014b
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 44
-    const v0, 0x7f0a05ce
+    const v0, 0x7f0b0687
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/SegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -87,7 +87,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 45
-    const v1, 0x7f0a05d0
+    const v1, 0x7f0b0689
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/SegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -100,7 +100,7 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/bbm/ac;->SegmentedControl:[I
+    sget-object v3, Lcom/bbm/ae;->SegmentedControl:[I
 
     invoke-virtual {v2, p2, v3, p3, v4}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -137,7 +137,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b02d2
+    const v1, 0x7f0a0316
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -148,7 +148,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b02dd
+    const v2, 0x7f0a0321
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -191,36 +191,6 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 78
-    iget-object v0, p0, Lcom/bbm/ui/SegmentedControl;->a:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setFocusable(Z)V
-
-    .line 79
-    iget-object v0, p0, Lcom/bbm/ui/SegmentedControl;->a:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setClickable(Z)V
-
-    .line 80
-    iget-object v0, p0, Lcom/bbm/ui/SegmentedControl;->b:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setFocusable(Z)V
-
-    .line 81
-    iget-object v0, p0, Lcom/bbm/ui/SegmentedControl;->b:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setClickable(Z)V
-
-    .line 82
-    return-void
-.end method
-
 .method public final a(I)V
     .locals 3
 
@@ -247,14 +217,14 @@
 
     .line 102
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/SegmentedControl;->d:Lcom/bbm/ui/fe;
+    iget-object v0, p0, Lcom/bbm/ui/SegmentedControl;->d:Lcom/bbm/ui/fz;
 
     if-eqz v0, :cond_0
 
     .line 103
-    iget-object v0, p0, Lcom/bbm/ui/SegmentedControl;->d:Lcom/bbm/ui/fe;
+    iget-object v0, p0, Lcom/bbm/ui/SegmentedControl;->d:Lcom/bbm/ui/fz;
 
-    invoke-interface {v0, p1}, Lcom/bbm/ui/fe;->a(I)V
+    invoke-interface {v0, p1}, Lcom/bbm/ui/fz;->a(I)V
 
     .line 105
     :cond_0
@@ -304,7 +274,7 @@
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
     .line 68
-    const v0, 0x7f0a05cd
+    const v0, 0x7f0b0686
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/SegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -322,7 +292,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 71
-    const v0, 0x7f0a05cf
+    const v0, 0x7f0b0688
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/SegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -348,12 +318,12 @@
     return-void
 .end method
 
-.method public setOnOptionSelectedListener(Lcom/bbm/ui/fe;)V
+.method public setOnOptionSelectedListener(Lcom/bbm/ui/fz;)V
     .locals 0
 
     .prologue
     .line 112
-    iput-object p1, p0, Lcom/bbm/ui/SegmentedControl;->d:Lcom/bbm/ui/fe;
+    iput-object p1, p0, Lcom/bbm/ui/SegmentedControl;->d:Lcom/bbm/ui/fz;
 
     .line 113
     return-void

@@ -3,7 +3,7 @@
 .source "ConversationActivity.java"
 
 # interfaces
-.implements Lcom/bbm/j/s;
+.implements Lcom/bbm/ui/bq;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 1667
+    .line 390
     iput-object p1, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,182 +25,172 @@
 
 
 # virtual methods
-.method public final a()Z
-    .locals 7
+.method public final a(I)Lcom/bbm/ui/QuickShareBaseView;
+    .locals 2
 
     .prologue
-    const/4 v2, 0x0
+    .line 394
+    packed-switch p1, :pswitch_data_0
 
-    const/4 v1, 0x1
+    .line 404
+    new-instance v0, Lcom/bbm/ui/QuickShareBaseView;
 
-    .line 1670
-    iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    iget-object v1, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->u(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/r;
+    invoke-direct {v0, v1}, Lcom/bbm/ui/QuickShareBaseView;-><init>(Landroid/content/Context;)V
 
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/dp;
-
-    iget-object v0, v0, Lcom/bbm/d/dp;->t:Lcom/bbm/util/bc;
-
-    sget-object v3, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
-
-    if-ne v0, v3, :cond_4
-
-    .line 1672
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/ae;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ae;->u()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->u(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/r;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/dp;
-
-    iget-wide v3, v0, Lcom/bbm/d/dp;->o:J
-
-    const-wide/16 v5, 0x0
-
-    cmp-long v0, v3, v5
-
-    if-nez v0, :cond_1
-
-    .line 1674
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    const/4 v3, 0x4
-
-    invoke-virtual {v0, v3}, Landroid/view/Window;->setSoftInputMode(I)V
-
-    .line 1675
-    iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->y(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
-
-    .line 1677
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->a:Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->h()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 1678
-    iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    const/4 v3, 0x2
-
-    invoke-virtual {v0, v3}, Landroid/view/Window;->setSoftInputMode(I)V
-
-    .line 1679
-    iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    .line 1680
-    iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0, v2}, Lcom/bbm/ui/activities/ConversationActivity;->b(Lcom/bbm/ui/activities/ConversationActivity;Z)V
-
-    :cond_2
     :goto_0
-    move v0, v1
+    return-object v0
 
-    .line 1689
-    :goto_1
-    return v0
-
-    .line 1682
-    :cond_3
+    .line 396
+    :pswitch_0
     iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->a:Lcom/bbm/ui/EmoticonInputPanel;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->b(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/QuickShareBaseView;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->c()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 1683
-    iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->a:Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->e()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 1684
-    iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->b(Lcom/bbm/ui/activities/ConversationActivity;Z)V
+    move-result-object v0
 
     goto :goto_0
 
-    .line 1689
-    :cond_4
+    .line 398
+    :pswitch_1
     iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->u(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/r;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->c(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/QuickShareBaseView;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
+    goto :goto_0
+
+    .line 400
+    :pswitch_2
+    iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->d(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/QuickShareBaseView;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/dp;
+    goto :goto_0
 
-    iget-object v0, v0, Lcom/bbm/d/dp;->t:Lcom/bbm/util/bc;
+    .line 402
+    :pswitch_3
+    iget-object v0, p0, Lcom/bbm/ui/activities/fw;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    sget-object v3, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->e(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/QuickShareBaseView;
 
-    if-eq v0, v3, :cond_5
+    move-result-object v0
 
-    move v0, v1
+    goto :goto_0
 
-    goto :goto_1
+    .line 394
+    nop
 
-    :cond_5
-    move v0, v2
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
+.end method
 
-    goto :goto_1
+.method public final a()Ljava/util/List;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Landroid/util/Pair",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            ">;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 409
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 410
+    new-instance v1, Landroid/util/Pair;
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const v3, 0x7f0203d5
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-direct {v1, v2, v3}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 411
+    new-instance v1, Landroid/util/Pair;
+
+    const/4 v2, 0x1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const v3, 0x7f0203d7
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-direct {v1, v2, v3}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 412
+    new-instance v1, Landroid/util/Pair;
+
+    const/4 v2, 0x2
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const v3, 0x7f0203d6
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-direct {v1, v2, v3}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 413
+    new-instance v1, Landroid/util/Pair;
+
+    const/4 v2, 0x3
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const v3, 0x7f0203d4
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    invoke-direct {v1, v2, v3}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 414
+    return-object v0
 .end method

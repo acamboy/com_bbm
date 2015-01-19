@@ -1,91 +1,110 @@
 .class final Lcom/bbm/ui/c/am;
-.super Lcom/bbm/e/a;
+.super Ljava/lang/Object;
 .source "ChannelDetailsFragment.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic c:Lcom/bbm/ui/ObservingImageView;
-
-.field final synthetic d:Lcom/bbm/ui/c/q;
+.field final synthetic a:Lcom/bbm/ui/c/ag;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/q;Landroid/app/Activity;Lcom/bbm/ui/ObservingImageView;Ljava/lang/String;Lcom/bbm/ui/ObservingImageView;)V
+.method constructor <init>(Lcom/bbm/ui/c/ag;)V
     .locals 0
 
     .prologue
-    .line 360
-    iput-object p1, p0, Lcom/bbm/ui/c/am;->d:Lcom/bbm/ui/c/q;
+    .line 647
+    iput-object p1, p0, Lcom/bbm/ui/c/am;->a:Lcom/bbm/ui/c/ag;
 
-    iput-object p5, p0, Lcom/bbm/ui/c/am;->c:Lcom/bbm/ui/ObservingImageView;
-
-    invoke-direct {p0, p2, p3, p4}, Lcom/bbm/e/a;-><init>(Landroid/app/Activity;Lcom/bbm/ui/ObservingImageView;Ljava/lang/String;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Lcom/bbm/d/dw;)V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 6
 
     .prologue
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    .line 363
-    iget-object v0, p0, Lcom/bbm/ui/c/am;->d:Lcom/bbm/ui/c/q;
+    .line 651
+    iget-object v0, p0, Lcom/bbm/ui/c/am;->a:Lcom/bbm/ui/c/ag;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->j(Lcom/bbm/ui/c/q;)Landroid/widget/ProgressBar;
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
 
     move-result-object v0
 
-    const/16 v1, 0x8
+    const v1, 0x7f0b063d
 
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    .line 364
-    iget-object v0, p0, Lcom/bbm/ui/c/am;->d:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->k(Lcom/bbm/ui/c/q;)Landroid/widget/ImageView;
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    check-cast v0, Landroid/widget/LinearLayout;
 
-    .line 365
-    iget-object v0, p0, Lcom/bbm/ui/c/am;->c:Lcom/bbm/ui/ObservingImageView;
+    .line 652
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getVisibility()I
 
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/ObservingImageView;->setVisibility(I)V
+    move-result v1
 
-    .line 366
-    invoke-super {p0, p1}, Lcom/bbm/e/a;->a(Lcom/bbm/d/dw;)V
+    const/16 v2, 0x8
 
-    .line 367
-    iget-object v0, p0, Lcom/bbm/ui/c/am;->d:Lcom/bbm/ui/c/q;
+    if-ne v1, v2, :cond_0
 
-    iget-object v1, p0, Lcom/bbm/e/a;->b:Ljava/lang/String;
+    .line 653
+    const/4 v1, -0x1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/q;->a(Lcom/bbm/ui/c/q;Ljava/lang/String;)Ljava/lang/String;
+    const/4 v2, -0x2
 
-    .line 368
-    iget-object v0, p0, Lcom/bbm/ui/c/am;->d:Lcom/bbm/ui/c/q;
+    invoke-virtual {v0, v1, v2}, Landroid/view/View;->measure(II)V
 
-    iget-boolean v1, p0, Lcom/bbm/e/a;->a:Z
+    invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/q;->b(Lcom/bbm/ui/c/q;Z)Z
+    move-result v1
 
-    .line 369
+    invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v2
+
+    iput v3, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+
+    new-instance v2, Lcom/bbm/ui/e;
+
+    invoke-direct {v2, v0, v1}, Lcom/bbm/ui/e;-><init>(Landroid/view/View;I)V
+
+    const-wide/16 v4, 0x96
+
+    invoke-virtual {v2, v4, v5}, Landroid/view/animation/Animation;->setDuration(J)V
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    .line 654
+    check-cast p1, Landroid/widget/TextView;
+
+    const v0, 0x7f0e0187
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
+
+    .line 659
+    :goto_0
     return-void
-.end method
 
-.method protected final bridge synthetic a(Ljava/lang/Object;)V
-    .locals 0
+    .line 656
+    :cond_0
+    invoke-static {v0, v3}, Lcom/bbm/ui/d;->a(Landroid/view/View;I)V
 
-    .prologue
-    .line 360
-    check-cast p1, Lcom/bbm/d/dw;
+    .line 657
+    check-cast p1, Landroid/widget/TextView;
 
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/c/am;->a(Lcom/bbm/d/dw;)V
+    const v0, 0x7f0e018f
 
-    return-void
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setText(I)V
+
+    goto :goto_0
 .end method

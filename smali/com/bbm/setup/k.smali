@@ -3,7 +3,7 @@
 .source "LoadingActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 82
+    .line 153
     iput-object p1, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,43 +25,165 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final onGlobalLayout()V
+    .locals 2
 
     .prologue
-    .line 85
+    .line 156
     iget-object v0, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
 
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->g(Lcom/bbm/setup/LoadingActivity;)Z
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->m(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
 
-    .line 87
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    .line 158
     iget-object v0, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
 
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->h(Lcom/bbm/setup/LoadingActivity;)Z
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->n(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
 
-    .line 88
+    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->n(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getWidth()I
+
+    move-result v1
+
+    div-int/lit8 v1, v1, 0x2
+
+    int-to-float v1, v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setPivotX(F)V
+
+    .line 159
     iget-object v0, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/setup/LoadingActivity;->b()V
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->n(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
 
-    .line 93
-    :goto_0
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
+
+    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->n(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setPivotY(F)V
+
+    .line 161
+    iget-object v0, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
+
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->o(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
+
+    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->o(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getWidth()I
+
+    move-result v1
+
+    div-int/lit8 v1, v1, 0x2
+
+    int-to-float v1, v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setPivotX(F)V
+
+    .line 162
+    iget-object v0, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
+
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->o(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
+
+    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->o(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setPivotY(F)V
+
+    .line 164
+    iget-object v0, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
+
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->p(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
+
+    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->p(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getWidth()I
+
+    move-result v1
+
+    div-int/lit8 v1, v1, 0x2
+
+    int-to-float v1, v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setPivotX(F)V
+
+    .line 165
+    iget-object v0, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
+
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->p(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
+
+    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->p(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getHeight()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setPivotY(F)V
+
+    .line 167
+    iget-object v0, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
+
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->k(Lcom/bbm/setup/LoadingActivity;)V
+
+    .line 168
+    iget-object v0, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
+
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->l(Lcom/bbm/setup/LoadingActivity;)V
+
+    .line 169
     return-void
-
-    .line 90
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->i(Lcom/bbm/setup/LoadingActivity;)V
-
-    .line 91
-    iget-object v0, p0, Lcom/bbm/setup/k;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->j(Lcom/bbm/setup/LoadingActivity;)V
-
-    goto :goto_0
 .end method

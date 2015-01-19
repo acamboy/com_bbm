@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/ex;
 .super Ljava/lang/Object;
-.source "SearchEditText.java"
+.source "QuickShareGlympseView.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Landroid/location/LocationListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/SearchEditText;
+.field final synthetic a:Lcom/bbm/ui/QuickShareGlympseView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/SearchEditText;)V
+.method constructor <init>(Lcom/bbm/ui/QuickShareGlympseView;)V
     .locals 0
 
     .prologue
-    .line 73
-    iput-object p1, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/SearchEditText;
+    .line 90
+    iput-object p1, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/QuickShareGlympseView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,99 +25,68 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
+.method public final onLocationChanged(Landroid/location/Location;)V
     .locals 0
 
     .prologue
-    .line 76
+    .line 94
     return-void
 .end method
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+.method public final onProviderDisabled(Ljava/lang/String;)V
+    .locals 2
 
     .prologue
-    .line 80
-    return-void
-.end method
+    .line 110
+    iget-object v0, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/QuickShareGlympseView;
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 4
-
-    .prologue
-    const/16 v2, 0x8
-
-    const/4 v1, 0x0
-
-    .line 84
-    iget-object v0, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/SearchEditText;
-
-    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->a(Lcom/bbm/ui/SearchEditText;)Lcom/bbm/ui/fc;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 85
-    iget-object v0, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/SearchEditText;
-
-    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->a(Lcom/bbm/ui/SearchEditText;)Lcom/bbm/ui/fc;
-
-    move-result-object v0
-
-    invoke-static {p1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-interface {v0, v3}, Lcom/bbm/ui/fc;->a(Ljava/lang/String;)V
-
-    .line 87
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/SearchEditText;
-
-    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->b(Lcom/bbm/ui/SearchEditText;)Landroid/widget/Button;
-
-    move-result-object v3
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->a(Lcom/bbm/ui/QuickShareGlympseView;)Z
 
     move-result v0
 
-    if-lez v0, :cond_1
+    if-eqz v0, :cond_0
 
-    move v0, v1
+    .line 111
+    iget-object v0, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/QuickShareGlympseView;
 
-    :goto_0
-    invoke-virtual {v3, v0}, Landroid/widget/Button;->setVisibility(I)V
+    const/4 v1, 0x0
 
-    .line 88
-    iget-object v0, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/SearchEditText;
+    invoke-static {v0, v1}, Lcom/bbm/ui/QuickShareGlympseView;->a(Lcom/bbm/ui/QuickShareGlympseView;Z)V
 
-    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->c(Lcom/bbm/ui/SearchEditText;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v3
-
-    if-lez v3, :cond_2
-
-    :goto_1
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
-
-    .line 89
+    .line 113
+    :cond_0
     return-void
+.end method
 
-    :cond_1
-    move v0, v2
+.method public final onProviderEnabled(Ljava/lang/String;)V
+    .locals 2
 
-    .line 87
-    goto :goto_0
+    .prologue
+    .line 103
+    iget-object v0, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/QuickShareGlympseView;
 
-    :cond_2
-    move v1, v2
+    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->a(Lcom/bbm/ui/QuickShareGlympseView;)Z
 
-    .line 88
-    goto :goto_1
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 104
+    iget-object v0, p0, Lcom/bbm/ui/ex;->a:Lcom/bbm/ui/QuickShareGlympseView;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/QuickShareGlympseView;->a(Lcom/bbm/ui/QuickShareGlympseView;Z)V
+
+    .line 106
+    :cond_0
+    return-void
+.end method
+
+.method public final onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
+    .locals 0
+
+    .prologue
+    .line 99
+    return-void
 .end method

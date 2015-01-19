@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method protected abstract a(Ljava/lang/Object;)V
+.method public abstract a(Ljava/lang/Object;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT",
@@ -64,7 +64,7 @@
     .end annotation
 .end method
 
-.method protected abstract cP()V
+.method public abstract cP()V
 .end method
 
 .method public ec()V

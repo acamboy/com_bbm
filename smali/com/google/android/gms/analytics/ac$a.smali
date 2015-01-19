@@ -338,9 +338,9 @@
 
     invoke-interface {v1}, Lcom/google/android/gms/analytics/i;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/google/android/gms/analytics/ac$a;->uj:J
+    iput-wide v2, p0, Lcom/google/android/gms/analytics/ac$a;->uj:J
 
     :try_start_0
     invoke-super {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;

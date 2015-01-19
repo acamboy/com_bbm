@@ -1,58 +1,363 @@
-.class final Lcom/bbm/ui/e/bn;
+.class final synthetic Lcom/bbm/ui/e/bn;
 .super Ljava/lang/Object;
-.source "SharedUrlHolder.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "MessagesDelegateAdapter.java"
 
 
-# instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/e/bm;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/e/bm;Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 171
-    iput-object p1, p0, Lcom/bbm/ui/e/bn;->b:Lcom/bbm/ui/e/bm;
-
-    iput-object p2, p0, Lcom/bbm/ui/e/bn;->a:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method static constructor <clinit>()V
     .locals 3
 
     .prologue
-    .line 174
-    new-instance v0, Landroid/content/Intent;
+    .line 434
+    invoke-static {}, Lcom/bbm/d/fm;->values()[Lcom/bbm/d/fm;
 
-    const-string v1, "android.intent.action.VIEW"
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/bbm/ui/e/bn;->a:Ljava/lang/String;
+    array-length v0, v0
 
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    new-array v0, v0, [I
 
-    move-result-object v2
+    sput-object v0, Lcom/bbm/ui/e/bn;->a:[I
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
 
-    .line 175
-    iget-object v1, p0, Lcom/bbm/ui/e/bn;->b:Lcom/bbm/ui/e/bm;
+    sget-object v1, Lcom/bbm/d/fm;->a:Lcom/bbm/d/fm;
 
-    iget-object v1, v1, Lcom/bbm/ui/e/bm;->a:Landroid/content/Context;
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
 
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    move-result v1
 
-    .line 176
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_f
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->b:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_e
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->c:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_d
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->q:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_c
+
+    :goto_3
+    :try_start_4
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->h:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_b
+
+    :goto_4
+    :try_start_5
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->s:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_a
+
+    :goto_5
+    :try_start_6
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->w:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x7
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_9
+
+    :goto_6
+    :try_start_7
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->f:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x8
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_8
+
+    :goto_7
+    :try_start_8
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->g:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x9
+
+    aput v2, v0, v1
+    :try_end_8
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_7
+
+    :goto_8
+    :try_start_9
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->e:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xa
+
+    aput v2, v0, v1
+    :try_end_9
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_6
+
+    :goto_9
+    :try_start_a
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->r:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xb
+
+    aput v2, v0, v1
+    :try_end_a
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_5
+
+    :goto_a
+    :try_start_b
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->p:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xc
+
+    aput v2, v0, v1
+    :try_end_b
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_b .. :try_end_b} :catch_4
+
+    :goto_b
+    :try_start_c
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->u:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xd
+
+    aput v2, v0, v1
+    :try_end_c
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_c .. :try_end_c} :catch_3
+
+    :goto_c
+    :try_start_d
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->t:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xe
+
+    aput v2, v0, v1
+    :try_end_d
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_d .. :try_end_d} :catch_2
+
+    :goto_d
+    :try_start_e
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->v:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0xf
+
+    aput v2, v0, v1
+    :try_end_e
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_e .. :try_end_e} :catch_1
+
+    :goto_e
+    :try_start_f
+    sget-object v0, Lcom/bbm/ui/e/bn;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->x:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/16 v2, 0x10
+
+    aput v2, v0, v1
+    :try_end_f
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_f .. :try_end_f} :catch_0
+
+    :goto_f
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_f
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_e
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_d
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_c
+
+    :catch_4
+    move-exception v0
+
+    goto :goto_b
+
+    :catch_5
+    move-exception v0
+
+    goto :goto_a
+
+    :catch_6
+    move-exception v0
+
+    goto :goto_9
+
+    :catch_7
+    move-exception v0
+
+    goto :goto_8
+
+    :catch_8
+    move-exception v0
+
+    goto :goto_7
+
+    :catch_9
+    move-exception v0
+
+    goto :goto_6
+
+    :catch_a
+    move-exception v0
+
+    goto/16 :goto_5
+
+    :catch_b
+    move-exception v0
+
+    goto/16 :goto_4
+
+    :catch_c
+    move-exception v0
+
+    goto/16 :goto_3
+
+    :catch_d
+    move-exception v0
+
+    goto/16 :goto_2
+
+    :catch_e
+    move-exception v0
+
+    goto/16 :goto_1
+
+    :catch_f
+    move-exception v0
+
+    goto/16 :goto_0
 .end method

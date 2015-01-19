@@ -40,7 +40,7 @@
     .line 43
     if-ne p0, p1, :cond_1
 
-    .line 64
+    .line 63
     :cond_0
     :goto_0
     return v0
@@ -90,7 +90,7 @@
     .line 55
     goto :goto_0
 
-    .line 58
+    .line 57
     :cond_4
     iget-object v2, p0, Lcom/bbm/ui/widget/a;->b:Landroid/content/Context;
 
@@ -104,10 +104,10 @@
 
     move v0, v1
 
-    .line 59
+    .line 58
     goto :goto_0
 
-    .line 61
+    .line 60
     :cond_5
     iget v2, p0, Lcom/bbm/ui/widget/a;->a:I
 
@@ -117,7 +117,7 @@
 
     move v0, v1
 
-    .line 62
+    .line 61
     goto :goto_0
 .end method
 

@@ -17,7 +17,7 @@
     return-void
 .end method
 
-.method protected static a([I[II)I
+.method public static a([I[II)I
     .locals 9
 
     .prologue
@@ -123,7 +123,7 @@
     goto :goto_1
 .end method
 
-.method protected static a(Lcom/google/zxing/b/a;I[I)V
+.method public static a(Lcom/google/zxing/b/a;I[I)V
     .locals 8
 
     .prologue
@@ -605,7 +605,7 @@
     throw v1
 .end method
 
-.method protected static b(Lcom/google/zxing/b/a;I[I)V
+.method public static b(Lcom/google/zxing/b/a;I[I)V
     .locals 3
 
     .prologue

@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/activities/ace;
 .super Ljava/lang/Object;
-.source "SelectGroupActivity.java"
+.source "PreviewChannelActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/b/f;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SelectGroupActivity;
+.field final synthetic a:Lcom/bbm/ui/b/a;
+
+.field final synthetic b:Lcom/bbm/ui/activities/PreviewChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SelectGroupActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/PreviewChannelActivity;Lcom/bbm/ui/b/a;)V
     .locals 0
 
     .prologue
-    .line 116
-    iput-object p1, p0, Lcom/bbm/ui/activities/ace;->a:Lcom/bbm/ui/activities/SelectGroupActivity;
+    .line 153
+    iput-object p1, p0, Lcom/bbm/ui/activities/ace;->b:Lcom/bbm/ui/activities/PreviewChannelActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/ace;->a:Lcom/bbm/ui/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,22 +29,20 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a()V
+    .locals 1
 
     .prologue
-    .line 119
-    const-string v0, "mHeaderActionBar PositiveButton Clicked"
+    .line 157
+    iget-object v0, p0, Lcom/bbm/ui/activities/ace;->b:Lcom/bbm/ui/activities/PreviewChannelActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/SelectGroupActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->i(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 158
+    iget-object v0, p0, Lcom/bbm/ui/activities/ace;->a:Lcom/bbm/ui/b/a;
 
-    .line 121
-    iget-object v0, p0, Lcom/bbm/ui/activities/ace;->a:Lcom/bbm/ui/activities/SelectGroupActivity;
+    invoke-virtual {v0}, Lcom/bbm/ui/b/a;->dismiss()V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SelectGroupActivity;->d(Lcom/bbm/ui/activities/SelectGroupActivity;)V
-
-    .line 122
+    .line 159
     return-void
 .end method

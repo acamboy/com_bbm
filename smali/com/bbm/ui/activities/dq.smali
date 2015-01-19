@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/dq;
 .super Ljava/lang/Object;
-.source "ChannelSettingsActivity.java"
+.source "ChannelPostPhotoGalleryActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/dp;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelSettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/dp;)V
     .locals 0
 
     .prologue
-    .line 106
-    iput-object p1, p0, Lcom/bbm/ui/activities/dq;->a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
+    .line 65
+    iput-object p1, p0, Lcom/bbm/ui/activities/dq;->a:Lcom/bbm/ui/activities/dp;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,15 +25,34 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 1
+.method public final run()V
+    .locals 2
 
     .prologue
-    .line 109
-    iget-object v0, p0, Lcom/bbm/ui/activities/dq;->a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
+    const/4 v1, 0x4
 
-    invoke-virtual {v0, p1}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->onAllowChatClicked(Landroid/view/View;)V
+    .line 69
+    iget-object v0, p0, Lcom/bbm/ui/activities/dq;->a:Lcom/bbm/ui/activities/dp;
 
-    .line 110
+    iget-object v0, v0, Lcom/bbm/ui/activities/dp;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->a(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)Lcom/bbm/ui/FooterActionBar;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
+
+    .line 70
+    iget-object v0, p0, Lcom/bbm/ui/activities/dq;->a:Lcom/bbm/ui/activities/dp;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/dp;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->b(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 71
     return-void
 .end method

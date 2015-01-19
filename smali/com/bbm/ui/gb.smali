@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/gb;
 .super Ljava/lang/Object;
-.source "StoreItemView.java"
+.source "SelfHeaderView.java"
 
 # interfaces
-.implements Lcom/bbm/ui/gf;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Z
-
-.field final synthetic b:Lcom/bbm/ui/StoreItemView;
+.field final synthetic a:Lcom/bbm/ui/SelfHeaderView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/StoreItemView;Z)V
+.method constructor <init>(Lcom/bbm/ui/SelfHeaderView;)V
     .locals 0
 
     .prologue
-    .line 189
-    iput-object p1, p0, Lcom/bbm/ui/gb;->b:Lcom/bbm/ui/StoreItemView;
-
-    iput-boolean p2, p0, Lcom/bbm/ui/gb;->a:Z
+    .line 61
+    iput-object p1, p0, Lcom/bbm/ui/gb;->a:Lcom/bbm/ui/SelfHeaderView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,67 +25,38 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/d/dw;Ljava/lang/String;)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    .line 192
-    iget-object v0, p0, Lcom/bbm/ui/gb;->b:Lcom/bbm/ui/StoreItemView;
+    .line 64
+    const-string v0, "Avatar clicked"
 
-    invoke-static {v0}, Lcom/bbm/ui/StoreItemView;->a(Lcom/bbm/ui/StoreItemView;)Ljava/lang/String;
+    const-class v1, Lcom/bbm/ui/SelfHeaderView;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-static {v0, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+    .line 65
+    iget-object v0, p0, Lcom/bbm/ui/gb;->a:Lcom/bbm/ui/SelfHeaderView;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 193
-    if-nez p1, :cond_1
-
-    .line 194
-    iget-object v0, p0, Lcom/bbm/ui/gb;->b:Lcom/bbm/ui/StoreItemView;
-
-    invoke-static {v0}, Lcom/bbm/ui/StoreItemView;->b(Lcom/bbm/ui/StoreItemView;)Landroid/widget/ImageView;
+    invoke-virtual {v0}, Lcom/bbm/ui/SelfHeaderView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    new-instance v1, Landroid/content/Intent;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+    iget-object v2, p0, Lcom/bbm/ui/gb;->a:Lcom/bbm/ui/SelfHeaderView;
 
-    .line 204
-    :cond_0
-    :goto_0
+    invoke-virtual {v2}, Lcom/bbm/ui/SelfHeaderView;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const-class v3, Lcom/bbm/ui/activities/OwnProfileActivity;
+
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 66
     return-void
-
-    .line 197
-    :cond_1
-    iget-object v0, p1, Lcom/bbm/d/dw;->b:Landroid/graphics/drawable/Drawable;
-
-    .line 198
-    iget-boolean v1, p0, Lcom/bbm/ui/gb;->a:Z
-
-    if-eqz v1, :cond_2
-
-    .line 199
-    iget-object v1, p0, Lcom/bbm/ui/gb;->b:Lcom/bbm/ui/StoreItemView;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/StoreItemView;->a(Lcom/bbm/ui/StoreItemView;Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
-
-    .line 201
-    :cond_2
-    iget-object v1, p0, Lcom/bbm/ui/gb;->b:Lcom/bbm/ui/StoreItemView;
-
-    invoke-static {v1}, Lcom/bbm/ui/StoreItemView;->b(Lcom/bbm/ui/StoreItemView;)Landroid/widget/ImageView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    goto :goto_0
 .end method

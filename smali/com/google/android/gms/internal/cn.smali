@@ -73,7 +73,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/google/android/gms/internal/z;Lcom/google/android/gms/internal/dd;Ljava/util/List;ILjava/util/List;Ljava/util/List;IJLjava/lang/String;ZLcom/google/android/gms/internal/ax;Lcom/google/android/gms/internal/bg;Ljava/lang/String;Lcom/google/android/gms/internal/ay;Lcom/google/android/gms/internal/ba;JLcom/google/android/gms/internal/ab;JJJ)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -147,7 +147,9 @@
 
     iput-boolean p11, p0, Lcom/google/android/gms/internal/cn;->ok:Z
 
-    iput-object p12, p0, Lcom/google/android/gms/internal/cn;->mM:Lcom/google/android/gms/internal/ax;
+    move-object/from16 v0, p12
+
+    iput-object v0, p0, Lcom/google/android/gms/internal/cn;->mM:Lcom/google/android/gms/internal/ax;
 
     move-object/from16 v0, p13
 

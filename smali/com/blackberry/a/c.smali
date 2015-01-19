@@ -262,7 +262,7 @@
 
     .line 71
     :pswitch_0
-    const-string v0, "http://10.3.163.26"
+    const-string v0, "http://10.236.2.85"
 
     iput-object v0, p0, Lcom/blackberry/a/c;->h:Ljava/lang/String;
 
@@ -403,11 +403,11 @@
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    div-long/2addr v3, v10
+    div-long/2addr v4, v10
 
-    long-to-int v1, v3
+    long-to-int v1, v4
 
     add-int/lit8 v1, v1, 0x3c
 

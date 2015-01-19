@@ -97,73 +97,73 @@
 .method public z(Landroid/os/Parcel;)Lcom/google/android/gms/drive/DriveId;
     .locals 9
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/a;->o(Landroid/os/Parcel;)I
 
     move-result v0
 
-    const/4 v1, 0x0
-
     const/4 v2, 0x0
 
-    move-wide v3, v5
+    const/4 v3, 0x0
+
+    move-wide v4, v6
 
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
-    move-result v7
+    move-result v1
 
-    if-ge v7, v0, :cond_0
+    if-ge v1, v0, :cond_0
 
     invoke-static {p1}, Lcom/google/android/gms/common/internal/safeparcel/a;->n(Landroid/os/Parcel;)I
 
-    move-result v7
+    move-result v1
 
-    invoke-static {v7}, Lcom/google/android/gms/common/internal/safeparcel/a;->S(I)I
+    invoke-static {v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->S(I)I
 
     move-result v8
 
     packed-switch v8, :pswitch_data_0
 
-    invoke-static {p1, v7}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
+    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
     :pswitch_0
-    invoke-static {p1, v7}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
+    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
 
-    move-result v1
+    move-result v2
 
     goto :goto_0
 
     :pswitch_1
-    invoke-static {p1, v7}, Lcom/google/android/gms/common/internal/safeparcel/a;->m(Landroid/os/Parcel;I)Ljava/lang/String;
+    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->m(Landroid/os/Parcel;I)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
     goto :goto_0
 
     :pswitch_2
-    invoke-static {p1, v7}, Lcom/google/android/gms/common/internal/safeparcel/a;->h(Landroid/os/Parcel;I)J
+    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->h(Landroid/os/Parcel;I)J
 
-    move-result-wide v3
+    move-result-wide v4
 
     goto :goto_0
 
     :pswitch_3
-    invoke-static {p1, v7}, Lcom/google/android/gms/common/internal/safeparcel/a;->h(Landroid/os/Parcel;I)J
+    invoke-static {p1, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->h(Landroid/os/Parcel;I)J
 
-    move-result-wide v5
+    move-result-wide v6
 
     goto :goto_0
 
     :cond_0
     invoke-virtual {p1}, Landroid/os/Parcel;->dataPosition()I
 
-    move-result v7
+    move-result v1
 
-    if-eq v7, v0, :cond_1
+    if-eq v1, v0, :cond_1
 
     new-instance v1, Lcom/google/android/gms/common/internal/safeparcel/a$a;
 
@@ -186,11 +186,11 @@
     throw v1
 
     :cond_1
-    new-instance v0, Lcom/google/android/gms/drive/DriveId;
+    new-instance v1, Lcom/google/android/gms/drive/DriveId;
 
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/drive/DriveId;-><init>(ILjava/lang/String;JJ)V
+    invoke-direct/range {v1 .. v7}, Lcom/google/android/gms/drive/DriveId;-><init>(ILjava/lang/String;JJ)V
 
-    return-object v0
+    return-object v1
 
     nop
 

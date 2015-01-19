@@ -1,55 +1,67 @@
 .class Lcom/glympse/android/hal/aq;
-.super Landroid/database/ContentObserver;
+.super Ljava/lang/Object;
 .source "LocalContactsProvider.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic bX:Lcom/glympse/android/hal/ap;
+.field private bU:Lcom/glympse/android/hal/GVector;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/glympse/android/hal/GVector",
+            "<",
+            "Lcom/glympse/android/lib/GPerson;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private bY:Lcom/glympse/android/hal/ao;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/hal/ap;)V
-    .locals 1
+.method public constructor <init>(Lcom/glympse/android/hal/ao;Lcom/glympse/android/hal/GVector;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glympse/android/hal/ao;",
+            "Lcom/glympse/android/hal/GVector",
+            "<",
+            "Lcom/glympse/android/lib/GPerson;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 148
-    iput-object p1, p0, Lcom/glympse/android/hal/aq;->bX:Lcom/glympse/android/hal/ap;
+    .line 220
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 149
-    const/4 v0, 0x0
+    .line 221
+    iput-object p1, p0, Lcom/glympse/android/hal/aq;->bY:Lcom/glympse/android/hal/ao;
 
-    invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+    .line 222
+    iput-object p2, p0, Lcom/glympse/android/hal/aq;->bU:Lcom/glympse/android/hal/GVector;
 
-    .line 150
+    .line 223
     return-void
 .end method
 
 
 # virtual methods
-.method public deliverSelfNotifications()Z
-    .locals 1
-
-    .prologue
-    .line 164
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public onChange(Z)V
+.method public run()V
     .locals 2
 
     .prologue
-    .line 155
-    invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
+    .line 227
+    iget-object v0, p0, Lcom/glympse/android/hal/aq;->bY:Lcom/glympse/android/hal/ao;
 
-    .line 158
-    iget-object v0, p0, Lcom/glympse/android/hal/aq;->bX:Lcom/glympse/android/hal/ap;
+    iget-object v1, p0, Lcom/glympse/android/hal/aq;->bU:Lcom/glympse/android/hal/GVector;
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v1}, Lcom/glympse/android/hal/ao;->complete(Lcom/glympse/android/hal/GVector;)V
 
-    invoke-static {v0, v1}, Lcom/glympse/android/hal/ap;->a(Lcom/glympse/android/hal/ap;Z)Z
-
-    .line 159
+    .line 228
     return-void
 .end method

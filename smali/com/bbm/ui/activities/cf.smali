@@ -1,41 +1,37 @@
 .class final Lcom/bbm/ui/activities/cf;
-.super Lcom/bbm/ui/by;
-.source "ChannelOfficeHoursSettingsActivity.java"
+.super Ljava/lang/Object;
+.source "ChangeStatusActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+.field a:Landroid/widget/LinearLayout;
+
+.field b:Landroid/widget/EditText;
+
+.field c:Z
+
+.field final synthetic d:Lcom/bbm/ui/activities/cb;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
+.method private constructor <init>(Lcom/bbm/ui/activities/cb;)V
     .locals 0
 
     .prologue
-    .line 176
-    iput-object p1, p0, Lcom/bbm/ui/activities/cf;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+    .line 408
+    iput-object p1, p0, Lcom/bbm/ui/activities/cf;->d:Lcom/bbm/ui/activities/cb;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()V
-    .locals 1
+.method synthetic constructor <init>(Lcom/bbm/ui/activities/cb;B)V
+    .locals 0
 
     .prologue
-    .line 179
-    iget-object v0, p0, Lcom/bbm/ui/activities/cf;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+    .line 408
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/cf;-><init>(Lcom/bbm/ui/activities/cb;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->e(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
-
-    .line 180
-    iget-object v0, p0, Lcom/bbm/ui/activities/cf;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->finish()V
-
-    .line 181
     return-void
 .end method

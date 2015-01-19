@@ -23,7 +23,7 @@
 .end method
 
 .method private static a(Ljava/io/InputStream;Ljava/io/OutputStream;)J
-    .locals 5
+    .locals 6
 
     .prologue
     .line 202
@@ -57,9 +57,9 @@
     invoke-virtual {p1, v2, v4, v3}, Ljava/io/OutputStream;->write([BII)V
 
     .line 212
-    int-to-long v3, v3
+    int-to-long v4, v3
 
-    add-long/2addr v0, v3
+    add-long/2addr v0, v4
 
     .line 213
     goto :goto_0

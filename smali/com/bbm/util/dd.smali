@@ -1,47 +1,163 @@
-.class final Lcom/bbm/util/dd;
+.class public final Lcom/bbm/util/dd;
 .super Ljava/lang/Object;
-.source "ShareMyPinUtil.java"
-
-# interfaces
-.implements Landroid/media/MediaScannerConnection$OnScanCompletedListener;
-
-
-# instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/util/dc;
+.source "ProximitySensorUtil.java"
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/dc;Ljava/lang/String;)V
-    .locals 0
+.method public static a(Landroid/os/PowerManager;)Landroid/os/PowerManager$WakeLock;
+    .locals 7
 
     .prologue
-    .line 80
-    iput-object p1, p0, Lcom/bbm/util/dd;->b:Lcom/bbm/util/dc;
+    const/4 v1, 0x0
 
-    iput-object p2, p0, Lcom/bbm/util/dd;->a:Ljava/lang/String;
+    .line 76
+    const-class v2, Landroid/os/PowerManager;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 81
+    :try_start_0
+    const-string v0, "PROXIMITY_SCREEN_OFF_WAKE_LOCK"
 
-    return-void
-.end method
+    invoke-virtual {v2, v0}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
+    move-result-object v0
 
-# virtual methods
-.method public final onScanCompleted(Ljava/lang/String;Landroid/net/Uri;)V
-    .locals 2
-
-    .prologue
     .line 83
-    iget-object v0, p0, Lcom/bbm/util/dd;->b:Lcom/bbm/util/dc;
+    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    iget-object v0, v0, Lcom/bbm/util/dc;->a:Landroid/app/Activity;
+    move-result v3
 
-    iget-object v1, p0, Lcom/bbm/util/dd;->a:Ljava/lang/String;
+    .line 98
+    :try_start_1
+    const-string v0, "isWakeLockLevelSupported"
 
-    invoke-static {v0, v1, p2}, Lcom/bbm/util/db;->a(Landroid/app/Activity;Ljava/lang/String;Landroid/net/Uri;)V
+    const/4 v4, 0x1
 
-    .line 84
-    return-void
+    new-array v4, v4, [Ljava/lang/Class;
+
+    const/4 v5, 0x0
+
+    sget-object v6, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v6, v4, v5
+
+    invoke-virtual {v2, v0, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    .line 101
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-virtual {v0, p0, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 102
+    instance-of v4, v0, Ljava/lang/Boolean;
+
+    if-eqz v4, :cond_0
+
+    .line 103
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    .line 104
+    if-eqz v0, :cond_0
+
+    .line 105
+    const-string v0, "bbm"
+
+    invoke-virtual {p0, v3, v0}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-result-object v0
+
+    .line 135
+    :goto_0
+    return-object v0
+
+    .line 89
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v0
+
+    .line 121
+    :cond_0
+    :try_start_2
+    const-string v0, "getSupportedWakeLockFlags"
+
+    const/4 v4, 0x0
+
+    new-array v4, v4, [Ljava/lang/Class;
+
+    invoke-virtual {v2, v0, v4}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    .line 124
+    const/4 v2, 0x0
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-virtual {v0, p0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 125
+    instance-of v2, v0, Ljava/lang/Integer;
+
+    if-eqz v2, :cond_1
+
+    .line 126
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    .line 127
+    and-int/2addr v0, v3
+
+    if-eqz v0, :cond_1
+
+    .line 128
+    const-string v0, "bbm"
+
+    invoke-virtual {p0, v3, v0}, Landroid/os/PowerManager;->newWakeLock(ILjava/lang/String;)Landroid/os/PowerManager$WakeLock;
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
+
+    move-result-object v0
+
+    goto :goto_0
+
+    :catch_2
+    move-exception v0
+
+    :cond_1
+    move-object v0, v1
+
+    .line 135
+    goto :goto_0
 .end method

@@ -1,46 +1,62 @@
 .class Lcom/glympse/android/lib/eb;
-.super Lcom/glympse/android/lib/ex;
+.super Lcom/glympse/android/lib/fb;
 .source "ImageCache.java"
 
 
 # instance fields
-.field private nl:Lcom/glympse/android/lib/dy;
+.field private kq:Ljava/lang/String;
 
-.field final synthetic nn:Lcom/glympse/android/lib/dy;
+.field private nM:Lcom/glympse/android/lib/ea;
+
+.field private nN:Lcom/glympse/android/api/GImage;
+
+.field final synthetic nO:Lcom/glympse/android/lib/ea;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/dy;Lcom/glympse/android/lib/dy;)V
+.method public constructor <init>(Lcom/glympse/android/lib/ea;Lcom/glympse/android/lib/ea;Lcom/glympse/android/api/GImage;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 476
-    iput-object p1, p0, Lcom/glympse/android/lib/eb;->nn:Lcom/glympse/android/lib/dy;
+    .line 459
+    iput-object p1, p0, Lcom/glympse/android/lib/eb;->nO:Lcom/glympse/android/lib/ea;
 
-    invoke-direct {p0}, Lcom/glympse/android/lib/ex;-><init>()V
+    invoke-direct {p0}, Lcom/glympse/android/lib/fb;-><init>()V
 
-    .line 477
-    iput-object p2, p0, Lcom/glympse/android/lib/eb;->nl:Lcom/glympse/android/lib/dy;
+    .line 460
+    iput-object p2, p0, Lcom/glympse/android/lib/eb;->nM:Lcom/glympse/android/lib/ea;
 
-    .line 478
+    .line 461
+    iput-object p3, p0, Lcom/glympse/android/lib/eb;->nN:Lcom/glympse/android/api/GImage;
+
+    .line 462
+    iput-object p4, p0, Lcom/glympse/android/lib/eb;->kq:Ljava/lang/String;
+
+    .line 463
     return-void
 .end method
 
 
 # virtual methods
 .method public onProcess()V
-    .locals 1
+    .locals 3
 
     .prologue
-    .line 482
-    iget-object v0, p0, Lcom/glympse/android/lib/eb;->nl:Lcom/glympse/android/lib/dy;
+    .line 467
+    iget-object v1, p0, Lcom/glympse/android/lib/eb;->nM:Lcom/glympse/android/lib/ea;
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/dy;->getMemoryCache()Lcom/glympse/android/lib/GMemoryCache;
+    iget-object v2, p0, Lcom/glympse/android/lib/eb;->kq:Ljava/lang/String;
+
+    iget-object v0, p0, Lcom/glympse/android/lib/eb;->nN:Lcom/glympse/android/api/GImage;
+
+    invoke-interface {v0}, Lcom/glympse/android/api/GImage;->getDrawable()Lcom/glympse/android/core/GDrawable;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/glympse/android/lib/GMemoryCache;->onLowMemory()V
+    check-cast v0, Lcom/glympse/android/hal/GDrawablePrivate;
 
-    .line 483
+    invoke-virtual {v1, v2, v0}, Lcom/glympse/android/lib/ea;->saveToCache(Ljava/lang/String;Lcom/glympse/android/hal/GDrawablePrivate;)V
+
+    .line 468
     return-void
 .end method

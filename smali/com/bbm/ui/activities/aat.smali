@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/aat;
 .super Ljava/lang/Object;
-.source "SearchResultsChannelsActivity.java"
+.source "OpenInBbmActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/h/bb;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/OpenInBbmActivity;)V
     .locals 0
 
     .prologue
-    .line 99
-    iput-object p1, p0, Lcom/bbm/ui/activities/aat;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+    .line 343
+    iput-object p1, p0, Lcom/bbm/ui/activities/aat;->a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,24 +25,15 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a()V
+    .locals 1
 
     .prologue
-    .line 103
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+    .line 347
+    iget-object v0, p0, Lcom/bbm/ui/activities/aat;->a:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
 
-    check-cast v0, Lcom/bbm/d/de;
-
-    .line 104
-    iget-object v1, p0, Lcom/bbm/ui/activities/aat;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
-
-    check-cast p1, Landroid/widget/ImageView;
-
-    invoke-static {v0, v1, p1}, Lcom/bbm/util/r;->a(Lcom/bbm/d/de;Landroid/app/Activity;Landroid/widget/ImageView;)V
-
-    .line 105
+    .line 348
     return-void
 .end method

@@ -28,7 +28,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 57
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 43
@@ -42,9 +42,9 @@
 
     iput-boolean v0, p0, Lcom/slidingmenu/lib/a/c;->g:Z
 
-    .line 58
+    .line 57
     iput-object p1, p0, Lcom/slidingmenu/lib/a/c;->a:Landroid/app/Activity;
 
-    .line 59
+    .line 58
     return-void
 .end method

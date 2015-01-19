@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/z;
 .super Ljava/lang/Object;
-.source "BbidErrorActivity.java"
+.source "AvatarViewerActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/slidingmenu/lib/a/b;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/BbidErrorActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/BbidErrorActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/AvatarViewerActivity;)V
     .locals 0
 
     .prologue
-    .line 39
-    iput-object p1, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
+    .line 108
+    iput-object p1, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,53 +25,50 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a()V
     .locals 2
 
     .prologue
-    .line 43
-    const-string v0, "Retrying on BBID error"
+    .line 112
+    const-string v0, "onHardwareMenuButtonClicked"
 
-    const-class v1, Lcom/bbm/ui/activities/BbidErrorActivity;
+    const-class v1, Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 45
-    iget-object v0, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
+    .line 113
+    iget-object v0, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/BbidErrorActivity;->getIntent()Landroid/content/Intent;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    sget-object v1, Lcom/bbm/ui/activities/BbidErrorActivity;->a:Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->b()Z
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
+    move-result v0
 
-    move-result-object v0
-
-    check-cast v0, Landroid/content/Intent;
-
-    .line 46
     if-eqz v0, :cond_0
 
-    .line 47
-    iget-object v1, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
+    .line 114
+    iget-object v0, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/BbidErrorActivity;->startActivity(Landroid/content/Intent;)V
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    .line 50
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    sget v1, Lcom/bbm/ui/activities/BbidErrorActivity;->b:I
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/BbidErrorActivity;->setResult(I)V
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    .line 51
-    iget-object v0, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/BbidErrorActivity;->finish()V
-
-    .line 52
+    .line 118
+    :goto_0
     return-void
+
+    .line 116
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/z;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->o()V
+
+    goto :goto_0
 .end method

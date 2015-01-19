@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/payment_activity_dialog_corner" />
+    <solid android:color="@color/payment_dialog_backround" />
+    <padding android:left="@dimen/payment_activity_dialog_padding" android:top="@dimen/payment_activity_dialog_padding" android:right="@dimen/payment_activity_dialog_padding" android:bottom="@dimen/payment_activity_dialog_padding_bottom" />
+</shape>

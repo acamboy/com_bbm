@@ -102,7 +102,7 @@
     move-result-object v1
 
     .line 3900
-    invoke-static {v0}, Lcom/google/b/b/n;->b(Lcom/google/b/b/am;)V
+    invoke-static {v0}, Lcom/google/b/b/n;->a(Lcom/google/b/b/am;)V
 
     move-object v0, v1
 
@@ -299,7 +299,7 @@
     invoke-static {v0, v1}, Lcom/google/b/b/n;->a(Lcom/google/b/b/am;Lcom/google/b/b/am;)V
 
     .line 3868
-    invoke-static {p1}, Lcom/google/b/b/n;->b(Lcom/google/b/b/am;)V
+    invoke-static {p1}, Lcom/google/b/b/n;->a(Lcom/google/b/b/am;)V
 
     .line 3870
     sget-object v0, Lcom/google/b/b/al;->a:Lcom/google/b/b/al;

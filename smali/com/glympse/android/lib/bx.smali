@@ -7,7 +7,7 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/glympse/android/lib/GGlympsePrivate;)V
+.method public abstract b(Lcom/glympse/android/lib/GGlympsePrivate;)V
 .end method
 
 .method public abstract deactivate()V

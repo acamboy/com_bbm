@@ -20,6 +20,14 @@
 
 .field public static final ACCOUNT_UNLINK_SUCCEEDED:I = 0x4
 
+.field public static final APPLICATIONS_APP_ADDED:I = 0x1
+
+.field public static final APPLICATIONS_APP_CHANGED:I = 0x4
+
+.field public static final APPLICATIONS_APP_LAUNCHED:I = 0x8
+
+.field public static final APPLICATIONS_APP_REMOVED:I = 0x2
+
 .field public static final BATTERY_STATE_CHANGED:I = 0x1
 
 .field public static final CONFIG_CHANGED:I = 0x3
@@ -56,7 +64,9 @@
 
 .field public static final GROUP_MEMBER_REMOVED:I = 0x20
 
-.field public static final GROUP_MEMBER_TICKET:I = 0x200
+.field public static final GROUP_MEMBER_TICKET_CHANGED:I = 0x200
+
+.field public static final GROUP_MEMBER_TICKET_RESIGNING:I = 0x400
 
 .field public static final GROUP_NAME_CHANGED:I = 0x80000
 
@@ -73,6 +83,8 @@
 .field public static final INVITE_DECODED:I = 0x1
 
 .field public static final INVITE_INVALID_CODE:I = 0x2
+
+.field public static final LISTENER_APPLICATIONS:I = 0xe
 
 .field public static final LISTENER_BATTERY:I = 0x6
 
@@ -101,6 +113,8 @@
 .field public static final LISTENER_PLATFORM:I = 0x1
 
 .field public static final LISTENER_TICKET:I = 0x4
+
+.field public static final LISTENER_TRIGGERS:I = 0xf
 
 .field public static final LISTENER_USER:I = 0x3
 
@@ -180,7 +194,7 @@
 
 .field public static final TICKET_ARRIVED:I = 0x200000
 
-.field public static final TICKET_CHANGED:I = 0x531f7f2
+.field public static final TICKET_CHANGED:I = 0x531f7fa
 
 .field public static final TICKET_COMPLETED:I = 0x4000000
 
@@ -234,7 +248,17 @@
 
 .field public static final TICKET_TRAVEL_MODE_CHANGED:I = 0x400
 
+.field public static final TICKET_VISIBILITY_CHANGED:I = 0x8
+
+.field public static final TRIGGERS_TRIGGER_ACTIVATED:I = 0x4
+
+.field public static final TRIGGERS_TRIGGER_ADDED:I = 0x1
+
+.field public static final TRIGGERS_TRIGGER_REMOVED:I = 0x2
+
 .field public static final USER_ACTIVE_TICKET_CHANGED:I = 0x2
+
+.field public static final USER_ACTIVE_TICKET_RESIGNING:I = 0x40
 
 .field public static final USER_AVATAR_FAILED_TO_UPLOAD:I = 0x20
 

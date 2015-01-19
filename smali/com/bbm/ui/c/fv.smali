@@ -1,403 +1,549 @@
-.class final Lcom/bbm/ui/c/fv;
-.super Lcom/bbm/ui/dt;
-.source "SlideMenuFragment.java"
+.class public Lcom/bbm/ui/c/fv;
+.super Landroid/app/Fragment;
+.source "PeopleYouKnowFragment.java"
 
 
 # annotations
-.annotation system Ldalvik/annotation/Signature;
+.annotation build Landroid/annotation/SuppressLint;
     value = {
-        "Lcom/bbm/ui/dt",
-        "<",
-        "Lcom/bbm/ui/slidingmenu/a;",
-        "Ljava/lang/Integer;",
-        ">;"
+        "ValidFragment"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic b:Lcom/bbm/ui/c/fq;
+.field public a:Landroid/view/View$OnClickListener;
+
+.field private b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+
+.field private final c:Lcom/bbm/i/b;
+
+.field private d:Lcom/bbm/ui/c/fz;
+
+.field private final e:Lcom/bbm/ui/c/ga;
+
+.field private final f:Lcom/bbm/util/ct;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/ct",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final g:Lcom/bbm/util/di;
+
+.field private final h:Landroid/widget/AdapterView$OnItemClickListener;
+
+.field private i:Z
+
+.field private j:Lcom/bbm/h/aq;
+
+.field private k:Landroid/widget/ProgressBar;
+
+.field private final l:Lcom/bbm/j/k;
+
+.field private final m:Lcom/bbm/j/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/a",
+            "<",
+            "Ljava/lang/Boolean;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/c/fq;Lcom/bbm/j/r;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bbm/j/r",
-            "<",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/ui/slidingmenu/a;",
-            ">;>;)V"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 4
 
     .prologue
-    .line 341
-    iput-object p1, p0, Lcom/bbm/ui/c/fv;->b:Lcom/bbm/ui/c/fq;
+    .line 70
+    invoke-static {}, Lcom/bbm/util/bp;->a()Lcom/bbm/util/bp;
 
-    .line 342
-    invoke-direct {p0, p2}, Lcom/bbm/ui/dt;-><init>(Lcom/bbm/j/r;)V
+    move-result-object v0
 
-    .line 343
+    new-instance v1, Lcom/bbm/i/b;
+
+    invoke-static {}, Lcom/bbm/Alaska;->x()Lcom/bbm/j/r;
+
+    move-result-object v2
+
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+
+    move-result-object v3
+
+    invoke-direct {v1, v2, v3}, Lcom/bbm/i/b;-><init>(Lcom/bbm/j/r;Lcom/bbm/e;)V
+
+    const/4 v2, 0x0
+
+    invoke-direct {p0, v0, v1, v2}, Lcom/bbm/ui/c/fv;-><init>(Lcom/bbm/util/di;Lcom/bbm/i/b;Lcom/bbm/h/aq;)V
+
+    .line 76
     return-void
 .end method
 
-
-# virtual methods
-.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+.method public constructor <init>(Lcom/bbm/util/di;Lcom/bbm/i/b;Lcom/bbm/h/aq;)V
     .locals 3
 
     .prologue
-    .line 360
-    new-instance v1, Lcom/bbm/ui/c/fw;
+    const/4 v2, 0x1
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/c/fw;-><init>(Lcom/bbm/ui/c/fv;)V
+    .line 80
+    invoke-direct {p0}, Landroid/app/Fragment;-><init>()V
 
-    .line 363
-    new-instance v2, Lcom/bbm/ui/slidingmenu/SlidingMenuItemView;
+    .line 48
+    new-instance v0, Lcom/bbm/ui/c/ga;
 
-    invoke-virtual {p3}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
+    invoke-direct {v0, p0}, Lcom/bbm/ui/c/ga;-><init>(Lcom/bbm/ui/c/fv;)V
 
-    move-result-object v0
+    iput-object v0, p0, Lcom/bbm/ui/c/fv;->e:Lcom/bbm/ui/c/ga;
 
-    invoke-direct {v2, v0}, Lcom/bbm/ui/slidingmenu/SlidingMenuItemView;-><init>(Landroid/content/Context;)V
+    .line 50
+    new-instance v0, Lcom/bbm/util/ct;
 
-    .line 364
-    const v0, 0x7f0a048c
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
 
-    check-cast v0, Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/bbm/ui/c/fv;->f:Lcom/bbm/util/ct;
 
-    iput-object v0, v1, Lcom/bbm/ui/c/fw;->a:Landroid/widget/ImageView;
+    .line 52
+    new-instance v0, Lcom/bbm/ui/c/gb;
 
-    .line 365
-    const v0, 0x7f0a048d
+    invoke-direct {v0, p0}, Lcom/bbm/ui/c/gb;-><init>(Lcom/bbm/ui/c/fv;)V
 
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iput-object v0, p0, Lcom/bbm/ui/c/fv;->h:Landroid/widget/AdapterView$OnItemClickListener;
 
-    move-result-object v0
+    .line 53
+    const/4 v0, 0x0
 
-    check-cast v0, Landroid/widget/ImageView;
+    iput-boolean v0, p0, Lcom/bbm/ui/c/fv;->i:Z
 
-    iput-object v0, v1, Lcom/bbm/ui/c/fw;->b:Landroid/widget/ImageView;
+    .line 58
+    new-instance v0, Lcom/bbm/ui/c/fw;
 
-    .line 366
-    const v0, 0x7f0a048e
+    invoke-direct {v0, p0}, Lcom/bbm/ui/c/fw;-><init>(Lcom/bbm/ui/c/fv;)V
 
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iput-object v0, p0, Lcom/bbm/ui/c/fv;->m:Lcom/bbm/j/a;
 
-    move-result-object v0
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->m:Lcom/bbm/j/a;
 
-    check-cast v0, Landroid/widget/TextView;
+    iput-boolean v2, v0, Lcom/bbm/j/a;->c:Z
 
-    iput-object v0, v1, Lcom/bbm/ui/c/fw;->c:Landroid/widget/TextView;
+    .line 82
+    iput-object p2, p0, Lcom/bbm/ui/c/fv;->c:Lcom/bbm/i/b;
 
-    .line 367
-    const v0, 0x7f0a048f
+    .line 83
+    iput-object p1, p0, Lcom/bbm/ui/c/fv;->g:Lcom/bbm/util/di;
 
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 84
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->c:Lcom/bbm/i/b;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/i/b;->b()V
 
-    check-cast v0, Landroid/widget/TextView;
+    .line 85
+    iput-object p3, p0, Lcom/bbm/ui/c/fv;->j:Lcom/bbm/h/aq;
 
-    iput-object v0, v1, Lcom/bbm/ui/c/fw;->d:Landroid/widget/TextView;
+    .line 86
+    new-instance v0, Lcom/bbm/ui/c/fx;
 
-    .line 368
-    invoke-virtual {v2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/c/fx;-><init>(Lcom/bbm/ui/c/fv;)V
 
-    .line 370
-    return-object v2
+    iput-object v0, p0, Lcom/bbm/ui/c/fv;->l:Lcom/bbm/j/k;
+
+    .line 104
+    return-void
 .end method
 
-.method protected final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+.method static synthetic a(Lcom/bbm/ui/c/fv;)Lcom/bbm/i/b;
     .locals 1
 
     .prologue
-    .line 339
-    check-cast p1, Lcom/bbm/ui/slidingmenu/a;
-
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->c:Lcom/bbm/i/b;
 
     return-object v0
 .end method
 
-.method protected final synthetic a(Landroid/view/View;Ljava/lang/Object;)V
-    .locals 6
+.method static synthetic b(Lcom/bbm/ui/c/fv;)Z
+    .locals 4
 
     .prologue
-    const/4 v5, -0x1
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->c:Lcom/bbm/i/b;
 
-    const/16 v3, 0x8
+    sget-object v1, Lcom/bbm/ui/c/ix;->b:Lcom/bbm/ui/c/ix;
 
-    const/4 v2, 0x0
-
-    .line 339
-    check-cast p2, Lcom/bbm/ui/slidingmenu/a;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/c/fw;
-
-    invoke-virtual {p2}, Lcom/bbm/ui/slidingmenu/a;->a()Lcom/google/b/a/l;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/google/b/a/l;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v4, v0, Lcom/bbm/ui/c/fw;->a:Landroid/widget/ImageView;
-
-    invoke-virtual {p2}, Lcom/bbm/ui/slidingmenu/a;->a()Lcom/google/b/a/l;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    invoke-virtual {v4, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    iget-object v1, v0, Lcom/bbm/ui/c/fw;->a:Landroid/widget/ImageView;
-
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    :goto_0
-    iget-object v1, v0, Lcom/bbm/ui/c/fw;->a:Landroid/widget/ImageView;
-
-    invoke-virtual {p2}, Lcom/bbm/ui/slidingmenu/a;->g()Z
-
-    move-result v4
-
-    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setEnabled(Z)V
-
-    iget-object v4, v0, Lcom/bbm/ui/c/fw;->a:Landroid/widget/ImageView;
-
-    invoke-static {p2}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
-
-    iget-boolean v1, p2, Lcom/bbm/ui/slidingmenu/a;->b:Z
-
-    if-eqz v1, :cond_2
-
-    const v1, 0x3f333333
-
-    :goto_1
-    invoke-virtual {v4, v1}, Landroid/widget/ImageView;->setAlpha(F)V
-
-    iget v1, p2, Lcom/bbm/ui/slidingmenu/a;->a:I
-
-    if-eq v1, v5, :cond_0
-
-    iget-object v1, v0, Lcom/bbm/ui/c/fw;->a:Landroid/widget/ImageView;
-
-    iget v4, p2, Lcom/bbm/ui/slidingmenu/a;->a:I
-
-    invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setId(I)V
-
-    :cond_0
-    iget-object v4, v0, Lcom/bbm/ui/c/fw;->b:Landroid/widget/ImageView;
-
-    invoke-virtual {p2}, Lcom/bbm/ui/slidingmenu/a;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_3
-
-    move v1, v2
-
-    :goto_2
-    invoke-virtual {v4, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    iget-object v1, v0, Lcom/bbm/ui/c/fw;->c:Landroid/widget/TextView;
-
-    invoke-virtual {p2}, Lcom/bbm/ui/slidingmenu/a;->b()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v1, v0, Lcom/bbm/ui/c/fw;->c:Landroid/widget/TextView;
-
-    invoke-virtual {p2}, Lcom/bbm/ui/slidingmenu/a;->g()Z
-
-    move-result v4
-
-    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setEnabled(Z)V
-
-    iget-object v1, v0, Lcom/bbm/ui/c/fw;->d:Landroid/widget/TextView;
-
-    invoke-virtual {p2}, Lcom/bbm/ui/slidingmenu/a;->d()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v1, p0, Lcom/bbm/ui/c/fv;->b:Lcom/bbm/ui/c/fq;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/fq;->e(Lcom/bbm/ui/c/fq;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_4
-
-    iget-object v1, p0, Lcom/bbm/ui/c/fv;->b:Lcom/bbm/ui/c/fq;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/fq;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v4, 0x7f0202f3
-
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    :goto_3
-    invoke-virtual {p2}, Lcom/bbm/ui/slidingmenu/a;->d()Ljava/lang/String;
-
-    move-result-object v1
-
-    if-nez v1, :cond_6
-
-    iget-object v1, v0, Lcom/bbm/ui/c/fw;->c:Landroid/widget/TextView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0}, Lcom/bbm/i/b;->g()Ljava/util/List;
 
     move-result-object v2
 
-    const v4, 0x7f0b0317
-
-    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimension(I)F
+    invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v2
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextSize(F)V
+    if-eqz v2, :cond_1
 
-    iget-object v0, v0, Lcom/bbm/ui/c/fw;->d:Landroid/widget/TextView;
+    invoke-virtual {v0}, Lcom/bbm/i/b;->g()Ljava/util/List;
 
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+    move-result-object v0
 
-    :goto_4
-    return-void
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/hc;
+
+    iget-object v3, v0, Lcom/bbm/ui/hc;->b:Ljava/lang/Object;
+
+    if-ne v3, v1, :cond_0
+
+    iget-object v0, v0, Lcom/bbm/ui/hc;->a:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
 
     :cond_1
-    iget-object v1, v0, Lcom/bbm/ui/c/fw;->a:Landroid/widget/ImageView;
+    const/4 v0, 0x0
 
-    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+    goto :goto_0
+.end method
 
-    goto/16 :goto_0
+.method static synthetic c(Lcom/bbm/ui/c/fv;)Lcom/bbm/j/a;
+    .locals 1
 
-    :cond_2
-    const/high16 v1, 0x3f800000
+    .prologue
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->m:Lcom/bbm/j/a;
 
-    goto :goto_1
+    return-object v0
+.end method
 
-    :cond_3
-    move v1, v3
+.method static synthetic d(Lcom/bbm/ui/c/fv;)Landroid/widget/ProgressBar;
+    .locals 1
 
-    goto :goto_2
+    .prologue
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->k:Landroid/widget/ProgressBar;
 
-    :cond_4
-    invoke-virtual {p2}, Lcom/bbm/ui/slidingmenu/a;->f()Z
+    return-object v0
+.end method
+
+.method static synthetic e(Lcom/bbm/ui/c/fv;)Lcom/bbm/util/ct;
+    .locals 1
+
+    .prologue
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->f:Lcom/bbm/util/ct;
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcom/bbm/ui/c/fv;)Lcom/bbm/h/aq;
+    .locals 1
+
+    .prologue
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->j:Lcom/bbm/h/aq;
+
+    return-object v0
+.end method
+
+.method static synthetic g(Lcom/bbm/ui/c/fv;)Landroid/view/View$OnClickListener;
+    .locals 1
+
+    .prologue
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->a:Landroid/view/View$OnClickListener;
+
+    return-object v0
+.end method
+
+.method static synthetic h(Lcom/bbm/ui/c/fv;)Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    .locals 1
+
+    .prologue
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+
+    return-object v0
+.end method
+
+.method static synthetic i(Lcom/bbm/ui/c/fv;)Landroid/widget/AdapterView$OnItemClickListener;
+    .locals 1
+
+    .prologue
+    .line 43
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->h:Landroid/widget/AdapterView$OnItemClickListener;
+
+    return-object v0
+.end method
+
+.method static synthetic j(Lcom/bbm/ui/c/fv;)Z
+    .locals 1
+
+    .prologue
+    .line 43
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bbm/ui/c/fv;->i:Z
+
+    return v0
+.end method
+
+
+# virtual methods
+.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    .locals 7
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 108
+    const-string v0, "onCreateView"
+
+    const-class v2, Lcom/bbm/ui/c/fv;
+
+    invoke-static {v0, v2}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 109
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->j:Lcom/bbm/h/aq;
+
+    if-nez v0, :cond_0
+
+    .line 110
+    invoke-virtual {p0}, Lcom/bbm/ui/c/fv;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/h/aq;->a(Landroid/content/Context;)Lcom/bbm/h/aq;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/c/fv;->j:Lcom/bbm/h/aq;
+
+    .line 113
+    :cond_0
+    if-eqz p3, :cond_1
+
+    const-string v0, "com.bbm.ui.PeopleYouKnowFragment.invitesent"
+
+    invoke-virtual {p3, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    :goto_0
+    iput-boolean v0, p0, Lcom/bbm/ui/c/fv;->i:Z
+
+    .line 115
+    const v0, 0x7f03009a
+
+    invoke-virtual {p1, v0, p2, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v6
+
+    .line 116
+    new-instance v0, Lcom/bbm/ui/c/fz;
+
+    invoke-virtual {p0}, Lcom/bbm/ui/c/fv;->getActivity()Landroid/app/Activity;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/bbm/ui/c/fv;->c:Lcom/bbm/i/b;
+
+    iget-object v4, p0, Lcom/bbm/ui/c/fv;->g:Lcom/bbm/util/di;
+
+    new-instance v1, Lcom/bbm/util/b/f;
+
+    invoke-direct {v1}, Lcom/bbm/util/b/f;-><init>()V
+
+    invoke-virtual {p0}, Lcom/bbm/ui/c/fv;->getActivity()Landroid/app/Activity;
+
+    move-result-object v5
+
+    invoke-static {v1, v5}, Lcom/bbm/util/b/d;->a(Lcom/bbm/util/b/f;Landroid/app/Activity;)Lcom/bbm/util/b/d;
+
+    move-result-object v5
+
+    move-object v1, p0
+
+    invoke-direct/range {v0 .. v5}, Lcom/bbm/ui/c/fz;-><init>(Lcom/bbm/ui/c/fv;Landroid/content/Context;Lcom/bbm/j/r;Lcom/bbm/util/di;Lcom/bbm/util/b/d;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/c/fv;->d:Lcom/bbm/ui/c/fz;
+
+    .line 117
+    const v0, 0x7f0b03f5
+
+    invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+
+    iput-object v0, p0, Lcom/bbm/ui/c/fv;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+
+    .line 118
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->b:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/fv;->d:Lcom/bbm/ui/c/fz;
+
+    invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    .line 120
+    const v0, 0x7f0b029b
+
+    invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, p0, Lcom/bbm/ui/c/fv;->k:Landroid/widget/ProgressBar;
+
+    .line 122
+    const v0, 0x7f0b03f4
+
+    invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Switch;
+
+    .line 123
+    iget-object v1, p0, Lcom/bbm/ui/c/fv;->e:Lcom/bbm/ui/c/ga;
+
+    invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
+
+    .line 126
+    const v0, 0x7f0b02fd
+
+    invoke-virtual {v6, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    .line 127
+    new-instance v1, Lcom/bbm/ui/c/fy;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/c/fy;-><init>(Lcom/bbm/ui/c/fv;)V
+
+    invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 148
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/c/fv;->d:Lcom/bbm/ui/c/fz;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/c/fz;->getCount()I
 
     move-result v1
 
-    if-eqz v1, :cond_5
+    iput v1, v0, Lcom/bbm/c/c;->ai:I
 
-    iget-object v1, p0, Lcom/bbm/ui/c/fv;->b:Lcom/bbm/ui/c/fq;
+    .line 150
+    return-object v6
 
-    invoke-virtual {v1}, Lcom/bbm/ui/c/fq;->getResources()Landroid/content/res/Resources;
+    :cond_1
+    move v0, v1
 
-    move-result-object v1
+    .line 113
+    goto :goto_0
+.end method
 
-    const v4, 0x7f09014e
+.method public onPause()V
+    .locals 2
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getColor(I)I
+    .prologue
+    .line 155
+    const-string v0, "onPause"
 
-    move-result v1
+    const-class v1, Lcom/bbm/ui/c/fv;
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundColor(I)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    iget-object v1, v0, Lcom/bbm/ui/c/fw;->d:Landroid/widget/TextView;
+    .line 156
+    invoke-super {p0}, Landroid/app/Fragment;->onPause()V
 
-    invoke-virtual {v1, v5}, Landroid/widget/TextView;->setTextColor(I)V
+    .line 157
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->l:Lcom/bbm/j/k;
 
-    goto :goto_3
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
 
-    :cond_5
-    iget-object v1, p0, Lcom/bbm/ui/c/fv;->b:Lcom/bbm/ui/c/fq;
+    .line 158
+    return-void
+.end method
 
-    invoke-virtual {v1}, Lcom/bbm/ui/c/fq;->getResources()Landroid/content/res/Resources;
+.method public onResume()V
+    .locals 2
 
-    move-result-object v1
+    .prologue
+    .line 162
+    const-string v0, "onResume"
 
-    const v4, 0x7f0202f4
+    const-class v1, Lcom/bbm/ui/c/fv;
 
-    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    move-result-object v1
+    .line 163
+    invoke-super {p0}, Landroid/app/Fragment;->onResume()V
 
-    invoke-virtual {p1, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+    .line 164
+    iget-object v0, p0, Lcom/bbm/ui/c/fv;->l:Lcom/bbm/j/k;
 
-    iget-object v1, v0, Lcom/bbm/ui/c/fw;->d:Landroid/widget/TextView;
+    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    iget-object v4, p0, Lcom/bbm/ui/c/fv;->b:Lcom/bbm/ui/c/fq;
+    .line 165
+    return-void
+.end method
 
-    invoke-virtual {v4}, Lcom/bbm/ui/c/fq;->getResources()Landroid/content/res/Resources;
+.method public onSaveInstanceState(Landroid/os/Bundle;)V
+    .locals 2
 
-    move-result-object v4
+    .prologue
+    .line 169
+    invoke-super {p0, p1}, Landroid/app/Fragment;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    const v5, 0x7f09016c
+    .line 170
+    const-string v0, "com.bbm.ui.PeopleYouKnowFragment.invitesent"
 
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getColor(I)I
+    iget-boolean v1, p0, Lcom/bbm/ui/c/fv;->i:Z
 
-    move-result v4
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    invoke-virtual {v1, v4}, Landroid/widget/TextView;->setTextColor(I)V
-
-    goto :goto_3
-
-    :cond_6
-    iget-object v1, v0, Lcom/bbm/ui/c/fw;->c:Landroid/widget/TextView;
-
-    invoke-virtual {p1}, Landroid/view/View;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    const v4, 0x7f0b0314
-
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimension(I)F
-
-    move-result v3
-
-    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTextSize(F)V
-
-    iget-object v0, v0, Lcom/bbm/ui/c/fw;->d:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    goto :goto_4
+    .line 171
+    return-void
 .end method

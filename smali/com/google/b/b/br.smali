@@ -20,7 +20,7 @@
 .end method
 
 .method private d()J
-    .locals 7
+    .locals 8
 
     .prologue
     .line 105
@@ -48,9 +48,9 @@
     if-eqz v5, :cond_0
 
     .line 112
-    iget-wide v5, v5, Lcom/google/b/b/cc;->a:J
+    iget-wide v6, v5, Lcom/google/b/b/cc;->a:J
 
-    add-long/2addr v0, v5
+    add-long/2addr v0, v6
 
     .line 109
     :cond_0
@@ -66,7 +66,7 @@
 
 # virtual methods
 .method final a(JJ)J
-    .locals 2
+    .locals 3
 
     .prologue
     .line 56
@@ -92,27 +92,26 @@
     .locals 13
 
     .prologue
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
     .line 71
-    iget-object v1, p0, Lcom/google/b/b/br;->c:[Lcom/google/b/b/cc;
+    iget-object v2, p0, Lcom/google/b/b/br;->c:[Lcom/google/b/b/cc;
 
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
-    iget-wide v4, p0, Lcom/google/b/b/br;->d:J
+    iget-wide v0, p0, Lcom/google/b/b/br;->d:J
 
-    add-long v6, v4, p1
+    add-long v4, v0, p1
 
-    invoke-virtual {p0, v4, v5, v6, v7}, Lcom/google/b/b/br;->b(JJ)Z
+    invoke-virtual {p0, v0, v1, v4, v5}, Lcom/google/b/b/br;->b(JJ)Z
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_5
+
+    .line 72
+    :cond_0
+    const/4 v1, 0x1
 
     .line 73
-    :cond_0
     sget-object v0, Lcom/google/b/b/br;->a:Lcom/google/b/b/ce;
 
     invoke-virtual {v0}, Lcom/google/b/b/ce;->get()Ljava/lang/Object;
@@ -121,325 +120,332 @@
 
     check-cast v0, Lcom/google/b/b/cd;
 
-    iget v4, v0, Lcom/google/b/b/cd;->b:I
+    iget v3, v0, Lcom/google/b/b/cd;->b:I
 
     .line 74
-    if-eqz v1, :cond_11
+    if-eqz v2, :cond_1
 
-    array-length v5, v1
+    array-length v4, v2
 
-    if-lez v5, :cond_11
+    if-lez v4, :cond_1
 
-    add-int/lit8 v5, v5, -0x1
+    add-int/lit8 v4, v4, -0x1
 
-    and-int/2addr v4, v5
+    and-int/2addr v3, v4
 
-    aget-object v1, v1, v4
+    aget-object v2, v2, v3
 
-    if-eqz v1, :cond_11
+    if-eqz v2, :cond_1
 
-    iget-wide v4, v1, Lcom/google/b/b/cc;->a:J
+    iget-wide v4, v2, Lcom/google/b/b/cc;->a:J
 
     add-long v6, v4, p1
 
-    invoke-virtual {v1, v4, v5, v6, v7}, Lcom/google/b/b/cc;->a(JJ)Z
+    invoke-virtual {v2, v4, v5, v6, v7}, Lcom/google/b/b/cc;->a(JJ)Z
 
     move-result v1
 
-    if-nez v1, :cond_3
+    if-nez v1, :cond_5
 
     .line 77
-    :goto_0
-    iget v4, v0, Lcom/google/b/b/cd;->b:I
-
-    move v5, v4
-
-    move v6, v1
-
-    move v4, v3
-
     :cond_1
-    :goto_1
-    iget-object v7, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
+    iget v3, v0, Lcom/google/b/b/cd;->b:I
 
-    if-eqz v7, :cond_c
+    const/4 v2, 0x0
 
-    array-length v8, v7
+    move v4, v1
 
-    if-lez v8, :cond_c
+    :cond_2
+    :goto_0
+    iget-object v5, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
 
-    add-int/lit8 v1, v8, -0x1
+    if-eqz v5, :cond_e
 
-    and-int/2addr v1, v5
+    array-length v6, v5
 
-    aget-object v1, v7, v1
+    if-lez v6, :cond_e
 
-    if-nez v1, :cond_5
+    add-int/lit8 v1, v6, -0x1
+
+    and-int/2addr v1, v3
+
+    aget-object v1, v5, v1
+
+    if-nez v1, :cond_7
 
     iget v1, p0, Lcom/google/b/b/ca;->e:I
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_6
 
-    new-instance v1, Lcom/google/b/b/cc;
+    new-instance v5, Lcom/google/b/b/cc;
 
-    invoke-direct {v1, p1, p2}, Lcom/google/b/b/cc;-><init>(J)V
+    invoke-direct {v5, p1, p2}, Lcom/google/b/b/cc;-><init>(J)V
 
-    iget v7, p0, Lcom/google/b/b/ca;->e:I
+    iget v1, p0, Lcom/google/b/b/ca;->e:I
 
-    if-nez v7, :cond_4
+    if-nez v1, :cond_6
 
     invoke-virtual {p0}, Lcom/google/b/b/ca;->b()Z
 
-    move-result v7
+    move-result v1
 
-    if-eqz v7, :cond_4
+    if-eqz v1, :cond_6
+
+    const/4 v1, 0x0
 
     :try_start_0
-    iget-object v7, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
+    iget-object v6, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
 
-    if-eqz v7, :cond_10
+    if-eqz v6, :cond_3
 
-    array-length v8, v7
+    array-length v7, v6
 
-    if-lez v8, :cond_10
+    if-lez v7, :cond_3
 
-    add-int/lit8 v8, v8, -0x1
+    add-int/lit8 v7, v7, -0x1
 
-    and-int/2addr v8, v5
+    and-int/2addr v7, v3
 
-    aget-object v9, v7, v8
+    aget-object v8, v6, v7
 
-    if-nez v9, :cond_10
+    if-nez v8, :cond_3
 
-    aput-object v1, v7, v8
+    aput-object v5, v6, v7
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move v1, v2
+    const/4 v1, 0x1
 
-    :goto_2
-    iput v3, p0, Lcom/google/b/b/ca;->e:I
+    :cond_3
+    const/4 v5, 0x0
 
-    if-eqz v1, :cond_1
+    iput v5, p0, Lcom/google/b/b/ca;->e:I
 
-    :cond_2
-    :goto_3
-    iput v5, v0, Lcom/google/b/b/cd;->b:I
+    if-eqz v1, :cond_2
+
+    :cond_4
+    :goto_1
+    iput v3, v0, Lcom/google/b/b/cd;->b:I
 
     .line 79
-    :cond_3
+    :cond_5
     return-void
 
     .line 77
     :catchall_0
     move-exception v0
 
-    iput v3, p0, Lcom/google/b/b/ca;->e:I
+    const/4 v1, 0x0
+
+    iput v1, p0, Lcom/google/b/b/ca;->e:I
 
     throw v0
 
-    :cond_4
-    move v1, v3
-
-    :goto_4
-    shl-int/lit8 v4, v5, 0xd
-
-    xor-int/2addr v4, v5
-
-    ushr-int/lit8 v5, v4, 0x11
-
-    xor-int/2addr v4, v5
-
-    shl-int/lit8 v5, v4, 0x5
-
-    xor-int/2addr v4, v5
-
-    move v5, v4
-
-    move v4, v1
-
-    goto :goto_1
-
-    :cond_5
-    if-nez v6, :cond_6
-
-    move v1, v4
-
-    move v6, v2
-
-    goto :goto_4
-
     :cond_6
-    iget-wide v9, v1, Lcom/google/b/b/cc;->a:J
-
-    invoke-virtual {p0, v9, v10, p1, p2}, Lcom/google/b/b/ca;->a(JJ)J
-
-    move-result-wide v11
-
-    invoke-virtual {v1, v9, v10, v11, v12}, Lcom/google/b/b/cc;->a(JJ)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    sget v1, Lcom/google/b/b/ca;->b:I
-
-    if-ge v8, v1, :cond_7
-
-    iget-object v1, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
-
-    if-eq v1, v7, :cond_8
-
-    :cond_7
-    move v1, v3
-
-    goto :goto_4
-
-    :cond_8
-    if-nez v4, :cond_9
+    const/4 v2, 0x0
 
     move v1, v2
 
-    goto :goto_4
+    :goto_2
+    shl-int/lit8 v2, v3, 0xd
+
+    xor-int/2addr v2, v3
+
+    ushr-int/lit8 v3, v2, 0x11
+
+    xor-int/2addr v2, v3
+
+    shl-int/lit8 v3, v2, 0x5
+
+    xor-int/2addr v2, v3
+
+    move v3, v2
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_7
+    if-nez v4, :cond_8
+
+    const/4 v4, 0x1
+
+    move v1, v2
+
+    goto :goto_2
+
+    :cond_8
+    iget-wide v8, v1, Lcom/google/b/b/cc;->a:J
+
+    invoke-virtual {p0, v8, v9, p1, p2}, Lcom/google/b/b/ca;->a(JJ)J
+
+    move-result-wide v10
+
+    invoke-virtual {v1, v8, v9, v10, v11}, Lcom/google/b/b/cc;->a(JJ)Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    sget v1, Lcom/google/b/b/ca;->b:I
+
+    if-ge v6, v1, :cond_9
+
+    iget-object v1, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
+
+    if-eq v1, v5, :cond_a
 
     :cond_9
+    const/4 v2, 0x0
+
+    move v1, v2
+
+    goto :goto_2
+
+    :cond_a
+    if-nez v2, :cond_b
+
+    const/4 v2, 0x1
+
+    move v1, v2
+
+    goto :goto_2
+
+    :cond_b
     iget v1, p0, Lcom/google/b/b/ca;->e:I
 
-    if-nez v1, :cond_f
+    if-nez v1, :cond_11
 
     invoke-virtual {p0}, Lcom/google/b/b/ca;->b()Z
 
     move-result v1
 
-    if-eqz v1, :cond_f
+    if-eqz v1, :cond_11
 
     :try_start_1
     iget-object v1, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
 
-    if-ne v1, v7, :cond_b
+    if-ne v1, v5, :cond_d
 
-    shl-int/lit8 v1, v8, 0x1
+    shl-int/lit8 v1, v6, 0x1
 
-    new-array v4, v1, [Lcom/google/b/b/cc;
+    new-array v2, v1, [Lcom/google/b/b/cc;
 
-    move v1, v3
+    const/4 v1, 0x0
 
-    :goto_5
-    if-ge v1, v8, :cond_a
+    :goto_3
+    if-ge v1, v6, :cond_c
 
-    aget-object v9, v7, v1
+    aget-object v7, v5, v1
 
-    aput-object v9, v4, v1
+    aput-object v7, v2, v1
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_5
+    goto :goto_3
 
-    :cond_a
-    iput-object v4, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
+    :cond_c
+    iput-object v2, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    :cond_b
-    iput v3, p0, Lcom/google/b/b/ca;->e:I
+    :cond_d
+    const/4 v1, 0x0
 
-    move v4, v3
+    iput v1, p0, Lcom/google/b/b/ca;->e:I
 
-    goto/16 :goto_1
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    goto/16 :goto_0
 
     :catchall_1
     move-exception v0
 
-    iput v3, p0, Lcom/google/b/b/ca;->e:I
+    const/4 v1, 0x0
+
+    iput v1, p0, Lcom/google/b/b/ca;->e:I
 
     throw v0
 
-    :cond_c
+    :cond_e
     iget v1, p0, Lcom/google/b/b/ca;->e:I
 
-    if-nez v1, :cond_d
+    if-nez v1, :cond_10
 
     iget-object v1, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
 
-    if-ne v1, v7, :cond_d
+    if-ne v1, v5, :cond_10
 
     invoke-virtual {p0}, Lcom/google/b/b/ca;->b()Z
 
     move-result v1
 
-    if-eqz v1, :cond_d
+    if-eqz v1, :cond_10
+
+    const/4 v1, 0x0
 
     :try_start_2
-    iget-object v1, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
+    iget-object v6, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
 
-    if-ne v1, v7, :cond_e
+    if-ne v6, v5, :cond_f
 
     const/4 v1, 0x2
 
     new-array v1, v1, [Lcom/google/b/b/cc;
 
-    and-int/lit8 v7, v5, 0x1
+    and-int/lit8 v5, v3, 0x1
 
-    new-instance v8, Lcom/google/b/b/cc;
+    new-instance v6, Lcom/google/b/b/cc;
 
-    invoke-direct {v8, p1, p2}, Lcom/google/b/b/cc;-><init>(J)V
+    invoke-direct {v6, p1, p2}, Lcom/google/b/b/cc;-><init>(J)V
 
-    aput-object v8, v1, v7
+    aput-object v6, v1, v5
 
     iput-object v1, p0, Lcom/google/b/b/ca;->c:[Lcom/google/b/b/cc;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    move v1, v2
+    const/4 v1, 0x1
 
-    :goto_6
-    iput v3, p0, Lcom/google/b/b/ca;->e:I
+    :cond_f
+    const/4 v5, 0x0
 
-    if-nez v1, :cond_2
+    iput v5, p0, Lcom/google/b/b/ca;->e:I
 
-    goto/16 :goto_1
+    if-nez v1, :cond_4
+
+    goto/16 :goto_0
 
     :catchall_2
     move-exception v0
 
-    iput v3, p0, Lcom/google/b/b/ca;->e:I
+    const/4 v1, 0x0
+
+    iput v1, p0, Lcom/google/b/b/ca;->e:I
 
     throw v0
 
-    :cond_d
-    iget-wide v7, p0, Lcom/google/b/b/ca;->d:J
+    :cond_10
+    iget-wide v6, p0, Lcom/google/b/b/ca;->d:J
 
-    invoke-virtual {p0, v7, v8, p1, p2}, Lcom/google/b/b/ca;->a(JJ)J
+    invoke-virtual {p0, v6, v7, p1, p2}, Lcom/google/b/b/ca;->a(JJ)J
 
-    move-result-wide v9
+    move-result-wide v8
 
-    invoke-virtual {p0, v7, v8, v9, v10}, Lcom/google/b/b/ca;->b(JJ)Z
+    invoke-virtual {p0, v6, v7, v8, v9}, Lcom/google/b/b/ca;->b(JJ)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    goto/16 :goto_3
-
-    :cond_e
-    move v1, v3
-
-    goto :goto_6
-
-    :cond_f
-    move v1, v4
-
-    goto/16 :goto_4
-
-    :cond_10
-    move v1, v3
-
-    goto/16 :goto_2
+    goto/16 :goto_1
 
     :cond_11
     move v1, v2
 
-    goto/16 :goto_0
+    goto/16 :goto_2
 .end method
 
 .method public final doubleValue()D

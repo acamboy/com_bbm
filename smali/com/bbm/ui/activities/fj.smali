@@ -1,112 +1,57 @@
-.class final Lcom/bbm/ui/activities/fj;
+.class abstract Lcom/bbm/ui/activities/fj;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
-
-# interfaces
-.implements Lcom/bbm/ui/bi;
+.source "ChildActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic b:Lcom/bbm/ui/activities/ey;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+.method private constructor <init>(Lcom/bbm/ui/activities/ey;)V
     .locals 0
 
     .prologue
-    .line 353
-    iput-object p1, p0, Lcom/bbm/ui/activities/fj;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 346
+    iput-object p1, p0, Lcom/bbm/ui/activities/fj;->b:Lcom/bbm/ui/activities/ey;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(I)Lcom/bbm/ui/QuickShareBaseView;
-    .locals 2
+.method synthetic constructor <init>(Lcom/bbm/ui/activities/ey;B)V
+    .locals 0
 
     .prologue
-    .line 357
-    packed-switch p1, :pswitch_data_0
+    .line 346
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/fj;-><init>(Lcom/bbm/ui/activities/ey;)V
 
-    .line 367
-    new-instance v0, Lcom/bbm/ui/QuickShareBaseView;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/fj;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-direct {v0, v1}, Lcom/bbm/ui/QuickShareBaseView;-><init>(Landroid/content/Context;)V
-
-    :goto_0
-    return-object v0
-
-    .line 359
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/fj;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->b(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/QuickShareBaseView;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 361
-    :pswitch_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/fj;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->c(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/QuickShareBaseView;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 363
-    :pswitch_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/fj;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->d(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/QuickShareBaseView;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 365
-    :pswitch_3
-    iget-object v0, p0, Lcom/bbm/ui/activities/fj;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->e(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/QuickShareBaseView;
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 357
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
+    return-void
 .end method
 
-.method public final a()V
-    .locals 1
+
+# virtual methods
+.method public a()V
+    .locals 0
 
     .prologue
-    .line 372
-    iget-object v0, p0, Lcom/bbm/ui/activities/fj;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 349
+    return-void
+.end method
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->f(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/k;
+.method public b()V
+    .locals 0
 
-    move-result-object v0
+    .prologue
+    .line 355
+    return-void
+.end method
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
+.method public c()V
+    .locals 0
 
-    .line 373
+    .prologue
+    .line 352
     return-void
 .end method

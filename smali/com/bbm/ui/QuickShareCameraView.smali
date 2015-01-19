@@ -6,7 +6,7 @@
 # instance fields
 .field private final a:Landroid/widget/ImageButton;
 
-.field private b:Lcom/bbm/ui/eb;
+.field private b:Lcom/bbm/ui/ew;
 
 
 # direct methods
@@ -48,14 +48,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f03012d
+    const v1, 0x7f030145
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 33
-    const v0, 0x7f0a05ae
+    const v0, 0x7f0b0668
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/QuickShareCameraView;->findViewById(I)Landroid/view/View;
 
@@ -68,9 +68,9 @@
     .line 34
     iget-object v0, p0, Lcom/bbm/ui/QuickShareCameraView;->a:Landroid/widget/ImageButton;
 
-    new-instance v1, Lcom/bbm/ui/ea;
+    new-instance v1, Lcom/bbm/ui/ev;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/ea;-><init>(Lcom/bbm/ui/QuickShareCameraView;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/ev;-><init>(Lcom/bbm/ui/QuickShareCameraView;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -78,12 +78,12 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/QuickShareCameraView;)Lcom/bbm/ui/eb;
+.method static synthetic a(Lcom/bbm/ui/QuickShareCameraView;)Lcom/bbm/ui/ew;
     .locals 1
 
     .prologue
     .line 11
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareCameraView;->b:Lcom/bbm/ui/eb;
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareCameraView;->b:Lcom/bbm/ui/ew;
 
     return-object v0
 .end method
@@ -98,28 +98,28 @@
     invoke-super {p0}, Lcom/bbm/ui/QuickShareBaseView;->a()V
 
     .line 52
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareCameraView;->b:Lcom/bbm/ui/eb;
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareCameraView;->b:Lcom/bbm/ui/ew;
 
     if-eqz v0, :cond_0
 
     .line 53
-    iget-object v0, p0, Lcom/bbm/ui/QuickShareCameraView;->b:Lcom/bbm/ui/eb;
+    iget-object v0, p0, Lcom/bbm/ui/QuickShareCameraView;->b:Lcom/bbm/ui/ew;
 
     const/4 v1, 0x0
 
-    invoke-interface {v0, v1}, Lcom/bbm/ui/eb;->a(Z)V
+    invoke-interface {v0, v1}, Lcom/bbm/ui/ew;->a(Z)V
 
     .line 55
     :cond_0
     return-void
 .end method
 
-.method public setOnQuickShareCameraListener(Lcom/bbm/ui/eb;)V
+.method public setOnQuickShareCameraListener(Lcom/bbm/ui/ew;)V
     .locals 0
 
     .prologue
     .line 46
-    iput-object p1, p0, Lcom/bbm/ui/QuickShareCameraView;->b:Lcom/bbm/ui/eb;
+    iput-object p1, p0, Lcom/bbm/ui/QuickShareCameraView;->b:Lcom/bbm/ui/ew;
 
     .line 47
     return-void

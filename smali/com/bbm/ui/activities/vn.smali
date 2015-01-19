@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/vn;
 .super Ljava/lang/Object;
-.source "NewChannelActivity.java"
+.source "InviteActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/o;
-
-.field final synthetic b:Lcom/bbm/ui/activities/NewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;Lcom/bbm/ui/b/o;)V
+.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
     .locals 0
 
     .prologue
-    .line 619
-    iput-object p1, p0, Lcom/bbm/ui/activities/vn;->b:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/vn;->a:Lcom/bbm/ui/b/o;
+    .line 454
+    iput-object p1, p0, Lcom/bbm/ui/activities/vn;->a:Lcom/bbm/ui/activities/InviteActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,19 +26,21 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 622
-    iget-object v0, p0, Lcom/bbm/ui/activities/vn;->a:Lcom/bbm/ui/b/o;
+    .line 458
+    const-string v0, "mHeaderActionBar onNegative button Clicked"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
+    const-class v1, Lcom/bbm/ui/activities/InviteActivity;
 
-    .line 624
-    iget-object v0, p0, Lcom/bbm/ui/activities/vn;->b:Lcom/bbm/ui/activities/NewChannelActivity;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->c(Lcom/bbm/ui/activities/NewChannelActivity;)V
+    .line 460
+    iget-object v0, p0, Lcom/bbm/ui/activities/vn;->a:Lcom/bbm/ui/activities/InviteActivity;
 
-    .line 625
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/InviteActivity;->finish()V
+
+    .line 461
     return-void
 .end method

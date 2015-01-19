@@ -1,54 +1,47 @@
 .class final Landroid/support/v4/widget/f;
-.super Ljava/lang/Object;
+.super Landroid/support/v4/view/a;
 .source "DrawerLayout.java"
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Landroid/os/Parcelable$Creator",
-        "<",
-        "Landroid/support/v4/widget/DrawerLayout$SavedState;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic b:Landroid/support/v4/widget/DrawerLayout;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Landroid/support/v4/widget/DrawerLayout;)V
     .locals 0
 
     .prologue
-    .line 1310
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1907
+    iput-object p1, p0, Landroid/support/v4/widget/f;->b:Landroid/support/v4/widget/DrawerLayout;
+
+    invoke-direct {p0}, Landroid/support/v4/view/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+.method public final a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
     .locals 1
 
     .prologue
-    .line 1310
-    new-instance v0, Landroid/support/v4/widget/DrawerLayout$SavedState;
+    .line 1911
+    invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
 
-    invoke-direct {v0, p1}, Landroid/support/v4/widget/DrawerLayout$SavedState;-><init>(Landroid/os/Parcel;)V
+    .line 1912
+    invoke-static {p1}, Landroid/support/v4/widget/DrawerLayout;->f(Landroid/view/View;)Z
 
-    return-object v0
-.end method
+    move-result v0
 
-.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
+    if-nez v0, :cond_0
 
-    .prologue
-    .line 1310
-    new-array v0, p1, [Landroid/support/v4/widget/DrawerLayout$SavedState;
+    .line 1916
+    const/4 v0, 0x0
 
-    return-object v0
+    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->c(Landroid/view/View;)V
+
+    .line 1918
+    :cond_0
+    return-void
 .end method

@@ -1,5 +1,5 @@
 .class public Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
-.super Lcom/bbm/ui/activities/eg;
+.super Lcom/bbm/ui/activities/ey;
 .source "ChannelInviteToBBM.java"
 
 
@@ -10,21 +10,21 @@
 
 .field private c:Ljava/lang/String;
 
-.field private j:Lcom/bbm/ui/ObservingImageView;
+.field private d:Lcom/bbm/ui/ObservingImageView;
 
-.field private k:Landroid/widget/ProgressBar;
+.field private e:Landroid/widget/ProgressBar;
 
-.field private l:Lcom/bbm/ui/InlineImageTextView;
+.field private f:Lcom/bbm/ui/InlineImageTextView;
 
-.field private m:Lcom/bbm/ui/ActionBarItem;
+.field private g:Lcom/bbm/ui/ActionBarItem;
 
-.field private n:Lcom/bbm/ui/ActionBarItem;
+.field private h:Lcom/bbm/ui/ActionBarItem;
 
-.field private o:Lcom/bbm/j/k;
+.field private i:Lcom/bbm/j/k;
 
-.field private p:Lcom/bbm/ui/FooterActionBar;
+.field private j:Lcom/bbm/ui/FooterActionBar;
 
-.field private q:Landroid/widget/ImageView;
+.field private k:Landroid/widget/ImageView;
 
 
 # direct methods
@@ -32,8 +32,8 @@
     .locals 0
 
     .prologue
-    .line 37
-    invoke-direct {p0}, Lcom/bbm/ui/activities/eg;-><init>()V
+    .line 35
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ey;-><init>()V
 
     return-void
 .end method
@@ -46,8 +46,8 @@
 
     const/4 v1, 0x4
 
-    .line 37
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->p:Lcom/bbm/ui/FooterActionBar;
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/FooterActionBar;
 
     invoke-virtual {v0}, Lcom/bbm/ui/FooterActionBar;->getVisibility()I
 
@@ -55,15 +55,15 @@
 
     if-ne v0, v1, :cond_1
 
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->p:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/FooterActionBar;
 
     invoke-virtual {v0, v2}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->q:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->k:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->l:Lcom/bbm/ui/InlineImageTextView;
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->f:Lcom/bbm/ui/InlineImageTextView;
 
     invoke-virtual {v0, v2}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
@@ -72,7 +72,7 @@
     return-void
 
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->p:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/FooterActionBar;
 
     invoke-virtual {v0}, Lcom/bbm/ui/FooterActionBar;->getVisibility()I
 
@@ -80,15 +80,15 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->p:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/FooterActionBar;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->q:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->k:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->l:Lcom/bbm/ui/InlineImageTextView;
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->f:Lcom/bbm/ui/InlineImageTextView;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
@@ -99,7 +99,7 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 35
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->c:Ljava/lang/String;
 
     return-object v0
@@ -109,8 +109,8 @@
     .locals 1
 
     .prologue
-    .line 37
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->k:Landroid/widget/ProgressBar;
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->e:Landroid/widget/ProgressBar;
 
     return-object v0
 .end method
@@ -119,8 +119,8 @@
     .locals 1
 
     .prologue
-    .line 37
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/ObservingImageView;
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->d:Lcom/bbm/ui/ObservingImageView;
 
     return-object v0
 .end method
@@ -129,8 +129,8 @@
     .locals 1
 
     .prologue
-    .line 37
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->p:Lcom/bbm/ui/FooterActionBar;
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/FooterActionBar;
 
     return-object v0
 .end method
@@ -139,8 +139,8 @@
     .locals 1
 
     .prologue
-    .line 37
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->n:Lcom/bbm/ui/ActionBarItem;
+    .line 35
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->h:Lcom/bbm/ui/ActionBarItem;
 
     return-object v0
 .end method
@@ -149,7 +149,7 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 35
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->a:Ljava/lang/String;
 
     return-object v0
@@ -163,25 +163,25 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 63
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/eg;->onCreate(Landroid/os/Bundle;)V
+    .line 61
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onCreate(Landroid/os/Bundle;)V
 
-    .line 64
-    const v0, 0x7f03000f
+    .line 62
+    const v0, 0x7f030010
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->setContentView(I)V
 
-    .line 66
+    .line 64
     invoke-virtual {p0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 67
+    .line 65
     invoke-virtual {v0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 68
+    .line 66
     const-string v1, "imageUri"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -190,7 +190,7 @@
 
     iput-object v1, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->a:Ljava/lang/String;
 
-    .line 69
+    .line 67
     const-string v1, "userName"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -199,7 +199,7 @@
 
     iput-object v1, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->b:Ljava/lang/String;
 
-    .line 70
+    .line 68
     const-string v1, "userUri"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -208,8 +208,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->c:Ljava/lang/String;
 
-    .line 72
-    const v0, 0x7f0a00bd
+    .line 70
+    const v0, 0x7f0b0101
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->findViewById(I)Landroid/view/View;
 
@@ -217,13 +217,13 @@
 
     check-cast v0, Lcom/bbm/ui/ObservingImageView;
 
-    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/ObservingImageView;
+    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->d:Lcom/bbm/ui/ObservingImageView;
 
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/ObservingImageView;
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->d:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v0, v3}, Lcom/bbm/ui/ObservingImageView;->setLimitedLengthAnimation(Z)V
 
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/ObservingImageView;
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->d:Lcom/bbm/ui/ObservingImageView;
 
     new-instance v1, Lcom/bbm/ui/channel/activities/a;
 
@@ -231,7 +231,7 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a00bc
+    const v0, 0x7f0b0100
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->findViewById(I)Landroid/view/View;
 
@@ -239,9 +239,9 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->k:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->e:Landroid/widget/ProgressBar;
 
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->k:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->e:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, v3}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
@@ -249,10 +249,10 @@
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/channel/activities/b;-><init>(Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->o:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->i:Lcom/bbm/j/k;
 
-    .line 73
-    const v0, 0x7f0a00be
+    .line 71
+    const v0, 0x7f0b0102
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->findViewById(I)Landroid/view/View;
 
@@ -260,16 +260,16 @@
 
     check-cast v0, Lcom/bbm/ui/InlineImageTextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->l:Lcom/bbm/ui/InlineImageTextView;
+    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->f:Lcom/bbm/ui/InlineImageTextView;
 
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->l:Lcom/bbm/ui/InlineImageTextView;
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->f:Lcom/bbm/ui/InlineImageTextView;
 
     iget-object v1, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->b:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/InlineImageTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 74
-    const v0, 0x7f0a00a0
+    .line 72
+    const v0, 0x7f0b00bf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->findViewById(I)Landroid/view/View;
 
@@ -277,29 +277,29 @@
 
     check-cast v0, Lcom/bbm/ui/FooterActionBar;
 
-    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->p:Lcom/bbm/ui/FooterActionBar;
+    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/FooterActionBar;
 
     new-instance v0, Lcom/bbm/ui/ActionBarItem;
 
-    const v1, 0x7f02020e
+    const v1, 0x7f020226
 
-    const v2, 0x7f0e0486
+    const v2, 0x7f0e04d8
 
     invoke-direct {v0, p0, v1, v2}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
 
-    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->m:Lcom/bbm/ui/ActionBarItem;
+    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->g:Lcom/bbm/ui/ActionBarItem;
 
     new-instance v0, Lcom/bbm/ui/ActionBarItem;
 
-    const v1, 0x7f020397
+    const v1, 0x7f0203d0
 
-    const v2, 0x7f0e0522
+    const v2, 0x7f0e058a
 
     invoke-direct {v0, p0, v1, v2}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
 
-    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->n:Lcom/bbm/ui/ActionBarItem;
+    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->h:Lcom/bbm/ui/ActionBarItem;
 
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->p:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/FooterActionBar;
 
     invoke-virtual {v0, v3}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
 
@@ -307,11 +307,11 @@
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/channel/activities/c;-><init>(Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;)V
 
-    iget-object v1, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->p:Lcom/bbm/ui/FooterActionBar;
+    iget-object v1, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/FooterActionBar;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/by;)V
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
 
-    const v0, 0x7f0a0123
+    const v0, 0x7f0b0137
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->findViewById(I)Landroid/view/View;
 
@@ -319,18 +319,18 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->q:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->k:Landroid/widget/ImageView;
 
-    .line 76
+    .line 74
     invoke-static {p0}, Lcom/bbm/util/b/h;->a(Landroid/app/Activity;)Landroid/graphics/Point;
 
     move-result-object v0
 
-    .line 77
+    .line 75
     iget v0, v0, Landroid/graphics/Point;->x:I
 
-    .line 79
-    iget-object v1, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/ObservingImageView;
+    .line 77
+    iget-object v1, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->d:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v1}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -338,8 +338,8 @@
 
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 80
-    iget-object v1, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/ObservingImageView;
+    .line 78
+    iget-object v1, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->d:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v1}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -347,12 +347,12 @@
 
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 81
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->j:Lcom/bbm/ui/ObservingImageView;
+    .line 79
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->d:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v0}, Lcom/bbm/ui/ObservingImageView;->requestLayout()V
 
-    .line 82
+    .line 80
     return-void
 .end method
 
@@ -360,15 +360,15 @@
     .locals 1
 
     .prologue
-    .line 206
-    invoke-super {p0}, Lcom/bbm/ui/activities/eg;->onPause()V
+    .line 203
+    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onPause()V
 
-    .line 207
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->o:Lcom/bbm/j/k;
+    .line 204
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->i:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
 
-    .line 208
+    .line 205
     return-void
 .end method
 
@@ -376,14 +376,14 @@
     .locals 1
 
     .prologue
-    .line 212
-    invoke-super {p0}, Lcom/bbm/ui/activities/eg;->onResume()V
+    .line 209
+    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onResume()V
 
-    .line 213
-    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->o:Lcom/bbm/j/k;
+    .line 210
+    iget-object v0, p0, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->i:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 214
+    .line 211
     return-void
 .end method

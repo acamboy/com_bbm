@@ -1,47 +1,52 @@
 .class final Lcom/bbm/ui/activities/q;
-.super Ljava/lang/Object;
-.source "AudioPlayerActivity.java"
-
-# interfaces
-.implements Landroid/media/MediaPlayer$OnCompletionListener;
+.super Lcom/bbm/ui/cn;
+.source "AppStoreActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/AudioPlayerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/AppStoreActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/AudioPlayerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/AppStoreActivity;)V
     .locals 0
 
     .prologue
-    .line 85
-    iput-object p1, p0, Lcom/bbm/ui/activities/q;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
+    .line 84
+    iput-object p1, p0, Lcom/bbm/ui/activities/q;->a:Lcom/bbm/ui/activities/AppStoreActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCompletion(Landroid/media/MediaPlayer;)V
-    .locals 2
+.method public final a()V
+    .locals 1
 
     .prologue
-    .line 88
-    iget-object v0, p0, Lcom/bbm/ui/activities/q;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
+    .line 93
+    iget-object v0, p0, Lcom/bbm/ui/activities/q;->a:Lcom/bbm/ui/activities/AppStoreActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->e(Lcom/bbm/ui/activities/AudioPlayerActivity;)Landroid/os/Handler;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/AppStoreActivity;->finish()V
 
-    move-result-object v0
+    .line 94
+    return-void
+.end method
 
-    new-instance v1, Lcom/bbm/ui/activities/r;
+.method public final a(I)V
+    .locals 0
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/r;-><init>(Lcom/bbm/ui/activities/q;)V
+    .prologue
+    .line 99
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+.method public final b()V
+    .locals 0
 
-    .line 96
+    .prologue
+    .line 89
     return-void
 .end method

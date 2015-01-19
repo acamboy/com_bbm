@@ -250,7 +250,7 @@
         <item>Csoport (és az azzal kapcsolatos összes adat) törlése</item>
     </string-array>
     <string-array name="group_list_item_sort">
-        <item>Határidő napja</item>
+        <item>Határidő</item>
         <item>Prioritás</item>
         <item>Kategória</item>
         <item>Hozzárendelve a következőhöz:</item>

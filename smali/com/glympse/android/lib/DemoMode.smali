@@ -25,7 +25,7 @@
 .end method
 
 .method private static a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
-    .locals 2
+    .locals 3
 
     .prologue
     .line 319
@@ -232,9 +232,9 @@
 
     move-result-object v3
 
-    new-instance v4, Lcom/glympse/android/lib/at;
+    new-instance v4, Lcom/glympse/android/lib/aw;
 
-    invoke-direct {v4, v2}, Lcom/glympse/android/lib/at;-><init>(Lcom/glympse/android/core/GLocation;)V
+    invoke-direct {v4, v2}, Lcom/glympse/android/lib/aw;-><init>(Lcom/glympse/android/core/GLocation;)V
 
     invoke-interface {v3, v4}, Lcom/glympse/android/api/GLocationManager;->setLocationProvider(Lcom/glympse/android/core/GLocationProvider;)V
 
@@ -975,16 +975,16 @@
 
     move-result-object v2
 
-    move-object v10, v2
+    move-object v11, v2
 
-    check-cast v10, Lcom/glympse/android/lib/GHistoryManagerPrivate;
+    check-cast v11, Lcom/glympse/android/lib/GHistoryManagerPrivate;
 
     .line 158
-    new-instance v2, Lcom/glympse/android/lib/ee;
+    new-instance v2, Lcom/glympse/android/lib/eh;
 
-    invoke-direct {v2}, Lcom/glympse/android/lib/ee;-><init>()V
+    invoke-direct {v2}, Lcom/glympse/android/lib/eh;-><init>()V
 
-    invoke-interface {v10, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->syncedWithServer(Lcom/glympse/android/lib/ee;)V
+    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->syncedWithServer(Lcom/glympse/android/lib/eh;)V
 
     .line 161
     const v2, 0x36ee80
@@ -1013,156 +1013,154 @@
 
     move-result-object v2
 
-    move-object v8, v2
-
-    check-cast v8, Lcom/glympse/android/lib/GTicketPrivate;
+    check-cast v2, Lcom/glympse/android/lib/GTicketPrivate;
 
     .line 163
-    const-wide/32 v2, 0x1b7740
+    const-wide/32 v4, 0x1b7740
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    invoke-interface {v8, v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
+    invoke-interface {v2, v4, v5}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
 
     .line 164
-    const-wide/32 v2, 0x1b7740
+    const-wide/32 v4, 0x1b7740
 
-    add-long/2addr v2, v0
+    add-long/2addr v4, v0
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v8, v2, v3, v4}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
+    invoke-interface {v2, v4, v5, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
 
     .line 165
-    const/16 v2, 0x10
+    const/16 v3, 0x10
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
 
     .line 166
-    const/4 v2, 0x3
+    const/4 v3, 0x3
 
-    const-string v3, "Joaquin Garza (Mobile)"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "206-555-4567"
+    const-string v4, "Joaquin Garza (Mobile)"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0x9c40
+    const-string v5, "206-555-4567"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x2
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0x9c40
 
-    move-result-object v2
+    sub-long v6, v0, v6
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/4 v8, 0x2
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 167
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Kelly Houser (Home)"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "kelly.houser@glympse.com"
+    const-string v4, "Kelly Houser (Home)"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/16 v5, 0xfa0
+    const-string v5, "kelly.houser@glympse.com"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x1
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/16 v6, 0xfa0
 
-    move-result-object v2
+    sub-long v6, v0, v6
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/4 v8, 0x1
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 168
-    const/4 v2, 0x5
-
-    const/4 v3, 0x0
+    const/4 v3, 0x5
 
     const/4 v4, 0x0
 
-    const-wide/16 v5, 0x0
+    const/4 v5, 0x0
 
-    sub-long v5, v0, v5
+    const-wide/16 v6, 0x0
 
-    const/16 v7, 0x11
+    sub-long v6, v0, v6
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const/16 v8, 0x11
 
-    move-result-object v2
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 169
-    const/4 v2, 0x4
-
-    const/4 v3, 0x0
+    const/4 v3, 0x4
 
     const/4 v4, 0x0
 
-    const-wide/16 v5, 0x7d0
+    const/4 v5, 0x0
 
-    sub-long v5, v0, v5
+    const-wide/16 v6, 0x7d0
 
-    const/4 v7, 0x6
+    sub-long v6, v0, v6
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const/4 v8, 0x6
 
-    move-result-object v2
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 170
     if-eqz v9, :cond_1
 
     .line 172
-    const/16 v2, 0x8
+    const/16 v3, 0x8
 
-    const-string v3, "WhatsApp"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "android.intent.action.SEND;text/plain;;com.whatsapp/.ContactPicker"
+    const-string v4, "WhatsApp"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/16 v5, 0x2710
+    const-string v5, "android.intent.action.SEND;text/plain;;com.whatsapp/.ContactPicker"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x2
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/16 v6, 0x2710
 
-    move-result-object v2
+    sub-long v6, v0, v6
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/4 v8, 0x2
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 176
     :cond_1
-    invoke-interface {v10, v8}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 
     .line 179
     const v2, 0x2932e0
@@ -1191,95 +1189,93 @@
 
     move-result-object v2
 
-    move-object v11, v2
-
-    check-cast v11, Lcom/glympse/android/lib/GTicketPrivate;
+    check-cast v2, Lcom/glympse/android/lib/GTicketPrivate;
 
     .line 181
-    const-wide/32 v2, 0xdbba00
+    const-wide/32 v4, 0xdbba00
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    invoke-interface {v11, v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
+    invoke-interface {v2, v4, v5}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
 
     .line 182
-    const-wide/32 v2, 0xa4cb80
+    const-wide/32 v4, 0xa4cb80
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v11, v2, v3, v4}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
+    invoke-interface {v2, v4, v5, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
 
     .line 183
-    const/4 v2, 0x3
+    const/4 v3, 0x3
 
-    const-string v3, "Gabriel Young (Mobile)"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "456-870-1234"
+    const-string v4, "Gabriel Young (Mobile)"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0xa4cb80
+    const-string v5, "456-870-1234"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x3
+    move-result-object v5
 
-    const-string v8, "demo_gabriel.png"
+    const-wide/32 v6, 0xa4cb80
 
-    invoke-static {v8}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    sub-long v6, v0, v6
 
-    move-result-object v9
+    const/4 v8, 0x3
 
-    move-object v8, p1
+    const-string v9, "demo_gabriel.png"
 
-    invoke-static/range {v2 .. v9}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JILcom/glympse/android/lib/GDrawableLoader;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+    invoke-static {v9}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v10
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    move-object v9, p1
+
+    invoke-static/range {v3 .. v10}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JILcom/glympse/android/lib/GDrawableLoader;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 184
-    const/4 v2, 0x3
+    const/4 v3, 0x3
 
-    const-string v3, "Maya Hudson (Mobile)"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "223-123-1212"
+    const-string v4, "Maya Hudson (Mobile)"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0xa4cb80
+    const-string v5, "223-123-1212"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x2
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0xa4cb80
 
-    move-result-object v2
+    sub-long v6, v0, v6
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/4 v8, 0x2
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 185
-    const/16 v2, 0x40
+    const/16 v3, 0x40
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
 
     .line 186
-    invoke-interface {v10, v11}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 
     .line 189
     const v2, 0xdbba0
@@ -1308,68 +1304,66 @@
 
     move-result-object v2
 
-    move-object v11, v2
-
-    check-cast v11, Lcom/glympse/android/lib/GTicketPrivate;
+    check-cast v2, Lcom/glympse/android/lib/GTicketPrivate;
 
     .line 191
-    const-wide/32 v2, 0x2ca1c80
+    const-wide/32 v4, 0x2ca1c80
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    invoke-interface {v11, v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
+    invoke-interface {v2, v4, v5}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
 
     .line 192
-    const-wide/32 v2, 0x2932e00
+    const-wide/32 v4, 0x2932e00
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v11, v2, v3, v4}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
+    invoke-interface {v2, v4, v5, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
 
     .line 193
-    const/4 v2, 0x3
+    const/4 v3, 0x3
 
-    const-string v3, "Misaki Satou (Mobile)"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "456-234-1234"
+    const-string v4, "Misaki Satou (Mobile)"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0x2932e00
+    const-string v5, "456-234-1234"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x3
+    move-result-object v5
 
-    const-string v8, "demo_misaki.png"
+    const-wide/32 v6, 0x2932e00
 
-    invoke-static {v8}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    sub-long v6, v0, v6
 
-    move-result-object v9
+    const/4 v8, 0x3
 
-    move-object v8, p1
+    const-string v9, "demo_misaki.png"
 
-    invoke-static/range {v2 .. v9}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JILcom/glympse/android/lib/GDrawableLoader;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+    invoke-static {v9}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v10
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    move-object v9, p1
+
+    invoke-static/range {v3 .. v10}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JILcom/glympse/android/lib/GDrawableLoader;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 194
-    const/16 v2, 0x40
+    const/16 v3, 0x40
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
 
     .line 195
-    invoke-interface {v10, v11}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 
     .line 198
     const v2, 0xdbba0
@@ -1386,179 +1380,177 @@
 
     move-result-object v2
 
-    move-object v8, v2
-
-    check-cast v8, Lcom/glympse/android/lib/GTicketPrivate;
+    check-cast v2, Lcom/glympse/android/lib/GTicketPrivate;
 
     .line 200
-    const-wide/32 v2, 0xb287200
+    const-wide/32 v4, 0xb287200
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    invoke-interface {v8, v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
+    invoke-interface {v2, v4, v5}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
 
     .line 201
-    const-wide/32 v2, 0xaf18380
+    const-wide/32 v4, 0xaf18380
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v8, v2, v3, v4}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
+    invoke-interface {v2, v4, v5, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
 
     .line 202
-    const/4 v2, 0x5
-
-    const/4 v3, 0x0
+    const/4 v3, 0x5
 
     const/4 v4, 0x0
 
-    const-wide/32 v5, 0xaf18380
+    const/4 v5, 0x0
 
-    sub-long v5, v0, v5
+    const-wide/32 v6, 0xaf18380
 
-    const/16 v7, 0x75
+    sub-long v6, v0, v6
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const/16 v8, 0x75
 
-    move-result-object v2
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 203
-    const/4 v2, 0x4
-
-    const/4 v3, 0x0
+    const/4 v3, 0x4
 
     const/4 v4, 0x0
 
-    const-wide/32 v5, 0xaf18380
+    const/4 v5, 0x0
 
-    sub-long v5, v0, v5
+    const-wide/32 v6, 0xaf18380
 
-    const/16 v7, 0x38
+    sub-long v6, v0, v6
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const/16 v8, 0x38
 
-    move-result-object v2
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 204
-    const/4 v2, 0x3
+    const/4 v3, 0x3
 
-    const-string v3, "Egor Pushkin (Mobile)"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "345-645-2343"
+    const-string v4, "Egor Pushkin (Mobile)"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0xaf18380
+    const-string v5, "345-645-2343"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x3
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0xaf18380
 
-    move-result-object v2
+    sub-long v6, v0, v6
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/4 v8, 0x3
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 205
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Egor Pushkin (Office)"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "egorp@glympse.com"
+    const-string v4, "Egor Pushkin (Office)"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0xaf18380
+    const-string v5, "egorp@glympse.com"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x2
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0xaf18380
 
-    move-result-object v2
+    sub-long v6, v0, v6
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/4 v8, 0x2
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 206
-    const/4 v2, 0x3
+    const/4 v3, 0x3
 
-    const-string v3, "John Moore (Mobile)"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "123-123-1234"
+    const-string v4, "John Moore (Mobile)"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0xaf18380
+    const-string v5, "123-123-1234"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x2
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0xaf18380
 
-    move-result-object v2
+    sub-long v6, v0, v6
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/4 v8, 0x2
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 207
-    const/4 v2, 0x3
+    const/4 v3, 0x3
 
-    const-string v3, "Eric Steele (Mobile)"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "645-234-2342"
+    const-string v4, "Eric Steele (Mobile)"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0xaf18380
+    const-string v5, "645-234-2342"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x1
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0xaf18380
 
-    move-result-object v2
+    sub-long v6, v0, v6
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/4 v8, 0x1
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 208
-    const/16 v2, 0x40
+    const/16 v3, 0x40
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
 
     .line 209
-    invoke-interface {v10, v8}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 
     .line 212
     const v2, 0xdbba0
@@ -1571,106 +1563,104 @@
 
     move-result-object v2
 
-    move-object v8, v2
-
-    check-cast v8, Lcom/glympse/android/lib/GTicketPrivate;
+    check-cast v2, Lcom/glympse/android/lib/GTicketPrivate;
 
     .line 214
-    const-wide/32 v2, 0xf731400
+    const-wide/32 v4, 0xf731400
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    invoke-interface {v8, v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
+    invoke-interface {v2, v4, v5}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
 
     .line 215
-    const-wide/32 v2, 0xf3c2580
+    const-wide/32 v4, 0xf3c2580
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v8, v2, v3, v4}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
+    invoke-interface {v2, v4, v5, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
 
     .line 216
-    const/4 v2, 0x5
-
-    const/4 v3, 0x0
+    const/4 v3, 0x5
 
     const/4 v4, 0x0
 
-    const-wide/32 v5, 0xf3c2580
+    const/4 v5, 0x0
 
-    sub-long v5, v0, v5
+    const-wide/32 v6, 0xf3c2580
 
-    const/16 v7, 0x22
+    sub-long v6, v0, v6
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const/16 v8, 0x22
 
-    move-result-object v2
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 217
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Lawrence Cooley"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "lawrence.cooley@glympse.com"
+    const-string v4, "Lawrence Cooley"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0xf3c2580
+    const-string v5, "lawrence.cooley@glympse.com"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x1
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0xf3c2580
 
-    move-result-object v2
+    sub-long v6, v0, v6
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/4 v8, 0x1
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 218
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Lawrence Cooley"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "lawrence.cooley@glympse.com"
+    const-string v4, "Lawrence Cooley"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0xf3c2580
+    const-string v5, "lawrence.cooley@glympse.com"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x1
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0xf3c2580
 
-    move-result-object v2
+    sub-long v6, v0, v6
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/4 v8, 0x1
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 219
-    const/16 v2, 0x40
+    const/16 v3, 0x40
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
 
     .line 220
-    invoke-interface {v10, v8}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 
     .line 223
     const v2, 0xdbba0
@@ -1683,68 +1673,66 @@
 
     move-result-object v2
 
-    move-object v11, v2
-
-    check-cast v11, Lcom/glympse/android/lib/GTicketPrivate;
+    check-cast v2, Lcom/glympse/android/lib/GTicketPrivate;
 
     .line 225
-    const-wide/32 v2, 0x13bdb600
+    const-wide/32 v4, 0x13bdb600
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    invoke-interface {v11, v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
+    invoke-interface {v2, v4, v5}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
 
     .line 226
-    const-wide/32 v2, 0x1386c780
+    const-wide/32 v4, 0x1386c780
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v11, v2, v3, v4}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
+    invoke-interface {v2, v4, v5, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
 
     .line 227
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Olivia Garza"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "olivia.garza@glympse.com"
+    const-string v4, "Olivia Garza"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0x1386c780
+    const-string v5, "olivia.garza@glympse.com"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x1
+    move-result-object v5
 
-    const-string v8, "demo_olivia.png"
+    const-wide/32 v6, 0x1386c780
 
-    invoke-static {v8}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    sub-long v6, v0, v6
 
-    move-result-object v9
+    const/4 v8, 0x1
 
-    move-object v8, p1
+    const-string v9, "demo_olivia.png"
 
-    invoke-static/range {v2 .. v9}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JILcom/glympse/android/lib/GDrawableLoader;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+    invoke-static {v9}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v10
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    move-object v9, p1
+
+    invoke-static/range {v3 .. v10}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JILcom/glympse/android/lib/GDrawableLoader;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 228
-    const/16 v2, 0x40
+    const/16 v3, 0x40
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
 
     .line 229
-    invoke-interface {v10, v11}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 
     .line 232
     const v2, 0xdbba0
@@ -1757,34 +1745,26 @@
 
     move-result-object v2
 
-    move-object v8, v2
-
-    check-cast v8, Lcom/glympse/android/lib/GTicketPrivate;
+    check-cast v2, Lcom/glympse/android/lib/GTicketPrivate;
 
     .line 234
-    const-wide/32 v2, 0x18085800
+    const-wide/32 v4, 0x18085800
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    invoke-interface {v8, v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
+    invoke-interface {v2, v4, v5}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
 
     .line 235
-    const-wide/32 v2, 0x17d16980
+    const-wide/32 v4, 0x17d16980
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v8, v2, v3, v4}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
+    invoke-interface {v2, v4, v5, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
 
     .line 236
-    const/4 v2, 0x7
-
-    const-string v3, "!DurandReunion916"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
+    const/4 v3, 0x7
 
     const-string v4, "!DurandReunion916"
 
@@ -1792,25 +1772,31 @@
 
     move-result-object v4
 
-    const-wide/32 v5, 0x17d16980
+    const-string v5, "!DurandReunion916"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/16 v7, 0xc
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0x17d16980
 
-    move-result-object v2
+    sub-long v6, v0, v6
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/16 v8, 0xc
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 237
-    const/16 v2, 0x40
+    const/16 v3, 0x40
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
 
     .line 238
-    invoke-interface {v10, v8}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 
     .line 241
     const v2, 0xdbba0
@@ -1823,68 +1809,66 @@
 
     move-result-object v2
 
-    move-object v11, v2
-
-    check-cast v11, Lcom/glympse/android/lib/GTicketPrivate;
+    check-cast v2, Lcom/glympse/android/lib/GTicketPrivate;
 
     .line 243
-    const-wide/32 v2, 0x209d9c00
+    const-wide/32 v4, 0x209d9c00
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    invoke-interface {v11, v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
+    invoke-interface {v2, v4, v5}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
 
     .line 244
-    const-wide/32 v2, 0x2066ad80
+    const-wide/32 v4, 0x2066ad80
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v11, v2, v3, v4}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
+    invoke-interface {v2, v4, v5, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
 
     .line 245
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Olivia Garza"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "olivia.garza@glympse.com"
+    const-string v4, "Olivia Garza"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0x2066ad80
+    const-string v5, "olivia.garza@glympse.com"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x1
+    move-result-object v5
 
-    const-string v8, "demo_olivia.png"
+    const-wide/32 v6, 0x2066ad80
 
-    invoke-static {v8}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    sub-long v6, v0, v6
 
-    move-result-object v9
+    const/4 v8, 0x1
 
-    move-object v8, p1
+    const-string v9, "demo_olivia.png"
 
-    invoke-static/range {v2 .. v9}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JILcom/glympse/android/lib/GDrawableLoader;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+    invoke-static {v9}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v10
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    move-object v9, p1
+
+    invoke-static/range {v3 .. v10}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JILcom/glympse/android/lib/GDrawableLoader;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 246
-    const/16 v2, 0x40
+    const/16 v3, 0x40
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
 
     .line 247
-    invoke-interface {v10, v11}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 
     .line 250
     const v2, 0xdbba0
@@ -1897,68 +1881,66 @@
 
     move-result-object v2
 
-    move-object v11, v2
-
-    check-cast v11, Lcom/glympse/android/lib/GTicketPrivate;
+    check-cast v2, Lcom/glympse/android/lib/GTicketPrivate;
 
     .line 252
-    const-wide/32 v2, 0x24e83e00
+    const-wide/32 v4, 0x24e83e00
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    invoke-interface {v11, v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
+    invoke-interface {v2, v4, v5}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
 
     .line 253
-    const-wide/32 v2, 0x24b14f80
+    const-wide/32 v4, 0x24b14f80
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v11, v2, v3, v4}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
+    invoke-interface {v2, v4, v5, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
 
     .line 254
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Maxine Miller"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "maxine.miller@glympse.com"
+    const-string v4, "Maxine Miller"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0x24b14f80
+    const-string v5, "maxine.miller@glympse.com"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x1
+    move-result-object v5
 
-    const-string v8, "demo_maxine.png"
+    const-wide/32 v6, 0x24b14f80
 
-    invoke-static {v8}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    sub-long v6, v0, v6
 
-    move-result-object v9
+    const/4 v8, 0x1
 
-    move-object v8, p1
+    const-string v9, "demo_maxine.png"
 
-    invoke-static/range {v2 .. v9}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JILcom/glympse/android/lib/GDrawableLoader;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+    invoke-static {v9}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v10
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    move-object v9, p1
+
+    invoke-static/range {v3 .. v10}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JILcom/glympse/android/lib/GDrawableLoader;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 255
-    const/16 v2, 0x40
+    const/16 v3, 0x40
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
 
     .line 256
-    invoke-interface {v10, v11}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 
     .line 259
     const v2, 0xdbba0
@@ -1971,68 +1953,66 @@
 
     move-result-object v2
 
-    move-object v11, v2
-
-    check-cast v11, Lcom/glympse/android/lib/GTicketPrivate;
+    check-cast v2, Lcom/glympse/android/lib/GTicketPrivate;
 
     .line 261
-    const-wide/32 v2, 0x2932e000
+    const-wide/32 v4, 0x2932e000
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    invoke-interface {v11, v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
+    invoke-interface {v2, v4, v5}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
 
     .line 262
-    const-wide/32 v2, 0x28fbf180
+    const-wide/32 v4, 0x28fbf180
 
-    sub-long v2, v0, v2
+    sub-long v4, v0, v4
 
-    const/4 v4, 0x1
+    const/4 v3, 0x1
 
-    invoke-interface {v11, v2, v3, v4}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
+    invoke-interface {v2, v4, v5, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
 
     .line 263
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Harold Reynolds"
-
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "harold.reynolds@glympse.com"
+    const-string v4, "Harold Reynolds"
 
     invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0x28fbf180
+    const-string v5, "harold.reynolds@glympse.com"
 
-    sub-long v5, v0, v5
+    invoke-static {v5}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x1
+    move-result-object v5
 
-    const-string v8, "demo_harold.png"
+    const-wide/32 v6, 0x28fbf180
 
-    invoke-static {v8}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    sub-long v6, v0, v6
 
-    move-result-object v9
+    const/4 v8, 0x1
 
-    move-object v8, p1
+    const-string v9, "demo_harold.png"
 
-    invoke-static/range {v2 .. v9}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JILcom/glympse/android/lib/GDrawableLoader;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+    invoke-static {v9}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v10
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    move-object v9, p1
+
+    invoke-static/range {v3 .. v10}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JILcom/glympse/android/lib/GDrawableLoader;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 264
-    const/16 v2, 0x40
+    const/16 v3, 0x40
 
-    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
 
     .line 265
-    invoke-interface {v10, v11}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+    invoke-interface {v11, v2}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 
     .line 268
     const v2, 0xdbba0
@@ -2045,16 +2025,16 @@
 
     move-result-object v2
 
-    move-object v8, v2
+    move-object v9, v2
 
-    check-cast v8, Lcom/glympse/android/lib/GTicketPrivate;
+    check-cast v9, Lcom/glympse/android/lib/GTicketPrivate;
 
     .line 270
     const-wide/32 v2, 0x2e902a80
 
     sub-long v2, v0, v2
 
-    invoke-interface {v8, v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
+    invoke-interface {v9, v2, v3}, Lcom/glympse/android/lib/GTicketPrivate;->setStartTime(J)V
 
     .line 271
     const-wide/32 v2, 0x2e593c00
@@ -2063,208 +2043,206 @@
 
     const/4 v4, 0x1
 
-    invoke-interface {v8, v2, v3, v4}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
+    invoke-interface {v9, v2, v3, v4}, Lcom/glympse/android/lib/GTicketPrivate;->setExpireTime(JZ)V
 
     .line 272
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Abbey Wetmore"
+    const-string v2, "Abbey Wetmore"
 
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "a@b1"
-
-    invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0x2e593c00
+    const-string v2, "a@b1"
 
-    sub-long v5, v0, v5
+    invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x3
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0x2e593c00
+
+    sub-long v6, v0, v6
+
+    const/4 v8, 0x3
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
 
     move-result-object v2
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    invoke-interface {v9, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 273
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Abbey Wetmore"
+    const-string v2, "Abbey Wetmore"
 
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "a@b2"
-
-    invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0x2e593c00
+    const-string v2, "a@b2"
 
-    sub-long v5, v0, v5
+    invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x3
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0x2e593c00
+
+    sub-long v6, v0, v6
+
+    const/4 v8, 0x3
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
 
     move-result-object v2
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    invoke-interface {v9, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 274
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Abbey Wetmore"
+    const-string v2, "Abbey Wetmore"
 
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "a@b3"
-
-    invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0x2e593c00
+    const-string v2, "a@b3"
 
-    sub-long v5, v0, v5
+    invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x3
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0x2e593c00
+
+    sub-long v6, v0, v6
+
+    const/4 v8, 0x3
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
 
     move-result-object v2
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    invoke-interface {v9, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 275
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Abbey Wetmore"
+    const-string v2, "Abbey Wetmore"
 
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "a@b4"
-
-    invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0x2e593c00
+    const-string v2, "a@b4"
 
-    sub-long v5, v0, v5
+    invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x3
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0x2e593c00
+
+    sub-long v6, v0, v6
+
+    const/4 v8, 0x3
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
 
     move-result-object v2
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    invoke-interface {v9, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 276
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Abbey Wetmore"
+    const-string v2, "Abbey Wetmore"
 
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "a@b5"
-
-    invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0x2e593c00
+    const-string v2, "a@b5"
 
-    sub-long v5, v0, v5
+    invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x3
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0x2e593c00
+
+    sub-long v6, v0, v6
+
+    const/4 v8, 0x3
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
 
     move-result-object v2
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    invoke-interface {v9, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 277
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    const-string v3, "Abbey Wetmore"
+    const-string v2, "Abbey Wetmore"
 
-    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "a@b6"
-
-    invoke-static {v4}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/32 v5, 0x2e593c00
+    const-string v2, "a@b6"
 
-    sub-long v5, v0, v5
+    invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    const/4 v7, 0x3
+    move-result-object v5
 
-    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    const-wide/32 v6, 0x2e593c00
+
+    sub-long v6, v0, v6
+
+    const/4 v8, 0x3
+
+    invoke-static/range {v3 .. v8}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
 
     move-result-object v2
 
-    invoke-interface {v8, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    invoke-interface {v9, v2}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 278
-    const/4 v6, 0x4
-
-    const/4 v7, 0x0
+    const/4 v7, 0x4
 
     const/4 v2, 0x0
 
-    const-wide/32 v3, 0x2e593c00
+    const/4 v3, 0x0
 
-    sub-long v3, v0, v3
+    const-wide/32 v4, 0x2e593c00
 
-    const/16 v5, 0x38
+    sub-long v4, v0, v4
 
-    move v0, v6
+    const/16 v6, 0x38
 
-    move-object v1, v7
+    move v1, v7
 
-    invoke-static/range {v0 .. v5}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    invoke-static/range {v1 .. v6}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
 
     move-result-object v0
 
-    invoke-interface {v8, v0}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    invoke-interface {v9, v0}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 279
     const/16 v0, 0x40
 
-    invoke-interface {v8, v0}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
+    invoke-interface {v9, v0}, Lcom/glympse/android/lib/GTicketPrivate;->setState(I)Z
 
     .line 280
-    invoke-interface {v10, v8}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+    invoke-interface {v11, v9}, Lcom/glympse/android/lib/GHistoryManagerPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 
     .line 283
-    new-instance v0, Lcom/glympse/android/lib/as;
+    new-instance v0, Lcom/glympse/android/lib/av;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/lib/as;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/lib/av;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;)V
 
     .line 284
-    invoke-virtual {v0}, Lcom/glympse/android/lib/as;->run()V
+    invoke-virtual {v0}, Lcom/glympse/android/lib/av;->run()V
 
     .line 288
     invoke-interface {p0}, Lcom/glympse/android/lib/GGlympsePrivate;->getFavoritesManager()Lcom/glympse/android/lib/GFavoritesManager;
@@ -2319,78 +2297,76 @@
 
     move-result-object v0
 
-    move-object v6, v0
-
-    check-cast v6, Lcom/glympse/android/lib/GTicketPrivate;
+    check-cast v0, Lcom/glympse/android/lib/GTicketPrivate;
 
     .line 295
-    const-string v0, "Heading to the office"
+    const-string v1, "Heading to the office"
 
-    invoke-static {v0}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v6, v0}, Lcom/glympse/android/lib/GTicketPrivate;->setName(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GTicketPrivate;->setName(Ljava/lang/String;)V
 
     .line 296
-    const/4 v0, 0x3
+    const/4 v1, 0x3
 
-    const-string v1, "Kelly Houser"
-
-    invoke-static {v1}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "(206) 555-6789"
+    const-string v2, "Kelly Houser"
 
     invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    const-wide/16 v3, 0x0
+    const-string v3, "(206) 555-6789"
 
-    const/4 v5, 0x0
+    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static/range {v0 .. v5}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    move-result-object v3
 
-    move-result-object v0
+    const-wide/16 v4, 0x0
 
-    invoke-interface {v6, v0}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/4 v6, 0x0
+
+    invoke-static/range {v1 .. v6}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 297
-    const/4 v0, 0x2
+    const/4 v1, 0x2
 
-    const-string v1, "Marion Blakely"
-
-    invoke-static {v1}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    const-string v2, "Marion.Blakely@glympse.com"
+    const-string v2, "Marion Blakely"
 
     invoke-static {v2}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    const-wide/16 v3, 0x0
+    const-string v3, "Marion.Blakely@glympse.com"
 
-    const/4 v5, 0x0
+    invoke-static {v3}, Lcom/glympse/android/lib/DemoMode;->str(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static/range {v0 .. v5}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+    move-result-object v3
 
-    move-result-object v0
+    const-wide/16 v4, 0x0
 
-    invoke-interface {v6, v0}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
+    const/4 v6, 0x0
+
+    invoke-static/range {v1 .. v6}, Lcom/glympse/android/lib/DemoMode;->a(ILjava/lang/String;Ljava/lang/String;JI)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GTicketPrivate;->addInvite(Lcom/glympse/android/api/GInvite;)Z
 
     .line 298
-    invoke-interface {v7, v6}, Lcom/glympse/android/lib/GFavoritesManager;->hasFavorite(Lcom/glympse/android/api/GTicket;)Z
+    invoke-interface {v7, v0}, Lcom/glympse/android/lib/GFavoritesManager;->hasFavorite(Lcom/glympse/android/api/GTicket;)Z
 
-    move-result v0
+    move-result v1
 
-    if-nez v0, :cond_2
+    if-nez v1, :cond_2
 
     .line 300
-    invoke-interface {v7, v6}, Lcom/glympse/android/lib/GFavoritesManager;->addFavorite(Lcom/glympse/android/api/GTicket;)V
+    invoke-interface {v7, v0}, Lcom/glympse/android/lib/GFavoritesManager;->addFavorite(Lcom/glympse/android/api/GTicket;)V
 
     .line 302
     :cond_2
@@ -32992,7 +32968,7 @@
 .end method
 
 .method public static populateTrail(JLcom/glympse/android/lib/GTrackPrivate;[IIIFF)Lcom/glympse/android/lib/GLocationPrivate;
-    .locals 11
+    .locals 12
 
     .prologue
     .line 463
@@ -33002,80 +32978,82 @@
 
     .line 468
     :cond_0
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     move/from16 v0, p5
 
-    add-int/lit16 v2, v0, -0x258
+    add-int/lit16 v3, v0, -0x258
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->max(II)I
+    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
 
-    move-result v2
+    move-result v3
 
     .line 469
     move/from16 v0, p5
 
-    invoke-static {v0, p4}, Ljava/lang/Math;->min(II)I
+    move/from16 v1, p4
 
-    move-result v8
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+
+    move-result v9
 
     .line 471
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    move v7, v2
+    move v8, v3
 
     .line 472
     :goto_0
-    if-ge v7, v8, :cond_1
+    if-ge v8, v9, :cond_1
 
     .line 474
-    shl-int/lit8 v5, v7, 0x1
+    shl-int/lit8 v6, v8, 0x1
 
     .line 475
-    sub-int v1, p4, v7
+    sub-int v2, p4, v8
 
-    add-int/lit8 v1, v1, -0x1
+    add-int/lit8 v2, v2, -0x1
 
-    mul-int/lit16 v1, v1, 0x3e8
+    mul-int/lit16 v2, v2, 0x3e8
 
-    int-to-long v1, v1
+    int-to-long v2, v2
 
-    sub-long v1, p0, v1
+    sub-long v2, p0, v2
 
-    aget v3, p3, v5
+    aget v4, p3, v6
 
-    int-to-double v3, v3
+    int-to-double v4, v4
 
-    const-wide v9, 0x40f86a0000000000L
+    const-wide v10, 0x40f86a0000000000L
 
-    div-double/2addr v3, v9
+    div-double/2addr v4, v10
 
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v6, v6, 0x1
 
-    aget v5, p3, v5
+    aget v6, p3, v6
 
-    int-to-double v5, v5
+    int-to-double v6, v6
 
-    const-wide v9, 0x40f86a0000000000L
+    const-wide v10, 0x40f86a0000000000L
 
-    div-double/2addr v5, v9
+    div-double/2addr v6, v10
 
-    invoke-static/range {v1 .. v6}, Lcom/glympse/android/lib/LibFactory;->createLocation(JDD)Lcom/glympse/android/lib/GLocationPrivate;
+    invoke-static/range {v2 .. v7}, Lcom/glympse/android/lib/LibFactory;->createLocation(JDD)Lcom/glympse/android/lib/GLocationPrivate;
 
-    move-result-object v1
+    move-result-object v2
 
     .line 478
-    const/high16 v2, 0x40400000
+    const/high16 v3, 0x40400000
 
-    invoke-interface {v1, v2}, Lcom/glympse/android/lib/GLocationPrivate;->setHAccuracy(F)V
+    invoke-interface {v2, v3}, Lcom/glympse/android/lib/GLocationPrivate;->setHAccuracy(F)V
 
     .line 479
-    invoke-interface {p2, v1}, Lcom/glympse/android/lib/GTrackPrivate;->addCore(Lcom/glympse/android/core/GLocation;)V
+    invoke-interface {p2, v2}, Lcom/glympse/android/lib/GTrackPrivate;->addCore(Lcom/glympse/android/core/GLocation;)V
 
     .line 472
-    add-int/lit8 v2, v7, 0x1
+    add-int/lit8 v3, v8, 0x1
 
-    move v7, v2
+    move v8, v3
 
     goto :goto_0
 
@@ -33083,15 +33061,15 @@
     :cond_1
     move/from16 v0, p6
 
-    invoke-interface {v1, v0}, Lcom/glympse/android/lib/GLocationPrivate;->setSpeed(F)V
+    invoke-interface {v2, v0}, Lcom/glympse/android/lib/GLocationPrivate;->setSpeed(F)V
 
     .line 483
     move/from16 v0, p7
 
-    invoke-interface {v1, v0}, Lcom/glympse/android/lib/GLocationPrivate;->setBearing(F)V
+    invoke-interface {v2, v0}, Lcom/glympse/android/lib/GLocationPrivate;->setBearing(F)V
 
     .line 485
-    return-object v1
+    return-object v2
 .end method
 
 .method public static str(Ljava/lang/String;)Ljava/lang/String;

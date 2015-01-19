@@ -277,7 +277,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/d/a/b/h;B)V
+.method public synthetic constructor <init>(Lcom/d/a/b/h;B)V
     .locals 0
 
     .prologue

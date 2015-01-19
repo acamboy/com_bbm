@@ -1,22 +1,30 @@
 .class final Lcom/bbm/ui/fo;
 .super Ljava/lang/Object;
-.source "StickerPicker.java"
+.source "QuickShareVoicenoteView.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/media/MediaPlayer$OnPreparedListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/StickerPicker;
+.field final synthetic a:Lcom/bbm/ui/fq;
+
+.field final synthetic b:Landroid/media/MediaPlayer;
+
+.field final synthetic c:Lcom/bbm/ui/QuickShareVoicenoteView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/StickerPicker;)V
+.method constructor <init>(Lcom/bbm/ui/QuickShareVoicenoteView;Lcom/bbm/ui/fq;Landroid/media/MediaPlayer;)V
     .locals 0
 
     .prologue
-    .line 58
-    iput-object p1, p0, Lcom/bbm/ui/fo;->a:Lcom/bbm/ui/StickerPicker;
+    .line 282
+    iput-object p1, p0, Lcom/bbm/ui/fo;->c:Lcom/bbm/ui/QuickShareVoicenoteView;
+
+    iput-object p2, p0, Lcom/bbm/ui/fo;->a:Lcom/bbm/ui/fq;
+
+    iput-object p3, p0, Lcom/bbm/ui/fo;->b:Landroid/media/MediaPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,57 +33,26 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final onPrepared(Landroid/media/MediaPlayer;)V
+    .locals 1
 
     .prologue
-    .line 62
-    iget-object v0, p0, Lcom/bbm/ui/fo;->a:Lcom/bbm/ui/StickerPicker;
-
-    invoke-static {v0}, Lcom/bbm/ui/StickerPicker;->a(Lcom/bbm/ui/StickerPicker;)Lcom/bbm/ui/fs;
-
-    move-result-object v0
+    .line 286
+    iget-object v0, p0, Lcom/bbm/ui/fo;->a:Lcom/bbm/ui/fq;
 
     if-eqz v0, :cond_0
 
-    .line 63
-    const-string v0, "Sticker Clicked"
+    .line 287
+    iget-object v0, p0, Lcom/bbm/ui/fo;->a:Lcom/bbm/ui/fq;
 
-    const-class v1, Lcom/bbm/ui/StickerPicker;
+    invoke-interface {v0}, Lcom/bbm/ui/fq;->a()V
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 64
-    iget-object v0, p0, Lcom/bbm/ui/fo;->a:Lcom/bbm/ui/StickerPicker;
-
-    invoke-static {v0}, Lcom/bbm/ui/StickerPicker;->a(Lcom/bbm/ui/StickerPicker;)Lcom/bbm/ui/fs;
-
-    move-result-object v1
-
-    iget-object v0, p0, Lcom/bbm/ui/fo;->a:Lcom/bbm/ui/StickerPicker;
-
-    invoke-static {v0}, Lcom/bbm/ui/StickerPicker;->b(Lcom/bbm/ui/StickerPicker;)Lcom/bbm/ui/fr;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/fr;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/em;
-
-    invoke-interface {v1, v0, p3}, Lcom/bbm/ui/fs;->a(Lcom/bbm/d/em;I)V
-
-    .line 66
+    .line 289
     :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/fo;->b:Landroid/media/MediaPlayer;
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
+
+    .line 290
     return-void
 .end method

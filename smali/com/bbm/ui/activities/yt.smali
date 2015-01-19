@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/yt;
 .super Ljava/lang/Object;
-.source "PreviewChannelActivity.java"
+.source "NewChannelActivity.java"
 
 # interfaces
-.implements Lcom/bbm/j/s;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
     .locals 0
 
     .prologue
-    .line 315
-    iput-object p1, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    .line 320
+    iput-object p1, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,55 +25,153 @@
 
 
 # virtual methods
-.method public final a()Z
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
     .prologue
-    .line 318
-    iget-object v0, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    const/4 v4, 0x1
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    const/4 v3, 0x0
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/PreviewChannelActivity;->d(Lcom/bbm/ui/activities/PreviewChannelActivity;)Lcom/bbm/d;
+    .line 323
+    iget-object v0, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->k(Lcom/bbm/ui/activities/NewChannelActivity;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 324
+    iget-object v0, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/NewChannelActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/d;->b:Lcom/bbm/d/a;
+    const v2, 0x7f0e0174
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/PreviewChannelActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->O(Ljava/lang/String;)Lcom/bbm/d/de;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/PreviewChannelActivity;->a(Lcom/bbm/ui/activities/PreviewChannelActivity;Lcom/bbm/d/de;)Lcom/bbm/d/de;
+    invoke-static {v0, v1, v3}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 319
-    iget-object v0, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    .line 337
+    :cond_0
+    :goto_0
+    return-void
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->e(Lcom/bbm/ui/activities/PreviewChannelActivity;)Lcom/bbm/d/de;
+    .line 325
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->j(Lcom/bbm/ui/activities/NewChannelActivity;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d/de;->Q:Lcom/bbm/util/bc;
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
-    sget-object v1, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
+    move-result v0
 
-    if-ne v0, v1, :cond_0
+    if-nez v0, :cond_0
 
-    .line 320
-    const/4 v0, 0x0
+    .line 326
+    iget-object v0, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    .line 322
-    :goto_0
-    return v0
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->j(Lcom/bbm/ui/activities/NewChannelActivity;)Ljava/lang/String;
 
-    :cond_0
-    const/4 v0, 0x1
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v0
+
+    .line 327
+    iget-object v1, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    new-instance v2, Lcom/cropimage/f;
+
+    invoke-direct {v2, v0, v3}, Lcom/cropimage/f;-><init>(Landroid/net/Uri;B)V
+
+    invoke-static {v1, v2}, Lcom/bbm/ui/activities/NewChannelActivity;->a(Lcom/bbm/ui/activities/NewChannelActivity;Lcom/cropimage/f;)Lcom/cropimage/f;
+
+    .line 328
+    iget-object v1, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/NewChannelActivity;->l(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/cropimage/f;
+
+    move-result-object v1
+
+    iput-object v0, v1, Lcom/cropimage/f;->b:Landroid/net/Uri;
+
+    .line 329
+    iget-object v0, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->l(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/cropimage/f;
+
+    move-result-object v0
+
+    iput-boolean v4, v0, Lcom/cropimage/f;->c:Z
+
+    .line 330
+    iget-object v0, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->l(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/cropimage/f;
+
+    move-result-object v0
+
+    iput-boolean v3, v0, Lcom/cropimage/f;->d:Z
+
+    .line 331
+    iget-object v0, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->l(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/cropimage/f;
+
+    move-result-object v0
+
+    iput-boolean v3, v0, Lcom/cropimage/f;->a:Z
+
+    .line 332
+    iget-object v0, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->l(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/cropimage/f;
+
+    move-result-object v0
+
+    iput-boolean v4, v0, Lcom/cropimage/f;->e:Z
+
+    .line 333
+    iget-object v0, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->l(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/cropimage/f;
+
+    move-result-object v0
+
+    const v1, 0x32000
+
+    iput v1, v0, Lcom/cropimage/f;->f:I
+
+    .line 334
+    iget-object v0, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/NewChannelActivity;->l(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/cropimage/f;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/yt;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-virtual {v1, v2}, Lcom/cropimage/f;->a(Landroid/content/Context;)Landroid/content/Intent;
+
+    move-result-object v1
+
+    const/4 v2, 0x3
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/activities/NewChannelActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     goto :goto_0
 .end method

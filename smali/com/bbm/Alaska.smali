@@ -3,77 +3,90 @@
 .source "Alaska.java"
 
 # interfaces
-.implements Lcom/bbm/r;
+.implements Lcom/bbm/t;
 
 
 # static fields
 .field public static a:Z
 
-.field private static c:Lcom/bbm/f/c;
+.field public static b:I
 
-.field private static d:Lcom/bbm/f/c;
+.field public static f:Lcom/bbm/setup/z;
 
-.field private static e:Lcom/bbm/f/c;
+.field private static k:Lcom/bbm/f/c;
 
-.field private static f:Lcom/bbm/j/e;
+.field private static l:Lcom/bbm/f/c;
+
+.field private static m:Lcom/bbm/f/c;
+
+.field private static n:Lcom/bbm/j/e;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/bbm/j/e",
             "<",
-            "Lcom/bbm/f/aa;",
+            "Lcom/bbm/f/ae;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private static g:Lcom/bbm/d;
+.field private static o:Lcom/bbm/j/e;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/e",
+            "<",
+            "Lcom/bbm/f/ag;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private static h:Lcom/bbm/setup/x;
+.field private static p:Lcom/bbm/e;
 
-.field private static i:Lcom/bbm/d/a/i;
+.field private static q:Lcom/bbm/d/a/i;
 
-.field private static j:Lcom/bbm/ae;
+.field private static r:Lcom/bbm/ag;
 
-.field private static m:Lcom/bbm/Alaska;
+.field private static t:Lcom/bbm/Alaska;
 
-.field private static n:Lcom/bbm/c/a;
+.field private static u:Lcom/bbm/c/c;
 
-.field private static o:Lcom/bbm/ui/f/a;
+.field private static v:Lcom/bbm/ui/f/a;
 
-.field private static p:Lcom/bbm/iceberg/k;
+.field private static w:Lcom/bbm/iceberg/m;
 
-.field private static q:Ljavax/net/ssl/TrustManagerFactory;
+.field private static x:Ljavax/net/ssl/TrustManagerFactory;
 
 
 # instance fields
-.field public b:Z
+.field private final A:Landroid/content/ServiceConnection;
 
-.field private k:Lcom/bbm/h;
+.field private B:Lcom/d/a/b/f;
 
-.field private l:Z
+.field private C:Lcom/bbm/w;
 
-.field private r:Lcom/bbm/j/a;
+.field public c:Lcom/bbm/util/ct;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/j/a",
+            "Lcom/bbm/util/ct",
             "<",
-            "Lcom/bbm/f/ab;",
+            "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final s:Ljava/lang/Thread;
+.field public d:Ljava/lang/Runnable;
 
-.field private final t:Landroid/content/ServiceConnection;
+.field public e:Landroid/os/Handler;
 
-.field private u:Lcom/d/a/b/f;
+.field public g:Lcom/bbm/j;
 
-.field private final v:Lcom/bbm/s;
+.field public h:Z
 
-.field private w:Lcom/bbm/u;
+.field public final i:Lcom/bbm/u;
 
-.field private x:Ljava/lang/ref/WeakReference;
+.field public j:Ljava/lang/ref/WeakReference;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/ref/WeakReference",
@@ -84,239 +97,250 @@
     .end annotation
 .end field
 
+.field private s:Z
+
+.field private y:Lcom/bbm/j/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/a",
+            "<",
+            "Lcom/bbm/f/af;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final z:Ljava/lang/Thread;
+
 
 # direct methods
 .method static constructor <clinit>()V
     .locals 2
 
     .prologue
-    .line 83
+    .line 84
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/bbm/Alaska;->a:Z
 
-    .line 92
-    new-instance v0, Lcom/bbm/f/c;
-
-    invoke-direct {v0}, Lcom/bbm/f/c;-><init>()V
-
-    sput-object v0, Lcom/bbm/Alaska;->c:Lcom/bbm/f/c;
-
-    .line 93
-    new-instance v0, Lcom/bbm/f/c;
-
-    invoke-direct {v0}, Lcom/bbm/f/c;-><init>()V
-
-    sput-object v0, Lcom/bbm/Alaska;->d:Lcom/bbm/f/c;
-
     .line 94
+    const/16 v0, 0x14
+
+    sput v0, Lcom/bbm/Alaska;->b:I
+
+    .line 100
     new-instance v0, Lcom/bbm/f/c;
 
     invoke-direct {v0}, Lcom/bbm/f/c;-><init>()V
 
-    sput-object v0, Lcom/bbm/Alaska;->e:Lcom/bbm/f/c;
+    sput-object v0, Lcom/bbm/Alaska;->k:Lcom/bbm/f/c;
 
-    .line 95
+    .line 101
+    new-instance v0, Lcom/bbm/f/c;
+
+    invoke-direct {v0}, Lcom/bbm/f/c;-><init>()V
+
+    sput-object v0, Lcom/bbm/Alaska;->l:Lcom/bbm/f/c;
+
+    .line 102
+    new-instance v0, Lcom/bbm/f/c;
+
+    invoke-direct {v0}, Lcom/bbm/f/c;-><init>()V
+
+    sput-object v0, Lcom/bbm/Alaska;->m:Lcom/bbm/f/c;
+
+    .line 103
     new-instance v0, Lcom/bbm/j/e;
 
-    new-instance v1, Lcom/bbm/f/aa;
+    new-instance v1, Lcom/bbm/f/ae;
 
-    invoke-direct {v1}, Lcom/bbm/f/aa;-><init>()V
+    invoke-direct {v1}, Lcom/bbm/f/ae;-><init>()V
 
     invoke-direct {v0, v1}, Lcom/bbm/j/e;-><init>(Ljava/lang/Object;)V
 
-    sput-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/j/e;
+    sput-object v0, Lcom/bbm/Alaska;->n:Lcom/bbm/j/e;
 
-    .line 98
+    .line 104
+    new-instance v0, Lcom/bbm/j/e;
+
+    new-instance v1, Lcom/bbm/f/ag;
+
+    invoke-direct {v1}, Lcom/bbm/f/ag;-><init>()V
+
+    invoke-direct {v0, v1}, Lcom/bbm/j/e;-><init>(Ljava/lang/Object;)V
+
+    sput-object v0, Lcom/bbm/Alaska;->o:Lcom/bbm/j/e;
+
+    .line 107
     new-instance v0, Lcom/bbm/d/a/g;
 
     invoke-direct {v0}, Lcom/bbm/d/a/g;-><init>()V
 
-    sput-object v0, Lcom/bbm/Alaska;->i:Lcom/bbm/d/a/i;
+    sput-object v0, Lcom/bbm/Alaska;->q:Lcom/bbm/d/a/i;
 
-    .line 109
+    .line 118
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/bbm/Alaska;->q:Ljavax/net/ssl/TrustManagerFactory;
+    sput-object v0, Lcom/bbm/Alaska;->x:Ljavax/net/ssl/TrustManagerFactory;
 
     return-void
 .end method
 
 .method public constructor <init>()V
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 81
+    const/4 v3, 0x0
+
+    const/4 v2, 0x0
+
+    .line 82
     invoke-direct {p0}, Landroid/app/Application;-><init>()V
 
-    .line 103
-    const/4 v0, 0x0
+    .line 95
+    new-instance v0, Lcom/bbm/util/ct;
 
-    iput-boolean v0, p0, Lcom/bbm/Alaska;->b:Z
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 111
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/Alaska;->c:Lcom/bbm/util/ct;
+
+    .line 96
+    iput-object v3, p0, Lcom/bbm/Alaska;->d:Ljava/lang/Runnable;
+
+    .line 98
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/Alaska;->e:Landroid/os/Handler;
+
+    .line 112
+    iput-boolean v2, p0, Lcom/bbm/Alaska;->h:Z
+
+    .line 120
     new-instance v0, Lcom/bbm/a;
 
     invoke-direct {v0, p0}, Lcom/bbm/a;-><init>(Lcom/bbm/Alaska;)V
 
-    iput-object v0, p0, Lcom/bbm/Alaska;->r:Lcom/bbm/j/a;
+    iput-object v0, p0, Lcom/bbm/Alaska;->y:Lcom/bbm/j/a;
 
-    .line 124
+    .line 132
     new-instance v0, Lcom/bbm/b;
 
     invoke-direct {v0, p0}, Lcom/bbm/b;-><init>(Lcom/bbm/Alaska;)V
 
-    iput-object v0, p0, Lcom/bbm/Alaska;->s:Ljava/lang/Thread;
+    iput-object v0, p0, Lcom/bbm/Alaska;->z:Ljava/lang/Thread;
 
-    .line 164
+    .line 170
     new-instance v0, Lcom/bbm/c;
 
     invoke-direct {v0, p0}, Lcom/bbm/c;-><init>(Lcom/bbm/Alaska;)V
 
-    iput-object v0, p0, Lcom/bbm/Alaska;->t:Landroid/content/ServiceConnection;
+    iput-object v0, p0, Lcom/bbm/Alaska;->A:Landroid/content/ServiceConnection;
 
-    .line 188
-    new-instance v0, Lcom/bbm/s;
+    .line 195
+    new-instance v0, Lcom/bbm/u;
 
     const-string v1, "Opening conversation pane"
 
-    invoke-direct {v0, v1}, Lcom/bbm/s;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, v1}, Lcom/bbm/u;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/bbm/Alaska;->v:Lcom/bbm/s;
+    iput-object v0, p0, Lcom/bbm/Alaska;->i:Lcom/bbm/u;
 
-    .line 190
+    .line 197
     new-instance v0, Ljava/lang/ref/WeakReference;
 
-    const/4 v1, 0x0
+    invoke-direct {v0, v3}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    invoke-direct {v0, v1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/bbm/Alaska;->x:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/bbm/Alaska;->j:Ljava/lang/ref/WeakReference;
 
     return-void
 .end method
 
-.method public static C()Lcom/bbm/j/r;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/bbm/j/r",
-            "<",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/iceberg/j;",
-            ">;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 651
-    invoke-static {}, Lcom/bbm/Alaska;->L()Lcom/bbm/iceberg/k;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/iceberg/k;->a()Lcom/bbm/j/r;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static D()Z
+.method public static A()V
     .locals 1
 
     .prologue
-    .line 655
-    invoke-static {}, Lcom/bbm/Alaska;->L()Lcom/bbm/iceberg/k;
+    .line 717
+    invoke-static {}, Lcom/bbm/Alaska;->y()Lcom/bbm/iceberg/m;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/iceberg/k;->c()Z
+    iget-object v0, v0, Lcom/bbm/iceberg/m;->a:Lcom/bbm/iceberg/c;
 
-    move-result v0
+    invoke-virtual {v0}, Lcom/bbm/iceberg/c;->b()V
 
-    return v0
-.end method
-
-.method public static E()V
-    .locals 1
-
-    .prologue
-    .line 667
-    invoke-static {}, Lcom/bbm/Alaska;->L()Lcom/bbm/iceberg/k;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/iceberg/k;->b()V
-
-    .line 668
+    .line 718
     return-void
 .end method
 
-.method public static G()Ljavax/net/ssl/TrustManagerFactory;
+.method public static C()Ljavax/net/ssl/TrustManagerFactory;
     .locals 7
 
     .prologue
     const/4 v1, 0x0
 
-    .line 685
-    sget-object v0, Lcom/bbm/Alaska;->q:Ljavax/net/ssl/TrustManagerFactory;
+    .line 731
+    sget-object v0, Lcom/bbm/Alaska;->x:Ljavax/net/ssl/TrustManagerFactory;
 
     if-nez v0, :cond_1
 
-    .line 689
+    .line 741
     :try_start_0
-    sget-object v0, Lcom/bbm/Alaska;->m:Lcom/bbm/Alaska;
+    sget-object v0, Lcom/bbm/Alaska;->t:Lcom/bbm/Alaska;
 
     invoke-virtual {v0}, Lcom/bbm/Alaska;->getAssets()Landroid/content/res/AssetManager;
 
     move-result-object v0
 
-    .line 696
+    .line 742
     const-string v2, "certs/ca.pem"
 
     invoke-virtual {v0, v2}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v1
 
-    .line 697
+    .line 743
     const-string v0, "BKS"
 
     invoke-static {v0}, Ljava/security/KeyStore;->getInstance(Ljava/lang/String;)Ljava/security/KeyStore;
 
     move-result-object v4
 
-    .line 698
+    .line 744
     const/4 v0, 0x0
 
     const/4 v2, 0x0
 
     invoke-virtual {v4, v0, v2}, Ljava/security/KeyStore;->load(Ljava/io/InputStream;[C)V
 
-    .line 700
+    .line 746
     const-string v0, "X.509"
 
     invoke-static {v0}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
 
     move-result-object v0
 
-    .line 701
+    .line 747
     invoke-virtual {v0, v1}, Ljava/security/cert/CertificateFactory;->generateCertificates(Ljava/io/InputStream;)Ljava/util/Collection;
 
     move-result-object v0
 
-    .line 703
+    .line 749
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
-    .line 704
+    .line 750
     const/4 v0, 0x0
 
     move v2, v0
 
-    .line 705
+    .line 751
     :goto_0
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
@@ -324,14 +348,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 706
+    .line 752
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/security/cert/X509Certificate;
 
-    .line 707
+    .line 753
     new-instance v6, Ljava/lang/StringBuilder;
 
     const-string v3, "cert"
@@ -352,10 +376,10 @@
 
     move v2, v3
 
-    .line 708
+    .line 754
     goto :goto_0
 
-    .line 710
+    .line 756
     :cond_0
     const-string v0, "X509"
 
@@ -363,56 +387,56 @@
 
     move-result-object v0
 
-    .line 711
-    sput-object v0, Lcom/bbm/Alaska;->q:Ljavax/net/ssl/TrustManagerFactory;
+    .line 757
+    sput-object v0, Lcom/bbm/Alaska;->x:Ljavax/net/ssl/TrustManagerFactory;
 
     invoke-virtual {v0, v4}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 717
+    .line 763
     if-eqz v1, :cond_1
 
-    .line 719
+    .line 765
     :try_start_1
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 726
+    .line 772
     :cond_1
     :goto_1
-    sget-object v0, Lcom/bbm/Alaska;->q:Ljavax/net/ssl/TrustManagerFactory;
+    sget-object v0, Lcom/bbm/Alaska;->x:Ljavax/net/ssl/TrustManagerFactory;
 
     return-object v0
 
-    .line 720
+    .line 766
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 713
+    .line 759
     :catch_1
     move-exception v0
 
     :try_start_2
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
-    .line 715
+    .line 761
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/bbm/Alaska;->q:Ljavax/net/ssl/TrustManagerFactory;
+    sput-object v0, Lcom/bbm/Alaska;->x:Ljavax/net/ssl/TrustManagerFactory;
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 717
+    .line 763
     if-eqz v1, :cond_1
 
-    .line 719
+    .line 765
     :try_start_3
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_3
@@ -420,217 +444,214 @@
 
     goto :goto_1
 
-    .line 720
+    .line 766
     :catch_2
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 717
+    .line 763
     :catchall_0
     move-exception v0
 
     if-eqz v1, :cond_2
 
-    .line 719
+    .line 765
     :try_start_4
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 722
+    .line 768
     :cond_2
     :goto_2
     throw v0
 
-    .line 720
+    .line 766
     :catch_3
     move-exception v1
 
-    invoke-static {v1}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_2
 .end method
 
-.method static synthetic H()Lcom/bbm/f/c;
+.method static synthetic D()Lcom/bbm/f/c;
     .locals 1
 
     .prologue
-    .line 81
-    sget-object v0, Lcom/bbm/Alaska;->c:Lcom/bbm/f/c;
+    .line 82
+    sget-object v0, Lcom/bbm/Alaska;->k:Lcom/bbm/f/c;
 
     return-object v0
 .end method
 
-.method static synthetic I()Lcom/bbm/f/c;
+.method static synthetic E()Lcom/bbm/f/c;
     .locals 1
 
     .prologue
-    .line 81
-    sget-object v0, Lcom/bbm/Alaska;->d:Lcom/bbm/f/c;
+    .line 82
+    sget-object v0, Lcom/bbm/Alaska;->l:Lcom/bbm/f/c;
 
     return-object v0
 .end method
 
-.method static synthetic J()Lcom/bbm/f/c;
+.method static synthetic F()Lcom/bbm/f/c;
     .locals 1
 
     .prologue
-    .line 81
-    sget-object v0, Lcom/bbm/Alaska;->e:Lcom/bbm/f/c;
+    .line 82
+    sget-object v0, Lcom/bbm/Alaska;->m:Lcom/bbm/f/c;
 
     return-object v0
 .end method
 
-.method static synthetic K()Lcom/bbm/j/e;
+.method static synthetic G()Lcom/bbm/j/e;
     .locals 1
 
     .prologue
-    .line 81
-    sget-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/j/e;
+    .line 82
+    sget-object v0, Lcom/bbm/Alaska;->n:Lcom/bbm/j/e;
 
     return-object v0
 .end method
 
-.method private static L()Lcom/bbm/iceberg/k;
-    .locals 2
-
-    .prologue
-    .line 659
-    sget-object v0, Lcom/bbm/Alaska;->p:Lcom/bbm/iceberg/k;
-
-    if-nez v0, :cond_0
-
-    .line 661
-    new-instance v0, Lcom/bbm/iceberg/k;
-
-    sget-object v1, Lcom/bbm/Alaska;->m:Lcom/bbm/Alaska;
-
-    invoke-direct {v0, v1}, Lcom/bbm/iceberg/k;-><init>(Landroid/content/Context;)V
-
-    sput-object v0, Lcom/bbm/Alaska;->p:Lcom/bbm/iceberg/k;
-
-    .line 663
-    :cond_0
-    sget-object v0, Lcom/bbm/Alaska;->p:Lcom/bbm/iceberg/k;
-
-    return-object v0
-.end method
-
-.method static synthetic a(Lcom/bbm/Alaska;)Lcom/bbm/h;
+.method static synthetic H()Lcom/bbm/j/e;
     .locals 1
 
     .prologue
-    .line 81
-    iget-object v0, p0, Lcom/bbm/Alaska;->k:Lcom/bbm/h;
+    .line 82
+    sget-object v0, Lcom/bbm/Alaska;->o:Lcom/bbm/j/e;
 
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/bbm/Alaska;Lcom/bbm/h;)Lcom/bbm/h;
+.method public static a()Lcom/bbm/f/a;
+    .locals 1
+
+    .prologue
+    .line 226
+    sget-object v0, Lcom/bbm/Alaska;->l:Lcom/bbm/f/c;
+
+    return-object v0
+.end method
+
+.method static synthetic a(Lcom/bbm/Alaska;)Lcom/bbm/j;
+    .locals 1
+
+    .prologue
+    .line 82
+    iget-object v0, p0, Lcom/bbm/Alaska;->g:Lcom/bbm/j;
+
+    return-object v0
+.end method
+
+.method static synthetic a(Lcom/bbm/Alaska;Lcom/bbm/j;)Lcom/bbm/j;
     .locals 0
 
     .prologue
-    .line 81
-    iput-object p1, p0, Lcom/bbm/Alaska;->k:Lcom/bbm/h;
+    .line 82
+    iput-object p1, p0, Lcom/bbm/Alaska;->g:Lcom/bbm/j;
 
     return-object p1
+.end method
+
+.method public static b()Lcom/bbm/f/a;
+    .locals 1
+
+    .prologue
+    .line 230
+    sget-object v0, Lcom/bbm/Alaska;->k:Lcom/bbm/f/c;
+
+    return-object v0
 .end method
 
 .method static synthetic b(Lcom/bbm/Alaska;)Lcom/bbm/j/a;
     .locals 1
 
     .prologue
-    .line 81
-    iget-object v0, p0, Lcom/bbm/Alaska;->r:Lcom/bbm/j/a;
+    .line 82
+    iget-object v0, p0, Lcom/bbm/Alaska;->y:Lcom/bbm/j/a;
 
     return-object v0
 .end method
 
-.method public static d()Lcom/bbm/f/a;
+.method public static c()Lcom/bbm/e;
     .locals 1
 
     .prologue
-    .line 219
-    sget-object v0, Lcom/bbm/Alaska;->d:Lcom/bbm/f/c;
+    .line 234
+    sget-object v0, Lcom/bbm/Alaska;->p:Lcom/bbm/e;
 
     return-object v0
 .end method
 
-.method public static e()Lcom/bbm/f/a;
+.method static synthetic c(Lcom/bbm/Alaska;)Ljava/lang/Runnable;
     .locals 1
 
     .prologue
-    .line 223
-    sget-object v0, Lcom/bbm/Alaska;->c:Lcom/bbm/f/c;
+    .line 82
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/bbm/Alaska;->d:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
-.method public static f()Lcom/bbm/d;
+.method public static d()Lcom/bbm/b/w;
     .locals 1
 
     .prologue
-    .line 227
-    sget-object v0, Lcom/bbm/Alaska;->g:Lcom/bbm/d;
+    .line 242
+    sget-object v0, Lcom/bbm/Alaska;->p:Lcom/bbm/e;
+
+    iget-object v0, v0, Lcom/bbm/e;->a:Lcom/bbm/b/w;
 
     return-object v0
 .end method
 
-.method public static g()Lcom/bbm/b/k;
+.method public static e()Lcom/bbm/d/a;
     .locals 1
 
     .prologue
-    .line 235
-    sget-object v0, Lcom/bbm/Alaska;->g:Lcom/bbm/d;
+    .line 246
+    sget-object v0, Lcom/bbm/Alaska;->p:Lcom/bbm/e;
 
-    iget-object v0, v0, Lcom/bbm/d;->a:Lcom/bbm/b/k;
+    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
 
     return-object v0
 .end method
 
-.method public static h()Lcom/bbm/d/a;
+.method public static f()Lcom/bbm/g/al;
     .locals 1
 
     .prologue
-    .line 239
-    sget-object v0, Lcom/bbm/Alaska;->g:Lcom/bbm/d;
+    .line 260
+    sget-object v0, Lcom/bbm/Alaska;->p:Lcom/bbm/e;
 
-    iget-object v0, v0, Lcom/bbm/d;->b:Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
 
     return-object v0
 .end method
 
-.method public static j()Lcom/bbm/g/ab;
+.method public static g()Lcom/bbm/c/c;
     .locals 1
 
     .prologue
-    .line 249
-    sget-object v0, Lcom/bbm/Alaska;->g:Lcom/bbm/d;
-
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
+    .line 264
+    sget-object v0, Lcom/bbm/Alaska;->u:Lcom/bbm/c/c;
 
     return-object v0
 .end method
 
-.method public static k()Lcom/bbm/c/a;
+.method public static h()Landroid/content/SharedPreferences;
     .locals 1
 
     .prologue
-    .line 253
-    sget-object v0, Lcom/bbm/Alaska;->n:Lcom/bbm/c/a;
-
-    return-object v0
-.end method
-
-.method public static l()Landroid/content/SharedPreferences;
-    .locals 1
-
-    .prologue
-    .line 258
-    sget-object v0, Lcom/bbm/Alaska;->m:Lcom/bbm/Alaska;
+    .line 268
+    sget-object v0, Lcom/bbm/Alaska;->t:Lcom/bbm/Alaska;
 
     invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -639,246 +660,276 @@
     return-object v0
 .end method
 
-.method public static m()Lcom/bbm/ui/f/a;
+.method public static i()Lcom/bbm/ui/f/a;
     .locals 1
 
     .prologue
-    .line 262
-    sget-object v0, Lcom/bbm/Alaska;->o:Lcom/bbm/ui/f/a;
+    .line 272
+    sget-object v0, Lcom/bbm/Alaska;->v:Lcom/bbm/ui/f/a;
 
     return-object v0
 .end method
 
-.method public static n()Lcom/bbm/f/aa;
+.method public static j()Lcom/bbm/f/ae;
     .locals 1
 
     .prologue
-    .line 273
-    sget-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/j/e;
+    .line 283
+    sget-object v0, Lcom/bbm/Alaska;->n:Lcom/bbm/j/e;
 
-    invoke-virtual {v0}, Lcom/bbm/j/e;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/f/aa;
-
-    return-object v0
-.end method
-
-.method public static o()Lcom/bbm/ae;
-    .locals 1
-
-    .prologue
-    .line 277
-    sget-object v0, Lcom/bbm/Alaska;->j:Lcom/bbm/ae;
-
-    return-object v0
-.end method
-
-.method public static r()Lcom/bbm/Alaska;
-    .locals 1
-
-    .prologue
-    .line 322
-    sget-object v0, Lcom/bbm/Alaska;->m:Lcom/bbm/Alaska;
-
-    return-object v0
-.end method
-
-.method public static t()Z
-    .locals 1
-
-    .prologue
-    .line 509
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public static x()Lcom/bbm/setup/ac;
-    .locals 1
-
-    .prologue
-    .line 609
-    sget-object v0, Lcom/bbm/Alaska;->h:Lcom/bbm/setup/x;
-
-    invoke-virtual {v0}, Lcom/bbm/setup/x;->a()Lcom/bbm/setup/ac;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final A()V
-    .locals 3
-
-    .prologue
-    .line 639
-    iget-object v0, p0, Lcom/bbm/Alaska;->v:Lcom/bbm/s;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    iput-wide v1, v0, Lcom/bbm/s;->b:J
-
-    .line 640
-    return-void
-.end method
-
-.method public final B()V
-    .locals 5
-
-    .prologue
-    .line 643
-    iget-object v0, p0, Lcom/bbm/Alaska;->v:Lcom/bbm/s;
-
-    iget-wide v1, v0, Lcom/bbm/s;->b:J
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v1, v1, v3
-
-    if-eqz v1, :cond_0
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    iput-wide v1, v0, Lcom/bbm/s;->c:J
-
-    iget-boolean v1, v0, Lcom/bbm/s;->f:Z
-
-    if-nez v1, :cond_0
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lcom/bbm/s;->f:Z
-
-    iget-object v1, v0, Lcom/bbm/s;->a:Landroid/os/Handler;
-
-    iget-object v2, v0, Lcom/bbm/s;->g:Ljava/lang/Runnable;
-
-    iget-wide v3, v0, Lcom/bbm/s;->d:J
-
-    invoke-virtual {v1, v2, v3, v4}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 644
-    :cond_0
-    return-void
-.end method
-
-.method public final F()Lcom/bbm/f/ab;
-    .locals 1
-
-    .prologue
-    .line 676
-    iget-object v0, p0, Lcom/bbm/Alaska;->r:Lcom/bbm/j/a;
+    iget-object v0, v0, Lcom/bbm/j/e;->c:Lcom/bbm/j/a;
 
     invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/f/ab;
+    check-cast v0, Lcom/bbm/f/ae;
 
     return-object v0
 .end method
 
-.method public final a()Lcom/bbm/i/a;
-    .locals 3
+.method public static k()Lcom/bbm/f/ag;
+    .locals 1
 
     .prologue
-    .line 193
-    iget-object v0, p0, Lcom/bbm/Alaska;->x:Ljava/lang/ref/WeakReference;
+    .line 293
+    sget-object v0, Lcom/bbm/Alaska;->o:Lcom/bbm/j/e;
+
+    iget-object v0, v0, Lcom/bbm/j/e;->c:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/f/ag;
+
+    return-object v0
+.end method
+
+.method public static l()Lcom/bbm/ag;
+    .locals 1
+
+    .prologue
+    .line 297
+    sget-object v0, Lcom/bbm/Alaska;->r:Lcom/bbm/ag;
+
+    return-object v0
+.end method
+
+.method public static o()Lcom/bbm/Alaska;
+    .locals 1
+
+    .prologue
+    .line 334
+    sget-object v0, Lcom/bbm/Alaska;->t:Lcom/bbm/Alaska;
+
+    return-object v0
+.end method
+
+.method public static q()Z
+    .locals 1
+
+    .prologue
+    .line 528
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public static u()Lcom/bbm/setup/af;
+    .locals 1
+
+    .prologue
+    .line 625
+    sget-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
+
+    invoke-virtual {v0}, Lcom/bbm/setup/z;->a()Lcom/bbm/setup/af;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static x()Lcom/bbm/j/r;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/bbm/j/r",
+            "<",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/iceberg/l;",
+            ">;>;"
+        }
+    .end annotation
+
+    .prologue
+    .line 651
+    invoke-static {}, Lcom/bbm/Alaska;->y()Lcom/bbm/iceberg/m;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/iceberg/m;->a()Lcom/bbm/j/r;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static y()Lcom/bbm/iceberg/m;
+    .locals 2
+
+    .prologue
+    .line 659
+    sget-object v0, Lcom/bbm/Alaska;->w:Lcom/bbm/iceberg/m;
+
+    if-nez v0, :cond_0
+
+    .line 660
+    new-instance v0, Lcom/bbm/iceberg/m;
+
+    sget-object v1, Lcom/bbm/Alaska;->t:Lcom/bbm/Alaska;
+
+    invoke-direct {v0, v1}, Lcom/bbm/iceberg/m;-><init>(Landroid/content/Context;)V
+
+    sput-object v0, Lcom/bbm/Alaska;->w:Lcom/bbm/iceberg/m;
+
+    .line 662
+    :cond_0
+    sget-object v0, Lcom/bbm/Alaska;->w:Lcom/bbm/iceberg/m;
+
+    return-object v0
+.end method
+
+.method public static z()Z
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x1
+
+    .line 713
+    invoke-static {}, Lcom/bbm/Alaska;->y()Lcom/bbm/iceberg/m;
+
+    move-result-object v2
+
+    iget-object v0, v2, Lcom/bbm/iceberg/m;->b:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/i/a;
+    check-cast v0, Lcom/bbm/j/r;
 
-    .line 194
     if-nez v0, :cond_0
 
-    .line 195
-    new-instance v0, Lcom/bbm/i/a;
+    new-instance v0, Lcom/bbm/iceberg/o;
 
-    invoke-static {}, Lcom/bbm/Alaska;->L()Lcom/bbm/iceberg/k;
+    invoke-direct {v0, v2}, Lcom/bbm/iceberg/o;-><init>(Lcom/bbm/iceberg/m;)V
 
-    move-result-object v1
+    iput-boolean v1, v0, Lcom/bbm/j/a;->c:Z
 
-    invoke-virtual {v1}, Lcom/bbm/iceberg/k;->a()Lcom/bbm/j/r;
+    new-instance v3, Ljava/lang/ref/WeakReference;
 
-    move-result-object v1
+    invoke-direct {v3, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    sget-object v2, Lcom/bbm/Alaska;->g:Lcom/bbm/d;
+    iput-object v3, v2, Lcom/bbm/iceberg/m;->b:Ljava/lang/ref/WeakReference;
 
-    iget-object v2, v2, Lcom/bbm/d;->b:Lcom/bbm/d/a;
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/i/a;-><init>(Lcom/bbm/j/r;Lcom/bbm/d/a;)V
-
-    .line 198
-    new-instance v1, Ljava/lang/ref/WeakReference;
-
-    invoke-direct {v1, v0}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v1, p0, Lcom/bbm/Alaska;->x:Ljava/lang/ref/WeakReference;
-
-    .line 201
     :cond_0
-    return-object v0
-.end method
+    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
 
-.method public final b()V
-    .locals 1
+    move-result-object v0
 
-    .prologue
-    .line 211
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    move v0, v1
+
+    :goto_0
+    return v0
+
+    :cond_1
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/bbm/Alaska;->b:Z
-
-    .line 212
-    return-void
+    goto :goto_0
 .end method
 
-.method public final c()Z
+
+# virtual methods
+.method public final B()Lcom/bbm/f/af;
     .locals 1
 
     .prologue
-    .line 215
-    iget-boolean v0, p0, Lcom/bbm/Alaska;->b:Z
+    .line 722
+    iget-object v0, p0, Lcom/bbm/Alaska;->y:Lcom/bbm/j/a;
 
-    return v0
+    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/f/af;
+
+    return-object v0
 .end method
 
 .method public getApplicationContext()Landroid/content/Context;
     .locals 0
 
     .prologue
-    .line 680
+    .line 726
     return-object p0
 .end method
 
-.method public final i()V
+.method public final m()Lcom/bbm/setup/z;
     .locals 1
 
     .prologue
-    .line 243
-    iget-object v0, p0, Lcom/bbm/Alaska;->k:Lcom/bbm/h;
+    .line 316
+    sget-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
 
-    if-eqz v0, :cond_0
+    return-object v0
+.end method
 
-    .line 244
-    iget-object v0, p0, Lcom/bbm/Alaska;->k:Lcom/bbm/h;
+.method public final n()Z
+    .locals 2
 
-    invoke-virtual {v0}, Lcom/bbm/h;->f()V
+    .prologue
+    .line 326
+    sget-object v0, Lcom/bbm/Alaska;->l:Lcom/bbm/f/c;
 
-    .line 246
+    invoke-virtual {v0}, Lcom/bbm/f/c;->a()Lcom/bbm/f/b;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/f/b;->d:Lcom/bbm/f/b;
+
+    if-eq v0, v1, :cond_0
+
+    sget-object v0, Lcom/bbm/Alaska;->m:Lcom/bbm/f/c;
+
+    invoke-virtual {v0}, Lcom/bbm/f/c;->a()Lcom/bbm/f/b;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/f/b;->d:Lcom/bbm/f/b;
+
+    if-ne v0, v1, :cond_1
+
     :cond_0
-    return-void
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method public onCreate()V
@@ -887,19 +938,19 @@
     .prologue
     const/4 v7, 0x2
 
-    const/4 v6, 0x0
-
     const/4 v5, 0x1
 
-    .line 330
+    const/4 v6, 0x0
+
+    .line 342
     invoke-super {p0}, Landroid/app/Application;->onCreate()V
 
-    .line 332
-    iget-object v0, p0, Lcom/bbm/Alaska;->r:Lcom/bbm/j/a;
+    .line 344
+    iget-object v0, p0, Lcom/bbm/Alaska;->y:Lcom/bbm/j/a;
 
     iput-boolean v5, v0, Lcom/bbm/j/a;->c:Z
 
-    .line 334
+    .line 346
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
     const-string v1, "RIM"
@@ -910,18 +961,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 336
+    .line 347
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
 
     invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
 
-    .line 415
+    .line 434
     :goto_0
     return-void
 
-    .line 340
+    .line 351
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -949,9 +1000,9 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/String;)V
 
-    .line 341
+    .line 352
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string v1, "yyyy-MM-dd\'T\'HH:mm:ssZ"
@@ -960,20 +1011,20 @@
 
     invoke-direct {v0, v1, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 342
+    .line 353
     const-string v1, "BBM Version: %s, build: %s Date: %s"
 
     const/4 v2, 0x3
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/bbm/Alaska;->u()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/bbm/Alaska;->r()Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v2, v6
 
-    sget-object v3, Lcom/bbm/k;->a:Lcom/bbm/j;
+    sget-object v3, Lcom/bbm/m;->a:Lcom/bbm/l;
 
     aput-object v3, v2, v5
 
@@ -987,47 +1038,40 @@
 
     aput-object v0, v2, v7
 
-    invoke-static {v1, v2}, Lcom/bbm/w;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 343
+    .line 354
     const-string v0, "onCreate"
 
     const-class v1, Lcom/bbm/Alaska;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 345
-    sput-object p0, Lcom/bbm/Alaska;->m:Lcom/bbm/Alaska;
+    .line 356
+    sput-object p0, Lcom/bbm/Alaska;->t:Lcom/bbm/Alaska;
 
-    .line 347
+    .line 358
     sget-object v0, Landroid/os/Environment;->DIRECTORY_DOWNLOADS:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/os/Environment;->getExternalStoragePublicDirectory(Ljava/lang/String;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 348
+    .line 359
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 349
-    new-instance v1, Lcom/bbm/m;
+    .line 360
+    new-instance v1, Lcom/bbm/o;
 
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-direct {v1, v0}, Lcom/bbm/m;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v0}, Lcom/bbm/o;-><init>(Ljava/lang/String;)V
 
     invoke-static {v1}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
-    .line 351
-    new-instance v0, Lcom/bbm/c/a;
-
-    invoke-direct {v0, p0}, Lcom/bbm/c/a;-><init>(Landroid/content/Context;)V
-
-    sput-object v0, Lcom/bbm/Alaska;->n:Lcom/bbm/c/a;
-
-    .line 352
+    .line 362
     sget-object v0, Lcom/google/analytics/tracking/android/p;->a:Lcom/google/analytics/tracking/android/p;
 
     if-nez v0, :cond_1
@@ -1041,12 +1085,12 @@
     :cond_1
     sget-object v0, Lcom/google/analytics/tracking/android/p;->a:Lcom/google/analytics/tracking/android/p;
 
-    .line 354
-    iget-object v0, p0, Lcom/bbm/Alaska;->s:Ljava/lang/Thread;
+    .line 364
+    iget-object v0, p0, Lcom/bbm/Alaska;->z:Ljava/lang/Thread;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/bbm/Alaska;->s:Ljava/lang/Thread;
+    iget-object v0, p0, Lcom/bbm/Alaska;->z:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->getState()Ljava/lang/Thread$State;
 
@@ -1056,151 +1100,217 @@
 
     if-ne v0, v1, :cond_2
 
-    iget-object v0, p0, Lcom/bbm/Alaska;->s:Ljava/lang/Thread;
+    iget-object v0, p0, Lcom/bbm/Alaska;->z:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 356
+    .line 366
     :cond_2
-    new-instance v0, Lcom/bbm/ae;
+    const-string v0, "Loading native libraries"
+
+    new-array v1, v6, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 367
+    invoke-static {p0}, Lcom/bbm/f/i;->a(Landroid/content/Context;)V
+
+    .line 368
+    const-string v0, "Done loading native libraries"
+
+    new-array v1, v6, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 370
+    new-instance v0, Lcom/bbm/ag;
 
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    invoke-direct {v0, v1, p0}, Lcom/bbm/ae;-><init>(Landroid/content/SharedPreferences;Landroid/content/Context;)V
+    invoke-direct {v0, v1, p0}, Lcom/bbm/ag;-><init>(Landroid/content/SharedPreferences;Landroid/content/Context;)V
 
-    sput-object v0, Lcom/bbm/Alaska;->j:Lcom/bbm/ae;
+    sput-object v0, Lcom/bbm/Alaska;->r:Lcom/bbm/ag;
 
-    .line 358
-    new-instance v0, Lcom/bbm/b/k;
+    .line 372
+    new-instance v0, Lcom/bbm/b/w;
 
-    sget-object v1, Lcom/bbm/Alaska;->c:Lcom/bbm/f/c;
+    sget-object v1, Lcom/bbm/Alaska;->k:Lcom/bbm/f/c;
 
-    sget-object v2, Lcom/bbm/Alaska;->i:Lcom/bbm/d/a/i;
+    sget-object v2, Lcom/bbm/Alaska;->q:Lcom/bbm/d/a/i;
 
-    invoke-direct {v0, v1, p0, v2}, Lcom/bbm/b/k;-><init>(Lcom/bbm/f/a;Landroid/content/Context;Lcom/bbm/d/a/i;)V
+    invoke-direct {v0, v1, p0, v2}, Lcom/bbm/b/w;-><init>(Lcom/bbm/f/a;Landroid/content/Context;Lcom/bbm/d/a/i;)V
 
-    .line 359
+    .line 373
     new-instance v1, Lcom/bbm/d/a;
 
-    sget-object v2, Lcom/bbm/Alaska;->d:Lcom/bbm/f/c;
+    sget-object v2, Lcom/bbm/Alaska;->l:Lcom/bbm/f/c;
 
-    sget-object v3, Lcom/bbm/Alaska;->i:Lcom/bbm/d/a/i;
+    sget-object v3, Lcom/bbm/Alaska;->q:Lcom/bbm/d/a/i;
 
     invoke-direct {v1, v2, p0, v3}, Lcom/bbm/d/a;-><init>(Lcom/bbm/f/a;Landroid/content/Context;Lcom/bbm/d/a/i;)V
 
-    .line 360
-    new-instance v2, Lcom/bbm/g/ab;
+    .line 374
+    new-instance v2, Lcom/bbm/g/al;
 
-    sget-object v3, Lcom/bbm/Alaska;->e:Lcom/bbm/f/c;
+    sget-object v3, Lcom/bbm/Alaska;->m:Lcom/bbm/f/c;
 
-    sget-object v4, Lcom/bbm/Alaska;->i:Lcom/bbm/d/a/i;
+    sget-object v4, Lcom/bbm/Alaska;->q:Lcom/bbm/d/a/i;
 
-    invoke-direct {v2, v3, v4}, Lcom/bbm/g/ab;-><init>(Lcom/bbm/f/a;Lcom/bbm/d/a/i;)V
+    invoke-direct {v2, v3, v4}, Lcom/bbm/g/al;-><init>(Lcom/bbm/f/a;Lcom/bbm/d/a/i;)V
 
-    .line 362
-    new-instance v3, Lcom/bbm/d;
+    .line 376
+    new-instance v3, Lcom/bbm/e;
 
-    invoke-direct {v3, v1, v2, v0}, Lcom/bbm/d;-><init>(Lcom/bbm/d/a;Lcom/bbm/g/ab;Lcom/bbm/b/k;)V
+    invoke-direct {v3, v1, v2, v0}, Lcom/bbm/e;-><init>(Lcom/bbm/d/a;Lcom/bbm/g/al;Lcom/bbm/b/w;)V
 
-    sput-object v3, Lcom/bbm/Alaska;->g:Lcom/bbm/d;
+    sput-object v3, Lcom/bbm/Alaska;->p:Lcom/bbm/e;
 
-    .line 364
+    .line 378
     new-instance v0, Lcom/bbm/ui/f/g;
 
-    sget-object v1, Lcom/bbm/Alaska;->d:Lcom/bbm/f/c;
+    sget-object v1, Lcom/bbm/Alaska;->l:Lcom/bbm/f/c;
 
     invoke-direct {v0, v1}, Lcom/bbm/ui/f/g;-><init>(Lcom/bbm/f/a;)V
 
-    .line 365
-    new-instance v1, Lcom/bbm/ui/f/k;
+    .line 379
+    new-instance v1, Lcom/bbm/ui/f/l;
 
-    sget-object v2, Lcom/bbm/Alaska;->d:Lcom/bbm/f/c;
+    sget-object v2, Lcom/bbm/Alaska;->l:Lcom/bbm/f/c;
 
-    invoke-direct {v1, v2}, Lcom/bbm/ui/f/k;-><init>(Lcom/bbm/f/a;)V
+    invoke-direct {v1, v2}, Lcom/bbm/ui/f/l;-><init>(Lcom/bbm/f/a;)V
 
-    .line 366
-    new-instance v2, Lcom/bbm/ui/f/n;
+    .line 380
+    new-instance v2, Lcom/bbm/ui/f/o;
 
-    sget-object v3, Lcom/bbm/Alaska;->e:Lcom/bbm/f/c;
+    sget-object v3, Lcom/bbm/Alaska;->m:Lcom/bbm/f/c;
 
-    invoke-direct {v2, v3}, Lcom/bbm/ui/f/n;-><init>(Lcom/bbm/f/a;)V
+    invoke-direct {v2, v3}, Lcom/bbm/ui/f/o;-><init>(Lcom/bbm/f/a;)V
 
-    .line 368
-    invoke-static {}, Lcom/bbm/n;->a()Lcom/bbm/n;
+    .line 382
+    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
 
     move-result-object v3
 
-    invoke-virtual {v3, p0}, Lcom/bbm/n;->a(Landroid/content/Context;)V
+    invoke-virtual {v3, p0}, Lcom/bbm/p;->a(Landroid/content/Context;)V
 
-    .line 370
+    .line 384
     new-instance v3, Lcom/bbm/ui/f/a;
 
     invoke-direct {v3, p0}, Lcom/bbm/ui/f/a;-><init>(Landroid/content/Context;)V
 
-    .line 371
-    sput-object v3, Lcom/bbm/Alaska;->o:Lcom/bbm/ui/f/a;
+    .line 385
+    sput-object v3, Lcom/bbm/Alaska;->v:Lcom/bbm/ui/f/a;
 
     invoke-virtual {v3, v0}, Lcom/bbm/ui/f/a;->a(Lcom/bbm/ui/f/c;)V
 
-    .line 372
-    sget-object v0, Lcom/bbm/Alaska;->o:Lcom/bbm/ui/f/a;
+    .line 386
+    sget-object v0, Lcom/bbm/Alaska;->v:Lcom/bbm/ui/f/a;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/f/a;->a(Lcom/bbm/ui/f/c;)V
 
-    .line 373
-    sget-object v0, Lcom/bbm/Alaska;->o:Lcom/bbm/ui/f/a;
+    .line 387
+    sget-object v0, Lcom/bbm/Alaska;->v:Lcom/bbm/ui/f/a;
 
     invoke-virtual {v0, v2}, Lcom/bbm/ui/f/a;->a(Lcom/bbm/ui/f/c;)V
 
-    .line 376
-    new-instance v0, Lcom/bbm/setup/x;
+    .line 390
+    new-instance v0, Lcom/bbm/setup/z;
 
-    sget-object v1, Lcom/bbm/Alaska;->g:Lcom/bbm/d;
+    sget-object v1, Lcom/bbm/Alaska;->p:Lcom/bbm/e;
 
-    iget-object v1, v1, Lcom/bbm/d;->b:Lcom/bbm/d/a;
+    iget-object v1, v1, Lcom/bbm/e;->b:Lcom/bbm/d/a;
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/setup/x;-><init>(Lcom/bbm/r;Lcom/bbm/d/a;)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/setup/z;-><init>(Lcom/bbm/t;Lcom/bbm/d/a;)V
 
-    .line 377
-    sput-object v0, Lcom/bbm/Alaska;->h:Lcom/bbm/setup/x;
+    .line 391
+    sput-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
 
-    iget-object v1, v0, Lcom/bbm/setup/x;->e:Lcom/bbm/j/k;
-
-    invoke-virtual {v1}, Lcom/bbm/j/k;->c()V
-
-    iget-object v1, v0, Lcom/bbm/setup/x;->d:Lcom/bbm/j/k;
+    iget-object v1, v0, Lcom/bbm/setup/z;->f:Lcom/bbm/j/k;
 
     invoke-virtual {v1}, Lcom/bbm/j/k;->c()V
 
-    iget-object v1, v0, Lcom/bbm/setup/x;->c:Lcom/bbm/x;
-
-    iget-object v1, v1, Lcom/bbm/x;->h:Lcom/bbm/j/k;
+    iget-object v1, v0, Lcom/bbm/setup/z;->d:Lcom/bbm/j/k;
 
     invoke-virtual {v1}, Lcom/bbm/j/k;->c()V
 
-    iget-object v1, v0, Lcom/bbm/setup/x;->f:Lcom/bbm/setup/ae;
+    iget-object v1, v0, Lcom/bbm/setup/z;->c:Lcom/bbm/z;
 
-    invoke-virtual {v1}, Lcom/bbm/setup/ae;->a()V
-
-    iput-boolean v5, v1, Lcom/bbm/setup/ae;->b:Z
-
-    iget-object v1, v1, Lcom/bbm/setup/ae;->c:Lcom/bbm/j/k;
+    iget-object v1, v1, Lcom/bbm/z;->h:Lcom/bbm/j/k;
 
     invoke-virtual {v1}, Lcom/bbm/j/k;->c()V
 
-    iget-object v1, v0, Lcom/bbm/setup/x;->b:Lcom/bbm/j/k;
+    iget-object v1, v0, Lcom/bbm/setup/z;->h:Lcom/bbm/setup/ah;
+
+    invoke-virtual {v1}, Lcom/bbm/setup/ah;->a()V
+
+    iput-boolean v5, v1, Lcom/bbm/setup/ah;->b:Z
+
+    iget-object v1, v1, Lcom/bbm/setup/ah;->c:Lcom/bbm/j/k;
 
     invoke-virtual {v1}, Lcom/bbm/j/k;->c()V
 
-    iget-object v0, v0, Lcom/bbm/setup/x;->g:Lcom/bbm/setup/aj;
+    iget-object v1, v0, Lcom/bbm/setup/z;->b:Lcom/bbm/j/k;
 
-    iget-object v0, v0, Lcom/bbm/setup/aj;->a:Lcom/bbm/j/k;
+    invoke-virtual {v1}, Lcom/bbm/j/k;->c()V
+
+    iget-object v1, v0, Lcom/bbm/setup/z;->i:Lcom/bbm/setup/am;
+
+    iget-object v1, v1, Lcom/bbm/setup/am;->a:Lcom/bbm/j/k;
+
+    invoke-virtual {v1}, Lcom/bbm/j/k;->c()V
+
+    iget-object v0, v0, Lcom/bbm/setup/z;->e:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
     .line 393
+    new-instance v0, Lcom/bbm/c/c;
+
+    invoke-direct {v0, p0}, Lcom/bbm/c/c;-><init>(Lcom/bbm/Alaska;)V
+
+    .line 394
+    sput-object v0, Lcom/bbm/Alaska;->u:Lcom/bbm/c/c;
+
+    iget-object v1, v0, Lcom/bbm/c/c;->aM:Lcom/bbm/c/a;
+
+    iget-object v2, v1, Lcom/bbm/c/a;->b:Landroid/app/Application;
+
+    iget-object v1, v1, Lcom/bbm/c/a;->a:Landroid/app/Application$ActivityLifecycleCallbacks;
+
+    invoke-virtual {v2, v1}, Landroid/app/Application;->registerActivityLifecycleCallbacks(Landroid/app/Application$ActivityLifecycleCallbacks;)V
+
+    iget-object v1, v0, Lcom/bbm/c/c;->aK:Lcom/bbm/j/k;
+
+    invoke-virtual {v1}, Lcom/bbm/j/k;->c()V
+
+    iget-object v1, v0, Lcom/bbm/c/c;->aN:Lcom/bbm/c/w;
+
+    iget-object v1, v1, Lcom/bbm/c/w;->a:Lcom/bbm/j/k;
+
+    invoke-virtual {v1}, Lcom/bbm/j/k;->c()V
+
+    sget-object v1, Lcom/bbm/Alaska;->p:Lcom/bbm/e;
+
+    iget-object v1, v1, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+
+    iget-object v1, v1, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
+
+    iget-object v1, v1, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    iget-object v0, v0, Lcom/bbm/c/c;->aL:Lcom/bbm/f/ac;
+
+    invoke-interface {v1, v0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
+
+    .line 397
+    sget-object v0, Lcom/bbm/Alaska;->u:Lcom/bbm/c/c;
+
+    const-string v1, "mixpanel_number_of_app_starts"
+
+    invoke-virtual {v0, p0, v1}, Lcom/bbm/c/c;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 413
     const-string v0, "Alaska maybe startServiceLayer, LOAD_SHUNT %s, IsBound %s"
 
     new-array v1, v7, [Ljava/lang/Object;
@@ -1211,7 +1321,7 @@
 
     aput-object v2, v1, v6
 
-    iget-boolean v2, p0, Lcom/bbm/Alaska;->l:Z
+    iget-boolean v2, p0, Lcom/bbm/Alaska;->s:Z
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1219,9 +1329,9 @@
 
     aput-object v2, v1, v5
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    iget-boolean v0, p0, Lcom/bbm/Alaska;->l:Z
+    iget-boolean v0, p0, Lcom/bbm/Alaska;->s:Z
 
     if-nez v0, :cond_3
 
@@ -1243,45 +1353,238 @@
 
     invoke-virtual {p0, v0}, Lcom/bbm/Alaska;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    invoke-virtual {p0}, Lcom/bbm/Alaska;->s()V
+    invoke-virtual {p0}, Lcom/bbm/Alaska;->p()V
 
-    .line 396
+    .line 416
     :cond_3
-    new-instance v0, Lcom/d/a/b/h;
+    new-instance v2, Lcom/d/a/b/h;
 
-    invoke-direct {v0, p0}, Lcom/d/a/b/h;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, p0}, Lcom/d/a/b/h;-><init>(Landroid/content/Context;)V
 
-    new-instance v1, Lcom/d/a/a/a/a/b;
+    new-instance v0, Lcom/d/a/a/a/a/b;
 
     invoke-virtual {p0}, Lcom/bbm/Alaska;->getCacheDir()Ljava/io/File;
 
-    move-result-object v2
+    move-result-object v1
 
     const/high16 v3, 0x500000
 
-    invoke-direct {v1, v2, v3}, Lcom/d/a/a/a/a/b;-><init>(Ljava/io/File;I)V
+    invoke-direct {v0, v1, v3}, Lcom/d/a/a/a/a/b;-><init>(Ljava/io/File;I)V
 
-    invoke-virtual {v0, v1}, Lcom/d/a/b/h;->a(Lcom/d/a/a/a/b;)Lcom/d/a/b/h;
+    iget v1, v2, Lcom/d/a/b/h;->l:I
+
+    if-gtz v1, :cond_4
+
+    iget v1, v2, Lcom/d/a/b/h;->m:I
+
+    if-lez v1, :cond_5
+
+    :cond_4
+    const-string v1, "discCache(), discCacheSize() and discCacheFileCount calls overlap each other"
+
+    new-array v3, v6, [Ljava/lang/Object;
+
+    invoke-static {v1, v3}, Lcom/d/a/c/d;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    :cond_5
+    iget-object v1, v2, Lcom/d/a/b/h;->p:Lcom/d/a/a/a/b/a;
+
+    if-eqz v1, :cond_6
+
+    const-string v1, "discCache() and discCacheFileNameGenerator() calls overlap each other"
+
+    new-array v3, v6, [Ljava/lang/Object;
+
+    invoke-static {v1, v3}, Lcom/d/a/c/d;->c(Ljava/lang/String;[Ljava/lang/Object;)V
+
+    :cond_6
+    iput-object v0, v2, Lcom/d/a/b/h;->o:Lcom/d/a/a/a/b;
+
+    iget-object v0, v2, Lcom/d/a/b/h;->c:Ljava/util/concurrent/Executor;
+
+    if-nez v0, :cond_f
+
+    iget v0, v2, Lcom/d/a/b/h;->g:I
+
+    iget v1, v2, Lcom/d/a/b/h;->h:I
+
+    iget-object v3, v2, Lcom/d/a/b/h;->j:Lcom/d/a/b/a/j;
+
+    invoke-static {v0, v1, v3}, Lcom/d/a/b/a;->a(IILcom/d/a/b/a/j;)Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/d/a/b/h;->a()Lcom/d/a/b/g;
+    iput-object v0, v2, Lcom/d/a/b/h;->c:Ljava/util/concurrent/Executor;
+
+    :goto_1
+    iget-object v0, v2, Lcom/d/a/b/h;->d:Ljava/util/concurrent/Executor;
+
+    if-nez v0, :cond_10
+
+    iget v0, v2, Lcom/d/a/b/h;->g:I
+
+    iget v1, v2, Lcom/d/a/b/h;->h:I
+
+    iget-object v3, v2, Lcom/d/a/b/h;->j:Lcom/d/a/b/a/j;
+
+    invoke-static {v0, v1, v3}, Lcom/d/a/b/a;->a(IILcom/d/a/b/a/j;)Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
-    .line 402
+    iput-object v0, v2, Lcom/d/a/b/h;->d:Ljava/util/concurrent/Executor;
+
+    :goto_2
+    iget-object v0, v2, Lcom/d/a/b/h;->o:Lcom/d/a/a/a/b;
+
+    if-nez v0, :cond_8
+
+    iget-object v0, v2, Lcom/d/a/b/h;->p:Lcom/d/a/a/a/b/a;
+
+    if-nez v0, :cond_7
+
+    new-instance v0, Lcom/d/a/a/a/b/b;
+
+    invoke-direct {v0}, Lcom/d/a/a/a/b/b;-><init>()V
+
+    iput-object v0, v2, Lcom/d/a/b/h;->p:Lcom/d/a/a/a/b/a;
+
+    :cond_7
+    iget-object v0, v2, Lcom/d/a/b/h;->b:Landroid/content/Context;
+
+    iget-object v1, v2, Lcom/d/a/b/h;->p:Lcom/d/a/a/a/b/a;
+
+    iget v3, v2, Lcom/d/a/b/h;->l:I
+
+    iget v4, v2, Lcom/d/a/b/h;->m:I
+
+    if-lez v3, :cond_11
+
+    invoke-static {v0}, Lcom/d/a/c/e;->b(Landroid/content/Context;)Ljava/io/File;
+
+    move-result-object v4
+
+    new-instance v0, Lcom/d/a/a/a/a/b;
+
+    invoke-direct {v0, v4, v1, v3}, Lcom/d/a/a/a/a/b;-><init>(Ljava/io/File;Lcom/d/a/a/a/b/a;I)V
+
+    :goto_3
+    iput-object v0, v2, Lcom/d/a/b/h;->o:Lcom/d/a/a/a/b;
+
+    :cond_8
+    iget-object v0, v2, Lcom/d/a/b/h;->n:Lcom/d/a/a/b/c;
+
+    if-nez v0, :cond_a
+
+    iget v0, v2, Lcom/d/a/b/h;->k:I
+
+    if-nez v0, :cond_9
+
+    invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/Runtime;->maxMemory()J
+
+    move-result-wide v0
+
+    const-wide/16 v4, 0x8
+
+    div-long/2addr v0, v4
+
+    long-to-int v0, v0
+
+    :cond_9
+    sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x9
+
+    if-lt v1, v3, :cond_13
+
+    new-instance v1, Lcom/d/a/a/b/a/c;
+
+    invoke-direct {v1, v0}, Lcom/d/a/a/b/a/c;-><init>(I)V
+
+    move-object v0, v1
+
+    :goto_4
+    iput-object v0, v2, Lcom/d/a/b/h;->n:Lcom/d/a/a/b/c;
+
+    :cond_a
+    iget-boolean v0, v2, Lcom/d/a/b/h;->i:Z
+
+    if-eqz v0, :cond_b
+
+    new-instance v0, Lcom/d/a/a/b/a/a;
+
+    iget-object v1, v2, Lcom/d/a/b/h;->n:Lcom/d/a/a/b/c;
+
+    new-instance v3, Lcom/d/a/b/a/i;
+
+    invoke-direct {v3}, Lcom/d/a/b/a/i;-><init>()V
+
+    invoke-direct {v0, v1, v3}, Lcom/d/a/a/b/a/a;-><init>(Lcom/d/a/a/b/c;Ljava/util/Comparator;)V
+
+    iput-object v0, v2, Lcom/d/a/b/h;->n:Lcom/d/a/a/b/c;
+
+    :cond_b
+    iget-object v0, v2, Lcom/d/a/b/h;->q:Lcom/d/a/b/d/c;
+
+    if-nez v0, :cond_c
+
+    iget-object v0, v2, Lcom/d/a/b/h;->b:Landroid/content/Context;
+
+    new-instance v1, Lcom/d/a/b/d/a;
+
+    invoke-direct {v1, v0}, Lcom/d/a/b/d/a;-><init>(Landroid/content/Context;)V
+
+    iput-object v1, v2, Lcom/d/a/b/h;->q:Lcom/d/a/b/d/c;
+
+    :cond_c
+    iget-object v0, v2, Lcom/d/a/b/h;->r:Lcom/d/a/b/b/d;
+
+    if-nez v0, :cond_d
+
+    iget-boolean v0, v2, Lcom/d/a/b/h;->t:Z
+
+    new-instance v1, Lcom/d/a/b/b/a;
+
+    invoke-direct {v1, v0}, Lcom/d/a/b/b/a;-><init>(Z)V
+
+    iput-object v1, v2, Lcom/d/a/b/h;->r:Lcom/d/a/b/b/d;
+
+    :cond_d
+    iget-object v0, v2, Lcom/d/a/b/h;->s:Lcom/d/a/b/d;
+
+    if-nez v0, :cond_e
+
+    new-instance v0, Lcom/d/a/b/e;
+
+    invoke-direct {v0}, Lcom/d/a/b/e;-><init>()V
+
+    invoke-virtual {v0}, Lcom/d/a/b/e;->a()Lcom/d/a/b/d;
+
+    move-result-object v0
+
+    iput-object v0, v2, Lcom/d/a/b/h;->s:Lcom/d/a/b/d;
+
+    :cond_e
+    new-instance v0, Lcom/d/a/b/g;
+
+    invoke-direct {v0, v2, v6}, Lcom/d/a/b/g;-><init>(Lcom/d/a/b/h;B)V
+
+    .line 422
     invoke-static {}, Lcom/d/a/b/f;->a()Lcom/d/a/b/f;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/bbm/Alaska;->u:Lcom/d/a/b/f;
+    iput-object v1, p0, Lcom/bbm/Alaska;->B:Lcom/d/a/b/f;
 
-    .line 403
-    iget-object v1, p0, Lcom/bbm/Alaska;->u:Lcom/d/a/b/f;
+    .line 423
+    iget-object v1, p0, Lcom/bbm/Alaska;->B:Lcom/d/a/b/f;
 
     invoke-virtual {v1, v0}, Lcom/d/a/b/f;->a(Lcom/d/a/b/g;)V
 
-    .line 407
+    .line 427
     :try_start_0
     new-instance v0, Ljava/io/File;
 
@@ -1293,47 +1596,91 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 408
-    const-wide/32 v1, 0xa00000
+    .line 428
+    const-wide/32 v2, 0xa00000
 
-    invoke-static {v0, v1, v2}, Landroid/net/http/HttpResponseCache;->install(Ljava/io/File;J)Landroid/net/http/HttpResponseCache;
+    invoke-static {v0, v2, v3}, Landroid/net/http/HttpResponseCache;->install(Ljava/io/File;J)Landroid/net/http/HttpResponseCache;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 414
-    :goto_1
-    new-instance v0, Lcom/bbm/u;
+    .line 433
+    :goto_5
+    new-instance v0, Lcom/bbm/w;
 
-    invoke-direct {v0, p0}, Lcom/bbm/u;-><init>(Landroid/app/Application;)V
+    invoke-direct {v0, p0}, Lcom/bbm/w;-><init>(Landroid/app/Application;)V
 
-    iput-object v0, p0, Lcom/bbm/Alaska;->w:Lcom/bbm/u;
+    iput-object v0, p0, Lcom/bbm/Alaska;->C:Lcom/bbm/w;
 
     goto/16 :goto_0
 
-    .line 410
+    .line 416
+    :cond_f
+    iput-boolean v5, v2, Lcom/d/a/b/h;->e:Z
+
+    goto/16 :goto_1
+
+    :cond_10
+    iput-boolean v5, v2, Lcom/d/a/b/h;->f:Z
+
+    goto/16 :goto_2
+
+    :cond_11
+    if-lez v4, :cond_12
+
+    invoke-static {v0}, Lcom/d/a/c/e;->b(Landroid/content/Context;)Ljava/io/File;
+
+    move-result-object v3
+
+    new-instance v0, Lcom/d/a/a/a/a/a;
+
+    invoke-direct {v0, v3, v1, v4}, Lcom/d/a/a/a/a/a;-><init>(Ljava/io/File;Lcom/d/a/a/a/b/a;I)V
+
+    goto/16 :goto_3
+
+    :cond_12
+    invoke-static {v0}, Lcom/d/a/c/e;->a(Landroid/content/Context;)Ljava/io/File;
+
+    move-result-object v3
+
+    new-instance v0, Lcom/d/a/a/a/a/c;
+
+    invoke-direct {v0, v3, v1}, Lcom/d/a/a/a/a/c;-><init>(Ljava/io/File;Lcom/d/a/a/a/b/a;)V
+
+    goto/16 :goto_3
+
+    :cond_13
+    new-instance v1, Lcom/d/a/a/b/a/b;
+
+    invoke-direct {v1, v0}, Lcom/d/a/a/b/a/b;-><init>(I)V
+
+    move-object v0, v1
+
+    goto/16 :goto_4
+
+    .line 429
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
-    goto :goto_1
+    goto :goto_5
 .end method
 
 .method public onLowMemory()V
     .locals 2
 
     .prologue
-    .line 539
+    .line 556
     invoke-super {p0}, Landroid/app/Application;->onLowMemory()V
 
-    .line 540
+    .line 557
     const-string v0, "onLowMemory"
 
     const-class v1, Lcom/bbm/Alaska;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 541
+    .line 558
     return-void
 .end method
 
@@ -1341,17 +1688,17 @@
     .locals 5
 
     .prologue
-    .line 545
+    .line 562
     invoke-super {p0, p1}, Landroid/app/Application;->onTrimMemory(I)V
 
-    .line 546
+    .line 563
     const-string v0, "onTrimMemory"
 
     const-class v1, Lcom/bbm/Alaska;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 547
+    .line 564
     sparse-switch p1, :sswitch_data_0
 
     const-string v0, "unknown"
@@ -1375,46 +1722,52 @@
 
     aput-object v0, v2, v3
 
-    invoke-static {v1, v2}, Lcom/bbm/w;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 549
+    .line 566
     const/16 v0, 0x14
 
     if-ne p1, v0, :cond_0
 
-    .line 551
-    sget-object v0, Lcom/bbm/Alaska;->n:Lcom/bbm/c/a;
+    .line 567
+    sget-object v0, Lcom/bbm/Alaska;->u:Lcom/bbm/c/c;
 
-    invoke-virtual {v0, p0}, Lcom/bbm/c/a;->b(Landroid/content/Context;)V
+    invoke-virtual {v0, p0}, Lcom/bbm/c/c;->a(Landroid/content/Context;)V
 
-    .line 556
+    .line 572
     :cond_0
     const/16 v0, 0xa
 
     if-lt p1, v0, :cond_1
 
-    .line 557
-    sget-object v0, Lcom/bbm/Alaska;->i:Lcom/bbm/d/a/i;
+    .line 573
+    sget-object v0, Lcom/bbm/Alaska;->q:Lcom/bbm/d/a/i;
 
     invoke-interface {v0}, Lcom/bbm/d/a/i;->a()V
 
-    .line 559
+    .line 575
     :cond_1
-    sget-object v0, Lcom/bbm/Alaska;->g:Lcom/bbm/d;
+    sget-object v0, Lcom/bbm/Alaska;->p:Lcom/bbm/e;
 
-    iget-object v0, v0, Lcom/bbm/d;->b:Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
 
     iget-object v0, v0, Lcom/bbm/d/a;->a:Lcom/bbm/d/a/d/c;
 
-    invoke-virtual {v0}, Lcom/bbm/d/a/d/c;->e()V
+    iget-object v1, v0, Lcom/bbm/d/a/d/c;->h:Lcom/google/b/b/d;
 
-    .line 560
-    invoke-static {}, Lcom/bbm/util/eo;->a()V
+    invoke-interface {v1}, Lcom/google/b/b/d;->a()V
 
-    .line 561
+    iget-object v0, v0, Lcom/bbm/d/a/d/c;->i:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
+
+    .line 576
+    invoke-static {}, Lcom/bbm/util/fh;->a()V
+
+    .line 577
     return-void
 
-    .line 547
+    .line 564
     :sswitch_0
     const-string v0, "TRIM_MEMORY_BACKGROUND"
 
@@ -1450,8 +1803,6 @@
 
     goto :goto_0
 
-    nop
-
     :sswitch_data_0
     .sparse-switch
         0x5 -> :sswitch_6
@@ -1464,67 +1815,20 @@
     .end sparse-switch
 .end method
 
-.method public final p()Lcom/bbm/setup/x;
-    .locals 1
-
-    .prologue
-    .line 300
-    sget-object v0, Lcom/bbm/Alaska;->h:Lcom/bbm/setup/x;
-
-    return-object v0
-.end method
-
-.method public final q()Z
-    .locals 2
-
-    .prologue
-    .line 312
-    sget-object v0, Lcom/bbm/Alaska;->d:Lcom/bbm/f/c;
-
-    invoke-virtual {v0}, Lcom/bbm/f/c;->a()Lcom/bbm/f/b;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/bbm/f/b;->d:Lcom/bbm/f/b;
-
-    if-eq v0, v1, :cond_0
-
-    sget-object v0, Lcom/bbm/Alaska;->e:Lcom/bbm/f/c;
-
-    invoke-virtual {v0}, Lcom/bbm/f/c;->a()Lcom/bbm/f/b;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/bbm/f/b;->d:Lcom/bbm/f/b;
-
-    if-ne v0, v1, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final s()V
+.method public final p()V
     .locals 3
 
     .prologue
-    .line 484
-    iget-boolean v0, p0, Lcom/bbm/Alaska;->l:Z
+    .line 503
+    iget-boolean v0, p0, Lcom/bbm/Alaska;->s:Z
 
     if-eqz v0, :cond_0
 
-    .line 494
+    .line 513
     :goto_0
     return-void
 
-    .line 491
+    .line 510
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -1536,15 +1840,15 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 492
+    .line 511
     const-string v1, "com.bbm.BBMService.mock_service"
 
     sget-boolean v2, Lcom/bbm/Alaska;->a:Z
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 493
-    iget-object v1, p0, Lcom/bbm/Alaska;->t:Landroid/content/ServiceConnection;
+    .line 512
+    iget-object v1, p0, Lcom/bbm/Alaska;->A:Landroid/content/ServiceConnection;
 
     const/4 v2, 0x0
 
@@ -1552,18 +1856,18 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/bbm/Alaska;->l:Z
+    iput-boolean v0, p0, Lcom/bbm/Alaska;->s:Z
 
     goto :goto_0
 .end method
 
-.method public final u()Ljava/lang/String;
+.method public final r()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 515
+    .line 533
     :try_start_0
-    invoke-virtual {p0}, Lcom/bbm/Alaska;->v()Landroid/content/pm/PackageInfo;
+    invoke-virtual {p0}, Lcom/bbm/Alaska;->s()Landroid/content/pm/PackageInfo;
 
     move-result-object v0
 
@@ -1571,11 +1875,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 519
+    .line 536
     :goto_0
     return-object v0
 
-    .line 518
+    .line 535
     :catch_0
     move-exception v0
 
@@ -1585,19 +1889,19 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 519
+    .line 536
     const-string v0, ""
 
     goto :goto_0
 .end method
 
-.method public final v()Landroid/content/pm/PackageInfo;
+.method public final s()Landroid/content/pm/PackageInfo;
     .locals 3
 
     .prologue
-    .line 524
+    .line 541
     invoke-virtual {p0}, Lcom/bbm/Alaska;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -1615,25 +1919,25 @@
     return-object v0
 .end method
 
-.method public final w()Z
+.method public final t()Z
     .locals 2
 
     .prologue
-    .line 602
-    sget-object v0, Lcom/bbm/Alaska;->h:Lcom/bbm/setup/x;
+    .line 618
+    sget-object v0, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
 
-    invoke-virtual {v0}, Lcom/bbm/setup/x;->a()Lcom/bbm/setup/ac;
+    invoke-virtual {v0}, Lcom/bbm/setup/z;->a()Lcom/bbm/setup/af;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/setup/ac;->a:Lcom/bbm/setup/ad;
+    iget-object v0, v0, Lcom/bbm/setup/af;->a:Lcom/bbm/setup/ag;
 
-    .line 603
-    sget-object v1, Lcom/bbm/setup/ad;->k:Lcom/bbm/setup/ad;
+    .line 619
+    sget-object v1, Lcom/bbm/setup/ag;->k:Lcom/bbm/setup/ag;
 
     if-eq v0, v1, :cond_0
 
-    sget-object v1, Lcom/bbm/setup/ad;->b:Lcom/bbm/setup/ad;
+    sget-object v1, Lcom/bbm/setup/ag;->b:Lcom/bbm/setup/ag;
 
     if-eq v0, v1, :cond_0
 
@@ -1648,42 +1952,48 @@
     goto :goto_0
 .end method
 
-.method public final y()V
+.method public final v()V
     .locals 1
 
     .prologue
-    .line 617
-    invoke-static {}, Lcom/bbm/Alaska;->n()Lcom/bbm/f/aa;
+    .line 629
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/f/ae;
 
     move-result-object v0
 
-    iget-boolean v0, v0, Lcom/bbm/f/aa;->j:Z
+    iget-boolean v0, v0, Lcom/bbm/f/ae;->j:Z
 
     if-eqz v0, :cond_0
 
-    .line 618
-    invoke-virtual {p0}, Lcom/bbm/Alaska;->z()V
+    .line 630
+    invoke-virtual {p0}, Lcom/bbm/Alaska;->w()V
 
-    .line 620
+    .line 632
     :cond_0
     return-void
 .end method
 
-.method public final z()V
+.method public final w()V
     .locals 1
 
     .prologue
-    .line 623
-    iget-object v0, p0, Lcom/bbm/Alaska;->k:Lcom/bbm/h;
+    .line 635
+    iget-object v0, p0, Lcom/bbm/Alaska;->g:Lcom/bbm/j;
 
     if-eqz v0, :cond_0
 
-    .line 624
-    iget-object v0, p0, Lcom/bbm/Alaska;->k:Lcom/bbm/h;
+    .line 636
+    iget-object v0, p0, Lcom/bbm/Alaska;->g:Lcom/bbm/j;
 
-    invoke-virtual {v0}, Lcom/bbm/h;->g()V
+    iget-object v0, v0, Lcom/bbm/j;->a:Lcom/bbm/BbmService;
 
-    .line 626
+    invoke-static {v0}, Lcom/bbm/BbmService;->a(Lcom/bbm/BbmService;)Lcom/bbm/f/ad;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/f/ad;->i()V
+
+    .line 638
     :cond_0
     return-void
 .end method

@@ -10,6 +10,9 @@
 .method public abstract handle(Ljava/lang/String;)V
 .end method
 
+.method public abstract handle(Ljava/lang/String;Ljava/lang/String;)V
+.end method
+
 .method public abstract setActive(Z)V
 .end method
 

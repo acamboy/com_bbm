@@ -213,7 +213,7 @@
     <string name="VC">Saint Vincent és Grenadine-szigetek</string>
     <string name="VE">Venezuela</string>
     <string name="VG">Brit Virgin-szigetek</string>
-    <string name="VI">„Amerikai Virgin-szigetek</string>
+    <string name="VI">Amerikai Virgin-szigetek</string>
     <string name="VN">Vietnam</string>
     <string name="VU">Vanuatu</string>
     <string name="WF">Wallis és Futuna</string>
@@ -240,12 +240,20 @@
     <string name="activity_tap_to_invite_dialog_yes">Igen</string>
     <string name="activity_tap_to_invite_info">Igazítsa egymáshoz az aktuális készülékek hátlapját. Mindkét készüléken be kell kapcsolni az NFC-funkciót.</string>
     <string name="ad_block_channel">Ha letiltja a csatornát, nem fogja a(z) \"%1$s\" csatorna szponzorált tartalmát látni Ezt a műveletet nem lehet visszavonni.</string>
+    <string name="ad_block_sponsor">Nem fogja a(z) \"%1$s\" csatorna szponzorált tartalmát látni. Ezt a műveletet nem lehet visszavonni.</string>
     <string name="ad_channel">Szponzorált csatorna</string>
     <string name="ad_notpresent_message">A hirdetés már nem érhető el</string>
+    <string name="ad_sponsor_label">Szponzor</string>
     <string name="add">Hozzáadás</string>
     <string name="add_all">Összes hozzáadása</string>
-    <string name="add_channel_post">Bejegyzés hozzáadása</string>
-    <string name="add_contacts">Partnerek hozzáadása</string>
+    <string name="add_channel_post">Hozzáadás</string>
+    <string name="add_contacts">Meghívás</string>
+    <string name="add_contacts_category_add_to_bbm">A hozzáadáshoz érintse meg</string>
+    <string name="add_contacts_category_incoming_ads">Szponzorált meghívók</string>
+    <string name="add_contacts_category_incoming_bbm">BBM-meghívás</string>
+    <string name="add_contacts_category_incoming_group">Csoportmeghívások</string>
+    <string name="add_contacts_category_invite_to_bbm">Meghívás letöltésre</string>
+    <string name="add_contacts_category_sent">Elküldött meghívók</string>
     <string name="add_from_gallery">Hozzáadás a galériából</string>
     <string name="add_group_button">Új csoport létrehozása</string>
     <string name="add_new">Új hozzáadása</string>
@@ -255,6 +263,11 @@
     <string name="allow_comments_on_posts">Hozzászólások engedélyezése bejegyzéseknél</string>
     <string name="app_name">BBM</string>
     <string name="app_picker_name">Alkalmazások</string>
+    <string name="app_store_details_screen_install_button">Telepítés</string>
+    <string name="app_store_details_screen_inventory_not_found">"Az alkalmazást nem lehet megnyitni.
+ Próbálja újra később."</string>
+    <string name="app_store_details_screen_open_button">Megnyitás</string>
+    <string name="app_store_invalid_app_id">Ez az elem nem érhető el.</string>
     <string name="approve_comments">Hozzászólások jóváhagyása</string>
     <string name="approve_comments_description">Ez az opció a csatornák webhelyén módosítható.</string>
     <string name="arrived_at_destination">Glympse: Megérkezett a célállomásra</string>
@@ -269,6 +282,7 @@
     <string name="attach_list_file">Fájl</string>
     <string name="attach_list_location">Hely</string>
     <string name="attach_list_picture">Kiválasztás a Galériából</string>
+    <string name="attach_list_picture_label">Kép</string>
     <string name="attach_list_voicenote">Hangjegyzet</string>
     <string name="audio_player_pause">Szünet</string>
     <string name="audio_player_play">Lejátszás</string>
@@ -278,17 +292,20 @@
     <string name="auth_client_play_services_err_notification_msg">Google Play szolgáltatási hiba</string>
     <string name="auth_client_requested_by_msg">Igénylő: %1$s</string>
     <string name="auth_client_using_bad_version_title">Egy alkalmazás a Play Szolgáltatások rossz verzióját akarta használni.</string>
+    <string name="avatar_file_not_support">Nem támogatott fájl.</string>
     <string name="back">Vissza</string>
     <string name="backup_file_is_not_valid">A biztonságimásolat-fájl érvénytelen; lépjen ki a BBM beállításból, és használja a BlackBerry Desktop Software készülékcsere segédprogramját.</string>
     <string name="barcode_info">A partner leolvashatja a vonalkódot, hogy hozzáadja Önt a BBM-hez</string>
     <string name="bbm_account_name">BBM</string>
     <string name="bbm_account_user_name">BBM Groups</string>
+    <string name="bbm_carrier_billing">Fizetés a telefonszámlával</string>
     <string name="bbm_contacts">BBM</string>
     <string name="bbm_error">BBM hiba</string>
     <string name="bbm_for_all">BBM minden rendszerhez</string>
     <string name="bbm_groups">BBM Groups</string>
     <string name="bbm_has_lost_its_connection">A BBM elvesztette a kapcsolatot. Várjon, amíg a kiszolgáló megkísérli az újracsatlakozást.</string>
     <string name="bbm_is_unable_to_connect_to_the_server">A BBM nem tud csatlakozni a kiszolgálóhoz. Próbálja újra később.</string>
+    <string name="bbm_package_name">com.bbm</string>
     <string name="bbm_service_no_connectivity">Nincs kapcsolat</string>
     <string name="bbm_service_running">Csatlakozva</string>
     <string name="bbm_setup">BBM-beállítás</string>
@@ -325,7 +342,7 @@
     <string name="button_done">Kész</string>
     <string name="button_email">E-mail küldése</string>
     <string name="button_get_directions">Útvonaltervezés</string>
-    <string name="button_google_shopper">Shopper</string>
+    <string name="button_google_shopper">Vásárló</string>
     <string name="button_mms">MMS küldése</string>
     <string name="button_ok">OK</string>
     <string name="button_open_browser">Böngésző megnyitása</string>
@@ -361,7 +378,7 @@
     <string name="cancel_invite">Meghívás törlése</string>
     <string name="cancel_narrowbutton">Mégse</string>
     <string name="cannot_switch_bbm_to_the_current_device">BBM átváltása a jelenlegi készülékre nem lehetséges.</string>
-    <string name="capture_activity_info">Tartsa mozdulatlanul a készüléket úgy, hogy a vonalkód látható legyen a megtekintőben</string>
+    <string name="capture_activity_info">Mozgassa a készüléket úgy, hogy a vonalkód látható legyen a megtekintőben, majd tartsa mozdulatlanul.</string>
     <string name="category_textfield">Kategória</string>
     <string name="channel_block_subscriber">%1$s letiltása</string>
     <string name="channel_block_subscriber_channel_not_found_failure">HIBA: csatorna nem található</string>
@@ -399,12 +416,11 @@
     <string name="channel_details_copy_website">Webhely másolása</string>
     <string name="channel_details_private_channel_description">Csak meghívóval</string>
     <string name="channel_doesnt_exist">Ez a csatorna nem létezik.</string>
-    <string name="channel_geolocation_checkbox">Ne kérdezze újra.</string>
     <string name="channel_geolocation_checkbox_accept">Elfogadás</string>
     <string name="channel_geolocation_checkbox_decline">Elutasítás</string>
     <string name="channel_geolocation_checkbox_description">Engedélyezi a BBM időszakos hozzáférését a helyszínhez?</string>
     <string name="channel_geolocation_introduction">A használat testreszabásához a BBM időszakosan hozzá szeretne férni a készülék jelenlegi vagy elmentett helyszíneihez. BBM beállításaiból ezt az engedélyt bármikor módosíthatja.</string>
-    <string name="channel_geolocation_setting_description">Engedélyezi, hogy az alkalmazás hozzáférjen a készülék jelenlegi vagy elmentett helyszíneihez.</string>
+    <string name="channel_geolocation_setting_description">Engedélyezi, hogy az alkalmazás hozzáférjen a készülék jelenlegi vagy elmentett helyszíneihez</string>
     <string name="channel_geolocation_setting_disable_description">A helyszín jelentése funkció nem érhető el, mert a Helymeghatározási szolgáltatások ki vannak kapcsolva. A Helymeghatározási szolgáltatások bekapcsolásához nyissa meg a Beállításokat.</string>
     <string name="channel_geolocation_setting_disable_no">Most nem</string>
     <string name="channel_geolocation_setting_disable_yes">Beállítások</string>
@@ -621,6 +637,7 @@ Hamarosan elérhető"</string>
     <string name="contacts_dialog_delete_multi_title">%1$s partner törlése</string>
     <string name="contacts_dialog_delete_title">%1$s törlése</string>
     <string name="contacts_invite_to_group">Meghívás csoportba</string>
+    <string name="contacts_invited_to_meeting">%1d partnert meghívott az értekezletre.</string>
     <string name="contacts_move_contact">Partner áthelyezése</string>
     <string name="contacts_move_contacts">Partnerek áthelyezése</string>
     <string name="contacts_open_in_contacts">Megnyitás a Partnerekben</string>
@@ -638,7 +655,9 @@ Hamarosan elérhető"</string>
     <string name="contents_sms">SMS szám</string>
     <string name="contents_text">Egyszerű szöveg</string>
     <string name="context_menu_copy_message">Üzenet másolása</string>
+    <string name="context_menu_recall_message">Üzenet visszavonása</string>
     <string name="context_menu_resend_message">Üzenet újraküldése</string>
+    <string name="conversation_activity_end_chat_on_voice_warning_message">A hívás befejeződik, és a csevegésüzenetek törlődnek.</string>
     <string name="conversation_activity_end_chat_warning_message">Ha befejezi a csevegést, az összes üzenet törölve lesz.</string>
     <string name="conversation_activity_end_chat_warning_title">Befejezi a csevegést?</string>
     <string name="conversation_activity_reinvite_accepted">Meghívás elfogadása</string>
@@ -670,8 +689,11 @@ Hamarosan elérhető"</string>
     <string name="conversation_joined_the_chat">&lt;b>%1$s&lt;/b> csatlakozott a csevegéshez</string>
     <string name="conversation_left_the_chat">&lt;b>%1$s&lt;/b> kilépett a csevegésből</string>
     <string name="conversation_location_message_accurace_within">Pontos a következő belül: %1$sm</string>
-    <string name="conversation_location_received">Helyszín érkezett</string>
-    <string name="conversation_location_sent">Helyszín elküldve</string>
+    <string name="conversation_location_received">Tartózkodási hely érkezett</string>
+    <string name="conversation_location_sent">Tartózkodási hely elküldve</string>
+    <string name="conversation_message_recall_failed">Nem vonható vissza az üzenet</string>
+    <string name="conversation_message_recall_pending">Üzenet visszavonása</string>
+    <string name="conversation_message_recalled">Az üzenetet visszavonták</string>
     <string name="conversation_must_reinvite">%1$s nem vette még fel Önt partnerként. Ismételten meg kívánja hívni a következőt: %1$s?</string>
     <string name="conversation_notification_calendar_received">Találkozó fogadva</string>
     <string name="conversation_notification_calendar_sent">Találkozó elküldve</string>
@@ -684,6 +706,10 @@ Hamarosan elérhető"</string>
     <string name="conversation_notification_contact_card_sent">Partnerkártya elküldve</string>
     <string name="conversation_notification_default_incomming">Üzenet érkezett</string>
     <string name="conversation_notification_default_outgoing">Üzenet elküldve</string>
+    <string name="conversation_notification_ephemeral_default_received">Időzített üzenet érkezett</string>
+    <string name="conversation_notification_ephemeral_default_sent">Időzített üzenet elküldve</string>
+    <string name="conversation_notification_ephemeral_picture_received">Időzített kép érkezett</string>
+    <string name="conversation_notification_ephemeral_picture_sent">Időzített kép elküldve</string>
     <string name="conversation_notification_file_pending">Átvitel függőben</string>
     <string name="conversation_notification_file_received">Fájl érkezett</string>
     <string name="conversation_notification_file_sent">Fájl elküldve</string>
@@ -712,9 +738,16 @@ Hamarosan elérhető"</string>
     <string name="conversation_voice_note_transfert">Hangjegyzet érkezett</string>
     <string name="conversation_you_invited">Meghívta a csevegésbe a következő személyt: &lt;b>%1$s&lt;/b></string>
     <string name="conversation_you_joined_the_chat">Ön csatlakozott a csevegéshez</string>
+    <string name="copied_group_passphrase">Jelszó másolva</string>
+    <string name="copied_group_passphrase_toast">A vágólapra másolva</string>
     <string name="copy_chat_sender_message">%1$s: %2$s</string>
+    <string name="copy_group_passphrase">Másolás</string>
     <string name="create">Létrehozás</string>
     <string name="create_channel">Csatorna létrehozása</string>
+    <string name="create_non_protected_group_details">Minden BBM-felhasználó csatlakozhat a csoporthoz.</string>
+    <string name="create_protected_group_details">Csak a BBM Protected-felhasználók csatlakozhatnak.</string>
+    <string name="create_protected_group_passphrase_details">A csoportba meghívott személyeknek meg kell adniuk a jelszót a csatlakozáskor.</string>
+    <string name="create_protected_group_switch">BBM Protected csoportok</string>
     <string name="creating_channel_toast_string">Csatorna létrehozása</string>
     <string name="creating_private_channel_confirmation">Ezt a műveletet nem lehet visszavonni. Biztosan szeretné, ha a csatorna privát lenne?</string>
     <string name="current">Jelenlegi</string>
@@ -739,6 +772,7 @@ Hamarosan elérhető"</string>
     <string name="dialog_delete_group_label_admin">Minden csoportadat – beleértve a csoportnaptárt, listákat, képeket és csevegéseket – minden tagra vonatkozóan elvész. A művelet nem visszavonható.</string>
     <string name="dialog_delete_group_label_last">Ön az utolsó tag, ha kilép, a csoport megszűnik, és minden kapcsolódó adat törlésre kerül. A művelet nem visszavonható.</string>
     <string name="dialog_delete_group_option_admin">Törli a csoportot?</string>
+    <string name="dialog_ignore_checkbox">Ne kérdezze újra.</string>
     <string name="dialog_invite_security_question_hint"><i>Itt adja meg a választ</i></string>
     <string name="dialog_invite_security_question_tip">Tipp: Ügyeljen a kis- és nagybetűkre.</string>
     <string name="dialog_invite_security_question_title">Biztonsági kérdés</string>
@@ -759,7 +793,23 @@ Hamarosan elérhető"</string>
     <string name="enter_an_address">Adja meg a címet</string>
     <string name="enter_comment"><i>Hozzászólás írása</i></string>
     <string name="enter_date_of_birth">A BBM Channels használatához adja meg születési dátumát.</string>
+    <string name="enter_passphrase">Jelszó megadása</string>
+    <string name="enter_passphrase_hint"><i>Jelszó megadása</i></string>
     <string name="enter_text"><i>Szöveg beírása</i></string>
+    <string name="entered_passphrase_incorrect">A megadott jelszó helytelen.</string>
+    <string name="ephemeral_hint_received">Időzített üzenet érkezett. A megtekintéshez tartsa lenyomva.</string>
+    <string name="ephemeral_hint_sent">Időzített üzenet.</string>
+    <string name="ephemeral_hint_viewed">Időzített üzenet érkezett. Lejárt</string>
+    <string name="ephemeral_picker_disabled">A partner a funkciót nem támogató BBM verzióval rendelkezik.</string>
+    <string name="ephemeral_picker_title">Időzítő beállítása</string>
+    <string name="ephemeral_picture_expired">Időzített kép érkezett. Lejárt</string>
+    <string name="ephemeral_picture_received">Időzített kép érkezett. A megtekintéshez tartsa lenyomva.</string>
+    <string name="ephemeral_picture_screenshot_alert">Képernyőkép észlelve</string>
+    <string name="ephemeral_picture_sent">Időzített kép.</string>
+    <string name="ephemeral_setting">Időzített üzenetek</string>
+    <string name="ephemeral_tech_tip_body">Állítson be időzítőt, amellyel szabályozhatja, hogy a partnerek mennyi ideig láthassák az üzenetet vagy a képet, mielőtt az megsemmisülne.</string>
+    <string name="ephemeral_tech_tip_title">Időzített üzenetek</string>
+    <string name="ephemeral_unsupport_toast">Időzítő eltávolítva. A melléklet típusa nem támogatja ezt a funkciót.</string>
     <string name="error_network_failure"><i>Hálózati hiba</i></string>
     <string name="exit">Kilépés</string>
     <string name="feature_glympse">Glympse</string>
@@ -781,6 +831,7 @@ Hamarosan elérhető"</string>
     <string name="file_picker_overwrite_dialog_title">Felülírás megerősítése</string>
     <string name="file_picker_save_error_dialog_text">Adjon meg fájlnevet</string>
     <string name="file_picker_save_error_dialog_title">Mentési hiba</string>
+    <string name="file_picker_sd_card_label">SD-kártya</string>
     <string name="file_picker_select_file">Fájl kijelölése</string>
     <string name="file_picker_sort">Rendezés</string>
     <string name="file_picker_type">Típus</string>
@@ -811,7 +862,7 @@ Hamarosan elérhető"</string>
     <string name="filetransfer_abort_writeerror">Hiba a fájl írása közben.</string>
     <string name="filetransfer_status_downloadispending">Letöltés függőben...</string>
     <string name="filetransfer_status_file_note_supported">Ez a fájltípus jelenleg nem támogatott</string>
-    <string name="filetransfer_status_higherqualitypicturehasbeenreceived">Jobb minőségű kép érkezett</string>
+    <string name="filetransfer_status_higherqualitypicturehasbeenreceived">HD kép érkezett</string>
     <string name="filetransfer_status_nohandlerforfiletype">Nem található kezelőprogram ilyen típusú fájlhoz</string>
     <string name="filetransfer_status_picturereceived">Kép érkezett</string>
     <string name="filetransfer_status_picturesent">Kép elküldve</string>
@@ -820,12 +871,15 @@ Hamarosan elérhető"</string>
     <string name="filetransfer_status_picturetransferispending">Képátvitel függőben...</string>
     <string name="filetransfer_status_received">%1$s érkezett</string>
     <string name="filetransfer_status_receiving">%1$s fogadása</string>
+    <string name="filetransfer_status_receivinghigherqualitypicture">HD kép fogadása</string>
     <string name="filetransfer_status_receivingpicture">Kép fogadása</string>
-    <string name="filetransfer_status_requesthigherquality">Jobb minőségű képet kértek</string>
-    <string name="filetransfer_status_requesthigherqualitypicturedenied">A jobb minőségű képre vonatkozó kérést elutasították</string>
-    <string name="filetransfer_status_requesthigherqualitysent">Jobb minőségű kép elküldve</string>
+    <string name="filetransfer_status_requesthigherquality">HD képet kértek</string>
+    <string name="filetransfer_status_requesthigherqualitypicturecanceled">HD képet elutasították</string>
+    <string name="filetransfer_status_requesthigherqualitypicturedenied">HD képet visszautasították</string>
+    <string name="filetransfer_status_requesthigherqualitypictureexpired">A fájlátvitel lejárt</string>
+    <string name="filetransfer_status_requesthigherqualitysent">HD kép elküldve</string>
     <string name="filetransfer_status_sending">%1$s küldése</string>
-    <string name="filetransfer_status_sendinghigherqualitypicture">Jobb minőségű kép küldése</string>
+    <string name="filetransfer_status_sendinghigherqualitypicture">HD kép küldése</string>
     <string name="filetransfer_status_sendingpicture">Kép küldése</string>
     <string name="filetransfer_status_sent">%1$s elküldve</string>
     <string name="filetransfer_status_stickerreceived">Címke érkezett</string>
@@ -840,11 +894,14 @@ Hamarosan elérhető"</string>
     <string name="filetransfer_type_voicenote">Hangjegyzet</string>
     <string name="filetransfer_type_voicenote_lowercased">hangjegyzet</string>
     <string name="filter_by">Szűrési feltétel</string>
+    <string name="find_friend_allow_upload_dialog_double_check_text">Biztos benne? Ha nem engedi, hogy a BBM hozzáférjen partnereihez, a BBM-partnereket manuálisan kell hozzáadnia.</string>
+    <string name="find_friend_allow_upload_dialog_double_check_title">Nem ajánlott</string>
     <string name="find_friend_allow_upload_dialog_title">Ismerősök keresése a BBM alkalmazásban</string>
-    <string name="find_friend_allow_upload_text">Engedélyezheti, hogy a BBM időről időre hozzáférhessen a partnerekhez, hogy megtalálja ismerőseit a BBM-ben. Ez az opció a BBM beállításokban bármikor módosítható.</string>
-    <string name="find_friend_category_get_bbm">Meghívás a BBM használatára</string>
-    <string name="find_friend_category_invite">Talált ismerősök</string>
+    <string name="find_friend_allow_upload_text">Engedélyezze, hogy a BBM hozzáférhessen a partnerek listájához, és így könnyebben találjon és vegyen fel ismerősöket.</string>
+    <string name="find_friend_category_get_bbm">Meghívás letöltésre</string>
+    <string name="find_friend_category_invite">A hozzáadáshoz érintse meg</string>
     <string name="find_friends">Ismerősök keresése a BBM alkalmazásban</string>
+    <string name="find_more_friends">További ismerős keresése</string>
     <string name="first_launch_after_upgrade_privacy_terms">Egyetértek az &lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>Adatvédelmi szabályzattal&lt;/a>&lt;/b> és a &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Szolgáltatási feltételekkel&lt;/a>&lt;/b></string>
     <string name="first_launch_after_upgrade_subtitle">Tegye még élvezetesebbé a matricák segítségével a BBM-csevegéseket. Már elérhető.</string>
     <string name="first_launch_after_upgrade_title">Küldjön matricákat!</string>
@@ -908,7 +965,7 @@ Hamarosan elérhető"</string>
     <string name="group_add_list_item_button">Elem hozzáadása</string>
     <string name="group_add_list_item_category">Kategória</string>
     <string name="group_add_list_item_due">Határidő</string>
-    <string name="group_add_list_item_due_date">Határidő napja</string>
+    <string name="group_add_list_item_due_date">Határidő</string>
     <string name="group_add_list_item_list">Lista</string>
     <string name="group_add_list_item_priority">Prioritás</string>
     <string name="group_add_list_item_priority_high">Magas</string>
@@ -923,6 +980,7 @@ Hamarosan elérhető"</string>
     <string name="group_admin_about">A csoportadminisztrátorok</string>
     <string name="group_admin_text">A rendszergazdák a következőket tehetik:</string>
     <string name="group_barcode_info">A partnerek a vonalkód leolvasásával csatlakozhatnak a csoporthoz</string>
+    <string name="group_barcode_scan_rejected_user_not_protected">Nincs engedélye, hogy ehhez a csoporthoz csatlakozzon.</string>
     <string name="group_cancel">Mégse</string>
     <string name="group_chat_exists">Ilyen tárgyú csevegés már létezik</string>
     <string name="group_chat_general_discussion">Általános megbeszélés</string>
@@ -937,11 +995,11 @@ Hamarosan elérhető"</string>
     <string name="group_chat_history_weeks_2">2 hét</string>
     <string name="group_chat_history_weeks_3">3 hét</string>
     <string name="group_chat_list_delete_chat">Csevegés törlése</string>
-    <string name="group_conversation_are_writing_messages">„ üzenetet írnak...”</string>
+    <string name="group_conversation_are_writing_messages">" üzenetet írnak..."</string>
     <string name="group_conversation_email_chat_message">%1$s: %2$s</string>
     <string name="group_conversation_email_chat_message_header">Ebből a csoportból: %1$s</string>
     <string name="group_conversation_email_chat_subject">%1$s csevegés: %2$s</string>
-    <string name="group_conversation_is_writing_a_message">„ üzenetet ír...”</string>
+    <string name="group_conversation_is_writing_a_message">" üzenetet ír..."</string>
     <string name="group_conversation_slide_menu_chat_history">Csevegési előzmények</string>
     <string name="group_conversation_slide_menu_clear_chat">Csevegés törlése</string>
     <string name="group_conversation_slide_menu_copy_chat">Csevegés másolása</string>
@@ -976,11 +1034,15 @@ Hamarosan elérhető"</string>
     <string name="group_invite_email_message">"-----\ufffc----
 Szeretném meghívni %1$s nevű csoportomba. 
 
- Ha Android vagy iPhone készüléken szeretne csatlakozni a csoporthoz vagy letöltené a BBM-et, kattintson a következőre:%2$s.
+ Ha Android vagy iPhone készüléken szeretne csatlakozni a csoporthoz vagy letöltené a BBM-et, kattintson a következőre: %2$s.
 
 %3$s"</string>
     <string name="group_invite_email_subject">Csatlakozzon BlackBerry Group csoportomhoz!</string>
+    <string name="group_invite_enter_passphrase">A csoporthoz való csatlakozáshoz adja meg a csoporttagok valamelyike által biztosított jelszót.</string>
+    <string name="group_invite_enter_passphrase_multi_attempts">Helytelen jelszó. A csoporthoz való csatlakozáshoz adja meg a csoporttagok valamelyike által biztosított jelszót. (%1$d/%2$d)</string>
     <string name="group_invite_message_default">Szeretném meghívni %1$s nevű csoportomba.</string>
+    <string name="group_invite_status_enter_passphrase_max_attempts_reached">Helytelen jelszó. Ha szeretne csatlakozni a csoporthoz, újból meghívót kell kapnia.</string>
+    <string name="group_invite_status_enter_passphrase_multi_attempts">Helytelen jelszó. A csoporthoz való csatlakozáshoz adja meg a csoporttagok valamelyike által biztosított jelszót.</string>
     <string name="group_invite_www_uri">http://%1$s</string>
     <string name="group_leave">Kilépés innen: %1$s</string>
     <string name="group_leave_admin">Minden csoportadat – beleértve a csoportnaptárt, listákat, képeket és csevegéseket – minden tagra vonatkozóan elvész. A művelet nem visszavonható.</string>
@@ -988,6 +1050,7 @@ Szeretném meghívni %1$s nevű csoportomba.
     <string name="group_leave_default">Biztosan kilép ebből a csoportból?</string>
     <string name="group_leave_lastmember">Ön az utolsó tag. Ha kilép, a csoport megszűnik, és törlődik minden kapcsolódó adat. A művelet nem visszavonható.</string>
     <string name="group_like_picture">Kép kedvelése</string>
+    <string name="group_likes_this_picture">Kedveli ezt a képet.</string>
     <string name="group_list_item_filter_all">Minden (%1$s)</string>
     <string name="group_list_item_filter_assignedtome">Hozzám rendelve</string>
     <string name="group_list_item_filter_complete">Kész (%1$s)</string>
@@ -1013,7 +1076,11 @@ Szeretném meghívni %1$s nevű csoportomba.
     <string name="group_lobby_lists_no_due_date">Nincs határidő</string>
     <string name="group_lobby_pictures">Képek</string>
     <string name="group_lobby_pictures_count">Képek (%1$d)</string>
+    <string name="group_max_limit">Ön %1d csoportban szerepel. Másik csoport létrehozása vagy másik csoporthoz való csatlakozás előtt ki kell lépnie a csoportból.</string>
     <string name="group_max_members">Elérte a tagok maximális számát</string>
+    <string name="group_passphrase">Csoportjelszó</string>
+    <string name="group_passphrase_info">Megoszthatja a jelszót, amelyet a csoportba meghívott személyeknek meg kell adniuk a csatlakozáskor.</string>
+    <string name="group_passphrase_missing">Jelszó N/A</string>
     <string name="group_picture_add">Kép hozzáadása</string>
     <string name="group_picture_added_days">%1$d napja vette fel %2$s</string>
     <string name="group_picture_added_today">Ma %1$s órakor %2$s vette fel</string>
@@ -1084,9 +1151,14 @@ Szeretném meghívni %1$s nevű csoportomba.
     <string name="groups_restore_unrecoverable">Nincsenek más tagok a csoportban, vagy meg kell kérnie egy csoporttagot, hogy hívja meg Önt még egyszer.</string>
     <string name="groups_settings_edit">Szerk.</string>
     <string name="groups_unknown_name">Ismeretlen csoport</string>
+    <string name="hd_button_text_bottom">HD</string>
+    <string name="hd_button_text_top">Kérelem</string>
+    <string name="hdimage_prompt_message">Automatikusan el szeretné fogadni a jövőbeli HD kérelmeket?</string>
+    <string name="hdimage_prompt_title">Mindig elfogadom a kérelmeket</string>
     <string name="help">Súgó</string>
-    <string name="help_url">http://docs.blackberry.com/bbm/22/android/hu</string>
+    <string name="help_url">http://docs.blackberry.com/bbm/25/android/hu</string>
     <string name="high_priority">Magas prioritás</string>
+    <string name="hint_protected_enabled_chat"><i>Védett. Üzenet bevitele</i></string>
     <string name="history_clear_one_history_text">Törlése</string>
     <string name="history_clear_text">Előzmények törlése</string>
     <string name="history_email_title">Barcode Scanner előzmények</string>
@@ -1094,9 +1166,17 @@ Szeretném meghívni %1$s nevű csoportomba.
     <string name="history_empty_detail">Nem vonalkód szkennelés lett felvéve még</string>
     <string name="history_send">Előzmények küldése</string>
     <string name="history_title">Előzmények</string>
+    <string name="home_page_view_all_string">Az összes megtekintése</string>
     <string name="if_youre_an_existing_bbm_user_you_can_restore_bbm">BBM felhasználóként visszaállíthatja a BBM adatait. Ha új BBM felhasználó, kezdje az első lépésekkel.</string>
     <string name="ignore_complaint">Panasz mellőzése</string>
     <string name="ignore_invitation">Figyelmen kívül hagyja a meghívót?</string>
+    <string name="inapp_upgrade_dialog_body_text">A BBM egy régi verzióját használja. Frissítsen a BBM legújabb verziójára, hogy megkapja a frissítéseket és javításokat.</string>
+    <string name="inapp_upgrade_dialog_body_text2">Ez a funkció a BBM frissített verzióját igényli.</string>
+    <string name="inapp_upgrade_dialog_cancel_button">Mégse</string>
+    <string name="inapp_upgrade_dialog_ignore_button">Mellőzés</string>
+    <string name="inapp_upgrade_dialog_title">A BBM frissítése</string>
+    <string name="inapp_upgrade_dialog_update_button">Frissítés</string>
+    <string name="inapp_upgrade_dialog_update_url">http://www.bbm.com/update</string>
     <string name="incoming_call_accept">Válasz</string>
     <string name="incoming_call_decline">Elutasítás</string>
     <string name="incoming_call_type_voice">BBM Voice</string>
@@ -1104,6 +1184,9 @@ Szeretném meghívni %1$s nevű csoportomba.
     <string name="introducing_channels_first_part">A BBM segítségével rajongókkal, barátokkal vagy üzletfelekkel léphet kapcsolatba – bejegyzéseket és képeket használva – a csatornákon.</string>
     <string name="introducing_channels_second_part">A csatornájára feliratkozottak a BBM-en keresztül juthatnak hozzá a legújabb hírekhez és megoszthatják gondolataikat.</string>
     <string name="introducing_channels_title">A BBM Channels bemutatása</string>
+    <string name="invalid_passphrase_toast">Hibás jelszó</string>
+    <string name="invitation_rejected_invitee_not_protected_message">%1$s nem tud csatlakozni a csoporthoz. Csak a BBM Protected partnerek csatlakozhatnak.</string>
+    <string name="invitation_rejected_invitee_not_protected_title">A felhasználót nem lehet meghívni</string>
     <string name="invitation_sent">Meghívó elküldve</string>
     <string name="invite">Meghívás</string>
     <string name="invite_activity_category">Kategória</string>
@@ -1111,7 +1194,7 @@ Szeretném meghívni %1$s nevű csoportomba.
     <string name="invite_activity_mail">E-mail: %1$s</string>
     <string name="invite_activity_mail_body">"Szeretném meghívni BBM-csevegésre.
 
-Ha szeretne csatlakozni hozzám a BBM-en, kattintson ide:
+Ha szeretne csatlakozni hozzám a BBM-en, kattintson ide: 
 %1s
 "</string>
     <string name="invite_activity_mail_subject">BBM-meghívás a következőtől: %1$s</string>
@@ -1122,7 +1205,7 @@ Ha szeretne csatlakozni hozzám a BBM-en, kattintson ide:
     <string name="invite_activity_security_label">Biztonsági kérdés</string>
     <string name="invite_activity_sms_body">Vegyen fel a BBM-be! A BlackBerry készüléken kattintson a %1$s PIN-re, majd jelölje ki a \"Meghívás a BBM-be\" lehetőséget. Ha Android vagy iPhone készülékeken szeretne hozzáadni a BBM-hez, vagy letöltené a BBM-et, kattintson a www.pin.bbm.com/%1$s hivatkozásra.</string>
     <string name="invite_activity_to">Címzett:</string>
-    <string name="invite_bbm_contact">BBM-partner meghívása</string>
+    <string name="invite_bbm_contact">BBM-partner hozzáadása</string>
     <string name="invite_bbm_invites">BBM-meghívás</string>
     <string name="invite_button_join">Csatlakozás</string>
     <string name="invite_button_preview">Előnézet</string>
@@ -1139,11 +1222,11 @@ Ha szeretne csatlakozni hozzám a BBM-en, kattintson ide:
     <string name="invite_group_invites">Csoportmeghívások</string>
     <string name="invite_group_notification">Új BBM Group meghívó</string>
     <string name="invite_menu_choose_email_client">E-mail kiválasztása</string>
-    <string name="invite_menu_invite_barcode">Meghívás vonalkód-beolvasással</string>
-    <string name="invite_menu_invite_email">Meghívás e-mailben</string>
-    <string name="invite_menu_invite_nfc">Meghívás NFC funkción keresztül</string>
-    <string name="invite_menu_invite_pin">Meghívás PIN-kóddal</string>
-    <string name="invite_menu_invite_sms">Meghívás SMS-ben</string>
+    <string name="invite_menu_invite_barcode">Hozzáadás vonalkód-beolvasással</string>
+    <string name="invite_menu_invite_email">Hozzáadás e-mailben</string>
+    <string name="invite_menu_invite_nfc">Hozzáadás NFC-vel</string>
+    <string name="invite_menu_invite_pin">Hozzáadás PIN kóddal</string>
+    <string name="invite_menu_invite_sms">Hozzáadás SMS-ben</string>
     <string name="invite_menu_title">Meghívás küldése a BBM alkalmazásba</string>
     <string name="invite_message">Üzenet:</string>
     <string name="invite_message_default">Szeretném meghívni BBM-csevegésre.</string>
@@ -1158,7 +1241,8 @@ Ha szeretne csatlakozni hozzám a BBM-en, kattintson ide:
     <string name="invite_send_button">Küldés</string>
     <string name="invite_sms_contacts">SMS-partnerek meghívása</string>
     <string name="invite_sponsored_invites">Szponzorált meghívók</string>
-    <string name="invite_to_bbm">Meghívás a BBM használatára</string>
+    <string name="invite_to_bbm">Partner hozzáadása</string>
+    <string name="invite_to_bbm_scan_barcode">Vonalkód beolvasása</string>
     <string name="invite_type_email">E-mail meghívás</string>
     <string name="invite_your_friends_to_chat_over_bbm">Ismerősök meghívása BBM-csevegésre</string>
     <string name="invitemore">További meghívás</string>
@@ -1175,7 +1259,19 @@ Ha szeretne csatlakozni hozzám a BBM-en, kattintson ide:
     <string name="join_channel_menu">Beolvasás csatlakozáshoz</string>
     <string name="join_channel_preview">Csatlakozás</string>
     <string name="join_channel_toast_string">A hozzászólások és a teljes kép megtekintéséhez csatlakozzon ehhez a csatornához.</string>
+    <string name="join_chat">Csatlakozás a csevegéshez</string>
     <string name="join_group_button">Csatlakozás csoporthoz</string>
+    <string name="key_exchange_accepted">Jelszó elfogadva.</string>
+    <string name="key_exchange_canceled">A jelszó eltöröve.</string>
+    <string name="key_exchange_canceled_by_contact">&lt;b>%1$s&lt;/b> törölte a jelszót.</string>
+    <string name="key_exchange_canceled_by_user">Visszavonta a jelszót.</string>
+    <string name="key_exchange_failed_canceled">Jelszó eltöröve</string>
+    <string name="key_exchange_failed_max_attempts">Elérte a maximális próbálkozások számát</string>
+    <string name="key_exchange_hint_share">A jelszó megosztása a csevegésben</string>
+    <string name="key_exchange_hint_waiting_passphrase_confirmation">Jelszó megadva</string>
+    <string name="key_exchange_hint_waiting_to_enter_passphrase">A csatlakozáshoz adja meg a jelszót</string>
+    <string name="key_exchange_hint_waiting_to_join">Várakozás %1$s csatlakozására</string>
+    <string name="key_exchange_status_accepted">Jelszó elfogadva</string>
     <string name="learn_more_about_bbm_pins">Tudjon meg többet a BBM PIN kódokról</string>
     <string name="learn_more_about_restoring_bbm_data">További tudnivalók a BBM adatok helyreállításáról.</string>
     <string name="leave_channel">Csatorna elhagyása</string>
@@ -1183,6 +1279,10 @@ Ha szeretne csatlakozni hozzám a BBM-en, kattintson ide:
     <string name="leave_channel_warning">Ha kilép a csatornából, nem szólhat hozzá a bejegyzéshez, amíg újra nem csatlakozik a csatornához.</string>
     <string name="leave_label">Kilépés</string>
     <string name="legal_activity_title">Jogi tudnivalók</string>
+    <string name="limited_bbm_access">Korlátozott BBM-hozzáférés</string>
+    <string name="limited_bbm_access_info">Kapcsolódás</string>
+    <string name="limited_network_connection">Korlátozott hálózati kapcsolat</string>
+    <string name="limited_network_connection_info">Keressen jobb lefedettséggel rendelkező helyet, vagy próbálkozzon Wi-Fi hálózathoz csatlakozni.</string>
     <string name="list_item_edit_added_by">Hozzáadta: %1$s</string>
     <string name="list_item_edit_last_edited_by">Utoljára szerkesztette: %1$s</string>
     <string name="location_service_acquiring">Hely beolvasása</string>
@@ -1212,6 +1312,10 @@ Ha szeretne csatlakozni hozzám a BBM-en, kattintson ide:
     <string name="message_button_decline">Elutasítás</string>
     <string name="message_button_deny">Elutasítás</string>
     <string name="message_copied">Üzenet másolva</string>
+    <string name="message_recall_tech_tip_body">"Nem akarta elküldeni az üzenetet?
+Hosszan érintse meg az üzenetet, hogy visszavonja a másik személy BBM-csevegéséből."</string>
+    <string name="message_recall_tech_tip_title">Üzenetek visszavonása</string>
+    <string name="message_recall_toast_not_supported">A partner a funkciót nem támogató BBM verzióval rendelkezik.</string>
     <string name="message_resent">Üzenet újra elküldve</string>
     <string name="message_with_context_attachment_text">%1$s %2$s</string>
     <string name="message_with_context_avatar">Tudnivalók a megjelenített képről</string>
@@ -1235,6 +1339,7 @@ Ha szeretne csatlakozni hozzám a BBM-en, kattintson ide:
     <string name="msg_google_shopper_missing">A Google Shopper nincs telepítve</string>
     <string name="msg_install_google_shopper">A Google Shopper kombinálja a vonalkód szkennelést árakkal, értékelésekkel és más dolgokkal, böngésző megnyitása nélkül. Ki szeretné próbálni?</string>
     <string name="msg_intent_failed">A kért alkalmazást nem lehet elindítani. A vonalkód tartalma lehet, hogy érvénytelen.</string>
+    <string name="msg_no_camera_detected">Nem érzékelhető kamera</string>
     <string name="msg_redirect">Átirányítás</string>
     <string name="msg_sbc_book_not_searchable">Ez a könyv nem kereshető.</string>
     <string name="msg_sbc_failed">A keresés problémába ütközött.</string>
@@ -1312,9 +1417,17 @@ Ha szeretne csatlakozni hozzám a BBM-en, kattintson ide:
     <string name="num_contacts">%1$s partner</string>
     <string name="ok">OK</string>
     <string name="open">Megnyitás</string>
+    <string name="open_browser_ad_menu">Megnyitás böngészőben</string>
     <string name="open_in_bbm">Megnyitás BBM-ben</string>
     <string name="openchat">Csevegés megnyitása</string>
     <string name="opening_bbm">BBM megnyitása</string>
+    <string name="out_of_band_passphrase_message_email">"BBM csevegést szeretnék kezdeményezni Önnel. A jelszó:
+
+%1$s 
+
+BlackBerry eszközön érintse meg a pin lehetőséget: %2$s, majd adja meg a jelszót."</string>
+    <string name="out_of_band_passphrase_message_sms">BBM Protected csevegést szeretnék kezdeményezni Önnel. BlackBerry eszközön érintse meg a(z) %1$s gombot. Adja meg a jelszót: %2$s.</string>
+    <string name="out_of_band_passphrase_subject">BBM Protected csevegés</string>
     <string name="overlay_bbm_ongoing_notification_reason">"Miért látom a BBM ikonját a képernyő felső részén?
 
 A BBM ikonja az állapotsávon jelenik meg, mert az állandó kapcsolat érdekében a BBM folyamatosan be van kapcsolva."</string>
@@ -1324,16 +1437,60 @@ A BBM ikonja az állapotsávon jelenik meg, mert az állandó kapcsolat érdeké
     <string name="overlay_tap_to_continue">A folytatáshoz érintse meg</string>
     <string name="owned_channel_invite_default_message_private">Szeretném meghívni \"%1$s\" nevű (privát) csoportomba.</string>
     <string name="owned_channel_invite_default_message_public">Szeretném meghívni \"%1$s\" nevű csoportomba.</string>
-    <string name="pending_group_invite_declined">Meghívás elutasítva:</string>
+    <string name="partner_app_contact_no_regid_message">A funkció nem támogatott ennél a partnernél.</string>
+    <string name="partner_app_general_error_dialog_message">A kérelem sikertelen. Próbálja meg később.</string>
+    <string name="partner_app_invalid_request_dialog">Érvénytelen kérelem</string>
+    <string name="partner_app_invalid_request_dialog_button">OK</string>
+    <string name="partner_app_invalid_request_dialog_title">Érvénytelen kérelem</string>
+    <string name="partner_app_not_installed_dialog_button_cancel">Mégse</string>
+    <string name="partner_app_not_installed_dialog_button_ok">Letöltés</string>
+    <string name="partner_app_not_installed_dialog_message">Az alkalmazás nincs telepítve. Le szeretné tölteni?</string>
+    <string name="partner_app_not_installed_dialog_title">%1$s letöltése</string>
+    <string name="partner_app_not_registered_dialog_button_cancel">Mégse</string>
+    <string name="partner_app_not_registered_dialog_button_ok">Engedélyezés</string>
+    <string name="partner_app_not_registered_dialog_message">Engedélyezi a(z) %1$s alkalmazásnak, hogy hozzáférjen az Ön BBM-partnereinek listájához és értesítéseket küldhessen?</string>
+    <string name="partner_app_not_registered_dialog_title">Nincs regisztrálva a BBM használatára</string>
+    <string name="partner_app_notification_message">Új üzenet</string>
+    <string name="partner_app_notification_name_message">%1$s üzenet</string>
+    <string name="partner_app_register_dialog_button_cancel">Mégse</string>
+    <string name="partner_app_register_dialog_button_ok">Engedélyezés</string>
+    <string name="partner_app_register_dialog_message">Engedélyezi a(z) %1$s alkalmazásnak, hogy hozzáférjen az Ön BBM-partnereinek listájához és értesítéseket küldhessen?</string>
+    <string name="partner_app_register_dialog_title">Regisztrálás a BBM használatára</string>
+    <string name="partner_app_register_failed_dialog_button">OK</string>
+    <string name="partner_app_register_failed_dialog_message">Nem tudok regisztrálni %1$s a BBM használatára</string>
+    <string name="partner_app_register_failed_dialog_outage_message">Nem észlelhető hálózati kapcsolat</string>
+    <string name="partner_app_register_failed_dialog_title">Regisztrálás a BBM használatára</string>
+    <string name="passphrase">Jelszó</string>
+    <string name="passphrase_creation_details">Ahhoz, hogy a BBM-partnere csatlakozhasson a csevegéshez, meg kell osztania vele a jelszót. Legalább négy nagybetűt kell tartalmaznia.</string>
+    <string name="passphrase_incorrect">&lt;b>%1$s&lt;/b> helytelen jelszót adott meg.</string>
+    <string name="passphrase_initiated">Megosztotta a jelszót &lt;b>%1$s&lt;/b> a következővel: &lt;b>%2$s&lt;/b>.</string>
+    <string name="passphrase_message_email">"BBM Protected csevegést szeretnék kezdeményezni Önnel.
+---o---
+Adja meg a jelszót\"%1$s\" a PIN-re való kattintás után:%2$s vagy %3$s"</string>
+    <string name="passphrase_message_sms">Csatlakozzon a BBM Protected csevegéshez! Adja meg a jelszót \"%1$s\" a PIN-re való kattintás után:%2$s vagy %3$s</string>
+    <string name="passphrase_rules_details">Három, szóközzel elválasztott betűsorból kell állnia, minden betűsorban legalább négy, legfeljebb hét nagybetűvel Példa: SÖTÉT BARNA TIGRIS</string>
+    <string name="passphrase_share_details">Hogyan kívánja megosztani a jelszót a következővel: %1$s?</string>
+    <string name="passphrase_wait_to_join">Várakozás &lt;b>%1$s&lt;/b> csatlakozására.</string>
+    <string name="pay_with_blackberry">A fizetés a telefonszámlával szolgáltatás használata</string>
+    <string name="pay_with_google_play">Google Play használata</string>
+    <string name="pending_group_invite_accepted">Elfogadta: %1$s</string>
+    <string name="pending_group_invite_declined">Meghívás elutasítva: %1$s</string>
+    <string name="pending_group_invite_failed">Nem tud csatlakozni: %1$s</string>
+    <string name="pending_group_invite_verifying">Válasz ellenőrzése: %1$s</string>
+    <string name="pending_group_invite_verifying_passphrase">Jelszó megerősítése: %1$s</string>
     <string name="pending_invite_accepted">Elfogadva</string>
     <string name="pending_invite_answer_incorrect">Hibás válasz</string>
     <string name="pending_invite_answer_incorrect_dialog">Hibás biztonsági válasz. Meghívás visszavonva</string>
     <string name="pending_invite_declined">Meghívás elutasítva</string>
     <string name="pending_invite_deleted">Meghívás törölve</string>
+    <string name="pending_invite_group_incorrect_answer">Helytelen válasz. Ha szeretne csatlakozni a csoporthoz, újból meghívót kell kapnia.</string>
     <string name="pending_invite_group_invites_you_to">%1$s szeretné meghívni a következő csoportba: \"%2$s\".</string>
+    <string name="pending_invite_group_no_invitation">Elutasította: %1$s törölte ezt a meghívást.</string>
     <string name="pending_invite_group_pending">Várakozás: %1$s</string>
     <string name="pending_invite_group_title">Meghívás ide: %1$s</string>
+    <string name="pending_invite_group_too_many_members">Elutasította: A csoport megtelt.</string>
     <string name="pending_invite_pending">Függőben</string>
+    <string name="pending_invite_protected_group_invites_you_to">%1$s szeretné meghívni a következő csoportba: \"%2$s\". A BBM Protected csoporthoz való csatlakozáshoz adja meg a csoporttagok valamelyike által biztosított jelszót.</string>
     <string name="personalize_profile_dialog_message">A BBM-profil beállításához érintse meg az értesítősávot.</string>
     <string name="personalize_profile_dialog_title">Profil testreszabása</string>
     <string name="pic_caption_hint"><i>Felirat megadása</i></string>
@@ -1342,9 +1499,9 @@ A BBM ikonja az állapotsávon jelenik meg, mert az állandó kapcsolat érdeké
     <string name="please_ensure_the_device_time_is_correctly_set">Ellenőrizze, hogy helyes-e a készülék időbeállítása, majd próbálja meg újra.</string>
     <string name="post_removed">A bejegyzést törölték.</string>
     <string name="posts_caption">Bejegyzések</string>
-    <string name="pref_add_contact_on_tap">Partnerek hozzáadása koppintással</string>
+    <string name="pref_add_contact_on_tap">Partnerek hozzáadása érintéssel</string>
     <string name="pref_all_notifications">Összes értesítés</string>
-    <string name="pref_allow_contact_upload">Partnerek feltöltésének engedélyezése</string>
+    <string name="pref_allow_contact_upload">BBM-et már használó ismerősök</string>
     <string name="pref_allow_mobile_calls">Mobilhálózaton történő BBM-hívás engedélyezése</string>
     <string name="pref_led_notifications">LED színe</string>
     <string name="pref_led_notifications_blue">Kék</string>
@@ -1361,12 +1518,13 @@ A BBM ikonja az állapotsávon jelenik meg, mert az állandó kapcsolat érdeké
     <string name="pref_ping_vibrate_notifications">Rezgés pingelésnél</string>
     <string name="pref_security_question">Biztonsági kérdés a meghívókhoz</string>
     <string name="pref_show_location">Saját ország és idő megjelenítése</string>
-    <string name="pref_show_what_others_are_listening_to">Mások által hallgatott számok megjelenítése</string>
+    <string name="pref_show_what_others_are_listening_to">Mások által hallgatott zeneszámok megjelenítése</string>
     <string name="pref_sound_notification_bbm">BBM</string>
     <string name="pref_sound_notification_silent">Halk</string>
     <string name="pref_sound_notifications">Hangjelzés</string>
     <string name="pref_sticky_notification">BBM csatlakoztatva ikon</string>
     <string name="pref_sticky_notification_warning">Ha kikapcsolja a BBM csatlakoztatva ikont, előfordulhat, hogy a rendszer nem továbbítja a BBM-üzeneteket vagy a továbbítás késedelmes, ha a készülék kevés memóriával rendelkezik.</string>
+    <string name="pref_swilt">Mutassa meg, hogy mit hallgatok</string>
     <string name="pref_vibrate_notifications">Rezgés</string>
     <string name="preferences_actions_title">Amikor a vonalkód megvan…</string>
     <string name="preferences_auto_focus_title">Használja autofókusz</string>
@@ -1419,10 +1577,28 @@ A BBM ikonja az állapotsávon jelenik meg, mert az állandó kapcsolat érdeké
     <string name="profile_selector_apps">Alkalmazások</string>
     <string name="profile_selector_details">Részletek</string>
     <string name="profile_selector_members">Tagok</string>
-    <string name="profile_selector_updates">Hírfolyamok</string>
+    <string name="profile_selector_updates">Frissítések</string>
     <string name="profile_share_pin">Saját PIN megosztása</string>
     <string name="profile_status_edit">Állapotüzenetek szerkesztése</string>
     <string name="profile_status_label">Állapot:</string>
+    <string name="prompt_change_bbm_picture">Módosítja a BBM-képet?</string>
+    <string name="prompted_after_rate_call">Köszönjük!</string>
+    <string name="prompted_before_rate_call">Értékelje a hívás minőségét</string>
+    <string name="protected_group_invite_message_default">Szeretném meghívni \"%1$s\" nevű csoportomba. A BBM Protected csoporthoz való csatlakozáshoz adja meg a csoporttagok valamelyike által biztosított jelszót.</string>
+    <string name="protected_group_requires_join">Várakozás a jelszó megerősítésére a védett csoport visszaállításához</string>
+    <string name="protected_mode_disabled_header">BBM Protected kikapcsolva</string>
+    <string name="protected_mode_disabled_message">A partnereket és a csevegéseket mentette a program, de eltávolította Önt az összes, a BBM Protected funkciót használó többszemélyes csevegésből és csoportból.</string>
+    <string name="protected_mode_disabled_title">A rendszergazda kikapcsolta a BBM Protected funkciót.</string>
+    <string name="protected_mode_enabled_header">BBM Protected</string>
+    <string name="protected_mode_enabled_message">"A BBM Protected szolgáltatás egy újabb titkosítási réteget nyújt a BBM csevegésekhez, fájlátvitelhez és csoportokhoz. Legközelebb, amikor csevegést kezdeményez egy BBM Protected partnerével, meg kell határoznia egy jelszót, amelyet a másik személynek meg kell adnia a csatlakozáshoz. A jelszót csak egyszer kell megadni minden BBM Protected partnerhez. 
+ 
+ A BBM csoportok esetében megadhatja, hogy csak a BBM Protected partnerek lehetnek-e tagok. Ha létrehoz egy BBM Protected csoportot, akkor megoszthatja a jelszót, amelyet másoknak meg kell adniuk a csatlakozáshoz."</string>
+    <string name="protected_mode_enabled_title">A rendszergazda aktiválta a BBM Protected szolgáltatást az eszközön.</string>
+    <string name="purchase_failed_message">A fizetést nem tudtuk feldolgozni. Másik fizetési módot szeretne kiválasztani?</string>
+    <string name="purchase_options">Fizetési lehetőségek</string>
+    <string name="purchase_success_message">Tétel sikeresen megvásárolva</string>
+    <string name="purchase_unexpected_error_message">A vásárlás félbeszakadt. Próbálja újra.</string>
+    <string name="pyk_empty_invites_allow_upload_hint">BBM-et már használó ismerősök</string>
     <string name="qr_description">UsersQR</string>
     <string name="quick_share_glympse_first_experience_overlay_infos">Küldjön Glympse-t BBM-partnereinek, hogy követhessék helyzetét a térképen egy meghatározott időintervallumban. Tökéletes megoldás találkozók esetén, vagy ha késésben van.</string>
     <string name="quick_share_glympse_first_experience_overlay_note"><i>Megjegyzés: A funkció használatakor GPS-koordinátáit megosztjuk a Glympse Inc. vállalattal és arra az <a href="http://glympse.com/privacy">adatvédelmi szabályzat rendelkezései vonatkoznak</a></i></string>
@@ -1436,6 +1612,11 @@ A BBM ikonja az állapotsávon jelenik meg, mert az állandó kapcsolat érdeké
     <string name="quick_share_voice_note_label_send">Küldéshez engedje fel az ujját, a törléshez pedig húzza el</string>
     <string name="quick_share_voice_note_tost_message">Azonnali hangjegyzet küldéséhez tartsa lenyomva a felvétel gombot</string>
     <string name="rate_limited">Elérte a Glympse sebességkorlátot.</string>
+    <string name="rate_my_app_ignore">Köszönöm, nem</string>
+    <string name="rate_my_app_message">Ha tetszett Önnek a BBM használata, szánna pár percet az alkalmazás értékelésére? Köszönjük.</string>
+    <string name="rate_my_app_rate_now">Értékelés most</string>
+    <string name="rate_my_app_remind_later">Figyelmeztessen később</string>
+    <string name="rate_my_app_title">Az alkalmazás értékelése</string>
     <string name="received_pending_group_invite_ignore">Figyelmen kívül hagyja az innen érkező csoportos meghívásokat: %1$s?</string>
     <string name="received_pending_invite_accept">Elfogadás</string>
     <string name="received_pending_invite_category">Kategória</string>
@@ -1477,6 +1658,7 @@ http://blackberry.com/support/bbm webhelyen érhető el"</string>
     <string name="reports_caption_none">Jelentve</string>
     <string name="request_was_received">Glympse-kérelem érkezett</string>
     <string name="required_fields">Kötelező mezők *</string>
+    <string name="resend_passphrase">Jelszó újbóli elküldése</string>
     <string name="restore_sticker_purchases">Helyreállítás</string>
     <string name="restore_using_device_switch">Visszaállítás a Készülékcsere használatával</string>
     <string name="restore_using_email">Visszaállítás e-mail segítségével</string>
@@ -1522,8 +1704,10 @@ http://blackberry.com/support/bbm webhelyen érhető el"</string>
     <string name="select_category">Kategória kijelölése</string>
     <string name="select_category_with_count">%1$s (%2$d)</string>
     <string name="select_contact">Partner kiválasztása</string>
+    <string name="select_contact_activity_protected_title">Védett(%1$s)</string>
     <string name="select_contact_activity_title">{0,choice,0#Partnerek kiválasztása|1#+1 partner|1&lt;+{0} partner}</string>
     <string name="select_contact_all_filtered">Nem található partner.</string>
+    <string name="select_contacts_for_existing_protected_chat">Ez a csevegés védett. Csak a BBM Protected felhasználói csatlakozhatnak.</string>
     <string name="select_contacts_to_move">Következő helyre áthelyezendő partnerek kijelölése: \"%1$s\"</string>
     <string name="select_group">Csoport kijelölése</string>
     <string name="select_group_activity_title">{0,choice,0#Select Group|1#+1 Group|1&lt;+{0} Groups}</string>
@@ -1543,6 +1727,7 @@ http://blackberry.com/support/bbm webhelyen érhető el"</string>
     <string name="setas_activity_picture_set_as_wallpaper">Kép beállítása háttérképként</string>
     <string name="setas_activity_title">Beállítás következőként</string>
     <string name="settings">Beállítások</string>
+    <string name="settings_activity_allow_hq_pictures">Mindig elfogadom a HD kép kérelmeket</string>
     <string name="settings_activity_blackberry_id_edit">Szerkesztés</string>
     <string name="settings_activity_blackberry_id_generic_error">Jelenleg nem tudjuk módosítani BlackBerry ID azonosítóját. Próbálkozzon újra később</string>
     <string name="settings_activity_blocked_contacts">Letiltott partnerek és hírfolyamok</string>
@@ -1576,9 +1761,11 @@ http://blackberry.com/support/bbm webhelyen érhető el"</string>
     <string name="setup_learn_more_about_blackberry_id">További tudnivalók a BlackBerry ID-azonosítóról</string>
     <string name="setup_not_completed">A &lt;b>BBM&lt;/b> beállítása majdnem befejeződött.</string>
     <string name="setup_report_problem">Probléma jelentése</string>
+    <string name="setup_running_long">A BBM beállítása a vártnál tovább tart. Újrapróbálkozás.</string>
     <string name="setup_setting_up_bbm">A &lt;b>BBM&lt;/b> beállítása</string>
     <string name="setup_share_bbm_message">Tudassa ismerőseivel, hogy a BBM mostantól Android és iOS rendszereken is elérhető</string>
     <string name="setup_sign_in">Bejelentkezés</string>
+    <string name="setup_verify_connection">Kapcsolat ellenőrzése.</string>
     <string name="setup_you_need_to_signin_to_blackberry_id">"A következő alkalmazáshoz történő hozzáféréshez be kell jelentkeznie BlackBerry ID-azonosítójával: 
 BBM"</string>
     <string name="share">Megosztás</string>
@@ -1588,11 +1775,16 @@ BBM"</string>
     <string name="share_my_pin_text">"\#BBMme PIN: %1$s
 www.pin.bbm.com/%1$s"</string>
     <string name="share_name">Megosztás vonalkóddal</string>
+    <string name="share_passphrase_email">E-mail</string>
+    <string name="share_passphrase_other">Személyesen mondom el</string>
+    <string name="share_passphrase_sms">Szöveges üzenet</string>
+    <string name="share_passphrase_title">Jelszó megosztása</string>
     <string name="sharead_sponsored_invite">Megosztott szponzorált meghívó</string>
     <string name="sharead_sponsored_post">Megosztott szponzorált bejegyzés</string>
     <string name="shared_channel_post_default_text">Bejegyzés megosztása</string>
     <string name="shared_channel_post_received">Csatornabejegyzés érkezett</string>
     <string name="shared_channel_post_sent">Csatornabejegyzés elküldve</string>
+    <string name="shared_sponsored_content">Megosztott szponzorált tartalom</string>
     <string name="shop">Üzlet</string>
     <string name="show">Megjelenítés</string>
     <string name="show_channel_preview">Előnézet</string>
@@ -1607,9 +1799,9 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_edit">Szerkesztés</string>
     <string name="slide_menu_end_chat">Csevegés vége</string>
     <string name="slide_menu_group_settings">Csoportbeállítások</string>
-    <string name="slide_menu_invite">Meghívás</string>
+    <string name="slide_menu_invite">Partner hozzáadása</string>
     <string name="slide_menu_invite_more">További meghívás</string>
-    <string name="slide_menu_invite_to_bbm">Meghívás a BBM használatára</string>
+    <string name="slide_menu_invite_to_bbm">Partner hozzáadása</string>
     <string name="slide_menu_leave_chat">Kilépés a csevegésből</string>
     <string name="slide_menu_leave_group">Kilépés a csoportból</string>
     <string name="slide_menu_mark_complete">Készként megjelöl</string>
@@ -1637,15 +1829,19 @@ www.pin.bbm.com/%1$s"</string>
     <string name="stacked_notification_format"><Data>&lt;b>%1$s&lt;/b>: %2$s</Data></string>
     <string name="start_chat">Csevegés indítása</string>
     <string name="start_chat_failed">A csevegés nem hozható létre</string>
+    <string name="start_meeting">A BBM Meetings elindítása</string>
+    <string name="start_meeting_confirmation_dialog">Befejezi az értekezletet és újat indít?</string>
+    <string name="start_meeting_confirmation_title">Elindítja a BBM Meeting alkalmazást?</string>
     <string name="start_multiperson_chat">Többrésztvevős csevegés indítása</string>
     <string name="starts">Kezdődik</string>
     <string name="stats_caption">Statisztikák</string>
     <string name="stay_in_touch_like_never_before_with_blackberry_messenger">A BlackBerry Messenger minden eddiginél közvetlenebb kapcsolatot biztosít.</string>
-    <string name="sticker_picker_no_sticker_packs">Nincs matricacsomag.</string>
     <string name="sticker_picker_no_stickers_purchased">Nem vásárolt matricát.</string>
+    <string name="sticker_picker_preview_hint">Az előnézet megtekintéséhez érintse meg hosszan a matricát.</string>
     <string name="sticker_store_collection_heading">Matricák</string>
     <string name="sticker_store_details_artist_channel">Csatorna</string>
     <string name="sticker_store_details_artist_website">Webhely</string>
+    <string name="sticker_store_details_promo_text">MEGTEKINTÉS</string>
     <string name="sticker_store_details_screen_about">Névjegy</string>
     <string name="sticker_store_details_screen_already_purchased">Ezt a tétel egyszer már megvásárolta. Szeretné ismét telepíteni ezt a tételt vagy visszaállítja az összes vásárlását?</string>
     <string name="sticker_store_details_screen_inventory_error">Nem lehet csatlakozni a Google Play webhelyéhez</string>
@@ -1662,9 +1858,16 @@ Tipp: Más képernyőre léphet, amíg a telepítés tart."</string>
     <string name="sticker_store_server_unavailable_message">Nem nyitható meg a BBM üzlet.</string>
     <string name="sticker_store_server_unavailable_retry_message">Ellenőrizze a hálózati kapcsolatot, és próbálkozzon újra</string>
     <string name="sticker_store_sticker_preview_artist">Készítette: %1$s</string>
-    <string name="sticker_store_store_heading">BBM üzlet</string>
+    <string name="sticker_store_sticker_purchase_notification_dialog_heading">Hozzáadja a hírfolyamokhoz?</string>
+    <string name="sticker_store_sticker_purchase_notification_dialog_line">Tájékoztathatja partnereit, hogy új matricái vannak.</string>
+    <string name="sticker_store_sticker_purchase_notification_message">Tekintse meg matricáimat! http://shop.bbm.com/stickers/%1$s</string>
     <string name="sticker_store_store_loading">Betöltés...</string>
+    <string name="store_title">BBM üzlet</string>
     <string name="submit_button">Küldés</string>
+    <string name="submit_passphrase">Küldés</string>
+    <string name="submit_passphrase_details">A csevegéshez való csatlakozáshoz adja meg a partnere által biztosított jelszót.</string>
+    <string name="submit_passphrase_multi_attempts_details">Helytelen jelszó. Adja meg a partnere által biztosított jelszót. A jelszó megkülönbözteti a kis- és nagybetűket. (%1$d/%2$d).</string>
+    <string name="submit_passphrase_title">BBM Protected</string>
     <string name="subscribed_channel_invite_default_message">Szeretném meghívni a(z) \"%1$s\" nevű csoportba.</string>
     <string name="subscribed_channels">Előfizetett csatornák</string>
     <string name="subscribers_caption">Feliratkozók</string>
@@ -1672,8 +1875,14 @@ Tipp: Más képernyőre léphet, amíg a telepítés tart."</string>
     <string name="suggestion_sent">Javaslat elküldve</string>
     <string name="suggestion_want_to_invite_bbm_contact">Meg szeretné hívni ezt a BBM-partnert?</string>
     <string name="switch_bbm">BBM váltás</string>
+    <string name="system_message_new_bbm_system_message">Elkészült az új BBM-közlemény!</string>
+    <string name="system_message_new_bbm_system_message_single_notification_title">Figyelmeztetés</string>
+    <string name="system_message_new_bbm_system_message_tap_to_view">Tudnivalók (%1$d) – Érintse meg a megtekintéshez</string>
+    <string name="system_message_new_bbm_system_message_title">Tudnivalók (%1$d)</string>
+    <string name="system_message_new_partner_app_message">Üzenete érkezett a következőtől: %1$s</string>
+    <string name="system_message_unknown_partner_app_message">Új üzenet érkezett</string>
     <string name="take_a_photo">Fénykép készítése</string>
-    <string name="tapToInvite">A meghíváshoz érintse meg</string>
+    <string name="tapToInvite">A hozzáadáshoz érintse meg</string>
     <string name="tell_your_friends">Ismerősök értesítése</string>
     <string name="tell_your_friends_now">Értesítse ismerőseit</string>
     <string name="temporary_server_error">Ideiglenes kiszolgálóhiba</string>
@@ -1708,6 +1917,7 @@ Tipp: Más képernyőre léphet, amíg a telepítés tart."</string>
     <string name="title_preview_channel_activity">Csatorna előnézete</string>
     <string name="title_private">Privát</string>
     <string name="title_set_channel_avatar">Csatornák ikonja</string>
+    <string name="top_picks_heading">BBM Legnépszerűbb választások</string>
     <string name="unable_to_complete_setup">A beállítás nem fejezhető be</string>
     <string name="unable_to_connect">A csatlakozás nem lehetséges</string>
     <string name="unmute">Némítás feloldása</string>
@@ -1729,10 +1939,10 @@ Tipp: Más képernyőre léphet, amíg a telepítés tart."</string>
     <string name="update_list_dialog_contact_hide_music_updates">Zenei hírfolyam</string>
     <string name="update_list_dialog_contact_hide_status_updates">Állapothírfolyamok</string>
     <string name="update_list_dialog_contact_hide_updates">Partnerhírfolyam elrejtése</string>
-    <string name="update_list_dialog_contact_updates">Hírfolyamok</string>
+    <string name="update_list_dialog_contact_updates">Frissítések</string>
     <string name="update_list_dialog_contact_updates_hidden">%1$s elrejtve %2$s felhasználó elől</string>
     <string name="update_list_display_name_message">&lt;b>%1$s&lt;/b> megváltoztatta a megjelenített nevet a következőre: &lt;b>%2$s&lt;/b>.</string>
-    <string name="update_list_display_name_sub_title">A megjelenített név megváltozott</string>
+    <string name="update_list_display_name_sub_title">Módosított megjelenítési név</string>
     <string name="update_list_displayname">%1$s megváltoztatta a megjelenített nevet a következőre: &lt;b>%2$s&lt;/b></string>
     <string name="update_list_group_event_new">&lt;b>%1$s&lt;/b> &lt;b>%2$s&lt;/b> nevű eseményt ütemezett a(z) &lt;b>%3$s&lt;/b> csoport számára.</string>
     <string name="update_list_group_event_updated">&lt;b>%1$s&lt;/b> frissítette a(z) &lt;b>%2$s&lt;/b> eseményt a(z) &lt;b>%3$s&lt;/b> csoport számára.</string>
@@ -1782,19 +1992,29 @@ Tipp: Más képernyőre léphet, amíg a telepítés tart."</string>
     <string name="update_list_personalmessage">&lt;b>%1$s&lt;/b> a következőt mondta: \"%2$s\"</string>
     <string name="update_list_you">Ön</string>
     <string name="update_removed_from_blocked_list">Eltávolítva a letiltottak listájáról.</string>
+    <string name="update_sponsored_content">Szponzorált tartalom</string>
     <string name="update_sponsored_post">Szponzorált bejegyzés</string>
-    <string name="updates">Hírfolyamok</string>
+    <string name="updates">Frissítések</string>
     <string name="upload">Feltöltés</string>
     <string name="verify_date_of_birth">Születési idejének ellenőrzése</string>
+    <string name="verify_passphrase">Jelszó megerősítése.</string>
     <string name="version">Verzió</string>
+    <string name="view_ad_label">Megtekintés</string>
     <string name="view_channel_info">Előnézet</string>
     <string name="view_channel_profile">Csatornaprofil megtekintése</string>
     <string name="visits_caption">Látogatások</string>
+    <string name="voice_rating_bad">Rossz</string>
+    <string name="voice_rating_excellent">Kitűnő</string>
+    <string name="voice_rating_fair">Megfelelő</string>
+    <string name="voice_rating_good">Jó</string>
+    <string name="voice_rating_poor">Gyenge</string>
+    <string name="voice_rating_title">Milyen volt a hívás minősége?</string>
     <string name="voicecall_already_in_call">Már BBM-hívást folytat. A partner hívásához fejezze be a másik hívást, és próbálkozzon újra.</string>
     <string name="voicecall_status_calling">Hívás</string>
     <string name="voicecall_status_connecting">Kapcsolódás</string>
     <string name="voicecall_status_duration">Hanghívás %1$s</string>
     <string name="voicecall_status_duration_while_mute">Némítva %1$s</string>
+    <string name="wait_passphrase_confirmation">Várakozás a jelszó megerősítésére.</string>
     <string name="widget_back_to_chat_previews">Vissza a csevegés-előnézetekhez</string>
     <string name="widget_change_my_status_message">Állapotüzenet módosítása</string>
     <string name="widget_edit_status">Állapot szerkesztése</string>

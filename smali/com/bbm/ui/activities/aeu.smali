@@ -1,79 +1,63 @@
 .class final Lcom/bbm/ui/activities/aeu;
-.super Landroid/content/BroadcastReceiver;
-.source "StartupActivity.java"
+.super Ljava/lang/Object;
+.source "SearchResultsChannelsActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/StartupActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/StartupActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
     .locals 0
 
     .prologue
-    .line 60
-    iput-object p1, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/StartupActivity;
+    .line 389
+    iput-object p1, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 63
-    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/StartupActivity;
+    const/4 v1, 0x1
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/StartupActivity;->a(Lcom/bbm/ui/activities/StartupActivity;)Z
+    .line 392
+    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 64
-    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/StartupActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/StartupActivity;->b(Lcom/bbm/ui/activities/StartupActivity;)Landroid/app/AlertDialog;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->h(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->isShowing()Z
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setFocusable(Z)V
 
-    move-result v0
+    .line 393
+    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    if-eqz v0, :cond_0
-
-    .line 65
-    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/StartupActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/StartupActivity;->b(Lcom/bbm/ui/activities/StartupActivity;)Landroid/app/AlertDialog;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->h(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/AlertDialog;->dismiss()V
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setFocusableInTouchMode(Z)V
 
-    .line 66
-    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/StartupActivity;
+    .line 394
+    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/StartupActivity;->c(Lcom/bbm/ui/activities/StartupActivity;)Landroid/app/AlertDialog;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->h(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Landroid/widget/EditText;
 
-    .line 71
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/StartupActivity;
+    move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/StartupActivity;->d(Lcom/bbm/ui/activities/StartupActivity;)V
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setCursorVisible(Z)V
 
-    .line 73
-    iget-object v0, p0, Lcom/bbm/ui/activities/aeu;->a:Lcom/bbm/ui/activities/StartupActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/StartupActivity;->e(Lcom/bbm/ui/activities/StartupActivity;)V
-
-    .line 75
-    :cond_1
+    .line 395
     return-void
 .end method

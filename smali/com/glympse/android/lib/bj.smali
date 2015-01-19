@@ -1,463 +1,86 @@
 .class Lcom/glympse/android/lib/bj;
 .super Ljava/lang/Object;
-.source "ExtensionManager.java"
+.source "Event.java"
 
 # interfaces
-.implements Lcom/glympse/android/lib/GExtensionListener;
-.implements Lcom/glympse/android/lib/GExtensionManager;
+.implements Lcom/glympse/android/lib/GEvent;
 
 
 # instance fields
-.field private cC:Lcom/glympse/android/api/GGlympse;
+.field private iA:I
 
-.field private ki:Lcom/glympse/android/hal/GVector;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/glympse/android/hal/GVector",
-            "<",
-            "Lcom/glympse/android/lib/GExtension;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private iz:I
 
-.field private kj:Ljava/lang/String;
+.field private ky:Lcom/glympse/android/api/GEventListener;
 
-.field private kk:Z
-
-.field private kl:Lcom/glympse/android/lib/GExtension;
+.field private kz:Lcom/glympse/android/core/GCommon;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lcom/glympse/android/api/GEventListener;IILcom/glympse/android/core/GCommon;)V
+    .locals 0
 
     .prologue
-    .line 29
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 28
+    iput-object p1, p0, Lcom/glympse/android/lib/bj;->ky:Lcom/glympse/android/api/GEventListener;
+
+    .line 29
+    iput p2, p0, Lcom/glympse/android/lib/bj;->iz:I
+
     .line 30
-    new-instance v0, Lcom/glympse/android/hal/GVector;
-
-    invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/bj;->ki:Lcom/glympse/android/hal/GVector;
+    iput p3, p0, Lcom/glympse/android/lib/bj;->iA:I
 
     .line 31
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/glympse/android/lib/bj;->kk:Z
+    iput-object p4, p0, Lcom/glympse/android/lib/bj;->kz:Lcom/glympse/android/core/GCommon;
 
     .line 32
     return-void
 .end method
 
-.method private bb()Lcom/glympse/android/lib/GExtensionListener;
-    .locals 1
+.method public static a(Lcom/glympse/android/api/GGlympse;Lcom/glympse/android/api/GEventListener;IILcom/glympse/android/core/GCommon;)V
+    .locals 3
 
     .prologue
-    .line 162
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 45
+    new-instance v0, Lcom/glympse/android/lib/bj;
 
-    move-result-object v0
+    invoke-direct {v0, p1, p2, p3, p4}, Lcom/glympse/android/lib/bj;-><init>(Lcom/glympse/android/api/GEventListener;IILcom/glympse/android/core/GCommon;)V
 
-    check-cast v0, Lcom/glympse/android/lib/GExtensionListener;
+    .line 47
+    invoke-interface {p0}, Lcom/glympse/android/api/GGlympse;->getHandler()Lcom/glympse/android/core/GHandler;
 
-    return-object v0
+    move-result-object v1
+
+    new-instance v2, Lcom/glympse/android/lib/bk;
+
+    invoke-direct {v2, p0, v0}, Lcom/glympse/android/lib/bk;-><init>(Lcom/glympse/android/api/GGlympse;Lcom/glympse/android/lib/GEvent;)V
+
+    invoke-interface {v1, v2}, Lcom/glympse/android/core/GHandler;->post(Ljava/lang/Runnable;)V
+
+    .line 48
+    return-void
 .end method
 
 
 # virtual methods
-.method public activated(Lcom/glympse/android/lib/GExtension;)V
-    .locals 3
-
-    .prologue
-    .line 125
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->kl:Lcom/glympse/android/lib/GExtension;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->kl:Lcom/glympse/android/lib/GExtension;
-
-    if-eq v0, p1, :cond_0
-
-    .line 127
-    const/4 v0, 0x5
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "[ExtensionManager.activated] Attempting to activate extension "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p1}, Lcom/glympse/android/lib/GExtension;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " while extension "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/glympse/android/lib/bj;->kl:Lcom/glympse/android/lib/GExtension;
-
-    invoke-interface {v2}, Lcom/glympse/android/lib/GExtension;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " is active"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
-
-    .line 132
-    :cond_0
-    iput-object p1, p0, Lcom/glympse/android/lib/bj;->kl:Lcom/glympse/android/lib/GExtension;
-
-    .line 135
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->cC:Lcom/glympse/android/api/GGlympse;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/bj;->kl:Lcom/glympse/android/lib/GExtension;
-
-    invoke-interface {v1}, Lcom/glympse/android/lib/GExtension;->getBrand()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/api/GGlympse;->setBrand(Ljava/lang/String;)V
-
-    .line 136
-    return-void
-.end method
-
-.method public add(Lcom/glympse/android/lib/GExtension;)V
-    .locals 2
-
-    .prologue
-    .line 45
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->ki:Lcom/glympse/android/hal/GVector;
-
-    invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
-
-    .line 48
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->cC:Lcom/glympse/android/api/GGlympse;
-
-    if-eqz v0, :cond_0
-
-    .line 50
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->cC:Lcom/glympse/android/api/GGlympse;
-
-    invoke-direct {p0}, Lcom/glympse/android/lib/bj;->bb()Lcom/glympse/android/lib/GExtensionListener;
-
-    move-result-object v1
-
-    invoke-interface {p1, v0, v1}, Lcom/glympse/android/lib/GExtension;->start(Lcom/glympse/android/api/GGlympse;Lcom/glympse/android/lib/GExtensionListener;)V
-
-    .line 53
-    iget-boolean v0, p0, Lcom/glympse/android/lib/bj;->kk:Z
-
-    if-nez v0, :cond_0
-
-    .line 55
-    const/4 v0, 0x0
-
-    invoke-interface {p1, v0}, Lcom/glympse/android/lib/GExtension;->setActive(Z)V
-
-    .line 58
-    :cond_0
-    return-void
-.end method
-
-.method public deactivated(Lcom/glympse/android/lib/GExtension;)V
-    .locals 3
-
-    .prologue
-    .line 141
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->kl:Lcom/glympse/android/lib/GExtension;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->kl:Lcom/glympse/android/lib/GExtension;
-
-    if-eq v0, p1, :cond_0
-
-    .line 143
-    const/4 v0, 0x5
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "[ExtensionManager:deactivated] Attempting to deactivate extension "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-interface {p1}, Lcom/glympse/android/lib/GExtension;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " while extension "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/glympse/android/lib/bj;->kl:Lcom/glympse/android/lib/GExtension;
-
-    invoke-interface {v2}, Lcom/glympse/android/lib/GExtension;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v2, " is active"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
-
-    .line 154
-    :goto_0
-    return-void
-
-    .line 150
-    :cond_0
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/glympse/android/lib/bj;->kl:Lcom/glympse/android/lib/GExtension;
-
-    .line 153
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->cC:Lcom/glympse/android/api/GGlympse;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/bj;->kj:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/api/GGlympse;->setBrand(Ljava/lang/String;)V
-
-    goto :goto_0
-.end method
-
-.method public enable(Lcom/glympse/android/lib/GExtension;Z)V
-    .locals 0
-
-    .prologue
-    .line 63
-    return-void
-.end method
-
-.method public getExtensions()Lcom/glympse/android/core/GArray;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/glympse/android/core/GArray",
-            "<",
-            "Lcom/glympse/android/lib/GExtension;",
-            ">;"
-        }
-    .end annotation
+.method public send(Lcom/glympse/android/api/GGlympse;)V
+    .locals 4
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->ki:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/bj;->ky:Lcom/glympse/android/api/GEventListener;
 
-    return-object v0
-.end method
+    iget v1, p0, Lcom/glympse/android/lib/bj;->iz:I
 
-.method public setActive(Z)V
-    .locals 4
+    iget v2, p0, Lcom/glympse/android/lib/bj;->iA:I
 
-    .prologue
-    .line 96
-    iget-boolean v0, p0, Lcom/glympse/android/lib/bj;->kk:Z
+    iget-object v3, p0, Lcom/glympse/android/lib/bj;->kz:Lcom/glympse/android/core/GCommon;
 
-    if-ne v0, p1, :cond_1
+    invoke-interface {v0, p1, v1, v2, v3}, Lcom/glympse/android/api/GEventListener;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
 
-    .line 111
-    :cond_0
-    return-void
-
-    .line 102
-    :cond_1
-    iput-boolean p1, p0, Lcom/glympse/android/lib/bj;->kk:Z
-
-    .line 105
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->ki:Lcom/glympse/android/hal/GVector;
-
-    invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
-
-    move-result v2
-
-    .line 106
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, v2, :cond_0
-
-    .line 108
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->ki:Lcom/glympse/android/hal/GVector;
-
-    invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/lib/GExtension;
-
-    .line 109
-    iget-boolean v3, p0, Lcom/glympse/android/lib/bj;->kk:Z
-
-    invoke-interface {v0, v3}, Lcom/glympse/android/lib/GExtension;->setActive(Z)V
-
-    .line 106
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_0
-.end method
-
-.method public setBrand(Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 115
-    iput-object p1, p0, Lcom/glympse/android/lib/bj;->kj:Ljava/lang/String;
-
-    .line 116
-    return-void
-.end method
-
-.method public start(Lcom/glympse/android/api/GGlympse;)V
-    .locals 5
-
-    .prologue
-    .line 67
-    iput-object p1, p0, Lcom/glympse/android/lib/bj;->cC:Lcom/glympse/android/api/GGlympse;
-
-    .line 70
-    invoke-direct {p0}, Lcom/glympse/android/lib/bj;->bb()Lcom/glympse/android/lib/GExtensionListener;
-
-    move-result-object v2
-
-    .line 71
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->ki:Lcom/glympse/android/hal/GVector;
-
-    invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
-
-    move-result v3
-
-    .line 72
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, v3, :cond_0
-
-    .line 74
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->ki:Lcom/glympse/android/hal/GVector;
-
-    invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/lib/GExtension;
-
-    .line 75
-    iget-object v4, p0, Lcom/glympse/android/lib/bj;->cC:Lcom/glympse/android/api/GGlympse;
-
-    invoke-interface {v0, v4, v2}, Lcom/glympse/android/lib/GExtension;->start(Lcom/glympse/android/api/GGlympse;Lcom/glympse/android/lib/GExtensionListener;)V
-
-    .line 72
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_0
-
-    .line 77
-    :cond_0
-    return-void
-.end method
-
-.method public stop()V
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x0
-
-    .line 82
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->ki:Lcom/glympse/android/hal/GVector;
-
-    invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
-
-    move-result v2
-
-    .line 83
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_0
-    if-ge v1, v2, :cond_0
-
-    .line 85
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->ki:Lcom/glympse/android/hal/GVector;
-
-    invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/lib/GExtension;
-
-    .line 86
-    invoke-interface {v0}, Lcom/glympse/android/lib/GExtension;->stop()V
-
-    .line 83
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_0
-
-    .line 88
-    :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/bj;->ki:Lcom/glympse/android/hal/GVector;
-
-    invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->removeAllElements()V
-
-    .line 90
-    iput-object v3, p0, Lcom/glympse/android/lib/bj;->cC:Lcom/glympse/android/api/GGlympse;
-
-    .line 91
-    iput-object v3, p0, Lcom/glympse/android/lib/bj;->kl:Lcom/glympse/android/lib/GExtension;
-
-    .line 92
+    .line 41
     return-void
 .end method

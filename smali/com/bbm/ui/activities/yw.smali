@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/yw;
 .super Ljava/lang/Object;
-.source "ProfileActivity.java"
+.source "NewChannelActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
     .locals 0
 
     .prologue
-    .line 393
-    iput-object p1, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 392
+    iput-object p1, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,45 +26,47 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 396
-    const-string v0, "mKeyboardButton Clicked"
+    .line 395
+    new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/bbm/ui/activities/ProfileActivity;
+    iget-object v1, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    const-class v2, Lcom/bbm/ui/activities/NewChannelCategoryActivity;
 
-    .line 398
-    invoke-static {}, Lcom/bbm/ui/activities/ProfileActivity;->b()Ljava/lang/Boolean;
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    move-result-object v0
+    .line 397
+    const-string v1, "subcategory"
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    iget-object v2, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    move-result v0
+    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelActivity;->g(Lcom/bbm/ui/activities/NewChannelActivity;)I
 
-    if-eqz v0, :cond_0
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 399
-    iget-object v0, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    const-string v1, "category"
 
-    const/4 v1, 0x0
+    iget-object v2, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->c(Lcom/bbm/ui/activities/ProfileActivity;Z)V
+    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelActivity;->f(Lcom/bbm/ui/activities/NewChannelActivity;)I
 
-    .line 404
-    :goto_0
+    move-result v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 400
+    iget-object v1, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/NewChannelActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    .line 401
     return-void
-
-    .line 402
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/yw;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->c(Lcom/bbm/ui/activities/ProfileActivity;Z)V
-
-    goto :goto_0
 .end method

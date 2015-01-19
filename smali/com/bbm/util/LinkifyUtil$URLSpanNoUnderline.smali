@@ -8,10 +8,10 @@
     .locals 0
 
     .prologue
-    .line 204
+    .line 205
     invoke-direct {p0, p1}, Landroid/text/style/URLSpan;-><init>(Ljava/lang/String;)V
 
-    .line 205
+    .line 206
     return-void
 .end method
 
@@ -21,14 +21,14 @@
     .locals 1
 
     .prologue
-    .line 209
+    .line 210
     invoke-super {p0, p1}, Landroid/text/style/URLSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    .line 210
+    .line 211
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
-    .line 211
+    .line 212
     return-void
 .end method

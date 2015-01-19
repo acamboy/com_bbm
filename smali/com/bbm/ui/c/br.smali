@@ -1,30 +1,22 @@
 .class final Lcom/bbm/ui/c/br;
 .super Ljava/lang/Object;
-.source "ContactsFragment.java"
+.source "ChatsFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/ExpandableListView$OnGroupExpandListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/util/List;
-
-.field final synthetic b:Lcom/bbm/ui/b/j;
-
-.field final synthetic c:Lcom/bbm/ui/c/bl;
+.field final synthetic a:Lcom/bbm/ui/c/bo;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/bl;Ljava/util/List;Lcom/bbm/ui/b/j;)V
+.method constructor <init>(Lcom/bbm/ui/c/bo;)V
     .locals 0
 
     .prologue
-    .line 896
-    iput-object p1, p0, Lcom/bbm/ui/c/br;->c:Lcom/bbm/ui/c/bl;
-
-    iput-object p2, p0, Lcom/bbm/ui/c/br;->a:Ljava/util/List;
-
-    iput-object p3, p0, Lcom/bbm/ui/c/br;->b:Lcom/bbm/ui/b/j;
+    .line 913
+    iput-object p1, p0, Lcom/bbm/ui/c/br;->a:Lcom/bbm/ui/c/bo;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,70 +25,51 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final onGroupExpand(I)V
+    .locals 2
 
     .prologue
-    .line 900
-    const-string v0, "DeleteContactDialog RightButton Clicked"
+    .line 916
+    iget-object v0, p0, Lcom/bbm/ui/c/br;->a:Lcom/bbm/ui/c/bo;
 
-    const-class v1, Lcom/bbm/ui/c/bl;
+    const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/bo;->a(Lcom/bbm/ui/c/bo;Z)V
 
-    .line 902
-    iget-object v0, p0, Lcom/bbm/ui/c/br;->a:Ljava/util/List;
+    .line 918
+    iget-object v0, p0, Lcom/bbm/ui/c/br;->a:Lcom/bbm/ui/c/bo;
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-static {v0}, Lcom/bbm/ui/c/bo;->g(Lcom/bbm/ui/c/bo;)Lcom/bbm/ui/e/cm;
 
-    move-result-object v1
+    move-result-object v0
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0, p1}, Lcom/bbm/ui/e/cm;->getChildrenCount(I)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 920
+    iget-object v0, p0, Lcom/bbm/ui/c/br;->a:Lcom/bbm/ui/c/bo;
 
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/eu;
-
-    .line 903
-    iget-object v2, p0, Lcom/bbm/ui/c/br;->c:Lcom/bbm/ui/c/bl;
-
-    invoke-static {v2}, Lcom/bbm/ui/c/bl;->e(Lcom/bbm/ui/c/bl;)Lcom/bbm/d/a;
-
-    move-result-object v2
-
-    iget-object v0, v0, Lcom/bbm/d/eu;->x:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/bbm/d/y;->d(Ljava/lang/String;)Lcom/bbm/d/bc;
+    invoke-static {v0}, Lcom/bbm/ui/c/bo;->g(Lcom/bbm/ui/c/bo;)Lcom/bbm/ui/e/cm;
 
     move-result-object v0
 
-    iget-object v3, p0, Lcom/bbm/ui/c/br;->b:Lcom/bbm/ui/b/j;
+    const/4 v1, 0x0
 
-    invoke-virtual {v3}, Lcom/bbm/ui/b/j;->b()Z
-
-    move-result v3
-
-    invoke-virtual {v0, v3}, Lcom/bbm/d/bc;->a(Z)Lcom/bbm/d/bc;
+    invoke-virtual {v0, p1, v1}, Lcom/bbm/ui/e/cm;->getChild(II)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
+    check-cast v0, Lcom/bbm/d/gn;
 
-    goto :goto_0
+    .line 921
+    iget-object v1, p0, Lcom/bbm/ui/c/br;->a:Lcom/bbm/ui/c/bo;
 
-    .line 905
+    invoke-static {v1, v0}, Lcom/bbm/ui/c/bo;->a(Lcom/bbm/ui/c/bo;Lcom/bbm/d/gn;)V
+
+    .line 924
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/br;->b:Lcom/bbm/ui/b/j;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/j;->dismiss()V
-
-    .line 906
     return-void
 .end method

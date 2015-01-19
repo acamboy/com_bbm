@@ -588,13 +588,13 @@
 
     move-result-wide v8
 
-    sub-long v5, v6, v8
+    sub-long/2addr v6, v8
 
-    sget v7, Landroid/support/v4/view/p;->g:I
+    sget v5, Landroid/support/v4/view/p;->g:I
 
-    int-to-long v7, v7
+    int-to-long v8, v5
 
-    cmp-long v5, v5, v7
+    cmp-long v5, v6, v8
 
     if-gtz v5, :cond_b
 
@@ -729,15 +729,15 @@
 
     sget v5, Landroid/support/v4/view/p;->f:I
 
-    int-to-long v5, v5
+    int-to-long v6, v5
 
-    add-long/2addr v2, v5
+    add-long/2addr v2, v6
 
     sget v5, Landroid/support/v4/view/p;->e:I
 
-    int-to-long v5, v5
+    int-to-long v6, v5
 
-    add-long/2addr v2, v5
+    add-long/2addr v2, v6
 
     invoke-virtual {v1, v12, v2, v3}, Landroid/os/Handler;->sendEmptyMessageAtTime(IJ)Z
 
@@ -753,9 +753,9 @@
 
     sget v5, Landroid/support/v4/view/p;->f:I
 
-    int-to-long v5, v5
+    int-to-long v6, v5
 
-    add-long/2addr v2, v5
+    add-long/2addr v2, v6
 
     invoke-virtual {v1, v4, v2, v3}, Landroid/os/Handler;->sendEmptyMessageAtTime(IJ)Z
 
@@ -783,9 +783,9 @@
 
     sget v5, Landroid/support/v4/view/p;->g:I
 
-    int-to-long v5, v5
+    int-to-long v6, v5
 
-    invoke-virtual {v0, v11, v5, v6}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v0, v11, v6, v7}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
     :cond_d
     move v0, v3
@@ -1182,8 +1182,6 @@
     goto/16 :goto_8
 
     .line 249
-    nop
-
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_3

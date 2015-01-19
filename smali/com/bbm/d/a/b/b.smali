@@ -165,7 +165,7 @@
 
     .line 87
     :cond_4
-    new-instance v2, Lcom/bbm/f/x;
+    new-instance v2, Lcom/bbm/f/ab;
 
     const-string v0, "requestListElements"
 
@@ -173,7 +173,7 @@
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    invoke-direct {v2, v0, v1}, Lcom/bbm/f/x;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
+    invoke-direct {v2, v0, v1}, Lcom/bbm/f/ab;-><init>(Ljava/lang/String;Lorg/json/JSONObject;)V
 
     new-instance v3, Lorg/json/JSONArray;
 
@@ -227,17 +227,13 @@
 
     :cond_6
     :try_start_0
-    invoke-virtual {v2}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
-
-    move-result-object v0
+    iget-object v0, v2, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
     const-string v1, "elements"
 
     invoke-virtual {v0, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    invoke-virtual {v2}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
-
-    move-result-object v0
+    iget-object v0, v2, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
     const-string v1, "cookie"
 
@@ -245,9 +241,7 @@
 
     invoke-virtual {v0, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    invoke-virtual {v2}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
-
-    move-result-object v0
+    iget-object v0, v2, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
     const-string v1, "type"
 
@@ -257,9 +251,7 @@
 
     invoke-virtual {v0, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    invoke-virtual {v2}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
-
-    move-result-object v0
+    iget-object v0, v2, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
     const-string v1, "id"
 
@@ -273,7 +265,7 @@
 
     iget-object v0, v4, Lcom/bbm/d/a/b/a;->f:Lcom/bbm/f/a;
 
-    invoke-interface {v0, v2}, Lcom/bbm/f/a;->a(Lcom/bbm/f/x;)V
+    invoke-interface {v0, v2}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ab;)V
 
     goto :goto_3
 
@@ -289,5 +281,5 @@
     :cond_7
     move v0, v3
 
-    goto/16 :goto_2
+    goto :goto_2
 .end method

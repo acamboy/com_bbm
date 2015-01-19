@@ -1,5 +1,5 @@
 .class public final Lcom/bbm/d/ay;
-.super Lcom/bbm/d/da;
+.super Lcom/bbm/d/dy;
 .source "BbmdsProtocol.java"
 
 
@@ -8,17 +8,17 @@
     .locals 1
 
     .prologue
-    .line 1453
-    const-string v0, "conferenceInvitationResponse"
+    .line 1263
+    const-string v0, "channelRemoveOwned"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/da;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
 
-    .line 1455
-    const-string v0, "requestId"
+    .line 1265
+    const-string v0, "channelUri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/ay;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1456
+    .line 1266
     return-void
 .end method
 
@@ -28,21 +28,21 @@
     .locals 1
 
     .prologue
-    .line 1466
-    const-string v0, "response"
+    .line 1276
+    const-string v0, "cookie"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/ay;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1467
+    .line 1277
     return-object p0
 .end method
 
-.method public final bridge synthetic a()Lcom/bbm/f/x;
+.method public final bridge synthetic a()Lcom/bbm/f/ab;
     .locals 1
 
     .prologue
-    .line 1451
-    invoke-super {p0}, Lcom/bbm/d/da;->a()Lcom/bbm/f/x;
+    .line 1261
+    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

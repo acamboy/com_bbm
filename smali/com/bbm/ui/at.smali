@@ -1,78 +1,100 @@
 .class final Lcom/bbm/ui/at;
-.super Landroid/view/GestureDetector$SimpleOnGestureListener;
-.source "CustomViewPager.java"
+.super Ljava/lang/Object;
+.source "ConferenceHeaderView.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/CustomViewPager;
+.field final synthetic a:Lcom/bbm/ui/ar;
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/ui/CustomViewPager;)V
+.method constructor <init>(Lcom/bbm/ui/ar;)V
     .locals 0
 
     .prologue
-    .line 49
-    iput-object p1, p0, Lcom/bbm/ui/at;->a:Lcom/bbm/ui/CustomViewPager;
+    .line 105
+    iput-object p1, p0, Lcom/bbm/ui/at;->a:Lcom/bbm/ui/ar;
 
-    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/bbm/ui/CustomViewPager;B)V
-    .locals 0
-
-    .prologue
-    .line 49
-    invoke-direct {p0, p1}, Lcom/bbm/ui/at;-><init>(Lcom/bbm/ui/CustomViewPager;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+.method public final onClick(Landroid/view/View;)V
     .locals 3
 
     .prologue
-    const/4 v1, 0x1
+    .line 109
+    const-string v0, "Glympse Clicked"
 
-    .line 52
-    invoke-static {p4}, Ljava/lang/Math;->abs(F)F
+    const-class v1, Lcom/bbm/ui/aq;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 110
+    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
+
+    iget-object v0, p0, Lcom/bbm/ui/at;->a:Lcom/bbm/ui/ar;
+
+    iget-object v0, v0, Lcom/bbm/ui/ar;->a:Lcom/bbm/ui/aq;
+
+    invoke-static {v0}, Lcom/bbm/ui/aq;->e(Lcom/bbm/ui/aq;)Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/p;->b(Landroid/content/Context;)Z
 
     move-result v0
 
-    invoke-static {p3}, Ljava/lang/Math;->abs(F)F
-
-    move-result v2
-
-    cmpg-float v0, v0, v2
-
-    if-gez v0, :cond_1
-
-    move v0, v1
-
-    .line 54
-    :goto_0
     if-eqz v0, :cond_0
 
-    .line 55
-    iget-object v2, p0, Lcom/bbm/ui/at;->a:Lcom/bbm/ui/CustomViewPager;
+    .line 111
+    iget-object v0, p0, Lcom/bbm/ui/at;->a:Lcom/bbm/ui/ar;
 
-    invoke-virtual {v2}, Lcom/bbm/ui/CustomViewPager;->getParent()Landroid/view/ViewParent;
+    iget-object v0, v0, Lcom/bbm/ui/ar;->a:Lcom/bbm/ui/aq;
 
-    move-result-object v2
+    iget-object v1, p0, Lcom/bbm/ui/at;->a:Lcom/bbm/ui/ar;
 
-    invoke-interface {v2, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
+    iget-object v1, v1, Lcom/bbm/ui/ar;->a:Lcom/bbm/ui/aq;
 
-    .line 57
+    invoke-static {v1}, Lcom/bbm/ui/aq;->a(Lcom/bbm/ui/aq;)Ljava/lang/String;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/aq;->c()V
+
+    .line 115
+    :goto_0
+    return-void
+
+    .line 113
     :cond_0
-    return v0
+    iget-object v0, p0, Lcom/bbm/ui/at;->a:Lcom/bbm/ui/ar;
 
-    .line 52
-    :cond_1
-    const/4 v0, 0x0
+    iget-object v0, v0, Lcom/bbm/ui/ar;->a:Lcom/bbm/ui/aq;
+
+    invoke-static {v0}, Lcom/bbm/ui/aq;->e(Lcom/bbm/ui/aq;)Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/at;->a:Lcom/bbm/ui/ar;
+
+    iget-object v1, v1, Lcom/bbm/ui/ar;->a:Lcom/bbm/ui/aq;
+
+    invoke-static {v1}, Lcom/bbm/ui/aq;->e(Lcom/bbm/ui/aq;)Landroid/content/Context;
+
+    move-result-object v1
+
+    const v2, 0x7f0e03c1
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

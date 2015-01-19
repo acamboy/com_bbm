@@ -1,33 +1,49 @@
-.class public final Lcom/bbm/ui/b/aa;
+.class final Lcom/bbm/ui/b/aa;
 .super Ljava/lang/Object;
-.source "ListDialogBuilder.java"
+.source "FirstTimeSetAvatarDialog.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field a:I
-
-.field b:I
-
-.field public c:Lcom/bbm/ui/b/ab;
+.field final synthetic a:Lcom/bbm/ui/b/y;
 
 
 # direct methods
-.method public constructor <init>(IILcom/bbm/ui/b/ab;)V
+.method constructor <init>(Lcom/bbm/ui/b/y;)V
     .locals 0
 
     .prologue
-    .line 63
+    .line 39
+    iput-object p1, p0, Lcom/bbm/ui/b/aa;->a:Lcom/bbm/ui/b/y;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
-    iput p1, p0, Lcom/bbm/ui/b/aa;->a:I
+    return-void
+.end method
 
-    .line 65
-    iput p2, p0, Lcom/bbm/ui/b/aa;->b:I
 
-    .line 66
-    iput-object p3, p0, Lcom/bbm/ui/b/aa;->c:Lcom/bbm/ui/b/ab;
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
-    .line 67
+    .prologue
+    .line 42
+    iget-object v0, p0, Lcom/bbm/ui/b/aa;->a:Lcom/bbm/ui/b/y;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/y;->a(Lcom/bbm/ui/b/y;)Lcom/bbm/ui/activities/MainActivity;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/util/fh;->c(Landroid/app/Activity;)Landroid/content/Intent;
+
+    move-result-object v1
+
+    const/16 v2, 0x14
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/activities/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    .line 43
     return-void
 .end method

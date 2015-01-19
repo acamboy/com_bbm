@@ -1,5 +1,5 @@
 .class public Lcom/glympse/android/lib/ContactPhone;
-.super Lcom/glympse/android/lib/ae;
+.super Lcom/glympse/android/lib/ah;
 .source "ContactPhone.java"
 
 
@@ -9,20 +9,20 @@
 
     .prologue
     .line 19
-    invoke-direct {p0}, Lcom/glympse/android/lib/ae;-><init>()V
+    invoke-direct {p0}, Lcom/glympse/android/lib/ah;-><init>()V
 
     .line 20
-    iput-object p1, p0, Lcom/glympse/android/lib/ContactPhone;->iz:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/lib/ContactPhone;->iX:Ljava/lang/String;
 
     .line 21
-    iput-object p2, p0, Lcom/glympse/android/lib/ContactPhone;->eq:Ljava/lang/String;
+    iput-object p2, p0, Lcom/glympse/android/lib/ContactPhone;->ew:Ljava/lang/String;
 
     .line 22
     invoke-static {p2}, Lcom/glympse/android/lib/ContactPhone;->getNormalizedAddress(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/ContactPhone;->iA:Ljava/lang/String;
+    iput-object v0, p0, Lcom/glympse/android/lib/ContactPhone;->iY:Ljava/lang/String;
 
     .line 23
     return-void
@@ -168,7 +168,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/ae;->getAddress()Ljava/lang/String;
+    invoke-super {p0}, Lcom/glympse/android/lib/ah;->getAddress()Ljava/lang/String;
 
     move-result-object v0
 
@@ -180,7 +180,7 @@
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/glympse/android/lib/ContactPhone;->iz:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/ContactPhone;->iX:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -190,7 +190,7 @@
 
     .prologue
     .line 16
-    invoke-super {p0}, Lcom/glympse/android/lib/ae;->getNormalizedAddress()Ljava/lang/String;
+    invoke-super {p0}, Lcom/glympse/android/lib/ah;->getNormalizedAddress()Ljava/lang/String;
 
     move-result-object v0
 
@@ -202,7 +202,7 @@
 
     .prologue
     .line 41
-    iget-object v0, p0, Lcom/glympse/android/lib/ContactPhone;->iz:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/lib/ContactPhone;->iX:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/lib/ContactPhone;->getSortRank(Ljava/lang/String;)I
 

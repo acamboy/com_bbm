@@ -1,111 +1,103 @@
-.class final synthetic Lcom/bbm/util/ai;
+.class final Lcom/bbm/util/ai;
 .super Ljava/lang/Object;
 .source "ChannelUtil.java"
 
+# interfaces
+.implements Lcom/bbm/ui/d/c;
 
-# static fields
-.field static final synthetic a:[I
+
+# instance fields
+.field final synthetic a:Lcom/bbm/util/ah;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method constructor <init>(Lcom/bbm/util/ah;)V
+    .locals 0
+
+    .prologue
+    .line 820
+    iput-object p1, p0, Lcom/bbm/util/ai;->a:Lcom/bbm/util/ah;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/bbm/f/ab;)V
     .locals 3
 
     .prologue
-    .line 1149
-    invoke-static {}, Lcom/bbm/util/as;->values()[Lcom/bbm/util/as;
+    .line 823
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    array-length v0, v0
+    iget-object v0, v0, Lcom/bbm/d/a;->c:Lcom/bbm/ui/d/d;
 
-    new-array v0, v0, [I
+    iget-object v1, p0, Lcom/bbm/util/ai;->a:Lcom/bbm/util/ah;
 
-    sput-object v0, Lcom/bbm/util/ai;->a:[I
+    iget-object v1, v1, Lcom/bbm/util/ah;->e:Lcom/bbm/ui/activities/cq;
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/util/ai;->a:[I
+    invoke-virtual {v0, v1, p0}, Lcom/bbm/ui/d/d;->a(Ljava/lang/Object;Lcom/bbm/ui/d/c;)V
 
-    sget-object v1, Lcom/bbm/util/as;->a:Lcom/bbm/util/as;
+    .line 824
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcom/bbm/util/as;->ordinal()I
+    .line 825
+    const-string v1, "listRemove"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 827
+    const-string v1, "channelDeleteCommentError"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 828
+    iget-object v0, p0, Lcom/bbm/util/ai;->a:Lcom/bbm/util/ah;
+
+    iget-object v0, v0, Lcom/bbm/util/ah;->e:Lcom/bbm/ui/activities/cq;
+
+    iget-object v1, p0, Lcom/bbm/util/ai;->a:Lcom/bbm/util/ah;
+
+    iget-object v1, v1, Lcom/bbm/util/ah;->e:Lcom/bbm/ui/activities/cq;
+
+    const v2, 0x7f0e02ff
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/cq;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
 
     const/4 v2, 0x1
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/util/ai;->a:[I
+    .line 830
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/util/ai;->a:Lcom/bbm/util/ah;
 
-    sget-object v1, Lcom/bbm/util/as;->b:Lcom/bbm/util/as;
+    iget-boolean v0, v0, Lcom/bbm/util/ah;->f:Z
 
-    invoke-virtual {v1}, Lcom/bbm/util/as;->ordinal()I
+    if-eqz v0, :cond_1
 
-    move-result v1
+    .line 831
+    iget-object v0, p0, Lcom/bbm/util/ai;->a:Lcom/bbm/util/ah;
 
-    const/4 v2, 0x2
+    iget-object v0, v0, Lcom/bbm/util/ah;->e:Lcom/bbm/ui/activities/cq;
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/cq;->finish()V
 
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/util/ai;->a:[I
-
-    sget-object v1, Lcom/bbm/util/as;->c:Lcom/bbm/util/as;
-
-    invoke-virtual {v1}, Lcom/bbm/util/as;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/util/ai;->a:[I
-
-    sget-object v1, Lcom/bbm/util/as;->d:Lcom/bbm/util/as;
-
-    invoke-virtual {v1}, Lcom/bbm/util/as;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_3
+    .line 833
+    :cond_1
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_0
 .end method

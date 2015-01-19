@@ -1,17 +1,6 @@
 .class public Lcom/glympse/android/lib/cy;
-.super Ljava/lang/Object;
+.super Lcom/glympse/android/lib/cz;
 .source "GroupEventsParser.java"
-
-# interfaces
-.implements Lcom/glympse/android/core/GCommon;
-
-
-# instance fields
-.field public iU:Ljava/lang/String;
-
-.field public lX:Ljava/lang/String;
-
-.field public lY:Ljava/lang/String;
 
 
 # direct methods
@@ -19,8 +8,8 @@
     .locals 0
 
     .prologue
-    .line 22
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 31
+    invoke-direct {p0}, Lcom/glympse/android/lib/cz;-><init>()V
 
     return-void
 .end method

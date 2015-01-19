@@ -1,327 +1,517 @@
 .class Lcom/glympse/android/hal/ay;
 .super Ljava/lang/Object;
-.source "LocationProvider.java"
+.source "LocationProviderFuse.java"
 
 # interfaces
-.implements Landroid/location/LocationListener;
+.implements Lcom/glympse/android/core/GLocationProvider;
+.implements Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
+.implements Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;
+.implements Lcom/glympse/android/hal/gms/location/LocationListener;
 
 
 # instance fields
-.field final synthetic cv:Lcom/glympse/android/hal/au;
+.field private bZ:Lcom/glympse/android/core/GLocationListener;
 
-.field protected cw:Z
+.field private cb:I
+
+.field private cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+
+.field private cy:Lcom/glympse/android/hal/gms/location/LocationRequest;
+
+.field private e:Landroid/content/Context;
+
+.field private v:Z
 
 
 # direct methods
-.method private constructor <init>(Lcom/glympse/android/hal/au;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 1
 
     .prologue
-    .line 736
-    iput-object p1, p0, Lcom/glympse/android/hal/ay;->cv:Lcom/glympse/android/hal/au;
-
+    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 738
+    .line 83
+    iput-object p1, p0, Lcom/glympse/android/hal/ay;->e:Landroid/content/Context;
+
+    .line 84
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/glympse/android/hal/ay;->cb:I
+
+    .line 85
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ay;->cw:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ay;->v:Z
 
+    .line 88
+    const/4 v0, 0x3
+
+    invoke-static {v0}, Lcom/glympse/android/hal/at;->b(I)Lcom/glympse/android/core/GLocationProfile;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/glympse/android/hal/ay;->applyProfile(Lcom/glympse/android/core/GLocationProfile;)V
+
+    .line 89
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/glympse/android/hal/au;Lcom/glympse/android/hal/au$1;)V
-    .locals 0
+.method private K()Z
+    .locals 4
 
     .prologue
-    .line 736
-    invoke-direct {p0, p1}, Lcom/glympse/android/hal/ay;-><init>(Lcom/glympse/android/hal/au;)V
+    const/4 v1, 0x1
 
-    return-void
+    const/4 v0, 0x0
+
+    .line 191
+    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v3, 0x13
+
+    if-lt v2, v3, :cond_2
+
+    .line 201
+    :try_start_0
+    iget-object v2, p0, Lcom/glympse/android/hal/ay;->e:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "location_mode"
+
+    invoke-static {v2, v3}, Landroid/provider/Settings$Secure;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
+    :try_end_0
+    .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v2
+
+    .line 202
+    if-nez v2, :cond_1
+
+    .line 220
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    move v0, v1
+
+    .line 206
+    goto :goto_0
+
+    :catch_0
+    move-exception v2
+
+    .line 215
+    :cond_2
+    iget-object v2, p0, Lcom/glympse/android/hal/ay;->e:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v2
+
+    const-string v3, "location_providers_allowed"
+
+    invoke-static {v2, v3}, Landroid/provider/Settings$Secure;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 216
+    const-string v3, "gps"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    move v0, v1
+
+    .line 220
+    goto :goto_0
+.end method
+
+.method public static isSupported(Landroid/content/Context;)Z
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 53
+    :try_start_0
+    invoke-static {p0}, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->isSupported(Landroid/content/Context;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 77
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 62
+    :cond_1
+    const v1, 0x3d0900
+
+    invoke-static {p0, v1}, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->isVersionSupported(Landroid/content/Context;I)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 68
+    invoke-static {p0}, Lcom/glympse/android/hal/gms/location/LocationClient;->isLocationSupported(Landroid/content/Context;)Z
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 73
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 77
+    :catch_0
+    move-exception v1
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method protected a(Landroid/location/LocationManager;)V
+.method protected J()V
     .locals 2
 
     .prologue
-    const/4 v1, 0x0
-
-    .line 763
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ay;->cw:Z
+    .line 157
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ay;->v:Z
 
     if-eqz v0, :cond_0
 
-    .line 767
-    :try_start_0
-    invoke-virtual {p1, p0}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+    .line 161
+    iget-object v0, p0, Lcom/glympse/android/hal/ay;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
 
-    .line 773
-    :goto_0
-    iput-boolean v1, p0, Lcom/glympse/android/hal/ay;->cw:Z
+    iget-object v1, p0, Lcom/glympse/android/hal/ay;->cy:Lcom/glympse/android/hal/gms/location/LocationRequest;
 
-    .line 775
+    invoke-virtual {v0, v1, p0}, Lcom/glympse/android/hal/gms/location/LocationClient;->requestLocationUpdates(Lcom/glympse/android/hal/gms/location/LocationRequest;Lcom/glympse/android/hal/gms/location/LocationListener;)V
+
+    .line 163
     :cond_0
     return-void
+.end method
 
-    .line 769
-    :catch_0
-    move-exception v0
+.method protected a(Lcom/glympse/android/core/GLocationProfile;)Lcom/glympse/android/hal/gms/location/LocationRequest;
+    .locals 4
 
-    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
+    .prologue
+    .line 168
+    invoke-static {}, Lcom/glympse/android/hal/gms/location/LocationRequest;->create()Lcom/glympse/android/hal/gms/location/LocationRequest;
+
+    move-result-object v0
+
+    .line 169
+    invoke-interface {p1}, Lcom/glympse/android/core/GLocationProfile;->getPriority()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/glympse/android/hal/gms/location/LocationRequest;->setPriority(I)V
+
+    .line 170
+    invoke-interface {p1}, Lcom/glympse/android/core/GLocationProfile;->getFrequency()I
+
+    move-result v1
+
+    int-to-long v2, v1
+
+    invoke-virtual {v0, v2, v3}, Lcom/glympse/android/hal/gms/location/LocationRequest;->setInterval(J)V
+
+    .line 174
+    return-object v0
+.end method
+
+.method public applyProfile(Lcom/glympse/android/core/GLocationProfile;)V
+    .locals 1
+
+    .prologue
+    .line 139
+    if-nez p1, :cond_0
+
+    .line 141
+    const/4 v0, 0x3
+
+    invoke-static {v0}, Lcom/glympse/android/hal/at;->b(I)Lcom/glympse/android/core/GLocationProfile;
+
+    move-result-object p1
+
+    .line 145
+    :cond_0
+    invoke-virtual {p0, p1}, Lcom/glympse/android/hal/ay;->a(Lcom/glympse/android/core/GLocationProfile;)Lcom/glympse/android/hal/gms/location/LocationRequest;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/glympse/android/hal/ay;->cy:Lcom/glympse/android/hal/gms/location/LocationRequest;
+
+    .line 148
+    invoke-virtual {p0}, Lcom/glympse/android/hal/ay;->J()V
+
+    .line 149
+    return-void
+.end method
+
+.method protected c(I)V
+    .locals 2
+
+    .prologue
+    .line 179
+    iget v0, p0, Lcom/glympse/android/hal/ay;->cb:I
+
+    if-eq p1, v0, :cond_0
+
+    .line 181
+    iput p1, p0, Lcom/glympse/android/hal/ay;->cb:I
+
+    .line 182
+    iget-object v0, p0, Lcom/glympse/android/hal/ay;->bZ:Lcom/glympse/android/core/GLocationListener;
+
+    if-eqz v0, :cond_0
+
+    .line 184
+    iget-object v0, p0, Lcom/glympse/android/hal/ay;->bZ:Lcom/glympse/android/core/GLocationListener;
+
+    iget v1, p0, Lcom/glympse/android/hal/ay;->cb:I
+
+    invoke-interface {v0, v1}, Lcom/glympse/android/core/GLocationListener;->stateChanged(I)V
+
+    .line 187
+    :cond_0
+    return-void
+.end method
+
+.method public getLastKnownLocation()Lcom/glympse/android/core/GLocation;
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 124
+    iget-object v1, p0, Lcom/glympse/android/hal/ay;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+
+    if-eqz v1, :cond_0
+
+    iget-boolean v1, p0, Lcom/glympse/android/hal/ay;->v:Z
+
+    if-nez v1, :cond_1
+
+    .line 129
+    :cond_0
+    :goto_0
+    return-object v0
+
+    .line 128
+    :cond_1
+    iget-object v1, p0, Lcom/glympse/android/hal/ay;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+
+    invoke-virtual {v1}, Lcom/glympse/android/hal/gms/location/LocationClient;->getLastLocation()Landroid/location/Location;
+
+    move-result-object v1
+
+    .line 129
+    if-eqz v1, :cond_0
+
+    invoke-static {v1}, Lcom/glympse/android/hal/at;->a(Landroid/location/Location;)Lcom/glympse/android/core/GLocation;
+
+    move-result-object v0
 
     goto :goto_0
 .end method
 
-.method protected a(Landroid/location/LocationManager;II)Z
-    .locals 7
+.method public isStarted()Z
+    .locals 1
 
     .prologue
-    const/4 v6, 0x0
+    .line 119
+    iget-object v0, p0, Lcom/glympse/android/hal/ay;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
 
-    .line 744
-    :try_start_0
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ay;->cw:Z
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public onConnected(Landroid/os/Bundle;)V
+    .locals 2
+
+    .prologue
+    .line 251
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ay;->v:Z
+
+    .line 254
+    iget-object v0, p0, Lcom/glympse/android/hal/ay;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
+
+    iget-object v1, p0, Lcom/glympse/android/hal/ay;->cy:Lcom/glympse/android/hal/gms/location/LocationRequest;
+
+    invoke-virtual {v0, v1, p0}, Lcom/glympse/android/hal/gms/location/LocationClient;->requestLocationUpdates(Lcom/glympse/android/hal/gms/location/LocationRequest;Lcom/glympse/android/hal/gms/location/LocationListener;)V
+
+    .line 256
+    invoke-direct {p0}, Lcom/glympse/android/hal/ay;->K()Z
+
+    move-result v0
 
     if-nez v0, :cond_0
 
-    .line 747
-    const/4 v0, 0x1
+    .line 258
+    const/4 v0, 0x2
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ay;->cw:Z
+    invoke-virtual {p0, v0}, Lcom/glympse/android/hal/ay;->c(I)V
 
-    .line 750
-    const-string v1, "passive"
-
-    int-to-long v2, p2
-
-    int-to-float v4, p3
-
-    move-object v0, p1
-
-    move-object v5, p0
-
-    invoke-virtual/range {v0 .. v5}, Landroid/location/LocationManager;->requestLocationUpdates(Ljava/lang/String;JFLandroid/location/LocationListener;)V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 758
+    .line 260
     :cond_0
-    :goto_0
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ay;->cw:Z
+    return-void
+.end method
 
-    return v0
+.method public onConnectionFailed(Lcom/glympse/android/hal/gms/common/ConnectionResult;)V
+    .locals 0
 
-    .line 753
-    :catch_0
-    move-exception v0
+    .prologue
+    .line 276
+    return-void
+.end method
 
-    .line 755
-    iput-boolean v6, p0, Lcom/glympse/android/hal/ay;->cw:Z
+.method public onDisconnected()V
+    .locals 1
 
-    .line 756
-    invoke-static {v0, v6}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
+    .prologue
+    .line 266
+    const/4 v0, 0x0
 
-    goto :goto_0
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ay;->v:Z
+
+    .line 267
+    return-void
 .end method
 
 .method public onLocationChanged(Landroid/location/Location;)V
     .locals 2
 
     .prologue
-    .line 779
-    if-eqz p1, :cond_0
+    .line 230
+    iget-object v0, p0, Lcom/glympse/android/hal/ay;->bZ:Lcom/glympse/android/core/GLocationListener;
 
-    .line 783
-    :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/ay;->cv:Lcom/glympse/android/hal/au;
+    if-nez v0, :cond_0
 
-    const-string v1, "PASSIVE"
-
-    invoke-virtual {v0, v1, p1}, Lcom/glympse/android/hal/au;->a(Ljava/lang/String;Landroid/location/Location;)Z
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 790
-    :cond_0
+    .line 243
     :goto_0
     return-void
 
-    .line 785
-    :catch_0
-    move-exception v0
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
-
-    goto :goto_0
-.end method
-
-.method public onProviderDisabled(Ljava/lang/String;)V
-    .locals 3
-
-    .prologue
-    .line 794
-    const/4 v0, 0x3
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "[ProviderPassive::onProviderDisabled] - "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
-
-    .line 796
-    return-void
-.end method
-
-.method public onProviderEnabled(Ljava/lang/String;)V
-    .locals 3
-
-    .prologue
-    .line 800
-    const/4 v0, 0x3
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "[ProviderPassive::onProviderEnabled] - "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
-
-    .line 802
-    return-void
-.end method
-
-.method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x3
-
-    .line 807
-    if-nez p2, :cond_0
-
-    .line 809
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "[ProviderPassive::onStatusChanged] - OUT_OF_SERVICE, "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v2, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
-
-    .line 827
-    :goto_0
-    return-void
-
-    .line 813
+    .line 236
     :cond_0
-    const/4 v0, 0x1
-
-    if-ne v0, p2, :cond_1
-
-    .line 815
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "[ProviderPassive::onStatusChanged] - TEMPORARILY_UNAVAILABLE, "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {p1}, Lcom/glympse/android/hal/at;->a(Landroid/location/Location;)Lcom/glympse/android/core/GLocation;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 239
+    const/4 v1, 0x3
 
-    move-result-object v0
+    invoke-virtual {p0, v1}, Lcom/glympse/android/hal/ay;->c(I)V
 
-    invoke-static {v2, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+    .line 242
+    iget-object v1, p0, Lcom/glympse/android/hal/ay;->bZ:Lcom/glympse/android/core/GLocationListener;
+
+    invoke-interface {v1, v0}, Lcom/glympse/android/core/GLocationListener;->locationChanged(Lcom/glympse/android/core/GLocation;)V
 
     goto :goto_0
+.end method
 
-    .line 819
-    :cond_1
-    const/4 v0, 0x2
+.method public setLocationListener(Lcom/glympse/android/core/GLocationListener;)V
+    .locals 0
 
-    if-ne v0, p2, :cond_2
+    .prologue
+    .line 134
+    iput-object p1, p0, Lcom/glympse/android/hal/ay;->bZ:Lcom/glympse/android/core/GLocationListener;
 
-    .line 821
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 135
+    return-void
+.end method
 
-    const-string v1, "[ProviderPassive::onStatusChanged] - AVAILABLE, "
+.method public start()V
+    .locals 2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .prologue
+    .line 98
+    iget-object v0, p0, Lcom/glympse/android/hal/ay;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-nez v0, :cond_0
 
-    move-result-object v0
+    .line 100
+    new-instance v0, Lcom/glympse/android/hal/gms/location/LocationClient;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/hal/ay;->e:Landroid/content/Context;
 
-    move-result-object v0
+    invoke-direct {v0, v1, p0, p0}, Lcom/glympse/android/hal/gms/location/LocationClient;-><init>(Landroid/content/Context;Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$OnConnectionFailedListener;)V
 
-    invoke-static {v2, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+    iput-object v0, p0, Lcom/glympse/android/hal/ay;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
 
-    goto :goto_0
+    .line 101
+    iget-object v0, p0, Lcom/glympse/android/hal/ay;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
 
-    .line 825
-    :cond_2
-    new-instance v0, Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lcom/glympse/android/hal/gms/location/LocationClient;->connect()V
 
-    const-string v1, "[ProviderPassive::onStatusChanged] - UNKNOWN("
+    .line 103
+    :cond_0
+    return-void
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public stop()V
+    .locals 1
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .prologue
+    .line 107
+    iget-object v0, p0, Lcom/glympse/android/hal/ay;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    const-string v1, "), "
+    .line 111
+    iget-object v0, p0, Lcom/glympse/android/hal/ay;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lcom/glympse/android/hal/gms/location/LocationClient;->disconnect()V
 
-    move-result-object v0
+    .line 112
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lcom/glympse/android/hal/ay;->cx:Lcom/glympse/android/hal/gms/location/LocationClient;
 
-    move-result-object v0
+    .line 113
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ay;->v:Z
 
-    move-result-object v0
+    .line 115
+    :cond_0
+    return-void
+.end method
 
-    invoke-static {v2, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+.method public toString()Ljava/lang/String;
+    .locals 1
 
-    goto :goto_0
+    .prologue
+    .line 284
+    const-string v0, "com.glympse.android.hal.LocationProviderFuse"
+
+    return-object v0
 .end method

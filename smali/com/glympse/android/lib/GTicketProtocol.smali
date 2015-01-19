@@ -55,6 +55,9 @@
 .method public abstract refreshTicket(Lcom/glympse/android/lib/GTicketPrivate;Z)V
 .end method
 
+.method public abstract setVisibility(Lcom/glympse/android/lib/GTicketPrivate;Lcom/glympse/android/core/GPrimitive;)V
+.end method
+
 .method public abstract start(Lcom/glympse/android/lib/GGlympsePrivate;)V
 .end method
 

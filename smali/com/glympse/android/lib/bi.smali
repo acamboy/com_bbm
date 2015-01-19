@@ -1,277 +1,262 @@
 .class Lcom/glympse/android/lib/bi;
-.super Ljava/lang/Object;
-.source "ExponentialBackOff.java"
-
-# interfaces
-.implements Lcom/glympse/android/core/GCommon;
+.super Lcom/glympse/android/hal/ErrorReporterBase;
+.source "ErrorReporter.java"
 
 
 # static fields
-.field public static final kc:I = 0x3e8
+.field private static ku:Lcom/glympse/android/lib/bi;
 
-.field public static final kd:I = 0xea60
+.field private static kv:Lcom/glympse/android/hal/GMutex;
 
 
 # instance fields
-.field protected ke:I
+.field private kw:Lcom/glympse/android/lib/GDiagnosticsManager;
 
-.field protected kf:D
-
-.field protected kg:I
-
-.field protected kh:I
+.field private kx:Z
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 2
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 56
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 31
+    invoke-static {}, Lcom/glympse/android/hal/HalFactory;->createMutex()Lcom/glympse/android/hal/GMutex;
 
-    .line 57
-    const/16 v0, 0x3e8
+    move-result-object v0
 
-    iput v0, p0, Lcom/glympse/android/lib/bi;->ke:I
+    sput-object v0, Lcom/glympse/android/lib/bi;->kv:Lcom/glympse/android/hal/GMutex;
 
-    .line 58
-    invoke-static {}, Lcom/glympse/android/lib/bi;->ai()D
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/glympse/android/lib/bi;->kf:D
-
-    .line 59
-    invoke-virtual {p0}, Lcom/glympse/android/lib/bi;->reset()V
-
-    .line 60
     return-void
 .end method
 
-.method public static a(DI)I
-    .locals 6
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 115
-    invoke-static {}, Lcom/glympse/android/lib/bi;->aU()D
+    .line 103
+    invoke-direct {p0}, Lcom/glympse/android/hal/ErrorReporterBase;-><init>()V
 
-    move-result-wide v0
+    .line 104
+    const/4 v0, 0x0
 
-    int-to-double v2, p2
+    iput-boolean v0, p0, Lcom/glympse/android/lib/bi;->kx:Z
 
-    mul-double/2addr v0, v2
-
-    .line 116
-    int-to-double v2, p2
-
-    sub-double/2addr v2, v0
-
-    .line 117
-    int-to-double v4, p2
-
-    add-double/2addr v0, v4
-
-    .line 121
-    sub-double/2addr v0, v2
-
-    const-wide/high16 v4, 0x3ff0000000000000L
-
-    add-double/2addr v0, v4
-
-    mul-double/2addr v0, p0
-
-    add-double/2addr v0, v2
-
-    double-to-int v0, v0
-
-    .line 122
-    return v0
+    .line 105
+    return-void
 .end method
 
-.method public static aU()D
+.method public static a(Lcom/glympse/android/lib/GDiagnosticsManager;)V
     .locals 2
 
     .prologue
-    .line 44
-    const-wide/high16 v0, 0x3fe0000000000000L
+    .line 51
+    sget-object v0, Lcom/glympse/android/lib/bi;->ku:Lcom/glympse/android/lib/bi;
 
-    return-wide v0
-.end method
+    if-nez v0, :cond_0
 
-.method public static ai()D
-    .locals 2
-
-    .prologue
-    .line 38
-    const-wide/high16 v0, 0x3ff8000000000000L
-
-    return-wide v0
-.end method
-
-.method private ba()V
-    .locals 6
-
-    .prologue
-    .line 179
-    iget v0, p0, Lcom/glympse/android/lib/bi;->kg:I
-
-    int-to-double v0, v0
-
-    const-wide v2, 0x40ed4c0000000000L
-
-    iget-wide v4, p0, Lcom/glympse/android/lib/bi;->kf:D
-
-    div-double/2addr v2, v4
-
-    cmpl-double v0, v0, v2
-
-    if-ltz v0, :cond_0
-
-    .line 181
-    const v0, 0xea60
-
-    iput v0, p0, Lcom/glympse/android/lib/bi;->kg:I
-
-    .line 188
+    .line 71
     :goto_0
     return-void
 
-    .line 185
+    .line 57
     :cond_0
-    iget v0, p0, Lcom/glympse/android/lib/bi;->kg:I
+    sget-object v0, Lcom/glympse/android/lib/bi;->kv:Lcom/glympse/android/hal/GMutex;
 
-    int-to-double v0, v0
+    invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
-    iget-wide v2, p0, Lcom/glympse/android/lib/bi;->kf:D
+    .line 61
+    :try_start_0
+    sget-object v0, Lcom/glympse/android/lib/bi;->ku:Lcom/glympse/android/lib/bi;
 
-    mul-double/2addr v0, v2
+    iget-object v0, v0, Lcom/glympse/android/lib/bi;->kw:Lcom/glympse/android/lib/GDiagnosticsManager;
 
-    .line 186
-    double-to-int v0, v0
+    if-nez v0, :cond_1
 
-    iput v0, p0, Lcom/glympse/android/lib/bi;->kg:I
+    .line 63
+    sget-object v0, Lcom/glympse/android/lib/bi;->ku:Lcom/glympse/android/lib/bi;
+
+    iput-object p0, v0, Lcom/glympse/android/lib/bi;->kw:Lcom/glympse/android/lib/GDiagnosticsManager;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 70
+    :cond_1
+    :goto_1
+    sget-object v0, Lcom/glympse/android/lib/bi;->kv:Lcom/glympse/android/hal/GMutex;
+
+    invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
+
+    goto :goto_0
+
+    .line 66
+    :catch_0
+    move-exception v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
+
+    goto :goto_1
+.end method
+
+.method public static b(Lcom/glympse/android/lib/GDiagnosticsManager;)V
+    .locals 2
+
+    .prologue
+    .line 75
+    sget-object v0, Lcom/glympse/android/lib/bi;->ku:Lcom/glympse/android/lib/bi;
+
+    if-nez v0, :cond_0
+
+    .line 100
+    :goto_0
+    return-void
+
+    .line 81
+    :cond_0
+    sget-object v0, Lcom/glympse/android/lib/bi;->kv:Lcom/glympse/android/hal/GMutex;
+
+    invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
+
+    .line 85
+    :try_start_0
+    sget-object v0, Lcom/glympse/android/lib/bi;->ku:Lcom/glympse/android/lib/bi;
+
+    iget-object v0, v0, Lcom/glympse/android/lib/bi;->kw:Lcom/glympse/android/lib/GDiagnosticsManager;
+
+    if-ne v0, p0, :cond_1
+
+    .line 87
+    sget-object v0, Lcom/glympse/android/lib/bi;->ku:Lcom/glympse/android/lib/bi;
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lcom/glympse/android/lib/bi;->kw:Lcom/glympse/android/lib/GDiagnosticsManager;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 94
+    :cond_1
+    :goto_1
+    sget-object v0, Lcom/glympse/android/lib/bi;->kv:Lcom/glympse/android/hal/GMutex;
+
+    invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
+
+    goto :goto_0
+
+    .line 90
+    :catch_0
+    move-exception v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
+
+    goto :goto_1
+.end method
+
+.method public static init()V
+    .locals 1
+
+    .prologue
+    .line 42
+    sget-object v0, Lcom/glympse/android/lib/bi;->ku:Lcom/glympse/android/lib/bi;
+
+    if-nez v0, :cond_0
+
+    invoke-static {}, Lcom/glympse/android/lib/Debug;->areSignalHandlersEnabled()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 47
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 46
+    :cond_1
+    new-instance v0, Lcom/glympse/android/lib/bi;
+
+    invoke-direct {v0}, Lcom/glympse/android/lib/bi;-><init>()V
+
+    sput-object v0, Lcom/glympse/android/lib/bi;->ku:Lcom/glympse/android/lib/bi;
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public a(D)V
-    .locals 0
+.method public handle(Ljava/lang/String;)V
+    .locals 4
 
     .prologue
-    .line 81
-    iput-wide p1, p0, Lcom/glympse/android/lib/bi;->kf:D
+    const/4 v3, 0x0
 
-    .line 82
+    const/4 v2, 0x1
+
+    .line 109
+    iget-boolean v0, p0, Lcom/glympse/android/lib/bi;->kx:Z
+
+    if-eqz v0, :cond_0
+
+    .line 136
+    :goto_0
     return-void
-.end method
 
-.method public aV()I
-    .locals 1
+    .line 113
+    :cond_0
+    iput-boolean v2, p0, Lcom/glympse/android/lib/bi;->kx:Z
 
-    .prologue
-    .line 89
-    iget v0, p0, Lcom/glympse/android/lib/bi;->kg:I
+    .line 118
+    const/4 v0, 0x0
 
-    return v0
-.end method
+    :try_start_0
+    invoke-static {p1, v0}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/String;Z)V
 
-.method public aW()I
-    .locals 3
+    .line 121
+    const-string v0, "err"
 
-    .prologue
-    .line 104
-    invoke-static {}, Lcom/glympse/android/hal/Platform;->random()D
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result-wide v0
+    move-result-object v0
 
-    iget v2, p0, Lcom/glympse/android/lib/bi;->kg:I
+    const/4 v1, 0x1
 
-    invoke-static {v0, v1, v2}, Lcom/glympse/android/lib/bi;->a(DI)I
+    invoke-static {p1, v0, v1}, Lcom/glympse/android/lib/Debug;->reportError(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    move-result v0
+    .line 125
+    iget-object v0, p0, Lcom/glympse/android/lib/bi;->kw:Lcom/glympse/android/lib/GDiagnosticsManager;
 
-    .line 105
-    invoke-direct {p0}, Lcom/glympse/android/lib/bi;->ba()V
+    if-eqz v0, :cond_1
 
-    .line 106
-    return v0
-.end method
+    .line 127
+    iget-object v0, p0, Lcom/glympse/android/lib/bi;->kw:Lcom/glympse/android/lib/GDiagnosticsManager;
 
-.method public aX()I
-    .locals 2
+    const-string v1, "crash"
 
-    .prologue
-    .line 146
-    iget v0, p0, Lcom/glympse/android/lib/bi;->kg:I
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
-    add-int/lit16 v0, v0, 0x7d0
+    move-result-object v1
 
-    const/16 v1, 0x6d60
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GDiagnosticsManager;->logEvent(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
+    .line 135
+    :cond_1
+    :goto_1
+    iput-boolean v3, p0, Lcom/glympse/android/lib/bi;->kx:Z
 
-    move-result v0
+    goto :goto_0
 
-    iput v0, p0, Lcom/glympse/android/lib/bi;->kh:I
-
-    .line 149
-    iget v0, p0, Lcom/glympse/android/lib/bi;->kh:I
-
-    return v0
-.end method
-
-.method public aY()I
-    .locals 1
-
-    .prologue
-    .line 157
-    const/16 v0, 0x6d60
-
-    return v0
-.end method
-
-.method public aZ()J
-    .locals 2
-
-    .prologue
-    .line 166
-    iget v0, p0, Lcom/glympse/android/lib/bi;->kh:I
-
-    add-int/lit16 v0, v0, 0x6d60
-
-    add-int/lit16 v0, v0, 0x7d0
-
-    int-to-long v0, v0
-
-    return-wide v0
-.end method
-
-.method public k(I)V
-    .locals 0
-
-    .prologue
-    .line 72
-    iput p1, p0, Lcom/glympse/android/lib/bi;->ke:I
-
-    .line 73
-    invoke-virtual {p0}, Lcom/glympse/android/lib/bi;->reset()V
-
-    .line 74
-    return-void
-.end method
-
-.method public reset()V
-    .locals 1
-
-    .prologue
     .line 130
-    iget v0, p0, Lcom/glympse/android/lib/bi;->ke:I
+    :catch_0
+    move-exception v0
 
-    iput v0, p0, Lcom/glympse/android/lib/bi;->kg:I
+    invoke-static {v0, v2}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
 
-    .line 131
-    return-void
+    goto :goto_1
 .end method

@@ -1,57 +1,65 @@
 .class Lcom/glympse/android/lib/aa;
 .super Ljava/lang/Object;
-.source "CalendarManager.java"
+.source "BatteryManager.java"
 
 # interfaces
-.implements Lcom/glympse/android/hal/GCalendarListener;
-.implements Lcom/glympse/android/lib/GCalendarManager;
+.implements Lcom/glympse/android/hal/GBatteryListener;
+.implements Lcom/glympse/android/lib/GBatteryManagerPrivate;
 
 
 # instance fields
-.field private S:Lcom/glympse/android/hal/GVector;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/glympse/android/hal/GVector",
-            "<",
-            "Lcom/glympse/android/lib/GCalendarEvent;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private I:Z
 
 .field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
 .field private hE:Lcom/glympse/android/lib/CommonSink;
 
-.field private hS:Lcom/glympse/android/hal/GCalendarProvider;
+.field private ia:I
 
-.field private hT:J
+.field private ib:I
+
+.field private ic:I
+
+.field private id:Lcom/glympse/android/hal/GBatteryProvider;
+
+.field private ie:Z
+
+.field private if:Z
+
+.field private ig:Z
+
+.field private ih:Lcom/glympse/android/hal/GTimer;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 29
+    const/4 v3, 0x1
+
+    const/4 v2, 0x0
+
+    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
-    const-wide/16 v0, 0x0
+    .line 49
+    iput v2, p0, Lcom/glympse/android/lib/aa;->ia:I
 
-    iput-wide v0, p0, Lcom/glympse/android/lib/aa;->hT:J
+    .line 50
+    const/16 v0, 0x64
 
-    .line 31
-    new-instance v0, Lcom/glympse/android/hal/GVector;
+    iput v0, p0, Lcom/glympse/android/lib/aa;->ib:I
 
-    invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
+    .line 51
+    const/4 v0, -0x1
 
-    iput-object v0, p0, Lcom/glympse/android/lib/aa;->S:Lcom/glympse/android/hal/GVector;
+    iput v0, p0, Lcom/glympse/android/lib/aa;->ic:I
 
-    .line 32
+    .line 52
     new-instance v0, Lcom/glympse/android/lib/CommonSink;
 
-    const-string v1, "Calendar"
+    const-string v1, "BatteryManager"
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -61,36 +69,143 @@
 
     iput-object v0, p0, Lcom/glympse/android/lib/aa;->hE:Lcom/glympse/android/lib/CommonSink;
 
-    .line 33
+    .line 53
+    iput-boolean v3, p0, Lcom/glympse/android/lib/aa;->ie:Z
+
+    .line 54
+    iput-boolean v2, p0, Lcom/glympse/android/lib/aa;->if:Z
+
+    .line 55
+    iput-boolean v2, p0, Lcom/glympse/android/lib/aa;->I:Z
+
+    .line 56
+    iput-boolean v3, p0, Lcom/glympse/android/lib/aa;->ig:Z
+
+    .line 57
     return-void
 .end method
 
-.method private aq()Lcom/glympse/android/lib/GCalendarManager;
-    .locals 1
+.method private ao()Z
+    .locals 2
 
     .prologue
-    .line 184
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 169
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getServerPost()Lcom/glympse/android/lib/GServerPost;
 
     move-result-object v0
 
-    check-cast v0, Lcom/glympse/android/lib/GCalendarManager;
+    .line 174
+    invoke-virtual {p0}, Lcom/glympse/android/lib/aa;->isBatteryOk()Z
 
-    return-object v0
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iget-object v1, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v1}, Lcom/glympse/android/lib/GGlympsePrivate;->isSharing()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GServerPost;->haveLocationsToPost()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
-.method private ar()Lcom/glympse/android/hal/GCalendarListener;
-    .locals 1
+.method private ap()V
+    .locals 4
 
     .prologue
-    .line 189
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 406
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->ih:Lcom/glympse/android/hal/GTimer;
+
+    if-nez v0, :cond_0
+
+    .line 408
+    const/4 v0, 0x1
+
+    const-string v1, "[BatteryManager.startWatchdogTimer]"
+
+    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+
+    .line 410
+    new-instance v0, Lcom/glympse/android/lib/ab;
+
+    iget-object v1, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-direct {v0, v1}, Lcom/glympse/android/lib/ab;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;)V
+
+    .line 411
+    const-wide/16 v2, 0x7530
+
+    iget-object v1, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v1}, Lcom/glympse/android/lib/GGlympsePrivate;->getHandler()Lcom/glympse/android/core/GHandler;
+
+    move-result-object v1
+
+    invoke-static {v0, v2, v3, v1}, Lcom/glympse/android/hal/HalFactory;->createTimer(Ljava/lang/Runnable;JLcom/glympse/android/core/GHandler;)Lcom/glympse/android/hal/GTimer;
 
     move-result-object v0
 
-    check-cast v0, Lcom/glympse/android/hal/GCalendarListener;
+    iput-object v0, p0, Lcom/glympse/android/lib/aa;->ih:Lcom/glympse/android/hal/GTimer;
 
-    return-object v0
+    .line 412
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->ih:Lcom/glympse/android/hal/GTimer;
+
+    invoke-interface {v0}, Lcom/glympse/android/hal/GTimer;->start()V
+
+    .line 414
+    :cond_0
+    return-void
+.end method
+
+.method private aq()V
+    .locals 2
+
+    .prologue
+    .line 418
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->ih:Lcom/glympse/android/hal/GTimer;
+
+    if-eqz v0, :cond_0
+
+    .line 420
+    const/4 v0, 0x1
+
+    const-string v1, "[BatteryManager.stopWatchdogTimer]"
+
+    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+
+    .line 422
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->ih:Lcom/glympse/android/hal/GTimer;
+
+    invoke-interface {v0}, Lcom/glympse/android/hal/GTimer;->stop()V
+
+    .line 423
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/glympse/android/lib/aa;->ih:Lcom/glympse/android/hal/GTimer;
+
+    .line 425
+    :cond_0
+    return-void
 .end method
 
 
@@ -99,7 +214,7 @@
     .locals 1
 
     .prologue
-    .line 130
+    .line 352
     iget-object v0, p0, Lcom/glympse/android/lib/aa;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->addListener(Lcom/glympse/android/api/GEventListener;)Z
@@ -113,78 +228,25 @@
     .locals 1
 
     .prologue
-    .line 155
+    .line 377
     iget-object v0, p0, Lcom/glympse/android/lib/aa;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/glympse/android/lib/CommonSink;->associateContext(JLjava/lang/Object;)V
 
-    .line 156
+    .line 378
     return-void
-.end method
-
-.method public calendarChanged(Lcom/glympse/android/hal/GCalendarProvider;)V
-    .locals 4
-
-    .prologue
-    .line 111
-    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->isStarted()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 122
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 117
-    :cond_1
-    invoke-interface {p1}, Lcom/glympse/android/hal/GCalendarProvider;->getEvents()Lcom/glympse/android/hal/GVector;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/glympse/android/lib/aa;->S:Lcom/glympse/android/hal/GVector;
-
-    .line 118
-    invoke-static {}, Lcom/glympse/android/hal/Concurrent;->getTime()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/glympse/android/lib/aa;->hT:J
-
-    .line 121
-    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    const v1, 0x10004
-
-    const/4 v2, 0x1
-
-    invoke-direct {p0}, Lcom/glympse/android/lib/aa;->aq()Lcom/glympse/android/lib/GCalendarManager;
-
-    move-result-object v3
-
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/glympse/android/lib/aa;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
-
-    goto :goto_0
 .end method
 
 .method public clearContext(J)V
     .locals 1
 
     .prologue
-    .line 165
+    .line 387
     iget-object v0, p0, Lcom/glympse/android/lib/aa;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->clearContext(J)V
 
-    .line 166
+    .line 388
     return-void
 .end method
 
@@ -192,25 +254,56 @@
     .locals 1
 
     .prologue
-    .line 175
+    .line 397
     iget-object v0, p0, Lcom/glympse/android/lib/aa;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->deriveContext(Lcom/glympse/android/api/GEventSink;)V
 
-    .line 176
+    .line 398
     return-void
+.end method
+
+.method public enableWakeLock(Z)V
+    .locals 1
+
+    .prologue
+    .line 130
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    if-nez v0, :cond_1
+
+    .line 143
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 135
+    :cond_1
+    iget-boolean v0, p0, Lcom/glympse/android/lib/aa;->ig:Z
+
+    if-eq p1, v0, :cond_0
+
+    .line 139
+    iput-boolean p1, p0, Lcom/glympse/android/lib/aa;->ig:Z
+
+    .line 142
+    invoke-virtual {p0}, Lcom/glympse/android/lib/aa;->setKeepAwake()V
+
+    goto :goto_0
 .end method
 
 .method public eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
     .locals 6
 
     .prologue
-    .line 145
+    .line 367
     iget-object v0, p0, Lcom/glympse/android/lib/aa;->hE:Lcom/glympse/android/lib/CommonSink;
 
-    invoke-direct {p0}, Lcom/glympse/android/lib/aa;->aq()Lcom/glympse/android/lib/GCalendarManager;
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
+
+    check-cast v1, Lcom/glympse/android/api/GEventSink;
 
     move-object v2, p1
 
@@ -222,7 +315,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/glympse/android/lib/CommonSink;->eventsOccurred(Lcom/glympse/android/api/GEventSink;Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
 
-    .line 146
+    .line 368
     return-void
 .end method
 
@@ -230,7 +323,7 @@
     .locals 1
 
     .prologue
-    .line 160
+    .line 382
     iget-object v0, p0, Lcom/glympse/android/lib/aa;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->getContext(J)Ljava/lang/Object;
@@ -253,7 +346,7 @@
     .end annotation
 
     .prologue
-    .line 170
+    .line 392
     iget-object v0, p0, Lcom/glympse/android/lib/aa;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0}, Lcom/glympse/android/lib/CommonSink;->getContextKeys()Ljava/util/Enumeration;
@@ -263,47 +356,16 @@
     return-object v0
 .end method
 
-.method public getEvents()Lcom/glympse/android/core/GArray;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/glympse/android/core/GArray",
-            "<",
-            "Lcom/glympse/android/lib/GCalendarEvent;",
-            ">;"
-        }
-    .end annotation
+.method public getListener()Lcom/glympse/android/hal/GBatteryListener;
+    .locals 1
 
     .prologue
-    .line 80
-    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+    .line 315
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 83
-    invoke-static {}, Lcom/glympse/android/hal/Concurrent;->getTime()J
-
-    move-result-wide v0
-
-    iget-wide v2, p0, Lcom/glympse/android/lib/aa;->hT:J
-
-    sub-long/2addr v0, v2
-
-    const-wide/32 v2, 0x927c0
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_0
-
-    .line 85
-    iget-object v0, p0, Lcom/glympse/android/lib/aa;->hS:Lcom/glympse/android/hal/GCalendarProvider;
-
-    invoke-interface {v0}, Lcom/glympse/android/hal/GCalendarProvider;->refresh()V
-
-    .line 88
-    :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/aa;->S:Lcom/glympse/android/hal/GVector;
+    check-cast v0, Lcom/glympse/android/hal/GBatteryListener;
 
     return-object v0
 .end method
@@ -321,7 +383,7 @@
     .end annotation
 
     .prologue
-    .line 140
+    .line 362
     iget-object v0, p0, Lcom/glympse/android/lib/aa;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0}, Lcom/glympse/android/lib/CommonSink;->getListeners()Lcom/glympse/android/core/GArray;
@@ -331,31 +393,21 @@
     return-object v0
 .end method
 
-.method public getSnapshotDuration()J
-    .locals 2
+.method public getProvider()Lcom/glympse/android/hal/GBatteryProvider;
+    .locals 1
 
     .prologue
-    .line 100
-    const-wide/32 v0, 0x36ee800
+    .line 310
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
 
-    return-wide v0
-.end method
-
-.method public getSnapshotLookback()J
-    .locals 2
-
-    .prologue
-    .line 105
-    const-wide/32 v0, 0x36ee80
-
-    return-wide v0
+    return-object v0
 .end method
 
 .method public hasContext(J)Z
     .locals 1
 
     .prologue
-    .line 150
+    .line 372
     iget-object v0, p0, Lcom/glympse/android/lib/aa;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->hasContext(J)Z
@@ -365,30 +417,273 @@
     return v0
 .end method
 
-.method public refresh()V
+.method public isBatteryForce()Z
     .locals 1
 
     .prologue
-    .line 67
+    .line 98
+    iget-boolean v0, p0, Lcom/glympse/android/lib/aa;->if:Z
+
+    return v0
+.end method
+
+.method public isBatteryLevelGood()Z
+    .locals 1
+
+    .prologue
+    .line 87
+    iget-boolean v0, p0, Lcom/glympse/android/lib/aa;->ie:Z
+
+    return v0
+.end method
+
+.method public isBatteryOk()Z
+    .locals 1
+
+    .prologue
+    .line 93
+    iget-boolean v0, p0, Lcom/glympse/android/lib/aa;->ie:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/glympse/android/lib/aa;->if:Z
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public isWakeLockEnabled()Z
+    .locals 1
+
+    .prologue
+    .line 125
+    iget-boolean v0, p0, Lcom/glympse/android/lib/aa;->ig:Z
+
+    return v0
+.end method
+
+.method public logBatteryEvent(Lcom/glympse/android/api/GTicket;)V
+    .locals 6
+
+    .prologue
+    const/4 v3, 0x2
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 335
     iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->isActive()Z
+
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 69
-    iget-object v0, p0, Lcom/glympse/android/lib/aa;->hS:Lcom/glympse/android/hal/GCalendarProvider;
+    move v0, v1
 
-    invoke-interface {v0}, Lcom/glympse/android/hal/GCalendarProvider;->refresh()V
+    :goto_0
+    shl-int/lit8 v4, v0, 0x0
 
-    .line 71
-    :cond_0
+    .line 336
+    iget-boolean v0, p0, Lcom/glympse/android/lib/aa;->ie:Z
+
+    if-eqz v0, :cond_1
+
+    move v0, v2
+
+    :goto_1
+    shl-int/lit8 v0, v0, 0x1
+
+    or-int/2addr v0, v4
+
+    .line 337
+    iget-object v4, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v4}, Lcom/glympse/android/hal/GBatteryProvider;->isPlugged()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_3
+
+    :goto_2
+    shl-int/lit8 v1, v1, 0x3
+
+    or-int/2addr v0, v1
+
+    .line 338
+    iget-object v1, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v1}, Lcom/glympse/android/hal/GBatteryProvider;->getLevel()I
+
+    move-result v1
+
+    shl-int/lit8 v1, v1, 0x4
+
+    or-int/2addr v0, v1
+
+    .line 340
+    new-instance v1, Lcom/glympse/android/lib/Primitive;
+
+    invoke-direct {v1, v3}, Lcom/glympse/android/lib/Primitive;-><init>(I)V
+
+    .line 341
+    const-string v2, "state"
+
+    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    int-to-long v4, v0
+
+    invoke-interface {v1, v2, v4, v5}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
+
+    .line 343
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getDiagnosticsManager()Lcom/glympse/android/lib/GDiagnosticsManager;
+
+    move-result-object v0
+
+    const-string v2, "battery"
+
+    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, p1, v2, v1}, Lcom/glympse/android/lib/GDiagnosticsManager;->logEvent(Lcom/glympse/android/api/GTicket;Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+
+    .line 344
     return-void
+
+    :cond_0
+    move v0, v2
+
+    .line 335
+    goto :goto_0
+
+    .line 336
+    :cond_1
+    iget-boolean v0, p0, Lcom/glympse/android/lib/aa;->if:Z
+
+    if-eqz v0, :cond_2
+
+    move v0, v1
+
+    goto :goto_1
+
+    :cond_2
+    move v0, v3
+
+    goto :goto_1
+
+    :cond_3
+    move v1, v2
+
+    .line 337
+    goto :goto_2
+.end method
+
+.method public memoryWarningReceived()V
+    .locals 3
+
+    .prologue
+    .line 259
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    if-nez v0, :cond_0
+
+    .line 269
+    :goto_0
+    return-void
+
+    .line 264
+    :cond_0
+    new-instance v1, Lcom/glympse/android/lib/Primitive;
+
+    const/4 v0, 0x2
+
+    invoke-direct {v1, v0}, Lcom/glympse/android/lib/Primitive;-><init>(I)V
+
+    .line 265
+    const-string v0, "state"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v2, "low"
+
+    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v1, v0, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 266
+    const-string v0, "platform"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->isActive()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    const-string v0, "active"
+
+    :goto_1
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v1, v2, v0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 268
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getDiagnosticsManager()Lcom/glympse/android/lib/GDiagnosticsManager;
+
+    move-result-object v0
+
+    const-string v2, "memory"
+
+    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v2, v1}, Lcom/glympse/android/lib/GDiagnosticsManager;->logEvent(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+
+    goto :goto_0
+
+    .line 266
+    :cond_1
+    const-string v0, "inactive"
+
+    goto :goto_1
 .end method
 
 .method public removeListener(Lcom/glympse/android/api/GEventListener;)Z
     .locals 1
 
     .prologue
-    .line 135
+    .line 357
     iget-object v0, p0, Lcom/glympse/android/lib/aa;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
@@ -398,33 +693,184 @@
     return v0
 .end method
 
-.method public setActive(Z)V
-    .locals 2
+.method public setBatteryForce()V
+    .locals 4
 
     .prologue
-    .line 58
-    if-nez p1, :cond_0
+    const/4 v3, 0x0
 
-    .line 61
-    const-wide/16 v0, 0x0
+    const/4 v2, 0x1
 
-    iput-wide v0, p0, Lcom/glympse/android/lib/aa;->hT:J
+    .line 103
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    .line 63
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/glympse/android/lib/aa;->ie:Z
+
+    if-nez v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/glympse/android/lib/aa;->if:Z
+
+    if-eqz v0, :cond_1
+
+    .line 121
     :cond_0
+    :goto_0
     return-void
+
+    .line 109
+    :cond_1
+    iput-boolean v2, p0, Lcom/glympse/android/lib/aa;->if:Z
+
+    .line 112
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->okToPost()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 114
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getServerPost()Lcom/glympse/android/lib/GServerPost;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GServerPost;->doPost()V
+
+    .line 118
+    :cond_2
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    const/4 v1, 0x6
+
+    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/glympse/android/lib/aa;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
+
+    .line 120
+    invoke-virtual {p0, v3}, Lcom/glympse/android/lib/aa;->logBatteryEvent(Lcom/glympse/android/api/GTicket;)V
+
+    goto :goto_0
 .end method
 
-.method public start(Lcom/glympse/android/api/GGlympse;)V
+.method public setBatteryLevels(II)Z
     .locals 3
 
     .prologue
-    .line 41
-    check-cast p1, Lcom/glympse/android/lib/GGlympsePrivate;
+    const/16 v0, 0x64
 
+    .line 66
+    if-ltz p1, :cond_0
+
+    if-gt p1, v0, :cond_0
+
+    if-ltz p2, :cond_0
+
+    if-gt p2, v0, :cond_0
+
+    if-le p1, p2, :cond_1
+
+    .line 69
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 82
+    :goto_0
+    return v0
+
+    .line 73
+    :cond_1
+    iput p1, p0, Lcom/glympse/android/lib/aa;->ia:I
+
+    .line 74
+    iput p2, p0, Lcom/glympse/android/lib/aa;->ib:I
+
+    .line 77
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    if-eqz v0, :cond_2
+
+    .line 79
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v0}, Lcom/glympse/android/hal/GBatteryProvider;->getLevel()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v1}, Lcom/glympse/android/hal/GBatteryProvider;->isPlugged()Z
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v2}, Lcom/glympse/android/hal/GBatteryProvider;->isPresent()Z
+
+    move-result v2
+
+    invoke-virtual {p0, v0, v1, v2}, Lcom/glympse/android/lib/aa;->updateStatus(IZZ)V
+
+    .line 82
+    :cond_2
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public setKeepAwake()V
+    .locals 2
+
+    .prologue
+    .line 147
+    invoke-direct {p0}, Lcom/glympse/android/lib/aa;->ao()Z
+
+    move-result v0
+
+    .line 150
+    if-eqz v0, :cond_1
+
+    .line 152
+    iget-boolean v1, p0, Lcom/glympse/android/lib/aa;->ig:Z
+
+    if-eqz v1, :cond_0
+
+    .line 154
+    iget-object v1, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v1}, Lcom/glympse/android/hal/GBatteryProvider;->acquireWakeLock()V
+
+    .line 156
+    :cond_0
+    invoke-direct {p0}, Lcom/glympse/android/lib/aa;->ap()V
+
+    .line 160
+    :cond_1
+    if-nez v0, :cond_2
+
+    .line 162
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v0}, Lcom/glympse/android/hal/GBatteryProvider;->releaseWakeLock()V
+
+    .line 163
+    invoke-direct {p0}, Lcom/glympse/android/lib/aa;->aq()V
+
+    .line 165
+    :cond_2
+    return-void
+.end method
+
+.method public start(Lcom/glympse/android/lib/GGlympsePrivate;)V
+    .locals 3
+
+    .prologue
+    .line 277
     iput-object p1, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    .line 44
+    .line 278
     iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getContextHolder()Lcom/glympse/android/hal/GContextHolder;
@@ -435,28 +881,50 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/glympse/android/hal/HalFactory;->createCalendarProvider(Landroid/content/Context;)Lcom/glympse/android/hal/GCalendarProvider;
+    invoke-static {v0}, Lcom/glympse/android/hal/HalFactory;->createBatteryProvider(Landroid/content/Context;)Lcom/glympse/android/hal/GBatteryProvider;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/aa;->hS:Lcom/glympse/android/hal/GCalendarProvider;
+    iput-object v0, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
 
-    .line 45
-    iget-object v0, p0, Lcom/glympse/android/lib/aa;->hS:Lcom/glympse/android/hal/GCalendarProvider;
+    .line 279
+    iget-object v1, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
 
-    invoke-direct {p0}, Lcom/glympse/android/lib/aa;->ar()Lcom/glympse/android/hal/GCalendarListener;
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+    check-cast v0, Lcom/glympse/android/hal/GBatteryListener;
 
-    invoke-interface {v2}, Lcom/glympse/android/lib/GGlympsePrivate;->getHandler()Lcom/glympse/android/core/GHandler;
+    invoke-interface {v1, v0}, Lcom/glympse/android/hal/GBatteryProvider;->setBatteryListener(Lcom/glympse/android/hal/GBatteryListener;)V
 
-    move-result-object v2
+    .line 280
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
 
-    invoke-interface {v0, v1, v2}, Lcom/glympse/android/hal/GCalendarProvider;->start(Lcom/glympse/android/hal/GCalendarListener;Lcom/glympse/android/core/GHandler;)V
+    invoke-interface {v0}, Lcom/glympse/android/hal/GBatteryProvider;->start()V
 
-    .line 46
+    .line 283
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v0}, Lcom/glympse/android/hal/GBatteryProvider;->getLevel()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v1}, Lcom/glympse/android/hal/GBatteryProvider;->isPlugged()Z
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v2}, Lcom/glympse/android/hal/GBatteryProvider;->isPresent()Z
+
+    move-result v2
+
+    invoke-virtual {p0, v0, v1, v2}, Lcom/glympse/android/lib/aa;->updateStatus(IZZ)V
+
+    .line 284
     return-void
 .end method
 
@@ -466,17 +934,254 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 50
-    iget-object v0, p0, Lcom/glympse/android/lib/aa;->hS:Lcom/glympse/android/hal/GCalendarProvider;
+    .line 289
+    invoke-direct {p0}, Lcom/glympse/android/lib/aa;->aq()V
 
-    invoke-interface {v0}, Lcom/glympse/android/hal/GCalendarProvider;->stop()V
+    .line 292
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->hE:Lcom/glympse/android/lib/CommonSink;
 
-    .line 51
-    iput-object v1, p0, Lcom/glympse/android/lib/aa;->hS:Lcom/glympse/android/hal/GCalendarProvider;
+    invoke-virtual {v0}, Lcom/glympse/android/lib/CommonSink;->removeAllListeners()Z
 
-    .line 53
+    .line 294
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v0}, Lcom/glympse/android/hal/GBatteryProvider;->stop()V
+
+    .line 295
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v0, v1}, Lcom/glympse/android/hal/GBatteryProvider;->setBatteryListener(Lcom/glympse/android/hal/GBatteryListener;)V
+
+    .line 296
+    iput-object v1, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    .line 297
     iput-object v1, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    .line 54
+    .line 298
     return-void
+.end method
+
+.method public updateStatus()V
+    .locals 3
+
+    .prologue
+    .line 302
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    if-eqz v0, :cond_0
+
+    .line 304
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v0}, Lcom/glympse/android/hal/GBatteryProvider;->getLevel()I
+
+    move-result v0
+
+    iget-object v1, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v1}, Lcom/glympse/android/hal/GBatteryProvider;->isPlugged()Z
+
+    move-result v1
+
+    iget-object v2, p0, Lcom/glympse/android/lib/aa;->id:Lcom/glympse/android/hal/GBatteryProvider;
+
+    invoke-interface {v2}, Lcom/glympse/android/hal/GBatteryProvider;->isPresent()Z
+
+    move-result v2
+
+    invoke-virtual {p0, v0, v1, v2}, Lcom/glympse/android/lib/aa;->updateStatus(IZZ)V
+
+    .line 306
+    :cond_0
+    return-void
+.end method
+
+.method public updateStatus(IZZ)V
+    .locals 6
+
+    .prologue
+    const/4 v5, 0x0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 185
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    if-eqz v0, :cond_0
+
+    if-gez p1, :cond_1
+
+    .line 255
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 191
+    :cond_1
+    iget v0, p0, Lcom/glympse/android/lib/aa;->ia:I
+
+    if-gt p1, v0, :cond_6
+
+    move v0, v1
+
+    .line 192
+    :goto_1
+    iget v3, p0, Lcom/glympse/android/lib/aa;->ib:I
+
+    if-lt p1, v3, :cond_7
+
+    move v3, v1
+
+    .line 195
+    :goto_2
+    iget-boolean v4, p0, Lcom/glympse/android/lib/aa;->ie:Z
+
+    .line 200
+    if-nez v3, :cond_2
+
+    if-nez p2, :cond_2
+
+    if-eqz p3, :cond_2
+
+    iget v3, p0, Lcom/glympse/android/lib/aa;->ia:I
+
+    if-nez v3, :cond_b
+
+    :cond_2
+    move v3, v1
+
+    .line 206
+    :goto_3
+    if-eqz v0, :cond_a
+
+    if-nez p2, :cond_a
+
+    if-eqz p3, :cond_a
+
+    iget v0, p0, Lcom/glympse/android/lib/aa;->ia:I
+
+    if-lez v0, :cond_a
+
+    move v0, v2
+
+    .line 212
+    :goto_4
+    iget-boolean v3, p0, Lcom/glympse/android/lib/aa;->ie:Z
+
+    if-eq v0, v3, :cond_8
+
+    .line 215
+    iput-boolean v0, p0, Lcom/glympse/android/lib/aa;->ie:Z
+
+    .line 220
+    iget-boolean v0, p0, Lcom/glympse/android/lib/aa;->ie:Z
+
+    if-eqz v0, :cond_3
+
+    .line 222
+    iput-boolean v2, p0, Lcom/glympse/android/lib/aa;->if:Z
+
+    .line 225
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getServerPost()Lcom/glympse/android/lib/GServerPost;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GServerPost;->doPost()V
+
+    .line 229
+    :cond_3
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->startStopLocation()V
+
+    .line 232
+    const/4 v0, 0x3
+
+    const-string v2, "[BatteryManager.updateStatus] Changed"
+
+    invoke-static {v0, v2}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+
+    .line 235
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    const/4 v2, 0x6
+
+    invoke-virtual {p0, v0, v2, v1, v5}, Lcom/glympse/android/lib/aa;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
+
+    .line 237
+    invoke-virtual {p0, v5}, Lcom/glympse/android/lib/aa;->logBatteryEvent(Lcom/glympse/android/api/GTicket;)V
+
+    .line 249
+    :cond_4
+    :goto_5
+    iget-boolean v0, p0, Lcom/glympse/android/lib/aa;->I:Z
+
+    if-eq v0, p2, :cond_5
+
+    .line 252
+    iget-object v0, p0, Lcom/glympse/android/lib/aa;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->startStopLocation()V
+
+    .line 254
+    :cond_5
+    iput-boolean p2, p0, Lcom/glympse/android/lib/aa;->I:Z
+
+    goto :goto_0
+
+    :cond_6
+    move v0, v2
+
+    .line 191
+    goto :goto_1
+
+    :cond_7
+    move v3, v2
+
+    .line 192
+    goto :goto_2
+
+    .line 241
+    :cond_8
+    iget v0, p0, Lcom/glympse/android/lib/aa;->ic:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_9
+
+    iget v0, p0, Lcom/glympse/android/lib/aa;->ic:I
+
+    sub-int v0, p1, v0
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(I)I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-lt v0, v1, :cond_4
+
+    .line 243
+    :cond_9
+    iput p1, p0, Lcom/glympse/android/lib/aa;->ic:I
+
+    .line 245
+    invoke-virtual {p0, v5}, Lcom/glympse/android/lib/aa;->logBatteryEvent(Lcom/glympse/android/api/GTicket;)V
+
+    goto :goto_5
+
+    :cond_a
+    move v0, v3
+
+    goto :goto_4
+
+    :cond_b
+    move v3, v4
+
+    goto :goto_3
 .end method

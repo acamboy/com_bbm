@@ -1,73 +1,452 @@
-.class final Lcom/bbm/ui/cp;
-.super Ljava/lang/Object;
-.source "IncrementalListAdapter.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.class public final Lcom/bbm/ui/cp;
+.super Landroid/graphics/drawable/Drawable;
+.source "GifDrawable.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/co;
+.field protected a:Lcom/bbm/util/b/b;
+
+.field protected b:Landroid/graphics/Bitmap;
+
+.field protected c:I
+
+.field protected d:J
+
+.field protected e:J
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/co;)V
-    .locals 0
+.method private constructor <init>(Lcom/bbm/util/b/b;)V
+    .locals 3
 
     .prologue
-    .line 155
-    iput-object p1, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/ui/co;
+    const-wide/16 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 20
+    invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
+    .line 17
+    iput-wide v0, p0, Lcom/bbm/ui/cp;->d:J
+
+    .line 18
+    iput-wide v0, p0, Lcom/bbm/ui/cp;->e:J
+
+    .line 21
+    iput-object p1, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+
+    .line 23
+    const/4 v0, 0x0
+
+    :goto_0
+    iget-object v1, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+
+    invoke-virtual {v1}, Lcom/bbm/util/b/b;->c()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_0
+
+    .line 24
+    iget v1, p0, Lcom/bbm/ui/cp;->c:I
+
+    invoke-direct {p0, v0}, Lcom/bbm/ui/cp;->a(I)I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    iput v1, p0, Lcom/bbm/ui/cp;->c:I
+
+    .line 23
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 27
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+
+    invoke-virtual {v0}, Lcom/bbm/util/b/b;->c()I
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 28
+    invoke-virtual {p0}, Lcom/bbm/ui/cp;->b()V
+
+    .line 30
+    :cond_1
     return-void
+.end method
+
+.method private a(I)I
+    .locals 2
+
+    .prologue
+    .line 72
+    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+
+    invoke-virtual {v0, p1}, Lcom/bbm/util/b/b;->a(I)I
+
+    move-result v0
+
+    .line 73
+    const/16 v1, 0x14
+
+    if-ge v0, v1, :cond_0
+
+    const/16 v0, 0x64
+
+    :cond_0
+    return v0
+.end method
+
+.method public static a(Ljava/lang/String;)Lcom/bbm/ui/cp;
+    .locals 1
+
+    .prologue
+    .line 102
+    invoke-static {p0}, Lcom/bbm/util/bk;->f(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/ui/cp;->a([B)Lcom/bbm/ui/cp;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static a([B)Lcom/bbm/ui/cp;
+    .locals 4
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 106
+    if-eqz p0, :cond_0
+
+    array-length v1, p0
+
+    if-nez v1, :cond_1
+
+    .line 132
+    :cond_0
+    :goto_0
+    return-object v0
+
+    .line 110
+    :cond_1
+    :try_start_0
+    new-instance v2, Lcom/bbm/util/b/b;
+
+    invoke-direct {v2}, Lcom/bbm/util/b/b;-><init>()V
+
+    .line 111
+    invoke-virtual {v2, p0}, Lcom/bbm/util/b/b;->a([B)I
+
+    move-result v1
+
+    .line 112
+    if-nez v1, :cond_0
+
+    .line 117
+    invoke-virtual {v2}, Lcom/bbm/util/b/b;->c()I
+
+    move-result v1
+
+    const/4 v3, 0x1
+
+    if-le v1, v3, :cond_0
+
+    .line 118
+    new-instance v1, Lcom/bbm/ui/cp;
+
+    invoke-direct {v1, v2}, Lcom/bbm/ui/cp;-><init>(Lcom/bbm/util/b/b;)V
+
+    .line 119
+    iget v2, v1, Lcom/bbm/ui/cp;->c:I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_1
+
+    if-lez v2, :cond_0
+
+    move-object v0, v1
+
+    .line 121
+    goto :goto_0
+
+    .line 126
+    :catch_0
+    move-exception v1
+
+    invoke-static {v1}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    .line 128
+    :catch_1
+    move-exception v1
+
+    invoke-static {v1}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public final a(J)V
+    .locals 1
 
     .prologue
-    .line 158
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/ui/co;
+    .line 141
+    iput-wide p1, p0, Lcom/bbm/ui/cp;->d:J
 
-    const/4 v1, 0x0
+    .line 142
+    return-void
+.end method
 
-    iput-boolean v1, v0, Lcom/bbm/ui/co;->b:Z
+.method public final a()[B
+    .locals 1
 
-    .line 159
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/ui/co;
+    .prologue
+    .line 33
+    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
 
-    iget-object v0, v0, Lcom/bbm/ui/co;->d:Lcom/bbm/ui/ci;
+    invoke-virtual {v0}, Lcom/bbm/util/b/b;->f()[B
 
-    invoke-static {v0}, Lcom/bbm/ui/ci;->e(Lcom/bbm/ui/ci;)Z
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final b()V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x1
+
+    .line 44
+    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+
+    invoke-virtual {v0}, Lcom/bbm/util/b/b;->c()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-lt v2, v0, :cond_0
 
-    .line 160
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/ui/co;
+    .line 46
+    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
 
-    const/high16 v1, 0x3f800000
+    invoke-virtual {v0}, Lcom/bbm/util/b/b;->b()V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/co;->a(F)V
-
-    .line 161
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/ui/co;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/co;->b()V
-
-    .line 165
-    :goto_0
-    return-void
-
-    .line 164
+    .line 48
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/ui/co;
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/co;->a(Lcom/bbm/ui/co;)V
+    :goto_0
+    if-gt v0, v2, :cond_1
+
+    .line 49
+    iget-object v1, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+
+    invoke-virtual {v1}, Lcom/bbm/util/b/b;->a()V
+
+    .line 50
+    iget-object v1, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+
+    invoke-virtual {v1}, Lcom/bbm/util/b/b;->e()Landroid/graphics/Bitmap;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
+
+    .line 48
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
+
+    .line 52
+    :cond_1
+    return-void
+.end method
+
+.method public final b(J)V
+    .locals 1
+
+    .prologue
+    .line 149
+    iput-wide p1, p0, Lcom/bbm/ui/cp;->e:J
+
+    .line 150
+    return-void
+.end method
+
+.method public final c()V
+    .locals 1
+
+    .prologue
+    .line 55
+    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+
+    invoke-virtual {v0}, Lcom/bbm/util/b/b;->a()V
+
+    .line 56
+    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+
+    invoke-virtual {v0}, Lcom/bbm/util/b/b;->e()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
+
+    .line 57
+    return-void
+.end method
+
+.method public final d()Landroid/graphics/Bitmap;
+    .locals 1
+
+    .prologue
+    .line 60
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
+
+    return-object v0
+.end method
+
+.method public final draw(Landroid/graphics/Canvas;)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 38
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
+
+    if-eqz v0, :cond_0
+
+    .line 39
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, v0, v2, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    .line 41
+    :cond_0
+    return-void
+.end method
+
+.method public final e()I
+    .locals 1
+
+    .prologue
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/cp;->a:Lcom/bbm/util/b/b;
+
+    invoke-virtual {v0}, Lcom/bbm/util/b/b;->d()I
+
+    move-result v0
+
+    invoke-direct {p0, v0}, Lcom/bbm/ui/cp;->a(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final f()J
+    .locals 2
+
+    .prologue
+    .line 145
+    iget-wide v0, p0, Lcom/bbm/ui/cp;->d:J
+
+    return-wide v0
+.end method
+
+.method public final g()J
+    .locals 2
+
+    .prologue
+    .line 153
+    iget-wide v0, p0, Lcom/bbm/ui/cp;->e:J
+
+    return-wide v0
+.end method
+
+.method public final getIntrinsicHeight()I
+    .locals 1
+
+    .prologue
+    .line 98
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, -0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public final getIntrinsicWidth()I
+    .locals 1
+
+    .prologue
+    .line 93
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, -0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/cp;->b:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public final getOpacity()I
+    .locals 1
+
+    .prologue
+    .line 88
+    const/4 v0, -0x3
+
+    return v0
+.end method
+
+.method public final setAlpha(I)V
+    .locals 0
+
+    .prologue
+    .line 79
+    return-void
+.end method
+
+.method public final setColorFilter(Landroid/graphics/ColorFilter;)V
+    .locals 0
+
+    .prologue
+    .line 84
+    return-void
 .end method

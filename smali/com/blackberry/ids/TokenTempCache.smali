@@ -233,9 +233,9 @@
 
     move-result-wide v2
 
-    const-wide/16 v5, 0x3e8
+    const-wide/16 v6, 0x3e8
 
-    div-long/2addr v2, v5
+    div-long/2addr v2, v6
 
     add-long/2addr v0, v2
 
@@ -249,7 +249,7 @@
     iput-object p2, v4, Lcom/blackberry/ids/TokenTempCache$TokenInfo;->c:Ljava/lang/String;
 
     .line 85
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v2
 
@@ -275,10 +275,10 @@
 .end method
 
 .method static a(Ljava/lang/String;)Z
-    .locals 11
+    .locals 12
 
     .prologue
-    const-wide/16 v9, 0x0
+    const-wide/16 v10, 0x0
 
     const/4 v1, 0x1
 
@@ -339,39 +339,39 @@
 
     .line 32
     :cond_2
-    iget-wide v3, v2, Lcom/blackberry/ids/TokenTempCache$TokenInfo;->d:J
+    iget-wide v4, v2, Lcom/blackberry/ids/TokenTempCache$TokenInfo;->d:J
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    const-wide/16 v7, 0x3e8
+    const-wide/16 v8, 0x3e8
 
-    div-long/2addr v5, v7
+    div-long/2addr v6, v8
 
-    sub-long/2addr v3, v5
+    sub-long/2addr v4, v6
 
     .line 33
-    cmp-long v5, v3, v9
+    cmp-long v3, v4, v10
 
-    if-lez v5, :cond_3
+    if-lez v3, :cond_3
 
     .line 35
     const-string v2, "TokenTempCache - isTokenValid - TOK : %s is Valid for %d"
 
-    const/4 v5, 0x2
+    const/4 v3, 0x2
 
-    new-array v5, v5, [Ljava/lang/Object;
+    new-array v3, v3, [Ljava/lang/Object;
 
-    aput-object p0, v5, v0
+    aput-object p0, v3, v0
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    aput-object v0, v5, v1
+    aput-object v0, v3, v1
 
-    invoke-static {v2, v5}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v2, v3}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -401,7 +401,7 @@
     iput-object v1, v2, Lcom/blackberry/ids/TokenTempCache$TokenInfo;->c:Ljava/lang/String;
 
     .line 42
-    iput-wide v9, v2, Lcom/blackberry/ids/TokenTempCache$TokenInfo;->d:J
+    iput-wide v10, v2, Lcom/blackberry/ids/TokenTempCache$TokenInfo;->d:J
 
     goto :goto_0
 .end method
@@ -517,9 +517,9 @@
     if-eqz v0, :cond_0
 
     .line 118
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    iput-wide v1, v0, Lcom/blackberry/ids/TokenTempCache$TokenInfo;->d:J
+    iput-wide v2, v0, Lcom/blackberry/ids/TokenTempCache$TokenInfo;->d:J
 
     .line 119
     const-string v1, ""
@@ -532,13 +532,13 @@
     iput-object v1, v0, Lcom/blackberry/ids/TokenTempCache$TokenInfo;->c:Ljava/lang/String;
 
     .line 121
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v1
 
     iget-object v2, v0, Lcom/blackberry/ids/TokenTempCache$TokenInfo;->a:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/blackberry/ids/BBIDStorage;->f(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/blackberry/ids/BBIDStorage;->a(Ljava/lang/String;)V
 
     .line 122
     const-string v1, "TokenTempCache - clearRPToken - %s CLEARED!"

@@ -137,9 +137,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/google/zxing/g/a/o;->a()Lcom/google/zxing/g/a/n;
-
-    move-result-object v12
+    iget-object v12, v1, Lcom/google/zxing/g/a/o;->a:Lcom/google/zxing/g/a/n;
 
     .line 92
     invoke-virtual {v10}, Lcom/google/zxing/g/a/a;->a()Lcom/google/zxing/g/a/o;
@@ -150,31 +148,222 @@
 
     move-result-object v13
 
-    invoke-virtual {v1}, Lcom/google/zxing/g/a/o;->b()B
-
-    move-result v1
+    iget-byte v1, v1, Lcom/google/zxing/g/a/o;->b:B
 
     invoke-static {v1}, Lcom/google/zxing/g/a/c;->a(I)Lcom/google/zxing/g/a/c;
 
-    move-result-object v1
+    move-result-object v3
 
-    iget-object v2, v10, Lcom/google/zxing/g/a/a;->a:Lcom/google/zxing/b/b;
+    iget-object v1, v10, Lcom/google/zxing/g/a/a;->a:Lcom/google/zxing/b/b;
 
-    iget v14, v2, Lcom/google/zxing/b/b;->b:I
+    iget v14, v1, Lcom/google/zxing/b/b;->b:I
 
-    iget-object v2, v10, Lcom/google/zxing/g/a/a;->a:Lcom/google/zxing/b/b;
+    iget-object v4, v10, Lcom/google/zxing/g/a/a;->a:Lcom/google/zxing/b/b;
 
-    invoke-virtual {v1, v2, v14}, Lcom/google/zxing/g/a/c;->a(Lcom/google/zxing/b/b;I)V
+    const/4 v1, 0x0
 
-    invoke-virtual {v13}, Lcom/google/zxing/g/a/q;->e()Lcom/google/zxing/b/b;
+    move v2, v1
 
-    move-result-object v15
+    :goto_0
+    if-ge v2, v14, :cond_2
 
+    const/4 v1, 0x0
+
+    :goto_1
+    if-ge v1, v14, :cond_1
+
+    invoke-virtual {v3, v2, v1}, Lcom/google/zxing/g/a/c;->a(II)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_0
+
+    iget v5, v4, Lcom/google/zxing/b/b;->c:I
+
+    mul-int/2addr v5, v2
+
+    shr-int/lit8 v6, v1, 0x5
+
+    add-int/2addr v5, v6
+
+    iget-object v6, v4, Lcom/google/zxing/b/b;->d:[I
+
+    aget v7, v6, v5
+
+    const/4 v8, 0x1
+
+    and-int/lit8 v9, v1, 0x1f
+
+    shl-int/2addr v8, v9
+
+    xor-int/2addr v7, v8
+
+    aput v7, v6, v5
+
+    :cond_0
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    add-int/lit8 v1, v2, 0x1
+
+    move v2, v1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v13}, Lcom/google/zxing/g/a/q;->a()I
+
+    move-result v3
+
+    new-instance v15, Lcom/google/zxing/b/b;
+
+    invoke-direct {v15, v3}, Lcom/google/zxing/b/b;-><init>(I)V
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x0
+
+    const/16 v4, 0x9
+
+    const/16 v5, 0x9
+
+    invoke-virtual {v15, v1, v2, v4, v5}, Lcom/google/zxing/b/b;->a(IIII)V
+
+    add-int/lit8 v1, v3, -0x8
+
+    const/4 v2, 0x0
+
+    const/16 v4, 0x8
+
+    const/16 v5, 0x9
+
+    invoke-virtual {v15, v1, v2, v4, v5}, Lcom/google/zxing/b/b;->a(IIII)V
+
+    const/4 v1, 0x0
+
+    add-int/lit8 v2, v3, -0x8
+
+    const/16 v4, 0x9
+
+    const/16 v5, 0x8
+
+    invoke-virtual {v15, v1, v2, v4, v5}, Lcom/google/zxing/b/b;->a(IIII)V
+
+    iget-object v1, v13, Lcom/google/zxing/g/a/q;->b:[I
+
+    array-length v4, v1
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_2
+    if-ge v2, v4, :cond_7
+
+    iget-object v1, v13, Lcom/google/zxing/g/a/q;->b:[I
+
+    aget v1, v1, v2
+
+    add-int/lit8 v5, v1, -0x2
+
+    const/4 v1, 0x0
+
+    :goto_3
+    if-ge v1, v4, :cond_6
+
+    if-nez v2, :cond_3
+
+    if-eqz v1, :cond_5
+
+    add-int/lit8 v6, v4, -0x1
+
+    if-eq v1, v6, :cond_5
+
+    :cond_3
+    add-int/lit8 v6, v4, -0x1
+
+    if-ne v2, v6, :cond_4
+
+    if-eqz v1, :cond_5
+
+    :cond_4
+    iget-object v6, v13, Lcom/google/zxing/g/a/q;->b:[I
+
+    aget v6, v6, v1
+
+    add-int/lit8 v6, v6, -0x2
+
+    const/4 v7, 0x5
+
+    const/4 v8, 0x5
+
+    invoke-virtual {v15, v6, v5, v7, v8}, Lcom/google/zxing/b/b;->a(IIII)V
+
+    :cond_5
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_3
+
+    :cond_6
+    add-int/lit8 v1, v2, 0x1
+
+    move v2, v1
+
+    goto :goto_2
+
+    :cond_7
+    const/4 v1, 0x6
+
+    const/16 v2, 0x9
+
+    const/4 v4, 0x1
+
+    add-int/lit8 v5, v3, -0x11
+
+    invoke-virtual {v15, v1, v2, v4, v5}, Lcom/google/zxing/b/b;->a(IIII)V
+
+    const/16 v1, 0x9
+
+    const/4 v2, 0x6
+
+    add-int/lit8 v4, v3, -0x11
+
+    const/4 v5, 0x1
+
+    invoke-virtual {v15, v1, v2, v4, v5}, Lcom/google/zxing/b/b;->a(IIII)V
+
+    iget v1, v13, Lcom/google/zxing/g/a/q;->a:I
+
+    const/4 v2, 0x6
+
+    if-le v1, v2, :cond_8
+
+    add-int/lit8 v1, v3, -0xb
+
+    const/4 v2, 0x0
+
+    const/4 v4, 0x3
+
+    const/4 v5, 0x6
+
+    invoke-virtual {v15, v1, v2, v4, v5}, Lcom/google/zxing/b/b;->a(IIII)V
+
+    const/4 v1, 0x0
+
+    add-int/lit8 v2, v3, -0xb
+
+    const/4 v3, 0x6
+
+    const/4 v4, 0x3
+
+    invoke-virtual {v15, v1, v2, v3, v4}, Lcom/google/zxing/b/b;->a(IIII)V
+
+    :cond_8
     const/4 v2, 0x1
 
-    invoke-virtual {v13}, Lcom/google/zxing/g/a/q;->c()I
-
-    move-result v1
+    iget v1, v13, Lcom/google/zxing/g/a/q;->c:I
 
     new-array v0, v1, [B
 
@@ -190,28 +379,28 @@
 
     move v9, v2
 
-    :goto_0
-    if-lez v1, :cond_5
+    :goto_4
+    if-lez v1, :cond_e
 
     const/4 v2, 0x6
 
-    if-ne v1, v2, :cond_0
+    if-ne v1, v2, :cond_9
 
     add-int/lit8 v1, v1, -0x1
 
-    :cond_0
+    :cond_9
     const/4 v3, 0x0
 
-    :goto_1
-    if-ge v3, v14, :cond_4
+    :goto_5
+    if-ge v3, v14, :cond_d
 
-    if-eqz v9, :cond_2
+    if-eqz v9, :cond_b
 
     add-int/lit8 v2, v14, -0x1
 
     sub-int/2addr v2, v3
 
-    :goto_2
+    :goto_6
     const/4 v4, 0x0
 
     move v8, v4
@@ -220,10 +409,10 @@
 
     move v5, v6
 
-    :goto_3
+    :goto_7
     const/4 v6, 0x2
 
-    if-ge v8, v6, :cond_3
+    if-ge v8, v6, :cond_c
 
     sub-int v6, v1, v8
 
@@ -231,7 +420,7 @@
 
     move-result v6
 
-    if-nez v6, :cond_15
+    if-nez v6, :cond_1e
 
     add-int/lit8 v4, v4, 0x1
 
@@ -247,14 +436,14 @@
 
     move-result v6
 
-    if-eqz v6, :cond_1
+    if-eqz v6, :cond_a
 
     or-int/lit8 v5, v5, 0x1
 
-    :cond_1
+    :cond_a
     const/16 v6, 0x8
 
-    if-ne v4, v6, :cond_15
+    if-ne v4, v6, :cond_1e
 
     add-int/lit8 v6, v7, 0x1
 
@@ -266,44 +455,42 @@
 
     const/4 v5, 0x0
 
-    :goto_4
+    :goto_8
     add-int/lit8 v7, v8, 0x1
 
     move v8, v7
 
     move v7, v6
 
-    goto :goto_3
+    goto :goto_7
 
-    :cond_2
+    :cond_b
     move v2, v3
 
-    goto :goto_2
+    goto :goto_6
 
-    :cond_3
+    :cond_c
     add-int/lit8 v3, v3, 0x1
 
     move v6, v5
 
     move v5, v4
 
-    goto :goto_1
+    goto :goto_5
 
-    :cond_4
+    :cond_d
     xor-int/lit8 v2, v9, 0x1
 
     add-int/lit8 v1, v1, -0x2
 
     move v9, v2
 
-    goto :goto_0
+    goto :goto_4
 
-    :cond_5
-    invoke-virtual {v13}, Lcom/google/zxing/g/a/q;->c()I
+    :cond_e
+    iget v1, v13, Lcom/google/zxing/g/a/q;->c:I
 
-    move-result v1
-
-    if-eq v7, v1, :cond_6
+    if-eq v7, v1, :cond_f
 
     invoke-static {}, Lcom/google/zxing/f;->a()Lcom/google/zxing/f;
 
@@ -312,16 +499,14 @@
     throw v1
 
     .line 94
-    :cond_6
+    :cond_f
     move-object/from16 v0, v16
 
     array-length v1, v0
 
-    invoke-virtual {v11}, Lcom/google/zxing/g/a/q;->c()I
+    iget v2, v11, Lcom/google/zxing/g/a/q;->c:I
 
-    move-result v2
-
-    if-eq v1, v2, :cond_7
+    if-eq v1, v2, :cond_10
 
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -329,7 +514,7 @@
 
     throw v1
 
-    :cond_7
+    :cond_10
     invoke-virtual {v11, v12}, Lcom/google/zxing/g/a/q;->a(Lcom/google/zxing/g/a/n;)Lcom/google/zxing/g/a/s;
 
     move-result-object v5
@@ -342,8 +527,8 @@
 
     const/4 v1, 0x0
 
-    :goto_5
-    if-ge v1, v3, :cond_8
+    :goto_9
+    if-ge v1, v3, :cond_11
 
     aget-object v4, v6, v1
 
@@ -353,9 +538,9 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_5
+    goto :goto_9
 
-    :cond_8
+    :cond_11
     new-array v8, v2, [Lcom/google/zxing/g/a/b;
 
     const/4 v2, 0x0
@@ -366,17 +551,17 @@
 
     move v4, v1
 
-    :goto_6
-    if-ge v4, v7, :cond_a
+    :goto_a
+    if-ge v4, v7, :cond_13
 
     aget-object v9, v6, v4
 
     const/4 v1, 0x0
 
-    :goto_7
+    :goto_b
     iget v3, v9, Lcom/google/zxing/g/a/r;->a:I
 
-    if-ge v1, v3, :cond_9
+    if-ge v1, v3, :cond_12
 
     iget v10, v9, Lcom/google/zxing/g/a/r;->b:I
 
@@ -398,16 +583,16 @@
 
     move v2, v3
 
-    goto :goto_7
+    goto :goto_b
 
-    :cond_9
+    :cond_12
     add-int/lit8 v1, v4, 0x1
 
     move v4, v1
 
-    goto :goto_6
+    goto :goto_a
 
-    :cond_a
+    :cond_13
     const/4 v1, 0x0
 
     aget-object v1, v8, v1
@@ -420,8 +605,8 @@
 
     add-int/lit8 v1, v1, -0x1
 
-    :goto_8
-    if-ltz v1, :cond_b
+    :goto_c
+    if-ltz v1, :cond_14
 
     aget-object v4, v8, v1
 
@@ -429,13 +614,13 @@
 
     array-length v4, v4
 
-    if-eq v4, v3, :cond_b
+    if-eq v4, v3, :cond_14
 
     add-int/lit8 v1, v1, -0x1
 
-    goto :goto_8
+    goto :goto_c
 
-    :cond_b
+    :cond_14
     add-int/lit8 v7, v1, 0x1
 
     iget v1, v5, Lcom/google/zxing/g/a/s;->a:I
@@ -450,8 +635,8 @@
 
     move v1, v4
 
-    :goto_9
-    if-ge v6, v3, :cond_d
+    :goto_d
+    if-ge v6, v3, :cond_16
 
     const/4 v4, 0x0
 
@@ -461,8 +646,8 @@
 
     move/from16 v1, v18
 
-    :goto_a
-    if-ge v1, v2, :cond_c
+    :goto_e
+    if-ge v1, v2, :cond_15
 
     aget-object v5, v8, v1
 
@@ -478,22 +663,22 @@
 
     move v4, v5
 
-    goto :goto_a
+    goto :goto_e
 
-    :cond_c
+    :cond_15
     add-int/lit8 v1, v6, 0x1
 
     move v6, v1
 
     move v1, v4
 
-    goto :goto_9
+    goto :goto_d
 
-    :cond_d
+    :cond_16
     move v4, v7
 
-    :goto_b
-    if-ge v4, v2, :cond_e
+    :goto_f
+    if-ge v4, v2, :cond_17
 
     aget-object v5, v8, v4
 
@@ -511,9 +696,9 @@
 
     move v1, v5
 
-    goto :goto_b
+    goto :goto_f
 
-    :cond_e
+    :cond_17
     const/4 v4, 0x0
 
     aget-object v4, v8, v4
@@ -522,8 +707,8 @@
 
     array-length v9, v4
 
-    :goto_c
-    if-ge v3, v9, :cond_11
+    :goto_10
+    if-ge v3, v9, :cond_1a
 
     const/4 v4, 0x0
 
@@ -531,14 +716,14 @@
 
     move v4, v1
 
-    :goto_d
-    if-ge v5, v2, :cond_10
+    :goto_11
+    if-ge v5, v2, :cond_19
 
-    if-ge v5, v7, :cond_f
+    if-ge v5, v7, :cond_18
 
     move v1, v3
 
-    :goto_e
+    :goto_12
     aget-object v6, v8, v5
 
     iget-object v10, v6, Lcom/google/zxing/g/a/b;->b:[B
@@ -555,22 +740,22 @@
 
     move v4, v6
 
-    goto :goto_d
+    goto :goto_11
 
-    :cond_f
+    :cond_18
     add-int/lit8 v1, v3, 0x1
 
-    goto :goto_e
+    goto :goto_12
 
-    :cond_10
+    :cond_19
     add-int/lit8 v3, v3, 0x1
 
     move v1, v4
 
-    goto :goto_c
+    goto :goto_10
 
     .line 97
-    :cond_11
+    :cond_1a
     const/4 v2, 0x0
 
     .line 98
@@ -578,8 +763,8 @@
 
     const/4 v1, 0x0
 
-    :goto_f
-    if-ge v1, v3, :cond_12
+    :goto_13
+    if-ge v1, v3, :cond_1b
 
     aget-object v4, v8, v1
 
@@ -591,10 +776,10 @@
     .line 98
     add-int/lit8 v1, v1, 0x1
 
-    goto :goto_f
+    goto :goto_13
 
     .line 101
-    :cond_12
+    :cond_1b
     new-array v5, v2, [B
 
     .line 102
@@ -607,8 +792,8 @@
 
     move v4, v1
 
-    :goto_10
-    if-ge v4, v6, :cond_14
+    :goto_14
+    if-ge v4, v6, :cond_1d
 
     aget-object v1, v8, v4
 
@@ -626,8 +811,8 @@
     .line 109
     const/4 v1, 0x0
 
-    :goto_11
-    if-ge v1, v9, :cond_13
+    :goto_15
+    if-ge v1, v9, :cond_1c
 
     .line 110
     add-int/lit8 v3, v2, 0x1
@@ -641,18 +826,18 @@
 
     move v2, v3
 
-    goto :goto_11
+    goto :goto_15
 
     .line 105
-    :cond_13
+    :cond_1c
     add-int/lit8 v1, v4, 0x1
 
     move v4, v1
 
-    goto :goto_10
+    goto :goto_14
 
     .line 115
-    :cond_14
+    :cond_1d
     move-object/from16 v0, p2
 
     invoke-static {v5, v11, v12, v0}, Lcom/google/zxing/g/a/l;->a([BLcom/google/zxing/g/a/q;Lcom/google/zxing/g/a/n;Ljava/util/Map;)Lcom/google/zxing/b/e;
@@ -661,8 +846,8 @@
 
     return-object v1
 
-    :cond_15
+    :cond_1e
     move v6, v7
 
-    goto/16 :goto_4
+    goto/16 :goto_8
 .end method

@@ -75,7 +75,7 @@
     return-void
 .end method
 
-.method protected static a([I)I
+.method public static a([I)I
     .locals 4
 
     .prologue
@@ -105,7 +105,7 @@
     return v1
 .end method
 
-.method protected static a([I[[I)I
+.method public static a([I[[I)I
     .locals 3
 
     .prologue
@@ -148,7 +148,7 @@
     throw v0
 .end method
 
-.method protected static a([I[F)V
+.method public static a([I[F)V
     .locals 4
 
     .prologue
@@ -196,7 +196,7 @@
     return-void
 .end method
 
-.method protected static b([I[F)V
+.method public static b([I[F)V
     .locals 4
 
     .prologue
@@ -244,7 +244,7 @@
     return-void
 .end method
 
-.method protected static b([I)Z
+.method public static b([I)Z
     .locals 7
 
     .prologue

@@ -89,7 +89,7 @@
 .end method
 
 .method constructor <init>(IIJJZJIF)V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -240,7 +240,7 @@
 .end method
 
 .method private static r(J)V
-    .locals 3
+    .locals 4
 
     const-wide/16 v0, 0x0
 
@@ -504,7 +504,7 @@
 .end method
 
 .method public final setExpirationDuration(J)Lcom/google/android/gms/location/LocationRequest;
-    .locals 8
+    .locals 9
 
     const-wide v6, 0x7fffffffffffffffL
 
@@ -543,7 +543,7 @@
 .end method
 
 .method public final setExpirationTime(J)Lcom/google/android/gms/location/LocationRequest;
-    .locals 4
+    .locals 5
 
     const-wide/16 v2, 0x0
 
@@ -576,7 +576,7 @@
 .end method
 
 .method public final setInterval(J)Lcom/google/android/gms/location/LocationRequest;
-    .locals 4
+    .locals 5
 
     invoke-static {p1, p2}, Lcom/google/android/gms/location/LocationRequest;->r(J)V
 
@@ -654,7 +654,7 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 5
+    .locals 6
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -733,31 +733,31 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-wide v1, p0, Lcom/google/android/gms/location/LocationRequest;->KV:J
+    iget-wide v2, p0, Lcom/google/android/gms/location/LocationRequest;->KV:J
 
-    const-wide v3, 0x7fffffffffffffffL
+    const-wide v4, 0x7fffffffffffffffL
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-eqz v1, :cond_1
 
-    iget-wide v1, p0, Lcom/google/android/gms/location/LocationRequest;->KV:J
+    iget-wide v2, p0, Lcom/google/android/gms/location/LocationRequest;->KV:J
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    sub-long/2addr v1, v3
+    sub-long/2addr v2, v4
 
-    const-string v3, " expireIn="
+    const-string v1, " expireIn="
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 

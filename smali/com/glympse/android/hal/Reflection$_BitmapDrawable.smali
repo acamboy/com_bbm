@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cL:Z
+.field private static cR:Z
 
-.field private static df:Ljava/lang/reflect/Constructor;
+.field private static dl:Ljava/lang/reflect/Constructor;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/reflect/Constructor",
@@ -24,12 +24,12 @@
     .line 998
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->cR:Z
 
     .line 999
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->df:Ljava/lang/reflect/Constructor;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->dl:Ljava/lang/reflect/Constructor;
 
     return-void
 .end method
@@ -51,14 +51,14 @@
     const/4 v0, 0x0
 
     .line 1004
-    sget-boolean v1, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->cL:Z
+    sget-boolean v1, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->cR:Z
 
     if-nez v1, :cond_0
 
     .line 1006
     const/4 v1, 0x1
 
-    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->cL:Z
+    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->cR:Z
 
     .line 1010
     :try_start_0
@@ -115,7 +115,7 @@
     if-eqz v4, :cond_1
 
     .line 1019
-    sput-object v3, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->df:Ljava/lang/reflect/Constructor;
+    sput-object v3, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->dl:Ljava/lang/reflect/Constructor;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -146,13 +146,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->Load()V
 
     .line 1036
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->df:Ljava/lang/reflect/Constructor;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->dl:Ljava/lang/reflect/Constructor;
 
     if-eqz v0, :cond_0
 
     .line 1040
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->df:Ljava/lang/reflect/Constructor;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_BitmapDrawable;->dl:Ljava/lang/reflect/Constructor;
 
     const/4 v1, 0x2
 

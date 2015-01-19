@@ -1,85 +1,172 @@
 .class final Lcom/bbm/ui/cr;
-.super Lcom/bbm/j/u;
-.source "InlineImageEditText.java"
+.super Ljava/lang/Object;
+.source "GlympseUserSelector.java"
+
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/InlineImageEditText;
+.field final synthetic a:Lcom/bbm/ui/GlympseUserSelector;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/InlineImageEditText;)V
+.method constructor <init>(Lcom/bbm/ui/GlympseUserSelector;)V
     .locals 0
 
     .prologue
-    .line 62
-    iput-object p1, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/InlineImageEditText;
+    .line 92
+    iput-object p1, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 2
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 65
-    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/InlineImageEditText;
+    const/4 v5, 0x0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->isInEditMode()Z
+    .line 96
+    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
 
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 66
-    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/InlineImageEditText;
-
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/d;->b:Lcom/bbm/d/a;
-
-    invoke-virtual {v1}, Lcom/bbm/d/a;->f()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/InlineImageEditText;->a(Lcom/bbm/ui/InlineImageEditText;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 68
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/InlineImageEditText;
-
-    invoke-static {v0}, Lcom/bbm/ui/InlineImageEditText;->a(Lcom/bbm/ui/InlineImageEditText;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->f(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/ct;
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v0, p3}, Lcom/bbm/ui/ct;->a(I)Lcom/glympse/android/api/GUser;
 
-    move-result v0
+    move-result-object v0
 
-    if-eqz v0, :cond_1
+    .line 97
+    iget-object v1, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
 
-    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/InlineImageEditText;
+    invoke-static {v1}, Lcom/bbm/ui/GlympseUserSelector;->c(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/GlympseUserSelectorItem;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->isInEditMode()Z
+    move-result-object v1
 
-    move-result v0
+    iget-object v2, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
 
-    if-eqz v0, :cond_2
+    invoke-static {v2}, Lcom/bbm/ui/GlympseUserSelector;->g(Lcom/bbm/ui/GlympseUserSelector;)Ljava/util/List;
 
-    :cond_1
-    const/4 v0, 0x1
+    move-result-object v2
 
-    :goto_0
-    return v0
+    iget-object v3, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
 
-    :cond_2
-    const/4 v0, 0x0
+    invoke-static {v3}, Lcom/bbm/ui/GlympseUserSelector;->h(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/activities/ye;
 
-    goto :goto_0
+    move-result-object v3
+
+    iget-object v4, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+
+    invoke-static {v4}, Lcom/bbm/ui/GlympseUserSelector;->i(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/d/eu;
+
+    move-result-object v4
+
+    invoke-static {v0, v2, v3, v4}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;Ljava/util/List;Lcom/bbm/ui/activities/ye;Lcom/bbm/d/eu;)I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/GlympseUserSelectorItem;->setColor(I)V
+
+    .line 98
+    iget-object v1, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+
+    invoke-static {v1}, Lcom/bbm/ui/GlympseUserSelector;->c(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/GlympseUserSelectorItem;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/GlympseUserSelectorItem;->a(Lcom/glympse/android/api/GUser;)V
+
+    .line 99
+    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+
+    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->c(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/GlympseUserSelectorItem;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Lcom/bbm/ui/GlympseUserSelectorItem;->setExpanded(Z)V
+
+    .line 100
+    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+
+    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->f(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/ct;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ui/ct;->notifyDataSetChanged()V
+
+    .line 101
+    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+
+    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->a(Lcom/bbm/ui/GlympseUserSelector;)Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 102
+    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+
+    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->b(Lcom/bbm/ui/GlympseUserSelector;)Landroid/widget/ImageButton;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Landroid/widget/ImageButton;->setActivated(Z)V
+
+    .line 103
+    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+
+    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->e(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/cs;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 104
+    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+
+    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->e(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/cs;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+
+    invoke-static {v1}, Lcom/bbm/ui/GlympseUserSelector;->c(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/GlympseUserSelectorItem;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/bbm/ui/GlympseUserSelectorItem;->getUser()Lcom/glympse/android/api/GUser;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lcom/bbm/ui/cs;->a(Lcom/glympse/android/api/GUser;)V
+
+    .line 106
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/cr;->a:Lcom/bbm/ui/GlympseUserSelector;
+
+    invoke-static {v0}, Lcom/bbm/ui/GlympseUserSelector;->d(Lcom/bbm/ui/GlympseUserSelector;)Lcom/bbm/ui/GlympseUserSelectorItem;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v5}, Lcom/bbm/ui/GlympseUserSelectorItem;->setVisibility(I)V
+
+    .line 107
+    return-void
 .end method

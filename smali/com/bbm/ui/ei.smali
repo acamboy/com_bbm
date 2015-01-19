@@ -1,133 +1,129 @@
-.class final Lcom/bbm/ui/ei;
-.super Ljava/lang/Object;
-.source "QuickShareGlympseView.java"
+.class public abstract Lcom/bbm/ui/ei;
+.super Lcom/bbm/ui/ec;
+.source "ObservableListAdapter.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/ListAdapter;
+.implements Lcom/bbm/j/h;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lcom/bbm/ui/ec",
+        "<TT;>;",
+        "Landroid/widget/ListAdapter;",
+        "Lcom/bbm/j/h;"
+    }
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/QuickShareGlympseView;
+.field private final b:Lcom/bbm/j/j;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/j",
+            "<TT;>;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/QuickShareGlympseView;)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/j/j;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/bbm/j/j",
+            "<TT;>;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 270
-    iput-object p1, p0, Lcom/bbm/ui/ei;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    .line 19
+    invoke-direct {p0}, Lcom/bbm/ui/ec;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 20
+    iput-object p1, p0, Lcom/bbm/ui/ei;->b:Lcom/bbm/j/j;
 
+    .line 21
+    iget-object v0, p0, Lcom/bbm/ui/ei;->b:Lcom/bbm/j/j;
+
+    invoke-interface {v0, p0}, Lcom/bbm/j/j;->a(Lcom/bbm/j/h;)V
+
+    .line 22
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 6
+.method public final a()V
+    .locals 0
 
     .prologue
-    .line 273
-    const-string v0, "Upgrading button Clicked"
+    .line 49
+    invoke-virtual {p0}, Lcom/bbm/ui/ei;->notifyDataSetChanged()V
 
-    const-class v1, Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 275
-    if-eqz p1, :cond_0
-
-    instance-of v0, p1, Landroid/widget/Button;
-
-    if-eqz v0, :cond_0
-
-    .line 276
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 280
-    :try_start_0
-    iget-object v1, p0, Lcom/bbm/ui/ei;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/QuickShareGlympseView;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    new-instance v2, Landroid/content/Intent;
-
-    const-string v3, "android.intent.action.VIEW"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "market://details?id=com.google.android.gms&hl="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v4
-
-    invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 287
-    :cond_0
-    :goto_0
+    .line 50
     return-void
+.end method
 
-    .line 283
-    :catch_0
-    move-exception v1
+.method public getCount()I
+    .locals 1
 
-    iget-object v1, p0, Lcom/bbm/ui/ei;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    .prologue
+    .line 27
+    iget-object v0, p0, Lcom/bbm/ui/ei;->b:Lcom/bbm/j/j;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/QuickShareGlympseView;->getContext()Landroid/content/Context;
+    invoke-interface {v0}, Lcom/bbm/j/j;->d()I
 
-    move-result-object v1
+    move-result v0
 
-    new-instance v2, Landroid/content/Intent;
+    return v0
+.end method
 
-    const-string v3, "android.intent.action.VIEW"
+.method public getItem(I)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)TT;"
+        }
+    .end annotation
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    .prologue
+    .line 33
+    iget-object v0, p0, Lcom/bbm/ui/ei;->b:Lcom/bbm/j/j;
 
-    const-string v5, "http://play.google.com/store/apps/details?id=com.google.android.gms&hl="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0, p1}, Lcom/bbm/j/j;->a(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public getItemId(I)J
+    .locals 2
 
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    .prologue
+    .line 39
+    int-to-long v0, p1
 
-    move-result-object v0
+    return-wide v0
+.end method
 
-    invoke-direct {v2, v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+.method public hasStableIds()Z
+    .locals 1
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    .prologue
+    .line 44
+    const/4 v0, 0x0
 
-    goto :goto_0
+    return v0
 .end method

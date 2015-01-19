@@ -79,7 +79,7 @@
     .locals 1
 
     .prologue
-    .line 56
+    .line 57
     const-class v0, Lcom/bbm/util/b/b;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -95,27 +95,27 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
+    .line 103
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/bbm/util/b/b;->f:I
 
-    .line 115
+    .line 116
     const/16 v0, 0x100
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/bbm/util/b/b;->o:[B
 
-    .line 116
+    .line 117
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/bbm/util/b/b;->p:I
 
-    .line 135
+    .line 136
     return-void
 .end method
 
@@ -123,13 +123,13 @@
     .locals 22
 
     .prologue
-    .line 436
+    .line 429
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    .line 438
+    .line 431
     if-eqz p1, :cond_0
 
-    .line 440
+    .line 433
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
@@ -140,7 +140,7 @@
 
     invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 443
+    .line 436
     :cond_0
     if-nez p1, :cond_6
 
@@ -156,7 +156,7 @@
 
     move v15, v1
 
-    .line 447
+    .line 440
     :goto_0
     if-eqz p2, :cond_1
 
@@ -166,13 +166,13 @@
 
     if-ge v1, v15, :cond_2
 
-    .line 448
+    .line 441
     :cond_1
     new-array v0, v15, [B
 
     move-object/from16 p2, v0
 
-    .line 450
+    .line 443
     :cond_2
     move-object/from16 v0, p0
 
@@ -180,7 +180,7 @@
 
     if-nez v1, :cond_3
 
-    .line 451
+    .line 444
     const/16 v1, 0x1000
 
     new-array v1, v1, [S
@@ -189,7 +189,7 @@
 
     iput-object v1, v0, Lcom/bbm/util/b/b;->q:[S
 
-    .line 453
+    .line 446
     :cond_3
     move-object/from16 v0, p0
 
@@ -197,7 +197,7 @@
 
     if-nez v1, :cond_4
 
-    .line 454
+    .line 447
     const/16 v1, 0x1000
 
     new-array v1, v1, [B
@@ -206,7 +206,7 @@
 
     iput-object v1, v0, Lcom/bbm/util/b/b;->r:[B
 
-    .line 456
+    .line 449
     :cond_4
     move-object/from16 v0, p0
 
@@ -214,7 +214,7 @@
 
     if-nez v1, :cond_5
 
-    .line 457
+    .line 450
     const/16 v1, 0x1001
 
     new-array v1, v1, [B
@@ -223,37 +223,37 @@
 
     iput-object v1, v0, Lcom/bbm/util/b/b;->s:[B
 
-    .line 461
+    .line 454
     :cond_5
-    invoke-direct/range {p0 .. p0}, Lcom/bbm/util/b/b;->h()I
+    invoke-direct/range {p0 .. p0}, Lcom/bbm/util/b/b;->i()I
 
     move-result v16
 
-    .line 462
+    .line 455
     const/4 v1, 0x1
 
     shl-int v17, v1, v16
 
-    .line 463
+    .line 456
     add-int/lit8 v18, v17, 0x1
 
-    .line 464
+    .line 457
     add-int/lit8 v11, v17, 0x2
 
-    .line 465
+    .line 458
     const/4 v10, -0x1
 
-    .line 466
+    .line 459
     add-int/lit8 v3, v16, 0x1
 
-    .line 467
+    .line 460
     const/4 v1, 0x1
 
     shl-int/2addr v1, v3
 
     add-int/lit8 v4, v1, -0x1
 
-    .line 468
+    .line 461
     const/4 v1, 0x0
 
     :goto_1
@@ -261,7 +261,7 @@
 
     if-ge v1, v0, :cond_7
 
-    .line 469
+    .line 462
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/bbm/util/b/b;->q:[S
@@ -270,7 +270,7 @@
 
     aput-short v5, v2, v1
 
-    .line 470
+    .line 463
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/bbm/util/b/b;->r:[B
@@ -279,12 +279,12 @@
 
     aput-byte v5, v2, v1
 
-    .line 468
+    .line 461
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 443
+    .line 436
     :cond_6
     move-object/from16 v0, p1
 
@@ -300,11 +300,11 @@
 
     goto :goto_0
 
-    .line 474
+    .line 467
     :cond_7
     const/4 v12, 0x0
 
-    .line 475
+    .line 468
     const/4 v1, 0x0
 
     move v5, v12
@@ -324,27 +324,27 @@
     :goto_2
     if-ge v14, v15, :cond_e
 
-    .line 476
+    .line 469
     if-nez v5, :cond_12
 
-    .line 477
+    .line 470
     if-ge v8, v3, :cond_9
 
-    .line 479
+    .line 472
     if-nez v2, :cond_8
 
-    .line 481
-    invoke-direct/range {p0 .. p0}, Lcom/bbm/util/b/b;->i()I
+    .line 474
+    invoke-direct/range {p0 .. p0}, Lcom/bbm/util/b/b;->j()I
 
     move-result v2
 
-    .line 482
+    .line 475
     if-lez v2, :cond_e
 
-    .line 483
+    .line 476
     const/4 v1, 0x0
 
-    .line 487
+    .line 480
     :cond_8
     move-object/from16 v0, p0
 
@@ -358,66 +358,66 @@
 
     add-int/2addr v7, v9
 
-    .line 488
+    .line 481
     add-int/lit8 v8, v8, 0x8
 
-    .line 489
+    .line 482
     add-int/lit8 v1, v1, 0x1
 
-    .line 490
+    .line 483
     add-int/lit8 v2, v2, -0x1
 
-    .line 491
+    .line 484
     goto :goto_2
 
-    .line 494
+    .line 487
     :cond_9
     and-int v9, v7, v4
 
-    .line 495
+    .line 488
     shr-int/2addr v7, v3
 
-    .line 496
+    .line 489
     sub-int/2addr v8, v3
 
-    .line 498
+    .line 491
     if-gt v9, v11, :cond_e
 
     move/from16 v0, v18
 
     if-eq v9, v0, :cond_e
 
-    .line 499
+    .line 492
     move/from16 v0, v17
 
     if-ne v9, v0, :cond_a
 
-    .line 503
+    .line 496
     add-int/lit8 v3, v16, 0x1
 
-    .line 504
+    .line 497
     const/4 v4, 0x1
 
     shl-int/2addr v4, v3
 
     add-int/lit8 v4, v4, -0x1
 
-    .line 505
+    .line 498
     add-int/lit8 v11, v17, 0x2
 
-    .line 506
+    .line 499
     const/4 v10, -0x1
 
-    .line 507
+    .line 500
     goto :goto_2
 
-    .line 509
+    .line 502
     :cond_a
     const/4 v13, -0x1
 
     if-ne v10, v13, :cond_b
 
-    .line 510
+    .line 503
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/bbm/util/b/b;->s:[B
@@ -438,14 +438,14 @@
 
     move v6, v9
 
-    .line 513
+    .line 506
     goto :goto_2
 
-    .line 516
+    .line 509
     :cond_b
     if-ne v9, v11, :cond_11
 
-    .line 517
+    .line 510
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/bbm/util/b/b;->s:[B
@@ -460,13 +460,13 @@
 
     move v6, v10
 
-    .line 520
+    .line 513
     :goto_3
     move/from16 v0, v17
 
     if-le v6, v0, :cond_c
 
-    .line 521
+    .line 514
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/bbm/util/b/b;->s:[B
@@ -485,7 +485,7 @@
 
     aput-byte v20, v19, v13
 
-    .line 522
+    .line 515
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/bbm/util/b/b;->q:[S
@@ -496,7 +496,7 @@
 
     goto :goto_3
 
-    .line 524
+    .line 517
     :cond_c
     move-object/from16 v0, p0
 
@@ -506,7 +506,7 @@
 
     and-int/lit16 v6, v5, 0xff
 
-    .line 526
+    .line 519
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/bbm/util/b/b;->s:[B
@@ -521,12 +521,12 @@
 
     aput-byte v20, v19, v13
 
-    .line 529
+    .line 522
     const/16 v13, 0x1000
 
     if-ge v11, v13, :cond_10
 
-    .line 530
+    .line 523
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/bbm/util/b/b;->q:[S
@@ -535,7 +535,7 @@
 
     aput-short v10, v13, v11
 
-    .line 531
+    .line 524
     move-object/from16 v0, p0
 
     iget-object v10, v0, Lcom/bbm/util/b/b;->r:[B
@@ -544,10 +544,10 @@
 
     aput-byte v13, v10, v11
 
-    .line 532
+    .line 525
     add-int/lit8 v10, v11, 0x1
 
-    .line 534
+    .line 527
     :goto_4
     and-int v11, v10, v4
 
@@ -557,10 +557,10 @@
 
     if-ge v10, v11, :cond_d
 
-    .line 535
+    .line 528
     add-int/lit8 v3, v3, 0x1
 
-    .line 536
+    .line 529
     add-int/2addr v4, v10
 
     :cond_d
@@ -580,11 +580,11 @@
 
     move/from16 v3, v21
 
-    .line 541
+    .line 534
     :goto_5
     add-int/lit8 v11, v3, -0x1
 
-    .line 542
+    .line 535
     add-int/lit8 v3, v12, 0x1
 
     move-object/from16 v0, p0
@@ -595,7 +595,7 @@
 
     aput-byte v13, p2, v12
 
-    .line 543
+    .line 536
     add-int/lit8 v12, v14, 0x1
 
     move v14, v12
@@ -625,21 +625,21 @@
     :cond_e
     move v1, v12
 
-    .line 546
+    .line 539
     :goto_6
     if-ge v1, v15, :cond_f
 
-    .line 547
+    .line 540
     const/4 v2, 0x0
 
     aput-byte v2, p2, v1
 
-    .line 546
+    .line 539
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_6
 
-    .line 549
+    .line 542
     :cond_f
     return-void
 
@@ -681,22 +681,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 617
+    .line 607
     mul-int/lit8 v0, p1, 0x3
 
-    .line 618
+    .line 608
     const/4 v1, 0x0
 
-    .line 619
+    .line 609
     new-array v4, v0, [B
 
-    .line 622
+    .line 612
     :try_start_0
     iget-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->get([B)Ljava/nio/ByteBuffer;
 
-    .line 624
+    .line 614
     const/16 v0, 0x100
 
     new-array v0, v0, [I
@@ -705,11 +705,11 @@
 
     move v1, v2
 
-    .line 627
+    .line 617
     :goto_0
     if-ge v2, p1, :cond_0
 
-    .line 628
+    .line 618
     add-int/lit8 v3, v1, 0x1
 
     :try_start_1
@@ -717,21 +717,21 @@
 
     and-int/lit16 v5, v1, 0xff
 
-    .line 629
+    .line 619
     add-int/lit8 v6, v3, 0x1
 
     aget-byte v1, v4, v3
 
     and-int/lit16 v7, v1, 0xff
 
-    .line 630
+    .line 620
     add-int/lit8 v1, v6, 0x1
 
     aget-byte v3, v4, v6
 
     and-int/lit16 v6, v3, 0xff
 
-    .line 631
+    .line 621
     add-int/lit8 v3, v2, 0x1
 
     const/high16 v8, -0x1000000
@@ -752,10 +752,10 @@
 
     move v2, v3
 
-    .line 632
+    .line 622
     goto :goto_0
 
-    .line 634
+    .line 623
     :catch_0
     move-exception v0
 
@@ -765,7 +765,7 @@
 
     move-object v1, v9
 
-    .line 635
+    .line 624
     :goto_1
     sget-object v2, Lcom/bbm/util/b/b;->C:Ljava/lang/String;
 
@@ -773,16 +773,16 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 636
+    .line 625
     const/4 v1, 0x1
 
     iput v1, p0, Lcom/bbm/util/b/b;->a:I
 
-    .line 639
+    .line 628
     :cond_0
     return-object v0
 
-    .line 634
+    .line 623
     :catch_1
     move-exception v1
 
@@ -793,7 +793,7 @@
     .locals 1
 
     .prologue
-    .line 555
+    .line 548
     iget v0, p0, Lcom/bbm/util/b/b;->a:I
 
     if-eqz v0, :cond_0
@@ -809,14 +809,47 @@
     goto :goto_0
 .end method
 
-.method private h()I
+.method private h()V
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 555
+    iput v0, p0, Lcom/bbm/util/b/b;->a:I
+
+    .line 556
+    iput v0, p0, Lcom/bbm/util/b/b;->B:I
+
+    .line 557
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/bbm/util/b/b;->A:I
+
+    .line 558
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/util/b/b;->w:Ljava/util/ArrayList;
+
+    .line 559
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/bbm/util/b/b;->g:[I
+
+    .line 560
+    return-void
+.end method
+
+.method private i()I
     .locals 2
 
     .prologue
-    .line 573
+    .line 566
     const/4 v0, 0x0
 
-    .line 575
+    .line 568
     :try_start_0
     iget-object v1, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
 
@@ -828,11 +861,11 @@
 
     and-int/lit16 v0, v0, 0xff
 
-    .line 580
+    .line 572
     :goto_0
     return v0
 
-    .line 578
+    .line 570
     :catch_0
     move-exception v1
 
@@ -843,38 +876,38 @@
     goto :goto_0
 .end method
 
-.method private i()I
+.method private j()I
     .locals 4
 
     .prologue
-    .line 589
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()I
+    .line 581
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
 
     move-result v0
 
     iput v0, p0, Lcom/bbm/util/b/b;->p:I
 
-    .line 590
+    .line 582
     const/4 v0, 0x0
 
-    .line 591
+    .line 583
     iget v1, p0, Lcom/bbm/util/b/b;->p:I
 
     if-lez v1, :cond_0
 
-    .line 594
+    .line 586
     :goto_0
     :try_start_0
     iget v1, p0, Lcom/bbm/util/b/b;->p:I
 
     if-ge v0, v1, :cond_0
 
-    .line 595
+    .line 587
     iget v1, p0, Lcom/bbm/util/b/b;->p:I
 
     sub-int/2addr v1, v0
 
-    .line 596
+    .line 588
     iget-object v2, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
 
     iget-object v3, p0, Lcom/bbm/util/b/b;->o:[B
@@ -883,70 +916,70 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 598
+    .line 590
     add-int/2addr v0, v1
 
     goto :goto_0
 
-    .line 601
+    .line 592
     :catch_0
     move-exception v1
 
-    .line 602
+    .line 593
     sget-object v2, Lcom/bbm/util/b/b;->C:Ljava/lang/String;
 
     const-string v3, "Error Reading Block"
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 603
+    .line 594
     const/4 v1, 0x1
 
     iput v1, p0, Lcom/bbm/util/b/b;->a:I
 
-    .line 606
+    .line 597
     :cond_0
     return v0
 .end method
 
-.method private j()V
-    .locals 10
+.method private k()V
+    .locals 11
 
     .prologue
-    const/4 v9, 0x0
-
-    const/4 v2, 0x0
+    const/4 v10, 0x0
 
     const/4 v1, 0x1
 
-    .line 647
+    const/4 v2, 0x0
+
+    .line 636
     move v3, v2
 
-    .line 648
+    .line 637
     :cond_0
     :goto_0
-    if-nez v3, :cond_9
+    if-nez v3, :cond_7
 
     invoke-direct {p0}, Lcom/bbm/util/b/b;->g()Z
 
     move-result v0
 
-    if-nez v0, :cond_9
+    if-nez v0, :cond_7
 
-    .line 649
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()I
+    .line 638
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
 
     move-result v0
 
-    .line 650
+    .line 639
     sparse-switch v0, :sswitch_data_0
 
-    .line 690
+    .line 678
     iput v1, p0, Lcom/bbm/util/b/b;->a:I
 
     goto :goto_0
 
-    .line 652
+    .line 641
     :sswitch_0
     iget-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
 
@@ -997,7 +1030,7 @@
 
     iput v4, v0, Lcom/bbm/util/b/c;->d:I
 
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()I
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
 
     move-result v4
 
@@ -1010,19 +1043,19 @@
     :goto_1
     iput-boolean v0, p0, Lcom/bbm/util/b/b;->l:Z
 
-    const-wide/high16 v5, 0x4000000000000000L
+    const-wide/high16 v6, 0x4000000000000000L
 
     and-int/lit8 v0, v4, 0x7
 
     add-int/lit8 v0, v0, 0x1
 
-    int-to-double v7, v0
+    int-to-double v8, v0
 
-    invoke-static {v5, v6, v7, v8}, Ljava/lang/Math;->pow(DD)D
+    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    double-to-int v0, v5
+    double-to-int v0, v6
 
     iput v0, p0, Lcom/bbm/util/b/b;->m:I
 
@@ -1064,9 +1097,9 @@
 
     iget-object v0, p0, Lcom/bbm/util/b/b;->t:[B
 
-    invoke-direct {p0, v9, v0}, Lcom/bbm/util/b/b;->a(Lcom/bbm/util/b/c;[B)V
+    invoke-direct {p0, v10, v0}, Lcom/bbm/util/b/b;->a(Lcom/bbm/util/b/c;[B)V
 
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->m()V
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->n()V
 
     invoke-direct {p0}, Lcom/bbm/util/b/b;->g()Z
 
@@ -1101,25 +1134,25 @@
     :cond_4
     iget-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
 
-    iput-object v9, v0, Lcom/bbm/util/b/c;->k:[I
+    iput-object v10, v0, Lcom/bbm/util/b/c;->k:[I
 
     goto :goto_3
 
-    .line 655
+    .line 644
     :sswitch_1
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()I
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
 
     move-result v0
 
-    .line 656
+    .line 645
     sparse-switch v0, :sswitch_data_1
 
-    .line 682
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->m()V
+    .line 670
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->n()V
 
     goto/16 :goto_0
 
-    .line 659
+    .line 648
     :sswitch_2
     new-instance v0, Lcom/bbm/util/b/c;
 
@@ -1127,90 +1160,29 @@
 
     iput-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
 
-    .line 660
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()I
-
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()I
-
-    move-result v0
-
-    iget-object v4, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
-
-    and-int/lit8 v5, v0, 0x1c
-
-    shr-int/lit8 v5, v5, 0x2
-
-    iput v5, v4, Lcom/bbm/util/b/c;->g:I
-
-    iget-object v4, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
-
-    iget v4, v4, Lcom/bbm/util/b/c;->g:I
-
-    if-nez v4, :cond_5
-
-    iget-object v4, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
-
-    iput v1, v4, Lcom/bbm/util/b/c;->g:I
-
-    :cond_5
-    iget-object v4, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
-
-    and-int/lit8 v0, v0, 0x1
-
-    if-eqz v0, :cond_6
-
-    move v0, v1
-
-    :goto_4
-    iput-boolean v0, v4, Lcom/bbm/util/b/c;->f:Z
-
-    iget-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
-
-    iget-object v4, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v4
-
-    mul-int/lit8 v4, v4, 0xa
-
-    iput v4, v0, Lcom/bbm/util/b/c;->i:I
-
-    iget-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
-
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()I
-
-    move-result v4
-
-    iput v4, v0, Lcom/bbm/util/b/c;->h:I
-
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()I
+    .line 649
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->l()V
 
     goto/16 :goto_0
 
-    :cond_6
-    move v0, v2
-
-    goto :goto_4
-
-    .line 663
+    .line 652
     :sswitch_3
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->j()I
 
-    .line 664
+    .line 653
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
     move v0, v2
 
-    .line 665
-    :goto_5
+    .line 654
+    :goto_4
     const/16 v5, 0xb
 
-    if-ge v0, v5, :cond_7
+    if-ge v0, v5, :cond_5
 
-    .line 666
+    .line 655
     iget-object v5, p0, Lcom/bbm/util/b/b;->o:[B
 
     aget-byte v5, v5, v0
@@ -1219,13 +1191,13 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 665
+    .line 654
     add-int/lit8 v0, v0, 0x1
 
-    goto :goto_5
+    goto :goto_4
 
-    .line 668
-    :cond_7
+    .line 657
+    :cond_5
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -1236,42 +1208,42 @@
 
     move-result v0
 
-    if-eqz v0, :cond_8
+    if-eqz v0, :cond_6
 
-    .line 669
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->l()V
-
-    goto/16 :goto_0
-
-    .line 672
-    :cond_8
+    .line 658
     invoke-direct {p0}, Lcom/bbm/util/b/b;->m()V
 
     goto/16 :goto_0
 
-    .line 676
+    .line 660
+    :cond_6
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->n()V
+
+    goto/16 :goto_0
+
+    .line 664
     :sswitch_4
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->m()V
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->n()V
 
     goto/16 :goto_0
 
-    .line 679
+    .line 667
     :sswitch_5
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->m()V
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->n()V
 
     goto/16 :goto_0
 
     :sswitch_6
     move v3, v1
 
-    .line 687
+    .line 675
     goto/16 :goto_0
 
-    .line 693
-    :cond_9
+    .line 681
+    :cond_7
     return-void
 
-    .line 650
+    .line 639
     nop
 
     :sswitch_data_0
@@ -1281,7 +1253,7 @@
         0x3b -> :sswitch_6
     .end sparse-switch
 
-    .line 656
+    .line 645
     :sswitch_data_1
     .sparse-switch
         0x1 -> :sswitch_5
@@ -1291,247 +1263,98 @@
     .end sparse-switch
 .end method
 
-.method private k()V
-    .locals 5
+.method private l()V
+    .locals 4
 
     .prologue
     const/4 v0, 0x1
 
-    const/4 v1, 0x0
+    .line 708
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
 
-    .line 699
-    const-string v2, ""
+    .line 709
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
 
-    move-object v3, v2
+    move-result v1
 
-    move v2, v1
+    .line 710
+    iget-object v2, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
 
-    .line 700
-    :goto_0
-    const/4 v4, 0x6
+    and-int/lit8 v3, v1, 0x1c
 
-    if-ge v2, v4, :cond_0
+    shr-int/lit8 v3, v3, 0x2
 
-    .line 701
-    new-instance v4, Ljava/lang/StringBuilder;
+    iput v3, v2, Lcom/bbm/util/b/c;->g:I
 
-    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+    .line 711
+    iget-object v2, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
 
-    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget v2, v2, Lcom/bbm/util/b/c;->g:I
 
-    move-result-object v3
+    if-nez v2, :cond_0
 
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()I
+    .line 712
+    iget-object v2, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
 
-    move-result v4
+    iput v0, v2, Lcom/bbm/util/b/c;->g:I
 
-    int-to-char v4, v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 700
-    add-int/lit8 v2, v2, 0x1
-
-    goto :goto_0
-
-    .line 703
+    .line 714
     :cond_0
-    const-string v2, "GIF"
+    iget-object v2, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
 
-    invoke-virtual {v3, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    and-int/lit8 v1, v1, 0x1
 
-    move-result v2
+    if-eqz v1, :cond_1
 
-    if-nez v2, :cond_2
+    :goto_0
+    iput-boolean v0, v2, Lcom/bbm/util/b/c;->f:Z
 
-    .line 704
-    iput v0, p0, Lcom/bbm/util/b/b;->a:I
+    .line 715
+    iget-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
+
+    iget-object v1, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0xa
+
+    iput v1, v0, Lcom/bbm/util/b/c;->i:I
+
+    .line 716
+    iget-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
+
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    move-result v1
+
+    iput v1, v0, Lcom/bbm/util/b/c;->h:I
+
+    .line 717
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    .line 718
+    return-void
 
     .line 714
     :cond_1
-    :goto_1
-    return-void
+    const/4 v0, 0x0
 
-    .line 707
-    :cond_2
-    iget-object v2, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v2
-
-    iput v2, p0, Lcom/bbm/util/b/b;->b:I
-
-    iget-object v2, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
-
-    invoke-virtual {v2}, Ljava/nio/ByteBuffer;->getShort()S
-
-    move-result v2
-
-    iput v2, p0, Lcom/bbm/util/b/b;->c:I
-
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()I
-
-    move-result v2
-
-    and-int/lit16 v3, v2, 0x80
-
-    if-eqz v3, :cond_3
-
-    :goto_2
-    iput-boolean v0, p0, Lcom/bbm/util/b/b;->d:Z
-
-    const/4 v0, 0x2
-
-    and-int/lit8 v2, v2, 0x7
-
-    shl-int/2addr v0, v2
-
-    iput v0, p0, Lcom/bbm/util/b/b;->e:I
-
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/bbm/util/b/b;->i:I
-
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/bbm/util/b/b;->k:I
-
-    iget v0, p0, Lcom/bbm/util/b/b;->b:I
-
-    iget v2, p0, Lcom/bbm/util/b/b;->c:I
-
-    mul-int/2addr v0, v2
-
-    new-array v0, v0, [B
-
-    iput-object v0, p0, Lcom/bbm/util/b/b;->t:[B
-
-    iget v0, p0, Lcom/bbm/util/b/b;->b:I
-
-    iget v2, p0, Lcom/bbm/util/b/b;->c:I
-
-    mul-int/2addr v0, v2
-
-    new-array v0, v0, [I
-
-    iput-object v0, p0, Lcom/bbm/util/b/b;->u:[I
-
-    iget v0, p0, Lcom/bbm/util/b/b;->b:I
-
-    iget v2, p0, Lcom/bbm/util/b/b;->c:I
-
-    mul-int/2addr v0, v2
-
-    new-array v0, v0, [I
-
-    iput-object v0, p0, Lcom/bbm/util/b/b;->v:[I
-
-    :try_start_0
-    iget v0, p0, Lcom/bbm/util/b/b;->b:I
-
-    iget v2, p0, Lcom/bbm/util/b/b;->c:I
-
-    sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    invoke-static {v0, v2, v3}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/util/b/b;->y:Landroid/graphics/Bitmap;
-
-    iget v0, p0, Lcom/bbm/util/b/b;->b:I
-
-    iget v2, p0, Lcom/bbm/util/b/b;->c:I
-
-    sget-object v3, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
-
-    invoke-static {v0, v2, v3}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/util/b/b;->z:Landroid/graphics/Bitmap;
-    :try_end_0
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 708
-    :goto_3
-    iget-boolean v0, p0, Lcom/bbm/util/b/b;->d:Z
-
-    if-eqz v0, :cond_1
-
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 709
-    iget v0, p0, Lcom/bbm/util/b/b;->e:I
-
-    invoke-direct {p0, v0}, Lcom/bbm/util/b/b;->b(I)[I
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/util/b/b;->g:[I
-
-    .line 710
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->g()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 711
-    iget-object v0, p0, Lcom/bbm/util/b/b;->g:[I
-
-    iget v1, p0, Lcom/bbm/util/b/b;->i:I
-
-    aget v0, v0, v1
-
-    iput v0, p0, Lcom/bbm/util/b/b;->j:I
-
-    goto :goto_1
-
-    :cond_3
-    move v0, v1
-
-    .line 707
-    goto :goto_2
-
-    :catch_0
-    move-exception v0
-
-    const-string v2, "Out of memory processing image"
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {v0, v2, v1}, Lcom/bbm/w;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    goto :goto_3
+    goto :goto_0
 .end method
 
-.method private l()V
+.method private m()V
     .locals 4
 
     .prologue
     const/4 v3, 0x1
 
-    .line 806
+    .line 794
     :cond_0
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->j()I
 
-    .line 807
+    .line 795
     iget-object v0, p0, Lcom/bbm/util/b/b;->o:[B
 
     const/4 v1, 0x0
@@ -1540,14 +1363,14 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 809
+    .line 797
     iget-object v0, p0, Lcom/bbm/util/b/b;->o:[B
 
     aget-byte v0, v0, v3
 
     and-int/lit16 v0, v0, 0xff
 
-    .line 810
+    .line 798
     iget-object v1, p0, Lcom/bbm/util/b/b;->o:[B
 
     const/4 v2, 0x2
@@ -1556,14 +1379,14 @@
 
     and-int/lit16 v1, v1, 0xff
 
-    .line 811
+    .line 799
     shl-int/lit8 v1, v1, 0x8
 
     or-int/2addr v0, v1
 
     iput v0, p0, Lcom/bbm/util/b/b;->f:I
 
-    .line 814
+    .line 802
     :cond_1
     iget v0, p0, Lcom/bbm/util/b/b;->p:I
 
@@ -1575,20 +1398,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 815
+    .line 803
     :cond_2
     return-void
 .end method
 
-.method private m()V
+.method private n()V
     .locals 1
 
     .prologue
-    .line 830
+    .line 818
     :cond_0
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->j()I
 
-    .line 832
+    .line 820
     iget v0, p0, Lcom/bbm/util/b/b;->p:I
 
     if-lez v0, :cond_1
@@ -1599,7 +1422,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 833
+    .line 821
     :cond_1
     return-void
 .end method
@@ -1637,96 +1460,287 @@
 .end method
 
 .method public final a([B)I
-    .locals 2
+    .locals 6
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v5, 0x2
 
-    .line 311
-    iput v0, p0, Lcom/bbm/util/b/b;->a:I
+    const/4 v2, 0x0
 
-    iput v0, p0, Lcom/bbm/util/b/b;->B:I
+    const/4 v1, 0x1
 
-    const/4 v0, -0x1
+    .line 305
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()V
 
-    iput v0, p0, Lcom/bbm/util/b/b;->A:I
+    .line 306
+    if-eqz p1, :cond_5
 
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/util/b/b;->w:Ljava/util/ArrayList;
-
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/bbm/util/b/b;->g:[I
-
-    .line 312
-    if-eqz p1, :cond_1
-
-    .line 314
+    .line 308
     invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
 
-    .line 315
+    .line 309
     iget-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 316
+    .line 310
     iget-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
 
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+    sget-object v3, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 318
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->k()V
+    .line 312
+    const-string v0, ""
 
-    .line 319
+    move-object v3, v0
+
+    move v0, v2
+
+    :goto_0
+    const/4 v4, 0x6
+
+    if-ge v0, v4, :cond_0
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    move-result v4
+
+    int-to-char v4, v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const-string v0, "GIF"
+
+    invoke-virtual {v3, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    iput v1, p0, Lcom/bbm/util/b/b;->a:I
+
+    .line 313
+    :cond_1
+    :goto_1
     invoke-direct {p0}, Lcom/bbm/util/b/b;->g()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_2
 
-    .line 320
-    invoke-direct {p0}, Lcom/bbm/util/b/b;->j()V
+    .line 314
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->k()V
 
-    .line 321
+    .line 315
     iget v0, p0, Lcom/bbm/util/b/b;->B:I
 
-    if-gez v0, :cond_0
+    if-gez v0, :cond_2
 
-    .line 322
-    const/4 v0, 0x1
+    .line 316
+    iput v1, p0, Lcom/bbm/util/b/b;->a:I
 
-    iput v0, p0, Lcom/bbm/util/b/b;->a:I
-
-    .line 330
-    :cond_0
-    :goto_0
+    .line 323
+    :cond_2
+    :goto_2
     iget v0, p0, Lcom/bbm/util/b/b;->a:I
 
     return v0
 
-    .line 327
-    :cond_1
-    const/4 v0, 0x2
+    .line 312
+    :cond_3
+    iget-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
 
-    iput v0, p0, Lcom/bbm/util/b/b;->a:I
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
 
-    goto :goto_0
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/util/b/b;->b:I
+
+    iget-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/util/b/b;->c:I
+
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    move-result v3
+
+    and-int/lit16 v0, v3, 0x80
+
+    if-eqz v0, :cond_4
+
+    move v0, v1
+
+    :goto_3
+    iput-boolean v0, p0, Lcom/bbm/util/b/b;->d:Z
+
+    and-int/lit8 v0, v3, 0x7
+
+    shl-int v0, v5, v0
+
+    iput v0, p0, Lcom/bbm/util/b/b;->e:I
+
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/util/b/b;->i:I
+
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/util/b/b;->k:I
+
+    iget v0, p0, Lcom/bbm/util/b/b;->b:I
+
+    iget v3, p0, Lcom/bbm/util/b/b;->c:I
+
+    mul-int/2addr v0, v3
+
+    new-array v0, v0, [B
+
+    iput-object v0, p0, Lcom/bbm/util/b/b;->t:[B
+
+    iget v0, p0, Lcom/bbm/util/b/b;->b:I
+
+    iget v3, p0, Lcom/bbm/util/b/b;->c:I
+
+    mul-int/2addr v0, v3
+
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Lcom/bbm/util/b/b;->u:[I
+
+    iget v0, p0, Lcom/bbm/util/b/b;->b:I
+
+    iget v3, p0, Lcom/bbm/util/b/b;->c:I
+
+    mul-int/2addr v0, v3
+
+    new-array v0, v0, [I
+
+    iput-object v0, p0, Lcom/bbm/util/b/b;->v:[I
+
+    :try_start_0
+    iget v0, p0, Lcom/bbm/util/b/b;->b:I
+
+    iget v3, p0, Lcom/bbm/util/b/b;->c:I
+
+    sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {v0, v3, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/util/b/b;->y:Landroid/graphics/Bitmap;
+
+    iget v0, p0, Lcom/bbm/util/b/b;->b:I
+
+    iget v3, p0, Lcom/bbm/util/b/b;->c:I
+
+    sget-object v4, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+
+    invoke-static {v0, v3, v4}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/util/b/b;->z:Landroid/graphics/Bitmap;
+    :try_end_0
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_4
+    iget-boolean v0, p0, Lcom/bbm/util/b/b;->d:Z
+
+    if-eqz v0, :cond_1
+
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->g()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget v0, p0, Lcom/bbm/util/b/b;->e:I
+
+    invoke-direct {p0, v0}, Lcom/bbm/util/b/b;->b(I)[I
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/util/b/b;->g:[I
+
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->g()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/util/b/b;->g:[I
+
+    iget v2, p0, Lcom/bbm/util/b/b;->i:I
+
+    aget v0, v0, v2
+
+    iput v0, p0, Lcom/bbm/util/b/b;->j:I
+
+    goto/16 :goto_1
+
+    :cond_4
+    move v0, v2
+
+    goto :goto_3
+
+    :catch_0
+    move-exception v0
+
+    const-string v3, "Out of memory processing image"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v3, v2}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    iput v1, p0, Lcom/bbm/util/b/b;->a:I
+
+    goto :goto_4
+
+    .line 320
+    :cond_5
+    iput v5, p0, Lcom/bbm/util/b/b;->a:I
+
+    goto/16 :goto_2
 .end method
 
 .method public final a()V
     .locals 2
 
     .prologue
-    .line 156
+    .line 157
     iget v0, p0, Lcom/bbm/util/b/b;->A:I
 
     add-int/lit8 v0, v0, 0x1
@@ -1737,7 +1751,7 @@
 
     iput v0, p0, Lcom/bbm/util/b/b;->A:I
 
-    .line 157
+    .line 158
     return-void
 .end method
 
@@ -1745,13 +1759,548 @@
     .locals 1
 
     .prologue
-    .line 163
+    .line 164
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/bbm/util/b/b;->A:I
 
-    .line 164
+    .line 165
     return-void
+.end method
+
+.method public final b([B)Z
+    .locals 11
+
+    .prologue
+    const/4 v10, 0x0
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 829
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->h()V
+
+    .line 830
+    if-eqz p1, :cond_1
+
+    .line 832
+    invoke-static {p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    .line 833
+    iget-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
+
+    .line 834
+    iget-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    sget-object v3, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
+
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
+
+    .line 836
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    move v0, v2
+
+    .line 837
+    :goto_0
+    const/4 v4, 0x6
+
+    if-ge v0, v4, :cond_0
+
+    .line 838
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    move-result v4
+
+    int-to-char v4, v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 837
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 840
+    :cond_0
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v4, "GIF87a"
+
+    invoke-static {v0, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v3, "GIF89a"
+
+    invoke-static {v0, v3}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 951
+    :cond_1
+    :goto_1
+    return v2
+
+    .line 845
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/util/b/b;->b:I
+
+    .line 846
+    iget-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/util/b/b;->c:I
+
+    .line 848
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    move-result v3
+
+    .line 849
+    and-int/lit16 v0, v3, 0x80
+
+    if-eqz v0, :cond_4
+
+    move v0, v1
+
+    :goto_2
+    iput-boolean v0, p0, Lcom/bbm/util/b/b;->d:Z
+
+    .line 852
+    const/4 v0, 0x2
+
+    and-int/lit8 v3, v3, 0x7
+
+    shl-int/2addr v0, v3
+
+    iput v0, p0, Lcom/bbm/util/b/b;->e:I
+
+    .line 853
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/util/b/b;->i:I
+
+    .line 854
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/util/b/b;->k:I
+
+    .line 857
+    iget-boolean v0, p0, Lcom/bbm/util/b/b;->d:Z
+
+    if-eqz v0, :cond_3
+
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->g()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    .line 859
+    :try_start_0
+    iget-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    iget-object v3, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v3}, Ljava/nio/ByteBuffer;->position()I
+
+    move-result v3
+
+    iget v4, p0, Lcom/bbm/util/b/b;->e:I
+
+    mul-int/lit8 v4, v4, 0x3
+
+    add-int/2addr v3, v4
+
+    invoke-virtual {v0, v3}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    :try_end_0
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
+
+    :cond_3
+    move v3, v2
+
+    .line 866
+    :goto_3
+    if-nez v3, :cond_b
+
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->g()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    .line 867
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    move-result v0
+
+    .line 868
+    sparse-switch v0, :sswitch_data_0
+
+    .line 942
+    iput v1, p0, Lcom/bbm/util/b/b;->a:I
+
+    goto :goto_3
+
+    :cond_4
+    move v0, v2
+
+    .line 849
+    goto :goto_2
+
+    .line 870
+    :sswitch_0
+    iget-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
+
+    if-nez v0, :cond_5
+
+    .line 872
+    iput v1, p0, Lcom/bbm/util/b/b;->a:I
+
+    goto :goto_1
+
+    .line 876
+    :cond_5
+    iget-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
+
+    iget-object v4, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v4
+
+    iput v4, v0, Lcom/bbm/util/b/c;->a:I
+
+    .line 877
+    iget-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
+
+    iget-object v4, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v4
+
+    iput v4, v0, Lcom/bbm/util/b/c;->b:I
+
+    .line 878
+    iget-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
+
+    iget-object v4, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v4
+
+    iput v4, v0, Lcom/bbm/util/b/c;->c:I
+
+    .line 879
+    iget-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
+
+    iget-object v4, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->getShort()S
+
+    move-result v4
+
+    iput v4, v0, Lcom/bbm/util/b/c;->d:I
+
+    .line 881
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    move-result v4
+
+    .line 882
+    and-int/lit16 v0, v4, 0x80
+
+    if-eqz v0, :cond_7
+
+    move v0, v1
+
+    :goto_4
+    iput-boolean v0, p0, Lcom/bbm/util/b/b;->l:Z
+
+    .line 883
+    const-wide/high16 v6, 0x4000000000000000L
+
+    and-int/lit8 v0, v4, 0x7
+
+    add-int/lit8 v0, v0, 0x1
+
+    int-to-double v8, v0
+
+    invoke-static {v6, v7, v8, v9}, Ljava/lang/Math;->pow(DD)D
+
+    move-result-wide v6
+
+    double-to-int v0, v6
+
+    iput v0, p0, Lcom/bbm/util/b/b;->m:I
+
+    .line 887
+    iget-object v5, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
+
+    and-int/lit8 v0, v4, 0x40
+
+    if-eqz v0, :cond_8
+
+    move v0, v1
+
+    :goto_5
+    iput-boolean v0, v5, Lcom/bbm/util/b/c;->e:Z
+
+    .line 888
+    iget-boolean v0, p0, Lcom/bbm/util/b/b;->l:Z
+
+    if-eqz v0, :cond_6
+
+    .line 890
+    :try_start_1
+    iget-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    iget-object v4, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->position()I
+
+    move-result v4
+
+    iget v5, p0, Lcom/bbm/util/b/b;->e:I
+
+    mul-int/lit8 v5, v5, 0x3
+
+    add-int/2addr v4, v5
+
+    invoke-virtual {v0, v4}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    :try_end_1
+    .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 896
+    :cond_6
+    iget-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
+
+    iget-object v4, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
+
+    invoke-virtual {v4}, Ljava/nio/ByteBuffer;->position()I
+
+    move-result v4
+
+    iput v4, v0, Lcom/bbm/util/b/c;->j:I
+
+    .line 898
+    invoke-direct {p0, v10, v10}, Lcom/bbm/util/b/b;->a(Lcom/bbm/util/b/c;[B)V
+
+    .line 899
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->n()V
+
+    .line 900
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->g()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 904
+    iget v0, p0, Lcom/bbm/util/b/b;->B:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/bbm/util/b/b;->B:I
+
+    .line 905
+    iget-object v0, p0, Lcom/bbm/util/b/b;->w:Ljava/util/ArrayList;
+
+    iget-object v4, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
+
+    invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_3
+
+    :cond_7
+    move v0, v2
+
+    .line 882
+    goto :goto_4
+
+    :cond_8
+    move v0, v2
+
+    .line 887
+    goto :goto_5
+
+    .line 908
+    :sswitch_1
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->i()I
+
+    move-result v0
+
+    .line 909
+    sparse-switch v0, :sswitch_data_1
+
+    .line 934
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->n()V
+
+    goto/16 :goto_3
+
+    .line 912
+    :sswitch_2
+    new-instance v0, Lcom/bbm/util/b/c;
+
+    invoke-direct {v0, v2}, Lcom/bbm/util/b/c;-><init>(B)V
+
+    iput-object v0, p0, Lcom/bbm/util/b/b;->x:Lcom/bbm/util/b/c;
+
+    .line 913
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->l()V
+
+    goto/16 :goto_3
+
+    .line 916
+    :sswitch_3
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->j()I
+
+    .line 917
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    move v0, v2
+
+    .line 918
+    :goto_6
+    const/16 v5, 0xb
+
+    if-ge v0, v5, :cond_9
+
+    .line 919
+    iget-object v5, p0, Lcom/bbm/util/b/b;->o:[B
+
+    aget-byte v5, v5, v0
+
+    int-to-char v5, v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 918
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_6
+
+    .line 921
+    :cond_9
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v4, "NETSCAPE2.0"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    .line 922
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->m()V
+
+    goto/16 :goto_3
+
+    .line 924
+    :cond_a
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->n()V
+
+    goto/16 :goto_3
+
+    .line 928
+    :sswitch_4
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->n()V
+
+    goto/16 :goto_3
+
+    .line 931
+    :sswitch_5
+    invoke-direct {p0}, Lcom/bbm/util/b/b;->n()V
+
+    goto/16 :goto_3
+
+    :sswitch_6
+    move v3, v1
+
+    .line 939
+    goto/16 :goto_3
+
+    .line 946
+    :cond_b
+    iget v0, p0, Lcom/bbm/util/b/b;->B:I
+
+    if-le v0, v1, :cond_1
+
+    move v2, v1
+
+    .line 947
+    goto/16 :goto_1
+
+    .line 892
+    :catch_0
+    move-exception v0
+
+    goto/16 :goto_1
+
+    .line 861
+    :catch_1
+    move-exception v0
+
+    goto/16 :goto_1
+
+    .line 868
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x21 -> :sswitch_1
+        0x2c -> :sswitch_0
+        0x3b -> :sswitch_6
+    .end sparse-switch
+
+    .line 909
+    :sswitch_data_1
+    .sparse-switch
+        0x1 -> :sswitch_5
+        0xf9 -> :sswitch_2
+        0xfe -> :sswitch_4
+        0xff -> :sswitch_3
+    .end sparse-switch
 .end method
 
 .method public final c()I
@@ -1795,7 +2344,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 261
+    .line 260
     :goto_0
     return-object v0
 
@@ -1823,24 +2372,24 @@
 
     iput-object v0, p0, Lcom/bbm/util/b/b;->h:[I
 
-    .line 243
+    .line 242
     :cond_2
     :goto_1
     const/4 v0, 0x0
 
-    .line 244
+    .line 243
     iget-boolean v1, v10, Lcom/bbm/util/b/c;->f:Z
 
     if-eqz v1, :cond_3
 
-    .line 245
+    .line 244
     iget-object v0, p0, Lcom/bbm/util/b/b;->h:[I
 
     iget v1, v10, Lcom/bbm/util/b/c;->h:I
 
     aget v0, v0, v1
 
-    .line 246
+    .line 245
     iget-object v1, p0, Lcom/bbm/util/b/b;->h:[I
 
     iget v2, v10, Lcom/bbm/util/b/c;->h:I
@@ -1852,49 +2401,49 @@
     :cond_3
     move v11, v0
 
-    .line 248
+    .line 247
     iget-object v0, p0, Lcom/bbm/util/b/b;->h:[I
 
     if-nez v0, :cond_5
 
-    .line 249
+    .line 248
     sget-object v0, Lcom/bbm/util/b/b;->C:Ljava/lang/String;
 
     const-string v1, "No Valid Color Table"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 250
+    .line 249
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/bbm/util/b/b;->a:I
 
-    .line 251
+    .line 250
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 237
+    .line 236
     :cond_4
     iget-object v0, v10, Lcom/bbm/util/b/c;->k:[I
 
     iput-object v0, p0, Lcom/bbm/util/b/b;->h:[I
 
-    .line 238
+    .line 237
     iget v0, p0, Lcom/bbm/util/b/b;->i:I
 
     iget v1, v10, Lcom/bbm/util/b/c;->h:I
 
     if-ne v0, v1, :cond_2
 
-    .line 239
+    .line 238
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/bbm/util/b/b;->j:I
 
     goto :goto_1
 
-    .line 254
+    .line 253
     :cond_5
     iget v1, p0, Lcom/bbm/util/b/b;->A:I
 
@@ -2234,19 +2783,19 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->setPixels([IIIIIII)V
 
-    .line 257
+    .line 256
     iget-boolean v0, v10, Lcom/bbm/util/b/c;->f:Z
 
     if-eqz v0, :cond_10
 
-    .line 258
+    .line 257
     iget-object v0, p0, Lcom/bbm/util/b/b;->h:[I
 
     iget v1, v10, Lcom/bbm/util/b/c;->h:I
 
     aput v11, v0, v1
 
-    .line 261
+    .line 260
     :cond_10
     iget-object v0, p0, Lcom/bbm/util/b/b;->z:Landroid/graphics/Bitmap;
 
@@ -2268,7 +2817,7 @@
 
     goto/16 :goto_2
 
-    .line 254
+    .line 253
     nop
 
     :pswitch_data_0
@@ -2283,7 +2832,7 @@
     .locals 1
 
     .prologue
-    .line 836
+    .line 824
     iget-object v0, p0, Lcom/bbm/util/b/b;->n:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B

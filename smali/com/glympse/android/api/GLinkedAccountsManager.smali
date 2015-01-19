@@ -7,6 +7,9 @@
 
 
 # virtual methods
+.method public abstract canSend(Lcom/glympse/android/api/GInvite;)Z
+.end method
+
 .method public abstract getAccount(Ljava/lang/String;)Lcom/glympse/android/api/GLinkedAccount;
 .end method
 

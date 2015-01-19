@@ -1,117 +1,205 @@
-.class final Lcom/bbm/setup/ah;
+.class public final Lcom/bbm/setup/ah;
 .super Ljava/lang/Object;
-.source "UpgradeActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "TransportErrorMonitor.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/setup/UpgradeActivity;
+.field a:Z
+
+.field public b:Z
+
+.field public final c:Lcom/bbm/j/k;
+
+.field private d:Z
+
+.field private e:Landroid/os/Handler;
+
+.field private f:J
+
+.field private g:J
+
+.field private final h:Ljava/lang/Runnable;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/setup/UpgradeActivity;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     .prologue
-    .line 27
-    iput-object p1, p0, Lcom/bbm/setup/ah;->a:Lcom/bbm/setup/UpgradeActivity;
+    const/4 v0, 0x0
 
+    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 19
+    iput-boolean v0, p0, Lcom/bbm/setup/ah;->a:Z
+
+    .line 20
+    iput-boolean v0, p0, Lcom/bbm/setup/ah;->d:Z
+
+    .line 21
+    iput-boolean v0, p0, Lcom/bbm/setup/ah;->b:Z
+
+    .line 22
+    new-instance v0, Landroid/os/Handler;
+
+    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/ah;->e:Landroid/os/Handler;
+
+    .line 23
+    const-wide/16 v0, 0x64
+
+    iput-wide v0, p0, Lcom/bbm/setup/ah;->f:J
+
+    .line 24
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/bbm/setup/ah;->g:J
+
+    .line 26
+    new-instance v0, Lcom/bbm/setup/ai;
+
+    invoke-direct {v0, p0}, Lcom/bbm/setup/ai;-><init>(Lcom/bbm/setup/ah;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/ah;->h:Ljava/lang/Runnable;
+
+    .line 38
+    new-instance v0, Lcom/bbm/setup/aj;
+
+    invoke-direct {v0, p0}, Lcom/bbm/setup/aj;-><init>(Lcom/bbm/setup/ah;)V
+
+    iput-object v0, p0, Lcom/bbm/setup/ah;->c:Lcom/bbm/j/k;
+
+    .line 45
     return-void
+.end method
+
+.method static synthetic a(Lcom/bbm/setup/ah;)V
+    .locals 7
+
+    .prologue
+    const/4 v6, 0x1
+
+    .line 15
+    iget-boolean v0, p0, Lcom/bbm/setup/ah;->b:Z
+
+    if-eqz v0, :cond_2
+
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/f/ae;
+
+    move-result-object v0
+
+    iget-boolean v0, v0, Lcom/bbm/f/ae;->j:Z
+
+    if-eqz v0, :cond_4
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lcom/bbm/setup/ah;->g:J
+
+    iget-wide v4, p0, Lcom/bbm/setup/ah;->f:J
+
+    add-long/2addr v2, v4
+
+    cmp-long v2, v2, v0
+
+    if-ltz v2, :cond_0
+
+    iget-boolean v2, p0, Lcom/bbm/setup/ah;->a:Z
+
+    if-nez v2, :cond_1
+
+    :cond_0
+    iget-boolean v2, p0, Lcom/bbm/setup/ah;->d:Z
+
+    if-eqz v2, :cond_3
+
+    iget-wide v2, p0, Lcom/bbm/setup/ah;->f:J
+
+    const-wide/16 v4, 0x2
+
+    mul-long/2addr v2, v4
+
+    const-wide/32 v4, 0x1499700
+
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->min(JJ)J
+
+    move-result-wide v2
+
+    iput-wide v2, p0, Lcom/bbm/setup/ah;->f:J
+
+    :goto_0
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/bbm/Alaska;->w()V
+
+    iput-wide v0, p0, Lcom/bbm/setup/ah;->g:J
+
+    iput-boolean v6, p0, Lcom/bbm/setup/ah;->a:Z
+
+    iget-object v2, p0, Lcom/bbm/setup/ah;->e:Landroid/os/Handler;
+
+    iget-object v3, p0, Lcom/bbm/setup/ah;->h:Ljava/lang/Runnable;
+
+    iget-wide v4, p0, Lcom/bbm/setup/ah;->f:J
+
+    add-long/2addr v0, v4
+
+    invoke-virtual {v2, v3, v0, v1}, Landroid/os/Handler;->postAtTime(Ljava/lang/Runnable;J)Z
+
+    :cond_1
+    iput-boolean v6, p0, Lcom/bbm/setup/ah;->d:Z
+
+    :cond_2
+    :goto_1
+    return-void
+
+    :cond_3
+    const-wide/16 v2, 0x64
+
+    iput-wide v2, p0, Lcom/bbm/setup/ah;->f:J
+
+    goto :goto_0
+
+    :cond_4
+    invoke-virtual {p0}, Lcom/bbm/setup/ah;->a()V
+
+    goto :goto_1
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 6
+.method public final a()V
+    .locals 3
 
     .prologue
-    .line 30
-    const-string v0, "Upgrade Clicked"
+    const/4 v2, 0x0
 
-    const-class v1, Lcom/bbm/setup/UpgradeActivity;
+    .line 85
+    iput-boolean v2, p0, Lcom/bbm/setup/ah;->d:Z
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 86
+    const-wide/16 v0, 0x64
 
-    .line 32
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+    iput-wide v0, p0, Lcom/bbm/setup/ah;->f:J
 
-    move-result-object v0
+    .line 87
+    iput-boolean v2, p0, Lcom/bbm/setup/ah;->a:Z
 
-    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+    .line 88
+    const-wide/16 v0, 0x0
 
-    move-result-object v0
+    iput-wide v0, p0, Lcom/bbm/setup/ah;->g:J
 
-    .line 35
-    :try_start_0
-    iget-object v1, p0, Lcom/bbm/setup/ah;->a:Lcom/bbm/setup/UpgradeActivity;
-
-    new-instance v2, Landroid/content/Intent;
-
-    const-string v3, "android.intent.action.VIEW"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "market://details?id=com.bbm&hl="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v4
-
-    invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    invoke-virtual {v1, v2}, Lcom/bbm/setup/UpgradeActivity;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 43
-    :goto_0
+    .line 89
     return-void
-
-    .line 38
-    :catch_0
-    move-exception v1
-
-    iget-object v1, p0, Lcom/bbm/setup/ah;->a:Lcom/bbm/setup/UpgradeActivity;
-
-    new-instance v2, Landroid/content/Intent;
-
-    const-string v3, "android.intent.action.VIEW"
-
-    new-instance v4, Ljava/lang/StringBuilder;
-
-    const-string v5, "http://play.google.com/store/apps/details?id=com.bbm&hl="
-
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    invoke-direct {v2, v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    invoke-virtual {v1, v2}, Lcom/bbm/setup/UpgradeActivity;->startActivity(Landroid/content/Intent;)V
-
-    goto :goto_0
 .end method

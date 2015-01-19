@@ -1,142 +1,201 @@
-.class public final Lcom/bbm/ui/dz;
+.class final Lcom/bbm/ui/dz;
 .super Ljava/lang/Object;
-.source "ProfileIconHelper.java"
+.source "MainTabBarView.java"
+
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+
+
+# instance fields
+.field final synthetic a:Landroid/view/ViewGroup;
+
+.field final synthetic b:Z
+
+.field final synthetic c:Landroid/widget/ImageView;
+
+.field final synthetic d:Lcom/bbm/ui/MainTabBarView;
 
 
 # direct methods
-.method public static a(Landroid/app/Activity;ILandroid/net/Uri;)Z
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/MainTabBarView;Landroid/view/ViewGroup;ZLandroid/widget/ImageView;)V
+    .locals 0
 
     .prologue
-    .line 23
-    invoke-static {p0, p2}, Lcom/bbm/util/b/h;->c(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
+    .line 367
+    iput-object p1, p0, Lcom/bbm/ui/dz;->d:Lcom/bbm/ui/MainTabBarView;
 
-    move-result-object v0
+    iput-object p2, p0, Lcom/bbm/ui/dz;->a:Landroid/view/ViewGroup;
 
-    invoke-static {p0, p1, p2, v0}, Lcom/bbm/ui/dz;->a(Landroid/app/Activity;ILandroid/net/Uri;Ljava/lang/String;)Z
+    iput-boolean p3, p0, Lcom/bbm/ui/dz;->b:Z
 
-    move-result v0
+    iput-object p4, p0, Lcom/bbm/ui/dz;->c:Landroid/widget/ImageView;
 
-    return v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method
 
-.method public static a(Landroid/app/Activity;ILandroid/net/Uri;Ljava/lang/String;)Z
-    .locals 5
+
+# virtual methods
+.method public final onPreDraw()Z
+    .locals 6
 
     .prologue
-    .line 27
-    const-string v0, "image/gif"
+    const/4 v5, 0x1
 
-    invoke-virtual {v0, p3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    const/4 v3, 0x0
+
+    .line 370
+    iget-object v0, p0, Lcom/bbm/ui/dz;->a:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    .line 372
+    iget-object v0, p0, Lcom/bbm/ui/dz;->a:Landroid/view/ViewGroup;
+
+    invoke-virtual {v0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    iget-object v1, p0, Lcom/bbm/ui/dz;->d:Lcom/bbm/ui/MainTabBarView;
 
-    .line 29
-    const v0, 0x7f0e0359
+    invoke-static {v1}, Lcom/bbm/ui/MainTabBarView;->a(Lcom/bbm/ui/MainTabBarView;)I
 
-    invoke-virtual {p0, v0}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+    move-result v1
 
-    move-result-object v0
+    sub-int/2addr v0, v1
 
-    invoke-static {p0, v0}, Lcom/bbm/util/eo;->b(Landroid/content/Context;Ljava/lang/String;)V
+    div-int/lit8 v0, v0, 0x2
 
-    .line 31
-    :try_start_0
-    invoke-static {p0, p2}, Lcom/bbm/util/bd;->a(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/dz;->d:Lcom/bbm/ui/MainTabBarView;
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/bbm/ui/MainTabBarView;->a(Lcom/bbm/ui/MainTabBarView;)I
 
-    .line 33
-    new-instance v1, Ljava/io/File;
+    move-result v1
 
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    add-int/2addr v0, v1
 
-    .line 34
-    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+    iget-object v1, p0, Lcom/bbm/ui/dz;->d:Lcom/bbm/ui/MainTabBarView;
 
-    move-result v2
+    invoke-static {v1}, Lcom/bbm/ui/MainTabBarView;->b(Lcom/bbm/ui/MainTabBarView;)I
 
-    if-eqz v2, :cond_0
+    move-result v1
 
-    invoke-virtual {v1}, Ljava/io/File;->length()J
+    sub-int/2addr v0, v1
 
-    move-result-wide v1
+    int-to-float v1, v0
 
-    const-wide/32 v3, 0x8000
+    .line 374
+    iget-boolean v0, p0, Lcom/bbm/ui/dz;->b:Z
 
-    cmp-long v1, v1, v3
+    if-eqz v0, :cond_0
 
-    if-lez v1, :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/dz;->d:Lcom/bbm/ui/MainTabBarView;
 
-    .line 35
-    invoke-static {v0}, Lcom/bbm/util/b/h;->a(Ljava/lang/String;)Z
-
-    .line 37
-    :cond_0
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
-
-    move-result-object v1
-
-    const-string v2, "image/gif"
-
-    invoke-static {v0, v2}, Lcom/bbm/d/y;->d(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/cb;
+    invoke-static {v0}, Lcom/bbm/ui/MainTabBarView;->c(Lcom/bbm/ui/MainTabBarView;)[I
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    aget v0, v0, v3
 
-    .line 42
+    int-to-float v0, v0
+
+    .line 375
     :goto_0
-    const/4 v0, 0x1
+    iget-boolean v2, p0, Lcom/bbm/ui/dz;->b:Z
 
-    .line 49
+    if-eqz v2, :cond_1
+
+    iget-object v2, p0, Lcom/bbm/ui/dz;->d:Lcom/bbm/ui/MainTabBarView;
+
+    invoke-static {v2}, Lcom/bbm/ui/MainTabBarView;->c(Lcom/bbm/ui/MainTabBarView;)[I
+
+    move-result-object v2
+
+    aget v2, v2, v3
+
+    int-to-float v2, v2
+
+    sub-float v1, v2, v1
+
+    .line 377
     :goto_1
-    return v0
+    new-instance v2, Landroid/view/animation/TranslateAnimation;
 
-    .line 39
-    :catch_0
-    move-exception v0
+    iget-object v3, p0, Lcom/bbm/ui/dz;->d:Lcom/bbm/ui/MainTabBarView;
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v3}, Lcom/bbm/ui/MainTabBarView;->c(Lcom/bbm/ui/MainTabBarView;)[I
+
+    move-result-object v3
+
+    aget v3, v3, v5
+
+    int-to-float v3, v3
+
+    iget-object v4, p0, Lcom/bbm/ui/dz;->d:Lcom/bbm/ui/MainTabBarView;
+
+    invoke-static {v4}, Lcom/bbm/ui/MainTabBarView;->c(Lcom/bbm/ui/MainTabBarView;)[I
+
+    move-result-object v4
+
+    aget v4, v4, v5
+
+    int-to-float v4, v4
+
+    invoke-direct {v2, v0, v1, v3, v4}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
+
+    .line 379
+    invoke-virtual {v2, v5}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
+
+    .line 380
+    const-wide/16 v0, 0xc8
+
+    invoke-virtual {v2, v0, v1}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+
+    .line 381
+    const-wide/16 v0, 0x96
+
+    invoke-virtual {v2, v0, v1}, Landroid/view/animation/TranslateAnimation;->setStartOffset(J)V
+
+    .line 383
+    iget-object v0, p0, Lcom/bbm/ui/dz;->c:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
+
+    .line 385
+    return v5
+
+    .line 374
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/dz;->d:Lcom/bbm/ui/MainTabBarView;
+
+    invoke-static {v0}, Lcom/bbm/ui/MainTabBarView;->c(Lcom/bbm/ui/MainTabBarView;)[I
+
+    move-result-object v0
+
+    aget v0, v0, v3
+
+    int-to-float v0, v0
+
+    sub-float/2addr v0, v1
 
     goto :goto_0
 
-    .line 46
+    .line 375
     :cond_1
-    invoke-static {p0, p1, p2}, Lcom/bbm/ui/dz;->b(Landroid/app/Activity;ILandroid/net/Uri;)V
+    iget-object v1, p0, Lcom/bbm/ui/dz;->d:Lcom/bbm/ui/MainTabBarView;
 
-    .line 47
-    const/4 v0, 0x0
+    invoke-static {v1}, Lcom/bbm/ui/MainTabBarView;->c(Lcom/bbm/ui/MainTabBarView;)[I
+
+    move-result-object v1
+
+    aget v1, v1, v3
+
+    int-to-float v1, v1
 
     goto :goto_1
-.end method
-
-.method public static b(Landroid/app/Activity;ILandroid/net/Uri;)V
-    .locals 2
-
-    .prologue
-    .line 53
-    new-instance v0, Lcom/cropimage/f;
-
-    invoke-direct {v0, p2}, Lcom/cropimage/f;-><init>(Landroid/net/Uri;)V
-
-    iput-object p2, v0, Lcom/cropimage/f;->b:Landroid/net/Uri;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lcom/cropimage/f;->c:Z
-
-    .line 60
-    invoke-virtual {v0, p0}, Lcom/cropimage/f;->a(Landroid/content/Context;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0, p1}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    .line 61
-    return-void
 .end method

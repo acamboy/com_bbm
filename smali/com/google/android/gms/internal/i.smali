@@ -224,19 +224,19 @@
 
     const/16 v4, 0xf0
 
-    const/16 v3, 0xef
+    const/16 v1, 0xef
 
     array-length v0, p1
 
-    if-le v0, v3, :cond_0
+    if-le v0, v1, :cond_0
 
     invoke-direct {p0}, Lcom/google/android/gms/internal/i;->t()V
 
     const/16 v0, 0x14
 
-    const-wide/16 v1, 0x1
+    const-wide/16 v2, 0x1
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/internal/i;->a(IJ)V
+    invoke-virtual {p0, v0, v2, v3}, Lcom/google/android/gms/internal/i;->a(IJ)V
 
     invoke-direct {p0}, Lcom/google/android/gms/internal/i;->u()[B
 
@@ -245,7 +245,7 @@
     :cond_0
     array-length v0, p1
 
-    if-ge v0, v3, :cond_2
+    if-ge v0, v1, :cond_2
 
     array-length v0, p1
 
@@ -366,46 +366,52 @@
 .end method
 
 .method public a(III)V
-    .locals 15
+    .locals 16
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/i;->jY:Landroid/view/MotionEvent;
+    move-object/from16 v0, p0
 
-    if-eqz v1, :cond_0
+    iget-object v2, v0, Lcom/google/android/gms/internal/i;->jY:Landroid/view/MotionEvent;
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/i;->jY:Landroid/view/MotionEvent;
+    if-eqz v2, :cond_0
 
-    invoke-virtual {v1}, Landroid/view/MotionEvent;->recycle()V
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/google/android/gms/internal/i;->jY:Landroid/view/MotionEvent;
+
+    invoke-virtual {v2}, Landroid/view/MotionEvent;->recycle()V
 
     :cond_0
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     move/from16 v0, p3
 
-    int-to-long v3, v0
+    int-to-long v4, v0
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
     move/from16 v0, p1
 
-    int-to-float v6, v0
-
-    iget-object v7, p0, Lcom/google/android/gms/internal/i;->jZ:Landroid/util/DisplayMetrics;
-
-    iget v7, v7, Landroid/util/DisplayMetrics;->density:F
-
-    mul-float/2addr v6, v7
-
-    move/from16 v0, p2
-
     int-to-float v7, v0
 
-    iget-object v8, p0, Lcom/google/android/gms/internal/i;->jZ:Landroid/util/DisplayMetrics;
+    move-object/from16 v0, p0
+
+    iget-object v8, v0, Lcom/google/android/gms/internal/i;->jZ:Landroid/util/DisplayMetrics;
 
     iget v8, v8, Landroid/util/DisplayMetrics;->density:F
 
     mul-float/2addr v7, v8
 
-    const/4 v8, 0x0
+    move/from16 v0, p2
+
+    int-to-float v8, v0
+
+    move-object/from16 v0, p0
+
+    iget-object v9, v0, Lcom/google/android/gms/internal/i;->jZ:Landroid/util/DisplayMetrics;
+
+    iget v9, v9, Landroid/util/DisplayMetrics;->density:F
+
+    mul-float/2addr v8, v9
 
     const/4 v9, 0x0
 
@@ -419,17 +425,21 @@
 
     const/4 v14, 0x0
 
-    invoke-static/range {v1 .. v14}, Landroid/view/MotionEvent;->obtain(JJIFFFFIFFII)Landroid/view/MotionEvent;
+    const/4 v15, 0x0
 
-    move-result-object v1
+    invoke-static/range {v2 .. v15}, Landroid/view/MotionEvent;->obtain(JJIFFFFIFFII)Landroid/view/MotionEvent;
 
-    iput-object v1, p0, Lcom/google/android/gms/internal/i;->jY:Landroid/view/MotionEvent;
+    move-result-object v2
+
+    move-object/from16 v0, p0
+
+    iput-object v2, v0, Lcom/google/android/gms/internal/i;->jY:Landroid/view/MotionEvent;
 
     return-void
 .end method
 
 .method protected a(IJ)V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/google/android/gms/internal/i;->kb:Lcom/google/android/gms/internal/o;
 

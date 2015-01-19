@@ -1,49 +1,58 @@
 .class Lcom/glympse/android/hal/ag;
 .super Ljava/lang/Object;
-.source "GlympseHttpConnection.java"
+.source "GlympseMutex.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/glympse/android/hal/GMutex;
 
 
 # instance fields
-.field final synthetic bs:Lcom/glympse/android/hal/af;
+.field private bs:Ljava/util/concurrent/locks/ReentrantLock;
 
 
 # direct methods
-.method private constructor <init>(Lcom/glympse/android/hal/af;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 384
-    iput-object p1, p0, Lcom/glympse/android/hal/ag;->bs:Lcom/glympse/android/hal/af;
-
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 17
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
-.method synthetic constructor <init>(Lcom/glympse/android/hal/af;Lcom/glympse/android/hal/af$1;)V
-    .locals 0
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    .prologue
-    .line 384
-    invoke-direct {p0, p1}, Lcom/glympse/android/hal/ag;-><init>(Lcom/glympse/android/hal/af;)V
+    iput-object v0, p0, Lcom/glympse/android/hal/ag;->bs:Ljava/util/concurrent/locks/ReentrantLock;
 
+    .line 18
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public block()V
     .locals 1
 
     .prologue
-    .line 388
-    iget-object v0, p0, Lcom/glympse/android/hal/ag;->bs:Lcom/glympse/android/hal/af;
+    .line 22
+    iget-object v0, p0, Lcom/glympse/android/hal/ag;->bs:Ljava/util/concurrent/locks/ReentrantLock;
 
-    invoke-virtual {v0}, Lcom/glympse/android/hal/af;->close()V
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 389
+    .line 23
+    return-void
+.end method
+
+.method public unblock()V
+    .locals 1
+
+    .prologue
+    .line 27
+    iget-object v0, p0, Lcom/glympse/android/hal/ag;->bs:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+
+    .line 28
     return-void
 .end method

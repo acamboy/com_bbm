@@ -230,9 +230,9 @@
     :pswitch_0
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/google/android/gms/internal/ea;->AT:J
+    iput-wide v2, p0, Lcom/google/android/gms/internal/ea;->AT:J
 
     const/4 v1, 0x2
 

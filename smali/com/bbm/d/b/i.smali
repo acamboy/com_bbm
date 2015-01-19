@@ -103,16 +103,6 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/d/b/i;)V
-    .locals 0
-
-    .prologue
-    .line 16
-    invoke-virtual {p0}, Lcom/bbm/d/b/i;->c()V
-
-    return-void
-.end method
-
 
 # virtual methods
 .method public final a(I)Ljava/lang/Object;

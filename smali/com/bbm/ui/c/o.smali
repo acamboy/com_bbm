@@ -1,378 +1,319 @@
-.class public Lcom/bbm/ui/c/o;
-.super Lcom/bbm/ui/c/f;
-.source "BlockedUpdatesFragment.java"
+.class final Lcom/bbm/ui/c/o;
+.super Ljava/lang/Object;
+.source "AppStoreFragment.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/ui/c/f",
-        "<",
-        "Lcom/bbm/d/a/a;",
-        "Ljava/lang/String;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lcom/bbm/l/c/l;
 
 
 # instance fields
-.field d:Lcom/bbm/g/ab;
+.field final synthetic a:Lcom/bbm/ui/c/l;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/c/l;)V
+    .locals 0
 
     .prologue
-    .line 31
-    invoke-direct {p0}, Lcom/bbm/ui/c/f;-><init>()V
+    .line 191
+    iput-object p1, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
 
-    .line 33
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/ab;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/c/o;->d:Lcom/bbm/g/ab;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method final a()Lcom/bbm/j/r;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/bbm/j/r",
-            "<",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/a/a;",
-            ">;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 49
-    new-instance v0, Lcom/bbm/ui/c/p;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/c/p;-><init>(Lcom/bbm/ui/c/o;)V
-
-    .line 90
-    return-object v0
-.end method
-
-.method final a(Ljava/util/List;)V
-    .locals 8
+.method public final a(Ljava/util/List;)V
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/d/a/a;",
+            "Lcom/bbm/l/b/d;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 103
-    const-string v1, "Delete Blocked updates"
+    const/16 v2, 0x8
 
-    const-class v2, Lcom/bbm/ui/c/o;
+    const/4 v4, 0x0
 
-    invoke-static {v1, v2}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 194
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
 
-    .line 105
-    :try_start_0
-    new-instance v3, Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->e(Lcom/bbm/ui/c/l;)Z
 
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+    .line 195
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
 
-    .line 106
-    new-instance v4, Ljava/util/ArrayList;
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->b(Lcom/bbm/ui/c/l;)Landroid/view/View;
 
-    invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
+    move-result-object v0
 
-    .line 107
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    move-result-object v5
+    .line 196
+    if-eqz p1, :cond_4
 
-    :cond_0
-    :goto_0
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_3
+    if-nez v0, :cond_4
 
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 197
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
 
-    move-result-object v1
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->f(Lcom/bbm/ui/c/l;)I
 
-    check-cast v1, Lcom/bbm/d/a/a;
+    .line 198
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
 
-    .line 108
-    instance-of v2, v1, Lcom/bbm/d/ev;
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->g(Lcom/bbm/ui/c/l;)Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-    if-eqz v2, :cond_2
+    move-result-object v0
 
-    .line 110
-    new-instance v6, Lorg/json/JSONObject;
+    invoke-virtual {v0, v4}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setVisibility(I)V
 
-    invoke-direct {v6}, Lorg/json/JSONObject;-><init>()V
+    .line 199
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
 
-    .line 111
-    const-string v7, "userUri"
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->c(Lcom/bbm/ui/c/l;)Landroid/view/View;
 
-    move-object v0, v1
+    move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/ev;
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    move-object v2, v0
+    .line 200
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
 
-    iget-object v2, v2, Lcom/bbm/d/ev;->c:Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->h(Lcom/bbm/ui/c/l;)Ljava/util/List;
 
-    invoke-virtual {v6, v7, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    move-result-object v0
 
-    .line 112
-    const-string v7, "type"
+    if-eqz v0, :cond_3
 
-    move-object v0, v1
+    .line 201
+    new-instance v1, Ljava/util/HashSet;
 
-    check-cast v0, Lcom/bbm/d/ev;
+    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    move-object v2, v0
+    .line 202
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
 
-    iget-object v2, v2, Lcom/bbm/d/ev;->a:Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->h(Lcom/bbm/ui/c/l;)Ljava/util/List;
 
-    invoke-virtual {v6, v7, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    move-result-object v0
 
-    .line 113
-    const-string v2, "typeUri"
-
-    check-cast v1, Lcom/bbm/d/ev;
-
-    iget-object v1, v1, Lcom/bbm/d/ev;->b:Ljava/lang/String;
-
-    invoke-virtual {v6, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 114
-    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 131
-    :catch_0
-    move-exception v1
-
-    invoke-static {v1}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
-    .line 134
-    :cond_1
-    :goto_1
-    invoke-virtual {p0}, Lcom/bbm/ui/c/o;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const v2, 0x7f0e06ef
-
-    invoke-virtual {p0, v2}, Lcom/bbm/ui/c/o;->getString(I)Ljava/lang/String;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    const/4 v3, 0x1
+    :cond_0
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static {v1, v2, v3}, Lcom/bbm/util/eo;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    move-result v0
 
-    .line 135
-    return-void
+    if-eqz v0, :cond_1
 
-    .line 117
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/l/b/d;
+
+    .line 203
+    invoke-virtual {v0}, Lcom/bbm/l/b/d;->a()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 204
+    iget-object v0, v0, Lcom/bbm/l/b/s;->j:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
+
+    .line 207
+    :cond_1
+    invoke-virtual {v1}, Ljava/util/HashSet;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    .line 208
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
     :cond_2
-    :try_start_1
-    instance-of v2, v1, Lcom/bbm/g/a;
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    if-eqz v2, :cond_0
+    move-result v0
 
-    .line 118
+    if-eqz v0, :cond_3
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/l/b/d;
+
+    .line 209
+    iget-object v3, v0, Lcom/bbm/l/b/s;->j:Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    .line 211
+    invoke-virtual {v0}, Lcom/bbm/l/b/d;->b()V
+
+    goto :goto_1
+
+    .line 216
+    :cond_3
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
+
+    invoke-static {v0, p1}, Lcom/bbm/ui/c/l;->a(Lcom/bbm/ui/c/l;Ljava/util/List;)Ljava/util/List;
+
+    .line 217
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
+
+    iget-object v0, v0, Lcom/bbm/ui/c/l;->a:Lcom/bbm/d/b/f;
+
+    invoke-virtual {v0}, Lcom/bbm/d/b/f;->f()V
+
+    .line 218
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->g(Lcom/bbm/ui/c/l;)Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->smoothScrollToPosition(I)V
+
+    .line 219
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/c/l;->f:Lcom/bbm/c/l;
+
+    :try_start_0
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    .line 119
-    const-string v6, "uri"
+    sget-object v3, Lcom/bbm/c/o;->al:Lcom/bbm/c/o;
 
-    check-cast v1, Lcom/bbm/g/a;
+    invoke-virtual {v3}, Lcom/bbm/c/o;->toString()Ljava/lang/String;
 
-    iget-object v1, v1, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    move-result-object v3
 
-    invoke-virtual {v2, v6, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 120
-    const-string v1, "ignoreUpdatesForThisGroup"
-
-    const/4 v6, 0x0
-
-    invoke-virtual {v2, v1, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
-
-    .line 121
-    invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    .line 124
-    :cond_3
-    invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    .line 125
-    iget-object v1, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/d/a;
-
-    const-string v2, "userBlockedItem"
-
-    invoke-static {v3, v2}, Lcom/bbm/d/y;->d(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/ci;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-
-    .line 127
-    :cond_4
-    invoke-virtual {v4}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 128
-    iget-object v1, p0, Lcom/bbm/ui/c/o;->d:Lcom/bbm/g/ab;
-
-    const-string v2, "group"
-
-    invoke-static {v4, v2}, Lcom/bbm/g/ac;->a(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/g/bz;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
-    :try_end_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_1
-.end method
-
-.method final synthetic c(Ljava/lang/Object;)Lcom/bbm/d/a/a;
-    .locals 2
-
-    .prologue
-    .line 31
-    check-cast p1, Lcom/bbm/d/a/a;
-
-    instance-of v0, p1, Lcom/bbm/d/ev;
-
-    if-eqz v0, :cond_0
-
-    :goto_0
-    return-object p1
-
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/o;->d:Lcom/bbm/g/ab;
-
-    check-cast p1, Lcom/bbm/g/a;
-
-    iget-object v1, p1, Lcom/bbm/g/a;->u:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->t(Ljava/lang/String;)Lcom/bbm/g/a;
-
-    move-result-object p1
-
-    goto :goto_0
-.end method
-
-.method final synthetic d(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 2
-
-    .prologue
-    .line 31
-    check-cast p1, Lcom/bbm/d/a/a;
-
-    instance-of v0, p1, Lcom/bbm/d/ev;
-
-    if-eqz v0, :cond_0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    move-object v0, p1
-
-    check-cast v0, Lcom/bbm/d/ev;
-
-    iget-object v0, v0, Lcom/bbm/d/ev;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    check-cast p1, Lcom/bbm/d/ev;
-
-    iget-object v1, p1, Lcom/bbm/d/ev;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    check-cast p1, Lcom/bbm/g/a;
-
-    iget-object v0, p1, Lcom/bbm/g/a;->u:Ljava/lang/String;
-
-    goto :goto_0
-.end method
-
-.method public onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
-    .locals 3
-
-    .prologue
-    .line 37
-    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/c/f;->onCreateView(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;
+    invoke-virtual {v1}, Lcom/bbm/c/l;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 38
-    const-string v0, "onCreateView"
+    invoke-virtual {v2, v3, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-class v2, Lcom/bbm/ui/c/o;
+    sget-object v1, Lcom/bbm/c/n;->n:Lcom/bbm/c/n;
 
-    invoke-static {v0, v2}, Lcom/bbm/w;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/c/c;->a(Lcom/bbm/c/n;Lorg/json/JSONObject;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 39
-    const v0, 0x7f0a032c
+    .line 231
+    :goto_2
+    return-void
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 219
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    .line 221
+    :cond_4
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->g(Lcom/bbm/ui/c/l;)Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    invoke-virtual {v0, v2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setVisibility(I)V
 
-    .line 40
-    const v2, 0x7f0e04f3
+    .line 222
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->c(Lcom/bbm/ui/c/l;)Landroid/view/View;
 
-    .line 42
-    return-object v1
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
+
+    .line 223
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->i(Lcom/bbm/ui/c/l;)I
+
+    move-result v0
+
+    const/4 v1, 0x2
+
+    if-ge v0, v1, :cond_5
+
+    .line 224
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->j(Lcom/bbm/ui/c/l;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
+
+    .line 225
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->k(Lcom/bbm/ui/c/l;)Landroid/widget/Button;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Landroid/widget/Button;->setVisibility(I)V
+
+    goto :goto_2
+
+    .line 227
+    :cond_5
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->j(Lcom/bbm/ui/c/l;)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 228
+    iget-object v0, p0, Lcom/bbm/ui/c/o;->a:Lcom/bbm/ui/c/l;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/l;->k(Lcom/bbm/ui/c/l;)Landroid/widget/Button;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/widget/Button;->setVisibility(I)V
+
+    goto :goto_2
 .end method

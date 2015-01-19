@@ -1,328 +1,402 @@
 .class Lcom/glympse/android/lib/fu;
 .super Ljava/lang/Object;
-.source "MessageCenter.java"
+.source "LocationProfile.java"
 
 # interfaces
-.implements Lcom/glympse/android/lib/GMessageCenter;
+.implements Lcom/glympse/android/core/GLocationProfile;
 
 
 # instance fields
-.field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+.field private pb:I
 
-.field private hE:Lcom/glympse/android/lib/CommonSink;
+.field private qd:I
 
-.field private pO:Lcom/glympse/android/hal/GSmsReceiver;
+.field private qe:I
+
+.field private qf:D
+
+.field private qg:D
+
+.field private qh:I
+
+.field private qi:I
+
+.field private qj:I
+
+.field private qk:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 25
+    const-wide/16 v2, 0x0
+
+    const/4 v1, 0x0
+
+    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
-    new-instance v0, Lcom/glympse/android/lib/CommonSink;
+    .line 41
+    const/4 v0, -0x1
 
-    const-string v1, "MessageCenter"
+    iput v0, p0, Lcom/glympse/android/lib/fu;->qd:I
 
-    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    .line 42
+    iput v1, p0, Lcom/glympse/android/lib/fu;->pb:I
 
-    move-result-object v1
+    .line 43
+    const/4 v0, 0x3
 
-    invoke-direct {v0, v1}, Lcom/glympse/android/lib/CommonSink;-><init>(Ljava/lang/String;)V
+    iput v0, p0, Lcom/glympse/android/lib/fu;->qe:I
 
-    iput-object v0, p0, Lcom/glympse/android/lib/fu;->hE:Lcom/glympse/android/lib/CommonSink;
+    .line 44
+    iput-wide v2, p0, Lcom/glympse/android/lib/fu;->qf:D
 
-    .line 27
+    .line 45
+    iput-wide v2, p0, Lcom/glympse/android/lib/fu;->qg:D
+
+    .line 46
+    iput v1, p0, Lcom/glympse/android/lib/fu;->qh:I
+
+    .line 47
+    iput v1, p0, Lcom/glympse/android/lib/fu;->qi:I
+
+    .line 48
+    iput v1, p0, Lcom/glympse/android/lib/fu;->qj:I
+
+    .line 49
+    iput-boolean v1, p0, Lcom/glympse/android/lib/fu;->qk:Z
+
+    .line 50
     return-void
+.end method
+
+.method public static w(Ljava/lang/String;)I
+    .locals 1
+
+    .prologue
+    .line 173
+    const-string v0, "viewing"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 174
+    const/4 v0, 0x3
+
+    .line 182
+    :goto_0
+    return v0
+
+    .line 175
+    :cond_0
+    const-string v0, "not_viewing"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 176
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    .line 177
+    :cond_1
+    const-string v0, "foreground"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 178
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 179
+    :cond_2
+    const-string v0, "background"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 180
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 182
+    :cond_3
+    const/4 v0, -0x1
+
+    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public addListener(Lcom/glympse/android/api/GEventListener;)Z
+.method public b(D)V
     .locals 1
 
     .prologue
-    .line 132
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->hE:Lcom/glympse/android/lib/CommonSink;
+    .line 122
+    iput-wide p1, p0, Lcom/glympse/android/lib/fu;->qf:D
 
-    invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->addListener(Lcom/glympse/android/api/GEventListener;)Z
+    .line 123
+    return-void
+.end method
 
-    move-result v0
+.method public c(D)V
+    .locals 1
+
+    .prologue
+    .line 127
+    iput-wide p1, p0, Lcom/glympse/android/lib/fu;->qg:D
+
+    .line 128
+    return-void
+.end method
+
+.method public getAccuracy()D
+    .locals 2
+
+    .prologue
+    .line 78
+    iget-wide v0, p0, Lcom/glympse/android/lib/fu;->qg:D
+
+    return-wide v0
+.end method
+
+.method public getActivity()I
+    .locals 1
+
+    .prologue
+    .line 93
+    iget v0, p0, Lcom/glympse/android/lib/fu;->qi:I
 
     return v0
 .end method
 
-.method public associateContext(JLjava/lang/Object;)V
+.method public getDistance()D
+    .locals 2
+
+    .prologue
+    .line 73
+    iget-wide v0, p0, Lcom/glympse/android/lib/fu;->qf:D
+
+    return-wide v0
+.end method
+
+.method public getFrequency()I
     .locals 1
 
     .prologue
+    .line 83
+    iget v0, p0, Lcom/glympse/android/lib/fu;->qh:I
+
+    return v0
+.end method
+
+.method public getMode()I
+    .locals 1
+
+    .prologue
+    .line 63
+    iget v0, p0, Lcom/glympse/android/lib/fu;->pb:I
+
+    return v0
+.end method
+
+.method public getPriority()I
+    .locals 1
+
+    .prologue
+    .line 88
+    iget v0, p0, Lcom/glympse/android/lib/fu;->qj:I
+
+    return v0
+.end method
+
+.method public getProfile()I
+    .locals 1
+
+    .prologue
+    .line 58
+    iget v0, p0, Lcom/glympse/android/lib/fu;->qd:I
+
+    return v0
+.end method
+
+.method public getSource()I
+    .locals 1
+
+    .prologue
+    .line 68
+    iget v0, p0, Lcom/glympse/android/lib/fu;->qe:I
+
+    return v0
+.end method
+
+.method public isAutoPauseEnabled()Z
+    .locals 1
+
+    .prologue
+    .line 98
+    iget-boolean v0, p0, Lcom/glympse/android/lib/fu;->qk:Z
+
+    return v0
+.end method
+
+.method public isEqual(Lcom/glympse/android/core/GCommon;)Z
+    .locals 4
+
+    .prologue
+    .line 156
+    check-cast p1, Lcom/glympse/android/lib/fu;
+
     .line 157
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->hE:Lcom/glympse/android/lib/CommonSink;
+    iget v0, p1, Lcom/glympse/android/lib/fu;->pb:I
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/glympse/android/lib/CommonSink;->associateContext(JLjava/lang/Object;)V
+    iget v1, p0, Lcom/glympse/android/lib/fu;->pb:I
 
-    .line 158
-    return-void
+    if-ne v0, v1, :cond_0
+
+    iget v0, p1, Lcom/glympse/android/lib/fu;->qe:I
+
+    iget v1, p0, Lcom/glympse/android/lib/fu;->qe:I
+
+    if-ne v0, v1, :cond_0
+
+    iget-wide v0, p1, Lcom/glympse/android/lib/fu;->qf:D
+
+    iget-wide v2, p0, Lcom/glympse/android/lib/fu;->qf:D
+
+    cmpl-double v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    iget-wide v0, p1, Lcom/glympse/android/lib/fu;->qg:D
+
+    iget-wide v2, p0, Lcom/glympse/android/lib/fu;->qg:D
+
+    cmpl-double v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    iget v0, p1, Lcom/glympse/android/lib/fu;->qh:I
+
+    iget v1, p0, Lcom/glympse/android/lib/fu;->qh:I
+
+    if-ne v0, v1, :cond_0
+
+    iget v0, p1, Lcom/glympse/android/lib/fu;->qi:I
+
+    iget v1, p0, Lcom/glympse/android/lib/fu;->qi:I
+
+    if-ne v0, v1, :cond_0
+
+    iget-boolean v0, p1, Lcom/glympse/android/lib/fu;->qk:Z
+
+    iget-boolean v1, p0, Lcom/glympse/android/lib/fu;->qk:Z
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
-.method public clearContext(J)V
-    .locals 1
-
-    .prologue
-    .line 167
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->clearContext(J)V
-
-    .line 168
-    return-void
-.end method
-
-.method public deriveContext(Lcom/glympse/android/api/GEventSink;)V
-    .locals 1
-
-    .prologue
-    .line 177
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->deriveContext(Lcom/glympse/android/api/GEventSink;)V
-
-    .line 178
-    return-void
-.end method
-
-.method public eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
-    .locals 6
+.method public l(Z)V
+    .locals 0
 
     .prologue
     .line 147
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/glympse/android/api/GEventSink;
-
-    move-object v2, p1
-
-    move v3, p2
-
-    move v4, p3
-
-    move-object v5, p4
-
-    invoke-virtual/range {v0 .. v5}, Lcom/glympse/android/lib/CommonSink;->eventsOccurred(Lcom/glympse/android/api/GEventSink;Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
+    iput-boolean p1, p0, Lcom/glympse/android/lib/fu;->qk:Z
 
     .line 148
     return-void
 .end method
 
-.method public getContext(J)Ljava/lang/Object;
-    .locals 1
+.method public o(I)V
+    .locals 0
 
     .prologue
-    .line 162
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->hE:Lcom/glympse/android/lib/CommonSink;
+    .line 107
+    iput p1, p0, Lcom/glympse/android/lib/fu;->qd:I
 
-    invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->getContext(J)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getContextKeys()Ljava/util/Enumeration;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Enumeration",
-            "<",
-            "Ljava/lang/Long;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 172
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0}, Lcom/glympse/android/lib/CommonSink;->getContextKeys()Ljava/util/Enumeration;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getListeners()Lcom/glympse/android/core/GArray;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/glympse/android/core/GArray",
-            "<",
-            "Lcom/glympse/android/api/GEventListener;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 142
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0}, Lcom/glympse/android/lib/CommonSink;->getListeners()Lcom/glympse/android/core/GArray;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public hasContext(J)Z
-    .locals 1
-
-    .prologue
-    .line 152
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->hasContext(J)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public removeListener(Lcom/glympse/android/api/GEventListener;)Z
-    .locals 1
-
-    .prologue
-    .line 137
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->hE:Lcom/glympse/android/lib/CommonSink;
-
-    invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public start(Lcom/glympse/android/lib/GGlympsePrivate;)V
-    .locals 6
-
-    .prologue
-    .line 35
-    iput-object p1, p0, Lcom/glympse/android/lib/fu;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    .line 37
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->isSmsScrapingEnabled()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 40
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getConfig()Lcom/glympse/android/api/GConfig;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/lib/GConfigPrivate;
-
-    .line 41
-    invoke-interface {v0}, Lcom/glympse/android/lib/GConfigPrivate;->getContents()Lcom/glympse/android/core/GPrimitive;
-
-    move-result-object v0
-
-    const-string v1, "g.smsTs"
-
-    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/core/GPrimitive;->getLong(Ljava/lang/String;)J
-
-    move-result-wide v0
-
-    .line 47
-    iget-object v2, p0, Lcom/glympse/android/lib/fu;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    invoke-interface {v2}, Lcom/glympse/android/lib/GGlympsePrivate;->getTime()J
-
-    move-result-wide v2
-
-    const-wide/32 v4, 0xb287200
-
-    sub-long/2addr v2, v4
-
-    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->max(JJ)J
-
-    move-result-wide v1
-
-    .line 50
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getContextHolder()Lcom/glympse/android/hal/GContextHolder;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/glympse/android/hal/GContextHolder;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/glympse/android/hal/HalFactory;->createSmsReceiver(Landroid/content/Context;)Lcom/glympse/android/hal/GSmsReceiver;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/glympse/android/lib/fu;->pO:Lcom/glympse/android/hal/GSmsReceiver;
-
-    .line 51
-    iget-object v3, p0, Lcom/glympse/android/lib/fu;->pO:Lcom/glympse/android/hal/GSmsReceiver;
-
-    new-instance v4, Lcom/glympse/android/lib/fv;
-
-    iget-object v5, p0, Lcom/glympse/android/lib/fu;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/api/GEventSink;
-
-    invoke-direct {v4, p0, v5, v0}, Lcom/glympse/android/lib/fv;-><init>(Lcom/glympse/android/lib/fu;Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/api/GEventSink;)V
-
-    invoke-interface {v3, v1, v2, v4}, Lcom/glympse/android/hal/GSmsReceiver;->start(JLcom/glympse/android/hal/GMessageListener;)V
-
-    .line 53
-    :cond_0
+    .line 108
     return-void
 .end method
 
-.method public stop()V
-    .locals 1
+.method public p(I)V
+    .locals 0
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->pO:Lcom/glympse/android/hal/GSmsReceiver;
+    .line 132
+    iput p1, p0, Lcom/glympse/android/lib/fu;->qh:I
 
-    if-eqz v0, :cond_0
+    .line 133
+    return-void
+.end method
 
-    .line 59
-    iget-object v0, p0, Lcom/glympse/android/lib/fu;->pO:Lcom/glympse/android/hal/GSmsReceiver;
+.method public q(I)V
+    .locals 0
 
-    invoke-interface {v0}, Lcom/glympse/android/hal/GSmsReceiver;->stop()V
+    .prologue
+    .line 142
+    iput p1, p0, Lcom/glympse/android/lib/fu;->qi:I
 
-    .line 61
-    :cond_0
-    const/4 v0, 0x0
+    .line 143
+    return-void
+.end method
 
-    iput-object v0, p0, Lcom/glympse/android/lib/fu;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+.method public setMode(I)V
+    .locals 0
 
-    .line 62
+    .prologue
+    .line 112
+    iput p1, p0, Lcom/glympse/android/lib/fu;->pb:I
+
+    .line 113
+    return-void
+.end method
+
+.method public setPriority(I)V
+    .locals 0
+
+    .prologue
+    .line 137
+    iput p1, p0, Lcom/glympse/android/lib/fu;->qj:I
+
+    .line 138
+    return-void
+.end method
+
+.method public setSource(I)V
+    .locals 0
+
+    .prologue
+    .line 117
+    iput p1, p0, Lcom/glympse/android/lib/fu;->qe:I
+
+    .line 118
     return-void
 .end method

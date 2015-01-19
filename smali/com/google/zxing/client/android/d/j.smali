@@ -20,9 +20,9 @@
 
 
 # instance fields
-.field final a:Lcom/google/zxing/client/a/q;
+.field public final a:Lcom/google/zxing/client/a/q;
 
-.field final b:Landroid/app/Activity;
+.field public final b:Landroid/app/Activity;
 
 .field private final j:Lcom/google/zxing/m;
 
@@ -170,7 +170,7 @@
     .end array-data
 .end method
 
-.method constructor <init>(Landroid/app/Activity;Lcom/google/zxing/client/a/q;)V
+.method public constructor <init>(Landroid/app/Activity;Lcom/google/zxing/client/a/q;)V
     .locals 1
 
     .prologue
@@ -585,7 +585,7 @@
 .end method
 
 .method final a([Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 8
+    .locals 7
 
     .prologue
     .line 229
@@ -787,33 +787,33 @@
 
     aput-object p7, v4, v1
 
-    array-length v5, v4
-
     const/4 v1, 0x0
 
     :goto_5
+    const/4 v5, 0x3
+
     if-ge v1, v5, :cond_9
 
-    aget-object v6, v4, v1
+    aget-object v5, v4, v1
 
     .line 260
-    if-eqz v6, :cond_8
+    if-eqz v5, :cond_8
 
     .line 261
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->length()I
 
-    move-result v7
+    move-result v6
 
-    if-lez v7, :cond_7
+    if-lez v6, :cond_7
 
     .line 262
-    const/16 v7, 0xa
+    const/16 v6, 0xa
 
-    invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 264
     :cond_7
-    invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 259
     :cond_8
@@ -842,9 +842,7 @@
     :cond_a
     const-string v1, "im_handle"
 
-    move-object/from16 v0, p8
-
-    invoke-static {v2, v1, v0}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1, p8}, Lcom/google/zxing/client/android/d/j;->a(Landroid/content/Intent;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 272
     const-string v1, "postal"
@@ -1013,16 +1011,6 @@
     return-void
 .end method
 
-.method public final c()Lcom/google/zxing/client/a/q;
-    .locals 1
-
-    .prologue
-    .line 124
-    iget-object v0, p0, Lcom/google/zxing/client/android/d/j;->a:Lcom/google/zxing/client/a/q;
-
-    return-object v0
-.end method
-
 .method final c(Ljava/lang/String;)V
     .locals 3
 
@@ -1081,6 +1069,26 @@
     return-void
 .end method
 
+.method final c()Z
+    .locals 1
+
+    .prologue
+    .line 128
+    iget-object v0, p0, Lcom/google/zxing/client/android/d/j;->k:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method final d(Ljava/lang/String;)V
     .locals 3
 
@@ -1115,24 +1123,14 @@
     return-void
 .end method
 
-.method final d()Z
+.method public d()Z
     .locals 1
 
     .prologue
-    .line 128
-    iget-object v0, p0, Lcom/google/zxing/client/android/d/j;->k:Ljava/lang/String;
-
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
+    .line 165
     const/4 v0, 0x0
 
-    goto :goto_0
+    return v0
 .end method
 
 .method final e(Ljava/lang/String;)V
@@ -1248,28 +1246,6 @@
     invoke-static {v1, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_1
-.end method
-
-.method public e()Z
-    .locals 1
-
-    .prologue
-    .line 165
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final f()Lcom/google/zxing/client/a/r;
-    .locals 1
-
-    .prologue
-    .line 202
-    iget-object v0, p0, Lcom/google/zxing/client/android/d/j;->a:Lcom/google/zxing/client/a/q;
-
-    iget-object v0, v0, Lcom/google/zxing/client/a/q;->o:Lcom/google/zxing/client/a/r;
-
-    return-object v0
 .end method
 
 .method final f(Ljava/lang/String;)V

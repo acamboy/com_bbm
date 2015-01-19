@@ -1,154 +1,94 @@
-.class public final Lcom/bbm/ui/activities/wd;
-.super Lcom/bbm/ui/dt;
-.source "NewChannelCategoryActivity.java"
+.class final Lcom/bbm/ui/activities/wd;
+.super Ljava/lang/Object;
+.source "MainActivity.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/ui/dt",
-        "<",
-        "Lcom/bbm/d/df;",
-        "Ljava/lang/String;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic b:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+.field final synthetic a:Lcom/bbm/ui/b/j;
+
+.field final synthetic b:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;Lcom/bbm/j/r;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;Lcom/bbm/ui/b/j;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/content/Context;",
-            ")V"
-        }
-    .end annotation
 
     .prologue
-    .line 216
-    iput-object p1, p0, Lcom/bbm/ui/activities/wd;->b:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    .line 802
+    iput-object p1, p0, Lcom/bbm/ui/activities/wd;->b:Lcom/bbm/ui/activities/MainActivity;
 
-    .line 217
-    invoke-direct {p0, p2}, Lcom/bbm/ui/dt;-><init>(Lcom/bbm/j/r;)V
+    iput-object p2, p0, Lcom/bbm/ui/activities/wd;->a:Lcom/bbm/ui/b/j;
 
-    .line 218
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    .line 222
-    iget-object v0, p0, Lcom/bbm/ui/activities/wd;->b:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    .line 805
+    const-string v0, "setActionBarForFragment Dialog LeftButton Clicked"
 
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    const-class v1, Lcom/bbm/ui/activities/MainActivity;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    const v1, 0x7f0300ae
+    .line 807
+    iget-object v0, p0, Lcom/bbm/ui/activities/wd;->b:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-virtual {v0, v1, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v1
-
-    .line 224
-    new-instance v2, Lcom/bbm/ui/activities/wf;
-
-    invoke-direct {v2, p0, v3}, Lcom/bbm/ui/activities/wf;-><init>(Lcom/bbm/ui/activities/wd;B)V
-
-    .line 225
-    const v0, 0x7f0a03e0
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v2, Lcom/bbm/ui/activities/wf;->a:Landroid/widget/TextView;
-
-    .line 226
-    const v0, 0x7f0a03e1
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 808
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageView;
+    .line 809
+    iget-object v1, p0, Lcom/bbm/ui/activities/wd;->a:Lcom/bbm/ui/b/j;
 
-    iput-object v0, v2, Lcom/bbm/ui/activities/wf;->b:Landroid/widget/ImageView;
+    iget-object v1, v1, Lcom/bbm/ui/b/j;->d:Landroid/widget/CheckBox;
 
-    .line 227
-    invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v1}, Landroid/widget/CheckBox;->isChecked()Z
 
-    .line 229
-    return-object v1
-.end method
-
-.method protected final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 214
-    check-cast p1, Lcom/bbm/d/df;
-
-    invoke-virtual {p1}, Lcom/bbm/d/df;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected final synthetic a(Landroid/view/View;Ljava/lang/Object;)V
-    .locals 4
-
-    .prologue
-    const v3, 0x7f0a0017
-
-    .line 214
-    check-cast p2, Lcom/bbm/d/df;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/wf;
-
-    iget-object v1, v0, Lcom/bbm/ui/activities/wf;->a:Landroid/widget/TextView;
-
-    iget-object v2, p2, Lcom/bbm/d/df;->b:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {p1, v3}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/bbm/j/k;
-
-    new-instance v2, Lcom/bbm/ui/activities/we;
-
-    invoke-direct {v2, p0, v0, p2}, Lcom/bbm/ui/activities/we;-><init>(Lcom/bbm/ui/activities/wd;Lcom/bbm/ui/activities/wf;Lcom/bbm/d/df;)V
-
-    invoke-virtual {v2}, Lcom/bbm/j/k;->c()V
+    move-result v1
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {v1}, Lcom/bbm/j/k;->d()V
+    .line 810
+    const-string v1, "show_channels_geolocation"
 
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    .line 812
     :cond_0
-    invoke-virtual {p1, v3, v2}, Landroid/view/View;->setTag(ILjava/lang/Object;)V
+    const-string v1, "allow_geolocation_collect"
 
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    .line 813
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    .line 814
+    invoke-static {}, Lcom/bbm/ui/activities/MainActivity;->k()Lcom/bbm/d/a;
+
+    invoke-static {v2}, Lcom/bbm/d/a;->c(Z)V
+
+    .line 815
+    iget-object v0, p0, Lcom/bbm/ui/activities/wd;->a:Lcom/bbm/ui/b/j;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/b/j;->dismiss()V
+
+    .line 817
     return-void
 .end method

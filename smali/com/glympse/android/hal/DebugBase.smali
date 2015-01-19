@@ -16,9 +16,9 @@
     .end annotation
 .end field
 
-.field private static final aP:Ljava/lang/String; = "GlympseAPI"
+.field private static final aO:Ljava/lang/String; = "GlympseAPI"
 
-.field private static aQ:Z
+.field private static aP:Z
 
 
 # direct methods
@@ -247,7 +247,7 @@
     .line 329
     :goto_0
     :try_start_1
-    invoke-static {}, Lcom/glympse/android/hal/Platform;->getSystemLocale()Ljava/util/Locale;
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v4
 
@@ -1122,42 +1122,6 @@
     goto/16 :goto_d
 .end method
 
-.method private static b(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 87
-    sget-object v0, Lcom/glympse/android/hal/DebugBase;->_fileMap:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/io/FileOutputStream;
-
-    .line 88
-    if-eqz v0, :cond_0
-
-    .line 92
-    :try_start_0
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->flush()V
-
-    .line 93
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 99
-    :cond_0
-    :goto_0
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
-.end method
-
 .method public static closeAllFiles()V
     .locals 2
 
@@ -1192,7 +1156,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 107
-    invoke-static {v0}, Lcom/glympse/android/hal/DebugBase;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/glympse/android/hal/DebugBase;->e(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -1207,7 +1171,7 @@
     .prologue
     .line 178
     :try_start_0
-    invoke-static {p1}, Lcom/glympse/android/hal/DebugBase;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/glympse/android/hal/DebugBase;->e(Ljava/lang/String;)V
 
     .line 180
     invoke-static {p0}, Lcom/glympse/android/hal/t;->a(Landroid/content/Context;)Landroid/content/Context;
@@ -1229,19 +1193,21 @@
 .end method
 
 .method public static dumpBundle(Landroid/os/Bundle;)V
-    .locals 5
+    .locals 11
 
     .prologue
-    const/4 v4, 0x2
+    const/4 v3, 0x0
+
+    const/4 v10, 0x2
 
     .line 615
     invoke-static {}, Lcom/glympse/android/lib/Debug;->getLevel()I
 
     move-result v0
 
-    if-le v0, v4, :cond_1
+    if-le v0, v10, :cond_1
 
-    .line 638
+    .line 651
     :cond_0
     :goto_0
     return-void
@@ -1250,7 +1216,7 @@
     :cond_1
     const-string v0, "-=- BUNDLE -=-"
 
-    invoke-static {v4, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+    invoke-static {v10, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 622
     if-nez p0, :cond_2
@@ -1258,7 +1224,7 @@
     .line 624
     const-string v0, "Bundle: null"
 
-    invoke-static {v4, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+    invoke-static {v10, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     goto :goto_0
 
@@ -1282,7 +1248,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+    invoke-static {v10, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 629
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1303,7 +1269,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+    invoke-static {v10, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 630
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1324,7 +1290,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+    invoke-static {v10, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 631
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1345,7 +1311,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+    invoke-static {v10, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 633
     invoke-virtual {p0}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
@@ -1359,43 +1325,113 @@
 
     invoke-interface {v0}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    move-result-object v1
+    move-result-object v6
 
+    :cond_3
     :goto_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
     .line 636
+    invoke-virtual {p0, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 638
+    instance-of v2, v1, [Ljava/lang/Object;
+
+    if-eqz v2, :cond_4
+
+    .line 641
+    check-cast v1, [Ljava/lang/Object;
+
+    check-cast v1, [Ljava/lang/Object;
+
+    array-length v7, v1
+
+    move v2, v3
+
+    move v4, v3
+
+    :goto_2
+    if-ge v2, v7, :cond_3
+
+    aget-object v8, v1, v2
+
+    .line 643
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string v9, "Key: "
+
+    invoke-direct {v5, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    const-string v9, "["
+
+    invoke-virtual {v5, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v9
+
+    add-int/lit8 v5, v4, 0x1
+
+    invoke-virtual {v9, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const-string v9, "], Value: "
+
+    invoke-virtual {v4, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v10, v4}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+
+    .line 641
+    add-int/lit8 v2, v2, 0x1
+
+    move v4, v5
+
+    goto :goto_2
+
+    .line 648
+    :cond_4
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v3, "Key: "
+    const-string v4, "Key: "
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    const-string v3, ", Value: "
+    const-string v2, ", Value: "
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v0}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1403,7 +1439,7 @@
 
     move-result-object v0
 
-    invoke-static {v4, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+    invoke-static {v10, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     goto :goto_1
 .end method
@@ -1414,61 +1450,61 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 644
+    .line 657
     invoke-static {}, Lcom/glympse/android/lib/Debug;->getLevel()I
 
     move-result v0
 
     if-le v0, v1, :cond_1
 
-    .line 683
+    .line 696
     :cond_0
     :goto_0
     return-void
 
-    .line 649
+    .line 662
     :cond_1
     const-string v0, "-=- CURSOR -=-"
 
     invoke-static {v1, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
-    .line 651
+    .line 664
     if-nez p0, :cond_2
 
-    .line 653
+    .line 666
     const-string v0, "Cursor: null"
 
     invoke-static {v1, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     goto :goto_0
 
-    .line 657
+    .line 670
     :cond_2
     invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
-    .line 659
+    .line 672
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 661
+    .line 674
     invoke-interface {p0}, Landroid/database/Cursor;->getPosition()I
 
     move-result v1
 
-    .line 662
+    .line 675
     invoke-interface {p0}, Landroid/database/Cursor;->getColumnCount()I
 
     move-result v2
 
-    .line 664
+    .line 677
     const/4 v0, 0x0
 
     :goto_2
     if-ge v0, v2, :cond_3
 
-    .line 668
+    .line 681
     const/4 v3, 0x2
 
     :try_start_0
@@ -1528,25 +1564,25 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 664
+    .line 677
     :goto_3
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 675
+    .line 688
     :cond_3
     invoke-interface {p0}, Landroid/database/Cursor;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 676
+    .line 689
     if-eqz v0, :cond_4
 
-    .line 678
+    .line 691
     invoke-static {v0}, Lcom/glympse/android/hal/DebugBase;->dumpBundle(Landroid/os/Bundle;)V
 
-    .line 681
+    .line 694
     :cond_4
     invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -2090,6 +2126,42 @@
     goto/16 :goto_0
 .end method
 
+.method private static e(Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 87
+    sget-object v0, Lcom/glympse/android/hal/DebugBase;->_fileMap:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/io/FileOutputStream;
+
+    .line 88
+    if-eqz v0, :cond_0
+
+    .line 92
+    :try_start_0
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->flush()V
+
+    .line 93
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 99
+    :cond_0
+    :goto_0
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
 .method public static extractExceptionString(Ljava/lang/Throwable;Ljava/lang/StringBuilder;)V
     .locals 3
 
@@ -2210,7 +2282,7 @@
     .locals 2
 
     .prologue
-    .line 916
+    .line 929
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2237,15 +2309,15 @@
 
     move-result-object v0
 
-    .line 919
-    invoke-static {v0}, Lcom/glympse/android/hal/DebugBase;->b(Ljava/lang/String;)V
+    .line 932
+    invoke-static {v0}, Lcom/glympse/android/hal/DebugBase;->e(Ljava/lang/String;)V
 
-    .line 922
+    .line 935
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 924
+    .line 937
     invoke-virtual {v1}, Ljava/io/File;->length()J
 
     move-result-wide v0
@@ -2534,7 +2606,7 @@
     move-result-object v0
 
     .line 237
-    invoke-static {v0}, Lcom/glympse/android/hal/DebugBase;->b(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/glympse/android/hal/DebugBase;->e(Ljava/lang/String;)V
 
     .line 240
     new-instance v2, Ljava/io/File;
@@ -2554,14 +2626,14 @@
     check-cast v0, Ljava/net/HttpURLConnection;
 
     .line 247
-    invoke-static {v3, v0}, Lcom/glympse/android/hal/af;->a(Ljava/net/URL;Ljava/net/HttpURLConnection;)V
+    invoke-static {v3, v0}, Lcom/glympse/android/hal/ae;->a(Ljava/net/URL;Ljava/net/HttpURLConnection;)V
 
     .line 255
     invoke-virtual {v2}, Ljava/io/File;->length()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    long-to-int v3, v3
+    long-to-int v3, v4
 
     invoke-virtual {v0, v3}, Ljava/net/HttpURLConnection;->setFixedLengthStreamingMode(I)V
 
@@ -2671,7 +2743,7 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 929
+    .line 942
     const-string v0, "android.permission.ACCESS_NETWORK_STATE"
 
     invoke-static {p0, v0}, Lcom/glympse/android/hal/t;->b(Landroid/content/Context;Ljava/lang/String;)Z
@@ -2680,7 +2752,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 932
+    .line 945
     const-string v0, "connectivity"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2689,17 +2761,17 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 933
+    .line 946
     invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 934
+    .line 947
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v0
 
-    .line 936
+    .line 949
     :goto_0
     return v0
 
@@ -2713,12 +2785,12 @@
     .locals 16
 
     .prologue
-    .line 689
+    .line 702
     invoke-static/range {p0 .. p0}, Lcom/glympse/android/hal/t;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v3
 
-    .line 692
+    .line 705
     invoke-static {}, Lcom/glympse/android/lib/Debug;->getLevel()I
 
     move-result v0
@@ -2727,22 +2799,22 @@
 
     if-le v0, v1, :cond_1
 
-    .line 835
+    .line 848
     :cond_0
     :goto_0
     return-void
 
-    .line 700
+    .line 713
     :cond_1
     :try_start_0
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 701
+    .line 714
     if-eqz v0, :cond_2
 
-    .line 703
+    .line 716
     const/4 v1, 0x1
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2769,7 +2841,7 @@
 
     invoke-static {v1, v2}, Lcom/glympse/android/hal/DebugBase;->logSpecial(ILjava/lang/String;)V
 
-    .line 704
+    .line 717
     const/4 v1, 0x1
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2796,11 +2868,11 @@
 
     invoke-static {v1, v0}, Lcom/glympse/android/hal/DebugBase;->logSpecial(ILjava/lang/String;)V
 
-    .line 707
+    .line 720
     :cond_2
     const/4 v1, 0x0
 
-    .line 710
+    .line 723
     const-string v0, "activity"
 
     invoke-virtual {v3, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2809,18 +2881,18 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 711
+    .line 724
     if-eqz v0, :cond_c
 
-    .line 714
+    .line 727
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getDeviceConfigurationInfo()Landroid/content/pm/ConfigurationInfo;
 
     move-result-object v2
 
-    .line 715
+    .line 728
     if-eqz v2, :cond_3
 
-    .line 717
+    .line 730
     const/4 v4, 0x1
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2893,7 +2965,7 @@
 
     invoke-static {v4, v2}, Lcom/glympse/android/hal/DebugBase;->logSpecial(ILjava/lang/String;)V
 
-    .line 726
+    .line 739
     :cond_3
     const/4 v2, 0x1
 
@@ -2937,12 +3009,12 @@
 
     invoke-static {v2, v4}, Lcom/glympse/android/hal/DebugBase;->logSpecial(ILjava/lang/String;)V
 
-    .line 729
+    .line 742
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v0
 
-    .line 730
+    .line 743
     if-eqz v0, :cond_c
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -2951,12 +3023,12 @@
 
     if-lez v2, :cond_c
 
-    .line 732
+    .line 745
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 733
+    .line 746
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -2974,7 +3046,7 @@
 
     check-cast v0, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 735
+    .line 748
     iget-object v0, v0, Landroid/app/ActivityManager$RunningAppProcessInfo;->pkgList:[Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->emptyIfNull([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -2992,12 +3064,12 @@
 
     aget-object v6, v0, v2
 
-    .line 737
+    .line 750
     const/4 v7, 0x0
 
     invoke-virtual {v1, v6, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 735
+    .line 748
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
@@ -3005,20 +3077,20 @@
     :cond_5
     move-object v4, v1
 
-    .line 786
+    .line 799
     :goto_2
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    .line 787
+    .line 800
     const/16 v1, 0x1000
 
     invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->getInstalledPackages(I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 789
+    .line 802
     new-instance v5, Ljava/text/SimpleDateFormat;
 
     const-string v0, "yyyy-MM-dd HH:mm"
@@ -3027,17 +3099,17 @@
 
     invoke-direct {v5, v0, v2}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 790
+    .line 803
     new-instance v6, Ljava/lang/StringBuilder;
 
     const/16 v0, 0x1000
 
     invoke-direct {v6, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 792
+    .line 805
     const/4 v0, 0x0
 
-    .line 793
+    .line 806
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->emptyIfNull(Ljava/lang/Iterable;)Ljava/lang/Iterable;
 
     move-result-object v1
@@ -3061,22 +3133,22 @@
 
     check-cast v0, Landroid/content/pm/PackageInfo;
 
-    .line 795
+    .line 808
     const/4 v1, 0x0
 
     invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 797
+    .line 810
     invoke-static {v0}, Lcom/glympse/android/hal/Reflection$_PackageInfo;->firstInstallTime(Landroid/content/pm/PackageInfo;)J
 
     move-result-wide v8
 
-    .line 798
+    .line 811
     invoke-static {v0}, Lcom/glympse/android/hal/Reflection$_PackageInfo;->lastUpdateTime(Landroid/content/pm/PackageInfo;)J
 
     move-result-wide v10
 
-    .line 800
+    .line 813
     if-eqz v4, :cond_7
 
     iget-object v1, v0, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
@@ -3089,7 +3161,7 @@
 
     const/4 v1, 0x1
 
-    .line 802
+    .line 815
     :goto_4
     const-string v3, "PKG[%04d] R: %s, N: %s, B: %d, I: %s, U: %s, P: "
 
@@ -3153,9 +3225,9 @@
 
     const/4 v8, 0x5
 
-    const-wide/16 v13, 0x0
+    const-wide/16 v14, 0x0
 
-    cmp-long v1, v10, v13
+    cmp-long v1, v10, v14
 
     if-lez v1, :cond_a
 
@@ -3176,16 +3248,16 @@
 
     invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 810
+    .line 823
     iget-object v8, v0, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
 
-    .line 811
+    .line 824
     if-eqz v8, :cond_b
 
-    .line 813
+    .line 826
     const/4 v3, 0x1
 
-    .line 814
+    .line 827
     array-length v9, v8
 
     const/4 v1, 0x0
@@ -3195,15 +3267,15 @@
 
     aget-object v10, v8, v1
 
-    .line 816
+    .line 829
     if-nez v3, :cond_6
 
-    .line 818
+    .line 831
     const-string v3, " | "
 
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 820
+    .line 833
     :cond_6
     const-string v3, "android.permission."
 
@@ -3215,21 +3287,21 @@
 
     invoke-virtual {v6, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 821
+    .line 834
     const/4 v3, 0x0
 
-    .line 814
+    .line 827
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_8
 
-    .line 800
+    .line 813
     :cond_7
     const/4 v1, 0x0
 
     goto :goto_4
 
-    .line 802
+    .line 815
     :cond_8
     const-string v1, "n"
 
@@ -3245,18 +3317,18 @@
 
     goto :goto_7
 
-    .line 825
+    .line 838
     :cond_b
     const-string v1, ", V: "
 
     invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 826
+    .line 839
     iget-object v0, v0, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
     invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 828
+    .line 841
     const/4 v0, 0x1
 
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -3269,7 +3341,7 @@
 
     goto/16 :goto_3
 
-    .line 831
+    .line 844
     :catch_0
     move-exception v0
 
@@ -3289,10 +3361,10 @@
     .locals 3
 
     .prologue
-    .line 841
+    .line 854
     invoke-static {p0}, Lcom/glympse/android/hal/t;->a(Landroid/content/Context;)Landroid/content/Context;
 
-    .line 844
+    .line 857
     invoke-static {}, Lcom/glympse/android/lib/Debug;->getLevel()I
 
     move-result v0
@@ -3301,7 +3373,7 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 846
+    .line 859
     const-wide/16 v0, 0x0
 
     new-instance v2, Lcom/glympse/android/hal/DebugBase$1;
@@ -3310,7 +3382,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/glympse/android/hal/DebugBase;->runInBackground(JLjava/lang/Runnable;)V
 
-    .line 854
+    .line 867
     :cond_0
     return-void
 .end method
@@ -3323,12 +3395,12 @@
 
     const/4 v8, 0x0
 
-    .line 859
+    .line 872
     invoke-static {p0}, Lcom/glympse/android/hal/t;->a(Landroid/content/Context;)Landroid/content/Context;
 
     move-result-object v0
 
-    .line 862
+    .line 875
     if-eqz v0, :cond_2
 
     invoke-static {}, Lcom/glympse/android/lib/Debug;->getLevel()I
@@ -3337,20 +3409,20 @@
 
     if-gt v1, v9, :cond_2
 
-    .line 864
+    .line 877
     new-instance v1, Ljava/lang/StringBuilder;
 
     const/16 v2, 0x140
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 868
+    .line 881
     :try_start_0
     new-instance v2, Landroid/app/ActivityManager$MemoryInfo;
 
     invoke-direct {v2}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
-    .line 869
+    .line 882
     const-string v3, "activity"
 
     invoke-virtual {v0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3359,10 +3431,10 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 870
+    .line 883
     invoke-virtual {v0, v2}, Landroid/app/ActivityManager;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
 
-    .line 872
+    .line 885
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, "MEM: SysTotal: "
@@ -3431,7 +3503,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 878
+    .line 891
     const/4 v2, 0x1
 
     new-array v2, v2, [I
@@ -3444,19 +3516,19 @@
 
     aput v4, v2, v3
 
-    .line 879
+    .line 892
     invoke-static {v0, v2}, Lcom/glympse/android/hal/Reflection$_ActivityManager;->getProcessMemoryInfo(Landroid/app/ActivityManager;[I)[Landroid/os/Debug$MemoryInfo;
 
     move-result-object v2
 
-    .line 880
+    .line 893
     if-eqz v2, :cond_0
 
     array-length v3, v2
 
     if-lez v3, :cond_0
 
-    .line 882
+    .line 895
     new-instance v3, Ljava/lang/StringBuilder;
 
     const-string v4, ", Dalvik PD/PSS/SD: "
@@ -3667,16 +3739,16 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 890
+    .line 903
     :cond_0
     invoke-static {v0}, Lcom/glympse/android/hal/Reflection$_ActivityManager;->getMyMemoryState(Landroid/app/ActivityManager;)Landroid/app/ActivityManager$RunningAppProcessInfo;
 
     move-result-object v0
 
-    .line 891
+    .line 904
     if-eqz v0, :cond_1
 
-    .line 893
+    .line 906
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, ", Importance: "
@@ -3723,7 +3795,7 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 904
+    .line 917
     :cond_1
     :goto_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -3732,11 +3804,11 @@
 
     invoke-static {v9, v0}, Lcom/glympse/android/hal/DebugBase;->logSpecial(ILjava/lang/String;)V
 
-    .line 906
+    .line 919
     :cond_2
     return-void
 
-    .line 899
+    .line 912
     :catch_0
     move-exception v0
 
@@ -3750,7 +3822,7 @@
 
     .prologue
     .line 63
-    sget-boolean v0, Lcom/glympse/android/hal/DebugBase;->aQ:Z
+    sget-boolean v0, Lcom/glympse/android/hal/DebugBase;->aP:Z
 
     if-eqz v0, :cond_0
 
@@ -3775,7 +3847,7 @@
     .locals 1
 
     .prologue
-    .line 910
+    .line 923
     const-string v0, "com.glympse"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -3837,7 +3909,7 @@
 
     .prologue
     .line 58
-    sput-boolean p0, Lcom/glympse/android/hal/DebugBase;->aQ:Z
+    sput-boolean p0, Lcom/glympse/android/hal/DebugBase;->aP:Z
 
     .line 59
     return-void
@@ -3892,7 +3964,7 @@
 
     .line 120
     :try_start_0
-    invoke-static {p1}, Lcom/glympse/android/hal/DebugBase;->b(Ljava/lang/String;)V
+    invoke-static {p1}, Lcom/glympse/android/hal/DebugBase;->e(Ljava/lang/String;)V
 
     .line 130
     :goto_0

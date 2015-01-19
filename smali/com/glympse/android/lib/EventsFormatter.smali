@@ -848,12 +848,12 @@
 
     and-int/2addr p2, v1
 
-    .line 781
+    .line 791
     :cond_1a
     :goto_0
     if-eqz p2, :cond_1b
 
-    .line 784
+    .line 794
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -868,9 +868,9 @@
 
     move-result-object v0
 
-    int-to-long v1, p2
+    int-to-long v2, p2
 
-    invoke-static {v1, v2}, Lcom/glympse/android/hal/Helpers;->toString(J)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/glympse/android/hal/Helpers;->toString(J)Ljava/lang/String;
 
     move-result-object v1
 
@@ -892,11 +892,11 @@
 
     move-result-object v0
 
-    .line 788
+    .line 798
     :cond_1b
     if-eqz p3, :cond_1c
 
-    .line 790
+    .line 800
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -933,7 +933,7 @@
 
     move-result-object v0
 
-    .line 794
+    .line 804
     :cond_1c
     return-object v0
 
@@ -1023,7 +1023,7 @@
     :cond_1f
     const/4 v1, 0x3
 
-    if-ne v1, p1, :cond_25
+    if-ne v1, p1, :cond_26
 
     .line 185
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1073,11 +1073,39 @@
 
     .line 192
     :cond_20
-    and-int/lit8 v1, p2, 0x2
+    and-int/lit8 v1, p2, 0x40
 
     if-eqz v1, :cond_21
 
     .line 194
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "USER_ACTIVE_TICKET_RESIGNING "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 195
+    and-int/lit8 p2, p2, -0x41
+
+    .line 197
+    :cond_21
+    and-int/lit8 v1, p2, 0x2
+
+    if-eqz v1, :cond_22
+
+    .line 199
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1096,16 +1124,16 @@
 
     move-result-object v0
 
-    .line 195
+    .line 200
     and-int/lit8 p2, p2, -0x3
 
-    .line 197
-    :cond_21
+    .line 202
+    :cond_22
     and-int/lit8 v1, p2, 0x4
 
-    if-eqz v1, :cond_22
+    if-eqz v1, :cond_23
 
-    .line 199
+    .line 204
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1124,16 +1152,16 @@
 
     move-result-object v0
 
-    .line 200
+    .line 205
     and-int/lit8 p2, p2, -0x5
 
-    .line 202
-    :cond_22
+    .line 207
+    :cond_23
     and-int/lit8 v1, p2, 0x8
 
-    if-eqz v1, :cond_23
+    if-eqz v1, :cond_24
 
-    .line 204
+    .line 209
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1152,16 +1180,16 @@
 
     move-result-object v0
 
-    .line 205
+    .line 210
     and-int/lit8 p2, p2, -0x9
 
-    .line 207
-    :cond_23
+    .line 212
+    :cond_24
     and-int/lit8 v1, p2, 0x10
 
-    if-eqz v1, :cond_24
+    if-eqz v1, :cond_25
 
-    .line 209
+    .line 214
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1180,16 +1208,16 @@
 
     move-result-object v0
 
-    .line 210
+    .line 215
     and-int/lit8 p2, p2, -0x11
 
-    .line 212
-    :cond_24
+    .line 217
+    :cond_25
     and-int/lit8 v1, p2, 0x20
 
     if-eqz v1, :cond_1a
 
-    .line 214
+    .line 219
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1208,18 +1236,18 @@
 
     move-result-object v0
 
-    .line 215
+    .line 220
     and-int/lit8 p2, p2, -0x21
 
     goto/16 :goto_0
 
-    .line 218
-    :cond_25
+    .line 223
+    :cond_26
     const/4 v1, 0x4
 
-    if-ne v1, p1, :cond_40
+    if-ne v1, p1, :cond_41
 
-    .line 220
+    .line 225
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1238,12 +1266,12 @@
 
     move-result-object v0
 
-    .line 222
+    .line 227
     and-int/lit8 v1, p2, 0x1
 
-    if-eqz v1, :cond_26
+    if-eqz v1, :cond_27
 
-    .line 224
+    .line 229
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1262,16 +1290,16 @@
 
     move-result-object v0
 
-    .line 225
+    .line 230
     and-int/lit8 p2, p2, -0x2
 
-    .line 227
-    :cond_26
+    .line 232
+    :cond_27
     and-int/lit8 v1, p2, 0x2
 
-    if-eqz v1, :cond_27
+    if-eqz v1, :cond_28
 
-    .line 229
+    .line 234
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1290,16 +1318,16 @@
 
     move-result-object v0
 
-    .line 230
+    .line 235
     and-int/lit8 p2, p2, -0x3
 
-    .line 232
-    :cond_27
+    .line 237
+    :cond_28
     and-int/lit8 v1, p2, 0x4
 
-    if-eqz v1, :cond_28
+    if-eqz v1, :cond_29
 
-    .line 234
+    .line 239
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1318,16 +1346,16 @@
 
     move-result-object v0
 
-    .line 235
+    .line 240
     and-int/lit8 p2, p2, -0x5
 
-    .line 237
-    :cond_28
+    .line 242
+    :cond_29
     and-int/lit8 v1, p2, 0x10
 
-    if-eqz v1, :cond_29
+    if-eqz v1, :cond_2a
 
-    .line 239
+    .line 244
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1346,16 +1374,16 @@
 
     move-result-object v0
 
-    .line 240
+    .line 245
     and-int/lit8 p2, p2, -0x11
 
-    .line 242
-    :cond_29
+    .line 247
+    :cond_2a
     and-int/lit8 v1, p2, 0x20
 
-    if-eqz v1, :cond_2a
+    if-eqz v1, :cond_2b
 
-    .line 244
+    .line 249
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1374,16 +1402,16 @@
 
     move-result-object v0
 
-    .line 245
+    .line 250
     and-int/lit8 p2, p2, -0x21
 
-    .line 247
-    :cond_2a
+    .line 252
+    :cond_2b
     and-int/lit8 v1, p2, 0x40
 
-    if-eqz v1, :cond_2b
+    if-eqz v1, :cond_2c
 
-    .line 249
+    .line 254
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1402,16 +1430,16 @@
 
     move-result-object v0
 
-    .line 250
+    .line 255
     and-int/lit8 p2, p2, -0x41
 
-    .line 252
-    :cond_2b
+    .line 257
+    :cond_2c
     and-int/lit16 v1, p2, 0x80
 
-    if-eqz v1, :cond_2c
+    if-eqz v1, :cond_2d
 
-    .line 254
+    .line 259
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1430,16 +1458,16 @@
 
     move-result-object v0
 
-    .line 255
+    .line 260
     and-int/lit16 p2, p2, -0x81
 
-    .line 257
-    :cond_2c
+    .line 262
+    :cond_2d
     and-int/lit16 v1, p2, 0x100
 
-    if-eqz v1, :cond_2d
+    if-eqz v1, :cond_2e
 
-    .line 259
+    .line 264
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1458,16 +1486,16 @@
 
     move-result-object v0
 
-    .line 260
+    .line 265
     and-int/lit16 p2, p2, -0x101
 
-    .line 262
-    :cond_2d
+    .line 267
+    :cond_2e
     and-int/lit16 v1, p2, 0x200
 
-    if-eqz v1, :cond_2e
+    if-eqz v1, :cond_2f
 
-    .line 264
+    .line 269
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1486,16 +1514,16 @@
 
     move-result-object v0
 
-    .line 265
+    .line 270
     and-int/lit16 p2, p2, -0x201
 
-    .line 267
-    :cond_2e
+    .line 272
+    :cond_2f
     and-int/lit16 v1, p2, 0x800
 
-    if-eqz v1, :cond_2f
+    if-eqz v1, :cond_30
 
-    .line 269
+    .line 274
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1514,16 +1542,16 @@
 
     move-result-object v0
 
-    .line 270
+    .line 275
     and-int/lit16 p2, p2, -0x801
 
-    .line 272
-    :cond_2f
+    .line 277
+    :cond_30
     and-int/lit16 v1, p2, 0x1000
 
-    if-eqz v1, :cond_30
+    if-eqz v1, :cond_31
 
-    .line 274
+    .line 279
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1542,16 +1570,16 @@
 
     move-result-object v0
 
-    .line 275
+    .line 280
     and-int/lit16 p2, p2, -0x1001
 
-    .line 277
-    :cond_30
+    .line 282
+    :cond_31
     and-int/lit16 v1, p2, 0x2000
 
-    if-eqz v1, :cond_31
+    if-eqz v1, :cond_32
 
-    .line 279
+    .line 284
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1570,16 +1598,16 @@
 
     move-result-object v0
 
-    .line 280
+    .line 285
     and-int/lit16 p2, p2, -0x2001
 
-    .line 282
-    :cond_31
+    .line 287
+    :cond_32
     and-int/lit16 v1, p2, 0x4000
 
-    if-eqz v1, :cond_32
+    if-eqz v1, :cond_33
 
-    .line 284
+    .line 289
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1598,16 +1626,16 @@
 
     move-result-object v0
 
-    .line 285
+    .line 290
     and-int/lit16 p2, p2, -0x4001
 
-    .line 287
-    :cond_32
+    .line 292
+    :cond_33
     and-int v1, p2, v6
 
-    if-eqz v1, :cond_33
+    if-eqz v1, :cond_34
 
-    .line 289
+    .line 294
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1626,18 +1654,18 @@
 
     move-result-object v0
 
-    .line 290
+    .line 295
     and-int/2addr p2, v5
 
-    .line 292
-    :cond_33
+    .line 297
+    :cond_34
     const/high16 v1, 0x10000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_34
+    if-eqz v1, :cond_35
 
-    .line 294
+    .line 299
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1656,20 +1684,20 @@
 
     move-result-object v0
 
-    .line 295
+    .line 300
     const v1, -0x10001
 
     and-int/2addr p2, v1
 
-    .line 297
-    :cond_34
+    .line 302
+    :cond_35
     const/high16 v1, 0x20000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_35
+    if-eqz v1, :cond_36
 
-    .line 299
+    .line 304
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1688,20 +1716,20 @@
 
     move-result-object v0
 
-    .line 300
+    .line 305
     const v1, -0x20001
 
     and-int/2addr p2, v1
 
-    .line 302
-    :cond_35
+    .line 307
+    :cond_36
     const/high16 v1, 0x40000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_36
+    if-eqz v1, :cond_37
 
-    .line 304
+    .line 309
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1720,18 +1748,18 @@
 
     move-result-object v0
 
-    .line 305
+    .line 310
     and-int/2addr p2, v4
 
-    .line 307
-    :cond_36
+    .line 312
+    :cond_37
     const/high16 v1, 0x80000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_37
+    if-eqz v1, :cond_38
 
-    .line 309
+    .line 314
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1750,18 +1778,18 @@
 
     move-result-object v0
 
-    .line 310
+    .line 315
     and-int/2addr p2, v3
 
-    .line 312
-    :cond_37
+    .line 317
+    :cond_38
     const/high16 v1, 0x100000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_38
+    if-eqz v1, :cond_39
 
-    .line 314
+    .line 319
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1780,18 +1808,18 @@
 
     move-result-object v0
 
-    .line 315
+    .line 320
     and-int/2addr p2, v2
 
-    .line 317
-    :cond_38
+    .line 322
+    :cond_39
     const/high16 v1, 0x200000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_39
+    if-eqz v1, :cond_3a
 
-    .line 319
+    .line 324
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1810,20 +1838,20 @@
 
     move-result-object v0
 
-    .line 320
+    .line 325
     const v1, -0x200001
 
     and-int/2addr p2, v1
 
-    .line 322
-    :cond_39
+    .line 327
+    :cond_3a
     const/high16 v1, 0x400000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_3a
+    if-eqz v1, :cond_3b
 
-    .line 324
+    .line 329
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1842,20 +1870,20 @@
 
     move-result-object v0
 
-    .line 325
+    .line 330
     const v1, -0x400001
 
     and-int/2addr p2, v1
 
-    .line 327
-    :cond_3a
+    .line 332
+    :cond_3b
     const/high16 v1, 0x800000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_3b
+    if-eqz v1, :cond_3c
 
-    .line 329
+    .line 334
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1874,20 +1902,20 @@
 
     move-result-object v0
 
-    .line 330
+    .line 335
     const v1, -0x800001
 
     and-int/2addr p2, v1
 
-    .line 332
-    :cond_3b
+    .line 337
+    :cond_3c
     const/high16 v1, 0x1000000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_3c
+    if-eqz v1, :cond_3d
 
-    .line 334
+    .line 339
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1906,20 +1934,20 @@
 
     move-result-object v0
 
-    .line 335
+    .line 340
     const v1, -0x1000001
 
     and-int/2addr p2, v1
 
-    .line 337
-    :cond_3c
+    .line 342
+    :cond_3d
     const/high16 v1, 0x2000000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_3d
+    if-eqz v1, :cond_3e
 
-    .line 339
+    .line 344
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1938,20 +1966,20 @@
 
     move-result-object v0
 
-    .line 340
+    .line 345
     const v1, -0x2000001
 
     and-int/2addr p2, v1
 
-    .line 342
-    :cond_3d
+    .line 347
+    :cond_3e
     const/high16 v1, 0x4000000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_3e
+    if-eqz v1, :cond_3f
 
-    .line 344
+    .line 349
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1970,20 +1998,20 @@
 
     move-result-object v0
 
-    .line 345
+    .line 350
     const v1, -0x4000001
 
     and-int/2addr p2, v1
 
-    .line 347
-    :cond_3e
+    .line 352
+    :cond_3f
     const v1, 0x1f000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_3f
+    if-eqz v1, :cond_40
 
-    .line 349
+    .line 354
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2002,20 +2030,20 @@
 
     move-result-object v0
 
-    .line 350
+    .line 355
     const v1, -0x1f001
 
     and-int/2addr p2, v1
 
-    .line 352
-    :cond_3f
-    const v1, 0x531f7f2
+    .line 357
+    :cond_40
+    const v1, 0x531f7fa
 
     and-int/2addr v1, p2
 
     if-eqz v1, :cond_1a
 
-    .line 354
+    .line 359
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2034,20 +2062,20 @@
 
     move-result-object v0
 
-    .line 355
-    const v1, -0x531f7f3
+    .line 360
+    const v1, -0x531f7fb
 
     and-int/2addr p2, v1
 
     goto/16 :goto_0
 
-    .line 358
-    :cond_40
+    .line 363
+    :cond_41
     const/4 v1, 0x5
 
-    if-ne v1, p1, :cond_44
+    if-ne v1, p1, :cond_45
 
-    .line 360
+    .line 365
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2066,12 +2094,12 @@
 
     move-result-object v0
 
-    .line 362
+    .line 367
     and-int/lit8 v1, p2, 0x1
 
-    if-eqz v1, :cond_41
+    if-eqz v1, :cond_42
 
-    .line 364
+    .line 369
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2090,16 +2118,16 @@
 
     move-result-object v0
 
-    .line 365
+    .line 370
     and-int/lit8 p2, p2, -0x2
 
-    .line 367
-    :cond_41
+    .line 372
+    :cond_42
     and-int/lit8 v1, p2, 0x2
 
-    if-eqz v1, :cond_42
+    if-eqz v1, :cond_43
 
-    .line 369
+    .line 374
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2118,16 +2146,16 @@
 
     move-result-object v0
 
-    .line 370
+    .line 375
     and-int/lit8 p2, p2, -0x3
 
-    .line 372
-    :cond_42
+    .line 377
+    :cond_43
     and-int/lit8 v1, p2, 0x10
 
-    if-eqz v1, :cond_43
+    if-eqz v1, :cond_44
 
-    .line 374
+    .line 379
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2146,16 +2174,16 @@
 
     move-result-object v0
 
-    .line 375
+    .line 380
     and-int/lit8 p2, p2, -0x11
 
-    .line 377
-    :cond_43
+    .line 382
+    :cond_44
     and-int/lit8 v1, p2, 0x20
 
     if-eqz v1, :cond_1a
 
-    .line 379
+    .line 384
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2174,18 +2202,18 @@
 
     move-result-object v0
 
-    .line 380
+    .line 385
     and-int/lit8 p2, p2, -0x21
 
     goto/16 :goto_0
 
-    .line 383
-    :cond_44
+    .line 388
+    :cond_45
     const/4 v1, 0x6
 
-    if-ne v1, p1, :cond_45
+    if-ne v1, p1, :cond_46
 
-    .line 385
+    .line 390
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2204,12 +2232,12 @@
 
     move-result-object v0
 
-    .line 387
+    .line 392
     and-int/lit8 v1, p2, 0x1
 
     if-eqz v1, :cond_1a
 
-    .line 389
+    .line 394
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2228,18 +2256,18 @@
 
     move-result-object v0
 
-    .line 390
+    .line 395
     and-int/lit8 p2, p2, -0x2
 
     goto/16 :goto_0
 
-    .line 393
-    :cond_45
+    .line 398
+    :cond_46
     const/4 v1, 0x7
 
-    if-ne v1, p1, :cond_46
+    if-ne v1, p1, :cond_47
 
-    .line 395
+    .line 400
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2258,12 +2286,12 @@
 
     move-result-object v0
 
-    .line 397
+    .line 402
     and-int/lit8 v1, p2, 0x1
 
     if-eqz v1, :cond_1a
 
-    .line 399
+    .line 404
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2282,18 +2310,18 @@
 
     move-result-object v0
 
-    .line 400
+    .line 405
     and-int/lit8 p2, p2, -0x2
 
     goto/16 :goto_0
 
-    .line 403
-    :cond_46
+    .line 408
+    :cond_47
     const/16 v1, 0x8
 
-    if-ne v1, p1, :cond_4b
+    if-ne v1, p1, :cond_4c
 
-    .line 405
+    .line 410
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2312,12 +2340,12 @@
 
     move-result-object v0
 
-    .line 407
+    .line 412
     and-int/lit8 v1, p2, 0x1
 
-    if-eqz v1, :cond_47
+    if-eqz v1, :cond_48
 
-    .line 409
+    .line 414
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2336,16 +2364,16 @@
 
     move-result-object v0
 
-    .line 410
+    .line 415
     and-int/lit8 p2, p2, -0x2
 
-    .line 412
-    :cond_47
+    .line 417
+    :cond_48
     and-int/lit8 v1, p2, 0x10
 
-    if-eqz v1, :cond_48
+    if-eqz v1, :cond_49
 
-    .line 414
+    .line 419
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2364,16 +2392,16 @@
 
     move-result-object v0
 
-    .line 415
+    .line 420
     and-int/lit8 p2, p2, -0x11
 
-    .line 417
-    :cond_48
+    .line 422
+    :cond_49
     and-int/lit8 v1, p2, 0x20
 
-    if-eqz v1, :cond_49
+    if-eqz v1, :cond_4a
 
-    .line 419
+    .line 424
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2392,16 +2420,16 @@
 
     move-result-object v0
 
-    .line 420
+    .line 425
     and-int/lit8 p2, p2, -0x21
 
-    .line 422
-    :cond_49
+    .line 427
+    :cond_4a
     and-int/lit16 v1, p2, 0x100
 
-    if-eqz v1, :cond_4a
+    if-eqz v1, :cond_4b
 
-    .line 424
+    .line 429
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2420,16 +2448,16 @@
 
     move-result-object v0
 
-    .line 425
+    .line 430
     and-int/lit16 p2, p2, -0x101
 
-    .line 427
-    :cond_4a
+    .line 432
+    :cond_4b
     and-int/lit16 v1, p2, 0x200
 
     if-eqz v1, :cond_1a
 
-    .line 429
+    .line 434
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2448,18 +2476,18 @@
 
     move-result-object v0
 
-    .line 430
+    .line 435
     and-int/lit16 p2, p2, -0x201
 
     goto/16 :goto_0
 
-    .line 433
-    :cond_4b
+    .line 438
+    :cond_4c
     const/16 v1, 0x9
 
-    if-ne v1, p1, :cond_50
+    if-ne v1, p1, :cond_51
 
-    .line 435
+    .line 440
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2478,12 +2506,12 @@
 
     move-result-object v0
 
-    .line 437
+    .line 442
     and-int/lit8 v1, p2, 0x1
 
-    if-eqz v1, :cond_4c
+    if-eqz v1, :cond_4d
 
-    .line 439
+    .line 444
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2502,16 +2530,16 @@
 
     move-result-object v0
 
-    .line 440
+    .line 445
     and-int/lit8 p2, p2, -0x2
 
-    .line 442
-    :cond_4c
+    .line 447
+    :cond_4d
     and-int/lit8 v1, p2, 0x2
 
-    if-eqz v1, :cond_4d
+    if-eqz v1, :cond_4e
 
-    .line 444
+    .line 449
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2530,16 +2558,16 @@
 
     move-result-object v0
 
-    .line 445
+    .line 450
     and-int/lit8 p2, p2, -0x3
 
-    .line 447
-    :cond_4d
+    .line 452
+    :cond_4e
     and-int/lit8 v1, p2, 0x4
 
-    if-eqz v1, :cond_4e
+    if-eqz v1, :cond_4f
 
-    .line 449
+    .line 454
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2558,16 +2586,16 @@
 
     move-result-object v0
 
-    .line 450
+    .line 455
     and-int/lit8 p2, p2, -0x5
 
-    .line 452
-    :cond_4e
+    .line 457
+    :cond_4f
     and-int/lit8 v1, p2, 0x8
 
-    if-eqz v1, :cond_4f
+    if-eqz v1, :cond_50
 
-    .line 454
+    .line 459
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2586,16 +2614,16 @@
 
     move-result-object v0
 
-    .line 455
+    .line 460
     and-int/lit8 p2, p2, -0x9
 
-    .line 457
-    :cond_4f
+    .line 462
+    :cond_50
     and-int/lit8 v1, p2, 0x20
 
     if-eqz v1, :cond_1a
 
-    .line 459
+    .line 464
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2614,18 +2642,18 @@
 
     move-result-object v0
 
-    .line 460
+    .line 465
     and-int/lit8 p2, p2, -0x21
 
     goto/16 :goto_0
 
-    .line 463
-    :cond_50
+    .line 468
+    :cond_51
     const/16 v1, 0xa
 
-    if-ne v1, p1, :cond_5c
+    if-ne v1, p1, :cond_5e
 
-    .line 465
+    .line 470
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2644,12 +2672,12 @@
 
     move-result-object v0
 
-    .line 467
+    .line 472
     and-int/lit8 v1, p2, 0x1
 
-    if-eqz v1, :cond_51
+    if-eqz v1, :cond_52
 
-    .line 469
+    .line 474
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2668,16 +2696,16 @@
 
     move-result-object v0
 
-    .line 470
+    .line 475
     and-int/lit8 p2, p2, -0x2
 
-    .line 472
-    :cond_51
+    .line 477
+    :cond_52
     and-int/lit8 v1, p2, 0x2
 
-    if-eqz v1, :cond_52
+    if-eqz v1, :cond_53
 
-    .line 474
+    .line 479
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2696,16 +2724,16 @@
 
     move-result-object v0
 
-    .line 475
+    .line 480
     and-int/lit8 p2, p2, -0x3
 
-    .line 477
-    :cond_52
+    .line 482
+    :cond_53
     and-int/lit8 v1, p2, 0x4
 
-    if-eqz v1, :cond_53
+    if-eqz v1, :cond_54
 
-    .line 479
+    .line 484
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2724,16 +2752,16 @@
 
     move-result-object v0
 
-    .line 480
+    .line 485
     and-int/lit8 p2, p2, -0x5
 
-    .line 482
-    :cond_53
+    .line 487
+    :cond_54
     and-int/lit8 v1, p2, 0x8
 
-    if-eqz v1, :cond_54
+    if-eqz v1, :cond_55
 
-    .line 484
+    .line 489
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2752,16 +2780,16 @@
 
     move-result-object v0
 
-    .line 485
+    .line 490
     and-int/lit8 p2, p2, -0x9
 
-    .line 487
-    :cond_54
+    .line 492
+    :cond_55
     and-int/lit8 v1, p2, 0x10
 
-    if-eqz v1, :cond_55
+    if-eqz v1, :cond_56
 
-    .line 489
+    .line 494
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2780,16 +2808,16 @@
 
     move-result-object v0
 
-    .line 490
+    .line 495
     and-int/lit8 p2, p2, -0x11
 
-    .line 492
-    :cond_55
+    .line 497
+    :cond_56
     and-int/lit8 v1, p2, 0x20
 
-    if-eqz v1, :cond_56
+    if-eqz v1, :cond_57
 
-    .line 494
+    .line 499
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2808,16 +2836,16 @@
 
     move-result-object v0
 
-    .line 495
+    .line 500
     and-int/lit8 p2, p2, -0x21
 
-    .line 497
-    :cond_56
+    .line 502
+    :cond_57
     and-int/lit8 v1, p2, 0x40
 
-    if-eqz v1, :cond_57
+    if-eqz v1, :cond_58
 
-    .line 499
+    .line 504
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2836,16 +2864,16 @@
 
     move-result-object v0
 
-    .line 500
+    .line 505
     and-int/lit8 p2, p2, -0x41
 
-    .line 502
-    :cond_57
+    .line 507
+    :cond_58
     and-int/lit16 v1, p2, 0x100
 
-    if-eqz v1, :cond_58
+    if-eqz v1, :cond_59
 
-    .line 504
+    .line 509
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2864,16 +2892,16 @@
 
     move-result-object v0
 
-    .line 505
+    .line 510
     and-int/lit16 p2, p2, -0x101
 
-    .line 507
-    :cond_58
+    .line 512
+    :cond_59
     and-int/lit16 v1, p2, 0x200
 
-    if-eqz v1, :cond_59
+    if-eqz v1, :cond_5a
 
-    .line 509
+    .line 514
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2882,7 +2910,7 @@
 
     move-result-object v0
 
-    const-string v1, "GROUP_MEMBER_TICKET "
+    const-string v1, "GROUP_MEMBER_TICKET_CHANGED "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2892,18 +2920,46 @@
 
     move-result-object v0
 
-    .line 510
+    .line 515
     and-int/lit16 p2, p2, -0x201
 
-    .line 512
-    :cond_59
+    .line 517
+    :cond_5a
+    and-int/lit16 v1, p2, 0x400
+
+    if-eqz v1, :cond_5b
+
+    .line 519
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "GROUP_MEMBER_TICKET_RESIGNING "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 520
+    and-int/lit16 p2, p2, -0x401
+
+    .line 522
+    :cond_5b
     const/high16 v1, 0x40000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_5a
+    if-eqz v1, :cond_5c
 
-    .line 514
+    .line 524
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2922,18 +2978,18 @@
 
     move-result-object v0
 
-    .line 515
+    .line 525
     and-int/2addr p2, v4
 
-    .line 517
-    :cond_5a
+    .line 527
+    :cond_5c
     const/high16 v1, 0x80000
 
     and-int/2addr v1, p2
 
-    if-eqz v1, :cond_5b
+    if-eqz v1, :cond_5d
 
-    .line 519
+    .line 529
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2952,18 +3008,18 @@
 
     move-result-object v0
 
-    .line 520
+    .line 530
     and-int/2addr p2, v3
 
-    .line 522
-    :cond_5b
+    .line 532
+    :cond_5d
     const/high16 v1, 0x100000
 
     and-int/2addr v1, p2
 
     if-eqz v1, :cond_1a
 
-    .line 524
+    .line 534
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2982,18 +3038,18 @@
 
     move-result-object v0
 
-    .line 525
+    .line 535
     and-int/2addr p2, v2
 
     goto/16 :goto_0
 
-    .line 528
-    :cond_5c
+    .line 538
+    :cond_5e
     const v1, 0x10001
 
-    if-ne v1, p1, :cond_5e
+    if-ne v1, p1, :cond_60
 
-    .line 530
+    .line 540
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3012,12 +3068,12 @@
 
     move-result-object v0
 
-    .line 532
+    .line 542
     and-int/lit8 v1, p2, 0x1
 
-    if-eqz v1, :cond_5d
+    if-eqz v1, :cond_5f
 
-    .line 534
+    .line 544
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3036,16 +3092,16 @@
 
     move-result-object v0
 
-    .line 535
+    .line 545
     and-int/lit8 p2, p2, -0x2
 
-    .line 537
-    :cond_5d
+    .line 547
+    :cond_5f
     and-int/lit8 v1, p2, 0x2
 
     if-eqz v1, :cond_1a
 
-    .line 539
+    .line 549
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3064,18 +3120,18 @@
 
     move-result-object v0
 
-    .line 540
+    .line 550
     and-int/lit8 p2, p2, -0x3
 
     goto/16 :goto_0
 
-    .line 543
-    :cond_5e
+    .line 553
+    :cond_60
     const v1, 0x10002
 
-    if-ne v1, p1, :cond_6e
+    if-ne v1, p1, :cond_70
 
-    .line 545
+    .line 555
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3094,12 +3150,12 @@
 
     move-result-object v0
 
-    .line 547
+    .line 557
     and-int/lit8 v1, p2, 0x1
 
-    if-eqz v1, :cond_5f
+    if-eqz v1, :cond_61
 
-    .line 549
+    .line 559
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3108,7 +3164,7 @@
 
     move-result-object v0
 
-    const-string v1, "PLATFORM_URL_SINKS "
+    const-string v1, "PLATFORM_URL_INVITES "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -3118,16 +3174,16 @@
 
     move-result-object v0
 
-    .line 550
+    .line 560
     and-int/lit8 p2, p2, -0x2
 
-    .line 552
-    :cond_5f
+    .line 562
+    :cond_61
     and-int/lit8 v1, p2, 0x2
 
-    if-eqz v1, :cond_60
+    if-eqz v1, :cond_62
 
-    .line 554
+    .line 564
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3146,16 +3202,16 @@
 
     move-result-object v0
 
-    .line 555
+    .line 565
     and-int/lit8 p2, p2, -0x3
 
-    .line 557
-    :cond_60
+    .line 567
+    :cond_62
     and-int/lit8 v1, p2, 0x4
 
-    if-eqz v1, :cond_61
+    if-eqz v1, :cond_63
 
-    .line 559
+    .line 569
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3174,16 +3230,16 @@
 
     move-result-object v0
 
-    .line 560
+    .line 570
     and-int/lit8 p2, p2, -0x5
 
-    .line 562
-    :cond_61
+    .line 572
+    :cond_63
     and-int/lit8 v1, p2, 0x8
 
-    if-eqz v1, :cond_62
+    if-eqz v1, :cond_64
 
-    .line 564
+    .line 574
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3202,16 +3258,16 @@
 
     move-result-object v0
 
-    .line 565
+    .line 575
     and-int/lit8 p2, p2, -0x9
 
-    .line 567
-    :cond_62
+    .line 577
+    :cond_64
     and-int/lit8 v1, p2, 0x10
 
-    if-eqz v1, :cond_63
+    if-eqz v1, :cond_65
 
-    .line 569
+    .line 579
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3230,16 +3286,16 @@
 
     move-result-object v0
 
-    .line 570
+    .line 580
     and-int/lit8 p2, p2, -0x11
 
-    .line 572
-    :cond_63
+    .line 582
+    :cond_65
     and-int/lit8 v1, p2, 0x20
 
-    if-eqz v1, :cond_64
+    if-eqz v1, :cond_66
 
-    .line 574
+    .line 584
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3258,16 +3314,16 @@
 
     move-result-object v0
 
-    .line 575
+    .line 585
     and-int/lit8 p2, p2, -0x21
 
-    .line 577
-    :cond_64
+    .line 587
+    :cond_66
     and-int/lit8 v1, p2, 0x40
 
-    if-eqz v1, :cond_65
+    if-eqz v1, :cond_67
 
-    .line 579
+    .line 589
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3286,16 +3342,16 @@
 
     move-result-object v0
 
-    .line 580
+    .line 590
     and-int/lit8 p2, p2, -0x41
 
-    .line 582
-    :cond_65
+    .line 592
+    :cond_67
     and-int/lit16 v1, p2, 0x80
 
-    if-eqz v1, :cond_66
+    if-eqz v1, :cond_68
 
-    .line 584
+    .line 594
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3314,16 +3370,16 @@
 
     move-result-object v0
 
-    .line 585
+    .line 595
     and-int/lit16 p2, p2, -0x81
 
-    .line 587
-    :cond_66
+    .line 597
+    :cond_68
     and-int/lit16 v1, p2, 0x100
 
-    if-eqz v1, :cond_67
+    if-eqz v1, :cond_69
 
-    .line 589
+    .line 599
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3342,16 +3398,16 @@
 
     move-result-object v0
 
-    .line 590
+    .line 600
     and-int/lit16 p2, p2, -0x101
 
-    .line 592
-    :cond_67
+    .line 602
+    :cond_69
     and-int/lit16 v1, p2, 0x200
 
-    if-eqz v1, :cond_68
+    if-eqz v1, :cond_6a
 
-    .line 594
+    .line 604
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3370,16 +3426,16 @@
 
     move-result-object v0
 
-    .line 595
+    .line 605
     and-int/lit16 p2, p2, -0x201
 
-    .line 597
-    :cond_68
+    .line 607
+    :cond_6a
     and-int/lit16 v1, p2, 0x400
 
-    if-eqz v1, :cond_69
+    if-eqz v1, :cond_6b
 
-    .line 599
+    .line 609
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3398,16 +3454,16 @@
 
     move-result-object v0
 
-    .line 600
+    .line 610
     and-int/lit16 p2, p2, -0x401
 
-    .line 602
-    :cond_69
+    .line 612
+    :cond_6b
     and-int/lit16 v1, p2, 0x800
 
-    if-eqz v1, :cond_6a
+    if-eqz v1, :cond_6c
 
-    .line 604
+    .line 614
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3426,16 +3482,16 @@
 
     move-result-object v0
 
-    .line 605
+    .line 615
     and-int/lit16 p2, p2, -0x801
 
-    .line 607
-    :cond_6a
+    .line 617
+    :cond_6c
     and-int/lit16 v1, p2, 0x1000
 
-    if-eqz v1, :cond_6b
+    if-eqz v1, :cond_6d
 
-    .line 609
+    .line 619
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3454,16 +3510,16 @@
 
     move-result-object v0
 
-    .line 610
+    .line 620
     and-int/lit16 p2, p2, -0x1001
 
-    .line 612
-    :cond_6b
+    .line 622
+    :cond_6d
     and-int/lit16 v1, p2, 0x2000
 
-    if-eqz v1, :cond_6c
+    if-eqz v1, :cond_6e
 
-    .line 614
+    .line 624
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3482,16 +3538,16 @@
 
     move-result-object v0
 
-    .line 615
+    .line 625
     and-int/lit16 p2, p2, -0x2001
 
-    .line 617
-    :cond_6c
+    .line 627
+    :cond_6e
     and-int/lit16 v1, p2, 0x4000
 
-    if-eqz v1, :cond_6d
+    if-eqz v1, :cond_6f
 
-    .line 619
+    .line 629
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3510,16 +3566,16 @@
 
     move-result-object v0
 
-    .line 620
+    .line 630
     and-int/lit16 p2, p2, -0x4001
 
-    .line 622
-    :cond_6d
+    .line 632
+    :cond_6f
     and-int v1, p2, v6
 
     if-eqz v1, :cond_1a
 
-    .line 624
+    .line 634
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3538,18 +3594,18 @@
 
     move-result-object v0
 
-    .line 625
+    .line 635
     and-int/2addr p2, v5
 
     goto/16 :goto_0
 
-    .line 628
-    :cond_6e
+    .line 638
+    :cond_70
     const v1, 0x10003
 
-    if-ne v1, p1, :cond_6f
+    if-ne v1, p1, :cond_71
 
-    .line 630
+    .line 640
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3568,12 +3624,12 @@
 
     move-result-object v0
 
-    .line 632
+    .line 642
     and-int/lit8 v1, p2, 0x1
 
     if-eqz v1, :cond_1a
 
-    .line 634
+    .line 644
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3592,18 +3648,18 @@
 
     move-result-object v0
 
-    .line 635
+    .line 645
     and-int/lit8 p2, p2, -0x2
 
     goto/16 :goto_0
 
-    .line 638
-    :cond_6f
+    .line 648
+    :cond_71
     const/16 v1, 0xb
 
-    if-ne v1, p1, :cond_72
+    if-ne v1, p1, :cond_74
 
-    .line 640
+    .line 650
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3622,12 +3678,12 @@
 
     move-result-object v0
 
-    .line 642
+    .line 652
     and-int/lit8 v1, p2, 0x1
 
-    if-eqz v1, :cond_70
+    if-eqz v1, :cond_72
 
-    .line 644
+    .line 654
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3646,16 +3702,16 @@
 
     move-result-object v0
 
-    .line 645
+    .line 655
     and-int/lit8 p2, p2, -0x2
 
-    .line 647
-    :cond_70
+    .line 657
+    :cond_72
     and-int/lit8 v1, p2, 0x2
 
-    if-eqz v1, :cond_71
+    if-eqz v1, :cond_73
 
-    .line 649
+    .line 659
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3674,16 +3730,16 @@
 
     move-result-object v0
 
-    .line 650
+    .line 660
     and-int/lit8 p2, p2, -0x3
 
-    .line 653
-    :cond_71
+    .line 663
+    :cond_73
     and-int/lit8 v1, p2, 0x3
 
     if-eqz v1, :cond_1a
 
-    .line 655
+    .line 665
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3702,18 +3758,18 @@
 
     move-result-object v0
 
-    .line 656
+    .line 666
     and-int/lit8 p2, p2, -0x4
 
     goto/16 :goto_0
 
-    .line 659
-    :cond_72
+    .line 669
+    :cond_74
     const v1, 0x10004
 
-    if-ne v1, p1, :cond_73
+    if-ne v1, p1, :cond_75
 
-    .line 661
+    .line 671
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3732,12 +3788,12 @@
 
     move-result-object v0
 
-    .line 663
+    .line 673
     and-int/lit8 v1, p2, 0x1
 
     if-eqz v1, :cond_1a
 
-    .line 665
+    .line 675
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3756,18 +3812,18 @@
 
     move-result-object v0
 
-    .line 666
+    .line 676
     and-int/lit8 p2, p2, -0x2
 
     goto/16 :goto_0
 
-    .line 669
-    :cond_73
+    .line 679
+    :cond_75
     const v1, 0x10005
 
-    if-ne v1, p1, :cond_77
+    if-ne v1, p1, :cond_79
 
-    .line 671
+    .line 681
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3786,12 +3842,12 @@
 
     move-result-object v0
 
-    .line 673
+    .line 683
     and-int/lit8 v1, p2, 0x1
 
-    if-eqz v1, :cond_74
+    if-eqz v1, :cond_76
 
-    .line 675
+    .line 685
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3810,16 +3866,16 @@
 
     move-result-object v0
 
-    .line 676
+    .line 686
     and-int/lit8 p2, p2, -0x2
 
-    .line 678
-    :cond_74
+    .line 688
+    :cond_76
     and-int/lit8 v1, p2, 0x2
 
-    if-eqz v1, :cond_75
+    if-eqz v1, :cond_77
 
-    .line 680
+    .line 690
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3838,16 +3894,16 @@
 
     move-result-object v0
 
-    .line 681
+    .line 691
     and-int/lit8 p2, p2, -0x3
 
-    .line 683
-    :cond_75
+    .line 693
+    :cond_77
     and-int/lit8 v1, p2, 0x4
 
-    if-eqz v1, :cond_76
+    if-eqz v1, :cond_78
 
-    .line 685
+    .line 695
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3866,16 +3922,16 @@
 
     move-result-object v0
 
-    .line 686
+    .line 696
     and-int/lit8 p2, p2, -0x5
 
-    .line 689
-    :cond_76
+    .line 699
+    :cond_78
     and-int/lit8 v1, p2, 0x7
 
     if-eqz v1, :cond_1a
 
-    .line 691
+    .line 701
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3894,18 +3950,18 @@
 
     move-result-object v0
 
-    .line 692
+    .line 702
     and-int/lit8 p2, p2, -0x8
 
     goto/16 :goto_0
 
-    .line 695
-    :cond_77
+    .line 705
+    :cond_79
     const v1, 0x10006
 
-    if-ne v1, p1, :cond_7c
+    if-ne v1, p1, :cond_7e
 
-    .line 697
+    .line 707
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3924,12 +3980,12 @@
 
     move-result-object v0
 
-    .line 699
+    .line 709
     and-int/lit8 v1, p2, 0x1
 
-    if-eqz v1, :cond_78
+    if-eqz v1, :cond_7a
 
-    .line 701
+    .line 711
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3948,16 +4004,16 @@
 
     move-result-object v0
 
-    .line 702
+    .line 712
     and-int/lit8 p2, p2, -0x2
 
-    .line 704
-    :cond_78
+    .line 714
+    :cond_7a
     and-int/lit8 v1, p2, 0x2
 
-    if-eqz v1, :cond_79
+    if-eqz v1, :cond_7b
 
-    .line 706
+    .line 716
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3976,16 +4032,16 @@
 
     move-result-object v0
 
-    .line 707
+    .line 717
     and-int/lit8 p2, p2, -0x3
 
-    .line 709
-    :cond_79
+    .line 719
+    :cond_7b
     and-int/lit8 v1, p2, 0x4
 
-    if-eqz v1, :cond_7a
+    if-eqz v1, :cond_7c
 
-    .line 711
+    .line 721
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4004,16 +4060,16 @@
 
     move-result-object v0
 
-    .line 712
+    .line 722
     and-int/lit8 p2, p2, -0x5
 
-    .line 714
-    :cond_7a
+    .line 724
+    :cond_7c
     and-int/lit8 v1, p2, 0x8
 
-    if-eqz v1, :cond_7b
+    if-eqz v1, :cond_7d
 
-    .line 716
+    .line 726
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4032,16 +4088,16 @@
 
     move-result-object v0
 
-    .line 717
+    .line 727
     and-int/lit8 p2, p2, -0x9
 
-    .line 719
-    :cond_7b
+    .line 729
+    :cond_7d
     and-int/lit8 v1, p2, 0x10
 
     if-eqz v1, :cond_1a
 
-    .line 721
+    .line 731
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4060,18 +4116,18 @@
 
     move-result-object v0
 
-    .line 722
+    .line 732
     and-int/lit8 p2, p2, -0x11
 
     goto/16 :goto_0
 
-    .line 725
-    :cond_7c
+    .line 735
+    :cond_7e
     const/16 v1, 0xd
 
-    if-ne v1, p1, :cond_84
+    if-ne v1, p1, :cond_86
 
-    .line 727
+    .line 737
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4090,12 +4146,12 @@
 
     move-result-object v0
 
-    .line 729
+    .line 739
     and-int/lit8 v1, p2, 0x1
 
-    if-eqz v1, :cond_7d
+    if-eqz v1, :cond_7f
 
-    .line 731
+    .line 741
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4114,16 +4170,16 @@
 
     move-result-object v0
 
-    .line 732
+    .line 742
     and-int/lit8 p2, p2, -0x2
 
-    .line 734
-    :cond_7d
+    .line 744
+    :cond_7f
     and-int/lit8 v1, p2, 0x2
 
-    if-eqz v1, :cond_7e
+    if-eqz v1, :cond_80
 
-    .line 736
+    .line 746
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4142,16 +4198,16 @@
 
     move-result-object v0
 
-    .line 737
+    .line 747
     and-int/lit8 p2, p2, -0x3
 
-    .line 739
-    :cond_7e
+    .line 749
+    :cond_80
     and-int/lit8 v1, p2, 0x4
 
-    if-eqz v1, :cond_7f
+    if-eqz v1, :cond_81
 
-    .line 741
+    .line 751
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4170,16 +4226,16 @@
 
     move-result-object v0
 
-    .line 742
+    .line 752
     and-int/lit8 p2, p2, -0x5
 
-    .line 744
-    :cond_7f
+    .line 754
+    :cond_81
     and-int/lit8 v1, p2, 0x8
 
-    if-eqz v1, :cond_80
+    if-eqz v1, :cond_82
 
-    .line 746
+    .line 756
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4198,16 +4254,16 @@
 
     move-result-object v0
 
-    .line 747
+    .line 757
     and-int/lit8 p2, p2, -0x9
 
-    .line 749
-    :cond_80
+    .line 759
+    :cond_82
     and-int/lit8 v1, p2, 0x10
 
-    if-eqz v1, :cond_81
+    if-eqz v1, :cond_83
 
-    .line 751
+    .line 761
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4226,16 +4282,16 @@
 
     move-result-object v0
 
-    .line 752
+    .line 762
     and-int/lit8 p2, p2, -0x11
 
-    .line 754
-    :cond_81
+    .line 764
+    :cond_83
     and-int/lit8 v1, p2, 0x20
 
-    if-eqz v1, :cond_82
+    if-eqz v1, :cond_84
 
-    .line 756
+    .line 766
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4254,16 +4310,16 @@
 
     move-result-object v0
 
-    .line 757
+    .line 767
     and-int/lit8 p2, p2, -0x21
 
-    .line 759
-    :cond_82
+    .line 769
+    :cond_84
     and-int/lit8 v1, p2, 0x40
 
-    if-eqz v1, :cond_83
+    if-eqz v1, :cond_85
 
-    .line 761
+    .line 771
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4282,16 +4338,16 @@
 
     move-result-object v0
 
-    .line 762
+    .line 772
     and-int/lit8 p2, p2, -0x41
 
-    .line 764
-    :cond_83
+    .line 774
+    :cond_85
     and-int/lit16 v1, p2, 0x80
 
     if-eqz v1, :cond_1a
 
-    .line 766
+    .line 776
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4310,16 +4366,16 @@
 
     move-result-object v0
 
-    .line 767
+    .line 777
     and-int/lit16 p2, p2, -0x81
 
     goto/16 :goto_0
 
-    .line 774
-    :cond_84
+    .line 784
+    :cond_86
     if-eqz p1, :cond_1a
 
-    .line 777
+    .line 787
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -4334,9 +4390,9 @@
 
     move-result-object v0
 
-    int-to-long v1, p1
+    int-to-long v2, p1
 
-    invoke-static {v1, v2}, Lcom/glympse/android/hal/Helpers;->toString(J)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/glympse/android/hal/Helpers;->toString(J)Ljava/lang/String;
 
     move-result-object v1
 
@@ -4365,6 +4421,6 @@
     .locals 0
 
     .prologue
-    .line 803
+    .line 813
     return-object p0
 .end method

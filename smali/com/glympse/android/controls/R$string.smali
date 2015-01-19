@@ -4,25 +4,25 @@
 
 
 # static fields
-.field public static final glympse_time_picker_button:I = 0x7f0e0372
+.field public static final glympse_time_picker_button:I = 0x7f0e03aa
 
-.field public static final glympse_time_picker_expires_at:I = 0x7f0e0373
+.field public static final glympse_time_picker_expires_at:I = 0x7f0e03ab
 
-.field public static final glympse_time_picker_no_expire_time:I = 0x7f0e0374
+.field public static final glympse_time_picker_no_expire_time:I = 0x7f0e03ac
 
-.field public static final glympse_timer_check_in:I = 0x7f0e0375
+.field public static final glympse_timer_check_in:I = 0x7f0e03ad
 
-.field public static final glympse_timer_expire_now:I = 0x7f0e0376
+.field public static final glympse_timer_expire_now:I = 0x7f0e03ae
 
-.field public static final glympse_timer_hour:I = 0x7f0e0377
+.field public static final glympse_timer_hour:I = 0x7f0e03af
 
-.field public static final glympse_timer_hours:I = 0x7f0e0378
+.field public static final glympse_timer_hours:I = 0x7f0e03b0
 
-.field public static final glympse_timer_minute:I = 0x7f0e0379
+.field public static final glympse_timer_minute:I = 0x7f0e03b1
 
-.field public static final glympse_timer_minutes:I = 0x7f0e037a
+.field public static final glympse_timer_minutes:I = 0x7f0e03b2
 
-.field public static final glympse_timer_slide_to_set:I = 0x7f0e037b
+.field public static final glympse_timer_slide_to_set:I = 0x7f0e03b3
 
 
 # direct methods

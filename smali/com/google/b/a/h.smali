@@ -28,7 +28,29 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)Lcom/google/b/a/g;
+.method final a(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 268
+    if-nez p1, :cond_0
+
+    iget-object v0, p0, Lcom/google/b/a/h;->a:Ljava/lang/String;
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/google/b/a/h;->b:Lcom/google/b/a/g;
+
+    invoke-virtual {v0, p1}, Lcom/google/b/a/g;->a(Ljava/lang/Object;)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final b(Ljava/lang/String;)Lcom/google/b/a/g;
     .locals 2
 
     .prologue

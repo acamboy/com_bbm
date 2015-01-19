@@ -20,7 +20,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f030124
+    const v1, 0x7f03013b
 
     const/4 v2, 0x1
 
@@ -40,7 +40,7 @@
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
     .line 26
-    const v0, 0x7f0a054e
+    const v0, 0x7f0b0606
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/LocationTimezoneContainer;->findViewById(I)Landroid/view/View;
 

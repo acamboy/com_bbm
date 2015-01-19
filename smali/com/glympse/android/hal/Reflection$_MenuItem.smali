@@ -4,15 +4,15 @@
 
 
 # static fields
-.field private static cL:Z
+.field private static cR:Z
 
-.field private static dp:Ljava/lang/reflect/Method;
+.field private static dv:Ljava/lang/reflect/Method;
 
-.field private static dq:Ljava/lang/reflect/Method;
+.field private static dw:Ljava/lang/reflect/Method;
 
-.field private static dr:I
+.field private static dx:I
 
-.field private static ds:I
+.field private static dy:I
 
 
 # direct methods
@@ -25,23 +25,23 @@
     .line 849
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->cR:Z
 
     .line 850
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_MenuItem;->dp:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_MenuItem;->dv:Ljava/lang/reflect/Method;
 
     .line 851
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_MenuItem;->dq:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_MenuItem;->dw:Ljava/lang/reflect/Method;
 
     .line 852
     const/4 v0, 0x1
 
-    sput v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dr:I
+    sput v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dx:I
 
     .line 853
     const/4 v0, 0x4
 
-    sput v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->ds:I
+    sput v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dy:I
 
     return-void
 .end method
@@ -63,12 +63,12 @@
     const/4 v1, 0x1
 
     .line 858
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->cL:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->cR:Z
 
     if-nez v0, :cond_0
 
     .line 860
-    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_MenuItem;->cL:Z
+    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_MenuItem;->cR:Z
 
     .line 864
     :try_start_0
@@ -90,7 +90,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dp:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dv:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_3
 
@@ -107,13 +107,13 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dq:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dw:Ljava/lang/reflect/Method;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
 
     .line 878
     :goto_1
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dp:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dv:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
@@ -133,7 +133,7 @@
 
     move-result v0
 
-    sput v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dr:I
+    sput v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dx:I
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -154,7 +154,7 @@
 
     move-result v0
 
-    sput v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->ds:I
+    sput v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dy:I
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
 
@@ -192,7 +192,7 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_MenuItem;->Load()V
 
     .line 902
-    sget v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dr:I
+    sget v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dx:I
 
     return v0
 .end method
@@ -205,7 +205,7 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_MenuItem;->Load()V
 
     .line 909
-    sget v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->ds:I
+    sget v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dy:I
 
     return v0
 .end method
@@ -220,13 +220,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_MenuItem;->Load()V
 
     .line 935
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dq:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dw:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 939
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dq:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dw:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -267,13 +267,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_MenuItem;->Load()V
 
     .line 917
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dp:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dv:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 921
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dp:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_MenuItem;->dv:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 

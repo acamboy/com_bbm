@@ -3,7 +3,7 @@
 .source "ConversationActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnKeyListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 1595
+    .line 932
     iput-object p1, p0, Lcom/bbm/ui/activities/fu;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,68 +25,74 @@
 
 
 # virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
+.method public final run()V
     .locals 4
 
     .prologue
-    const/16 v3, 0x42
+    .line 936
+    iget-object v0, p0, Lcom/bbm/ui/activities/fu;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    const/4 v0, 0x1
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->B(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/os/Handler;
 
-    .line 1599
-    const-string v1, "mOnKeyListener onKey"
+    move-result-object v0
 
-    const-class v2, Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-virtual {v0, p0}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    invoke-static {v1, v2}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 938
+    iget-object v0, p0, Lcom/bbm/ui/activities/fu;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 1600
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->C(Lcom/bbm/ui/activities/ConversationActivity;)I
 
-    move-result v1
+    move-result v0
 
-    if-ne v1, v0, :cond_1
+    const/4 v1, 0x3
 
-    if-ne p2, v3, :cond_1
+    if-lt v0, v1, :cond_1
 
-    .line 1603
-    iget-object v1, p0, Lcom/bbm/ui/activities/fu;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 939
+    iget-object v0, p0, Lcom/bbm/ui/activities/fu;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->D(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/google/b/a/l;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/fu;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/ConversationActivity;->l(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
+    move-result v0
 
-    move-result-object v2
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->j(Ljava/lang/String;)V
+    .line 940
+    iget-object v0, p0, Lcom/bbm/ui/activities/fu;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 1605
-    iget-object v1, p0, Lcom/bbm/ui/activities/fu;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->D(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/google/b/a/l;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ConversationActivity;->h()V
+    move-result-object v0
 
-    .line 1612
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/slidingmenu/a;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/slidingmenu/a;->d(Z)V
+
+    .line 943
     :cond_0
-    :goto_0
-    return v0
+    iget-object v0, p0, Lcom/bbm/ui/activities/fu;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 1607
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->E(Lcom/bbm/ui/activities/ConversationActivity;)I
+
+    .line 944
+    iget-object v0, p0, Lcom/bbm/ui/activities/fu;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v0, v2, v3}, Lcom/bbm/ui/activities/ConversationActivity;->a(Lcom/bbm/ui/activities/ConversationActivity;J)J
+
+    .line 946
     :cond_1
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    if-eq p2, v3, :cond_0
-
-    .line 1612
-    :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

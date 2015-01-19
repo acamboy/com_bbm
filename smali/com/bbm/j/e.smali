@@ -20,7 +20,7 @@
 
 
 # instance fields
-.field public a:Lcom/google/b/a/l;
+.field a:Lcom/google/b/a/l;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/google/b/a/l",
@@ -96,6 +96,44 @@
 
     .line 36
     return-void
+.end method
+
+.method public final a(Lcom/google/b/a/l;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/b/a/l",
+            "<",
+            "Lcom/bbm/j/r",
+            "<TT;>;>;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 44
+    iget-object v0, p0, Lcom/bbm/j/e;->a:Lcom/google/b/a/l;
+
+    invoke-static {p1, v0}, Lcom/bbm/util/bh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 49
+    :goto_0
+    return-void
+
+    .line 47
+    :cond_0
+    iput-object p1, p0, Lcom/bbm/j/e;->a:Lcom/google/b/a/l;
+
+    .line 48
+    iget-object v0, p0, Lcom/bbm/j/e;->c:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->c()V
+
+    goto :goto_0
 .end method
 
 .method public final b(Lcom/bbm/j/h;)V

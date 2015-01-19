@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/yz;
 .super Ljava/lang/Object;
-.source "ProfileActivity.java"
+.source "NewChannelCategoryActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
+.implements Lcom/bbm/j/s;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
     .locals 0
 
     .prologue
-    .line 551
-    iput-object p1, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 117
+    iput-object p1, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,92 +25,169 @@
 
 
 # virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 6
+.method public final a()Z
+    .locals 4
 
     .prologue
-    .line 558
-    iget-object v0, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileActivity;->m(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/ui/FooterActionBar;
+    .line 120
+    iget-object v0, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->h(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/bbm/d/a;->Q()Lcom/bbm/j/w;
 
-    .line 559
-    sub-int v0, p5, p3
+    move-result-object v0
 
-    .line 561
-    new-instance v1, Landroid/graphics/Point;
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
 
-    invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
+    move-result-object v0
 
-    .line 562
-    iget-object v2, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    check-cast v0, Ljava/util/List;
 
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/ProfileActivity;->getWindowManager()Landroid/view/WindowManager;
+    iget-object v2, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->g(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)I
+
+    move-result v2
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/eh;
+
+    .line 121
+    iget-object v2, v0, Lcom/bbm/d/eh;->c:Lcom/bbm/util/bi;
+
+    sget-object v3, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+
+    if-ne v2, v3, :cond_0
+
+    move v0, v1
+
+    .line 144
+    :goto_0
+    return v0
+
+    .line 124
+    :cond_0
+    iget-object v2, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->i(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Landroid/widget/TextView;
 
     move-result-object v2
 
-    invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+    iget-object v3, v0, Lcom/bbm/d/eh;->b:Ljava/lang/String;
 
-    move-result-object v2
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 563
-    invoke-virtual {v2, v1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
+    .line 125
+    iget-object v2, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
 
-    .line 565
-    int-to-double v2, v0
+    iget-object v3, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
 
-    iget v0, v1, Landroid/graphics/Point;->y:I
+    invoke-static {v3}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->h(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/d/a;
 
-    int-to-double v0, v0
+    move-result-object v3
 
-    const-wide v4, 0x3fe999999999999aL
+    iget-object v0, v0, Lcom/bbm/d/eh;->a:Ljava/lang/String;
 
-    mul-double/2addr v0, v4
+    invoke-virtual {v3, v0}, Lcom/bbm/d/a;->P(Ljava/lang/String;)Lcom/bbm/j/w;
 
-    cmpg-double v0, v2, v0
+    move-result-object v0
 
-    if-gez v0, :cond_1
+    invoke-static {v2, v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a(Lcom/bbm/ui/activities/NewChannelCategoryActivity;Lcom/bbm/j/w;)Lcom/bbm/j/w;
 
+    .line 126
+    iget-object v0, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->j(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Landroid/widget/ListView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setVisibility(I)V
+
+    .line 128
+    iget-object v0, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    new-instance v1, Lcom/bbm/ui/activities/zh;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    invoke-virtual {v3}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->getApplicationContext()Landroid/content/Context;
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    invoke-static {v3}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->k(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/j/w;
+
+    move-result-object v3
+
+    invoke-direct {v1, v2, v3}, Lcom/bbm/ui/activities/zh;-><init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;Lcom/bbm/j/r;)V
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a(Lcom/bbm/ui/activities/NewChannelCategoryActivity;Lcom/bbm/ui/activities/zh;)Lcom/bbm/ui/activities/zh;
+
+    .line 129
+    iget-object v0, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->j(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Landroid/widget/ListView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->l(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/ui/activities/zh;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    .line 130
+    new-instance v0, Lcom/bbm/ui/activities/za;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/za;-><init>(Lcom/bbm/ui/activities/yz;)V
+
+    .line 141
+    iget-object v1, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->j(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Landroid/widget/ListView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+
+    .line 143
+    iget-object v0, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->n(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
+
+    move-result-object v1
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->k(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
+
+    .line 144
     const/4 v0, 0x1
 
-    .line 567
-    :goto_0
-    if-eqz v0, :cond_2
-
-    .line 568
-    iget-object v0, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->b(Lcom/bbm/ui/activities/ProfileActivity;Z)V
-
-    .line 569
-    iget-object v0, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileActivity;->e(Lcom/bbm/ui/activities/ProfileActivity;)V
-
-    .line 575
-    :cond_0
-    :goto_1
-    return-void
-
-    .line 565
-    :cond_1
-    const/4 v0, 0x0
-
     goto :goto_0
-
-    .line 572
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/yz;->a:Lcom/bbm/ui/activities/ProfileActivity;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->b(Lcom/bbm/ui/activities/ProfileActivity;Z)V
-
-    goto :goto_1
 .end method

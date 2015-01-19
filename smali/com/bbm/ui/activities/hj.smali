@@ -1,48 +1,60 @@
 .class final Lcom/bbm/ui/activities/hj;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/a;
 .source "ConversationActivity.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/lang/Boolean;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/hi;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/hi;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 481
-    iput-object p1, p0, Lcom/bbm/ui/activities/hj;->a:Lcom/bbm/ui/activities/hi;
+    .line 2586
+    iput-object p1, p0, Lcom/bbm/ui/activities/hj;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 485
-    const-string v0, "mAttachmentView RemoveAttachment Clicked"
+    .line 2586
+    iget-object v0, p0, Lcom/bbm/ui/activities/hj;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->w(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/a;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 487
-    iget-object v0, p0, Lcom/bbm/ui/activities/hj;->a:Lcom/bbm/ui/activities/hi;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/hi;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->i()V
+    check-cast v0, Lcom/bbm/d/eu;
 
-    .line 488
-    return-void
+    iget-boolean v0, v0, Lcom/bbm/d/eu;->i:Z
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,137 +1,75 @@
-.class public final Lcom/bbm/iceberg/s;
+.class final Lcom/bbm/iceberg/s;
 .super Ljava/lang/Object;
-.source "ProgressAmount.java"
+.source "LocalContactList.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private final a:I
+.field final synthetic a:Ljava/util/List;
 
-.field private final b:I
+.field final synthetic b:Lcom/bbm/iceberg/r;
 
 
 # direct methods
-.method public constructor <init>(II)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/iceberg/r;Ljava/util/List;)V
+    .locals 0
 
     .prologue
-    const/4 v0, 0x1
+    .line 65
+    iput-object p1, p0, Lcom/bbm/iceberg/s;->b:Lcom/bbm/iceberg/r;
 
-    .line 7
+    iput-object p2, p0, Lcom/bbm/iceberg/s;->a:Ljava/util/List;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 8
-    if-gtz p2, :cond_0
-
-    .line 9
-    iput v0, p0, Lcom/bbm/iceberg/s;->a:I
-
-    .line 10
-    iput v0, p0, Lcom/bbm/iceberg/s;->b:I
-
-    .line 15
-    :goto_0
     return-void
-
-    .line 12
-    :cond_0
-    iput p1, p0, Lcom/bbm/iceberg/s;->a:I
-
-    .line 13
-    iput p2, p0, Lcom/bbm/iceberg/s;->b:I
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
-
-    .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 36
-    if-ne p0, p1, :cond_1
-
-    .line 52
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 39
-    :cond_1
-    if-nez p1, :cond_2
-
-    move v0, v1
-
-    .line 40
-    goto :goto_0
-
-    .line 42
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_3
-
-    move v0, v1
-
-    .line 43
-    goto :goto_0
-
-    .line 45
-    :cond_3
-    check-cast p1, Lcom/bbm/iceberg/s;
-
-    .line 46
-    iget v2, p0, Lcom/bbm/iceberg/s;->a:I
-
-    iget v3, p1, Lcom/bbm/iceberg/s;->a:I
-
-    if-eq v2, v3, :cond_4
-
-    move v0, v1
-
-    .line 47
-    goto :goto_0
-
-    .line 49
-    :cond_4
-    iget v2, p0, Lcom/bbm/iceberg/s;->b:I
-
-    iget v3, p1, Lcom/bbm/iceberg/s;->b:I
-
-    if-eq v2, v3, :cond_0
-
-    move v0, v1
-
-    .line 50
-    goto :goto_0
-.end method
-
-.method public final hashCode()I
+.method public final run()V
     .locals 2
 
     .prologue
-    .line 27
-    iget v0, p0, Lcom/bbm/iceberg/s;->a:I
+    .line 68
+    iget-object v0, p0, Lcom/bbm/iceberg/s;->b:Lcom/bbm/iceberg/r;
 
-    add-int/lit8 v0, v0, 0x1f
+    iget-object v0, v0, Lcom/bbm/iceberg/r;->a:Lcom/bbm/iceberg/p;
 
-    .line 30
-    mul-int/lit8 v0, v0, 0x1f
+    invoke-static {v0}, Lcom/bbm/iceberg/p;->b(Lcom/bbm/iceberg/p;)Z
 
-    iget v1, p0, Lcom/bbm/iceberg/s;->b:I
+    .line 69
+    iget-object v0, p0, Lcom/bbm/iceberg/s;->b:Lcom/bbm/iceberg/r;
 
-    add-int/2addr v0, v1
+    iget-object v0, v0, Lcom/bbm/iceberg/r;->a:Lcom/bbm/iceberg/p;
 
-    .line 31
-    return v0
+    invoke-static {v0}, Lcom/bbm/iceberg/p;->c(Lcom/bbm/iceberg/p;)Lcom/bbm/util/ct;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/iceberg/s;->a:Ljava/util/List;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+
+    .line 70
+    iget-object v0, p0, Lcom/bbm/iceberg/s;->b:Lcom/bbm/iceberg/r;
+
+    iget-object v0, v0, Lcom/bbm/iceberg/r;->a:Lcom/bbm/iceberg/p;
+
+    invoke-static {v0}, Lcom/bbm/iceberg/p;->d(Lcom/bbm/iceberg/p;)Lcom/bbm/util/ct;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+
+    .line 71
+    return-void
 .end method

@@ -1,129 +1,106 @@
-.class final Lcom/bbm/ui/ee;
-.super Ljava/lang/Object;
-.source "QuickShareGlympseView.java"
-
-# interfaces
-.implements Lcom/glympse/android/controls/GTimerView$OnDurationChangedListener;
+.class public Lcom/bbm/ui/ee;
+.super Landroid/text/style/DynamicDrawableSpan;
+.source "MutableImageSpan.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/QuickShareGlympseView;
+.field private final a:Landroid/graphics/drawable/Drawable;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/QuickShareGlympseView;)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;F)V
+    .locals 4
 
     .prologue
-    .line 147
-    iput-object p1, p0, Lcom/bbm/ui/ee;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    const/4 v3, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 19
+    invoke-direct {p0, v3}, Landroid/text/style/DynamicDrawableSpan;-><init>(I)V
 
+    .line 20
+    iput-object p1, p0, Lcom/bbm/ui/ee;->a:Landroid/graphics/drawable/Drawable;
+
+    .line 21
+    iget-object v0, p0, Lcom/bbm/ui/ee;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    div-float v0, p2, v0
+
+    iget-object v1, p0, Lcom/bbm/ui/ee;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    mul-float/2addr v0, v1
+
+    float-to-int v0, v0
+
+    float-to-int v1, p2
+
+    iget-object v2, p0, Lcom/bbm/ui/ee;->a:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v2, v3, v3, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    .line 22
     return-void
 .end method
 
 
 # virtual methods
-.method public final onDurationChanged(Lcom/glympse/android/controls/GTimerView;I)V
-    .locals 10
+.method public draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
+    .locals 3
 
     .prologue
-    const/4 v0, 0x0
+    const v2, 0xfeff
 
-    .line 151
-    iget-object v1, p0, Lcom/bbm/ui/ee;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    .line 41
+    iget-object v0, p0, Lcom/bbm/ui/ee;->a:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v1}, Lcom/bbm/ui/QuickShareGlympseView;->h(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/widget/TextView;
+    .line 44
+    invoke-interface {p2, p3}, Ljava/lang/CharSequence;->charAt(I)C
 
-    move-result-object v1
+    move-result v0
 
-    iget-object v2, p0, Lcom/bbm/ui/ee;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    if-eq v0, v2, :cond_0
 
-    invoke-virtual {v2}, Lcom/bbm/ui/QuickShareGlympseView;->getResources()Landroid/content/res/Resources;
+    add-int/lit8 v0, p3, 0x1
 
-    move-result-object v2
+    invoke-interface {p2}, Ljava/lang/CharSequence;->length()I
 
-    const v3, 0x7f0e0361
+    move-result v1
 
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    if-ge v0, v1, :cond_0
 
-    move-result-object v2
+    add-int/lit8 v0, p3, 0x1
 
-    const/4 v3, 0x1
+    invoke-interface {p2, v0}, Ljava/lang/CharSequence;->charAt(I)C
 
-    new-array v3, v3, [Ljava/lang/Object;
+    move-result v0
 
-    iget-object v4, p0, Lcom/bbm/ui/ee;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    if-eq v0, v2, :cond_0
 
-    invoke-static {v4}, Lcom/bbm/ui/QuickShareGlympseView;->f(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/content/Context;
+    .line 45
+    invoke-super/range {p0 .. p9}, Landroid/text/style/DynamicDrawableSpan;->draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
 
-    move-result-object v4
-
-    iget-object v5, p0, Lcom/bbm/ui/ee;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v5}, Lcom/bbm/ui/QuickShareGlympseView;->g(Lcom/bbm/ui/QuickShareGlympseView;)Lcom/glympse/android/controls/GTimerView;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Lcom/glympse/android/controls/GTimerView;->getExpireTime()J
-
-    move-result-wide v5
-
-    iget-object v7, p0, Lcom/bbm/ui/ee;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    iget-object v7, v7, Lcom/bbm/ui/QuickShareGlympseView;->a:Ljava/util/TimeZone;
-
-    iget-object v8, p0, Lcom/bbm/ui/ee;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v8}, Lcom/bbm/ui/QuickShareGlympseView;->g(Lcom/bbm/ui/QuickShareGlympseView;)Lcom/glympse/android/controls/GTimerView;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Lcom/glympse/android/controls/GTimerView;->getExpireTime()J
-
-    move-result-wide v8
-
-    invoke-virtual {v7, v8, v9}, Ljava/util/TimeZone;->getOffset(J)I
-
-    move-result v7
-
-    int-to-long v7, v7
-
-    add-long/2addr v5, v7
-
-    const/16 v7, 0x2001
-
-    invoke-static {v4, v5, v6, v7}, Lcom/bbm/util/ba;->a(Landroid/content/Context;JI)Ljava/lang/String;
-
-    move-result-object v4
-
-    aput-object v4, v3, v0
-
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 155
-    iget-object v1, p0, Lcom/bbm/ui/ee;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v1}, Lcom/bbm/ui/QuickShareGlympseView;->h(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/widget/TextView;
-
-    move-result-object v1
-
-    if-lez p2, :cond_0
-
-    :goto_0
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 156
-    return-void
-
-    .line 155
+    .line 47
     :cond_0
-    const/4 v0, 0x4
+    return-void
+.end method
 
-    goto :goto_0
+.method public getDrawable()Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .prologue
+    .line 34
+    iget-object v0, p0, Lcom/bbm/ui/ee;->a:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
 .end method

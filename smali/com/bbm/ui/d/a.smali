@@ -31,45 +31,45 @@
     .locals 1
 
     .prologue
-    .line 11
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
+    .line 11
     const-string v0, "listRemove"
 
     iput-object v0, p0, Lcom/bbm/ui/d/a;->a:Ljava/lang/String;
 
-    .line 14
+    .line 12
     const-string v0, "listChange"
 
     iput-object v0, p0, Lcom/bbm/ui/d/a;->b:Ljava/lang/String;
 
-    .line 17
+    .line 15
     const-string v0, "mostRecentError"
 
     iput-object v0, p0, Lcom/bbm/ui/d/a;->c:Ljava/lang/String;
 
-    .line 18
+    .line 16
     const-string v0, "GeneralFailure"
 
     iput-object v0, p0, Lcom/bbm/ui/d/a;->d:Ljava/lang/String;
 
-    .line 19
+    .line 17
     const-string v0, "AlreadyDeleted"
 
     iput-object v0, p0, Lcom/bbm/ui/d/a;->e:Ljava/lang/String;
 
-    .line 20
+    .line 18
     const-string v0, "ChannelListChanging"
 
     iput-object v0, p0, Lcom/bbm/ui/d/a;->f:Ljava/lang/String;
 
-    .line 21
+    .line 19
     const-string v0, "AuthorizationFailure"
 
     iput-object v0, p0, Lcom/bbm/ui/d/a;->g:Ljava/lang/String;
 
-    .line 22
+    .line 20
     const-string v0, "NetworkFailure"
 
     iput-object v0, p0, Lcom/bbm/ui/d/a;->h:Ljava/lang/String;
@@ -85,16 +85,14 @@
 .method public abstract a(I)V
 .end method
 
-.method public final a(Lcom/bbm/f/x;)V
+.method public final a(Lcom/bbm/f/ab;)V
     .locals 2
 
     .prologue
-    .line 28
-    invoke-virtual {p1}, Lcom/bbm/f/x;->f()Ljava/lang/String;
+    .line 26
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    move-result-object v0
-
-    .line 29
+    .line 27
     const-string v1, "listRemove"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -103,13 +101,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 30
+    .line 28
     invoke-virtual {p0}, Lcom/bbm/ui/d/a;->a()V
 
-    .line 41
+    .line 38
     :cond_0
     :goto_0
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
@@ -119,10 +117,10 @@
 
     invoke-virtual {v0, v1, p0}, Lcom/bbm/ui/d/d;->a(Ljava/lang/Object;Lcom/bbm/ui/d/c;)V
 
-    .line 42
+    .line 39
     return-void
 
-    .line 31
+    .line 29
     :cond_1
     const-string v1, "listChange"
 
@@ -132,11 +130,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 34
+    .line 32
     :try_start_0
-    invoke-virtual {p1}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
-
-    move-result-object v0
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
     const-string v1, "elements"
 
@@ -158,7 +154,7 @@
 
     move-result-object v0
 
-    .line 39
+    .line 36
     :goto_1
     const-string v1, "AlreadyDeleted"
 
@@ -168,14 +164,14 @@
 
     if-eqz v1, :cond_2
 
-    const v0, 0x7f0e0184
+    const v0, 0x7f0e0194
 
     :goto_2
     invoke-virtual {p0, v0}, Lcom/bbm/ui/d/a;->a(I)V
 
     goto :goto_0
 
-    .line 37
+    .line 34
     :catch_0
     move-exception v0
 
@@ -183,7 +179,7 @@
 
     goto :goto_1
 
-    .line 39
+    .line 36
     :cond_2
     const-string v1, "NetworkFailure"
 
@@ -193,12 +189,12 @@
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f0e02ff
+    const v0, 0x7f0e0330
 
     goto :goto_2
 
     :cond_3
-    const v0, 0x7f0e0185
+    const v0, 0x7f0e0195
 
     goto :goto_2
 .end method
@@ -207,11 +203,11 @@
     .locals 1
 
     .prologue
-    .line 45
+    .line 42
     iput-object p2, p0, Lcom/bbm/ui/d/a;->i:Ljava/lang/Object;
 
-    .line 46
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 43
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
@@ -219,6 +215,6 @@
 
     invoke-virtual {v0, p1, p0, p2}, Lcom/bbm/ui/d/d;->a(Ljava/lang/String;Lcom/bbm/ui/d/c;Ljava/lang/Object;)V
 
-    .line 47
+    .line 44
     return-void
 .end method

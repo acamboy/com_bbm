@@ -67,7 +67,7 @@
 .end method
 
 .method private cx()V
-    .locals 5
+    .locals 6
 
     invoke-static {}, Lcom/google/android/gms/analytics/GoogleAnalytics;->cf()Lcom/google/android/gms/analytics/GoogleAnalytics;
 
@@ -83,11 +83,11 @@
     return-void
 
     :cond_0
-    iget-wide v1, p0, Lcom/google/android/gms/analytics/Tracker$a;->uD:J
+    iget-wide v2, p0, Lcom/google/android/gms/analytics/Tracker$a;->uD:J
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-gez v1, :cond_1
 
@@ -418,7 +418,7 @@
 .end method
 
 .method public setSessionTimeout(J)V
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/google/android/gms/analytics/Tracker$a;->uD:J
 

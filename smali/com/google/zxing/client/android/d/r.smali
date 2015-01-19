@@ -207,9 +207,9 @@
     .line 66
     iget-object v0, p0, Lcom/google/zxing/client/android/d/r;->c:Lcom/google/zxing/client/android/CaptureActivity;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/zxing/client/android/CaptureActivity;->a(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/google/zxing/client/android/CaptureActivity;->a(J)V
 
     .line 68
     :cond_0

@@ -1,63 +1,41 @@
-.class public final Lcom/bbm/ui/cn;
+.class public abstract Lcom/bbm/ui/cn;
 .super Ljava/lang/Object;
-.source "IncrementalListAdapter.java"
-
-
-# instance fields
-.field a:Ljava/lang/Object;
-
-.field b:J
-
-.field c:J
+.source "FooterActionBar.java"
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 0
 
     .prologue
-    const-wide/16 v1, -0x1
-
-    .line 124
+    .line 228
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 125
-    iput-wide v1, p0, Lcom/bbm/ui/cn;->c:J
-
-    .line 126
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/bbm/ui/cn;->a:Ljava/lang/Object;
-
-    .line 127
-    iput-wide v1, p0, Lcom/bbm/ui/cn;->b:J
-
-    .line 128
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 4
+.method public a()V
+    .locals 0
 
     .prologue
-    .line 139
-    iget-wide v0, p0, Lcom/bbm/ui/cn;->c:J
+    .line 231
+    return-void
+.end method
 
-    const-wide/16 v2, -0x1
+.method public a(I)V
+    .locals 0
 
-    cmp-long v0, v0, v2
+    .prologue
+    .line 237
+    return-void
+.end method
 
-    if-eqz v0, :cond_0
+.method public b()V
+    .locals 0
 
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    .prologue
+    .line 234
+    return-void
 .end method

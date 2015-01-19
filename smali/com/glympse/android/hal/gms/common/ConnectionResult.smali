@@ -37,11 +37,11 @@
     .end annotation
 .end field
 
-.field private static eK:Ljava/lang/reflect/Method;
+.field private static eR:Ljava/lang/reflect/Method;
 
 
 # instance fields
-.field private eL:Ljava/lang/Object;
+.field private eS:Ljava/lang/Object;
 
 
 # direct methods
@@ -52,7 +52,7 @@
     .line 27
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/common/ConnectionResult;->eK:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/common/ConnectionResult;->eR:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -67,10 +67,10 @@
     .line 29
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/gms/common/ConnectionResult;->eL:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/glympse/android/hal/gms/common/ConnectionResult;->eS:Ljava/lang/Object;
 
     .line 33
-    iput-object p1, p0, Lcom/glympse/android/hal/gms/common/ConnectionResult;->eL:Ljava/lang/Object;
+    iput-object p1, p0, Lcom/glympse/android/hal/gms/common/ConnectionResult;->eS:Ljava/lang/Object;
 
     .line 34
     return-void
@@ -99,7 +99,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/common/ConnectionResult;->eK:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/common/ConnectionResult;->eR:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -121,9 +121,9 @@
     .prologue
     .line 40
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/common/ConnectionResult;->eK:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/common/ConnectionResult;->eR:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/common/ConnectionResult;->eL:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/common/ConnectionResult;->eS:Ljava/lang/Object;
 
     const/4 v2, 0x0
 

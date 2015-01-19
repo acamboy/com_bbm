@@ -1,52 +1,63 @@
-.class final Lcom/bbm/util/e/e;
+.class public final Lcom/bbm/util/e/e;
 .super Ljava/lang/Object;
-.source "TimeRangeFormatter.java"
-
-# interfaces
-.implements Lcom/bbm/util/e/i;
+.source "StringUtils.java"
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static a([BI)Ljava/lang/String;
+    .locals 3
 
     .prologue
-    .line 90
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 29
+    :try_start_0
+    new-instance v0, Ljava/lang/String;
 
-    return-void
+    const/4 v1, 0x0
+
+    const-string v2, "UTF-8"
+
+    invoke-direct {v0, p0, v1, p1, v2}, Ljava/lang/String;-><init>([BIILjava/lang/String;)V
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    return-object v0
+
+    .line 31
+    :catch_0
+    move-exception v0
+
+    .line 32
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method
 
-
-# virtual methods
-.method public final a(Landroid/content/Context;JJ)Ljava/lang/String;
-    .locals 4
+.method static a(Ljava/lang/String;)[B
+    .locals 2
 
     .prologue
-    .line 94
-    const v0, 0x7f0e068e
+    .line 14
+    :try_start_0
+    const-string v0, "UTF-8"
 
-    invoke-virtual {p1, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    const/4 v2, 0x0
-
-    const/16 v3, 0x101
-
-    invoke-static {p1, p2, p3, v3}, Lcom/bbm/util/ba;->a(Landroid/content/Context;JI)Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v1, v2
-
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
     return-object v0
+
+    .line 16
+    :catch_0
+    move-exception v0
+
+    .line 17
+    new-instance v1, Ljava/lang/RuntimeException;
+
+    invoke-direct {v1, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw v1
 .end method

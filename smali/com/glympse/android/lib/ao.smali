@@ -1,201 +1,175 @@
 .class Lcom/glympse/android/lib/ao;
-.super Lcom/glympse/android/lib/j;
-.source "DataAppend.java"
+.super Ljava/lang/Object;
+.source "ContentResolver.java"
+
+# interfaces
+.implements Lcom/glympse/android/lib/GContentResolver;
 
 
 # instance fields
-.field protected _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-.field private gB:Ljava/lang/String;
-
-.field protected iX:Ljava/lang/String;
-
-.field protected iY:Lcom/glympse/android/core/GPrimitive;
-
-.field protected iZ:Lcom/glympse/android/lib/l;
+.field private jj:Lcom/glympse/android/hal/GVector;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/glympse/android/hal/GVector",
+            "<",
+            "Lcom/glympse/android/lib/GContentProvider;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+.method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 26
-    invoke-direct {p0}, Lcom/glympse/android/lib/j;-><init>()V
+    .line 21
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
-    iput-object p1, p0, Lcom/glympse/android/lib/ao;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+    .line 22
+    new-instance v0, Lcom/glympse/android/hal/GVector;
 
-    .line 28
-    iput-object p2, p0, Lcom/glympse/android/lib/ao;->iX:Ljava/lang/String;
+    invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    .line 29
-    iput-object p3, p0, Lcom/glympse/android/lib/ao;->iY:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/ao;->jj:Lcom/glympse/android/hal/GVector;
 
-    .line 30
-    new-instance v0, Lcom/glympse/android/lib/l;
-
-    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/ao;->iZ:Lcom/glympse/android/lib/l;
-
-    .line 31
-    iget-object v0, p0, Lcom/glympse/android/lib/ao;->iZ:Lcom/glympse/android/lib/l;
-
-    iput-object v0, p0, Lcom/glympse/android/lib/ao;->gT:Lcom/glympse/android/lib/k;
-
-    .line 32
+    .line 23
     return-void
 .end method
 
 
 # virtual methods
-.method public cancel()V
+.method public isMatches(Lcom/glympse/android/lib/GUri;)Z
     .locals 1
 
     .prologue
-    .line 78
-    new-instance v0, Lcom/glympse/android/lib/l;
+    .line 32
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
+    return v0
+.end method
 
-    iput-object v0, p0, Lcom/glympse/android/lib/ao;->iZ:Lcom/glympse/android/lib/l;
+.method public load(Lcom/glympse/android/lib/GUri;)Lcom/glympse/android/core/GCommon;
+    .locals 5
 
-    .line 79
-    iget-object v0, p0, Lcom/glympse/android/lib/ao;->iZ:Lcom/glympse/android/lib/l;
+    .prologue
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/ao;->gT:Lcom/glympse/android/lib/k;
+    .line 37
+    iget-object v0, p0, Lcom/glympse/android/lib/ao;->jj:Lcom/glympse/android/hal/GVector;
 
-    .line 80
+    invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
+
+    move-result v3
+
+    move v1, v2
+
+    .line 38
+    :goto_0
+    if-ge v1, v3, :cond_0
+
+    .line 40
+    iget-object v0, p0, Lcom/glympse/android/lib/ao;->jj:Lcom/glympse/android/hal/GVector;
+
+    invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/lib/GContentProvider;
+
+    .line 41
+    invoke-interface {v0, p1}, Lcom/glympse/android/lib/GContentProvider;->isMatches(Lcom/glympse/android/lib/GUri;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    .line 47
+    :try_start_0
+    invoke-interface {v0, p1}, Lcom/glympse/android/lib/GContentProvider;->load(Lcom/glympse/android/lib/GUri;)Lcom/glympse/android/core/GCommon;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 56
+    :goto_1
+    return-object v0
+
+    .line 49
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0, v2}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
+
+    .line 56
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    .line 38
+    :cond_1
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+.end method
+
+.method public registerProvider(Lcom/glympse/android/lib/GContentProvider;)V
+    .locals 1
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/glympse/android/lib/ao;->jj:Lcom/glympse/android/hal/GVector;
+
+    invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
+
+    .line 76
     return-void
 .end method
 
-.method public post()Ljava/lang/String;
-    .locals 2
+.method public stop()V
+    .locals 3
 
     .prologue
-    .line 52
-    iget-object v0, p0, Lcom/glympse/android/lib/ao;->gB:Ljava/lang/String;
+    .line 61
+    iget-object v0, p0, Lcom/glympse/android/lib/ao;->jj:Lcom/glympse/android/hal/GVector;
 
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
+    invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
-    move-result v0
+    move-result v2
 
-    if-nez v0, :cond_0
+    .line 62
+    const/4 v0, 0x0
 
-    .line 54
-    iget-object v0, p0, Lcom/glympse/android/lib/ao;->gB:Ljava/lang/String;
+    move v1, v0
 
-    .line 58
     :goto_0
-    return-object v0
+    if-ge v1, v2, :cond_0
 
-    .line 57
-    :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/ao;->iY:Lcom/glympse/android/core/GPrimitive;
+    .line 64
+    iget-object v0, p0, Lcom/glympse/android/lib/ao;->jj:Lcom/glympse/android/hal/GVector;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/ao;->iY:Lcom/glympse/android/core/GPrimitive;
-
-    invoke-interface {v1}, Lcom/glympse/android/core/GPrimitive;->size()I
-
-    move-result v1
-
-    mul-int/lit16 v1, v1, 0x80
-
-    invoke-static {v0, v1}, Lcom/glympse/android/lib/json/JsonSerializer;->toString(Lcom/glympse/android/core/GPrimitive;I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/ao;->gB:Ljava/lang/String;
+    check-cast v0, Lcom/glympse/android/lib/GContentProvider;
 
-    .line 58
-    iget-object v0, p0, Lcom/glympse/android/lib/ao;->gB:Ljava/lang/String;
+    .line 65
+    invoke-interface {v0}, Lcom/glympse/android/lib/GContentProvider;->stop()V
+
+    .line 62
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
 
     goto :goto_0
-.end method
 
-.method public process()Z
-    .locals 2
-
-    .prologue
-    .line 63
-    iget-object v0, p0, Lcom/glympse/android/lib/ao;->iZ:Lcom/glympse/android/lib/l;
-
-    iget-object v0, v0, Lcom/glympse/android/lib/l;->gW:Ljava/lang/String;
-
-    const-string v1, "ok"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 66
-    iget-object v0, p0, Lcom/glympse/android/lib/ao;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getServerPost()Lcom/glympse/android/lib/GServerPost;
-
-    move-result-object v0
-
-    const/16 v1, 0x1000
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GServerPost;->rememberEvents(I)V
-
-    .line 73
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    .line 71
+    .line 67
     :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public url(Ljava/lang/StringBuilder;)Z
-    .locals 2
-
-    .prologue
-    .line 40
-    const-string v0, "tickets/append_data"
-
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 41
-    iget-object v0, p0, Lcom/glympse/android/lib/ao;->iX:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    .line 42
-    :goto_0
-    if-eqz v0, :cond_0
-
-    .line 44
-    const-string v1, "?ids="
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 45
-    iget-object v1, p0, Lcom/glympse/android/lib/ao;->iX:Ljava/lang/String;
-
-    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 47
-    :cond_0
-    return v0
-
-    .line 41
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

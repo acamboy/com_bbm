@@ -21,22 +21,22 @@
     .locals 0
 
     .prologue
-    .line 325
+    .line 335
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 326
+    .line 336
     iput-object p1, p0, Lcom/a/a/q;->a:Ljava/lang/String;
 
-    .line 327
+    .line 337
     iput p2, p0, Lcom/a/a/q;->b:I
 
-    .line 328
+    .line 338
     iput-object p3, p0, Lcom/a/a/q;->c:Ljava/lang/String;
 
-    .line 329
+    .line 339
     iput-boolean p4, p0, Lcom/a/a/q;->d:Z
 
-    .line 330
+    .line 340
     return-void
 .end method
 
@@ -46,7 +46,7 @@
     .locals 1
 
     .prologue
-    .line 388
+    .line 398
     sget-object v0, Lcom/a/a/k;->b:Lcom/a/a/k;
 
     return-object v0
@@ -60,15 +60,15 @@
 
     const/4 v1, 0x0
 
-    .line 358
+    .line 368
     if-ne p0, p1, :cond_1
 
-    .line 365
+    .line 375
     :cond_0
     :goto_0
     return v0
 
-    .line 361
+    .line 371
     :cond_1
     instance-of v2, p1, Lcom/a/a/q;
 
@@ -76,14 +76,14 @@
 
     move v0, v1
 
-    .line 362
+    .line 372
     goto :goto_0
 
-    .line 364
+    .line 374
     :cond_2
     check-cast p1, Lcom/a/a/q;
 
-    .line 365
+    .line 375
     iget v2, p0, Lcom/a/a/q;->b:I
 
     iget v3, p1, Lcom/a/a/q;->b:I
@@ -128,10 +128,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 373
+    .line 383
     iget v0, p0, Lcom/a/a/q;->b:I
 
-    .line 374
+    .line 384
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v0, p0, Lcom/a/a/q;->a:Ljava/lang/String;
@@ -147,7 +147,7 @@
     :goto_0
     add-int/2addr v0, v2
 
-    .line 375
+    .line 385
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v2, p0, Lcom/a/a/q;->c:Ljava/lang/String;
@@ -163,7 +163,7 @@
     :cond_0
     add-int/2addr v0, v1
 
-    .line 376
+    .line 386
     mul-int/lit8 v1, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/a/a/q;->d:Z
@@ -175,16 +175,16 @@
     :goto_1
     add-int/2addr v0, v1
 
-    .line 377
+    .line 387
     return v0
 
     :cond_1
     move v0, v1
 
-    .line 374
+    .line 384
     goto :goto_0
 
-    .line 376
+    .line 386
     :cond_2
     const/16 v0, 0x4d5
 
@@ -195,7 +195,7 @@
     .locals 4
 
     .prologue
-    .line 382
+    .line 392
     const-string v0, "type: %d, data: %s, label: %s, isPrimary: %s"
 
     const/4 v1, 0x4

@@ -490,7 +490,7 @@
 .method static bh(Ljava/lang/String;)Ljava/lang/Long;
     .locals 10
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
     const/4 v0, 0x0
 
@@ -502,13 +502,13 @@
 
     invoke-virtual {v1, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
-    move-result-object v5
+    move-result-object v1
 
-    invoke-virtual {v5}, Ljava/util/regex/Matcher;->matches()Z
+    invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -530,23 +530,23 @@
     return-object v0
 
     :cond_0
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
     :try_start_0
-    invoke-virtual {v5, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-wide v1
+    move-result-wide v2
 
     :goto_1
-    cmp-long v3, v1, v3
+    cmp-long v4, v2, v4
 
-    if-gtz v3, :cond_1
+    if-gtz v4, :cond_1
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -567,42 +567,42 @@
     goto :goto_0
 
     :catch_0
-    move-exception v1
+    move-exception v2
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string v2, "illegal number in _lifetime value: "
+    const-string v3, "illegal number in _lifetime value: "
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-static {v1}, Lcom/google/android/gms/tagmanager/bh;->w(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/google/android/gms/tagmanager/bh;->w(Ljava/lang/String;)V
 
-    move-wide v1, v3
+    move-wide v2, v4
 
     goto :goto_1
 
     :cond_1
-    const/4 v3, 0x2
+    const/4 v4, 0x2
 
-    invoke-virtual {v5, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
+    invoke-virtual {v1, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3}, Ljava/lang/String;->length()I
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v4
 
     if-nez v4, :cond_2
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
@@ -611,11 +611,11 @@
     :cond_2
     const/4 v4, 0x0
 
-    invoke-virtual {v3, v4}, Ljava/lang/String;->charAt(I)C
+    invoke-virtual {v1, v4}, Ljava/lang/String;->charAt(I)C
 
-    move-result v3
+    move-result v1
 
-    sparse-switch v3, :sswitch_data_0
+    sparse-switch v1, :sswitch_data_0
 
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -636,7 +636,7 @@
     goto :goto_0
 
     :sswitch_0
-    mul-long v0, v1, v8
+    mul-long v0, v2, v8
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -645,7 +645,7 @@
     goto :goto_0
 
     :sswitch_1
-    mul-long v0, v1, v8
+    mul-long v0, v2, v8
 
     mul-long/2addr v0, v6
 
@@ -656,7 +656,7 @@
     goto :goto_0
 
     :sswitch_2
-    mul-long v0, v1, v8
+    mul-long v0, v2, v8
 
     mul-long/2addr v0, v6
 
@@ -669,7 +669,7 @@
     goto :goto_0
 
     :sswitch_3
-    mul-long v0, v1, v8
+    mul-long v0, v2, v8
 
     mul-long/2addr v0, v6
 
@@ -942,7 +942,7 @@
 .end method
 
 .method private y(Ljava/util/Map;)V
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -976,9 +976,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-interface {v2, v1, v3, v4}, Lcom/google/android/gms/tagmanager/DataLayer$c;->a(Ljava/util/List;J)V
+    invoke-interface {v2, v1, v4, v5}, Lcom/google/android/gms/tagmanager/DataLayer$c;->a(Ljava/util/List;J)V
 
     goto :goto_0
 .end method

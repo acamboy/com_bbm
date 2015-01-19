@@ -72,9 +72,9 @@
 
     sget-object v0, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    const-wide/16 v1, 0x1
+    const-wide/16 v2, 0x1
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
+    invoke-virtual {v0, v2, v3}, Ljava/util/concurrent/TimeUnit;->toMillis(J)J
 
     move-result-wide v0
 
@@ -84,7 +84,7 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 3
+    .locals 4
 
     const-string v0, "urn:x-cast:com.google.cast.media"
 
@@ -112,65 +112,65 @@
 
     new-instance v0, Lcom/google/android/gms/internal/dy;
 
-    sget-wide v1, Lcom/google/android/gms/internal/dv;->yj:J
+    sget-wide v2, Lcom/google/android/gms/internal/dv;->yj:J
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/internal/dy;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Lcom/google/android/gms/internal/dy;-><init>(J)V
 
     iput-object v0, p0, Lcom/google/android/gms/internal/dv;->yo:Lcom/google/android/gms/internal/dy;
 
     new-instance v0, Lcom/google/android/gms/internal/dy;
 
-    sget-wide v1, Lcom/google/android/gms/internal/dv;->yi:J
+    sget-wide v2, Lcom/google/android/gms/internal/dv;->yi:J
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/internal/dy;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Lcom/google/android/gms/internal/dy;-><init>(J)V
 
     iput-object v0, p0, Lcom/google/android/gms/internal/dv;->yp:Lcom/google/android/gms/internal/dy;
 
     new-instance v0, Lcom/google/android/gms/internal/dy;
 
-    sget-wide v1, Lcom/google/android/gms/internal/dv;->yi:J
+    sget-wide v2, Lcom/google/android/gms/internal/dv;->yi:J
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/internal/dy;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Lcom/google/android/gms/internal/dy;-><init>(J)V
 
     iput-object v0, p0, Lcom/google/android/gms/internal/dv;->yq:Lcom/google/android/gms/internal/dy;
 
     new-instance v0, Lcom/google/android/gms/internal/dy;
 
-    sget-wide v1, Lcom/google/android/gms/internal/dv;->yi:J
+    sget-wide v2, Lcom/google/android/gms/internal/dv;->yi:J
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/internal/dy;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Lcom/google/android/gms/internal/dy;-><init>(J)V
 
     iput-object v0, p0, Lcom/google/android/gms/internal/dv;->yr:Lcom/google/android/gms/internal/dy;
 
     new-instance v0, Lcom/google/android/gms/internal/dy;
 
-    sget-wide v1, Lcom/google/android/gms/internal/dv;->yk:J
+    sget-wide v2, Lcom/google/android/gms/internal/dv;->yk:J
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/internal/dy;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Lcom/google/android/gms/internal/dy;-><init>(J)V
 
     iput-object v0, p0, Lcom/google/android/gms/internal/dv;->ys:Lcom/google/android/gms/internal/dy;
 
     new-instance v0, Lcom/google/android/gms/internal/dy;
 
-    sget-wide v1, Lcom/google/android/gms/internal/dv;->yi:J
+    sget-wide v2, Lcom/google/android/gms/internal/dv;->yi:J
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/internal/dy;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Lcom/google/android/gms/internal/dy;-><init>(J)V
 
     iput-object v0, p0, Lcom/google/android/gms/internal/dv;->yt:Lcom/google/android/gms/internal/dy;
 
     new-instance v0, Lcom/google/android/gms/internal/dy;
 
-    sget-wide v1, Lcom/google/android/gms/internal/dv;->yi:J
+    sget-wide v2, Lcom/google/android/gms/internal/dv;->yi:J
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/internal/dy;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Lcom/google/android/gms/internal/dy;-><init>(J)V
 
     iput-object v0, p0, Lcom/google/android/gms/internal/dv;->yu:Lcom/google/android/gms/internal/dy;
 
     new-instance v0, Lcom/google/android/gms/internal/dy;
 
-    sget-wide v1, Lcom/google/android/gms/internal/dv;->yi:J
+    sget-wide v2, Lcom/google/android/gms/internal/dv;->yi:J
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/internal/dy;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Lcom/google/android/gms/internal/dy;-><init>(J)V
 
     iput-object v0, p0, Lcom/google/android/gms/internal/dv;->yv:Lcom/google/android/gms/internal/dy;
 
@@ -188,7 +188,7 @@
 .end method
 
 .method private a(JLorg/json/JSONObject;)V
-    .locals 5
+    .locals 7
 
     const/4 v1, 0x1
 
@@ -292,9 +292,9 @@
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    iput-wide v3, p0, Lcom/google/android/gms/internal/dv;->ym:J
+    iput-wide v4, p0, Lcom/google/android/gms/internal/dv;->ym:J
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->onStatusUpdated()V
 
@@ -305,9 +305,9 @@
 
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    iput-wide v3, p0, Lcom/google/android/gms/internal/dv;->ym:J
+    iput-wide v4, p0, Lcom/google/android/gms/internal/dv;->ym:J
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->onStatusUpdated()V
 
@@ -547,9 +547,9 @@
 
     const-string v2, "requestId"
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v4, -0x1
 
-    invoke-virtual {v0, v2, v3, v4}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;J)J
+    invoke-virtual {v0, v2, v4, v5}, Lorg/json/JSONObject;->optLong(Ljava/lang/String;J)J
 
     move-result-wide v2
 
@@ -834,32 +834,32 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cW()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/dv;->yv:Lcom/google/android/gms/internal/dy;
+    iget-object v1, p0, Lcom/google/android/gms/internal/dv;->yv:Lcom/google/android/gms/internal/dy;
 
-    invoke-virtual {v3, v1, v2, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
+    invoke-virtual {v1, v2, v3, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
-    invoke-direct {p0, v3}, Lcom/google/android/gms/internal/dv;->u(Z)V
+    invoke-direct {p0, v1}, Lcom/google/android/gms/internal/dv;->u(Z)V
 
     :try_start_0
-    const-string v3, "requestId"
+    const-string v1, "requestId"
 
-    invoke-virtual {v0, v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    const-string v3, "type"
+    const-string v1, "type"
 
     const-string v4, "GET_STATUS"
 
-    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/dv;->yn:Lcom/google/android/gms/cast/MediaStatus;
+    iget-object v1, p0, Lcom/google/android/gms/internal/dv;->yn:Lcom/google/android/gms/cast/MediaStatus;
 
-    if-eqz v3, :cond_0
+    if-eqz v1, :cond_0
 
-    const-string v3, "mediaSessionId"
+    const-string v1, "mediaSessionId"
 
     iget-object v4, p0, Lcom/google/android/gms/internal/dv;->yn:Lcom/google/android/gms/cast/MediaStatus;
 
@@ -867,7 +867,7 @@
 
     move-result-wide v4
 
-    invoke-virtual {v0, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -877,14 +877,14 @@
 
     move-result-object v0
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3, v1}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
 
-    return-wide v1
+    return-wide v2
 
     :catch_0
-    move-exception v3
+    move-exception v1
 
     goto :goto_0
 .end method
@@ -932,52 +932,52 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cW()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/dv;->yt:Lcom/google/android/gms/internal/dy;
+    iget-object v1, p0, Lcom/google/android/gms/internal/dv;->yt:Lcom/google/android/gms/internal/dy;
 
-    invoke-virtual {v3, v1, v2, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
+    invoke-virtual {v1, v2, v3, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
-    invoke-direct {p0, v3}, Lcom/google/android/gms/internal/dv;->u(Z)V
+    invoke-direct {p0, v1}, Lcom/google/android/gms/internal/dv;->u(Z)V
 
     :try_start_0
-    const-string v3, "requestId"
+    const-string v1, "requestId"
 
-    invoke-virtual {v0, v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    const-string v3, "type"
+    const-string v1, "type"
 
     const-string v4, "SET_VOLUME"
 
-    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "mediaSessionId"
+    const-string v1, "mediaSessionId"
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cU()J
 
     move-result-wide v4
 
-    invoke-virtual {v0, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    new-instance v3, Lorg/json/JSONObject;
+    new-instance v1, Lorg/json/JSONObject;
 
-    invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     const-string v4, "level"
 
-    invoke-virtual {v3, v4, p2, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-virtual {v1, v4, p2, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     const-string v4, "volume"
 
-    invoke-virtual {v0, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     if-eqz p4, :cond_2
 
-    const-string v3, "customData"
+    const-string v1, "customData"
 
-    invoke-virtual {v0, v3, p4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, p4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -987,20 +987,20 @@
 
     move-result-object v0
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3, v1}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
 
-    return-wide v1
+    return-wide v2
 
     :catch_0
-    move-exception v3
+    move-exception v1
 
     goto :goto_0
 .end method
 
 .method public a(Lcom/google/android/gms/internal/dx;JILorg/json/JSONObject;)J
-    .locals 7
+    .locals 8
 
     const/4 v6, 0x1
 
@@ -1010,56 +1010,56 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cW()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/dv;->ys:Lcom/google/android/gms/internal/dy;
+    iget-object v1, p0, Lcom/google/android/gms/internal/dv;->ys:Lcom/google/android/gms/internal/dy;
 
-    invoke-virtual {v3, v1, v2, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
+    invoke-virtual {v1, v2, v3, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
 
     invoke-direct {p0, v6}, Lcom/google/android/gms/internal/dv;->u(Z)V
 
     :try_start_0
-    const-string v3, "requestId"
+    const-string v1, "requestId"
 
-    invoke-virtual {v0, v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    const-string v3, "type"
+    const-string v1, "type"
 
     const-string v4, "SEEK"
 
-    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "mediaSessionId"
+    const-string v1, "mediaSessionId"
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cU()J
 
     move-result-wide v4
 
-    invoke-virtual {v0, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    const-string v3, "currentTime"
+    const-string v1, "currentTime"
 
     invoke-static {p2, p3}, Lcom/google/android/gms/internal/dr;->l(J)D
 
     move-result-wide v4
 
-    invoke-virtual {v0, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     if-ne p4, v6, :cond_2
 
-    const-string v3, "resumeState"
+    const-string v1, "resumeState"
 
     const-string v4, "PLAYBACK_START"
 
-    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     :cond_0
     :goto_0
     if-eqz p5, :cond_1
 
-    const-string v3, "customData"
+    const-string v1, "customData"
 
-    invoke-virtual {v0, v3, p5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, p5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1069,30 +1069,30 @@
 
     move-result-object v0
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3, v1}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
 
-    return-wide v1
+    return-wide v2
 
     :cond_2
-    const/4 v3, 0x2
+    const/4 v1, 0x2
 
-    if-ne p4, v3, :cond_0
+    if-ne p4, v1, :cond_0
 
     :try_start_1
-    const-string v3, "resumeState"
+    const-string v1, "resumeState"
 
     const-string v4, "PLAYBACK_PAUSE"
 
-    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 
     :catch_0
-    move-exception v3
+    move-exception v1
 
     goto :goto_1
 .end method
@@ -1106,52 +1106,52 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cW()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/dv;->yo:Lcom/google/android/gms/internal/dy;
+    iget-object v1, p0, Lcom/google/android/gms/internal/dv;->yo:Lcom/google/android/gms/internal/dy;
 
-    invoke-virtual {v3, v1, v2, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
+    invoke-virtual {v1, v2, v3, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
-    invoke-direct {p0, v3}, Lcom/google/android/gms/internal/dv;->u(Z)V
+    invoke-direct {p0, v1}, Lcom/google/android/gms/internal/dv;->u(Z)V
 
     :try_start_0
-    const-string v3, "requestId"
+    const-string v1, "requestId"
 
-    invoke-virtual {v0, v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    const-string v3, "type"
+    const-string v1, "type"
 
     const-string v4, "LOAD"
 
-    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "media"
+    const-string v1, "media"
 
     invoke-virtual {p2}, Lcom/google/android/gms/cast/MediaInfo;->cT()Lorg/json/JSONObject;
 
     move-result-object v4
 
-    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "autoplay"
+    const-string v1, "autoplay"
 
-    invoke-virtual {v0, v3, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
-    const-string v3, "currentTime"
+    const-string v1, "currentTime"
 
     invoke-static {p4, p5}, Lcom/google/android/gms/internal/dr;->l(J)D
 
     move-result-wide v4
 
-    invoke-virtual {v0, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
     if-eqz p6, :cond_0
 
-    const-string v3, "customData"
+    const-string v1, "customData"
 
-    invoke-virtual {v0, v3, p6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, p6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1161,14 +1161,14 @@
 
     move-result-object v0
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3, v1}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
 
-    return-wide v1
+    return-wide v2
 
     :catch_0
-    move-exception v3
+    move-exception v1
 
     goto :goto_0
 .end method
@@ -1182,40 +1182,40 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cW()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/dv;->yp:Lcom/google/android/gms/internal/dy;
+    iget-object v1, p0, Lcom/google/android/gms/internal/dv;->yp:Lcom/google/android/gms/internal/dy;
 
-    invoke-virtual {v3, v1, v2, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
+    invoke-virtual {v1, v2, v3, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
-    invoke-direct {p0, v3}, Lcom/google/android/gms/internal/dv;->u(Z)V
+    invoke-direct {p0, v1}, Lcom/google/android/gms/internal/dv;->u(Z)V
 
     :try_start_0
-    const-string v3, "requestId"
+    const-string v1, "requestId"
 
-    invoke-virtual {v0, v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    const-string v3, "type"
+    const-string v1, "type"
 
     const-string v4, "PAUSE"
 
-    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "mediaSessionId"
+    const-string v1, "mediaSessionId"
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cU()J
 
     move-result-wide v4
 
-    invoke-virtual {v0, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     if-eqz p2, :cond_0
 
-    const-string v3, "customData"
+    const-string v1, "customData"
 
-    invoke-virtual {v0, v3, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1225,14 +1225,14 @@
 
     move-result-object v0
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3, v1}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
 
-    return-wide v1
+    return-wide v2
 
     :catch_0
-    move-exception v3
+    move-exception v1
 
     goto :goto_0
 .end method
@@ -1246,52 +1246,52 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cW()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/dv;->yu:Lcom/google/android/gms/internal/dy;
+    iget-object v1, p0, Lcom/google/android/gms/internal/dv;->yu:Lcom/google/android/gms/internal/dy;
 
-    invoke-virtual {v3, v1, v2, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
+    invoke-virtual {v1, v2, v3, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
-    invoke-direct {p0, v3}, Lcom/google/android/gms/internal/dv;->u(Z)V
+    invoke-direct {p0, v1}, Lcom/google/android/gms/internal/dv;->u(Z)V
 
     :try_start_0
-    const-string v3, "requestId"
+    const-string v1, "requestId"
 
-    invoke-virtual {v0, v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    const-string v3, "type"
+    const-string v1, "type"
 
     const-string v4, "SET_VOLUME"
 
-    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "mediaSessionId"
+    const-string v1, "mediaSessionId"
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cU()J
 
     move-result-wide v4
 
-    invoke-virtual {v0, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    new-instance v3, Lorg/json/JSONObject;
+    new-instance v1, Lorg/json/JSONObject;
 
-    invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
+    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
     const-string v4, "muted"
 
-    invoke-virtual {v3, v4, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    invoke-virtual {v1, v4, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     const-string v4, "volume"
 
-    invoke-virtual {v0, v4, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     if-eqz p3, :cond_0
 
-    const-string v3, "customData"
+    const-string v1, "customData"
 
-    invoke-virtual {v0, v3, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, p3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1301,14 +1301,14 @@
 
     move-result-object v0
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3, v1}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
 
-    return-wide v1
+    return-wide v2
 
     :catch_0
-    move-exception v3
+    move-exception v1
 
     goto :goto_0
 .end method
@@ -1360,40 +1360,40 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cW()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/dv;->yr:Lcom/google/android/gms/internal/dy;
+    iget-object v1, p0, Lcom/google/android/gms/internal/dv;->yr:Lcom/google/android/gms/internal/dy;
 
-    invoke-virtual {v3, v1, v2, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
+    invoke-virtual {v1, v2, v3, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
-    invoke-direct {p0, v3}, Lcom/google/android/gms/internal/dv;->u(Z)V
+    invoke-direct {p0, v1}, Lcom/google/android/gms/internal/dv;->u(Z)V
 
     :try_start_0
-    const-string v3, "requestId"
+    const-string v1, "requestId"
 
-    invoke-virtual {v0, v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    const-string v3, "type"
+    const-string v1, "type"
 
     const-string v4, "STOP"
 
-    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "mediaSessionId"
+    const-string v1, "mediaSessionId"
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cU()J
 
     move-result-wide v4
 
-    invoke-virtual {v0, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     if-eqz p2, :cond_0
 
-    const-string v3, "customData"
+    const-string v1, "customData"
 
-    invoke-virtual {v0, v3, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1403,14 +1403,14 @@
 
     move-result-object v0
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3, v1}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
 
-    return-wide v1
+    return-wide v2
 
     :catch_0
-    move-exception v3
+    move-exception v1
 
     goto :goto_0
 .end method
@@ -1424,40 +1424,40 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cW()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/google/android/gms/internal/dv;->yq:Lcom/google/android/gms/internal/dy;
+    iget-object v1, p0, Lcom/google/android/gms/internal/dv;->yq:Lcom/google/android/gms/internal/dy;
 
-    invoke-virtual {v3, v1, v2, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
+    invoke-virtual {v1, v2, v3, p1}, Lcom/google/android/gms/internal/dy;->a(JLcom/google/android/gms/internal/dx;)V
 
-    const/4 v3, 0x1
+    const/4 v1, 0x1
 
-    invoke-direct {p0, v3}, Lcom/google/android/gms/internal/dv;->u(Z)V
+    invoke-direct {p0, v1}, Lcom/google/android/gms/internal/dv;->u(Z)V
 
     :try_start_0
-    const-string v3, "requestId"
+    const-string v1, "requestId"
 
-    invoke-virtual {v0, v3, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    const-string v3, "type"
+    const-string v1, "type"
 
     const-string v4, "PLAY"
 
-    invoke-virtual {v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    const-string v3, "mediaSessionId"
+    const-string v1, "mediaSessionId"
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/dv;->cU()J
 
     move-result-wide v4
 
-    invoke-virtual {v0, v3, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, v4, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     if-eqz p2, :cond_0
 
-    const-string v3, "customData"
+    const-string v1, "customData"
 
-    invoke-virtual {v0, v3, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1467,14 +1467,14 @@
 
     move-result-object v0
 
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3, v1}, Lcom/google/android/gms/internal/dv;->a(Ljava/lang/String;JLjava/lang/String;)V
 
-    return-wide v1
+    return-wide v2
 
     :catch_0
-    move-exception v3
+    move-exception v1
 
     goto :goto_0
 .end method
@@ -1513,7 +1513,7 @@
 .end method
 
 .method public getApproximateStreamPosition()J
-    .locals 11
+    .locals 12
 
     const-wide/16 v2, 0x0
 
@@ -1538,7 +1538,7 @@
 
     invoke-virtual {v0}, Lcom/google/android/gms/cast/MediaStatus;->getPlaybackRate()D
 
-    move-result-wide v9
+    move-result-wide v10
 
     iget-object v0, p0, Lcom/google/android/gms/internal/dv;->yn:Lcom/google/android/gms/cast/MediaStatus;
 
@@ -1554,7 +1554,7 @@
 
     const-wide/16 v6, 0x0
 
-    cmpl-double v1, v9, v6
+    cmpl-double v1, v10, v6
 
     if-eqz v1, :cond_2
 
@@ -1598,7 +1598,7 @@
 
     long-to-double v6, v6
 
-    mul-double/2addr v6, v9
+    mul-double/2addr v6, v10
 
     double-to-long v6, v6
 
@@ -1685,13 +1685,13 @@
     goto :goto_0
 .end method
 
-.method protected onMetadataUpdated()V
+.method public onMetadataUpdated()V
     .locals 0
 
     return-void
 .end method
 
-.method protected onStatusUpdated()V
+.method public onStatusUpdated()V
     .locals 0
 
     return-void

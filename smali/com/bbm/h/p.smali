@@ -1,97 +1,60 @@
 .class final Lcom/bbm/h/p;
-.super Ljava/lang/Object;
-.source "InvitesAdapter.java"
+.super Lcom/bbm/d/b/m;
+.source "AddContactsFragment.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/m",
+        "<",
+        "Lcom/bbm/h/al;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/ea;
-
-.field final synthetic b:Lcom/bbm/h/n;
+.field final synthetic a:Lcom/bbm/h/l;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/h/n;Lcom/bbm/d/ea;)V
+.method constructor <init>(Lcom/bbm/h/l;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
-    .line 150
-    iput-object p1, p0, Lcom/bbm/h/p;->b:Lcom/bbm/h/n;
+    .line 152
+    iput-object p1, p0, Lcom/bbm/h/p;->a:Lcom/bbm/h/l;
 
-    iput-object p2, p0, Lcom/bbm/h/p;->a:Lcom/bbm/d/ea;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method protected final synthetic a(Ljava/lang/Object;)Z
+    .locals 1
 
     .prologue
-    .line 153
-    const-string v0, "outgoing invite clicked"
+    .line 152
+    check-cast p1, Lcom/bbm/h/al;
 
-    const-class v1, Lcom/bbm/h/n;
+    iget-object v0, p0, Lcom/bbm/h/p;->a:Lcom/bbm/h/l;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 155
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/bbm/h/p;->b:Lcom/bbm/h/n;
-
-    invoke-static {v1}, Lcom/bbm/h/n;->a(Lcom/bbm/h/n;)Lcom/bbm/h/w;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/bbm/h/w;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const-class v2, Lcom/bbm/ui/activities/SentPendingInviteActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 156
-    const-string v1, "pending_contact_id"
-
-    iget-object v2, p0, Lcom/bbm/h/p;->a:Lcom/bbm/d/ea;
-
-    iget-object v2, v2, Lcom/bbm/d/ea;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 157
-    iget-object v1, p0, Lcom/bbm/h/p;->b:Lcom/bbm/h/n;
-
-    invoke-static {v1}, Lcom/bbm/h/n;->a(Lcom/bbm/h/n;)Lcom/bbm/h/w;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/bbm/h/w;->startActivity(Landroid/content/Intent;)V
-
-    .line 158
-    iget-object v0, p0, Lcom/bbm/h/p;->b:Lcom/bbm/h/n;
-
-    invoke-static {v0}, Lcom/bbm/h/n;->a(Lcom/bbm/h/n;)Lcom/bbm/h/w;
+    invoke-static {v0}, Lcom/bbm/h/l;->a(Lcom/bbm/h/l;)Lcom/bbm/util/ct;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/h/w;->getActivity()Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
 
     move-result-object v0
 
-    const v1, 0x7f040001
+    check-cast v0, Ljava/lang/String;
 
-    const v2, 0x7f040004
+    invoke-virtual {p1, v0}, Lcom/bbm/h/al;->a(Ljava/lang/String;)Z
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->overridePendingTransition(II)V
+    move-result v0
 
-    .line 159
-    return-void
+    return v0
 .end method

@@ -40,6 +40,9 @@
 .method public abstract getState()I
 .end method
 
+.method public abstract getSubtype()Ljava/lang/String;
+.end method
+
 .method public abstract getText()Ljava/lang/String;
 .end method
 
@@ -56,6 +59,9 @@
 .end method
 
 .method public abstract initiateClientSideSend()Z
+.end method
+
+.method public abstract isCreateOnly()Z
 .end method
 
 .method public abstract isVisible()Z

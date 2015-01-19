@@ -115,17 +115,15 @@
 
 # virtual methods
 .method public a(Landroid/os/Parcel;)Lcom/google/android/gms/internal/z;
-    .locals 17
+    .locals 18
 
     invoke-static/range {p1 .. p1}, Lcom/google/android/gms/common/internal/safeparcel/a;->o(Landroid/os/Parcel;)I
 
-    move-result v15
+    move-result v16
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide/16 v3, 0x0
-
-    const/4 v5, 0x0
+    const-wide/16 v4, 0x0
 
     const/4 v6, 0x0
 
@@ -145,184 +143,192 @@
 
     const/4 v14, 0x0
 
+    const/4 v15, 0x0
+
     :goto_0
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->dataPosition()I
 
-    move-result v1
+    move-result v2
 
-    if-ge v1, v15, :cond_0
+    move/from16 v0, v16
+
+    if-ge v2, v0, :cond_0
 
     invoke-static/range {p1 .. p1}, Lcom/google/android/gms/common/internal/safeparcel/a;->n(Landroid/os/Parcel;)I
 
-    move-result v1
+    move-result v2
 
-    invoke-static {v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->S(I)I
+    invoke-static {v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->S(I)I
 
-    move-result v16
+    move-result v17
 
-    packed-switch v16, :pswitch_data_0
+    packed-switch v17, :pswitch_data_0
 
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->b(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
     :pswitch_0
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
 
-    move-result v2
+    move-result v3
 
     goto :goto_0
 
     :pswitch_1
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->h(Landroid/os/Parcel;I)J
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->h(Landroid/os/Parcel;I)J
 
-    move-result-wide v3
+    move-result-wide v4
 
     goto :goto_0
 
     :pswitch_2
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->o(Landroid/os/Parcel;I)Landroid/os/Bundle;
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->o(Landroid/os/Parcel;I)Landroid/os/Bundle;
 
-    move-result-object v5
+    move-result-object v6
 
     goto :goto_0
 
     :pswitch_3
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
 
-    move-result v6
+    move-result v7
 
     goto :goto_0
 
     :pswitch_4
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->y(Landroid/os/Parcel;I)Ljava/util/ArrayList;
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->y(Landroid/os/Parcel;I)Ljava/util/ArrayList;
 
-    move-result-object v7
+    move-result-object v8
 
     goto :goto_0
 
     :pswitch_5
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->c(Landroid/os/Parcel;I)Z
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->c(Landroid/os/Parcel;I)Z
 
-    move-result v8
+    move-result v9
 
     goto :goto_0
 
     :pswitch_6
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->g(Landroid/os/Parcel;I)I
 
-    move-result v9
+    move-result v10
 
     goto :goto_0
 
     :pswitch_7
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->c(Landroid/os/Parcel;I)Z
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->c(Landroid/os/Parcel;I)Z
 
-    move-result v10
+    move-result v11
 
     goto :goto_0
 
     :pswitch_8
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->m(Landroid/os/Parcel;I)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->m(Landroid/os/Parcel;I)Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v12
 
     goto :goto_0
 
     :pswitch_9
-    sget-object v12, Lcom/google/android/gms/internal/am;->CREATOR:Lcom/google/android/gms/internal/an;
+    sget-object v13, Lcom/google/android/gms/internal/am;->CREATOR:Lcom/google/android/gms/internal/an;
 
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1, v12}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    invoke-static {v0, v2, v13}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Lcom/google/android/gms/internal/am;
+    check-cast v2, Lcom/google/android/gms/internal/am;
 
-    move-object v12, v1
+    move-object v13, v2
 
     goto :goto_0
 
     :pswitch_a
-    sget-object v13, Landroid/location/Location;->CREATOR:Landroid/os/Parcelable$Creator;
+    sget-object v14, Landroid/location/Location;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1, v13}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
+    invoke-static {v0, v2, v14}, Lcom/google/android/gms/common/internal/safeparcel/a;->a(Landroid/os/Parcel;ILandroid/os/Parcelable$Creator;)Landroid/os/Parcelable;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Landroid/location/Location;
+    check-cast v2, Landroid/location/Location;
 
-    move-object v13, v1
+    move-object v14, v2
 
     goto :goto_0
 
     :pswitch_b
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Lcom/google/android/gms/common/internal/safeparcel/a;->m(Landroid/os/Parcel;I)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/google/android/gms/common/internal/safeparcel/a;->m(Landroid/os/Parcel;I)Ljava/lang/String;
 
-    move-result-object v14
+    move-result-object v15
 
     goto :goto_0
 
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->dataPosition()I
 
-    move-result v1
+    move-result v2
 
-    if-eq v1, v15, :cond_1
+    move/from16 v0, v16
 
-    new-instance v1, Lcom/google/android/gms/common/internal/safeparcel/a$a;
+    if-eq v2, v0, :cond_1
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v2, Lcom/google/android/gms/common/internal/safeparcel/a$a;
 
-    const-string v3, "Overread allowed size end="
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const-string v4, "Overread allowed size end="
 
-    invoke-virtual {v2, v15}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    move-result-object v2
+    move/from16 v0, v16
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
 
     move-object/from16 v0, p1
 
-    invoke-direct {v1, v2, v0}, Lcom/google/android/gms/common/internal/safeparcel/a$a;-><init>(Ljava/lang/String;Landroid/os/Parcel;)V
+    invoke-direct {v2, v3, v0}, Lcom/google/android/gms/common/internal/safeparcel/a$a;-><init>(Ljava/lang/String;Landroid/os/Parcel;)V
 
-    throw v1
+    throw v2
 
     :cond_1
-    new-instance v1, Lcom/google/android/gms/internal/z;
+    new-instance v2, Lcom/google/android/gms/internal/z;
 
-    invoke-direct/range {v1 .. v14}, Lcom/google/android/gms/internal/z;-><init>(IJLandroid/os/Bundle;ILjava/util/List;ZIZLjava/lang/String;Lcom/google/android/gms/internal/am;Landroid/location/Location;Ljava/lang/String;)V
+    invoke-direct/range {v2 .. v15}, Lcom/google/android/gms/internal/z;-><init>(IJLandroid/os/Bundle;ILjava/util/List;ZIZLjava/lang/String;Lcom/google/android/gms/internal/am;Landroid/location/Location;Ljava/lang/String;)V
 
-    return-object v1
+    return-object v2
 
     nop
 

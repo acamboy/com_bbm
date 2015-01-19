@@ -1,26 +1,30 @@
 .class final Lcom/bbm/ui/activities/yl;
 .super Ljava/lang/Object;
-.source "OwnedChannelLobbyActivity.java"
+.source "NewChannelActivity.java"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.implements Lcom/bbm/j/s;
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View;
+.field final synthetic a:I
 
-.field final synthetic b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+.field final synthetic b:I
+
+.field final synthetic c:Lcom/bbm/ui/activities/NewChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;Landroid/view/View;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;II)V
     .locals 0
 
     .prologue
-    .line 187
-    iput-object p1, p0, Lcom/bbm/ui/activities/yl;->b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+    .line 533
+    iput-object p1, p0, Lcom/bbm/ui/activities/yl;->c:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/yl;->a:Landroid/view/View;
+    iput p2, p0, Lcom/bbm/ui/activities/yl;->a:I
+
+    iput p3, p0, Lcom/bbm/ui/activities/yl;->b:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,157 +33,133 @@
 
 
 # virtual methods
-.method public final onGlobalLayout()V
-    .locals 5
+.method public final a()Z
+    .locals 4
 
     .prologue
-    .line 191
-    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
+    .line 536
+    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->c:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->d(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->getHeight()I
+    invoke-virtual {v0}, Lcom/bbm/d/a;->Q()Lcom/bbm/j/w;
 
-    move-result v0
+    move-result-object v0
 
-    .line 192
-    iget-object v1, p0, Lcom/bbm/ui/activities/yl;->b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->getHeight()I
-
-    move-result v1
-
-    .line 193
-    iget-object v2, p0, Lcom/bbm/ui/activities/yl;->b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->c(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;->getHeight()I
+    .line 537
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
 
     move-result v2
 
-    .line 194
-    iget-object v3, p0, Lcom/bbm/ui/activities/yl;->b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+    if-eqz v2, :cond_0
 
-    invoke-static {v3}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
+    move v0, v1
 
-    move-result-object v3
+    .line 553
+    :goto_0
+    return v0
 
-    invoke-virtual {v3}, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->getHeight()I
+    .line 541
+    :cond_0
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    iget v2, p0, Lcom/bbm/ui/activities/yl;->a:I
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/eh;
+
+    .line 542
+    iget-object v2, p0, Lcom/bbm/ui/activities/yl;->c:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelActivity;->d(Lcom/bbm/ui/activities/NewChannelActivity;)Lcom/bbm/d/a;
+
+    move-result-object v2
+
+    iget-object v3, v0, Lcom/bbm/d/eh;->a:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lcom/bbm/d/a;->P(Ljava/lang/String;)Lcom/bbm/j/w;
+
+    move-result-object v2
+
+    .line 544
+    invoke-interface {v2}, Lcom/bbm/j/w;->b()Z
 
     move-result v3
 
-    .line 198
-    if-ne v0, v1, :cond_0
+    if-eqz v3, :cond_1
 
-    if-ne v1, v2, :cond_0
+    move v0, v1
 
-    if-eq v2, v3, :cond_4
+    .line 545
+    goto :goto_0
 
-    .line 199
-    :cond_0
-    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result v4
-
-    invoke-static {v1, v4}, Ljava/lang/Math;->max(II)I
-
-    move-result v4
-
-    invoke-static {v0, v4}, Ljava/lang/Math;->max(II)I
-
-    move-result v4
-
-    .line 200
-    if-eq v0, v4, :cond_1
-
-    .line 201
-    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->a(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    .line 202
-    iput v4, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 204
+    .line 548
     :cond_1
-    if-eq v1, v4, :cond_2
+    invoke-interface {v2}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
 
-    .line 205
-    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+    move-result-object v1
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->b(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;
+    check-cast v1, Ljava/util/List;
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-lez v1, :cond_2
+
+    .line 549
+    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->c:Lcom/bbm/ui/activities/NewChannelActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->h(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/TextView;
+
+    move-result-object v1
+
+    invoke-interface {v2}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    check-cast v0, Ljava/util/List;
+
+    iget v2, p0, Lcom/bbm/ui/activities/yl;->b:I
+
+    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 206
-    iput v4, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
+    check-cast v0, Lcom/bbm/d/ep;
 
-    .line 208
+    iget-object v0, v0, Lcom/bbm/d/ep;->b:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 553
+    :goto_1
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 551
     :cond_2
-    if-eq v2, v4, :cond_3
+    iget-object v1, p0, Lcom/bbm/ui/activities/yl;->c:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    .line 209
-    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
+    invoke-static {v1}, Lcom/bbm/ui/activities/NewChannelActivity;->h(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/TextView;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->c(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
+    move-result-object v1
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/d/eh;->b:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    move-result-object v0
-
-    .line 210
-    iput v4, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 212
-    :cond_3
-    if-eq v3, v4, :cond_4
-
-    .line 213
-    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->b:Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;->d(Lcom/bbm/ui/activities/OwnedChannelLobbyActivity;)Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    .line 214
-    iput v4, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 217
-    :cond_4
-    iget-object v0, p0, Lcom/bbm/ui/activities/yl;->a:Landroid/view/View;
-
-    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
-
-    move-result-object v0
-
-    .line 218
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    .line 219
-    return-void
+    goto :goto_1
 .end method

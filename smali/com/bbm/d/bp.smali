@@ -1,5 +1,5 @@
 .class public final Lcom/bbm/d/bp;
-.super Lcom/bbm/d/da;
+.super Lcom/bbm/d/dy;
 .source "BbmdsProtocol.java"
 
 
@@ -8,28 +8,28 @@
     .locals 1
 
     .prologue
-    .line 2377
-    const-string v0, "markRecentUpdatesRead"
+    .line 2293
+    const-string v0, "flagChannel"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/da;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
 
-    .line 2379
-    const-string v0, "id"
+    .line 2295
+    const-string v0, "uri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/bp;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 2380
+    .line 2296
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a()Lcom/bbm/f/x;
+.method public final bridge synthetic a()Lcom/bbm/f/ab;
     .locals 1
 
     .prologue
-    .line 2375
-    invoke-super {p0}, Lcom/bbm/d/da;->a()Lcom/bbm/f/x;
+    .line 2291
+    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

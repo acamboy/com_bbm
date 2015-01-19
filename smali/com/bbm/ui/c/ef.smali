@@ -1,125 +1,208 @@
-.class final Lcom/bbm/ui/c/ef;
+.class final synthetic Lcom/bbm/ui/c/ef;
 .super Ljava/lang/Object;
-.source "MyChannelsFragment.java"
-
-# interfaces
-.implements Lcom/bbm/ui/cm;
+.source "GroupsFragment.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/c/dx;
+# static fields
+.field static final synthetic a:[I
+
+.field static final synthetic b:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dx;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 262
-    iput-object p1, p0, Lcom/bbm/ui/c/ef;->a:Lcom/bbm/ui/c/dx;
+    .line 199
+    invoke-static {}, Lcom/bbm/g/ai;->values()[Lcom/bbm/g/ai;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/c/ef;->b:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/c/ef;->b:[I
+
+    sget-object v1, Lcom/bbm/g/ai;->b:Lcom/bbm/g/ai;
+
+    invoke-virtual {v1}, Lcom/bbm/g/ai;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_7
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/c/ef;->b:[I
+
+    sget-object v1, Lcom/bbm/g/ai;->a:Lcom/bbm/g/ai;
+
+    invoke-virtual {v1}, Lcom/bbm/g/ai;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_6
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/c/ef;->b:[I
+
+    sget-object v1, Lcom/bbm/g/ai;->e:Lcom/bbm/g/ai;
+
+    invoke-virtual {v1}, Lcom/bbm/g/ai;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_5
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/c/ef;->b:[I
+
+    sget-object v1, Lcom/bbm/g/ai;->c:Lcom/bbm/g/ai;
+
+    invoke-virtual {v1}, Lcom/bbm/g/ai;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_4
+
+    :goto_3
+    :try_start_4
+    sget-object v0, Lcom/bbm/ui/c/ef;->b:[I
+
+    sget-object v1, Lcom/bbm/g/ai;->d:Lcom/bbm/g/ai;
+
+    invoke-virtual {v1}, Lcom/bbm/g/ai;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x5
+
+    aput v2, v0, v1
+    :try_end_4
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_3
+
+    :goto_4
+    :try_start_5
+    sget-object v0, Lcom/bbm/ui/c/ef;->b:[I
+
+    sget-object v1, Lcom/bbm/g/ai;->f:Lcom/bbm/g/ai;
+
+    invoke-virtual {v1}, Lcom/bbm/g/ai;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x6
+
+    aput v2, v0, v1
+    :try_end_5
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_2
+
+    .line 157
+    :goto_5
+    invoke-static {}, Lcom/bbm/ui/c/eq;->values()[Lcom/bbm/ui/c/eq;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/c/ef;->a:[I
+
+    :try_start_6
+    sget-object v0, Lcom/bbm/ui/c/ef;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/c/eq;->a:Lcom/bbm/ui/c/eq;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/c/eq;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_6
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_1
+
+    :goto_6
+    :try_start_7
+    sget-object v0, Lcom/bbm/ui/c/ef;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/c/eq;->b:Lcom/bbm/ui/c/eq;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/c/eq;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_7
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_0
+
+    :goto_7
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final a(Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 5
+    goto :goto_7
 
-    .prologue
-    .line 265
-    iget-object v0, p0, Lcom/bbm/ui/c/ef;->a:Lcom/bbm/ui/c/dx;
+    :catch_1
+    move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/ui/c/dx;->d(Lcom/bbm/ui/c/dx;)Landroid/content/Context;
+    goto :goto_6
 
-    move-result-object v0
+    :catch_2
+    move-exception v0
 
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    goto :goto_5
 
-    move-result-object v0
+    :catch_3
+    move-exception v0
 
-    const v1, 0x7f0300cb
+    goto :goto_4
 
-    const/4 v2, 0x0
+    :catch_4
+    move-exception v0
 
-    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    goto :goto_3
 
-    move-result-object v3
+    :catch_5
+    move-exception v0
 
-    .line 266
-    const v0, 0x7f0a0324
+    goto :goto_2
 
-    invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    :catch_6
+    move-exception v0
 
-    move-result-object v0
+    goto :goto_1
 
-    check-cast v0, Lcom/bbm/ui/ObservingImageView;
+    :catch_7
+    move-exception v0
 
-    .line 267
-    const v1, 0x7f0a00d8
-
-    invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/LinearLayout;
-
-    .line 269
-    invoke-virtual {v0}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    iget-object v4, p0, Lcom/bbm/ui/c/ef;->a:Lcom/bbm/ui/c/dx;
-
-    invoke-static {v4}, Lcom/bbm/ui/c/dx;->f(Lcom/bbm/ui/c/dx;)I
-
-    move-result v4
-
-    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
-
-    .line 270
-    invoke-virtual {v0}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v2
-
-    check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    iget-object v4, p0, Lcom/bbm/ui/c/ef;->a:Lcom/bbm/ui/c/dx;
-
-    invoke-static {v4}, Lcom/bbm/ui/c/dx;->f(Lcom/bbm/ui/c/dx;)I
-
-    move-result v4
-
-    iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->width:I
-
-    .line 271
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
-
-    iget-object v2, p0, Lcom/bbm/ui/c/ef;->a:Lcom/bbm/ui/c/dx;
-
-    invoke-static {v2}, Lcom/bbm/ui/c/dx;->f(Lcom/bbm/ui/c/dx;)I
-
-    move-result v2
-
-    iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->width:I
-
-    .line 272
-    iget-object v1, p0, Lcom/bbm/ui/c/ef;->a:Lcom/bbm/ui/c/dx;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/dx;->h(Lcom/bbm/ui/c/dx;)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Landroid/graphics/Bitmap;)V
-
-    .line 273
-    return-object v3
+    goto :goto_0
 .end method

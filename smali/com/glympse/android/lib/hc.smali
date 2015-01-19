@@ -1,138 +1,220 @@
 .class Lcom/glympse/android/lib/hc;
-.super Ljava/lang/Object;
-.source "SendWizardListener.java"
-
-# interfaces
-.implements Lcom/glympse/android/hal/GUiControlListener;
+.super Lcom/glympse/android/lib/j;
+.source "RegisterDevice.java"
 
 
 # instance fields
-.field private cC:Lcom/glympse/android/api/GGlympse;
+.field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-.field private ja:Lcom/glympse/android/api/GTicket;
+.field private jx:Lcom/glympse/android/lib/l;
 
-.field private nq:Lcom/glympse/android/lite/GTicketLite;
+.field private rB:Ljava/lang/String;
+
+.field private rC:Z
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lite/GTicketLite;Lcom/glympse/android/api/GGlympse;Lcom/glympse/android/api/GTicket;)V
-    .locals 0
+.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    .line 27
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 33
+    invoke-direct {p0}, Lcom/glympse/android/lib/j;-><init>()V
 
-    .line 28
-    iput-object p1, p0, Lcom/glympse/android/lib/hc;->nq:Lcom/glympse/android/lite/GTicketLite;
+    .line 34
+    iput-object p1, p0, Lcom/glympse/android/lib/hc;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    .line 29
-    iput-object p2, p0, Lcom/glympse/android/lib/hc;->cC:Lcom/glympse/android/api/GGlympse;
+    .line 35
+    iput-object p2, p0, Lcom/glympse/android/lib/hc;->rB:Ljava/lang/String;
 
-    .line 30
-    iput-object p3, p0, Lcom/glympse/android/lib/hc;->ja:Lcom/glympse/android/api/GTicket;
+    .line 36
+    iget-object v0, p0, Lcom/glympse/android/lib/hc;->rB:Ljava/lang/String;
 
-    .line 31
-    return-void
-.end method
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
-.method public static a(Lcom/glympse/android/lite/GTicketLite;Lcom/glympse/android/api/GGlympse;)V
-    .locals 3
+    move-result v0
 
-    .prologue
-    .line 72
-    if-nez p1, :cond_1
+    if-nez v0, :cond_0
 
-    .line 85
-    :cond_0
+    const/4 v0, 0x1
+
     :goto_0
+    iput-boolean v0, p0, Lcom/glympse/android/lib/hc;->rC:Z
+
+    .line 37
+    new-instance v0, Lcom/glympse/android/lib/l;
+
+    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
+
+    iput-object v0, p0, Lcom/glympse/android/lib/hc;->jx:Lcom/glympse/android/lib/l;
+
+    .line 38
+    iget-object v0, p0, Lcom/glympse/android/lib/hc;->jx:Lcom/glympse/android/lib/l;
+
+    iput-object v0, p0, Lcom/glympse/android/lib/hc;->hc:Lcom/glympse/android/lib/k;
+
+    .line 39
     return-void
 
-    .line 77
-    :cond_1
-    const-wide v0, 0x1000000001001L
-
-    invoke-interface {p1, v0, v1}, Lcom/glympse/android/api/GGlympse;->getContext(J)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/lite/GGlympseLite;
-
-    .line 78
-    if-eqz v0, :cond_0
-
-    .line 84
-    const/16 v1, 0x400
-
-    const/4 v2, 0x0
-
-    invoke-interface {v0, v0, v1, p0, v2}, Lcom/glympse/android/lite/GGlympseLite;->eventsOccurred(Lcom/glympse/android/lite/GGlympseLite;ILjava/lang/Object;Ljava/lang/Object;)V
+    .line 36
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public onCancelled()V
-    .locals 3
+.method public cancel()V
+    .locals 1
 
     .prologue
-    const/4 v2, 0x0
+    .line 83
+    new-instance v0, Lcom/glympse/android/lib/l;
 
-    .line 59
-    iget-object v0, p0, Lcom/glympse/android/lib/hc;->nq:Lcom/glympse/android/lite/GTicketLite;
+    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
 
-    iget-object v1, p0, Lcom/glympse/android/lib/hc;->cC:Lcom/glympse/android/api/GGlympse;
+    iput-object v0, p0, Lcom/glympse/android/lib/hc;->jx:Lcom/glympse/android/lib/l;
 
-    invoke-static {v0, v1}, Lcom/glympse/android/lib/hc;->a(Lcom/glympse/android/lite/GTicketLite;Lcom/glympse/android/api/GGlympse;)V
+    .line 84
+    iget-object v0, p0, Lcom/glympse/android/lib/hc;->jx:Lcom/glympse/android/lib/l;
 
-    .line 62
-    iput-object v2, p0, Lcom/glympse/android/lib/hc;->nq:Lcom/glympse/android/lite/GTicketLite;
+    iput-object v0, p0, Lcom/glympse/android/lib/hc;->hc:Lcom/glympse/android/lib/k;
 
-    .line 63
-    iput-object v2, p0, Lcom/glympse/android/lib/hc;->cC:Lcom/glympse/android/api/GGlympse;
-
-    .line 64
+    .line 85
     return-void
 .end method
 
-.method public onCompleted()V
+.method public process()Z
     .locals 5
 
     .prologue
-    const-wide v3, 0x1000000001001L
+    .line 61
+    iget-object v0, p0, Lcom/glympse/android/lib/hc;->jx:Lcom/glympse/android/lib/l;
 
-    const/4 v2, 0x0
+    iget-object v0, v0, Lcom/glympse/android/lib/l;->hf:Ljava/lang/String;
 
-    .line 42
-    iget-object v0, p0, Lcom/glympse/android/lib/hc;->ja:Lcom/glympse/android/api/GTicket;
+    const-string v1, "ok"
 
-    iget-object v1, p0, Lcom/glympse/android/lib/hc;->nq:Lcom/glympse/android/lite/GTicketLite;
-
-    invoke-interface {v0, v3, v4, v1}, Lcom/glympse/android/api/GTicket;->associateContext(JLjava/lang/Object;)V
-
-    .line 45
-    iget-object v0, p0, Lcom/glympse/android/lib/hc;->cC:Lcom/glympse/android/api/GGlympse;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/hc;->ja:Lcom/glympse/android/api/GTicket;
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/api/GGlympse;->sendTicket(Lcom/glympse/android/api/GTicket;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_2
+
+    .line 63
+    iget-boolean v0, p0, Lcom/glympse/android/lib/hc;->rC:Z
+
+    if-eqz v0, :cond_0
+
+    .line 66
+    iget-object v0, p0, Lcom/glympse/android/lib/hc;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getConfig()Lcom/glympse/android/api/GConfig;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/lib/GConfigPrivate;
+
+    .line 67
+    iget-object v1, p0, Lcom/glympse/android/lib/hc;->rB:Ljava/lang/String;
+
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GConfigPrivate;->saveRegistrationToken(Ljava/lang/String;)V
+
+    .line 71
+    :cond_0
+    iget-boolean v0, p0, Lcom/glympse/android/lib/hc;->rC:Z
+
+    if-eqz v0, :cond_1
+
+    const/16 v0, 0x200
+
+    .line 72
+    :goto_0
+    iget-object v1, p0, Lcom/glympse/android/lib/hc;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    iget-object v2, p0, Lcom/glympse/android/lib/hc;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    const v3, 0x10002
+
+    iget-object v4, p0, Lcom/glympse/android/lib/hc;->rB:Ljava/lang/String;
+
+    invoke-interface {v1, v2, v3, v0, v4}, Lcom/glympse/android/lib/GGlympsePrivate;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
+
+    .line 78
+    const/4 v0, 0x1
+
+    :goto_1
+    return v0
+
+    .line 71
+    :cond_1
+    const/16 v0, 0x400
+
+    goto :goto_0
+
+    .line 76
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_1
+.end method
+
+.method public url(Ljava/lang/StringBuilder;)Z
+    .locals 1
+
+    .prologue
+    .line 47
+    const-string v0, "users/self/"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 48
-    iget-object v0, p0, Lcom/glympse/android/lib/hc;->ja:Lcom/glympse/android/api/GTicket;
+    iget-boolean v0, p0, Lcom/glympse/android/lib/hc;->rC:Z
 
-    invoke-interface {v0, v3, v4}, Lcom/glympse/android/api/GTicket;->clearContext(J)V
+    if-eqz v0, :cond_1
 
-    .line 52
-    :cond_0
-    iput-object v2, p0, Lcom/glympse/android/lib/hc;->nq:Lcom/glympse/android/lite/GTicketLite;
+    const-string v0, "register_device"
+
+    :goto_0
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 49
+    const-string v0, "?provider="
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 50
+    invoke-static {}, Lcom/glympse/android/hal/Platform;->getPushType()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 51
+    iget-boolean v0, p0, Lcom/glympse/android/lib/hc;->rC:Z
+
+    if-eqz v0, :cond_0
 
     .line 53
-    iput-object v2, p0, Lcom/glympse/android/lib/hc;->cC:Lcom/glympse/android/api/GGlympse;
+    const-string v0, "&auth_id="
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 54
-    return-void
+    iget-object v0, p0, Lcom/glympse/android/lib/hc;->rB:Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 56
+    :cond_0
+    const/4 v0, 0x1
+
+    return v0
+
+    .line 48
+    :cond_1
+    const-string v0, "unregister_device"
+
+    goto :goto_0
 .end method

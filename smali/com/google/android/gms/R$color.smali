@@ -4,29 +4,29 @@
 
 
 # static fields
-.field public static final common_action_bar_splitter:I = 0x7f090055
+.field public static final common_action_bar_splitter:I = 0x7f09005d
 
-.field public static final common_signin_btn_dark_text_default:I = 0x7f090056
+.field public static final common_signin_btn_dark_text_default:I = 0x7f09005e
 
-.field public static final common_signin_btn_dark_text_disabled:I = 0x7f090057
+.field public static final common_signin_btn_dark_text_disabled:I = 0x7f09005f
 
-.field public static final common_signin_btn_dark_text_focused:I = 0x7f090058
+.field public static final common_signin_btn_dark_text_focused:I = 0x7f090060
 
-.field public static final common_signin_btn_dark_text_pressed:I = 0x7f090059
+.field public static final common_signin_btn_dark_text_pressed:I = 0x7f090061
 
-.field public static final common_signin_btn_default_background:I = 0x7f09005a
+.field public static final common_signin_btn_default_background:I = 0x7f090062
 
-.field public static final common_signin_btn_light_text_default:I = 0x7f09005b
+.field public static final common_signin_btn_light_text_default:I = 0x7f090063
 
-.field public static final common_signin_btn_light_text_disabled:I = 0x7f09005c
+.field public static final common_signin_btn_light_text_disabled:I = 0x7f090064
 
-.field public static final common_signin_btn_light_text_focused:I = 0x7f09005d
+.field public static final common_signin_btn_light_text_focused:I = 0x7f090065
 
-.field public static final common_signin_btn_light_text_pressed:I = 0x7f09005e
+.field public static final common_signin_btn_light_text_pressed:I = 0x7f090066
 
-.field public static final common_signin_btn_text_dark:I = 0x7f09019b
+.field public static final common_signin_btn_text_dark:I = 0x7f0901b7
 
-.field public static final common_signin_btn_text_light:I = 0x7f09019c
+.field public static final common_signin_btn_text_light:I = 0x7f0901b8
 
 
 # direct methods

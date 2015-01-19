@@ -93,7 +93,7 @@
     return-void
 .end method
 
-.method public static a(Landroid/view/View;)Landroid/support/v4/view/a/h;
+.method public static a(Landroid/view/View;)Landroid/support/v4/view/a/i;
     .locals 2
 
     .prologue
@@ -102,7 +102,7 @@
 
     sget-object v1, Landroid/support/v4/view/a;->c:Ljava/lang/Object;
 
-    invoke-interface {v0, v1, p0}, Landroid/support/v4/view/d;->a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/h;
+    invoke-interface {v0, v1, p0}, Landroid/support/v4/view/d;->a(Ljava/lang/Object;Landroid/view/View;)Landroid/support/v4/view/a/i;
 
     move-result-object v0
 
@@ -139,22 +139,6 @@
     return-void
 .end method
 
-.method public static b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-    .locals 2
-
-    .prologue
-    .line 379
-    sget-object v0, Landroid/support/v4/view/a;->b:Landroid/support/v4/view/d;
-
-    sget-object v1, Landroid/support/v4/view/a;->c:Ljava/lang/Object;
-
-    invoke-interface {v0, v1, p0, p1}, Landroid/support/v4/view/d;->a(Ljava/lang/Object;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
 .method public static c(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 2
 
@@ -172,16 +156,6 @@
 
 
 # virtual methods
-.method final a()Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 318
-    iget-object v0, p0, Landroid/support/v4/view/a;->a:Ljava/lang/Object;
-
-    return-object v0
-.end method
-
 .method public a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
     .locals 2
 
@@ -223,6 +197,22 @@
     sget-object v1, Landroid/support/v4/view/a;->c:Ljava/lang/Object;
 
     invoke-interface {v0, v1, p1, p2, p3}, Landroid/support/v4/view/d;->a(Ljava/lang/Object;Landroid/view/ViewGroup;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+    .locals 2
+
+    .prologue
+    .line 379
+    sget-object v0, Landroid/support/v4/view/a;->b:Landroid/support/v4/view/d;
+
+    sget-object v1, Landroid/support/v4/view/a;->c:Ljava/lang/Object;
+
+    invoke-interface {v0, v1, p1, p2}, Landroid/support/v4/view/d;->a(Ljava/lang/Object;Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
 
     move-result v0
 

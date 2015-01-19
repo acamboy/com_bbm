@@ -1,116 +1,95 @@
 .class final Lcom/bbm/ui/c/fd;
-.super Lcom/bbm/j/k;
-.source "PeopleYouKnowFragment.java"
+.super Ljava/lang/Object;
+.source "MyChannelsFragment.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/fb;
+.field final synthetic a:Lcom/bbm/d/ee;
+
+.field final synthetic b:Lcom/bbm/ui/c/er;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/fb;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/c/er;Lcom/bbm/d/ee;)V
+    .locals 0
 
     .prologue
-    .line 94
-    iput-object p1, p0, Lcom/bbm/ui/c/fd;->a:Lcom/bbm/ui/c/fb;
+    .line 363
+    iput-object p1, p0, Lcom/bbm/ui/c/fd;->b:Lcom/bbm/ui/c/er;
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lcom/bbm/ui/c/fd;->a:Lcom/bbm/d/ee;
 
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 7
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    const/4 v6, 0x0
+    .line 366
+    const-string v0, "bottomItem Clicked"
 
-    .line 98
-    invoke-static {}, Lcom/bbm/Alaska;->D()Z
+    const-class v1, Lcom/bbm/ui/c/er;
 
-    move-result v1
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 100
-    iget-object v0, p0, Lcom/bbm/ui/c/fd;->a:Lcom/bbm/ui/c/fb;
+    .line 368
+    iget-object v0, p0, Lcom/bbm/ui/c/fd;->b:Lcom/bbm/ui/c/er;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/fb;->b(Lcom/bbm/ui/c/fb;)Z
-
-    move-result v2
-
-    .line 102
-    iget-object v0, p0, Lcom/bbm/ui/c/fd;->a:Lcom/bbm/ui/c/fb;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/fb;->c(Lcom/bbm/ui/c/fb;)Lcom/bbm/j/a;
+    invoke-static {v0}, Lcom/bbm/ui/c/er;->g(Lcom/bbm/ui/c/er;)Lcom/bbm/ui/activities/MainActivity;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    check-cast v0, Ljava/lang/Boolean;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    move-result v0
+    .line 369
+    iget-object v0, p0, Lcom/bbm/ui/c/fd;->a:Lcom/bbm/d/ee;
 
-    .line 104
-    const-string v3, "people you know progress monitor finished loading %s has found friend %s"
+    iget-boolean v0, v0, Lcom/bbm/d/ee;->t:Z
 
-    const/4 v4, 0x2
+    if-eqz v0, :cond_0
 
-    new-array v4, v4, [Ljava/lang/Object;
+    .line 370
+    iget-object v0, p0, Lcom/bbm/ui/c/fd;->a:Lcom/bbm/d/ee;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    iget-object v0, v0, Lcom/bbm/d/ee;->O:Ljava/lang/String;
 
-    move-result-object v5
+    iget-object v1, p0, Lcom/bbm/ui/c/fd;->b:Lcom/bbm/ui/c/er;
 
-    aput-object v5, v4, v6
+    invoke-static {v1}, Lcom/bbm/ui/c/er;->g(Lcom/bbm/ui/c/er;)Lcom/bbm/ui/activities/MainActivity;
 
-    const/4 v5, 0x1
+    move-result-object v1
 
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v0, v1}, Lcom/bbm/util/ac;->a(Ljava/lang/String;Landroid/app/Activity;)V
 
-    move-result-object v2
-
-    aput-object v2, v4, v5
-
-    invoke-static {v3, v4}, Lcom/bbm/w;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 105
-    if-eqz v1, :cond_0
-
-    if-nez v0, :cond_0
-
-    .line 107
-    iget-object v0, p0, Lcom/bbm/ui/c/fd;->a:Lcom/bbm/ui/c/fb;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/fb;->d(Lcom/bbm/ui/c/fb;)Landroid/widget/ProgressBar;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    .line 113
+    .line 374
     :goto_0
     return-void
 
-    .line 111
+    .line 372
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/fd;->a:Lcom/bbm/ui/c/fb;
+    iget-object v0, p0, Lcom/bbm/ui/c/fd;->a:Lcom/bbm/d/ee;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/fb;->d(Lcom/bbm/ui/c/fb;)Landroid/widget/ProgressBar;
+    iget-object v1, p0, Lcom/bbm/ui/c/fd;->b:Lcom/bbm/ui/c/er;
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/bbm/ui/c/er;->g(Lcom/bbm/ui/c/er;)Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-virtual {v0, v6}, Landroid/widget/ProgressBar;->setVisibility(I)V
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/ac;->a(Lcom/bbm/d/ee;Landroid/app/Activity;)V
 
     goto :goto_0
 .end method

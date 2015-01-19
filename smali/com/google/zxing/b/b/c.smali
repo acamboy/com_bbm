@@ -143,22 +143,20 @@
     :goto_3
     iget-object v2, p0, Lcom/google/zxing/b/b/c;->a:Lcom/google/zxing/b/b/a;
 
-    invoke-virtual {v2}, Lcom/google/zxing/b/b/a;->a()Lcom/google/zxing/b/b/b;
-
-    move-result-object v3
-
-    iget-object v2, p0, Lcom/google/zxing/b/b/c;->a:Lcom/google/zxing/b/b/a;
-
     invoke-virtual {v2}, Lcom/google/zxing/b/b/a;->b()Lcom/google/zxing/b/b/b;
 
     move-result-object v2
 
-    move-object v4, v3
+    iget-object v3, p0, Lcom/google/zxing/b/b/c;->a:Lcom/google/zxing/b/b/a;
 
-    move-object v3, v0
+    invoke-virtual {v3}, Lcom/google/zxing/b/b/a;->a()V
+
+    iget-object v3, v3, Lcom/google/zxing/b/b/a;->i:Lcom/google/zxing/b/b/b;
+
+    move-object v4, v0
 
     :goto_4
-    iget-object v0, v3, Lcom/google/zxing/b/b/b;->a:[I
+    iget-object v0, v4, Lcom/google/zxing/b/b/b;->a:[I
 
     array-length v0, v0
 
@@ -168,7 +166,7 @@
 
     if-lt v0, v6, :cond_6
 
-    invoke-virtual {v3}, Lcom/google/zxing/b/b/b;->a()Z
+    invoke-virtual {v4}, Lcom/google/zxing/b/b/b;->a()Z
 
     move-result v0
 
@@ -185,17 +183,17 @@
     :cond_4
     iget-object v0, p0, Lcom/google/zxing/b/b/c;->a:Lcom/google/zxing/b/b/a;
 
-    invoke-virtual {v0}, Lcom/google/zxing/b/b/a;->a()Lcom/google/zxing/b/b/b;
+    invoke-virtual {v0}, Lcom/google/zxing/b/b/a;->b()Lcom/google/zxing/b/b/b;
 
     move-result-object v0
 
-    iget-object v6, v3, Lcom/google/zxing/b/b/b;->a:[I
+    iget-object v6, v4, Lcom/google/zxing/b/b/b;->a:[I
 
     array-length v6, v6
 
     add-int/lit8 v6, v6, -0x1
 
-    invoke-virtual {v3, v6}, Lcom/google/zxing/b/b/b;->a(I)I
+    invoke-virtual {v4, v6}, Lcom/google/zxing/b/b/b;->a(I)I
 
     move-result v6
 
@@ -212,7 +210,7 @@
 
     add-int/lit8 v7, v7, -0x1
 
-    iget-object v8, v3, Lcom/google/zxing/b/b/b;->a:[I
+    iget-object v8, v4, Lcom/google/zxing/b/b/b;->a:[I
 
     array-length v8, v8
 
@@ -232,7 +230,7 @@
 
     add-int/lit8 v7, v7, -0x1
 
-    iget-object v8, v3, Lcom/google/zxing/b/b/b;->a:[I
+    iget-object v8, v4, Lcom/google/zxing/b/b/b;->a:[I
 
     array-length v8, v8
 
@@ -266,7 +264,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v3, v7, v8}, Lcom/google/zxing/b/b/b;->a(II)Lcom/google/zxing/b/b/b;
+    invoke-virtual {v4, v7, v8}, Lcom/google/zxing/b/b/b;->a(II)Lcom/google/zxing/b/b/b;
 
     move-result-object v7
 
@@ -277,21 +275,21 @@
     goto :goto_5
 
     :cond_5
-    invoke-virtual {v0, v2}, Lcom/google/zxing/b/b/b;->b(Lcom/google/zxing/b/b/b;)Lcom/google/zxing/b/b/b;
+    invoke-virtual {v0, v3}, Lcom/google/zxing/b/b/b;->b(Lcom/google/zxing/b/b/b;)Lcom/google/zxing/b/b/b;
 
     move-result-object v0
 
-    invoke-virtual {v0, v4}, Lcom/google/zxing/b/b/b;->a(Lcom/google/zxing/b/b/b;)Lcom/google/zxing/b/b/b;
+    invoke-virtual {v0, v2}, Lcom/google/zxing/b/b/b;->a(Lcom/google/zxing/b/b/b;)Lcom/google/zxing/b/b/b;
 
     move-result-object v0
 
-    move-object v4, v2
+    move-object v2, v3
 
-    move-object v2, v0
+    move-object v3, v0
 
-    move-object v11, v3
+    move-object v11, v4
 
-    move-object v3, v1
+    move-object v4, v1
 
     move-object v1, v11
 
@@ -300,7 +298,7 @@
     :cond_6
     const/4 v0, 0x0
 
-    invoke-virtual {v2, v0}, Lcom/google/zxing/b/b/b;->a(I)I
+    invoke-virtual {v3, v0}, Lcom/google/zxing/b/b/b;->a(I)I
 
     move-result v0
 
@@ -321,11 +319,11 @@
 
     move-result v0
 
-    invoke-virtual {v2, v0}, Lcom/google/zxing/b/b/b;->c(I)Lcom/google/zxing/b/b/b;
+    invoke-virtual {v3, v0}, Lcom/google/zxing/b/b/b;->c(I)Lcom/google/zxing/b/b/b;
 
     move-result-object v1
 
-    invoke-virtual {v3, v0}, Lcom/google/zxing/b/b/b;->c(I)Lcom/google/zxing/b/b/b;
+    invoke-virtual {v4, v0}, Lcom/google/zxing/b/b/b;->c(I)Lcom/google/zxing/b/b/b;
 
     move-result-object v0
 
@@ -449,9 +447,7 @@
     :goto_a
     iget-object v7, p0, Lcom/google/zxing/b/b/c;->a:Lcom/google/zxing/b/b/a;
 
-    invoke-virtual {v7}, Lcom/google/zxing/b/b/a;->c()I
-
-    move-result v7
+    iget v7, v7, Lcom/google/zxing/b/b/a;->j:I
 
     if-ge v0, v7, :cond_b
 

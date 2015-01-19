@@ -15,13 +15,13 @@
     .locals 0
 
     .prologue
-    .line 1195
+    .line 1202
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1196
+    .line 1203
     iput-object p1, p0, Lcom/a/a/v;->a:Ljava/lang/String;
 
-    .line 1197
+    .line 1204
     return-void
 .end method
 
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 1242
+    .line 1249
     sget-object v0, Lcom/a/a/k;->h:Lcom/a/a/k;
 
     return-object v0
@@ -41,32 +41,32 @@
     .locals 2
 
     .prologue
-    .line 1220
+    .line 1227
     if-ne p0, p1, :cond_0
 
-    .line 1221
+    .line 1228
     const/4 v0, 0x1
 
-    .line 1227
+    .line 1234
     :goto_0
     return v0
 
-    .line 1223
+    .line 1230
     :cond_0
     instance-of v0, p1, Lcom/a/a/v;
 
     if-nez v0, :cond_1
 
-    .line 1224
+    .line 1231
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1226
+    .line 1233
     :cond_1
     check-cast p1, Lcom/a/a/v;
 
-    .line 1227
+    .line 1234
     iget-object v0, p0, Lcom/a/a/v;->a:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/a/a/v;->a:Ljava/lang/String;
@@ -82,7 +82,7 @@
     .locals 1
 
     .prologue
-    .line 1232
+    .line 1239
     iget-object v0, p0, Lcom/a/a/v;->a:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -106,7 +106,7 @@
     .locals 2
 
     .prologue
-    .line 1237
+    .line 1244
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "website: "

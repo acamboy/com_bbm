@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/afe;
 .super Ljava/lang/Object;
-.source "TapToInviteActivity.java"
+.source "SelectCategoryActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/o;
-
-.field final synthetic b:Lcom/bbm/ui/activities/TapToInviteActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectCategoryActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/TapToInviteActivity;Lcom/bbm/ui/b/o;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectCategoryActivity;)V
     .locals 0
 
     .prologue
-    .line 83
-    iput-object p1, p0, Lcom/bbm/ui/activities/afe;->b:Lcom/bbm/ui/activities/TapToInviteActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/afe;->a:Lcom/bbm/ui/b/o;
+    .line 307
+    iput-object p1, p0, Lcom/bbm/ui/activities/afe;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,23 +29,25 @@
     .locals 2
 
     .prologue
-    .line 87
-    const-string v0, "NFC State dialog LeftButton Clicked"
+    .line 311
+    const-string v0, "headerActionBar NegativeButton Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/TapToInviteActivity;
+    const-class v1, Lcom/bbm/ui/activities/SelectCategoryActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 89
-    iget-object v0, p0, Lcom/bbm/ui/activities/afe;->a:Lcom/bbm/ui/b/o;
+    .line 313
+    iget-object v0, p0, Lcom/bbm/ui/activities/afe;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
+    const/4 v1, 0x0
 
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/afe;->b:Lcom/bbm/ui/activities/TapToInviteActivity;
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/SelectCategoryActivity;->setResult(I)V
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/TapToInviteActivity;->finish()V
+    .line 314
+    iget-object v0, p0, Lcom/bbm/ui/activities/afe;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
 
-    .line 91
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectCategoryActivity;->finish()V
+
+    .line 315
     return-void
 .end method

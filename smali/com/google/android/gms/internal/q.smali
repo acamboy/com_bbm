@@ -29,7 +29,7 @@
 
 # virtual methods
 .method public b(IJ)V
-    .locals 1
+    .locals 2
 
     iget-object v0, p0, Lcom/google/android/gms/internal/q;->kv:Lcom/google/android/gms/internal/jz;
 

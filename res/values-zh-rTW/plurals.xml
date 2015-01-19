@@ -4,14 +4,31 @@
         <item quantity="other">已傳送廣播訊息給 %1$s 個連絡人</item>
         <item quantity="one">廣播訊息傳送給 1 位連絡人</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d 名訂閱者</item>
+        <item quantity="zero">沒有訂閱者</item>
+        <item quantity="one">%1$d 名訂閱者</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d 名成員</item>
+        <item quantity="one">%1$d 名成員</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">秒</item>
+        <item quantity="one">秒</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">計時器設為 %1$d 秒。</item>
+        <item quantity="one">計時器設為 %1$d 秒。</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s 個項目</item>
         <item quantity="zero">0 個項目</item>
         <item quantity="one">1 個項目</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d 個邀請正在等待)</item>
-        <item quantity="one">(1 個邀請正在等待)</item>
+        <item quantity="other">(%1$d 個擱置中)</item>
+        <item quantity="one">(1 個擱置中)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s 個結果</item>

@@ -1,9 +1,19 @@
 .class final Lcom/bbm/d/b/s;
 .super Ljava/lang/Object;
-.source "TransformingList.java"
+.source "SortedList.java"
 
 # interfaces
-.implements Lcom/bbm/j/h;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<TT;>;"
+    }
+.end annotation
 
 
 # instance fields
@@ -15,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 19
+    .line 27
     iput-object p1, p0, Lcom/bbm/d/b/s;->a:Lcom/bbm/d/b/r;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,15 +35,33 @@
 
 
 # virtual methods
-.method public final a()V
+.method public final compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;TT;)I"
+        }
+    .end annotation
 
     .prologue
-    .line 22
+    .line 31
+    :try_start_0
     iget-object v0, p0, Lcom/bbm/d/b/s;->a:Lcom/bbm/d/b/r;
 
-    invoke-static {v0}, Lcom/bbm/d/b/r;->a(Lcom/bbm/d/b/r;)V
+    invoke-virtual {v0, p1, p2}, Lcom/bbm/d/b/r;->a(Ljava/lang/Object;Ljava/lang/Object;)I
+    :try_end_0
+    .catch Lcom/bbm/j/z; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 23
-    return-void
+    move-result v0
+
+    .line 38
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

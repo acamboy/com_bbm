@@ -1,41 +1,78 @@
 .class public final Lcom/bbm/d/aq;
-.super Lcom/bbm/d/da;
+.super Lcom/bbm/d/dy;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(J)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 961
-    const-string v0, "channelMarkNotificationsAsRead"
+    .line 899
+    const-string v0, "channelInvitationSend"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/da;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
 
-    .line 963
-    const-string v0, "timestamp"
+    .line 901
+    const-string v0, "channelUri"
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/aq;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    move-result-object v1
+    .line 902
+    const-string v0, "to"
 
-    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/aq;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/aq;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 964
+    .line 903
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a()Lcom/bbm/f/x;
+.method public final a(Ljava/lang/String;)Lcom/bbm/d/aq;
     .locals 1
 
     .prologue
-    .line 959
-    invoke-super {p0}, Lcom/bbm/d/da;->a()Lcom/bbm/f/x;
+    .line 913
+    const-string v0, "cookie"
+
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/aq;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 914
+    return-object p0
+.end method
+
+.method public final bridge synthetic a()Lcom/bbm/f/ab;
+    .locals 1
+
+    .prologue
+    .line 897
+    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final b(Ljava/lang/String;)Lcom/bbm/d/aq;
+    .locals 1
+
+    .prologue
+    .line 925
+    const-string v0, "inviteMessage"
+
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/aq;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 926
+    return-object p0
 .end method

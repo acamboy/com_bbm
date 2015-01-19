@@ -18,7 +18,7 @@
 
 # virtual methods
 .method public final skip(J)J
-    .locals 8
+    .locals 9
 
     .prologue
     const-wide/16 v4, 0x0

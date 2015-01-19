@@ -1,29 +1,23 @@
 .class final Lcom/bbm/ui/c/hu;
 .super Ljava/lang/Object;
-.source "UpdatesFragment.java"
+.source "StickerDetailsFragment.java"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Landroid/view/View$OnClickListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcom/bbm/util/ee;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/c/gr;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/bbm/ui/c/gr;)V
     .locals 0
 
     .prologue
-    .line 318
+    .line 556
+    iput-object p1, p0, Lcom/bbm/ui/c/hu;->a:Lcom/bbm/ui/c/gr;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,43 +25,22 @@
 
 
 # virtual methods
-.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 4
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 318
-    check-cast p1, Lcom/bbm/util/ee;
+    .line 560
+    const-string v0, "Full sticker clicked=close"
 
-    check-cast p2, Lcom/bbm/util/ee;
+    const-class v1, Lcom/bbm/ui/c/gr;
 
-    iget-wide v0, p1, Lcom/bbm/util/ee;->b:J
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    iget-wide v2, p2, Lcom/bbm/util/ee;->b:J
+    .line 561
+    iget-object v0, p0, Lcom/bbm/ui/c/hu;->a:Lcom/bbm/ui/c/gr;
 
-    cmp-long v0, v0, v2
+    invoke-static {v0}, Lcom/bbm/ui/c/gr;->b(Lcom/bbm/ui/c/gr;)V
 
-    if-gez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    iget-wide v0, p1, Lcom/bbm/util/ee;->b:J
-
-    iget-wide v2, p2, Lcom/bbm/util/ee;->b:J
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_1
-
-    const/4 v0, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+    .line 562
+    return-void
 .end method

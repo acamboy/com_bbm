@@ -1,6 +1,10 @@
 .class public final Lcom/bbm/ui/fi;
-.super Lcom/bbm/ui/activities/agx;
-.source "SlideActivityLifeCycleListener.java"
+.super Lcom/glympse/map/lib/Map;
+.source "QuickShareGlympseView.java"
+
+
+# instance fields
+.field a:Lcom/bbm/ui/fg;
 
 
 # direct methods
@@ -8,40 +12,32 @@
     .locals 0
 
     .prologue
-    .line 7
-    invoke-direct {p0}, Lcom/bbm/ui/activities/agx;-><init>()V
+    .line 287
+    invoke-direct {p0}, Lcom/glympse/map/lib/Map;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/activities/agw;)V
-    .locals 2
+.method public final onActivityCreated(Landroid/os/Bundle;)V
+    .locals 1
 
     .prologue
-    .line 11
-    const v0, 0x7f04000d
+    .line 296
+    invoke-super {p0, p1}, Lcom/glympse/map/lib/Map;->onActivityCreated(Landroid/os/Bundle;)V
 
-    const v1, 0x7f04000f
+    .line 297
+    iget-object v0, p0, Lcom/bbm/ui/fi;->a:Lcom/bbm/ui/fg;
 
-    invoke-virtual {p1, v0, v1}, Lcom/bbm/ui/activities/agw;->overridePendingTransition(II)V
+    if-eqz v0, :cond_0
 
-    .line 12
-    return-void
-.end method
+    .line 298
+    iget-object v0, p0, Lcom/bbm/ui/fi;->a:Lcom/bbm/ui/fg;
 
-.method public final c(Lcom/bbm/ui/activities/agw;)V
-    .locals 2
+    invoke-interface {v0}, Lcom/bbm/ui/fg;->a()V
 
-    .prologue
-    .line 16
-    const/4 v0, 0x0
-
-    const v1, 0x7f04000e
-
-    invoke-virtual {p1, v0, v1}, Lcom/bbm/ui/activities/agw;->overridePendingTransition(II)V
-
-    .line 17
+    .line 300
+    :cond_0
     return-void
 .end method

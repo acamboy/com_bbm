@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/ib;
 .super Ljava/lang/Object;
-.source "FilePickerActivity.java"
+.source "ConversationActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/activities/ia;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ia;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 278
-    iput-object p1, p0, Lcom/bbm/ui/activities/ib;->b:Lcom/bbm/ui/activities/ia;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/ib;->a:Ljava/lang/String;
+    .line 3006
+    iput-object p1, p0, Lcom/bbm/ui/activities/ib;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,48 +26,33 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 282
-    iget-object v0, p0, Lcom/bbm/ui/activities/ib;->b:Lcom/bbm/ui/activities/ia;
+    .line 3010
+    const-string v0, "quickshare attach picture clicked"
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    .line 3011
+    iget-object v0, p0, Lcom/bbm/ui/activities/ib;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ib;->b:Lcom/bbm/ui/activities/ia;
+    const/4 v1, 0x1
 
-    iget-object v2, v2, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->g(Lcom/bbm/ui/activities/ConversationActivity;Z)Z
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/FilePickerActivity;->h(Lcom/bbm/ui/activities/FilePickerActivity;)Ljava/lang/String;
+    move-result v0
 
-    move-result-object v2
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 3012
+    iget-object v0, p0, Lcom/bbm/ui/activities/ib;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    move-result-object v1
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->aK(Lcom/bbm/ui/activities/ConversationActivity;)V
 
-    sget-object v2, Ljava/io/File;->separator:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/ib;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/FilePickerActivity;->b(Lcom/bbm/ui/activities/FilePickerActivity;Ljava/lang/String;)V
-
-    .line 283
+    .line 3014
+    :cond_0
     return-void
 .end method

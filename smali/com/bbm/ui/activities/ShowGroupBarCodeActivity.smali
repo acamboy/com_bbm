@@ -1,20 +1,20 @@
 .class public Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;
-.super Lcom/bbm/ui/activities/kl;
+.super Lcom/bbm/ui/activities/mj;
 .source "ShowGroupBarCodeActivity.java"
 
 
 # instance fields
-.field private final a:Lcom/bbm/d;
+.field private final a:Lcom/bbm/e;
 
-.field private b:Lcom/bbm/ui/activities/aek;
+.field private b:Lcom/bbm/ui/activities/aik;
 
-.field private j:Landroid/widget/ImageView;
+.field private d:Landroid/widget/ImageView;
 
-.field private k:Landroid/widget/TextView;
+.field private e:Landroid/widget/TextView;
 
-.field private l:Landroid/widget/Button;
+.field private f:Landroid/widget/Button;
 
-.field private final m:Lcom/bbm/g/ab;
+.field private final g:Lcom/bbm/g/al;
 
 
 # direct methods
@@ -23,32 +23,32 @@
 
     .prologue
     .line 34
-    invoke-direct {p0}, Lcom/bbm/ui/activities/kl;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/mj;-><init>()V
 
     .line 36
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->a:Lcom/bbm/d;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->a:Lcom/bbm/e;
 
     .line 46
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/ab;
+    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->m:Lcom/bbm/g/ab;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->g:Lcom/bbm/g/al;
 
     .line 130
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;)Lcom/bbm/g/ab;
+.method static synthetic a(Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;)Lcom/bbm/g/al;
     .locals 1
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->m:Lcom/bbm/g/ab;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->g:Lcom/bbm/g/al;
 
     return-object v0
 .end method
@@ -143,7 +143,7 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->setPixels([IIIIIII)V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->j:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->d:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
     :try_end_0
@@ -155,27 +155,27 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_3
 .end method
 
-.method static synthetic b(Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;)Lcom/bbm/ui/activities/aek;
+.method static synthetic b(Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;)Lcom/bbm/ui/activities/aik;
     .locals 1
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->b:Lcom/bbm/ui/activities/aek;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->b:Lcom/bbm/ui/activities/aik;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;)Lcom/bbm/d;
+.method static synthetic c(Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;)Lcom/bbm/e;
     .locals 1
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->a:Lcom/bbm/d;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->a:Lcom/bbm/e;
 
     return-object v0
 .end method
@@ -210,26 +210,26 @@
 
     .line 53
     :cond_0
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/kl;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/mj;->onCreate(Landroid/os/Bundle;)V
 
     .line 54
-    const v0, 0x7f03005d
+    const v0, 0x7f030064
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->setContentView(I)V
 
     .line 55
-    iput-boolean v1, p0, Lcom/bbm/ui/activities/eg;->e:Z
+    iput-boolean v1, p0, Lcom/bbm/ui/activities/ey;->y:Z
 
     .line 57
     new-instance v0, Lcom/bbm/ui/HeaderButtonActionBar;
 
-    const v2, 0x7f0e0576
+    const v2, 0x7f0e060c
 
     invoke-virtual {p0, v2}, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    const v3, 0x7f0e0239
+    const v3, 0x7f0e0248
 
     invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->getString(I)Ljava/lang/String;
 
@@ -238,9 +238,9 @@
     invoke-direct {v0, p0, v2, v3}, Lcom/bbm/ui/HeaderButtonActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 58
-    new-instance v2, Lcom/bbm/ui/activities/aei;
+    new-instance v2, Lcom/bbm/ui/activities/aii;
 
-    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/aei;-><init>(Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;)V
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/aii;-><init>(Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;)V
 
     invoke-virtual {v0, v2}, Lcom/bbm/ui/HeaderButtonActionBar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -262,7 +262,7 @@
     invoke-virtual {v2, v0}, Landroid/app/ActionBar;->setDisplayOptions(I)V
 
     .line 72
-    const v0, 0x7f0a02b6
+    const v0, 0x7f0b0317
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->findViewById(I)Landroid/view/View;
 
@@ -270,10 +270,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->k:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->e:Landroid/widget/TextView;
 
     .line 73
-    iget-object v2, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->k:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->e:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->getIntent()Landroid/content/Intent;
 
@@ -293,40 +293,40 @@
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 77
-    iget-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->a:Lcom/bbm/d;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->a:Lcom/bbm/e;
 
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/kl;->c:Ljava/lang/String;
+    iget-object v2, p0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/bbm/g/ac;->d(Ljava/lang/String;)Lcom/bbm/g/bv;
+    invoke-static {v2}, Lcom/bbm/g/am;->e(Ljava/lang/String;)Lcom/bbm/g/co;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
+    invoke-virtual {v0, v2}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
 
     .line 78
-    new-instance v0, Lcom/bbm/ui/activities/aek;
+    new-instance v0, Lcom/bbm/ui/activities/aik;
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/aek;-><init>(Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;B)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/aik;-><init>(Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;B)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->b:Lcom/bbm/ui/activities/aek;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->b:Lcom/bbm/ui/activities/aik;
 
     .line 79
-    iget-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->a:Lcom/bbm/d;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->a:Lcom/bbm/e;
 
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
 
-    iget-object v0, v0, Lcom/bbm/g/ad;->a:Lcom/bbm/d/a/f;
+    iget-object v0, v0, Lcom/bbm/g/an;->a:Lcom/bbm/d/a/f;
 
     iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->b:Lcom/bbm/ui/activities/aek;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->b:Lcom/bbm/ui/activities/aik;
 
-    invoke-interface {v0, v1}, Lcom/bbm/f/a;->a(Lcom/bbm/f/y;)V
+    invoke-interface {v0, v1}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
 
     .line 80
-    const v0, 0x7f0a02b7
+    const v0, 0x7f0b0318
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->findViewById(I)Landroid/view/View;
 
@@ -334,10 +334,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->j:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->d:Landroid/widget/ImageView;
 
     .line 82
-    const v0, 0x7f0a02b1
+    const v0, 0x7f0b0315
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->findViewById(I)Landroid/view/View;
 
@@ -345,14 +345,14 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->l:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->f:Landroid/widget/Button;
 
     .line 83
-    iget-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->l:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;->f:Landroid/widget/Button;
 
-    new-instance v1, Lcom/bbm/ui/activities/aej;
+    new-instance v1, Lcom/bbm/ui/activities/aij;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/aej;-><init>(Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/aij;-><init>(Lcom/bbm/ui/activities/ShowGroupBarCodeActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -371,7 +371,7 @@
 
     .prologue
     .line 99
-    invoke-super {p0}, Lcom/bbm/ui/activities/kl;->onPause()V
+    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onPause()V
 
     .line 100
     return-void

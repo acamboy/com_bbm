@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static ai:Ljava/lang/Object;
+.field private static ah:Ljava/lang/Object;
 
 
 # direct methods
@@ -19,7 +19,7 @@
 
     invoke-direct {v0, v1}, Lcom/glympse/android/hal/p;-><init>(Lcom/glympse/android/hal/ConnectivityChecker$1;)V
 
-    sput-object v0, Lcom/glympse/android/hal/ConnectivityChecker;->ai:Ljava/lang/Object;
+    sput-object v0, Lcom/glympse/android/hal/ConnectivityChecker;->ah:Ljava/lang/Object;
 
     return-void
 .end method
@@ -40,7 +40,7 @@
 
     .prologue
     .line 35
-    sput-object p0, Lcom/glympse/android/hal/ConnectivityChecker;->ai:Ljava/lang/Object;
+    sput-object p0, Lcom/glympse/android/hal/ConnectivityChecker;->ah:Ljava/lang/Object;
 
     return-object p0
 .end method
@@ -55,7 +55,7 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/ConnectivityChecker;->ai:Ljava/lang/Object;
+    sget-object v0, Lcom/glympse/android/hal/ConnectivityChecker;->ah:Ljava/lang/Object;
 
     const/4 v2, 0x0
 
@@ -93,7 +93,7 @@
 
     .prologue
     .line 35
-    sget-object v0, Lcom/glympse/android/hal/ConnectivityChecker;->ai:Ljava/lang/Object;
+    sget-object v0, Lcom/glympse/android/hal/ConnectivityChecker;->ah:Ljava/lang/Object;
 
     return-object v0
 .end method

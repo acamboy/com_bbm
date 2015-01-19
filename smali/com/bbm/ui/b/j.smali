@@ -1,20 +1,14 @@
-.class public Lcom/bbm/ui/b/j;
+.class public final Lcom/bbm/ui/b/j;
 .super Lcom/bbm/ui/b/o;
-.source "BBInfoAndCheckboxDialog.java"
+.source "BBInfoAndIgnoreCheckboxDialog.java"
 
 
 # instance fields
 .field public d:Landroid/widget/CheckBox;
 
-.field private e:Landroid/widget/TextView;
+.field public e:Z
 
-.field private f:Landroid/widget/TextView;
-
-.field private g:Landroid/widget/CheckBox;
-
-.field private h:Ljava/lang/String;
-
-.field private i:Ljava/lang/String;
+.field private f:Landroid/view/View;
 
 
 # direct methods
@@ -22,234 +16,85 @@
     .locals 0
 
     .prologue
-    .line 33
+    .line 32
     invoke-direct {p0, p1}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
 
-    .line 34
+    .line 33
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()I
-    .locals 1
+.method public final a_(Ljava/lang/String;)V
+    .locals 2
 
     .prologue
-    .line 42
-    const v0, 0x7f030072
+    .line 62
+    invoke-super {p0, p1}, Lcom/bbm/ui/b/o;->a_(Ljava/lang/String;)V
 
-    return v0
-.end method
+    .line 64
+    iget-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/view/View;
 
-.method public final b()Z
-    .locals 1
+    if-eqz v0, :cond_0
 
-    .prologue
-    .line 81
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->d:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
+    .line 65
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    return v0
-.end method
+    if-nez v0, :cond_1
 
-.method public final c(I)V
-    .locals 1
-
-    .prologue
-    .line 99
-    if-lez p1, :cond_0
-
-    .line 100
-    invoke-virtual {p0}, Lcom/bbm/ui/b/j;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/b/j;->c(Ljava/lang/String;)V
-
-    .line 102
-    :cond_0
-    return-void
-.end method
-
-.method public final c(Ljava/lang/String;)V
-    .locals 3
-
-    .prologue
-    const/16 v2, 0x8
+    .line 66
+    iget-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/view/View;
 
     const/4 v1, 0x0
 
-    .line 110
-    iput-object p1, p0, Lcom/bbm/ui/b/j;->h:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 111
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->e:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->d:Landroid/widget/CheckBox;
-
-    if-eqz v0, :cond_0
-
-    .line 112
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->h:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 113
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->d:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setVisibility(I)V
-
-    .line 114
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->e:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 115
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->e:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/bbm/ui/b/j;->h:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 122
+    .line 71
     :cond_0
     :goto_0
     return-void
 
-    .line 118
+    .line 68
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->d:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/view/View;
 
-    invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setVisibility(I)V
+    const/16 v1, 0x8
 
-    .line 119
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->e:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
 .end method
 
-.method public final c()Z
+.method protected final b()I
     .locals 1
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->g:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
-
-    move-result v0
+    .line 41
+    const v0, 0x7f030077
 
     return v0
 .end method
 
-.method public final e()V
-    .locals 4
+.method protected final onCreate(Landroid/os/Bundle;)V
+    .locals 2
 
     .prologue
-    const/16 v3, 0x8
-
-    const/4 v2, 0x0
-
-    .line 130
-    invoke-virtual {p0}, Lcom/bbm/ui/b/j;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    const v1, 0x7f0e05f6
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/b/j;->i:Ljava/lang/String;
-
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->g:Landroid/widget/CheckBox;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/widget/TextView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->i:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->g:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/bbm/ui/b/j;->i:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 133
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 130
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->g:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0, v3}, Landroid/widget/CheckBox;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
-
-    goto :goto_0
-.end method
-
-.method public onCreate(Landroid/os/Bundle;)V
-    .locals 4
-
-    .prologue
-    const/16 v3, 0x8
-
-    const/4 v2, 0x0
-
-    .line 47
+    .line 46
     invoke-super {p0, p1}, Lcom/bbm/ui/b/o;->onCreate(Landroid/os/Bundle;)V
 
-    .line 49
-    const v0, 0x7f0a0316
+    .line 48
+    const v0, 0x7f0b0368
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/j;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/b/j;->e:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/view/View;
 
     .line 50
-    const v0, 0x7f0a0317
+    const v0, 0x7f0b0369
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/j;->findViewById(I)Landroid/view/View;
 
@@ -260,34 +105,14 @@
     iput-object v0, p0, Lcom/bbm/ui/b/j;->d:Landroid/widget/CheckBox;
 
     .line 51
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->h:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 52
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->e:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 53
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->e:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/bbm/ui/b/j;->h:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 55
     iget-object v0, p0, Lcom/bbm/ui/b/j;->d:Landroid/widget/CheckBox;
 
-    invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setVisibility(I)V
+    iget-boolean v1, p0, Lcom/bbm/ui/b/j;->e:Z
 
-    .line 61
-    :goto_0
-    const v0, 0x7f0a0318
+    invoke-virtual {v0, v1}, Landroid/widget/CheckBox;->setChecked(Z)V
+
+    .line 53
+    const v0, 0x7f0b0362
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/j;->findViewById(I)Landroid/view/View;
 
@@ -295,72 +120,35 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/widget/TextView;
-
-    .line 62
-    const v0, 0x7f0a0319
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/b/j;->findViewById(I)Landroid/view/View;
+    .line 54
+    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
-
-    check-cast v0, Landroid/widget/CheckBox;
-
-    iput-object v0, p0, Lcom/bbm/ui/b/j;->g:Landroid/widget/CheckBox;
-
-    .line 63
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->i:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
-    .line 64
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/widget/TextView;
+    .line 55
+    iget-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/view/View;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    const/4 v1, 0x0
 
-    .line 65
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/widget/TextView;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v1, p0, Lcom/bbm/ui/b/j;->i:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->g:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setVisibility(I)V
-
-    .line 72
-    :goto_1
+    .line 59
+    :goto_0
     return-void
 
     .line 57
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->e:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/view/View;
 
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+    const/16 v1, 0x8
 
-    .line 58
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->d:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0, v3}, Landroid/widget/CheckBox;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     goto :goto_0
-
-    .line 69
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->f:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 70
-    iget-object v0, p0, Lcom/bbm/ui/b/j;->g:Landroid/widget/CheckBox;
-
-    invoke-virtual {v0, v3}, Landroid/widget/CheckBox;->setVisibility(I)V
-
-    goto :goto_1
 .end method

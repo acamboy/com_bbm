@@ -1,9 +1,6 @@
 .class final Lcom/bbm/ui/voice/activities/b;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/k;
 .source "IncomingCallActivity.java"
-
-# interfaces
-.implements Lcom/bbm/l/i;
 
 
 # instance fields
@@ -12,49 +9,71 @@
 
 # direct methods
 .method constructor <init>(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 118
+    .line 114
     iput-object p1, p0, Lcom/bbm/ui/voice/activities/b;->a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method protected final a()V
+    .locals 3
 
     .prologue
-    .line 122
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 117
     iget-object v0, p0, Lcom/bbm/ui/voice/activities/b;->a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)V
+    invoke-static {v0}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
 
-    .line 123
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/n/b;->a:Lcom/bbm/j/t;
+
+    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    if-ne v0, v1, :cond_1
+
+    move v0, v1
+
+    :goto_0
+    if-nez v0, :cond_0
+
+    .line 118
     iget-object v0, p0, Lcom/bbm/ui/voice/activities/b;->a:Lcom/bbm/ui/voice/activities/IncomingCallActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->finish()V
+    invoke-static {v0}, Lcom/bbm/ui/voice/activities/IncomingCallActivity;->e(Lcom/bbm/ui/voice/activities/IncomingCallActivity;)Lcom/bbm/n/j;
 
-    .line 124
+    move-result-object v0
+
+    invoke-interface {v0, v2}, Lcom/bbm/n/j;->a(Z)V
+
+    .line 120
+    :cond_0
     return-void
-.end method
 
-.method public final b()V
-    .locals 0
+    :cond_1
+    move v0, v2
 
-    .prologue
-    .line 134
-    return-void
-.end method
-
-.method public final c()V
-    .locals 0
-
-    .prologue
-    .line 154
-    return-void
+    .line 117
+    goto :goto_0
 .end method

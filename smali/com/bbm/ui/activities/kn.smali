@@ -1,46 +1,27 @@
 .class final Lcom/bbm/ui/activities/kn;
 .super Ljava/lang/Object;
-.source "GroupConversationActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "FileSearchActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.field a:Landroid/widget/ImageView;
+
+.field b:Landroid/widget/TextView;
+
+.field c:Landroid/widget/TextView;
+
+.field final synthetic d:Lcom/bbm/ui/activities/km;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/km;)V
     .locals 0
 
     .prologue
-    .line 423
-    iput-object p1, p0, Lcom/bbm/ui/activities/kn;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 201
+    iput-object p1, p0, Lcom/bbm/ui/activities/kn;->d:Lcom/bbm/ui/activities/km;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
-
-    .prologue
-    .line 426
-    const-string v0, "mBarGroupHeaderContainer Clicked"
-
-    const-class v1, Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 428
-    iget-object v0, p0, Lcom/bbm/ui/activities/kn;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->o()V
-
-    .line 429
     return-void
 .end method

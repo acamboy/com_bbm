@@ -105,9 +105,11 @@
 
 # virtual methods
 .method final a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 7
+    .locals 8
 
     .prologue
+    const/16 v7, 0x10
+
     const/4 v6, 0x0
 
     .line 420
@@ -121,9 +123,7 @@
     move-result-object v1
 
     .line 426
-    const/16 v2, 0x10
-
-    new-array v2, v2, [B
+    new-array v2, v7, [B
 
     .line 427
     sget-object v3, Lcom/blackberry/ids/BBIDStorage$Encrypter;->a:Ljava/security/SecureRandom;
@@ -155,25 +155,19 @@
     move-result-object v0
 
     .line 441
-    array-length v1, v2
+    array-length v1, v0
 
-    array-length v3, v0
-
-    add-int/2addr v1, v3
+    add-int/lit8 v1, v1, 0x10
 
     new-array v1, v1, [B
 
     .line 442
-    array-length v3, v2
-
-    invoke-static {v2, v6, v1, v6, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v2, v6, v1, v6, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 443
-    array-length v2, v2
+    array-length v2, v0
 
-    array-length v3, v0
-
-    invoke-static {v0, v6, v1, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    invoke-static {v0, v6, v1, v7, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 445
     invoke-static {v1}, Lcom/blackberry/ids/StringUtils;->b([B)Ljava/lang/String;

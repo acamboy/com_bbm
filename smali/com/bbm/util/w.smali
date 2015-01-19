@@ -1,39 +1,60 @@
-.class public final Lcom/bbm/util/w;
+.class final Lcom/bbm/util/w;
 .super Ljava/lang/Object;
-.source "ChannelPostCommentUtil.java"
+.source "ChannelJoinUtil.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field final synthetic a:Lcom/bbm/util/v;
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+.method constructor <init>(Lcom/bbm/util/v;)V
+    .locals 0
 
     .prologue
-    const/16 v1, 0x7c
+    .line 76
+    iput-object p1, p0, Lcom/bbm/util/w;->a:Lcom/bbm/util/v;
 
-    .line 11
-    new-instance v0, Ljava/lang/StringBuffer;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p0}, Ljava/lang/StringBuffer;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    move-result-object v0
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    .prologue
+    .line 79
+    invoke-static {}, Lcom/bbm/util/fh;->a()V
 
-    move-result-object v0
+    .line 80
+    iget-object v0, p0, Lcom/bbm/util/w;->a:Lcom/bbm/util/v;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
+    iget-object v0, v0, Lcom/bbm/util/v;->a:Lcom/bbm/util/u;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/util/u;->a:Lcom/bbm/d/ee;
 
-    invoke-virtual {v0, p2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    iget-object v1, p0, Lcom/bbm/util/w;->a:Lcom/bbm/util/v;
 
-    move-result-object v0
+    iget-object v1, v1, Lcom/bbm/util/v;->a:Lcom/bbm/util/u;
 
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/util/u;->b:Landroid/widget/ImageView;
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/bbm/util/w;->a:Lcom/bbm/util/v;
 
-    return-object v0
+    iget-object v2, v2, Lcom/bbm/util/v;->a:Lcom/bbm/util/u;
+
+    iget-object v2, v2, Lcom/bbm/util/u;->d:Landroid/app/Activity;
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v1, v2, v3}, Lcom/bbm/util/s;->a(Lcom/bbm/d/ee;Landroid/widget/ImageView;Landroid/app/Activity;Z)V
+
+    .line 81
+    return-void
 .end method

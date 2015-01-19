@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/jq;
 .super Ljava/lang/Object;
-.source "GroupAdminValidatePasswordActivity.java"
+.source "EditListItemActivity.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/EditListItemActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/EditListItemActivity;)V
     .locals 0
 
     .prologue
-    .line 91
-    iput-object p1, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;
+    .line 255
+    iput-object p1, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/EditListItemActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,63 +25,34 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 94
-    const-string v0, "password field afterTextChanged"
+    .line 259
+    const-string v0, "mHeaderActionBar Negative Button Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
+    const-class v1, Lcom/bbm/ui/activities/EditListItemActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 96
-    iget-object v0, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;
+    .line 261
+    const-string v0, "negativebutton onClick"
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;->c(Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
+    const-class v1, Lcom/bbm/ui/activities/EditListItemActivity;
 
-    move-result-object v1
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;
+    .line 262
+    iget-object v0, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/EditListItemActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;->b(Lcom/bbm/ui/activities/GroupAdminValidatePasswordActivity;)Landroid/widget/EditText;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/EditListItemActivity;->finish()V
 
-    move-result-object v0
+    .line 263
+    iget-object v0, p0, Lcom/bbm/ui/activities/jq;->a:Lcom/bbm/ui/activities/EditListItemActivity;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->length()I
+    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
 
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
-
-    .line 97
-    return-void
-
-    .line 96
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    .prologue
-    .line 101
-    return-void
-.end method
-
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    .prologue
-    .line 105
+    .line 264
     return-void
 .end method

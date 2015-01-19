@@ -4,6 +4,9 @@
 
 
 # virtual methods
+.method public abstract onBluetoothEnabled(Z)V
+.end method
+
 .method public abstract onCallStateChange(ILcom/rim/bbm/BbmMediaCallService$CallData;)V
 .end method
 

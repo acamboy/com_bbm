@@ -13,7 +13,7 @@
 
 # direct methods
 .method public constructor <init>(Lcom/blackberry/ids/WebActivity;Landroid/graphics/Path;J)V
-    .locals 2
+    .locals 3
 
     .prologue
     .line 327

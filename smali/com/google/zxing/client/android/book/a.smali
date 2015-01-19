@@ -102,9 +102,7 @@
     .line 49
     iget-object v2, p0, Lcom/google/zxing/client/android/book/a;->a:Lcom/google/zxing/client/android/book/b;
 
-    invoke-virtual {v2}, Lcom/google/zxing/client/android/book/b;->a()Ljava/lang/String;
-
-    move-result-object v2
+    iget-object v2, v2, Lcom/google/zxing/client/android/book/b;->a:Ljava/lang/String;
 
     invoke-static {v2}, Lcom/google/zxing/client/android/r;->a(Ljava/lang/String;)Z
 
@@ -121,9 +119,7 @@
     .line 50
     iget-object v2, p0, Lcom/google/zxing/client/android/book/a;->a:Lcom/google/zxing/client/android/book/b;
 
-    invoke-virtual {v2}, Lcom/google/zxing/client/android/book/b;->a()Ljava/lang/String;
-
-    move-result-object v2
+    iget-object v2, v2, Lcom/google/zxing/client/android/book/b;->a:Ljava/lang/String;
 
     .line 51
     const/16 v3, 0x3d
@@ -211,5 +207,5 @@
 
     invoke-virtual {v0, v1}, Lcom/google/zxing/client/android/book/b;->startActivity(Landroid/content/Intent;)V
 
-    goto/16 :goto_0
+    goto :goto_0
 .end method

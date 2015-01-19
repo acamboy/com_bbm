@@ -1,367 +1,77 @@
 .class Lcom/glympse/android/lib/ch;
-.super Ljava/lang/Object;
-.source "GogoLocationProvider.java"
-
-# interfaces
-.implements Lcom/glympse/android/core/GLocationProvider;
-
-
-# instance fields
-.field private G:Z
-
-.field private bZ:Lcom/glympse/android/core/GLocationListener;
-
-.field private cb:I
-
-.field private f:Lcom/glympse/android/core/GHandler;
-
-.field private ha:Lcom/glympse/android/lib/GJobQueue;
-
-.field private hm:Lcom/glympse/android/core/GLocation;
-
-.field private jO:Ljava/lang/Runnable;
-
-.field private lo:Ljava/lang/String;
+.super Lcom/glympse/android/lib/ii;
+.source "GogoHandoff.java"
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/core/GHandler;Lcom/glympse/android/lib/GJobQueue;Ljava/lang/String;)V
-    .locals 1
+.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GTicketPrivate;Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
+    .locals 0
 
     .prologue
-    .line 39
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 24
+    invoke-direct {p0, p1, p2, p3, p4}, Lcom/glympse/android/lib/ii;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GTicketPrivate;Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
 
-    .line 40
-    iput-object p1, p0, Lcom/glympse/android/lib/ch;->f:Lcom/glympse/android/core/GHandler;
-
-    .line 41
-    iput-object p2, p0, Lcom/glympse/android/lib/ch;->ha:Lcom/glympse/android/lib/GJobQueue;
-
-    .line 42
-    iput-object p3, p0, Lcom/glympse/android/lib/ch;->lo:Ljava/lang/String;
-
-    .line 43
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/glympse/android/lib/ch;->G:Z
-
-    .line 44
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/glympse/android/lib/ch;->cb:I
-
-    .line 45
-    return-void
-.end method
-
-.method private c(I)V
-    .locals 2
-
-    .prologue
-    .line 100
-    iget v0, p0, Lcom/glympse/android/lib/ch;->cb:I
-
-    if-eq p1, v0, :cond_0
-
-    .line 102
-    iput p1, p0, Lcom/glympse/android/lib/ch;->cb:I
-
-    .line 103
-    iget-object v0, p0, Lcom/glympse/android/lib/ch;->bZ:Lcom/glympse/android/core/GLocationListener;
-
-    if-eqz v0, :cond_0
-
-    .line 105
-    iget-object v0, p0, Lcom/glympse/android/lib/ch;->bZ:Lcom/glympse/android/core/GLocationListener;
-
-    iget v1, p0, Lcom/glympse/android/lib/ch;->cb:I
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/core/GLocationListener;->stateChanged(I)V
-
-    .line 108
-    :cond_0
+    .line 25
     return-void
 .end method
 
 
 # virtual methods
-.method public applyProfile(Lcom/glympse/android/core/GLocationProfile;)V
-    .locals 0
+.method public shouldRetry(ZI)Z
+    .locals 4
 
     .prologue
-    .line 96
-    return-void
-.end method
-
-.method protected bt()V
-    .locals 1
-
-    .prologue
-    .line 145
-    iget-boolean v0, p0, Lcom/glympse/android/lib/ch;->G:Z
-
-    if-nez v0, :cond_0
-
-    .line 147
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/ch;->jO:Ljava/lang/Runnable;
+    .line 37
+    iget-object v1, p0, Lcom/glympse/android/lib/ch;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    .line 152
-    :goto_0
-    return-void
+    invoke-interface {v1}, Lcom/glympse/android/lib/GGlympsePrivate;->isStarted()Z
 
-    .line 150
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 55
     :cond_0
-    const/4 v0, 0x4
-
-    invoke-direct {p0, v0}, Lcom/glympse/android/lib/ch;->c(I)V
-
-    .line 151
-    invoke-virtual {p0}, Lcom/glympse/android/lib/ch;->bv()V
-
-    goto :goto_0
-.end method
-
-.method protected bu()V
-    .locals 4
-
-    .prologue
-    .line 113
-    iget-object v1, p0, Lcom/glympse/android/lib/ch;->ha:Lcom/glympse/android/lib/GJobQueue;
-
-    new-instance v2, Lcom/glympse/android/lib/ce;
-
-    new-instance v3, Lcom/glympse/android/lib/cj;
-
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/lib/ch;
-
-    invoke-direct {v3, v0}, Lcom/glympse/android/lib/cj;-><init>(Lcom/glympse/android/lib/ch;)V
-
-    iget-object v0, p0, Lcom/glympse/android/lib/ch;->lo:Ljava/lang/String;
-
-    invoke-direct {v2, v3, v0}, Lcom/glympse/android/lib/ce;-><init>(Lcom/glympse/android/lib/cf;Ljava/lang/String;)V
-
-    invoke-interface {v1, v2}, Lcom/glympse/android/lib/GJobQueue;->addJob(Lcom/glympse/android/lib/GJob;)V
-
-    .line 114
-    return-void
-.end method
-
-.method protected bv()V
-    .locals 4
-
-    .prologue
-    .line 189
-    iget-object v0, p0, Lcom/glympse/android/lib/ch;->f:Lcom/glympse/android/core/GHandler;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/ch;->jO:Ljava/lang/Runnable;
-
-    const-wide/16 v2, 0x2710
-
-    invoke-interface {v0, v1, v2, v3}, Lcom/glympse/android/core/GHandler;->postDelayed(Ljava/lang/Runnable;J)V
-
-    .line 190
-    return-void
-.end method
-
-.method public getLastKnownLocation()Lcom/glympse/android/core/GLocation;
-    .locals 1
-
-    .prologue
-    .line 85
-    iget-object v0, p0, Lcom/glympse/android/lib/ch;->hm:Lcom/glympse/android/core/GLocation;
-
-    return-object v0
-.end method
-
-.method public isStarted()Z
-    .locals 1
-
-    .prologue
-    .line 80
-    iget-boolean v0, p0, Lcom/glympse/android/lib/ch;->G:Z
-
+    :goto_0
     return v0
-.end method
 
-.method protected locationChanged(Lcom/glympse/android/core/GLocation;)V
-    .locals 8
-
-    .prologue
-    .line 118
-    iget-boolean v0, p0, Lcom/glympse/android/lib/ch;->G:Z
-
-    if-nez v0, :cond_0
-
-    .line 120
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/glympse/android/lib/ch;->jO:Ljava/lang/Runnable;
-
-    .line 141
-    :goto_0
-    return-void
-
-    .line 123
-    :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/ch;->bZ:Lcom/glympse/android/core/GLocationListener;
-
-    if-eqz v0, :cond_2
-
-    .line 125
-    iget-object v0, p0, Lcom/glympse/android/lib/ch;->hm:Lcom/glympse/android/core/GLocation;
-
-    if-eqz v0, :cond_1
-
-    .line 127
-    const/4 v0, 0x3
-
-    invoke-direct {p0, v0}, Lcom/glympse/android/lib/ch;->c(I)V
-
-    .line 129
-    iget-object v0, p0, Lcom/glympse/android/lib/ch;->hm:Lcom/glympse/android/core/GLocation;
-
-    invoke-interface {v0}, Lcom/glympse/android/core/GLocation;->getLatitude()D
-
-    move-result-wide v0
-
-    iget-object v2, p0, Lcom/glympse/android/lib/ch;->hm:Lcom/glympse/android/core/GLocation;
-
-    invoke-interface {v2}, Lcom/glympse/android/core/GLocation;->getLongitude()D
-
-    move-result-wide v2
-
-    invoke-interface {p1}, Lcom/glympse/android/core/GLocation;->getLatitude()D
-
-    move-result-wide v4
-
-    invoke-interface {p1}, Lcom/glympse/android/core/GLocation;->getLongitude()D
-
-    move-result-wide v6
-
-    invoke-static/range {v0 .. v7}, Lcom/glympse/android/lib/Location;->bearing(DDDD)D
-
-    move-result-wide v0
-
-    double-to-float v1, v0
-
-    move-object v0, p1
-
-    .line 133
-    check-cast v0, Lcom/glympse/android/lib/GLocationPrivate;
-
-    .line 134
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GLocationPrivate;->setBearing(F)V
-
-    .line 137
+    .line 43
     :cond_1
-    iput-object p1, p0, Lcom/glympse/android/lib/ch;->hm:Lcom/glympse/android/core/GLocation;
+    iget-object v1, p0, Lcom/glympse/android/lib/ch;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    .line 138
-    iget-object v0, p0, Lcom/glympse/android/lib/ch;->bZ:Lcom/glympse/android/core/GLocationListener;
+    invoke-interface {v1}, Lcom/glympse/android/lib/GGlympsePrivate;->getHandoffManager()Lcom/glympse/android/api/GHandoffManager;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/ch;->hm:Lcom/glympse/android/core/GLocation;
+    move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/glympse/android/core/GLocationListener;->locationChanged(Lcom/glympse/android/core/GLocation;)V
+    invoke-interface {v1}, Lcom/glympse/android/api/GHandoffManager;->getHandoffProvider()Lcom/glympse/android/api/GHandoffProvider;
 
-    .line 140
-    :cond_2
-    invoke-virtual {p0}, Lcom/glympse/android/lib/ch;->bv()V
+    move-result-object v1
 
-    goto :goto_0
-.end method
+    .line 44
+    if-eqz v1, :cond_0
 
-.method public setLocationListener(Lcom/glympse/android/core/GLocationListener;)V
-    .locals 0
+    .line 48
+    invoke-interface {v1}, Lcom/glympse/android/api/GHandoffProvider;->getProviderId()Ljava/lang/String;
 
-    .prologue
-    .line 90
-    iput-object p1, p0, Lcom/glympse/android/lib/ch;->bZ:Lcom/glympse/android/core/GLocationListener;
+    move-result-object v2
 
-    .line 91
-    return-void
-.end method
+    .line 49
+    invoke-static {}, Lcom/glympse/android/lib/ce;->bq()Ljava/lang/String;
 
-.method public start()V
-    .locals 2
+    move-result-object v3
 
-    .prologue
-    .line 53
-    iget-boolean v0, p0, Lcom/glympse/android/lib/ch;->G:Z
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_0
+    move-result v2
 
-    .line 62
-    :goto_0
-    return-void
+    if-eqz v2, :cond_0
 
-    .line 57
-    :cond_0
-    const/4 v0, 0x1
+    .line 55
+    invoke-interface {v1}, Lcom/glympse/android/api/GHandoffProvider;->isEnabled()Z
 
-    iput-boolean v0, p0, Lcom/glympse/android/lib/ch;->G:Z
-
-    .line 58
-    new-instance v1, Lcom/glympse/android/lib/ci;
-
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/lib/ch;
-
-    invoke-direct {v1, v0}, Lcom/glympse/android/lib/ci;-><init>(Lcom/glympse/android/lib/ch;)V
-
-    iput-object v1, p0, Lcom/glympse/android/lib/ch;->jO:Ljava/lang/Runnable;
-
-    .line 61
-    invoke-virtual {p0}, Lcom/glympse/android/lib/ch;->bu()V
-
-    goto :goto_0
-.end method
-
-.method public stop()V
-    .locals 2
-
-    .prologue
-    .line 66
-    iget-boolean v0, p0, Lcom/glympse/android/lib/ch;->G:Z
-
-    if-nez v0, :cond_1
-
-    .line 76
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 70
-    :cond_1
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/glympse/android/lib/ch;->G:Z
-
-    .line 71
-    iget-object v0, p0, Lcom/glympse/android/lib/ch;->jO:Ljava/lang/Runnable;
-
-    if-eqz v0, :cond_0
-
-    .line 73
-    iget-object v0, p0, Lcom/glympse/android/lib/ch;->f:Lcom/glympse/android/core/GHandler;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/ch;->jO:Ljava/lang/Runnable;
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/core/GHandler;->cancel(Ljava/lang/Runnable;)V
-
-    .line 74
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/glympse/android/lib/ch;->jO:Ljava/lang/Runnable;
+    move-result v0
 
     goto :goto_0
 .end method

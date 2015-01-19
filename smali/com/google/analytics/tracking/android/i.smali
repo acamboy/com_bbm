@@ -200,43 +200,34 @@
 
 # virtual methods
 .method public final a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+    .locals 1
 
     .prologue
-    const/4 v0, 0x0
-
     .line 81
-    if-nez p1, :cond_1
+    const-string v0, "&an"
 
-    .line 93
-    :cond_0
-    :goto_0
-    return-object v0
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 84
-    :cond_1
-    const-string v1, "&an"
+    move-result v0
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
+    if-eqz v0, :cond_0
 
     .line 85
     iget-object v0, p0, Lcom/google/analytics/tracking/android/i;->a:Ljava/lang/String;
 
-    goto :goto_0
+    .line 93
+    :goto_0
+    return-object v0
 
     .line 86
-    :cond_2
-    const-string v1, "&av"
+    :cond_0
+    const-string v0, "&av"
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_3
+    if-eqz v0, :cond_1
 
     .line 87
     iget-object v0, p0, Lcom/google/analytics/tracking/android/i;->b:Ljava/lang/String;
@@ -244,14 +235,14 @@
     goto :goto_0
 
     .line 88
-    :cond_3
-    const-string v1, "&aid"
+    :cond_1
+    const-string v0, "&aid"
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_4
+    if-eqz v0, :cond_2
 
     .line 89
     iget-object v0, p0, Lcom/google/analytics/tracking/android/i;->c:Ljava/lang/String;
@@ -259,17 +250,23 @@
     goto :goto_0
 
     .line 90
-    :cond_4
-    const-string v1, "&aiid"
+    :cond_2
+    const-string v0, "&aiid"
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_0
+    if-eqz v0, :cond_3
 
     .line 91
     iget-object v0, p0, Lcom/google/analytics/tracking/android/i;->d:Ljava/lang/String;
+
+    goto :goto_0
+
+    .line 93
+    :cond_3
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

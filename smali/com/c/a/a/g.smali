@@ -4,17 +4,17 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String;
-
 .field private static final b:Ljava/lang/String;
 
 .field private static final c:Ljava/lang/String;
 
 .field private static final d:Ljava/lang/String;
 
+.field private static final e:Ljava/lang/String;
+
 
 # instance fields
-.field private final e:Lcom/c/a/a/h;
+.field final a:Lcom/c/a/a/h;
 
 
 # direct methods
@@ -31,38 +31,7 @@
 
     sget-object v1, Lcom/c/a/a/i;->a:Lcom/c/a/a/i;
 
-    invoke-virtual {v1}, Lcom/c/a/a/i;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string v1, " (_id INTEGER PRIMARY KEY AUTOINCREMENT, data STRING NOT NULL, created_at INTEGER NOT NULL);"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/c/a/a/g;->a:Ljava/lang/String;
-
-    .line 52
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string v1, "CREATE TABLE "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    sget-object v1, Lcom/c/a/a/i;->b:Lcom/c/a/a/i;
-
-    invoke-virtual {v1}, Lcom/c/a/a/i;->a()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, v1, Lcom/c/a/a/i;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -80,24 +49,22 @@
 
     sput-object v0, Lcom/c/a/a/g;->b:Ljava/lang/String;
 
-    .line 56
+    .line 52
     new-instance v0, Ljava/lang/StringBuilder;
 
-    const-string v1, "CREATE INDEX IF NOT EXISTS time_idx ON "
+    const-string v1, "CREATE TABLE "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lcom/c/a/a/i;->a:Lcom/c/a/a/i;
+    sget-object v1, Lcom/c/a/a/i;->b:Lcom/c/a/a/i;
 
-    invoke-virtual {v1}, Lcom/c/a/a/i;->a()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, v1, Lcom/c/a/a/i;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    const-string v1, " (created_at);"
+    const-string v1, " (_id INTEGER PRIMARY KEY AUTOINCREMENT, data STRING NOT NULL, created_at INTEGER NOT NULL);"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -109,18 +76,16 @@
 
     sput-object v0, Lcom/c/a/a/g;->c:Ljava/lang/String;
 
-    .line 59
+    .line 56
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "CREATE INDEX IF NOT EXISTS time_idx ON "
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v1, Lcom/c/a/a/i;->b:Lcom/c/a/a/i;
+    sget-object v1, Lcom/c/a/a/i;->a:Lcom/c/a/a/i;
 
-    invoke-virtual {v1}, Lcom/c/a/a/i;->a()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, v1, Lcom/c/a/a/i;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -137,6 +102,33 @@
     move-result-object v0
 
     sput-object v0, Lcom/c/a/a/g;->d:Ljava/lang/String;
+
+    .line 59
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "CREATE INDEX IF NOT EXISTS time_idx ON "
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v1, Lcom/c/a/a/i;->b:Lcom/c/a/a/i;
+
+    iget-object v1, v1, Lcom/c/a/a/i;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, " (created_at);"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/c/a/a/g;->e:Ljava/lang/String;
 
     return-void
 .end method
@@ -166,23 +158,13 @@
 
     invoke-direct {v0, p1, p2}, Lcom/c/a/a/h;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iput-object v0, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     .line 112
     return-void
 .end method
 
-.method static synthetic b()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 24
-    sget-object v0, Lcom/c/a/a/g;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic c()Ljava/lang/String;
+.method static synthetic a()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -192,7 +174,7 @@
     return-object v0
 .end method
 
-.method static synthetic d()Ljava/lang/String;
+.method static synthetic b()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -202,12 +184,22 @@
     return-object v0
 .end method
 
-.method static synthetic e()Ljava/lang/String;
+.method static synthetic c()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 24
     sget-object v0, Lcom/c/a/a/g;->d:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic d()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 24
+    sget-object v0, Lcom/c/a/a/g;->e:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -221,16 +213,14 @@
     const/4 v2, 0x0
 
     .line 122
-    invoke-virtual {p2}, Lcom/c/a/a/i;->a()Ljava/lang/String;
-
-    move-result-object v3
+    iget-object v3, p2, Lcom/c/a/a/i;->c:Ljava/lang/String;
 
     .line 126
     const/4 v0, -0x1
 
     .line 129
     :try_start_0
-    iget-object v1, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v1, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v1}, Lcom/c/a/a/h;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -303,7 +293,7 @@
     move-result v0
 
     .line 148
-    iget-object v1, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v1, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v1}, Lcom/c/a/a/h;->close()V
 
@@ -349,14 +339,14 @@
     invoke-static {v4, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 146
-    iget-object v1, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v1, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v1}, Lcom/c/a/a/h;->a()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 148
-    iget-object v1, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v1, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v1}, Lcom/c/a/a/h;->close()V
 
@@ -372,7 +362,7 @@
     :catchall_0
     move-exception v0
 
-    iget-object v1, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v1, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v1}, Lcom/c/a/a/h;->close()V
 
@@ -386,31 +376,16 @@
     throw v0
 .end method
 
-.method public final a()V
-    .locals 1
-
-    .prologue
-    .line 207
-    iget-object v0, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
-
-    invoke-virtual {v0}, Lcom/c/a/a/h;->a()V
-
-    .line 208
-    return-void
-.end method
-
 .method public final a(JLcom/c/a/a/i;)V
     .locals 5
 
     .prologue
     .line 187
-    invoke-virtual {p3}, Lcom/c/a/a/i;->a()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, p3, Lcom/c/a/a/i;->c:Ljava/lang/String;
 
     .line 191
     :try_start_0
-    iget-object v0, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v0, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v0}, Lcom/c/a/a/h;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -439,7 +414,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 202
-    iget-object v0, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v0, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v0}, Lcom/c/a/a/h;->close()V
 
@@ -478,14 +453,14 @@
     invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     .line 200
-    iget-object v0, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v0, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v0}, Lcom/c/a/a/h;->a()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 202
-    iget-object v0, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v0, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v0}, Lcom/c/a/a/h;->close()V
 
@@ -494,109 +469,7 @@
     :catchall_0
     move-exception v0
 
-    iget-object v1, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
-
-    invoke-virtual {v1}, Lcom/c/a/a/h;->close()V
-
-    throw v0
-.end method
-
-.method public final a(Ljava/lang/String;Lcom/c/a/a/i;)V
-    .locals 5
-
-    .prologue
-    .line 162
-    invoke-virtual {p2}, Lcom/c/a/a/i;->a()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 166
-    :try_start_0
-    iget-object v0, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
-
-    invoke-virtual {v0}, Lcom/c/a/a/h;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
-
-    move-result-object v0
-
-    .line 167
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "_id <= "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
-    :try_end_0
-    .catch Landroid/database/sqlite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 177
-    iget-object v0, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
-
-    invoke-virtual {v0}, Lcom/c/a/a/h;->close()V
-
-    .line 178
-    :goto_0
-    return-void
-
-    .line 168
-    :catch_0
-    move-exception v0
-
-    .line 169
-    :try_start_1
-    const-string v2, "MixpanelAPI"
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string v4, "cleanupEvents "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string v3, " by id FAILED. Deleting DB."
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
-
-    .line 175
-    iget-object v0, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
-
-    invoke-virtual {v0}, Lcom/c/a/a/h;->a()V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 177
-    iget-object v0, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
-
-    invoke-virtual {v0}, Lcom/c/a/a/h;->close()V
-
-    goto :goto_0
-
-    :catchall_0
-    move-exception v0
-
-    iget-object v1, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v1, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v1}, Lcom/c/a/a/h;->close()V
 
@@ -611,13 +484,11 @@
 
     .line 220
     .line 223
-    invoke-virtual {p1}, Lcom/c/a/a/i;->a()Ljava/lang/String;
-
-    move-result-object v4
+    iget-object v4, p1, Lcom/c/a/a/i;->c:Ljava/lang/String;
 
     .line 226
     :try_start_0
-    iget-object v0, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v0, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v0}, Lcom/c/a/a/h;->getReadableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -741,7 +612,7 @@
 
     .line 256
     :goto_1
-    iget-object v4, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v4, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v4}, Lcom/c/a/a/h;->close()V
 
@@ -808,7 +679,7 @@
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
     .line 256
-    iget-object v0, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v0, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v0}, Lcom/c/a/a/h;->close()V
 
@@ -831,7 +702,7 @@
     move-object v2, v1
 
     :goto_4
-    iget-object v1, p0, Lcom/c/a/a/g;->e:Lcom/c/a/a/h;
+    iget-object v1, p0, Lcom/c/a/a/g;->a:Lcom/c/a/a/h;
 
     invoke-virtual {v1}, Lcom/c/a/a/h;->close()V
 

@@ -21,10 +21,10 @@
     .locals 1
 
     .prologue
-    .line 1373
+    .line 1380
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1374
+    .line 1381
     const-string v0, "sip:"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -33,7 +33,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1375
+    .line 1382
     const/4 v0, 0x4
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -42,20 +42,20 @@
 
     iput-object v0, p0, Lcom/a/a/t;->a:Ljava/lang/String;
 
-    .line 1380
+    .line 1386
     :goto_0
     iput p2, p0, Lcom/a/a/t;->b:I
 
-    .line 1381
+    .line 1387
     iput-object p3, p0, Lcom/a/a/t;->c:Ljava/lang/String;
 
-    .line 1382
+    .line 1388
     iput-boolean p4, p0, Lcom/a/a/t;->d:Z
 
-    .line 1383
+    .line 1389
     return-void
 
-    .line 1378
+    .line 1384
     :cond_0
     iput-object p1, p0, Lcom/a/a/t;->a:Ljava/lang/String;
 
@@ -68,7 +68,7 @@
     .locals 1
 
     .prologue
-    .line 1439
+    .line 1445
     sget-object v0, Lcom/a/a/k;->i:Lcom/a/a/k;
 
     return-object v0
@@ -82,15 +82,15 @@
 
     const/4 v1, 0x0
 
-    .line 1410
+    .line 1416
     if-ne p0, p1, :cond_1
 
-    .line 1417
+    .line 1423
     :cond_0
     :goto_0
     return v0
 
-    .line 1413
+    .line 1419
     :cond_1
     instance-of v2, p1, Lcom/a/a/t;
 
@@ -98,14 +98,14 @@
 
     move v0, v1
 
-    .line 1414
+    .line 1420
     goto :goto_0
 
-    .line 1416
+    .line 1422
     :cond_2
     check-cast p1, Lcom/a/a/t;
 
-    .line 1417
+    .line 1423
     iget v2, p0, Lcom/a/a/t;->b:I
 
     iget v3, p1, Lcom/a/a/t;->b:I
@@ -150,10 +150,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1425
+    .line 1431
     iget v0, p0, Lcom/a/a/t;->b:I
 
-    .line 1426
+    .line 1432
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v0, p0, Lcom/a/a/t;->c:Ljava/lang/String;
@@ -169,7 +169,7 @@
     :goto_0
     add-int/2addr v0, v2
 
-    .line 1427
+    .line 1433
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v2, p0, Lcom/a/a/t;->a:Ljava/lang/String;
@@ -185,7 +185,7 @@
     :cond_0
     add-int/2addr v0, v1
 
-    .line 1428
+    .line 1434
     mul-int/lit8 v1, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/a/a/t;->d:Z
@@ -197,16 +197,16 @@
     :goto_1
     add-int/2addr v0, v1
 
-    .line 1429
+    .line 1435
     return v0
 
     :cond_1
     move v0, v1
 
-    .line 1426
+    .line 1432
     goto :goto_0
 
-    .line 1428
+    .line 1434
     :cond_2
     const/16 v0, 0x4d5
 
@@ -217,7 +217,7 @@
     .locals 2
 
     .prologue
-    .line 1434
+    .line 1440
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "sip: "

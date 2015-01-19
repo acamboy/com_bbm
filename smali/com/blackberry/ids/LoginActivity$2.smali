@@ -16,7 +16,7 @@
     .locals 0
 
     .prologue
-    .line 265
+    .line 272
     iput-object p1, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
 
     iput-object p2, p0, Lcom/blackberry/ids/LoginActivity$2;->a:Landroid/webkit/WebView;
@@ -34,7 +34,7 @@
     .locals 2
 
     .prologue
-    .line 334
+    .line 341
     const-string v0, "onPageFinished"
 
     const/4 v1, 0x0
@@ -43,21 +43,21 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 335
+    .line 342
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$2;->a:Landroid/webkit/WebView;
 
     const-string v1, "javascript:( function () { if( document.getElementById(\'content\') != null) window.HTMLOUT.pageDone();} ) ()"
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 337
+    .line 344
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$2;->a:Landroid/webkit/WebView;
 
     const-string v1, "javascript:( function () { var markup = document.documentElement.innerHTML; window.HTMLOUT.pageDoneErrorCheck(markup);} ) ()"
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 338
+    .line 345
     return-void
 .end method
 
@@ -65,7 +65,7 @@
     .locals 4
 
     .prologue
-    .line 312
+    .line 319
     const-string v0, "onReceivedError errorCode=%d description=%s failingUrl=%s"
 
     const/4 v1, 0x3
@@ -96,12 +96,12 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 314
+    .line 321
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
 
     invoke-static {v0, p3}, Lcom/blackberry/ids/LoginActivity;->a(Lcom/blackberry/ids/LoginActivity;Ljava/lang/String;)V
 
-    .line 315
+    .line 322
     return-void
 .end method
 
@@ -109,7 +109,7 @@
     .locals 4
 
     .prologue
-    .line 323
+    .line 330
     const-string v0, "LoginActivity onReceivedSslError Request id = %d, SSL error code = %d"
 
     const/4 v1, 0x2
@@ -146,7 +146,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 325
+    .line 332
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -169,7 +169,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/LoginActivity;->a(Lcom/blackberry/ids/LoginActivity;Ljava/lang/String;)V
 
-    .line 328
+    .line 335
     return-void
 .end method
 
@@ -177,7 +177,7 @@
     .locals 2
 
     .prologue
-    .line 269
+    .line 276
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Intercept? "
@@ -198,7 +198,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 270
+    .line 277
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
 
     iget-object v0, v0, Lcom/blackberry/ids/LoginActivity;->e:Lcom/blackberry/ids/WebActivity$CookieTracker;
@@ -211,7 +211,7 @@
 
     invoke-virtual {v0, v1}, Lcom/blackberry/ids/WebActivity$CookieTracker;->trackUrl(Ljava/lang/String;)V
 
-    .line 272
+    .line 279
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
 
     new-instance v1, Lcom/blackberry/ids/LoginActivity$2$1;
@@ -220,14 +220,14 @@
 
     invoke-virtual {v0, v1}, Lcom/blackberry/ids/LoginActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 278
+    .line 285
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
 
     iget-object v1, p0, Lcom/blackberry/ids/LoginActivity$2;->b:Ljava/lang/String;
 
     invoke-static {v0, v1, p2}, Lcom/blackberry/ids/LoginActivity;->a(Lcom/blackberry/ids/LoginActivity;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 279
+    .line 286
     const/4 v0, 0x0
 
     return-object v0
@@ -239,7 +239,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 284
+    .line 291
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "Override? "
@@ -258,7 +258,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 285
+    .line 292
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
 
     iget-object v0, v0, Lcom/blackberry/ids/LoginActivity;->e:Lcom/blackberry/ids/WebActivity$CookieTracker;
@@ -271,17 +271,17 @@
 
     invoke-virtual {v0, v1}, Lcom/blackberry/ids/WebActivity$CookieTracker;->trackUrl(Ljava/lang/String;)V
 
-    .line 286
+    .line 293
     invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 293
+    .line 300
     invoke-virtual {v0}, Landroid/net/Uri;->getHost()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 294
+    .line 301
     if-eqz v1, :cond_0
 
     const-string v2, "^www\\.blackberry\\.com$"
@@ -292,14 +292,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 295
+    .line 302
     const-string v1, "Override - Opening the URL in external browser"
 
     new-array v2, v3, [Ljava/lang/Object;
 
     invoke-static {v1, v2}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 297
+    .line 304
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -307,22 +307,22 @@
 
     invoke-direct {v1, v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 299
+    .line 306
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
 
     invoke-virtual {v0, v1}, Lcom/blackberry/ids/LoginActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 304
+    .line 311
     :goto_0
     const/4 v0, 0x1
 
-    .line 306
+    .line 313
     :goto_1
     return v0
 
-    .line 300
+    .line 307
     :catch_0
     move-exception v0
 
@@ -334,7 +334,7 @@
 
     goto :goto_0
 
-    .line 306
+    .line 313
     :cond_0
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$2;->c:Lcom/blackberry/ids/LoginActivity;
 

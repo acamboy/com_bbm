@@ -47,13 +47,13 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/String;)V
-    .locals 3
+    .locals 4
 
     const/16 v0, 0x3c
 
-    const-wide/16 v1, 0x7d0
+    const-wide/16 v2, 0x7d0
 
-    invoke-direct {p0, v0, v1, v2, p1}, Lcom/google/android/gms/analytics/z;-><init>(IJLjava/lang/String;)V
+    invoke-direct {p0, v0, v2, v3, p1}, Lcom/google/android/gms/analytics/z;-><init>(IJLjava/lang/String;)V
 
     return-void
 .end method

@@ -3,7 +3,7 @@
 .source "ConversationActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/e/bp;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 2238
+    .line 1295
     iput-object p1, p0, Lcom/bbm/ui/activities/gi;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,33 +25,42 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final a(Lcom/bbm/d/fi;)V
+    .locals 1
 
     .prologue
-    .line 2241
-    const-string v0, "clicked on cart"
+    .line 1300
+    iget-object v0, p1, Lcom/bbm/d/fi;->u:Ljava/lang/String;
 
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 1301
+    new-instance v0, Lcom/bbm/ui/activities/gj;
 
-    .line 2243
-    new-instance v0, Landroid/content/Intent;
+    invoke-direct {v0, p0, p1}, Lcom/bbm/ui/activities/gj;-><init>(Lcom/bbm/ui/activities/gi;Lcom/bbm/d/fi;)V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/gi;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
 
-    const-class v2, Lcom/bbm/ui/activities/StoreActivity;
+    .line 1315
+    return-void
+.end method
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+.method public final b(Lcom/bbm/d/fi;)V
+    .locals 1
 
-    .line 2244
-    iget-object v1, p0, Lcom/bbm/ui/activities/gi;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .prologue
+    .line 1319
+    iget-object v0, p1, Lcom/bbm/d/fi;->u:Ljava/lang/String;
 
-    const/16 v2, 0xa
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
-    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/ConversationActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    .line 1320
+    new-instance v0, Lcom/bbm/ui/activities/gk;
 
-    .line 2245
+    invoke-direct {v0, p0, p1}, Lcom/bbm/ui/activities/gk;-><init>(Lcom/bbm/ui/activities/gi;Lcom/bbm/d/fi;)V
+
+    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
+
+    .line 1333
     return-void
 .end method

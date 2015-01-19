@@ -4,16 +4,16 @@
 
 
 # static fields
-.field private static final a:[Ljava/lang/String;
+.field private static final b:[Ljava/lang/String;
 
 
 # instance fields
-.field private final b:Lcom/bbm/util/c/h;
+.field final a:Lcom/bbm/util/c/h;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/bbm/util/c/h",
             "<",
-            "Ljava/lang/Boolean;",
+            "Lcom/bbm/util/c/b;",
             ">;"
         }
     .end annotation
@@ -24,7 +24,7 @@
         value = {
             "Lcom/bbm/util/c/h",
             "<",
-            "Lcom/bbm/util/c/b;",
+            "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
@@ -77,7 +77,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/bbm/util/c/a;->a:[Ljava/lang/String;
+    sput-object v0, Lcom/bbm/util/c/a;->b:[Ljava/lang/String;
 
     return-void
 .end method
@@ -98,10 +98,10 @@
 
     invoke-direct {v0}, Lcom/bbm/util/c/h;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/util/c/a;->b:Lcom/bbm/util/c/h;
+    iput-object v0, p0, Lcom/bbm/util/c/a;->c:Lcom/bbm/util/c/h;
 
     .line 16
-    sget-object v2, Lcom/bbm/util/c/a;->a:[Ljava/lang/String;
+    sget-object v2, Lcom/bbm/util/c/a;->b:[Ljava/lang/String;
 
     array-length v3, v2
 
@@ -113,7 +113,7 @@
     aget-object v4, v2, v0
 
     .line 19
-    iget-object v5, p0, Lcom/bbm/util/c/a;->b:Lcom/bbm/util/c/h;
+    iget-object v5, p0, Lcom/bbm/util/c/a;->c:Lcom/bbm/util/c/h;
 
     invoke-static {v9}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -122,7 +122,7 @@
     invoke-virtual {v5, v4, v6}, Lcom/bbm/util/c/h;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 22
-    iget-object v5, p0, Lcom/bbm/util/c/a;->b:Lcom/bbm/util/c/h;
+    iget-object v5, p0, Lcom/bbm/util/c/a;->c:Lcom/bbm/util/c/h;
 
     sget-object v6, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -137,7 +137,7 @@
     invoke-virtual {v5, v6, v7}, Lcom/bbm/util/c/h;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 25
-    iget-object v5, p0, Lcom/bbm/util/c/a;->b:Lcom/bbm/util/c/h;
+    iget-object v5, p0, Lcom/bbm/util/c/a;->c:Lcom/bbm/util/c/h;
 
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -186,14 +186,14 @@
 
     const/16 v1, 0x3dd
 
-    iget-object v2, p0, Lcom/bbm/util/c/a;->b:Lcom/bbm/util/c/h;
+    iget-object v2, p0, Lcom/bbm/util/c/a;->c:Lcom/bbm/util/c/h;
 
     invoke-direct {v0, v1, v2}, Lcom/bbm/util/c/h;-><init>(ILcom/bbm/util/c/h;)V
 
-    iput-object v0, p0, Lcom/bbm/util/c/a;->c:Lcom/bbm/util/c/h;
+    iput-object v0, p0, Lcom/bbm/util/c/a;->a:Lcom/bbm/util/c/h;
 
     .line 29
-    iget-object v0, p0, Lcom/bbm/util/c/a;->c:Lcom/bbm/util/c/h;
+    iget-object v0, p0, Lcom/bbm/util/c/a;->a:Lcom/bbm/util/c/h;
 
     iput-boolean v9, v0, Lcom/bbm/util/c/h;->a:Z
 
@@ -203,67 +203,6 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/CharSequence;)Ljava/util/List;
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/CharSequence;",
-            ")",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/util/c/i",
-            "<",
-            "Lcom/bbm/util/c/b;",
-            ">;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 51
-    iget-object v1, p0, Lcom/bbm/util/c/a;->c:Lcom/bbm/util/c/h;
-
-    new-instance v2, Ljava/util/ArrayList;
-
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
-
-    if-eqz p1, :cond_0
-
-    const/4 v0, 0x0
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v3
-
-    :goto_0
-    if-ge v0, v3, :cond_0
-
-    invoke-virtual {v1, p1, v0, v3}, Lcom/bbm/util/c/h;->a(Ljava/lang/CharSequence;II)Lcom/google/b/a/l;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/util/c/i;
-
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    iget v0, v0, Lcom/bbm/util/c/i;->b:I
-
-    goto :goto_0
-
-    :cond_0
-    return-object v2
-.end method
-
 .method final a(Ljava/lang/String;Lcom/bbm/util/c/b;)V
     .locals 2
 
@@ -276,7 +215,7 @@
     if-eq v0, v1, :cond_0
 
     .line 40
-    iget-object v0, p0, Lcom/bbm/util/c/a;->c:Lcom/bbm/util/c/h;
+    iget-object v0, p0, Lcom/bbm/util/c/a;->a:Lcom/bbm/util/c/h;
 
     invoke-virtual {v0, p1, p2}, Lcom/bbm/util/c/h;->a(Ljava/lang/String;Ljava/lang/Object;)V
 

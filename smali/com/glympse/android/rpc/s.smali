@@ -1,6 +1,6 @@
 .class Lcom/glympse/android/rpc/s;
 .super Ljava/lang/Object;
-.source "MethodGetSocialTokens.java"
+.source "MethodGetPhoneFavorites.java"
 
 # interfaces
 .implements Lcom/glympse/android/rpc/GRpcMethod;
@@ -54,7 +54,7 @@
 
     .prologue
     .line 20
-    const-string v0, "get_social_tokens"
+    const-string v0, "get_phone_favorites"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -64,7 +64,7 @@
 .end method
 
 .method public handle(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/core/GPrimitive;Lcom/glympse/android/core/GArray;)V
-    .locals 4
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -84,18 +84,9 @@
 
     move-result-object v0
 
-    .line 33
-    invoke-static {p4}, Lcom/glympse/android/rpc/RpcMessages;->providerUnpackSink(Lcom/glympse/android/core/GArray;)Lcom/glympse/android/api/GEventSink;
-
-    move-result-object v1
+    .line 35
+    invoke-static {p1, p2, v0}, Lcom/glympse/android/rpc/az;->a(Lcom/glympse/android/rpc/GMessageGateway;Lcom/glympse/android/rpc/GConnection;Lcom/glympse/android/lib/GGlympsePrivate;)V
 
     .line 36
-    const/4 v2, 0x3
-
-    const/16 v3, 0x100
-
-    invoke-interface {v1, v0, v2, v3, p2}, Lcom/glympse/android/api/GEventSink;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
-
-    .line 37
     return-void
 .end method

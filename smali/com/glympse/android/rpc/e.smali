@@ -294,7 +294,7 @@
     move-result-object v4
 
     .line 113
-    invoke-static {v4, v3}, Lcom/glympse/android/rpc/d;->a(Lcom/glympse/android/lib/GTicketPrivate;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v4, v3}, Lcom/glympse/android/rpc/d;->a(Lcom/glympse/android/lib/GTicketPrivate;Lcom/glympse/android/core/GPrimitive;)Ljava/lang/String;
 
     .line 114
     invoke-interface {p0, v4}, Lcom/glympse/android/lib/GUserPrivate;->addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
@@ -331,7 +331,7 @@
     move-result-object v0
 
     .line 123
-    invoke-static {v0}, Lcom/glympse/android/rpc/c;->J(Ljava/lang/String;)Lcom/glympse/android/core/GDrawable;
+    invoke-static {v0}, Lcom/glympse/android/rpc/c;->R(Ljava/lang/String;)Lcom/glympse/android/core/GDrawable;
 
     move-result-object v1
 

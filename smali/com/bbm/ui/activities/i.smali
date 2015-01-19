@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 162
+    .line 150
     iput-object p1, p0, Lcom/bbm/ui/activities/i;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,11 +29,11 @@
     .locals 1
 
     .prologue
-    .line 165
+    .line 153
     iget-object v0, p0, Lcom/bbm/ui/activities/i;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-virtual {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->finish()V
 
-    .line 166
+    .line 154
     return-void
 .end method

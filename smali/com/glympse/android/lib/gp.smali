@@ -1,56 +1,160 @@
 .class Lcom/glympse/android/lib/gp;
-.super Lcom/glympse/android/lib/gj;
-.source "PersonUser.java"
+.super Ljava/lang/Object;
+.source "PersonBase.java"
 
-
-# instance fields
-.field private mg:Lcom/glympse/android/api/GUser;
+# interfaces
+.implements Lcom/glympse/android/lib/gq;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/api/GUser;)V
+.method private constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 189
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/glympse/android/lib/go$1;)V
+    .locals 0
+
+    .prologue
+    .line 189
+    invoke-direct {p0}, Lcom/glympse/android/lib/gp;-><init>()V
+
+    return-void
+.end method
+
+.method private static t(I)I
     .locals 1
 
     .prologue
-    .line 24
-    invoke-direct {p0}, Lcom/glympse/android/lib/gj;-><init>()V
+    .line 208
+    packed-switch p0, :pswitch_data_0
 
-    .line 25
-    iput-object p1, p0, Lcom/glympse/android/lib/gp;->mg:Lcom/glympse/android/api/GUser;
+    .line 215
+    :pswitch_0
+    const/4 v0, 0x4
 
-    .line 28
-    invoke-interface {p1}, Lcom/glympse/android/api/GUser;->getAvatar()Lcom/glympse/android/api/GImage;
+    :goto_0
+    return v0
 
-    move-result-object v0
+    .line 210
+    :pswitch_1
+    const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/gp;->lE:Lcom/glympse/android/api/GImage;
+    goto :goto_0
 
-    .line 29
-    return-void
+    .line 211
+    :pswitch_2
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 212
+    :pswitch_3
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    .line 213
+    :pswitch_4
+    const/4 v0, 0x3
+
+    goto :goto_0
+
+    .line 208
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_1
+        :pswitch_2
+        :pswitch_0
+        :pswitch_4
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_3
+    .end packed-switch
 .end method
 
 
 # virtual methods
-.method public getName()Ljava/lang/String;
-    .locals 1
+.method public a(Lcom/glympse/android/lib/GContact;Lcom/glympse/android/lib/GContact;)I
+    .locals 3
 
     .prologue
-    .line 42
-    iget-object v0, p0, Lcom/glympse/android/lib/gp;->mg:Lcom/glympse/android/api/GUser;
+    .line 194
+    invoke-interface {p1}, Lcom/glympse/android/lib/GContact;->getType()I
 
-    invoke-interface {v0}, Lcom/glympse/android/api/GUser;->getNickname()Ljava/lang/String;
+    move-result v0
+
+    invoke-static {v0}, Lcom/glympse/android/lib/gp;->t(I)I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x64
+
+    invoke-interface {p1}, Lcom/glympse/android/lib/GContact;->getSortRank()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    invoke-interface {p2}, Lcom/glympse/android/lib/GContact;->getType()I
+
+    move-result v1
+
+    invoke-static {v1}, Lcom/glympse/android/lib/gp;->t(I)I
+
+    move-result v1
+
+    mul-int/lit8 v1, v1, 0x64
+
+    invoke-interface {p2}, Lcom/glympse/android/lib/GContact;->getSortRank()I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    sub-int/2addr v0, v1
+
+    .line 198
+    if-nez v0, :cond_0
+
+    .line 200
+    invoke-interface {p1}, Lcom/glympse/android/lib/GContact;->getNormalizedAddress()Ljava/lang/String;
 
     move-result-object v0
 
-    return-object v0
+    invoke-interface {p2}, Lcom/glympse/android/lib/GContact;->getNormalizedAddress()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 203
+    :cond_0
+    return v0
 .end method
 
-.method public getUser()Lcom/glympse/android/api/GUser;
+.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
     .prologue
-    .line 51
-    iget-object v0, p0, Lcom/glympse/android/lib/gp;->mg:Lcom/glympse/android/api/GUser;
+    .line 189
+    check-cast p1, Lcom/glympse/android/lib/GContact;
 
-    return-object v0
+    check-cast p2, Lcom/glympse/android/lib/GContact;
+
+    invoke-virtual {p0, p1, p2}, Lcom/glympse/android/lib/gp;->a(Lcom/glympse/android/lib/GContact;Lcom/glympse/android/lib/GContact;)I
+
+    move-result v0
+
+    return v0
 .end method

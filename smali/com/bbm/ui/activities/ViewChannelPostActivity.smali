@@ -1,117 +1,117 @@
 .class public Lcom/bbm/ui/activities/ViewChannelPostActivity;
-.super Lcom/bbm/ui/activities/by;
+.super Lcom/bbm/ui/activities/cq;
 .source "ViewChannelPostActivity.java"
 
 
 # static fields
-.field private static final a:Ljava/util/regex/Pattern;
+.field private static final t:Ljava/util/regex/Pattern;
 
-.field private static final b:Ljava/util/regex/Pattern;
+.field private static final u:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field private A:Landroid/widget/TextView;
+.field private F:Ljava/lang/String;
 
-.field private B:Z
+.field private G:Ljava/lang/String;
 
-.field private C:Z
-
-.field private D:Lcom/bbm/ui/FooterActionBar;
-
-.field private E:Landroid/widget/FrameLayout;
-
-.field private F:Lcom/bbm/ui/ActionBarItem;
-
-.field private G:Landroid/widget/TextView;
-
-.field private H:Landroid/widget/TextView;
-
-.field private I:Landroid/widget/TextView;
-
-.field private J:Landroid/widget/TextView;
-
-.field private K:Landroid/widget/TextView;
-
-.field private L:Landroid/widget/TextView;
-
-.field private M:Lcom/bbm/ui/ObservingImageView;
-
-.field private N:Landroid/widget/ImageButton;
-
-.field private O:Landroid/widget/ImageButton;
-
-.field private P:Landroid/widget/ImageButton;
-
-.field private Q:Landroid/widget/ImageView;
-
-.field private R:Landroid/widget/TextView;
-
-.field private S:Landroid/widget/RelativeLayout;
-
-.field private T:Landroid/widget/TextView;
-
-.field private U:Landroid/widget/ImageView;
-
-.field private V:Landroid/widget/ProgressBar;
-
-.field private W:Lcom/bbm/util/n;
-
-.field private X:Lcom/bbm/j/k;
-
-.field private Y:Z
-
-.field private Z:Z
-
-.field private aa:Z
-
-.field private final ab:Landroid/widget/AdapterView$OnItemLongClickListener;
-
-.field private final ac:Lcom/bbm/ui/c/fu;
-
-.field private final ad:Landroid/view/View$OnClickListener;
-
-.field private final ae:Lcom/bbm/ui/c/fu;
-
-.field private final c:Lcom/bbm/d/a;
-
-.field private j:Lcom/bbm/d/de;
-
-.field private k:Lcom/bbm/d/di;
-
-.field private l:Ljava/lang/String;
-
-.field private m:Ljava/lang/String;
-
-.field private n:Ljava/lang/String;
-
-.field private o:Lcom/bbm/j/x;
+.field private H:Lcom/bbm/j/x;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/bbm/j/x",
             "<",
-            "Lcom/bbm/d/dj;",
+            "Lcom/bbm/d/en;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private p:Lcom/bbm/ui/a/k;
+.field private I:Lcom/bbm/j/k;
 
-.field private q:Lcom/bbm/ui/views/ChannelPostCommentListView;
+.field private J:Lcom/bbm/j/k;
 
-.field private r:Lcom/bbm/j/k;
+.field private K:Landroid/view/View;
 
-.field private s:Lcom/bbm/j/k;
+.field private L:Lcom/bbm/d/en;
 
-.field private t:I
+.field private M:Z
 
-.field private u:Landroid/view/View;
+.field private N:Lcom/bbm/ui/FooterActionBar;
 
-.field private v:Lcom/bbm/d/dj;
+.field private O:Landroid/widget/ImageView;
 
-.field private w:Lcom/bbm/ui/EmoticonInputPanel;
+.field private P:Lcom/bbm/ui/ActionBarItem;
 
-.field private x:Landroid/widget/EditText;
+.field private Q:Landroid/widget/TextView;
+
+.field private R:Landroid/widget/TextView;
+
+.field private S:Landroid/widget/TextView;
+
+.field private T:Landroid/widget/TextView;
+
+.field private U:Lcom/bbm/ui/ObservingImageView;
+
+.field private V:Landroid/widget/ImageButton;
+
+.field private W:Landroid/widget/ImageView;
+
+.field private X:Landroid/widget/TextView;
+
+.field private Y:Lcom/bbm/util/o;
+
+.field private Z:Lcom/bbm/j/k;
+
+.field a:Lcom/bbm/d/ee;
+
+.field private aa:Z
+
+.field private ab:Z
+
+.field private final ac:Lcom/bbm/ui/c/gn;
+
+.field private final ad:Landroid/view/View$OnClickListener;
+
+.field private final ae:Lcom/bbm/ui/c/gn;
+
+.field b:Ljava/lang/String;
+
+.field public c:Lcom/bbm/ui/a/p;
+
+.field d:Lcom/bbm/ui/views/ChannelPostCommentListView;
+
+.field public e:I
+
+.field f:Lcom/bbm/ui/EmoticonInputPanel;
+
+.field g:Landroid/widget/EditText;
+
+.field h:Landroid/widget/TextView;
+
+.field i:Z
+
+.field j:Landroid/widget/TextView;
+
+.field k:Landroid/widget/TextView;
+
+.field l:Landroid/widget/ImageButton;
+
+.field m:Landroid/widget/ImageButton;
+
+.field n:Landroid/view/View;
+
+.field o:Landroid/widget/TextView;
+
+.field p:Landroid/widget/ImageView;
+
+.field q:Landroid/widget/ProgressBar;
+
+.field r:Z
+
+.field final s:Landroid/widget/AdapterView$OnItemLongClickListener;
+
+.field private final v:Lcom/bbm/d/a;
+
+.field private w:Lcom/bbm/d/em;
 
 
 # direct methods
@@ -121,23 +121,23 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 88
+    .line 83
     const-string v0, "\\b[Cc][0-9a-f]{8}\\b"
 
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    sput-object v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->t:Ljava/util/regex/Pattern;
 
-    .line 89
+    .line 84
     const-string v0, "\\b[0-9a-f]{8}\\b"
 
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    sput-object v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->u:Ljava/util/regex/Pattern;
 
     return-void
 .end method
@@ -146,102 +146,59 @@
     .locals 1
 
     .prologue
-    .line 161
-    invoke-direct {p0}, Lcom/bbm/ui/activities/by;-><init>()V
+    .line 156
+    invoke-direct {p0}, Lcom/bbm/ui/activities/cq;-><init>()V
 
-    .line 94
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 89
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/d/a;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/a;
 
-    .line 117
+    .line 112
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->C:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->i:Z
 
-    .line 245
-    new-instance v0, Lcom/bbm/ui/activities/agf;
+    .line 254
+    new-instance v0, Lcom/bbm/ui/activities/akj;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/agf;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/akj;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ab:Landroid/widget/AdapterView$OnItemLongClickListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->s:Landroid/widget/AdapterView$OnItemLongClickListener;
 
-    .line 670
-    new-instance v0, Lcom/bbm/ui/activities/aft;
+    .line 633
+    new-instance v0, Lcom/bbm/ui/activities/ajw;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aft;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ajw;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ac:Lcom/bbm/ui/c/fu;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ac:Lcom/bbm/ui/c/gn;
 
-    .line 677
-    new-instance v0, Lcom/bbm/ui/activities/afu;
+    .line 640
+    new-instance v0, Lcom/bbm/ui/activities/ajx;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/afu;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ajx;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ad:Landroid/view/View$OnClickListener;
 
-    .line 983
-    new-instance v0, Lcom/bbm/ui/activities/agb;
+    .line 921
+    new-instance v0, Lcom/bbm/ui/activities/ake;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/agb;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ake;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ae:Lcom/bbm/ui/c/fu;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ae:Lcom/bbm/ui/c/gn;
 
-    .line 162
+    .line 157
     return-void
-.end method
-
-.method private A()V
-    .locals 3
-
-    .prologue
-    .line 689
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Lcom/bbm/d/di;
-
-    iget-boolean v0, v0, Lcom/bbm/d/di;->i:Z
-
-    .line 690
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 691
-    :goto_0
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->b()Ljava/lang/String;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
-
-    invoke-static {v1, v0, v2}, Lcom/bbm/d/y;->a(Ljava/lang/String;ZLjava/lang/String;)Lcom/bbm/d/ar;
-
-    move-result-object v0
-
-    .line 692
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-
-    .line 693
-    return-void
-
-    .line 690
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;I)I
     .locals 0
 
     .prologue
-    .line 86
-    iput p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->t:I
+    .line 81
+    iput p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->e:I
 
     return p1
 .end method
@@ -250,7 +207,7 @@
     .locals 3
 
     .prologue
-    .line 86
+    .line 81
     new-instance v0, Landroid/content/Intent;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getApplicationContext()Landroid/content/Context;
@@ -261,13 +218,13 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-static {p1}, Lcom/bbm/util/q;->a(Ljava/util/List;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/bbm/util/r;->a(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->W:Lcom/bbm/util/n;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Y:Lcom/bbm/util/o;
 
-    iget-object v2, v2, Lcom/bbm/util/n;->c:Ljava/lang/String;
+    iget-object v2, v2, Lcom/bbm/util/o;->c:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -277,26 +234,26 @@
 
     const-string v1, "imageUri"
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->W:Lcom/bbm/util/n;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Y:Lcom/bbm/util/o;
 
-    iget-object v2, v2, Lcom/bbm/util/n;->d:Ljava/lang/String;
+    iget-object v2, v2, Lcom/bbm/util/o;->d:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     :goto_0
     const-string v1, "mimeType"
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->W:Lcom/bbm/util/n;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Y:Lcom/bbm/util/o;
 
-    iget-object v2, v2, Lcom/bbm/util/n;->e:Ljava/lang/String;
+    iget-object v2, v2, Lcom/bbm/util/o;->e:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "postId"
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/bbm/util/x;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/bbm/util/ac;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -316,78 +273,88 @@
     .locals 0
 
     .prologue
-    .line 86
-    iput-object p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->u:Landroid/view/View;
+    .line 81
+    iput-object p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->K:Landroid/view/View;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/d/de;)Lcom/bbm/d/de;
+.method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/d/ee;)Lcom/bbm/d/ee;
     .locals 0
 
     .prologue
-    .line 86
-    iput-object p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    .line 81
+    iput-object p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/d/di;)Lcom/bbm/d/di;
+.method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/d/em;)Lcom/bbm/d/em;
     .locals 0
 
     .prologue
-    .line 86
-    iput-object p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Lcom/bbm/d/di;
+    .line 81
+    iput-object p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/d/em;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/d/dj;)Lcom/bbm/d/dj;
+.method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/d/en;)Lcom/bbm/d/en;
     .locals 0
 
     .prologue
-    .line 86
-    iput-object p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/dj;
+    .line 81
+    iput-object p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Lcom/bbm/d/en;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/ui/c/fq;)V
+.method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/ui/EmoticonInputPanel;
+    .locals 1
+
+    .prologue
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->f:Lcom/bbm/ui/EmoticonInputPanel;
+
+    return-object v0
+.end method
+
+.method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/ui/c/gj;)V
     .locals 0
 
     .prologue
-    .line 86
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b(Lcom/bbm/ui/c/fq;)V
+    .line 81
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b(Lcom/bbm/ui/c/gj;)V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/ui/c/fq;Z)V
+.method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/ui/c/gj;Z)V
     .locals 10
 
     .prologue
     const/4 v0, 0x0
 
-    .line 86
+    .line 81
     :try_start_0
     new-instance v2, Lcom/bbm/ui/slidingmenu/a;
 
     const/4 v3, 0x0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/dj;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Lcom/bbm/d/en;
 
-    iget-boolean v1, v1, Lcom/bbm/d/dj;->c:Z
+    iget-boolean v1, v1, Lcom/bbm/d/en;->c:Z
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-object v1, v1, Lcom/bbm/d/de;->k:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/ee;->k:Ljava/lang/String;
 
     :goto_0
-    iget-object v4, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/dj;
+    iget-object v4, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Lcom/bbm/d/en;
 
-    iget-object v4, v4, Lcom/bbm/d/dj;->e:Ljava/lang/String;
+    iget-object v4, v4, Lcom/bbm/d/en;->e:Ljava/lang/String;
 
     invoke-direct {v2, v3, v1, v4}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -399,15 +366,15 @@
 
     new-instance v3, Lcom/bbm/ui/slidingmenu/a;
 
-    const v4, 0x7f0a0033
+    const v4, 0x7f0b0028
 
-    const v5, 0x7f020029
+    const v5, 0x7f02002e
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    const v6, 0x7f0e01dd
+    const v6, 0x7f0e01ec
 
     invoke-virtual {p0, v6}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
 
@@ -424,15 +391,15 @@
     :cond_0
     new-instance v3, Lcom/bbm/ui/slidingmenu/a;
 
-    const v4, 0x7f0a0024
+    const v4, 0x7f0b0019
 
-    const v5, 0x7f020250
+    const v5, 0x7f02026b
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    const v6, 0x7f0e03fe
+    const v6, 0x7f0e0440
 
     invoke-virtual {p0, v6}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
 
@@ -448,13 +415,13 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/dj;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Lcom/bbm/d/en;
 
-    iget-object v3, v3, Lcom/bbm/d/dj;->o:Ljava/lang/String;
+    iget-object v3, v3, Lcom/bbm/d/en;->o:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/d/a;
+    iget-object v4, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/a;
 
-    invoke-virtual {v4}, Lcom/bbm/d/a;->e()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/bbm/d/a;->h()Ljava/lang/String;
 
     move-result-object v4
 
@@ -464,29 +431,29 @@
 
     if-nez v3, :cond_1
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-boolean v3, v3, Lcom/bbm/d/de;->s:Z
+    iget-boolean v3, v3, Lcom/bbm/d/ee;->t:Z
 
     if-eqz v3, :cond_1
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/dj;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Lcom/bbm/d/en;
 
-    iget-boolean v3, v3, Lcom/bbm/d/dj;->l:Z
+    iget-boolean v3, v3, Lcom/bbm/d/en;->l:Z
 
     if-nez v3, :cond_1
 
     new-instance v3, Lcom/bbm/ui/slidingmenu/a;
 
-    const v4, 0x7f0a0020
+    const v4, 0x7f0b0015
 
-    const v5, 0x7f02022d
+    const v5, 0x7f020248
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    const v6, 0x7f0e016b
+    const v6, 0x7f0e017b
 
     invoke-virtual {p0, v6}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
 
@@ -498,9 +465,9 @@
 
     const/4 v8, 0x0
 
-    iget-object v9, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/dj;
+    iget-object v9, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Lcom/bbm/d/en;
 
-    iget-object v9, v9, Lcom/bbm/d/dj;->f:Ljava/lang/String;
+    iget-object v9, v9, Lcom/bbm/d/en;->f:Ljava/lang/String;
 
     aput-object v9, v7, v8
 
@@ -515,15 +482,15 @@
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     :cond_1
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-boolean v3, v3, Lcom/bbm/d/de;->s:Z
+    iget-boolean v3, v3, Lcom/bbm/d/ee;->t:Z
 
     if-eqz v3, :cond_4
 
     new-instance v0, Lcom/bbm/ui/slidingmenu/a;
 
-    const v3, 0x7f020252
+    const v3, 0x7f02026d
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -537,7 +504,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0e02de
+    const v5, 0x7f0e02fe
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -547,38 +514,38 @@
 
     invoke-direct {v0, v3, v4, v5}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v3, Lcom/bbm/ui/activities/agc;
+    new-instance v3, Lcom/bbm/ui/activities/akf;
 
-    invoke-direct {v3, p0}, Lcom/bbm/ui/activities/agc;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+    invoke-direct {v3, p0}, Lcom/bbm/ui/activities/akf;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
 
-    invoke-virtual {p1, v3}, Lcom/bbm/ui/c/fq;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v3}, Lcom/bbm/ui/c/gj;->a(Landroid/view/View$OnClickListener;)V
 
     :cond_2
     :goto_1
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ae:Lcom/bbm/ui/c/fu;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ae:Lcom/bbm/ui/c/gn;
 
-    invoke-virtual {p1, v3}, Lcom/bbm/ui/c/fq;->a(Lcom/bbm/ui/c/fu;)V
+    iput-object v3, p1, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
 
-    invoke-virtual {p1, v1, v2, v0}, Lcom/bbm/ui/c/fq;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
+    invoke-virtual {p1, v1, v2, v0}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
 
     :goto_2
     return-void
 
     :cond_3
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/dj;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Lcom/bbm/d/en;
 
-    iget-object v1, v1, Lcom/bbm/d/dj;->f:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/en;->f:Ljava/lang/String;
 
     goto/16 :goto_0
 
     :cond_4
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/dj;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Lcom/bbm/d/en;
 
-    iget-object v3, v3, Lcom/bbm/d/dj;->o:Ljava/lang/String;
+    iget-object v3, v3, Lcom/bbm/d/en;->o:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/d/a;
+    iget-object v4, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/a;
 
-    invoke-virtual {v4}, Lcom/bbm/d/a;->e()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/bbm/d/a;->h()Ljava/lang/String;
 
     move-result-object v4
 
@@ -588,23 +555,23 @@
 
     if-nez v3, :cond_2
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/dj;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Lcom/bbm/d/en;
 
-    iget-boolean v3, v3, Lcom/bbm/d/dj;->j:Z
+    iget-boolean v3, v3, Lcom/bbm/d/en;->j:Z
 
     if-eqz v3, :cond_5
 
     new-instance v3, Lcom/bbm/ui/slidingmenu/a;
 
-    const v4, 0x7f0a0032
+    const v4, 0x7f0b0027
 
-    const v5, 0x7f02027d
+    const v5, 0x7f0202a3
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    const v6, 0x7f0e01d6
+    const v6, 0x7f0e01e5
 
     invoke-virtual {p0, v6}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
 
@@ -628,15 +595,15 @@
     :cond_5
     new-instance v0, Lcom/bbm/ui/slidingmenu/a;
 
-    const v3, 0x7f0a0036
+    const v3, 0x7f0b002b
 
-    const v4, 0x7f02027d
+    const v4, 0x7f0202a3
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
 
-    const v5, 0x7f0e01d7
+    const v5, 0x7f0e01e6
 
     invoke-virtual {p0, v5}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
 
@@ -646,11 +613,11 @@
 
     invoke-direct {v0, v3, v4, v5, v6}, Lcom/bbm/ui/slidingmenu/a;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v3, Lcom/bbm/ui/activities/agd;
+    new-instance v3, Lcom/bbm/ui/activities/akg;
 
-    invoke-direct {v3, p0}, Lcom/bbm/ui/activities/agd;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+    invoke-direct {v3, p0}, Lcom/bbm/ui/activities/akg;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
 
-    invoke-virtual {p1, v3}, Lcom/bbm/ui/c/fq;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v3}, Lcom/bbm/ui/c/gj;->a(Landroid/view/View$OnClickListener;)V
 
     invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a(Lcom/bbm/ui/slidingmenu/a;)V
     :try_end_0
@@ -663,18 +630,18 @@
     .locals 9
 
     .prologue
-    const/4 v7, 0x0
-
     const/4 v4, 0x1
 
-    .line 86
-    sget-object v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Ljava/util/regex/Pattern;
+    const/4 v7, 0x0
+
+    .line 81
+    sget-object v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->t:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b:Ljava/util/regex/Pattern;
+    sget-object v1, Lcom/bbm/ui/activities/ViewChannelPostActivity;->u:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -710,7 +677,7 @@
 
     div-int/lit8 v8, v0, 0x8
 
-    const v0, 0x7f0e01bb
+    const v0, 0x7f0e01ca
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
 
@@ -720,17 +687,17 @@
 
     const/4 v3, 0x0
 
-    new-instance v5, Lcom/bbm/ui/activities/afq;
+    new-instance v5, Lcom/bbm/ui/activities/ajt;
 
-    invoke-direct {v5, p0}, Lcom/bbm/ui/activities/afq;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+    invoke-direct {v5, p0}, Lcom/bbm/ui/activities/ajt;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
 
     const/16 v6, 0x30
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v8}, Lcom/bbm/util/eo;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/view/View$OnClickListener;ILandroid/content/DialogInterface$OnDismissListener;III)V
+    invoke-static/range {v0 .. v8}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/view/View$OnClickListener;ILandroid/content/DialogInterface$OnDismissListener;III)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->g:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
 
@@ -743,23 +710,23 @@
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->g:Landroid/widget/EditText;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {p0, v4}, Lcom/bbm/util/eo;->a(Landroid/app/Activity;Z)V
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->f:Lcom/bbm/ui/EmoticonInputPanel;
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r()V
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->d()Z
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-object v1, v1, Lcom/bbm/d/de;->H:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/ee;->I:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -781,51 +748,51 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->n:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v1
 
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->b()Ljava/lang/String;
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->b()Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
-    invoke-static {v2, p1, v0, v3}, Lcom/bbm/d/y;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/bw;
+    invoke-static {v2, p1, v0, v3}, Lcom/bbm/d/aa;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/cp;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
+    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
 
     :goto_2
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Lcom/bbm/ui/a/k;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/ui/a/p;
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Lcom/bbm/ui/a/k;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/ui/a/p;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/a/k;->e()V
+    invoke-virtual {v1}, Lcom/bbm/ui/a/p;->d()V
 
     :cond_3
     const-string v1, ""
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->n:Ljava/lang/String;
+    iput-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b:Ljava/lang/String;
 
-    new-instance v1, Lcom/bbm/ui/activities/afr;
+    new-instance v1, Lcom/bbm/ui/activities/aju;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afr;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/aju;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
 
     iput-object p0, v1, Lcom/bbm/ui/d/h;->b:Ljava/lang/Object;
 
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v2
 
@@ -836,27 +803,27 @@
     goto :goto_1
 
     :cond_4
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v1
 
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->b()Ljava/lang/String;
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->b()Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
-    invoke-static {v2, p1, v0, v3}, Lcom/bbm/d/y;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/bw;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->n:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Lcom/bbm/d/bw;->a(Ljava/lang/String;)Lcom/bbm/d/bw;
+    invoke-static {v2, p1, v0, v3}, Lcom/bbm/d/aa;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/cp;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lcom/bbm/d/cp;->a(Ljava/lang/String;)Lcom/bbm/d/cp;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
 
     goto :goto_2
 .end method
@@ -865,7 +832,7 @@
     .locals 0
 
     .prologue
-    .line 86
+    .line 81
     invoke-direct/range {p0 .. p11}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZJ)V
 
     return-void
@@ -875,35 +842,35 @@
     .locals 1
 
     .prologue
-    .line 1080
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    .line 1018
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-boolean v0, v0, Lcom/bbm/d/de;->p:Z
+    iget-boolean v0, v0, Lcom/bbm/d/ee;->q:Z
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Z
 
     if-eqz v0, :cond_1
 
-    .line 1081
+    .line 1019
     :cond_0
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lcom/bbm/ui/slidingmenu/a;->d(Z)V
 
-    .line 1082
+    .line 1020
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lcom/bbm/ui/slidingmenu/a;->b(Z)V
 
-    .line 1084
+    .line 1022
     :cond_1
     return-void
 .end method
 
 .method private a(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZJ)V
-    .locals 6
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -923,8 +890,8 @@
     .end annotation
 
     .prologue
-    .line 872
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->W:Lcom/bbm/util/n;
+    .line 833
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Y:Lcom/bbm/util/o;
 
     if-nez v0, :cond_1
 
@@ -936,34 +903,34 @@
 
     if-lez v0, :cond_b
 
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->b()Ljava/lang/String;
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
-    invoke-static {p1, v0, v1}, Lcom/bbm/util/q;->a(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/util/n;
+    invoke-static {p1, v0, v1}, Lcom/bbm/util/r;->a(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/util/o;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->W:Lcom/bbm/util/n;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Y:Lcom/bbm/util/o;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->W:Lcom/bbm/util/n;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Y:Lcom/bbm/util/o;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->W:Lcom/bbm/util/n;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Y:Lcom/bbm/util/o;
 
-    iget-object v0, v0, Lcom/bbm/util/n;->c:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/util/o;->c:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Lcom/bbm/ui/ObservingImageView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Lcom/bbm/ui/ObservingImageView;
 
     const/16 v1, 0x8
 
@@ -971,26 +938,26 @@
 
     :cond_1
     :goto_0
-    invoke-static {p2}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_c
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->G:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Q:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     :goto_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->H:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->R:Landroid/widget/TextView;
 
     sget-object v1, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     invoke-virtual {v0, p3, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->K:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->T:Landroid/widget/TextView;
 
     invoke-virtual {p5}, Ljava/lang/String;->isEmpty()Z
 
@@ -1003,33 +970,33 @@
     :cond_2
     invoke-virtual {v0, p5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->O:Landroid/widget/ImageButton;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->V:Landroid/widget/ImageButton;
 
     if-eqz p4, :cond_d
 
-    const v0, 0x7f020056
+    const v0, 0x7f02005f
 
     :goto_2
     invoke-virtual {v1, v0}, Landroid/widget/ImageButton;->setImageResource(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Lcom/bbm/ui/ActionBarItem;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->P:Lcom/bbm/ui/ActionBarItem;
 
     if-eqz v0, :cond_3
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Lcom/bbm/ui/ActionBarItem;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->P:Lcom/bbm/ui/ActionBarItem;
 
     if-eqz p4, :cond_e
 
-    const v0, 0x7f0203d8
+    const v0, 0x7f02042f
 
     :goto_3
     invoke-virtual {v1, v0}, Lcom/bbm/ui/ActionBarItem;->setIcon(I)V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Lcom/bbm/ui/ActionBarItem;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->P:Lcom/bbm/ui/ActionBarItem;
 
     if-eqz p4, :cond_f
 
-    const v0, 0x7f0e01c5
+    const v0, 0x7f0e01d4
 
     :goto_4
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
@@ -1039,13 +1006,13 @@
     invoke-virtual {v1, v0}, Lcom/bbm/ui/ActionBarItem;->setText(Ljava/lang/CharSequence;)V
 
     :cond_3
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-boolean v0, v0, Lcom/bbm/d/de;->e:Z
+    iget-boolean v0, v0, Lcom/bbm/d/ee;->e:Z
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->J:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Landroid/widget/TextView;
 
     invoke-virtual {p6}, Ljava/lang/String;->isEmpty()Z
 
@@ -1059,13 +1026,13 @@
     invoke-virtual {v0, p6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_5
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-boolean v0, v0, Lcom/bbm/d/de;->s:Z
+    iget-boolean v0, v0, Lcom/bbm/d/ee;->t:Z
 
     if-eqz v0, :cond_7
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Landroid/widget/TextView;
 
     invoke-virtual {p7}, Ljava/lang/String;->isEmpty()Z
 
@@ -1081,15 +1048,15 @@
     :cond_7
     if-eqz p8, :cond_11
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->I:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->S:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->I:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->S:Landroid/widget/TextView;
 
-    invoke-static {p8}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-static/range {p8 .. p8}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v0
 
@@ -1119,7 +1086,7 @@
 
     move-result-wide v2
 
-    invoke-static {p0, v2, v3}, Lcom/bbm/util/az;->b(Landroid/content/Context;J)Ljava/lang/String;
+    invoke-static {p0, v2, v3}, Lcom/bbm/util/bd;->b(Landroid/content/Context;J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1127,58 +1094,56 @@
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :goto_6
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Q:Landroid/widget/ImageView;
+    iget-object v5, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->W:Landroid/widget/ImageView;
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->R:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->X:Landroid/widget/TextView;
 
-    move-wide/from16 v1, p10
+    move-wide/from16 v2, p10
 
-    move v3, p9
+    move/from16 v4, p9
 
-    invoke-static/range {v0 .. v5}, Lcom/bbm/util/x;->a(Lcom/bbm/d/de;JZLandroid/widget/ImageView;Landroid/widget/TextView;)V
+    invoke-static/range {v1 .. v6}, Lcom/bbm/util/ac;->a(Lcom/bbm/d/ee;JZLandroid/widget/ImageView;Landroid/widget/TextView;)V
 
-    .line 874
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/d/a;
+    .line 835
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/a;
 
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->b()Ljava/lang/String;
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->b()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->O(Ljava/lang/String;)Lcom/bbm/d/de;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/ee;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/de;->c()Lcom/bbm/util/bc;
+    iget-object v0, v0, Lcom/bbm/d/ee;->R:Lcom/bbm/util/bi;
 
-    move-result-object v0
-
-    sget-object v1, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v1, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-ne v0, v1, :cond_8
 
-    .line 877
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->o:Lcom/bbm/j/x;
+    .line 838
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->H:Lcom/bbm/j/x;
 
     if-nez v0, :cond_8
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-boolean v0, v0, Lcom/bbm/d/de;->e:Z
+    iget-boolean v0, v0, Lcom/bbm/d/ee;->e:Z
 
     if-eqz v0, :cond_8
 
-    .line 878
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x()V
+    .line 839
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l()V
 
-    .line 881
+    .line 842
     :cond_8
     return-void
 
-    .line 872
+    .line 833
     :cond_9
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->W:Lcom/bbm/util/n;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Y:Lcom/bbm/util/o;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getResources()Landroid/content/res/Resources;
 
@@ -1190,11 +1155,11 @@
 
     iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    iget v2, v0, Lcom/bbm/util/n;->b:I
+    iget v2, v0, Lcom/bbm/util/o;->b:I
 
     int-to-float v2, v2
 
-    iget v3, v0, Lcom/bbm/util/n;->a:I
+    iget v3, v0, Lcom/bbm/util/o;->a:I
 
     int-to-float v3, v3
 
@@ -1212,7 +1177,7 @@
 
     if-le v2, v3, :cond_a
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Lcom/bbm/ui/ObservingImageView;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v1}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1220,28 +1185,28 @@
 
     iput v3, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Lcom/bbm/ui/ObservingImageView;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v1}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
-    iget v2, v0, Lcom/bbm/util/n;->a:I
+    iget v2, v0, Lcom/bbm/util/o;->a:I
 
     mul-int/2addr v2, v3
 
-    iget v3, v0, Lcom/bbm/util/n;->b:I
+    iget v3, v0, Lcom/bbm/util/o;->b:I
 
     div-int/2addr v2, v3
 
     iput v2, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     :goto_7
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Lcom/bbm/ui/ObservingImageView;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Lcom/bbm/ui/ObservingImageView;
 
     const/4 v2, 0x0
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Lcom/bbm/ui/ObservingImageView;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v3}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1249,7 +1214,7 @@
 
     iget v3, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Lcom/bbm/ui/ObservingImageView;
+    iget-object v4, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v4}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1257,28 +1222,28 @@
 
     iget v4, v4, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    iget-boolean v5, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
+    iget-boolean v5, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Z
 
-    invoke-virtual/range {v0 .. v5}, Lcom/bbm/util/n;->a(Lcom/bbm/ui/ObservingImageView;Lcom/bbm/util/b/d;IIZ)V
+    invoke-virtual/range {v0 .. v5}, Lcom/bbm/util/o;->a(Lcom/bbm/ui/ObservingImageView;Lcom/bbm/util/b/d;IIZ)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Lcom/bbm/ui/ObservingImageView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Lcom/bbm/ui/ObservingImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setLimitedLengthAnimation(Z)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Lcom/bbm/ui/ObservingImageView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Lcom/bbm/ui/ObservingImageView;
 
-    new-instance v1, Lcom/bbm/ui/activities/aga;
+    new-instance v1, Lcom/bbm/ui/activities/akc;
 
-    invoke-direct {v1, p0, p1}, Lcom/bbm/ui/activities/aga;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;Ljava/util/List;)V
+    invoke-direct {v1, p0, p1}, Lcom/bbm/ui/activities/akc;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;Ljava/util/List;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     goto/16 :goto_0
 
     :cond_a
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Lcom/bbm/ui/ObservingImageView;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v3}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1286,7 +1251,7 @@
 
     iput v2, v3, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Lcom/bbm/ui/ObservingImageView;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v2}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1297,7 +1262,7 @@
     goto :goto_7
 
     :cond_b
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Lcom/bbm/ui/ObservingImageView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Lcom/bbm/ui/ObservingImageView;
 
     const/16 v1, 0x8
 
@@ -1306,30 +1271,30 @@
     goto/16 :goto_0
 
     :cond_c
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->G:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Q:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->G:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Q:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_1
 
     :cond_d
-    const v0, 0x7f020055
+    const v0, 0x7f02005e
 
     goto/16 :goto_2
 
     :cond_e
-    const v0, 0x7f0202e4
+    const v0, 0x7f02030d
 
     goto/16 :goto_3
 
     :cond_f
-    const v0, 0x7f0e01bd
+    const v0, 0x7f0e01cc
 
     goto/16 :goto_4
 
@@ -1339,7 +1304,7 @@
     goto/16 :goto_5
 
     :cond_11
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->I:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->S:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
@@ -1348,73 +1313,53 @@
     goto/16 :goto_6
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Z
-    .locals 1
-
-    .prologue
-    .line 86
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
-
-    return v0
-.end method
-
 .method static synthetic a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Z)Z
     .locals 0
 
     .prologue
-    .line 86
-    iput-boolean p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
+    .line 81
+    iput-boolean p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Z
 
     return p1
 .end method
 
-.method static synthetic b(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-    .locals 0
-
-    .prologue
-    .line 86
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->A()V
-
-    return-void
-.end method
-
-.method private b(Lcom/bbm/ui/c/fq;)V
+.method private b(Lcom/bbm/ui/c/gj;)V
     .locals 7
 
     .prologue
     const/4 v3, 0x0
 
-    .line 645
-    .line 647
+    .line 608
+    .line 610
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 648
+    .line 611
     new-instance v1, Lcom/bbm/ui/slidingmenu/a;
 
-    const v2, 0x7f0a002e
+    const v2, 0x7f0b0023
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Lcom/bbm/d/di;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/d/em;
 
-    iget-boolean v0, v0, Lcom/bbm/d/di;->i:Z
+    iget-boolean v0, v0, Lcom/bbm/d/em;->i:Z
 
     if-eqz v0, :cond_2
 
-    const v0, 0x7f0203d8
+    const v0, 0x7f02042f
 
     :goto_0
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Lcom/bbm/d/di;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/d/em;
 
-    iget-boolean v0, v0, Lcom/bbm/d/di;->i:Z
+    iget-boolean v0, v0, Lcom/bbm/d/em;->i:Z
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f0e01c5
+    const v0, 0x7f0e01d4
 
     :goto_1
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
@@ -1425,38 +1370,38 @@
 
     invoke-interface {v4, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 650
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    .line 613
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-boolean v0, v0, Lcom/bbm/d/de;->s:Z
+    iget-boolean v0, v0, Lcom/bbm/d/ee;->t:Z
 
     if-nez v0, :cond_6
 
-    .line 651
+    .line 614
     new-instance v2, Lcom/bbm/ui/slidingmenu/a;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Lcom/bbm/d/di;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/d/em;
 
-    iget-boolean v0, v0, Lcom/bbm/d/di;->h:Z
+    iget-boolean v0, v0, Lcom/bbm/d/em;->h:Z
 
     if-eqz v0, :cond_4
 
-    const v0, 0x7f0a0031
+    const v0, 0x7f0b0026
 
     :goto_2
-    const v1, 0x7f02027d
+    const v1, 0x7f0202a3
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Lcom/bbm/d/di;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/d/em;
 
-    iget-boolean v1, v1, Lcom/bbm/d/di;->h:Z
+    iget-boolean v1, v1, Lcom/bbm/d/em;->h:Z
 
     if-eqz v1, :cond_5
 
-    const v1, 0x7f0e01ce
+    const v1, 0x7f0e01dd
 
     :goto_3
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
@@ -1465,38 +1410,38 @@
 
     invoke-direct {v2, v0, v5, v1, v3}, Lcom/bbm/ui/slidingmenu/a;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 656
+    .line 619
     invoke-direct {p0, v2}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a(Lcom/bbm/ui/slidingmenu/a;)V
 
     move-object v0, v2
 
-    .line 658
+    .line 621
     :goto_4
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-boolean v1, v1, Lcom/bbm/d/de;->t:Z
+    iget-boolean v1, v1, Lcom/bbm/d/ee;->u:Z
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-boolean v1, v1, Lcom/bbm/d/de;->s:Z
+    iget-boolean v1, v1, Lcom/bbm/d/ee;->t:Z
 
     if-eqz v1, :cond_1
 
-    .line 659
+    .line 622
     :cond_0
     new-instance v1, Lcom/bbm/ui/slidingmenu/a;
 
-    const v2, 0x7f0a003c
+    const v2, 0x7f0b0031
 
-    const v5, 0x7f020264
+    const v5, 0x7f020281
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    const v6, 0x7f0e01d1
+    const v6, 0x7f0e01e0
 
     invoke-virtual {p0, v6}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
 
@@ -1506,18 +1451,18 @@
 
     invoke-interface {v4, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 661
+    .line 624
     new-instance v1, Lcom/bbm/ui/slidingmenu/a;
 
-    const v2, 0x7f0a0037
+    const v2, 0x7f0b002c
 
-    const v5, 0x7f02027e
+    const v5, 0x7f0202a4
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    const v6, 0x7f0e01c4
+    const v6, 0x7f0e01d3
 
     invoke-virtual {p0, v6}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
 
@@ -1527,42 +1472,42 @@
 
     invoke-interface {v4, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 664
+    .line 627
     :cond_1
-    invoke-virtual {p1, v4, v3, v0}, Lcom/bbm/ui/c/fq;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
+    invoke-virtual {p1, v4, v3, v0}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
 
-    .line 666
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ac:Lcom/bbm/ui/c/fu;
+    .line 629
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ac:Lcom/bbm/ui/c/gn;
 
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/fq;->a(Lcom/bbm/ui/c/fu;)V
+    iput-object v0, p1, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
 
-    .line 667
+    .line 630
     iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ad:Landroid/view/View$OnClickListener;
 
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/fq;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/gj;->a(Landroid/view/View$OnClickListener;)V
 
-    .line 668
+    .line 631
     return-void
 
-    .line 648
+    .line 611
     :cond_2
-    const v0, 0x7f0202e4
+    const v0, 0x7f02030d
 
     goto/16 :goto_0
 
     :cond_3
-    const v0, 0x7f0e01bd
+    const v0, 0x7f0e01cc
 
     goto/16 :goto_1
 
-    .line 651
+    .line 614
     :cond_4
-    const v0, 0x7f0a0035
+    const v0, 0x7f0b002a
 
     goto :goto_2
 
     :cond_5
-    const v1, 0x7f0e01c3
+    const v1, 0x7f0e01d2
 
     goto :goto_3
 
@@ -1572,18 +1517,38 @@
     goto :goto_4
 .end method
 
+.method static synthetic b(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Z
+    .locals 1
+
+    .prologue
+    .line 81
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Z
+
+    return v0
+.end method
+
 .method static synthetic c(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+    .locals 0
+
+    .prologue
+    .line 81
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->m()V
+
+    return-void
+.end method
+
+.method static synthetic d(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
     .locals 6
 
     .prologue
-    .line 86
-    invoke-static {}, Lcom/bbm/util/eo;->a()V
+    .line 81
+    invoke-static {}, Lcom/bbm/util/fh;->a()V
 
     new-instance v0, Landroid/widget/Toast;
 
     invoke-direct {v0, p0}, Landroid/widget/Toast;-><init>(Landroid/content/Context;)V
 
-    const v1, 0x7f0e0493
+    const v1, 0x7f0e04e6
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
 
@@ -1605,7 +1570,7 @@
 
     move-result-object v4
 
-    const v5, 0x7f0b0360
+    const v5, 0x7f0a03c2
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDimensionPixelOffset(I)I
 
@@ -1617,47 +1582,37 @@
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v5}, Lcom/bbm/util/eo;->a(Landroid/content/Context;Ljava/lang/String;IIII)V
+    invoke-static/range {v0 .. v5}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;IIII)V
 
     return-void
 .end method
 
-.method static synthetic d(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/ui/a/k;
+.method static synthetic e(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/ui/a/p;
     .locals 1
 
     .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Lcom/bbm/ui/a/k;
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/ui/a/p;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Landroid/widget/EditText;
+.method static synthetic f(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Landroid/widget/EditText;
     .locals 1
 
     .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x:Landroid/widget/EditText;
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->g:Landroid/widget/EditText;
 
     return-object v0
 .end method
 
-.method static synthetic f(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Landroid/view/View;
+.method static synthetic g(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Landroid/view/View;
     .locals 1
 
     .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->u:Landroid/view/View;
-
-    return-object v0
-.end method
-
-.method static synthetic g(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/ui/EmoticonInputPanel;
-    .locals 1
-
-    .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/ui/EmoticonInputPanel;
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->K:Landroid/view/View;
 
     return-object v0
 .end method
@@ -1666,100 +1621,313 @@
     .locals 0
 
     .prologue
-    .line 86
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->y()V
+    .line 81
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l()V
 
     return-void
 .end method
 
-.method static synthetic i(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+.method static synthetic i(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/ee;
+    .locals 1
+
+    .prologue
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
+
+    return-object v0
+.end method
+
+.method static synthetic j(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/ui/views/ChannelPostCommentListView;
+    .locals 1
+
+    .prologue
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->d:Lcom/bbm/ui/views/ChannelPostCommentListView;
+
+    return-object v0
+.end method
+
+.method static synthetic k(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/em;
+    .locals 1
+
+    .prologue
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/d/em;
+
+    return-object v0
+.end method
+
+.method private k()V
+    .locals 2
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 404
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
+
+    .line 405
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ab:Z
+
+    .line 406
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->J:Lcom/bbm/j/k;
+
+    if-eqz v0, :cond_0
+
+    .line 407
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->J:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+
+    .line 409
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Z:Lcom/bbm/j/k;
+
+    if-eqz v0, :cond_1
+
+    .line 410
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Z:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+
+    .line 412
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->I:Lcom/bbm/j/k;
+
+    if-eqz v0, :cond_2
+
+    .line 413
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->I:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+
+    .line 415
+    :cond_2
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/ui/f/a;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/f/a;->a(Ljava/lang/String;)V
+
+    .line 416
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->f:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->d()Z
+
+    .line 417
+    return-void
+.end method
+
+.method static synthetic l(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/a;
+    .locals 1
+
+    .prologue
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/a;
+
+    return-object v0
+.end method
+
+.method private l()V
+    .locals 6
+
+    .prologue
+    .line 421
+    new-instance v0, Lorg/json/JSONObject;
+
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    .line 423
+    :try_start_0
+    const-string v1, "id"
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->G:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 424
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->G:Ljava/lang/String;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/d/a;->c(Ljava/lang/String;Z)Lcom/bbm/j/x;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->H:Lcom/bbm/j/x;
+
+    .line 426
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Z:Lcom/bbm/j/k;
+
+    if-nez v0, :cond_0
+
+    .line 427
+    new-instance v0, Lcom/bbm/ui/activities/ajz;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ajz;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Z:Lcom/bbm/j/k;
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Z:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
+
+    .line 429
+    :cond_0
+    new-instance v0, Lcom/bbm/ui/a/p;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->H:Lcom/bbm/j/x;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
+
+    iget-boolean v4, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Z
+
+    move-object v5, p0
+
+    invoke-direct/range {v0 .. v5}, Lcom/bbm/ui/a/p;-><init>(Lcom/bbm/j/x;Lcom/bbm/d/ee;Ljava/lang/String;ZLandroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/ui/a/p;
+
+    .line 430
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->d:Lcom/bbm/ui/views/ChannelPostCommentListView;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/ui/a/p;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelPostCommentListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 434
+    :goto_0
+    return-void
+
+    .line 431
+    :catch_0
+    move-exception v0
+
+    .line 432
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "error in searching: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method static synthetic m(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/j/x;
+    .locals 1
+
+    .prologue
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->H:Lcom/bbm/j/x;
+
+    return-object v0
+.end method
+
+.method private m()V
+    .locals 3
+
+    .prologue
+    .line 652
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/d/em;
+
+    iget-boolean v0, v0, Lcom/bbm/d/em;->i:Z
+
+    .line 653
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 654
+    :goto_0
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->b()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
+
+    invoke-static {v1, v0, v2}, Lcom/bbm/d/aa;->a(Ljava/lang/String;ZLjava/lang/String;)Lcom/bbm/d/av;
+
+    move-result-object v0
+
+    .line 655
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+
+    .line 656
+    return-void
+
+    .line 653
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method static synthetic n(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
     .locals 0
 
     .prologue
-    .line 86
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x()V
+    .line 81
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->f()V
 
     return-void
 .end method
 
-.method static synthetic j(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/de;
+.method static synthetic o(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Landroid/widget/ImageButton;
     .locals 1
 
     .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Landroid/widget/ImageButton;
 
     return-object v0
 .end method
 
-.method static synthetic k(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/ui/views/ChannelPostCommentListView;
+.method static synthetic p(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Z
     .locals 1
 
     .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->q:Lcom/bbm/ui/views/ChannelPostCommentListView;
+    .line 81
+    const/4 v0, 0x1
 
-    return-object v0
-.end method
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ab:Z
 
-.method static synthetic l(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/di;
-    .locals 1
-
-    .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Lcom/bbm/d/di;
-
-    return-object v0
-.end method
-
-.method static synthetic m(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/a;
-    .locals 1
-
-    .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/d/a;
-
-    return-object v0
-.end method
-
-.method static synthetic n(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/j/x;
-    .locals 1
-
-    .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->o:Lcom/bbm/j/x;
-
-    return-object v0
-.end method
-
-.method static synthetic o(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-    .locals 0
-
-    .prologue
-    .line 86
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->z()V
-
-    return-void
-.end method
-
-.method static synthetic p(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Landroid/widget/ImageButton;
-    .locals 1
-
-    .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Landroid/widget/ImageButton;
-
-    return-object v0
+    return v0
 .end method
 
 .method static synthetic q(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Z
     .locals 1
 
     .prologue
-    .line 86
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Z:Z
+    .line 81
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ab:Z
 
     return v0
 .end method
@@ -1768,92 +1936,21 @@
     .locals 1
 
     .prologue
-    .line 86
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Z:Z
-
-    return v0
-.end method
-
-.method private s()V
-    .locals 2
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 434
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Y:Z
-
-    .line 435
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Z:Z
-
-    .line 436
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->s:Lcom/bbm/j/k;
-
-    if-eqz v0, :cond_0
-
-    .line 437
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->s:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
-
-    .line 439
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->X:Lcom/bbm/j/k;
-
-    if-eqz v0, :cond_1
-
-    .line 440
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->X:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
-
-    .line 442
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Lcom/bbm/j/k;
-
-    if-eqz v0, :cond_2
-
-    .line 443
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
-
-    .line 445
-    :cond_2
-    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/f/a;->a(Ljava/lang/String;)V
-
-    .line 446
-    invoke-static {p0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    .line 447
-    return-void
-.end method
-
-.method static synthetic s(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Z
-    .locals 1
-
-    .prologue
-    .line 86
+    .line 81
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Y:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
 
     return v0
 .end method
 
-.method static synthetic t(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+.method static synthetic s(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
     .locals 12
 
     .prologue
     const/4 v0, 0x0
 
-    .line 86
+    .line 81
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -1864,7 +1961,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -1948,459 +2045,95 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 .end method
 
-.method static synthetic u(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Z
+.method static synthetic t(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Z
     .locals 1
 
     .prologue
-    .line 86
+    .line 81
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->B:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Z
 
     return v0
 .end method
 
-.method static synthetic v(Lcom/bbm/ui/activities/ViewChannelPostActivity;)I
+.method static synthetic u(Lcom/bbm/ui/activities/ViewChannelPostActivity;)I
     .locals 1
 
     .prologue
-    .line 86
-    iget v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->t:I
+    .line 81
+    iget v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->e:I
 
     return v0
 .end method
 
-.method static synthetic w(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/dj;
+.method static synthetic v(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/en;
     .locals 1
 
     .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->v:Lcom/bbm/d/dj;
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Lcom/bbm/d/en;
 
     return-object v0
 .end method
 
-.method static synthetic x(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Ljava/lang/String;
+.method static synthetic w(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
     return-object v0
-.end method
-
-.method private x()V
-    .locals 6
-
-    .prologue
-    .line 451
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
-
-    .line 453
-    :try_start_0
-    const-string v1, "id"
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->m:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 454
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->m:Ljava/lang/String;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/d/a;->c(Ljava/lang/String;Z)Lcom/bbm/j/x;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->o:Lcom/bbm/j/x;
-
-    .line 456
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->X:Lcom/bbm/j/k;
-
-    if-nez v0, :cond_0
-
-    .line 457
-    new-instance v0, Lcom/bbm/ui/activities/afw;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/afw;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->X:Lcom/bbm/j/k;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->X:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
-
-    .line 459
-    :cond_0
-    new-instance v0, Lcom/bbm/ui/a/k;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->o:Lcom/bbm/j/x;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
-
-    iget-boolean v4, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
-
-    move-object v5, p0
-
-    invoke-direct/range {v0 .. v5}, Lcom/bbm/ui/a/k;-><init>(Lcom/bbm/j/x;Lcom/bbm/d/de;Ljava/lang/String;ZLandroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Lcom/bbm/ui/a/k;
-
-    .line 460
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->q:Lcom/bbm/ui/views/ChannelPostCommentListView;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Lcom/bbm/ui/a/k;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelPostCommentListView;->setAdapter(Landroid/widget/ListAdapter;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 464
-    :goto_0
-    return-void
-
-    .line 461
-    :catch_0
-    move-exception v0
-
-    .line 462
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "error in searching: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    goto :goto_0
-.end method
-
-.method private y()V
-    .locals 2
-
-    .prologue
-    const/16 v1, 0x8
-
-    .line 504
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->E:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
-
-    move-result v0
-
-    if-eq v0, v1, :cond_0
-
-    .line 505
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->E:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    .line 507
-    :cond_0
-    return-void
-.end method
-
-.method private z()V
-    .locals 4
-
-    .prologue
-    .line 596
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->D:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/FooterActionBar;->a()V
-
-    .line 597
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
-
-    iget-boolean v0, v0, Lcom/bbm/d/de;->s:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
-
-    if-nez v0, :cond_0
-
-    .line 598
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->D:Lcom/bbm/ui/FooterActionBar;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Lcom/bbm/ui/ActionBarItem;
-
-    const v2, 0x7f0a002e
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
-
-    .line 600
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
-
-    iget-boolean v0, v0, Lcom/bbm/d/de;->t:Z
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
-
-    iget-boolean v0, v0, Lcom/bbm/d/de;->s:Z
-
-    if-eqz v0, :cond_2
-
-    :cond_1
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
-
-    if-nez v0, :cond_2
-
-    .line 601
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->D:Lcom/bbm/ui/FooterActionBar;
-
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
-
-    const v2, 0x7f02027e
-
-    const v3, 0x7f0e01c4
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
-
-    const v2, 0x7f0a0037
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
-
-    .line 603
-    :cond_2
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
-
-    if-eqz v0, :cond_3
-
-    .line 604
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->D:Lcom/bbm/ui/FooterActionBar;
-
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
-
-    const v2, 0x7f02001b
-
-    const v3, 0x7f0e0490
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
-
-    const v2, 0x7f0a002d
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
-
-    .line 605
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->D:Lcom/bbm/ui/FooterActionBar;
-
-    new-instance v1, Lcom/bbm/ui/ActionBarItem;
-
-    const v2, 0x7f0202b9
-
-    const v3, 0x7f0e06f5
-
-    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
-
-    const v2, 0x7f0a003f
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
-
-    .line 607
-    :cond_3
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->D:Lcom/bbm/ui/FooterActionBar;
-
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
-
-    if-nez v0, :cond_4
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
-
-    .line 608
-    new-instance v0, Lcom/bbm/ui/activities/afs;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/afs;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    .line 627
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->D:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/by;)V
-
-    .line 628
-    return-void
-
-    .line 607
-    :cond_4
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
 .method public final a(I)V
-    .locals 0
-
-    .prologue
-    .line 157
-    iput p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->t:I
-
-    .line 158
-    return-void
-.end method
-
-.method public final a(Ljava/lang/String;)V
-    .locals 4
-
-    .prologue
-    .line 488
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->y()V
-
-    .line 489
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    .line 490
-    new-instance v1, Lcom/bbm/ui/activities/afp;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afp;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    const-wide/16 v2, 0x64
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 497
-    iput-object p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->n:Ljava/lang/String;
-
-    .line 498
-    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 499
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->q:Lcom/bbm/ui/views/ChannelPostCommentListView;
-
-    const/4 v1, 0x1
-
-    iput-boolean v1, v0, Lcom/bbm/ui/views/ChannelPostCommentListView;->a:Z
-
-    .line 501
-    :cond_0
-    return-void
-.end method
-
-.method protected final a(Lcom/bbm/ui/c/fq;)Z
-    .locals 1
-
-    .prologue
-    .line 1088
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Lcom/bbm/d/di;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
-
-    if-nez v0, :cond_1
-
-    .line 1089
-    :cond_0
-    new-instance v0, Lcom/bbm/ui/activities/age;
-
-    invoke-direct {v0, p0, p1}, Lcom/bbm/ui/activities/age;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/ui/c/fq;)V
-
-    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
-
-    .line 1111
-    :goto_0
-    const/4 v0, 0x1
-
-    return v0
-
-    .line 1109
-    :cond_1
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b(Lcom/bbm/ui/c/fq;)V
-
-    goto :goto_0
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 1134
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->b()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final b(I)V
     .locals 4
 
     .prologue
     const/4 v0, 0x0
 
-    .line 697
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    iput-boolean v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->B:Z
+    .line 660
+    iput-boolean v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Z
 
-    .line 698
-    iget-object v1, p0, Lcom/slidingmenu/lib/a/a;->z:Lcom/slidingmenu/lib/a/c;
+    .line 661
+    iget-object v1, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
     iget-object v1, v1, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    invoke-virtual {v1}, Lcom/slidingmenu/lib/SlidingMenu;->c()V
+    invoke-virtual {v1, v2}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    .line 699
+    .line 662
     sparse-switch p1, :sswitch_data_0
 
-    .line 728
+    .line 691
     :goto_0
     return-void
 
-    .line 701
+    .line 664
     :sswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->D:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
 
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->A()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->m()V
 
     goto :goto_0
 
-    .line 705
+    .line 668
     :sswitch_1
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Lcom/bbm/d/di;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/d/em;
 
-    iget-object v1, v1, Lcom/bbm/d/di;->k:Ljava/util/List;
+    iget-object v1, v1, Lcom/bbm/d/em;->k:Ljava/util/List;
 
-    .line 706
+    .line 669
     if-eqz v1, :cond_0
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -2409,119 +2142,282 @@
 
     if-lez v2, :cond_0
 
-    .line 707
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    .line 670
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iget-object v0, v0, Lcom/bbm/d/de;->N:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/d/ee;->O:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
-    invoke-static {v1, v0, v2}, Lcom/bbm/util/q;->a(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/util/n;
+    invoke-static {v1, v0, v2}, Lcom/bbm/util/r;->a(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/util/o;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/util/n;->c:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/util/o;->c:Ljava/lang/String;
 
-    .line 709
+    .line 672
     :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Lcom/bbm/d/di;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/d/em;
 
-    iget-object v1, v1, Lcom/bbm/d/di;->r:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/em;->s:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Lcom/bbm/d/di;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/d/em;
 
-    iget-object v2, v2, Lcom/bbm/d/di;->d:Ljava/lang/String;
+    iget-object v2, v2, Lcom/bbm/d/em;->d:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
-    invoke-static {p0, v1, v2, v0, v3}, Lcom/bbm/util/x;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v1, v2, v0, v3}, Lcom/bbm/util/ac;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 712
+    .line 675
     :sswitch_2
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->b()Ljava/lang/String;
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
-    invoke-static {p0, v0, v1}, Lcom/bbm/util/x;->a(Lcom/bbm/ui/activities/eg;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcom/bbm/util/ac;->a(Lcom/bbm/ui/activities/ey;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 715
+    .line 678
     :sswitch_3
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->b()Ljava/lang/String;
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
-    invoke-static {p0, v0, v1}, Lcom/bbm/util/x;->b(Lcom/bbm/ui/activities/eg;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcom/bbm/util/ac;->b(Lcom/bbm/ui/activities/ey;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 718
+    .line 681
     :sswitch_4
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    invoke-static {v1, p0, v0}, Lcom/bbm/util/r;->b(Lcom/bbm/d/de;Landroid/app/Activity;Landroid/widget/ImageView;)V
+    invoke-static {v1, p0, v0}, Lcom/bbm/util/s;->a(Lcom/bbm/d/ee;Landroid/app/Activity;Landroid/widget/ImageView;)V
 
     goto :goto_0
 
-    .line 721
+    .line 684
     :sswitch_5
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->b()Ljava/lang/String;
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/bbm/util/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/bbm/util/ac;->a(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 722
+    .line 685
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->finish()V
 
     goto :goto_0
 
-    .line 725
+    .line 688
     :sswitch_6
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->b()Ljava/lang/String;
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->b()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
-    invoke-static {p0, v0, v1}, Lcom/bbm/util/x;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v0, v1}, Lcom/bbm/util/ac;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 699
+    .line 662
     :sswitch_data_0
     .sparse-switch
-        0x7f0a002d -> :sswitch_4
-        0x7f0a002e -> :sswitch_0
-        0x7f0a0031 -> :sswitch_3
-        0x7f0a0035 -> :sswitch_2
-        0x7f0a0037 -> :sswitch_1
-        0x7f0a003c -> :sswitch_6
-        0x7f0a003f -> :sswitch_5
+        0x7f0b0022 -> :sswitch_4
+        0x7f0b0023 -> :sswitch_0
+        0x7f0b0026 -> :sswitch_3
+        0x7f0b002a -> :sswitch_2
+        0x7f0b002c -> :sswitch_1
+        0x7f0b0031 -> :sswitch_6
+        0x7f0b0034 -> :sswitch_5
     .end sparse-switch
 .end method
 
-.method protected final c_()Z
-    .locals 1
+.method public final a(Ljava/lang/String;)V
+    .locals 4
 
     .prologue
-    .line 1117
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Y:Z
+    .line 458
+    new-instance v0, Landroid/os/Handler;
 
-    if-nez v0, :cond_1
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
+    .line 459
+    new-instance v1, Lcom/bbm/ui/activities/ako;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ako;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+
+    const-wide/16 v2, 0xc8
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 465
+    iput-object p1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b:Ljava/lang/String;
+
+    .line 466
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->c_()Z
+    .line 467
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->d:Lcom/bbm/ui/views/ChannelPostCommentListView;
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lcom/bbm/ui/views/ChannelPostCommentListView;->a:Z
+
+    .line 469
+    :cond_0
+    return-void
+.end method
+
+.method public final a(Z)V
+    .locals 4
+
+    .prologue
+    const/16 v2, 0x8
+
+    const/4 v1, 0x0
+
+    .line 472
+    invoke-static {}, Lcom/bbm/Alaska;->l()Lcom/bbm/ag;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ag;->d()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/util/fh;->a(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 474
+    :goto_0
+    if-nez v0, :cond_1
+
+    .line 475
+    iget-object v3, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->O:Landroid/widget/ImageView;
+
+    if-eqz p1, :cond_3
+
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {v3, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 476
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
+
+    if-eqz p1, :cond_4
+
+    :goto_2
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
+
+    .line 478
+    :cond_1
+    return-void
+
+    :cond_2
+    move v0, v1
+
+    .line 472
+    goto :goto_0
+
+    :cond_3
+    move v0, v2
+
+    .line 475
+    goto :goto_1
+
+    :cond_4
+    move v1, v2
+
+    .line 476
+    goto :goto_2
+.end method
+
+.method protected final a(Lcom/bbm/ui/c/gj;)Z
+    .locals 1
+
+    .prologue
+    .line 1026
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/d/em;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
+
+    if-nez v0, :cond_1
+
+    .line 1027
+    :cond_0
+    new-instance v0, Lcom/bbm/ui/activities/akh;
+
+    invoke-direct {v0, p0, p1}, Lcom/bbm/ui/activities/akh;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/ui/c/gj;)V
+
+    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
+
+    .line 1049
+    :goto_0
+    const/4 v0, 0x1
+
+    return v0
+
+    .line 1047
+    :cond_1
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b(Lcom/bbm/ui/c/gj;)V
+
+    goto :goto_0
+.end method
+
+.method public final b()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 1072
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->b()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected final c()Z
+    .locals 1
+
+    .prologue
+    .line 1055
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Z
+
+    if-nez v0, :cond_0
+
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->c()Z
 
     move-result v0
 
@@ -2543,42 +2439,42 @@
     .locals 2
 
     .prologue
-    .line 1122
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->d()V
+    .line 1060
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->d()V
 
-    .line 1123
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/ui/EmoticonInputPanel;
+    .line 1061
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->f:Lcom/bbm/ui/EmoticonInputPanel;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setVisibility(I)V
 
-    .line 1124
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->D:Lcom/bbm/ui/FooterActionBar;
+    .line 1062
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
 
     invoke-virtual {v0}, Lcom/bbm/ui/FooterActionBar;->a()V
 
-    .line 1125
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->D:Lcom/bbm/ui/FooterActionBar;
+    .line 1063
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setBackActionEnabled(Z)V
 
-    .line 1126
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->D:Lcom/bbm/ui/FooterActionBar;
+    .line 1064
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
 
-    .line 1127
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Y:Z
+    .line 1065
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
 
     if-eqz v0, :cond_0
 
-    .line 1128
-    const v0, 0x7f0a00b8
+    .line 1066
+    const v0, 0x7f0b00fc
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -2586,7 +2482,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0e053b
+    const v1, 0x7f0e05d0
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getString(I)Ljava/lang/String;
 
@@ -2594,370 +2490,181 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1130
+    .line 1068
     :cond_0
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->s()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k()V
 
-    .line 1131
+    .line 1069
     return-void
 .end method
 
-.method protected final e()V
-    .locals 0
+.method final f()V
+    .locals 4
 
     .prologue
-    .line 962
-    invoke-static {p0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
+    .line 558
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
 
-    .line 963
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->e()V
+    invoke-virtual {v0}, Lcom/bbm/ui/FooterActionBar;->a()V
 
-    .line 964
-    return-void
-.end method
+    .line 560
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-.method protected final f()V
-    .locals 1
+    iget-boolean v0, v0, Lcom/bbm/d/ee;->t:Z
 
-    .prologue
-    .line 633
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->f()V
+    if-nez v0, :cond_0
 
-    .line 634
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->B:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Z
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
-    .line 635
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Lcom/bbm/ui/a/k;
+    .line 561
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->P:Lcom/bbm/ui/ActionBarItem;
 
-    .line 636
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Lcom/bbm/ui/a/k;
+    const v2, 0x7f0b0023
 
-    invoke-virtual {v0}, Lcom/bbm/ui/a/k;->e()V
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
 
-    .line 638
+    .line 563
     :cond_0
-    const-string v0, ""
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->n:Ljava/lang/String;
+    iget-boolean v0, v0, Lcom/bbm/d/ee;->u:Z
 
-    .line 640
-    :cond_1
-    const/4 v0, 0x0
+    if-eqz v0, :cond_1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->B:Z
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    .line 641
-    return-void
-.end method
-
-.method public final g()Lcom/bbm/ui/a/k;
-    .locals 1
-
-    .prologue
-    .line 149
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Lcom/bbm/ui/a/k;
-
-    return-object v0
-.end method
-
-.method public final h()I
-    .locals 1
-
-    .prologue
-    .line 153
-    iget v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->t:I
-
-    return v0
-.end method
-
-.method public final i()V
-    .locals 5
-
-    .prologue
-    const/4 v4, 0x1
-
-    const/16 v3, 0x8
-
-    const/4 v2, 0x0
-
-    .line 275
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
-
-    iget-boolean v0, v0, Lcom/bbm/d/de;->e:Z
-
-    if-eqz v0, :cond_4
-
-    .line 276
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->n:Ljava/lang/String;
-
-    .line 277
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x:Landroid/widget/EditText;
-
-    new-instance v1, Lcom/bbm/ui/activities/agg;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/agg;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
-
-    .line 290
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x:Landroid/widget/EditText;
-
-    new-instance v1, Lcom/bbm/ui/activities/agh;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/agh;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 297
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x:Landroid/widget/EditText;
-
-    new-instance v1, Lcom/bbm/ui/activities/agi;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/agi;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    .line 311
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x:Landroid/widget/EditText;
-
-    new-instance v1, Lcom/bbm/ui/activities/agj;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/agj;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
-
-    .line 326
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/ui/EmoticonInputPanel;
-
-    new-instance v1, Lcom/bbm/ui/activities/agk;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/agk;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setEmoticonInputPanelListener(Lcom/bbm/ui/bh;)V
-
-    .line 344
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Landroid/widget/ImageView;
-
-    new-instance v1, Lcom/bbm/ui/activities/agl;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/agl;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 352
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Landroid/widget/ImageButton;
-
-    new-instance v1, Lcom/bbm/ui/activities/afo;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afo;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 364
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->getVisibility()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 365
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
-
-    .line 367
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
-
-    iget-boolean v0, v0, Lcom/bbm/d/de;->p:Z
-
-    if-nez v0, :cond_1
-
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
-
-    if-nez v0, :cond_1
-
-    .line 368
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/EmoticonInputPanel;->setVisibility(I)V
-
-    .line 370
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->V:Landroid/widget/ProgressBar;
-
-    invoke-virtual {v0, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    .line 371
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->J:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 372
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setVisibility(I)V
-
-    .line 373
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->A:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 393
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
-
-    iget-boolean v0, v0, Lcom/bbm/d/de;->s:Z
+    iget-boolean v0, v0, Lcom/bbm/d/ee;->t:Z
 
     if-eqz v0, :cond_2
 
-    .line 394
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->P:Landroid/widget/ImageButton;
+    :cond_1
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Z
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setVisibility(I)V
+    if-nez v0, :cond_2
 
-    .line 395
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Landroid/widget/TextView;
+    .line 564
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
 
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
+    new-instance v1, Lcom/bbm/ui/ActionBarItem;
 
-    .line 399
+    const v2, 0x7f0202a4
+
+    const v3, 0x7f0e01d3
+
+    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
+
+    const v2, 0x7f0b002c
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
+
+    .line 566
     :cond_2
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->C:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Z
 
-    if-nez v0, :cond_3
+    if-eqz v0, :cond_3
 
-    .line 400
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->z()V
+    .line 567
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
 
-    .line 401
-    iput-boolean v4, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->C:Z
+    new-instance v1, Lcom/bbm/ui/ActionBarItem;
 
-    .line 402
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->q:Lcom/bbm/ui/views/ChannelPostCommentListView;
+    const v2, 0x7f02001f
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->ab:Landroid/widget/AdapterView$OnItemLongClickListener;
+    const v3, 0x7f0e04e3
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelPostCommentListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
+    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
 
-    .line 404
+    const v2, 0x7f0b0022
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
+
+    .line 568
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
+
+    new-instance v1, Lcom/bbm/ui/ActionBarItem;
+
+    const v2, 0x7f0202e2
+
+    const v3, 0x7f0e07c1
+
+    invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
+
+    const v2, 0x7f0b0034
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
+
+    .line 570
     :cond_3
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
+
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Z
+
+    if-nez v0, :cond_4
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
+
+    .line 571
+    new-instance v0, Lcom/bbm/ui/activities/ajv;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ajv;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+
+    .line 590
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
+
+    .line 591
     return-void
 
-    .line 377
+    .line 570
     :cond_4
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/EmoticonInputPanel;->setVisibility(I)V
-
-    .line 378
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->V:Landroid/widget/ProgressBar;
-
-    invoke-virtual {v0, v3}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    .line 379
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->J:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 380
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
-
-    .line 381
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
-
-    invoke-virtual {v0}, Lcom/bbm/d/de;->c()Lcom/bbm/util/bc;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
-
-    if-ne v0, v1, :cond_5
-
-    .line 382
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->A:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 386
-    :cond_5
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
-
-    .line 389
-    new-instance v0, Landroid/widget/ArrayAdapter;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1, v4}, Landroid/widget/ArrayAdapter;-><init>(Landroid/content/Context;I)V
-
-    .line 390
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->q:Lcom/bbm/ui/views/ChannelPostCommentListView;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/views/ChannelPostCommentListView;->setAdapter(Landroid/widget/ListAdapter;)V
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public final o()V
-    .locals 3
+.method protected final g()V
+    .locals 1
 
     .prologue
-    const/4 v2, 0x0
+    .line 596
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->g()V
 
-    .line 467
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->S:Landroid/widget/RelativeLayout;
+    .line 597
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Z
 
-    invoke-virtual {v0, v2}, Landroid/widget/RelativeLayout;->setVisibility(I)V
+    if-nez v0, :cond_1
 
-    .line 468
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->V:Landroid/widget/ProgressBar;
+    .line 598
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/ui/a/p;
 
-    const/16 v1, 0x8
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
+    .line 599
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/ui/a/p;
 
-    .line 469
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Landroid/widget/ImageView;
+    invoke-virtual {v0}, Lcom/bbm/ui/a/p;->d()V
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+    .line 601
+    :cond_0
+    const-string v0, ""
 
-    .line 470
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->T:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getResources()Landroid/content/res/Resources;
+    .line 603
+    :cond_1
+    const/4 v0, 0x0
 
-    move-result-object v1
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Z
 
-    const v2, 0x7f090147
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    .line 471
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->T:Landroid/widget/TextView;
-
-    const v1, 0x7f0e01c2
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    .line 472
+    .line 604
     return-void
 .end method
 
@@ -2965,29 +2672,29 @@
     .locals 1
 
     .prologue
-    .line 734
-    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/by;->onActivityResult(IILandroid/content/Intent;)V
+    .line 696
+    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/cq;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 735
+    .line 697
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_0
 
-    .line 736
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    .line 698
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
     if-nez v0, :cond_2
 
-    .line 737
-    new-instance v0, Lcom/bbm/ui/activities/afv;
+    .line 699
+    new-instance v0, Lcom/bbm/ui/activities/ajy;
 
-    invoke-direct {v0, p0, p3}, Lcom/bbm/ui/activities/afv;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;Landroid/content/Intent;)V
+    invoke-direct {v0, p0, p3}, Lcom/bbm/ui/activities/ajy;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;Landroid/content/Intent;)V
 
     invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
 
-    .line 752
+    .line 714
     :cond_0
     :goto_0
     const/16 v0, 0x64
@@ -2998,18 +2705,18 @@
 
     if-ne p2, v0, :cond_1
 
-    .line 753
-    invoke-static {p0, p3}, Lcom/bbm/util/x;->a(Landroid/app/Activity;Landroid/content/Intent;)V
+    .line 715
+    invoke-static {p0, p3}, Lcom/bbm/util/ac;->a(Landroid/app/Activity;Landroid/content/Intent;)V
 
-    .line 755
+    .line 717
     :cond_1
     return-void
 
-    .line 749
+    .line 711
     :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Lcom/bbm/d/de;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a:Lcom/bbm/d/ee;
 
-    invoke-static {p3, p0, v0}, Lcom/bbm/util/x;->a(Landroid/content/Intent;Landroid/content/Context;Lcom/bbm/d/de;)V
+    invoke-static {p3, p0, v0}, Lcom/bbm/util/ac;->a(Landroid/content/Intent;Landroid/content/Context;Lcom/bbm/d/ee;)V
 
     goto :goto_0
 .end method
@@ -3018,49 +2725,38 @@
     .locals 1
 
     .prologue
-    .line 969
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x:Landroid/widget/EditText;
+    .line 1077
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->f:Lcom/bbm/ui/EmoticonInputPanel;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->hasFocus()Z
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->d()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 970
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
-
-    .line 971
-    invoke-static {p0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    .line 972
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Lcom/bbm/ui/a/k;
+    .line 1078
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/ui/a/p;
 
     if-eqz v0, :cond_0
 
-    .line 973
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Lcom/bbm/ui/a/k;
+    .line 1079
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/ui/a/p;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/a/k;->e()V
+    invoke-virtual {v0}, Lcom/bbm/ui/a/p;->d()V
 
-    .line 975
+    .line 1081
     :cond_0
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->n:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b:Ljava/lang/String;
 
-    .line 976
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r()V
-
-    .line 980
+    .line 1085
     :goto_0
     return-void
 
-    .line 978
+    .line 1083
     :cond_1
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->onBackPressed()V
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onBackPressed()V
 
     goto :goto_0
 .end method
@@ -3071,23 +2767,23 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 211
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/by;->onCreate(Landroid/os/Bundle;)V
+    .line 206
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/cq;->onCreate(Landroid/os/Bundle;)V
 
-    .line 212
-    const v0, 0x7f0300ee
+    .line 207
+    const v0, 0x7f0300fe
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->setContentView(I)V
 
-    .line 213
+    .line 208
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
     invoke-virtual {v0, v2}, Landroid/view/Window;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 214
-    const v0, 0x7f0a0498
+    .line 209
+    const v0, 0x7f0b0529
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -3095,37 +2791,58 @@
 
     check-cast v0, Lcom/bbm/ui/views/OverrideBackPressed;
 
-    .line 215
-    const v1, 0x7f030016
+    .line 210
+    const v1, 0x7f030017
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/views/OverrideBackPressed;->setViewStub(I)V
 
-    .line 217
-    const v0, 0x7f0a00f0
+    .line 211
+    const v0, 0x7f0b012e
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/views/ChannelPostCommentListView;
+    check-cast v0, Lcom/bbm/ui/EmoticonPanelViewLayout;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->q:Lcom/bbm/ui/views/ChannelPostCommentListView;
+    .line 213
+    const v1, 0x7f0b0131
 
-    .line 218
-    const v0, 0x7f0a00ec
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
+    move-result-object v1
 
-    move-result-object v0
+    check-cast v1, Lcom/bbm/ui/views/ChannelPostCommentListView;
 
-    check-cast v0, Lcom/bbm/ui/EmoticonInputPanel;
+    iput-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->d:Lcom/bbm/ui/views/ChannelPostCommentListView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/ui/EmoticonInputPanel;
+    .line 214
+    const v1, 0x7f0b0136
 
-    .line 219
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/ui/EmoticonInputPanel;
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
 
-    const v1, 0x7f0a0525
+    move-result-object v1
+
+    check-cast v1, Lcom/bbm/ui/EmoticonInputPanel;
+
+    iput-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->f:Lcom/bbm/ui/EmoticonInputPanel;
+
+    .line 215
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->f:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonPanelViewLayout;->setEmoticonInputPanel(Lcom/bbm/ui/EmoticonInputPanel;)V
+
+    .line 216
+    new-instance v1, Lcom/bbm/ui/activities/aki;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/aki;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonPanelViewLayout;->setLowerPanelVisibilityListener(Lcom/bbm/ui/bs;)V
+
+    .line 228
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->f:Lcom/bbm/ui/EmoticonInputPanel;
+
+    const v1, 0x7f0b05b5
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->findViewById(I)Landroid/view/View;
 
@@ -3133,31 +2850,20 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->x:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->g:Landroid/widget/EditText;
 
-    .line 220
-    const v0, 0x7f0a00ed
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/FrameLayout;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->E:Landroid/widget/FrameLayout;
-
-    .line 222
+    .line 230
     invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030018
+    const v1, 0x7f030019
 
     invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
-    const v0, 0x7f0a00d7
+    const v0, 0x7f0b011b
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3165,97 +2871,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->G:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Q:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00d9
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->H:Landroid/widget/TextView;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->H:Landroid/widget/TextView;
-
-    new-instance v2, Lcom/bbm/ui/activities/afn;
-
-    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/afn;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    const v0, 0x7f0a00da
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->I:Landroid/widget/TextView;
-
-    const v0, 0x7f0a00dc
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->J:Landroid/widget/TextView;
-
-    const v0, 0x7f0a00de
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->K:Landroid/widget/TextView;
-
-    const v0, 0x7f0a00d6
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/ObservingImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->M:Lcom/bbm/ui/ObservingImageView;
-
-    const v0, 0x7f0a00db
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageButton;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Landroid/widget/ImageButton;
-
-    const v0, 0x7f0a00dd
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageButton;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->O:Landroid/widget/ImageButton;
-
-    const v0, 0x7f0a00fc
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->Q:Landroid/widget/ImageView;
-
-    const v0, 0x7f0a00fd
+    const v0, 0x7f0b011d
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3265,17 +2883,15 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->R:Landroid/widget/TextView;
 
-    const v0, 0x7f0a00fa
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->R:Landroid/widget/TextView;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    new-instance v2, Lcom/bbm/ui/activities/ajs;
 
-    move-result-object v0
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/ajs;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
 
-    check-cast v0, Landroid/widget/ImageButton;
+    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->P:Landroid/widget/ImageButton;
-
-    const v0, 0x7f0a00fb
+    const v0, 0x7f0b011e
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -3283,64 +2899,21 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->L:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->S:Landroid/widget/TextView;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->O:Landroid/widget/ImageButton;
+    const v0, 0x7f0b0120
 
-    new-instance v2, Lcom/bbm/ui/activities/afy;
-
-    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/afy;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->q:Lcom/bbm/ui/views/ChannelPostCommentListView;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelPostCommentListView;->addHeaderView(Landroid/view/View;)V
-
-    .line 224
-    const v0, 0x7f0a00ef
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/RelativeLayout;
+    check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->S:Landroid/widget/RelativeLayout;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->j:Landroid/widget/TextView;
 
-    .line 225
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->S:Landroid/widget/RelativeLayout;
+    const v0, 0x7f0b0122
 
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    .line 227
-    const v0, 0x7f0a00f3
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ProgressBar;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->V:Landroid/widget/ProgressBar;
-
-    .line 228
-    const v0, 0x7f0a00f2
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Landroid/widget/ImageView;
-
-    .line 229
-    const v0, 0x7f0a00f1
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -3348,8 +2921,128 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->T:Landroid/widget/TextView;
 
-    .line 231
-    const v0, 0x7f0a00fe
+    const v0, 0x7f0b011a
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/ObservingImageView;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Lcom/bbm/ui/ObservingImageView;
+
+    const v0, 0x7f0b011f
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageButton;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Landroid/widget/ImageButton;
+
+    const v0, 0x7f0b0121
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageButton;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->V:Landroid/widget/ImageButton;
+
+    const v0, 0x7f0b0140
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->W:Landroid/widget/ImageView;
+
+    const v0, 0x7f0b0141
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->X:Landroid/widget/TextView;
+
+    const v0, 0x7f0b013e
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageButton;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->m:Landroid/widget/ImageButton;
+
+    const v0, 0x7f0b013f
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k:Landroid/widget/TextView;
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->V:Landroid/widget/ImageButton;
+
+    new-instance v2, Lcom/bbm/ui/activities/akd;
+
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/akd;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->d:Lcom/bbm/ui/views/ChannelPostCommentListView;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/views/ChannelPostCommentListView;->addHeaderView(Landroid/view/View;)V
+
+    .line 232
+    const v0, 0x7f0b0132
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->n:Landroid/view/View;
+
+    .line 233
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->n:Landroid/view/View;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 235
+    const v0, 0x7f0b0135
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ProgressBar;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->q:Landroid/widget/ProgressBar;
+
+    .line 236
+    const v0, 0x7f0b0134
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Landroid/widget/ImageView;
+
+    .line 237
+    const v0, 0x7f0b0133
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -3357,10 +3050,21 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->A:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->o:Landroid/widget/TextView;
 
-    .line 233
-    const v0, 0x7f0a00a0
+    .line 239
+    const v0, 0x7f0b0142
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->h:Landroid/widget/TextView;
+
+    .line 241
+    const v0, 0x7f0b00bf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -3368,27 +3072,38 @@
 
     check-cast v0, Lcom/bbm/ui/FooterActionBar;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->D:Lcom/bbm/ui/FooterActionBar;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->N:Lcom/bbm/ui/FooterActionBar;
 
-    .line 234
+    .line 242
+    const v0, 0x7f0b0137
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->O:Landroid/widget/ImageView;
+
+    .line 243
     new-instance v0, Lcom/bbm/ui/ActionBarItem;
 
-    const v1, 0x7f020055
+    const v1, 0x7f02005e
 
-    const v2, 0x7f0e01bd
+    const v2, 0x7f0e01cc
 
     invoke-direct {v0, p0, v1, v2}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Lcom/bbm/ui/ActionBarItem;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->P:Lcom/bbm/ui/ActionBarItem;
 
-    .line 236
-    new-instance v0, Lcom/bbm/ui/activities/afx;
+    .line 245
+    new-instance v0, Lcom/bbm/ui/activities/aka;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/afx;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aka;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->I:Lcom/bbm/j/k;
 
-    .line 239
+    .line 248
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -3399,14 +3114,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
-    .line 240
+    .line 249
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->b()Ljava/lang/String;
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->b()Ljava/lang/String;
 
     move-result-object v1
 
@@ -3420,9 +3135,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/bbm/util/x;->b(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/bbm/util/ac;->b(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -3434,9 +3149,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->m:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->G:Ljava/lang/String;
 
-    .line 241
+    .line 250
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -3449,18 +3164,18 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->aa:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Z
 
-    .line 242
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    .line 251
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
-    new-instance v1, Lcom/bbm/ui/activities/afz;
+    new-instance v1, Lcom/bbm/ui/activities/akb;
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/afz;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/akb;-><init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;Ljava/lang/String;)V
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->s:Lcom/bbm/j/k;
+    iput-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->J:Lcom/bbm/j/k;
 
-    .line 243
+    .line 252
     return-void
 .end method
 
@@ -3468,13 +3183,13 @@
     .locals 0
 
     .prologue
-    .line 429
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->onPause()V
+    .line 399
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onPause()V
 
-    .line 430
-    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->s()V
+    .line 400
+    invoke-direct {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k()V
 
-    .line 431
+    .line 401
     return-void
 .end method
 
@@ -3482,10 +3197,10 @@
     .locals 3
 
     .prologue
-    .line 409
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->onResume()V
+    .line 379
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onResume()V
 
-    .line 410
+    .line 380
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -3500,165 +3215,68 @@
 
     if-eqz v0, :cond_0
 
-    .line 411
+    .line 381
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a(Ljava/lang/String;)V
 
-    .line 413
+    .line 383
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Lcom/bbm/j/k;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->I:Lcom/bbm/j/k;
 
     if-eqz v0, :cond_1
 
-    .line 414
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->r:Lcom/bbm/j/k;
+    .line 384
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->I:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 416
+    .line 386
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->s:Lcom/bbm/j/k;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->J:Lcom/bbm/j/k;
 
     if-eqz v0, :cond_2
 
-    .line 417
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->s:Lcom/bbm/j/k;
+    .line 387
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->J:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 419
+    .line 389
     :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Lcom/bbm/ui/a/k;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/ui/a/p;
 
     if-eqz v0, :cond_3
 
-    .line 420
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->p:Lcom/bbm/ui/a/k;
+    .line 390
+    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c:Lcom/bbm/ui/a/p;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/a/k;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/bbm/ui/a/p;->notifyDataSetChanged()V
 
-    .line 422
+    .line 392
     :cond_3
-    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/ui/f/a;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/bbm/ui/f/a;->c()V
 
-    .line 423
-    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
+    .line 393
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/ui/f/a;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/bbm/ui/f/a;->b()V
 
-    .line 424
-    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
+    .line 394
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/ui/f/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->F:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/f/a;->a(Ljava/lang/String;)V
 
-    .line 425
-    return-void
-.end method
-
-.method public final p()V
-    .locals 3
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 475
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->S:Landroid/widget/RelativeLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    .line 476
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->V:Landroid/widget/ProgressBar;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    .line 477
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->U:Landroid/widget/ImageView;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 478
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->T:Landroid/widget/TextView;
-
-    const v1, 0x7f0e01be
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
-
-    .line 479
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->T:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f09000c
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    .line 480
-    return-void
-.end method
-
-.method public final q()V
-    .locals 2
-
-    .prologue
-    .line 483
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->S:Landroid/widget/RelativeLayout;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    .line 484
-    return-void
-.end method
-
-.method public final r()V
-    .locals 2
-
-    .prologue
-    .line 510
-    invoke-static {p0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    .line 511
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w:Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->b()V
-
-    .line 512
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->E:Landroid/widget/FrameLayout;
-
-    invoke-virtual {v0}, Landroid/widget/FrameLayout;->getVisibility()I
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 513
-    iget-object v0, p0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->E:Landroid/widget/FrameLayout;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
-
-    .line 515
-    :cond_0
+    .line 395
     return-void
 .end method

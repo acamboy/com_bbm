@@ -38,22 +38,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 129
+    .line 130
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 125
+    .line 126
     iput-object v0, p0, Lcom/glympse/android/hal/m;->ae:Lcom/glympse/android/hal/l;
 
-    .line 126
+    .line 127
     iput-object v0, p0, Lcom/glympse/android/hal/m;->S:Lcom/glympse/android/hal/GVector;
 
-    .line 130
+    .line 131
     iput-object p1, p0, Lcom/glympse/android/hal/m;->ae:Lcom/glympse/android/hal/l;
 
-    .line 131
+    .line 132
     iput-object p2, p0, Lcom/glympse/android/hal/m;->S:Lcom/glympse/android/hal/GVector;
 
-    .line 132
+    .line 133
     return-void
 .end method
 
@@ -63,13 +63,13 @@
     .locals 2
 
     .prologue
-    .line 136
+    .line 137
     iget-object v0, p0, Lcom/glympse/android/hal/m;->ae:Lcom/glympse/android/hal/l;
 
     iget-object v1, p0, Lcom/glympse/android/hal/m;->S:Lcom/glympse/android/hal/GVector;
 
-    invoke-virtual {v0, v1}, Lcom/glympse/android/hal/l;->a(Lcom/glympse/android/hal/GVector;)V
+    invoke-virtual {v0, v1}, Lcom/glympse/android/hal/l;->complete(Lcom/glympse/android/hal/GVector;)V
 
-    .line 137
+    .line 138
     return-void
 .end method

@@ -1,39 +1,63 @@
-.class final Lcom/bbm/ui/dc;
+.class public final Lcom/bbm/ui/dc;
 .super Ljava/lang/Object;
-.source "ListItemTouchHandler.java"
-
-# interfaces
-.implements Lcom/bbm/ui/as;
+.source "IncrementalListAdapter.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/db;
+.field a:Ljava/lang/Object;
+
+.field b:J
+
+.field c:J
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/db;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 4
 
     .prologue
-    .line 32
-    iput-object p1, p0, Lcom/bbm/ui/dc;->a:Lcom/bbm/ui/db;
+    const-wide/16 v2, -0x1
 
+    .line 127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 128
+    iput-wide v2, p0, Lcom/bbm/ui/dc;->c:J
+
+    .line 129
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/bbm/ui/dc;->a:Ljava/lang/Object;
+
+    .line 130
+    iput-wide v2, p0, Lcom/bbm/ui/dc;->b:J
+
+    .line 131
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final a()Z
+    .locals 4
 
     .prologue
-    .line 36
-    iget-object v0, p0, Lcom/bbm/ui/dc;->a:Lcom/bbm/ui/db;
+    .line 142
+    iget-wide v0, p0, Lcom/bbm/ui/dc;->c:J
 
-    invoke-virtual {v0}, Lcom/bbm/ui/db;->b()V
+    const-wide/16 v2, -0x1
 
-    .line 37
-    return-void
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

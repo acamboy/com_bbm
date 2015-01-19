@@ -13,7 +13,7 @@
             "Ljava/util/HashMap",
             "<",
             "Ljava/lang/Integer;",
-            "Lcom/bbm/ui/dl;",
+            "Lcom/bbm/ui/eb;",
             ">;"
         }
     .end annotation
@@ -37,7 +37,7 @@
 
 .field private final j:Landroid/view/animation/Animation;
 
-.field private k:Lcom/bbm/ui/dk;
+.field private k:Lcom/bbm/ui/ea;
 
 .field private l:I
 
@@ -72,7 +72,7 @@
     .line 54
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/MainTabBarView;->k:Lcom/bbm/ui/dk;
+    iput-object v0, p0, Lcom/bbm/ui/MainTabBarView;->k:Lcom/bbm/ui/ea;
 
     .line 56
     const/4 v0, 0x0
@@ -84,77 +84,77 @@
 
     move-result-object v0
 
-    const v1, 0x7f030125
+    const v1, 0x7f03013c
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 66
-    new-instance v1, Lcom/bbm/ui/dl;
+    new-instance v1, Lcom/bbm/ui/eb;
 
     const/4 v0, 0x0
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/dl;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
+    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/eb;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
 
     .line 67
-    new-instance v2, Lcom/bbm/ui/dl;
+    new-instance v2, Lcom/bbm/ui/eb;
 
     const/4 v0, 0x0
 
-    invoke-direct {v2, p0, v0}, Lcom/bbm/ui/dl;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
+    invoke-direct {v2, p0, v0}, Lcom/bbm/ui/eb;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
 
     .line 68
-    new-instance v3, Lcom/bbm/ui/dl;
+    new-instance v3, Lcom/bbm/ui/eb;
 
     const/4 v0, 0x0
 
-    invoke-direct {v3, p0, v0}, Lcom/bbm/ui/dl;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
+    invoke-direct {v3, p0, v0}, Lcom/bbm/ui/eb;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
 
     .line 69
-    new-instance v4, Lcom/bbm/ui/dl;
+    new-instance v4, Lcom/bbm/ui/eb;
 
     const/4 v0, 0x0
 
-    invoke-direct {v4, p0, v0}, Lcom/bbm/ui/dl;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
+    invoke-direct {v4, p0, v0}, Lcom/bbm/ui/eb;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
 
     .line 70
-    new-instance v5, Lcom/bbm/ui/dl;
+    new-instance v5, Lcom/bbm/ui/eb;
 
     const/4 v0, 0x0
 
-    invoke-direct {v5, p0, v0}, Lcom/bbm/ui/dl;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
+    invoke-direct {v5, p0, v0}, Lcom/bbm/ui/eb;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
 
     .line 71
-    new-instance v6, Lcom/bbm/ui/dl;
+    new-instance v6, Lcom/bbm/ui/eb;
 
     const/4 v0, 0x0
 
-    invoke-direct {v6, p0, v0}, Lcom/bbm/ui/dl;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
+    invoke-direct {v6, p0, v0}, Lcom/bbm/ui/eb;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
 
     .line 72
-    new-instance v7, Lcom/bbm/ui/dl;
+    new-instance v7, Lcom/bbm/ui/eb;
 
     const/4 v0, 0x0
 
-    invoke-direct {v7, p0, v0}, Lcom/bbm/ui/dl;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
+    invoke-direct {v7, p0, v0}, Lcom/bbm/ui/eb;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
 
     .line 73
-    new-instance v8, Lcom/bbm/ui/dl;
+    new-instance v8, Lcom/bbm/ui/eb;
 
     const/4 v0, 0x0
 
-    invoke-direct {v8, p0, v0}, Lcom/bbm/ui/dl;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
+    invoke-direct {v8, p0, v0}, Lcom/bbm/ui/eb;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
 
     .line 74
-    new-instance v9, Lcom/bbm/ui/dl;
+    new-instance v9, Lcom/bbm/ui/eb;
 
     const/4 v0, 0x0
 
-    invoke-direct {v9, p0, v0}, Lcom/bbm/ui/dl;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
+    invoke-direct {v9, p0, v0}, Lcom/bbm/ui/eb;-><init>(Lcom/bbm/ui/MainTabBarView;B)V
 
     .line 76
-    const v0, 0x7f0a0565
+    const v0, 0x7f0b061d
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -162,15 +162,15 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object v0, v1, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iput-object v0, v1, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     .line 77
-    iget-object v0, v1, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v1, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 78
-    iget-object v0, v1, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v1, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     const/4 v10, 0x0
 
@@ -181,7 +181,7 @@
     invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
     .line 79
-    const v0, 0x7f0a0568
+    const v0, 0x7f0b0620
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -189,10 +189,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v1, Lcom/bbm/ui/dl;->c:Landroid/widget/TextView;
+    iput-object v0, v1, Lcom/bbm/ui/eb;->c:Landroid/widget/TextView;
 
     .line 80
-    const v0, 0x7f0a0566
+    const v0, 0x7f0b061e
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -200,10 +200,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v1, Lcom/bbm/ui/dl;->b:Landroid/widget/ImageView;
+    iput-object v0, v1, Lcom/bbm/ui/eb;->b:Landroid/widget/ImageView;
 
     .line 81
-    const v0, 0x7f0a0567
+    const v0, 0x7f0b061f
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -211,10 +211,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v1, Lcom/bbm/ui/dl;->d:Landroid/widget/ImageView;
+    iput-object v0, v1, Lcom/bbm/ui/eb;->d:Landroid/widget/ImageView;
 
     .line 83
-    const v0, 0x7f0a055c
+    const v0, 0x7f0b0614
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -222,15 +222,15 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object v0, v2, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iput-object v0, v2, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     .line 84
-    iget-object v0, v2, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v2, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 85
-    iget-object v0, v2, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v2, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     const/4 v10, 0x1
 
@@ -241,7 +241,7 @@
     invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
     .line 86
-    const v0, 0x7f0a055e
+    const v0, 0x7f0b0616
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -249,10 +249,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v2, Lcom/bbm/ui/dl;->c:Landroid/widget/TextView;
+    iput-object v0, v2, Lcom/bbm/ui/eb;->c:Landroid/widget/TextView;
 
     .line 87
-    const v0, 0x7f0a055d
+    const v0, 0x7f0b0615
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -260,10 +260,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v2, Lcom/bbm/ui/dl;->b:Landroid/widget/ImageView;
+    iput-object v0, v2, Lcom/bbm/ui/eb;->b:Landroid/widget/ImageView;
 
     .line 89
-    const v0, 0x7f0a056d
+    const v0, 0x7f0b0625
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -271,15 +271,15 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object v0, v3, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iput-object v0, v3, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     .line 90
-    iget-object v0, v3, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v3, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 91
-    iget-object v0, v3, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v3, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     const/4 v10, 0x2
 
@@ -290,7 +290,7 @@
     invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
     .line 92
-    const v0, 0x7f0a0350
+    const v0, 0x7f0b03d5
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -298,10 +298,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v3, Lcom/bbm/ui/dl;->b:Landroid/widget/ImageView;
+    iput-object v0, v3, Lcom/bbm/ui/eb;->b:Landroid/widget/ImageView;
 
     .line 93
-    const v0, 0x7f0a056e
+    const v0, 0x7f0b0626
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -309,10 +309,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v3, Lcom/bbm/ui/dl;->c:Landroid/widget/TextView;
+    iput-object v0, v3, Lcom/bbm/ui/eb;->c:Landroid/widget/TextView;
 
     .line 95
-    const v0, 0x7f0a0552
+    const v0, 0x7f0b060a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -320,15 +320,15 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object v0, v4, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iput-object v0, v4, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     .line 96
-    iget-object v0, v4, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v4, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 97
-    iget-object v0, v4, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v4, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     const/4 v10, 0x4
 
@@ -339,7 +339,7 @@
     invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
     .line 98
-    const v0, 0x7f0a0555
+    const v0, 0x7f0b060d
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -347,10 +347,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v4, Lcom/bbm/ui/dl;->c:Landroid/widget/TextView;
+    iput-object v0, v4, Lcom/bbm/ui/eb;->c:Landroid/widget/TextView;
 
     .line 99
-    const v0, 0x7f0a0553
+    const v0, 0x7f0b060b
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -358,10 +358,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v4, Lcom/bbm/ui/dl;->b:Landroid/widget/ImageView;
+    iput-object v0, v4, Lcom/bbm/ui/eb;->b:Landroid/widget/ImageView;
 
     .line 100
-    const v0, 0x7f0a0554
+    const v0, 0x7f0b060c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -369,10 +369,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v4, Lcom/bbm/ui/dl;->d:Landroid/widget/ImageView;
+    iput-object v0, v4, Lcom/bbm/ui/eb;->d:Landroid/widget/ImageView;
 
     .line 102
-    const v0, 0x7f0a0557
+    const v0, 0x7f0b060f
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -380,15 +380,15 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object v0, v5, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iput-object v0, v5, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     .line 103
-    iget-object v0, v5, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v5, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 104
-    iget-object v0, v5, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v5, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     const/4 v10, 0x5
 
@@ -399,7 +399,7 @@
     invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
     .line 105
-    const v0, 0x7f0a055a
+    const v0, 0x7f0b0612
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -407,10 +407,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v5, Lcom/bbm/ui/dl;->c:Landroid/widget/TextView;
+    iput-object v0, v5, Lcom/bbm/ui/eb;->c:Landroid/widget/TextView;
 
     .line 106
-    const v0, 0x7f0a0558
+    const v0, 0x7f0b0610
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -418,10 +418,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v5, Lcom/bbm/ui/dl;->b:Landroid/widget/ImageView;
+    iput-object v0, v5, Lcom/bbm/ui/eb;->b:Landroid/widget/ImageView;
 
     .line 107
-    const v0, 0x7f0a0559
+    const v0, 0x7f0b0611
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -429,10 +429,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v5, Lcom/bbm/ui/dl;->d:Landroid/widget/ImageView;
+    iput-object v0, v5, Lcom/bbm/ui/eb;->d:Landroid/widget/ImageView;
 
     .line 109
-    const v0, 0x7f0a0569
+    const v0, 0x7f0b0621
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -440,15 +440,15 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object v0, v6, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iput-object v0, v6, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     .line 110
-    iget-object v0, v6, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v6, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 111
-    iget-object v0, v6, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v6, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     const/4 v10, 0x3
 
@@ -459,7 +459,7 @@
     invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
     .line 112
-    const v0, 0x7f0a056c
+    const v0, 0x7f0b0624
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -467,10 +467,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v6, Lcom/bbm/ui/dl;->c:Landroid/widget/TextView;
+    iput-object v0, v6, Lcom/bbm/ui/eb;->c:Landroid/widget/TextView;
 
     .line 113
-    const v0, 0x7f0a056a
+    const v0, 0x7f0b0622
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -478,10 +478,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v6, Lcom/bbm/ui/dl;->b:Landroid/widget/ImageView;
+    iput-object v0, v6, Lcom/bbm/ui/eb;->b:Landroid/widget/ImageView;
 
     .line 114
-    const v0, 0x7f0a056b
+    const v0, 0x7f0b0623
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -489,10 +489,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v6, Lcom/bbm/ui/dl;->d:Landroid/widget/ImageView;
+    iput-object v0, v6, Lcom/bbm/ui/eb;->d:Landroid/widget/ImageView;
 
     .line 116
-    const v0, 0x7f0a0560
+    const v0, 0x7f0b0618
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -500,15 +500,15 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object v0, v7, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iput-object v0, v7, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     .line 117
-    iget-object v0, v7, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v7, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 118
-    iget-object v0, v7, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v7, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     const/4 v10, 0x6
 
@@ -519,7 +519,7 @@
     invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
     .line 119
-    const v0, 0x7f0a0563
+    const v0, 0x7f0b061b
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -527,10 +527,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v7, Lcom/bbm/ui/dl;->c:Landroid/widget/TextView;
+    iput-object v0, v7, Lcom/bbm/ui/eb;->c:Landroid/widget/TextView;
 
     .line 120
-    const v0, 0x7f0a0561
+    const v0, 0x7f0b0619
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -538,10 +538,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v7, Lcom/bbm/ui/dl;->b:Landroid/widget/ImageView;
+    iput-object v0, v7, Lcom/bbm/ui/eb;->b:Landroid/widget/ImageView;
 
     .line 121
-    const v0, 0x7f0a0562
+    const v0, 0x7f0b061a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -549,10 +549,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v7, Lcom/bbm/ui/dl;->d:Landroid/widget/ImageView;
+    iput-object v0, v7, Lcom/bbm/ui/eb;->d:Landroid/widget/ImageView;
 
     .line 123
-    const v0, 0x7f0a054f
+    const v0, 0x7f0b0607
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -560,15 +560,15 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object v0, v8, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iput-object v0, v8, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     .line 124
-    iget-object v0, v8, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v8, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 125
-    iget-object v0, v8, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v8, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     const/4 v10, 0x7
 
@@ -579,7 +579,7 @@
     invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
     .line 126
-    const v0, 0x7f0a0550
+    const v0, 0x7f0b0608
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -587,10 +587,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v8, Lcom/bbm/ui/dl;->b:Landroid/widget/ImageView;
+    iput-object v0, v8, Lcom/bbm/ui/eb;->b:Landroid/widget/ImageView;
 
     .line 127
-    const v0, 0x7f0a0551
+    const v0, 0x7f0b0609
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -598,10 +598,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v8, Lcom/bbm/ui/dl;->d:Landroid/widget/ImageView;
+    iput-object v0, v8, Lcom/bbm/ui/eb;->d:Landroid/widget/ImageView;
 
     .line 129
-    const v0, 0x7f0a056f
+    const v0, 0x7f0b0627
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -609,15 +609,15 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object v0, v9, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iput-object v0, v9, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     .line 130
-    iget-object v0, v9, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v9, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 131
-    iget-object v0, v9, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
+    iget-object v0, v9, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
 
     const/16 v10, 0x8
 
@@ -628,7 +628,7 @@
     invoke-virtual {v0, v10}, Landroid/view/ViewGroup;->setTag(Ljava/lang/Object;)V
 
     .line 132
-    const v0, 0x7f0a0572
+    const v0, 0x7f0b062a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -636,10 +636,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v9, Lcom/bbm/ui/dl;->c:Landroid/widget/TextView;
+    iput-object v0, v9, Lcom/bbm/ui/eb;->c:Landroid/widget/TextView;
 
     .line 133
-    const v0, 0x7f0a0570
+    const v0, 0x7f0b0628
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -647,10 +647,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v9, Lcom/bbm/ui/dl;->b:Landroid/widget/ImageView;
+    iput-object v0, v9, Lcom/bbm/ui/eb;->b:Landroid/widget/ImageView;
 
     .line 135
-    const v0, 0x7f0a0556
+    const v0, 0x7f0b060e
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -661,7 +661,7 @@
     iput-object v0, p0, Lcom/bbm/ui/MainTabBarView;->b:Landroid/widget/ImageView;
 
     .line 136
-    const v0, 0x7f0a055b
+    const v0, 0x7f0b0613
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -672,7 +672,7 @@
     iput-object v0, p0, Lcom/bbm/ui/MainTabBarView;->c:Landroid/widget/ImageView;
 
     .line 137
-    const v0, 0x7f0a055f
+    const v0, 0x7f0b0617
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -683,7 +683,7 @@
     iput-object v0, p0, Lcom/bbm/ui/MainTabBarView;->d:Landroid/widget/ImageView;
 
     .line 138
-    const v0, 0x7f0a0564
+    const v0, 0x7f0b061c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->findViewById(I)Landroid/view/View;
 
@@ -705,7 +705,7 @@
 
     move-result-object v0
 
-    const v10, 0x7f0202a5
+    const v10, 0x7f0202cc
 
     invoke-virtual {v0, v10}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -728,7 +728,7 @@
 
     move-result-object v0
 
-    const v10, 0x7f0b034a
+    const v10, 0x7f0a03a5
 
     invoke-virtual {v0, v10}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -908,21 +908,21 @@
     .locals 2
 
     .prologue
-    .line 340
+    .line 339
     if-nez p2, :cond_0
 
-    .line 341
+    .line 340
     iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->j:Landroid/view/animation/Animation;
 
-    new-instance v1, Lcom/bbm/ui/di;
+    new-instance v1, Lcom/bbm/ui/dy;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/di;-><init>(Lcom/bbm/ui/MainTabBarView;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/dy;-><init>(Lcom/bbm/ui/MainTabBarView;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 361
+    .line 360
     :cond_0
-    invoke-direct {p0, p1}, Lcom/bbm/ui/MainTabBarView;->d(I)Landroid/widget/ImageView;
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/MainTabBarView;->d(I)Landroid/widget/ImageView;
 
     move-result-object v1
 
@@ -933,8 +933,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 362
-    invoke-direct {p0, p1}, Lcom/bbm/ui/MainTabBarView;->b(I)Landroid/widget/TextView;
+    .line 361
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/MainTabBarView;->b(I)Landroid/widget/TextView;
 
     move-result-object v1
 
@@ -945,16 +945,16 @@
     :goto_1
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 363
+    .line 362
     return-void
 
-    .line 361
+    .line 360
     :cond_1
     iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->j:Landroid/view/animation/Animation;
 
     goto :goto_0
 
-    .line 362
+    .line 361
     :cond_2
     iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->j:Landroid/view/animation/Animation;
 
@@ -965,18 +965,18 @@
     .locals 2
 
     .prologue
-    .line 368
+    .line 367
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    new-instance v1, Lcom/bbm/ui/dj;
+    new-instance v1, Lcom/bbm/ui/dz;
 
-    invoke-direct {v1, p0, p1, p3, p2}, Lcom/bbm/ui/dj;-><init>(Lcom/bbm/ui/MainTabBarView;Landroid/view/ViewGroup;ZLandroid/widget/ImageView;)V
+    invoke-direct {v1, p0, p1, p3, p2}, Lcom/bbm/ui/dz;-><init>(Lcom/bbm/ui/MainTabBarView;Landroid/view/ViewGroup;ZLandroid/widget/ImageView;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 389
+    .line 388
     return-void
 .end method
 
@@ -990,86 +990,6 @@
     return v0
 .end method
 
-.method private b(I)Landroid/widget/TextView;
-    .locals 2
-
-    .prologue
-    .line 212
-    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->a:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->a:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/dl;
-
-    iget-object v0, v0, Lcom/bbm/ui/dl;->c:Landroid/widget/TextView;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private c(I)Landroid/view/View;
-    .locals 2
-
-    .prologue
-    .line 222
-    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->a:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->a:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/dl;
-
-    iget-object v0, v0, Lcom/bbm/ui/dl;->a:Landroid/view/ViewGroup;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
 .method static synthetic c(Lcom/bbm/ui/MainTabBarView;)[I
     .locals 1
 
@@ -1080,175 +1000,8 @@
     return-object v0
 .end method
 
-.method private d(I)Landroid/widget/ImageView;
-    .locals 2
-
-    .prologue
-    .line 232
-    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->a:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->a:Ljava/util/HashMap;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/dl;
-
-    iget-object v0, v0, Lcom/bbm/ui/dl;->b:Landroid/widget/ImageView;
-
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private setLeftTabVisibility(I)V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x5
-
-    const/4 v4, 0x4
-
-    const/4 v0, 0x1
-
-    const/16 v2, 0x8
-
-    const/4 v1, 0x0
-
-    .line 266
-    invoke-direct {p0, v0}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
-
-    move-result-object v3
-
-    if-ne p1, v0, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 267
-    invoke-direct {p0, v4}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
-
-    move-result-object v3
-
-    if-ne p1, v4, :cond_1
-
-    move v0, v1
-
-    :goto_1
-    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 268
-    invoke-direct {p0, v5}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
-
-    move-result-object v3
-
-    if-ne p1, v5, :cond_2
-
-    move v0, v1
-
-    :goto_2
-    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 269
-    const/4 v0, 0x6
-
-    invoke-direct {p0, v0}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
-
-    move-result-object v3
-
-    const/4 v0, 0x6
-
-    if-ne p1, v0, :cond_3
-
-    move v0, v1
-
-    :goto_3
-    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
-
-    .line 270
-    const/4 v0, 0x7
-
-    invoke-direct {p0, v0}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
-
-    move-result-object v0
-
-    const/4 v3, 0x7
-
-    if-ne p1, v3, :cond_4
-
-    :goto_4
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 271
-    return-void
-
-    :cond_0
-    move v0, v2
-
-    .line 266
-    goto :goto_0
-
-    :cond_1
-    move v0, v2
-
-    .line 267
-    goto :goto_1
-
-    :cond_2
-    move v0, v2
-
-    .line 268
-    goto :goto_2
-
-    :cond_3
-    move v0, v2
-
-    .line 269
-    goto :goto_3
-
-    :cond_4
-    move v1, v2
-
-    .line 270
-    goto :goto_4
-.end method
-
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    .prologue
-    .line 261
-    const/4 v0, 0x7
-
-    invoke-direct {p0, v0}, Lcom/bbm/ui/MainTabBarView;->setLeftTabVisibility(I)V
-
-    .line 262
-    return-void
-.end method
-
 .method public final a(I)V
     .locals 6
 
@@ -1316,14 +1069,14 @@
 
     .line 183
     :cond_3
-    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->k:Lcom/bbm/ui/dk;
+    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->k:Lcom/bbm/ui/ea;
 
     if-eqz v0, :cond_4
 
     .line 184
-    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->k:Lcom/bbm/ui/dk;
+    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->k:Lcom/bbm/ui/ea;
 
-    invoke-interface {v0, p1}, Lcom/bbm/ui/dk;->a(I)V
+    invoke-interface {v0, p1}, Lcom/bbm/ui/ea;->a(I)V
 
     .line 186
     :cond_4
@@ -1331,11 +1084,11 @@
 
     .line 178
     :pswitch_0
-    invoke-direct {p0, p1}, Lcom/bbm/ui/MainTabBarView;->setLeftTabVisibility(I)V
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/MainTabBarView;->setLeftTabVisibility(I)V
 
     invoke-direct {p0, p1, v2}, Lcom/bbm/ui/MainTabBarView;->a(IZ)V
 
-    invoke-direct {p0, v1}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1348,11 +1101,11 @@
     goto :goto_0
 
     :pswitch_1
-    invoke-direct {p0, p1}, Lcom/bbm/ui/MainTabBarView;->setLeftTabVisibility(I)V
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/MainTabBarView;->setLeftTabVisibility(I)V
 
     invoke-direct {p0, p1, v2}, Lcom/bbm/ui/MainTabBarView;->a(IZ)V
 
-    invoke-direct {p0, v4}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1365,11 +1118,11 @@
     goto :goto_0
 
     :pswitch_2
-    invoke-direct {p0, p1}, Lcom/bbm/ui/MainTabBarView;->setLeftTabVisibility(I)V
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/MainTabBarView;->setLeftTabVisibility(I)V
 
     invoke-direct {p0, p1, v2}, Lcom/bbm/ui/MainTabBarView;->a(IZ)V
 
-    invoke-direct {p0, v2}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1382,11 +1135,11 @@
     goto :goto_0
 
     :pswitch_3
-    invoke-direct {p0, p1}, Lcom/bbm/ui/MainTabBarView;->setLeftTabVisibility(I)V
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/MainTabBarView;->setLeftTabVisibility(I)V
 
     invoke-direct {p0, p1, v2}, Lcom/bbm/ui/MainTabBarView;->a(IZ)V
 
-    invoke-direct {p0, v5}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1407,7 +1160,7 @@
 
     invoke-direct {p0, v0, v3}, Lcom/bbm/ui/MainTabBarView;->a(IZ)V
 
-    invoke-direct {p0, v1}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1428,7 +1181,7 @@
 
     invoke-direct {p0, v0, v3}, Lcom/bbm/ui/MainTabBarView;->a(IZ)V
 
-    invoke-direct {p0, v4}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+    invoke-virtual {p0, v4}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1449,7 +1202,7 @@
 
     invoke-direct {p0, v0, v3}, Lcom/bbm/ui/MainTabBarView;->a(IZ)V
 
-    invoke-direct {p0, v2}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1470,7 +1223,7 @@
 
     invoke-direct {p0, v0, v3}, Lcom/bbm/ui/MainTabBarView;->a(IZ)V
 
-    invoke-direct {p0, v5}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -1496,49 +1249,124 @@
     .end packed-switch
 .end method
 
-.method public final a(Z)V
+.method public final b(I)Landroid/widget/TextView;
     .locals 2
 
     .prologue
-    const/16 v1, 0x8
+    .line 212
+    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->a:Ljava/util/HashMap;
 
-    .line 189
-    invoke-direct {p0, v1}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v1
 
-    .line 190
-    if-eqz v0, :cond_1
-
-    .line 191
-    invoke-virtual {v0, p1}, Landroid/view/View;->setEnabled(Z)V
-
-    .line 193
-    invoke-direct {p0, v1}, Lcom/bbm/ui/MainTabBarView;->d(I)Landroid/widget/ImageView;
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 194
     if-eqz v0, :cond_0
 
-    .line 195
-    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
+    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->a:Ljava/util/HashMap;
 
-    .line 198
-    :cond_0
-    invoke-direct {p0, v1}, Lcom/bbm/ui/MainTabBarView;->b(I)Landroid/widget/TextView;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 199
-    if-eqz v0, :cond_1
+    check-cast v0, Lcom/bbm/ui/eb;
 
-    .line 200
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEnabled(Z)V
+    iget-object v0, v0, Lcom/bbm/ui/eb;->c:Landroid/widget/TextView;
 
-    .line 203
-    :cond_1
-    return-void
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final c(I)Landroid/view/View;
+    .locals 2
+
+    .prologue
+    .line 222
+    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->a:Ljava/util/HashMap;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->a:Ljava/util/HashMap;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/eb;
+
+    iget-object v0, v0, Lcom/bbm/ui/eb;->a:Landroid/view/ViewGroup;
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final d(I)Landroid/widget/ImageView;
+    .locals 2
+
+    .prologue
+    .line 232
+    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->a:Ljava/util/HashMap;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/MainTabBarView;->a:Ljava/util/HashMap;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/eb;
+
+    iget-object v0, v0, Lcom/bbm/ui/eb;->b:Landroid/widget/ImageView;
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method public onClick(Landroid/view/View;)V
@@ -1575,7 +1403,7 @@
 
     const-class v2, Lcom/bbm/ui/MainTabBarView;
 
-    invoke-static {v1, v2}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v1, v2}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 283
     const/4 v1, 0x4
@@ -1630,7 +1458,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/dl;
+    check-cast v0, Lcom/bbm/ui/eb;
 
     .line 239
     if-eqz v0, :cond_0
@@ -1646,7 +1474,7 @@
 
     .line 243
     :pswitch_1
-    iget-object v3, v0, Lcom/bbm/ui/dl;->d:Landroid/widget/ImageView;
+    iget-object v3, v0, Lcom/bbm/ui/eb;->d:Landroid/widget/ImageView;
 
     if-eqz p2, :cond_1
 
@@ -1654,7 +1482,7 @@
     invoke-virtual {v3, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 244
-    iget-object v0, v0, Lcom/bbm/ui/dl;->d:Landroid/widget/ImageView;
+    iget-object v0, v0, Lcom/bbm/ui/eb;->d:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->invalidate()V
 
@@ -1668,7 +1496,7 @@
 
     .line 250
     :pswitch_2
-    iget-object v0, v0, Lcom/bbm/ui/dl;->d:Landroid/widget/ImageView;
+    iget-object v0, v0, Lcom/bbm/ui/eb;->d:Landroid/widget/ImageView;
 
     if-eqz p2, :cond_2
 
@@ -1684,7 +1512,7 @@
 
     .line 254
     :pswitch_3
-    iget-object v0, v0, Lcom/bbm/ui/dl;->d:Landroid/widget/ImageView;
+    iget-object v0, v0, Lcom/bbm/ui/eb;->d:Landroid/widget/ImageView;
 
     if-eqz p2, :cond_3
 
@@ -1712,12 +1540,126 @@
     .end packed-switch
 .end method
 
-.method public setOnTabClickListener(Lcom/bbm/ui/dk;)V
+.method public setLeftTabVisibility(I)V
+    .locals 6
+
+    .prologue
+    const/4 v5, 0x5
+
+    const/4 v4, 0x4
+
+    const/4 v0, 0x1
+
+    const/16 v2, 0x8
+
+    const/4 v1, 0x0
+
+    .line 266
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+
+    move-result-object v3
+
+    if-ne p1, v0, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 267
+    invoke-virtual {p0, v4}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+
+    move-result-object v3
+
+    if-ne p1, v4, :cond_1
+
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 268
+    invoke-virtual {p0, v5}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+
+    move-result-object v3
+
+    if-ne p1, v5, :cond_2
+
+    move v0, v1
+
+    :goto_2
+    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 269
+    const/4 v0, 0x6
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+
+    move-result-object v3
+
+    const/4 v0, 0x6
+
+    if-ne p1, v0, :cond_3
+
+    move v0, v1
+
+    :goto_3
+    invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 270
+    const/4 v0, 0x7
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/MainTabBarView;->c(I)Landroid/view/View;
+
+    move-result-object v0
+
+    const/4 v3, 0x7
+
+    if-ne p1, v3, :cond_4
+
+    :goto_4
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 271
+    return-void
+
+    :cond_0
+    move v0, v2
+
+    .line 266
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    .line 267
+    goto :goto_1
+
+    :cond_2
+    move v0, v2
+
+    .line 268
+    goto :goto_2
+
+    :cond_3
+    move v0, v2
+
+    .line 269
+    goto :goto_3
+
+    :cond_4
+    move v1, v2
+
+    .line 270
+    goto :goto_4
+.end method
+
+.method public setOnTabClickListener(Lcom/bbm/ui/ea;)V
     .locals 0
 
     .prologue
     .line 274
-    iput-object p1, p0, Lcom/bbm/ui/MainTabBarView;->k:Lcom/bbm/ui/dk;
+    iput-object p1, p0, Lcom/bbm/ui/MainTabBarView;->k:Lcom/bbm/ui/ea;
 
     .line 275
     return-void

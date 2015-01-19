@@ -1,38 +1,26 @@
 .class final Lcom/bbm/ui/c/bg;
 .super Ljava/lang/Object;
-.source "ChatsFragment.java"
+.source "ChannelPostPreviewFragment.java"
 
 # interfaces
-.implements Ljava/util/Comparator;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Ljava/lang/Integer;",
-        ">;"
-    }
-.end annotation
+.implements Lcom/bbm/j/s;
 
 
 # instance fields
-.field final synthetic a:Ljava/util/ArrayList;
+.field final synthetic a:Landroid/content/Context;
 
-.field final synthetic b:Lcom/bbm/ui/c/bf;
+.field final synthetic b:Lcom/bbm/ui/c/be;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/bf;Ljava/util/ArrayList;)V
+.method constructor <init>(Lcom/bbm/ui/c/be;Landroid/content/Context;)V
     .locals 0
 
     .prologue
-    .line 204
-    iput-object p1, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/bf;
+    .line 58
+    iput-object p1, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
 
-    iput-object p2, p0, Lcom/bbm/ui/c/bg;->a:Ljava/util/ArrayList;
+    iput-object p2, p0, Lcom/bbm/ui/c/bg;->a:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,67 +29,155 @@
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 5
+.method public final a()Z
+    .locals 6
 
     .prologue
-    .line 204
-    check-cast p1, Ljava/lang/Integer;
+    const/4 v1, 0x0
 
-    check-cast p2, Ljava/lang/Integer;
-
-    iget-object v0, p0, Lcom/bbm/ui/c/bg;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {p2}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    .line 61
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Long;
+    iget-object v2, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    invoke-static {v2}, Lcom/bbm/ui/c/be;->c(Lcom/bbm/ui/c/be;)Ljava/lang/String;
 
-    move-result-wide v1
+    move-result-object v2
 
-    iget-object v0, p0, Lcom/bbm/ui/c/bg;->a:Ljava/util/ArrayList;
+    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/ee;
 
-    invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
+    move-result-object v2
 
-    move-result v3
+    .line 62
+    iget-object v0, v2, Lcom/bbm/d/ee;->R:Lcom/bbm/util/bi;
 
-    invoke-virtual {v0, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    sget-object v3, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
 
-    move-result-object v0
+    if-ne v0, v3, :cond_0
 
-    check-cast v0, Ljava/lang/Long;
+    move v0, v1
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v3
-
-    cmp-long v0, v1, v3
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
+    .line 77
     :goto_0
     return v0
 
+    .line 65
     :cond_0
-    cmp-long v0, v3, v1
+    iget-object v3, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
 
-    if-lez v0, :cond_1
+    new-instance v4, Lcom/bbm/ui/a/f;
 
-    const/4 v0, -0x1
+    iget-object v0, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
 
-    goto :goto_0
+    invoke-static {v0}, Lcom/bbm/ui/c/be;->a(Lcom/bbm/ui/c/be;)Lcom/bbm/j/x;
 
-    :cond_1
-    const/4 v0, 0x0
+    move-result-object v5
+
+    iget-object v0, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/be;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/cq;
+
+    invoke-direct {v4, v5, v2, v0}, Lcom/bbm/ui/a/f;-><init>(Lcom/bbm/j/x;Lcom/bbm/d/ee;Lcom/bbm/ui/activities/cq;)V
+
+    invoke-static {v3, v4}, Lcom/bbm/ui/c/be;->a(Lcom/bbm/ui/c/be;Lcom/bbm/ui/a/f;)Lcom/bbm/ui/a/f;
+
+    .line 66
+    iget-object v0, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/be;->d(Lcom/bbm/ui/c/be;)Lcom/bbm/ui/a/f;
+
+    move-result-object v0
+
+    iput-boolean v1, v0, Lcom/bbm/ui/gh;->c:Z
+
+    .line 67
+    iget-object v0, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/be;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/PreviewChannelActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/be;->d(Lcom/bbm/ui/c/be;)Lcom/bbm/ui/a/f;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/bbm/ui/activities/PreviewChannelActivity;->a:Lcom/bbm/util/ba;
+
+    .line 70
+    iget-object v0, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
+
+    new-instance v1, Lcom/bbm/ui/cx;
+
+    iget-object v2, p0, Lcom/bbm/ui/c/bg;->a:Landroid/content/Context;
+
+    iget-object v3, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
+
+    invoke-static {v3}, Lcom/bbm/ui/c/be;->d(Lcom/bbm/ui/c/be;)Lcom/bbm/ui/a/f;
+
+    move-result-object v3
+
+    invoke-direct {v1, v2, v3}, Lcom/bbm/ui/cx;-><init>(Landroid/content/Context;Landroid/widget/ListAdapter;)V
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/be;->a(Lcom/bbm/ui/c/be;Lcom/bbm/ui/cx;)Lcom/bbm/ui/cx;
+
+    .line 71
+    iget-object v0, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/be;->e(Lcom/bbm/ui/c/be;)Lcom/bbm/ui/cx;
+
+    move-result-object v0
+
+    const/4 v1, 0x3
+
+    iput v1, v0, Lcom/bbm/ui/cx;->h:I
+
+    .line 74
+    iget-object v0, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/be;->b(Lcom/bbm/ui/c/be;)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0b03b0
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ListView;
+
+    .line 75
+    iget-object v1, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/be;->e(Lcom/bbm/ui/c/be;)Lcom/bbm/ui/cx;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
+
+    .line 76
+    iget-object v1, p0, Lcom/bbm/ui/c/bg;->b:Lcom/bbm/ui/c/be;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/be;->d(Lcom/bbm/ui/c/be;)Lcom/bbm/ui/a/f;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/ui/a/f;->f:Landroid/widget/AdapterView$OnItemLongClickListener;
+
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
+
+    .line 77
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method

@@ -363,30 +363,6 @@
     return-void
 .end method
 
-.method private c()Landroid/graphics/Matrix;
-    .locals 2
-
-    .prologue
-    .line 284
-    iget-object v0, p0, Lcom/cropimage/i;->a:Landroid/graphics/Matrix;
-
-    iget-object v1, p0, Lcom/cropimage/i;->f:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
-
-    .line 285
-    iget-object v0, p0, Lcom/cropimage/i;->a:Landroid/graphics/Matrix;
-
-    iget-object v1, p0, Lcom/cropimage/i;->g:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
-
-    .line 286
-    iget-object v0, p0, Lcom/cropimage/i;->a:Landroid/graphics/Matrix;
-
-    return-object v0
-.end method
-
 
 # virtual methods
 .method protected final a()V
@@ -410,7 +386,7 @@
 
     .line 190
     :cond_0
-    invoke-direct {p0}, Lcom/cropimage/i;->c()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/cropimage/i;->getImageViewMatrix()Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -505,7 +481,7 @@
     invoke-virtual {p0, v1, v0}, Lcom/cropimage/i;->a(FF)V
 
     .line 226
-    invoke-direct {p0}, Lcom/cropimage/i;->c()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/cropimage/i;->getImageViewMatrix()Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -620,7 +596,7 @@
 
     .line 311
     :cond_0
-    invoke-virtual {p0}, Lcom/cropimage/i;->b()F
+    invoke-virtual {p0}, Lcom/cropimage/i;->getScale()F
 
     move-result v0
 
@@ -633,7 +609,7 @@
     invoke-virtual {v1, v0, v0, p2, p3}, Landroid/graphics/Matrix;->postScale(FFFF)Z
 
     .line 315
-    invoke-direct {p0}, Lcom/cropimage/i;->c()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/cropimage/i;->getImageViewMatrix()Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -646,167 +622,6 @@
     return-void
 .end method
 
-.method public final a(Landroid/graphics/Bitmap;Z)V
-    .locals 1
-
-    .prologue
-    .line 149
-    new-instance v0, Lcom/cropimage/m;
-
-    invoke-direct {v0, p1}, Lcom/cropimage/m;-><init>(Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {p0, v0, p2}, Lcom/cropimage/i;->a(Lcom/cropimage/m;Z)V
-
-    .line 150
-    return-void
-.end method
-
-.method public final a(Lcom/cropimage/m;Z)V
-    .locals 3
-
-    .prologue
-    .line 153
-    invoke-virtual {p0}, Lcom/cropimage/i;->getWidth()I
-
-    move-result v0
-
-    .line 155
-    if-gtz v0, :cond_0
-
-    .line 156
-    new-instance v0, Lcom/cropimage/j;
-
-    invoke-direct {v0, p0, p1, p2}, Lcom/cropimage/j;-><init>(Lcom/cropimage/i;Lcom/cropimage/m;Z)V
-
-    iput-object v0, p0, Lcom/cropimage/i;->d:Ljava/lang/Runnable;
-
-    .line 178
-    :goto_0
-    return-void
-
-    .line 165
-    :cond_0
-    iget-object v0, p1, Lcom/cropimage/m;->a:Landroid/graphics/Bitmap;
-
-    if-eqz v0, :cond_2
-
-    .line 166
-    iget-object v0, p0, Lcom/cropimage/i;->f:Landroid/graphics/Matrix;
-
-    invoke-direct {p0, p1, v0}, Lcom/cropimage/i;->a(Lcom/cropimage/m;Landroid/graphics/Matrix;)V
-
-    .line 167
-    iget-object v0, p1, Lcom/cropimage/m;->a:Landroid/graphics/Bitmap;
-
-    iget v1, p1, Lcom/cropimage/m;->b:I
-
-    invoke-direct {p0, v0, v1}, Lcom/cropimage/i;->a(Landroid/graphics/Bitmap;I)V
-
-    .line 173
-    :goto_1
-    if-eqz p2, :cond_1
-
-    .line 174
-    iget-object v0, p0, Lcom/cropimage/i;->g:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
-
-    .line 176
-    :cond_1
-    invoke-direct {p0}, Lcom/cropimage/i;->c()Landroid/graphics/Matrix;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/cropimage/i;->setImageMatrix(Landroid/graphics/Matrix;)V
-
-    .line 177
-    iget-object v0, p0, Lcom/cropimage/i;->h:Lcom/cropimage/m;
-
-    iget-object v0, v0, Lcom/cropimage/m;->a:Landroid/graphics/Bitmap;
-
-    if-nez v0, :cond_3
-
-    const/high16 v0, 0x3f800000
-
-    :goto_2
-    iput v0, p0, Lcom/cropimage/i;->k:F
-
-    goto :goto_0
-
-    .line 169
-    :cond_2
-    iget-object v0, p0, Lcom/cropimage/i;->f:Landroid/graphics/Matrix;
-
-    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
-
-    .line 170
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/cropimage/i;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    goto :goto_1
-
-    .line 177
-    :cond_3
-    iget-object v0, p0, Lcom/cropimage/i;->h:Lcom/cropimage/m;
-
-    invoke-virtual {v0}, Lcom/cropimage/m;->b()I
-
-    move-result v0
-
-    int-to-float v0, v0
-
-    iget v1, p0, Lcom/cropimage/i;->i:I
-
-    int-to-float v1, v1
-
-    div-float/2addr v0, v1
-
-    iget-object v1, p0, Lcom/cropimage/i;->h:Lcom/cropimage/m;
-
-    invoke-virtual {v1}, Lcom/cropimage/m;->a()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    iget v2, p0, Lcom/cropimage/i;->j:I
-
-    int-to-float v2, v2
-
-    div-float/2addr v1, v2
-
-    invoke-static {v0, v1}, Ljava/lang/Math;->max(FF)F
-
-    move-result v0
-
-    const/high16 v1, 0x40800000
-
-    mul-float/2addr v0, v1
-
-    goto :goto_2
-.end method
-
-.method protected final b()F
-    .locals 2
-
-    .prologue
-    .line 254
-    iget-object v0, p0, Lcom/cropimage/i;->g:Landroid/graphics/Matrix;
-
-    iget-object v1, p0, Lcom/cropimage/i;->b:[F
-
-    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->getValues([F)V
-
-    iget-object v0, p0, Lcom/cropimage/i;->b:[F
-
-    const/4 v1, 0x0
-
-    aget v0, v0, v1
-
-    return v0
-.end method
-
 .method protected final b(FF)V
     .locals 1
 
@@ -815,7 +630,7 @@
     invoke-virtual {p0, p1, p2}, Lcom/cropimage/i;->a(FF)V
 
     .line 405
-    invoke-direct {p0}, Lcom/cropimage/i;->c()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/cropimage/i;->getImageViewMatrix()Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -830,7 +645,7 @@
 
     .prologue
     .line 321
-    invoke-virtual {p0}, Lcom/cropimage/i;->b()F
+    invoke-virtual {p0}, Lcom/cropimage/i;->getScale()F
 
     move-result v0
 
@@ -841,7 +656,7 @@
     div-float v5, v0, v1
 
     .line 322
-    invoke-virtual {p0}, Lcom/cropimage/i;->b()F
+    invoke-virtual {p0}, Lcom/cropimage/i;->getScale()F
 
     move-result v4
 
@@ -867,6 +682,50 @@
 
     .line 338
     return-void
+.end method
+
+.method protected getImageViewMatrix()Landroid/graphics/Matrix;
+    .locals 2
+
+    .prologue
+    .line 284
+    iget-object v0, p0, Lcom/cropimage/i;->a:Landroid/graphics/Matrix;
+
+    iget-object v1, p0, Lcom/cropimage/i;->f:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
+
+    .line 285
+    iget-object v0, p0, Lcom/cropimage/i;->a:Landroid/graphics/Matrix;
+
+    iget-object v1, p0, Lcom/cropimage/i;->g:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->postConcat(Landroid/graphics/Matrix;)Z
+
+    .line 286
+    iget-object v0, p0, Lcom/cropimage/i;->a:Landroid/graphics/Matrix;
+
+    return-object v0
+.end method
+
+.method protected getScale()F
+    .locals 2
+
+    .prologue
+    .line 254
+    iget-object v0, p0, Lcom/cropimage/i;->g:Landroid/graphics/Matrix;
+
+    iget-object v1, p0, Lcom/cropimage/i;->b:[F
+
+    invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->getValues([F)V
+
+    iget-object v0, p0, Lcom/cropimage/i;->b:[F
+
+    const/4 v1, 0x0
+
+    aget v0, v0, v1
+
+    return v0
 .end method
 
 .method public onKeyDown(ILandroid/view/KeyEvent;)Z
@@ -928,7 +787,7 @@
     if-nez v0, :cond_0
 
     .line 107
-    invoke-virtual {p0}, Lcom/cropimage/i;->b()F
+    invoke-virtual {p0}, Lcom/cropimage/i;->getScale()F
 
     move-result v0
 
@@ -1017,7 +876,7 @@
     invoke-direct {p0, v0, v1}, Lcom/cropimage/i;->a(Lcom/cropimage/m;Landroid/graphics/Matrix;)V
 
     .line 89
-    invoke-direct {p0}, Lcom/cropimage/i;->c()Landroid/graphics/Matrix;
+    invoke-virtual {p0}, Lcom/cropimage/i;->getImageViewMatrix()Landroid/graphics/Matrix;
 
     move-result-object v0
 
@@ -1038,5 +897,157 @@
     invoke-direct {p0, p1, v0}, Lcom/cropimage/i;->a(Landroid/graphics/Bitmap;I)V
 
     .line 122
+    return-void
+.end method
+
+.method public setImageBitmapResetBase(Landroid/graphics/Bitmap;Z)V
+    .locals 1
+
+    .prologue
+    .line 149
+    new-instance v0, Lcom/cropimage/m;
+
+    invoke-direct {v0, p1}, Lcom/cropimage/m;-><init>(Landroid/graphics/Bitmap;)V
+
+    invoke-virtual {p0, v0, p2}, Lcom/cropimage/i;->setImageRotateBitmapResetBase(Lcom/cropimage/m;Z)V
+
+    .line 150
+    return-void
+.end method
+
+.method public setImageRotateBitmapResetBase(Lcom/cropimage/m;Z)V
+    .locals 3
+
+    .prologue
+    .line 153
+    invoke-virtual {p0}, Lcom/cropimage/i;->getWidth()I
+
+    move-result v0
+
+    .line 155
+    if-gtz v0, :cond_0
+
+    .line 156
+    new-instance v0, Lcom/cropimage/j;
+
+    invoke-direct {v0, p0, p1, p2}, Lcom/cropimage/j;-><init>(Lcom/cropimage/i;Lcom/cropimage/m;Z)V
+
+    iput-object v0, p0, Lcom/cropimage/i;->d:Ljava/lang/Runnable;
+
+    .line 178
+    :goto_0
+    return-void
+
+    .line 165
+    :cond_0
+    iget-object v0, p1, Lcom/cropimage/m;->a:Landroid/graphics/Bitmap;
+
+    if-eqz v0, :cond_2
+
+    .line 166
+    iget-object v0, p0, Lcom/cropimage/i;->f:Landroid/graphics/Matrix;
+
+    invoke-direct {p0, p1, v0}, Lcom/cropimage/i;->a(Lcom/cropimage/m;Landroid/graphics/Matrix;)V
+
+    .line 167
+    iget-object v0, p1, Lcom/cropimage/m;->a:Landroid/graphics/Bitmap;
+
+    iget v1, p1, Lcom/cropimage/m;->b:I
+
+    invoke-direct {p0, v0, v1}, Lcom/cropimage/i;->a(Landroid/graphics/Bitmap;I)V
+
+    .line 173
+    :goto_1
+    if-eqz p2, :cond_1
+
+    .line 174
+    iget-object v0, p0, Lcom/cropimage/i;->g:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
+
+    .line 176
+    :cond_1
+    invoke-virtual {p0}, Lcom/cropimage/i;->getImageViewMatrix()Landroid/graphics/Matrix;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Lcom/cropimage/i;->setImageMatrix(Landroid/graphics/Matrix;)V
+
+    .line 177
+    iget-object v0, p0, Lcom/cropimage/i;->h:Lcom/cropimage/m;
+
+    iget-object v0, v0, Lcom/cropimage/m;->a:Landroid/graphics/Bitmap;
+
+    if-nez v0, :cond_3
+
+    const/high16 v0, 0x3f800000
+
+    :goto_2
+    iput v0, p0, Lcom/cropimage/i;->k:F
+
+    goto :goto_0
+
+    .line 169
+    :cond_2
+    iget-object v0, p0, Lcom/cropimage/i;->f:Landroid/graphics/Matrix;
+
+    invoke-virtual {v0}, Landroid/graphics/Matrix;->reset()V
+
+    .line 170
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/cropimage/i;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    goto :goto_1
+
+    .line 177
+    :cond_3
+    iget-object v0, p0, Lcom/cropimage/i;->h:Lcom/cropimage/m;
+
+    invoke-virtual {v0}, Lcom/cropimage/m;->b()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    iget v1, p0, Lcom/cropimage/i;->i:I
+
+    int-to-float v1, v1
+
+    div-float/2addr v0, v1
+
+    iget-object v1, p0, Lcom/cropimage/i;->h:Lcom/cropimage/m;
+
+    invoke-virtual {v1}, Lcom/cropimage/m;->a()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    iget v2, p0, Lcom/cropimage/i;->j:I
+
+    int-to-float v2, v2
+
+    div-float/2addr v1, v2
+
+    invoke-static {v0, v1}, Ljava/lang/Math;->max(FF)F
+
+    move-result v0
+
+    const/high16 v1, 0x40800000
+
+    mul-float/2addr v0, v1
+
+    goto :goto_2
+.end method
+
+.method public setRecycler(Lcom/cropimage/l;)V
+    .locals 0
+
+    .prologue
+    .line 71
+    iput-object p1, p0, Lcom/cropimage/i;->c:Lcom/cropimage/l;
+
+    .line 72
     return-void
 .end method

@@ -7,20 +7,20 @@
 
 
 # instance fields
-.field final synthetic a:I
+.field final synthetic a:Lcom/bbm/iceberg/k;
 
 .field final synthetic b:Lcom/bbm/iceberg/e;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/iceberg/e;I)V
+.method constructor <init>(Lcom/bbm/iceberg/e;Lcom/bbm/iceberg/k;)V
     .locals 0
 
     .prologue
-    .line 501
+    .line 316
     iput-object p1, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
 
-    iput p2, p0, Lcom/bbm/iceberg/f;->a:I
+    iput-object p2, p0, Lcom/bbm/iceberg/f;->a:Lcom/bbm/iceberg/k;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,55 +30,192 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 7
 
     .prologue
-    .line 504
+    const/4 v2, 0x0
+
+    .line 324
     iget-object v0, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
 
-    iget-object v0, v0, Lcom/bbm/iceberg/e;->d:Lcom/bbm/iceberg/a;
+    iget-object v0, v0, Lcom/bbm/iceberg/e;->b:Lcom/bbm/iceberg/c;
 
-    iget-object v1, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
+    const/4 v1, 0x1
 
-    iget-object v1, v1, Lcom/bbm/iceberg/e;->d:Lcom/bbm/iceberg/a;
+    iput-boolean v1, v0, Lcom/bbm/iceberg/c;->i:Z
 
-    iget v1, v1, Lcom/bbm/iceberg/a;->k:I
+    .line 332
+    iget-object v0, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
 
-    iget v2, p0, Lcom/bbm/iceberg/f;->a:I
+    iget-object v0, v0, Lcom/bbm/iceberg/e;->b:Lcom/bbm/iceberg/c;
 
-    add-int/2addr v1, v2
+    iget-object v0, v0, Lcom/bbm/iceberg/c;->b:Ljava/util/List;
 
-    iget-object v2, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    iget-object v2, v2, Lcom/bbm/iceberg/e;->d:Lcom/bbm/iceberg/a;
+    move-result-object v3
 
-    iget v2, v2, Lcom/bbm/iceberg/a;->j:I
+    move v1, v2
 
-    invoke-static {v1, v2}, Ljava/lang/Math;->min(II)I
+    .line 333
+    :goto_0
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 334
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 336
+    iget-object v4, p0, Lcom/bbm/iceberg/f;->a:Lcom/bbm/iceberg/k;
+
+    invoke-virtual {v4, v0}, Lcom/bbm/iceberg/k;->a(Ljava/lang/String;)Lcom/bbm/util/bi;
+
+    move-result-object v0
+
+    sget-object v4, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+
+    if-ne v0, v4, :cond_3
+
+    .line 337
+    invoke-interface {v3}, Ljava/util/Iterator;->remove()V
+
+    .line 338
+    add-int/lit8 v0, v1, 0x1
+
+    :goto_1
+    move v1, v0
+
+    .line 340
+    goto :goto_0
+
+    .line 342
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
+
+    iget-object v0, v0, Lcom/bbm/iceberg/e;->b:Lcom/bbm/iceberg/c;
+
+    iget-object v3, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
+
+    iget-object v3, v3, Lcom/bbm/iceberg/e;->b:Lcom/bbm/iceberg/c;
+
+    iget v3, v3, Lcom/bbm/iceberg/c;->j:I
+
+    sub-int v1, v3, v1
+
+    invoke-static {v2, v1}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
-    iput v1, v0, Lcom/bbm/iceberg/a;->k:I
+    iput v1, v0, Lcom/bbm/iceberg/c;->j:I
 
-    .line 505
+    .line 343
     iget-object v0, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
 
-    iget-object v0, v0, Lcom/bbm/iceberg/e;->d:Lcom/bbm/iceberg/a;
+    iget-object v0, v0, Lcom/bbm/iceberg/e;->b:Lcom/bbm/iceberg/c;
+
+    invoke-virtual {v0}, Lcom/bbm/iceberg/c;->d()V
+
+    .line 344
+    iget-object v0, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
+
+    iget-object v0, v0, Lcom/bbm/iceberg/e;->b:Lcom/bbm/iceberg/c;
+
+    iget-object v0, v0, Lcom/bbm/iceberg/c;->a:Lcom/google/b/a/l;
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/util/ct;
+
+    iget-object v2, p0, Lcom/bbm/iceberg/f;->a:Lcom/bbm/iceberg/k;
 
     iget-object v1, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
 
-    iget-object v1, v1, Lcom/bbm/iceberg/e;->d:Lcom/bbm/iceberg/a;
+    iget-object v1, v1, Lcom/bbm/iceberg/e;->b:Lcom/bbm/iceberg/c;
 
-    iget v1, v1, Lcom/bbm/iceberg/a;->k:I
+    iget-object v1, v1, Lcom/bbm/iceberg/c;->b:Ljava/util/List;
+
+    new-instance v3, Ljava/util/HashMap;
+
+    invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
+
+    iget-object v4, v2, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
+
+    invoke-interface {v3, v4}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
+
+    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v4
+
+    :cond_1
+    :goto_2
+    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Ljava/lang/String;
+
+    iget-object v5, v2, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
+
+    invoke-interface {v5, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-nez v5, :cond_1
+
+    iget-object v5, v2, Lcom/bbm/iceberg/k;->a:Ljava/util/Map;
+
+    const/4 v6, 0x0
+
+    invoke-interface {v5, v1, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_2
+
+    :cond_2
+    new-instance v1, Lcom/bbm/iceberg/k;
+
+    invoke-direct {v1, v3}, Lcom/bbm/iceberg/k;-><init>(Ljava/util/Map;)V
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+
+    .line 348
+    iget-object v0, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
+
+    iget-object v0, v0, Lcom/bbm/iceberg/e;->b:Lcom/bbm/iceberg/c;
+
+    iget-object v1, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
+
+    iget-object v1, v1, Lcom/bbm/iceberg/e;->b:Lcom/bbm/iceberg/c;
+
+    iget v1, v1, Lcom/bbm/iceberg/c;->k:I
 
     iget-object v2, p0, Lcom/bbm/iceberg/f;->b:Lcom/bbm/iceberg/e;
 
-    iget-object v2, v2, Lcom/bbm/iceberg/e;->d:Lcom/bbm/iceberg/a;
+    iget-object v2, v2, Lcom/bbm/iceberg/e;->b:Lcom/bbm/iceberg/c;
 
-    iget v2, v2, Lcom/bbm/iceberg/a;->j:I
+    iget v2, v2, Lcom/bbm/iceberg/c;->j:I
 
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/iceberg/a;->a(II)V
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/iceberg/c;->a(II)V
 
-    .line 506
+    .line 349
     return-void
+
+    :cond_3
+    move v0, v1
+
+    goto :goto_1
 .end method

@@ -38,18 +38,18 @@
     .end annotation
 
     .prologue
-    .line 218
+    .line 212
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 219
+    .line 213
     iput p1, p0, Lcom/bbm/util/c/i;->a:I
 
-    .line 220
+    .line 214
     iput p2, p0, Lcom/bbm/util/c/i;->b:I
 
-    .line 221
+    .line 215
     iput-object p3, p0, Lcom/bbm/util/c/i;->c:Ljava/lang/Object;
 
-    .line 222
+    .line 216
     return-void
 .end method

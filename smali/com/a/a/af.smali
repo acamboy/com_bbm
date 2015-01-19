@@ -293,19 +293,19 @@
     .line 105
     iput v3, p0, Lcom/a/a/af;->g:I
 
-    .line 123
+    .line 119
     :cond_0
     :goto_0
     iget v0, p0, Lcom/a/a/af;->f:I
 
     if-eqz v0, :cond_6
 
-    .line 138
+    .line 131
     :cond_1
     :goto_1
     return-void
 
-    .line 107
+    .line 106
     :cond_2
     const-string v2, "3.0"
 
@@ -315,12 +315,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 108
+    .line 107
     iput v5, p0, Lcom/a/a/af;->g:I
 
     goto :goto_0
 
-    .line 110
+    .line 108
     :cond_3
     const-string v2, "4.0"
 
@@ -330,12 +330,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 111
+    .line 109
     iput v6, p0, Lcom/a/a/af;->g:I
 
     goto :goto_0
 
-    .line 114
+    .line 111
     :cond_4
     const-string v2, "vCard"
 
@@ -357,7 +357,7 @@
 
     goto :goto_0
 
-    .line 117
+    .line 113
     :cond_5
     sget-object v2, Lcom/a/a/af;->e:Ljava/lang/String;
 
@@ -367,17 +367,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 118
+    .line 114
     iput v7, p0, Lcom/a/a/af;->f:I
 
-    .line 119
+    .line 115
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v2
 
     if-lez v2, :cond_0
 
-    .line 120
+    .line 116
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -388,7 +388,7 @@
 
     goto :goto_0
 
-    .line 126
+    .line 122
     :cond_6
     sget-object v0, Lcom/a/a/af;->c:Ljava/util/Set;
 
@@ -398,14 +398,14 @@
 
     if-eqz v0, :cond_7
 
-    .line 127
+    .line 123
     const/4 v0, 0x4
 
     iput v0, p0, Lcom/a/a/af;->f:I
 
     goto :goto_1
 
-    .line 129
+    .line 124
     :cond_7
     sget-object v0, Lcom/a/a/af;->d:Ljava/util/Set;
 
@@ -415,12 +415,12 @@
 
     if-eqz v0, :cond_8
 
-    .line 130
+    .line 125
     iput v7, p0, Lcom/a/a/af;->f:I
 
     goto :goto_1
 
-    .line 132
+    .line 126
     :cond_8
     sget-object v0, Lcom/a/a/af;->b:Ljava/util/Set;
 
@@ -430,12 +430,12 @@
 
     if-eqz v0, :cond_9
 
-    .line 133
+    .line 127
     iput v6, p0, Lcom/a/a/af;->f:I
 
     goto :goto_1
 
-    .line 135
+    .line 128
     :cond_9
     sget-object v0, Lcom/a/a/af;->a:Ljava/util/Set;
 
@@ -445,7 +445,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 136
+    .line 129
     iput v5, p0, Lcom/a/a/af;->f:I
 
     goto :goto_1

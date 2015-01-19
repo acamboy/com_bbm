@@ -14,15 +14,15 @@
     .locals 0
 
     .prologue
-    .line 57
+    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
+    .line 59
     iput p1, p0, Lcom/bbm/util/c/b;->a:I
 
-    .line 59
+    .line 60
     iput-object p2, p0, Lcom/bbm/util/c/b;->b:Lcom/bbm/util/c/g;
 
-    .line 60
+    .line 61
     return-void
 .end method

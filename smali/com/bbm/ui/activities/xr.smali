@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/xr;
 .super Ljava/lang/Object;
-.source "OwnProfileActivity.java"
+.source "MainActivity.java"
 
 # interfaces
-.implements Landroid/widget/TextView$OnEditorActionListener;
+.implements Lcom/bbm/ui/c/gn;
 
 
 # instance fields
-.field final synthetic a:Landroid/widget/EditText;
-
-.field final synthetic b:Lcom/bbm/ui/activities/OwnProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnProfileActivity;Landroid/widget/EditText;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
     .locals 0
 
     .prologue
-    .line 366
-    iput-object p1, p0, Lcom/bbm/ui/activities/xr;->b:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/xr;->a:Landroid/widget/EditText;
+    .line 2697
+    iput-object p1, p0, Lcom/bbm/ui/activities/xr;->a:Lcom/bbm/ui/activities/MainActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,34 +25,18 @@
 
 
 # virtual methods
-.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
-    .locals 1
+.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+    .locals 2
 
     .prologue
-    .line 369
-    const/4 v0, 0x6
+    .line 2700
+    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
 
-    if-ne p2, v0, :cond_0
+    .line 2701
+    iget-object v1, p0, Lcom/bbm/ui/activities/xr;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    .line 370
-    iget-object v0, p0, Lcom/bbm/ui/activities/xr;->a:Landroid/widget/EditText;
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/MainActivity;->g(Lcom/bbm/ui/activities/MainActivity;I)Z
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
-
-    .line 371
-    iget-object v0, p0, Lcom/bbm/ui/activities/xr;->b:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    .line 372
-    const/4 v0, 0x1
-
-    .line 374
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    .line 2706
+    return-void
 .end method

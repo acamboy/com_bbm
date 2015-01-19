@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/os;
 .super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
+.source "GroupListItemsActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
     .locals 0
 
     .prologue
-    .line 294
-    iput-object p1, p0, Lcom/bbm/ui/activities/os;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 192
+    iput-object p1, p0, Lcom/bbm/ui/activities/os;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,42 +25,39 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 297
-    const-string v0, "mGroupPictureTile Clicked"
+    .line 195
+    invoke-virtual {p1, p3}, Landroid/widget/AdapterView;->getItemAtPosition(I)Ljava/lang/Object;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupLobbyActivity;
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    check-cast v0, Lcom/bbm/g/y;
 
-    .line 299
-    new-instance v0, Landroid/content/Intent;
+    .line 196
+    iget-boolean v1, v0, Lcom/bbm/g/y;->i:Z
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/os;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    if-nez v1, :cond_0
 
-    const-class v2, Lcom/bbm/ui/activities/GroupPictureActivity;
+    .line 197
+    iget-object v1, p0, Lcom/bbm/ui/activities/os;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    iget-object v0, v0, Lcom/bbm/g/y;->k:Ljava/lang/String;
 
-    .line 300
-    const-string v1, "groupUri"
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->a(Lcom/bbm/ui/activities/GroupListItemsActivity;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/os;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/GroupLobbyActivity;->i()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 301
-    iget-object v1, p0, Lcom/bbm/ui/activities/os;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 302
+    .line 199
+    :cond_0
     return-void
 .end method

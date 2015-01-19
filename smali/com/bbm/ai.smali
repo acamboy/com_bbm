@@ -1,107 +1,101 @@
-.class abstract Lcom/bbm/ai;
-.super Lcom/bbm/util/cm;
+.class final Lcom/bbm/ai;
+.super Lcom/bbm/ak;
 .source "Settings.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "<V:",
-        "Ljava/lang/Object;",
-        ">",
-        "Lcom/bbm/util/cm",
-        "<TV;>;"
+        "Lcom/bbm/ak",
+        "<",
+        "Ljava/lang/Boolean;",
+        ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic d:Lcom/bbm/ae;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Z
+
+.field final synthetic c:Lcom/bbm/ag;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ae;Ljava/lang/Object;)V
+.method constructor <init>(Lcom/bbm/ag;Ljava/lang/Boolean;Ljava/lang/String;Z)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 106
-    iput-object p1, p0, Lcom/bbm/ai;->d:Lcom/bbm/ae;
+    .line 232
+    iput-object p1, p0, Lcom/bbm/ai;->c:Lcom/bbm/ag;
 
-    .line 107
-    invoke-direct {p0, p2}, Lcom/bbm/util/cm;-><init>(Ljava/lang/Object;)V
+    iput-object p3, p0, Lcom/bbm/ai;->a:Ljava/lang/String;
 
-    .line 108
+    iput-boolean p4, p0, Lcom/bbm/ai;->b:Z
+
+    invoke-direct {p0, p1, p2}, Lcom/bbm/ak;-><init>(Lcom/bbm/ag;Ljava/lang/Object;)V
+
     return-void
 .end method
 
 
 # virtual methods
-.method protected abstract a()V
-.end method
-
-.method protected abstract a(Ljava/lang/Object;)Z
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)Z"
-        }
-    .end annotation
-.end method
-
-.method public final b(Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)V"
-        }
-    .end annotation
+.method protected final a()V
+    .locals 3
 
     .prologue
-    .line 112
-    iget-object v0, p0, Lcom/bbm/ai;->e:Ljava/lang/Object;
+    .line 240
+    iget-object v0, p0, Lcom/bbm/ai;->c:Lcom/bbm/ag;
 
-    invoke-static {v0, p1}, Lcom/bbm/util/bb;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    iget-object v0, v0, Lcom/bbm/ag;->b:Landroid/content/SharedPreferences;
+
+    iget-object v1, p0, Lcom/bbm/ai;->a:Ljava/lang/String;
+
+    iget-boolean v2, p0, Lcom/bbm/ai;->b:Z
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 113
-    invoke-virtual {p0, p1}, Lcom/bbm/ai;->a(Ljava/lang/Object;)Z
+    move-result-object v0
 
-    move-result v0
+    invoke-virtual {p0, v0}, Lcom/bbm/ai;->c(Ljava/lang/Object;)V
 
-    if-eqz v0, :cond_0
-
-    .line 114
-    invoke-virtual {p0, p1}, Lcom/bbm/ai;->c(Ljava/lang/Object;)V
-
-    .line 117
-    :cond_0
+    .line 241
     return-void
 .end method
 
-.method final c(Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)V"
-        }
-    .end annotation
+.method public final synthetic a(Ljava/lang/Object;)Z
+    .locals 3
 
     .prologue
-    .line 120
-    iput-object p1, p0, Lcom/bbm/ai;->e:Ljava/lang/Object;
+    .line 232
+    check-cast p1, Ljava/lang/Boolean;
 
-    .line 121
-    iget-object v0, p0, Lcom/bbm/ai;->f:Lcom/bbm/j/i;
+    iget-object v0, p0, Lcom/bbm/ai;->c:Lcom/bbm/ag;
 
-    invoke-virtual {v0}, Lcom/bbm/j/i;->a()V
+    iget-object v0, v0, Lcom/bbm/ag;->b:Landroid/content/SharedPreferences;
 
-    .line 122
-    return-void
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ai;->a:Ljava/lang/String;
+
+    invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v2
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    move-result v0
+
+    return v0
 .end method

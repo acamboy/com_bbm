@@ -26,6 +26,8 @@
 
 .field public static final LISTENER_PUSH:I = 0x10006
 
+.field public static final LISTENER_RPC:I = 0x10008
+
 .field public static final LISTENER_SEARCH:I = 0x10001
 
 .field public static final MESSAGES_RECEIVED:I = 0x1
@@ -52,9 +54,9 @@
 
 .field public static final PLATFORM_URL_GROUPS:I = 0x8
 
-.field public static final PLATFORM_URL_SCREEN:I = 0x4
+.field public static final PLATFORM_URL_INVITES:I = 0x1
 
-.field public static final PLATFORM_URL_SINKS:I = 0x1
+.field public static final PLATFORM_URL_SCREEN:I = 0x4
 
 .field public static final PLATFORM_URL_TICKET:I = 0x2
 
@@ -73,6 +75,10 @@
 .field public static final PUSH_REFRESH:I = 0x10
 
 .field public static final PUSH_VIEWER:I = 0x4
+
+.field public static final RPC_FAVORITES_READY:I = 0x1
+
+.field public static final RPC_INVITE_READY:I = 0x2
 
 .field public static final SEARCH_COMPLETED:I = 0x1
 

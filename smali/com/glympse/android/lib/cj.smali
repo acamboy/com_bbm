@@ -3,60 +3,39 @@
 .source "GogoLocationProvider.java"
 
 # interfaces
-.implements Lcom/glympse/android/lib/cf;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private lr:Lcom/glympse/android/lib/ch;
+.field private lW:Lcom/glympse/android/lib/ci;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/ch;)V
+.method public constructor <init>(Lcom/glympse/android/lib/ci;)V
     .locals 0
 
     .prologue
-    .line 163
+    .line 197
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 164
-    iput-object p1, p0, Lcom/glympse/android/lib/cj;->lr:Lcom/glympse/android/lib/ch;
+    .line 198
+    iput-object p1, p0, Lcom/glympse/android/lib/cj;->lW:Lcom/glympse/android/lib/ci;
 
-    .line 165
+    .line 199
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;Z)V
-    .locals 0
-
-    .prologue
-    .line 175
-    return-void
-.end method
-
-.method public bt()V
+.method public run()V
     .locals 1
 
     .prologue
-    .line 179
-    iget-object v0, p0, Lcom/glympse/android/lib/cj;->lr:Lcom/glympse/android/lib/ch;
+    .line 203
+    iget-object v0, p0, Lcom/glympse/android/lib/cj;->lW:Lcom/glympse/android/lib/ci;
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/ch;->bt()V
+    invoke-virtual {v0}, Lcom/glympse/android/lib/ci;->bv()V
 
-    .line 180
-    return-void
-.end method
-
-.method public locationChanged(Lcom/glympse/android/core/GLocation;)V
-    .locals 1
-
-    .prologue
-    .line 169
-    iget-object v0, p0, Lcom/glympse/android/lib/cj;->lr:Lcom/glympse/android/lib/ch;
-
-    invoke-virtual {v0, p1}, Lcom/glympse/android/lib/ch;->locationChanged(Lcom/glympse/android/core/GLocation;)V
-
-    .line 170
+    .line 204
     return-void
 .end method

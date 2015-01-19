@@ -10,6 +10,9 @@
 .method public abstract allowSiblingTickets(Z)V
 .end method
 
+.method public abstract arePrivateGroupsEnabled()Z
+.end method
+
 .method public abstract areSiblingTicketsAllowed()Z
 .end method
 
@@ -31,7 +34,10 @@
 .method public abstract decodeInvite(Ljava/lang/String;ILcom/glympse/android/api/GInvite;)Lcom/glympse/android/api/GEventSink;
 .end method
 
-.method public abstract enableAccountSharing(Z)V
+.method public abstract enableApplicationsManager(Z)V
+.end method
+
+.method public abstract enablePrivateGroups(Z)V
 .end method
 
 .method public abstract enableSmsScraping(Z)V
@@ -69,6 +75,9 @@
 .end method
 
 .method public abstract getApiVersionFull()Ljava/lang/String;
+.end method
+
+.method public abstract getApplicationsManager()Lcom/glympse/android/api/GApplicationsManager;
 .end method
 
 .method public abstract getBatteryManager()Lcom/glympse/android/api/GBatteryManager;
@@ -128,16 +137,19 @@
 .method public abstract getTime()J
 .end method
 
+.method public abstract getTriggersManager()Lcom/glympse/android/api/GTriggersManager;
+.end method
+
 .method public abstract getUserManager()Lcom/glympse/android/api/GUserManager;
 .end method
 
 .method public abstract hasUserAccount()Z
 .end method
 
-.method public abstract isAccountSharingEnabled()Z
+.method public abstract isActive()Z
 .end method
 
-.method public abstract isActive()Z
+.method public abstract isApplicationsManagerEnabled()Z
 .end method
 
 .method public abstract isFirstLaunch()Z

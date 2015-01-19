@@ -32,7 +32,7 @@
     .line 65
     const/4 v0, 0x0
 
-    .line 87
+    .line 85
     :goto_0
     return-object v0
 
@@ -102,7 +102,7 @@
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 80
+    .line 79
     :catch_0
     move-exception v0
 
@@ -133,13 +133,13 @@
 
     goto :goto_1
 
-    .line 84
+    .line 82
     :cond_3
     invoke-virtual {v1, v2}, Ljava/io/ByteArrayOutputStream;->write(I)V
 
     goto :goto_2
 
-    .line 87
+    .line 85
     :cond_4
     invoke-virtual {v1}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 

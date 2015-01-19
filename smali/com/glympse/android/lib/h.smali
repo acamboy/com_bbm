@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private gz:Lcom/glympse/android/core/GPrimitive;
+.field private g:Lcom/glympse/android/lib/GAccountImportListener;
 
-.field private h:Lcom/glympse/android/lib/GAccountImportListener;
+.field private gG:Lcom/glympse/android/core/GPrimitive;
 
 
 # direct methods
@@ -21,10 +21,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 365
-    iput-object p1, p0, Lcom/glympse/android/lib/h;->h:Lcom/glympse/android/lib/GAccountImportListener;
+    iput-object p1, p0, Lcom/glympse/android/lib/h;->g:Lcom/glympse/android/lib/GAccountImportListener;
 
     .line 366
-    iput-object p2, p0, Lcom/glympse/android/lib/h;->gz:Lcom/glympse/android/core/GPrimitive;
+    iput-object p2, p0, Lcom/glympse/android/lib/h;->gG:Lcom/glympse/android/core/GPrimitive;
 
     .line 367
     return-void
@@ -37,9 +37,9 @@
 
     .prologue
     .line 371
-    iget-object v0, p0, Lcom/glympse/android/lib/h;->h:Lcom/glympse/android/lib/GAccountImportListener;
+    iget-object v0, p0, Lcom/glympse/android/lib/h;->g:Lcom/glympse/android/lib/GAccountImportListener;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/h;->gz:Lcom/glympse/android/core/GPrimitive;
+    iget-object v1, p0, Lcom/glympse/android/lib/h;->gG:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/lib/GAccountImportListener;->accountImported(Lcom/glympse/android/core/GPrimitive;)V
 

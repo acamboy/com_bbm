@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="hlv_absHListViewStyle" format="reference" />
+    <attr name="hlv_expandableListViewStyle" format="reference" />
+    <attr name="hlv_listPreferredItemWidth" format="dimension" />
+    <attr name="hlv_listViewStyle" format="reference" />
+    <attr name="hlv_stackFromRight" format="boolean" />
+    <attr name="hlv_transcriptMode">
+        <enum name="alwaysScroll" value="2" />
+        <enum name="disabled" value="0" />
+        <enum name="normal" value="1" />
+    </attr>
     <attr name="showBack" format="boolean" />
     <attr name="backText" format="string" />
     <attr name="showOverflow" format="boolean" />
@@ -10,18 +20,62 @@
     <attr name="adSizes" format="string" />
     <attr name="adUnitId" format="string" />
     <attr name="layoutType" format="string">
-        <enum name="record" value="0" />
         <enum name="playback" value="1" />
+        <enum name="record" value="0" />
     </attr>
     <attr name="dateLabel" format="string" />
     <attr name="type" format="integer">
-        <enum name="dateTime" value="0" />
         <enum name="dateOnly" value="1" />
+        <enum name="dateTime" value="0" />
         <enum name="timeOnly" value="2" />
     </attr>
     <attr name="hasQuickShareBar" format="boolean" />
     <attr name="hasStickerPicker" format="boolean" />
+    <attr name="hasTimebomb" format="boolean" />
     <attr name="inputHint" format="string" />
+    <attr name="src" format="reference" />
+    <attr name="textSize" format="dimension" />
+    <attr name="textColor" format="integer" />
+    <attr name="value" format="integer" />
+    <attr name="hlv_indicatorGravity">
+        <flag name="bottom" value="0x00000050" />
+        <flag name="center" value="0x00000011" />
+        <flag name="center_horizontal" value="0x00000001" />
+        <flag name="center_vertical" value="0x00000010" />
+        <flag name="clip_horizontal" value="0x00000008" />
+        <flag name="clip_vertical" value="0x00000080" />
+        <flag name="end" value="0x00800005" />
+        <flag name="fill" value="0x00000077" />
+        <flag name="fill_horizontal" value="0x00000007" />
+        <flag name="fill_vertical" value="0x00000070" />
+        <flag name="left" value="0x00000003" />
+        <flag name="right" value="0x00000005" />
+        <flag name="start" value="0x00800003" />
+        <flag name="top" value="0x00000030" />
+    </attr>
+    <attr name="hlv_childIndicatorGravity">
+        <flag name="bottom" value="0x00000050" />
+        <flag name="center" value="0x00000011" />
+        <flag name="center_horizontal" value="0x00000001" />
+        <flag name="center_vertical" value="0x00000010" />
+        <flag name="clip_horizontal" value="0x00000008" />
+        <flag name="clip_vertical" value="0x00000080" />
+        <flag name="end" value="0x00800005" />
+        <flag name="fill" value="0x00000077" />
+        <flag name="fill_horizontal" value="0x00000007" />
+        <flag name="fill_vertical" value="0x00000070" />
+        <flag name="left" value="0x00000003" />
+        <flag name="right" value="0x00000005" />
+        <flag name="start" value="0x00800003" />
+        <flag name="top" value="0x00000030" />
+    </attr>
+    <attr name="hlv_childDivider" format="reference|color" />
+    <attr name="hlv_groupIndicator" format="reference" />
+    <attr name="hlv_childIndicator" format="reference" />
+    <attr name="hlv_indicatorPaddingLeft" format="dimension" />
+    <attr name="hlv_indicatorPaddingTop" format="dimension" />
+    <attr name="hlv_childIndicatorPaddingLeft" format="dimension" />
+    <attr name="hlv_childIndicatorPaddingTop" format="dimension" />
     <attr name="hasOverflowAction" format="boolean" />
     <attr name="backActionIconRes" format="reference" />
     <attr name="backActionLabel" format="string" />
@@ -34,16 +88,22 @@
     <attr name="glympseTextViewStyle" format="reference" />
     <attr name="glympseTimerStyle" format="reference" />
     <attr name="glympseToggleButtonStyle" format="reference" />
+    <attr name="hlv_dividerWidth" format="dimension" />
+    <attr name="hlv_headerDividersEnabled" format="boolean" />
+    <attr name="hlv_footerDividersEnabled" format="boolean" />
+    <attr name="hlv_overScrollHeader" format="reference|color" />
+    <attr name="hlv_overScrollFooter" format="reference|color" />
+    <attr name="hlv_measureWithChild" format="integer" />
     <attr name="leftLabel" format="string" />
     <attr name="rightLabel" format="string" />
     <attr name="showLeftLabel" format="boolean" />
     <attr name="showRightLabel" format="boolean" />
     <attr name="mapType">
-        <enum name="none" value="0" />
         <enum name="normal" value="1" />
+        <enum name="hybrid" value="4" />
+        <enum name="none" value="0" />
         <enum name="satellite" value="2" />
         <enum name="terrain" value="3" />
-        <enum name="hybrid" value="4" />
     </attr>
     <attr name="cameraBearing" format="float" />
     <attr name="cameraTargetLat" format="float" />
@@ -72,12 +132,12 @@
     <attr name="behindWidth" format="dimension" />
     <attr name="behindScrollScale" format="float" />
     <attr name="touchModeAbove">
-        <enum name="margin" value="0" />
         <enum name="fullscreen" value="1" />
+        <enum name="margin" value="0" />
     </attr>
     <attr name="touchModeBehind">
-        <enum name="margin" value="0" />
         <enum name="fullscreen" value="1" />
+        <enum name="margin" value="0" />
     </attr>
     <attr name="shadowDrawable" format="reference" />
     <attr name="shadowWidth" format="dimension" />
@@ -85,6 +145,10 @@
     <attr name="fadeDegree" format="float" />
     <attr name="selectorEnabled" format="boolean" />
     <attr name="selectorDrawable" format="reference" />
+    <attr name="gridLeftLabel" format="string" />
+    <attr name="gridShowLeftLabel" format="boolean" />
+    <attr name="gridRightLabel" format="string" />
+    <attr name="gridShowRightLabel" format="boolean" />
     <attr name="segmentLeftOption" format="string" />
     <attr name="segmentMiddleOption" format="string" />
     <attr name="segmentRightOption" format="string" />

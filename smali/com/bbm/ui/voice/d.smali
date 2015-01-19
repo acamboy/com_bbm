@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 361
+    .line 359
     iput-object p1, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -27,7 +27,7 @@
     .locals 0
 
     .prologue
-    .line 361
+    .line 359
     invoke-direct {p0, p1}, Lcom/bbm/ui/voice/d;-><init>(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)V
 
     return-void
@@ -45,8 +45,8 @@
 
     const/4 v1, 0x0
 
-    .line 365
-    .line 370
+    .line 363
+    .line 368
     if-nez p2, :cond_1
 
     move v2, v1
@@ -55,7 +55,7 @@
 
     move v4, v1
 
-    .line 389
+    .line 383
     :goto_0
     iget-object v6, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
@@ -65,7 +65,7 @@
 
     invoke-virtual {v6, v4}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 390
+    .line 384
     iget-object v4, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v4}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->h(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/graphics/drawable/Drawable;
@@ -74,7 +74,7 @@
 
     invoke-virtual {v4, v3}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 391
+    .line 385
     iget-object v3, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v3}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->i(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/graphics/drawable/Drawable;
@@ -83,7 +83,7 @@
 
     invoke-virtual {v3, v2}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 392
+    .line 386
     iget-object v2, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v2}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->j(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/graphics/drawable/Drawable;
@@ -92,7 +92,7 @@
 
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 394
+    .line 388
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->k(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Lcom/bbm/ui/voice/g;
@@ -101,7 +101,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 395
+    .line 389
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->k(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Lcom/bbm/ui/voice/g;
@@ -130,11 +130,11 @@
     :goto_2
     invoke-interface {v2, p2, v0, v5}, Lcom/bbm/ui/voice/g;->a(IZZ)V
 
-    .line 398
+    .line 392
     :cond_0
     return-void
 
-    .line 374
+    .line 371
     :cond_1
     iget-object v2, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
@@ -144,7 +144,7 @@
 
     if-ge p2, v2, :cond_2
 
-    .line 376
+    .line 373
     rsub-int v0, p2, 0xff
 
     move v2, v0
@@ -157,7 +157,7 @@
 
     goto :goto_0
 
-    .line 378
+    .line 374
     :cond_2
     iget-object v2, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
@@ -167,7 +167,7 @@
 
     if-eq p2, v2, :cond_6
 
-    .line 381
+    .line 376
     iget-object v2, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v2}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)I
@@ -184,10 +184,10 @@
 
     move v0, v1
 
-    .line 383
+    .line 378
     goto :goto_0
 
-    .line 385
+    .line 379
     :cond_3
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
@@ -197,7 +197,7 @@
 
     if-le p2, v0, :cond_6
 
-    .line 386
+    .line 380
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)I
@@ -219,7 +219,7 @@
     :cond_4
     move v0, v1
 
-    .line 395
+    .line 389
     goto :goto_1
 
     :cond_5
@@ -243,7 +243,7 @@
     .locals 1
 
     .prologue
-    .line 407
+    .line 401
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->d(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/animation/AnimatorSet;
@@ -252,7 +252,7 @@
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 408
+    .line 402
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->n(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/animation/AnimatorSet;
@@ -261,7 +261,7 @@
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 409
+    .line 403
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->o(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/animation/AnimatorSet;
@@ -270,7 +270,7 @@
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 411
+    .line 405
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->k(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Lcom/bbm/ui/voice/g;
@@ -279,7 +279,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 412
+    .line 406
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->k(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Lcom/bbm/ui/voice/g;
@@ -288,7 +288,7 @@
 
     invoke-interface {v0}, Lcom/bbm/ui/voice/g;->c()V
 
-    .line 414
+    .line 408
     :cond_0
     return-void
 .end method
@@ -299,14 +299,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 418
+    .line 412
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-virtual {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getProgress()I
 
     move-result v2
 
-    .line 421
+    .line 415
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->m(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)I
@@ -315,21 +315,21 @@
 
     if-ge v2, v0, :cond_3
 
-    .line 422
+    .line 416
     const-string v0, "onRejectCallThreshold"
 
     const-class v3, Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
-    invoke-static {v0, v3}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v3}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 429
+    .line 423
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->p(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
 
     move v0, v1
 
-    .line 451
+    .line 443
     :goto_0
     iget-object v3, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
@@ -339,7 +339,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 452
+    .line 444
     iget-object v3, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v3}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->k(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Lcom/bbm/ui/voice/g;
@@ -348,7 +348,7 @@
 
     invoke-interface {v3}, Lcom/bbm/ui/voice/g;->d()V
 
-    .line 455
+    .line 447
     :cond_0
     const/16 v3, 0x32
 
@@ -362,7 +362,7 @@
 
     move-result v2
 
-    .line 456
+    .line 448
     iget-object v3, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     const-string v4, "progress"
@@ -377,22 +377,22 @@
 
     move-result-object v0
 
-    .line 458
-    int-to-long v3, v2
+    .line 450
+    int-to-long v4, v2
 
-    invoke-virtual {v0, v3, v4}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v0, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 459
+    .line 451
     new-instance v1, Lcom/bbm/ui/voice/e;
 
     invoke-direct {v1, p0}, Lcom/bbm/ui/voice/e;-><init>(Lcom/bbm/ui/voice/d;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/ObjectAnimator;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 471
+    .line 463
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 473
+    .line 465
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->k(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Lcom/bbm/ui/voice/g;
@@ -417,7 +417,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 478
+    .line 470
     :cond_1
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
@@ -429,11 +429,11 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 490
+    .line 481
     :cond_2
     return-void
 
-    .line 431
+    .line 424
     :cond_3
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
@@ -443,36 +443,36 @@
 
     if-le v2, v0, :cond_4
 
-    .line 432
+    .line 425
     const-string v0, "onAcceptCallThreshold"
 
     const-class v3, Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
-    invoke-static {v0, v3}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v3}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 438
+    .line 431
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)I
 
     move-result v0
 
-    .line 439
+    .line 432
     iget-object v3, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v3}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->q(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
 
     goto :goto_0
 
-    .line 442
+    .line 434
     :cond_4
     const-string v0, "onNoResponse"
 
     const-class v3, Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
-    invoke-static {v0, v3}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v3}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 448
+    .line 440
     iget-object v0, p0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
 
     invoke-static {v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)I

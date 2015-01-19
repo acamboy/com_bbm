@@ -4,13 +4,13 @@
 
 
 # static fields
-.field private static cL:Z
+.field private static cR:Z
 
-.field private static dQ:Ljava/lang/reflect/Method;
+.field private static dW:Ljava/lang/reflect/Method;
 
-.field private static dR:Ljava/lang/reflect/Method;
+.field private static dX:Ljava/lang/reflect/Method;
 
-.field private static dS:Ljava/lang/reflect/Method;
+.field private static dY:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -23,16 +23,16 @@
     .line 72
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_Service;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_Service;->cR:Z
 
     .line 73
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Service;->dQ:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Service;->dW:Ljava/lang/reflect/Method;
 
     .line 74
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Service;->dR:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Service;->dX:Ljava/lang/reflect/Method;
 
     .line 75
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Service;->dS:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Service;->dY:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -56,12 +56,12 @@
     const/4 v5, 0x0
 
     .line 80
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_Service;->cL:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_Service;->cR:Z
 
     if-nez v0, :cond_1
 
     .line 82
-    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_Service;->cL:Z
+    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_Service;->cR:Z
 
     .line 87
     :try_start_0
@@ -89,7 +89,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dR:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dX:Ljava/lang/reflect/Method;
 
     .line 88
     const-class v0, Landroid/app/Service;
@@ -110,17 +110,17 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dS:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dY:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 95
     :goto_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dR:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dX:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dS:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dY:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_1
 
@@ -145,7 +145,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dQ:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dW:Ljava/lang/reflect/Method;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -182,11 +182,11 @@
 
     .line 119
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dR:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dX:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dS:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dY:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
@@ -198,7 +198,7 @@
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 122
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dR:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dX:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x2
 
@@ -225,7 +225,7 @@
 
     .line 126
     :cond_1
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dQ:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dW:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
@@ -237,7 +237,7 @@
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 129
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dQ:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dW:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 
@@ -282,11 +282,11 @@
 
     .line 149
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dR:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dX:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dS:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dY:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_1
 
@@ -298,7 +298,7 @@
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 152
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dS:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dY:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 
@@ -321,7 +321,7 @@
 
     .line 156
     :cond_1
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dQ:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dW:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
@@ -333,7 +333,7 @@
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 159
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dQ:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Service;->dW:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 

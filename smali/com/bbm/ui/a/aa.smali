@@ -1,58 +1,76 @@
 .class final Lcom/bbm/ui/a/aa;
-.super Ljava/lang/Object;
-.source "UpdatesAdapter.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/u;
+.source "GroupMessageListAdapter.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/a/w;
+.field final synthetic a:Lcom/bbm/ui/a/x;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/a/w;)V
+.method constructor <init>(Lcom/bbm/ui/a/x;)V
     .locals 0
 
     .prologue
-    .line 189
-    iput-object p1, p0, Lcom/bbm/ui/a/aa;->a:Lcom/bbm/ui/a/w;
+    .line 174
+    iput-object p1, p0, Lcom/bbm/ui/a/aa;->a:Lcom/bbm/ui/a/x;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method protected final b()Z
+    .locals 1
 
     .prologue
-    const v1, 0x7f0a0064
+    .line 177
+    iget-object v0, p0, Lcom/bbm/ui/a/aa;->a:Lcom/bbm/ui/a/x;
 
-    .line 192
-    iget-object v0, p0, Lcom/bbm/ui/a/aa;->a:Lcom/bbm/ui/a/w;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/w;->c(Lcom/bbm/ui/a/w;)Landroid/app/Activity;
+    invoke-static {v0}, Lcom/bbm/ui/a/x;->a(Lcom/bbm/ui/a/x;)Lcom/bbm/j/w;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->b(I)V
+    move-result v0
 
-    .line 193
-    iget-object v0, p0, Lcom/bbm/ui/a/aa;->a:Lcom/bbm/ui/a/w;
+    if-nez v0, :cond_1
 
-    invoke-static {v0}, Lcom/bbm/ui/a/w;->c(Lcom/bbm/ui/a/w;)Landroid/app/Activity;
+    .line 178
+    iget-object v0, p0, Lcom/bbm/ui/a/aa;->a:Lcom/bbm/ui/a/x;
+
+    invoke-static {v0}, Lcom/bbm/ui/a/x;->f(Lcom/bbm/ui/a/x;)Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
+    instance-of v0, v0, Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->a(I)V
+    if-eqz v0, :cond_0
 
-    .line 194
-    return-void
+    .line 179
+    iget-object v0, p0, Lcom/bbm/ui/a/aa;->a:Lcom/bbm/ui/a/x;
+
+    invoke-static {v0}, Lcom/bbm/ui/a/x;->f(Lcom/bbm/ui/a/x;)Landroid/app/Activity;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->f()V
+
+    .line 181
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 183
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

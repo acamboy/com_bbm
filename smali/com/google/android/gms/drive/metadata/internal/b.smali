@@ -35,7 +35,7 @@
 .end method
 
 .method protected a(Landroid/os/Bundle;Ljava/util/Date;)V
-    .locals 3
+    .locals 4
 
     invoke-virtual {p0}, Lcom/google/android/gms/drive/metadata/internal/b;->getName()Ljava/lang/String;
 
@@ -43,9 +43,9 @@
 
     invoke-virtual {p2}, Ljava/util/Date;->getTime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {p1, v0, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     return-void
 .end method
@@ -71,7 +71,7 @@
 .end method
 
 .method protected e(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/util/Date;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/util/Date;
 
@@ -81,15 +81,15 @@
 
     invoke-virtual {p1, v1, p2, p3}, Lcom/google/android/gms/common/data/DataHolder;->getLong(Ljava/lang/String;II)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Ljava/util/Date;-><init>(J)V
 
     return-object v0
 .end method
 
 .method protected g(Landroid/os/Bundle;)Ljava/util/Date;
-    .locals 3
+    .locals 4
 
     new-instance v0, Ljava/util/Date;
 
@@ -99,9 +99,9 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-direct {v0, v1, v2}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Ljava/util/Date;-><init>(J)V
 
     return-object v0
 .end method

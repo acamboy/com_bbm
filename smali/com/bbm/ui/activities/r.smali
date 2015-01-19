@@ -3,20 +3,20 @@
 .source "AudioPlayerActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/bbm/ui/o;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/q;
+.field final synthetic a:Lcom/bbm/ui/activities/AudioPlayerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/q;)V
+.method constructor <init>(Lcom/bbm/ui/activities/AudioPlayerActivity;)V
     .locals 0
 
     .prologue
-    .line 88
-    iput-object p1, p0, Lcom/bbm/ui/activities/r;->a:Lcom/bbm/ui/activities/q;
+    .line 48
+    iput-object p1, p0, Lcom/bbm/ui/activities/r;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,24 +25,57 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final a(F)V
+    .locals 4
 
     .prologue
-    .line 91
-    iget-object v0, p0, Lcom/bbm/ui/activities/r;->a:Lcom/bbm/ui/activities/q;
+    .line 52
+    iget-object v0, p0, Lcom/bbm/ui/activities/r;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/q;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->a(Lcom/bbm/ui/activities/AudioPlayerActivity;)Landroid/media/MediaPlayer;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->d(Lcom/bbm/ui/activities/AudioPlayerActivity;)V
+    move-result-object v0
 
-    .line 93
-    iget-object v0, p0, Lcom/bbm/ui/activities/r;->a:Lcom/bbm/ui/activities/q;
+    if-eqz v0, :cond_0
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/q;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
+    .line 53
+    iget-object v0, p0, Lcom/bbm/ui/activities/r;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->finish()V
+    invoke-static {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->a(Lcom/bbm/ui/activities/AudioPlayerActivity;)Landroid/media/MediaPlayer;
 
-    .line 94
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/media/MediaPlayer;->getDuration()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    mul-float/2addr v0, p1
+
+    float-to-int v0, v0
+
+    .line 54
+    iget-object v1, p0, Lcom/bbm/ui/activities/r;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/AudioPlayerActivity;->b(Lcom/bbm/ui/activities/AudioPlayerActivity;)Lcom/bbm/ui/AudioProgressBar;
+
+    move-result-object v1
+
+    int-to-long v2, v0
+
+    invoke-virtual {v1, v2, v3}, Lcom/bbm/ui/AudioProgressBar;->setCurrentTime(J)V
+
+    .line 55
+    iget-object v1, p0, Lcom/bbm/ui/activities/r;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/AudioPlayerActivity;->a(Lcom/bbm/ui/activities/AudioPlayerActivity;)Landroid/media/MediaPlayer;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/media/MediaPlayer;->seekTo(I)V
+
+    .line 57
+    :cond_0
     return-void
 .end method

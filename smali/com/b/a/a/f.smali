@@ -1,5 +1,5 @@
 .class public final Lcom/b/a/a/f;
-.super Landroid/support/v4/app/d;
+.super Landroid/support/v4/app/m;
 .source "AppStoreInterstitial.java"
 
 
@@ -9,7 +9,7 @@
 
     .prologue
     .line 84
-    invoke-direct {p0}, Landroid/support/v4/app/d;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/app/m;-><init>()V
 
     return-void
 .end method
@@ -34,11 +34,11 @@
     .prologue
     .line 91
     .line 92
-    invoke-virtual {p0}, Lcom/b/a/a/f;->getActivity()Landroid/support/v4/app/h;
+    invoke-virtual {p0}, Lcom/b/a/a/f;->getActivity()Landroid/support/v4/app/q;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/support/v4/app/h;->getLayoutInflater()Landroid/view/LayoutInflater;
+    invoke-virtual {v0}, Landroid/support/v4/app/q;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -51,7 +51,7 @@
     move-result-object v1
 
     .line 94
-    invoke-virtual {p0}, Lcom/b/a/a/f;->getActivity()Landroid/support/v4/app/h;
+    invoke-virtual {p0}, Lcom/b/a/a/f;->getActivity()Landroid/support/v4/app/q;
 
     move-result-object v0
 
@@ -96,7 +96,7 @@
     .line 111
     new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    invoke-virtual {p0}, Lcom/b/a/a/f;->getActivity()Landroid/support/v4/app/h;
+    invoke-virtual {p0}, Lcom/b/a/a/f;->getActivity()Landroid/support/v4/app/q;
 
     move-result-object v2
 
@@ -118,7 +118,7 @@
 
     .prologue
     .line 118
-    invoke-super {p0}, Landroid/support/v4/app/d;->onStart()V
+    invoke-super {p0}, Landroid/support/v4/app/m;->onStart()V
 
     .line 119
     invoke-virtual {p0}, Lcom/b/a/a/f;->getDialog()Landroid/app/Dialog;

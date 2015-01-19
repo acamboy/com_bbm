@@ -1,9 +1,9 @@
 .class public Lcom/bbm/ui/activities/AddChannelPostActivity;
-.super Lcom/bbm/ui/activities/agw;
+.super Lcom/bbm/ui/activities/akz;
 .source "AddChannelPostActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/bn;
+.implements Lcom/bbm/ui/bv;
 
 
 # static fields
@@ -57,7 +57,7 @@
     .locals 1
 
     .prologue
-    .line 56
+    .line 44
     const/4 v0, 0x1
 
     sput v0, Lcom/bbm/ui/activities/AddChannelPostActivity;->a:I
@@ -69,36 +69,36 @@
     .locals 1
 
     .prologue
-    .line 84
-    invoke-direct {p0}, Lcom/bbm/ui/activities/agw;-><init>()V
+    .line 72
+    invoke-direct {p0}, Lcom/bbm/ui/activities/akz;-><init>()V
 
-    .line 76
+    .line 64
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->p:Landroid/os/Handler;
 
-    .line 80
+    .line 68
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->t:I
 
-    .line 85
-    new-instance v0, Lcom/bbm/ui/fh;
+    .line 73
+    new-instance v0, Lcom/bbm/ui/gc;
 
-    invoke-direct {v0}, Lcom/bbm/ui/fh;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/gc;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->a(Lcom/bbm/ui/activities/agy;)V
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->a(Lcom/bbm/ui/activities/alb;)V
 
-    .line 86
-    new-instance v0, Lcom/bbm/ui/voice/m;
+    .line 74
+    new-instance v0, Lcom/bbm/ui/voice/o;
 
-    invoke-direct {v0}, Lcom/bbm/ui/voice/m;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/voice/o;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->a(Lcom/bbm/ui/activities/agy;)V
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->a(Lcom/bbm/ui/activities/alb;)V
 
-    .line 87
+    .line 75
     return-void
 .end method
 
@@ -106,7 +106,7 @@
     .locals 0
 
     .prologue
-    .line 52
+    .line 40
     iput-object p1, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->n:Lcom/cropimage/f;
 
     return-object p1
@@ -116,7 +116,7 @@
     .locals 0
 
     .prologue
-    .line 52
+    .line 40
     iput-object p1, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->i:Ljava/lang/String;
 
     return-object p1
@@ -126,19 +126,19 @@
     .locals 4
 
     .prologue
-    .line 333
+    .line 323
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->o:Z
 
-    .line 334
+    .line 324
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->l:Landroid/widget/ImageButton;
 
     const v1, 0x7f020016
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
 
-    .line 335
+    .line 325
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->p:Landroid/os/Handler;
 
     new-instance v1, Lcom/bbm/ui/activities/e;
@@ -149,7 +149,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 342
+    .line 332
     return-void
 .end method
 
@@ -157,7 +157,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-boolean v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->u:Z
 
     return v0
@@ -167,7 +167,7 @@
     .locals 0
 
     .prologue
-    .line 52
+    .line 40
     iput-boolean p1, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->r:Z
 
     return p1
@@ -177,7 +177,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->i:Ljava/lang/String;
 
     return-object v0
@@ -191,56 +191,56 @@
 
     const/4 v2, 0x0
 
-    .line 283
+    .line 270
     new-instance v0, Lcom/bbm/ui/activities/c;
 
     iget-object v1, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->b:Lcom/bbm/ui/ObservingImageView;
 
     invoke-direct {v0, p0, p0, v1, p1}, Lcom/bbm/ui/activities/c;-><init>(Lcom/bbm/ui/activities/AddChannelPostActivity;Landroid/app/Activity;Lcom/bbm/ui/ObservingImageView;Ljava/lang/String;)V
 
-    .line 306
+    .line 297
     new-array v1, v2, [Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/e/a;->b([Ljava/lang/Object;)Lcom/bbm/util/a;
+    invoke-virtual {v0, v1}, Lcom/bbm/e/a;->b([Ljava/lang/Object;)Lcom/bbm/util/b;
 
-    .line 308
+    .line 299
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->b:Lcom/bbm/ui/ObservingImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 309
+    .line 300
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->q:Landroid/widget/ProgressBar;
 
     invoke-virtual {v0, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 310
+    .line 301
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->b:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v0, v3}, Lcom/bbm/ui/ObservingImageView;->setVisibility(I)V
 
-    .line 311
+    .line 302
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->c:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 312
+    .line 303
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->d:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    .line 313
+    .line 304
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->e:Lcom/bbm/ui/HeaderButtonActionBar;
 
     invoke-virtual {v0, v2}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
 
-    .line 314
+    .line 305
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->s:Z
 
-    .line 315
+    .line 306
     return-void
 .end method
 
@@ -248,7 +248,7 @@
     .locals 0
 
     .prologue
-    .line 52
+    .line 40
     iput-boolean p1, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->u:Z
 
     return p1
@@ -258,7 +258,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->n:Lcom/cropimage/f;
 
     return-object v0
@@ -268,7 +268,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->b:Lcom/bbm/ui/ObservingImageView;
 
     return-object v0
@@ -278,7 +278,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->c:Landroid/widget/ImageButton;
 
     return-object v0
@@ -288,7 +288,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->d:Landroid/widget/ImageButton;
 
     return-object v0
@@ -298,7 +298,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->q:Landroid/widget/ProgressBar;
 
     return-object v0
@@ -308,7 +308,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->k:Landroid/widget/ImageButton;
 
     return-object v0
@@ -318,7 +318,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->f:Lcom/bbm/ui/InlineImageEditText;
 
     return-object v0
@@ -328,7 +328,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->g:Lcom/bbm/ui/InlineImageEditText;
 
     return-object v0
@@ -338,7 +338,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->m:Ljava/lang/String;
 
     return-object v0
@@ -348,7 +348,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->t:I
 
     return v0
@@ -358,7 +358,7 @@
     .locals 0
 
     .prologue
-    .line 52
+    .line 40
     invoke-direct {p0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->a()V
 
     return-void
@@ -368,7 +368,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-boolean v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->r:Z
 
     return v0
@@ -378,7 +378,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-boolean v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->s:Z
 
     return v0
@@ -388,7 +388,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->e:Lcom/bbm/ui/HeaderButtonActionBar;
 
     return-object v0
@@ -398,7 +398,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->h:Landroid/widget/TextView;
 
     return-object v0
@@ -408,7 +408,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-boolean v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->o:Z
 
     return v0
@@ -418,8 +418,8 @@
     .locals 4
 
     .prologue
-    .line 52
-    invoke-static {p0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
+    .line 40
+    invoke-static {p0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
 
     const/4 v0, 0x1
 
@@ -427,7 +427,7 @@
 
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->l:Landroid/widget/ImageButton;
 
-    const v1, 0x7f02001a
+    const v1, 0x7f02001e
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
 
@@ -448,7 +448,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->p:Landroid/os/Handler;
 
     return-object v0
@@ -458,7 +458,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->s:Z
@@ -470,7 +470,7 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->j:Lcom/bbm/ui/EmoticonPicker;
 
     return-object v0
@@ -482,42 +482,42 @@
     .locals 2
 
     .prologue
-    .line 320
+    .line 311
     invoke-virtual {p0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->getCurrentFocus()Landroid/view/View;
 
     move-result-object v0
 
-    .line 321
+    .line 312
     instance-of v1, v0, Landroid/widget/EditText;
 
     if-eqz v1, :cond_1
 
-    .line 322
+    .line 313
     iget-object v1, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->g:Lcom/bbm/ui/InlineImageEditText;
 
     if-ne v0, v1, :cond_2
 
-    .line 323
+    .line 314
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->g:Lcom/bbm/ui/InlineImageEditText;
 
     invoke-static {v0, p1}, Lcom/bbm/ui/EmoticonPicker;->a(Landroid/widget/EditText;Ljava/lang/String;)V
 
-    .line 328
+    .line 318
     :cond_0
     :goto_0
     invoke-direct {p0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->a()V
 
-    .line 330
+    .line 320
     :cond_1
     return-void
 
-    .line 325
+    .line 315
     :cond_2
     iget-object v1, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->f:Lcom/bbm/ui/InlineImageEditText;
 
     if-ne v0, v1, :cond_0
 
-    .line 326
+    .line 316
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->f:Lcom/bbm/ui/InlineImageEditText;
 
     invoke-static {v0, p1}, Lcom/bbm/ui/EmoticonPicker;->a(Landroid/widget/EditText;Ljava/lang/String;)V
@@ -529,10 +529,10 @@
     .locals 2
 
     .prologue
-    .line 266
-    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/agw;->onActivityResult(IILandroid/content/Intent;)V
+    .line 253
+    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/akz;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 267
+    .line 254
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
@@ -541,20 +541,20 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 268
+    .line 255
     const-string v0, "imageUrl"
 
     invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 269
+    .line 256
     if-eqz v0, :cond_0
 
-    .line 270
+    .line 257
     invoke-direct {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->b(Ljava/lang/String;)V
 
-    .line 274
+    .line 261
     :cond_0
     const/4 v0, 0x2
 
@@ -564,22 +564,22 @@
 
     if-ne p2, v0, :cond_1
 
-    .line 275
+    .line 262
     invoke-virtual {p3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 277
+    .line 264
     const-string v1, "path"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 278
+    .line 265
     invoke-direct {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->b(Ljava/lang/String;)V
 
-    .line 280
+    .line 267
     :cond_1
     return-void
 .end method
@@ -594,15 +594,15 @@
 
     const/16 v5, 0x8
 
-    .line 91
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/agw;->onCreate(Landroid/os/Bundle;)V
+    .line 79
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/akz;->onCreate(Landroid/os/Bundle;)V
 
-    .line 92
+    .line 80
     const/high16 v0, 0x7f030000
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->setContentView(I)V
 
-    .line 93
+    .line 81
     invoke-virtual {p0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -615,7 +615,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->m:Ljava/lang/String;
 
-    .line 94
+    .line 82
     invoke-virtual {p0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -628,8 +628,8 @@
 
     iput v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->t:I
 
-    .line 96
-    const v0, 0x7f0a008b
+    .line 84
+    const v0, 0x7f0b00aa
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -643,7 +643,7 @@
 
     invoke-virtual {v0, v5}, Lcom/bbm/ui/ObservingImageView;->setVisibility(I)V
 
-    const v0, 0x7f0a008c
+    const v0, 0x7f0b00ab
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -665,7 +665,7 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    const v0, 0x7f0a008d
+    const v0, 0x7f0b00ac
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -687,7 +687,7 @@
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageButton;->setVisibility(I)V
 
-    const v0, 0x7f0a0087
+    const v0, 0x7f0b00a6
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -697,14 +697,14 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->q:Landroid/widget/ProgressBar;
 
-    .line 97
+    .line 85
     new-instance v0, Lcom/bbm/ui/HeaderButtonActionBar;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0e00f4
+    const v2, 0x7f0e00f6
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -714,7 +714,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e0165
+    const v3, 0x7f0e0175
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -724,7 +724,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e01ba
+    const v4, 0x7f0e01c9
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -770,8 +770,8 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ActionBar;->setDisplayOptions(I)V
 
-    .line 98
-    const v0, 0x7f0a008e
+    .line 86
+    const v0, 0x7f0b00ad
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -785,7 +785,7 @@
 
     const/16 v1, 0x64
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/gg;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/gg;
+    invoke-static {v0, v1}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
 
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->f:Lcom/bbm/ui/InlineImageEditText;
 
@@ -795,8 +795,8 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/InlineImageEditText;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 99
-    const v0, 0x7f0a0090
+    .line 87
+    const v0, 0x7f0b00af
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -810,7 +810,7 @@
 
     const/16 v1, 0x190
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/gg;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/gg;
+    invoke-static {v0, v1}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
 
     new-instance v0, Lcom/bbm/ui/activities/k;
 
@@ -840,8 +840,8 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/InlineImageEditText;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 100
-    const v0, 0x7f0a0092
+    .line 88
+    const v0, 0x7f0b00b1
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -857,7 +857,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e01c6
+    const v2, 0x7f0e01d5
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -879,7 +879,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    const v0, 0x7f0a0094
+    const v0, 0x7f0b00b3
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -897,7 +897,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0093
+    const v0, 0x7f0b00b2
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -915,7 +915,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    const v0, 0x7f0a0095
+    const v0, 0x7f0b00b4
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->findViewById(I)Landroid/view/View;
 
@@ -931,8 +931,8 @@
 
     iget-object v0, p0, Lcom/bbm/ui/activities/AddChannelPostActivity;->j:Lcom/bbm/ui/EmoticonPicker;
 
-    invoke-virtual {v0, p0}, Lcom/bbm/ui/EmoticonPicker;->setEmoticonPickerListener(Lcom/bbm/ui/bn;)V
+    invoke-virtual {v0, p0}, Lcom/bbm/ui/EmoticonPicker;->setEmoticonPickerListener(Lcom/bbm/ui/bv;)V
 
-    .line 102
+    .line 90
     return-void
 .end method

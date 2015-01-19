@@ -1,26 +1,22 @@
 .class final Lcom/bbm/h/ac;
 .super Ljava/lang/Object;
-.source "InvitesFragment.java"
+.source "AddContactsFragment.java"
 
 # interfaces
-.implements Lcom/bbm/ui/b/ab;
+.implements Lcom/bbm/ui/b/ah;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/iceberg/j;
-
-.field final synthetic b:Lcom/bbm/h/w;
+.field final synthetic a:Lcom/bbm/h/l;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/h/w;Lcom/bbm/iceberg/j;)V
+.method constructor <init>(Lcom/bbm/h/l;)V
     .locals 0
 
     .prologue
-    .line 275
-    iput-object p1, p0, Lcom/bbm/h/ac;->b:Lcom/bbm/h/w;
-
-    iput-object p2, p0, Lcom/bbm/h/ac;->a:Lcom/bbm/iceberg/j;
+    .line 371
+    iput-object p1, p0, Lcom/bbm/h/ac;->a:Lcom/bbm/h/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -30,16 +26,18 @@
 
 # virtual methods
 .method public final a()V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 278
-    iget-object v0, p0, Lcom/bbm/h/ac;->b:Lcom/bbm/h/w;
+    .line 375
+    iget-object v0, p0, Lcom/bbm/h/ac;->a:Lcom/bbm/h/l;
 
-    iget-object v1, p0, Lcom/bbm/h/ac;->a:Lcom/bbm/iceberg/j;
+    invoke-virtual {v0}, Lcom/bbm/h/l;->getActivity()Landroid/app/Activity;
 
-    invoke-static {v0, v1}, Lcom/bbm/h/w;->c(Lcom/bbm/h/w;Lcom/bbm/iceberg/j;)V
+    move-result-object v0
 
-    .line 279
+    invoke-static {v0}, Lcom/bbm/h/aq;->d(Landroid/content/Context;)V
+
+    .line 376
     return-void
 .end method

@@ -90,9 +90,7 @@
     .line 97
     sget-object v0, Lcom/google/analytics/tracking/android/aq;->a:Lcom/google/analytics/tracking/android/an;
 
-    invoke-virtual {v0}, Lcom/google/analytics/tracking/android/an;->d()Lcom/google/analytics/tracking/android/ar;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/google/analytics/tracking/android/an;->c:Lcom/google/analytics/tracking/android/ar;
 
     .line 99
     :goto_0

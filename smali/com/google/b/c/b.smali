@@ -47,7 +47,7 @@
 
 
 # virtual methods
-.method protected abstract a(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract a(Ljava/lang/Object;)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)TT;"

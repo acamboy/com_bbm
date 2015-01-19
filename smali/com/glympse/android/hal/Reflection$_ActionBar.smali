@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cL:Z
+.field private static cR:Z
 
-.field private static cM:Ljava/lang/Class;
+.field private static cS:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -15,21 +15,21 @@
     .end annotation
 .end field
 
-.field private static cN:Ljava/lang/reflect/Method;
-
-.field private static cO:Ljava/lang/reflect/Method;
-
-.field private static cP:Ljava/lang/reflect/Method;
-
-.field private static cQ:Ljava/lang/reflect/Method;
-
-.field private static cR:Ljava/lang/reflect/Method;
-
-.field private static cS:Ljava/lang/reflect/Method;
-
 .field private static cT:Ljava/lang/reflect/Method;
 
 .field private static cU:Ljava/lang/reflect/Method;
+
+.field private static cV:Ljava/lang/reflect/Method;
+
+.field private static cW:Ljava/lang/reflect/Method;
+
+.field private static cX:Ljava/lang/reflect/Method;
+
+.field private static cY:Ljava/lang/reflect/Method;
+
+.field private static cZ:Ljava/lang/reflect/Method;
+
+.field private static da:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -42,34 +42,34 @@
     .line 536
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cR:Z
 
     .line 537
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cM:Ljava/lang/Class;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/Class;
 
     .line 538
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cN:Ljava/lang/reflect/Method;
-
-    .line 539
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cO:Ljava/lang/reflect/Method;
-
-    .line 540
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cP:Ljava/lang/reflect/Method;
-
-    .line 541
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cQ:Ljava/lang/reflect/Method;
-
-    .line 542
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cR:Ljava/lang/reflect/Method;
-
-    .line 543
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/reflect/Method;
-
-    .line 545
     sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cT:Ljava/lang/reflect/Method;
 
-    .line 546
+    .line 539
     sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cU:Ljava/lang/reflect/Method;
+
+    .line 540
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cV:Ljava/lang/reflect/Method;
+
+    .line 541
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cW:Ljava/lang/reflect/Method;
+
+    .line 542
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cX:Ljava/lang/reflect/Method;
+
+    .line 543
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cY:Ljava/lang/reflect/Method;
+
+    .line 545
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cZ:Ljava/lang/reflect/Method;
+
+    .line 546
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->da:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -91,12 +91,12 @@
     const/4 v1, 0x1
 
     .line 551
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cL:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cR:Z
 
     if-nez v0, :cond_0
 
     .line 553
-    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cL:Z
+    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_ActionBar;->cR:Z
 
     .line 557
     :try_start_0
@@ -106,19 +106,19 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cM:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/Class;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_8
 
     .line 563
     :goto_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
     .line 567
     :try_start_1
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/Class;
 
     const-string v1, "isShowing"
 
@@ -128,14 +128,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cN:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cT:Ljava/lang/reflect/Method;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_7
 
     .line 574
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/Class;
 
     const-string v1, "setDisplayHomeAsUpEnabled"
 
@@ -153,14 +153,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cO:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cU:Ljava/lang/reflect/Method;
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_6
 
     .line 581
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/Class;
 
     const-string v1, "setDisplayShowTitleEnabled"
 
@@ -178,14 +178,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cR:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cX:Ljava/lang/reflect/Method;
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_5
 
     .line 588
     :goto_3
     :try_start_4
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/Class;
 
     const-string v1, "setDisplayShowHomeEnabled"
 
@@ -203,14 +203,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cP:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cV:Ljava/lang/reflect/Method;
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_4
 
     .line 595
     :goto_4
     :try_start_5
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/Class;
 
     const-string v1, "setDisplayShowCustomEnabled"
 
@@ -228,14 +228,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cQ:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cW:Ljava/lang/reflect/Method;
     :try_end_5
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_3
 
     .line 602
     :goto_5
     :try_start_6
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/Class;
 
     const-string v1, "setCustomView"
 
@@ -253,14 +253,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cY:Ljava/lang/reflect/Method;
     :try_end_6
     .catch Ljava/lang/Throwable; {:try_start_6 .. :try_end_6} :catch_2
 
     .line 619
     :goto_6
     :try_start_7
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/Class;
 
     const-string v1, "setHomeButtonEnabled"
 
@@ -278,14 +278,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cT:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cZ:Ljava/lang/reflect/Method;
     :try_end_7
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_1
 
     .line 627
     :goto_7
     :try_start_8
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/Class;
 
     const-string v1, "setLogo"
 
@@ -303,7 +303,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cU:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->da:Ljava/lang/reflect/Method;
     :try_end_8
     .catch Ljava/lang/Throwable; {:try_start_8 .. :try_end_8} :catch_0
 
@@ -371,13 +371,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActionBar;->Load()V
 
     .line 643
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cN:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cT:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 647
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cN:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cT:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -423,13 +423,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActionBar;->Load()V
 
     .line 747
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cY:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 751
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cS:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cY:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 
@@ -470,13 +470,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActionBar;->Load()V
 
     .line 665
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cO:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cU:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 669
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cO:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cU:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 
@@ -521,13 +521,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActionBar;->Load()V
 
     .line 727
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cQ:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cW:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 731
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cQ:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cW:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 
@@ -572,13 +572,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActionBar;->Load()V
 
     .line 707
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cP:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cV:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 711
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cP:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cV:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 
@@ -623,13 +623,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActionBar;->Load()V
 
     .line 686
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cR:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cX:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 690
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cR:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cX:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 
@@ -674,13 +674,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActionBar;->Load()V
 
     .line 810
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cT:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cZ:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 814
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cT:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cZ:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 
@@ -725,13 +725,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActionBar;->Load()V
 
     .line 831
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cU:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->da:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 835
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->cU:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActionBar;->da:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 

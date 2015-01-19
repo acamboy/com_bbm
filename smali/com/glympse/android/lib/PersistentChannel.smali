@@ -7,23 +7,25 @@
 
 
 # instance fields
-.field private G:Z
+.field private F:Z
 
-.field private f:Lcom/glympse/android/core/GHandler;
+.field private _backOffPolicy:Lcom/glympse/android/lib/bm;
 
-.field private jS:Ljava/lang/String;
+.field private _handler:Lcom/glympse/android/core/GHandler;
 
-.field private la:Z
+.field private kq:Ljava/lang/String;
 
-.field private mX:Lcom/glympse/android/lib/bi;
+.field private lF:Z
 
-.field private qi:Lcom/glympse/android/ws/GWebSocketListener;
+.field private qK:Z
 
-.field private qj:Lcom/glympse/android/ws/GWebSocket;
+.field private qL:Lcom/glympse/android/ws/GWebSocketListener;
 
-.field private qk:Lcom/glympse/android/lib/gg;
+.field private qM:Lcom/glympse/android/ws/GWebSocket;
 
-.field protected w:Z
+.field private qN:Lcom/glympse/android/lib/gl;
+
+.field protected v:Z
 
 
 # direct methods
@@ -33,29 +35,32 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 34
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
-    iput-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->G:Z
-
     .line 36
-    iput-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->la:Z
+    iput-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->F:Z
 
     .line 37
-    iput-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->w:Z
+    iput-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->lF:Z
 
     .line 38
-    iput-object p1, p0, Lcom/glympse/android/lib/PersistentChannel;->f:Lcom/glympse/android/core/GHandler;
+    iput-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->v:Z
 
     .line 39
-    new-instance v0, Lcom/glympse/android/lib/bi;
-
-    invoke-direct {v0}, Lcom/glympse/android/lib/bi;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->mX:Lcom/glympse/android/lib/bi;
+    iput-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qK:Z
 
     .line 40
+    iput-object p1, p0, Lcom/glympse/android/lib/PersistentChannel;->_handler:Lcom/glympse/android/core/GHandler;
+
+    .line 41
+    new-instance v0, Lcom/glympse/android/lib/bm;
+
+    invoke-direct {v0}, Lcom/glympse/android/lib/bm;-><init>()V
+
+    iput-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->_backOffPolicy:Lcom/glympse/android/lib/bm;
+
+    .line 42
     return-void
 .end method
 
@@ -64,48 +69,55 @@
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qi:Lcom/glympse/android/ws/GWebSocketListener;
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qL:Lcom/glympse/android/ws/GWebSocketListener;
 
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/glympse/android/lib/PersistentChannel;)Lcom/glympse/android/lib/bi;
+.method static synthetic b(Lcom/glympse/android/lib/PersistentChannel;)Lcom/glympse/android/lib/bm;
     .locals 1
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->mX:Lcom/glympse/android/lib/bi;
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->_backOffPolicy:Lcom/glympse/android/lib/bm;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/glympse/android/lib/PersistentChannel;)Lcom/glympse/android/lib/gg;
+.method static synthetic c(Lcom/glympse/android/lib/PersistentChannel;)Lcom/glympse/android/lib/gl;
     .locals 1
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qk:Lcom/glympse/android/lib/gg;
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qN:Lcom/glympse/android/lib/gl;
 
     return-object v0
 .end method
 
-.method private cr()V
+.method private cu()V
     .locals 4
 
     .prologue
-    .line 177
+    .line 184
     invoke-static {}, Lcom/glympse/android/ws/WebSocketFactory;->createWebSocket()Lcom/glympse/android/ws/GWebSocket;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qj:Lcom/glympse/android/ws/GWebSocket;
+    iput-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
 
-    .line 178
-    iget-object v1, p0, Lcom/glympse/android/lib/PersistentChannel;->qj:Lcom/glympse/android/ws/GWebSocket;
+    .line 185
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
 
-    iget-object v2, p0, Lcom/glympse/android/lib/PersistentChannel;->jS:Ljava/lang/String;
+    iget-boolean v1, p0, Lcom/glympse/android/lib/PersistentChannel;->qK:Z
 
-    new-instance v3, Lcom/glympse/android/lib/gh;
+    invoke-interface {v0, v1}, Lcom/glympse/android/ws/GWebSocket;->validateUtf8(Z)V
+
+    .line 186
+    iget-object v1, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
+
+    iget-object v2, p0, Lcom/glympse/android/lib/PersistentChannel;->kq:Ljava/lang/String;
+
+    new-instance v3, Lcom/glympse/android/lib/gm;
 
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -113,11 +125,11 @@
 
     check-cast v0, Lcom/glympse/android/lib/PersistentChannel;
 
-    invoke-direct {v3, v0}, Lcom/glympse/android/lib/gh;-><init>(Lcom/glympse/android/lib/PersistentChannel;)V
+    invoke-direct {v3, v0}, Lcom/glympse/android/lib/gm;-><init>(Lcom/glympse/android/lib/PersistentChannel;)V
 
     invoke-interface {v1, v2, v3}, Lcom/glympse/android/ws/GWebSocket;->open(Ljava/lang/String;Lcom/glympse/android/ws/GWebSocketListener;)V
 
-    .line 179
+    .line 187
     return-void
 .end method
 
@@ -129,68 +141,68 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 63
-    iget-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->G:Z
+    .line 65
+    iget-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->F:Z
 
     if-nez v0, :cond_0
 
-    .line 82
+    .line 84
     :goto_0
     return-void
 
-    .line 67
+    .line 69
     :cond_0
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->G:Z
+    iput-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->F:Z
 
-    .line 69
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qj:Lcom/glympse/android/ws/GWebSocket;
+    .line 71
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
 
     if-eqz v0, :cond_1
 
-    .line 71
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qj:Lcom/glympse/android/ws/GWebSocket;
+    .line 73
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
 
     invoke-interface {v0}, Lcom/glympse/android/ws/GWebSocket;->close()V
 
-    .line 72
-    iput-object v2, p0, Lcom/glympse/android/lib/PersistentChannel;->qj:Lcom/glympse/android/ws/GWebSocket;
+    .line 74
+    iput-object v2, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
 
-    .line 75
+    .line 77
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qk:Lcom/glympse/android/lib/gg;
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qN:Lcom/glympse/android/lib/gl;
 
     if-eqz v0, :cond_2
 
-    .line 77
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->f:Lcom/glympse/android/core/GHandler;
+    .line 79
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->_handler:Lcom/glympse/android/core/GHandler;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/PersistentChannel;->qk:Lcom/glympse/android/lib/gg;
+    iget-object v1, p0, Lcom/glympse/android/lib/PersistentChannel;->qN:Lcom/glympse/android/lib/gl;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GHandler;->cancel(Ljava/lang/Runnable;)V
 
-    .line 78
-    iput-object v2, p0, Lcom/glympse/android/lib/PersistentChannel;->qk:Lcom/glympse/android/lib/gg;
+    .line 80
+    iput-object v2, p0, Lcom/glympse/android/lib/PersistentChannel;->qN:Lcom/glympse/android/lib/gl;
 
-    .line 81
+    .line 83
     :cond_2
-    iput-object v2, p0, Lcom/glympse/android/lib/PersistentChannel;->qi:Lcom/glympse/android/ws/GWebSocketListener;
+    iput-object v2, p0, Lcom/glympse/android/lib/PersistentChannel;->qL:Lcom/glympse/android/ws/GWebSocketListener;
 
     goto :goto_0
 .end method
 
-.method protected cs()V
+.method protected cv()V
     .locals 4
 
     .prologue
-    .line 184
+    .line 192
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qj:Lcom/glympse/android/ws/GWebSocket;
+    iput-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
 
-    .line 187
-    iget-object v1, p0, Lcom/glympse/android/lib/PersistentChannel;->qi:Lcom/glympse/android/ws/GWebSocketListener;
+    .line 195
+    iget-object v1, p0, Lcom/glympse/android/lib/PersistentChannel;->qL:Lcom/glympse/android/ws/GWebSocketListener;
 
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -200,8 +212,8 @@
 
     invoke-interface {v1, v0}, Lcom/glympse/android/ws/GWebSocketListener;->disconnected(Lcom/glympse/android/ws/GWebSocket;)V
 
-    .line 190
-    new-instance v1, Lcom/glympse/android/lib/gg;
+    .line 198
+    new-instance v1, Lcom/glympse/android/lib/gl;
 
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -209,18 +221,18 @@
 
     check-cast v0, Lcom/glympse/android/lib/PersistentChannel;
 
-    invoke-direct {v1, v0}, Lcom/glympse/android/lib/gg;-><init>(Lcom/glympse/android/lib/PersistentChannel;)V
+    invoke-direct {v1, v0}, Lcom/glympse/android/lib/gl;-><init>(Lcom/glympse/android/lib/PersistentChannel;)V
 
-    iput-object v1, p0, Lcom/glympse/android/lib/PersistentChannel;->qk:Lcom/glympse/android/lib/gg;
+    iput-object v1, p0, Lcom/glympse/android/lib/PersistentChannel;->qN:Lcom/glympse/android/lib/gl;
 
-    .line 191
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->f:Lcom/glympse/android/core/GHandler;
+    .line 199
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->_handler:Lcom/glympse/android/core/GHandler;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/PersistentChannel;->qk:Lcom/glympse/android/lib/gg;
+    iget-object v1, p0, Lcom/glympse/android/lib/PersistentChannel;->qN:Lcom/glympse/android/lib/gl;
 
-    iget-object v2, p0, Lcom/glympse/android/lib/PersistentChannel;->mX:Lcom/glympse/android/lib/bi;
+    iget-object v2, p0, Lcom/glympse/android/lib/PersistentChannel;->_backOffPolicy:Lcom/glympse/android/lib/bm;
 
-    invoke-virtual {v2}, Lcom/glympse/android/lib/bi;->aW()I
+    invoke-virtual {v2}, Lcom/glympse/android/lib/bm;->aX()I
 
     move-result v2
 
@@ -228,7 +240,7 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/glympse/android/core/GHandler;->postDelayed(Ljava/lang/Runnable;J)V
 
-    .line 192
+    .line 200
     return-void
 .end method
 
@@ -238,30 +250,30 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 48
-    iget-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->la:Z
+    .line 50
+    iget-boolean v0, p0, Lcom/glympse/android/lib/PersistentChannel;->lF:Z
 
     if-eqz v0, :cond_0
 
-    .line 59
+    .line 61
     :goto_0
     return-void
 
-    .line 52
+    .line 54
     :cond_0
-    iput-boolean v1, p0, Lcom/glympse/android/lib/PersistentChannel;->G:Z
-
-    .line 53
-    iput-boolean v1, p0, Lcom/glympse/android/lib/PersistentChannel;->la:Z
+    iput-boolean v1, p0, Lcom/glympse/android/lib/PersistentChannel;->F:Z
 
     .line 55
-    iput-object p1, p0, Lcom/glympse/android/lib/PersistentChannel;->jS:Ljava/lang/String;
+    iput-boolean v1, p0, Lcom/glympse/android/lib/PersistentChannel;->lF:Z
 
-    .line 56
-    iput-object p2, p0, Lcom/glympse/android/lib/PersistentChannel;->qi:Lcom/glympse/android/ws/GWebSocketListener;
+    .line 57
+    iput-object p1, p0, Lcom/glympse/android/lib/PersistentChannel;->kq:Ljava/lang/String;
 
     .line 58
-    invoke-direct {p0}, Lcom/glympse/android/lib/PersistentChannel;->cr()V
+    iput-object p2, p0, Lcom/glympse/android/lib/PersistentChannel;->qL:Lcom/glympse/android/ws/GWebSocketListener;
+
+    .line 60
+    invoke-direct {p0}, Lcom/glympse/android/lib/PersistentChannel;->cu()V
 
     goto :goto_0
 .end method
@@ -270,15 +282,15 @@
     .locals 1
 
     .prologue
-    .line 200
+    .line 208
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qk:Lcom/glympse/android/lib/gg;
+    iput-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qN:Lcom/glympse/android/lib/gl;
 
-    .line 202
-    invoke-direct {p0}, Lcom/glympse/android/lib/PersistentChannel;->cr()V
+    .line 210
+    invoke-direct {p0}, Lcom/glympse/android/lib/PersistentChannel;->cu()V
 
-    .line 203
+    .line 211
     return-void
 .end method
 
@@ -286,17 +298,17 @@
     .locals 1
 
     .prologue
-    .line 86
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qj:Lcom/glympse/android/ws/GWebSocket;
+    .line 88
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
 
     if-eqz v0, :cond_0
 
-    .line 88
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qj:Lcom/glympse/android/ws/GWebSocket;
+    .line 90
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
 
     invoke-interface {v0, p1}, Lcom/glympse/android/ws/GWebSocket;->send(Ljava/lang/String;)V
 
-    .line 90
+    .line 92
     :cond_0
     return-void
 .end method
@@ -305,17 +317,17 @@
     .locals 1
 
     .prologue
-    .line 94
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qj:Lcom/glympse/android/ws/GWebSocket;
+    .line 96
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
 
     if-eqz v0, :cond_0
 
-    .line 96
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qj:Lcom/glympse/android/ws/GWebSocket;
+    .line 98
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
 
     invoke-interface {v0, p1}, Lcom/glympse/android/ws/GWebSocket;->send([B)V
 
-    .line 98
+    .line 100
     :cond_0
     return-void
 .end method
@@ -324,12 +336,12 @@
     .locals 1
 
     .prologue
-    .line 107
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qj:Lcom/glympse/android/ws/GWebSocket;
+    .line 109
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
 
     invoke-interface {v0, p1}, Lcom/glympse/android/ws/GWebSocket;->setDataHandler(Lcom/glympse/android/core/GHandler;)V
 
-    .line 108
+    .line 110
     return-void
 .end method
 
@@ -337,11 +349,22 @@
     .locals 1
 
     .prologue
-    .line 102
-    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qj:Lcom/glympse/android/ws/GWebSocket;
+    .line 104
+    iget-object v0, p0, Lcom/glympse/android/lib/PersistentChannel;->qM:Lcom/glympse/android/ws/GWebSocket;
 
     invoke-interface {v0, p1}, Lcom/glympse/android/ws/GWebSocket;->setStateHandler(Lcom/glympse/android/core/GHandler;)V
 
-    .line 103
+    .line 105
+    return-void
+.end method
+
+.method public validateUtf8(Z)V
+    .locals 0
+
+    .prologue
+    .line 114
+    iput-boolean p1, p0, Lcom/glympse/android/lib/PersistentChannel;->qK:Z
+
+    .line 115
     return-void
 .end method

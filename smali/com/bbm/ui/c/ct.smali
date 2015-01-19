@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/c/ct;
 .super Ljava/lang/Object;
-.source "GroupMembersFragment.java"
+.source "ContactsFragment.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/bbm/ui/db;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/cs;
+.field final synthetic a:Lcom/bbm/ui/c/ch;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/cs;)V
+.method constructor <init>(Lcom/bbm/ui/c/ch;)V
     .locals 0
 
     .prologue
-    .line 579
-    iput-object p1, p0, Lcom/bbm/ui/c/ct;->a:Lcom/bbm/ui/c/cs;
+    .line 173
+    iput-object p1, p0, Lcom/bbm/ui/c/ct;->a:Lcom/bbm/ui/c/ch;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,112 +25,43 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final a(Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 3
 
     .prologue
-    .line 583
-    iget-object v0, p0, Lcom/bbm/ui/c/ct;->a:Lcom/bbm/ui/c/cs;
+    .line 176
+    iget-object v0, p0, Lcom/bbm/ui/c/ct;->a:Lcom/bbm/ui/c/ch;
 
-    iget v0, v0, Lcom/bbm/ui/c/cs;->a:I
+    invoke-static {v0}, Lcom/bbm/ui/c/ch;->b(Lcom/bbm/ui/c/ch;)Landroid/content/Context;
 
-    const v1, 0x7f0a0057
+    move-result-object v0
 
-    if-ne v0, v1, :cond_0
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    .line 585
-    :try_start_0
-    new-instance v0, Ljava/util/ArrayList;
+    move-result-object v0
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    const v1, 0x7f0300c0
 
-    .line 586
-    new-instance v1, Lorg/json/JSONObject;
+    const/4 v2, 0x0
 
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
-
-    const-string v2, "uri"
-
-    iget-object v3, p0, Lcom/bbm/ui/c/ct;->a:Lcom/bbm/ui/c/cs;
-
-    iget-object v3, v3, Lcom/bbm/ui/c/cs;->b:Lcom/bbm/g/l;
-
-    iget-object v3, v3, Lcom/bbm/g/l;->f:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    .line 178
+    const v0, 0x7f0b048a
 
-    .line 587
-    iget-object v1, p0, Lcom/bbm/ui/c/ct;->a:Lcom/bbm/ui/c/cs;
-
-    iget-object v1, v1, Lcom/bbm/ui/c/cs;->c:Lcom/bbm/ui/c/cm;
-
-    iget-object v1, v1, Lcom/bbm/ui/c/cm;->a:Lcom/bbm/d;
-
-    iget-object v1, v1, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
-
-    const-string v2, "groupContactInactive"
-
-    invoke-static {v0, v2}, Lcom/bbm/g/ac;->b(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/g/ca;
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/bbm/ui/c/ct;->a:Lcom/bbm/ui/c/cs;
+    check-cast v0, Landroid/widget/ImageView;
 
-    iget-object v2, v2, Lcom/bbm/ui/c/cs;->c:Lcom/bbm/ui/c/cm;
+    .line 179
+    const v2, 0x7f0200da
 
-    iget-object v2, v2, Lcom/bbm/ui/c/cm;->b:Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    invoke-virtual {v0, v2}, Lcom/bbm/g/ca;->a(Ljava/lang/String;)Lcom/bbm/g/ca;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 597
-    :goto_0
-    return-void
-
-    .line 590
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    .line 595
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/ct;->a:Lcom/bbm/ui/c/cs;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/cs;->c:Lcom/bbm/ui/c/cm;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/cm;->a:Lcom/bbm/d;
-
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/ct;->a:Lcom/bbm/ui/c/cs;
-
-    iget-object v1, v1, Lcom/bbm/ui/c/cs;->b:Lcom/bbm/g/l;
-
-    iget-object v1, v1, Lcom/bbm/g/l;->f:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/ui/c/ct;->a:Lcom/bbm/ui/c/cs;
-
-    iget-object v2, v2, Lcom/bbm/ui/c/cs;->c:Lcom/bbm/ui/c/cm;
-
-    iget-object v2, v2, Lcom/bbm/ui/c/cm;->b:Ljava/lang/String;
-
-    new-instance v3, Lcom/bbm/g/bm;
-
-    invoke-direct {v3, v1, v2}, Lcom/bbm/g/bm;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v3}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
-
-    goto :goto_0
+    .line 180
+    return-object v1
 .end method

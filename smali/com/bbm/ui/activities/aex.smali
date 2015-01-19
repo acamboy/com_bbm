@@ -1,44 +1,45 @@
 .class final Lcom/bbm/ui/activities/aex;
 .super Ljava/lang/Object;
-.source "StartupActivity.java"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.source "SearchResultsChannelsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/StartupActivity;
+.field a:Landroid/widget/TextView;
+
+.field b:Landroid/widget/TextView;
+
+.field c:Landroid/widget/TextView;
+
+.field d:Landroid/widget/ImageView;
+
+.field e:Landroid/widget/ImageView;
+
+.field f:Landroid/widget/ImageView;
+
+.field g:Landroid/widget/ImageView;
+
+.field final synthetic h:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/StartupActivity;)V
+.method private constructor <init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
     .locals 0
 
     .prologue
-    .line 229
-    iput-object p1, p0, Lcom/bbm/ui/activities/aex;->a:Lcom/bbm/ui/activities/StartupActivity;
+    .line 89
+    iput-object p1, p0, Lcom/bbm/ui/activities/aex;->h:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
-    .locals 1
+.method synthetic constructor <init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;B)V
+    .locals 0
 
     .prologue
-    .line 234
-    iget-object v0, p0, Lcom/bbm/ui/activities/aex;->a:Lcom/bbm/ui/activities/StartupActivity;
+    .line 89
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/aex;-><init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/StartupActivity;->c(Lcom/bbm/ui/activities/StartupActivity;)Landroid/app/AlertDialog;
-
-    .line 235
-    iget-object v0, p0, Lcom/bbm/ui/activities/aex;->a:Lcom/bbm/ui/activities/StartupActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/StartupActivity;->finish()V
-
-    .line 236
     return-void
 .end method

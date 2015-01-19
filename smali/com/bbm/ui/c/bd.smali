@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/c/bd;
 .super Ljava/lang/Object;
-.source "ChatsFragment.java"
+.source "ChannelDetailsFragment.java"
 
 # interfaces
-.implements Lcom/bbm/ui/dh;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/bc;
+.field final synthetic a:Lcom/bbm/ui/c/ag;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/bc;)V
+.method constructor <init>(Lcom/bbm/ui/c/ag;)V
     .locals 0
 
     .prologue
-    .line 111
-    iput-object p1, p0, Lcom/bbm/ui/c/bd;->a:Lcom/bbm/ui/c/bc;
+    .line 400
+    iput-object p1, p0, Lcom/bbm/ui/c/bd;->a:Lcom/bbm/ui/c/ag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,44 +25,41 @@
 
 
 # virtual methods
-.method public final a(Z)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 115
-    iget-object v0, p0, Lcom/bbm/ui/c/bd;->a:Lcom/bbm/ui/c/bc;
+    .line 403
+    new-instance v0, Landroid/content/Intent;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/bc;->getActivity()Landroid/app/Activity;
+    iget-object v1, p0, Lcom/bbm/ui/c/bd;->a:Lcom/bbm/ui/c/ag;
 
-    move-result-object v0
+    invoke-static {v1}, Lcom/bbm/ui/c/ag;->h(Lcom/bbm/ui/c/ag;)Lcom/bbm/ui/activities/cq;
 
-    instance-of v0, v0, Lcom/bbm/ui/activities/MainActivity;
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    const-class v2, Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
-    .line 116
-    iget-object v0, p0, Lcom/bbm/ui/c/bd;->a:Lcom/bbm/ui/c/bc;
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/bc;->getActivity()Landroid/app/Activity;
+    .line 404
+    const-string v1, "imageUrl"
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/bbm/ui/c/bd;->a:Lcom/bbm/ui/c/ag;
 
-    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
+    invoke-static {v2}, Lcom/bbm/ui/c/ag;->l(Lcom/bbm/ui/c/ag;)Ljava/lang/String;
 
-    if-nez p1, :cond_1
+    move-result-object v2
 
-    const/4 v1, 0x1
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    :goto_0
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->a(Z)V
+    .line 405
+    iget-object v1, p0, Lcom/bbm/ui/c/bd;->a:Lcom/bbm/ui/c/ag;
 
-    .line 118
-    :cond_0
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/c/ag;->startActivityForResult(Landroid/content/Intent;I)V
+
+    .line 406
     return-void
-
-    .line 116
-    :cond_1
-    const/4 v1, 0x0
-
-    goto :goto_0
 .end method

@@ -347,13 +347,13 @@
     throw v0
 .end method
 
-.method protected abstract a(Lcom/google/android/gms/internal/en;Lcom/google/android/gms/internal/eh$e;)V
+.method public abstract a(Lcom/google/android/gms/internal/en;Lcom/google/android/gms/internal/eh$e;)V
 .end method
 
-.method protected abstract aF()Ljava/lang/String;
+.method public abstract aF()Ljava/lang/String;
 .end method
 
-.method protected abstract aG()Ljava/lang/String;
+.method public abstract aG()Ljava/lang/String;
 .end method
 
 .method protected varargs b([Ljava/lang/String;)V
@@ -362,7 +362,7 @@
     return-void
 .end method
 
-.method protected final bm()V
+.method public final bm()V
     .locals 2
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/eh;->isConnected()Z
@@ -630,7 +630,7 @@
     return-object v0
 .end method
 
-.method protected final eb()Landroid/os/IInterface;
+.method public final eb()Landroid/os/IInterface;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -729,7 +729,7 @@
     return v0
 .end method
 
-.method protected abstract p(Landroid/os/IBinder;)Landroid/os/IInterface;
+.method public abstract p(Landroid/os/IBinder;)Landroid/os/IInterface;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

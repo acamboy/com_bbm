@@ -387,7 +387,7 @@
 .end method
 
 .method public static d(IJ)I
-    .locals 2
+    .locals 3
 
     invoke-static {p0}, Lcom/google/android/gms/internal/jz;->cE(I)I
 
@@ -411,7 +411,7 @@
 .end method
 
 .method public static e(IJ)I
-    .locals 2
+    .locals 3
 
     invoke-static {p0}, Lcom/google/android/gms/internal/jz;->cE(I)I
 
@@ -473,7 +473,7 @@
 .end method
 
 .method public static z(J)I
-    .locals 1
+    .locals 2
 
     invoke-static {p0, p1}, Lcom/google/android/gms/internal/jz;->C(J)I
 
@@ -503,7 +503,7 @@
 .end method
 
 .method public final B(J)V
-    .locals 4
+    .locals 5
 
     :goto_0
     const-wide/16 v0, -0x80
@@ -608,7 +608,7 @@
 .end method
 
 .method public final b(IJ)V
-    .locals 1
+    .locals 2
 
     const/4 v0, 0x0
 
@@ -664,7 +664,7 @@
 .end method
 
 .method public final c(IJ)V
-    .locals 1
+    .locals 2
 
     const/4 v0, 0x0
 
@@ -874,7 +874,7 @@
 .end method
 
 .method public final x(J)V
-    .locals 0
+    .locals 1
 
     invoke-virtual {p0, p1, p2}, Lcom/google/android/gms/internal/jz;->B(J)V
 
@@ -882,7 +882,7 @@
 .end method
 
 .method public final y(J)V
-    .locals 2
+    .locals 3
 
     invoke-static {p1, p2}, Lcom/google/android/gms/internal/jz;->D(J)J
 

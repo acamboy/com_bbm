@@ -1,59 +1,162 @@
 .class final Landroid/support/v4/app/e;
-.super Ljava/lang/Object;
-.source "Fragment.java"
-
-# interfaces
-.implements Landroid/support/v4/app/m;
+.super Landroid/app/SharedElementCallback;
+.source "ActivityCompat21.java"
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/app/Fragment;
+.field private a:Landroid/support/v4/app/d;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/app/Fragment;)V
+.method public constructor <init>(Landroid/support/v4/app/d;)V
     .locals 0
 
     .prologue
-    .line 1461
-    iput-object p1, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/Fragment;
+    .line 83
+    invoke-direct {p0}, Landroid/app/SharedElementCallback;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 84
+    iput-object p1, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/d;
 
+    .line 85
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Landroid/view/View;
-    .locals 2
+.method public final onCaptureSharedElementSnapshot(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;
+    .locals 1
 
     .prologue
-    .line 1464
-    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/Fragment;
+    .line 115
+    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/d;
 
-    iget-object v0, v0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
-
-    if-nez v0, :cond_0
-
-    .line 1465
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string v1, "Fragment does not have a view"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 1467
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/Fragment;
-
-    iget-object v0, v0, Landroid/support/v4/app/Fragment;->mView:Landroid/view/View;
-
-    invoke-virtual {v0, p1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, p1, p2, p3}, Landroid/support/v4/app/d;->a(Landroid/view/View;Landroid/graphics/Matrix;Landroid/graphics/RectF;)Landroid/os/Parcelable;
 
     move-result-object v0
 
     return-object v0
+.end method
+
+.method public final onCreateSnapshotView(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;
+    .locals 1
+
+    .prologue
+    .line 121
+    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/d;
+
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/app/d;->a(Landroid/content/Context;Landroid/os/Parcelable;)Landroid/view/View;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final onMapSharedElements(Ljava/util/List;Ljava/util/Map;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 108
+    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/d;
+
+    invoke-virtual {v0}, Landroid/support/v4/app/d;->d()V
+
+    .line 109
+    return-void
+.end method
+
+.method public final onRejectSharedElements(Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 103
+    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/d;
+
+    invoke-virtual {v0}, Landroid/support/v4/app/d;->c()V
+
+    .line 104
+    return-void
+.end method
+
+.method public final onSharedElementEnd(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/View;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 97
+    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/d;
+
+    invoke-virtual {v0}, Landroid/support/v4/app/d;->b()V
+
+    .line 99
+    return-void
+.end method
+
+.method public final onSharedElementStart(Ljava/util/List;Ljava/util/List;Ljava/util/List;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/View;",
+            ">;",
+            "Ljava/util/List",
+            "<",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 90
+    iget-object v0, p0, Landroid/support/v4/app/e;->a:Landroid/support/v4/app/d;
+
+    invoke-virtual {v0}, Landroid/support/v4/app/d;->a()V
+
+    .line 92
+    return-void
 .end method

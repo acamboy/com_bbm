@@ -1,55 +1,58 @@
 .class final Lcom/bbm/ui/di;
-.super Ljava/lang/Object;
-.source "MainTabBarView.java"
-
-# interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
+.super Landroid/text/Editable$Factory;
+.source "InlineImageEditText.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/MainTabBarView;
+.field final synthetic a:Lcom/bbm/ui/InlineImageEditText;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/MainTabBarView;)V
+.method constructor <init>(Lcom/bbm/ui/InlineImageEditText;)V
     .locals 0
 
     .prologue
-    .line 341
-    iput-object p1, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/MainTabBarView;
+    .line 52
+    iput-object p1, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/InlineImageEditText;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/text/Editable$Factory;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
-    .locals 1
+.method public final newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
+    .locals 4
 
     .prologue
-    .line 356
-    iget-object v0, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/MainTabBarView;
+    .line 55
+    iget-object v0, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/InlineImageEditText;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/MainTabBarView;->a()V
+    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageEditText;->getContext()Landroid/content/Context;
 
-    .line 357
-    return-void
-.end method
+    move-result-object v0
 
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
+    invoke-static {v0}, Lcom/bbm/util/c/c;->a(Landroid/content/Context;)Lcom/bbm/util/c/c;
 
-    .prologue
-    .line 352
-    return-void
-.end method
+    move-result-object v0
 
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
+    .line 56
+    new-instance v1, Lcom/bbm/ui/dj;
 
-    .prologue
-    .line 346
-    return-void
+    iget-object v2, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/InlineImageEditText;
+
+    iget-object v3, p0, Lcom/bbm/ui/di;->a:Lcom/bbm/ui/InlineImageEditText;
+
+    invoke-virtual {v3}, Lcom/bbm/ui/InlineImageEditText;->getTextSize()F
+
+    move-result v3
+
+    invoke-virtual {v0, p1, v3}, Lcom/bbm/util/c/c;->a(Ljava/lang/CharSequence;F)Landroid/text/Spannable;
+
+    move-result-object v0
+
+    invoke-direct {v1, v2, v0}, Lcom/bbm/ui/dj;-><init>(Lcom/bbm/ui/InlineImageEditText;Ljava/lang/CharSequence;)V
+
+    return-object v1
 .end method

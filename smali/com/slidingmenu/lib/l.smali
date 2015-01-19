@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 1050
+    .line 985
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +35,7 @@
     .locals 2
 
     .prologue
-    .line 1050
+    .line 985
     new-instance v0, Lcom/slidingmenu/lib/SlidingMenu$SavedState;
 
     const/4 v1, 0x0
@@ -49,7 +49,7 @@
     .locals 1
 
     .prologue
-    .line 1050
+    .line 985
     new-array v0, p1, [Lcom/slidingmenu/lib/SlidingMenu$SavedState;
 
     return-object v0

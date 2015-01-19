@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/a/b;
 .super Ljava/lang/Object;
-.source "ChannelPostAdapter.java"
+.source "BannerPagerAdapter.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.implements Lcom/bbm/ui/a/d;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/a/a;
+.field final synthetic a:Landroid/widget/ImageView;
+
+.field final synthetic b:Lcom/bbm/ui/a/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/a/a;)V
+.method constructor <init>(Lcom/bbm/ui/a/a;Landroid/widget/ImageView;)V
     .locals 0
 
     .prologue
-    .line 79
-    iput-object p1, p0, Lcom/bbm/ui/a/b;->a:Lcom/bbm/ui/a/a;
+    .line 103
+    iput-object p1, p0, Lcom/bbm/ui/a/b;->b:Lcom/bbm/ui/a/a;
+
+    iput-object p2, p0, Lcom/bbm/ui/a/b;->a:Landroid/widget/ImageView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,104 +29,44 @@
 
 
 # virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public final a(Lcom/bbm/d/ff;Ljava/lang/String;)V
+    .locals 2
 
     .prologue
-    .line 82
-    const-string v0, "long click on channel post"
+    .line 106
+    iget-object v0, p0, Lcom/bbm/ui/a/b;->b:Lcom/bbm/ui/a/a;
 
-    const-class v1, Lcom/bbm/ui/a/a;
+    iget-object v0, v0, Lcom/bbm/ui/a/a;->c:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    .line 84
-    instance-of v0, p2, Landroid/widget/TextView;
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 85
-    iget-object v0, p0, Lcom/bbm/ui/a/b;->a:Lcom/bbm/ui/a/a;
+    .line 107
+    if-nez p1, :cond_1
 
-    check-cast p2, Landroid/widget/TextView;
+    .line 108
+    iget-object v0, p0, Lcom/bbm/ui/a/b;->a:Landroid/widget/ImageView;
 
-    invoke-static {v0, p2}, Lcom/bbm/ui/a/a;->a(Lcom/bbm/ui/a/a;Landroid/widget/TextView;)Landroid/widget/TextView;
+    const v1, 0x7f020046
 
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/a/b;->a:Lcom/bbm/ui/a/a;
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    invoke-static {v0}, Lcom/bbm/ui/a/a;->b(Lcom/bbm/ui/a/a;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/a/b;->a:Lcom/bbm/ui/a/a;
-
-    invoke-static {v1}, Lcom/bbm/ui/a/a;->a(Lcom/bbm/ui/a/a;)Lcom/bbm/ui/activities/by;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/by;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f09003b
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundColor(I)V
-
-    .line 89
+    .line 114
     :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/a/b;->a:Lcom/bbm/ui/a/a;
+    :goto_0
+    return-void
 
-    iget-object v0, p0, Lcom/bbm/ui/a/b;->a:Lcom/bbm/ui/a/a;
+    .line 111
+    :cond_1
+    iget-object v0, p1, Lcom/bbm/d/ff;->b:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/a/a;->getItem(I)Ljava/lang/Object;
+    .line 112
+    iget-object v1, p0, Lcom/bbm/ui/a/b;->a:Landroid/widget/ImageView;
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    check-cast v0, Lcom/bbm/d/di;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/a/a;->a(Lcom/bbm/ui/a/a;Lcom/bbm/d/di;)Lcom/bbm/d/di;
-
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/a/b;->a:Lcom/bbm/ui/a/a;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/a;->a(Lcom/bbm/ui/a/a;)Lcom/bbm/ui/activities/by;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/by;->k()Lcom/bbm/ui/c/fq;
-
-    move-result-object v0
-
-    .line 91
-    iget-object v1, p0, Lcom/bbm/ui/a/b;->a:Lcom/bbm/ui/a/a;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/a/a;->a(Lcom/bbm/ui/a/a;Lcom/bbm/ui/c/fq;)V
-
-    .line 92
-    iget-object v0, p0, Lcom/bbm/ui/a/b;->a:Lcom/bbm/ui/a/a;
-
-    invoke-static {v0}, Lcom/bbm/ui/a/a;->a(Lcom/bbm/ui/a/a;)Lcom/bbm/ui/activities/by;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/by;->w()V
-
-    .line 93
-    const/4 v0, 0x1
-
-    return v0
+    goto :goto_0
 .end method

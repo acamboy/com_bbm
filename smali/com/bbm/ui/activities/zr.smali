@@ -1,37 +1,39 @@
-.class public final Lcom/bbm/ui/activities/zr;
+.class final Lcom/bbm/ui/activities/zr;
 .super Ljava/lang/Object;
-.source "ProfileIconSourceActivity.java"
+.source "NewGroupActivity.java"
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field public final a:I
-
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lcom/bbm/ui/activities/zt;
-
-.field final synthetic d:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewGroupActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;ILjava/lang/String;Lcom/bbm/ui/activities/zt;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewGroupActivity;)V
     .locals 0
 
     .prologue
-    .line 226
-    iput-object p1, p0, Lcom/bbm/ui/activities/zr;->d:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
+    .line 233
+    iput-object p1, p0, Lcom/bbm/ui/activities/zr;->a:Lcom/bbm/ui/activities/NewGroupActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 227
-    iput p2, p0, Lcom/bbm/ui/activities/zr;->a:I
+    return-void
+.end method
 
-    .line 228
-    iput-object p3, p0, Lcom/bbm/ui/activities/zr;->b:Ljava/lang/String;
 
-    .line 229
-    iput-object p4, p0, Lcom/bbm/ui/activities/zr;->c:Lcom/bbm/ui/activities/zt;
+# virtual methods
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 1
 
-    .line 230
+    .prologue
+    .line 237
+    iget-object v0, p0, Lcom/bbm/ui/activities/zr;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+
+    invoke-static {v0, p2}, Lcom/bbm/ui/activities/NewGroupActivity;->b(Lcom/bbm/ui/activities/NewGroupActivity;Z)Z
+
+    .line 238
     return-void
 .end method

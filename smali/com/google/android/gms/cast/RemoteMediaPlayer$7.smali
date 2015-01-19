@@ -14,7 +14,7 @@
 
 # direct methods
 .method constructor <init>(Lcom/google/android/gms/cast/RemoteMediaPlayer;Lcom/google/android/gms/common/api/GoogleApiClient;DLorg/json/JSONObject;)V
-    .locals 0
+    .locals 1
 
     iput-object p1, p0, Lcom/google/android/gms/cast/RemoteMediaPlayer$7;->xk:Lcom/google/android/gms/cast/RemoteMediaPlayer;
 
@@ -74,11 +74,11 @@
 
     iget-object v2, p0, Lcom/google/android/gms/cast/RemoteMediaPlayer$7;->xy:Lcom/google/android/gms/internal/dx;
 
-    iget-wide v3, p0, Lcom/google/android/gms/cast/RemoteMediaPlayer$7;->xs:D
+    iget-wide v4, p0, Lcom/google/android/gms/cast/RemoteMediaPlayer$7;->xs:D
 
-    iget-object v5, p0, Lcom/google/android/gms/cast/RemoteMediaPlayer$7;->xp:Lorg/json/JSONObject;
+    iget-object v3, p0, Lcom/google/android/gms/cast/RemoteMediaPlayer$7;->xp:Lorg/json/JSONObject;
 
-    invoke-virtual {v0, v2, v3, v4, v5}, Lcom/google/android/gms/internal/dv;->a(Lcom/google/android/gms/internal/dx;DLorg/json/JSONObject;)J
+    invoke-virtual {v0, v2, v4, v5, v3}, Lcom/google/android/gms/internal/dv;->a(Lcom/google/android/gms/internal/dx;DLorg/json/JSONObject;)J
     :try_end_1
     .catch Ljava/lang/IllegalStateException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1

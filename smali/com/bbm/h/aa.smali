@@ -1,22 +1,22 @@
 .class final Lcom/bbm/h/aa;
 .super Ljava/lang/Object;
-.source "InvitesFragment.java"
+.source "AddContactsFragment.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Lcom/bbm/ui/b/ah;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/h/w;
+.field final synthetic a:Lcom/bbm/h/l;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/h/w;)V
+.method constructor <init>(Lcom/bbm/h/l;)V
     .locals 0
 
     .prologue
-    .line 178
-    iput-object p1, p0, Lcom/bbm/h/aa;->a:Lcom/bbm/h/w;
+    .line 354
+    iput-object p1, p0, Lcom/bbm/h/aa;->a:Lcom/bbm/h/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,51 +25,25 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+.method public final a()V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
 
     .prologue
-    .line 181
-    invoke-virtual {p1}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
+    .line 358
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
 
     move-result-object v0
 
-    invoke-interface {v0, p3}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/h/aq;->a(Landroid/content/Context;)Lcom/bbm/h/aq;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/iceberg/j;
+    iget-object v1, p0, Lcom/bbm/h/aa;->a:Lcom/bbm/h/l;
 
-    .line 182
-    invoke-virtual {v0}, Lcom/bbm/iceberg/j;->a()Z
+    invoke-virtual {v1}, Lcom/bbm/h/l;->getActivity()Landroid/app/Activity;
 
-    move-result v1
+    invoke-virtual {v0}, Lcom/bbm/h/aq;->a()V
 
-    if-eqz v1, :cond_0
-
-    .line 183
-    iget-object v1, p0, Lcom/bbm/h/aa;->a:Lcom/bbm/h/w;
-
-    invoke-static {v1, v0}, Lcom/bbm/h/w;->a(Lcom/bbm/h/w;Lcom/bbm/iceberg/j;)V
-
-    .line 187
-    :goto_0
+    .line 359
     return-void
-
-    .line 185
-    :cond_0
-    iget-object v1, p0, Lcom/bbm/h/aa;->a:Lcom/bbm/h/w;
-
-    invoke-static {v1, v0}, Lcom/bbm/h/w;->b(Lcom/bbm/h/w;Lcom/bbm/iceberg/j;)V
-
-    goto :goto_0
 .end method

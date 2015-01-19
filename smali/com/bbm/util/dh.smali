@@ -1,100 +1,175 @@
-.class final Lcom/bbm/util/dh;
-.super Ljava/lang/Object;
-.source "UpdatesFragmentUtil.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class public final Lcom/bbm/util/dh;
+.super Lcom/bbm/d/ff;
+.source "RecyclingImage.java"
 
 
 # instance fields
-.field final synthetic a:Ljava/util/Set;
+.field private d:I
 
-.field final synthetic b:Lcom/bbm/util/eg;
+.field private e:I
 
-.field final synthetic c:Landroid/content/Context;
+.field private f:Z
 
 
 # direct methods
-.method constructor <init>(Ljava/util/Set;Lcom/bbm/util/eg;Landroid/content/Context;)V
-    .locals 0
+.method private declared-synchronized d()V
+    .locals 1
 
     .prologue
-    .line 499
-    iput-object p1, p0, Lcom/bbm/util/dh;->a:Ljava/util/Set;
+    .line 104
+    monitor-enter p0
 
-    iput-object p2, p0, Lcom/bbm/util/dh;->b:Lcom/bbm/util/eg;
+    :try_start_0
+    iget v0, p0, Lcom/bbm/util/dh;->d:I
 
-    iput-object p3, p0, Lcom/bbm/util/dh;->c:Landroid/content/Context;
+    if-gtz v0, :cond_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iget v0, p0, Lcom/bbm/util/dh;->e:I
 
-    return-void
-.end method
+    if-gtz v0, :cond_0
 
+    iget-boolean v0, p0, Lcom/bbm/util/dh;->f:Z
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+    if-eqz v0, :cond_0
 
-    .prologue
-    const/4 v2, 0x1
-
-    .line 503
-    const-string v0, "updates Expanded View clicked"
-
-    const-class v1, Lcom/bbm/util/dg;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 504
-    iget-object v0, p0, Lcom/bbm/util/dh;->a:Ljava/util/Set;
-
-    iget-object v1, p0, Lcom/bbm/util/dh;->b:Lcom/bbm/util/eg;
-
-    iget-object v1, v1, Lcom/bbm/util/eg;->o:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-direct {p0}, Lcom/bbm/util/dh;->e()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 505
-    iget-object v0, p0, Lcom/bbm/util/dh;->b:Lcom/bbm/util/eg;
+    .line 111
+    invoke-virtual {p0}, Lcom/bbm/util/dh;->b()Landroid/graphics/drawable/BitmapDrawable;
 
-    iget-object v1, p0, Lcom/bbm/util/dh;->c:Landroid/content/Context;
+    move-result-object v0
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/dg;->b(Lcom/bbm/util/eg;Landroid/content/Context;Z)V
+    invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
-    .line 506
-    iget-object v0, p0, Lcom/bbm/util/dh;->a:Ljava/util/Set;
+    move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/util/dh;->b:Lcom/bbm/util/eg;
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    iget-object v1, v1, Lcom/bbm/util/eg;->o:Ljava/lang/String;
+    .line 113
+    :cond_0
+    monitor-exit p0
 
-    invoke-interface {v0, v1}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
-
-    .line 513
-    :goto_0
     return-void
 
-    .line 509
+    .line 104
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method private declared-synchronized e()Z
+    .locals 2
+
+    .prologue
+    .line 116
+    monitor-enter p0
+
+    :try_start_0
+    invoke-virtual {p0}, Lcom/bbm/util/dh;->b()Landroid/graphics/drawable/BitmapDrawable;
+
+    move-result-object v0
+
+    .line 117
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    monitor-exit p0
+
+    return v0
+
     :cond_0
-    iget-object v0, p0, Lcom/bbm/util/dh;->b:Lcom/bbm/util/eg;
-
-    iget-object v1, p0, Lcom/bbm/util/dh;->c:Landroid/content/Context;
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/dg;->a(Lcom/bbm/util/eg;Landroid/content/Context;Z)V
-
-    .line 510
-    iget-object v0, p0, Lcom/bbm/util/dh;->a:Ljava/util/Set;
-
-    iget-object v1, p0, Lcom/bbm/util/dh;->b:Lcom/bbm/util/eg;
-
-    iget-object v1, v1, Lcom/bbm/util/eg;->o:Ljava/lang/String;
-
-    invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+    const/4 v0, 0x0
 
     goto :goto_0
+
+    .line 116
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method public final a(Z)V
+    .locals 1
+
+    .prologue
+    .line 89
+    monitor-enter p0
+
+    .line 90
+    if-eqz p1, :cond_0
+
+    .line 91
+    :try_start_0
+    iget v0, p0, Lcom/bbm/util/dh;->d:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Lcom/bbm/util/dh;->d:I
+
+    .line 95
+    :goto_0
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 98
+    invoke-direct {p0}, Lcom/bbm/util/dh;->d()V
+
+    .line 99
+    return-void
+
+    .line 93
+    :cond_0
+    :try_start_1
+    iget v0, p0, Lcom/bbm/util/dh;->d:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Lcom/bbm/util/dh;->d:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    .line 95
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method

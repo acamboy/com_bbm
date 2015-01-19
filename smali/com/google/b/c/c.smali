@@ -1,4 +1,4 @@
-.class final Lcom/google/b/c/c;
+.class public final Lcom/google/b/c/c;
 .super Lcom/google/b/c/bv;
 .source "ByFunctionOrdering.java"
 
@@ -42,7 +42,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/google/b/a/f;Lcom/google/b/c/bv;)V
+.method public constructor <init>(Lcom/google/b/a/f;Lcom/google/b/c/bv;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

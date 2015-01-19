@@ -79,7 +79,7 @@
 .end method
 
 .method constructor <init>(ILcom/google/android/gms/maps/model/LatLng;DFIIFZ)V
-    .locals 2
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -221,7 +221,7 @@
 .end method
 
 .method public final radius(D)Lcom/google/android/gms/maps/model/CircleOptions;
-    .locals 0
+    .locals 1
 
     iput-wide p1, p0, Lcom/google/android/gms/maps/model/CircleOptions;->PL:D
 

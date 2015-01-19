@@ -4,13 +4,13 @@
 
 
 # static fields
-.field private static cL:Z
+.field private static cR:Z
 
-.field private static cV:Ljava/lang/reflect/Method;
+.field private static db:Ljava/lang/reflect/Method;
 
-.field private static cW:Ljava/lang/reflect/Method;
+.field private static dc:Ljava/lang/reflect/Method;
 
-.field private static cX:Ljava/lang/reflect/Method;
+.field private static dd:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -23,16 +23,16 @@
     .line 173
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_Activity;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_Activity;->cR:Z
 
     .line 174
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Activity;->cV:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Activity;->db:Ljava/lang/reflect/Method;
 
     .line 175
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Activity;->cW:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Activity;->dc:Ljava/lang/reflect/Method;
 
     .line 176
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_Activity;->cX:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_Activity;->dd:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -175,12 +175,12 @@
     const/4 v1, 0x1
 
     .line 181
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_Activity;->cL:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_Activity;->cR:Z
 
     if-nez v0, :cond_0
 
     .line 183
-    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_Activity;->cL:Z
+    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_Activity;->cR:Z
 
     .line 187
     :try_start_0
@@ -208,7 +208,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->cV:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->db:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_2
 
@@ -225,7 +225,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->cW:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->dc:Ljava/lang/reflect/Method;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
 
@@ -242,7 +242,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->cX:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->dd:Ljava/lang/reflect/Method;
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
 
@@ -280,13 +280,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_Activity;->Load()V
 
     .line 239
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_Activity;->cW:Ljava/lang/reflect/Method;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_Activity;->dc:Ljava/lang/reflect/Method;
 
     if-eqz v1, :cond_0
 
     .line 243
     :try_start_0
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_Activity;->cW:Ljava/lang/reflect/Method;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_Activity;->dc:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -323,13 +323,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_Activity;->Load()V
 
     .line 261
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->cX:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->dd:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 265
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->cX:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->dd:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
 
@@ -366,13 +366,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_Activity;->Load()V
 
     .line 218
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->cV:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->db:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 222
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->cV:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_Activity;->db:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x2
 

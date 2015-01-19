@@ -1,98 +1,73 @@
 .class final Lcom/bbm/ui/activities/nj;
-.super Lcom/bbm/ui/bh;
-.source "GroupListsCommentActivity.java"
+.super Lcom/bbm/ui/activities/nl;
+.source "GroupConversationActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupListsCommentActivity;)V
+.method private constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+    .locals 1
+
+    .prologue
+    .line 1037
+    iput-object p1, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/bbm/ui/activities/nl;-><init>(Lcom/bbm/ui/activities/GroupConversationActivity;B)V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;B)V
     .locals 0
 
     .prologue
-    .line 94
-    iput-object p1, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
-
-    invoke-direct {p0}, Lcom/bbm/ui/bh;-><init>()V
+    .line 1037
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/nj;-><init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
+.method protected final a(Ljava/lang/StringBuilder;)V
+    .locals 3
 
     .prologue
-    .line 98
-    iget-object v1, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListsCommentActivity;->a(Lcom/bbm/ui/activities/GroupListsCommentActivity;)Lcom/bbm/ui/EmoticonInputPanel;
+    .line 1041
+    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->c()Z
+    .line 1042
+    const-string v1, "simple text"
 
-    move-result v0
+    invoke-static {v1, v0}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
 
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    const/4 v0, 0x1
+    .line 1043
+    iget-object v1, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    :goto_0
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupListsCommentActivity;->a(Lcom/bbm/ui/activities/GroupListsCommentActivity;Z)V
+    invoke-static {v1, v0}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Landroid/content/ClipData;)V
 
-    .line 99
+    .line 1044
+    iget-object v0, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    const v2, 0x7f0e022c
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/GroupConversationActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 1045
     return-void
-
-    .line 98
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final a(Landroid/view/MotionEvent;)V
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x1
-
-    .line 103
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 104
-    iget-object v0, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/GroupListsCommentActivity;->b(Z)V
-
-    .line 109
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 106
-    :cond_1
-    invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    if-ne v0, v1, :cond_0
-
-    .line 107
-    iget-object v0, p0, Lcom/bbm/ui/activities/nj;->a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/GroupListsCommentActivity;->b(Z)V
-
-    goto :goto_0
 .end method

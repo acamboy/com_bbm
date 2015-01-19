@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private aU:Ljava/lang/Thread$UncaughtExceptionHandler;
+.field private aT:Ljava/lang/Thread$UncaughtExceptionHandler;
 
 
 # direct methods
@@ -23,7 +23,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ErrorReporterBase;->aU:Ljava/lang/Thread$UncaughtExceptionHandler;
+    iput-object v0, p0, Lcom/glympse/android/hal/ErrorReporterBase;->aT:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     .line 14
     invoke-static {p0}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
@@ -59,12 +59,12 @@
     invoke-virtual {p0, v0}, Lcom/glympse/android/hal/ErrorReporterBase;->handle(Ljava/lang/String;)V
 
     .line 29
-    iget-object v0, p0, Lcom/glympse/android/hal/ErrorReporterBase;->aU:Ljava/lang/Thread$UncaughtExceptionHandler;
+    iget-object v0, p0, Lcom/glympse/android/hal/ErrorReporterBase;->aT:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     if-eqz v0, :cond_0
 
     .line 31
-    iget-object v0, p0, Lcom/glympse/android/hal/ErrorReporterBase;->aU:Ljava/lang/Thread$UncaughtExceptionHandler;
+    iget-object v0, p0, Lcom/glympse/android/hal/ErrorReporterBase;->aT:Ljava/lang/Thread$UncaughtExceptionHandler;
 
     invoke-interface {v0, p1, p2}, Ljava/lang/Thread$UncaughtExceptionHandler;->uncaughtException(Ljava/lang/Thread;Ljava/lang/Throwable;)V
 

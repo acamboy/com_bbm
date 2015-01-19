@@ -1,110 +1,68 @@
 .class final Lcom/bbm/ui/c/et;
-.super Ljava/lang/Object;
-.source "OwnProfileDetailsFragment.java"
-
-# interfaces
-.implements Lcom/bbm/ui/p;
+.super Lcom/bbm/ui/d/a;
+.source "MyChannelsFragment.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/es;
+.field final synthetic a:Lcom/bbm/d/al;
+
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Lcom/bbm/ui/c/er;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/es;)V
+.method constructor <init>(Lcom/bbm/ui/c/er;Lcom/bbm/d/al;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 209
-    iput-object p1, p0, Lcom/bbm/ui/c/et;->a:Lcom/bbm/ui/c/es;
+    .line 441
+    iput-object p1, p0, Lcom/bbm/ui/c/et;->c:Lcom/bbm/ui/c/er;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/bbm/ui/c/et;->a:Lcom/bbm/d/al;
+
+    iput-object p3, p0, Lcom/bbm/ui/c/et;->b:Ljava/lang/String;
+
+    invoke-direct {p0}, Lcom/bbm/ui/d/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)V"
-        }
-    .end annotation
+.method public final a()V
+    .locals 2
 
     .prologue
-    .line 214
-    iget-object v0, p0, Lcom/bbm/ui/c/et;->a:Lcom/bbm/ui/c/es;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/es;->a:Lcom/bbm/ui/c/em;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/em;->h(Lcom/bbm/ui/c/em;)Ljava/util/LinkedHashMap;
+    .line 444
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->size()I
+    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
 
-    move-result v0
+    iget-object v1, p0, Lcom/bbm/ui/c/et;->a:Lcom/bbm/d/al;
 
-    add-int/lit8 v0, v0, -0x1
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
 
-    if-ne p1, v0, :cond_0
+    .line 445
+    return-void
+.end method
 
-    iget-object v0, p0, Lcom/bbm/ui/c/et;->a:Lcom/bbm/ui/c/es;
+.method public final a(I)V
+    .locals 2
 
-    iget-object v0, v0, Lcom/bbm/ui/c/es;->a:Lcom/bbm/ui/c/em;
+    .prologue
+    .line 450
+    new-instance v0, Ljava/io/File;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/em;->h(Lcom/bbm/ui/c/em;)Ljava/util/LinkedHashMap;
+    iget-object v1, p0, Lcom/bbm/ui/c/et;->b:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->size()I
+    .line 451
+    invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-le v0, v1, :cond_0
-
-    .line 215
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/et;->a:Lcom/bbm/ui/c/es;
-
-    iget-object v1, v1, Lcom/bbm/ui/c/es;->a:Lcom/bbm/ui/c/em;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/em;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    const-class v2, Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 216
-    const-string v1, "user_uri"
-
-    iget-object v2, p0, Lcom/bbm/ui/c/et;->a:Lcom/bbm/ui/c/es;
-
-    iget-object v2, v2, Lcom/bbm/ui/c/es;->a:Lcom/bbm/ui/c/em;
-
-    invoke-static {v2}, Lcom/bbm/ui/c/em;->e(Lcom/bbm/ui/c/em;)Lcom/bbm/d/eu;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcom/bbm/d/eu;->x:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 217
-    iget-object v1, p0, Lcom/bbm/ui/c/et;->a:Lcom/bbm/ui/c/es;
-
-    iget-object v1, v1, Lcom/bbm/ui/c/es;->a:Lcom/bbm/ui/c/em;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/em;->startActivity(Landroid/content/Intent;)V
-
-    .line 219
-    :cond_0
+    .line 452
     return-void
 .end method

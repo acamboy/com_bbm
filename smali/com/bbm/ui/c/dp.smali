@@ -1,26 +1,34 @@
 .class final Lcom/bbm/ui/c/dp;
 .super Ljava/lang/Object;
-.source "GroupsFragment.java"
+.source "GroupMembersFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/c/gn;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/g/z;
+.field final synthetic a:I
 
-.field final synthetic b:Lcom/bbm/ui/c/dg;
+.field final synthetic b:Lcom/bbm/g/o;
+
+.field final synthetic c:Lcom/bbm/ui/activities/ey;
+
+.field final synthetic d:Lcom/bbm/ui/c/dh;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dg;Lcom/bbm/g/z;)V
+.method constructor <init>(Lcom/bbm/ui/c/dh;ILcom/bbm/g/o;Lcom/bbm/ui/activities/ey;)V
     .locals 0
 
     .prologue
-    .line 342
-    iput-object p1, p0, Lcom/bbm/ui/c/dp;->b:Lcom/bbm/ui/c/dg;
+    .line 583
+    iput-object p1, p0, Lcom/bbm/ui/c/dp;->d:Lcom/bbm/ui/c/dh;
 
-    iput-object p2, p0, Lcom/bbm/ui/c/dp;->a:Lcom/bbm/g/z;
+    iput p2, p0, Lcom/bbm/ui/c/dp;->a:I
+
+    iput-object p3, p0, Lcom/bbm/ui/c/dp;->b:Lcom/bbm/g/o;
+
+    iput-object p4, p0, Lcom/bbm/ui/c/dp;->c:Lcom/bbm/ui/activities/ey;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,56 +37,90 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+    .locals 2
 
     .prologue
-    .line 345
-    const-string v0, "createGroupRestoreContextSlideMenu BottomItem Clicked"
+    .line 586
+    iget v0, p0, Lcom/bbm/ui/c/dp;->a:I
 
-    const-class v1, Lcom/bbm/ui/c/dg;
+    packed-switch v0, :pswitch_data_0
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 600
+    :goto_0
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/c/dp;->c:Lcom/bbm/ui/activities/ey;
 
-    .line 346
-    iget-object v0, p0, Lcom/bbm/ui/c/dp;->b:Lcom/bbm/ui/c/dg;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/dg;->getActivity()Landroid/app/Activity;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    .line 347
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    instance-of v1, v0, Lcom/bbm/ui/activities/MainActivity;
-
-    if-eqz v1, :cond_0
-
-    .line 348
-    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->v()V
-
-    .line 351
-    :cond_0
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    new-instance v1, Lcom/bbm/ui/c/dq;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/c/dq;-><init>(Lcom/bbm/ui/c/dp;)V
-
-    const-wide/16 v2, 0x12c
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 364
+    .line 601
     return-void
+
+    .line 588
+    :pswitch_1
+    const-string v0, "contact onItemClick"
+
+    const-class v1, Lcom/bbm/ui/c/dh;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 589
+    iget-object v0, p0, Lcom/bbm/ui/c/dp;->d:Lcom/bbm/ui/c/dh;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/dp;->b:Lcom/bbm/g/o;
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/dh;->b(Lcom/bbm/ui/c/dh;Lcom/bbm/g/o;)V
+
+    goto :goto_0
+
+    .line 592
+    :pswitch_2
+    const-string v0, "pending invite onItemClick"
+
+    const-class v1, Lcom/bbm/ui/c/dh;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 593
+    iget-object v0, p0, Lcom/bbm/ui/c/dp;->d:Lcom/bbm/ui/c/dh;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/dp;->b:Lcom/bbm/g/o;
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/dh;->a(Lcom/bbm/ui/c/dh;Lcom/bbm/g/o;)V
+
+    goto :goto_0
+
+    .line 596
+    :pswitch_3
+    const-string v0, "non-contact onItemClick"
+
+    const-class v1, Lcom/bbm/ui/c/dh;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 597
+    iget-object v0, p0, Lcom/bbm/ui/c/dp;->d:Lcom/bbm/ui/c/dh;
+
+    iget-object v1, p0, Lcom/bbm/ui/c/dp;->b:Lcom/bbm/g/o;
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/dh;->c(Lcom/bbm/ui/c/dh;Lcom/bbm/g/o;)V
+
+    goto :goto_0
+
+    .line 586
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x7f0b0053
+        :pswitch_1
+        :pswitch_0
+        :pswitch_3
+        :pswitch_2
+    .end packed-switch
 .end method

@@ -8,10 +8,10 @@
     .locals 0
 
     .prologue
-    .line 15
+    .line 14
     invoke-direct {p0, p1}, Lcom/bbm/ui/SpanFixTextView;-><init>(Landroid/content/Context;)V
 
-    .line 16
+    .line 15
     return-void
 .end method
 
@@ -19,10 +19,10 @@
     .locals 0
 
     .prologue
-    .line 19
+    .line 18
     invoke-direct {p0, p1, p2}, Lcom/bbm/ui/SpanFixTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 20
+    .line 19
     return-void
 .end method
 
@@ -30,10 +30,10 @@
     .locals 0
 
     .prologue
-    .line 23
+    .line 22
     invoke-direct {p0, p1, p2, p3}, Lcom/bbm/ui/SpanFixTextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 24
+    .line 23
     return-void
 .end method
 
@@ -43,17 +43,17 @@
     .locals 1
 
     .prologue
-    .line 29
+    .line 28
     :try_start_0
     invoke-super {p0, p1}, Lcom/bbm/ui/SpanFixTextView;->setGravity(I)V
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 35
+    .line 33
     :goto_0
     return-void
 
-    .line 32
+    .line 30
     :catch_0
     move-exception v0
 
@@ -67,7 +67,7 @@
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/PatchedTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 33
+    .line 31
     invoke-super {p0, p1}, Lcom/bbm/ui/SpanFixTextView;->setGravity(I)V
 
     goto :goto_0
@@ -77,17 +77,17 @@
     .locals 1
 
     .prologue
-    .line 40
+    .line 38
     :try_start_0
     invoke-super {p0, p1, p2}, Lcom/bbm/ui/SpanFixTextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
     :try_end_0
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 45
+    .line 42
     :goto_0
     return-void
 
-    .line 43
+    .line 40
     :catch_0
     move-exception v0
 

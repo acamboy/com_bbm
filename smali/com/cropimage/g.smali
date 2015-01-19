@@ -49,32 +49,32 @@
     .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 416
+    .line 415
     sget-object v0, Lcom/cropimage/h;->a:Lcom/cropimage/h;
 
     iput-object v0, p0, Lcom/cropimage/g;->d:Lcom/cropimage/h;
 
-    .line 423
+    .line 422
     iput-boolean v1, p0, Lcom/cropimage/g;->i:Z
 
-    .line 425
+    .line 424
     iput-boolean v1, p0, Lcom/cropimage/g;->k:Z
 
-    .line 431
+    .line 430
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/cropimage/g;->o:Landroid/graphics/Paint;
 
-    .line 432
+    .line 431
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lcom/cropimage/g;->p:Landroid/graphics/Paint;
 
-    .line 433
+    .line 432
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -94,7 +94,7 @@
     .locals 5
 
     .prologue
-    .line 378
+    .line 377
     new-instance v0, Landroid/graphics/RectF;
 
     iget-object v1, p0, Lcom/cropimage/g;->g:Landroid/graphics/RectF;
@@ -115,12 +115,12 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 380
+    .line 379
     iget-object v1, p0, Lcom/cropimage/g;->h:Landroid/graphics/Matrix;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Matrix;->mapRect(Landroid/graphics/RectF;)Z
 
-    .line 381
+    .line 380
     new-instance v1, Landroid/graphics/Rect;
 
     iget v2, v0, Landroid/graphics/RectF;->left:F
@@ -156,20 +156,20 @@
     .locals 1
 
     .prologue
-    .line 194
+    .line 193
     iget-object v0, p0, Lcom/cropimage/g;->d:Lcom/cropimage/h;
 
     if-eq p1, v0, :cond_0
 
-    .line 195
+    .line 194
     iput-object p1, p0, Lcom/cropimage/g;->d:Lcom/cropimage/h;
 
-    .line 196
+    .line 195
     iget-object v0, p0, Lcom/cropimage/g;->a:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 198
+    .line 197
     :cond_0
     return-void
 .end method
@@ -178,13 +178,13 @@
     .locals 1
 
     .prologue
-    .line 386
+    .line 385
     invoke-virtual {p0}, Lcom/cropimage/g;->a()Landroid/graphics/Rect;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    .line 387
+    .line 386
     return-void
 .end method

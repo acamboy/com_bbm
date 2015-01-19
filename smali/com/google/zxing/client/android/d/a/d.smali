@@ -36,9 +36,7 @@
     invoke-direct {p0, p1, p3}, Lcom/google/zxing/client/android/d/a/c;-><init>(Landroid/widget/TextView;Lcom/google/zxing/client/android/c/c;)V
 
     .line 42
-    invoke-virtual {p2}, Lcom/google/zxing/client/a/ac;->b()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, p2, Lcom/google/zxing/client/a/ac;->a:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/google/zxing/client/android/d/a/d;->b:Ljava/lang/String;
 

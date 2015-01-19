@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final a:Ljava/util/regex/Pattern;
+.field private static final b:Ljava/util/regex/Pattern;
 
 
 # instance fields
-.field private final b:Ljava/lang/String;
+.field public final a:Ljava/lang/String;
 
 .field private final c:Ljava/lang/String;
 
@@ -25,7 +25,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/zxing/client/a/ac;->a:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/google/zxing/client/a/ac;->b:Ljava/util/regex/Pattern;
 
     return-void
 .end method
@@ -68,7 +68,7 @@
 
     :cond_0
     :goto_0
-    iput-object v0, p0, Lcom/google/zxing/client/a/ac;->b:Ljava/lang/String;
+    iput-object v0, p0, Lcom/google/zxing/client/a/ac;->a:Ljava/lang/String;
 
     .line 34
     iput-object p2, p0, Lcom/google/zxing/client/a/ac;->c:Ljava/lang/String;
@@ -197,7 +197,7 @@
     invoke-static {v1, v0}, Lcom/google/zxing/client/a/ac;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 61
-    iget-object v1, p0, Lcom/google/zxing/client/a/ac;->b:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/zxing/client/a/ac;->a:Ljava/lang/String;
 
     invoke-static {v1, v0}, Lcom/google/zxing/client/a/ac;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
@@ -205,16 +205,6 @@
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final b()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 38
-    iget-object v0, p0, Lcom/google/zxing/client/a/ac;->b:Ljava/lang/String;
 
     return-object v0
 .end method

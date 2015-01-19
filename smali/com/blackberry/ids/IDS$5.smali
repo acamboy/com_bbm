@@ -21,7 +21,7 @@
     .locals 0
 
     .prologue
-    .line 1046
+    .line 1057
     iput-object p1, p0, Lcom/blackberry/ids/IDS$5;->a:[Ljava/lang/String;
 
     iput-object p2, p0, Lcom/blackberry/ids/IDS$5;->b:Lcom/blackberry/ids/IGetPropertiesCallback;
@@ -41,7 +41,7 @@
     .locals 4
 
     .prologue
-    .line 1054
+    .line 1065
     const-string v0, "grant_type"
 
     const-string v1, "id_token"
@@ -52,11 +52,11 @@
 
     const-string v1, "refresh_token"
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/blackberry/ids/BBIDStorage;->g()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/blackberry/ids/BBIDStorage;->d()Ljava/lang/String;
 
     move-result-object v2
 
@@ -85,7 +85,7 @@
     .locals 1
 
     .prologue
-    .line 1049
+    .line 1060
     const-string v0, "userInfo"
 
     invoke-virtual {p1, v0}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
@@ -99,12 +99,12 @@
     .locals 1
 
     .prologue
-    .line 1126
+    .line 1137
     iget-object v0, p0, Lcom/blackberry/ids/IDS$5;->d:Lcom/blackberry/ids/IFailureCallback;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/blackberry/ids/IFailureCallback;->call(IILjava/lang/String;)V
 
-    .line 1127
+    .line 1138
     return-void
 .end method
 
@@ -123,18 +123,18 @@
     .end annotation
 
     .prologue
-    const-wide/16 v1, -0x1
+    const-wide/16 v2, -0x1
 
     const/4 v4, 0x0
 
-    .line 1065
+    .line 1076
     iget-object v0, p0, Lcom/blackberry/ids/IDS$5;->a:[Ljava/lang/String;
 
     array-length v0, v0
 
     new-array v5, v0, [Lcom/blackberry/ids/Property;
 
-    .line 1068
+    .line 1079
     const-string v0, "expires_in"
 
     invoke-interface {p2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -143,16 +143,16 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1069
+    .line 1080
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
-    move-result v3
+    move-result v1
 
-    if-nez v3, :cond_0
+    if-nez v1, :cond_0
 
-    .line 1071
+    .line 1082
     :try_start_0
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
     :try_end_0
@@ -160,9 +160,9 @@
 
     move-result-wide v0
 
-    move-wide v1, v0
+    move-wide v2, v0
 
-    .line 1079
+    .line 1090
     :cond_0
     :goto_0
     const-string v0, "server_backoff"
@@ -173,23 +173,23 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1080
+    .line 1091
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
-    move-result v3
+    move-result v1
 
-    if-nez v3, :cond_1
+    if-nez v1, :cond_1
 
-    .line 1081
-    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BlockedTokenList;
+    .line 1092
+    invoke-static {}, Lcom/blackberry/ids/IDS;->c()Lcom/blackberry/ids/BlockedTokenList;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3, v0}, Lcom/blackberry/ids/BlockedTokenList;->a(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/blackberry/ids/BlockedTokenList;->a(Ljava/lang/String;)V
 
-    .line 1084
+    .line 1095
     :cond_1
     iget-object v0, p0, Lcom/blackberry/ids/IDS$5;->a:[Ljava/lang/String;
 
@@ -207,35 +207,35 @@
 
     if-eqz v0, :cond_4
 
-    move v3, v4
+    move v1, v4
 
-    .line 1087
+    .line 1098
     :goto_1
     iget-object v0, p0, Lcom/blackberry/ids/IDS$5;->a:[Ljava/lang/String;
 
     array-length v0, v0
 
-    if-ge v3, v0, :cond_5
+    if-ge v1, v0, :cond_5
 
-    .line 1088
+    .line 1099
     iget-object v0, p0, Lcom/blackberry/ids/IDS$5;->a:[Ljava/lang/String;
 
-    aget-object v6, v0, v3
+    aget-object v6, v0, v1
 
-    .line 1089
+    .line 1100
     invoke-interface {p2, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1090
+    .line 1101
     if-nez v0, :cond_2
 
-    .line 1091
+    .line 1102
     const-string v0, ""
 
-    .line 1093
+    .line 1104
     :cond_2
     invoke-static {v0}, Lcom/blackberry/ids/StringUtils;->b(Ljava/lang/String;)[B
 
@@ -245,14 +245,14 @@
 
     move-result-object v0
 
-    .line 1096
+    .line 1107
     new-instance v7, Lcom/blackberry/ids/Property;
 
     invoke-direct {v7, v6, v0}, Lcom/blackberry/ids/Property;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    aput-object v7, v5, v3
+    aput-object v7, v5, v1
 
-    .line 1098
+    .line 1109
     const-string v7, "urn:bbid:uid"
 
     invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -261,12 +261,12 @@
 
     if-eqz v6, :cond_3
 
-    .line 1099
+    .line 1110
     invoke-static {v0}, Lcom/blackberry/ids/CryptoUtils;->hashEcoid(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1100
+    .line 1111
     new-instance v6, Ljava/lang/StringBuilder;
 
     const-string v7, "UID from server (hashed) : "
@@ -285,19 +285,19 @@
 
     invoke-static {v0, v6}, Lcom/blackberry/ids/Ln;->i(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 1087
+    .line 1098
     :cond_3
-    add-int/lit8 v0, v3, 0x1
+    add-int/lit8 v0, v1, 0x1
 
-    move v3, v0
+    move v1, v0
 
     goto :goto_1
 
-    .line 1074
+    .line 1085
     :catch_0
-    move-exception v3
+    move-exception v1
 
-    const-string v3, "do_get_properties - in success call - error while parsing expiry param : %s"
+    const-string v1, "do_get_properties - in success call - error while parsing expiry param : %s"
 
     const/4 v6, 0x1
 
@@ -305,11 +305,11 @@
 
     aput-object v0, v6, v4
 
-    invoke-static {v3, v6}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v6}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 1105
+    .line 1116
     :cond_4
     const-string v0, "claims"
 
@@ -323,70 +323,70 @@
 
     move-result-object v0
 
-    .line 1106
+    .line 1117
     if-eqz v0, :cond_5
 
-    .line 1107
-    const-string v3, ";"
+    .line 1118
+    const-string v1, ";"
 
     iget-object v6, p0, Lcom/blackberry/ids/IDS$5;->a:[Ljava/lang/String;
 
     array-length v6, v6
 
-    invoke-virtual {v0, v3, v6}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
+    invoke-virtual {v0, v1, v6}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1109
+    .line 1120
     :goto_2
-    iget-object v3, p0, Lcom/blackberry/ids/IDS$5;->a:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/blackberry/ids/IDS$5;->a:[Ljava/lang/String;
 
-    array-length v3, v3
+    array-length v1, v1
 
-    if-ge v4, v3, :cond_5
+    if-ge v4, v1, :cond_5
 
-    .line 1110
-    iget-object v3, p0, Lcom/blackberry/ids/IDS$5;->a:[Ljava/lang/String;
+    .line 1121
+    iget-object v1, p0, Lcom/blackberry/ids/IDS$5;->a:[Ljava/lang/String;
 
-    aget-object v3, v3, v4
+    aget-object v1, v1, v4
 
-    .line 1111
+    .line 1122
     aget-object v6, v0, v4
 
-    .line 1112
+    .line 1123
     new-instance v7, Lcom/blackberry/ids/Property;
 
-    invoke-direct {v7, v3, v6}, Lcom/blackberry/ids/Property;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v7, v1, v6}, Lcom/blackberry/ids/Property;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     aput-object v7, v5, v4
 
-    .line 1109
+    .line 1120
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 1116
+    .line 1127
     :cond_5
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
-    move-result-object v3
+    move-result-object v1
 
-    monitor-enter v3
+    monitor-enter v1
 
-    .line 1117
+    .line 1128
     :try_start_1
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0, v5, v1, v2}, Lcom/blackberry/ids/BBIDStorage;->a([Lcom/blackberry/ids/Property;J)V
+    invoke-virtual {v0, v5, v2, v3}, Lcom/blackberry/ids/BBIDStorage;->a([Lcom/blackberry/ids/Property;J)V
 
-    .line 1118
-    monitor-exit v3
+    .line 1129
+    monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1119
+    .line 1130
     iget-object v0, p0, Lcom/blackberry/ids/IDS$5;->b:Lcom/blackberry/ids/IGetPropertiesCallback;
 
     iget-object v1, p0, Lcom/blackberry/ids/IDS$5;->c:Lcom/blackberry/ids/RequestId;
@@ -397,14 +397,14 @@
 
     invoke-interface {v0, v1, v5}, Lcom/blackberry/ids/IGetPropertiesCallback;->call(I[Lcom/blackberry/ids/Property;)V
 
-    .line 1122
+    .line 1133
     return-void
 
-    .line 1118
+    .line 1129
     :catchall_0
     move-exception v0
 
-    monitor-exit v3
+    monitor-exit v1
 
     throw v0
 .end method

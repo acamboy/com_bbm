@@ -7,17 +7,17 @@
 
 
 # instance fields
-.field private G:Z
+.field private F:Z
 
-.field private H:Lcom/glympse/android/hal/GBatteryListener;
+.field private G:Lcom/glympse/android/hal/GBatteryListener;
 
-.field private I:I
+.field private H:I
+
+.field private I:Z
 
 .field private J:Z
 
-.field private K:Z
-
-.field private L:Landroid/os/PowerManager$WakeLock;
+.field private K:Landroid/os/PowerManager$WakeLock;
 
 .field private e:Landroid/content/Context;
 
@@ -38,26 +38,26 @@
     iput-object v1, p0, Lcom/glympse/android/hal/k;->e:Landroid/content/Context;
 
     .line 21
-    iput-boolean v2, p0, Lcom/glympse/android/hal/k;->G:Z
+    iput-boolean v2, p0, Lcom/glympse/android/hal/k;->F:Z
 
     .line 22
-    iput-object v1, p0, Lcom/glympse/android/hal/k;->H:Lcom/glympse/android/hal/GBatteryListener;
+    iput-object v1, p0, Lcom/glympse/android/hal/k;->G:Lcom/glympse/android/hal/GBatteryListener;
 
     .line 23
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/glympse/android/hal/k;->I:I
+    iput v0, p0, Lcom/glympse/android/hal/k;->H:I
 
     .line 24
-    iput-boolean v2, p0, Lcom/glympse/android/hal/k;->J:Z
+    iput-boolean v2, p0, Lcom/glympse/android/hal/k;->I:Z
 
     .line 25
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/k;->K:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/k;->J:Z
 
     .line 26
-    iput-object v1, p0, Lcom/glympse/android/hal/k;->L:Landroid/os/PowerManager$WakeLock;
+    iput-object v1, p0, Lcom/glympse/android/hal/k;->K:Landroid/os/PowerManager$WakeLock;
 
     .line 30
     iput-object p1, p0, Lcom/glympse/android/hal/k;->e:Landroid/content/Context;
@@ -73,7 +73,7 @@
 
     .prologue
     .line 175
-    iget-object v0, p0, Lcom/glympse/android/hal/k;->L:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/glympse/android/hal/k;->K:Landroid/os/PowerManager$WakeLock;
 
     if-nez v0, :cond_0
 
@@ -123,10 +123,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/k;->L:Landroid/os/PowerManager$WakeLock;
+    iput-object v0, p0, Lcom/glympse/android/hal/k;->K:Landroid/os/PowerManager$WakeLock;
 
     .line 183
-    iget-object v0, p0, Lcom/glympse/android/hal/k;->L:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/glympse/android/hal/k;->K:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
     :try_end_0
@@ -153,7 +153,7 @@
 
     .prologue
     .line 80
-    iget v0, p0, Lcom/glympse/android/hal/k;->I:I
+    iget v0, p0, Lcom/glympse/android/hal/k;->H:I
 
     return v0
 .end method
@@ -163,7 +163,7 @@
 
     .prologue
     .line 85
-    iget-boolean v0, p0, Lcom/glympse/android/hal/k;->J:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/k;->I:Z
 
     return v0
 .end method
@@ -173,7 +173,7 @@
 
     .prologue
     .line 90
-    iget-boolean v0, p0, Lcom/glympse/android/hal/k;->K:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/k;->J:Z
 
     return v0
 .end method
@@ -287,30 +287,30 @@
 
     div-int/2addr v4, v5
 
-    iput v4, p0, Lcom/glympse/android/hal/k;->I:I
+    iput v4, p0, Lcom/glympse/android/hal/k;->H:I
 
     .line 157
     if-lez v3, :cond_2
 
     :goto_0
-    iput-boolean v0, p0, Lcom/glympse/android/hal/k;->J:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/k;->I:Z
 
     .line 158
-    iput-boolean v2, p0, Lcom/glympse/android/hal/k;->K:Z
+    iput-boolean v2, p0, Lcom/glympse/android/hal/k;->J:Z
 
     .line 161
-    iget-object v0, p0, Lcom/glympse/android/hal/k;->H:Lcom/glympse/android/hal/GBatteryListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/k;->G:Lcom/glympse/android/hal/GBatteryListener;
 
     if-eqz v0, :cond_1
 
     .line 163
-    iget-object v0, p0, Lcom/glympse/android/hal/k;->H:Lcom/glympse/android/hal/GBatteryListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/k;->G:Lcom/glympse/android/hal/GBatteryListener;
 
-    iget v2, p0, Lcom/glympse/android/hal/k;->I:I
+    iget v2, p0, Lcom/glympse/android/hal/k;->H:I
 
-    iget-boolean v3, p0, Lcom/glympse/android/hal/k;->J:Z
+    iget-boolean v3, p0, Lcom/glympse/android/hal/k;->I:Z
 
-    iget-boolean v4, p0, Lcom/glympse/android/hal/k;->K:Z
+    iget-boolean v4, p0, Lcom/glympse/android/hal/k;->J:Z
 
     invoke-interface {v0, v2, v3, v4}, Lcom/glympse/android/hal/GBatteryListener;->updateStatus(IZZ)V
     :try_end_0
@@ -341,7 +341,7 @@
 
     .prologue
     .line 194
-    iget-object v0, p0, Lcom/glympse/android/hal/k;->L:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/glympse/android/hal/k;->K:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_0
 
@@ -354,7 +354,7 @@
     invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
     .line 200
-    iget-object v0, p0, Lcom/glympse/android/hal/k;->L:Landroid/os/PowerManager$WakeLock;
+    iget-object v0, p0, Lcom/glympse/android/hal/k;->K:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
     :try_end_0
@@ -364,7 +364,7 @@
     :goto_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/k;->L:Landroid/os/PowerManager$WakeLock;
+    iput-object v0, p0, Lcom/glympse/android/hal/k;->K:Landroid/os/PowerManager$WakeLock;
 
     .line 208
     :cond_0
@@ -386,7 +386,7 @@
 
     .prologue
     .line 36
-    iput-object p1, p0, Lcom/glympse/android/hal/k;->H:Lcom/glympse/android/hal/GBatteryListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/k;->G:Lcom/glympse/android/hal/GBatteryListener;
 
     .line 37
     return-void
@@ -398,14 +398,14 @@
     .prologue
     .line 44
     :try_start_0
-    iget-boolean v0, p0, Lcom/glympse/android/hal/k;->G:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/k;->F:Z
 
     if-nez v0, :cond_0
 
     .line 46
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/k;->G:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/k;->F:Z
 
     .line 47
     iget-object v0, p0, Lcom/glympse/android/hal/k;->e:Landroid/content/Context;
@@ -442,14 +442,14 @@
     .prologue
     .line 62
     :try_start_0
-    iget-boolean v0, p0, Lcom/glympse/android/hal/k;->G:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/k;->F:Z
 
     if-eqz v0, :cond_0
 
     .line 64
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/k;->G:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/k;->F:Z
 
     .line 65
     iget-object v0, p0, Lcom/glympse/android/hal/k;->e:Landroid/content/Context;

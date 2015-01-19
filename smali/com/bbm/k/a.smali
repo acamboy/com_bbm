@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field final a:Lcom/bbm/g/ab;
+.field final a:Lcom/bbm/g/al;
 
 .field b:Lcom/bbm/j/w;
     .annotation system Ldalvik/annotation/Signature;
@@ -32,12 +32,12 @@
     .end annotation
 .end field
 
-.field final d:Lcom/bbm/g/c;
+.field final d:Lcom/bbm/g/f;
 
-.field e:Lcom/bbm/util/ce;
+.field e:Lcom/bbm/util/cl;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/util/ce",
+            "Lcom/bbm/util/cl",
             "<",
             "Lcom/bbm/k/g;",
             ">;"
@@ -45,10 +45,10 @@
     .end annotation
 .end field
 
-.field f:Lcom/bbm/util/ce;
+.field f:Lcom/bbm/util/cl;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/util/ce",
+            "Lcom/bbm/util/cl",
             "<",
             "Lcom/bbm/g/a;",
             ">;"
@@ -115,15 +115,15 @@
     .locals 2
 
     .prologue
-    .line 55
+    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 28
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/ab;
+    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/k/a;->a:Lcom/bbm/g/ab;
+    iput-object v0, p0, Lcom/bbm/k/a;->a:Lcom/bbm/g/al;
 
     .line 32
     new-instance v0, Ljava/util/HashMap;
@@ -137,41 +137,41 @@
 
     invoke-direct {v0, p0}, Lcom/bbm/k/d;-><init>(Lcom/bbm/k/a;)V
 
-    iput-object v0, p0, Lcom/bbm/k/a;->e:Lcom/bbm/util/ce;
+    iput-object v0, p0, Lcom/bbm/k/a;->e:Lcom/bbm/util/cl;
 
     .line 209
     new-instance v0, Lcom/bbm/k/e;
 
     invoke-direct {v0, p0}, Lcom/bbm/k/e;-><init>(Lcom/bbm/k/a;)V
 
-    iput-object v0, p0, Lcom/bbm/k/a;->f:Lcom/bbm/util/ce;
+    iput-object v0, p0, Lcom/bbm/k/a;->f:Lcom/bbm/util/cl;
 
-    .line 56
+    .line 58
     const-string v0, "GroupsCalendarProvider constructor"
 
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 57
-    new-instance v0, Lcom/bbm/g/c;
+    .line 59
+    new-instance v0, Lcom/bbm/g/f;
 
-    invoke-direct {v0, p1, p2}, Lcom/bbm/g/c;-><init>(Landroid/content/ContentResolver;Landroid/accounts/Account;)V
+    invoke-direct {v0, p1, p2}, Lcom/bbm/g/f;-><init>(Landroid/content/ContentResolver;Landroid/accounts/Account;)V
 
-    iput-object v0, p0, Lcom/bbm/k/a;->d:Lcom/bbm/g/c;
+    iput-object v0, p0, Lcom/bbm/k/a;->d:Lcom/bbm/g/f;
 
-    .line 58
-    iget-object v0, p0, Lcom/bbm/k/a;->a:Lcom/bbm/g/ab;
+    .line 60
+    iget-object v0, p0, Lcom/bbm/k/a;->a:Lcom/bbm/g/al;
 
-    invoke-virtual {v0}, Lcom/bbm/g/ab;->e()Lcom/bbm/j/w;
+    invoke-virtual {v0}, Lcom/bbm/g/al;->e()Lcom/bbm/j/w;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/k/a;->b:Lcom/bbm/j/w;
 
-    .line 60
+    .line 62
     new-instance v0, Lcom/bbm/d/b/c;
 
     iget-object v1, p0, Lcom/bbm/k/a;->b:Lcom/bbm/j/w;
@@ -180,21 +180,21 @@
 
     iput-object v0, p0, Lcom/bbm/k/a;->g:Lcom/bbm/d/b/c;
 
-    .line 62
+    .line 64
     new-instance v0, Lcom/bbm/k/i;
 
     invoke-direct {v0, p0}, Lcom/bbm/k/i;-><init>(Lcom/bbm/k/a;)V
 
     iput-object v0, p0, Lcom/bbm/k/a;->h:Lcom/bbm/k/i;
 
-    .line 63
+    .line 65
     iget-object v0, p0, Lcom/bbm/k/a;->g:Lcom/bbm/d/b/c;
 
     iget-object v1, p0, Lcom/bbm/k/a;->h:Lcom/bbm/k/i;
 
     invoke-virtual {v0, v1}, Lcom/bbm/d/b/c;->a(Lcom/bbm/d/b/e;)V
 
-    .line 65
+    .line 67
     new-instance v0, Lcom/bbm/k/b;
 
     iget-object v1, p0, Lcom/bbm/k/a;->g:Lcom/bbm/d/b/c;
@@ -203,7 +203,7 @@
 
     iput-object v0, p0, Lcom/bbm/k/a;->i:Lcom/bbm/d/b/l;
 
-    .line 73
+    .line 75
     new-instance v0, Lcom/bbm/d/b/i;
 
     iget-object v1, p0, Lcom/bbm/k/a;->i:Lcom/bbm/d/b/l;
@@ -212,7 +212,7 @@
 
     iput-object v0, p0, Lcom/bbm/k/a;->j:Lcom/bbm/d/b/i;
 
-    .line 75
+    .line 77
     new-instance v0, Lcom/bbm/d/b/c;
 
     iget-object v1, p0, Lcom/bbm/k/a;->j:Lcom/bbm/d/b/i;
@@ -221,20 +221,20 @@
 
     iput-object v0, p0, Lcom/bbm/k/a;->k:Lcom/bbm/d/b/c;
 
-    .line 78
+    .line 80
     new-instance v0, Lcom/bbm/k/h;
 
     invoke-direct {v0, p0}, Lcom/bbm/k/h;-><init>(Lcom/bbm/k/a;)V
 
     iput-object v0, p0, Lcom/bbm/k/a;->l:Lcom/bbm/k/h;
 
-    .line 80
+    .line 82
     iget-object v0, p0, Lcom/bbm/k/a;->k:Lcom/bbm/d/b/c;
 
     iget-object v1, p0, Lcom/bbm/k/a;->l:Lcom/bbm/k/h;
 
     invoke-virtual {v0, v1}, Lcom/bbm/d/b/c;->a(Lcom/bbm/d/b/e;)V
 
-    .line 81
+    .line 83
     return-void
 .end method

@@ -1,26 +1,26 @@
 .class final Lcom/bbm/util/ej;
 .super Ljava/lang/Object;
-.source "UpdatesUtil.java"
+.source "UpdatesFragmentUtil.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Z
+.field final synthetic a:Lcom/bbm/util/eu;
 
-.field final synthetic b:Lcom/bbm/util/ei;
+.field final synthetic b:Landroid/app/Activity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/ei;Z)V
+.method constructor <init>(Lcom/bbm/util/eu;Landroid/app/Activity;)V
     .locals 0
 
     .prologue
-    .line 97
-    iput-object p1, p0, Lcom/bbm/util/ej;->b:Lcom/bbm/util/ei;
+    .line 640
+    iput-object p1, p0, Lcom/bbm/util/ej;->a:Lcom/bbm/util/eu;
 
-    iput-boolean p2, p0, Lcom/bbm/util/ej;->a:Z
+    iput-object p2, p0, Lcom/bbm/util/ej;->b:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,52 +33,34 @@
     .locals 4
 
     .prologue
-    .line 100
-    invoke-static {}, Lcom/bbm/util/eo;->a()V
+    .line 643
+    iget-object v0, p0, Lcom/bbm/util/ej;->a:Lcom/bbm/util/eu;
 
-    .line 101
-    iget-object v0, p0, Lcom/bbm/util/ej;->b:Lcom/bbm/util/ei;
+    iget-object v0, v0, Lcom/bbm/util/eu;->m:Lcom/bbm/b/a;
 
-    iget-object v0, v0, Lcom/bbm/util/ei;->f:Lcom/bbm/util/eh;
+    iget-object v0, v0, Lcom/bbm/b/a;->j:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/eh;->a(Lcom/bbm/util/eh;)Lcom/bbm/d;
+    iget-object v1, p0, Lcom/bbm/util/ej;->b:Landroid/app/Activity;
+
+    invoke-static {v0, v1}, Lcom/bbm/b/j;->a(Ljava/lang/String;Landroid/app/Activity;)V
+
+    .line 646
+    invoke-static {}, Lcom/bbm/Alaska;->d()Lcom/bbm/b/w;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d;->b:Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/b/w;->a:Lcom/bbm/b/h;
 
-    iget-object v1, p0, Lcom/bbm/util/ej;->b:Lcom/bbm/util/ei;
+    iget-object v1, p0, Lcom/bbm/util/ej;->a:Lcom/bbm/util/eu;
 
-    iget-object v1, v1, Lcom/bbm/util/ei;->f:Lcom/bbm/util/eh;
+    iget-object v1, v1, Lcom/bbm/util/eu;->m:Lcom/bbm/b/a;
 
-    iget-boolean v1, p0, Lcom/bbm/util/ej;->a:Z
+    sget-object v2, Lcom/bbm/b/as;->b:Lcom/bbm/b/as;
 
-    iget-object v2, p0, Lcom/bbm/util/ej;->b:Lcom/bbm/util/ei;
+    sget-object v3, Lcom/bbm/b/at;->a:Lcom/bbm/b/at;
 
-    iget-object v2, v2, Lcom/bbm/util/ei;->b:Lcom/bbm/util/dx;
+    invoke-virtual {v0, v1, v2, v3}, Lcom/bbm/b/h;->a(Lcom/bbm/b/a;Lcom/bbm/b/as;Lcom/bbm/b/at;)V
 
-    invoke-static {v2}, Lcom/bbm/util/eh;->a(Lcom/bbm/util/dx;)Lcom/bbm/util/el;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/bbm/util/ej;->b:Lcom/bbm/util/ei;
-
-    iget-object v3, v3, Lcom/bbm/util/ei;->c:Lcom/bbm/d/eu;
-
-    iget-object v3, v3, Lcom/bbm/d/eu;->x:Ljava/lang/String;
-
-    invoke-static {v1, v2, v3}, Lcom/bbm/util/eh;->a(ZLcom/bbm/util/el;Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v1
-
-    const-string v2, "userBlockedItem"
-
-    invoke-static {v1, v2}, Lcom/bbm/d/y;->d(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/ci;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-
-    .line 102
+    .line 647
     return-void
 .end method

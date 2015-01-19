@@ -1,34 +1,39 @@
-.class public final Lcom/bbm/ui/b/w;
+.class final Lcom/bbm/ui/b/w;
 .super Ljava/lang/Object;
-.source "ListDialogBuilder.java"
+.source "ClickableToast.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field public final a:Landroid/content/Context;
-
-.field public final b:Landroid/app/AlertDialog$Builder;
+.field final synthetic a:Lcom/bbm/ui/b/v;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method constructor <init>(Lcom/bbm/ui/b/v;)V
+    .locals 0
 
     .prologue
-    .line 21
+    .line 30
+    iput-object p1, p0, Lcom/bbm/ui/b/w;->a:Lcom/bbm/ui/b/v;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
-    iput-object p1, p0, Lcom/bbm/ui/b/w;->a:Landroid/content/Context;
+    return-void
+.end method
 
-    .line 23
-    new-instance v0, Landroid/app/AlertDialog$Builder;
 
-    const/4 v1, 0x2
+# virtual methods
+.method public final run()V
+    .locals 1
 
-    invoke-direct {v0, p1, v1}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;I)V
+    .prologue
+    .line 33
+    iget-object v0, p0, Lcom/bbm/ui/b/w;->a:Lcom/bbm/ui/b/v;
 
-    iput-object v0, p0, Lcom/bbm/ui/b/w;->b:Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0}, Lcom/bbm/ui/b/v;->dismiss()V
 
-    .line 24
+    .line 34
     return-void
 .end method

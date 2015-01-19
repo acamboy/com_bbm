@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/gl;
 .super Ljava/lang/Object;
-.source "TwoButtonSegmentedControl.java"
+.source "StickerItemView.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/go;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/TwoButtonSegmentedControl;
+.field final synthetic a:Z
+
+.field final synthetic b:Lcom/bbm/ui/StickerItemView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/TwoButtonSegmentedControl;)V
+.method constructor <init>(Lcom/bbm/ui/StickerItemView;Z)V
     .locals 0
 
     .prologue
-    .line 98
-    iput-object p1, p0, Lcom/bbm/ui/gl;->a:Lcom/bbm/ui/TwoButtonSegmentedControl;
+    .line 222
+    iput-object p1, p0, Lcom/bbm/ui/gl;->b:Lcom/bbm/ui/StickerItemView;
+
+    iput-boolean p2, p0, Lcom/bbm/ui/gl;->a:Z
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,61 +29,73 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a(Lcom/bbm/d/ff;Ljava/lang/String;)V
+    .locals 3
 
     .prologue
-    .line 103
-    iget-object v0, p0, Lcom/bbm/ui/gl;->a:Lcom/bbm/ui/TwoButtonSegmentedControl;
+    .line 225
+    iget-object v0, p0, Lcom/bbm/ui/gl;->b:Lcom/bbm/ui/StickerItemView;
 
-    invoke-static {v0}, Lcom/bbm/ui/TwoButtonSegmentedControl;->a(Lcom/bbm/ui/TwoButtonSegmentedControl;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcom/bbm/ui/StickerItemView;->c(Lcom/bbm/ui/StickerItemView;)Ljava/lang/String;
 
     move-result-object v0
 
-    if-ne p1, v0, :cond_1
+    invoke-static {v0, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    .line 104
-    const-string v0, "Left option clicked"
+    move-result v0
 
-    const-class v1, Lcom/bbm/ui/TwoButtonSegmentedControl;
+    if-eqz v0, :cond_0
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 226
+    if-nez p1, :cond_1
 
-    .line 105
-    iget-object v0, p0, Lcom/bbm/ui/gl;->a:Lcom/bbm/ui/TwoButtonSegmentedControl;
+    .line 227
+    iget-object v0, p0, Lcom/bbm/ui/gl;->b:Lcom/bbm/ui/StickerItemView;
+
+    invoke-static {v0}, Lcom/bbm/ui/StickerItemView;->d(Lcom/bbm/ui/StickerItemView;)Landroid/widget/ImageView;
+
+    move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/TwoButtonSegmentedControl;->a(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 110
+    .line 237
     :cond_0
     :goto_0
     return-void
 
-    .line 106
+    .line 230
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/gl;->a:Lcom/bbm/ui/TwoButtonSegmentedControl;
+    iget-object v0, p1, Lcom/bbm/d/ff;->b:Landroid/graphics/drawable/Drawable;
 
-    invoke-static {v0}, Lcom/bbm/ui/TwoButtonSegmentedControl;->b(Lcom/bbm/ui/TwoButtonSegmentedControl;)Landroid/widget/LinearLayout;
+    .line 231
+    iget-boolean v1, p0, Lcom/bbm/ui/gl;->a:Z
 
-    move-result-object v0
+    if-eqz v1, :cond_2
 
-    if-ne p1, v0, :cond_0
+    .line 232
+    iget-object v1, p0, Lcom/bbm/ui/gl;->b:Lcom/bbm/ui/StickerItemView;
 
-    .line 107
-    const-string v0, "Right option clicked"
+    iget-object v2, p0, Lcom/bbm/ui/gl;->b:Lcom/bbm/ui/StickerItemView;
 
-    const-class v1, Lcom/bbm/ui/TwoButtonSegmentedControl;
+    invoke-static {v2}, Lcom/bbm/ui/StickerItemView;->d(Lcom/bbm/ui/StickerItemView;)Landroid/widget/ImageView;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v2
 
-    .line 108
-    iget-object v0, p0, Lcom/bbm/ui/gl;->a:Lcom/bbm/ui/TwoButtonSegmentedControl;
+    invoke-static {v1, v0, v2}, Lcom/bbm/ui/StickerItemView;->a(Lcom/bbm/ui/StickerItemView;Landroid/graphics/drawable/Drawable;Landroid/widget/ImageView;)V
 
-    const/4 v1, 0x1
+    goto :goto_0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/TwoButtonSegmentedControl;->a(I)V
+    .line 234
+    :cond_2
+    iget-object v1, p0, Lcom/bbm/ui/gl;->b:Lcom/bbm/ui/StickerItemView;
+
+    invoke-static {v1}, Lcom/bbm/ui/StickerItemView;->d(Lcom/bbm/ui/StickerItemView;)Landroid/widget/ImageView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 .end method

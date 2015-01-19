@@ -1,43 +1,77 @@
-.class public final Lcom/bbm/util/co;
+.class final Lcom/bbm/util/co;
 .super Ljava/lang/Object;
-.source "NetworkUtil.java"
+.source "LocationServicesUtil.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/b/o;
+
+.field final synthetic b:Landroid/app/Activity;
+
+.field final synthetic c:Landroid/view/View$OnClickListener;
 
 
 # direct methods
-.method public static a(Landroid/content/Context;)Z
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/b/o;Landroid/app/Activity;Landroid/view/View$OnClickListener;)V
+    .locals 0
 
     .prologue
-    .line 22
-    const-string v0, "connectivity"
+    .line 118
+    iput-object p1, p0, Lcom/bbm/util/co;->a:Lcom/bbm/ui/b/o;
 
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iput-object p2, p0, Lcom/bbm/util/co;->b:Landroid/app/Activity;
 
-    move-result-object v0
+    iput-object p3, p0, Lcom/bbm/util/co;->c:Landroid/view/View$OnClickListener;
 
-    check-cast v0, Landroid/net/ConnectivityManager;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
-    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+    return-void
+.end method
 
-    move-result-object v0
 
-    .line 25
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
+
+    .prologue
+    .line 122
+    const-string v0, "showEnableLocationDialog right button clicked"
+
+    const-class v1, Lcom/bbm/util/cm;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 123
+    iget-object v0, p0, Lcom/bbm/util/co;->a:Lcom/bbm/ui/b/o;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
+
+    .line 125
+    new-instance v0, Landroid/content/Intent;
+
+    const-string v1, "android.settings.LOCATION_SOURCE_SETTINGS"
+
+    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    .line 126
+    iget-object v1, p0, Lcom/bbm/util/co;->b:Landroid/app/Activity;
+
+    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+
+    .line 128
+    iget-object v0, p0, Lcom/bbm/util/co;->c:Landroid/view/View$OnClickListener;
+
     if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
+    .line 129
+    iget-object v0, p0, Lcom/bbm/util/co;->c:Landroid/view/View$OnClickListener;
 
-    move-result v0
+    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
-    if-eqz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
+    .line 131
     :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

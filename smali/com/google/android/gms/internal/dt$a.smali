@@ -132,18 +132,18 @@
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readDouble()D
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    move-result v5
+    move-result v3
 
-    if-eqz v5, :cond_2
+    if-eqz v3, :cond_2
 
     move v1, v2
 
     :cond_2
-    invoke-virtual {p0, v0, v3, v4, v1}, Lcom/google/android/gms/internal/dt$a;->b(Ljava/lang/String;DZ)V
+    invoke-virtual {p0, v0, v4, v5, v1}, Lcom/google/android/gms/internal/dt$a;->b(Ljava/lang/String;DZ)V
 
     goto :goto_0
 
@@ -231,13 +231,13 @@
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    invoke-virtual {p0, v0, v3, v4, v1}, Lcom/google/android/gms/internal/dt$a;->a(Ljava/lang/String;JI)V
+    invoke-virtual {p0, v0, v4, v5, v1}, Lcom/google/android/gms/internal/dt$a;->a(Ljava/lang/String;JI)V
 
     goto/16 :goto_0
 
@@ -252,9 +252,9 @@
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {p0, v0, v3, v4}, Lcom/google/android/gms/internal/dt$a;->a(Ljava/lang/String;J)V
+    invoke-virtual {p0, v0, v4, v5}, Lcom/google/android/gms/internal/dt$a;->a(Ljava/lang/String;J)V
 
     goto/16 :goto_0
 

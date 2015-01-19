@@ -60,59 +60,59 @@
 .end method
 
 .method public static createLocation(DD)Lcom/glympse/android/core/GLocation;
-    .locals 12
+    .locals 14
 
     .prologue
-    const/high16 v7, 0x7fc00000
-
     .line 183
-    new-instance v0, Lcom/glympse/android/lib/Location;
+    new-instance v1, Lcom/glympse/android/lib/Location;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    move-wide v3, p0
+    const/high16 v8, 0x7fc00000
 
-    move-wide v5, p2
+    const/high16 v9, 0x7fc00000
 
-    move v8, v7
+    const/high16 v10, 0x7fc00000
 
-    move v9, v7
+    const/high16 v11, 0x7fc00000
 
-    move v10, v7
+    const/high16 v12, 0x7fc00000
 
-    move v11, v7
+    move-wide v4, p0
 
-    invoke-direct/range {v0 .. v11}, Lcom/glympse/android/lib/Location;-><init>(JDDFFFFF)V
+    move-wide/from16 v6, p2
 
-    return-object v0
+    invoke-direct/range {v1 .. v12}, Lcom/glympse/android/lib/Location;-><init>(JDDFFFFF)V
+
+    return-object v1
 .end method
 
 .method public static createLocation(JDDFFFFF)Lcom/glympse/android/core/GLocation;
-    .locals 12
+    .locals 14
 
     .prologue
     .line 172
-    new-instance v0, Lcom/glympse/android/lib/Location;
+    new-instance v1, Lcom/glympse/android/lib/Location;
 
-    move-wide v1, p0
+    move-wide v2, p0
 
-    move-wide v3, p2
+    move-wide/from16 v4, p2
 
-    move-wide/from16 v5, p4
+    move-wide/from16 v6, p4
 
-    move/from16 v7, p6
+    move/from16 v8, p6
 
-    move/from16 v8, p7
+    move/from16 v9, p7
 
-    move/from16 v9, p8
+    move/from16 v10, p8
 
-    move/from16 v10, p9
+    move/from16 v11, p9
 
-    move/from16 v11, p10
+    move/from16 v12, p10
 
-    invoke-direct/range {v0 .. v11}, Lcom/glympse/android/lib/Location;-><init>(JDDFFFFF)V
+    invoke-direct/range {v1 .. v12}, Lcom/glympse/android/lib/Location;-><init>(JDDFFFFF)V
 
-    return-object v0
+    return-object v1
 .end method
 
 .method public static createPrimitive()Lcom/glympse/android/core/GPrimitive;
@@ -128,7 +128,7 @@
 .end method
 
 .method public static createPrimitive(D)Lcom/glympse/android/core/GPrimitive;
-    .locals 1
+    .locals 2
 
     .prologue
     .line 73
@@ -152,7 +152,7 @@
 .end method
 
 .method public static createPrimitive(J)Lcom/glympse/android/core/GPrimitive;
-    .locals 1
+    .locals 2
 
     .prologue
     .line 81
@@ -198,7 +198,7 @@
 .end method
 
 .method public static createProfile(IIIIDI)Lcom/glympse/android/core/GLocationProfile;
-    .locals 1
+    .locals 2
 
     .prologue
     .line 134
@@ -210,7 +210,7 @@
 .end method
 
 .method public static createRegion(DDDLjava/lang/String;)Lcom/glympse/android/core/GRegion;
-    .locals 1
+    .locals 2
 
     .prologue
     .line 197

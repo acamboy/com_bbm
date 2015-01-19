@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cL:Z
+.field private static cR:Z
 
-.field private static dc:Ljava/lang/reflect/Field;
+.field private static di:Ljava/lang/reflect/Field;
 
 
 # direct methods
@@ -17,12 +17,12 @@
     .line 1616
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->cR:Z
 
     .line 1617
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->dc:Ljava/lang/reflect/Field;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->di:Ljava/lang/reflect/Field;
 
     return-void
 .end method
@@ -42,14 +42,14 @@
 
     .prologue
     .line 1622
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->cL:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->cR:Z
 
     if-nez v0, :cond_0
 
     .line 1624
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->cR:Z
 
     .line 1628
     :try_start_0
@@ -61,7 +61,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->dc:Ljava/lang/reflect/Field;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->di:Ljava/lang/reflect/Field;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -87,13 +87,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->Load()V
 
     .line 1643
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->dc:Ljava/lang/reflect/Field;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->di:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_0
 
     .line 1647
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->dc:Ljava/lang/reflect/Field;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager_MemoryInfo;->di:Ljava/lang/reflect/Field;
 
     invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

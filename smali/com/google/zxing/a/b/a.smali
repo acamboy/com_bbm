@@ -172,19 +172,19 @@
     div-float/2addr v0, v4
 
     .line 563
-    float-to-double v1, v0
+    float-to-double v2, v0
 
-    const-wide v3, 0x3fb999999999999aL
+    const-wide v4, 0x3fb999999999999aL
 
-    cmpl-double v1, v1, v3
+    cmpl-double v1, v2, v4
 
     if-lez v1, :cond_2
 
-    float-to-double v1, v0
+    float-to-double v2, v0
 
-    const-wide v3, 0x3feccccccccccccdL
+    const-wide v4, 0x3feccccccccccccdL
 
-    cmpg-double v1, v1, v3
+    cmpg-double v1, v2, v4
 
     if-gez v1, :cond_2
 

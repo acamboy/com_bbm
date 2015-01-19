@@ -55,13 +55,13 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/google/android/gms/cast/RemoteMediaPlayer$a$a;->xw:J
+    iget-wide v2, p0, Lcom/google/android/gms/cast/RemoteMediaPlayer$a$a;->xw:J
 
     invoke-virtual {p1}, Lcom/google/android/gms/common/api/Status;->getStatusCode()I
 
-    move-result v3
+    move-result v1
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/google/android/gms/internal/dv;->a(JI)V
+    invoke-virtual {v0, v2, v3, v1}, Lcom/google/android/gms/internal/dv;->a(JI)V
 
     :cond_0
     return-void

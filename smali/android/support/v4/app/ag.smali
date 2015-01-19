@@ -1,286 +1,360 @@
-.class public final Landroid/support/v4/app/ag;
+.class final Landroid/support/v4/app/ag;
 .super Ljava/lang/Object;
-.source "NotificationCompat.java"
-
-
-# instance fields
-.field a:Landroid/content/Context;
-
-.field public b:Ljava/lang/CharSequence;
-
-.field public c:Ljava/lang/CharSequence;
-
-.field public d:Landroid/app/PendingIntent;
-
-.field e:Landroid/app/PendingIntent;
-
-.field f:Landroid/widget/RemoteViews;
-
-.field public g:Landroid/graphics/Bitmap;
-
-.field h:Ljava/lang/CharSequence;
-
-.field i:I
-
-.field public j:I
-
-.field public k:Z
-
-.field l:Landroid/support/v4/app/an;
-
-.field m:Ljava/lang/CharSequence;
-
-.field n:I
-
-.field o:I
-
-.field p:Z
-
-.field q:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Landroid/support/v4/app/ad;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field public r:Landroid/app/Notification;
+.source "FragmentTransitionCompat21.java"
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 3
+.method static a(Landroid/view/View;)Landroid/graphics/Rect;
+    .locals 7
 
     .prologue
-    .line 217
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v6, 0x1
 
-    .line 202
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v4/app/ag;->q:Ljava/util/ArrayList;
-
-    .line 204
-    new-instance v0, Landroid/app/Notification;
-
-    invoke-direct {v0}, Landroid/app/Notification;-><init>()V
-
-    iput-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
-
-    .line 218
-    iput-object p1, p0, Landroid/support/v4/app/ag;->a:Landroid/content/Context;
-
-    .line 221
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v1
-
-    iput-wide v1, v0, Landroid/app/Notification;->when:J
+    const/4 v4, 0x0
 
     .line 222
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
+    new-instance v0, Landroid/graphics/Rect;
 
-    const/4 v1, -0x1
-
-    iput v1, v0, Landroid/app/Notification;->audioStreamType:I
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     .line 223
-    const/4 v0, 0x0
+    const/4 v1, 0x2
 
-    iput v0, p0, Landroid/support/v4/app/ag;->j:I
+    new-array v1, v1, [I
 
     .line 224
-    return-void
-.end method
+    invoke-virtual {p0, v1}, Landroid/view/View;->getLocationOnScreen([I)V
 
+    .line 226
+    aget v2, v1, v4
 
-# virtual methods
-.method public final a()Landroid/app/Notification;
-    .locals 1
+    aget v3, v1, v6
 
-    .prologue
-    .line 595
-    invoke-static {}, Landroid/support/v4/app/ac;->a()Landroid/support/v4/app/ai;
+    aget v4, v1, v4
 
-    move-result-object v0
+    invoke-virtual {p0}, Landroid/view/View;->getWidth()I
 
-    invoke-interface {v0, p0}, Landroid/support/v4/app/ai;->a(Landroid/support/v4/app/ag;)Landroid/app/Notification;
+    move-result v5
 
-    move-result-object v0
+    add-int/2addr v4, v5
 
+    aget v1, v1, v6
+
+    invoke-virtual {p0}, Landroid/view/View;->getHeight()I
+
+    move-result v5
+
+    add-int/2addr v1, v5
+
+    invoke-virtual {v0, v2, v3, v4, v1}, Landroid/graphics/Rect;->set(IIII)V
+
+    .line 227
     return-object v0
 .end method
 
-.method public final a(I)Landroid/support/v4/app/ag;
-    .locals 1
+.method public static a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
 
     .prologue
-    .line 259
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
+    .line 40
+    if-eqz p0, :cond_0
 
-    iput p1, v0, Landroid/app/Notification;->icon:I
+    .line 41
+    check-cast p0, Landroid/transition/Transition;
 
-    .line 260
+    invoke-virtual {p0}, Landroid/transition/Transition;->clone()Landroid/transition/Transition;
+
+    move-result-object p0
+
+    .line 43
+    :cond_0
     return-object p0
 .end method
 
-.method public final a(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/support/v4/app/ag;
+.method public static a(Ljava/lang/Object;Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 560
-    iget-object v0, p0, Landroid/support/v4/app/ag;->q:Ljava/util/ArrayList;
+    .line 73
+    check-cast p0, Landroid/transition/Transition;
 
-    new-instance v1, Landroid/support/v4/app/ad;
+    .line 74
+    invoke-static {p1}, Landroid/support/v4/app/ag;->a(Landroid/view/View;)Landroid/graphics/Rect;
 
-    invoke-direct {v1, p1, p2, p3}, Landroid/support/v4/app/ad;-><init>(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)V
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .line 76
+    new-instance v1, Landroid/support/v4/app/ah;
 
-    .line 561
-    return-object p0
+    invoke-direct {v1, v0}, Landroid/support/v4/app/ah;-><init>(Landroid/graphics/Rect;)V
+
+    invoke-virtual {p0, v1}, Landroid/transition/Transition;->setEpicenterCallback(Landroid/transition/Transition$EpicenterCallback;)V
+
+    .line 82
+    return-void
 .end method
 
-.method public final a(Landroid/net/Uri;)Landroid/support/v4/app/ag;
-    .locals 2
+.method public static a(Ljava/lang/Object;Landroid/view/View;Z)V
+    .locals 0
 
     .prologue
-    .line 422
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
+    .line 63
+    check-cast p0, Landroid/transition/Transition;
 
-    iput-object p1, v0, Landroid/app/Notification;->sound:Landroid/net/Uri;
+    .line 64
+    invoke-virtual {p0, p1, p2}, Landroid/transition/Transition;->excludeTarget(Landroid/view/View;Z)Landroid/transition/Transition;
 
-    .line 423
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
-
-    const/4 v1, -0x1
-
-    iput v1, v0, Landroid/app/Notification;->audioStreamType:I
-
-    .line 424
-    return-object p0
+    .line 65
+    return-void
 .end method
 
-.method public final a(Ljava/lang/CharSequence;)Landroid/support/v4/app/ag;
-    .locals 1
+.method public static a(Ljava/lang/Object;Ljava/util/ArrayList;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 395
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
+    .line 308
+    check-cast p0, Landroid/transition/Transition;
 
-    iput-object p1, v0, Landroid/app/Notification;->tickerText:Ljava/lang/CharSequence;
+    .line 309
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
-    .line 396
-    return-object p0
-.end method
+    move-result v2
 
-.method public final a([J)Landroid/support/v4/app/ag;
-    .locals 1
+    .line 310
+    const/4 v0, 0x0
 
-    .prologue
-    .line 446
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
+    move v1, v0
 
-    iput-object p1, v0, Landroid/app/Notification;->vibrate:[J
-
-    .line 447
-    return-object p0
-.end method
-
-.method public final b(I)Landroid/support/v4/app/ag;
-    .locals 5
-
-    .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 456
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
-
-    iput p1, v0, Landroid/app/Notification;->ledARGB:I
-
-    .line 457
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
-
-    const/16 v3, 0x12c
-
-    iput v3, v0, Landroid/app/Notification;->ledOnMS:I
-
-    .line 458
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
-
-    const/16 v3, 0x76c
-
-    iput v3, v0, Landroid/app/Notification;->ledOffMS:I
-
-    .line 459
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
-
-    iget v0, v0, Landroid/app/Notification;->ledOnMS:I
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
-
-    iget v0, v0, Landroid/app/Notification;->ledOffMS:I
-
-    if-eqz v0, :cond_0
-
-    move v0, v1
-
-    .line 460
     :goto_0
-    iget-object v3, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
+    if-ge v1, v2, :cond_0
 
-    iget-object v4, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
+    .line 311
+    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    iget v4, v4, Landroid/app/Notification;->flags:I
+    move-result-object v0
 
-    and-int/lit8 v4, v4, -0x2
+    check-cast v0, Landroid/view/View;
+
+    invoke-virtual {p0, v0}, Landroid/transition/Transition;->removeTarget(Landroid/view/View;)Landroid/transition/Transition;
+
+    .line 310
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    .line 313
+    :cond_0
+    return-void
+.end method
+
+.method static a(Ljava/util/ArrayList;Landroid/view/View;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/view/View;",
+            ">;",
+            "Landroid/view/View;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .line 231
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 232
+    instance-of v0, p1, Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_2
+
+    .line 233
+    check-cast p1, Landroid/view/ViewGroup;
+
+    .line 234
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->isTransitionGroup()Z
+
+    move-result v0
 
     if-eqz v0, :cond_1
 
-    :goto_1
-    or-int v0, v4, v1
+    .line 235
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    iput v0, v3, Landroid/app/Notification;->flags:I
-
-    .line 462
-    return-object p0
-
+    .line 247
     :cond_0
-    move v0, v2
+    :goto_0
+    return-void
 
-    .line 459
-    goto :goto_0
-
+    .line 237
     :cond_1
-    move v1, v2
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
-    .line 460
+    move-result v1
+
+    .line 238
+    const/4 v0, 0x0
+
+    :goto_1
+    if-ge v0, v1, :cond_0
+
+    .line 239
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    .line 240
+    invoke-static {p0, v2}, Landroid/support/v4/app/ag;->a(Ljava/util/ArrayList;Landroid/view/View;)V
+
+    .line 238
+    add-int/lit8 v0, v0, 0x1
+
     goto :goto_1
+
+    .line 244
+    :cond_2
+    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    goto :goto_0
 .end method
 
-.method public final c(I)V
-    .locals 2
+.method public static a(Ljava/util/Map;Landroid/view/View;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map",
+            "<",
+            "Ljava/lang/String;",
+            "Landroid/view/View;",
+            ">;",
+            "Landroid/view/View;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    .line 520
-    iget-object v0, p0, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
+    .line 250
+    invoke-virtual {p1}, Landroid/view/View;->getVisibility()I
 
-    iget v1, v0, Landroid/app/Notification;->flags:I
+    move-result v0
 
-    or-int/2addr v1, p1
+    if-nez v0, :cond_1
 
-    iput v1, v0, Landroid/app/Notification;->flags:I
+    .line 251
+    invoke-virtual {p1}, Landroid/view/View;->getTransitionName()Ljava/lang/String;
 
+    move-result-object v0
+
+    .line 252
+    if-eqz v0, :cond_0
+
+    .line 253
+    invoke-interface {p0, v0, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 255
+    :cond_0
+    instance-of v0, p1, Landroid/view/ViewGroup;
+
+    if-eqz v0, :cond_1
+
+    .line 256
+    check-cast p1, Landroid/view/ViewGroup;
+
+    .line 257
+    invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
+
+    move-result v1
+
+    .line 258
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, v1, :cond_1
+
+    .line 259
+    invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v2
+
+    .line 260
+    invoke-static {p0, v2}, Landroid/support/v4/app/ag;->a(Ljava/util/Map;Landroid/view/View;)V
+
+    .line 258
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 264
+    :cond_1
+    return-void
+.end method
+
+.method public static b(Ljava/lang/Object;Ljava/util/ArrayList;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/view/View;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 316
+    check-cast p0, Landroid/transition/Transition;
+
+    .line 317
+    invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    .line 318
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, v2, :cond_0
+
+    .line 319
+    invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/View;
+
+    invoke-virtual {p0, v0}, Landroid/transition/Transition;->addTarget(Landroid/view/View;)Landroid/transition/Transition;
+
+    .line 318
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    .line 321
+    :cond_0
     return-void
 .end method

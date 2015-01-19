@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:padding="@dimen/conversation_chat_bubble_padding" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.bbm.ui.InlineImageTextView android:textAppearance="@style/ConversationSender" android:ellipsize="end" android:id="@id/message_sender" android:clickable="false" android:longClickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" android:textIsSelectable="false" />
+            <TextView android:textAppearance="@style/ConversationDate" android:id="@id/message_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/conversation_chat_bubble_date_padding" android:textIsSelectable="false" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/message_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/conversation_chat_bubble_incoming_status_margin_left" android:layout_marginTop="@dimen/conversation_chat_bubble_status_margin_top" android:layout_marginRight="@dimen/conversation_chat_bubble_incoming_status_margin_right" android:contentDescription="@string/blank" />
+            <com.bbm.ui.LinkifyTextView android:textSize="@dimen/fontSizeMedium" android:textColor="@color/conversation_chat_content" android:id="@id/message_body" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/conversation_chat_bubble_message_body_top" android:layout_weight="1.0" android:textIsSelectable="false" />
+        </LinearLayout>
+        <ProgressBar android:id="@id/countdown_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="8.0dip" android:layout_margin="10.0dip" style="@style/EphemeralProgressBar" />
+        <TextView android:textColor="@color/ephemeral_bubble_screenshot_alert_color" android:id="@id/screenshot_alert" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/conversation_chat_bubble_date_padding" android:text="@string/ephemeral_picture_screenshot_alert" android:textIsSelectable="false" />
+    </LinearLayout>
+    <com.bbm.ui.ObservingImageView android:id="@id/message_photo" android:layout_width="@dimen/conversation_chat_bubble_avatar_size" android:layout_height="@dimen/conversation_chat_bubble_avatar_size" android:scaleType="centerCrop" />
+</LinearLayout>

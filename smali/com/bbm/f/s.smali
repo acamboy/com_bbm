@@ -1,100 +1,181 @@
 .class final Lcom/bbm/f/s;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/a;
 .source "NativeServiceLayer.java"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Lcom/bbm/f/ag;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/f/u;
-
-.field final synthetic b:Lcom/bbm/f/x;
-
-.field final synthetic c:Lcom/bbm/f/r;
+.field final synthetic a:Lcom/bbm/f/j;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/f/r;Lcom/bbm/f/u;Lcom/bbm/f/x;)V
+.method constructor <init>(Lcom/bbm/f/j;)V
     .locals 0
 
     .prologue
-    .line 336
-    iput-object p1, p0, Lcom/bbm/f/s;->c:Lcom/bbm/f/r;
+    .line 481
+    iput-object p1, p0, Lcom/bbm/f/s;->a:Lcom/bbm/f/j;
 
-    iput-object p2, p0, Lcom/bbm/f/s;->a:Lcom/bbm/f/u;
-
-    iput-object p3, p0, Lcom/bbm/f/s;->b:Lcom/bbm/f/x;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 7
 
     .prologue
-    .line 339
-    iget-object v0, p0, Lcom/bbm/f/s;->c:Lcom/bbm/f/r;
+    const/4 v6, 0x2
 
-    iget-object v0, v0, Lcom/bbm/f/r;->a:Lcom/bbm/f/i;
+    const/4 v5, 0x0
 
-    invoke-static {v0}, Lcom/bbm/f/i;->m(Lcom/bbm/f/i;)Ljava/util/EnumMap;
+    .line 481
+    iget-object v0, p0, Lcom/bbm/f/s;->a:Lcom/bbm/f/j;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/f/s;->a:Lcom/bbm/f/u;
-
-    iget-object v1, v1, Lcom/bbm/f/u;->a:Lcom/rim/bbm/BbmCoreService$MessageType;
-
-    invoke-virtual {v0, v1}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/f/j;->n(Lcom/bbm/f/j;)Lcom/google/b/a/l;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/f/t;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
 
-    .line 341
-    iget-object v1, p0, Lcom/bbm/f/s;->c:Lcom/bbm/f/r;
+    move-result v0
 
-    iget-object v1, v1, Lcom/bbm/f/r;->a:Lcom/bbm/f/i;
+    if-nez v0, :cond_0
 
-    invoke-static {v1}, Lcom/bbm/f/i;->m(Lcom/bbm/f/i;)Ljava/util/EnumMap;
+    new-instance v0, Lcom/bbm/f/ag;
+
+    invoke-direct {v0}, Lcom/bbm/f/ag;-><init>()V
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/f/s;->a:Lcom/bbm/f/j;
+
+    invoke-static {v0}, Lcom/bbm/f/j;->o(Lcom/bbm/f/j;)Lcom/bbm/util/ct;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;
+
+    const-string v1, "ServiceLayer - notified connection %s, reason %s - received %s"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    iget v3, v0, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;->status:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v5
+
+    const/4 v3, 0x1
+
+    iget v4, v0, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;->reason:I
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    iget-object v3, p0, Lcom/bbm/f/s;->a:Lcom/bbm/f/j;
+
+    invoke-static {v3}, Lcom/bbm/f/j;->p(Lcom/bbm/f/j;)Lcom/bbm/util/ct;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+
+    move-result-object v3
+
+    aput-object v3, v2, v6
+
+    invoke-static {v1, v2}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    iget-object v1, p0, Lcom/bbm/f/s;->a:Lcom/bbm/f/j;
+
+    invoke-static {v1}, Lcom/bbm/f/j;->p(Lcom/bbm/f/j;)Lcom/bbm/util/ct;
 
     move-result-object v1
 
-    if-nez v1, :cond_0
+    invoke-virtual {v1}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
 
-    .line 342
-    const-string v0, "Unknown broker type for message type: %s, message discarded."
+    move-result-object v1
 
-    const/4 v1, 0x1
+    check-cast v1, Ljava/lang/Integer;
 
-    new-array v1, v1, [Ljava/lang/Object;
+    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
 
-    const/4 v2, 0x0
+    move-result v1
 
-    iget-object v3, p0, Lcom/bbm/f/s;->a:Lcom/bbm/f/u;
+    if-lt v1, v6, :cond_2
 
-    iget-object v3, v3, Lcom/bbm/f/u;->a:Lcom/rim/bbm/BbmCoreService$MessageType;
+    iget v1, v0, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;->status:I
 
-    aput-object v3, v1, v2
+    sget v2, Lcom/rim/bbm/BbmPlatformService;->MSDP_STATUS_UNKNOWN:I
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+    if-ne v1, v2, :cond_1
 
-    .line 347
-    :goto_0
-    return-void
+    sget-object v1, Lcom/bbm/f/ah;->c:Lcom/bbm/f/ah;
 
-    .line 346
-    :cond_0
-    iget-object v1, p0, Lcom/bbm/f/s;->b:Lcom/bbm/f/x;
+    :goto_1
+    const-string v2, "ServiceLayer is disconnected"
 
-    iget-object v0, v0, Lcom/bbm/f/t;->b:Lcom/bbm/f/w;
+    new-array v3, v5, [Ljava/lang/Object;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/f/w;->a(Lcom/bbm/f/x;)V
+    invoke-static {v2, v3}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    new-instance v2, Lcom/bbm/f/ag;
+
+    iget v0, v0, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;->reason:I
+
+    invoke-direct {v2, v1, v0}, Lcom/bbm/f/ag;-><init>(Lcom/bbm/f/ah;I)V
+
+    move-object v0, v2
+
+    goto :goto_0
+
+    :cond_1
+    sget-object v1, Lcom/bbm/f/ah;->a:Lcom/bbm/f/ah;
+
+    goto :goto_1
+
+    :cond_2
+    const-string v1, "ServiceLayer is connected"
+
+    new-array v2, v5, [Ljava/lang/Object;
+
+    invoke-static {v1, v2}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    new-instance v1, Lcom/bbm/f/ag;
+
+    sget-object v2, Lcom/bbm/f/ah;->b:Lcom/bbm/f/ah;
+
+    iget v0, v0, Lcom/rim/bbm/BbmPlatformService$ConnectionStatus;->reason:I
+
+    invoke-direct {v1, v2, v0}, Lcom/bbm/f/ag;-><init>(Lcom/bbm/f/ah;I)V
+
+    move-object v0, v1
 
     goto :goto_0
 .end method

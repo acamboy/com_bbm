@@ -1,12 +1,12 @@
 .class final Lcom/bbm/ui/f/j;
-.super Lcom/bbm/util/a;
+.super Lcom/bbm/util/b;
 .source "ChannelNotificationItem.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/util/a",
+        "Lcom/bbm/util/b",
         "<",
         "Ljava/lang/Void;",
         "Ljava/lang/Void;",
@@ -28,7 +28,7 @@
     .line 192
     iput-object p1, p0, Lcom/bbm/ui/f/j;->a:Lcom/bbm/ui/f/i;
 
-    invoke-direct {p0}, Lcom/bbm/util/a;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/util/b;-><init>()V
 
     return-void
 .end method
@@ -40,13 +40,13 @@
     .line 200
     iget-object v0, p0, Lcom/bbm/ui/f/j;->a:Lcom/bbm/ui/f/i;
 
-    invoke-static {v0}, Lcom/bbm/ui/f/i;->a(Lcom/bbm/ui/f/i;)Lcom/bbm/d/de;
+    invoke-static {v0}, Lcom/bbm/ui/f/i;->a(Lcom/bbm/ui/f/i;)Lcom/bbm/d/ee;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d/de;->o:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/d/ee;->o:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -98,11 +98,11 @@
 
     iget-object v4, p0, Lcom/bbm/ui/f/j;->a:Lcom/bbm/ui/f/i;
 
-    invoke-static {v4}, Lcom/bbm/ui/f/i;->a(Lcom/bbm/ui/f/i;)Lcom/bbm/d/de;
+    invoke-static {v4}, Lcom/bbm/ui/f/i;->a(Lcom/bbm/ui/f/i;)Lcom/bbm/d/ee;
 
     move-result-object v4
 
-    iget-object v4, v4, Lcom/bbm/d/de;->o:Ljava/lang/String;
+    iget-object v4, v4, Lcom/bbm/d/ee;->o:Ljava/lang/String;
 
     invoke-direct {v3, v4}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
@@ -161,34 +161,32 @@
     return-object v0
 .end method
 
-.method protected final synthetic a(Ljava/lang/Object;)V
+.method protected final synthetic b(Ljava/lang/Object;)V
     .locals 3
 
     .prologue
     .line 192
     iget-object v0, p0, Lcom/bbm/ui/f/j;->a:Lcom/bbm/ui/f/i;
 
-    invoke-static {v0}, Lcom/bbm/ui/f/i;->d(Lcom/bbm/ui/f/i;)Lcom/bbm/ui/f/k;
+    invoke-static {v0}, Lcom/bbm/ui/f/i;->d(Lcom/bbm/ui/f/i;)Lcom/bbm/ui/f/l;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/bbm/ui/f/j;->a:Lcom/bbm/ui/f/i;
 
-    invoke-static {v1}, Lcom/bbm/ui/f/i;->c(Lcom/bbm/ui/f/i;)Lcom/bbm/d/dh;
+    invoke-static {v1}, Lcom/bbm/ui/f/i;->c(Lcom/bbm/ui/f/i;)Lcom/bbm/d/ek;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/bbm/d/dh;->a()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, v1, Lcom/bbm/d/ek;->b:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/bbm/ui/f/j;->a:Lcom/bbm/ui/f/i;
 
-    invoke-virtual {v2}, Lcom/bbm/ui/f/i;->l()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/bbm/ui/f/i;->k()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/f/k;->a(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/f/l;->a(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

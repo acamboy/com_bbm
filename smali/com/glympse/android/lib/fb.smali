@@ -1,65 +1,131 @@
 .class Lcom/glympse/android/lib/fb;
-.super Lcom/glympse/android/lib/fa;
-.source "JobQueue.java"
+.super Ljava/lang/Object;
+.source "Job.java"
+
+# interfaces
+.implements Lcom/glympse/android/lib/GJob;
 
 
 # instance fields
-.field private ha:Lcom/glympse/android/lib/GJobQueue;
+.field protected _aborted:Z
 
-.field private oU:Lcom/glympse/android/lib/GJob;
+.field protected _handler:Lcom/glympse/android/core/GHandler;
 
-.field final synthetic oV:Lcom/glympse/android/lib/ey;
+.field protected _jobQueue:Lcom/glympse/android/lib/GJobQueue;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/ey;Lcom/glympse/android/lib/GJobQueue;Lcom/glympse/android/lib/GJob;)V
+.method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 437
-    iput-object p1, p0, Lcom/glympse/android/lib/fb;->oV:Lcom/glympse/android/lib/ey;
+    .line 25
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 26
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/glympse/android/lib/fa;-><init>(Lcom/glympse/android/lib/ey;Lcom/glympse/android/lib/ey$1;)V
+    iput-object v0, p0, Lcom/glympse/android/lib/fb;->_jobQueue:Lcom/glympse/android/lib/GJobQueue;
 
-    .line 438
-    iput-object p2, p0, Lcom/glympse/android/lib/fb;->ha:Lcom/glympse/android/lib/GJobQueue;
+    .line 27
+    const/4 v0, 0x0
 
-    .line 439
-    iput-object p3, p0, Lcom/glympse/android/lib/fb;->oU:Lcom/glympse/android/lib/GJob;
+    iput-boolean v0, p0, Lcom/glympse/android/lib/fb;->_aborted:Z
 
-    .line 440
+    .line 28
     return-void
 .end method
 
 
 # virtual methods
-.method public ch()Lcom/glympse/android/lib/GJob;
+.method public abort()V
     .locals 1
 
     .prologue
-    .line 444
-    iget-object v0, p0, Lcom/glympse/android/lib/fb;->oU:Lcom/glympse/android/lib/GJob;
+    .line 69
+    const/4 v0, 0x1
 
-    return-object v0
+    iput-boolean v0, p0, Lcom/glympse/android/lib/fb;->_aborted:Z
+
+    .line 70
+    return-void
 .end method
 
-.method public run()V
-    .locals 2
+.method public isAborted()Z
+    .locals 1
 
     .prologue
-    .line 449
-    iget-object v1, p0, Lcom/glympse/android/lib/fb;->ha:Lcom/glympse/android/lib/GJobQueue;
+    .line 64
+    iget-boolean v0, p0, Lcom/glympse/android/lib/fb;->_aborted:Z
 
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
+.end method
 
-    move-result-object v0
+.method public onAbort()V
+    .locals 0
 
-    check-cast v0, Lcom/glympse/android/core/GCommon;
-
-    invoke-interface {v1, v0}, Lcom/glympse/android/lib/GJobQueue;->handleRetry(Lcom/glympse/android/core/GCommon;)V
-
-    .line 450
+    .prologue
+    .line 47
     return-void
+.end method
+
+.method public onComplete()V
+    .locals 0
+
+    .prologue
+    .line 51
+    return-void
+.end method
+
+.method public onProcess()V
+    .locals 0
+
+    .prologue
+    .line 43
+    return-void
+.end method
+
+.method public onRetry()V
+    .locals 0
+
+    .prologue
+    .line 39
+    return-void
+.end method
+
+.method public onSchedule(Lcom/glympse/android/lib/GJobQueue;Lcom/glympse/android/core/GHandler;)V
+    .locals 1
+
+    .prologue
+    .line 32
+    iput-object p1, p0, Lcom/glympse/android/lib/fb;->_jobQueue:Lcom/glympse/android/lib/GJobQueue;
+
+    .line 33
+    iput-object p2, p0, Lcom/glympse/android/lib/fb;->_handler:Lcom/glympse/android/core/GHandler;
+
+    .line 34
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/glympse/android/lib/fb;->_aborted:Z
+
+    .line 35
+    return-void
+.end method
+
+.method public reset()V
+    .locals 0
+
+    .prologue
+    .line 60
+    return-void
+.end method
+
+.method public useHandler()Z
+    .locals 1
+
+    .prologue
+    .line 55
+    const/4 v0, 0x0
+
+    return v0
 .end method

@@ -1,50 +1,109 @@
 .class Lcom/glympse/android/lib/t;
 .super Ljava/lang/Object;
-.source "AutoProxProvider.java"
+.source "ArrayAdapter.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Ljava/util/Enumeration;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Enumeration",
+        "<TTO;>;"
+    }
+.end annotation
 
 
 # instance fields
-.field private hp:Lcom/glympse/android/lib/s;
+.field private hG:Lcom/glympse/android/lib/bp;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/glympse/android/lib/bp",
+            "<TFROM;TTO;>;"
+        }
+    .end annotation
+.end field
+
+.field private hH:Ljava/util/Enumeration;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Enumeration",
+            "<TFROM;>;"
+        }
+    .end annotation
+.end field
+
+.field final synthetic hI:Lcom/glympse/android/lib/s;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/s;)V
+.method public constructor <init>(Lcom/glympse/android/lib/s;Ljava/util/Enumeration;Lcom/glympse/android/lib/bp;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Enumeration",
+            "<TFROM;>;",
+            "Lcom/glympse/android/lib/bp",
+            "<TFROM;TTO;>;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 324
+    .line 70
+    iput-object p1, p0, Lcom/glympse/android/lib/t;->hI:Lcom/glympse/android/lib/s;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 325
-    iput-object p1, p0, Lcom/glympse/android/lib/t;->hp:Lcom/glympse/android/lib/s;
+    .line 71
+    iput-object p2, p0, Lcom/glympse/android/lib/t;->hH:Ljava/util/Enumeration;
 
-    .line 326
+    .line 72
+    iput-object p3, p0, Lcom/glympse/android/lib/t;->hG:Lcom/glympse/android/lib/bp;
+
+    .line 73
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 3
+.method public hasMoreElements()Z
+    .locals 1
 
     .prologue
-    .line 330
-    iget-object v0, p0, Lcom/glympse/android/lib/t;->hp:Lcom/glympse/android/lib/s;
+    .line 81
+    iget-object v0, p0, Lcom/glympse/android/lib/t;->hH:Ljava/util/Enumeration;
 
-    invoke-static {}, Lcom/glympse/android/hal/Concurrent;->getTime()J
+    invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
 
-    move-result-wide v1
+    move-result v0
 
-    invoke-virtual {v0, v1, v2}, Lcom/glympse/android/lib/s;->d(J)Z
+    return v0
+.end method
 
-    .line 331
-    iget-object v0, p0, Lcom/glympse/android/lib/t;->hp:Lcom/glympse/android/lib/s;
+.method public nextElement()Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TTO;"
+        }
+    .end annotation
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/s;->al()V
+    .prologue
+    .line 86
+    iget-object v0, p0, Lcom/glympse/android/lib/t;->hG:Lcom/glympse/android/lib/bp;
 
-    .line 332
-    return-void
+    iget-object v1, p0, Lcom/glympse/android/lib/t;->hH:Ljava/util/Enumeration;
+
+    invoke-interface {v1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lcom/glympse/android/lib/bp;->c(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method

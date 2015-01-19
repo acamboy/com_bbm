@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private eP:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
+.field private eW:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 41
-    iput-object p1, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacksProxy;->eP:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
+    iput-object p1, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacksProxy;->eW:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
 
     .line 42
     return-void
@@ -65,7 +65,7 @@
     .prologue
     .line 48
     :try_start_0
-    invoke-static {}, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->X()Ljava/lang/reflect/Method;
+    invoke-static {}, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->Y()Ljava/lang/reflect/Method;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
     if-eqz v0, :cond_0
 
     .line 50
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacksProxy;->eP:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacksProxy;->eW:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
 
     const/4 v0, 0x0
 
@@ -95,7 +95,7 @@
 
     .line 52
     :cond_0
-    invoke-static {}, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->M()Ljava/lang/reflect/Method;
+    invoke-static {}, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->N()Ljava/lang/reflect/Method;
 
     move-result-object v0
 
@@ -106,7 +106,7 @@
     if-eqz v0, :cond_1
 
     .line 54
-    iget-object v0, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacksProxy;->eP:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
+    iget-object v0, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacksProxy;->eW:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;->onDisconnected()V
 
@@ -119,7 +119,7 @@
 
     .line 58
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacksProxy;->eP:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
+    iget-object v0, p0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacksProxy;->eW:Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient$ConnectionCallbacks;
 
     invoke-virtual {p2, v0, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0

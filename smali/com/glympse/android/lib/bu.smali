@@ -19,21 +19,21 @@
 
 
 # virtual methods
-.method public abstract bh()Lcom/glympse/android/lib/bs;
+.method public abstract bh()Lcom/glympse/android/lib/bt;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/glympse/android/lib/bs",
+            "Lcom/glympse/android/lib/bt",
             "<TT;>;"
         }
     .end annotation
 .end method
 
-.method public abstract bi()Lcom/glympse/android/lib/bs;
+.method public abstract bi()Lcom/glympse/android/lib/bt;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
-            "Lcom/glympse/android/lib/bs",
+            "Lcom/glympse/android/lib/bt",
             "<TT;>;"
         }
     .end annotation
@@ -45,31 +45,31 @@
 .method public abstract bk()V
 .end method
 
-.method public abstract c(Lcom/glympse/android/lib/bs;)V
+.method public abstract c(Lcom/glympse/android/lib/bt;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Lcom/glympse/android/lib/bs",
+            "Lcom/glympse/android/lib/bt",
             "<TT;>;)V"
         }
     .end annotation
 .end method
 
-.method public abstract e(Ljava/lang/Object;)Lcom/glympse/android/lib/bs;
+.method public abstract e(Ljava/lang/Object;)Lcom/glympse/android/lib/bt;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)",
-            "Lcom/glympse/android/lib/bs",
+            "Lcom/glympse/android/lib/bt",
             "<TT;>;"
         }
     .end annotation
 .end method
 
-.method public abstract f(Ljava/lang/Object;)Lcom/glympse/android/lib/bs;
+.method public abstract f(Ljava/lang/Object;)Lcom/glympse/android/lib/bt;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)",
-            "Lcom/glympse/android/lib/bs",
+            "Lcom/glympse/android/lib/bt",
             "<TT;>;"
         }
     .end annotation

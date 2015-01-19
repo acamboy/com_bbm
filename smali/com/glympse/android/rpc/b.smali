@@ -7,13 +7,13 @@
 
 
 # instance fields
-.field private he:Ljava/lang/String;
+.field private hm:Ljava/lang/String;
 
-.field private ko:Ljava/lang/String;
+.field private kQ:Ljava/lang/String;
 
-.field private uA:Lcom/glympse/android/rpc/GRpcProtocol;
+.field private vm:J
 
-.field private uz:J
+.field private vn:Lcom/glympse/android/rpc/GRpcProtocol;
 
 
 # direct methods
@@ -27,7 +27,7 @@
     .line 28
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/glympse/android/rpc/b;->uz:J
+    iput-wide v0, p0, Lcom/glympse/android/rpc/b;->vm:J
 
     .line 29
     return-void
@@ -41,10 +41,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 33
-    iput-object p1, p0, Lcom/glympse/android/rpc/b;->he:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/rpc/b;->hm:Ljava/lang/String;
 
     .line 34
-    iput-wide p2, p0, Lcom/glympse/android/rpc/b;->uz:J
+    iput-wide p2, p0, Lcom/glympse/android/rpc/b;->vm:J
 
     .line 35
     return-void
@@ -57,7 +57,7 @@
 
     .prologue
     .line 74
-    iget-object v0, p0, Lcom/glympse/android/rpc/b;->ko:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/rpc/b;->kQ:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -67,7 +67,7 @@
 
     .prologue
     .line 54
-    iget-wide v0, p0, Lcom/glympse/android/rpc/b;->uz:J
+    iget-wide v0, p0, Lcom/glympse/android/rpc/b;->vm:J
 
     return-wide v0
 .end method
@@ -77,7 +77,7 @@
 
     .prologue
     .line 44
-    iget-object v0, p0, Lcom/glympse/android/rpc/b;->he:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/rpc/b;->hm:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -87,7 +87,7 @@
 
     .prologue
     .line 64
-    iget-object v0, p0, Lcom/glympse/android/rpc/b;->uA:Lcom/glympse/android/rpc/GRpcProtocol;
+    iget-object v0, p0, Lcom/glympse/android/rpc/b;->vn:Lcom/glympse/android/rpc/GRpcProtocol;
 
     return-object v0
 .end method
@@ -97,18 +97,18 @@
 
     .prologue
     .line 69
-    iput-object p1, p0, Lcom/glympse/android/rpc/b;->ko:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/rpc/b;->kQ:Ljava/lang/String;
 
     .line 70
     return-void
 .end method
 
 .method public setChannelId(J)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 49
-    iput-wide p1, p0, Lcom/glympse/android/rpc/b;->uz:J
+    iput-wide p1, p0, Lcom/glympse/android/rpc/b;->vm:J
 
     .line 50
     return-void
@@ -119,7 +119,7 @@
 
     .prologue
     .line 39
-    iput-object p1, p0, Lcom/glympse/android/rpc/b;->he:Ljava/lang/String;
+    iput-object p1, p0, Lcom/glympse/android/rpc/b;->hm:Ljava/lang/String;
 
     .line 40
     return-void
@@ -130,7 +130,7 @@
 
     .prologue
     .line 59
-    iput-object p1, p0, Lcom/glympse/android/rpc/b;->uA:Lcom/glympse/android/rpc/GRpcProtocol;
+    iput-object p1, p0, Lcom/glympse/android/rpc/b;->vn:Lcom/glympse/android/rpc/GRpcProtocol;
 
     .line 60
     return-void

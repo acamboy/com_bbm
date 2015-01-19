@@ -1,89 +1,58 @@
 .class final Lcom/bbm/iceberg/r;
-.super Landroid/database/ContentObserver;
+.super Ljava/lang/Object;
 .source "LocalContactList.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private final a:Landroid/content/ContentResolver;
-
-.field private final b:Ljava/lang/ref/WeakReference;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/ref/WeakReference",
-            "<",
-            "Lcom/bbm/iceberg/n;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcom/bbm/iceberg/p;
 
 
 # direct methods
-.method public constructor <init>(Landroid/os/Handler;Lcom/bbm/iceberg/n;Landroid/content/ContentResolver;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/iceberg/p;)V
+    .locals 0
 
     .prologue
-    .line 83
-    invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
+    .line 61
+    iput-object p1, p0, Lcom/bbm/iceberg/r;->a:Lcom/bbm/iceberg/p;
 
-    .line 85
-    new-instance v0, Ljava/lang/ref/WeakReference;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/bbm/iceberg/r;->b:Ljava/lang/ref/WeakReference;
-
-    .line 86
-    iput-object p3, p0, Lcom/bbm/iceberg/r;->a:Landroid/content/ContentResolver;
-
-    .line 87
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final run()V
+    .locals 3
 
     .prologue
-    .line 104
-    iget-object v0, p0, Lcom/bbm/iceberg/r;->a:Landroid/content/ContentResolver;
+    .line 64
+    iget-object v0, p0, Lcom/bbm/iceberg/r;->a:Lcom/bbm/iceberg/p;
 
-    invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
-
-    .line 105
-    return-void
-.end method
-
-.method public final onChange(Z)V
-    .locals 1
-
-    .prologue
-    .line 91
-    invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
-
-    .line 94
-    iget-object v0, p0, Lcom/bbm/iceberg/r;->b:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/iceberg/p;->a(Lcom/bbm/iceberg/p;)Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/iceberg/n;
+    invoke-static {v0}, Lcom/bbm/iceberg/p;->a(Landroid/content/ContentResolver;)Ljava/util/List;
 
-    .line 96
-    if-nez v0, :cond_0
+    move-result-object v0
 
-    .line 97
-    invoke-virtual {p0}, Lcom/bbm/iceberg/r;->a()V
+    .line 65
+    iget-object v1, p0, Lcom/bbm/iceberg/r;->a:Lcom/bbm/iceberg/p;
 
-    .line 101
-    :goto_0
+    invoke-static {v1}, Lcom/bbm/iceberg/p;->e(Lcom/bbm/iceberg/p;)Landroid/os/Handler;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/bbm/iceberg/s;
+
+    invoke-direct {v2, p0, v0}, Lcom/bbm/iceberg/s;-><init>(Lcom/bbm/iceberg/r;Ljava/util/List;)V
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 73
     return-void
-
-    .line 99
-    :cond_0
-    invoke-virtual {v0}, Lcom/bbm/iceberg/n;->b()V
-
-    goto :goto_0
 .end method

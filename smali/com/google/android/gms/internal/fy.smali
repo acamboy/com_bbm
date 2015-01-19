@@ -11,7 +11,7 @@
     return-void
 .end method
 
-.method protected static c(Ljava/lang/Integer;)Z
+.method public static c(Ljava/lang/Integer;)Z
     .locals 1
 
     if-nez p0, :cond_0

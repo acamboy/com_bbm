@@ -1,46 +1,57 @@
 .class final Lcom/bbm/ui/activities/aez;
-.super Ljava/lang/Object;
-.source "StickerDetailsActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/ui/cn;
+.source "SelectCategoryActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/StickerDetailsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectCategoryActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/StickerDetailsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectCategoryActivity;)V
     .locals 0
 
     .prologue
-    .line 55
-    iput-object p1, p0, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/StickerDetailsActivity;
+    .line 77
+    iput-object p1, p0, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a(I)V
+    .locals 3
 
     .prologue
-    .line 59
-    const-string v0, "Close button clicked"
+    .line 81
+    packed-switch p1, :pswitch_data_0
 
-    const-class v1, Lcom/bbm/ui/activities/StickerDetailsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/StickerDetailsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/StickerDetailsActivity;->finish()V
-
-    .line 61
+    .line 97
+    :goto_0
     return-void
+
+    .line 83
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+
+    new-instance v1, Lcom/bbm/ui/activities/afa;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afa;-><init>(Lcom/bbm/ui/activities/aez;)V
+
+    new-instance v2, Lcom/bbm/ui/activities/afb;
+
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/afb;-><init>(Lcom/bbm/ui/activities/aez;)V
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/ui/activities/SelectCategoryActivity;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnDismissListener;Lcom/bbm/ui/activities/afh;)V
+
+    goto :goto_0
+
+    .line 81
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

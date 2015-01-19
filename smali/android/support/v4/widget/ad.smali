@@ -1,41 +1,49 @@
 .class final Landroid/support/v4/widget/ad;
-.super Ljava/lang/Object;
-.source "ViewDragHelper.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic a:Landroid/support/v4/widget/ab;
+.super Landroid/view/animation/AccelerateDecelerateInterpolator;
+.source "MaterialProgressDrawable.java"
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/ab;)V
+.method private constructor <init>()V
     .locals 0
 
     .prologue
-    .line 333
-    iput-object p1, p0, Landroid/support/v4/widget/ad;->a:Landroid/support/v4/widget/ab;
+    .line 717
+    invoke-direct {p0}, Landroid/view/animation/AccelerateDecelerateInterpolator;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    return-void
+.end method
+
+.method synthetic constructor <init>(B)V
+    .locals 0
+
+    .prologue
+    .line 717
+    invoke-direct {p0}, Landroid/support/v4/widget/ad;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final getInterpolation(F)F
     .locals 2
 
     .prologue
-    .line 335
-    iget-object v0, p0, Landroid/support/v4/widget/ad;->a:Landroid/support/v4/widget/ab;
+    .line 720
+    const/high16 v0, 0x3f800000
 
-    const/4 v1, 0x0
+    const/high16 v1, 0x40000000
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/widget/ab;->b(I)V
+    mul-float/2addr v1, p1
 
-    .line 336
-    return-void
+    invoke-static {v0, v1}, Ljava/lang/Math;->min(FF)F
+
+    move-result v0
+
+    invoke-super {p0, v0}, Landroid/view/animation/AccelerateDecelerateInterpolator;->getInterpolation(F)F
+
+    move-result v0
+
+    return v0
 .end method

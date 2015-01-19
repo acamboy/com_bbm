@@ -1,247 +1,242 @@
 .class final Lcom/bbm/ui/c/dl;
-.super Lcom/bbm/ui/ds;
-.source "GroupsFragment.java"
+.super Lcom/bbm/d/b/f;
+.source "GroupMembersFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/ui/ds",
+        "Lcom/bbm/d/b/f",
         "<",
-        "Lcom/bbm/ui/c/dv;",
+        "Lcom/bbm/ui/c/du;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic b:Lcom/bbm/ui/c/dg;
+.field final synthetic a:Lcom/bbm/ui/c/dh;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dg;Lcom/bbm/j/j;)V
+.method constructor <init>(Lcom/bbm/ui/c/dh;)V
     .locals 0
 
     .prologue
-    .line 180
-    iput-object p1, p0, Lcom/bbm/ui/c/dl;->b:Lcom/bbm/ui/c/dg;
+    .line 279
+    iput-object p1, p0, Lcom/bbm/ui/c/dl;->a:Lcom/bbm/ui/c/dh;
 
-    invoke-direct {p0, p2}, Lcom/bbm/ui/ds;-><init>(Lcom/bbm/j/j;)V
+    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 3
+.method protected final a()Ljava/util/List;
+    .locals 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/ui/c/du;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 184
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
+    .line 284
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 288
+    iget-object v0, p0, Lcom/bbm/ui/c/dl;->a:Lcom/bbm/ui/c/dh;
+
+    iget-object v0, v0, Lcom/bbm/ui/c/dh;->a:Lcom/bbm/e;
+
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
+
+    iget-object v2, p0, Lcom/bbm/ui/c/dl;->a:Lcom/bbm/ui/c/dh;
+
+    iget-object v2, v2, Lcom/bbm/ui/c/dh;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Lcom/bbm/g/al;->g(Ljava/lang/String;)Lcom/bbm/j/w;
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    const v1, 0x7f0300bf
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v0
-
-    .line 188
-    return-object v0
-.end method
-
-.method protected final synthetic a(Landroid/view/View;Ljava/lang/Object;)V
-    .locals 8
-
-    .prologue
-    const v7, 0x7f0a041c
-
-    const v2, 0x7f0a041b
-
-    const v6, 0x7f0a041a
-
-    const/16 v3, 0x8
-
-    .line 180
-    check-cast p2, Lcom/bbm/ui/c/dv;
-
-    sget-object v0, Lcom/bbm/ui/c/dk;->a:[I
-
-    iget-object v1, p2, Lcom/bbm/ui/c/dv;->a:Lcom/bbm/ui/c/dw;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/dw;->ordinal()I
-
-    move-result v1
-
-    aget v0, v0, v1
-
-    packed-switch v0, :pswitch_data_0
-
-    :goto_0
-    return-void
-
-    :pswitch_0
-    iget-object v0, p2, Lcom/bbm/ui/c/dv;->c:Lcom/bbm/d/a/a;
-
-    check-cast v0, Lcom/bbm/g/a;
-
-    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/TextView;
-
-    iget-object v2, v0, Lcom/bbm/g/a;->q:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    const/4 v1, 0x0
-
-    iget-object v2, v0, Lcom/bbm/g/a;->c:Ljava/lang/String;
-
-    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
+    .line 289
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
 
     move-result v2
 
-    if-nez v2, :cond_0
+    if-eqz v2, :cond_0
 
-    iget-object v1, v0, Lcom/bbm/g/a;->c:Ljava/lang/String;
+    .line 290
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-static {v1}, Landroid/graphics/drawable/Drawable;->createFromPath(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object v1
+    .line 322
+    :goto_0
+    return-object v0
 
+    .line 292
     :cond_0
-    if-nez v1, :cond_1
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
 
-    iget-object v1, p0, Lcom/bbm/ui/c/dl;->b:Lcom/bbm/ui/c/dg;
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcom/bbm/ui/c/dg;->getResources()Landroid/content/res/Resources;
+    check-cast v0, Ljava/util/List;
 
-    move-result-object v1
-
-    const v2, 0x7f070007
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    iget-wide v4, v0, Lcom/bbm/g/a;->g:J
-
-    long-to-int v1, v4
-
-    invoke-virtual {v2, v1}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
-
-    :cond_1
-    move-object v2, v1
-
-    invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/ImageView;
-
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    invoke-virtual {p1, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/widget/ImageView;
-
-    iget-boolean v0, v0, Lcom/bbm/g/a;->l:Z
-
-    if-eqz v0, :cond_2
-
-    const/4 v0, 0x0
-
     :goto_1
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    goto :goto_0
+    move-result v0
 
-    :cond_2
-    move v0, v3
+    if-eqz v0, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/g/ac;
+
+    .line 293
+    new-instance v3, Lcom/bbm/ui/c/du;
+
+    iget-object v4, p0, Lcom/bbm/ui/c/dl;->a:Lcom/bbm/ui/c/dh;
+
+    iget-object v4, v4, Lcom/bbm/ui/c/dh;->a:Lcom/bbm/e;
+
+    iget-object v4, v4, Lcom/bbm/e;->c:Lcom/bbm/g/al;
+
+    iget-object v5, v0, Lcom/bbm/g/ac;->c:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Lcom/bbm/g/al;->q(Ljava/lang/String;)Lcom/bbm/g/o;
+
+    move-result-object v4
+
+    iget-object v4, v4, Lcom/bbm/g/o;->c:Ljava/lang/String;
+
+    invoke-direct {v3, v0, v4}, Lcom/bbm/ui/c/du;-><init>(Lcom/bbm/g/ac;Ljava/lang/String;)V
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    :pswitch_1
-    iget-object v0, p2, Lcom/bbm/ui/c/dv;->c:Lcom/bbm/d/a/a;
+    .line 298
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/c/dl;->a:Lcom/bbm/ui/c/dh;
 
-    check-cast v0, Lcom/bbm/g/z;
+    iget-object v0, v0, Lcom/bbm/ui/c/dh;->a:Lcom/bbm/e;
 
-    invoke-virtual {p1, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
 
-    move-result-object v1
+    iget-object v2, p0, Lcom/bbm/ui/c/dl;->a:Lcom/bbm/ui/c/dh;
 
-    check-cast v1, Landroid/widget/TextView;
+    iget-object v2, v2, Lcom/bbm/ui/c/dh;->b:Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/bbm/g/z;->a:Ljava/lang/String;
+    invoke-virtual {v0, v2}, Lcom/bbm/g/al;->t(Ljava/lang/String;)Lcom/bbm/g/a;
 
-    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
+    move-result-object v0
+
+    iget-boolean v0, v0, Lcom/bbm/g/a;->j:Z
+
+    if-eqz v0, :cond_3
+
+    .line 301
+    iget-object v0, p0, Lcom/bbm/ui/c/dl;->a:Lcom/bbm/ui/c/dh;
+
+    iget-object v0, v0, Lcom/bbm/ui/c/dh;->a:Lcom/bbm/e;
+
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
+
+    iget-object v2, p0, Lcom/bbm/ui/c/dl;->a:Lcom/bbm/ui/c/dh;
+
+    iget-object v2, v2, Lcom/bbm/ui/c/dh;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Lcom/bbm/g/al;->p(Ljava/lang/String;)Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    .line 303
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
 
     move-result v2
 
-    if-eqz v2, :cond_4
+    if-eqz v2, :cond_2
 
-    const v2, 0x7f0e043f
+    .line 304
+    new-instance v0, Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    goto :goto_0
+
+    .line 306
+    :cond_2
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
 
     :goto_2
-    iget-object v0, v0, Lcom/bbm/g/z;->c:Ljava/lang/String;
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
-    invoke-static {v0}, Lcom/bbm/ui/c/du;->a(Ljava/lang/String;)Lcom/bbm/ui/c/du;
+    move-result v0
 
-    move-result-object v1
+    if-eqz v0, :cond_3
 
-    if-eqz v1, :cond_3
-
-    invoke-virtual {p1, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageView;
+    check-cast v0, Lcom/bbm/g/p;
 
-    iget v1, v1, Lcom/bbm/ui/c/du;->h:I
+    .line 307
+    new-instance v3, Lcom/bbm/ui/c/du;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    iget-object v4, p0, Lcom/bbm/ui/c/dl;->a:Lcom/bbm/ui/c/dh;
 
-    :cond_3
-    invoke-virtual {p1, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget-object v4, v4, Lcom/bbm/ui/c/dh;->a:Lcom/bbm/e;
 
-    move-result-object v0
+    iget-object v4, v4, Lcom/bbm/e;->c:Lcom/bbm/g/al;
 
-    check-cast v0, Landroid/widget/ImageView;
+    iget-object v5, v0, Lcom/bbm/g/p;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+    invoke-virtual {v4, v5}, Lcom/bbm/g/al;->q(Ljava/lang/String;)Lcom/bbm/g/o;
 
-    goto/16 :goto_0
+    move-result-object v4
 
-    :cond_4
-    iget-object v2, v0, Lcom/bbm/g/z;->a:Ljava/lang/String;
+    iget-object v4, v4, Lcom/bbm/g/o;->c:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-direct {v3, v0, v4}, Lcom/bbm/ui/c/du;-><init>(Lcom/bbm/g/p;Ljava/lang/String;)V
+
+    invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    nop
+    .line 314
+    :cond_3
+    new-instance v0, Lcom/bbm/ui/c/dm;
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    invoke-direct {v0, p0}, Lcom/bbm/ui/c/dm;-><init>(Lcom/bbm/ui/c/dl;)V
+
+    invoke-static {v1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
+
+    move-object v0, v1
+
+    .line 322
+    goto/16 :goto_0
 .end method

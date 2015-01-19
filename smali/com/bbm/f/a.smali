@@ -7,11 +7,11 @@
 .method public abstract a()Lcom/bbm/f/b;
 .end method
 
-.method public abstract a(Lcom/bbm/f/x;)V
+.method public abstract a(Lcom/bbm/f/ab;)V
 .end method
 
-.method public abstract a(Lcom/bbm/f/y;)V
+.method public abstract a(Lcom/bbm/f/ac;)V
 .end method
 
-.method public abstract b(Lcom/bbm/f/y;)V
+.method public abstract b(Lcom/bbm/f/ac;)V
 .end method

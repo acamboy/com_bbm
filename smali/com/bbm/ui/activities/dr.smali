@@ -1,53 +1,56 @@
 .class final Lcom/bbm/ui/activities/dr;
-.super Lcom/bbm/ui/by;
-.source "ChannelSettingsActivity.java"
+.super Lcom/bbm/j/a;
+.source "ChannelReportsActivity.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Lcom/bbm/d/ee;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelReportsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelSettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
     .locals 0
 
     .prologue
-    .line 123
-    iput-object p1, p0, Lcom/bbm/ui/activities/dr;->a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
+    .line 76
+    iput-object p1, p0, Lcom/bbm/ui/activities/dr;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 2
 
     .prologue
-    .line 126
-    iget-object v0, p0, Lcom/bbm/ui/activities/dr;->a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
+    .line 76
+    iget-object v0, p0, Lcom/bbm/ui/activities/dr;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->c(Lcom/bbm/ui/activities/ChannelSettingsActivity;)Z
+    iget-object v0, v0, Lcom/bbm/ui/activities/ChannelReportsActivity;->b:Lcom/bbm/d/a;
 
-    move-result v0
+    iget-object v1, p0, Lcom/bbm/ui/activities/dr;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/ChannelReportsActivity;->b()Ljava/lang/String;
 
-    .line 127
-    new-instance v0, Lcom/bbm/ui/activities/ds;
+    move-result-object v1
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ds;-><init>(Lcom/bbm/ui/activities/dr;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/ee;
 
-    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
+    move-result-object v0
 
-    .line 138
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/dr;->a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->finish()V
-
-    .line 139
-    return-void
+    return-object v0
 .end method

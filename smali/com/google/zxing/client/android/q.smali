@@ -1,4 +1,4 @@
-.class final enum Lcom/google/zxing/client/android/q;
+.class public final enum Lcom/google/zxing/client/android/q;
 .super Ljava/lang/Enum;
 .source "IntentSource.java"
 

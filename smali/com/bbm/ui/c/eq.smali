@@ -1,82 +1,115 @@
-.class final Lcom/bbm/ui/c/eq;
-.super Ljava/lang/Object;
-.source "OwnProfileDetailsFragment.java"
-
-# interfaces
-.implements Landroid/view/View$OnKeyListener;
+.class public final enum Lcom/bbm/ui/c/eq;
+.super Ljava/lang/Enum;
+.source "GroupsFragment.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/c/em;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/c/eq;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/bbm/ui/c/eq;
+
+.field public static final enum b:Lcom/bbm/ui/c/eq;
+
+.field private static final synthetic c:[Lcom/bbm/ui/c/eq;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/em;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
     .prologue
-    .line 118
-    iput-object p1, p0, Lcom/bbm/ui/c/eq;->a:Lcom/bbm/ui/c/em;
+    const/4 v3, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    .line 123
+    new-instance v0, Lcom/bbm/ui/c/eq;
+
+    const-string v1, "GROUP"
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/c/eq;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/eq;->a:Lcom/bbm/ui/c/eq;
+
+    .line 124
+    new-instance v0, Lcom/bbm/ui/c/eq;
+
+    const-string v1, "GROUP_RESTORE"
+
+    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/c/eq;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/eq;->b:Lcom/bbm/ui/c/eq;
+
+    .line 122
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lcom/bbm/ui/c/eq;
+
+    sget-object v1, Lcom/bbm/ui/c/eq;->a:Lcom/bbm/ui/c/eq;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/bbm/ui/c/eq;->b:Lcom/bbm/ui/c/eq;
+
+    aput-object v1, v0, v3
+
+    sput-object v0, Lcom/bbm/ui/c/eq;->c:[Lcom/bbm/ui/c/eq;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
-    .locals 3
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
-    const/4 v2, 0x0
-
     .line 122
-    const-string v0, "onKeyListener"
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const-class v1, Lcom/bbm/ui/c/em;
+    return-void
+.end method
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/c/eq;
+    .locals 1
 
-    .line 123
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    .prologue
+    .line 122
+    const-class v0, Lcom/bbm/ui/c/eq;
 
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    const/16 v0, 0x42
-
-    if-ne p2, v0, :cond_0
-
-    .line 125
-    iget-object v0, p0, Lcom/bbm/ui/c/eq;->a:Lcom/bbm/ui/c/em;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/em;->getActivity()Landroid/app/Activity;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
-    const-string v1, "input_method"
+    check-cast v0, Lcom/bbm/ui/c/eq;
 
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    return-object v0
+.end method
+
+.method public static values()[Lcom/bbm/ui/c/eq;
+    .locals 1
+
+    .prologue
+    .line 122
+    sget-object v0, Lcom/bbm/ui/c/eq;->c:[Lcom/bbm/ui/c/eq;
+
+    invoke-virtual {v0}, [Lcom/bbm/ui/c/eq;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+    check-cast v0, [Lcom/bbm/ui/c/eq;
 
-    .line 126
-    invoke-virtual {p1}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-
-    .line 127
-    invoke-virtual {p1}, Landroid/view/View;->clearFocus()V
-
-    .line 129
-    :cond_0
-    return v2
+    return-object v0
 .end method

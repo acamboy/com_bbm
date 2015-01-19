@@ -27,18 +27,18 @@
 
     const-class v1, Lcom/bbm/receiver/BootCompletedReceiver;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
     .line 18
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/Alaska;->F()Lcom/bbm/f/ab;
+    invoke-virtual {v0}, Lcom/bbm/Alaska;->B()Lcom/bbm/f/af;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/f/ab;->a:Lcom/bbm/f/ab;
+    sget-object v1, Lcom/bbm/f/af;->a:Lcom/bbm/f/af;
 
     if-eq v0, v1, :cond_0
 
@@ -46,7 +46,7 @@
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     invoke-static {p1}, Lcom/bbm/receiver/a;->a(Landroid/content/Context;)V
 
@@ -75,9 +75,9 @@
 
     new-array v1, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 41
+    .line 37
     :cond_1
     return-void
 .end method

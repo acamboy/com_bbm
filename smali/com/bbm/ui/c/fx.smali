@@ -1,110 +1,118 @@
 .class final Lcom/bbm/ui/c/fx;
-.super Lcom/bbm/d/b/f;
-.source "SlideMenuFragment.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/f",
-        "<",
-        "Lcom/bbm/ui/slidingmenu/a;",
-        ">;"
-    }
-.end annotation
+.super Lcom/bbm/j/k;
+.source "PeopleYouKnowFragment.java"
 
 
 # instance fields
-.field a:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/ui/slidingmenu/a;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field final synthetic b:Lcom/bbm/ui/c/fq;
+.field final synthetic a:Lcom/bbm/ui/c/fv;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/c/fq;)V
+.method constructor <init>(Lcom/bbm/ui/c/fv;)V
     .locals 1
 
     .prologue
-    .line 441
-    iput-object p1, p0, Lcom/bbm/ui/c/fx;->b:Lcom/bbm/ui/c/fq;
+    .line 86
+    iput-object p1, p0, Lcom/bbm/ui/c/fx;->a:Lcom/bbm/ui/c/fv;
 
-    .line 442
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    const/4 v0, 0x0
 
-    .line 439
-    new-instance v0, Ljava/util/ArrayList;
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/ui/c/fx;->a:Ljava/util/List;
-
-    .line 443
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()Ljava/util/List;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/ui/slidingmenu/a;",
-            ">;"
-        }
-    .end annotation
+.method protected final a()V
+    .locals 7
 
     .prologue
-    .line 459
-    new-instance v1, Ljava/util/ArrayList;
+    const/4 v6, 0x0
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    .line 90
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
 
-    .line 460
-    iget-object v0, p0, Lcom/bbm/ui/c/fx;->a:Ljava/util/List;
+    invoke-static {}, Lcom/bbm/Alaska;->z()Z
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    move-result v1
 
-    move-result-object v2
+    .line 92
+    iget-object v0, p0, Lcom/bbm/ui/c/fx;->a:Lcom/bbm/ui/c/fv;
 
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-static {v0}, Lcom/bbm/ui/c/fv;->b(Lcom/bbm/ui/c/fv;)Z
 
-    move-result v0
+    move-result v2
 
-    if-eqz v0, :cond_1
+    .line 94
+    iget-object v0, p0, Lcom/bbm/ui/c/fx;->a:Lcom/bbm/ui/c/fv;
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/c/fv;->c(Lcom/bbm/ui/c/fv;)Lcom/bbm/j/a;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/slidingmenu/a;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
 
-    .line 461
-    invoke-static {v0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
+    move-result-object v0
 
-    iget-boolean v3, v0, Lcom/bbm/ui/slidingmenu/a;->d:Z
+    check-cast v0, Ljava/lang/Boolean;
 
-    if-eqz v3, :cond_0
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 463
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    move-result v0
+
+    .line 96
+    const-string v3, "people you know progress monitor finished loading %s has found friend %s"
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    aput-object v5, v4, v6
+
+    const/4 v5, 0x1
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    aput-object v2, v4, v5
+
+    invoke-static {v3, v4}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 97
+    if-eqz v1, :cond_0
+
+    if-nez v0, :cond_0
+
+    .line 98
+    iget-object v0, p0, Lcom/bbm/ui/c/fx;->a:Lcom/bbm/ui/c/fv;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/fv;->d(Lcom/bbm/ui/c/fv;)Landroid/widget/ProgressBar;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
+
+    .line 102
+    :goto_0
+    return-void
+
+    .line 100
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/c/fx;->a:Lcom/bbm/ui/c/fv;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/fv;->d(Lcom/bbm/ui/c/fv;)Landroid/widget/ProgressBar;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v6}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
     goto :goto_0
-
-    .line 466
-    :cond_1
-    return-object v1
 .end method

@@ -1,30 +1,22 @@
 .class final Lcom/bbm/ui/activities/fd;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
+.source "ChildActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/b/g;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/dg;
-
-.field final synthetic b:Lcom/bbm/ui/b/b;
-
-.field final synthetic c:Lcom/bbm/ui/activities/fc;
+.field final synthetic a:Lcom/bbm/ui/activities/ey;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/fc;Lcom/bbm/d/dg;Lcom/bbm/ui/b/b;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ey;)V
     .locals 0
 
     .prologue
-    .line 1021
-    iput-object p1, p0, Lcom/bbm/ui/activities/fd;->c:Lcom/bbm/ui/activities/fc;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/fd;->a:Lcom/bbm/d/dg;
-
-    iput-object p3, p0, Lcom/bbm/ui/activities/fd;->b:Lcom/bbm/ui/b/b;
+    .line 211
+    iput-object p1, p0, Lcom/bbm/ui/activities/fd;->a:Lcom/bbm/ui/activities/ey;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,26 +25,31 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 4
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 1
 
     .prologue
-    .line 1025
-    iget-object v0, p0, Lcom/bbm/ui/activities/fd;->c:Lcom/bbm/ui/activities/fc;
+    .line 215
+    iget-object v0, p0, Lcom/bbm/ui/activities/fd;->a:Lcom/bbm/ui/activities/ey;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/fd;->a:Lcom/bbm/d/dg;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ey;->a(Lcom/bbm/ui/activities/ey;)Landroid/support/v4/view/n;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/fd;->c:Lcom/bbm/ui/activities/fc;
+    move-result-object v0
 
-    iget-wide v2, v2, Lcom/bbm/ui/activities/fc;->b:J
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/bbm/ui/activities/fc;->a(Lcom/bbm/d/dg;J)V
+    .line 216
+    iget-object v0, p0, Lcom/bbm/ui/activities/fd;->a:Lcom/bbm/ui/activities/ey;
 
-    .line 1026
-    iget-object v0, p0, Lcom/bbm/ui/activities/fd;->b:Lcom/bbm/ui/b/b;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ey;->a(Lcom/bbm/ui/activities/ey;)Landroid/support/v4/view/n;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/b;->dismiss()V
+    move-result-object v0
 
-    .line 1027
-    return-void
+    invoke-virtual {v0, p2}, Landroid/support/v4/view/n;->a(Landroid/view/MotionEvent;)Z
+
+    .line 218
+    :cond_0
+    const/4 v0, 0x1
+
+    return v0
 .end method

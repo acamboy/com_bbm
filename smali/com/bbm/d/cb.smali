@@ -1,40 +1,35 @@
 .class public final Lcom/bbm/d/cb;
-.super Lcom/bbm/d/da;
+.super Lcom/bbm/d/dy;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 3252
-    const-string v0, "requestChangeAvatar"
+    .line 2751
+    const-string v0, "markRecentUpdatesRead"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/da;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
 
-    .line 3254
-    const-string v0, "file"
+    .line 2753
+    const-string v0, "id"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/cb;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 3255
-    const-string v0, "type"
-
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/cb;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 3256
+    .line 2754
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a()Lcom/bbm/f/x;
+.method public final bridge synthetic a()Lcom/bbm/f/ab;
     .locals 1
 
     .prologue
-    .line 3250
-    invoke-super {p0}, Lcom/bbm/d/da;->a()Lcom/bbm/f/x;
+    .line 2749
+    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

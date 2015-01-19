@@ -21,7 +21,7 @@
     .locals 0
 
     .prologue
-    .line 1627
+    .line 1638
     iput-object p1, p0, Lcom/blackberry/ids/IDS$9;->a:Lcom/blackberry/ids/RequestId;
 
     iput-object p2, p0, Lcom/blackberry/ids/IDS$9;->b:Lcom/blackberry/ids/IFailureCallback;
@@ -45,7 +45,7 @@
 
     const/4 v6, 0x0
 
-    .line 1630
+    .line 1641
     const-string v0, "enter IDS.ids_manage_identity [Runnable] request_id=%s"
 
     new-array v1, v7, [Ljava/lang/Object;
@@ -56,9 +56,9 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 1633
+    .line 1644
     :try_start_0
-    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BlockedTokenList;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->c()Lcom/blackberry/ids/BlockedTokenList;
 
     move-result-object v0
 
@@ -72,10 +72,10 @@
 
     move-result v0
 
-    .line 1634
+    .line 1645
     if-eqz v0, :cond_0
 
-    .line 1635
+    .line 1646
     const-string v1, "ids_manage_identity - request_id=%s - requests are blocked, http status "
 
     const/4 v2, 0x2
@@ -98,7 +98,7 @@
 
     invoke-static {v1, v2}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 1636
+    .line 1647
     iget-object v1, p0, Lcom/blackberry/ids/IDS$9;->b:Lcom/blackberry/ids/IFailureCallback;
 
     iget-object v2, p0, Lcom/blackberry/ids/IDS$9;->a:Lcom/blackberry/ids/RequestId;
@@ -134,12 +134,12 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1661
+    .line 1672
     sget-object v0, Lcom/blackberry/ids/IDS;->a:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 1662
+    .line 1673
     const-string v0, "exit IDS.ids_manage_identity [Runnable] request_id=%s"
 
     new-array v1, v7, [Ljava/lang/Object;
@@ -150,11 +150,11 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 1664
+    .line 1675
     :goto_0
     return-void
 
-    .line 1640
+    .line 1651
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/blackberry/ids/IDS$9;->a:Lcom/blackberry/ids/RequestId;
@@ -163,10 +163,10 @@
 
     move-result v1
 
-    .line 1641
+    .line 1652
     if-eqz v1, :cond_2
 
-    .line 1642
+    .line 1653
     const-string v0, "pingServer request_id=%s failed"
 
     const/4 v2, 0x1
@@ -181,18 +181,18 @@
 
     invoke-static {v0, v2}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 1643
+    .line 1654
     const-string v0, "pingServer failed"
 
-    .line 1644
+    .line 1655
     const/4 v2, -0x2
 
     if-ne v1, v2, :cond_1
 
-    .line 1645
+    .line 1656
     const-string v0, "CA trust cannot be established"
 
-    .line 1647
+    .line 1658
     :cond_1
     iget-object v1, p0, Lcom/blackberry/ids/IDS$9;->b:Lcom/blackberry/ids/IFailureCallback;
 
@@ -209,12 +209,12 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1661
+    .line 1672
     sget-object v0, Lcom/blackberry/ids/IDS;->a:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 1662
+    .line 1673
     const-string v0, "exit IDS.ids_manage_identity [Runnable] request_id=%s"
 
     new-array v1, v7, [Ljava/lang/Object;
@@ -227,7 +227,7 @@
 
     goto :goto_0
 
-    .line 1652
+    .line 1663
     :cond_2
     :try_start_2
     iget-object v0, p0, Lcom/blackberry/ids/IDS$9;->c:Ljava/lang/Object;
@@ -243,12 +243,12 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1661
+    .line 1672
     sget-object v0, Lcom/blackberry/ids/IDS;->a:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 1662
+    .line 1673
     const-string v0, "exit IDS.ids_manage_identity [Runnable] request_id=%s"
 
     new-array v1, v7, [Ljava/lang/Object;
@@ -261,11 +261,11 @@
 
     goto :goto_0
 
-    .line 1654
+    .line 1665
     :catch_0
     move-exception v0
 
-    .line 1655
+    .line 1666
     :try_start_3
     const-string v1, "Uncaught Throwable in IDS.ids_manage_identity request_id=%s"
 
@@ -281,7 +281,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 1658
+    .line 1669
     iget-object v1, p0, Lcom/blackberry/ids/IDS$9;->b:Lcom/blackberry/ids/IFailureCallback;
 
     iget-object v2, p0, Lcom/blackberry/ids/IDS$9;->a:Lcom/blackberry/ids/RequestId;
@@ -300,12 +300,12 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1661
+    .line 1672
     sget-object v0, Lcom/blackberry/ids/IDS;->a:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 1662
+    .line 1673
     const-string v0, "exit IDS.ids_manage_identity [Runnable] request_id=%s"
 
     new-array v1, v7, [Ljava/lang/Object;
@@ -318,7 +318,7 @@
 
     goto/16 :goto_0
 
-    .line 1661
+    .line 1672
     :catchall_0
     move-exception v0
 
@@ -326,7 +326,7 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 1662
+    .line 1673
     const-string v1, "exit IDS.ids_manage_identity [Runnable] request_id=%s"
 
     new-array v2, v7, [Ljava/lang/Object;

@@ -52,6 +52,9 @@
 .method public abstract getNormalizedName()Ljava/lang/String;
 .end method
 
+.method public abstract getSpan()I
+.end method
+
 .method public abstract prepareAvatar()V
 .end method
 

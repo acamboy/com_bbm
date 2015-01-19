@@ -8,10 +8,8 @@
     value = {
         "Lcom/bbm/j/a",
         "<",
-        "Ljava/util/List",
-        "<",
-        "Ljava/lang/String;",
-        ">;>;"
+        "Lcom/bbm/util/ay;",
+        ">;"
     }
 .end annotation
 
@@ -25,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 175
+    .line 152
     iput-object p1, p0, Lcom/bbm/d/q;->a:Lcom/bbm/d/a;
 
     invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
@@ -36,49 +34,31 @@
 
 # virtual methods
 .method protected final synthetic a()Ljava/lang/Object;
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 175
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
+    .line 152
     iget-object v0, p0, Lcom/bbm/d/q;->a:Lcom/bbm/d/a;
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->F()Lcom/bbm/j/w;
+    const-string v1, "channelsState"
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/util/bm;->d()Lorg/json/JSONObject;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
+    const-string v1, "state"
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/do;
+    invoke-static {v0}, Lcom/bbm/util/ay;->a(Ljava/lang/String;)Lcom/bbm/util/ay;
 
-    iget-object v0, v0, Lcom/bbm/d/do;->a:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
-
-    :cond_0
-    return-object v1
+    return-object v0
 .end method

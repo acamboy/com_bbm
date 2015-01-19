@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/abh;
 .super Ljava/lang/Object;
-.source "SelectCategoryActivity.java"
+.source "OwnProfileActivity.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/abg;
+.field final synthetic a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/abg;)V
+.method constructor <init>(Lcom/bbm/ui/activities/OwnProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 83
-    iput-object p1, p0, Lcom/bbm/ui/activities/abh;->a:Lcom/bbm/ui/activities/abg;
+    .line 451
+    iput-object p1, p0, Lcom/bbm/ui/activities/abh;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,19 +25,15 @@
 
 
 # virtual methods
-.method public final onDismiss(Landroid/content/DialogInterface;)V
-    .locals 2
+.method public final run()V
+    .locals 1
 
     .prologue
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/activities/abh;->a:Lcom/bbm/ui/activities/abg;
+    .line 454
+    iget-object v0, p0, Lcom/bbm/ui/activities/abh;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/abg;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->k(Lcom/bbm/ui/activities/OwnProfileActivity;)V
 
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/eo;->a(Landroid/app/Activity;Z)V
-
-    .line 87
+    .line 455
     return-void
 .end method

@@ -1,22 +1,26 @@
-.class final Lcom/bbm/ui/activities/wv;
+.class public final Lcom/bbm/ui/activities/wv;
 .super Ljava/lang/Object;
-.source "NewListItemActivity.java"
+.source "MainActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewListItemActivity;
+.field final synthetic a:Lcom/bbm/d/ec;
+
+.field final synthetic b:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+.method public constructor <init>(Lcom/bbm/ui/activities/MainActivity;Lcom/bbm/d/ec;)V
     .locals 0
 
     .prologue
-    .line 174
-    iput-object p1, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    .line 2112
+    iput-object p1, p0, Lcom/bbm/ui/activities/wv;->b:Lcom/bbm/ui/activities/MainActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/d/ec;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,60 +29,33 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 178
-    iget-object v0, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    .line 2115
+    const-string v0, "CategoriesContextSlideMenu Bottom Item Clicked"
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/NewListItemActivity;->q:Lcom/bbm/ui/DateTimePickerView;
+    const-class v1, Lcom/bbm/ui/activities/MainActivity;
 
-    if-eqz v0, :cond_0
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 179
-    iget-object v0, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    .line 2117
+    iget-object v0, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/d/ec;
 
-    iget-object v1, v0, Lcom/bbm/ui/activities/NewListItemActivity;->q:Lcom/bbm/ui/DateTimePickerView;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectCategoryActivity;->a(Lcom/bbm/d/ec;)V
 
-    if-eqz p2, :cond_1
+    .line 2118
+    iget-object v0, p0, Lcom/bbm/ui/activities/wv;->b:Lcom/bbm/ui/activities/MainActivity;
 
-    const/4 v0, 0x0
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    :goto_0
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/DateTimePickerView;->setVisibility(I)V
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    .line 180
-    iget-object v2, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    const/4 v1, 0x1
 
-    if-eqz p2, :cond_2
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/wv;->a:Lcom/bbm/ui/activities/NewListItemActivity;
-
-    invoke-static {}, Lcom/bbm/util/az;->a()J
-
-    move-result-wide v0
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/NewListItemActivity;->a(J)J
-
-    move-result-wide v0
-
-    :goto_1
-    iput-wide v0, v2, Lcom/bbm/ui/activities/NewListItemActivity;->s:J
-
-    .line 182
-    :cond_0
+    .line 2119
     return-void
-
-    .line 179
-    :cond_1
-    const/16 v0, 0x8
-
-    goto :goto_0
-
-    .line 180
-    :cond_2
-    const-wide/16 v0, 0x0
-
-    goto :goto_1
 .end method

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ady;
 .super Ljava/lang/Object;
-.source "ShareActivity.java"
+.source "ReportProblemActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ShareActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ReportProblemActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ShareActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ReportProblemActivity;)V
     .locals 0
 
     .prologue
-    .line 85
-    iput-object p1, p0, Lcom/bbm/ui/activities/ady;->a:Lcom/bbm/ui/activities/ShareActivity;
+    .line 131
+    iput-object p1, p0, Lcom/bbm/ui/activities/ady;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,21 +26,14 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 1
 
     .prologue
-    .line 89
-    const-string v0, "HeaderButtonActionBar NegativeButton Clicked"
+    .line 134
+    iget-object v0, p0, Lcom/bbm/ui/activities/ady;->a:Lcom/bbm/ui/activities/ReportProblemActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/ShareActivity;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ReportProblemActivity;->finish()V
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 91
-    iget-object v0, p0, Lcom/bbm/ui/activities/ady;->a:Lcom/bbm/ui/activities/ShareActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ShareActivity;->finish()V
-
-    .line 92
+    .line 135
     return-void
 .end method

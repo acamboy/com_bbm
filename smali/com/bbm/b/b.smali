@@ -1,363 +1,202 @@
-.class public final Lcom/bbm/b/b;
-.super Ljava/lang/Object;
-.source "AdCriteria.java"
-
-# interfaces
-.implements Lcom/bbm/d/a/a/d;
+.class public final enum Lcom/bbm/b/b;
+.super Ljava/lang/Enum;
+.source "Ad.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Object;",
-        "Lcom/bbm/d/a/a/d",
+        "Ljava/lang/Enum",
         "<",
-        "Lcom/bbm/b/a;",
+        "Lcom/bbm/b/b;",
         ">;"
     }
 .end annotation
 
 
-# instance fields
-.field private a:Lcom/google/b/a/l;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/b/a/l",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+# static fields
+.field public static final enum a:Lcom/bbm/b/b;
 
-.field private b:Lcom/google/b/a/l;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/google/b/a/l",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public static final enum b:Lcom/bbm/b/b;
+
+.field public static final enum c:Lcom/bbm/b/b;
+
+.field private static final synthetic e:[Lcom/bbm/b/b;
+
+
+# instance fields
+.field private final d:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
     .prologue
-    .line 19
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v5, 0x2
 
-    .line 21
-    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
+    const/4 v4, 0x1
 
-    move-result-object v0
+    const/4 v3, 0x0
 
-    iput-object v0, p0, Lcom/bbm/b/b;->a:Lcom/google/b/a/l;
+    .line 24
+    new-instance v0, Lcom/bbm/b/b;
 
-    .line 22
-    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
+    const-string v1, "Channel"
 
-    move-result-object v0
+    const-string v2, "Channel"
 
-    iput-object v0, p0, Lcom/bbm/b/b;->b:Lcom/google/b/a/l;
+    invoke-direct {v0, v1, v3, v2}, Lcom/bbm/b/b;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/b/b;->a:Lcom/bbm/b/b;
+
+    .line 25
+    new-instance v0, Lcom/bbm/b/b;
+
+    const-string v1, "Display"
+
+    const-string v2, "Display"
+
+    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/b/b;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/b/b;->b:Lcom/bbm/b/b;
+
+    .line 26
+    new-instance v0, Lcom/bbm/b/b;
+
+    const-string v1, "Unspecified"
+
+    const-string v2, ""
+
+    invoke-direct {v0, v1, v5, v2}, Lcom/bbm/b/b;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/b/b;->c:Lcom/bbm/b/b;
+
+    .line 23
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Lcom/bbm/b/b;
+
+    sget-object v1, Lcom/bbm/b/b;->a:Lcom/bbm/b/b;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/bbm/b/b;->b:Lcom/bbm/b/b;
+
+    aput-object v1, v0, v4
+
+    sget-object v1, Lcom/bbm/b/b;->c:Lcom/bbm/b/b;
+
+    aput-object v1, v0, v5
+
+    sput-object v0, Lcom/bbm/b/b;->e:[Lcom/bbm/b/b;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Ljava/lang/Boolean;)Lcom/bbm/b/b;
-    .locals 1
-
-    .prologue
-    .line 39
-    invoke-static {p1}, Lcom/google/b/a/l;->b(Ljava/lang/Object;)Lcom/google/b/a/l;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/b/b;->b:Lcom/google/b/a/l;
-
-    .line 40
-    return-object p0
-.end method
-
-.method public final a(Ljava/lang/String;)Lcom/bbm/b/b;
-    .locals 1
-
-    .prologue
-    .line 29
-    invoke-static {p1}, Lcom/google/b/a/l;->b(Ljava/lang/Object;)Lcom/google/b/a/l;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/b/b;->a:Lcom/google/b/a/l;
-
-    .line 30
-    return-object p0
-.end method
-
-.method public final a()Ljava/util/Map;
-    .locals 3
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()",
-            "Ljava/util/Map",
-            "<",
+            "(",
             "Ljava/lang/String;",
-            "Ljava/lang/Object;",
-            ">;"
+            ")V"
         }
     .end annotation
 
     .prologue
-    .line 75
-    new-instance v0, Ljava/util/HashMap;
+    .line 30
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    .line 31
+    iput-object p3, p0, Lcom/bbm/b/b;->d:Ljava/lang/String;
 
-    .line 76
-    iget-object v1, p0, Lcom/bbm/b/b;->a:Lcom/google/b/a/l;
+    .line 32
+    return-void
+.end method
 
-    invoke-virtual {v1}, Lcom/google/b/a/l;->a()Z
+.method public static a(Ljava/lang/String;)Lcom/bbm/b/b;
+    .locals 1
 
-    move-result v1
+    .prologue
+    .line 35
+    const-string v0, "Channel"
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 77
-    const-string v1, "type"
+    move-result v0
 
-    iget-object v2, p0, Lcom/bbm/b/b;->a:Lcom/google/b/a/l;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v2}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    .line 36
+    sget-object v0, Lcom/bbm/b/b;->a:Lcom/bbm/b/b;
 
-    move-result-object v2
+    .line 41
+    :goto_0
+    return-object v0
 
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 79
+    .line 38
     :cond_0
-    iget-object v1, p0, Lcom/bbm/b/b;->b:Lcom/google/b/a/l;
+    const-string v0, "Display"
 
-    invoke-virtual {v1}, Lcom/google/b/a/l;->a()Z
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_1
 
-    .line 80
-    const-string v1, "wasShared"
+    .line 39
+    sget-object v0, Lcom/bbm/b/b;->b:Lcom/bbm/b/b;
 
-    iget-object v2, p0, Lcom/bbm/b/b;->b:Lcom/google/b/a/l;
+    goto :goto_0
 
-    invoke-virtual {v2}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 82
+    .line 41
     :cond_1
+    sget-object v0, Lcom/bbm/b/b;->c:Lcom/bbm/b/b;
+
+    goto :goto_0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/b/b;
+    .locals 1
+
+    .prologue
+    .line 23
+    const-class v0, Lcom/bbm/b/b;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/b/b;
+
     return-object v0
 .end method
 
-.method public final synthetic a(Lcom/bbm/d/a/a;)Z
-    .locals 2
+.method public static values()[Lcom/bbm/b/b;
+    .locals 1
 
     .prologue
-    .line 19
-    check-cast p1, Lcom/bbm/b/a;
+    .line 23
+    sget-object v0, Lcom/bbm/b/b;->e:[Lcom/bbm/b/b;
 
-    const/4 v0, 0x1
-
-    iget-object v1, p0, Lcom/bbm/b/b;->a:Lcom/google/b/a/l;
-
-    invoke-virtual {v1}, Lcom/google/b/a/l;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/b/b;->a:Lcom/google/b/a/l;
-
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    invoke-virtual {v0}, [Lcom/bbm/b/b;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p1, Lcom/bbm/b/a;->q:Ljava/lang/String;
+    check-cast v0, [Lcom/bbm/b/b;
 
-    invoke-static {v0, v1}, Lcom/bbm/util/bb;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    :cond_0
-    if-eqz v0, :cond_1
-
-    iget-object v1, p0, Lcom/bbm/b/b;->b:Lcom/google/b/a/l;
-
-    invoke-virtual {v1}, Lcom/google/b/a/l;->a()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    iget-object v0, p0, Lcom/bbm/b/b;->b:Lcom/google/b/a/l;
-
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
-
-    move-result-object v0
-
-    iget-boolean v1, p1, Lcom/bbm/b/a;->r:Z
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/bb;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
-
-    move-result v0
-
-    :cond_1
-    return v0
+    return-object v0
 .end method
 
-.method public final equals(Ljava/lang/Object;)Z
-    .locals 4
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
 
     .prologue
-    const/4 v0, 0x1
+    .line 44
+    iget-object v0, p0, Lcom/bbm/b/b;->d:Ljava/lang/String;
 
-    const/4 v1, 0x0
-
-    .line 54
-    if-ne p0, p1, :cond_1
-
-    .line 70
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 57
-    :cond_1
-    if-nez p1, :cond_2
-
-    move v0, v1
-
-    .line 58
-    goto :goto_0
-
-    .line 60
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    move-result-object v3
-
-    if-eq v2, v3, :cond_3
-
-    move v0, v1
-
-    .line 61
-    goto :goto_0
-
-    .line 63
-    :cond_3
-    check-cast p1, Lcom/bbm/b/b;
-
-    .line 64
-    iget-object v2, p0, Lcom/bbm/b/b;->a:Lcom/google/b/a/l;
-
-    iget-object v3, p1, Lcom/bbm/b/b;->a:Lcom/google/b/a/l;
-
-    invoke-virtual {v2, v3}, Lcom/google/b/a/l;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_4
-
-    move v0, v1
-
-    .line 65
-    goto :goto_0
-
-    .line 67
-    :cond_4
-    iget-object v2, p0, Lcom/bbm/b/b;->b:Lcom/google/b/a/l;
-
-    iget-object v3, p1, Lcom/bbm/b/b;->b:Lcom/google/b/a/l;
-
-    invoke-virtual {v2, v3}, Lcom/google/b/a/l;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    move v0, v1
-
-    .line 68
-    goto :goto_0
-.end method
-
-.method public final hashCode()I
-    .locals 3
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 45
-    iget-object v0, p0, Lcom/bbm/b/b;->a:Lcom/google/b/a/l;
-
-    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    add-int/lit8 v0, v0, 0x1f
-
-    .line 48
-    mul-int/lit8 v0, v0, 0x1f
-
-    iget-object v2, p0, Lcom/bbm/b/b;->b:Lcom/google/b/a/l;
-
-    invoke-virtual {v2}, Lcom/google/b/a/l;->a()Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    :goto_1
-    add-int/2addr v0, v1
-
-    .line 49
-    return v0
-
-    .line 45
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/b/b;->a:Lcom/google/b/a/l;
-
-    invoke-virtual {v0}, Lcom/google/b/a/l;->hashCode()I
-
-    move-result v0
-
-    goto :goto_0
-
-    .line 48
-    :cond_1
-    iget-object v1, p0, Lcom/bbm/b/b;->b:Lcom/google/b/a/l;
-
-    invoke-virtual {v1}, Lcom/google/b/a/l;->hashCode()I
-
-    move-result v1
-
-    goto :goto_1
+    return-object v0
 .end method

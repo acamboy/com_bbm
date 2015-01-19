@@ -61,57 +61,59 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/os/Looper;Ljava/lang/String;Ljava/lang/String;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;[Ljava/lang/String;ILandroid/view/View;ZZIZI)V
-    .locals 7
+    .locals 8
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move-object v2, p1
+    move-object v3, p1
 
-    move-object v3, p2
+    move-object v4, p2
 
-    move-object v4, p5
+    move-object v5, p5
 
-    move-object v5, p6
+    move-object v6, p6
 
-    move-object v6, p7
+    move-object v7, p7
 
-    invoke-direct/range {v1 .. v6}, Lcom/google/android/gms/internal/eh;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;[Ljava/lang/String;)V
+    invoke-direct/range {v2 .. v7}, Lcom/google/android/gms/internal/eh;-><init>(Landroid/content/Context;Landroid/os/Looper;Lcom/google/android/gms/common/api/GoogleApiClient$ConnectionCallbacks;Lcom/google/android/gms/common/api/GoogleApiClient$OnConnectionFailedListener;[Ljava/lang/String;)V
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v1, p0, Lcom/google/android/gms/internal/fx;->GA:Z
+    iput-boolean v2, p0, Lcom/google/android/gms/internal/fx;->GA:Z
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    iput-boolean v1, p0, Lcom/google/android/gms/internal/fx;->GB:Z
+    iput-boolean v2, p0, Lcom/google/android/gms/internal/fx;->GB:Z
 
     iput-object p3, p0, Lcom/google/android/gms/internal/fx;->Gv:Ljava/lang/String;
 
     invoke-static {p4}, Lcom/google/android/gms/internal/er;->f(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v2, Ljava/lang/String;
 
-    iput-object v1, p0, Lcom/google/android/gms/internal/fx;->vi:Ljava/lang/String;
+    iput-object v2, p0, Lcom/google/android/gms/internal/fx;->vi:Ljava/lang/String;
 
-    new-instance v1, Landroid/os/Binder;
+    new-instance v2, Landroid/os/Binder;
 
-    invoke-direct {v1}, Landroid/os/Binder;-><init>()V
+    invoke-direct {v2}, Landroid/os/Binder;-><init>()V
 
-    iput-object v1, p0, Lcom/google/android/gms/internal/fx;->GD:Landroid/os/Binder;
+    iput-object v2, p0, Lcom/google/android/gms/internal/fx;->GD:Landroid/os/Binder;
 
-    new-instance v1, Ljava/util/HashMap;
+    new-instance v2, Ljava/util/HashMap;
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v1, p0, Lcom/google/android/gms/internal/fx;->Gw:Ljava/util/Map;
+    iput-object v2, p0, Lcom/google/android/gms/internal/fx;->Gw:Ljava/util/Map;
 
-    invoke-static {p0, p8}, Lcom/google/android/gms/internal/gd;->a(Lcom/google/android/gms/internal/fx;I)Lcom/google/android/gms/internal/gd;
+    move/from16 v0, p8
 
-    move-result-object v1
+    invoke-static {p0, v0}, Lcom/google/android/gms/internal/gd;->a(Lcom/google/android/gms/internal/fx;I)Lcom/google/android/gms/internal/gd;
 
-    iput-object v1, p0, Lcom/google/android/gms/internal/fx;->Gz:Lcom/google/android/gms/internal/gd;
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/google/android/gms/internal/fx;->Gz:Lcom/google/android/gms/internal/gd;
 
     move-object/from16 v0, p9
 
@@ -127,11 +129,11 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->hashCode()I
 
-    move-result v1
+    move-result v2
 
-    int-to-long v1, v1
+    int-to-long v2, v2
 
-    iput-wide v1, p0, Lcom/google/android/gms/internal/fx;->GE:J
+    iput-wide v2, p0, Lcom/google/android/gms/internal/fx;->GE:J
 
     move/from16 v0, p10
 
@@ -1145,7 +1147,7 @@
 .end method
 
 .method public final a(Lcom/google/android/gms/common/api/a$c;Ljava/lang/String;JLjava/lang/String;)V
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1162,31 +1164,31 @@
 
     if-nez p1, :cond_0
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
     :goto_0
     :try_start_0
     invoke-virtual {p0}, Lcom/google/android/gms/internal/fx;->eb()Landroid/os/IInterface;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lcom/google/android/gms/internal/gb;
+    check-cast v1, Lcom/google/android/gms/internal/gb;
 
-    move-object v2, p2
+    move-object v3, p2
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    move-object v5, p5
+    move-object v6, p5
 
-    invoke-interface/range {v0 .. v5}, Lcom/google/android/gms/internal/gb;->a(Lcom/google/android/gms/internal/ga;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-interface/range {v1 .. v6}, Lcom/google/android/gms/internal/gb;->a(Lcom/google/android/gms/internal/ga;Ljava/lang/String;JLjava/lang/String;)V
 
     :goto_1
     return-void
 
     :cond_0
-    new-instance v1, Lcom/google/android/gms/internal/fx$bd;
+    new-instance v2, Lcom/google/android/gms/internal/fx$bd;
 
-    invoke-direct {v1, p0, p1}, Lcom/google/android/gms/internal/fx$bd;-><init>(Lcom/google/android/gms/internal/fx;Lcom/google/android/gms/common/api/a$c;)V
+    invoke-direct {v2, p0, p1}, Lcom/google/android/gms/internal/fx$bd;-><init>(Lcom/google/android/gms/internal/fx;Lcom/google/android/gms/common/api/a$c;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1570,10 +1572,10 @@
 .end method
 
 .method public final a(Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;)V
-    .locals 9
+    .locals 10
 
     :try_start_0
-    new-instance v1, Lcom/google/android/gms/internal/fx$ax;
+    new-instance v2, Lcom/google/android/gms/internal/fx$ax;
 
     invoke-virtual {p1}, Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;->getRoomUpdateListener()Lcom/google/android/gms/games/multiplayer/realtime/RoomUpdateListener;
 
@@ -1581,41 +1583,41 @@
 
     invoke-virtual {p1}, Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;->getRoomStatusUpdateListener()Lcom/google/android/gms/games/multiplayer/realtime/RoomStatusUpdateListener;
 
-    move-result-object v2
+    move-result-object v1
 
     invoke-virtual {p1}, Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;->getMessageReceivedListener()Lcom/google/android/gms/games/multiplayer/realtime/RealTimeMessageReceivedListener;
 
     move-result-object v3
 
-    invoke-direct {v1, p0, v0, v2, v3}, Lcom/google/android/gms/internal/fx$ax;-><init>(Lcom/google/android/gms/internal/fx;Lcom/google/android/gms/games/multiplayer/realtime/RoomUpdateListener;Lcom/google/android/gms/games/multiplayer/realtime/RoomStatusUpdateListener;Lcom/google/android/gms/games/multiplayer/realtime/RealTimeMessageReceivedListener;)V
+    invoke-direct {v2, p0, v0, v1, v3}, Lcom/google/android/gms/internal/fx$ax;-><init>(Lcom/google/android/gms/internal/fx;Lcom/google/android/gms/games/multiplayer/realtime/RoomUpdateListener;Lcom/google/android/gms/games/multiplayer/realtime/RoomStatusUpdateListener;Lcom/google/android/gms/games/multiplayer/realtime/RealTimeMessageReceivedListener;)V
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/fx;->eb()Landroid/os/IInterface;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lcom/google/android/gms/internal/gb;
+    check-cast v1, Lcom/google/android/gms/internal/gb;
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/fx;->GD:Landroid/os/Binder;
+    iget-object v3, p0, Lcom/google/android/gms/internal/fx;->GD:Landroid/os/Binder;
 
     invoke-virtual {p1}, Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;->getVariant()I
 
-    move-result v3
+    move-result v4
 
     invoke-virtual {p1}, Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;->getInvitedPlayerIds()[Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     invoke-virtual {p1}, Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;->getAutoMatchCriteria()Landroid/os/Bundle;
 
-    move-result-object v5
+    move-result-object v6
 
     invoke-virtual {p1}, Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;->isSocketEnabled()Z
 
-    move-result v6
+    move-result v7
 
-    iget-wide v7, p0, Lcom/google/android/gms/internal/fx;->GE:J
+    iget-wide v8, p0, Lcom/google/android/gms/internal/fx;->GE:J
 
-    invoke-interface/range {v0 .. v8}, Lcom/google/android/gms/internal/gb;->a(Lcom/google/android/gms/internal/ga;Landroid/os/IBinder;I[Ljava/lang/String;Landroid/os/Bundle;ZJ)V
+    invoke-interface/range {v1 .. v9}, Lcom/google/android/gms/internal/gb;->a(Lcom/google/android/gms/internal/ga;Landroid/os/IBinder;I[Ljava/lang/String;Landroid/os/Bundle;ZJ)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2296,10 +2298,10 @@
 .end method
 
 .method public final b(Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;)V
-    .locals 7
+    .locals 8
 
     :try_start_0
-    new-instance v1, Lcom/google/android/gms/internal/fx$ax;
+    new-instance v2, Lcom/google/android/gms/internal/fx$ax;
 
     invoke-virtual {p1}, Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;->getRoomUpdateListener()Lcom/google/android/gms/games/multiplayer/realtime/RoomUpdateListener;
 
@@ -2307,33 +2309,33 @@
 
     invoke-virtual {p1}, Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;->getRoomStatusUpdateListener()Lcom/google/android/gms/games/multiplayer/realtime/RoomStatusUpdateListener;
 
-    move-result-object v2
+    move-result-object v1
 
     invoke-virtual {p1}, Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;->getMessageReceivedListener()Lcom/google/android/gms/games/multiplayer/realtime/RealTimeMessageReceivedListener;
 
     move-result-object v3
 
-    invoke-direct {v1, p0, v0, v2, v3}, Lcom/google/android/gms/internal/fx$ax;-><init>(Lcom/google/android/gms/internal/fx;Lcom/google/android/gms/games/multiplayer/realtime/RoomUpdateListener;Lcom/google/android/gms/games/multiplayer/realtime/RoomStatusUpdateListener;Lcom/google/android/gms/games/multiplayer/realtime/RealTimeMessageReceivedListener;)V
+    invoke-direct {v2, p0, v0, v1, v3}, Lcom/google/android/gms/internal/fx$ax;-><init>(Lcom/google/android/gms/internal/fx;Lcom/google/android/gms/games/multiplayer/realtime/RoomUpdateListener;Lcom/google/android/gms/games/multiplayer/realtime/RoomStatusUpdateListener;Lcom/google/android/gms/games/multiplayer/realtime/RealTimeMessageReceivedListener;)V
 
     invoke-virtual {p0}, Lcom/google/android/gms/internal/fx;->eb()Landroid/os/IInterface;
 
-    move-result-object v0
+    move-result-object v1
 
-    check-cast v0, Lcom/google/android/gms/internal/gb;
+    check-cast v1, Lcom/google/android/gms/internal/gb;
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/fx;->GD:Landroid/os/Binder;
+    iget-object v3, p0, Lcom/google/android/gms/internal/fx;->GD:Landroid/os/Binder;
 
     invoke-virtual {p1}, Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;->getInvitationId()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
     invoke-virtual {p1}, Lcom/google/android/gms/games/multiplayer/realtime/RoomConfig;->isSocketEnabled()Z
 
-    move-result v4
+    move-result v5
 
-    iget-wide v5, p0, Lcom/google/android/gms/internal/fx;->GE:J
+    iget-wide v6, p0, Lcom/google/android/gms/internal/fx;->GE:J
 
-    invoke-interface/range {v0 .. v6}, Lcom/google/android/gms/internal/gb;->a(Lcom/google/android/gms/internal/ga;Landroid/os/IBinder;Ljava/lang/String;ZJ)V
+    invoke-interface/range {v1 .. v7}, Lcom/google/android/gms/internal/gb;->a(Lcom/google/android/gms/internal/ga;Landroid/os/IBinder;Ljava/lang/String;ZJ)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2741,7 +2743,7 @@
 .end method
 
 .method public final disconnect()V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x0
 
@@ -2762,9 +2764,9 @@
 
     invoke-interface {v0}, Lcom/google/android/gms/internal/gb;->fH()V
 
-    iget-wide v1, p0, Lcom/google/android/gms/internal/fx;->GE:J
+    iget-wide v2, p0, Lcom/google/android/gms/internal/fx;->GE:J
 
-    invoke-interface {v0, v1, v2}, Lcom/google/android/gms/internal/gb;->n(J)V
+    invoke-interface {v0, v2, v3}, Lcom/google/android/gms/internal/gb;->n(J)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3539,7 +3541,7 @@
 .end method
 
 .method public final fv()V
-    .locals 3
+    .locals 4
 
     :try_start_0
     invoke-virtual {p0}, Lcom/google/android/gms/internal/fx;->eb()Landroid/os/IInterface;
@@ -3548,9 +3550,9 @@
 
     check-cast v0, Lcom/google/android/gms/internal/gb;
 
-    iget-wide v1, p0, Lcom/google/android/gms/internal/fx;->GE:J
+    iget-wide v2, p0, Lcom/google/android/gms/internal/fx;->GE:J
 
-    invoke-interface {v0, v1, v2}, Lcom/google/android/gms/internal/gb;->o(J)V
+    invoke-interface {v0, v2, v3}, Lcom/google/android/gms/internal/gb;->o(J)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3570,7 +3572,7 @@
 .end method
 
 .method public final fw()V
-    .locals 3
+    .locals 4
 
     :try_start_0
     invoke-virtual {p0}, Lcom/google/android/gms/internal/fx;->eb()Landroid/os/IInterface;
@@ -3579,9 +3581,9 @@
 
     check-cast v0, Lcom/google/android/gms/internal/gb;
 
-    iget-wide v1, p0, Lcom/google/android/gms/internal/fx;->GE:J
+    iget-wide v2, p0, Lcom/google/android/gms/internal/fx;->GE:J
 
-    invoke-interface {v0, v1, v2}, Lcom/google/android/gms/internal/gb;->p(J)V
+    invoke-interface {v0, v2, v3}, Lcom/google/android/gms/internal/gb;->p(J)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -3601,7 +3603,7 @@
 .end method
 
 .method public final fx()V
-    .locals 3
+    .locals 4
 
     :try_start_0
     invoke-virtual {p0}, Lcom/google/android/gms/internal/fx;->eb()Landroid/os/IInterface;
@@ -3610,9 +3612,9 @@
 
     check-cast v0, Lcom/google/android/gms/internal/gb;
 
-    iget-wide v1, p0, Lcom/google/android/gms/internal/fx;->GE:J
+    iget-wide v2, p0, Lcom/google/android/gms/internal/fx;->GE:J
 
-    invoke-interface {v0, v1, v2}, Lcom/google/android/gms/internal/gb;->q(J)V
+    invoke-interface {v0, v2, v3}, Lcom/google/android/gms/internal/gb;->q(J)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 

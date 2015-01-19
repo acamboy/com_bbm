@@ -28,6 +28,9 @@
 .method public abstract getProfile(I)Lcom/glympse/android/core/GLocationProfile;
 .end method
 
+.method public abstract handleGeofence(Ljava/lang/String;I)V
+.end method
+
 .method public abstract isFilteringEnabled()Z
 .end method
 

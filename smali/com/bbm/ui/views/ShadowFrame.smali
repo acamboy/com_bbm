@@ -62,7 +62,7 @@
     check-cast v0, Landroid/view/LayoutInflater;
 
     .line 30
-    const v1, 0x7f0300f3
+    const v1, 0x7f030104
 
     invoke-virtual {v0, v1, p0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -74,7 +74,7 @@
     .locals 2
 
     .prologue
-    const v1, 0x7f0a0497
+    const v1, 0x7f0b0528
 
     .line 34
     invoke-virtual {p0, v1}, Lcom/bbm/ui/views/ShadowFrame;->findViewById(I)Landroid/view/View;

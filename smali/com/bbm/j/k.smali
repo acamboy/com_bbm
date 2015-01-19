@@ -21,11 +21,11 @@
 
 .field private final d:Lcom/bbm/j/h;
 
-.field final h:Lcom/bbm/util/cx;
+.field final h:Lcom/bbm/util/di;
 
 .field final i:Ljava/lang/Runnable;
 
-.field public j:Z
+.field j:Z
 
 .field public k:Z
 
@@ -37,10 +37,10 @@
     .locals 4
 
     .prologue
-    .line 37
+    .line 36
     const-string v0, ""
 
-    new-instance v1, Lcom/bbm/util/bi;
+    new-instance v1, Lcom/bbm/util/bp;
 
     new-instance v2, Landroid/os/Handler;
 
@@ -50,13 +50,13 @@
 
     invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-direct {v1, v2}, Lcom/bbm/util/bi;-><init>(Landroid/os/Handler;)V
+    invoke-direct {v1, v2}, Lcom/bbm/util/bp;-><init>(Landroid/os/Handler;)V
 
     const-wide/16 v2, 0x3e8
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/bbm/j/k;-><init>(Ljava/lang/String;Lcom/bbm/util/cx;J)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/bbm/j/k;-><init>(Ljava/lang/String;Lcom/bbm/util/di;J)V
 
-    .line 38
+    .line 37
     return-void
 .end method
 
@@ -64,10 +64,10 @@
     .locals 4
 
     .prologue
-    .line 41
+    .line 40
     const-string v0, ""
 
-    new-instance v1, Lcom/bbm/util/bi;
+    new-instance v1, Lcom/bbm/util/bp;
 
     new-instance v2, Landroid/os/Handler;
 
@@ -77,67 +77,67 @@
 
     invoke-direct {v2, v3}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    invoke-direct {v1, v2}, Lcom/bbm/util/bi;-><init>(Landroid/os/Handler;)V
+    invoke-direct {v1, v2}, Lcom/bbm/util/bp;-><init>(Landroid/os/Handler;)V
 
     const-wide/16 v2, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/bbm/j/k;-><init>(Ljava/lang/String;Lcom/bbm/util/cx;J)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/bbm/j/k;-><init>(Ljava/lang/String;Lcom/bbm/util/di;J)V
 
-    .line 42
+    .line 41
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;Lcom/bbm/util/cx;J)V
-    .locals 2
+.method private constructor <init>(Ljava/lang/String;Lcom/bbm/util/di;J)V
+    .locals 3
 
     .prologue
     const/4 v1, 0x0
 
-    .line 51
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
+    .line 18
     new-instance v0, Lcom/bbm/j/l;
 
     invoke-direct {v0, p0}, Lcom/bbm/j/l;-><init>(Lcom/bbm/j/k;)V
 
     iput-object v0, p0, Lcom/bbm/j/k;->b:Lcom/bbm/j/q;
 
-    .line 25
+    .line 24
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/bbm/j/k;->c:Ljava/util/List;
 
-    .line 27
+    .line 26
     iput-boolean v1, p0, Lcom/bbm/j/k;->k:Z
 
-    .line 29
+    .line 28
     new-instance v0, Lcom/bbm/j/m;
 
     invoke-direct {v0, p0}, Lcom/bbm/j/m;-><init>(Lcom/bbm/j/k;)V
 
     iput-object v0, p0, Lcom/bbm/j/k;->d:Lcom/bbm/j/h;
 
-    .line 52
-    iput-object p2, p0, Lcom/bbm/j/k;->h:Lcom/bbm/util/cx;
+    .line 51
+    iput-object p2, p0, Lcom/bbm/j/k;->h:Lcom/bbm/util/di;
 
-    .line 53
+    .line 52
     iput-object p1, p0, Lcom/bbm/j/k;->a:Ljava/lang/String;
 
-    .line 54
+    .line 53
     iput-wide p3, p0, Lcom/bbm/j/k;->l:J
 
-    .line 56
+    .line 55
     new-instance v0, Lcom/bbm/j/n;
 
     invoke-direct {v0, p0}, Lcom/bbm/j/n;-><init>(Lcom/bbm/j/k;)V
 
     iput-object v0, p0, Lcom/bbm/j/k;->i:Ljava/lang/Runnable;
 
-    .line 63
+    .line 62
     iput-boolean v1, p0, Lcom/bbm/j/k;->j:Z
 
-    .line 64
+    .line 63
     return-void
 .end method
 
@@ -154,14 +154,14 @@
     .end annotation
 
     .prologue
-    .line 158
+    .line 152
     if-nez p1, :cond_1
 
-    .line 165
+    .line 159
     :cond_0
     return-void
 
-    .line 162
+    .line 156
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -180,7 +180,7 @@
 
     check-cast v0, Lcom/bbm/j/g;
 
-    .line 163
+    .line 157
     iget-object v2, p0, Lcom/bbm/j/k;->d:Lcom/bbm/j/h;
 
     invoke-interface {v0, v2}, Lcom/bbm/j/g;->b(Lcom/bbm/j/h;)V
@@ -190,106 +190,121 @@
 
 
 # virtual methods
-.method protected abstract a()V
+.method public abstract a()V
 .end method
 
 .method public final c()V
     .locals 1
 
     .prologue
-    .line 86
+    .line 84
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/bbm/j/k;->k:Z
 
-    .line 87
-    invoke-virtual {p0}, Lcom/bbm/j/k;->f_()V
+    .line 85
+    invoke-virtual {p0}, Lcom/bbm/j/k;->e_()V
 
-    .line 88
+    .line 86
     return-void
 .end method
 
-.method public final d()V
+.method public final d_()V
+    .locals 1
+
+    .prologue
+    .line 93
+    iget-boolean v0, p0, Lcom/bbm/j/k;->j:Z
+
+    if-eqz v0, :cond_0
+
+    .line 94
+    invoke-virtual {p0}, Lcom/bbm/j/k;->e_()V
+
+    .line 96
+    :cond_0
+    return-void
+.end method
+
+.method public final e()V
     .locals 2
 
     .prologue
     const/4 v0, 0x0
 
-    .line 106
+    .line 104
     iput-boolean v0, p0, Lcom/bbm/j/k;->k:Z
 
-    .line 107
+    .line 105
     iput-boolean v0, p0, Lcom/bbm/j/k;->j:Z
 
-    .line 108
-    iget-object v0, p0, Lcom/bbm/j/k;->h:Lcom/bbm/util/cx;
+    .line 106
+    iget-object v0, p0, Lcom/bbm/j/k;->h:Lcom/bbm/util/di;
 
     iget-object v1, p0, Lcom/bbm/j/k;->i:Ljava/lang/Runnable;
 
-    invoke-interface {v0, v1}, Lcom/bbm/util/cx;->b(Ljava/lang/Runnable;)V
+    invoke-interface {v0, v1}, Lcom/bbm/util/di;->b(Ljava/lang/Runnable;)V
 
-    .line 109
+    .line 107
     iget-object v0, p0, Lcom/bbm/j/k;->c:Ljava/util/List;
 
     invoke-direct {p0, v0}, Lcom/bbm/j/k;->a(Ljava/util/List;)V
 
-    .line 110
+    .line 108
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/bbm/j/k;->c:Ljava/util/List;
 
-    .line 111
+    .line 109
     return-void
 .end method
 
-.method public final f_()V
+.method final e_()V
     .locals 4
 
     .prologue
     const/4 v3, 0x0
 
-    .line 123
+    .line 121
     :try_start_0
     iget-boolean v0, p0, Lcom/bbm/j/k;->j:Z
 
     if-eqz v0, :cond_0
 
-    .line 124
-    iget-object v0, p0, Lcom/bbm/j/k;->h:Lcom/bbm/util/cx;
+    .line 122
+    iget-object v0, p0, Lcom/bbm/j/k;->h:Lcom/bbm/util/di;
 
     iget-object v1, p0, Lcom/bbm/j/k;->i:Ljava/lang/Runnable;
 
-    invoke-interface {v0, v1}, Lcom/bbm/util/cx;->b(Ljava/lang/Runnable;)V
+    invoke-interface {v0, v1}, Lcom/bbm/util/di;->b(Ljava/lang/Runnable;)V
 
-    .line 125
+    .line 123
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/bbm/j/k;->j:Z
 
-    .line 128
+    .line 126
     :cond_0
     iget-object v0, p0, Lcom/bbm/j/k;->c:Ljava/util/List;
 
     invoke-direct {p0, v0}, Lcom/bbm/j/k;->a(Ljava/util/List;)V
 
-    .line 131
+    .line 129
     iget-object v0, p0, Lcom/bbm/j/k;->b:Lcom/bbm/j/q;
 
     invoke-static {v0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/q;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 133
+    .line 131
     iget-boolean v1, p0, Lcom/bbm/j/k;->k:Z
 
     if-eqz v1, :cond_1
 
-    .line 134
+    .line 132
     iput-object v0, p0, Lcom/bbm/j/k;->c:Ljava/util/List;
 
-    .line 135
-    if-eqz v0, :cond_1
-
+    .line 133
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -315,7 +330,7 @@
 
     goto :goto_0
 
-    .line 138
+    .line 135
     :catch_0
     move-exception v0
 
@@ -323,12 +338,12 @@
 
     new-array v2, v3, [Ljava/lang/Object;
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/w;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 144
-    invoke-virtual {p0}, Lcom/bbm/j/k;->d()V
+    .line 139
+    invoke-virtual {p0}, Lcom/bbm/j/k;->e()V
 
-    .line 153
+    .line 147
     :cond_1
     return-void
 .end method
@@ -337,7 +352,7 @@
     .locals 2
 
     .prologue
-    .line 102
+    .line 100
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "ObservableMonitor("

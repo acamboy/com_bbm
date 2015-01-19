@@ -4,14 +4,31 @@
         <item quantity="other">Mensaxe de difusión enviada a %1$s contactos</item>
         <item quantity="one">Mensaxe de difusión enviada a un contacto</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d subscritores</item>
+        <item quantity="zero">Non hai subscritores</item>
+        <item quantity="one">%1$d subscritor</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d membros</item>
+        <item quantity="one">%1$d membro</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">segundos</item>
+        <item quantity="one">segundo</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Temporizador configurado para %1$d segundos.</item>
+        <item quantity="one">Temporizador configurado para %1$d segundo.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s elementos</item>
         <item quantity="zero">0 elementos</item>
         <item quantity="one">1 elemento</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d invitacións á espera)</item>
-        <item quantity="one">(1 invitación á espera)</item>
+        <item quantity="other">(%1$d pendentes)</item>
+        <item quantity="one">(1 pendente)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s resultados</item>

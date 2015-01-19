@@ -265,7 +265,7 @@
 
 
 # virtual methods
-.method protected abstract a(Lcom/google/android/gms/common/api/Api$a;)V
+.method public abstract a(Lcom/google/android/gms/common/api/Api$a;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TA;)V"
@@ -545,7 +545,7 @@
 .end method
 
 .method public final await(JLjava/util/concurrent/TimeUnit;)Lcom/google/android/gms/common/api/Result;
-    .locals 4
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
@@ -742,7 +742,7 @@
     return-void
 .end method
 
-.method protected abstract d(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/Result;
+.method public abstract d(Lcom/google/android/gms/common/api/Status;)Lcom/google/android/gms/common/api/Result;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

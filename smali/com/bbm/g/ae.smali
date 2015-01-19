@@ -1,209 +1,202 @@
-.class public abstract Lcom/bbm/g/ae;
-.super Ljava/lang/Object;
-.source "GroupsProtocol.java"
+.class public final enum Lcom/bbm/g/ae;
+.super Ljava/lang/Enum;
+.source "GroupMessage.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/g/ae;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/bbm/g/ae;
+
+.field public static final enum b:Lcom/bbm/g/ae;
+
+.field public static final enum c:Lcom/bbm/g/ae;
+
+.field private static final synthetic e:[Lcom/bbm/g/ae;
+
+
+# instance fields
+.field private final d:Ljava/lang/String;
 
 
 # direct methods
-.method public static a(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/ak;
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 6
 
     .prologue
-    .line 354
-    new-instance v0, Lcom/bbm/g/ak;
+    const/4 v5, 0x2
 
-    invoke-direct {v0, p0, p1}, Lcom/bbm/g/ak;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v4, 0x1
 
-    return-object v0
+    const/4 v3, 0x0
+
+    .line 23
+    new-instance v0, Lcom/bbm/g/ae;
+
+    const-string v1, "Text"
+
+    const-string v2, "Text"
+
+    invoke-direct {v0, v1, v3, v2}, Lcom/bbm/g/ae;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/g/ae;->a:Lcom/bbm/g/ae;
+
+    .line 24
+    new-instance v0, Lcom/bbm/g/ae;
+
+    const-string v1, "Sticker"
+
+    const-string v2, "Sticker"
+
+    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/g/ae;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/g/ae;->b:Lcom/bbm/g/ae;
+
+    .line 25
+    new-instance v0, Lcom/bbm/g/ae;
+
+    const-string v1, "Unspecified"
+
+    const-string v2, ""
+
+    invoke-direct {v0, v1, v5, v2}, Lcom/bbm/g/ae;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/g/ae;->c:Lcom/bbm/g/ae;
+
+    .line 22
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Lcom/bbm/g/ae;
+
+    sget-object v1, Lcom/bbm/g/ae;->a:Lcom/bbm/g/ae;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/bbm/g/ae;->b:Lcom/bbm/g/ae;
+
+    aput-object v1, v0, v4
+
+    sget-object v1, Lcom/bbm/g/ae;->c:Lcom/bbm/g/ae;
+
+    aput-object v1, v0, v5
+
+    sput-object v0, Lcom/bbm/g/ae;->e:[Lcom/bbm/g/ae;
+
+    return-void
 .end method
 
-.method public static a(Ljava/lang/String;)Lcom/bbm/g/as;
-    .locals 1
-
-    .prologue
-    .line 666
-    new-instance v0, Lcom/bbm/g/as;
-
-    invoke-direct {v0, p0}, Lcom/bbm/g/as;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static a(ZLjava/lang/String;)Lcom/bbm/g/ax;
-    .locals 1
-
-    .prologue
-    .line 832
-    new-instance v0, Lcom/bbm/g/ax;
-
-    invoke-direct {v0, p0, p1}, Lcom/bbm/g/ax;-><init>(ZLjava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/be;
-    .locals 1
-
-    .prologue
-    .line 1264
-    new-instance v0, Lcom/bbm/g/be;
-
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/bbm/g/be;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static a(Z)Lcom/bbm/g/bo;
-    .locals 1
-
-    .prologue
-    .line 1887
-    new-instance v0, Lcom/bbm/g/bo;
-
-    invoke-direct {v0, p0}, Lcom/bbm/g/bo;-><init>(Z)V
-
-    return-object v0
-.end method
-
-.method public static a(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/g/bz;
-    .locals 1
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/util/List",
-            "<",
-            "Lorg/json/JSONObject;",
-            ">;",
             "Ljava/lang/String;",
-            ")",
-            "Lcom/bbm/g/bz;"
+            ")V"
         }
     .end annotation
 
     .prologue
-    .line 2401
-    new-instance v0, Lcom/bbm/g/bz;
+    .line 29
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-direct {v0, p0, p1}, Lcom/bbm/g/bz;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    .line 30
+    iput-object p3, p0, Lcom/bbm/g/ae;->d:Ljava/lang/String;
+
+    .line 31
+    return-void
+.end method
+
+.method public static a(Ljava/lang/String;)Lcom/bbm/g/ae;
+    .locals 1
+
+    .prologue
+    .line 34
+    const-string v0, "Text"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 35
+    sget-object v0, Lcom/bbm/g/ae;->a:Lcom/bbm/g/ae;
+
+    .line 40
+    :goto_0
+    return-object v0
+
+    .line 37
+    :cond_0
+    const-string v0, "Sticker"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 38
+    sget-object v0, Lcom/bbm/g/ae;->b:Lcom/bbm/g/ae;
+
+    goto :goto_0
+
+    .line 40
+    :cond_1
+    sget-object v0, Lcom/bbm/g/ae;->c:Lcom/bbm/g/ae;
+
+    goto :goto_0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/g/ae;
+    .locals 1
+
+    .prologue
+    .line 22
+    const-class v0, Lcom/bbm/g/ae;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/g/ae;
 
     return-object v0
 .end method
 
-.method public static b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/az;
+.method public static values()[Lcom/bbm/g/ae;
     .locals 1
 
     .prologue
-    .line 1076
-    new-instance v0, Lcom/bbm/g/az;
+    .line 22
+    sget-object v0, Lcom/bbm/g/ae;->e:[Lcom/bbm/g/ae;
 
-    invoke-direct {v0, p0, p1}, Lcom/bbm/g/az;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0}, [Lcom/bbm/g/ae;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/g/ae;
 
     return-object v0
 .end method
 
-.method public static b(Ljava/lang/String;)Lcom/bbm/g/bb;
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 1144
-    new-instance v0, Lcom/bbm/g/bb;
-
-    invoke-direct {v0, p0}, Lcom/bbm/g/bb;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static b(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/g/ca;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lorg/json/JSONObject;",
-            ">;",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/bbm/g/ca;"
-        }
-    .end annotation
-
-    .prologue
-    .line 2567
-    new-instance v0, Lcom/bbm/g/ca;
-
-    invoke-direct {v0, p0, p1}, Lcom/bbm/g/ca;-><init>(Ljava/util/List;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljava/lang/String;)Lcom/bbm/g/bc;
-    .locals 1
-
-    .prologue
-    .line 1170
-    new-instance v0, Lcom/bbm/g/bc;
-
-    invoke-direct {v0, p0}, Lcom/bbm/g/bc;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static c(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bf;
-    .locals 1
-
-    .prologue
-    .line 1355
-    new-instance v0, Lcom/bbm/g/bf;
-
-    invoke-direct {v0, p0, p1}, Lcom/bbm/g/bf;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static d(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bg;
-    .locals 1
-
-    .prologue
-    .line 1396
-    new-instance v0, Lcom/bbm/g/bg;
-
-    invoke-direct {v0, p0, p1}, Lcom/bbm/g/bg;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static d(Ljava/lang/String;)Lcom/bbm/g/bv;
-    .locals 1
-
-    .prologue
-    .line 2203
-    new-instance v0, Lcom/bbm/g/bv;
-
-    invoke-direct {v0, p0}, Lcom/bbm/g/bv;-><init>(Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static e(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bj;
-    .locals 1
-
-    .prologue
-    .line 1651
-    new-instance v0, Lcom/bbm/g/bj;
-
-    invoke-direct {v0, p0, p1}, Lcom/bbm/g/bj;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    return-object v0
-.end method
-
-.method public static f(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bl;
-    .locals 1
-
-    .prologue
-    .line 1712
-    new-instance v0, Lcom/bbm/g/bl;
-
-    invoke-direct {v0, p0, p1}, Lcom/bbm/g/bl;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    .line 43
+    iget-object v0, p0, Lcom/bbm/g/ae;->d:Ljava/lang/String;
 
     return-object v0
 .end method

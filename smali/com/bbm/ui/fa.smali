@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/fa;
 .super Ljava/lang/Object;
-.source "SearchEditText.java"
+.source "QuickShareGlympseView.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/SearchEditText;
+.field final synthetic a:Lcom/bbm/ui/QuickShareGlympseView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/SearchEditText;)V
+.method constructor <init>(Lcom/bbm/ui/QuickShareGlympseView;)V
     .locals 0
 
     .prologue
-    .line 114
-    iput-object p1, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/SearchEditText;
+    .line 158
+    iput-object p1, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/QuickShareGlympseView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,67 +25,55 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 3
 
     .prologue
-    .line 118
-    const-string v0, "Cancel clicked"
+    const/4 v2, 0x1
 
-    const-class v1, Lcom/bbm/ui/SearchEditText;
+    const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 162
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
-    .line 120
-    iget-object v0, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/SearchEditText;
+    move-result v0
 
-    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->d(Lcom/bbm/ui/SearchEditText;)Landroid/widget/EditText;
+    if-nez v0, :cond_1
 
-    move-result-object v0
+    .line 163
+    iget-object v0, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/QuickShareGlympseView;
 
-    const-string v1, ""
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 121
-    iget-object v0, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/SearchEditText;
-
-    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->e(Lcom/bbm/ui/SearchEditText;)Landroid/content/Context;
+    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->f(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/content/Context;
 
     move-result-object v0
 
-    const-string v1, "input_method"
+    check-cast v0, Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    iput-boolean v1, v0, Lcom/bbm/ui/activities/ey;->y:Z
 
-    move-result-object v0
+    .line 167
+    :cond_0
+    :goto_0
+    return v1
 
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+    .line 164
+    :cond_1
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
-    .line 122
-    iget-object v1, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/SearchEditText;
+    move-result v0
 
-    invoke-static {v1}, Lcom/bbm/ui/SearchEditText;->d(Lcom/bbm/ui/SearchEditText;)Landroid/widget/EditText;
+    if-ne v0, v2, :cond_0
 
-    move-result-object v1
+    .line 165
+    iget-object v0, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/QuickShareGlympseView;
 
-    invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-
-    .line 123
-    iget-object v0, p0, Lcom/bbm/ui/fa;->a:Lcom/bbm/ui/SearchEditText;
-
-    invoke-static {v0}, Lcom/bbm/ui/SearchEditText;->d(Lcom/bbm/ui/SearchEditText;)Landroid/widget/EditText;
+    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->f(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
+    check-cast v0, Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 124
-    return-void
+    iput-boolean v2, v0, Lcom/bbm/ui/activities/ey;->y:Z
+
+    goto :goto_0
 .end method

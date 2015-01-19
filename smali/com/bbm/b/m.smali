@@ -1,80 +1,169 @@
 .class final Lcom/bbm/b/m;
 .super Ljava/lang/Object;
-.source "AdsModel.java"
+.source "AdUtils.java"
 
-
-# instance fields
-.field final a:Landroid/content/ContentResolver;
-
-.field final b:Landroid/telephony/TelephonyManager;
-
-.field final c:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/String;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end field
-
-.field final synthetic d:Lcom/bbm/b/k;
-
-.field private final e:Landroid/telephony/PhoneStateListener;
+# interfaces
+.implements Lcom/bbm/f/ac;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/b/k;Landroid/content/ContentResolver;Landroid/telephony/TelephonyManager;)V
+.method constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 195
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 0
+
+    .prologue
+    .line 200
+    return-void
+.end method
+
+.method public final a(Lcom/bbm/f/ab;)V
     .locals 4
 
     .prologue
-    const/4 v3, 0x0
+    .line 205
+    const-string v0, "listAdd"
 
-    .line 164
-    iput-object p1, p0, Lcom/bbm/b/m;->d:Lcom/bbm/b/k;
+    iget-object v1, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 165
-    iput-object p2, p0, Lcom/bbm/b/m;->a:Landroid/content/ContentResolver;
+    move-result v0
 
-    .line 166
-    new-instance v0, Ljava/util/HashMap;
+    if-eqz v0, :cond_1
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+    .line 206
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
-    iput-object v0, p0, Lcom/bbm/b/m;->c:Ljava/util/Map;
+    .line 209
+    const-string v1, "elements"
 
-    .line 167
-    iput-object p3, p0, Lcom/bbm/b/m;->b:Landroid/telephony/TelephonyManager;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
-    .line 168
-    new-instance v0, Lcom/bbm/b/n;
+    move-result v1
 
-    invoke-direct {v0, p0, p1}, Lcom/bbm/b/n;-><init>(Lcom/bbm/b/m;Lcom/bbm/b/k;)V
+    if-eqz v1, :cond_1
 
-    iput-object v0, p0, Lcom/bbm/b/m;->e:Landroid/telephony/PhoneStateListener;
+    .line 211
+    :try_start_0
+    const-string v1, "elements"
 
-    .line 174
-    iget-object v0, p0, Lcom/bbm/b/m;->b:Landroid/telephony/TelephonyManager;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
-    iget-object v1, p0, Lcom/bbm/b/m;->e:Landroid/telephony/PhoneStateListener;
+    move-result-object v0
 
-    const/16 v2, 0x10
+    .line 214
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
+    invoke-virtual {v0, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
-    .line 175
-    new-instance v0, Lcom/bbm/b/o;
+    move-result-object v0
 
-    invoke-direct {v0, p0, v3}, Lcom/bbm/b/o;-><init>(Lcom/bbm/b/m;B)V
+    .line 215
+    const-string v1, "offerUri"
 
-    new-array v1, v3, [Ljava/lang/Void;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
-    invoke-virtual {v0, v1}, Lcom/bbm/b/o;->b([Ljava/lang/Object;)Lcom/bbm/util/a;
+    move-result v1
 
-    .line 176
+    if-eqz v1, :cond_1
+
+    .line 217
+    const-string v1, "offerUri"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 218
+    invoke-static {}, Lcom/bbm/Alaska;->b()Lcom/bbm/f/a;
+
+    move-result-object v2
+
+    invoke-static {}, Lcom/bbm/b/j;->d()Lcom/bbm/f/ac;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    .line 220
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    .line 222
+    new-instance v2, Landroid/content/Intent;
+
+    const-string v3, "android.intent.action.VIEW"
+
+    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v1
+
+    invoke-direct {v2, v3, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    .line 223
+    const/high16 v1, 0x10000000
+
+    invoke-virtual {v2, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 224
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v2}, Lcom/bbm/Alaska;->startActivity(Landroid/content/Intent;)V
+
+    .line 226
+    :cond_0
+    new-instance v1, Ljava/util/LinkedList;
+
+    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
+
+    .line 227
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 228
+    invoke-static {}, Lcom/bbm/b/j;->e()Lcom/bbm/b/w;
+
+    move-result-object v0
+
+    const-string v2, "offer"
+
+    invoke-static {v1, v2}, Lcom/bbm/b/ad;->b(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/b/ap;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/b/w;->a(Lcom/bbm/b/au;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 235
+    :cond_1
+    :goto_0
     return-void
+
+    .line 230
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
 .end method

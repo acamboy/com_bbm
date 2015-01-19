@@ -1,79 +1,48 @@
 .class final Lcom/bbm/ui/activities/yo;
-.super Lcom/bbm/ui/by;
-.source "PreviewChannelActivity.java"
+.super Ljava/lang/Object;
+.source "NewChannelActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/b/o;
+
+.field final synthetic b:Lcom/bbm/ui/activities/NewChannelActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;Lcom/bbm/ui/b/o;)V
     .locals 0
 
     .prologue
-    .line 103
-    iput-object p1, p0, Lcom/bbm/ui/activities/yo;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    .line 607
+    iput-object p1, p0, Lcom/bbm/ui/activities/yo;->b:Lcom/bbm/ui/activities/NewChannelActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    iput-object p2, p0, Lcom/bbm/ui/activities/yo;->a:Lcom/bbm/ui/b/o;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
     .prologue
-    .line 114
-    iget-object v0, p0, Lcom/bbm/ui/activities/yo;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
+    .line 610
+    iget-object v0, p0, Lcom/bbm/ui/activities/yo;->a:Lcom/bbm/ui/b/o;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->finish()V
+    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
 
-    .line 115
-    return-void
-.end method
+    .line 612
+    iget-object v0, p0, Lcom/bbm/ui/activities/yo;->b:Lcom/bbm/ui/activities/NewChannelActivity;
 
-.method public final a(I)V
-    .locals 1
+    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->c(Lcom/bbm/ui/activities/NewChannelActivity;)V
 
-    .prologue
-    .line 119
-    iget-object v0, p0, Lcom/bbm/ui/activities/yo;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
-
-    invoke-static {v0, p1}, Lcom/bbm/ui/activities/PreviewChannelActivity;->b(Lcom/bbm/ui/activities/PreviewChannelActivity;I)V
-
-    .line 120
-    return-void
-.end method
-
-.method public final b()V
-    .locals 2
-
-    .prologue
-    .line 106
-    iget-object v0, p0, Lcom/bbm/ui/activities/yo;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->k()Lcom/bbm/ui/c/fq;
-
-    move-result-object v0
-
-    .line 107
-    iget-object v1, p0, Lcom/bbm/ui/activities/yo;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->a(Lcom/bbm/ui/activities/PreviewChannelActivity;Lcom/bbm/ui/c/fq;)V
-
-    .line 108
-    iget-object v0, p0, Lcom/bbm/ui/activities/yo;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    .line 109
-    iget-object v0, p0, Lcom/bbm/ui/activities/yo;->a:Lcom/bbm/ui/activities/PreviewChannelActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->w()V
-
-    .line 110
+    .line 613
     return-void
 .end method

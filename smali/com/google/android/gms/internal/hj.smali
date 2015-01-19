@@ -84,37 +84,37 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/String;ISDDFJII)V
-    .locals 14
+    .locals 16
 
-    const/4 v1, 0x1
+    const/4 v2, 0x1
 
-    move-object v0, p0
+    move-object/from16 v1, p0
 
-    move-object v2, p1
+    move-object/from16 v3, p1
 
-    move/from16 v3, p2
+    move/from16 v4, p2
 
-    move/from16 v4, p3
+    move/from16 v5, p3
 
-    move-wide/from16 v5, p4
+    move-wide/from16 v6, p4
 
-    move-wide/from16 v7, p6
+    move-wide/from16 v8, p6
 
-    move/from16 v9, p8
+    move/from16 v10, p8
 
-    move-wide/from16 v10, p9
+    move-wide/from16 v11, p9
 
-    move/from16 v12, p11
+    move/from16 v13, p11
 
-    move/from16 v13, p12
+    move/from16 v14, p12
 
-    invoke-direct/range {v0 .. v13}, Lcom/google/android/gms/internal/hj;-><init>(ILjava/lang/String;ISDDFJII)V
+    invoke-direct/range {v1 .. v14}, Lcom/google/android/gms/internal/hj;-><init>(ILjava/lang/String;ISDDFJII)V
 
     return-void
 .end method
 
 .method private static a(DD)V
-    .locals 3
+    .locals 4
 
     const-wide v0, 0x4056800000000000L
 
@@ -511,7 +511,7 @@
 .end method
 
 .method public hashCode()I
-    .locals 5
+    .locals 6
 
     const/16 v4, 0x20
 
@@ -529,19 +529,19 @@
 
     add-int/lit8 v0, v0, 0x1f
 
-    iget-wide v1, p0, Lcom/google/android/gms/internal/hj;->KY:D
+    iget-wide v2, p0, Lcom/google/android/gms/internal/hj;->KY:D
 
-    invoke-static {v1, v2}, Ljava/lang/Double;->doubleToLongBits(D)J
+    invoke-static {v2, v3}, Ljava/lang/Double;->doubleToLongBits(D)J
 
-    move-result-wide v1
+    move-result-wide v2
 
     mul-int/lit8 v0, v0, 0x1f
 
-    ushr-long v3, v1, v4
+    ushr-long v4, v2, v4
 
-    xor-long/2addr v1, v3
+    xor-long/2addr v2, v4
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
     add-int/2addr v0, v1
 

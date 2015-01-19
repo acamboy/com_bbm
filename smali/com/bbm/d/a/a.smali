@@ -7,7 +7,7 @@
 .method public abstract a()Ljava/lang/String;
 .end method
 
-.method public abstract a(Lcom/bbm/util/bc;)V
+.method public abstract a(Lcom/bbm/util/bi;)V
 .end method
 
 .method public abstract a(Lorg/json/JSONObject;)V
@@ -16,5 +16,5 @@
 .method public abstract b()Lcom/bbm/d/a/a;
 .end method
 
-.method public abstract c()Lcom/bbm/util/bc;
+.method public abstract c()Lcom/bbm/util/bi;
 .end method

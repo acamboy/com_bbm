@@ -3,421 +3,448 @@
 .source "MapCollections.java"
 
 # interfaces
-.implements Ljava/util/Collection;
+.implements Ljava/util/Iterator;
+.implements Ljava/util/Map$Entry;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Ljava/util/Collection",
-        "<TV;>;"
+        "Ljava/util/Iterator",
+        "<",
+        "Ljava/util/Map$Entry",
+        "<TK;TV;>;>;",
+        "Ljava/util/Map$Entry",
+        "<TK;TV;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/b/g;
+.field a:I
+
+.field b:I
+
+.field c:Z
+
+.field final synthetic d:Landroid/support/v4/b/h;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/b/g;)V
-    .locals 0
+.method constructor <init>(Landroid/support/v4/b/h;)V
+    .locals 1
 
     .prologue
-    .line 353
-    iput-object p1, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
+    .line 76
+    iput-object p1, p0, Landroid/support/v4/b/l;->d:Landroid/support/v4/b/h;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 74
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroid/support/v4/b/l;->c:Z
+
+    .line 77
+    invoke-virtual {p1}, Landroid/support/v4/b/h;->a()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Landroid/support/v4/b/l;->a:I
+
+    .line 78
+    const/4 v0, -0x1
+
+    iput v0, p0, Landroid/support/v4/b/l;->b:I
+
+    .line 79
     return-void
 .end method
 
 
 # virtual methods
-.method public final add(Ljava/lang/Object;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)Z"
-        }
-    .end annotation
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 5
 
     .prologue
-    .line 357
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
+    const/4 v1, 0x1
 
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final addAll(Ljava/util/Collection;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Collection",
-            "<+TV;>;)Z"
-        }
-    .end annotation
-
-    .prologue
-    .line 362
-    new-instance v0, Ljava/lang/UnsupportedOperationException;
-
-    invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
-
-    throw v0
-.end method
-
-.method public final clear()V
-    .locals 1
-
-    .prologue
-    .line 367
-    iget-object v0, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    invoke-virtual {v0}, Landroid/support/v4/b/g;->c()V
-
-    .line 368
-    return-void
-.end method
-
-.method public final contains(Ljava/lang/Object;)Z
-    .locals 1
-
-    .prologue
-    .line 372
-    iget-object v0, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/b/g;->b(Ljava/lang/Object;)I
-
-    move-result v0
-
-    if-ltz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
-    goto :goto_0
-.end method
+    .line 133
+    iget-boolean v2, p0, Landroid/support/v4/b/l;->c:Z
 
-.method public final containsAll(Ljava/util/Collection;)Z
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Collection",
-            "<*>;)Z"
-        }
-    .end annotation
+    if-nez v2, :cond_0
 
-    .prologue
-    .line 377
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    .line 134
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    move-result-object v0
+    const-string v1, "This container does not support retaining Map.Entry objects"
 
-    .line 378
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 137
     :cond_0
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    instance-of v2, p1, Ljava/util/Map$Entry;
 
-    move-result v1
+    if-nez v2, :cond_2
 
-    if-eqz v1, :cond_1
-
-    .line 379
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Landroid/support/v4/b/l;->contains(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 380
-    const/4 v0, 0x0
-
-    .line 383
-    :goto_0
-    return v0
-
+    .line 141
     :cond_1
-    const/4 v0, 0x1
-
-    goto :goto_0
-.end method
-
-.method public final isEmpty()Z
-    .locals 1
-
-    .prologue
-    .line 388
-    iget-object v0, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    invoke-virtual {v0}, Landroid/support/v4/b/g;->a()I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
     :goto_0
     return v0
 
-    :cond_0
-    const/4 v0, 0x0
+    .line 140
+    :cond_2
+    check-cast p1, Ljava/util/Map$Entry;
+
+    .line 141
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    move-result-object v2
+
+    iget-object v3, p0, Landroid/support/v4/b/l;->d:Landroid/support/v4/b/h;
+
+    iget v4, p0, Landroid/support/v4/b/l;->b:I
+
+    invoke-virtual {v3, v4, v0}, Landroid/support/v4/b/h;->a(II)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/support/v4/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    invoke-interface {p1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
+
+    move-result-object v2
+
+    iget-object v3, p0, Landroid/support/v4/b/l;->d:Landroid/support/v4/b/h;
+
+    iget v4, p0, Landroid/support/v4/b/l;->b:I
+
+    invoke-virtual {v3, v4, v1}, Landroid/support/v4/b/h;->a(II)Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Landroid/support/v4/b/c;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    move v0, v1
 
     goto :goto_0
 .end method
 
-.method public final iterator()Ljava/util/Iterator;
+.method public final getKey()Ljava/lang/Object;
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()",
-            "Ljava/util/Iterator",
-            "<TV;>;"
+            "()TK;"
         }
     .end annotation
 
     .prologue
-    .line 393
-    new-instance v0, Landroid/support/v4/b/h;
+    .line 106
+    iget-boolean v0, p0, Landroid/support/v4/b/l;->c:Z
 
-    iget-object v1, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
+    if-nez v0, :cond_0
 
-    const/4 v2, 0x1
+    .line 107
+    new-instance v0, Ljava/lang/IllegalStateException;
 
-    invoke-direct {v0, v1, v2}, Landroid/support/v4/b/h;-><init>(Landroid/support/v4/b/g;I)V
+    const-string v1, "This container does not support retaining Map.Entry objects"
 
-    return-object v0
-.end method
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-.method public final remove(Ljava/lang/Object;)Z
-    .locals 2
+    throw v0
 
-    .prologue
-    .line 398
-    iget-object v0, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    invoke-virtual {v0, p1}, Landroid/support/v4/b/g;->b(Ljava/lang/Object;)I
-
-    move-result v0
-
-    .line 399
-    if-ltz v0, :cond_0
-
-    .line 400
-    iget-object v1, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    invoke-virtual {v1, v0}, Landroid/support/v4/b/g;->a(I)V
-
-    .line 401
-    const/4 v0, 0x1
-
-    .line 403
-    :goto_0
-    return v0
-
+    .line 110
     :cond_0
-    const/4 v0, 0x0
+    iget-object v0, p0, Landroid/support/v4/b/l;->d:Landroid/support/v4/b/h;
 
-    goto :goto_0
-.end method
+    iget v1, p0, Landroid/support/v4/b/l;->b:I
 
-.method public final removeAll(Ljava/util/Collection;)Z
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Collection",
-            "<*>;)Z"
-        }
-    .end annotation
+    const/4 v2, 0x0
 
-    .prologue
-    const/4 v2, 0x1
-
-    const/4 v0, 0x0
-
-    .line 408
-    iget-object v1, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    invoke-virtual {v1}, Landroid/support/v4/b/g;->a()I
-
-    move-result v3
-
-    move v1, v0
-
-    .line 410
-    :goto_0
-    if-ge v0, v3, :cond_1
-
-    .line 411
-    iget-object v4, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    invoke-virtual {v4, v0, v2}, Landroid/support/v4/b/g;->a(II)Ljava/lang/Object;
-
-    move-result-object v4
-
-    .line 412
-    invoke-interface {p1, v4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_0
-
-    .line 413
-    iget-object v1, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    invoke-virtual {v1, v0}, Landroid/support/v4/b/g;->a(I)V
-
-    .line 414
-    add-int/lit8 v0, v0, -0x1
-
-    .line 415
-    add-int/lit8 v1, v3, -0x1
-
-    move v3, v1
-
-    move v1, v2
-
-    .line 410
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 419
-    :cond_1
-    return v1
-.end method
-
-.method public final retainAll(Ljava/util/Collection;)Z
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/Collection",
-            "<*>;)Z"
-        }
-    .end annotation
-
-    .prologue
-    const/4 v2, 0x1
-
-    const/4 v0, 0x0
-
-    .line 424
-    iget-object v1, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    invoke-virtual {v1}, Landroid/support/v4/b/g;->a()I
-
-    move-result v3
-
-    move v1, v0
-
-    .line 426
-    :goto_0
-    if-ge v0, v3, :cond_1
-
-    .line 427
-    iget-object v4, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    invoke-virtual {v4, v0, v2}, Landroid/support/v4/b/g;->a(II)Ljava/lang/Object;
-
-    move-result-object v4
-
-    .line 428
-    invoke-interface {p1, v4}, Ljava/util/Collection;->contains(Ljava/lang/Object;)Z
-
-    move-result v4
-
-    if-nez v4, :cond_0
-
-    .line 429
-    iget-object v1, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    invoke-virtual {v1, v0}, Landroid/support/v4/b/g;->a(I)V
-
-    .line 430
-    add-int/lit8 v0, v0, -0x1
-
-    .line 431
-    add-int/lit8 v1, v3, -0x1
-
-    move v3, v1
-
-    move v1, v2
-
-    .line 426
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 435
-    :cond_1
-    return v1
-.end method
-
-.method public final size()I
-    .locals 1
-
-    .prologue
-    .line 440
-    iget-object v0, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    invoke-virtual {v0}, Landroid/support/v4/b/g;->a()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final toArray()[Ljava/lang/Object;
-    .locals 2
-
-    .prologue
-    .line 445
-    iget-object v0, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/b/g;->b(I)[Ljava/lang/Object;
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/b/h;->a(II)Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-    .locals 2
+.method public final getValue()Ljava/lang/Object;
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">([TT;)[TT;"
+            "()TV;"
         }
     .end annotation
 
     .prologue
-    .line 450
-    iget-object v0, p0, Landroid/support/v4/b/l;->a:Landroid/support/v4/b/g;
+    .line 115
+    iget-boolean v0, p0, Landroid/support/v4/b/l;->c:Z
 
-    const/4 v1, 0x1
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0, p1, v1}, Landroid/support/v4/b/g;->a([Ljava/lang/Object;I)[Ljava/lang/Object;
+    .line 116
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "This container does not support retaining Map.Entry objects"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 119
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/b/l;->d:Landroid/support/v4/b/h;
+
+    iget v1, p0, Landroid/support/v4/b/l;->b:I
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v1, v2}, Landroid/support/v4/b/h;->a(II)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final hasNext()Z
+    .locals 2
+
+    .prologue
+    .line 83
+    iget v0, p0, Landroid/support/v4/b/l;->b:I
+
+    iget v1, p0, Landroid/support/v4/b/l;->a:I
+
+    if-ge v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 147
+    iget-boolean v1, p0, Landroid/support/v4/b/l;->c:Z
+
+    if-nez v1, :cond_0
+
+    .line 148
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "This container does not support retaining Map.Entry objects"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 151
+    :cond_0
+    iget-object v1, p0, Landroid/support/v4/b/l;->d:Landroid/support/v4/b/h;
+
+    iget v2, p0, Landroid/support/v4/b/l;->b:I
+
+    invoke-virtual {v1, v2, v0}, Landroid/support/v4/b/h;->a(II)Ljava/lang/Object;
+
+    move-result-object v1
+
+    .line 152
+    iget-object v2, p0, Landroid/support/v4/b/l;->d:Landroid/support/v4/b/h;
+
+    iget v3, p0, Landroid/support/v4/b/l;->b:I
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v2, v3, v4}, Landroid/support/v4/b/h;->a(II)Ljava/lang/Object;
+
+    move-result-object v2
+
+    .line 153
+    if-nez v1, :cond_1
+
+    move v1, v0
+
+    :goto_0
+    if-nez v2, :cond_2
+
+    :goto_1
+    xor-int/2addr v0, v1
+
+    return v0
+
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    goto :goto_0
+
+    :cond_2
+    invoke-virtual {v2}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    goto :goto_1
+.end method
+
+.method public final bridge synthetic next()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 71
+    iget v0, p0, Landroid/support/v4/b/l;->b:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    iput v0, p0, Landroid/support/v4/b/l;->b:I
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Landroid/support/v4/b/l;->c:Z
+
+    return-object p0
+.end method
+
+.method public final remove()V
+    .locals 2
+
+    .prologue
+    .line 95
+    iget-boolean v0, p0, Landroid/support/v4/b/l;->c:Z
+
+    if-nez v0, :cond_0
+
+    .line 96
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    invoke-direct {v0}, Ljava/lang/IllegalStateException;-><init>()V
+
+    throw v0
+
+    .line 98
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/b/l;->d:Landroid/support/v4/b/h;
+
+    iget v1, p0, Landroid/support/v4/b/l;->b:I
+
+    invoke-virtual {v0, v1}, Landroid/support/v4/b/h;->a(I)V
+
+    .line 99
+    iget v0, p0, Landroid/support/v4/b/l;->b:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Landroid/support/v4/b/l;->b:I
+
+    .line 100
+    iget v0, p0, Landroid/support/v4/b/l;->a:I
+
+    add-int/lit8 v0, v0, -0x1
+
+    iput v0, p0, Landroid/support/v4/b/l;->a:I
+
+    .line 101
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Landroid/support/v4/b/l;->c:Z
+
+    .line 102
+    return-void
+.end method
+
+.method public final setValue(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TV;)TV;"
+        }
+    .end annotation
+
+    .prologue
+    .line 124
+    iget-boolean v0, p0, Landroid/support/v4/b/l;->c:Z
+
+    if-nez v0, :cond_0
+
+    .line 125
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string v1, "This container does not support retaining Map.Entry objects"
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 128
+    :cond_0
+    iget-object v0, p0, Landroid/support/v4/b/l;->d:Landroid/support/v4/b/h;
+
+    iget v1, p0, Landroid/support/v4/b/l;->b:I
+
+    invoke-virtual {v0, v1, p1}, Landroid/support/v4/b/h;->a(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final toString()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 159
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Landroid/support/v4/b/l;->getKey()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Landroid/support/v4/b/l;->getValue()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 

@@ -154,20 +154,18 @@
     .locals 8
 
     .prologue
+    const/4 v7, 0x6
+
     const/4 v2, 0x0
 
     .line 148
-    array-length v7, p0
-
-    .line 150
-    array-length v3, p0
-
     move v0, v2
 
     move v6, v2
 
+    .line 150
     :goto_0
-    if-ge v0, v3, :cond_0
+    if-ge v0, v7, :cond_0
 
     aget v1, p0, v0
 
@@ -579,7 +577,7 @@
 
 # virtual methods
 .method public final a(ILcom/google/zxing/b/a;Ljava/util/Map;)Lcom/google/zxing/m;
-    .locals 10
+    .locals 9
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(I",
@@ -610,8 +608,6 @@
 
     const/4 v2, 0x0
 
-    array-length v6, v5
-
     move v3, v0
 
     :goto_0
@@ -619,17 +615,17 @@
 
     invoke-virtual {p2, v3}, Lcom/google/zxing/b/a;->a(I)Z
 
-    move-result v7
+    move-result v6
 
-    xor-int/2addr v7, v2
+    xor-int/2addr v6, v2
 
-    if-eqz v7, :cond_0
+    if-eqz v6, :cond_0
 
-    aget v7, v5, v1
+    aget v6, v5, v1
 
-    add-int/lit8 v7, v7, 0x1
+    add-int/lit8 v6, v6, 0x1
 
-    aput v7, v5, v1
+    aput v6, v5, v1
 
     :goto_1
     add-int/lit8 v3, v3, 0x1
@@ -637,17 +633,17 @@
     goto :goto_0
 
     :cond_0
-    add-int/lit8 v7, v6, -0x1
+    const/4 v6, 0x5
 
-    if-ne v1, v7, :cond_2
+    if-ne v1, v6, :cond_2
 
     invoke-static {v5}, Lcom/google/zxing/e/d;->a([I)I
 
-    move-result v7
+    move-result v6
 
-    sget v8, Lcom/google/zxing/e/d;->c:I
+    sget v7, Lcom/google/zxing/e/d;->c:I
 
-    if-ne v7, v8, :cond_1
+    if-ne v6, v7, :cond_1
 
     const/4 v1, 0x2
 
@@ -706,44 +702,44 @@
 
     .line 60
     :cond_1
-    const/4 v7, 0x0
+    const/4 v6, 0x0
+
+    aget v6, v5, v6
+
+    const/4 v7, 0x1
 
     aget v7, v5, v7
 
-    const/4 v8, 0x1
+    add-int/2addr v6, v7
 
-    aget v8, v5, v8
+    add-int/2addr v0, v6
 
-    add-int/2addr v7, v8
+    const/4 v6, 0x2
 
-    add-int/2addr v0, v7
+    const/4 v7, 0x0
 
-    const/4 v7, 0x2
+    const/4 v8, 0x4
 
-    const/4 v8, 0x0
+    invoke-static {v5, v6, v5, v7, v8}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    add-int/lit8 v9, v6, -0x2
+    const/4 v6, 0x4
 
-    invoke-static {v5, v7, v5, v8, v9}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    const/4 v7, 0x0
 
-    add-int/lit8 v7, v6, -0x2
+    aput v7, v5, v6
 
-    const/4 v8, 0x0
+    const/4 v6, 0x5
 
-    aput v8, v5, v7
+    const/4 v7, 0x0
 
-    add-int/lit8 v7, v6, -0x1
-
-    const/4 v8, 0x0
-
-    aput v8, v5, v7
+    aput v7, v5, v6
 
     add-int/lit8 v1, v1, -0x1
 
     :goto_3
-    const/4 v7, 0x1
+    const/4 v6, 0x1
 
-    aput v7, v5, v1
+    aput v6, v5, v1
 
     if-nez v2, :cond_3
 
@@ -778,19 +774,19 @@
     invoke-virtual {v5, v7}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 78
-    array-length v8, v6
-
     const/4 v1, 0x0
 
     move v2, v0
 
     :goto_4
+    const/4 v8, 0x6
+
     if-ge v1, v8, :cond_6
 
-    aget v9, v6, v1
+    aget v8, v6, v1
 
     .line 79
-    add-int/2addr v2, v9
+    add-int/2addr v2, v8
 
     .line 78
     add-int/lit8 v1, v1, 0x1

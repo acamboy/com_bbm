@@ -211,7 +211,7 @@
 .end method
 
 .method public invokeAll(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/util/List;
-    .locals 11
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -231,10 +231,6 @@
     .end annotation
 
     .prologue
-    const-wide/16 v9, 0x0
-
-    const/4 v8, 0x1
-
     .line 116
     if-eqz p1, :cond_0
 
@@ -318,7 +314,9 @@
     check-cast v0, Ljava/util/concurrent/Future;
 
     .line 164
-    invoke-interface {v0, v8}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    const/4 v3, 0x1
+
+    invoke-interface {v0, v3}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     goto :goto_1
 
@@ -366,7 +364,9 @@
     sub-long/2addr v4, v2
 
     .line 137
-    cmp-long v2, v4, v9
+    const-wide/16 v2, 0x0
+
+    cmp-long v2, v4, v2
 
     if-gtz v2, :cond_4
 
@@ -389,7 +389,9 @@
     check-cast v0, Ljava/util/concurrent/Future;
 
     .line 164
-    invoke-interface {v0, v8}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    const/4 v2, 0x1
+
+    invoke-interface {v0, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     goto :goto_3
 
@@ -436,7 +438,9 @@
     if-nez v1, :cond_b
 
     .line 144
-    cmp-long v1, v4, v9
+    const-wide/16 v8, 0x0
+
+    cmp-long v1, v4, v8
 
     if-gtz v1, :cond_7
 
@@ -459,7 +463,9 @@
     check-cast v0, Ljava/util/concurrent/Future;
 
     .line 164
-    invoke-interface {v0, v8}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    const/4 v2, 0x1
+
+    invoke-interface {v0, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     goto :goto_6
 
@@ -526,7 +532,9 @@
     check-cast v0, Ljava/util/concurrent/Future;
 
     .line 164
-    invoke-interface {v0, v8}, Ljava/util/concurrent/Future;->cancel(Z)Z
+    const/4 v2, 0x1
+
+    invoke-interface {v0, v2}, Ljava/util/concurrent/Future;->cancel(Z)Z
 
     goto :goto_9
 
@@ -566,7 +574,7 @@
 .end method
 
 .method public invokeAny(Ljava/util/Collection;)Ljava/lang/Object;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -583,10 +591,10 @@
     .line 68
     const/4 v0, 0x0
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     :try_start_0
-    invoke-static {p0, p1, v0, v1, v2}, Lcom/google/b/f/a/o;->a(Lcom/google/b/f/a/n;Ljava/util/Collection;ZJ)Ljava/lang/Object;
+    invoke-static {p0, p1, v0, v2, v3}, Lcom/google/b/f/a/o;->a(Lcom/google/b/f/a/n;Ljava/util/Collection;ZJ)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/util/concurrent/TimeoutException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -606,7 +614,7 @@
 .end method
 
 .method public invokeAny(Ljava/util/Collection;JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",
@@ -627,9 +635,9 @@
 
     invoke-virtual {p4, p2, p3}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {p0, p1, v0, v1, v2}, Lcom/google/b/f/a/o;->a(Lcom/google/b/f/a/n;Ljava/util/Collection;ZJ)Ljava/lang/Object;
+    invoke-static {p0, p1, v0, v2, v3}, Lcom/google/b/f/a/o;->a(Lcom/google/b/f/a/n;Ljava/util/Collection;ZJ)Ljava/lang/Object;
 
     move-result-object v0
 

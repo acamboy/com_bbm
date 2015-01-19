@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 246
+    .line 236
     iput-object p1, p0, Lcom/slidingmenu/lib/e;->a:Lcom/slidingmenu/lib/SlidingMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +29,7 @@
     .locals 1
 
     .prologue
-    .line 257
+    .line 247
     if-nez p1, :cond_1
 
     iget-object v0, p0, Lcom/slidingmenu/lib/e;->a:Lcom/slidingmenu/lib/SlidingMenu;
@@ -40,17 +40,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 258
+    .line 248
     iget-object v0, p0, Lcom/slidingmenu/lib/e;->a:Lcom/slidingmenu/lib/SlidingMenu;
 
     invoke-static {v0}, Lcom/slidingmenu/lib/SlidingMenu;->a(Lcom/slidingmenu/lib/SlidingMenu;)Lcom/slidingmenu/lib/j;
 
-    .line 263
+    .line 252
     :cond_0
     :goto_0
     return-void
 
-    .line 260
+    .line 249
     :cond_1
     const/4 v0, 0x1
 
@@ -64,7 +64,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 261
+    .line 250
     iget-object v0, p0, Lcom/slidingmenu/lib/e;->a:Lcom/slidingmenu/lib/SlidingMenu;
 
     invoke-static {v0}, Lcom/slidingmenu/lib/SlidingMenu;->b(Lcom/slidingmenu/lib/SlidingMenu;)Lcom/slidingmenu/lib/h;

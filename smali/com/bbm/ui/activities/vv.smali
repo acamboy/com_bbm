@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/vv;
 .super Ljava/lang/Object;
-.source "NewChannelActivity.java"
+.source "MainActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/ah;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
     .locals 0
 
     .prologue
-    .line 405
-    iput-object p1, p0, Lcom/bbm/ui/activities/vv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 522
+    iput-object p1, p0, Lcom/bbm/ui/activities/vv;->a:Lcom/bbm/ui/activities/MainActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,48 +25,15 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final a(I)V
+    .locals 1
 
     .prologue
-    .line 408
-    new-instance v0, Landroid/content/Intent;
+    .line 525
+    iget-object v0, p0, Lcom/bbm/ui/activities/vv;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/vv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    invoke-virtual {v0, p1}, Lcom/bbm/ui/activities/MainActivity;->a(I)V
 
-    const-class v2, Lcom/bbm/ui/activities/NewChannelCategoryActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 410
-    const-string v1, "subcategory"
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/vv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelActivity;->g(Lcom/bbm/ui/activities/NewChannelActivity;)I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 412
-    const-string v1, "category"
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/vv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/NewChannelActivity;->f(Lcom/bbm/ui/activities/NewChannelActivity;)I
-
-    move-result v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 413
-    iget-object v1, p0, Lcom/bbm/ui/activities/vv;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/NewChannelActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    .line 414
+    .line 526
     return-void
 .end method

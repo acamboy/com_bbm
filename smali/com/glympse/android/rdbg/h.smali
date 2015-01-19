@@ -14,7 +14,7 @@
     return-void
 .end method
 
-.method private static G(Ljava/lang/String;)Ljava/lang/String;
+.method private static O(Ljava/lang/String;)Ljava/lang/String;
     .locals 12
 
     .prologue
@@ -286,7 +286,7 @@
     move-result-object v0
 
     .line 145
-    invoke-static {p1}, Lcom/glympse/android/rdbg/j;->j(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
+    invoke-static {p1}, Lcom/glympse/android/rdbg/j;->k(Lcom/glympse/android/lib/GGlympsePrivate;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v1
 
@@ -482,7 +482,7 @@
 
     .line 182
     :cond_3
-    invoke-static {v0}, Lcom/glympse/android/rdbg/h;->G(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/glympse/android/rdbg/h;->O(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

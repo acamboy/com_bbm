@@ -1,66 +1,75 @@
 .class final Lcom/bbm/ui/activities/nb;
-.super Ljava/lang/Object;
-.source "GroupListsActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/ui/cn;
+.source "GroupConversationActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupListsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 209
-    iput-object p1, p0, Lcom/bbm/ui/activities/nb;->a:Lcom/bbm/ui/activities/GroupListsActivity;
+    .line 202
+    iput-object p1, p0, Lcom/bbm/ui/activities/nb;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final a()V
+    .locals 1
 
     .prologue
+    .line 211
+    iget-object v0, p0, Lcom/bbm/ui/activities/nb;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->d(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+
     .line 212
-    const-string v0, "actionbar onClick"
+    return-void
+.end method
 
-    const-class v1, Lcom/bbm/ui/activities/GroupListsActivity;
+.method public final a(I)V
+    .locals 1
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .prologue
+    .line 216
+    packed-switch p1, :pswitch_data_0
 
-    .line 213
-    new-instance v0, Landroid/content/Intent;
+    .line 221
+    :goto_0
+    return-void
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/nb;->a:Lcom/bbm/ui/activities/GroupListsActivity;
+    .line 218
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/nb;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    const-class v2, Lcom/bbm/ui/activities/GroupProfileActivity;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->b()V
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 214
-    const-string v1, "groupUri"
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/nb;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/GroupListsActivity;->i()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 215
-    iget-object v1, p0, Lcom/bbm/ui/activities/nb;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/GroupListsActivity;->startActivity(Landroid/content/Intent;)V
+    goto :goto_0
 
     .line 216
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()V
+    .locals 1
+
+    .prologue
+    .line 206
+    iget-object v0, p0, Lcom/bbm/ui/activities/nb;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->c(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+
+    .line 207
     return-void
 .end method

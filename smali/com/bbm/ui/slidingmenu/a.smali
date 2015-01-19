@@ -127,7 +127,7 @@
     .line 69
     iget-object v0, p0, Lcom/bbm/ui/slidingmenu/a;->g:Ljava/lang/String;
 
-    invoke-static {v0, p1}, Lcom/bbm/util/bb;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    invoke-static {v0, p1}, Lcom/bbm/util/bh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
@@ -156,15 +156,15 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 89
+    .line 88
     :goto_0
     return-void
 
-    .line 87
+    .line 86
     :cond_0
     iput-boolean p1, p0, Lcom/bbm/ui/slidingmenu/a;->h:Z
 
-    .line 88
+    .line 87
     invoke-virtual {p0}, Lcom/bbm/ui/slidingmenu/a;->c()V
 
     goto :goto_0
@@ -187,20 +187,20 @@
     .locals 1
 
     .prologue
-    .line 98
+    .line 97
     iget-boolean v0, p0, Lcom/bbm/ui/slidingmenu/a;->b:Z
 
     if-ne v0, p1, :cond_0
 
-    .line 104
+    .line 102
     :goto_0
     return-void
 
-    .line 102
+    .line 100
     :cond_0
     iput-boolean p1, p0, Lcom/bbm/ui/slidingmenu/a;->b:Z
 
-    .line 103
+    .line 101
     invoke-virtual {p0}, Lcom/bbm/ui/slidingmenu/a;->c()V
 
     goto :goto_0
@@ -210,20 +210,20 @@
     .locals 1
 
     .prologue
-    .line 113
+    .line 111
     iget-boolean v0, p0, Lcom/bbm/ui/slidingmenu/a;->i:Z
 
     if-ne v0, p1, :cond_0
 
-    .line 119
+    .line 116
     :goto_0
     return-void
 
-    .line 117
+    .line 114
     :cond_0
     iput-boolean p1, p0, Lcom/bbm/ui/slidingmenu/a;->i:Z
 
-    .line 118
+    .line 115
     invoke-virtual {p0}, Lcom/bbm/ui/slidingmenu/a;->c()V
 
     goto :goto_0
@@ -246,20 +246,20 @@
     .locals 1
 
     .prologue
-    .line 128
+    .line 125
     iget-boolean v0, p0, Lcom/bbm/ui/slidingmenu/a;->j:Z
 
     if-ne v0, p1, :cond_0
 
-    .line 134
+    .line 130
     :goto_0
     return-void
 
-    .line 132
+    .line 128
     :cond_0
     iput-boolean p1, p0, Lcom/bbm/ui/slidingmenu/a;->j:Z
 
-    .line 133
+    .line 129
     invoke-virtual {p0}, Lcom/bbm/ui/slidingmenu/a;->c()V
 
     goto :goto_0
@@ -269,20 +269,20 @@
     .locals 1
 
     .prologue
-    .line 143
+    .line 139
     iget-boolean v0, p0, Lcom/bbm/ui/slidingmenu/a;->d:Z
 
     if-ne v0, p1, :cond_0
 
-    .line 149
+    .line 144
     :goto_0
     return-void
 
-    .line 147
+    .line 142
     :cond_0
     iput-boolean p1, p0, Lcom/bbm/ui/slidingmenu/a;->d:Z
 
-    .line 148
+    .line 143
     invoke-virtual {p0}, Lcom/bbm/ui/slidingmenu/a;->c()V
 
     goto :goto_0
@@ -292,10 +292,10 @@
     .locals 1
 
     .prologue
-    .line 93
+    .line 92
     invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
 
-    .line 94
+    .line 93
     iget-boolean v0, p0, Lcom/bbm/ui/slidingmenu/a;->h:Z
 
     return v0
@@ -305,10 +305,10 @@
     .locals 1
 
     .prologue
-    .line 123
+    .line 120
     invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
 
-    .line 124
+    .line 121
     iget-boolean v0, p0, Lcom/bbm/ui/slidingmenu/a;->i:Z
 
     return v0
@@ -318,10 +318,10 @@
     .locals 1
 
     .prologue
-    .line 138
+    .line 134
     invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
 
-    .line 139
+    .line 135
     iget-boolean v0, p0, Lcom/bbm/ui/slidingmenu/a;->j:Z
 
     return v0

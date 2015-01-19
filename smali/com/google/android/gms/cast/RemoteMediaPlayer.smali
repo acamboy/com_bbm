@@ -333,7 +333,7 @@
 .end method
 
 .method public load(Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/cast/MediaInfo;ZJ)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 7
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -367,7 +367,7 @@
 .end method
 
 .method public load(Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/cast/MediaInfo;ZJLorg/json/JSONObject;)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 8
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -383,23 +383,23 @@
         }
     .end annotation
 
-    new-instance v0, Lcom/google/android/gms/cast/RemoteMediaPlayer$2;
+    new-instance v1, Lcom/google/android/gms/cast/RemoteMediaPlayer$2;
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move-object v2, p1
+    move-object v3, p1
 
-    move-object v3, p2
+    move-object v4, p2
 
-    move v4, p3
+    move v5, p3
 
-    move-wide v5, p4
+    move-wide v6, p4
 
-    move-object v7, p6
+    move-object/from16 v8, p6
 
-    invoke-direct/range {v0 .. v7}, Lcom/google/android/gms/cast/RemoteMediaPlayer$2;-><init>(Lcom/google/android/gms/cast/RemoteMediaPlayer;Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/cast/MediaInfo;ZJLorg/json/JSONObject;)V
+    invoke-direct/range {v1 .. v8}, Lcom/google/android/gms/cast/RemoteMediaPlayer$2;-><init>(Lcom/google/android/gms/cast/RemoteMediaPlayer;Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/cast/MediaInfo;ZJLorg/json/JSONObject;)V
 
-    invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->b(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
+    invoke-interface {p1, v1}, Lcom/google/android/gms/common/api/GoogleApiClient;->b(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
 
     move-result-object v0
 
@@ -602,7 +602,7 @@
 .end method
 
 .method public seek(Lcom/google/android/gms/common/api/GoogleApiClient;JILorg/json/JSONObject;)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 7
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -617,21 +617,21 @@
         }
     .end annotation
 
-    new-instance v0, Lcom/google/android/gms/cast/RemoteMediaPlayer$6;
+    new-instance v1, Lcom/google/android/gms/cast/RemoteMediaPlayer$6;
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move-object v2, p1
+    move-object v3, p1
 
-    move-wide v3, p2
+    move-wide v4, p2
 
-    move v5, p4
+    move v6, p4
 
-    move-object v6, p5
+    move-object v7, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/cast/RemoteMediaPlayer$6;-><init>(Lcom/google/android/gms/cast/RemoteMediaPlayer;Lcom/google/android/gms/common/api/GoogleApiClient;JILorg/json/JSONObject;)V
+    invoke-direct/range {v1 .. v7}, Lcom/google/android/gms/cast/RemoteMediaPlayer$6;-><init>(Lcom/google/android/gms/cast/RemoteMediaPlayer;Lcom/google/android/gms/common/api/GoogleApiClient;JILorg/json/JSONObject;)V
 
-    invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->b(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
+    invoke-interface {p1, v1}, Lcom/google/android/gms/common/api/GoogleApiClient;->b(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
 
     move-result-object v0
 
@@ -705,7 +705,7 @@
 .end method
 
 .method public setStreamVolume(Lcom/google/android/gms/common/api/GoogleApiClient;D)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -728,7 +728,7 @@
 .end method
 
 .method public setStreamVolume(Lcom/google/android/gms/common/api/GoogleApiClient;DLorg/json/JSONObject;)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 6
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -777,19 +777,19 @@
     throw v0
 
     :cond_1
-    new-instance v0, Lcom/google/android/gms/cast/RemoteMediaPlayer$7;
+    new-instance v1, Lcom/google/android/gms/cast/RemoteMediaPlayer$7;
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move-object v2, p1
+    move-object v3, p1
 
-    move-wide v3, p2
+    move-wide v4, p2
 
-    move-object v5, p4
+    move-object v6, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/cast/RemoteMediaPlayer$7;-><init>(Lcom/google/android/gms/cast/RemoteMediaPlayer;Lcom/google/android/gms/common/api/GoogleApiClient;DLorg/json/JSONObject;)V
+    invoke-direct/range {v1 .. v6}, Lcom/google/android/gms/cast/RemoteMediaPlayer$7;-><init>(Lcom/google/android/gms/cast/RemoteMediaPlayer;Lcom/google/android/gms/common/api/GoogleApiClient;DLorg/json/JSONObject;)V
 
-    invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->b(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
+    invoke-interface {p1, v1}, Lcom/google/android/gms/common/api/GoogleApiClient;->b(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
 
     move-result-object v0
 

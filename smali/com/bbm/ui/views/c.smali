@@ -1,14 +1,14 @@
-.class final Lcom/bbm/ui/views/c;
-.super Lcom/bbm/ui/dt;
+.class public final Lcom/bbm/ui/views/c;
+.super Lcom/bbm/ui/ej;
 .source "ChannelFeaturedPostsView.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/ui/dt",
+        "Lcom/bbm/ui/ej",
         "<",
-        "Lcom/bbm/d/dr;",
+        "Lcom/bbm/d/ey;",
         "Ljava/lang/String;",
         ">;"
     }
@@ -23,7 +23,7 @@
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/bbm/d/dr;",
+            "Lcom/bbm/d/ey;",
             ">;"
         }
     .end annotation
@@ -31,14 +31,14 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/views/a;Lcom/bbm/j/r;)V
+.method public constructor <init>(Lcom/bbm/ui/views/a;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
     .line 95
     iput-object p1, p0, Lcom/bbm/ui/views/c;->b:Lcom/bbm/ui/views/a;
 
-    invoke-direct {p0, p2}, Lcom/bbm/ui/dt;-><init>(Lcom/bbm/j/r;)V
+    invoke-direct {p0, p2}, Lcom/bbm/ui/ej;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
@@ -68,9 +68,9 @@
 
     .prologue
     .line 95
-    check-cast p1, Lcom/bbm/d/dr;
+    check-cast p1, Lcom/bbm/d/ey;
 
-    invoke-virtual {p1}, Lcom/bbm/d/dr;->a()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/bbm/d/ey;->a()Ljava/lang/String;
 
     move-result-object v0
 
@@ -84,7 +84,7 @@
             "()",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/d/dr;",
+            "Lcom/bbm/d/ey;",
             ">;"
         }
     .end annotation
@@ -98,7 +98,7 @@
     if-nez v0, :cond_4
 
     .line 104
-    invoke-super {p0}, Lcom/bbm/ui/dt;->a()Ljava/util/List;
+    invoke-super {p0}, Lcom/bbm/ui/ej;->a()Ljava/util/List;
 
     move-result-object v3
 
@@ -126,9 +126,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/dr;
+    check-cast v0, Lcom/bbm/d/ey;
 
-    iget-object v0, v0, Lcom/bbm/d/dr;->a:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/d/ey;->a:Ljava/lang/String;
 
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -162,7 +162,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->D()Lcom/bbm/j/w;
+    invoke-virtual {v0}, Lcom/bbm/d/a;->M()Lcom/bbm/j/w;
 
     move-result-object v0
 
@@ -185,9 +185,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/bbm/d/dq;
+    check-cast v1, Lcom/bbm/d/ex;
 
-    iget-object v1, v1, Lcom/bbm/d/dq;->a:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/ex;->a:Ljava/lang/String;
 
     invoke-virtual {v4, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -202,9 +202,9 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/bbm/d/dq;
+    check-cast v1, Lcom/bbm/d/ex;
 
-    iget-object v1, v1, Lcom/bbm/d/dq;->a:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/ex;->a:Ljava/lang/String;
 
     invoke-virtual {v4, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -251,7 +251,7 @@
     return-object v0
 
     :cond_4
-    invoke-super {p0}, Lcom/bbm/ui/dt;->a()Ljava/util/List;
+    invoke-super {p0}, Lcom/bbm/ui/ej;->a()Ljava/util/List;
 
     move-result-object v0
 
@@ -263,7 +263,7 @@
 
     .prologue
     .line 95
-    check-cast p2, Lcom/bbm/d/dr;
+    check-cast p2, Lcom/bbm/d/ey;
 
     iget-object v0, p0, Lcom/bbm/ui/views/c;->b:Lcom/bbm/ui/views/a;
 
@@ -271,9 +271,9 @@
 
     move-result-object v0
 
-    iget-object v1, p2, Lcom/bbm/d/dr;->a:Ljava/lang/String;
+    iget-object v1, p2, Lcom/bbm/d/ey;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->O(Ljava/lang/String;)Lcom/bbm/d/de;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/ee;
 
     move-result-object v1
 
@@ -283,29 +283,29 @@
 
     move-result-object v0
 
-    invoke-virtual {p2}, Lcom/bbm/d/dr;->a()Ljava/lang/String;
+    invoke-virtual {p2}, Lcom/bbm/d/ey;->a()Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->s(Ljava/lang/String;)Lcom/bbm/d/ee;
+    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->w(Ljava/lang/String;)Lcom/bbm/d/fy;
 
     move-result-object v2
 
-    iget-object v0, v2, Lcom/bbm/d/ee;->s:Lcom/bbm/util/bc;
+    iget-object v0, v2, Lcom/bbm/d/fy;->t:Lcom/bbm/util/bi;
 
-    sget-object v3, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-ne v0, v3, :cond_0
 
-    iget-object v0, v1, Lcom/bbm/d/de;->Q:Lcom/bbm/util/bc;
+    iget-object v0, v1, Lcom/bbm/d/ee;->R:Lcom/bbm/util/bi;
 
-    sget-object v3, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-ne v0, v3, :cond_0
 
     iget-object v3, p0, Lcom/bbm/ui/views/c;->b:Lcom/bbm/ui/views/a;
 
-    const v0, 0x7f0a0083
+    const v0, 0x7f0b0086
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
 
@@ -313,7 +313,7 @@
 
     check-cast v0, Lcom/bbm/ui/views/f;
 
-    invoke-static {v3, v1, v2, v0}, Lcom/bbm/ui/views/a;->a(Lcom/bbm/ui/views/a;Lcom/bbm/d/de;Lcom/bbm/d/ee;Lcom/bbm/ui/views/f;)V
+    invoke-static {v3, v1, v2, v0}, Lcom/bbm/ui/views/a;->a(Lcom/bbm/ui/views/a;Lcom/bbm/d/ee;Lcom/bbm/d/fy;Lcom/bbm/ui/views/f;)V
 
     :cond_0
     return-void
@@ -337,7 +337,7 @@
     if-lez v0, :cond_0
 
     .line 139
-    invoke-super {p0}, Lcom/bbm/ui/dt;->getCount()I
+    invoke-super {p0}, Lcom/bbm/ui/ej;->getCount()I
 
     move-result v0
 

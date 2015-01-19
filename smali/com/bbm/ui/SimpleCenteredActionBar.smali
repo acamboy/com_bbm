@@ -25,13 +25,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f030109
+    const v1, 0x7f03011b
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    const v0, 0x7f0a04f3
+    const v0, 0x7f0b058e
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/SimpleCenteredActionBar;->findViewById(I)Landroid/view/View;
 

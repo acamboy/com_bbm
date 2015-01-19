@@ -1,56 +1,44 @@
 .class public final Lcom/bbm/d/bf;
-.super Lcom/bbm/d/da;
+.super Lcom/bbm/d/dy;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
+.method constructor <init>(Ljava/lang/String;Lcom/bbm/d/bg;)V
+    .locals 2
 
     .prologue
-    .line 1992
-    const-string v0, "fileTransferSend"
+    .line 1691
+    const-string v0, "conferenceInvitationResponse"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/da;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
 
-    .line 1994
-    const-string v0, "description"
+    .line 1693
+    const-string v0, "requestId"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/bf;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1995
-    const-string v0, "path"
+    .line 1694
+    const-string v0, "response"
 
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/bf;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p2}, Lcom/bbm/d/bg;->toString()Ljava/lang/String;
 
-    .line 1996
-    const-string v0, "to"
+    move-result-object v1
 
-    invoke-virtual {p0, v0, p3}, Lcom/bbm/d/bf;->a(Ljava/lang/String;Ljava/lang/Object;)V
+    invoke-virtual {p0, v0, v1}, Lcom/bbm/d/bf;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1997
+    .line 1695
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a()Lcom/bbm/f/x;
+.method public final bridge synthetic a()Lcom/bbm/f/ab;
     .locals 1
 
     .prologue
-    .line 1990
-    invoke-super {p0}, Lcom/bbm/d/da;->a()Lcom/bbm/f/x;
+    .line 1664
+    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

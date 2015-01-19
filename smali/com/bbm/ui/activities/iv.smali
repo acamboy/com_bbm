@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/iv;
 .super Ljava/lang/Object;
-.source "GlympseViewerActivity.java"
+.source "ConversationActivity.java"
 
 # interfaces
-.implements Lcom/bbm/f/y;
+.implements Lcom/bbm/ui/c/gn;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GlympseViewerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 108
-    iput-object p1, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+    .line 4201
+    iput-object p1, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,85 +25,80 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 0
-
-    .prologue
-    .line 113
-    return-void
-.end method
-
-.method public final a(Lcom/bbm/f/x;)V
+.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
     .locals 4
 
     .prologue
-    .line 117
-    invoke-virtual {p1}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
+    .line 4204
+    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    .line 118
-    const-string v1, "type"
+    .line 4215
+    :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+
+    .line 4216
+    return-void
+
+    .line 4206
+    :pswitch_0
+    const-string v0, "on recall message disabled selected"
+
+    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 4208
+    iget-object v0, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->f(Lcom/bbm/ui/activities/ConversationActivity;Z)Z
+
+    .line 4209
+    iget-object v0, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->aH(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/TextView;
 
     move-result-object v1
 
-    .line 119
-    invoke-virtual {p1}, Lcom/bbm/f/x;->f()Ljava/lang/String;
+    const v2, 0x7f09006e
 
-    move-result-object v2
+    const v3, 0x7f090010
 
-    const-string v3, "listChunk"
+    invoke-static {v0, v1, v2, v3}, Lcom/bbm/ui/activities/ConversationActivity;->a(Lcom/bbm/ui/activities/ConversationActivity;Landroid/widget/TextView;II)V
 
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 4210
+    iget-object v0, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    move-result v2
+    iget-object v1, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    if-eqz v2, :cond_0
+    const v2, 0x7f0e0522
 
-    const-string v2, "message"
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/ConversationActivity;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    move-result-object v1
 
-    move-result v1
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
 
-    if-eqz v1, :cond_0
+    goto :goto_0
 
-    .line 120
-    iget-object v1, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+    .line 4204
+    nop
 
-    const-string v2, "elements"
-
-    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Lcom/bbm/ui/activities/GlympseViewerActivity;Lorg/json/JSONArray;)V
-
-    .line 121
-    const-string v1, "last"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 122
-    iget-object v0, p0, Lcom/bbm/ui/activities/iv;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->b(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d/aa;->g:Lcom/bbm/d/a/f;
-
-    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
-
-    invoke-interface {v0, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/y;)V
-
-    .line 125
-    :cond_0
-    return-void
+    :pswitch_data_0
+    .packed-switch 0x7f0b0076
+        :pswitch_0
+    .end packed-switch
 .end method

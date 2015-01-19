@@ -62,9 +62,7 @@
 
     .prologue
     .line 185
-    invoke-virtual {p3}, Landroid/support/v4/view/a/a;->a()Ljava/lang/Object;
-
-    move-result-object v0
+    iget-object v0, p3, Landroid/support/v4/view/a/a;->b:Ljava/lang/Object;
 
     check-cast p1, Landroid/view/View$AccessibilityDelegate;
 

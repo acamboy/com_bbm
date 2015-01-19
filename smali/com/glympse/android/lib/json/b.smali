@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private gU:Lcom/glympse/android/lib/json/GJsonHandlerStack;
+.field private hd:Lcom/glympse/android/lib/json/GJsonHandlerStack;
 
-.field private mk:I
+.field private mQ:I
 
-.field private uj:Lcom/glympse/android/hal/GVector;
+.field private uW:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -19,13 +19,13 @@
     .end annotation
 .end field
 
-.field private uk:Lcom/glympse/android/core/GPrimitive;
+.field private uX:Lcom/glympse/android/core/GPrimitive;
 
-.field private ul:Lcom/glympse/android/core/GPrimitive;
+.field private uY:Lcom/glympse/android/core/GPrimitive;
 
-.field private um:Lcom/glympse/android/core/GPrimitive;
+.field private uZ:Lcom/glympse/android/core/GPrimitive;
 
-.field private un:Lcom/glympse/android/hal/GVector;
+.field private va:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -36,7 +36,7 @@
     .end annotation
 .end field
 
-.field private uo:Lcom/glympse/android/hal/GVector;
+.field private vb:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -59,47 +59,47 @@
     invoke-direct {p0}, Lcom/glympse/android/lib/json/JsonHandlerBasic;-><init>()V
 
     .line 172
-    iput-object p1, p0, Lcom/glympse/android/lib/json/b;->gU:Lcom/glympse/android/lib/json/GJsonHandlerStack;
+    iput-object p1, p0, Lcom/glympse/android/lib/json/b;->hd:Lcom/glympse/android/lib/json/GJsonHandlerStack;
 
     .line 173
-    iput p2, p0, Lcom/glympse/android/lib/json/b;->mk:I
+    iput p2, p0, Lcom/glympse/android/lib/json/b;->mQ:I
 
     .line 174
     new-instance v0, Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uj:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uW:Lcom/glympse/android/hal/GVector;
 
     .line 175
-    iput-object v1, p0, Lcom/glympse/android/lib/json/b;->uk:Lcom/glympse/android/core/GPrimitive;
+    iput-object v1, p0, Lcom/glympse/android/lib/json/b;->uX:Lcom/glympse/android/core/GPrimitive;
 
     .line 176
-    iput-object v1, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iput-object v1, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     .line 177
-    iput-object v1, p0, Lcom/glympse/android/lib/json/b;->um:Lcom/glympse/android/core/GPrimitive;
+    iput-object v1, p0, Lcom/glympse/android/lib/json/b;->uZ:Lcom/glympse/android/core/GPrimitive;
 
     .line 178
     new-instance v0, Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->un:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->va:Lcom/glympse/android/hal/GVector;
 
     .line 179
     new-instance v0, Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uo:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->vb:Lcom/glympse/android/hal/GVector;
 
     .line 180
     return-void
 .end method
 
 .method private a(Lcom/glympse/android/lib/json/GJsonPrimitive;)Lcom/glympse/android/core/GPrimitive;
-    .locals 3
+    .locals 4
 
     .prologue
     .line 319
@@ -122,12 +122,12 @@
     :pswitch_0
     invoke-virtual {p1}, Lcom/glympse/android/lib/json/GJsonPrimitive;->getLong()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 325
     new-instance v0, Lcom/glympse/android/lib/Primitive;
 
-    invoke-direct {v0, v1, v2}, Lcom/glympse/android/lib/Primitive;-><init>(J)V
+    invoke-direct {v0, v2, v3}, Lcom/glympse/android/lib/Primitive;-><init>(J)V
 
     goto :goto_0
 
@@ -135,12 +135,12 @@
     :pswitch_1
     invoke-virtual {p1}, Lcom/glympse/android/lib/json/GJsonPrimitive;->getDouble()D
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 330
     new-instance v0, Lcom/glympse/android/lib/Primitive;
 
-    invoke-direct {v0, v1, v2}, Lcom/glympse/android/lib/Primitive;-><init>(D)V
+    invoke-direct {v0, v2, v3}, Lcom/glympse/android/lib/Primitive;-><init>(D)V
 
     goto :goto_0
 
@@ -182,12 +182,12 @@
 
 
 # virtual methods
-.method public cZ()Lcom/glympse/android/core/GPrimitive;
+.method public de()Lcom/glympse/android/core/GPrimitive;
     .locals 1
 
     .prologue
     .line 184
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uk:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uX:Lcom/glympse/android/core/GPrimitive;
 
     return-object v0
 .end method
@@ -199,14 +199,14 @@
     const/4 v2, 0x1
 
     .line 200
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->um:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uZ:Lcom/glympse/android/core/GPrimitive;
 
     .line 201
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uj:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uW:Lcom/glympse/android/hal/GVector;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/json/b;->uj:Lcom/glympse/android/hal/GVector;
+    iget-object v1, p0, Lcom/glympse/android/lib/json/b;->uW:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v1}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -217,7 +217,7 @@
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->removeElementAt(I)V
 
     .line 202
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uj:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uW:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -226,7 +226,7 @@
     if-lez v0, :cond_2
 
     .line 204
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uj:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uW:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->lastElement()Ljava/lang/Object;
 
@@ -234,15 +234,15 @@
 
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     .line 210
     :goto_0
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->type()I
 
@@ -251,20 +251,20 @@
     if-ne v0, v2, :cond_0
 
     .line 212
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/json/b;->um:Lcom/glympse/android/core/GPrimitive;
+    iget-object v1, p0, Lcom/glympse/android/lib/json/b;->uZ:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GPrimitive;->put(Lcom/glympse/android/core/GPrimitive;)V
 
     .line 216
     :cond_0
-    iget v0, p0, Lcom/glympse/android/lib/json/b;->mk:I
+    iget v0, p0, Lcom/glympse/android/lib/json/b;->mQ:I
 
     if-ne v0, p1, :cond_1
 
     .line 218
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->gU:Lcom/glympse/android/lib/json/GJsonHandlerStack;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->hd:Lcom/glympse/android/lib/json/GJsonHandlerStack;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/json/GJsonHandlerStack;->popHandler()V
 
@@ -276,7 +276,7 @@
     :cond_2
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     goto :goto_0
 .end method
@@ -288,14 +288,14 @@
     const/4 v2, 0x1
 
     .line 236
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->um:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uZ:Lcom/glympse/android/core/GPrimitive;
 
     .line 237
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uj:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uW:Lcom/glympse/android/hal/GVector;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/json/b;->uj:Lcom/glympse/android/hal/GVector;
+    iget-object v1, p0, Lcom/glympse/android/lib/json/b;->uW:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v1}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -306,7 +306,7 @@
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->removeElementAt(I)V
 
     .line 238
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uj:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uW:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -315,7 +315,7 @@
     if-lez v0, :cond_2
 
     .line 240
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uj:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uW:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->lastElement()Ljava/lang/Object;
 
@@ -323,15 +323,15 @@
 
     check-cast v0, Lcom/glympse/android/core/GPrimitive;
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     .line 246
     :goto_0
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->type()I
 
@@ -340,20 +340,20 @@
     if-ne v0, v2, :cond_0
 
     .line 248
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/json/b;->um:Lcom/glympse/android/core/GPrimitive;
+    iget-object v1, p0, Lcom/glympse/android/lib/json/b;->uZ:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GPrimitive;->put(Lcom/glympse/android/core/GPrimitive;)V
 
     .line 252
     :cond_0
-    iget v0, p0, Lcom/glympse/android/lib/json/b;->mk:I
+    iget v0, p0, Lcom/glympse/android/lib/json/b;->mQ:I
 
     if-ne v0, p1, :cond_1
 
     .line 254
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->gU:Lcom/glympse/android/lib/json/GJsonHandlerStack;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->hd:Lcom/glympse/android/lib/json/GJsonHandlerStack;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/json/GJsonHandlerStack;->popHandler()V
 
@@ -365,7 +365,7 @@
     :cond_2
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     goto :goto_0
 .end method
@@ -377,17 +377,17 @@
     const/4 v4, 0x1
 
     .line 269
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uk:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uX:Lcom/glympse/android/core/GPrimitive;
 
     if-nez v0, :cond_0
 
     .line 271
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uk:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uX:Lcom/glympse/android/core/GPrimitive;
 
     .line 272
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->gU:Lcom/glympse/android/lib/json/GJsonHandlerStack;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->hd:Lcom/glympse/android/lib/json/GJsonHandlerStack;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/json/GJsonHandlerStack;->popHandler()V
 
@@ -397,7 +397,7 @@
 
     .line 276
     :cond_0
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uo:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->vb:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -407,7 +407,7 @@
     if-nez v1, :cond_1
 
     .line 279
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->gU:Lcom/glympse/android/lib/json/GJsonHandlerStack;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->hd:Lcom/glympse/android/lib/json/GJsonHandlerStack;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/json/GJsonHandlerStack;->popHandler()V
 
@@ -415,7 +415,7 @@
 
     .line 283
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uo:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->vb:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->lastElement()Ljava/lang/Object;
 
@@ -430,7 +430,7 @@
     if-nez v0, :cond_2
 
     .line 285
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->un:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->va:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->lastElement()Ljava/lang/Object;
 
@@ -439,17 +439,17 @@
     check-cast v0, Ljava/lang/String;
 
     .line 286
-    iget-object v2, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v2, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
-    iget-object v3, p0, Lcom/glympse/android/lib/json/b;->um:Lcom/glympse/android/core/GPrimitive;
+    iget-object v3, p0, Lcom/glympse/android/lib/json/b;->uZ:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v2, v0, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 288
     :cond_2
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->un:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->va:Lcom/glympse/android/hal/GVector;
 
-    iget-object v2, p0, Lcom/glympse/android/lib/json/b;->un:Lcom/glympse/android/hal/GVector;
+    iget-object v2, p0, Lcom/glympse/android/lib/json/b;->va:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v2}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -460,7 +460,7 @@
     invoke-virtual {v0, v2}, Lcom/glympse/android/hal/GVector;->removeElementAt(I)V
 
     .line 289
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uo:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->vb:Lcom/glympse/android/hal/GVector;
 
     add-int/lit8 v1, v1, -0x1
 
@@ -481,12 +481,12 @@
     move-result-object v1
 
     .line 300
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uk:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uX:Lcom/glympse/android/core/GPrimitive;
 
     if-nez v0, :cond_1
 
     .line 302
-    iput-object v1, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iput-object v1, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     .line 314
     :cond_0
@@ -495,7 +495,7 @@
 
     .line 304
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->type()I
 
@@ -504,7 +504,7 @@
     if-ne v0, v3, :cond_2
 
     .line 306
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GPrimitive;->put(Lcom/glympse/android/core/GPrimitive;)V
 
@@ -512,7 +512,7 @@
 
     .line 308
     :cond_2
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->type()I
 
@@ -523,7 +523,7 @@
     if-ne v0, v2, :cond_0
 
     .line 310
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->un:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->va:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->lastElement()Ljava/lang/Object;
 
@@ -532,12 +532,12 @@
     check-cast v0, Ljava/lang/String;
 
     .line 311
-    iget-object v2, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v2, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v2, v0, v1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
 
     .line 312
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uo:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->vb:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->lastElement()Ljava/lang/Object;
 
@@ -561,24 +561,24 @@
 
     invoke-direct {v0, v2}, Lcom/glympse/android/lib/Primitive;-><init>(I)V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     .line 190
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uj:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uW:Lcom/glympse/android/hal/GVector;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v1, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
     .line 191
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uk:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uX:Lcom/glympse/android/core/GPrimitive;
 
     if-nez v0, :cond_0
 
     .line 193
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uk:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uX:Lcom/glympse/android/core/GPrimitive;
 
     .line 195
     :cond_0
@@ -596,24 +596,24 @@
 
     invoke-direct {v0, v1}, Lcom/glympse/android/lib/Primitive;-><init>(I)V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     .line 226
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uj:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uW:Lcom/glympse/android/hal/GVector;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v1, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
     .line 227
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uk:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uX:Lcom/glympse/android/core/GPrimitive;
 
     if-nez v0, :cond_0
 
     .line 229
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->ul:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uY:Lcom/glympse/android/core/GPrimitive;
 
-    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uk:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/json/b;->uX:Lcom/glympse/android/core/GPrimitive;
 
     .line 231
     :cond_0
@@ -627,7 +627,7 @@
 
     .prologue
     .line 261
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->un:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->va:Lcom/glympse/android/hal/GVector;
 
     new-instance v1, Ljava/lang/String;
 
@@ -640,7 +640,7 @@
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
     .line 262
-    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->uo:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/json/b;->vb:Lcom/glympse/android/hal/GVector;
 
     new-instance v1, Lcom/glympse/android/lib/Primitive;
 

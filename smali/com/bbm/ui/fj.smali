@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/fj;
 .super Ljava/lang/Object;
-.source "SmsActionBarView.java"
+.source "QuickShareVoicenoteView.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/util/fo;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/SmsActionBarView;
+.field final synthetic a:Lcom/bbm/ui/QuickShareVoicenoteView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/SmsActionBarView;)V
+.method constructor <init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
     .locals 0
 
     .prologue
-    .line 81
-    iput-object p1, p0, Lcom/bbm/ui/fj;->a:Lcom/bbm/ui/SmsActionBarView;
+    .line 66
+    iput-object p1, p0, Lcom/bbm/ui/fj;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,61 +25,21 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a()V
     .locals 2
 
     .prologue
-    .line 84
-    iget-object v0, p0, Lcom/bbm/ui/fj;->a:Lcom/bbm/ui/SmsActionBarView;
+    .line 70
+    iget-object v0, p0, Lcom/bbm/ui/fj;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
 
-    invoke-static {v0}, Lcom/bbm/ui/SmsActionBarView;->a(Lcom/bbm/ui/SmsActionBarView;)Landroid/widget/RelativeLayout;
+    invoke-static {v0}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(Lcom/bbm/ui/QuickShareVoicenoteView;)Landroid/widget/ImageView;
 
     move-result-object v0
-
-    if-ne p1, v0, :cond_1
-
-    .line 85
-    const-string v0, "Back clicked"
-
-    const-class v1, Lcom/bbm/ui/SmsActionBarView;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 86
-    iget-object v0, p0, Lcom/bbm/ui/fj;->a:Lcom/bbm/ui/SmsActionBarView;
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/SmsActionBarView;->a(I)V
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setEnabled(Z)V
 
-    .line 95
-    :cond_0
-    :goto_0
+    .line 71
     return-void
-
-    .line 91
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/fj;->a:Lcom/bbm/ui/SmsActionBarView;
-
-    invoke-static {v0}, Lcom/bbm/ui/SmsActionBarView;->b(Lcom/bbm/ui/SmsActionBarView;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    if-ne p1, v0, :cond_0
-
-    .line 92
-    const-string v0, "Send clicked"
-
-    const-class v1, Lcom/bbm/ui/SmsActionBarView;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 93
-    iget-object v0, p0, Lcom/bbm/ui/fj;->a:Lcom/bbm/ui/SmsActionBarView;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/SmsActionBarView;->a(I)V
-
-    goto :goto_0
 .end method

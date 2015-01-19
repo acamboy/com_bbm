@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/zb;
 .super Ljava/lang/Object;
-.source "ProfileActivity.java"
+.source "NewChannelCategoryActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
     .locals 0
 
     .prologue
-    .line 612
-    iput-object p1, p0, Lcom/bbm/ui/activities/zb;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 324
+    iput-object p1, p0, Lcom/bbm/ui/activities/zb;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,19 +25,15 @@
 
 
 # virtual methods
-.method public final run()V
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
     .prologue
-    .line 615
-    iget-object v0, p0, Lcom/bbm/ui/activities/zb;->a:Lcom/bbm/ui/activities/ProfileActivity;
+    .line 327
+    iget-object v0, p0, Lcom/bbm/ui/activities/zb;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileActivity;->l(Lcom/bbm/ui/activities/ProfileActivity;)Landroid/widget/LinearLayout;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->finish()V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->requestLayout()V
-
-    .line 616
+    .line 328
     return-void
 .end method

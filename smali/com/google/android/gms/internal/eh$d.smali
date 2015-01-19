@@ -62,7 +62,7 @@
     return-void
 .end method
 
-.method protected abstract a(Ljava/lang/Object;Lcom/google/android/gms/common/data/DataHolder;)V
+.method public abstract a(Ljava/lang/Object;Lcom/google/android/gms/common/data/DataHolder;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT",

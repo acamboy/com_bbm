@@ -4,17 +4,28 @@
 
 
 # static fields
-.field private static a:Lcom/bbm/util/c/c;
+.field private static b:Lcom/bbm/util/c/c;
 
 .field private static final i:Ljava/lang/String;
 
 
 # instance fields
-.field private final b:Landroid/content/Context;
+.field public final a:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/util/c/e;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field private final c:Lcom/bbm/util/c/a;
+.field private final c:Landroid/content/Context;
 
-.field private final d:Ljava/util/Map;
+.field private final d:Lcom/bbm/util/c/a;
+
+.field private final e:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
@@ -26,7 +37,7 @@
     .end annotation
 .end field
 
-.field private final e:Ljava/util/concurrent/ConcurrentMap;
+.field private final f:Ljava/util/concurrent/ConcurrentMap;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/concurrent/ConcurrentMap",
@@ -38,18 +49,7 @@
     .end annotation
 .end field
 
-.field private final f:[Ljava/lang/String;
-
-.field private final g:Ljava/util/List;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/util/c/e;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private final g:[Ljava/lang/String;
 
 .field private final h:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
@@ -68,12 +68,12 @@
     .locals 1
 
     .prologue
-    .line 48
+    .line 47
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/bbm/util/c/c;->a:Lcom/bbm/util/c/c;
+    sput-object v0, Lcom/bbm/util/c/c;->b:Lcom/bbm/util/c/c;
 
-    .line 58
+    .line 57
     const-class v0, Lcom/bbm/util/c/c;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -89,17 +89,17 @@
     .locals 3
 
     .prologue
-    .line 66
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
+    .line 50
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/util/c/c;->d:Ljava/util/Map;
+    iput-object v0, p0, Lcom/bbm/util/c/c;->e:Ljava/util/Map;
 
-    .line 53
+    .line 52
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -116,12 +116,12 @@
 
     aput-object v2, v0, v1
 
-    iput-object v0, p0, Lcom/bbm/util/c/c;->f:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/util/c/c;->g:[Ljava/lang/String;
+
+    .line 66
+    iput-object p1, p0, Lcom/bbm/util/c/c;->c:Landroid/content/Context;
 
     .line 67
-    iput-object p1, p0, Lcom/bbm/util/c/c;->b:Landroid/content/Context;
-
-    .line 68
     new-instance v0, Lcom/google/b/c/q;
 
     invoke-direct {v0}, Lcom/google/b/c/q;-><init>()V
@@ -134,34 +134,34 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/util/c/c;->e:Ljava/util/concurrent/ConcurrentMap;
+    iput-object v0, p0, Lcom/bbm/util/c/c;->f:Ljava/util/concurrent/ConcurrentMap;
 
-    .line 69
+    .line 68
     new-instance v0, Lcom/bbm/util/c/a;
 
     invoke-direct {v0}, Lcom/bbm/util/c/a;-><init>()V
 
-    .line 70
+    .line 69
     invoke-direct {p0, v0}, Lcom/bbm/util/c/c;->c(Lcom/bbm/util/c/a;)Ljava/util/List;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/bbm/util/c/c;->g:Ljava/util/List;
+    iput-object v1, p0, Lcom/bbm/util/c/c;->a:Ljava/util/List;
 
-    .line 71
+    .line 70
     invoke-direct {p0, v0}, Lcom/bbm/util/c/c;->b(Lcom/bbm/util/c/a;)Ljava/util/List;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/bbm/util/c/c;->h:Ljava/util/List;
 
-    .line 72
+    .line 71
     invoke-direct {p0, v0}, Lcom/bbm/util/c/c;->a(Lcom/bbm/util/c/a;)V
 
-    .line 73
-    iput-object v0, p0, Lcom/bbm/util/c/c;->c:Lcom/bbm/util/c/a;
+    .line 72
+    iput-object v0, p0, Lcom/bbm/util/c/c;->d:Lcom/bbm/util/c/a;
 
-    .line 74
+    .line 73
     return-void
 .end method
 
@@ -169,8 +169,8 @@
     .locals 2
 
     .prologue
-    .line 98
-    iget-object v0, p0, Lcom/bbm/util/c/c;->b:Landroid/content/Context;
+    .line 97
+    iget-object v0, p0, Lcom/bbm/util/c/c;->c:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getAssets()Landroid/content/res/AssetManager;
 
@@ -180,17 +180,17 @@
 
     move-result-object v0
 
-    .line 99
+    .line 98
     const/4 v1, 0x0
 
     invoke-static {v0, v1, p2}, Landroid/graphics/BitmapFactory;->decodeStream(Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 100
+    .line 99
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
-    .line 101
+    .line 100
     return-object v1
 .end method
 
@@ -208,14 +208,14 @@
     .end annotation
 
     .prologue
-    .line 84
+    .line 83
     const/4 v0, 0x0
 
     cmpg-float v0, p3, v0
 
     if-gez v0, :cond_0
 
-    .line 85
+    .line 84
     invoke-interface {p2, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -230,7 +230,7 @@
 
     move-result-object v0
 
-    .line 88
+    .line 87
     :goto_0
     return-object v0
 
@@ -264,14 +264,14 @@
     .locals 4
 
     .prologue
-    .line 113
+    .line 110
     if-nez p2, :cond_0
 
-    .line 114
+    .line 111
     :try_start_0
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    iget-object v1, p0, Lcom/bbm/util/c/c;->b:Landroid/content/Context;
+    iget-object v1, p0, Lcom/bbm/util/c/c;->c:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -285,25 +285,25 @@
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
 
-    .line 132
+    .line 128
     :goto_0
     return-object v0
 
-    .line 117
+    .line 114
     :cond_0
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 118
+    .line 115
     const/4 v0, 0x1
 
     iput-boolean v0, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 119
+    .line 116
     invoke-direct {p0, p1, v1}, Lcom/bbm/util/c/c;->a(Ljava/lang/String;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 122
+    .line 119
     new-instance v0, Landroid/graphics/Point;
 
     iget v2, v1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
@@ -318,35 +318,35 @@
 
     iput v0, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 123
+    .line 120
     const/4 v0, 0x0
 
     iput-boolean v0, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 124
+    .line 121
     const/4 v0, 0x1
 
     iput-boolean v0, v1, Landroid/graphics/BitmapFactory$Options;->inPurgeable:Z
 
-    .line 125
+    .line 122
     const/4 v0, 0x1
 
     iput-boolean v0, v1, Landroid/graphics/BitmapFactory$Options;->inInputShareable:Z
 
-    .line 126
+    .line 123
     const/4 v0, 0x0
 
     iput-boolean v0, v1, Landroid/graphics/BitmapFactory$Options;->inPreferQualityOverSpeed:Z
 
-    .line 127
+    .line 124
     const/4 v0, 0x1
 
     iput-boolean v0, v1, Landroid/graphics/BitmapFactory$Options;->inMutable:Z
 
-    .line 128
+    .line 125
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    iget-object v2, p0, Lcom/bbm/util/c/c;->b:Landroid/content/Context;
+    iget-object v2, p0, Lcom/bbm/util/c/c;->c:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -362,16 +362,16 @@
 
     goto :goto_0
 
-    .line 130
+    .line 126
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
-    .line 132
+    .line 128
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    iget-object v1, p0, Lcom/bbm/util/c/c;->b:Landroid/content/Context;
+    iget-object v1, p0, Lcom/bbm/util/c/c;->c:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -386,12 +386,12 @@
     .locals 2
 
     .prologue
-    .line 155
-    sget-object v0, Lcom/bbm/util/c/c;->a:Lcom/bbm/util/c/c;
+    .line 150
+    sget-object v0, Lcom/bbm/util/c/c;->b:Lcom/bbm/util/c/c;
 
     if-nez v0, :cond_0
 
-    .line 159
+    .line 154
     new-instance v0, Lcom/bbm/util/c/c;
 
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -400,11 +400,11 @@
 
     invoke-direct {v0, v1}, Lcom/bbm/util/c/c;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/bbm/util/c/c;->a:Lcom/bbm/util/c/c;
+    sput-object v0, Lcom/bbm/util/c/c;->b:Lcom/bbm/util/c/c;
 
-    .line 161
+    .line 156
     :cond_0
-    sget-object v0, Lcom/bbm/util/c/c;->a:Lcom/bbm/util/c/c;
+    sget-object v0, Lcom/bbm/util/c/c;->b:Lcom/bbm/util/c/c;
 
     return-object v0
 .end method
@@ -415,24 +415,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 222
+    .line 208
     :try_start_0
-    iget-object v0, p0, Lcom/bbm/util/c/c;->b:Landroid/content/Context;
+    iget-object v0, p0, Lcom/bbm/util/c/c;->c:Landroid/content/Context;
 
     const v2, 0x7f060006
 
-    invoke-static {v0, v2}, Lcom/bbm/util/eo;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/bbm/util/fh;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 223
+    .line 209
     new-instance v3, Lorg/json/JSONArray;
 
     invoke-direct {v3, v0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
 
     move v2, v1
 
-    .line 224
+    .line 210
     :goto_0
     invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
 
@@ -440,12 +440,12 @@
 
     if-ge v2, v0, :cond_2
 
-    .line 225
+    .line 211
     invoke-virtual {v3, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    .line 226
+    .line 212
     const-string v4, "texts"
 
     invoke-virtual {v0, v4}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
@@ -454,7 +454,7 @@
 
     move v0, v1
 
-    .line 227
+    .line 213
     :goto_1
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
@@ -462,12 +462,12 @@
 
     if-ge v0, v5, :cond_0
 
-    .line 228
+    .line 214
     invoke-virtual {v4, v0}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 229
+    .line 215
     new-instance v6, Lcom/bbm/util/c/b;
 
     sget-object v7, Lcom/bbm/util/c/g;->c:Lcom/bbm/util/c/g;
@@ -476,12 +476,12 @@
 
     invoke-virtual {p1, v5, v6}, Lcom/bbm/util/c/a;->a(Ljava/lang/String;Lcom/bbm/util/c/b;)V
 
-    .line 227
+    .line 213
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 231
+    .line 217
     :cond_0
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
@@ -489,7 +489,7 @@
 
     if-nez v0, :cond_1
 
-    .line 233
+    .line 218
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -522,11 +522,11 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v0, v4}, Lcom/bbm/w;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v4}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 224
+    .line 210
     :cond_1
     add-int/lit8 v0, v2, 0x1
 
@@ -534,13 +534,13 @@
 
     goto :goto_0
 
-    .line 237
+    .line 221
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
-    .line 241
+    .line 225
     :cond_2
     return-void
 .end method
@@ -551,7 +551,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 475
+    .line 451
     move v0, v1
 
     :goto_0
@@ -561,7 +561,7 @@
 
     if-ge v0, v2, :cond_5
 
-    .line 476
+    .line 452
     invoke-virtual {p1, v0}, Lorg/json/JSONArray;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -570,8 +570,8 @@
 
     move-result-object v5
 
-    .line 477
-    iget-object v6, p0, Lcom/bbm/util/c/c;->f:[Ljava/lang/String;
+    .line 453
+    iget-object v6, p0, Lcom/bbm/util/c/c;->g:[Ljava/lang/String;
 
     array-length v7, v6
 
@@ -582,15 +582,15 @@
 
     aget-object v8, v6, v4
 
-    .line 478
+    .line 454
     invoke-virtual {v5, v8}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 479
-    iget-object v9, p0, Lcom/bbm/util/c/c;->d:Ljava/util/Map;
+    .line 455
+    iget-object v9, p0, Lcom/bbm/util/c/c;->e:Ljava/util/Map;
 
     const-string v3, ""
 
@@ -652,7 +652,7 @@
     :cond_0
     invoke-interface {v9, v5, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 477
+    .line 453
     :cond_1
     add-int/lit8 v2, v4, 0x1
 
@@ -660,7 +660,7 @@
 
     goto :goto_1
 
-    .line 479
+    .line 455
     :cond_2
     invoke-virtual {p1, v3}, Lorg/json/JSONArray;->get(I)Ljava/lang/Object;
 
@@ -689,13 +689,13 @@
 
     goto :goto_2
 
-    .line 475
+    .line 451
     :cond_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 483
+    .line 459
     :cond_5
     return-void
 .end method
@@ -704,19 +704,19 @@
     .locals 1
 
     .prologue
-    .line 441
+    .line 418
     const-string v0, "[:,]"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    .line 442
+    .line 419
     invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 443
+    .line 420
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v0
@@ -741,29 +741,29 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 244
+    .line 228
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 246
+    .line 230
     :try_start_0
-    iget-object v0, p0, Lcom/bbm/util/c/c;->b:Landroid/content/Context;
+    iget-object v0, p0, Lcom/bbm/util/c/c;->c:Landroid/content/Context;
 
     const v2, 0x7f060007
 
-    invoke-static {v0, v2}, Lcom/bbm/util/eo;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/bbm/util/fh;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 247
+    .line 231
     new-instance v4, Lorg/json/JSONArray;
 
     invoke-direct {v4, v0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
 
     move v2, v1
 
-    .line 248
+    .line 232
     :goto_0
     invoke-virtual {v4}, Lorg/json/JSONArray;->length()I
 
@@ -771,12 +771,12 @@
 
     if-ge v2, v0, :cond_2
 
-    .line 249
+    .line 233
     invoke-virtual {v4, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v5
 
-    .line 250
+    .line 234
     const-string v0, "texts"
 
     invoke-virtual {v5, v0}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
@@ -785,7 +785,7 @@
 
     move v0, v1
 
-    .line 251
+    .line 235
     :goto_1
     invoke-virtual {v6}, Lorg/json/JSONArray;->length()I
 
@@ -793,12 +793,12 @@
 
     if-ge v0, v7, :cond_0
 
-    .line 252
+    .line 236
     invoke-virtual {v6, v0}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 253
+    .line 237
     new-instance v8, Lcom/bbm/util/c/b;
 
     sget-object v9, Lcom/bbm/util/c/g;->b:Lcom/bbm/util/c/g;
@@ -807,12 +807,12 @@
 
     invoke-virtual {p1, v7, v8}, Lcom/bbm/util/c/a;->a(Ljava/lang/String;Lcom/bbm/util/c/b;)V
 
-    .line 251
+    .line 235
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 255
+    .line 239
     :cond_0
     new-instance v0, Lcom/bbm/util/c/e;
 
@@ -860,14 +860,14 @@
 
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 257
+    .line 241
     invoke-virtual {v6}, Lorg/json/JSONArray;->length()I
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 259
+    .line 242
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -900,11 +900,11 @@
 
     aput-object v7, v5, v6
 
-    invoke-static {v0, v5}, Lcom/bbm/w;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v5}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 248
+    .line 232
     :cond_1
     add-int/lit8 v0, v2, 0x1
 
@@ -912,13 +912,13 @@
 
     goto/16 :goto_0
 
-    .line 263
+    .line 245
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
-    .line 267
+    .line 249
     :cond_2
     return-object v3
 .end method
@@ -938,29 +938,29 @@
     .end annotation
 
     .prologue
-    .line 271
+    .line 253
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 273
+    .line 255
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/bbm/util/c/c;->b:Landroid/content/Context;
+    iget-object v1, v0, Lcom/bbm/util/c/c;->c:Landroid/content/Context;
 
     const v2, 0x7f060005
 
-    invoke-static {v1, v2}, Lcom/bbm/util/eo;->a(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/bbm/util/fh;->a(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 274
+    .line 256
     new-instance v9, Lorg/json/JSONArray;
 
     invoke-direct {v9, v1}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
 
-    .line 275
+    .line 257
     const/4 v1, 0x0
 
     move v7, v1
@@ -972,36 +972,36 @@
 
     if-ge v7, v1, :cond_6
 
-    .line 276
+    .line 258
     invoke-virtual {v9, v7}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v10
 
-    .line 277
+    .line 259
     const-string v1, "order"
 
     invoke-virtual {v10, v1}, Lorg/json/JSONObject;->getInt(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 278
+    .line 260
     const-string v1, "texts"
 
     invoke-virtual {v10, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v11
 
-    .line 279
+    .line 261
     const-string v5, ""
 
-    .line 280
+    .line 262
     const/4 v1, 0x0
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v2
 
-    .line 281
+    .line 263
     invoke-virtual {v11}, Lorg/json/JSONArray;->length()I
 
     move-result v1
@@ -1015,12 +1015,12 @@
     :goto_1
     if-ltz v6, :cond_4
 
-    .line 282
+    .line 264
     invoke-virtual {v11, v6}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 283
+    .line 265
     new-instance v2, Lcom/bbm/util/c/b;
 
     sget-object v12, Lcom/bbm/util/c/g;->a:Lcom/bbm/util/c/g;
@@ -1031,17 +1031,17 @@
 
     invoke-virtual {v0, v3, v2}, Lcom/bbm/util/c/a;->a(Ljava/lang/String;Lcom/bbm/util/c/b;)V
 
-    .line 284
+    .line 266
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v2
 
     if-nez v2, :cond_2
 
-    .line 285
+    .line 267
     move-object/from16 v0, p0
 
-    iget-object v12, v0, Lcom/bbm/util/c/c;->f:[Ljava/lang/String;
+    iget-object v12, v0, Lcom/bbm/util/c/c;->g:[Ljava/lang/String;
 
     array-length v13, v12
 
@@ -1058,21 +1058,21 @@
 
     aget-object v14, v12, v5
 
-    .line 286
+    .line 268
     invoke-virtual {v3, v14}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v14
 
     if-nez v14, :cond_1
 
-    .line 287
+    .line 269
     invoke-virtual {v1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v14
 
     if-nez v14, :cond_0
 
-    .line 289
+    .line 271
     const/4 v1, 0x1
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -1081,14 +1081,14 @@
 
     move-object v2, v3
 
-    .line 285
+    .line 267
     :cond_0
     :goto_3
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    .line 293
+    .line 274
     :cond_1
     const/4 v1, 0x0
 
@@ -1101,7 +1101,7 @@
     :cond_2
     move-object v2, v5
 
-    .line 281
+    .line 263
     :cond_3
     add-int/lit8 v3, v6, -0x1
 
@@ -1111,7 +1111,7 @@
 
     goto :goto_1
 
-    .line 299
+    .line 280
     :cond_4
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1153,7 +1153,7 @@
 
     move-result-object v3
 
-    .line 301
+    .line 282
     new-instance v1, Lcom/bbm/util/c/e;
 
     const-string v2, "name"
@@ -1168,19 +1168,19 @@
 
     invoke-interface {v8, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 304
+    .line 285
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11}, Lcom/bbm/util/c/c;->a(Lorg/json/JSONArray;)V
 
-    .line 305
+    .line 286
     invoke-virtual {v11}, Lorg/json/JSONArray;->length()I
 
     move-result v1
 
     if-nez v1, :cond_5
 
-    .line 307
+    .line 287
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1213,11 +1213,11 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v1, v2}, Lcom/bbm/w;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 275
+    .line 257
     :cond_5
     add-int/lit8 v1, v7, 0x1
 
@@ -1225,13 +1225,13 @@
 
     goto/16 :goto_0
 
-    .line 311
+    .line 290
     :catch_0
     move-exception v1
 
-    invoke-static {v1}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v1}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
-    .line 315
+    .line 294
     :cond_6
     return-object v8
 .end method
@@ -1246,13 +1246,13 @@
 
     const/4 v8, 0x1
 
-    .line 327
+    .line 304
     new-instance v1, Lcom/bbm/util/c/f;
 
     invoke-direct {v1, p3, p1, p2}, Lcom/bbm/util/c/f;-><init>(Lcom/bbm/util/c/g;IF)V
 
-    .line 330
-    iget-object v0, p0, Lcom/bbm/util/c/c;->e:Ljava/util/concurrent/ConcurrentMap;
+    .line 307
+    iget-object v0, p0, Lcom/bbm/util/c/c;->f:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/ConcurrentMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1260,14 +1260,14 @@
 
     check-cast v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 331
+    .line 308
     if-eqz v0, :cond_0
 
-    .line 340
+    .line 317
     :goto_0
     return-object v0
 
-    .line 334
+    .line 311
     :cond_0
     const/4 v0, 0x0
 
@@ -1311,19 +1311,19 @@
 
     new-array v3, v9, [Ljava/lang/Object;
 
-    invoke-static {v2, v3}, Lcom/bbm/w;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v2, v3}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 335
+    .line 312
     :goto_1
-    iget-object v2, p0, Lcom/bbm/util/c/c;->e:Ljava/util/concurrent/ConcurrentMap;
+    iget-object v2, p0, Lcom/bbm/util/c/c;->f:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v2, v1, v0}, Ljava/util/concurrent/ConcurrentMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 334
+    .line 311
     :pswitch_0
-    iget-object v0, p0, Lcom/bbm/util/c/c;->g:Ljava/util/List;
+    iget-object v0, p0, Lcom/bbm/util/c/c;->a:Ljava/util/List;
 
     invoke-direct {p0, p1, v0, p2}, Lcom/bbm/util/c/c;->a(ILjava/util/List;F)Landroid/graphics/drawable/BitmapDrawable;
 
@@ -1341,7 +1341,7 @@
     goto :goto_1
 
     :pswitch_2
-    iget-object v0, p0, Lcom/bbm/util/c/c;->b:Landroid/content/Context;
+    iget-object v0, p0, Lcom/bbm/util/c/c;->c:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1375,7 +1375,7 @@
 
     iput-boolean v8, v4, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    iget-object v5, p0, Lcom/bbm/util/c/c;->b:Landroid/content/Context;
+    iget-object v5, p0, Lcom/bbm/util/c/c;->c:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1409,7 +1409,7 @@
 
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
-    iget-object v5, p0, Lcom/bbm/util/c/c;->b:Landroid/content/Context;
+    iget-object v5, p0, Lcom/bbm/util/c/c;->c:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1439,7 +1439,7 @@
     .locals 1
 
     .prologue
-    .line 182
+    .line 177
     invoke-static {}, Landroid/text/Spannable$Factory;->getInstance()Landroid/text/Spannable$Factory;
 
     move-result-object v0
@@ -1448,57 +1448,89 @@
 
     move-result-object v0
 
-    .line 183
+    .line 178
     invoke-virtual {p0, p1, p2, v0}, Lcom/bbm/util/c/c;->a(Ljava/lang/CharSequence;FLandroid/text/Spannable;)Landroid/text/Spannable;
 
-    .line 184
+    .line 179
     return-object v0
 .end method
 
 .method public final a(Ljava/lang/CharSequence;FLandroid/text/Spannable;)Landroid/text/Spannable;
-    .locals 9
+    .locals 6
 
     .prologue
-    const/4 v3, 0x0
+    .line 183
+    const v0, 0x3fb33333
 
-    .line 188
-    const/high16 v0, 0x40000000
+    mul-float v2, p2, v0
 
-    add-float v4, p2, v0
+    .line 185
+    iget-object v0, p0, Lcom/bbm/util/c/c;->d:Lcom/bbm/util/c/a;
 
-    .line 191
-    iget-object v0, p0, Lcom/bbm/util/c/c;->c:Lcom/bbm/util/c/a;
+    iget-object v1, v0, Lcom/bbm/util/c/a;->a:Lcom/bbm/util/c/h;
 
-    invoke-virtual {v0, p1}, Lcom/bbm/util/c/a;->a(Ljava/lang/CharSequence;)Ljava/util/List;
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x0
+
+    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
+
+    move-result v4
+
+    :goto_0
+    if-ge v0, v4, :cond_0
+
+    invoke-virtual {v1, p1, v0, v4}, Lcom/bbm/util/c/h;->a(Ljava/lang/CharSequence;II)Lcom/google/b/a/l;
 
     move-result-object v0
 
-    .line 192
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
 
-    move-result-object v5
+    move-result v5
 
-    move v2, v3
+    if-eqz v5, :cond_0
 
-    :goto_0
-    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/bbm/util/c/i;
 
-    .line 194
+    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget v0, v0, Lcom/bbm/util/c/i;->b:I
+
+    goto :goto_0
+
+    .line 186
+    :cond_0
+    invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v3
+
+    :goto_1
+    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/util/c/i;
+
+    .line 188
     iget-object v1, v0, Lcom/bbm/util/c/i;->c:Ljava/lang/Object;
 
     check-cast v1, Lcom/bbm/util/c/b;
 
-    iget v6, v1, Lcom/bbm/util/c/b;->a:I
+    iget v4, v1, Lcom/bbm/util/c/b;->a:I
 
     iget-object v1, v0, Lcom/bbm/util/c/i;->c:Ljava/lang/Object;
 
@@ -1506,131 +1538,37 @@
 
     iget-object v1, v1, Lcom/bbm/util/c/b;->b:Lcom/bbm/util/c/g;
 
-    invoke-virtual {p0, v6, v4, v1}, Lcom/bbm/util/c/c;->a(IFLcom/bbm/util/c/g;)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {p0, v4, v2, v1}, Lcom/bbm/util/c/c;->a(IFLcom/bbm/util/c/g;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 195
-    new-instance v6, Lcom/bbm/ui/do;
+    .line 189
+    new-instance v4, Lcom/bbm/ui/ee;
 
-    invoke-direct {v6, v1, v4}, Lcom/bbm/ui/do;-><init>(Landroid/graphics/drawable/Drawable;F)V
+    invoke-direct {v4, v1, v2}, Lcom/bbm/ui/ee;-><init>(Landroid/graphics/drawable/Drawable;F)V
 
-    .line 197
+    .line 191
     iget v1, v0, Lcom/bbm/util/c/i;->a:I
 
-    iget v7, v0, Lcom/bbm/util/c/i;->b:I
+    iget v0, v0, Lcom/bbm/util/c/i;->b:I
 
-    const/16 v8, 0x21
+    const/16 v5, 0x21
 
-    invoke-interface {p3, v6, v1, v7, v8}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
-
-    .line 198
-    iget v1, v0, Lcom/bbm/util/c/i;->b:I
-
-    iget v0, v0, Lcom/bbm/util/c/i;->a:I
-
-    sub-int v0, v1, v0
-
-    add-int/2addr v0, v2
-
-    move v2, v0
-
-    .line 199
-    goto :goto_0
-
-    .line 202
-    :cond_0
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    if-ne v2, v0, :cond_1
-
-    .line 204
-    invoke-interface {p1}, Ljava/lang/CharSequence;->length()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, -0x1
-
-    const-class v1, Lcom/bbm/ui/do;
-
-    invoke-interface {p3, v3, v0, v1}, Landroid/text/Spannable;->getSpans(IILjava/lang/Class;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Lcom/bbm/ui/do;
-
-    array-length v1, v0
-
-    :goto_1
-    if-ge v3, v1, :cond_1
-
-    aget-object v2, v0, v3
-
-    .line 205
-    invoke-virtual {v2}, Lcom/bbm/ui/do;->a()V
-
-    .line 204
-    add-int/lit8 v3, v3, 0x1
+    invoke-interface {p3, v4, v1, v0, v5}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
     goto :goto_1
 
-    .line 208
+    .line 194
     :cond_1
     return-object p3
-.end method
-
-.method public final a()Ljava/util/List;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/util/c/e;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 217
-    iget-object v0, p0, Lcom/bbm/util/c/c;->g:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final b(Ljava/lang/CharSequence;F)Landroid/text/Spannable;
-    .locals 2
-
-    .prologue
-    .line 212
-    new-instance v0, Landroid/text/SpannableStringBuilder;
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
-
-    .line 213
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/util/c/c;->a(Ljava/lang/CharSequence;F)Landroid/text/Spannable;
-
-    move-result-object v0
-
-    return-object v0
 .end method
 
 .method public final b(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
     .prologue
-    .line 447
-    iget-object v0, p0, Lcom/bbm/util/c/c;->d:Ljava/util/Map;
+    .line 424
+    iget-object v0, p0, Lcom/bbm/util/c/c;->e:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -1640,7 +1578,7 @@
 
     move-result-object v2
 
-    .line 448
+    .line 425
     :cond_0
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -1649,14 +1587,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 449
+    .line 426
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 450
+    .line 427
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -1669,7 +1607,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 451
+    .line 428
     const-string v1, ""
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -1686,7 +1624,7 @@
 
     if-nez v1, :cond_0
 
-    .line 452
+    .line 429
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
@@ -1709,7 +1647,7 @@
 
     goto :goto_0
 
-    .line 456
+    .line 433
     :cond_1
     return-object p1
 .end method

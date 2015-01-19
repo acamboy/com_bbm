@@ -1,134 +1,81 @@
-.class public final Lcom/bbm/ui/c/aw;
+.class final Lcom/bbm/ui/c/aw;
 .super Ljava/lang/Object;
-.source "ChannelsNotificationsFragment.java"
+.source "ChannelDetailsFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/c/gn;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/ar;
-
-.field private final b:Lcom/bbm/d/dh;
+.field final synthetic a:Lcom/bbm/ui/c/ag;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/c/ar;Lcom/bbm/d/dh;)V
+.method constructor <init>(Lcom/bbm/ui/c/ag;)V
     .locals 0
 
     .prologue
-    .line 152
-    iput-object p1, p0, Lcom/bbm/ui/c/aw;->a:Lcom/bbm/ui/c/ar;
+    .line 1040
+    iput-object p1, p0, Lcom/bbm/ui/c/aw;->a:Lcom/bbm/ui/c/ag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 153
-    iput-object p2, p0, Lcom/bbm/ui/c/aw;->b:Lcom/bbm/d/dh;
-
-    .line 154
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+    .locals 3
 
     .prologue
-    const/4 v0, 0x0
+    .line 1043
+    iget-object v0, p0, Lcom/bbm/ui/c/aw;->a:Lcom/bbm/ui/c/ag;
 
-    .line 158
-    iget-object v1, p0, Lcom/bbm/ui/c/aw;->b:Lcom/bbm/d/dh;
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->h(Lcom/bbm/ui/c/ag;)Lcom/bbm/ui/activities/cq;
 
-    iget-object v1, v1, Lcom/bbm/d/dh;->b:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {v1}, Lcom/bbm/util/x;->e(Ljava/lang/String;)V
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    .line 162
-    :try_start_0
-    iget-object v1, p0, Lcom/bbm/ui/c/aw;->b:Lcom/bbm/d/dh;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    iget-object v1, v1, Lcom/bbm/d/dh;->d:Lorg/json/JSONObject;
+    const/4 v1, 0x1
 
-    const-string v2, "channelUri"
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    .line 1045
+    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 1050
+    :goto_0
+    return-void
+
+    .line 1047
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/c/aw;->a:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->a(Lcom/bbm/ui/c/ag;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/c/aw;->a:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/ag;->h(Lcom/bbm/ui/c/ag;)Lcom/bbm/ui/activities/cq;
 
     move-result-object v1
 
-    .line 163
-    :try_start_1
-    iget-object v2, p0, Lcom/bbm/ui/c/aw;->b:Lcom/bbm/d/dh;
+    sget-object v2, Lcom/bbm/util/ax;->d:Lcom/bbm/util/ax;
 
-    iget-object v2, v2, Lcom/bbm/d/dh;->d:Lorg/json/JSONObject;
-
-    const-string v3, "postId"
-
-    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
-    :try_end_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_1
-
-    move-result-object v0
-
-    .line 168
-    :goto_0
-    iget-object v2, p0, Lcom/bbm/ui/c/aw;->b:Lcom/bbm/d/dh;
-
-    iget-object v2, v2, Lcom/bbm/d/dh;->f:Ljava/lang/String;
-
-    const-string v3, "FavoriteChannelPost"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 170
-    iget-object v0, p0, Lcom/bbm/ui/c/aw;->a:Lcom/bbm/ui/c/ar;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ar;->c(Lcom/bbm/ui/c/ar;)Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0, v1}, Lcom/bbm/util/x;->a(Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 174
-    :goto_1
-    return-void
-
-    .line 164
-    :catch_0
-    move-exception v1
-
-    move-object v2, v1
-
-    move-object v1, v0
-
-    :goto_2
-    invoke-static {v2}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/ac;->a(Ljava/lang/String;Landroid/app/Activity;Lcom/bbm/util/ax;)V
 
     goto :goto_0
 
-    .line 172
-    :cond_0
-    iget-object v2, p0, Lcom/bbm/ui/c/aw;->a:Lcom/bbm/ui/c/ar;
-
-    invoke-static {v2}, Lcom/bbm/ui/c/ar;->c(Lcom/bbm/ui/c/ar;)Landroid/content/Context;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    invoke-static {v2, v0, v1, v3}, Lcom/bbm/util/x;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)V
-
-    goto :goto_1
-
-    .line 164
-    :catch_1
-    move-exception v2
-
-    goto :goto_2
+    .line 1045
+    :pswitch_data_0
+    .packed-switch 0x7f0b001b
+        :pswitch_0
+    .end packed-switch
 .end method

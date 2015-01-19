@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final e:Landroid/view/animation/Interpolator;
+.field private static final g:Landroid/view/animation/Interpolator;
 
 
 # instance fields
@@ -14,32 +14,32 @@
 
 .field private C:F
 
-.field protected a:I
-
-.field protected b:Landroid/view/VelocityTracker;
-
-.field protected c:I
-
-.field protected d:I
-
-.field private f:Landroid/view/View;
-
-.field private g:I
-
-.field private h:Landroid/widget/Scroller;
-
-.field private i:Z
-
-.field private final j:Lcom/bbm/util/cm;
+.field public final a:Lcom/bbm/util/ct;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/util/cm",
+            "Lcom/bbm/util/ct",
             "<",
             "Ljava/lang/Boolean;",
             ">;"
         }
     .end annotation
 .end field
+
+.field public b:Z
+
+.field protected c:I
+
+.field protected d:Landroid/view/VelocityTracker;
+
+.field protected e:I
+
+.field protected f:I
+
+.field private h:Landroid/view/View;
+
+.field private i:I
+
+.field private j:Landroid/widget/Scroller;
 
 .field private k:Z
 
@@ -93,7 +93,7 @@
 
     invoke-direct {v0}, Lcom/slidingmenu/lib/a;-><init>()V
 
-    sput-object v0, Lcom/slidingmenu/lib/CustomViewAbove;->e:Landroid/view/animation/Interpolator;
+    sput-object v0, Lcom/slidingmenu/lib/CustomViewAbove;->g:Landroid/view/animation/Interpolator;
 
     return-void
 .end method
@@ -102,12 +102,12 @@
     .locals 1
 
     .prologue
-    .line 174
+    .line 170
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/slidingmenu/lib/CustomViewAbove;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 175
+    .line 171
     return-void
 .end method
 
@@ -119,24 +119,24 @@
 
     const/4 v2, 0x0
 
-    .line 178
+    .line 174
     invoke-direct {p0, p1, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 70
-    new-instance v0, Lcom/bbm/util/cm;
+    new-instance v0, Lcom/bbm/util/ct;
 
     invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/bbm/util/cm;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Lcom/bbm/util/cm;
+    iput-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:Lcom/bbm/util/ct;
 
     .line 85
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
     .line 102
     iput-boolean v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->t:Z
@@ -154,18 +154,18 @@
     .line 116
     iput-boolean v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->A:Z
 
-    .line 625
-    iput v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:I
+    .line 602
+    iput v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:I
 
-    .line 680
+    .line 655
     iput-boolean v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->B:Z
 
-    .line 944
+    .line 911
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->C:F
 
-    .line 179
+    .line 175
     invoke-virtual {p0, v2}, Lcom/slidingmenu/lib/CustomViewAbove;->setWillNotDraw(Z)V
 
     const/high16 v0, 0x40000
@@ -180,11 +180,11 @@
 
     new-instance v1, Landroid/widget/Scroller;
 
-    sget-object v2, Lcom/slidingmenu/lib/CustomViewAbove;->e:Landroid/view/animation/Interpolator;
+    sget-object v2, Lcom/slidingmenu/lib/CustomViewAbove;->g:Landroid/view/animation/Interpolator;
 
     invoke-direct {v1, v0, v2}, Landroid/widget/Scroller;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
 
-    iput-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/widget/Scroller;
+    iput-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Landroid/widget/Scroller;
 
     invoke-static {v0}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
@@ -206,7 +206,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
+    iput v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->e:I
 
     new-instance v1, Lcom/slidingmenu/lib/b;
 
@@ -234,38 +234,137 @@
 
     iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->r:I
 
-    .line 180
+    .line 176
     return-void
 .end method
 
 .method private a(I)I
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 337
+    .line 327
     packed-switch p1, :pswitch_data_0
 
-    .line 344
+    .line 334
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 340
+    .line 330
     :pswitch_0
     iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
-    invoke-virtual {v0, v1, p1}, Lcom/slidingmenu/lib/CustomViewBehind;->a(Landroid/view/View;I)I
+    iget v2, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-nez v2, :cond_1
+
+    packed-switch p1, :pswitch_data_1
+
+    :cond_0
+    :goto_1
+    :pswitch_1
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
     move-result v0
 
     goto :goto_0
 
-    .line 342
-    :pswitch_1
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    :pswitch_2
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v0
+
+    sub-int v0, v1, v0
+
+    goto :goto_0
+
+    :pswitch_3
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_1
+    iget v2, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    const/4 v3, 0x1
+
+    if-ne v2, v3, :cond_2
+
+    packed-switch p1, :pswitch_data_2
+
+    :pswitch_4
+    goto :goto_1
+
+    :pswitch_5
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :pswitch_6
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    goto :goto_0
+
+    :cond_2
+    iget v2, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_0
+
+    packed-switch p1, :pswitch_data_3
+
+    :pswitch_7
+    goto :goto_1
+
+    :pswitch_8
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v0
+
+    sub-int v0, v1, v0
+
+    goto :goto_0
+
+    :pswitch_9
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    goto :goto_0
+
+    .line 332
+    :pswitch_a
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
@@ -273,14 +372,34 @@
 
     goto :goto_0
 
-    .line 337
-    nop
-
+    .line 327
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
-        :pswitch_1
+        :pswitch_a
         :pswitch_0
+    .end packed-switch
+
+    .line 330
+    :pswitch_data_1
+    .packed-switch 0x0
+        :pswitch_2
+        :pswitch_1
+        :pswitch_3
+    .end packed-switch
+
+    :pswitch_data_2
+    .packed-switch 0x0
+        :pswitch_5
+        :pswitch_4
+        :pswitch_6
+    .end packed-switch
+
+    :pswitch_data_3
+    .packed-switch 0x0
+        :pswitch_8
+        :pswitch_7
+        :pswitch_9
     .end packed-switch
 .end method
 
@@ -290,12 +409,12 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 673
+    .line 648
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->findPointerIndex(I)I
 
     move-result v0
 
-    .line 674
+    .line 649
     if-eq v0, v2, :cond_0
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
@@ -304,11 +423,11 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 675
+    .line 650
     :cond_0
-    iput v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    iput v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
-    .line 677
+    .line 652
     :cond_1
     return v0
 .end method
@@ -327,12 +446,12 @@
     .locals 1
 
     .prologue
-    .line 242
+    .line 235
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->a(IZZI)V
 
-    .line 243
+    .line 236
     return-void
 .end method
 
@@ -340,84 +459,100 @@
     .locals 12
 
     .prologue
-    .line 246
+    .line 239
     if-nez p3, :cond_1
 
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     if-ne v0, p1, :cond_1
 
-    .line 247
+    .line 240
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->setScrollingCacheEnabled(Z)V
 
-    .line 269
+    .line 261
     :cond_0
     :goto_0
     return-void
 
-    .line 251
+    .line 244
     :cond_1
     iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    invoke-virtual {v0, p1}, Lcom/slidingmenu/lib/CustomViewBehind;->a(I)I
+    const/4 v1, 0x1
 
-    move-result v1
+    if-le p1, v1, :cond_6
 
-    .line 253
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    const/4 p1, 0x2
 
-    if-eq v0, v1, :cond_4
+    :cond_2
+    :goto_1
+    iget v1, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-nez v1, :cond_7
+
+    const/4 v1, 0x1
+
+    if-le p1, v1, :cond_7
+
+    const/4 p1, 0x0
+
+    .line 246
+    :cond_3
+    :goto_2
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
+
+    if-eq v0, p1, :cond_8
 
     const/4 v0, 0x1
 
-    .line 254
-    :goto_1
-    iput v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    .line 247
+    :goto_3
+    iput p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
-    .line 255
-    iget v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    .line 248
+    iget v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
-    invoke-direct {p0, v2}, Lcom/slidingmenu/lib/CustomViewAbove;->a(I)I
+    invoke-direct {p0, v1}, Lcom/slidingmenu/lib/CustomViewAbove;->a(I)I
 
     move-result v3
 
+    .line 249
+    if-eqz v0, :cond_4
+
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->v:Lcom/slidingmenu/lib/c;
+
+    if-eqz v1, :cond_4
+
+    .line 250
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->v:Lcom/slidingmenu/lib/c;
+
+    invoke-interface {v1, p1}, Lcom/slidingmenu/lib/c;->a(I)V
+
+    .line 252
+    :cond_4
+    if-eqz v0, :cond_5
+
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->w:Lcom/slidingmenu/lib/c;
+
+    if-eqz v0, :cond_5
+
+    .line 253
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->w:Lcom/slidingmenu/lib/c;
+
+    invoke-interface {v0, p1}, Lcom/slidingmenu/lib/c;->a(I)V
+
+    .line 255
+    :cond_5
+    if-eqz p2, :cond_d
+
     .line 256
-    if-eqz v0, :cond_2
-
-    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->v:Lcom/slidingmenu/lib/c;
-
-    if-eqz v2, :cond_2
-
-    .line 257
-    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->v:Lcom/slidingmenu/lib/c;
-
-    invoke-interface {v2, v1}, Lcom/slidingmenu/lib/c;->a(I)V
-
-    .line 259
-    :cond_2
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->w:Lcom/slidingmenu/lib/c;
-
-    if-eqz v0, :cond_3
-
-    .line 260
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->w:Lcom/slidingmenu/lib/c;
-
-    invoke-interface {v0, v1}, Lcom/slidingmenu/lib/c;->a(I)V
-
-    .line 262
-    :cond_3
-    if-eqz p2, :cond_9
-
-    .line 263
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getChildCount()I
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_9
 
     const/4 v0, 0x0
 
@@ -425,14 +560,35 @@
 
     goto :goto_0
 
-    .line 253
-    :cond_4
-    const/4 v0, 0x0
+    .line 244
+    :cond_6
+    if-gtz p1, :cond_2
+
+    const/4 p1, 0x0
 
     goto :goto_1
 
-    .line 263
-    :cond_5
+    :cond_7
+    iget v0, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    const/4 v1, 0x1
+
+    if-ne v0, v1, :cond_3
+
+    if-gtz p1, :cond_3
+
+    const/4 p1, 0x2
+
+    goto :goto_2
+
+    .line 246
+    :cond_8
+    const/4 v0, 0x0
+
+    goto :goto_3
+
+    .line 256
+    :cond_9
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getScrollX()I
 
     move-result v1
@@ -445,17 +601,17 @@
 
     rsub-int/lit8 v4, v2, 0x0
 
-    if-nez v3, :cond_7
+    if-nez v3, :cond_b
 
-    if-nez v4, :cond_7
+    if-nez v4, :cond_b
 
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->e()V
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->c()V
 
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->c()Z
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->a()Z
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_a
 
     iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->y:Lcom/slidingmenu/lib/k;
 
@@ -467,7 +623,7 @@
 
     goto :goto_0
 
-    :cond_6
+    :cond_a
     iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->x:Lcom/slidingmenu/lib/i;
 
     if-eqz v0, :cond_0
@@ -478,12 +634,12 @@
 
     goto :goto_0
 
-    :cond_7
+    :cond_b
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->setScrollingCacheEnabled(Z)V
 
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Lcom/bbm/util/cm;
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:Lcom/bbm/util/ct;
 
     const/4 v5, 0x1
 
@@ -491,7 +647,7 @@
 
     move-result-object v5
 
-    invoke-virtual {v0, v5}, Lcom/bbm/util/cm;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v5}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
 
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getBehindWidth()I
 
@@ -547,7 +703,7 @@
 
     move-result v6
 
-    if-lez v6, :cond_8
+    if-lez v6, :cond_c
 
     const/high16 v0, 0x447a0000
 
@@ -567,14 +723,14 @@
 
     mul-int/lit8 v0, v0, 0x4
 
-    :goto_2
+    :goto_4
     const/16 v5, 0xc8
 
     invoke-static {v0, v5}, Ljava/lang/Math;->min(II)I
 
     move-result v5
 
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/widget/Scroller;
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Landroid/widget/Scroller;
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/Scroller;->startScroll(IIIII)V
 
@@ -582,7 +738,7 @@
 
     goto/16 :goto_0
 
-    :cond_8
+    :cond_c
     invoke-static {v3}, Ljava/lang/Math;->abs(I)I
 
     move-result v5
@@ -603,13 +759,13 @@
 
     float-to-int v0, v0
 
-    goto :goto_2
+    goto :goto_4
 
-    .line 266
-    :cond_9
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->e()V
+    .line 258
+    :cond_d
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->c()V
 
-    .line 267
+    .line 259
     const/4 v0, 0x0
 
     invoke-virtual {p0, v3, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->scrollTo(II)V
@@ -617,15 +773,42 @@
     goto/16 :goto_0
 .end method
 
+.method private a()Z
+    .locals 2
+
+    .prologue
+    .line 350
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
+
+    if-eqz v0, :cond_0
+
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method private a(Landroid/view/MotionEvent;)Z
-    .locals 6
+    .locals 8
 
     .prologue
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 641
+    .line 618
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -636,43 +819,58 @@
 
     float-to-int v0, v0
 
-    .line 642
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->c()Z
+    .line 619
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->a()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 643
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
+    .line 620
+    iget-object v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v4, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
-    iget v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    iget v5, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     int-to-float v0, v0
 
-    invoke-virtual {v1, v2, v3, v0}, Lcom/slidingmenu/lib/CustomViewBehind;->a(Landroid/view/View;IF)Z
+    iget v6, v3, Lcom/slidingmenu/lib/CustomViewBehind;->a:I
 
-    move-result v0
-
-    .line 655
-    :goto_0
-    return v0
-
-    .line 646
-    :cond_0
-    iget v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:I
-
-    packed-switch v3, :pswitch_data_0
+    packed-switch v6, :pswitch_data_0
 
     move v0, v2
 
-    .line 655
+    .line 631
+    :goto_0
+    return v0
+
+    :pswitch_0
+    move v0, v1
+
+    .line 620
     goto :goto_0
 
-    .line 648
-    :pswitch_0
+    :pswitch_1
+    invoke-virtual {v3, v4, v5, v0}, Lcom/slidingmenu/lib/CustomViewBehind;->a(Landroid/view/View;IF)Z
+
+    move-result v0
+
+    goto :goto_0
+
+    .line 622
+    :cond_0
+    iget v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:I
+
+    packed-switch v3, :pswitch_data_1
+
+    move v0, v2
+
+    .line 631
+    goto :goto_0
+
+    .line 624
+    :pswitch_2
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
@@ -735,93 +933,216 @@
 
     goto :goto_0
 
-    :pswitch_1
+    :pswitch_3
     move v0, v2
 
-    .line 650
+    .line 626
     goto :goto_0
 
-    .line 652
-    :pswitch_2
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
+    .line 628
+    :pswitch_4
+    iget-object v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v4, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
-    invoke-virtual {v1, v2, v0}, Lcom/slidingmenu/lib/CustomViewBehind;->b(Landroid/view/View;I)Z
+    invoke-virtual {v4}, Landroid/view/View;->getLeft()I
 
-    move-result v0
+    move-result v5
+
+    invoke-virtual {v4}, Landroid/view/View;->getRight()I
+
+    move-result v4
+
+    iget v6, v3, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-nez v6, :cond_5
+
+    if-lt v0, v5, :cond_4
+
+    iget v3, v3, Lcom/slidingmenu/lib/CustomViewBehind;->d:I
+
+    add-int/2addr v3, v5
+
+    if-gt v0, v3, :cond_4
+
+    move v0, v1
 
     goto :goto_0
 
-    .line 646
+    :cond_4
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_5
+    iget v6, v3, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-ne v6, v1, :cond_7
+
+    if-gt v0, v4, :cond_6
+
+    iget v3, v3, Lcom/slidingmenu/lib/CustomViewBehind;->d:I
+
+    sub-int v3, v4, v3
+
+    if-lt v0, v3, :cond_6
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_6
+    move v0, v2
+
+    goto :goto_0
+
+    :cond_7
+    iget v6, v3, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    const/4 v7, 0x2
+
+    if-ne v6, v7, :cond_b
+
+    if-lt v0, v5, :cond_8
+
+    iget v6, v3, Lcom/slidingmenu/lib/CustomViewBehind;->d:I
+
+    add-int/2addr v5, v6
+
+    if-le v0, v5, :cond_9
+
+    :cond_8
+    if-gt v0, v4, :cond_a
+
+    iget v3, v3, Lcom/slidingmenu/lib/CustomViewBehind;->d:I
+
+    sub-int v3, v4, v3
+
+    if-lt v0, v3, :cond_a
+
+    :cond_9
+    move v0, v1
+
+    goto/16 :goto_0
+
+    :cond_a
+    move v0, v2
+
+    goto/16 :goto_0
+
+    :cond_b
+    move v0, v2
+
+    goto/16 :goto_0
+
+    .line 620
     nop
 
     :pswitch_data_0
     .packed-switch 0x0
-        :pswitch_2
-        :pswitch_0
         :pswitch_1
+        :pswitch_0
+    .end packed-switch
+
+    .line 622
+    :pswitch_data_1
+    .packed-switch 0x0
+        :pswitch_4
+        :pswitch_2
+        :pswitch_3
     .end packed-switch
 .end method
 
-.method private b(Landroid/view/MotionEvent;)V
-    .locals 7
+.method private b()V
+    .locals 1
 
     .prologue
-    const/4 v6, 0x1
+    .line 540
+    invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getWidth()I
 
-    .line 882
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    .line 541
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->v:Lcom/slidingmenu/lib/c;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->v:Lcom/slidingmenu/lib/c;
+
+    :cond_0
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->w:Lcom/slidingmenu/lib/c;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->w:Lcom/slidingmenu/lib/c;
+
+    .line 546
+    :cond_1
+    return-void
+.end method
+
+.method private b(Landroid/view/MotionEvent;)V
+    .locals 10
+
+    .prologue
+    const/4 v9, 0x2
+
+    const/4 v8, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x1
+
+    .line 852
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
     invoke-direct {p0, p1, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->a(Landroid/view/MotionEvent;I)I
 
     move-result v0
 
-    .line 883
-    iget v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    .line 853
+    iget v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
-    const/4 v2, -0x1
+    const/4 v4, -0x1
 
-    if-ne v1, v2, :cond_1
+    if-ne v3, v4, :cond_1
 
-    .line 902
+    .line 871
     :cond_0
     :goto_0
     return-void
 
-    .line 886
+    .line 856
     :cond_1
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
 
-    move-result v1
-
-    .line 887
-    iget v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->o:F
-
-    sub-float v2, v1, v2
-
-    .line 888
-    invoke-static {v2}, Ljava/lang/Math;->abs(F)F
-
     move-result v3
 
-    .line 889
-    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getY(I)F
+    .line 857
+    iget v4, p0, Lcom/slidingmenu/lib/CustomViewAbove;->o:F
 
-    move-result v4
+    sub-float v4, v3, v4
 
-    .line 890
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->p:F
-
-    sub-float v0, v4, v0
-
-    .line 891
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+    .line 858
+    invoke-static {v4}, Ljava/lang/Math;->abs(F)F
 
     move-result v5
 
-    .line 892
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->c()Z
+    .line 859
+    invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getY(I)F
+
+    move-result v6
+
+    .line 860
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->p:F
+
+    sub-float v0, v6, v0
+
+    .line 861
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v7
+
+    .line 862
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->a()Z
 
     move-result v0
 
@@ -834,76 +1155,160 @@
     :goto_1
     int-to-float v0, v0
 
-    cmpl-float v0, v3, v0
+    cmpl-float v0, v5, v0
 
-    if-lez v0, :cond_4
+    if-lez v0, :cond_e
 
-    cmpl-float v0, v3, v5
+    cmpl-float v0, v5, v7
 
-    if-lez v0, :cond_4
+    if-lez v0, :cond_e
 
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->c()Z
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->a()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_8
 
     iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    invoke-virtual {v0, v2}, Lcom/slidingmenu/lib/CustomViewBehind;->b(F)Z
+    iget v7, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
 
-    move-result v0
+    if-nez v7, :cond_4
+
+    cmpg-float v0, v4, v8
+
+    if-gez v0, :cond_3
+
+    move v0, v1
 
     :goto_2
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_e
 
-    .line 893
-    iput-boolean v6, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
+    .line 863
+    iput-boolean v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Z
 
-    const/4 v0, 0x0
+    iput-boolean v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->B:Z
 
-    iput-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->B:Z
+    .line 864
+    iput v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->o:F
 
-    .line 894
-    iput v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->o:F
+    .line 865
+    iput v6, p0, Lcom/slidingmenu/lib/CustomViewAbove;->p:F
 
-    .line 895
-    iput v4, p0, Lcom/slidingmenu/lib/CustomViewAbove;->p:F
-
-    .line 896
-    invoke-direct {p0, v6}, Lcom/slidingmenu/lib/CustomViewAbove;->setScrollingCacheEnabled(Z)V
+    .line 866
+    invoke-direct {p0, v1}, Lcom/slidingmenu/lib/CustomViewAbove;->setScrollingCacheEnabled(Z)V
 
     goto :goto_0
 
-    .line 892
+    .line 862
     :cond_2
     iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->m:I
 
     goto :goto_1
 
     :cond_3
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
-
-    invoke-virtual {v0, v2}, Lcom/slidingmenu/lib/CustomViewBehind;->a(F)Z
-
-    move-result v0
+    move v0, v2
 
     goto :goto_2
 
-    .line 899
     :cond_4
+    iget v7, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-ne v7, v1, :cond_6
+
+    cmpl-float v0, v4, v8
+
+    if-lez v0, :cond_5
+
+    move v0, v1
+
+    goto :goto_2
+
+    :cond_5
+    move v0, v2
+
+    goto :goto_2
+
+    :cond_6
+    iget v0, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-ne v0, v9, :cond_7
+
+    move v0, v1
+
+    goto :goto_2
+
+    :cond_7
+    move v0, v2
+
+    goto :goto_2
+
+    :cond_8
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
+
+    iget v7, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-nez v7, :cond_a
+
+    cmpl-float v0, v4, v8
+
+    if-lez v0, :cond_9
+
+    move v0, v1
+
+    goto :goto_2
+
+    :cond_9
+    move v0, v2
+
+    goto :goto_2
+
+    :cond_a
+    iget v7, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-ne v7, v1, :cond_c
+
+    cmpg-float v0, v4, v8
+
+    if-gez v0, :cond_b
+
+    move v0, v1
+
+    goto :goto_2
+
+    :cond_b
+    move v0, v2
+
+    goto :goto_2
+
+    :cond_c
+    iget v0, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-ne v0, v9, :cond_d
+
+    move v0, v1
+
+    goto :goto_2
+
+    :cond_d
+    move v0, v2
+
+    goto :goto_2
+
+    .line 868
+    :cond_e
     iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->m:I
 
     int-to-float v0, v0
 
-    cmpl-float v0, v3, v0
+    cmpl-float v0, v5, v0
 
     if-lez v0, :cond_0
 
-    .line 900
-    iput-boolean v6, p0, Lcom/slidingmenu/lib/CustomViewAbove;->l:Z
+    .line 869
+    iput-boolean v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->l:Z
 
-    goto :goto_0
+    goto/16 :goto_0
 .end method
 
 .method private b(I)Z
@@ -918,18 +1323,18 @@
 
     const/4 v1, 0x1
 
-    .line 1079
+    .line 1039
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->findFocus()Landroid/view/View;
 
     move-result-object v0
 
-    .line 1080
+    .line 1040
     if-ne v0, p0, :cond_0
 
-    .line 1081
+    .line 1041
     const/4 v0, 0x0
 
-    .line 1086
+    .line 1046
     :cond_0
     invoke-static {}, Landroid/view/FocusFinder;->getInstance()Landroid/view/FocusFinder;
 
@@ -939,15 +1344,15 @@
 
     move-result-object v3
 
-    .line 1088
+    .line 1048
     if-eqz v3, :cond_5
 
     if-eq v3, v0, :cond_5
 
-    .line 1089
+    .line 1049
     if-ne p1, v4, :cond_3
 
-    .line 1090
+    .line 1050
     invoke-virtual {v3}, Landroid/view/View;->requestFocus()Z
 
     move-result v1
@@ -955,27 +1360,27 @@
     :goto_0
     move v2, v1
 
-    .line 1111
+    .line 1067
     :cond_1
     :goto_1
     if-eqz v2, :cond_2
 
-    .line 1112
+    .line 1068
     invoke-static {p1}, Landroid/view/SoundEffectConstants;->getContantForFocusDirection(I)I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->playSoundEffect(I)V
 
-    .line 1114
+    .line 1070
     :cond_2
     return v2
 
-    .line 1092
+    .line 1051
     :cond_3
     if-ne p1, v5, :cond_1
 
-    .line 1095
+    .line 1054
     if-eqz v0, :cond_4
 
     invoke-virtual {v3}, Landroid/view/View;->getLeft()I
@@ -988,7 +1393,7 @@
 
     if-le v4, v0, :cond_9
 
-    .line 1096
+    .line 1055
     :cond_4
     invoke-virtual {v3}, Landroid/view/View;->requestFocus()Z
 
@@ -996,19 +1401,19 @@
 
     goto :goto_0
 
-    .line 1103
+    .line 1060
     :cond_5
     if-eq p1, v4, :cond_6
 
     if-ne p1, v1, :cond_8
 
-    .line 1105
+    .line 1062
     :cond_6
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     if-lez v0, :cond_7
 
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     add-int/lit8 v0, v0, -0x1
 
@@ -1026,7 +1431,7 @@
 
     goto :goto_2
 
-    .line 1107
+    .line 1063
     :cond_8
     if-eq p1, v5, :cond_9
 
@@ -1034,13 +1439,13 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 1109
+    .line 1065
     :cond_9
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     if-gtz v0, :cond_a
 
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     add-int/lit8 v0, v0, 0x1
 
@@ -1054,31 +1459,152 @@
     goto :goto_0
 .end method
 
+.method private c()V
+    .locals 4
+
+    .prologue
+    .line 572
+    :try_start_0
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:Lcom/bbm/util/ct;
+
+    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    .line 574
+    if-eqz v0, :cond_2
+
+    .line 576
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->setScrollingCacheEnabled(Z)V
+
+    .line 577
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Landroid/widget/Scroller;
+
+    invoke-virtual {v0}, Landroid/widget/Scroller;->abortAnimation()V
+
+    .line 578
+    invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getScrollX()I
+
+    move-result v0
+
+    .line 579
+    invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getScrollY()I
+
+    move-result v1
+
+    .line 580
+    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Landroid/widget/Scroller;
+
+    invoke-virtual {v2}, Landroid/widget/Scroller;->getCurrX()I
+
+    move-result v2
+
+    .line 581
+    iget-object v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Landroid/widget/Scroller;
+
+    invoke-virtual {v3}, Landroid/widget/Scroller;->getCurrY()I
+
+    move-result v3
+
+    .line 582
+    if-ne v0, v2, :cond_0
+
+    if-eq v1, v3, :cond_1
+
+    .line 583
+    :cond_0
+    invoke-virtual {p0, v2, v3}, Lcom/slidingmenu/lib/CustomViewAbove;->scrollTo(II)V
+
+    .line 585
+    :cond_1
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 586
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->y:Lcom/slidingmenu/lib/k;
+
+    if-eqz v0, :cond_2
+
+    .line 587
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->y:Lcom/slidingmenu/lib/k;
+
+    invoke-interface {v0}, Lcom/slidingmenu/lib/k;->a()V
+
+    .line 595
+    :cond_2
+    :goto_0
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:Lcom/bbm/util/ct;
+
+    const/4 v1, 0x0
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+
+    .line 600
+    :goto_1
+    return-void
+
+    .line 590
+    :cond_3
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->x:Lcom/slidingmenu/lib/i;
+
+    if-eqz v0, :cond_2
+
+    .line 591
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->x:Lcom/slidingmenu/lib/i;
+
+    invoke-interface {v0}, Lcom/slidingmenu/lib/i;->a()V
+    :try_end_0
+    .catch Lcom/bbm/j/z; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 600
+    :catch_0
+    move-exception v0
+
+    goto :goto_1
+.end method
+
 .method private c(Landroid/view/MotionEvent;)V
     .locals 3
 
     .prologue
-    .line 950
+    .line 917
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v0
 
-    .line 951
+    .line 918
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v1
 
-    .line 952
-    iget v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    .line 919
+    iget v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
     if-ne v1, v2, :cond_1
 
-    .line 955
+    .line 922
     if-nez v0, :cond_2
 
     const/4 v0, 0x1
 
-    .line 956
+    .line 923
     :goto_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
@@ -1086,64 +1612,37 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 957
+    .line 924
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v1
 
     iput v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->o:F
 
-    .line 958
+    .line 925
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
-    .line 960
+    .line 927
     :cond_0
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Landroid/view/VelocityTracker;
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_1
 
-    .line 961
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Landroid/view/VelocityTracker;
+    .line 928
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->clear()V
 
-    .line 964
+    .line 931
     :cond_1
     return-void
 
-    .line 955
+    .line 922
     :cond_2
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private c()Z
-    .locals 2
-
-    .prologue
-    .line 360
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
@@ -1153,276 +1652,171 @@
     .locals 1
 
     .prologue
-    .line 558
-    invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getWidth()I
-
-    .line 559
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->v:Lcom/slidingmenu/lib/c;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->v:Lcom/slidingmenu/lib/c;
-
-    :cond_0
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->w:Lcom/slidingmenu/lib/c;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->w:Lcom/slidingmenu/lib/c;
-
-    .line 564
-    :cond_1
-    return-void
-.end method
-
-.method private e()V
-    .locals 4
-
-    .prologue
-    .line 593
-    :try_start_0
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Lcom/bbm/util/cm;
-
-    invoke-virtual {v0}, Lcom/bbm/util/cm;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    .line 595
-    if-eqz v0, :cond_2
-
-    .line 597
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->setScrollingCacheEnabled(Z)V
-
-    .line 598
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/widget/Scroller;
-
-    invoke-virtual {v0}, Landroid/widget/Scroller;->abortAnimation()V
-
-    .line 599
-    invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getScrollX()I
-
-    move-result v0
-
-    .line 600
-    invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getScrollY()I
-
-    move-result v1
-
-    .line 601
-    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/widget/Scroller;
-
-    invoke-virtual {v2}, Landroid/widget/Scroller;->getCurrX()I
-
-    move-result v2
-
-    .line 602
-    iget-object v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/widget/Scroller;
-
-    invoke-virtual {v3}, Landroid/widget/Scroller;->getCurrY()I
-
-    move-result v3
-
-    .line 603
-    if-ne v0, v2, :cond_0
-
-    if-eq v1, v3, :cond_1
-
-    .line 604
-    :cond_0
-    invoke-virtual {p0, v2, v3}, Lcom/slidingmenu/lib/CustomViewAbove;->scrollTo(II)V
-
-    .line 606
-    :cond_1
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->c()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 607
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->y:Lcom/slidingmenu/lib/k;
-
-    if-eqz v0, :cond_2
-
-    .line 608
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->y:Lcom/slidingmenu/lib/k;
-
-    invoke-interface {v0}, Lcom/slidingmenu/lib/k;->a()V
-
-    .line 617
-    :cond_2
-    :goto_0
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Lcom/bbm/util/cm;
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/util/cm;->b(Ljava/lang/Object;)V
-
-    .line 623
-    :goto_1
-    return-void
-
-    .line 612
-    :cond_3
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->x:Lcom/slidingmenu/lib/i;
-
-    if-eqz v0, :cond_2
-
-    .line 613
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->x:Lcom/slidingmenu/lib/i;
-
-    invoke-interface {v0}, Lcom/slidingmenu/lib/i;->a()V
-    :try_end_0
-    .catch Lcom/bbm/j/z; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 623
-    :catch_0
-    move-exception v0
-
-    goto :goto_1
-.end method
-
-.method private f()V
-    .locals 1
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 972
+    .line 939
     iput-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->B:Z
 
-    .line 973
-    iput-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
+    .line 940
+    iput-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Z
 
-    .line 974
+    .line 941
     iput-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->l:Z
 
-    .line 975
+    .line 942
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
-    .line 977
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Landroid/view/VelocityTracker;
+    .line 944
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:Landroid/view/VelocityTracker;
 
     if-eqz v0, :cond_0
 
-    .line 978
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Landroid/view/VelocityTracker;
+    .line 945
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:Landroid/view/VelocityTracker;
 
     invoke-virtual {v0}, Landroid/view/VelocityTracker;->recycle()V
 
-    .line 979
+    .line 946
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Landroid/view/VelocityTracker;
+    iput-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:Landroid/view/VelocityTracker;
 
-    .line 981
+    .line 948
     :cond_0
     return-void
 .end method
 
 .method private getLeftBound()I
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 348
+    .line 338
     iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/CustomViewBehind;->a(Landroid/view/View;)I
+    iget v2, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-eqz v2, :cond_0
+
+    iget v2, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_1
+
+    :cond_0
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
 
     move-result v0
 
+    sub-int v0, v1, v0
+
+    :goto_0
     return v0
+
+    :cond_1
+    iget v0, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_2
+
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method private getRightBound()I
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 352
+    .line 342
     iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/CustomViewBehind;->b(Landroid/view/View;)I
+    iget v2, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-nez v2, :cond_0
+
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
     move-result v0
 
+    :goto_0
     return v0
+
+    :cond_0
+    iget v2, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    const/4 v3, 0x1
+
+    if-eq v2, v3, :cond_1
+
+    iget v2, v0, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_2
+
+    :cond_1
+    invoke-virtual {v1}, Landroid/view/View;->getLeft()I
+
+    move-result v1
+
+    invoke-virtual {v0}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v0
+
+    add-int/2addr v0, v1
+
+    goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method private setScrollingCacheEnabled(Z)V
     .locals 1
 
     .prologue
-    .line 988
-    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:Z
+    .line 955
+    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 989
-    iput-boolean p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:Z
+    .line 956
+    iput-boolean p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
 
-    .line 1000
+    .line 967
     :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
-
-    .prologue
-    .line 629
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Lcom/bbm/util/cm;
-
-    invoke-virtual {v0}, Lcom/bbm/util/cm;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    .prologue
-    .line 984
-    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
-
-    return v0
-.end method
-
 .method public computeScroll()V
     .locals 4
 
     .prologue
-    .line 535
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/widget/Scroller;
+    .line 517
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->isFinished()Z
 
@@ -1430,8 +1824,8 @@
 
     if-nez v0, :cond_2
 
-    .line 536
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/widget/Scroller;
+    .line 518
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->computeScrollOffset()Z
 
@@ -1439,95 +1833,450 @@
 
     if-eqz v0, :cond_2
 
-    .line 537
+    .line 519
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getScrollX()I
 
     move-result v0
 
-    .line 538
+    .line 520
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getScrollY()I
 
     move-result v1
 
-    .line 539
-    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/widget/Scroller;
+    .line 521
+    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Landroid/widget/Scroller;
 
     invoke-virtual {v2}, Landroid/widget/Scroller;->getCurrX()I
 
     move-result v2
 
-    .line 540
-    iget-object v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/widget/Scroller;
+    .line 522
+    iget-object v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->j:Landroid/widget/Scroller;
 
     invoke-virtual {v3}, Landroid/widget/Scroller;->getCurrY()I
 
     move-result v3
 
-    .line 542
+    .line 524
     if-ne v0, v2, :cond_0
 
     if-eq v1, v3, :cond_1
 
-    .line 543
+    .line 525
     :cond_0
     invoke-virtual {p0, v2, v3}, Lcom/slidingmenu/lib/CustomViewAbove;->scrollTo(II)V
 
-    .line 544
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->d()V
+    .line 526
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->b()V
 
-    .line 548
+    .line 530
     :cond_1
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->invalidate()V
 
-    .line 555
+    .line 537
     :goto_0
     return-void
 
-    .line 554
+    .line 536
     :cond_2
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->e()V
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->c()V
 
     goto :goto_0
 .end method
 
 .method protected dispatchDraw(Landroid/graphics/Canvas;)V
-    .locals 3
+    .locals 12
 
     .prologue
-    .line 936
+    const/4 v11, 0x0
+
+    const/4 v10, 0x2
+
+    const/4 v2, 0x0
+
+    const/4 v9, 0x1
+
+    const/4 v6, 0x0
+
+    .line 903
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 938
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
+    .line 905
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
-    invoke-virtual {v0, v1, p1}, Lcom/slidingmenu/lib/CustomViewBehind;->a(Landroid/view/View;Landroid/graphics/Canvas;)V
+    iget-object v3, v1, Lcom/slidingmenu/lib/CustomViewBehind;->i:Landroid/graphics/drawable/Drawable;
 
-    .line 939
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
+    if-eqz v3, :cond_0
 
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget v3, v1, Lcom/slidingmenu/lib/CustomViewBehind;->k:I
 
-    invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getPercentOpen()F
+    if-gtz v3, :cond_4
 
-    move-result v2
+    .line 906
+    :cond_0
+    :goto_0
+    iget-object v7, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    invoke-virtual {v0, v1, p1, v2}, Lcom/slidingmenu/lib/CustomViewBehind;->a(Landroid/view/View;Landroid/graphics/Canvas;F)V
-
-    .line 940
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
-
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v8, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getPercentOpen()F
 
+    move-result v0
+
+    iget-boolean v1, v7, Lcom/slidingmenu/lib/CustomViewBehind;->f:Z
+
+    if-eqz v1, :cond_1
+
+    iget v1, v7, Lcom/slidingmenu/lib/CustomViewBehind;->l:F
+
+    const/high16 v3, 0x437f0000
+
+    mul-float/2addr v1, v3
+
+    const/high16 v3, 0x3f800000
+
+    sub-float v0, v3, v0
+
+    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
+
+    move-result v0
+
+    mul-float/2addr v0, v1
+
+    float-to-int v0, v0
+
+    iget-object v1, v7, Lcom/slidingmenu/lib/CustomViewBehind;->g:Landroid/graphics/Paint;
+
+    invoke-static {v0, v6, v6, v6}, Landroid/graphics/Color;->argb(IIII)I
+
+    move-result v0
+
+    invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
+
+    iget v0, v7, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-nez v0, :cond_7
+
+    invoke-virtual {v8}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    invoke-virtual {v7}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v1
+
+    sub-int v1, v0, v1
+
+    invoke-virtual {v8}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    :goto_1
+    int-to-float v1, v1
+
+    int-to-float v3, v0
+
+    invoke-virtual {v7}, Lcom/slidingmenu/lib/CustomViewBehind;->getHeight()I
+
+    move-result v0
+
+    int-to-float v4, v0
+
+    iget-object v5, v7, Lcom/slidingmenu/lib/CustomViewBehind;->g:Landroid/graphics/Paint;
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+
+    .line 907
+    :cond_1
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
+
+    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
+
+    invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getPercentOpen()F
+
+    move-result v3
+
+    iget-boolean v0, v1, Lcom/slidingmenu/lib/CustomViewBehind;->m:Z
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, v1, Lcom/slidingmenu/lib/CustomViewBehind;->n:Landroid/graphics/Bitmap;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, v1, Lcom/slidingmenu/lib/CustomViewBehind;->o:Landroid/view/View;
+
+    if-eqz v0, :cond_3
+
+    iget-object v0, v1, Lcom/slidingmenu/lib/CustomViewBehind;->o:Landroid/view/View;
+
+    const v4, 0x7f0b000d
+
+    invoke-virtual {v0, v4}, Landroid/view/View;->getTag(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    const-string v4, "CustomViewBehindSelectedView"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
+
+    iget-object v0, v1, Lcom/slidingmenu/lib/CustomViewBehind;->n:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v0
+
+    int-to-float v0, v0
+
+    mul-float/2addr v0, v3
+
+    float-to-int v0, v0
+
+    iget v3, v1, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-nez v3, :cond_9
+
+    invoke-virtual {v2}, Landroid/view/View;->getLeft()I
+
     move-result v2
 
-    invoke-virtual {v0, v1, p1, v2}, Lcom/slidingmenu/lib/CustomViewBehind;->b(Landroid/view/View;Landroid/graphics/Canvas;F)V
+    sub-int v0, v2, v0
 
-    .line 941
+    invoke-virtual {v1}, Lcom/slidingmenu/lib/CustomViewBehind;->getHeight()I
+
+    move-result v3
+
+    invoke-virtual {p1, v0, v6, v2, v3}, Landroid/graphics/Canvas;->clipRect(IIII)Z
+
+    iget-object v2, v1, Lcom/slidingmenu/lib/CustomViewBehind;->n:Landroid/graphics/Bitmap;
+
+    int-to-float v0, v0
+
+    invoke-virtual {v1}, Lcom/slidingmenu/lib/CustomViewBehind;->getSelectorTop()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {p1, v2, v0, v1, v11}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    :cond_2
+    :goto_2
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
+
+    .line 908
+    :cond_3
     return-void
+
+    .line 905
+    :cond_4
+    iget v3, v1, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-eqz v3, :cond_6
+
+    iget v3, v1, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-ne v3, v9, :cond_5
+
+    invoke-virtual {v0}, Landroid/view/View;->getRight()I
+
+    move-result v0
+
+    :goto_3
+    iget-object v3, v1, Lcom/slidingmenu/lib/CustomViewBehind;->i:Landroid/graphics/drawable/Drawable;
+
+    iget v4, v1, Lcom/slidingmenu/lib/CustomViewBehind;->k:I
+
+    add-int/2addr v4, v0
+
+    invoke-virtual {v1}, Lcom/slidingmenu/lib/CustomViewBehind;->getHeight()I
+
+    move-result v5
+
+    invoke-virtual {v3, v0, v6, v4, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iget-object v0, v1, Lcom/slidingmenu/lib/CustomViewBehind;->i:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    goto/16 :goto_0
+
+    :cond_5
+    iget v3, v1, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-ne v3, v10, :cond_b
+
+    iget-object v3, v1, Lcom/slidingmenu/lib/CustomViewBehind;->j:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v3, :cond_6
+
+    invoke-virtual {v0}, Landroid/view/View;->getRight()I
+
+    move-result v3
+
+    iget-object v4, v1, Lcom/slidingmenu/lib/CustomViewBehind;->j:Landroid/graphics/drawable/Drawable;
+
+    iget v5, v1, Lcom/slidingmenu/lib/CustomViewBehind;->k:I
+
+    add-int/2addr v5, v3
+
+    invoke-virtual {v1}, Lcom/slidingmenu/lib/CustomViewBehind;->getHeight()I
+
+    move-result v7
+
+    invoke-virtual {v4, v3, v6, v5, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iget-object v3, v1, Lcom/slidingmenu/lib/CustomViewBehind;->j:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    :cond_6
+    invoke-virtual {v0}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    iget v3, v1, Lcom/slidingmenu/lib/CustomViewBehind;->k:I
+
+    sub-int/2addr v0, v3
+
+    goto :goto_3
+
+    .line 906
+    :cond_7
+    iget v0, v7, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-ne v0, v9, :cond_8
+
+    invoke-virtual {v8}, Landroid/view/View;->getRight()I
+
+    move-result v1
+
+    invoke-virtual {v8}, Landroid/view/View;->getRight()I
+
+    move-result v0
+
+    invoke-virtual {v7}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v3
+
+    add-int/2addr v0, v3
+
+    goto/16 :goto_1
+
+    :cond_8
+    iget v0, v7, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-ne v0, v10, :cond_a
+
+    invoke-virtual {v8}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    invoke-virtual {v7}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    invoke-virtual {v8}, Landroid/view/View;->getLeft()I
+
+    move-result v3
+
+    int-to-float v1, v0
+
+    int-to-float v3, v3
+
+    invoke-virtual {v7}, Lcom/slidingmenu/lib/CustomViewBehind;->getHeight()I
+
+    move-result v0
+
+    int-to-float v4, v0
+
+    iget-object v5, v7, Lcom/slidingmenu/lib/CustomViewBehind;->g:Landroid/graphics/Paint;
+
+    move-object v0, p1
+
+    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
+
+    invoke-virtual {v8}, Landroid/view/View;->getRight()I
+
+    move-result v1
+
+    invoke-virtual {v8}, Landroid/view/View;->getRight()I
+
+    move-result v0
+
+    invoke-virtual {v7}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v3
+
+    add-int/2addr v0, v3
+
+    goto/16 :goto_1
+
+    .line 907
+    :cond_9
+    iget v3, v1, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-ne v3, v9, :cond_2
+
+    invoke-virtual {v2}, Landroid/view/View;->getRight()I
+
+    move-result v2
+
+    add-int/2addr v0, v2
+
+    invoke-virtual {v1}, Lcom/slidingmenu/lib/CustomViewBehind;->getHeight()I
+
+    move-result v3
+
+    invoke-virtual {p1, v2, v6, v0, v3}, Landroid/graphics/Canvas;->clipRect(IIII)Z
+
+    iget-object v2, v1, Lcom/slidingmenu/lib/CustomViewBehind;->n:Landroid/graphics/Bitmap;
+
+    iget-object v3, v1, Lcom/slidingmenu/lib/CustomViewBehind;->n:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
+
+    move-result v3
+
+    sub-int/2addr v0, v3
+
+    int-to-float v0, v0
+
+    invoke-virtual {v1}, Lcom/slidingmenu/lib/CustomViewBehind;->getSelectorTop()I
+
+    move-result v1
+
+    int-to-float v1, v1
+
+    invoke-virtual {p1, v2, v0, v1, v11}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+
+    goto/16 :goto_2
+
+    :cond_a
+    move v0, v6
+
+    move v1, v6
+
+    goto/16 :goto_1
+
+    :cond_b
+    move v0, v6
+
+    goto/16 :goto_3
 .end method
 
 .method public dispatchKeyEvent(Landroid/view/KeyEvent;)Z
@@ -1538,7 +2287,7 @@
 
     const/4 v1, 0x1
 
-    .line 1042
+    .line 1004
     invoke-super {p0, p1}, Landroid/view/ViewGroup;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v2
@@ -1629,15 +2378,15 @@
     .locals 1
 
     .prologue
-    .line 375
+    .line 365
     iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
     if-nez v0, :cond_0
 
-    .line 376
+    .line 366
     const/4 v0, 0x0
 
-    .line 379
+    .line 368
     :goto_0
     return v0
 
@@ -1655,8 +2404,8 @@
     .locals 1
 
     .prologue
-    .line 487
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    .line 469
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     return-object v0
 .end method
@@ -1665,14 +2414,14 @@
     .locals 2
 
     .prologue
-    .line 356
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    .line 346
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLeft()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
 
@@ -1687,8 +2436,8 @@
     .locals 1
 
     .prologue
-    .line 238
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    .line 231
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     return v0
 .end method
@@ -1697,10 +2446,10 @@
     .locals 2
 
     .prologue
-    .line 931
+    .line 898
     iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->C:F
 
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
@@ -1729,8 +2478,8 @@
     .locals 1
 
     .prologue
-    .line 637
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:I
+    .line 614
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:I
 
     return v0
 .end method
@@ -1743,7 +2492,7 @@
 
     const/4 v0, 0x0
 
-    .line 685
+    .line 660
     iget-boolean v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->t:Z
 
     if-eqz v2, :cond_0
@@ -1752,12 +2501,12 @@
 
     if-nez v2, :cond_1
 
-    .line 738
+    .line 712
     :cond_0
     :goto_0
     return v0
 
-    .line 689
+    .line 664
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -1765,7 +2514,7 @@
 
     and-int/lit16 v2, v2, 0xff
 
-    .line 697
+    .line 672
     const/4 v3, 0x3
 
     if-eq v2, v3, :cond_2
@@ -1778,44 +2527,44 @@
 
     if-eqz v3, :cond_3
 
-    .line 699
+    .line 674
     :cond_2
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->f()V
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->d()V
 
     goto :goto_0
 
-    .line 703
+    .line 678
     :cond_3
     sparse-switch v2, :sswitch_data_0
 
-    .line 731
+    .line 705
     :cond_4
     :goto_1
-    iget-boolean v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
+    iget-boolean v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Z
 
     if-nez v2, :cond_6
 
-    .line 732
-    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Landroid/view/VelocityTracker;
+    .line 706
+    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:Landroid/view/VelocityTracker;
 
     if-nez v2, :cond_5
 
-    .line 733
+    .line 707
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Landroid/view/VelocityTracker;
+    iput-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:Landroid/view/VelocityTracker;
 
-    .line 735
+    .line 709
     :cond_5
-    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Landroid/view/VelocityTracker;
+    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:Landroid/view/VelocityTracker;
 
     invoke-virtual {v2, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 738
+    .line 712
     :cond_6
-    iget-boolean v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
+    iget-boolean v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Z
 
     if-nez v2, :cond_7
 
@@ -1828,33 +2577,33 @@
 
     goto :goto_0
 
-    .line 705
+    .line 680
     :sswitch_0
     invoke-direct {p0, p1}, Lcom/slidingmenu/lib/CustomViewAbove;->b(Landroid/view/MotionEvent;)V
 
     goto :goto_1
 
-    .line 708
+    .line 683
     :sswitch_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v2
 
-    .line 709
+    .line 684
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v3
 
-    iput v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    iput v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
-    .line 710
-    iget v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    .line 685
+    iget v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
     const/4 v4, -0x1
 
     if-eq v3, v4, :cond_4
 
-    .line 711
+    .line 686
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v3
@@ -1863,28 +2612,28 @@
 
     iput v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->o:F
 
-    .line 714
+    .line 689
     invoke-virtual {p1, v2}, Landroid/view/MotionEvent;->getY(I)F
 
     move-result v2
 
     iput v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->p:F
 
-    .line 715
+    .line 690
     invoke-direct {p0, p1}, Lcom/slidingmenu/lib/CustomViewAbove;->a(Landroid/view/MotionEvent;)Z
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    .line 716
-    iput-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
+    .line 691
+    iput-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Z
 
-    .line 717
+    .line 692
     iput-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->l:Z
 
-    .line 718
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->c()Z
+    .line 693
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->a()Z
 
     move-result v2
 
@@ -1892,9 +2641,9 @@
 
     iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    iget-object v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
-    iget v4, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    iget v4, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -1904,30 +2653,30 @@
 
     add-float/2addr v5, v6
 
-    invoke-virtual {v2, v3, v4, v5}, Lcom/slidingmenu/lib/CustomViewBehind;->b(Landroid/view/View;IF)Z
+    invoke-virtual {v2, v3, v4, v5}, Lcom/slidingmenu/lib/CustomViewBehind;->a(Landroid/view/View;IF)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    .line 719
+    .line 694
     iput-boolean v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->B:Z
 
     goto :goto_1
 
-    .line 723
+    .line 697
     :cond_8
     iput-boolean v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->l:Z
 
     goto :goto_1
 
-    .line 727
+    .line 701
     :sswitch_2
     invoke-direct {p0, p1}, Lcom/slidingmenu/lib/CustomViewAbove;->c(Landroid/view/MotionEvent;)V
 
     goto :goto_1
 
-    .line 703
+    .line 678
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_1
@@ -1942,18 +2691,18 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 521
+    .line 503
     sub-int v0, p4, p2
 
-    .line 522
+    .line 504
     sub-int v1, p5, p3
 
-    .line 523
-    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    .line 505
+    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     invoke-virtual {v2, v3, v3, v0, v1}, Landroid/view/View;->layout(IIII)V
 
-    .line 524
+    .line 506
     return-void
 .end method
 
@@ -1963,35 +2712,35 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 497
+    .line 479
     invoke-static {v2, p1}, Lcom/slidingmenu/lib/CustomViewAbove;->getDefaultSize(II)I
 
     move-result v0
 
-    .line 498
+    .line 480
     invoke-static {v2, p2}, Lcom/slidingmenu/lib/CustomViewAbove;->getDefaultSize(II)I
 
     move-result v1
 
-    .line 499
+    .line 481
     invoke-virtual {p0, v0, v1}, Lcom/slidingmenu/lib/CustomViewAbove;->setMeasuredDimension(II)V
 
-    .line 501
+    .line 483
     invoke-static {p1, v2, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->getChildMeasureSpec(III)I
 
     move-result v0
 
-    .line 502
+    .line 484
     invoke-static {p2, v2, v1}, Lcom/slidingmenu/lib/CustomViewAbove;->getChildMeasureSpec(III)I
 
     move-result v1
 
-    .line 503
-    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    .line 485
+    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     invoke-virtual {v2, v0, v1}, Landroid/view/View;->measure(II)V
 
-    .line 504
+    .line 486
     return-void
 .end method
 
@@ -1999,17 +2748,17 @@
     .locals 2
 
     .prologue
-    .line 508
+    .line 490
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;->onSizeChanged(IIII)V
 
-    .line 510
+    .line 492
     if-eq p1, p3, :cond_0
 
-    .line 514
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->e()V
+    .line 496
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->c()V
 
-    .line 515
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    .line 497
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     invoke-direct {p0, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->a(I)I
 
@@ -2021,7 +2770,7 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/slidingmenu/lib/CustomViewAbove;->scrollTo(II)V
 
-    .line 517
+    .line 499
     :cond_0
     return-void
 .end method
@@ -2036,20 +2785,20 @@
 
     const/4 v4, 0x1
 
-    .line 744
+    .line 718
     iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->t:Z
 
     if-nez v0, :cond_0
 
     move v0, v3
 
-    .line 878
+    .line 848
     :goto_0
     return v0
 
-    .line 748
+    .line 722
     :cond_0
-    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
+    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Z
 
     if-nez v0, :cond_1
 
@@ -2061,34 +2810,34 @@
 
     move v0, v3
 
-    .line 749
+    .line 723
     goto :goto_0
 
-    .line 755
+    .line 729
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 757
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Landroid/view/VelocityTracker;
+    .line 731
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:Landroid/view/VelocityTracker;
 
     if-nez v1, :cond_2
 
-    .line 758
+    .line 732
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Landroid/view/VelocityTracker;
+    iput-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:Landroid/view/VelocityTracker;
 
-    .line 760
+    .line 734
     :cond_2
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Landroid/view/VelocityTracker;
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:Landroid/view/VelocityTracker;
 
     invoke-virtual {v1, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 762
+    .line 736
     and-int/lit16 v0, v0, 0xff
 
     packed-switch v0, :pswitch_data_0
@@ -2098,26 +2847,26 @@
     :pswitch_0
     move v0, v4
 
-    .line 878
+    .line 848
     goto :goto_0
 
-    .line 768
+    .line 742
     :pswitch_1
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->e()V
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->c()V
 
-    .line 771
+    .line 745
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v0
 
-    .line 772
+    .line 746
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
-    .line 773
+    .line 747
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
@@ -2128,103 +2877,103 @@
 
     goto :goto_1
 
-    .line 776
+    .line 750
     :pswitch_2
-    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
+    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Z
 
     if-nez v0, :cond_4
 
-    .line 777
+    .line 751
     invoke-direct {p0, p1}, Lcom/slidingmenu/lib/CustomViewAbove;->b(Landroid/view/MotionEvent;)V
 
-    .line 778
+    .line 752
     iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->l:Z
 
     if-eqz v0, :cond_4
 
     move v0, v3
 
-    .line 779
+    .line 753
     goto :goto_0
 
-    .line 782
+    .line 756
     :cond_4
-    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
+    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Z
 
     if-eqz v0, :cond_3
 
-    .line 783
+    .line 757
     iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
     invoke-virtual {v0, v4}, Lcom/slidingmenu/lib/CustomViewBehind;->setMenuVisible(Z)V
 
-    .line 785
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    .line 759
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
     invoke-direct {p0, p1, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->a(Landroid/view/MotionEvent;I)I
 
     move-result v0
 
-    .line 786
-    iget v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    .line 760
+    iget v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
     if-eq v1, v7, :cond_3
 
-    .line 787
+    .line 761
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v0
 
-    .line 790
+    .line 764
     iget v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->o:F
 
     sub-float/2addr v1, v0
 
-    .line 791
+    .line 765
     iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->o:F
 
-    .line 792
+    .line 766
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getScrollX()I
 
     move-result v0
 
     int-to-float v5, v0
 
-    .line 793
+    .line 767
     add-float v2, v5, v1
 
-    .line 794
+    .line 768
     invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getLeftBound()I
 
     move-result v0
 
     int-to-float v0, v0
 
-    .line 795
+    .line 769
     invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getRightBound()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    .line 796
+    .line 770
     cmpg-float v6, v2, v0
 
     if-gez v6, :cond_5
 
-    .line 802
+    .line 775
     :goto_2
     iput-boolean v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->A:Z
 
-    .line 806
+    .line 779
     cmpg-float v1, v0, v5
 
     if-gez v1, :cond_6
 
-    .line 807
+    .line 780
     iput-boolean v4, p0, Lcom/slidingmenu/lib/CustomViewAbove;->A:Z
 
-    .line 808
+    .line 781
     iget v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->o:F
 
     float-to-int v2, v0
@@ -2237,7 +2986,7 @@
 
     iput v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->o:F
 
-    .line 809
+    .line 782
     float-to-int v0, v0
 
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getScrollY()I
@@ -2246,12 +2995,12 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/slidingmenu/lib/CustomViewAbove;->scrollTo(II)V
 
-    .line 810
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->d()V
+    .line 783
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->b()V
 
     goto :goto_1
 
-    .line 799
+    .line 772
     :cond_5
     cmpl-float v0, v2, v1
 
@@ -2259,10 +3008,10 @@
 
     move v0, v1
 
-    .line 800
+    .line 773
     goto :goto_2
 
-    .line 813
+    .line 785
     :cond_6
     const/4 v1, 0x0
 
@@ -2270,7 +3019,7 @@
 
     if-gez v1, :cond_3
 
-    .line 814
+    .line 786
     float-to-int v0, v0
 
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getScrollY()I
@@ -2279,31 +3028,31 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/slidingmenu/lib/CustomViewAbove;->scrollTo(II)V
 
-    .line 815
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->d()V
+    .line 787
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->b()V
 
     goto/16 :goto_1
 
-    .line 822
+    .line 794
     :pswitch_3
-    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
+    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Z
 
     if-eqz v0, :cond_d
 
-    .line 823
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Landroid/view/VelocityTracker;
+    .line 795
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:Landroid/view/VelocityTracker;
 
-    .line 824
+    .line 796
     const/16 v1, 0x3e8
 
-    iget v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
+    iget v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->e:I
 
     int-to-float v2, v2
 
     invoke-virtual {v0, v1, v2}, Landroid/view/VelocityTracker;->computeCurrentVelocity(IF)V
 
-    .line 825
-    iget v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    .line 797
+    iget v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
     invoke-virtual {v0, v1}, Landroid/view/VelocityTracker;->getXVelocity(I)F
 
@@ -2311,13 +3060,13 @@
 
     float-to-int v1, v0
 
-    .line 826
+    .line 798
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getScrollX()I
 
     move-result v0
 
-    .line 830
-    iget v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    .line 802
+    iget v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     invoke-direct {p0, v2}, Lcom/slidingmenu/lib/CustomViewAbove;->a(I)I
 
@@ -2335,32 +3084,32 @@
 
     div-float v2, v0, v2
 
-    .line 831
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    .line 803
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
     invoke-direct {p0, p1, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->a(Landroid/view/MotionEvent;I)I
 
     move-result v0
 
-    .line 832
-    iget v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    .line 804
+    iget v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
     if-eq v3, v7, :cond_c
 
-    .line 833
+    .line 805
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v0
 
-    .line 834
+    .line 806
     iget v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->n:F
 
     sub-float/2addr v0, v3
 
     float-to-int v3, v0
 
-    .line 835
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    .line 807
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     invoke-static {v3}, Ljava/lang/Math;->abs(I)I
 
@@ -2384,33 +3133,33 @@
 
     add-int/lit8 v0, v0, -0x1
 
-    .line 838
+    .line 810
     :cond_7
     :goto_3
     iget-boolean v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->A:Z
 
     if-nez v2, :cond_8
 
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->c()Z
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->a()Z
 
     move-result v2
 
     if-eqz v2, :cond_b
 
-    .line 839
+    .line 811
     :cond_8
     invoke-direct {p0, v0, v4, v4, v1}, Lcom/slidingmenu/lib/CustomViewAbove;->a(IZZI)V
 
-    .line 847
+    .line 818
     :goto_4
-    iput v7, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    iput v7, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
-    .line 848
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->f()V
+    .line 819
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->d()V
 
     goto/16 :goto_1
 
-    .line 835
+    .line 807
     :cond_9
     if-gez v1, :cond_7
 
@@ -2421,7 +3170,7 @@
     goto :goto_3
 
     :cond_a
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     int-to-float v0, v0
 
@@ -2433,23 +3182,23 @@
 
     goto :goto_3
 
-    .line 841
+    .line 813
     :cond_b
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     invoke-direct {p0, v0, v4, v4, v1}, Lcom/slidingmenu/lib/CustomViewAbove;->a(IZZI)V
 
     goto :goto_4
 
-    .line 845
+    .line 816
     :cond_c
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     invoke-direct {p0, v0, v4, v4, v1}, Lcom/slidingmenu/lib/CustomViewAbove;->a(IZZI)V
 
     goto :goto_4
 
-    .line 850
+    .line 820
     :cond_d
     iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->B:Z
 
@@ -2457,9 +3206,9 @@
 
     iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
-    iget v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    iget v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -2469,78 +3218,78 @@
 
     add-float/2addr v3, v5
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/slidingmenu/lib/CustomViewBehind;->b(Landroid/view/View;IF)Z
+    invoke-virtual {v0, v1, v2, v3}, Lcom/slidingmenu/lib/CustomViewBehind;->a(Landroid/view/View;IF)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 852
+    .line 822
     invoke-virtual {p0, v4}, Lcom/slidingmenu/lib/CustomViewAbove;->setCurrentItem(I)V
 
-    .line 853
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->f()V
+    .line 823
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->d()V
 
     goto/16 :goto_1
 
-    .line 857
+    .line 827
     :pswitch_4
-    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->k:Z
+    iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->b:Z
 
     if-eqz v0, :cond_3
 
-    .line 858
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->g:I
+    .line 828
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->i:I
 
     invoke-direct {p0, v0, v4, v4}, Lcom/slidingmenu/lib/CustomViewAbove;->a(IZZ)V
 
-    .line 859
-    iput v7, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    .line 829
+    iput v7, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
-    .line 860
-    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->f()V
+    .line 830
+    invoke-direct {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->d()V
 
     goto/16 :goto_1
 
-    .line 864
+    .line 834
     :pswitch_5
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
     move-result v0
 
-    .line 865
+    .line 835
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v1
 
     iput v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->o:F
 
-    .line 866
+    .line 836
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
     goto/16 :goto_1
 
-    .line 870
+    .line 840
     :pswitch_6
     invoke-direct {p0, p1}, Lcom/slidingmenu/lib/CustomViewAbove;->c(Landroid/view/MotionEvent;)V
 
-    .line 871
-    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    .line 841
+    iget v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
     invoke-direct {p0, p1, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->a(Landroid/view/MotionEvent;I)I
 
     move-result v0
 
-    .line 872
-    iget v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->a:I
+    .line 842
+    iget v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->c:I
 
     if-eq v1, v7, :cond_3
 
-    .line 873
+    .line 843
     invoke-virtual {p1, v0}, Landroid/view/MotionEvent;->getX(I)F
 
     move-result v0
@@ -2554,7 +3303,7 @@
 
     goto/16 :goto_2
 
-    .line 762
+    .line 736
     nop
 
     :pswitch_data_0
@@ -2570,31 +3319,78 @@
 .end method
 
 .method public scrollTo(II)V
-    .locals 2
+    .locals 9
 
     .prologue
-    .line 906
+    const/4 v3, 0x2
+
+    const/4 v4, 0x1
+
+    const/4 v1, 0x4
+
+    const/4 v2, 0x0
+
+    .line 875
     invoke-super {p0, p1, p2}, Landroid/view/ViewGroup;->scrollTo(II)V
 
-    .line 907
+    .line 876
     int-to-float v0, p1
 
     iput v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->C:F
 
-    .line 908
+    .line 877
     iget-boolean v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->t:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 909
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
+    .line 878
+    iget-object v5, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v6, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
-    invoke-virtual {v0, v1, p1, p2}, Lcom/slidingmenu/lib/CustomViewBehind;->a(Landroid/view/View;II)V
+    iget v0, v5, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
 
-    .line 911
+    if-nez v0, :cond_4
+
+    invoke-virtual {v6}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    if-lt p1, v0, :cond_d
+
+    move v0, v1
+
+    :goto_0
+    invoke-virtual {v5}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v6
+
+    add-int/2addr v6, p1
+
+    int-to-float v6, v6
+
+    iget v7, v5, Lcom/slidingmenu/lib/CustomViewBehind;->h:F
+
+    mul-float/2addr v6, v7
+
+    float-to-int v6, v6
+
+    invoke-virtual {v5, v6, p2}, Lcom/slidingmenu/lib/CustomViewBehind;->scrollTo(II)V
+
+    :goto_1
+    if-ne v0, v1, :cond_0
+
+    const-string v1, "CustomViewBehind"
+
+    const-string v6, "behind INVISIBLE"
+
+    invoke-static {v1, v6}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
+
     :cond_0
+    invoke-virtual {v5, v0}, Lcom/slidingmenu/lib/CustomViewBehind;->setVisibility(I)V
+
+    .line 880
+    :cond_1
     invoke-virtual {p0}, Lcom/slidingmenu/lib/CustomViewAbove;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -2605,32 +3401,251 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->a(F)V
+    sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 912
+    const/16 v6, 0xb
+
+    if-lt v5, v6, :cond_3
+
+    const/4 v5, 0x0
+
+    cmpl-float v5, v1, v5
+
+    if-lez v5, :cond_a
+
+    const/high16 v5, 0x3f800000
+
+    cmpg-float v1, v1, v5
+
+    if-gez v1, :cond_a
+
+    move v1, v4
+
+    :goto_2
+    if-eqz v1, :cond_2
+
+    move v2, v3
+
+    :cond_2
+    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->getContent()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/View;->getLayerType()I
+
+    move-result v1
+
+    if-eq v2, v1, :cond_3
+
+    iget-object v1, v0, Lcom/slidingmenu/lib/SlidingMenu;->b:Landroid/os/Handler;
+
+    new-instance v3, Lcom/slidingmenu/lib/f;
+
+    invoke-direct {v3, v0, v2}, Lcom/slidingmenu/lib/f;-><init>(Lcom/slidingmenu/lib/SlidingMenu;I)V
+
+    invoke-virtual {v1, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+
+    .line 881
+    :cond_3
     return-void
+
+    .line 878
+    :cond_4
+    iget v0, v5, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-ne v0, v4, :cond_5
+
+    invoke-virtual {v6}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    if-gt p1, v0, :cond_c
+
+    move v0, v1
+
+    :goto_3
+    invoke-virtual {v5}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v6
+
+    invoke-virtual {v5}, Lcom/slidingmenu/lib/CustomViewBehind;->getWidth()I
+
+    move-result v7
+
+    sub-int/2addr v6, v7
+
+    int-to-float v6, v6
+
+    invoke-virtual {v5}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v7
+
+    sub-int v7, p1, v7
+
+    int-to-float v7, v7
+
+    iget v8, v5, Lcom/slidingmenu/lib/CustomViewBehind;->h:F
+
+    mul-float/2addr v7, v8
+
+    add-float/2addr v6, v7
+
+    float-to-int v6, v6
+
+    invoke-virtual {v5, v6, p2}, Lcom/slidingmenu/lib/CustomViewBehind;->scrollTo(II)V
+
+    goto :goto_1
+
+    :cond_5
+    iget v0, v5, Lcom/slidingmenu/lib/CustomViewBehind;->e:I
+
+    if-ne v0, v3, :cond_b
+
+    iget-object v7, v5, Lcom/slidingmenu/lib/CustomViewBehind;->b:Landroid/view/View;
+
+    invoke-virtual {v6}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    if-lt p1, v0, :cond_6
+
+    move v0, v1
+
+    :goto_4
+    invoke-virtual {v7, v0}, Landroid/view/View;->setVisibility(I)V
+
+    iget-object v7, v5, Lcom/slidingmenu/lib/CustomViewBehind;->c:Landroid/view/View;
+
+    invoke-virtual {v6}, Landroid/view/View;->getLeft()I
+
+    move-result v0
+
+    if-gt p1, v0, :cond_7
+
+    move v0, v1
+
+    :goto_5
+    invoke-virtual {v7, v0}, Landroid/view/View;->setVisibility(I)V
+
+    if-nez p1, :cond_8
+
+    move v0, v1
+
+    :goto_6
+    invoke-virtual {v6}, Landroid/view/View;->getLeft()I
+
+    move-result v6
+
+    if-gt p1, v6, :cond_9
+
+    invoke-virtual {v5}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v6
+
+    add-int/2addr v6, p1
+
+    int-to-float v6, v6
+
+    iget v7, v5, Lcom/slidingmenu/lib/CustomViewBehind;->h:F
+
+    mul-float/2addr v6, v7
+
+    float-to-int v6, v6
+
+    invoke-virtual {v5, v6, p2}, Lcom/slidingmenu/lib/CustomViewBehind;->scrollTo(II)V
+
+    goto/16 :goto_1
+
+    :cond_6
+    move v0, v2
+
+    goto :goto_4
+
+    :cond_7
+    move v0, v2
+
+    goto :goto_5
+
+    :cond_8
+    move v0, v2
+
+    goto :goto_6
+
+    :cond_9
+    invoke-virtual {v5}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v6
+
+    invoke-virtual {v5}, Lcom/slidingmenu/lib/CustomViewBehind;->getWidth()I
+
+    move-result v7
+
+    sub-int/2addr v6, v7
+
+    int-to-float v6, v6
+
+    invoke-virtual {v5}, Lcom/slidingmenu/lib/CustomViewBehind;->getBehindWidth()I
+
+    move-result v7
+
+    sub-int v7, p1, v7
+
+    int-to-float v7, v7
+
+    iget v8, v5, Lcom/slidingmenu/lib/CustomViewBehind;->h:F
+
+    mul-float/2addr v7, v8
+
+    add-float/2addr v6, v7
+
+    float-to-int v6, v6
+
+    invoke-virtual {v5, v6, p2}, Lcom/slidingmenu/lib/CustomViewBehind;->scrollTo(II)V
+
+    goto/16 :goto_1
+
+    :cond_a
+    move v1, v2
+
+    .line 880
+    goto/16 :goto_2
+
+    :cond_b
+    move v0, v2
+
+    goto/16 :goto_1
+
+    :cond_c
+    move v0, v2
+
+    goto :goto_3
+
+    :cond_d
+    move v0, v2
+
+    goto/16 :goto_0
 .end method
 
 .method public setAboveOffset(I)V
     .locals 4
 
     .prologue
-    .line 529
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    .line 511
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getPaddingTop()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v2, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getPaddingRight()I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iget-object v3, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getPaddingBottom()I
 
@@ -2638,7 +3653,7 @@
 
     invoke-virtual {v0, p1, v1, v2, v3}, Landroid/view/View;->setPadding(IIII)V
 
-    .line 531
+    .line 513
     return-void
 .end method
 
@@ -2646,26 +3661,26 @@
     .locals 1
 
     .prologue
-    .line 479
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    .line 461
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 480
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    .line 462
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->removeView(Landroid/view/View;)V
 
-    .line 482
+    .line 464
     :cond_0
-    iput-object p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    iput-object p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
-    .line 483
-    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:Landroid/view/View;
+    .line 465
+    iget-object v0, p0, Lcom/slidingmenu/lib/CustomViewAbove;->h:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->addView(Landroid/view/View;)V
 
-    .line 484
+    .line 466
     return-void
 .end method
 
@@ -2673,14 +3688,14 @@
     .locals 2
 
     .prologue
-    .line 222
+    .line 217
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Lcom/slidingmenu/lib/CustomViewAbove;->a(IZZ)V
 
-    .line 223
+    .line 218
     return-void
 .end method
 
@@ -2688,12 +3703,12 @@
     .locals 1
 
     .prologue
-    .line 234
+    .line 227
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/slidingmenu/lib/CustomViewAbove;->a(IZZ)V
 
-    .line 235
+    .line 228
     return-void
 .end method
 
@@ -2701,10 +3716,10 @@
     .locals 0
 
     .prologue
-    .line 491
+    .line 473
     iput-object p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->s:Lcom/slidingmenu/lib/CustomViewBehind;
 
-    .line 492
+    .line 474
     return-void
 .end method
 
@@ -2712,10 +3727,10 @@
     .locals 0
 
     .prologue
-    .line 399
+    .line 388
     iput-boolean p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->u:Z
 
-    .line 400
+    .line 389
     return-void
 .end method
 
@@ -2723,10 +3738,10 @@
     .locals 0
 
     .prologue
-    .line 296
+    .line 287
     iput-object p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->x:Lcom/slidingmenu/lib/i;
 
-    .line 297
+    .line 288
     return-void
 .end method
 
@@ -2734,10 +3749,10 @@
     .locals 0
 
     .prologue
-    .line 292
+    .line 283
     iput-object p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->y:Lcom/slidingmenu/lib/k;
 
-    .line 293
+    .line 284
     return-void
 .end method
 
@@ -2745,10 +3760,10 @@
     .locals 0
 
     .prologue
-    .line 279
+    .line 270
     iput-object p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->v:Lcom/slidingmenu/lib/c;
 
-    .line 280
+    .line 271
     return-void
 .end method
 
@@ -2756,10 +3771,10 @@
     .locals 0
 
     .prologue
-    .line 404
+    .line 393
     iput-boolean p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->t:Z
 
-    .line 405
+    .line 394
     return-void
 .end method
 
@@ -2767,9 +3782,9 @@
     .locals 0
 
     .prologue
-    .line 633
-    iput p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->d:I
+    .line 610
+    iput p1, p0, Lcom/slidingmenu/lib/CustomViewAbove;->f:I
 
-    .line 634
+    .line 611
     return-void
 .end method

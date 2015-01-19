@@ -1,5 +1,5 @@
 .class public Lcom/bbm/setup/WhatsNewActivity;
-.super Lcom/bbm/setup/r;
+.super Lcom/bbm/setup/q;
 .source "WhatsNewActivity.java"
 
 
@@ -9,7 +9,7 @@
 
     .prologue
     .line 16
-    invoke-direct {p0}, Lcom/bbm/setup/r;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/setup/q;-><init>()V
 
     return-void
 .end method
@@ -23,15 +23,15 @@
     const/4 v5, 0x0
 
     .line 20
-    invoke-super {p0, p1}, Lcom/bbm/setup/r;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/bbm/setup/q;->onCreate(Landroid/os/Bundle;)V
 
     .line 21
-    const v0, 0x7f03005a
+    const v0, 0x7f030061
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/WhatsNewActivity;->setContentView(I)V
 
     .line 24
-    const v0, 0x7f0a02ab
+    const v0, 0x7f0b030f
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/WhatsNewActivity;->findViewById(I)Landroid/view/View;
 
@@ -40,7 +40,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 25
-    const v1, 0x7f0a02ac
+    const v1, 0x7f0b0310
 
     invoke-virtual {p0, v1}, Lcom/bbm/setup/WhatsNewActivity;->findViewById(I)Landroid/view/View;
 
@@ -49,7 +49,7 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 26
-    const v2, 0x7f0a02ae
+    const v2, 0x7f0b0312
 
     invoke-virtual {p0, v2}, Lcom/bbm/setup/WhatsNewActivity;->findViewById(I)Landroid/view/View;
 
@@ -58,7 +58,7 @@
     check-cast v2, Landroid/widget/Button;
 
     .line 27
-    const v3, 0x7f0a02ad
+    const v3, 0x7f0b0311
 
     invoke-virtual {p0, v3}, Lcom/bbm/setup/WhatsNewActivity;->findViewById(I)Landroid/view/View;
 
@@ -85,7 +85,7 @@
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
     .line 31
-    const v0, 0x7f0e0354
+    const v0, 0x7f0e038c
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/WhatsNewActivity;->getString(I)Ljava/lang/String;
 
@@ -113,9 +113,9 @@
     invoke-static {v3}, Lcom/bbm/util/LinkifyUtil;->a(Landroid/widget/TextView;)V
 
     .line 38
-    new-instance v0, Lcom/bbm/setup/ai;
+    new-instance v0, Lcom/bbm/setup/al;
 
-    invoke-direct {v0, p0}, Lcom/bbm/setup/ai;-><init>(Lcom/bbm/setup/WhatsNewActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/setup/al;-><init>(Lcom/bbm/setup/WhatsNewActivity;)V
 
     invoke-virtual {v2, v0}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -128,10 +128,10 @@
 
     .prologue
     .line 52
-    invoke-super {p0}, Lcom/bbm/setup/r;->onResume()V
+    invoke-super {p0}, Lcom/bbm/setup/q;->onResume()V
 
     .line 57
-    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
 
     move-result-object v0
 

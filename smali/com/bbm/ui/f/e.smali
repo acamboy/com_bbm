@@ -4,13 +4,13 @@
 
 
 # virtual methods
-.method public abstract d_()Ljava/lang/String;
+.method public abstract b_()Ljava/lang/String;
 .end method
 
-.method public abstract e()Landroid/graphics/Bitmap;
+.method public abstract c_()Landroid/graphics/Bitmap;
 .end method
 
-.method public abstract e_()Ljava/lang/String;
+.method public abstract d()Ljava/lang/String;
 .end method
 
 .method public abstract f()I

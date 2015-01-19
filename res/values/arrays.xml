@@ -310,9 +310,9 @@
     <string-array name="invite_activity_security_question">
         <item></item>
         <item>Which month is my birthday in?</item>
-        <item>What type of pet do i have?</item>
-        <item>What elementary school did i attend?</item>
-        <item>Which city do i currently live in?</item>
+        <item>What type of pet do I have?</item>
+        <item>What elementary school did I attend?</item>
+        <item>Which city do I currently live in?</item>
         <item></item>
     </string-array>
     <string-array name="invite_activity_security_title">

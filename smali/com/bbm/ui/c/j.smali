@@ -1,81 +1,101 @@
 .class final Lcom/bbm/ui/c/j;
-.super Ljava/lang/Object;
-.source "BlockedContactsFragment.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/u;
+.source "AppDetailsFragment.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/f;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/bbm/ui/c/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/f;)V
+.method constructor <init>(Lcom/bbm/ui/c/a;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 289
-    iput-object p1, p0, Lcom/bbm/ui/c/j;->a:Lcom/bbm/ui/c/f;
+    .line 442
+    iput-object p1, p0, Lcom/bbm/ui/c/j;->b:Lcom/bbm/ui/c/a;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/bbm/ui/c/j;->a:Ljava/lang/String;
+
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method protected final b()Z
+    .locals 4
 
     .prologue
-    .line 292
-    const-string v0, "ContactContextSlideMenu BottomItem Clicked"
-
-    const-class v1, Lcom/bbm/ui/c/f;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 293
-    iget-object v0, p0, Lcom/bbm/ui/c/j;->a:Lcom/bbm/ui/c/f;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/f;->getActivity()Landroid/app/Activity;
+    .line 445
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/BlockedContactsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->v()V
-
-    .line 294
-    iget-object v0, p0, Lcom/bbm/ui/c/j;->a:Lcom/bbm/ui/c/f;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/f;->c:Lcom/bbm/ui/db;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/db;->a()Ljava/util/List;
+    invoke-virtual {v0}, Lcom/bbm/d/a;->j()Lcom/bbm/d/gr;
 
     move-result-object v0
 
-    .line 295
-    invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
+    .line 446
+    iget-object v1, v0, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
 
-    move-result v1
+    sget-object v2, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
 
-    if-nez v1, :cond_0
+    if-ne v1, v2, :cond_0
 
-    .line 296
-    iget-object v1, p0, Lcom/bbm/ui/c/j;->a:Lcom/bbm/ui/c/f;
+    .line 447
+    const/4 v0, 0x0
 
-    iget-object v1, v1, Lcom/bbm/ui/c/f;->c:Lcom/bbm/ui/db;
+    .line 453
+    :goto_0
+    return v0
 
-    invoke-virtual {v1}, Lcom/bbm/ui/db;->c()V
-
-    .line 297
-    iget-object v1, p0, Lcom/bbm/ui/c/j;->a:Lcom/bbm/ui/c/f;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/f;->a(Ljava/util/List;)V
-
-    .line 299
+    .line 449
     :cond_0
-    return-void
+    iget-object v1, v0, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
+
+    sget-object v2, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+
+    if-ne v1, v2, :cond_1
+
+    iget-wide v0, v0, Lcom/bbm/d/gr;->w:J
+
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 450
+    :goto_1
+    iget-object v1, p0, Lcom/bbm/ui/c/j;->b:Lcom/bbm/ui/c/a;
+
+    iget-object v2, p0, Lcom/bbm/ui/c/j;->b:Lcom/bbm/ui/c/a;
+
+    iget-object v2, p0, Lcom/bbm/ui/c/j;->a:Ljava/lang/String;
+
+    const-string v3, "[REGID]"
+
+    invoke-static {v2, v3, v0}, Lcom/bbm/ui/c/a;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/bbm/ui/c/a;->b(Lcom/bbm/ui/c/a;Ljava/lang/String;)V
+
+    .line 452
+    iget-object v0, p0, Lcom/bbm/ui/c/j;->b:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->c(Lcom/bbm/ui/c/a;)Lcom/bbm/j/u;
+
+    .line 453
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 449
+    :cond_1
+    const-string v0, ""
+
+    goto :goto_1
 .end method

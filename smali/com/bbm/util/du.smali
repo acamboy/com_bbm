@@ -1,94 +1,98 @@
 .class final Lcom/bbm/util/du;
-.super Ljava/lang/Object;
-.source "UpdatesFragmentUtil.java"
-
-# interfaces
-.implements Lcom/bbm/ui/c/fu;
+.super Landroid/os/Handler;
+.source "TpaUtil.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
-
-.field final synthetic b:Lcom/bbm/g/a;
-
-.field final synthetic c:Landroid/content/Context;
+.field final synthetic a:Lcom/bbm/util/dt;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;Lcom/bbm/g/a;Landroid/content/Context;)V
+.method constructor <init>(Lcom/bbm/util/dt;)V
     .locals 0
 
     .prologue
-    .line 720
-    iput-object p1, p0, Lcom/bbm/util/du;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 257
+    iput-object p1, p0, Lcom/bbm/util/du;->a:Lcom/bbm/util/dt;
 
-    iput-object p2, p0, Lcom/bbm/util/du;->b:Lcom/bbm/g/a;
-
-    iput-object p3, p0, Lcom/bbm/util/du;->c:Landroid/content/Context;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 3
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 7
 
     .prologue
-    .line 724
-    iget-object v0, p0, Lcom/bbm/util/du;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 260
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->v()V
+    check-cast v0, Ljava/util/Map;
 
-    .line 726
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    .line 261
+    const-string v1, "partnerApp"
 
-    packed-switch v0, :pswitch_data_0
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 735
-    :goto_0
+    move-result-object v5
+
+    check-cast v5, Lcom/bbm/d/fn;
+
+    .line 262
+    const-string v1, "invokeUrl"
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    .line 263
+    const-string v1, "bbmId"
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    .line 264
+    const-string v1, "appContext"
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    .line 266
+    invoke-static {}, Lcom/bbm/Alaska;->a()Lcom/bbm/f/a;
+
+    move-result-object v6
+
+    new-instance v0, Lcom/bbm/util/dv;
+
+    move-object v1, p0
+
+    invoke-direct/range {v0 .. v5}, Lcom/bbm/util/dv;-><init>(Lcom/bbm/util/du;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/bbm/d/fn;)V
+
+    invoke-interface {v6, v0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
+
+    .line 298
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v1, v5, Lcom/bbm/d/fn;->a:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/bbm/d/aa;->d(Ljava/lang/String;)Lcom/bbm/d/bs;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+
+    .line 299
     return-void
-
-    .line 729
-    :pswitch_0
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/bbm/util/du;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    const-class v2, Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 730
-    const-string v1, "groupUri"
-
-    iget-object v2, p0, Lcom/bbm/util/du;->b:Lcom/bbm/g/a;
-
-    iget-object v2, v2, Lcom/bbm/g/a;->u:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 731
-    iget-object v1, p0, Lcom/bbm/util/du;->c:Landroid/content/Context;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    .line 732
-    iget-object v0, p0, Lcom/bbm/util/du;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    const v1, 0x7f040001
-
-    const v2, 0x7f040004
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/activities/MainActivity;->overridePendingTransition(II)V
-
-    goto :goto_0
-
-    .line 726
-    :pswitch_data_0
-    .packed-switch 0x7f0a005c
-        :pswitch_0
-    .end packed-switch
 .end method

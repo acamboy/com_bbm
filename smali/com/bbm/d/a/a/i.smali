@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 143
+    .line 136
     iput-object p1, p0, Lcom/bbm/d/a/a/i;->b:Lcom/bbm/d/a/a/h;
 
     iput-object p3, p0, Lcom/bbm/d/a/a/i;->a:Lcom/bbm/d/a/a/d;
@@ -39,7 +39,7 @@
     .locals 1
 
     .prologue
-    .line 143
+    .line 136
     check-cast p1, Lcom/bbm/d/a/a;
 
     iget-object v0, p0, Lcom/bbm/d/a/a/i;->a:Lcom/bbm/d/a/a/d;

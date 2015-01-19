@@ -1,162 +1,54 @@
-.class public final Landroid/support/v4/widget/i;
+.class final Landroid/support/v4/widget/i;
 .super Ljava/lang/Object;
-.source "EdgeEffectCompat.java"
+.source "DrawerLayout.java"
 
-
-# static fields
-.field private static final b:Landroid/support/v4/widget/l;
-
-
-# instance fields
-.field private a:Ljava/lang/Object;
+# interfaces
+.implements Landroid/support/v4/widget/g;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 37
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xe
-
-    if-lt v0, v1, :cond_0
-
-    .line 38
-    new-instance v0, Landroid/support/v4/widget/k;
-
-    invoke-direct {v0}, Landroid/support/v4/widget/k;-><init>()V
-
-    sput-object v0, Landroid/support/v4/widget/i;->b:Landroid/support/v4/widget/l;
-
-    .line 42
-    :goto_0
-    return-void
-
-    .line 40
-    :cond_0
-    new-instance v0, Landroid/support/v4/widget/j;
-
-    invoke-direct {v0}, Landroid/support/v4/widget/j;-><init>()V
-
-    sput-object v0, Landroid/support/v4/widget/i;->b:Landroid/support/v4/widget/l;
-
-    goto :goto_0
-.end method
-
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 1
-
-    .prologue
-    .line 132
+    .line 263
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 133
-    sget-object v0, Landroid/support/v4/widget/i;->b:Landroid/support/v4/widget/l;
-
-    invoke-interface {v0, p1}, Landroid/support/v4/widget/l;->a(Landroid/content/Context;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    iput-object v0, p0, Landroid/support/v4/widget/i;->a:Ljava/lang/Object;
-
-    .line 134
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(II)V
-    .locals 2
+.method public final a(Ljava/lang/Object;)I
+    .locals 1
 
     .prologue
-    .line 143
-    sget-object v0, Landroid/support/v4/widget/i;->b:Landroid/support/v4/widget/l;
+    .line 277
+    const/4 v0, 0x0
 
-    iget-object v1, p0, Landroid/support/v4/widget/i;->a:Ljava/lang/Object;
+    return v0
+.end method
 
-    invoke-interface {v0, v1, p1, p2}, Landroid/support/v4/widget/l;->a(Ljava/lang/Object;II)V
+.method public final a(Landroid/view/View;)V
+    .locals 0
 
-    .line 144
+    .prologue
+    .line 266
     return-void
 .end method
 
-.method public final a()Z
-    .locals 2
+.method public final a(Landroid/view/View;Ljava/lang/Object;I)V
+    .locals 0
 
     .prologue
-    .line 154
-    sget-object v0, Landroid/support/v4/widget/i;->b:Landroid/support/v4/widget/l;
-
-    iget-object v1, p0, Landroid/support/v4/widget/i;->a:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Landroid/support/v4/widget/l;->a(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final a(F)Z
-    .locals 2
-
-    .prologue
-    .line 177
-    sget-object v0, Landroid/support/v4/widget/i;->b:Landroid/support/v4/widget/l;
-
-    iget-object v1, p0, Landroid/support/v4/widget/i;->a:Ljava/lang/Object;
-
-    invoke-interface {v0, v1, p1}, Landroid/support/v4/widget/l;->a(Ljava/lang/Object;F)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final a(Landroid/graphics/Canvas;)Z
-    .locals 2
-
-    .prologue
-    .line 218
-    sget-object v0, Landroid/support/v4/widget/i;->b:Landroid/support/v4/widget/l;
-
-    iget-object v1, p0, Landroid/support/v4/widget/i;->a:Ljava/lang/Object;
-
-    invoke-interface {v0, v1, p1}, Landroid/support/v4/widget/l;->a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final b()V
-    .locals 2
-
-    .prologue
-    .line 162
-    sget-object v0, Landroid/support/v4/widget/i;->b:Landroid/support/v4/widget/l;
-
-    iget-object v1, p0, Landroid/support/v4/widget/i;->a:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Landroid/support/v4/widget/l;->b(Ljava/lang/Object;)V
-
-    .line 163
+    .line 270
     return-void
 .end method
 
-.method public final c()Z
-    .locals 2
+.method public final a(Landroid/view/ViewGroup$MarginLayoutParams;Ljava/lang/Object;I)V
+    .locals 0
 
     .prologue
-    .line 189
-    sget-object v0, Landroid/support/v4/widget/i;->b:Landroid/support/v4/widget/l;
-
-    iget-object v1, p0, Landroid/support/v4/widget/i;->a:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Landroid/support/v4/widget/l;->c(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    return v0
+    .line 274
+    return-void
 .end method

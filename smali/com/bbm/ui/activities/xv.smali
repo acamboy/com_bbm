@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/xv;
 .super Ljava/lang/Object;
-.source "OwnProfileActivity.java"
+.source "MainActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/bn;
+.implements Lcom/bbm/j/s;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/OwnProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
     .locals 0
 
     .prologue
-    .line 420
-    iput-object p1, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    .line 2808
+    iput-object p1, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/MainActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,80 +25,90 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;)V
-    .locals 3
+.method public final a()Z
+    .locals 4
 
     .prologue
-    .line 424
-    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    const/4 v1, 0x1
 
-    const v1, 0x7f0a0367
+    .line 2811
+    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/OwnProfileActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/SendEditText;
-
-    .line 425
-    iget-object v1, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/OwnProfileActivity;->getCurrentFocus()Landroid/view/View;
-
-    move-result-object v1
-
-    .line 426
-    instance-of v2, v1, Landroid/widget/EditText;
-
-    if-eqz v2, :cond_1
-
-    .line 427
-    iget-object v2, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/OwnProfileActivity;->a(Lcom/bbm/ui/activities/OwnProfileActivity;)Lcom/google/b/a/l;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-ne v1, v2, :cond_2
-
-    .line 428
-    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->a(Lcom/bbm/ui/activities/OwnProfileActivity;)Lcom/google/b/a/l;
+    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->b(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/e;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+
+    invoke-virtual {v0}, Lcom/bbm/d/a;->O()Lcom/bbm/j/w;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/EditText;
+    .line 2812
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
 
-    invoke-static {v0, p1}, Lcom/bbm/ui/EmoticonPicker;->a(Landroid/widget/EditText;Ljava/lang/String;)V
+    move-result v2
 
-    .line 434
-    :cond_0
+    if-eqz v2, :cond_0
+
+    .line 2813
+    const/4 v0, 0x0
+
+    .line 2824
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    return v0
 
-    const/4 v1, 0x0
+    .line 2815
+    :cond_0
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/OwnProfileActivity;->b(Lcom/bbm/ui/activities/OwnProfileActivity;Z)V
+    move-result-object v0
 
-    .line 437
-    :cond_1
-    return-void
+    check-cast v0, Ljava/util/List;
 
-    .line 430
-    :cond_2
-    if-ne v1, v0, :cond_0
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    .line 431
-    invoke-static {v0, p1}, Lcom/bbm/ui/EmoticonPicker;->a(Landroid/widget/EditText;Ljava/lang/String;)V
+    move-result v0
 
+    if-nez v0, :cond_1
+
+    .line 2816
+    iget-object v0, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    const v2, 0x7f0b0063
+
+    invoke-virtual {v0, v2}, Lcom/bbm/ui/activities/MainActivity;->b(I)V
+
+    :goto_1
+    move v0, v1
+
+    .line 2824
     goto :goto_0
+
+    .line 2818
+    :cond_1
+    new-instance v0, Landroid/content/Intent;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    const-class v3, Lcom/bbm/ui/activities/SelectContactActivity;
+
+    invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 2819
+    const-string v2, "com.bbm.onlyone"
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 2821
+    const-string v2, "com.bbm.showfindmore"
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 2822
+    iget-object v2, p0, Lcom/bbm/ui/activities/xv;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    invoke-virtual {v2, v0, v1}, Lcom/bbm/ui/activities/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
+
+    goto :goto_1
 .end method

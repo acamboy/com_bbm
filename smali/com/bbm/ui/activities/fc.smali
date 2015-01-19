@@ -1,186 +1,80 @@
 .class final Lcom/bbm/ui/activities/fc;
-.super Ljava/lang/Object;
-.source "ConversationActivity.java"
-
-# interfaces
-.implements Lcom/bbm/j/s;
+.super Lcom/bbm/j/k;
+.source "ChildActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/dz;
-
-.field final synthetic b:J
-
-.field final synthetic c:Lcom/bbm/ui/activities/fb;
+.field final synthetic a:Lcom/bbm/ui/activities/ey;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/fb;Lcom/bbm/d/dz;J)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/ey;)V
+    .locals 1
 
     .prologue
-    .line 1007
-    iput-object p1, p0, Lcom/bbm/ui/activities/fc;->c:Lcom/bbm/ui/activities/fb;
+    .line 91
+    iput-object p1, p0, Lcom/bbm/ui/activities/fc;->a:Lcom/bbm/ui/activities/ey;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/fc;->a:Lcom/bbm/d/dz;
+    const/4 v0, 0x0
 
-    iput-wide p3, p0, Lcom/bbm/ui/activities/fc;->b:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method final a(Lcom/bbm/d/dg;J)V
-    .locals 4
-
-    .prologue
-    .line 1037
-    iget-object v0, p1, Lcom/bbm/d/dg;->a:Ljava/lang/String;
-
-    const-string v1, "socialInvitation"
-
-    invoke-static {v0, v1}, Lcom/bbm/d/y;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/av;
-
-    move-result-object v0
-
-    .line 1039
-    invoke-virtual {v0, p2, p3}, Lcom/bbm/d/av;->a(J)Lcom/bbm/d/av;
-
-    .line 1040
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v2, p1, Lcom/bbm/d/dg;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/util/UUID;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 1041
-    invoke-virtual {v0, v1}, Lcom/bbm/d/av;->a(Ljava/lang/String;)Lcom/bbm/d/av;
-
-    .line 1042
-    new-instance v2, Lcom/bbm/ui/activities/fe;
-
-    iget-object v3, p1, Lcom/bbm/d/dg;->a:Ljava/lang/String;
-
-    invoke-direct {v2, p0, v3}, Lcom/bbm/ui/activities/fe;-><init>(Lcom/bbm/ui/activities/fc;Ljava/lang/String;)V
-
-    .line 1052
-    iget-object v3, p0, Lcom/bbm/ui/activities/fc;->c:Lcom/bbm/ui/activities/fb;
-
-    iget-object v3, v3, Lcom/bbm/ui/activities/fb;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-virtual {v2, v1, v3}, Lcom/bbm/ui/d/e;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 1053
-    iget-object v1, p0, Lcom/bbm/ui/activities/fc;->c:Lcom/bbm/ui/activities/fb;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/fb;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-
-    .line 1054
-    return-void
-.end method
-
-.method public final a()Z
+.method protected final a()V
     .locals 3
 
     .prologue
-    .line 1011
-    iget-object v0, p0, Lcom/bbm/ui/activities/fc;->c:Lcom/bbm/ui/activities/fb;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/fb;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+    .line 94
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/fc;->a:Lcom/bbm/d/dz;
+    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
 
-    iget-object v1, v1, Lcom/bbm/d/dz;->c:Ljava/lang/String;
+    .line 95
+    iget-object v0, v0, Lcom/bbm/d/a;->g:Lcom/bbm/j/a;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->M(Ljava/lang/String;)Lcom/bbm/d/dg;
+    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1013
-    iget-object v1, v0, Lcom/bbm/d/dg;->h:Lcom/bbm/util/bc;
+    check-cast v0, Ljava/lang/Boolean;
 
-    sget-object v2, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    if-ne v1, v2, :cond_0
+    move-result v0
 
-    .line 1014
-    const/4 v0, 0x0
+    .line 96
+    if-eqz v0, :cond_0
 
-    .line 1033
-    :goto_0
-    return v0
+    iget-object v0, p0, Lcom/bbm/ui/activities/fc;->a:Lcom/bbm/ui/activities/ey;
 
-    .line 1018
+    instance-of v0, v0, Lcom/bbm/ui/activities/ProtectedStateActivity;
+
+    if-nez v0, :cond_0
+
+    .line 97
+    invoke-static {}, Lcom/bbm/util/db;->a()V
+
+    .line 98
+    new-instance v0, Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/fc;->a:Lcom/bbm/ui/activities/ey;
+
+    const-class v2, Lcom/bbm/ui/activities/ProtectedStateActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 99
+    iget-object v1, p0, Lcom/bbm/ui/activities/fc;->a:Lcom/bbm/ui/activities/ey;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/ey;->startActivity(Landroid/content/Intent;)V
+
+    .line 101
     :cond_0
-    invoke-static {}, Lcom/bbm/util/x;->b()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 1019
-    new-instance v1, Lcom/bbm/ui/b/b;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/fc;->c:Lcom/bbm/ui/activities/fb;
-
-    iget-object v2, v2, Lcom/bbm/ui/activities/fb;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-direct {v1, v2}, Lcom/bbm/ui/b/b;-><init>(Landroid/app/Activity;)V
-
-    .line 1021
-    new-instance v2, Lcom/bbm/ui/activities/fd;
-
-    invoke-direct {v2, p0, v0, v1}, Lcom/bbm/ui/activities/fd;-><init>(Lcom/bbm/ui/activities/fc;Lcom/bbm/d/dg;Lcom/bbm/ui/b/b;)V
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/b/b;->a(Lcom/bbm/ui/b/g;)V
-
-    .line 1029
-    invoke-virtual {v1}, Lcom/bbm/ui/b/b;->show()V
-
-    .line 1033
-    :goto_1
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    .line 1031
-    :cond_1
-    iget-wide v1, p0, Lcom/bbm/ui/activities/fc;->b:J
-
-    invoke-virtual {p0, v0, v1, v2}, Lcom/bbm/ui/activities/fc;->a(Lcom/bbm/d/dg;J)V
-
-    goto :goto_1
+    return-void
 .end method

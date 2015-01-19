@@ -1,25 +1,12 @@
 .class public Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-.super Lcom/bbm/ui/activities/kl;
+.super Lcom/bbm/ui/activities/mj;
 .source "GroupPictureCommentsActivity.java"
-
-# interfaces
-.implements Lcom/bbm/ui/bk;
 
 
 # instance fields
-.field private A:Landroid/widget/TextView;
-
-.field private B:Landroid/widget/TextView;
-
-.field private C:Landroid/widget/RelativeLayout;
-
-.field private D:I
-
-.field private E:I
-
 .field private F:I
 
-.field private G:Ljava/lang/String;
+.field private G:I
 
 .field private H:Ljava/lang/String;
 
@@ -27,53 +14,65 @@
 
 .field private J:Z
 
-.field private final K:Lcom/bbm/j/k;
+.field private final K:Landroid/text/TextWatcher;
 
-.field private final L:Landroid/view/View$OnTouchListener;
+.field private final L:Lcom/bbm/j/k;
 
-.field private final M:Lcom/bbm/j/k;
+.field private final M:Landroid/view/View$OnTouchListener;
 
-.field private final N:Lcom/bbm/ui/by;
+.field private final N:Lcom/bbm/j/k;
 
-.field private final O:Lcom/bbm/ui/c/fu;
+.field private final O:Lcom/bbm/ui/cn;
 
-.field private final P:Lcom/bbm/j/u;
+.field private final P:Lcom/bbm/ui/c/gn;
 
 .field private final Q:Lcom/bbm/j/u;
 
-.field private final a:Lcom/bbm/d;
+.field private final R:Lcom/bbm/j/u;
 
-.field private b:Lcom/bbm/ui/slidingmenu/a;
+.field a:Ljava/lang/String;
 
-.field private j:Lcom/bbm/ui/FooterActionBar;
+.field b:Ljava/lang/String;
 
-.field private k:Landroid/widget/ImageView;
+.field d:Ljava/lang/String;
 
-.field private l:Landroid/widget/ImageView;
+.field private e:Lcom/bbm/ui/slidingmenu/a;
 
-.field private m:Landroid/widget/ImageView;
+.field private f:Lcom/bbm/ui/FooterActionBar;
 
-.field private n:Landroid/widget/ListView;
+.field private g:Landroid/widget/ImageView;
 
-.field private o:Lcom/bbm/ui/activities/qo;
+.field private h:Landroid/widget/ImageView;
 
-.field private p:Ljava/lang/String;
+.field private i:Landroid/widget/ImageView;
 
-.field private q:Lcom/bbm/ui/SendEditText;
+.field private j:Landroid/widget/ListView;
 
-.field private r:Lcom/bbm/ui/EmoticonInputPanel;
+.field private k:Lcom/bbm/ui/activities/sv;
 
-.field private final s:Landroid/os/Handler;
+.field private l:Lcom/bbm/ui/SendEditText;
 
-.field private t:Lcom/bbm/g/w;
+.field private m:Lcom/bbm/ui/EmoticonInputPanel;
 
-.field private u:Ljava/util/Timer;
+.field private final n:Landroid/os/Handler;
 
-.field private v:Ljava/util/TimerTask;
+.field private o:Lcom/bbm/g/af;
 
-.field private w:Landroid/widget/TextView;
+.field private p:Ljava/util/Timer;
 
-.field private x:Landroid/widget/TextView;
+.field private q:Ljava/util/TimerTask;
+
+.field private r:Landroid/widget/TextView;
+
+.field private s:Landroid/widget/TextView;
+
+.field private t:Landroid/widget/TextView;
+
+.field private u:Landroid/widget/TextView;
+
+.field private v:Landroid/view/View;
+
+.field private w:I
 
 
 # direct methods
@@ -81,88 +80,88 @@
     .locals 1
 
     .prologue
-    .line 90
-    invoke-direct {p0}, Lcom/bbm/ui/activities/kl;-><init>()V
+    .line 85
+    invoke-direct {p0}, Lcom/bbm/ui/activities/mj;-><init>()V
 
-    .line 104
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Lcom/bbm/d;
-
-    .line 106
+    .line 101
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b:Lcom/bbm/ui/slidingmenu/a;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->e:Lcom/bbm/ui/slidingmenu/a;
 
-    .line 115
+    .line 110
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->s:Landroid/os/Handler;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->n:Landroid/os/Handler;
 
-    .line 117
+    .line 112
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->u:Ljava/util/Timer;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/util/Timer;
 
-    .line 132
+    .line 129
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->J:Z
 
-    .line 136
-    new-instance v0, Lcom/bbm/ui/activities/ps;
+    .line 133
+    new-instance v0, Lcom/bbm/ui/activities/ry;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ps;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ry;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->K:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->K:Landroid/text/TextWatcher;
 
-    .line 160
-    new-instance v0, Lcom/bbm/ui/activities/qf;
+    .line 148
+    new-instance v0, Lcom/bbm/ui/activities/sl;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/qf;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/sl;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->L:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->L:Lcom/bbm/j/k;
 
-    .line 395
-    new-instance v0, Lcom/bbm/ui/activities/pv;
+    .line 172
+    new-instance v0, Lcom/bbm/ui/activities/sn;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/pv;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/sn;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->M:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->M:Landroid/view/View$OnTouchListener;
 
-    .line 489
-    new-instance v0, Lcom/bbm/ui/activities/pw;
+    .line 377
+    new-instance v0, Lcom/bbm/ui/activities/rz;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/pw;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/rz;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->N:Lcom/bbm/ui/by;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->N:Lcom/bbm/j/k;
 
-    .line 641
-    new-instance v0, Lcom/bbm/ui/activities/py;
+    .line 472
+    new-instance v0, Lcom/bbm/ui/activities/sa;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/py;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/sa;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->O:Lcom/bbm/ui/c/fu;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->O:Lcom/bbm/ui/cn;
 
-    .line 716
-    new-instance v0, Lcom/bbm/ui/activities/qb;
+    .line 645
+    new-instance v0, Lcom/bbm/ui/activities/se;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/qb;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/se;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->P:Lcom/bbm/j/u;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->P:Lcom/bbm/ui/c/gn;
 
-    .line 747
-    new-instance v0, Lcom/bbm/ui/activities/qc;
+    .line 720
+    new-instance v0, Lcom/bbm/ui/activities/sh;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/qc;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/sh;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->Q:Lcom/bbm/j/u;
+
+    .line 750
+    new-instance v0, Lcom/bbm/ui/activities/si;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/si;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->R:Lcom/bbm/j/u;
 
     return-void
 .end method
@@ -171,16 +170,16 @@
     .locals 2
 
     .prologue
-    .line 90
+    .line 85
     const-string v0, "simple text"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->G:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b:Ljava/lang/String;
 
     invoke-static {v0, v1}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/bbm/util/eo;->a(Landroid/content/Context;Landroid/content/ClipData;)V
+    invoke-static {p0, v0}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Landroid/content/ClipData;)V
 
     return-void
 .end method
@@ -189,28 +188,18 @@
     .locals 0
 
     .prologue
-    .line 90
-    iput p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->E:I
+    .line 85
+    iput p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->F:I
 
     return p1
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/d;
-    .locals 1
-
-    .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Lcom/bbm/d;
-
-    return-object v0
-.end method
-
-.method static synthetic a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Lcom/bbm/g/w;)Lcom/bbm/g/w;
+.method static synthetic a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Lcom/bbm/g/af;)Lcom/bbm/g/af;
     .locals 0
 
     .prologue
-    .line 90
-    iput-object p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->t:Lcom/bbm/g/w;
+    .line 85
+    iput-object p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/g/af;
 
     return-object p1
 .end method
@@ -219,24 +208,24 @@
     .locals 0
 
     .prologue
-    .line 90
+    .line 85
     iput-object p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->I:Lcom/bbm/util/d/d;
 
     return-object p1
 .end method
 
-.method private static a(Ljava/lang/String;)Ljava/io/File;
+.method static a(Ljava/lang/String;)Ljava/io/File;
     .locals 8
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    .line 806
-    new-instance v2, Ljava/io/File;
+    .line 809
+    new-instance v1, Ljava/io/File;
 
-    invoke-direct {v2, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 808
+    .line 811
     const-string v0, "mounted"
 
     invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
@@ -249,7 +238,7 @@
 
     if-eqz v0, :cond_6
 
-    .line 809
+    .line 812
     new-instance v0, Ljava/io/File;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -280,153 +269,151 @@
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    move-object v6, v0
-
-    .line 815
+    .line 818
     :goto_0
     :try_start_0
-    new-instance v0, Ljava/io/FileInputStream;
+    new-instance v3, Ljava/io/FileInputStream;
 
-    invoke-direct {v0, v2}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v3, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    invoke-virtual {v0}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
+    invoke-virtual {v3}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result-object v0
+    move-result-object v1
 
-    .line 816
+    .line 819
     :try_start_1
-    new-instance v2, Ljava/io/FileOutputStream;
+    new-instance v3, Ljava/io/FileOutputStream;
 
-    invoke-direct {v2, v6}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    invoke-direct {v3, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    invoke-virtual {v2}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
+    invoke-virtual {v3}, Ljava/io/FileOutputStream;->getChannel()Ljava/nio/channels/FileChannel;
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_8
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_6
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    move-result-object v5
+    move-result-object v6
 
-    .line 817
-    const-wide/16 v1, 0x0
+    .line 820
+    const-wide/16 v2, 0x0
 
     :try_start_2
-    invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->size()J
+    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->size()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual/range {v0 .. v5}, Ljava/nio/channels/FileChannel;->transferTo(JJLjava/nio/channels/WritableByteChannel;)J
+    invoke-virtual/range {v1 .. v6}, Ljava/nio/channels/FileChannel;->transferTo(JJLjava/nio/channels/WritableByteChannel;)J
     :try_end_2
     .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_9
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_7
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
     .line 827
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
     .line 828
     :try_start_3
-    invoke-virtual {v0}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
 
     .line 830
     :cond_0
-    if-eqz v5, :cond_1
+    if-eqz v6, :cond_1
 
     .line 831
-    invoke-virtual {v5}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v6}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 838
+    .line 837
     :cond_1
     :goto_1
-    return-object v6
+    return-object v0
 
-    .line 834
+    .line 833
     :catch_0
-    move-exception v0
+    move-exception v1
 
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 819
+    .line 821
     :catch_1
-    move-exception v0
+    move-exception v1
 
-    move-object v2, v1
+    move-object v3, v2
 
     :goto_2
     :try_start_4
-    invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/io/FileNotFoundException;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_3
 
     .line 827
-    if-eqz v2, :cond_2
+    if-eqz v3, :cond_2
 
     .line 828
     :try_start_5
-    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v3}, Ljava/nio/channels/FileChannel;->close()V
 
     .line 830
     :cond_2
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
     .line 831
-    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_2
 
     goto :goto_1
 
-    .line 834
+    .line 833
     :catch_2
-    move-exception v0
+    move-exception v1
 
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 822
+    .line 823
     :catch_3
-    move-exception v0
+    move-exception v1
 
-    move-object v2, v1
+    move-object v3, v2
 
     :goto_3
     :try_start_6
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_3
 
     .line 827
-    if-eqz v2, :cond_3
+    if-eqz v3, :cond_3
 
     .line 828
     :try_start_7
-    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v3}, Ljava/nio/channels/FileChannel;->close()V
 
     .line 830
     :cond_3
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_1
 
     .line 831
-    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_4
 
     goto :goto_1
 
-    .line 834
+    .line 833
     :catch_4
-    move-exception v0
+    move-exception v1
 
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
+    invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
@@ -434,31 +421,31 @@
     :catchall_0
     move-exception v0
 
-    move-object v2, v1
+    move-object v1, v2
 
     .line 827
     :goto_4
-    if-eqz v2, :cond_4
+    if-eqz v1, :cond_4
 
     .line 828
     :try_start_8
-    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
 
     .line 830
     :cond_4
-    if-eqz v1, :cond_5
+    if-eqz v2, :cond_5
 
     .line 831
-    invoke-virtual {v1}, Ljava/nio/channels/FileChannel;->close()V
+    invoke-virtual {v2}, Ljava/nio/channels/FileChannel;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_5
 
-    .line 836
+    .line 835
     :cond_5
     :goto_5
     throw v0
 
-    .line 834
+    .line 833
     :catch_5
     move-exception v1
 
@@ -468,80 +455,72 @@
 
     .line 826
     :catchall_1
-    move-exception v2
-
-    move-object v7, v2
-
-    move-object v2, v0
-
-    move-object v0, v7
+    move-exception v0
 
     goto :goto_4
 
     :catchall_2
-    move-exception v1
+    move-exception v0
 
-    move-object v2, v0
-
-    move-object v0, v1
-
-    move-object v1, v5
+    move-object v2, v6
 
     goto :goto_4
 
     :catchall_3
     move-exception v0
 
+    move-object v1, v3
+
     goto :goto_4
 
-    .line 822
+    .line 823
     :catch_6
-    move-exception v2
+    move-exception v3
 
-    move-object v7, v2
+    move-object v7, v3
 
-    move-object v2, v0
+    move-object v3, v1
 
-    move-object v0, v7
+    move-object v1, v7
 
     goto :goto_3
 
     :catch_7
-    move-exception v1
+    move-exception v2
 
-    move-object v2, v0
+    move-object v3, v1
 
-    move-object v0, v1
+    move-object v1, v2
 
-    move-object v1, v5
+    move-object v2, v6
 
     goto :goto_3
 
-    .line 819
+    .line 821
     :catch_8
-    move-exception v2
+    move-exception v3
 
-    move-object v7, v2
+    move-object v7, v3
 
-    move-object v2, v0
+    move-object v3, v1
 
-    move-object v0, v7
+    move-object v1, v7
 
     goto :goto_2
 
     :catch_9
-    move-exception v1
+    move-exception v2
 
-    move-object v2, v0
+    move-object v3, v1
 
-    move-object v0, v1
+    move-object v1, v2
 
-    move-object v1, v5
+    move-object v2, v6
 
     goto :goto_2
 
     :cond_6
-    move-object v6, v1
+    move-object v0, v2
 
     goto/16 :goto_0
 .end method
@@ -550,83 +529,113 @@
     .locals 0
 
     .prologue
-    .line 90
-    iput-object p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->H:Ljava/lang/String;
+    .line 85
+    iput-object p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->d:Ljava/lang/String;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Lcom/bbm/ui/c/fq;)V
+.method static synthetic a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Lcom/bbm/ui/c/gj;)V
     .locals 0
 
     .prologue
-    .line 90
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b(Lcom/bbm/ui/c/fq;)V
+    .line 85
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/c/gj;)V
 
     return-void
 .end method
 
 .method static synthetic a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Z)V
-    .locals 0
+    .locals 4
 
     .prologue
-    .line 90
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->d(Z)V
+    const/16 v2, 0x8
 
+    const/4 v1, 0x0
+
+    .line 85
+    invoke-static {}, Lcom/bbm/Alaska;->l()Lcom/bbm/ag;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ag;->d()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/util/fh;->a(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :cond_0
+    const/4 v0, 0x1
+
+    :goto_0
+    if-nez v0, :cond_1
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->g:Landroid/widget/ImageView;
+
+    if-eqz p1, :cond_3
+
+    move v0, v1
+
+    :goto_1
+    invoke-virtual {v3, v0}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->f:Lcom/bbm/ui/FooterActionBar;
+
+    if-eqz p1, :cond_4
+
+    :goto_2
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
+
+    :cond_1
     return-void
+
+    :cond_2
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_3
+    move v0, v2
+
+    goto :goto_1
+
+    :cond_4
+    move v1, v2
+
+    goto :goto_2
 .end method
 
-.method static synthetic b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;I)I
-    .locals 0
-
-    .prologue
-    .line 90
-    iput p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->D:I
-
-    return p1
-.end method
-
-.method static synthetic b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method static synthetic b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Ljava/lang/String;)Ljava/lang/String;
-    .locals 0
-
-    .prologue
-    .line 90
-    iput-object p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->G:Ljava/lang/String;
-
-    return-object p1
-.end method
-
-.method private b(Lcom/bbm/ui/c/fq;)V
+.method private a(Lcom/bbm/ui/c/gj;)V
     .locals 5
 
     .prologue
     const/4 v4, 0x0
 
-    .line 599
+    .line 603
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 601
+    .line 605
     new-instance v0, Lcom/bbm/ui/slidingmenu/a;
 
-    const v2, 0x7f0203a9
+    const v2, 0x7f0203e3
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    const v3, 0x7f0e0401
+    const v3, 0x7f0e0443
 
     invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getString(I)Ljava/lang/String;
 
@@ -634,40 +643,40 @@
 
     invoke-direct {v0, v2, v3, v4}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 603
-    invoke-direct {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h()Z
+    .line 607
+    invoke-direct {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b()Z
 
     move-result v2
 
     invoke-virtual {v0, v2}, Lcom/bbm/ui/slidingmenu/a;->d(Z)V
 
-    .line 604
+    .line 608
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 606
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->t:Lcom/bbm/g/w;
+    .line 610
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/g/af;
 
-    iget-boolean v0, v0, Lcom/bbm/g/w;->b:Z
+    iget-boolean v0, v0, Lcom/bbm/g/af;->b:Z
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0e041f
+    const v0, 0x7f0e0461
 
     :goto_0
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 608
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->t:Lcom/bbm/g/w;
+    .line 612
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/g/af;
 
-    iget-boolean v0, v0, Lcom/bbm/g/w;->b:Z
+    iget-boolean v0, v0, Lcom/bbm/g/af;->b:Z
 
     if-eqz v0, :cond_2
 
-    const v0, 0x7f0203d8
+    const v0, 0x7f02042f
 
-    .line 610
+    .line 614
     :goto_1
     new-instance v3, Lcom/bbm/ui/slidingmenu/a;
 
@@ -679,35 +688,16 @@
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 611
-    new-instance v0, Lcom/bbm/ui/slidingmenu/a;
-
-    const v2, 0x7f020372
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    const v3, 0x7f0e0400
-
-    invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v0, v2, v3, v4}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
     .line 615
     new-instance v0, Lcom/bbm/ui/slidingmenu/a;
 
-    const v2, 0x7f0203be
+    const v2, 0x7f0203a9
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    const v3, 0x7f0e041d
+    const v3, 0x7f0e0442
 
     invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getString(I)Ljava/lang/String;
 
@@ -717,166 +707,115 @@
 
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 618
-    invoke-virtual {p1, v1}, Lcom/bbm/ui/c/fq;->a(Ljava/util/List;)V
+    .line 619
+    new-instance v0, Lcom/bbm/ui/slidingmenu/a;
 
-    .line 620
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b:Lcom/bbm/ui/slidingmenu/a;
+    const v2, 0x7f0203fa
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    const v3, 0x7f0e045f
+
+    invoke-virtual {p0, v3}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v0, v2, v3, v4}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 622
+    invoke-virtual {p1, v1, v4, v4}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
+
+    .line 624
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->e:Lcom/bbm/ui/slidingmenu/a;
 
     if-eqz v0, :cond_0
 
-    .line 621
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b:Lcom/bbm/ui/slidingmenu/a;
+    .line 625
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->e:Lcom/bbm/ui/slidingmenu/a;
 
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/fq;->a(Lcom/bbm/ui/slidingmenu/a;)V
+    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/gj;->a(Lcom/bbm/ui/slidingmenu/a;)V
 
-    .line 622
-    new-instance v0, Lcom/bbm/ui/activities/px;
+    .line 626
+    new-instance v0, Lcom/bbm/ui/activities/sd;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/px;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/sd;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/fq;->a(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/gj;->a(Landroid/view/View$OnClickListener;)V
 
-    .line 632
+    .line 636
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->O:Lcom/bbm/ui/c/fu;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->P:Lcom/bbm/ui/c/gn;
 
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/fq;->a(Lcom/bbm/ui/c/fu;)V
+    iput-object v0, p1, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
 
-    .line 633
+    .line 637
     return-void
 
-    .line 606
+    .line 610
     :cond_1
-    const v0, 0x7f0e03df
+    const v0, 0x7f0e041c
 
     goto :goto_0
 
-    .line 608
+    .line 612
     :cond_2
-    const v0, 0x7f0202e4
+    const v0, 0x7f02030d
 
     goto :goto_1
 .end method
 
-.method static synthetic b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Z)Z
+.method static synthetic a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Z
+    .locals 1
+
+    .prologue
+    .line 85
+    invoke-direct {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;I)I
     .locals 0
 
     .prologue
-    .line 90
-    iput-boolean p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->J:Z
+    .line 85
+    iput p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->w:I
 
     return p1
 .end method
 
-.method static synthetic c(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;I)I
+.method static synthetic b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/FooterActionBar;
+    .locals 1
+
+    .prologue
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->f:Lcom/bbm/ui/FooterActionBar;
+
+    return-object v0
+.end method
+
+.method static synthetic b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     .prologue
-    .line 90
-    iput p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->F:I
+    .line 85
+    iput-object p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b:Ljava/lang/String;
 
-    return p1
+    return-object p1
 .end method
 
-.method static synthetic c(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/g/w;
+.method private b()Z
     .locals 1
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->t:Lcom/bbm/g/w;
-
-    return-object v0
-.end method
-
-.method static synthetic d(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/ListView;
-    .locals 1
-
-    .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->n:Landroid/widget/ListView;
-
-    return-object v0
-.end method
-
-.method private d(Z)V
-    .locals 4
-
-    .prologue
-    const/16 v2, 0x8
-
-    const/4 v1, 0x0
-
-    .line 879
-    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->k:Landroid/widget/ImageView;
-
-    if-eqz p1, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    invoke-virtual {v3, v0}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 880
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Lcom/bbm/ui/FooterActionBar;
-
-    if-eqz p1, :cond_1
-
-    :goto_1
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
-
-    .line 881
-    return-void
-
-    :cond_0
-    move v0, v2
-
-    .line 879
-    goto :goto_0
-
-    :cond_1
-    move v1, v2
-
-    .line 880
-    goto :goto_1
-.end method
-
-.method static synthetic e(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/activities/qo;
-    .locals 1
-
-    .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/ui/activities/qo;
-
-    return-object v0
-.end method
-
-.method static synthetic f(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/util/d/d;
-    .locals 1
-
-    .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->I:Lcom/bbm/util/d/d;
-
-    return-object v0
-.end method
-
-.method static synthetic g(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/EmoticonInputPanel;
-    .locals 1
-
-    .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->r:Lcom/bbm/ui/EmoticonInputPanel;
-
-    return-object v0
-.end method
-
-.method private h()Z
-    .locals 1
-
-    .prologue
-    .line 372
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Lcom/bbm/ui/SendEditText;
+    .line 339
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Lcom/bbm/ui/SendEditText;
 
     invoke-virtual {v0}, Lcom/bbm/ui/SendEditText;->length()I
 
@@ -895,28 +834,108 @@
     goto :goto_0
 .end method
 
-.method static synthetic h(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Z
+.method static synthetic b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Z)Z
+    .locals 0
+
+    .prologue
+    .line 85
+    iput-boolean p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->J:Z
+
+    return p1
+.end method
+
+.method static synthetic c(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;I)I
+    .locals 0
+
+    .prologue
+    .line 85
+    iput p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->G:I
+
+    return p1
+.end method
+
+.method static synthetic c(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 90
-    invoke-direct {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h()Z
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Ljava/lang/String;
 
-    move-result v0
+    return-object v0
+.end method
 
-    return v0
+.method static synthetic c(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
+
+    .prologue
+    .line 85
+    iput-object p1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->H:Ljava/lang/String;
+
+    return-object p1
+.end method
+
+.method static synthetic d(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/g/af;
+    .locals 1
+
+    .prologue
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/g/af;
+
+    return-object v0
+.end method
+
+.method static synthetic e(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/ListView;
+    .locals 1
+
+    .prologue
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Landroid/widget/ListView;
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/activities/sv;
+    .locals 1
+
+    .prologue
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->k:Lcom/bbm/ui/activities/sv;
+
+    return-object v0
+.end method
+
+.method static synthetic g(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/util/d/d;
+    .locals 1
+
+    .prologue
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->I:Lcom/bbm/util/d/d;
+
+    return-object v0
+.end method
+
+.method static synthetic h(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/EmoticonInputPanel;
+    .locals 1
+
+    .prologue
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->m:Lcom/bbm/ui/EmoticonInputPanel;
+
+    return-object v0
 .end method
 
 .method static synthetic i(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
     .locals 4
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Lcom/bbm/d;
+    .line 85
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
+    move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Lcom/bbm/ui/SendEditText;
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Lcom/bbm/ui/SendEditText;
 
     invoke-virtual {v1}, Lcom/bbm/ui/SendEditText;->getText()Landroid/text/Editable;
 
@@ -926,15 +945,15 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/lang/String;
+    iget-object v2, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Ljava/lang/String;
 
-    new-instance v3, Lcom/bbm/g/bp;
+    new-instance v3, Lcom/bbm/g/ci;
 
-    invoke-direct {v3, v1, v2}, Lcom/bbm/g/bp;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v1, v2}, Lcom/bbm/g/ci;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v3}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
+    invoke-virtual {v0, v3}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Lcom/bbm/ui/SendEditText;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Lcom/bbm/ui/SendEditText;
 
     const-string v1, ""
 
@@ -943,144 +962,138 @@
     return-void
 .end method
 
-.method static synthetic j(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/FooterActionBar;
+.method static synthetic j(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
     .locals 1
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Lcom/bbm/ui/FooterActionBar;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
 
-    return-object v0
-.end method
+    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/c/gj;)V
 
-.method static synthetic k(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
-    .locals 1
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->m:Lcom/bbm/ui/EmoticonInputPanel;
 
-    .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/eg;->h:Lcom/bbm/ui/c/fq;
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->d()Z
 
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b(Lcom/bbm/ui/c/fq;)V
-
-    invoke-static {p0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->w()V
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o()V
 
     return-void
+.end method
+
+.method static synthetic k(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)I
+    .locals 1
+
+    .prologue
+    .line 85
+    iget v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->w:I
+
+    return v0
 .end method
 
 .method static synthetic l(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)I
     .locals 1
 
     .prologue
-    .line 90
-    iget v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->D:I
+    .line 85
+    iget v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->F:I
 
     return v0
 .end method
 
-.method static synthetic m(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)I
+.method static synthetic m(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/TextView;
     .locals 1
 
     .prologue
-    .line 90
-    iget v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->E:I
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->r:Landroid/widget/TextView;
 
-    return v0
+    return-object v0
 .end method
 
 .method static synthetic n(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/TextView;
     .locals 1
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->w:Landroid/widget/TextView;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->s:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic o(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/TextView;
-    .locals 1
+.method static synthetic o(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Ljava/lang/String;
+    .locals 12
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->x:Landroid/widget/TextView;
+    const-wide/16 v10, 0x3e8
 
-    return-object v0
-.end method
+    const/4 v6, 0x2
 
-.method static synthetic p(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Ljava/lang/String;
-    .locals 11
+    const/4 v9, 0x1
 
-    .prologue
-    const-wide/16 v9, 0x3e8
+    const/4 v8, 0x0
 
-    const/4 v5, 0x2
+    .line 85
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
-    const/4 v8, 0x1
+    move-result-object v0
 
-    const/4 v7, 0x0
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
 
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Lcom/bbm/d;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/g/af;
 
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
+    iget-object v1, v1, Lcom/bbm/g/af;->c:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->t:Lcom/bbm/g/w;
-
-    iget-object v1, v1, Lcom/bbm/g/w;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->q(Ljava/lang/String;)Lcom/bbm/g/l;
+    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->q(Ljava/lang/String;)Lcom/bbm/g/o;
 
     move-result-object v0
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->t:Lcom/bbm/g/w;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/g/af;
 
-    iget-wide v3, v3, Lcom/bbm/g/w;->k:J
+    iget-wide v4, v1, Lcom/bbm/g/af;->k:J
 
-    mul-long/2addr v3, v9
+    mul-long/2addr v4, v10
 
-    sub-long/2addr v1, v3
+    sub-long/2addr v2, v4
 
-    const-wide/32 v3, 0x5265c00
+    const-wide/32 v4, 0x5265c00
 
-    cmp-long v3, v1, v3
+    cmp-long v1, v2, v4
 
-    if-gtz v3, :cond_0
+    if-gtz v1, :cond_0
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0e03fc
+    const v2, 0x7f0e043e
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    new-array v2, v5, [Ljava/lang/Object;
+    new-array v2, v6, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->t:Lcom/bbm/g/w;
+    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/g/af;
 
-    iget-wide v3, v3, Lcom/bbm/g/w;->k:J
+    iget-wide v4, v3, Lcom/bbm/g/af;->k:J
 
-    mul-long/2addr v3, v9
+    mul-long/2addr v4, v10
 
-    const/16 v5, 0x101
+    const/16 v3, 0x101
 
-    invoke-static {p0, v3, v4, v5}, Lcom/bbm/util/ba;->a(Landroid/content/Context;JI)Ljava/lang/String;
+    invoke-static {p0, v4, v5, v3}, Lcom/bbm/util/be;->a(Landroid/content/Context;JI)Ljava/lang/String;
 
     move-result-object v3
 
-    aput-object v3, v2, v7
+    aput-object v3, v2, v8
 
-    iget-object v0, v0, Lcom/bbm/g/l;->c:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/g/o;->c:Ljava/lang/String;
 
-    aput-object v0, v2, v8
+    aput-object v0, v2, v9
 
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1090,27 +1103,27 @@
     return-object v0
 
     :cond_0
-    const-wide/32 v3, 0xa4cb800
+    const-wide/32 v4, 0xa4cb800
 
-    cmp-long v3, v1, v3
+    cmp-long v1, v2, v4
 
-    if-gtz v3, :cond_1
+    if-gtz v1, :cond_1
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0e03fd
+    const v2, 0x7f0e043f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    new-array v2, v8, [Ljava/lang/Object;
+    new-array v2, v9, [Ljava/lang/Object;
 
-    iget-object v0, v0, Lcom/bbm/g/l;->c:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/g/o;->c:Ljava/lang/String;
 
-    aput-object v0, v2, v7
+    aput-object v0, v2, v8
 
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
@@ -1121,107 +1134,121 @@
     :cond_1
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v3
+    move-result-object v1
 
-    const v4, 0x7f0e03fb
+    const v4, 0x7f0e043d
 
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    new-array v4, v5, [Ljava/lang/Object;
-
-    long-to-double v1, v1
-
-    const-wide v5, 0x4194997000000000L
-
-    div-double/2addr v1, v5
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v1
-
-    double-to-long v1, v1
-
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v1, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v4, v7
+    new-array v4, v6, [Ljava/lang/Object;
 
-    iget-object v0, v0, Lcom/bbm/g/l;->c:Ljava/lang/String;
+    long-to-double v2, v2
 
-    aput-object v0, v4, v8
+    const-wide v6, 0x4194997000000000L
 
-    invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+    div-double/2addr v2, v6
+
+    invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v2
+
+    double-to-long v2, v2
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    aput-object v2, v4, v8
+
+    iget-object v0, v0, Lcom/bbm/g/o;->c:Ljava/lang/String;
+
+    aput-object v0, v4, v9
+
+    invoke-static {v1, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method static synthetic q(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/TextView;
+.method static synthetic p(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/TextView;
     .locals 1
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->A:Landroid/widget/TextView;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->t:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic r(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+.method static synthetic q(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
     .locals 3
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->t:Lcom/bbm/g/w;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/g/af;
 
-    iget-boolean v0, v0, Lcom/bbm/g/w;->d:Z
+    iget-boolean v0, v0, Lcom/bbm/g/af;->d:Z
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->t:Lcom/bbm/g/w;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/g/af;
 
-    iget-boolean v0, v0, Lcom/bbm/g/w;->e:Z
+    iget-boolean v0, v0, Lcom/bbm/g/af;->e:Z
 
     if-eqz v0, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Lcom/bbm/d;
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
+    move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
 
-    new-instance v2, Lcom/bbm/g/ap;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Ljava/lang/String;
 
-    invoke-direct {v2, v1}, Lcom/bbm/g/ap;-><init>(Ljava/lang/String;)V
+    new-instance v2, Lcom/bbm/g/bb;
 
-    invoke-virtual {v0, v2}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
+    invoke-direct {v2, v1}, Lcom/bbm/g/bb;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Lcom/bbm/d;
+    invoke-virtual {v0, v2}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
 
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/lang/String;
+    move-result-object v0
 
-    new-instance v2, Lcom/bbm/g/aq;
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
 
-    invoke-direct {v2, v1}, Lcom/bbm/g/aq;-><init>(Ljava/lang/String;)V
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v2}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
+    new-instance v2, Lcom/bbm/g/bc;
+
+    invoke-direct {v2, v1}, Lcom/bbm/g/bc;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0, v2}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
 
     :cond_1
     return-void
+.end method
+
+.method static synthetic r(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->H:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method static synthetic s(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/ImageView;
     .locals 1
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Landroid/widget/ImageView;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h:Landroid/widget/ImageView;
 
     return-object v0
 .end method
@@ -1230,8 +1257,8 @@
     .locals 1
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->m:Landroid/widget/ImageView;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->i:Landroid/widget/ImageView;
 
     return-object v0
 .end method
@@ -1240,38 +1267,38 @@
     .locals 1
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->B:Landroid/widget/TextView;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->u:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
-.method static synthetic v(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/j/u;
+.method static synthetic v(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/os/Handler;
     .locals 1
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->Q:Lcom/bbm/j/u;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->n:Landroid/os/Handler;
 
     return-object v0
 .end method
 
-.method static synthetic w(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/RelativeLayout;
+.method static synthetic w(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/j/u;
     .locals 1
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->C:Landroid/widget/RelativeLayout;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->R:Lcom/bbm/j/u;
 
     return-object v0
 .end method
 
-.method static synthetic x(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/os/Handler;
+.method static synthetic x(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/view/View;
     .locals 1
 
     .prologue
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->s:Landroid/os/Handler;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->v:Landroid/view/View;
 
     return-object v0
 .end method
@@ -1280,16 +1307,16 @@
     .locals 4
 
     .prologue
-    .line 90
+    .line 85
     new-instance v0, Lcom/bbm/ui/slidingmenu/a;
 
-    const v1, 0x7f020252
+    const v1, 0x7f02026d
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    const v2, 0x7f0e03bd
+    const v2, 0x7f0e03f6
 
     invoke-virtual {p0, v2}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getString(I)Ljava/lang/String;
 
@@ -1299,7 +1326,7 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b:Lcom/bbm/ui/slidingmenu/a;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->e:Lcom/bbm/ui/slidingmenu/a;
 
     return-void
 .end method
@@ -1308,7 +1335,7 @@
     .locals 1
 
     .prologue
-    .line 90
+    .line 85
     iget-boolean v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->J:Z
 
     return v0
@@ -1316,197 +1343,65 @@
 
 
 # virtual methods
-.method protected final a(Lcom/bbm/ui/c/fq;)V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x0
-
-    .line 843
-    new-instance v0, Lcom/bbm/ui/slidingmenu/a;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->H:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->G:Ljava/lang/String;
-
-    invoke-direct {v0, v5, v1, v2}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 844
-    new-instance v1, Ljava/util/ArrayList;
-
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
-
-    .line 845
-    new-instance v2, Lcom/bbm/ui/slidingmenu/a;
-
-    const v3, 0x7f020250
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    const v4, 0x7f0e03fe
-
-    invoke-virtual {p0, v4}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v2, v3, v4, v5}, Lcom/bbm/ui/slidingmenu/a;-><init>(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 847
-    invoke-virtual {p1, v1}, Lcom/bbm/ui/c/fq;->a(Ljava/util/List;)V
-
-    .line 848
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/fq;->b(Lcom/bbm/ui/slidingmenu/a;)V
-
-    .line 850
-    new-instance v0, Lcom/bbm/ui/activities/qe;
-
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/qe;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
-
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/fq;->a(Lcom/bbm/ui/c/fu;)V
-
-    .line 864
-    return-void
-.end method
-
-.method public final a(Z)V
-    .locals 1
-
-    .prologue
-    .line 901
-    if-nez p1, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->r:Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->c()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->d(Z)V
-
-    .line 902
-    return-void
-
-    .line 901
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final a()Z
-    .locals 1
-
-    .prologue
-    .line 885
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->r:Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->c()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final b()V
-    .locals 1
-
-    .prologue
-    .line 890
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->r:Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->b()V
-
-    .line 891
-    const/4 v0, 0x1
-
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->d(Z)V
-
-    .line 892
-    return-void
-.end method
-
-.method protected final b_()V
+.method protected final a()V
     .locals 3
 
     .prologue
+    .line 867
+    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->a()V
+
     .line 868
-    invoke-super {p0}, Lcom/bbm/ui/activities/kl;->b_()V
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Landroid/widget/ListView;
 
-    .line 869
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->n:Landroid/widget/ListView;
-
-    iget v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->F:I
+    iget v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->G:I
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/ListView;->setItemChecked(IZ)V
 
-    .line 870
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->n:Landroid/widget/ListView;
+    .line 869
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Landroid/widget/ListView;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setTranscriptMode(I)V
 
-    .line 871
+    .line 870
     return-void
 .end method
 
-.method public final c()Landroid/view/inputmethod/InputMethodManager;
-    .locals 1
-
-    .prologue
-    .line 896
-    const-string v0, "input_method"
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    return-object v0
-.end method
-
-.method public final c(Z)V
+.method public final a(Z)V
     .locals 3
 
     .prologue
-    .line 684
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Lcom/bbm/d;
+    .line 688
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
+    move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
 
-    new-instance v2, Lcom/bbm/g/bq;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Ljava/lang/String;
 
-    invoke-direct {v2, p1, v1}, Lcom/bbm/g/bq;-><init>(ZLjava/lang/String;)V
+    new-instance v2, Lcom/bbm/g/cj;
 
-    invoke-virtual {v0, v2}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
+    invoke-direct {v2, p1, v1}, Lcom/bbm/g/cj;-><init>(ZLjava/lang/String;)V
 
-    .line 685
-    const v0, 0x7f0e0538
+    invoke-virtual {v0, v2}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
+
+    .line 689
+    const v0, 0x7f0e05cd
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/bbm/util/eo;->b(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 686
+    .line 690
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->finish()V
 
-    .line 687
+    .line 691
     return-void
 .end method
 
@@ -1514,107 +1409,7 @@
     .locals 0
 
     .prologue
-    .line 393
-    return-void
-.end method
-
-.method public final g()V
-    .locals 4
-
-    .prologue
-    .line 788
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Lcom/bbm/d;
-
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/kl;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/g/ab;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/w;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/g/w;->i:Ljava/lang/String;
-
-    .line 789
-    new-instance v1, Landroid/content/Intent;
-
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
-
-    .line 792
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Ljava/lang/String;)Ljava/io/File;
-
-    move-result-object v0
-
-    .line 794
-    const-string v2, "android.intent.action.SEND"
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 795
-    const-string v2, "android.intent.extra.STREAM"
-
-    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
-
-    .line 796
-    const-string v2, "picturePath"
-
-    invoke-static {v0}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/net/Uri;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 797
-    const-string v2, "groupUri"
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/kl;->c:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 798
-    const-string v2, "pictureUri"
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 799
-    const-string v2, "image/jpeg"
-
-    invoke-virtual {v1, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 800
-    if-eqz v0, :cond_0
-
-    .line 801
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v2, 0x7f0e041d
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 803
-    :cond_0
+    .line 375
     return-void
 .end method
 
@@ -1626,16 +1421,16 @@
 
     const/4 v2, 0x1
 
-    .line 175
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/kl;->onCreate(Landroid/os/Bundle;)V
+    .line 187
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/mj;->onCreate(Landroid/os/Bundle;)V
 
-    .line 176
-    const v0, 0x7f03002f
+    .line 188
+    const v0, 0x7f030032
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->setContentView(I)V
 
-    .line 178
-    const v0, 0x7f0a0194
+    .line 190
+    const v0, 0x7f0b01e3
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
 
@@ -1643,18 +1438,15 @@
 
     check-cast v0, Lcom/bbm/ui/EmoticonPanelViewLayout;
 
-    .line 179
-    invoke-virtual {v0, p0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->setEmoticonPanelView(Lcom/bbm/ui/bk;)V
-
-    .line 181
+    .line 192
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v1
 
-    .line 182
+    .line 193
     invoke-virtual {v1}, Landroid/app/ActionBar;->hide()V
 
-    .line 184
+    .line 195
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -1665,14 +1457,14 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/lang/String;
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Ljava/lang/String;
 
-    .line 185
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/lang/String;
+    .line 196
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -1685,23 +1477,23 @@
     :goto_0
     const-string v4, "GroupPictureCommentsActivity invoked without group picture uri"
 
-    invoke-static {p0, v1, v4}, Lcom/bbm/util/eo;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
+    invoke-static {p0, v1, v4}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;ZLjava/lang/Object;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 364
+    .line 331
     :goto_1
     return-void
 
     :cond_0
     move v1, v3
 
-    .line 185
+    .line 196
     goto :goto_0
 
-    .line 191
+    .line 202
     :cond_1
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getIntent()Landroid/content/Intent;
 
@@ -1719,9 +1511,9 @@
 
     add-int/lit8 v1, v1, 0x1
 
-    iput v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->D:I
+    iput v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->w:I
 
-    .line 193
+    .line 204
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -1736,15 +1528,15 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->E:I
+    iput v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->F:I
 
-    .line 195
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->K:Lcom/bbm/j/k;
+    .line 206
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->L:Lcom/bbm/j/k;
 
     invoke-virtual {v1}, Lcom/bbm/j/k;->c()V
 
-    .line 197
-    const v1, 0x7f0a0197
+    .line 208
+    const v1, 0x7f0b01e6
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
 
@@ -1752,17 +1544,17 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h:Landroid/widget/ImageView;
 
-    .line 198
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Landroid/widget/ImageView;
+    .line 209
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h:Landroid/widget/ImageView;
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->L:Landroid/view/View$OnTouchListener;
+    iget-object v4, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->M:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 199
-    const v1, 0x7f0a019d
+    .line 210
+    const v1, 0x7f0b01ec
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
 
@@ -1770,10 +1562,10 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->m:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->i:Landroid/widget/ImageView;
 
-    .line 201
-    const v1, 0x7f0a00a0
+    .line 212
+    const v1, 0x7f0b00bf
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
 
@@ -1781,30 +1573,30 @@
 
     check-cast v1, Lcom/bbm/ui/FooterActionBar;
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Lcom/bbm/ui/FooterActionBar;
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->f:Lcom/bbm/ui/FooterActionBar;
 
-    .line 202
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Lcom/bbm/ui/FooterActionBar;
+    .line 213
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->f:Lcom/bbm/ui/FooterActionBar;
 
     new-instance v4, Lcom/bbm/ui/ActionBarItem;
 
-    const v5, 0x7f0203a9
+    const v5, 0x7f0203e3
 
-    const v6, 0x7f0e05f5
+    const v6, 0x7f0e06a4
 
     invoke-direct {v4, p0, v5, v6}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
 
     invoke-virtual {v1, v4, v3}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
 
-    .line 204
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Lcom/bbm/ui/FooterActionBar;
+    .line 215
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->f:Lcom/bbm/ui/FooterActionBar;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->N:Lcom/bbm/ui/by;
+    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->O:Lcom/bbm/ui/cn;
 
-    invoke-virtual {v1, v3}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/by;)V
+    invoke-virtual {v1, v3}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
 
-    .line 206
-    const v1, 0x7f0a0123
+    .line 217
+    const v1, 0x7f0b0137
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
 
@@ -1812,10 +1604,10 @@
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->k:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->g:Landroid/widget/ImageView;
 
-    .line 208
-    const v1, 0x7f0a0525
+    .line 219
+    const v1, 0x7f0b05b5
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
 
@@ -1823,27 +1615,29 @@
 
     check-cast v1, Lcom/bbm/ui/SendEditText;
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Lcom/bbm/ui/SendEditText;
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Lcom/bbm/ui/SendEditText;
 
-    .line 210
-    new-instance v1, Lcom/bbm/ui/activities/qo;
+    .line 221
+    new-instance v1, Lcom/bbm/ui/activities/sv;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Lcom/bbm/d;
-
-    iget-object v3, v3, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Lcom/bbm/g/ab;->d(Ljava/lang/String;)Lcom/bbm/j/w;
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
     move-result-object v3
 
-    invoke-direct {v1, p0, v3}, Lcom/bbm/ui/activities/qo;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Lcom/bbm/j/r;)V
+    iget-object v3, v3, Lcom/bbm/e;->c:Lcom/bbm/g/al;
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/ui/activities/qo;
+    iget-object v4, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Ljava/lang/String;
 
-    .line 211
-    const v1, 0x7f0a019e
+    invoke-virtual {v3, v4}, Lcom/bbm/g/al;->d(Ljava/lang/String;)Lcom/bbm/j/w;
+
+    move-result-object v3
+
+    invoke-direct {v1, p0, v3}, Lcom/bbm/ui/activities/sv;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Lcom/bbm/j/r;)V
+
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->k:Lcom/bbm/ui/activities/sv;
+
+    .line 222
+    const v1, 0x7f0b01ed
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
 
@@ -1851,28 +1645,28 @@
 
     check-cast v1, Landroid/widget/ListView;
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->n:Landroid/widget/ListView;
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Landroid/widget/ListView;
 
-    .line 212
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->n:Landroid/widget/ListView;
+    .line 223
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Landroid/widget/ListView;
 
     const/4 v3, 0x2
 
     invoke-virtual {v1, v3}, Landroid/widget/ListView;->setTranscriptMode(I)V
 
-    .line 213
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->n:Landroid/widget/ListView;
+    .line 224
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Landroid/widget/ListView;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/ui/activities/qo;
+    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->k:Lcom/bbm/ui/activities/sv;
 
     invoke-virtual {v1, v3}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 214
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->n:Landroid/widget/ListView;
+    .line 225
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Landroid/widget/ListView;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->o:Lcom/bbm/ui/activities/qo;
+    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->k:Lcom/bbm/ui/activities/sv;
 
-    invoke-virtual {v3}, Lcom/bbm/ui/activities/qo;->getCount()I
+    invoke-virtual {v3}, Lcom/bbm/ui/activities/sv;->getCount()I
 
     move-result v3
 
@@ -1880,116 +1674,139 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/ListView;->setSelection(I)V
 
-    .line 215
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->n:Landroid/widget/ListView;
+    .line 226
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Landroid/widget/ListView;
 
     invoke-virtual {v1, v2}, Landroid/widget/ListView;->setChoiceMode(I)V
 
-    .line 218
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->n:Landroid/widget/ListView;
+    .line 229
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Landroid/widget/ListView;
 
-    new-instance v3, Lcom/bbm/ui/activities/qg;
+    new-instance v3, Lcom/bbm/ui/activities/so;
 
-    invoke-direct {v3, p0}, Lcom/bbm/ui/activities/qg;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v3, p0}, Lcom/bbm/ui/activities/so;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
     invoke-virtual {v1, v3}, Landroid/widget/ListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
-    .line 245
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->n:Landroid/widget/ListView;
+    .line 256
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Landroid/widget/ListView;
 
-    new-instance v3, Lcom/bbm/ui/activities/qi;
+    new-instance v3, Lcom/bbm/ui/activities/sq;
 
-    invoke-direct {v3, p0}, Lcom/bbm/ui/activities/qi;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v3, p0}, Lcom/bbm/ui/activities/sq;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
     invoke-virtual {v1, v3}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 258
-    new-instance v1, Lcom/bbm/ui/activities/qj;
+    .line 264
+    new-instance v1, Lcom/bbm/ui/activities/sr;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/qj;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/sr;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonPanelViewLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 273
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Lcom/bbm/ui/SendEditText;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Lcom/bbm/ui/SendEditText;
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v1
+    move-result-object v3
 
-    const v3, 0x7f0b0101
+    const v4, 0x7f0a010d
 
-    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    move-result v1
+    move-result v3
 
-    mul-int/lit8 v1, v1, 0x2
+    mul-int/lit8 v3, v3, 0x2
 
-    const v3, 0x4089999a
+    const v4, 0x4089999a
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Lcom/bbm/ui/SendEditText;
+    iget-object v5, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Lcom/bbm/ui/SendEditText;
 
-    invoke-virtual {v4}, Lcom/bbm/ui/SendEditText;->getLineHeight()I
+    invoke-virtual {v5}, Lcom/bbm/ui/SendEditText;->getLineHeight()I
 
-    move-result v4
+    move-result v5
 
-    int-to-float v4, v4
+    int-to-float v5, v5
 
-    mul-float/2addr v3, v4
+    mul-float/2addr v4, v5
 
-    float-to-int v3, v3
+    float-to-int v4, v4
 
-    add-int/2addr v1, v3
+    add-int/2addr v3, v4
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/SendEditText;->setMaxHeight(I)V
+    invoke-virtual {v1, v3}, Lcom/bbm/ui/SendEditText;->setMaxHeight(I)V
 
     .line 276
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Lcom/bbm/ui/SendEditText;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Lcom/bbm/ui/SendEditText;
 
-    new-instance v1, Lcom/bbm/ui/activities/qk;
+    new-instance v3, Lcom/bbm/ui/activities/ss;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/qk;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v3, p0}, Lcom/bbm/ui/activities/ss;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/SendEditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
+    invoke-virtual {v1, v3}, Lcom/bbm/ui/SendEditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
-    .line 292
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Lcom/bbm/ui/SendEditText;
+    .line 290
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Lcom/bbm/ui/SendEditText;
 
-    new-instance v1, Lcom/bbm/ui/activities/ql;
+    iget-object v3, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->K:Landroid/text/TextWatcher;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ql;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-virtual {v1, v3}, Lcom/bbm/ui/SendEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/SendEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    .line 291
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Lcom/bbm/ui/SendEditText;
 
-    .line 306
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Lcom/bbm/ui/SendEditText;
+    const/16 v3, 0x100
 
-    const/16 v1, 0x100
+    invoke-static {v1, v3}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/gg;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/gg;
+    .line 293
+    const v1, 0x7f0b0167
+
+    invoke-virtual {p0, v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/bbm/ui/EmoticonInputPanel;
+
+    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->m:Lcom/bbm/ui/EmoticonInputPanel;
+
+    .line 294
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->m:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonPanelViewLayout;->setEmoticonInputPanel(Lcom/bbm/ui/EmoticonInputPanel;)V
+
+    .line 295
+    new-instance v1, Lcom/bbm/ui/activities/st;
+
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/st;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonPanelViewLayout;->setLowerPanelVisibilityListener(Lcom/bbm/ui/bs;)V
+
+    .line 307
+    const v0, 0x7f0b01e8
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->r:Landroid/widget/TextView;
 
     .line 308
-    const v0, 0x7f0a0121
+    const v0, 0x7f0b01eb
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/EmoticonInputPanel;
+    check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->r:Lcom/bbm/ui/EmoticonInputPanel;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->t:Landroid/widget/TextView;
 
     .line 309
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->r:Lcom/bbm/ui/EmoticonInputPanel;
-
-    new-instance v1, Lcom/bbm/ui/activities/qm;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/qm;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setEmoticonInputPanelListener(Lcom/bbm/ui/bh;)V
-
-    .line 327
-    const v0, 0x7f0a0199
+    const v0, 0x7f0b01ea
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
 
@@ -1997,42 +1814,18 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->w:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->s:Landroid/widget/TextView;
 
-    .line 328
-    const v0, 0x7f0a019c
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->A:Landroid/widget/TextView;
-
-    .line 329
-    const v0, 0x7f0a019b
+    .line 310
+    const v0, 0x7f0b01e7
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->v:Landroid/view/View;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->x:Landroid/widget/TextView;
-
-    .line 330
-    const v0, 0x7f0a0198
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/RelativeLayout;
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->C:Landroid/widget/RelativeLayout;
-
-    .line 331
+    .line 311
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/4 v1, 0x0
@@ -2041,21 +1834,21 @@
 
     invoke-direct {v0, v1, v3}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 332
-    const-wide/16 v3, 0x5dc
+    .line 312
+    const-wide/16 v4, 0x5dc
 
-    invoke-virtual {v0, v3, v4}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
+    invoke-virtual {v0, v4, v5}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 333
+    .line 313
     invoke-virtual {v0, v2}, Landroid/view/animation/AlphaAnimation;->setFillAfter(Z)V
 
-    .line 334
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->C:Landroid/widget/RelativeLayout;
+    .line 314
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->v:Landroid/view/View;
 
-    invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->startAnimation(Landroid/view/animation/Animation;)V
+    invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 335
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->u:Ljava/util/Timer;
+    .line 315
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/util/Timer;
 
     if-nez v0, :cond_2
 
@@ -2063,34 +1856,34 @@
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->u:Ljava/util/Timer;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/util/Timer;
 
     :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->v:Ljava/util/TimerTask;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Ljava/util/TimerTask;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->v:Ljava/util/TimerTask;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Ljava/util/TimerTask;
 
     invoke-virtual {v0}, Ljava/util/TimerTask;->cancel()Z
 
     :cond_3
-    new-instance v0, Lcom/bbm/ui/activities/pz;
+    new-instance v0, Lcom/bbm/ui/activities/sf;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/pz;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/sf;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->v:Ljava/util/TimerTask;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Ljava/util/TimerTask;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->u:Ljava/util/Timer;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/util/Timer;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->v:Ljava/util/TimerTask;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Ljava/util/TimerTask;
 
     const-wide/16 v2, 0xfa0
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
-    .line 337
-    const v0, 0x7f0a019f
+    .line 317
+    const v0, 0x7f0b01ee
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->findViewById(I)Landroid/view/View;
 
@@ -2098,54 +1891,98 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->B:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->u:Landroid/widget/TextView;
 
-    .line 339
-    new-instance v0, Lcom/bbm/ui/activities/qn;
+    .line 319
+    new-instance v0, Lcom/bbm/ui/activities/su;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/qn;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/su;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/slidingmenu/lib/a/b;)V
-
-    .line 353
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Lcom/bbm/ui/SendEditText;
-
-    new-instance v1, Lcom/bbm/ui/activities/pu;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/pu;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/SendEditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
     goto/16 :goto_1
 .end method
 
 .method protected onDestroy()V
-    .locals 2
+    .locals 3
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    .line 378
-    invoke-super {p0}, Lcom/bbm/ui/activities/kl;->onDestroy()V
+    .line 344
+    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onDestroy()V
 
-    .line 383
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->u:Ljava/util/Timer;
+    .line 349
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/util/Timer;
 
     if-eqz v0, :cond_0
 
-    .line 384
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->u:Ljava/util/Timer;
+    .line 350
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/util/Timer;
 
     invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
 
-    .line 386
+    .line 352
     :cond_0
-    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->u:Ljava/util/Timer;
+    iput-object v2, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/util/Timer;
 
-    .line 387
-    iput-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->v:Ljava/util/TimerTask;
+    .line 353
+    iput-object v2, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->q:Ljava/util/TimerTask;
 
-    .line 388
+    .line 355
+    iput-object v2, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->e:Lcom/bbm/ui/slidingmenu/a;
+
+    .line 357
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Landroid/widget/ListView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
+
+    .line 358
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Landroid/widget/ListView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
+
+    .line 359
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    .line 361
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Lcom/bbm/ui/SendEditText;
+
+    invoke-virtual {v0, v2}, Lcom/bbm/ui/SendEditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
+
+    .line 362
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Lcom/bbm/ui/SendEditText;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->K:Landroid/text/TextWatcher;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/SendEditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
+
+    .line 363
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->l:Lcom/bbm/ui/SendEditText;
+
+    invoke-virtual {v0, v2}, Lcom/bbm/ui/SendEditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+
+    .line 365
+    invoke-virtual {p0, v2}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/slidingmenu/lib/a/b;)V
+
+    .line 367
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 368
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->g:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 369
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->i:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 370
     return-void
 .end method
 
@@ -2153,39 +1990,41 @@
     .locals 2
 
     .prologue
-    .line 523
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->M:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
-
     .line 524
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->K:Lcom/bbm/j/k;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->N:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
 
     .line 525
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->P:Lcom/bbm/j/u;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->L:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/u;->d()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
 
     .line 526
     iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->Q:Lcom/bbm/j/u;
 
-    invoke-virtual {v0}, Lcom/bbm/j/u;->d()V
+    invoke-virtual {v0}, Lcom/bbm/j/u;->e()V
 
     .line 527
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->r:Lcom/bbm/ui/EmoticonInputPanel;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->R:Lcom/bbm/j/u;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->b()V
+    invoke-virtual {v0}, Lcom/bbm/j/u;->e()V
 
     .line 528
-    invoke-static {p0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->m:Lcom/bbm/ui/EmoticonInputPanel;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->d()Z
 
     .line 529
-    invoke-super {p0}, Lcom/bbm/ui/activities/kl;->onPause()V
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->k:Lcom/bbm/ui/activities/sv;
 
-    .line 531
-    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/sv;->b()V
+
+    .line 530
+    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onPause()V
+
+    .line 532
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/ui/f/a;
 
     move-result-object v0
 
@@ -2193,7 +2032,7 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/f/a;->a(Ljava/lang/String;)V
 
-    .line 532
+    .line 533
     return-void
 .end method
 
@@ -2201,11 +2040,18 @@
     .locals 3
 
     .prologue
-    .line 513
-    invoke-super {p0}, Lcom/bbm/ui/activities/kl;->onResume()V
+    .line 496
+    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onResume()V
 
-    .line 515
-    invoke-static {}, Lcom/bbm/Alaska;->m()Lcom/bbm/ui/f/a;
+    .line 497
+    new-instance v0, Lcom/bbm/ui/activities/sb;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/sb;-><init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+
+    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
+
+    .line 512
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/ui/f/a;
 
     move-result-object v0
 
@@ -2213,7 +2059,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->p:Ljava/lang/String;
+    iget-object v2, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2231,27 +2077,39 @@
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/f/a;->a(Ljava/lang/String;)V
 
-    .line 516
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->M:Lcom/bbm/j/k;
+    .line 513
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->N:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 517
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->P:Lcom/bbm/j/u;
+    .line 514
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->Q:Lcom/bbm/j/u;
 
     invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
 
-    .line 518
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j:Lcom/bbm/ui/FooterActionBar;
+    .line 515
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->k:Lcom/bbm/ui/activities/sv;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/sv;->c()V
+
+    .line 517
+    invoke-static {}, Lcom/bbm/Alaska;->i()Lcom/bbm/ui/f/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ui/f/a;->b()V
+
+    .line 519
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->f:Lcom/bbm/ui/FooterActionBar;
 
     const/4 v1, 0x0
 
-    invoke-direct {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h()Z
+    invoke-direct {p0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b()Z
 
     move-result v2
 
     invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->setActionEnabled(IZ)V
 
-    .line 519
+    .line 520
     return-void
 .end method

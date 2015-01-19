@@ -3,7 +3,7 @@
 .source "ConversationActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/e/ay;
+.implements Lcom/bbm/receiver/c;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 1232
+    .line 375
     iput-object p1, p0, Lcom/bbm/ui/activities/fl;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,31 +25,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/d/dz;)V
-    .locals 2
+.method public final a()V
+    .locals 1
 
     .prologue
-    .line 1235
-    const-string v0, "picture onLongClick"
-
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 1237
+    .line 379
     iget-object v0, p0, Lcom/bbm/ui/activities/fl;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0, p1}, Lcom/bbm/ui/activities/ConversationActivity;->a(Lcom/bbm/ui/activities/ConversationActivity;Lcom/bbm/d/dz;)Lcom/bbm/d/dz;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->a(Lcom/bbm/ui/activities/ConversationActivity;)Z
 
-    .line 1238
-    iget-object v0, p0, Lcom/bbm/ui/activities/fl;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->S(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/u;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
-
-    .line 1239
+    .line 380
     return-void
 .end method

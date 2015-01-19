@@ -1,65 +1,45 @@
 .class final Lcom/bbm/f/an;
 .super Ljava/lang/Object;
-.source "StreamAssembler.java"
+.source "ShuntBroker.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field a:[B
-
-.field b:I
-
-.field c:I
-
-.field d:I
-
-.field e:I
-
-.field f:Z
+.field final synthetic a:Lcom/bbm/f/al;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/bbm/f/al;)V
     .locals 0
 
     .prologue
-    .line 64
+    .line 144
+    iput-object p1, p0, Lcom/bbm/f/an;->a:Lcom/bbm/f/al;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
-    invoke-virtual {p0}, Lcom/bbm/f/an;->a()V
-
-    .line 66
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final run()V
+    .locals 2
 
     .prologue
-    const/4 v0, 0x0
+    .line 147
+    iget-object v0, p0, Lcom/bbm/f/an;->a:Lcom/bbm/f/al;
 
-    .line 72
-    iput-boolean v0, p0, Lcom/bbm/f/an;->f:Z
+    iget-object v0, v0, Lcom/bbm/f/al;->b:Lcom/bbm/f/ai;
 
-    .line 73
-    iput v0, p0, Lcom/bbm/f/an;->b:I
+    iget-object v0, v0, Lcom/bbm/f/ai;->e:Lcom/bbm/util/ct;
 
-    .line 74
-    iput v0, p0, Lcom/bbm/f/an;->c:I
+    sget-object v1, Lcom/bbm/f/b;->c:Lcom/bbm/f/b;
 
-    .line 75
-    iput v0, p0, Lcom/bbm/f/an;->d:I
+    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
 
-    .line 76
-    iput v0, p0, Lcom/bbm/f/an;->e:I
-
-    .line 77
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/bbm/f/an;->a:[B
-
-    .line 78
+    .line 148
     return-void
 .end method

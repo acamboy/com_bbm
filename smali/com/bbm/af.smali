@@ -1,52 +1,47 @@
-.class final Lcom/bbm/af;
+.class public final Lcom/bbm/af;
 .super Ljava/lang/Object;
-.source "Settings.java"
-
-# interfaces
-.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
+.source "ServerConfig.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ae;
+# static fields
+.field public static a:Ljava/lang/String;
+
+.field public static b:Ljava/lang/String;
+
+.field public static c:Z
+
+.field public static d:Z
+
+.field public static e:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ae;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
     .prologue
-    .line 129
-    iput-object p1, p0, Lcom/bbm/af;->a:Lcom/bbm/ae;
+    const/4 v1, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 12
+    const-string v0, "production"
 
-    return-void
-.end method
+    sput-object v0, Lcom/bbm/af;->a:Ljava/lang/String;
 
+    .line 18
+    const-string v0, "production"
 
-# virtual methods
-.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
-    .locals 1
+    sput-object v0, Lcom/bbm/af;->b:Ljava/lang/String;
 
-    .prologue
-    .line 132
-    iget-object v0, p0, Lcom/bbm/af;->a:Lcom/bbm/ae;
+    .line 23
+    sput-boolean v1, Lcom/bbm/af;->c:Z
 
-    iget-object v0, v0, Lcom/bbm/ae;->c:Ljava/util/HashMap;
+    .line 28
+    sput-boolean v1, Lcom/bbm/af;->d:Z
 
-    invoke-virtual {v0, p2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 33
+    const-string v0, "https://meetings.bbm.com/download"
 
-    move-result-object v0
+    sput-object v0, Lcom/bbm/af;->e:Ljava/lang/String;
 
-    check-cast v0, Lcom/bbm/ai;
-
-    .line 133
-    if-eqz v0, :cond_0
-
-    .line 134
-    invoke-virtual {v0}, Lcom/bbm/ai;->a()V
-
-    .line 136
-    :cond_0
     return-void
 .end method

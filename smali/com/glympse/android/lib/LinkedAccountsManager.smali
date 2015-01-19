@@ -11,13 +11,13 @@
 
 .field private hE:Lcom/glympse/android/lib/CommonSink;
 
-.field private iY:Lcom/glympse/android/core/GPrimitive;
+.field private jO:Lcom/glympse/android/lib/hw;
 
-.field private jq:Lcom/glympse/android/lib/hp;
+.field private jw:Lcom/glympse/android/core/GPrimitive;
 
-.field private mx:Z
+.field private nd:Z
 
-.field private pf:Lcom/glympse/android/hal/GVector;
+.field private pH:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -51,23 +51,23 @@
     iput-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->hE:Lcom/glympse/android/lib/CommonSink;
 
     .line 33
-    new-instance v0, Lcom/glympse/android/lib/hp;
+    new-instance v0, Lcom/glympse/android/lib/hw;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/hp;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/lib/hw;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jq:Lcom/glympse/android/lib/hp;
+    iput-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jO:Lcom/glympse/android/lib/hw;
 
     .line 34
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->mx:Z
+    iput-boolean v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->nd:Z
 
     .line 35
     new-instance v0, Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    iput-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     .line 36
     return-void
@@ -77,18 +77,18 @@
     .locals 2
 
     .prologue
-    .line 574
+    .line 617
     invoke-interface {p1, p2}, Lcom/glympse/android/lib/GLinkedAccountPrivate;->merge(Lcom/glympse/android/lib/GLinkedAccountPrivate;)V
 
-    .line 576
+    .line 619
     if-eqz p4, :cond_0
 
-    .line 578
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    .line 621
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->removeElement(Ljava/lang/Object;)Z
 
-    .line 581
+    .line 624
     :cond_0
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
@@ -96,7 +96,7 @@
 
     invoke-virtual {p0, v0, v1, p3, p1}, Lcom/glympse/android/lib/LinkedAccountsManager;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
 
-    .line 582
+    .line 625
     return-void
 .end method
 
@@ -104,14 +104,14 @@
     .locals 3
 
     .prologue
-    .line 329
+    .line 357
     const/4 v0, 0x2
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
-    .line 330
+    .line 358
     const-string v1, "type"
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -124,7 +124,7 @@
 
     invoke-interface {v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 331
+    .line 359
     const-string v1, "token"
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -133,7 +133,7 @@
 
     invoke-interface {v0, v1, p0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 333
+    .line 361
     return-object v0
 .end method
 
@@ -141,14 +141,14 @@
     .locals 3
 
     .prologue
-    .line 307
+    .line 335
     const/4 v0, 0x2
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
-    .line 308
+    .line 336
     const-string v1, "type"
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -161,7 +161,7 @@
 
     invoke-interface {v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 309
+    .line 337
     const-string v1, "token"
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -170,7 +170,81 @@
 
     invoke-interface {v0, v1, p0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 311
+    .line 339
+    return-object v0
+.end method
+
+.method public static createGoogleAccountProfile(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    .locals 3
+
+    .prologue
+    .line 366
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
+
+    .line 367
+    const-string v1, "type"
+
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/glympse/android/api/GC;->LINKED_ACCOUNT_TYPE_GOOGLE()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 368
+    const-string v1, "token"
+
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, p0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 370
+    return-object v0
+.end method
+
+.method public static createGoogleServerAuthorizationProfile(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    .locals 3
+
+    .prologue
+    .line 375
+    const/4 v0, 0x2
+
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
+
+    .line 376
+    const-string v1, "type"
+
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {}, Lcom/glympse/android/api/GC;->LINKED_ACCOUNT_TYPE_GOOGLE()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 377
+    const-string v1, "code"
+
+    invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, p0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 379
     return-object v0
 .end method
 
@@ -178,14 +252,14 @@
     .locals 3
 
     .prologue
-    .line 317
+    .line 345
     const/4 v0, 0x2
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createPrimitive(I)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
-    .line 318
+    .line 346
     const-string v1, "type"
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -198,7 +272,7 @@
 
     invoke-interface {v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 319
+    .line 347
     const-string v1, "consumer_key"
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -207,7 +281,7 @@
 
     invoke-interface {v0, v1, p0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 320
+    .line 348
     const-string v1, "consumer_secret"
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -216,7 +290,7 @@
 
     invoke-interface {v0, v1, p1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 321
+    .line 349
     const-string v1, "oauth_token"
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -225,7 +299,7 @@
 
     invoke-interface {v0, v1, p2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 322
+    .line 350
     const-string v1, "oauth_token_secret"
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -234,7 +308,7 @@
 
     invoke-interface {v0, v1, p3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 324
+    .line 352
     return-object v0
 .end method
 
@@ -242,24 +316,24 @@
     .locals 2
 
     .prologue
-    .line 557
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jq:Lcom/glympse/android/lib/hp;
+    .line 600
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jO:Lcom/glympse/android/lib/hw;
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/hp;->load()Lcom/glympse/android/core/GPrimitive;
+    invoke-virtual {v0}, Lcom/glympse/android/lib/hw;->load()Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
-    .line 558
+    .line 601
     if-nez v0, :cond_0
 
-    .line 560
+    .line 603
     new-instance v0, Lcom/glympse/android/lib/Primitive;
 
     const/4 v1, 0x2
 
     invoke-direct {v0, v1}, Lcom/glympse/android/lib/Primitive;-><init>(I)V
 
-    .line 563
+    .line 606
     :cond_0
     return-object v0
 .end method
@@ -268,14 +342,14 @@
     .locals 2
 
     .prologue
-    .line 569
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jq:Lcom/glympse/android/lib/hp;
+    .line 612
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jO:Lcom/glympse/android/lib/hw;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->iY:Lcom/glympse/android/core/GPrimitive;
+    iget-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jw:Lcom/glympse/android/core/GPrimitive;
 
-    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/hp;->save(Lcom/glympse/android/core/GPrimitive;)V
+    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/hw;->save(Lcom/glympse/android/core/GPrimitive;)V
 
-    .line 570
+    .line 613
     return-void
 .end method
 
@@ -285,7 +359,7 @@
     .locals 1
 
     .prologue
-    .line 590
+    .line 633
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->addListener(Lcom/glympse/android/api/GEventListener;)Z
@@ -299,25 +373,127 @@
     .locals 1
 
     .prologue
-    .line 610
+    .line 653
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/glympse/android/lib/CommonSink;->associateContext(JLjava/lang/Object;)V
 
-    .line 611
+    .line 654
     return-void
+.end method
+
+.method public canSend(Lcom/glympse/android/api/GInvite;)Z
+    .locals 3
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 304
+    iget-object v2, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
+
+    if-eqz v2, :cond_0
+
+    if-nez p1, :cond_2
+
+    :cond_0
+    move v0, v1
+
+    .line 326
+    :cond_1
+    :goto_0
+    return v0
+
+    .line 310
+    :cond_2
+    invoke-interface {p1}, Lcom/glympse/android/api/GInvite;->getType()I
+
+    move-result v2
+
+    .line 311
+    sparse-switch v2, :sswitch_data_0
+
+    move v0, v1
+
+    .line 326
+    goto :goto_0
+
+    .line 315
+    :sswitch_0
+    const-string v2, "twitter"
+
+    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lcom/glympse/android/lib/LinkedAccountsManager;->getAccount(Ljava/lang/String;)Lcom/glympse/android/api/GLinkedAccount;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    move v0, v1
+
+    goto :goto_0
+
+    .line 319
+    :sswitch_1
+    const-string v2, "facebook"
+
+    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lcom/glympse/android/lib/LinkedAccountsManager;->getAccount(Ljava/lang/String;)Lcom/glympse/android/api/GLinkedAccount;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    move v0, v1
+
+    goto :goto_0
+
+    .line 323
+    :sswitch_2
+    const-string v2, "evernote"
+
+    invoke-static {v2}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v2}, Lcom/glympse/android/lib/LinkedAccountsManager;->getAccount(Ljava/lang/String;)Lcom/glympse/android/api/GLinkedAccount;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    move v0, v1
+
+    goto :goto_0
+
+    .line 311
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x4 -> :sswitch_0
+        0x5 -> :sswitch_1
+        0xa -> :sswitch_2
+    .end sparse-switch
 .end method
 
 .method public clearContext(J)V
     .locals 1
 
     .prologue
-    .line 620
+    .line 663
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->clearContext(J)V
 
-    .line 621
+    .line 664
     return-void
 .end method
 
@@ -325,12 +501,12 @@
     .locals 1
 
     .prologue
-    .line 630
+    .line 673
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->deriveContext(Lcom/glympse/android/api/GEventSink;)V
 
-    .line 631
+    .line 674
     return-void
 .end method
 
@@ -338,7 +514,7 @@
     .locals 6
 
     .prologue
-    .line 639
+    .line 682
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
@@ -357,7 +533,7 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/glympse/android/lib/CommonSink;->eventsOccurred(Lcom/glympse/android/api/GEventSink;Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
 
-    .line 640
+    .line 683
     return-void
 .end method
 
@@ -383,7 +559,7 @@
 
     .line 240
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -398,7 +574,7 @@
     if-ge v2, v3, :cond_2
 
     .line 243
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, v2}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -462,7 +638,7 @@
     if-nez v1, :cond_0
 
     .line 191
-    iget-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->iY:Lcom/glympse/android/core/GPrimitive;
+    iget-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jw:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v1, p1}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
@@ -493,7 +669,7 @@
 
     .prologue
     .line 255
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     return-object v0
 .end method
@@ -502,7 +678,7 @@
     .locals 1
 
     .prologue
-    .line 615
+    .line 658
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->getContext(J)Ljava/lang/Object;
@@ -525,7 +701,7 @@
     .end annotation
 
     .prologue
-    .line 625
+    .line 668
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0}, Lcom/glympse/android/lib/CommonSink;->getContextKeys()Ljava/util/Enumeration;
@@ -543,7 +719,7 @@
 
     .line 260
     .line 263
-    iget-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    iget-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v1}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -558,7 +734,7 @@
     if-ge v2, v3, :cond_2
 
     .line 266
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, v2}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -629,7 +805,7 @@
     .end annotation
 
     .prologue
-    .line 600
+    .line 643
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0}, Lcom/glympse/android/lib/CommonSink;->getListeners()Lcom/glympse/android/core/GArray;
@@ -643,7 +819,7 @@
     .locals 1
 
     .prologue
-    .line 605
+    .line 648
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1, p2}, Lcom/glympse/android/lib/CommonSink;->hasContext(J)Z
@@ -658,7 +834,7 @@
 
     .prologue
     .line 44
-    iget-boolean v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->mx:Z
+    iget-boolean v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->nd:Z
 
     return v0
 .end method
@@ -720,15 +896,15 @@
     if-nez v0, :cond_0
 
     .line 82
-    new-instance v0, Lcom/glympse/android/lib/fh;
+    new-instance v0, Lcom/glympse/android/lib/fl;
 
-    invoke-direct {v0, p1}, Lcom/glympse/android/lib/fh;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Lcom/glympse/android/lib/fl;-><init>(Ljava/lang/String;)V
 
     .line 83
     invoke-interface {v0, v4}, Lcom/glympse/android/lib/GLinkedAccountPrivate;->setState(I)V
 
     .line 84
-    iget-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    iget-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v1, v0}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
@@ -739,11 +915,11 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/glympse/android/lib/ff;
+    new-instance v2, Lcom/glympse/android/lib/fj;
 
     iget-object v3, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    invoke-direct {v2, v3, v0, p2}, Lcom/glympse/android/lib/ff;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GLinkedAccountPrivate;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-direct {v2, v3, v0, p2}, Lcom/glympse/android/lib/fj;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GLinkedAccountPrivate;Lcom/glympse/android/core/GPrimitive;)V
 
     invoke-interface {v1, v2, v4}, Lcom/glympse/android/lib/GServerPost;->invokeEndpoint(Lcom/glympse/android/lib/GApiEndpoint;Z)V
 
@@ -751,15 +927,13 @@
 .end method
 
 .method public linkComplete(Lcom/glympse/android/lib/GLinkedAccountPrivate;Lcom/glympse/android/lib/GLinkedAccountPrivate;)V
-    .locals 3
+    .locals 2
 
     .prologue
-    const/4 v2, 0x0
-
     const/4 v1, 0x1
 
-    .line 444
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    .line 490
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->contains(Ljava/lang/Object;)Z
 
@@ -767,11 +941,11 @@
 
     if-nez v0, :cond_0
 
-    .line 461
+    .line 504
     :goto_0
     return-void
 
-    .line 451
+    .line 497
     :cond_0
     invoke-interface {p2}, Lcom/glympse/android/lib/GLinkedAccountPrivate;->getLogin()I
 
@@ -779,17 +953,7 @@
 
     if-ne v1, v0, :cond_1
 
-    .line 453
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getConfigPrivate()Lcom/glympse/android/lib/GConfigPrivate;
-
-    move-result-object v0
-
-    invoke-interface {v0, v2}, Lcom/glympse/android/lib/GConfigPrivate;->setStandalone(Z)V
-
-    .line 457
-    :cond_1
+    .line 499
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getConfigPrivate()Lcom/glympse/android/lib/GConfigPrivate;
@@ -798,8 +962,11 @@
 
     invoke-interface {v0, v1}, Lcom/glympse/android/lib/GConfigPrivate;->setAccountsLinked(Z)V
 
-    .line 460
-    invoke-direct {p0, p1, p2, v1, v2}, Lcom/glympse/android/lib/LinkedAccountsManager;->a(Lcom/glympse/android/lib/GLinkedAccountPrivate;Lcom/glympse/android/lib/GLinkedAccountPrivate;IZ)V
+    .line 503
+    :cond_1
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v1, v0}, Lcom/glympse/android/lib/LinkedAccountsManager;->a(Lcom/glympse/android/lib/GLinkedAccountPrivate;Lcom/glympse/android/lib/GLinkedAccountPrivate;IZ)V
 
     goto :goto_0
 .end method
@@ -808,8 +975,8 @@
     .locals 2
 
     .prologue
-    .line 468
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    .line 511
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->contains(Ljava/lang/Object;)Z
 
@@ -817,11 +984,11 @@
 
     if-nez v0, :cond_0
 
-    .line 476
+    .line 519
     :goto_0
     return-void
 
-    .line 475
+    .line 518
     :cond_0
     const/4 v0, 0x2
 
@@ -849,30 +1016,30 @@
 
     const/4 v3, 0x0
 
-    .line 369
+    .line 415
     new-instance v5, Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v5}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    .line 373
+    .line 419
     invoke-virtual {p1}, Lcom/glympse/android/hal/GVector;->size()I
 
     move-result v6
 
     move v4, v3
 
-    .line 374
+    .line 420
     :goto_0
     if-ge v4, v6, :cond_1
 
-    .line 376
+    .line 422
     invoke-virtual {p1, v4}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/glympse/android/lib/GLinkedAccountPrivate;
 
-    .line 377
+    .line 423
     invoke-interface {v0}, Lcom/glympse/android/lib/GLinkedAccountPrivate;->getType()Ljava/lang/String;
 
     move-result-object v1
@@ -883,13 +1050,13 @@
 
     check-cast v1, Lcom/glympse/android/lib/GLinkedAccountPrivate;
 
-    .line 381
+    .line 427
     if-nez v1, :cond_0
 
-    .line 383
+    .line 429
     invoke-virtual {v5, v0}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
-    .line 374
+    .line 420
     :goto_1
     add-int/lit8 v0, v4, 0x1
 
@@ -897,26 +1064,26 @@
 
     goto :goto_0
 
-    .line 389
+    .line 435
     :cond_0
-    iget-object v7, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    iget-object v7, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v7, v1}, Lcom/glympse/android/hal/GVector;->removeElement(Ljava/lang/Object;)Z
 
-    .line 390
+    .line 436
     invoke-virtual {v5, v1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
-    .line 395
+    .line 441
     invoke-interface {v0, v3}, Lcom/glympse/android/lib/GLinkedAccountPrivate;->setState(I)V
 
-    .line 396
+    .line 442
     invoke-interface {v1, v0}, Lcom/glympse/android/lib/GLinkedAccountPrivate;->merge(Lcom/glympse/android/lib/GLinkedAccountPrivate;)V
 
     goto :goto_1
 
-    .line 402
+    .line 448
     :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -924,12 +1091,12 @@
 
     move v1, v3
 
-    .line 403
+    .line 449
     :goto_2
     if-ge v1, v4, :cond_3
 
-    .line 414
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    .line 460
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -937,17 +1104,17 @@
 
     check-cast v0, Lcom/glympse/android/lib/GLinkedAccountPrivate;
 
-    .line 415
+    .line 461
     invoke-interface {v0}, Lcom/glympse/android/lib/GLinkedAccountPrivate;->getState()I
 
     move-result v6
 
     if-ne v6, v2, :cond_2
 
-    .line 417
+    .line 463
     invoke-virtual {v5, v0}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
-    .line 403
+    .line 449
     :cond_2
     add-int/lit8 v0, v1, 0x1
 
@@ -955,15 +1122,15 @@
 
     goto :goto_2
 
-    .line 422
+    .line 468
     :cond_3
-    iput-object v5, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    iput-object v5, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
-    .line 423
-    iput-boolean v2, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->mx:Z
+    .line 469
+    iput-boolean v2, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->nd:Z
 
-    .line 426
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    .line 472
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -973,7 +1140,7 @@
 
     move v0, v2
 
-    .line 427
+    .line 473
     :goto_3
     iget-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
@@ -983,7 +1150,7 @@
 
     invoke-interface {v1, v0}, Lcom/glympse/android/lib/GConfigPrivate;->setAccountsLinked(Z)V
 
-    .line 430
+    .line 476
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
     const/16 v1, 0xd
@@ -994,13 +1161,13 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lcom/glympse/android/lib/LinkedAccountsManager;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
 
-    .line 431
+    .line 477
     return-void
 
     :cond_4
     move v0, v3
 
-    .line 426
+    .line 472
     goto :goto_3
 .end method
 
@@ -1008,7 +1175,7 @@
     .locals 3
 
     .prologue
-    .line 436
+    .line 482
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
     const/16 v1, 0xd
@@ -1017,7 +1184,7 @@
 
     invoke-virtual {p0, v0, v1, v2, p1}, Lcom/glympse/android/lib/LinkedAccountsManager;->eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
 
-    .line 437
+    .line 483
     return-void
 .end method
 
@@ -1095,11 +1262,11 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/glympse/android/lib/gu;
+    new-instance v2, Lcom/glympse/android/lib/ha;
 
     iget-object v3, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    invoke-direct {v2, v3, v0, p2}, Lcom/glympse/android/lib/gu;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GLinkedAccountPrivate;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-direct {v2, v3, v0, p2}, Lcom/glympse/android/lib/ha;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GLinkedAccountPrivate;Lcom/glympse/android/core/GPrimitive;)V
 
     const/4 v3, 0x1
 
@@ -1134,11 +1301,11 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/glympse/android/lib/fj;
+    new-instance v2, Lcom/glympse/android/lib/fn;
 
     iget-object v3, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    invoke-direct {v2, v3}, Lcom/glympse/android/lib/fj;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;)V
+    invoke-direct {v2, v3}, Lcom/glympse/android/lib/fn;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;)V
 
     invoke-interface {v1, v2, v0}, Lcom/glympse/android/lib/GServerPost;->invokeEndpoint(Lcom/glympse/android/lib/GApiEndpoint;Z)V
 
@@ -1149,8 +1316,8 @@
     .locals 2
 
     .prologue
-    .line 514
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    .line 557
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->contains(Ljava/lang/Object;)Z
 
@@ -1158,11 +1325,11 @@
 
     if-nez v0, :cond_0
 
-    .line 521
+    .line 564
     :goto_0
     return-void
 
-    .line 520
+    .line 563
     :cond_0
     const/16 v0, 0x10
 
@@ -1177,8 +1344,8 @@
     .locals 2
 
     .prologue
-    .line 528
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    .line 571
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->contains(Ljava/lang/Object;)Z
 
@@ -1186,12 +1353,12 @@
 
     if-nez v0, :cond_1
 
-    .line 547
+    .line 590
     :cond_0
     :goto_0
     return-void
 
-    .line 536
+    .line 579
     :cond_1
     invoke-interface {p2}, Lcom/glympse/android/lib/GLinkedAccountPrivate;->getError()Lcom/glympse/android/api/GServerError;
 
@@ -1207,23 +1374,23 @@
 
     const/4 v0, 0x1
 
-    .line 539
+    .line 582
     :goto_1
     const/16 v1, 0x20
 
     invoke-direct {p0, p1, p2, v1, v0}, Lcom/glympse/android/lib/LinkedAccountsManager;->a(Lcom/glympse/android/lib/GLinkedAccountPrivate;Lcom/glympse/android/lib/GLinkedAccountPrivate;IZ)V
 
-    .line 543
+    .line 586
     if-nez v0, :cond_0
 
-    .line 545
+    .line 588
     const/4 v0, 0x0
 
     invoke-interface {p1, v0}, Lcom/glympse/android/lib/GLinkedAccountPrivate;->setError(Lcom/glympse/android/api/GServerError;)V
 
     goto :goto_0
 
-    .line 536
+    .line 579
     :cond_2
     const/4 v0, 0x0
 
@@ -1234,7 +1401,7 @@
     .locals 1
 
     .prologue
-    .line 595
+    .line 638
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->hE:Lcom/glympse/android/lib/CommonSink;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/lib/CommonSink;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
@@ -1275,7 +1442,7 @@
     if-eqz p3, :cond_0
 
     .line 218
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->iY:Lcom/glympse/android/core/GPrimitive;
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jw:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v0, p1}, Lcom/glympse/android/core/GPrimitive;->get(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
@@ -1292,7 +1459,7 @@
     invoke-direct {v0, v1}, Lcom/glympse/android/lib/Primitive;-><init>(I)V
 
     .line 222
-    iget-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->iY:Lcom/glympse/android/core/GPrimitive;
+    iget-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jw:Lcom/glympse/android/core/GPrimitive;
 
     invoke-interface {v1, p1, v0}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Lcom/glympse/android/core/GPrimitive;)V
 
@@ -1310,11 +1477,11 @@
     .locals 5
 
     .prologue
-    .line 342
+    .line 388
     iput-object p1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    .line 343
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jq:Lcom/glympse/android/lib/hp;
+    .line 389
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jO:Lcom/glympse/android/lib/hw;
 
     iget-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
@@ -1336,16 +1503,16 @@
 
     move-result-object v4
 
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/glympse/android/lib/hp;->a(Lcom/glympse/android/hal/GContextHolder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/glympse/android/lib/hw;->a(Lcom/glympse/android/hal/GContextHolder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 346
+    .line 392
     invoke-direct {p0}, Lcom/glympse/android/lib/LinkedAccountsManager;->load()Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->iY:Lcom/glympse/android/core/GPrimitive;
+    iput-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jw:Lcom/glympse/android/core/GPrimitive;
 
-    .line 349
+    .line 395
     iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getConfigPrivate()Lcom/glympse/android/lib/GConfigPrivate;
@@ -1358,10 +1525,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 352
+    .line 398
     invoke-virtual {p0}, Lcom/glympse/android/lib/LinkedAccountsManager;->refresh()Z
 
-    .line 354
+    .line 400
     :cond_0
     return-void
 .end method
@@ -1372,23 +1539,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 358
-    iput-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->iY:Lcom/glympse/android/core/GPrimitive;
+    .line 404
+    iput-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jw:Lcom/glympse/android/core/GPrimitive;
 
-    .line 360
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jq:Lcom/glympse/android/lib/hp;
+    .line 406
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->jO:Lcom/glympse/android/lib/hw;
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/hp;->stop()V
+    invoke-virtual {v0}, Lcom/glympse/android/lib/hw;->stop()V
 
-    .line 361
+    .line 407
     iput-object v1, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    .line 364
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    .line 410
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->removeAllElements()V
 
-    .line 365
+    .line 411
     return-void
 .end method
 
@@ -1446,11 +1613,11 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/glympse/android/lib/iq;
+    new-instance v2, Lcom/glympse/android/lib/jc;
 
     iget-object v3, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-    invoke-direct {v2, v3, v0}, Lcom/glympse/android/lib/iq;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GLinkedAccountPrivate;)V
+    invoke-direct {v2, v3, v0}, Lcom/glympse/android/lib/jc;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GLinkedAccountPrivate;)V
 
     const/4 v3, 0x1
 
@@ -1463,8 +1630,8 @@
     .locals 2
 
     .prologue
-    .line 483
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    .line 526
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->contains(Ljava/lang/Object;)Z
 
@@ -1472,11 +1639,11 @@
 
     if-nez v0, :cond_0
 
-    .line 491
+    .line 534
     :goto_0
     return-void
 
-    .line 490
+    .line 533
     :cond_0
     const/4 v0, 0x4
 
@@ -1491,8 +1658,8 @@
     .locals 2
 
     .prologue
-    .line 498
-    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pf:Lcom/glympse/android/hal/GVector;
+    .line 541
+    iget-object v0, p0, Lcom/glympse/android/lib/LinkedAccountsManager;->pH:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p1}, Lcom/glympse/android/hal/GVector;->contains(Ljava/lang/Object;)Z
 
@@ -1500,11 +1667,11 @@
 
     if-nez v0, :cond_0
 
-    .line 507
+    .line 550
     :goto_0
     return-void
 
-    .line 506
+    .line 549
     :cond_0
     const/16 v0, 0x8
 

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ic;
 .super Ljava/lang/Object;
-.source "FilePickerActivity.java"
+.source "ConversationActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/FilePickerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/FilePickerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 305
-    iput-object p1, p0, Lcom/bbm/ui/activities/ic;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    .line 3023
+    iput-object p1, p0, Lcom/bbm/ui/activities/ic;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,51 +26,21 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 3
+    .locals 2
 
     .prologue
-    .line 309
-    const-string v0, "headerActionBar Negative Button Clicked"
+    .line 3027
+    const-string v0, "quickshare attach contact clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/FilePickerActivity;
+    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 311
-    new-instance v0, Landroid/content/Intent;
+    .line 3028
+    iget-object v0, p0, Lcom/bbm/ui/activities/ic;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ic;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->J(Lcom/bbm/ui/activities/ConversationActivity;)V
 
-    const-class v2, Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 312
-    const/high16 v1, 0x4000000
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    .line 313
-    const-string v1, "conversation_uri"
-
-    invoke-static {}, Lcom/bbm/ui/activities/FilePickerActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 315
-    iget-object v1, p0, Lcom/bbm/ui/activities/ic;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/FilePickerActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 316
-    iget-object v0, p0, Lcom/bbm/ui/activities/ic;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/FilePickerActivity;->setResult(I)V
-
-    .line 317
+    .line 3029
     return-void
 .end method

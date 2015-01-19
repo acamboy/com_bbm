@@ -596,185 +596,125 @@
 .end method
 
 .method private varargs b(Lorg/json/JSONObject;[Ljava/lang/String;)V
-    .locals 8
+    .locals 10
 
-    new-instance v3, Ljava/util/HashSet;
+    new-instance v4, Ljava/util/HashSet;
 
     invoke-static {p2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-direct {v3, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v4, v2}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
 
     :try_start_0
     invoke-virtual {p1}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
-    move-result-object v4
+    move-result-object v5
 
     :cond_0
     :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/lang/String;
-
-    const-string v2, "metadataType"
-
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v2
 
-    if-nez v2, :cond_0
+    if-eqz v2, :cond_2
 
-    sget-object v2, Lcom/google/android/gms/cast/MediaMetadata;->wS:Lcom/google/android/gms/cast/MediaMetadata$a;
+    invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    invoke-virtual {v2, v1}, Lcom/google/android/gms/cast/MediaMetadata$a;->N(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v5
+    check-cast v2, Ljava/lang/String;
 
-    if-eqz v5, :cond_1
+    const-string v3, "metadataType"
 
-    invoke-interface {v3, v5}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
+    invoke-virtual {v3, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    sget-object v3, Lcom/google/android/gms/cast/MediaMetadata;->wS:Lcom/google/android/gms/cast/MediaMetadata$a;
+
+    invoke-virtual {v3, v2}, Lcom/google/android/gms/cast/MediaMetadata$a;->N(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v6
+
+    if-eqz v6, :cond_1
+
+    invoke-interface {v4, v6}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_1
 
-    move-result v2
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    :try_start_1
+    invoke-virtual {p1, v2}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v2
 
     if-eqz v2, :cond_0
 
-    :try_start_1
-    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
+    sget-object v3, Lcom/google/android/gms/cast/MediaMetadata;->wS:Lcom/google/android/gms/cast/MediaMetadata$a;
 
-    move-result-object v1
+    invoke-virtual {v3, v6}, Lcom/google/android/gms/cast/MediaMetadata$a;->O(Ljava/lang/String;)I
 
-    if-eqz v1, :cond_0
+    move-result v3
 
-    sget-object v2, Lcom/google/android/gms/cast/MediaMetadata;->wS:Lcom/google/android/gms/cast/MediaMetadata$a;
-
-    invoke-virtual {v2, v5}, Lcom/google/android/gms/cast/MediaMetadata$a;->O(Ljava/lang/String;)I
-
-    move-result v2
-
-    packed-switch v2, :pswitch_data_0
+    packed-switch v3, :pswitch_data_0
 
     goto :goto_0
 
     :pswitch_0
-    instance-of v2, v1, Ljava/lang/String;
+    instance-of v3, v2, Ljava/lang/String;
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    iget-object v2, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
+    iget-object v3, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v2, Ljava/lang/String;
 
-    invoke-virtual {v2, v5, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v6, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :catch_0
-    move-exception v1
+    move-exception v2
 
     goto :goto_0
 
     :pswitch_1
-    instance-of v2, v1, Ljava/lang/String;
+    instance-of v3, v2, Ljava/lang/String;
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    move-object v0, v1
+    move-object v0, v2
 
     check-cast v0, Ljava/lang/String;
 
-    move-object v2, v0
+    move-object v3, v0
 
-    invoke-static {v2}, Lcom/google/android/gms/internal/dz;->V(Ljava/lang/String;)Ljava/util/Calendar;
+    invoke-static {v3}, Lcom/google/android/gms/internal/dz;->V(Ljava/lang/String;)Ljava/util/Calendar;
 
-    move-result-object v2
+    move-result-object v3
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    iget-object v2, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
+    iget-object v3, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
 
-    check-cast v1, Ljava/lang/String;
+    check-cast v2, Ljava/lang/String;
 
-    invoke-virtual {v2, v5, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v3, v6, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :pswitch_2
-    instance-of v2, v1, Ljava/lang/Integer;
+    instance-of v3, v2, Ljava/lang/Integer;
 
-    if-eqz v2, :cond_0
+    if-eqz v3, :cond_0
 
-    iget-object v2, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
-
-    check-cast v1, Ljava/lang/Integer;
-
-    invoke-virtual {v1}, Ljava/lang/Integer;->intValue()I
-
-    move-result v1
-
-    invoke-virtual {v2, v5, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
-
-    goto :goto_0
-
-    :pswitch_3
-    instance-of v2, v1, Ljava/lang/Double;
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
-
-    check-cast v1, Ljava/lang/Double;
-
-    invoke-virtual {v1}, Ljava/lang/Double;->doubleValue()D
-
-    move-result-wide v6
-
-    invoke-virtual {v2, v5, v6, v7}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
-    :try_end_1
-    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_0
-
-    :cond_1
-    :try_start_2
-    invoke-virtual {p1, v1}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v2
-
-    instance-of v5, v2, Ljava/lang/String;
-
-    if-eqz v5, :cond_3
-
-    iget-object v5, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
-
-    check-cast v2, Ljava/lang/String;
-
-    invoke-virtual {v5, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    :catch_1
-    move-exception v1
-
-    :cond_2
-    return-void
-
-    :cond_3
-    instance-of v5, v2, Ljava/lang/Integer;
-
-    if-eqz v5, :cond_4
-
-    iget-object v5, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
+    iget-object v3, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
 
     check-cast v2, Ljava/lang/Integer;
 
@@ -782,24 +722,84 @@
 
     move-result v2
 
-    invoke-virtual {v5, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+    invoke-virtual {v3, v6, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    goto/16 :goto_0
+    goto :goto_0
 
-    :cond_4
-    instance-of v5, v2, Ljava/lang/Double;
+    :pswitch_3
+    instance-of v3, v2, Ljava/lang/Double;
 
-    if-eqz v5, :cond_0
+    if-eqz v3, :cond_0
 
-    iget-object v5, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
+    iget-object v3, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
 
     check-cast v2, Ljava/lang/Double;
 
     invoke-virtual {v2}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v6
+    move-result-wide v8
 
-    invoke-virtual {v5, v1, v6, v7}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+    invoke-virtual {v3, v6, v8, v9}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_0
+
+    :cond_1
+    :try_start_2
+    invoke-virtual {p1, v2}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    instance-of v6, v3, Ljava/lang/String;
+
+    if-eqz v6, :cond_3
+
+    iget-object v6, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
+
+    check-cast v3, Ljava/lang/String;
+
+    invoke-virtual {v6, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    :catch_1
+    move-exception v2
+
+    :cond_2
+    return-void
+
+    :cond_3
+    instance-of v6, v3, Ljava/lang/Integer;
+
+    if-eqz v6, :cond_4
+
+    iget-object v6, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    invoke-virtual {v6, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
+
+    goto/16 :goto_0
+
+    :cond_4
+    instance-of v6, v3, Ljava/lang/Double;
+
+    if-eqz v6, :cond_0
+
+    iget-object v6, p0, Lcom/google/android/gms/cast/MediaMetadata;->wT:Landroid/os/Bundle;
+
+    check-cast v3, Ljava/lang/Double;
+
+    invoke-virtual {v3}, Ljava/lang/Double;->doubleValue()D
+
+    move-result-wide v8
+
+    invoke-virtual {v6, v2, v8, v9}, Landroid/os/Bundle;->putDouble(Ljava/lang/String;D)V
     :try_end_2
     .catch Lorg/json/JSONException; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -1680,7 +1680,7 @@
 .end method
 
 .method public putDouble(Ljava/lang/String;D)V
-    .locals 1
+    .locals 2
 
     const/4 v0, 0x3
 

@@ -1,36 +1,43 @@
 .class final Lcom/bbm/ui/activities/afa;
-.super Lcom/bbm/ui/by;
-.source "StoreActivity.java"
+.super Ljava/lang/Object;
+.source "SelectCategoryActivity.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/StoreActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/aez;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/StoreActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/aez;)V
     .locals 0
 
     .prologue
-    .line 55
-    iput-object p1, p0, Lcom/bbm/ui/activities/afa;->a:Lcom/bbm/ui/activities/StoreActivity;
+    .line 83
+    iput-object p1, p0, Lcom/bbm/ui/activities/afa;->a:Lcom/bbm/ui/activities/aez;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final onDismiss(Landroid/content/DialogInterface;)V
+    .locals 2
 
     .prologue
-    .line 58
-    iget-object v0, p0, Lcom/bbm/ui/activities/afa;->a:Lcom/bbm/ui/activities/StoreActivity;
+    .line 86
+    iget-object v0, p0, Lcom/bbm/ui/activities/afa;->a:Lcom/bbm/ui/activities/aez;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/StoreActivity;->finish()V
+    iget-object v0, v0, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
 
-    .line 59
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
+
+    .line 87
     return-void
 .end method

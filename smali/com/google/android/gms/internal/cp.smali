@@ -39,7 +39,7 @@
 .method static constructor <clinit>()V
     .locals 10
 
-    const/4 v5, 0x1
+    const/4 v6, 0x1
 
     const/4 v0, 0x0
 
@@ -61,9 +61,9 @@
 
     invoke-virtual {v1}, Ljava/util/UUID;->getMostSignificantBits()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+    invoke-static {v4, v5}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
 
     move-result-object v1
 
@@ -73,7 +73,7 @@
 
     new-instance v1, Ljava/math/BigInteger;
 
-    invoke-direct {v1, v5, v2}, Ljava/math/BigInteger;-><init>(I[B)V
+    invoke-direct {v1, v6, v2}, Ljava/math/BigInteger;-><init>(I[B)V
 
     invoke-virtual {v1}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
 

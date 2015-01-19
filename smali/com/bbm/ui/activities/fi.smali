@@ -1,97 +1,158 @@
 .class final Lcom/bbm/ui/activities/fi;
-.super Lcom/bbm/j/u;
-.source "ConversationActivity.java"
+.super Landroid/view/GestureDetector$SimpleOnGestureListener;
+.source "ChildActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ey;
+
+.field private b:Lcom/bbm/ui/activities/fj;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/ui/activities/ey;Lcom/bbm/ui/activities/fj;)V
+    .locals 1
 
     .prologue
-    .line 1135
-    iput-object p1, p0, Lcom/bbm/ui/activities/fi;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 308
+    iput-object p1, p0, Lcom/bbm/ui/activities/fi;->a:Lcom/bbm/ui/activities/ey;
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 
+    .line 306
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/fi;->b:Lcom/bbm/ui/activities/fj;
+
+    .line 309
+    iput-object p2, p0, Lcom/bbm/ui/activities/fi;->b:Lcom/bbm/ui/activities/fj;
+
+    .line 310
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 4
+.method public final onDown(Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    .prologue
+    .line 335
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+    .locals 5
 
     .prologue
     const/4 v0, 0x0
 
-    .line 1140
-    iget-object v1, p0, Lcom/bbm/ui/activities/fi;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    const/high16 v4, 0x43480000
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->P(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/dz;
+    .line 314
+    if-eqz p1, :cond_0
 
-    move-result-object v1
+    if-eqz p2, :cond_0
 
-    iget-object v1, v1, Lcom/bbm/d/dz;->t:Lcom/bbm/util/bc;
-
-    sget-object v2, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
-
-    if-ne v1, v2, :cond_1
-
-    .line 1141
-    iget-object v1, p0, Lcom/bbm/ui/activities/fi;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->P(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/dz;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/d/dz;->g:Ljava/lang/String;
-
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    .line 315
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
 
-    if-nez v1, :cond_0
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
-    .line 1142
-    iget-object v1, p0, Lcom/bbm/ui/activities/fi;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    move-result v2
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+    sub-float/2addr v1, v2
 
-    move-result-object v1
+    invoke-static {v1}, Ljava/lang/Math;->abs(F)F
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/fi;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    move-result v1
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/ConversationActivity;->P(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/dz;
+    .line 316
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
-    move-result-object v2
+    move-result v2
 
-    iget-object v2, v2, Lcom/bbm/d/dz;->g:Ljava/lang/String;
+    invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->C(Ljava/lang/String;)Lcom/bbm/d/ds;
+    move-result v3
 
-    move-result-object v1
+    sub-float/2addr v2, v3
 
-    .line 1144
-    iget-object v2, v1, Lcom/bbm/d/ds;->m:Lcom/bbm/util/bc;
+    .line 318
+    cmpl-float v1, v1, v4
 
-    sget-object v3, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    if-lez v1, :cond_1
 
-    if-ne v2, v3, :cond_1
-
-    .line 1145
-    iget-object v0, p0, Lcom/bbm/ui/activities/fi;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->a(Lcom/bbm/d/ds;)V
-
-    .line 1152
+    .line 330
     :cond_0
+    :goto_0
+    return v0
+
+    .line 322
+    :cond_1
+    const/high16 v1, 0x42f00000
+
+    cmpl-float v1, v2, v1
+
+    if-lez v1, :cond_2
+
+    invoke-static {p3}, Ljava/lang/Math;->abs(F)F
+
+    move-result v1
+
+    cmpl-float v1, v1, v4
+
+    if-lez v1, :cond_2
+
+    .line 323
+    iget-object v0, p0, Lcom/bbm/ui/activities/fi;->b:Lcom/bbm/ui/activities/fj;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/fj;->c()V
+
+    .line 324
     const/4 v0, 0x1
 
-    .line 1155
-    :cond_1
+    goto :goto_0
+
+    .line 325
+    :cond_2
+    const/high16 v1, -0x3d100000
+
+    cmpg-float v1, v2, v1
+
+    if-gez v1, :cond_0
+
+    invoke-static {p3}, Ljava/lang/Math;->abs(F)F
+
+    move-result v1
+
+    cmpl-float v1, v1, v4
+
+    if-lez v1, :cond_0
+
+    .line 326
+    iget-object v1, p0, Lcom/bbm/ui/activities/fi;->b:Lcom/bbm/ui/activities/fj;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/fj;->a()V
+
+    goto :goto_0
+.end method
+
+.method public final onSingleTapConfirmed(Landroid/view/MotionEvent;)Z
+    .locals 1
+
+    .prologue
+    .line 340
+    iget-object v0, p0, Lcom/bbm/ui/activities/fi;->b:Lcom/bbm/ui/activities/fj;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/fj;->b()V
+
+    .line 341
+    const/4 v0, 0x0
+
     return v0
 .end method

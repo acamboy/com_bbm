@@ -1,48 +1,53 @@
 .class final Lcom/bbm/ui/activities/ej;
-.super Lcom/bbm/j/k;
-.source "ChildActivity.java"
+.super Lcom/bbm/ui/cn;
+.source "ChannelSettingsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/eg;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/eg;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelSettingsActivity;)V
+    .locals 0
 
     .prologue
-    .line 67
-    iput-object p1, p0, Lcom/bbm/ui/activities/ej;->a:Lcom/bbm/ui/activities/eg;
+    .line 123
+    iput-object p1, p0, Lcom/bbm/ui/activities/ej;->a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
+.method public final a()V
     .locals 1
 
     .prologue
-    .line 71
-    iget-object v0, p0, Lcom/bbm/ui/activities/ej;->a:Lcom/bbm/ui/activities/eg;
+    .line 126
+    iget-object v0, p0, Lcom/bbm/ui/activities/ej;->a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/eg;->c_()Z
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->c(Lcom/bbm/ui/activities/ChannelSettingsActivity;)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 72
-    iget-object v0, p0, Lcom/bbm/ui/activities/ej;->a:Lcom/bbm/ui/activities/eg;
+    .line 127
+    new-instance v0, Lcom/bbm/ui/activities/ek;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/eg;->d()V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ek;-><init>(Lcom/bbm/ui/activities/ej;)V
 
-    .line 74
+    invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
+
+    .line 138
     :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/ej;->a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->finish()V
+
+    .line 139
     return-void
 .end method

@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 170
+    .line 168
     iput-object p1, p0, Lcom/cropimage/p;->a:Lcom/cropimage/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,16 +29,18 @@
     .locals 2
 
     .prologue
-    .line 173
+    .line 171
     iget-object v0, p0, Lcom/cropimage/p;->a:Lcom/cropimage/o;
 
-    iget-object v0, v0, Lcom/cropimage/o;->a:Lcom/bbm/ui/activities/agw;
+    iget-object v0, v0, Lcom/cropimage/o;->a:Lcom/bbm/ui/activities/akz;
 
     iget-object v1, p0, Lcom/cropimage/p;->a:Lcom/cropimage/o;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/agw;->b(Lcom/bbm/ui/activities/agy;)V
+    iget-object v0, v0, Lcom/bbm/ui/activities/akz;->D:Ljava/util/ArrayList;
 
-    .line 174
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    .line 172
     iget-object v0, p0, Lcom/cropimage/p;->a:Lcom/cropimage/o;
 
     iget-object v0, v0, Lcom/cropimage/o;->b:Landroid/app/ProgressDialog;
@@ -49,14 +51,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 175
+    .line 173
     iget-object v0, p0, Lcom/cropimage/p;->a:Lcom/cropimage/o;
 
     iget-object v0, v0, Lcom/cropimage/o;->b:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 177
+    .line 175
     :cond_0
     return-void
 .end method

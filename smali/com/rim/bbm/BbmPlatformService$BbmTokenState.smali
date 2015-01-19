@@ -16,20 +16,20 @@
     .locals 1
 
     .prologue
-    .line 275
+    .line 324
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 277
+    .line 326
     const-string v0, ""
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->value:Ljava/lang/String;
 
-    .line 278
+    .line 327
     const-string v0, ""
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->secret:Ljava/lang/String;
 
-    .line 279
+    .line 328
     sget-object v0, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_PENDING:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iput-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
@@ -47,15 +47,15 @@
 
     const/4 v1, 0x0
 
-    .line 283
+    .line 332
     if-ne p0, p1, :cond_1
 
-    .line 292
+    .line 341
     :cond_0
     :goto_0
     return v0
 
-    .line 284
+    .line 333
     :cond_1
     if-eqz p1, :cond_2
 
@@ -74,11 +74,11 @@
 
     goto :goto_0
 
-    .line 286
+    .line 335
     :cond_3
     check-cast p1, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;
 
-    .line 288
+    .line 337
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iget-object v3, p1, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
@@ -89,7 +89,7 @@
 
     goto :goto_0
 
-    .line 289
+    .line 338
     :cond_4
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->secret:Ljava/lang/String;
 
@@ -115,7 +115,7 @@
 
     if-nez v2, :cond_5
 
-    .line 290
+    .line 339
     :cond_7
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->value:Ljava/lang/String;
 
@@ -150,7 +150,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 297
+    .line 346
     iget-object v0, p0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->value:Ljava/lang/String;
 
     if-eqz v0, :cond_1
@@ -161,7 +161,7 @@
 
     move-result v0
 
-    .line 298
+    .line 347
     :goto_0
     mul-int/lit8 v2, v0, 0x1f
 
@@ -178,7 +178,7 @@
     :goto_1
     add-int/2addr v0, v2
 
-    .line 299
+    .line 348
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v2, p0, Lcom/rim/bbm/BbmPlatformService$BbmTokenState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
@@ -194,18 +194,18 @@
     :cond_0
     add-int/2addr v0, v1
 
-    .line 300
+    .line 349
     return v0
 
     :cond_1
     move v0, v1
 
-    .line 297
+    .line 346
     goto :goto_0
 
     :cond_2
     move v0, v1
 
-    .line 298
+    .line 347
     goto :goto_1
 .end method

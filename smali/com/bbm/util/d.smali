@@ -1,92 +1,77 @@
 .class final Lcom/bbm/util/d;
-.super Ljava/util/concurrent/FutureTask;
+.super Lcom/bbm/util/l;
 .source "AsyncTask.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/util/concurrent/FutureTask",
-        "<TResult;>;"
+        "Lcom/bbm/util/l",
+        "<TParams;TResult;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/util/a;
+.field final synthetic a:Lcom/bbm/util/b;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/a;Ljava/util/concurrent/Callable;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/util/b;)V
+    .locals 1
 
     .prologue
-    .line 304
-    iput-object p1, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/a;
+    .line 295
+    iput-object p1, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/b;
 
-    invoke-direct {p0, p2}, Ljava/util/concurrent/FutureTask;-><init>(Ljava/util/concurrent/Callable;)V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/util/l;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final done()V
+.method public final call()Ljava/lang/Object;
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TResult;"
+        }
+    .end annotation
 
     .prologue
-    .line 308
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/a;
+    .line 298
+    iget-object v0, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/b;
 
-    invoke-virtual {p0}, Lcom/bbm/util/d;->get()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/a;->b(Lcom/bbm/util/a;Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/util/concurrent/ExecutionException; {:try_start_0 .. :try_end_0} :catch_1
-    .catch Ljava/util/concurrent/CancellationException; {:try_start_0 .. :try_end_0} :catch_2
-
-    .line 319
-    :goto_0
-    return-void
-
-    .line 310
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/w;->b(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    .line 313
-    :catch_1
-    move-exception v0
-
-    .line 314
-    new-instance v1, Ljava/lang/RuntimeException;
-
-    const-string v2, "An error occured while executing doInBackground()"
-
-    invoke-virtual {v0}, Ljava/util/concurrent/ExecutionException;->getCause()Ljava/lang/Throwable;
+    invoke-static {v0}, Lcom/bbm/util/b;->a(Lcom/bbm/util/b;)Ljava/util/concurrent/atomic/AtomicBoolean;
 
     move-result-object v0
 
-    invoke-direct {v1, v2, v0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    const/4 v1, 0x1
 
-    throw v1
+    invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 317
-    :catch_2
-    move-exception v0
+    .line 300
+    const/16 v0, 0xa
 
-    iget-object v0, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/a;
+    invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    const/4 v1, 0x0
+    .line 302
+    iget-object v0, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/b;
 
-    invoke-static {v0, v1}, Lcom/bbm/util/a;->b(Lcom/bbm/util/a;Ljava/lang/Object;)V
+    iget-object v1, p0, Lcom/bbm/util/d;->a:Lcom/bbm/util/b;
 
-    goto :goto_0
+    iget-object v2, p0, Lcom/bbm/util/d;->b:[Ljava/lang/Object;
+
+    invoke-virtual {v1, v2}, Lcom/bbm/util/b;->a([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/b;->a(Lcom/bbm/util/b;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
 .end method

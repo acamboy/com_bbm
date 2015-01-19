@@ -1,56 +1,48 @@
 .class final Lcom/bbm/ui/activities/agr;
-.super Lcom/bbm/j/k;
-.source "ViewSubscribedChannelActivity.java"
+.super Ljava/lang/Object;
+.source "SettingsActivity.java"
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+    .locals 0
 
     .prologue
-    .line 49
-    iput-object p1, p0, Lcom/bbm/ui/activities/agr;->a:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
+    .line 304
+    iput-object p1, p0, Lcom/bbm/ui/activities/agr;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 3
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 2
 
     .prologue
-    .line 52
-    iget-object v0, p0, Lcom/bbm/ui/activities/agr;->a:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
+    .line 308
+    const-string v0, "vibrate enabled onCheckedChanged"
 
-    iget-object v1, v0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
+    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
 
-    const v2, 0x7f0a002f
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/agr;->a:Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;
+    .line 309
+    iget-object v0, p0, Lcom/bbm/ui/activities/agr;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ViewSubscribedChannelActivity;->m:Lcom/bbm/j/a;
+    const-string v1, "notification_vibrate_enabled"
 
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
 
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/de;
-
-    invoke-static {v0}, Lcom/bbm/util/x;->a(Lcom/bbm/d/de;)Z
-
-    move-result v0
-
-    invoke-virtual {v1, v2, v0}, Lcom/bbm/ui/FooterActionBar;->setActionEnabled(IZ)V
-
-    .line 53
+    .line 310
     return-void
 .end method

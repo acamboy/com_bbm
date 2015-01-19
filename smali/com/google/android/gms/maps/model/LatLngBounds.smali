@@ -31,7 +31,7 @@
 .end method
 
 .method constructor <init>(ILcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;)V
-    .locals 7
+    .locals 8
 
     const/4 v1, 0x1
 
@@ -47,11 +47,11 @@
 
     invoke-static {p3, v0}, Lcom/google/android/gms/internal/er;->b(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    iget-wide v3, p3, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v4, p3, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
 
-    iget-wide v5, p2, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v6, p2, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
 
-    cmpl-double v0, v3, v5
+    cmpl-double v0, v4, v6
 
     if-ltz v0, :cond_0
 
@@ -64,17 +64,17 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget-wide v5, p2, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v6, p2, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
 
-    invoke-static {v5, v6}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v5
 
     aput-object v5, v4, v2
 
-    iget-wide v5, p3, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v6, p3, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
 
-    invoke-static {v5, v6}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v2
 
@@ -145,7 +145,7 @@
 .end method
 
 .method private c(D)Z
-    .locals 2
+    .locals 3
 
     iget-object v0, p0, Lcom/google/android/gms/maps/model/LatLngBounds;->southwest:Lcom/google/android/gms/maps/model/LatLng;
 
@@ -185,7 +185,7 @@
 .end method
 
 .method private d(D)Z
-    .locals 6
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -438,102 +438,102 @@
 .end method
 
 .method public final including(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/model/LatLngBounds;
-    .locals 17
+    .locals 18
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/google/android/gms/maps/model/LatLngBounds;->southwest:Lcom/google/android/gms/maps/model/LatLng;
+    iget-object v2, v0, Lcom/google/android/gms/maps/model/LatLngBounds;->southwest:Lcom/google/android/gms/maps/model/LatLng;
 
-    iget-wide v1, v1, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v2, v2, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
 
     move-object/from16 v0, p1
 
-    iget-wide v3, v0, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v4, v0, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->min(DD)D
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->min(DD)D
 
-    move-result-wide v7
+    move-result-wide v8
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/google/android/gms/maps/model/LatLngBounds;->northeast:Lcom/google/android/gms/maps/model/LatLng;
+    iget-object v2, v0, Lcom/google/android/gms/maps/model/LatLngBounds;->northeast:Lcom/google/android/gms/maps/model/LatLng;
 
-    iget-wide v1, v1, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v2, v2, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
 
     move-object/from16 v0, p1
 
-    iget-wide v3, v0, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
+    iget-wide v4, v0, Lcom/google/android/gms/maps/model/LatLng;->latitude:D
 
-    invoke-static {v1, v2, v3, v4}, Ljava/lang/Math;->max(DD)D
+    invoke-static {v2, v3, v4, v5}, Ljava/lang/Math;->max(DD)D
 
-    move-result-wide v9
-
-    move-object/from16 v0, p0
-
-    iget-object v1, v0, Lcom/google/android/gms/maps/model/LatLngBounds;->northeast:Lcom/google/android/gms/maps/model/LatLng;
-
-    iget-wide v5, v1, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
+    move-result-wide v10
 
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/google/android/gms/maps/model/LatLngBounds;->southwest:Lcom/google/android/gms/maps/model/LatLng;
+    iget-object v2, v0, Lcom/google/android/gms/maps/model/LatLngBounds;->northeast:Lcom/google/android/gms/maps/model/LatLng;
 
-    iget-wide v3, v1, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
+    iget-wide v6, v2, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
+
+    move-object/from16 v0, p0
+
+    iget-object v2, v0, Lcom/google/android/gms/maps/model/LatLngBounds;->southwest:Lcom/google/android/gms/maps/model/LatLng;
+
+    iget-wide v4, v2, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
 
     move-object/from16 v0, p1
 
-    iget-wide v1, v0, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
+    iget-wide v2, v0, Lcom/google/android/gms/maps/model/LatLng;->longitude:D
 
     move-object/from16 v0, p0
 
-    invoke-direct {v0, v1, v2}, Lcom/google/android/gms/maps/model/LatLngBounds;->d(D)Z
+    invoke-direct {v0, v2, v3}, Lcom/google/android/gms/maps/model/LatLngBounds;->d(D)Z
 
-    move-result v11
+    move-result v12
 
-    if-nez v11, :cond_1
+    if-nez v12, :cond_1
 
-    invoke-static {v3, v4, v1, v2}, Lcom/google/android/gms/maps/model/LatLngBounds;->b(DD)D
+    invoke-static {v4, v5, v2, v3}, Lcom/google/android/gms/maps/model/LatLngBounds;->b(DD)D
 
-    move-result-wide v11
+    move-result-wide v12
 
-    invoke-static {v5, v6, v1, v2}, Lcom/google/android/gms/maps/model/LatLngBounds;->c(DD)D
+    invoke-static {v6, v7, v2, v3}, Lcom/google/android/gms/maps/model/LatLngBounds;->c(DD)D
 
-    move-result-wide v13
+    move-result-wide v14
 
-    cmpg-double v11, v11, v13
+    cmpg-double v12, v12, v14
 
-    if-gez v11, :cond_0
+    if-gez v12, :cond_0
 
-    move-wide v3, v5
+    move-wide v4, v6
 
     :goto_0
-    new-instance v5, Lcom/google/android/gms/maps/model/LatLngBounds;
+    new-instance v6, Lcom/google/android/gms/maps/model/LatLngBounds;
 
-    new-instance v6, Lcom/google/android/gms/maps/model/LatLng;
+    new-instance v7, Lcom/google/android/gms/maps/model/LatLng;
 
-    invoke-direct {v6, v7, v8, v1, v2}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v7, v8, v9, v2, v3}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
-    new-instance v1, Lcom/google/android/gms/maps/model/LatLng;
+    new-instance v2, Lcom/google/android/gms/maps/model/LatLng;
 
-    invoke-direct {v1, v9, v10, v3, v4}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v10, v11, v4, v5}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
-    invoke-direct {v5, v6, v1}, Lcom/google/android/gms/maps/model/LatLngBounds;-><init>(Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;)V
+    invoke-direct {v6, v7, v2}, Lcom/google/android/gms/maps/model/LatLngBounds;-><init>(Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;)V
 
-    return-object v5
+    return-object v6
 
     :cond_0
-    move-wide v15, v3
+    move-wide/from16 v16, v4
 
-    move-wide v3, v1
+    move-wide v4, v2
 
-    move-wide v1, v15
+    move-wide/from16 v2, v16
 
     goto :goto_0
 
     :cond_1
-    move-wide v1, v3
+    move-wide v2, v4
 
-    move-wide v3, v5
+    move-wide v4, v6
 
     goto :goto_0
 .end method

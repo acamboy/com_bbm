@@ -149,7 +149,7 @@
 .end method
 
 .method private static c(Lcom/google/android/gms/tagmanager/DataLayer;Lcom/google/android/gms/internal/c$d;)V
-    .locals 13
+    .locals 14
 
     const/4 v3, 0x0
 
@@ -193,34 +193,34 @@
     const/4 v0, 0x0
 
     :goto_2
-    iget-wide v7, v6, Lcom/google/android/gms/internal/c$c;->eY:J
+    iget-wide v8, v6, Lcom/google/android/gms/internal/c$c;->eY:J
 
-    iget-wide v9, v6, Lcom/google/android/gms/internal/c$c;->eZ:J
+    iget-wide v10, v6, Lcom/google/android/gms/internal/c$c;->eZ:J
 
-    iget-boolean v11, v6, Lcom/google/android/gms/internal/c$c;->fa:Z
+    iget-boolean v7, v6, Lcom/google/android/gms/internal/c$c;->fa:Z
 
-    if-eqz v11, :cond_1
+    if-eqz v7, :cond_1
 
     if-eqz v0, :cond_1
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v11
+    move-result-wide v12
 
-    cmp-long v11, v11, v7
+    cmp-long v7, v12, v8
 
-    if-ltz v11, :cond_1
+    if-ltz v7, :cond_1
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v11
+    move-result-wide v12
 
-    cmp-long v0, v11, v9
+    cmp-long v0, v12, v10
 
     if-lez v0, :cond_2
 
     :cond_1
-    cmp-long v0, v7, v9
+    cmp-long v0, v8, v10
 
     if-gtz v0, :cond_5
 
@@ -228,15 +228,15 @@
 
     move-result-wide v0
 
-    sub-long/2addr v9, v7
+    sub-long/2addr v10, v8
 
-    long-to-double v9, v9
+    long-to-double v10, v10
 
-    mul-double/2addr v0, v9
+    mul-double/2addr v0, v10
 
-    long-to-double v7, v7
+    long-to-double v8, v8
 
-    add-double/2addr v0, v7
+    add-double/2addr v0, v8
 
     invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
 
@@ -257,11 +257,11 @@
 
     move-result-object v1
 
-    iget-wide v7, v6, Lcom/google/android/gms/internal/c$c;->fb:J
+    iget-wide v8, v6, Lcom/google/android/gms/internal/c$c;->fb:J
 
-    const-wide/16 v9, 0x0
+    const-wide/16 v10, 0x0
 
-    cmp-long v0, v7, v9
+    cmp-long v0, v8, v10
 
     if-lez v0, :cond_3
 
@@ -285,9 +285,9 @@
 
     const/4 v8, 0x1
 
-    iget-wide v9, v6, Lcom/google/android/gms/internal/c$c;->fb:J
+    iget-wide v10, v6, Lcom/google/android/gms/internal/c$c;->fb:J
 
-    invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v6
 
@@ -312,9 +312,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Number;->longValue()J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 

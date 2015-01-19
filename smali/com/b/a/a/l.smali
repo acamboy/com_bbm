@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field final d:Ljava/lang/String;
+.field public final d:Ljava/lang/String;
 
 
 # direct methods

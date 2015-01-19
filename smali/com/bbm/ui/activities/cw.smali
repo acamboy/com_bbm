@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/cw;
 .super Ljava/lang/Object;
-.source "ChannelPostPhotoGalleryActivity.java"
+.source "ChannelOfficeHoursSettingsActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/fu;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 224
-    iput-object p1, p0, Lcom/bbm/ui/activities/cw;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+    .line 160
+    iput-object p1, p0, Lcom/bbm/ui/activities/cw;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,27 +25,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 2
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 1
 
     .prologue
-    .line 227
-    iget-object v0, p0, Lcom/bbm/ui/activities/cw;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+    .line 163
+    iget-object v0, p0, Lcom/bbm/ui/activities/cw;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->g(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)Z
+    invoke-static {v0, p2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;Z)V
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 228
-    iget-object v0, p0, Lcom/bbm/ui/activities/cw;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
-
-    iget v1, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->a(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;I)V
-
-    .line 230
-    :cond_0
+    .line 164
     return-void
 .end method

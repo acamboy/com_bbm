@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field final a:Lcom/bbm/j/k;
+.field public a:Ljava/lang/String;
 
-.field private b:Ljava/lang/String;
+.field public final b:Lcom/bbm/j/k;
 
 .field private c:Landroid/widget/TextView;
 
@@ -28,7 +28,7 @@
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/views/n;-><init>(Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->a:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->b:Lcom/bbm/j/k;
 
     .line 35
     return-void
@@ -46,7 +46,7 @@
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/views/n;-><init>(Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->a:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->b:Lcom/bbm/j/k;
 
     .line 39
     return-void
@@ -64,7 +64,7 @@
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/views/n;-><init>(Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->a:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->b:Lcom/bbm/j/k;
 
     .line 43
     return-void
@@ -75,19 +75,19 @@
 
     .prologue
     .line 17
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->b:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->a:Ljava/lang/String;
 
     const-string v2, "AllTime"
 
-    invoke-static {v1, v2}, Lcom/bbm/ui/activities/bo;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/bbm/ui/activities/cg;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->K(Ljava/lang/String;)Lcom/bbm/d/dk;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->Q(Ljava/lang/String;)Lcom/bbm/d/eo;
 
     move-result-object v1
 
@@ -97,9 +97,9 @@
 
     iget-object v3, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->c:Landroid/widget/TextView;
 
-    iget-object v0, v1, Lcom/bbm/d/dk;->h:Ljava/lang/String;
+    iget-object v0, v1, Lcom/bbm/d/eo;->h:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -112,9 +112,9 @@
 
     iget-object v3, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->d:Landroid/widget/TextView;
 
-    iget-object v0, v1, Lcom/bbm/d/dk;->i:Ljava/lang/String;
+    iget-object v0, v1, Lcom/bbm/d/eo;->i:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -127,9 +127,9 @@
 
     iget-object v3, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->e:Landroid/widget/TextView;
 
-    iget-object v0, v1, Lcom/bbm/d/dk;->f:Ljava/lang/String;
+    iget-object v0, v1, Lcom/bbm/d/eo;->f:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -143,7 +143,7 @@
     return-void
 
     :cond_0
-    iget-object v0, v1, Lcom/bbm/d/dk;->h:Ljava/lang/String;
+    iget-object v0, v1, Lcom/bbm/d/eo;->h:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -156,7 +156,7 @@
     goto :goto_0
 
     :cond_1
-    iget-object v0, v1, Lcom/bbm/d/dk;->i:Ljava/lang/String;
+    iget-object v0, v1, Lcom/bbm/d/eo;->i:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -169,7 +169,7 @@
     goto :goto_1
 
     :cond_2
-    iget-object v0, v1, Lcom/bbm/d/dk;->f:Ljava/lang/String;
+    iget-object v0, v1, Lcom/bbm/d/eo;->f:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -184,24 +184,6 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    .prologue
-    .line 61
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->a:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
-
-    .line 62
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->b:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/bo;->a(Ljava/lang/String;)V
-
-    .line 63
-    return-void
-.end method
-
 .method protected final a(Landroid/content/Context;)V
     .locals 2
 
@@ -210,12 +192,12 @@
     invoke-super {p0, p1}, Lcom/bbm/ui/views/ShadowFrame;->a(Landroid/content/Context;)V
 
     .line 48
-    const v0, 0x7f030043
+    const v0, 0x7f030048
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->setViewStub(I)V
 
     .line 49
-    const v0, 0x7f0a0202
+    const v0, 0x7f0b025a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->findViewById(I)Landroid/view/View;
 
@@ -225,7 +207,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const v1, 0x7f0e0663
+    const v1, 0x7f0e071d
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -234,7 +216,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 50
-    const v0, 0x7f0a021f
+    const v0, 0x7f0b0277
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->findViewById(I)Landroid/view/View;
 
@@ -245,7 +227,7 @@
     iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->c:Landroid/widget/TextView;
 
     .line 51
-    const v0, 0x7f0a0222
+    const v0, 0x7f0b027a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->findViewById(I)Landroid/view/View;
 
@@ -256,7 +238,7 @@
     iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->d:Landroid/widget/TextView;
 
     .line 52
-    const v0, 0x7f0a0225
+    const v0, 0x7f0b027d
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->findViewById(I)Landroid/view/View;
 
@@ -270,25 +252,12 @@
     return-void
 .end method
 
-.method public final b()V
-    .locals 1
-
-    .prologue
-    .line 66
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->a:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
-
-    .line 67
-    return-void
-.end method
-
 .method public setChannel(Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 56
-    iput-object p1, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->b:Ljava/lang/String;
+    iput-object p1, p0, Lcom/bbm/ui/views/ChannelLobbyStatsPaneView;->a:Ljava/lang/String;
 
     .line 57
     return-void

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ry;
 .super Ljava/lang/Object;
-.source "GroupSettingsActivity.java"
+.source "GroupPictureCommentsActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupSettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
     .locals 0
 
     .prologue
-    .line 248
-    iput-object p1, p0, Lcom/bbm/ui/activities/ry;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+    .line 133
+    iput-object p1, p0, Lcom/bbm/ui/activities/ry;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,42 +25,43 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
+
+    .prologue
+    .line 136
+    return-void
+.end method
+
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .prologue
+    .line 140
+    return-void
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 3
 
     .prologue
-    .line 251
-    const-string v0, "createButton Clicked"
+    .line 144
+    iget-object v0, p0, Lcom/bbm/ui/activities/ry;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupSettingsActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/FooterActionBar;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 253
-    new-instance v0, Landroid/content/Intent;
+    const/4 v1, 0x0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ry;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ry;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    const-class v2, Lcom/bbm/ui/activities/GroupAdminPasswordActivity;
+    invoke-static {v2}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Z
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result v2
 
-    .line 254
-    const-string v1, "groupUri"
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->setActionEnabled(IZ)V
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ry;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/GroupSettingsActivity;->i()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 255
-    iget-object v1, p0, Lcom/bbm/ui/activities/ry;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/GroupSettingsActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 256
+    .line 145
     return-void
 .end method

@@ -1,9 +1,6 @@
 .class final Lcom/bbm/ui/activities/y;
-.super Ljava/lang/Object;
+.super Lcom/bbm/ui/cn;
 .source "AvatarViewerActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -15,49 +12,64 @@
     .locals 0
 
     .prologue
-    .line 155
+    .line 69
     iput-object p1, p0, Lcom/bbm/ui/activities/y;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final a()V
+    .locals 1
 
     .prologue
-    .line 158
-    const-string v0, "bottom item onItemClick"
-
-    const-class v1, Lcom/bbm/ui/activities/AvatarViewerActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 159
+    .line 73
     iget-object v0, p0, Lcom/bbm/ui/activities/y;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->v()V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->finish()V
 
-    .line 160
+    .line 74
+    return-void
+.end method
+
+.method public final a(I)V
+    .locals 1
+
+    .prologue
+    .line 83
+    packed-switch p1, :pswitch_data_0
+
+    .line 88
+    :goto_0
+    return-void
+
+    .line 85
+    :pswitch_0
     iget-object v0, p0, Lcom/bbm/ui/activities/y;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->a(Lcom/bbm/ui/activities/AvatarViewerActivity;)Lcom/bbm/d/a;
+    invoke-static {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->c(Lcom/bbm/ui/activities/AvatarViewerActivity;)V
 
-    move-result-object v0
+    goto :goto_0
 
-    const-string v1, ""
+    .line 83
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    const-string v2, ""
+.method public final b()V
+    .locals 1
 
-    invoke-static {v1, v2}, Lcom/bbm/d/y;->d(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/cb;
+    .prologue
+    .line 78
+    iget-object v0, p0, Lcom/bbm/ui/activities/y;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    move-result-object v1
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->o()V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-
-    .line 161
+    .line 79
     return-void
 .end method

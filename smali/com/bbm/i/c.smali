@@ -27,7 +27,7 @@
     .locals 0
 
     .prologue
-    .line 136
+    .line 131
     iput-object p1, p0, Lcom/bbm/i/c;->a:[Ljava/text/CollationKey;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 3
 
     .prologue
-    .line 136
+    .line 131
     check-cast p1, Ljava/lang/Integer;
 
     check-cast p2, Ljava/lang/Integer;

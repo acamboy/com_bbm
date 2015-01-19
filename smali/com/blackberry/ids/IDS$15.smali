@@ -21,7 +21,7 @@
     .locals 0
 
     .prologue
-    .line 2296
+    .line 2307
     iput-object p1, p0, Lcom/blackberry/ids/IDS$15;->a:Lcom/blackberry/ids/RequestId;
 
     iput-object p2, p0, Lcom/blackberry/ids/IDS$15;->b:Lcom/blackberry/ids/IChallengeCallback;
@@ -45,7 +45,7 @@
 
     const/4 v10, 0x0
 
-    .line 2299
+    .line 2310
     const-string v0, "enter uiThread.do_challenge request_id=%s"
 
     new-array v1, v11, [Ljava/lang/Object;
@@ -56,9 +56,9 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 2311
+    .line 2322
     :try_start_0
-    invoke-static {}, Lcom/blackberry/ids/IDS;->h()Landroid/content/Context;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->i()Landroid/content/Context;
 
     move-result-object v0
 
@@ -72,58 +72,56 @@
 
     invoke-static {v0, v1, v2}, Lcom/blackberry/ids/ChallengeListener;->start(Landroid/content/Context;Lcom/blackberry/ids/IChallengeCallback;Lcom/blackberry/ids/IFailureCallback;)V
 
-    .line 2328
-    invoke-static {}, Lcom/blackberry/ids/IDS;->l()Landroid/content/Context;
+    .line 2339
+    invoke-static {}, Lcom/blackberry/ids/IDS;->m()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->m()I
+    invoke-static {}, Lcom/blackberry/ids/IDS;->n()I
 
     move-result v1
 
     iget-object v2, p0, Lcom/blackberry/ids/IDS$15;->a:Lcom/blackberry/ids/RequestId;
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->i()Landroid/net/Uri;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->j()Landroid/net/Uri;
 
     move-result-object v3
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/blackberry/ids/BBIDStorage;->b()Ljava/lang/String;
+    iget-object v4, v4, Lcom/blackberry/ids/BBIDStorage;->b:Ljava/lang/String;
 
-    move-result-object v4
-
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/blackberry/ids/BBIDStorage;->c()Ljava/lang/String;
+    invoke-virtual {v5}, Lcom/blackberry/ids/BBIDStorage;->a()Ljava/lang/String;
 
     move-result-object v5
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v6
 
-    invoke-virtual {v6}, Lcom/blackberry/ids/BBIDStorage;->g()Ljava/lang/String;
+    invoke-virtual {v6}, Lcom/blackberry/ids/BBIDStorage;->d()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v7
 
-    invoke-virtual {v7}, Lcom/blackberry/ids/BBIDStorage;->h()Ljava/lang/String;
+    invoke-virtual {v7}, Lcom/blackberry/ids/BBIDStorage;->e()Ljava/lang/String;
 
     move-result-object v7
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->j()Ljava/lang/String;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->k()Ljava/lang/String;
 
     move-result-object v8
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->k()Ljava/lang/String;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->l()Ljava/lang/String;
 
     move-result-object v9
 
@@ -131,7 +129,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2341
+    .line 2352
     const-string v0, "exit uiThread.do_challenge request_id=%s"
 
     new-array v1, v11, [Ljava/lang/Object;
@@ -142,10 +140,10 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 2342
+    .line 2353
     return-void
 
-    .line 2341
+    .line 2352
     :catchall_0
     move-exception v0
 

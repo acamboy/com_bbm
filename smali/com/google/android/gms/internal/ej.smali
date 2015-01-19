@@ -294,7 +294,7 @@
 .end method
 
 .method public final b(Ljava/lang/String;Lcom/google/android/gms/internal/eh$f;)V
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -395,9 +395,9 @@
 
     iget-object v2, p0, Lcom/google/android/gms/internal/ej;->mHandler:Landroid/os/Handler;
 
-    const-wide/16 v3, 0x1388
+    const-wide/16 v4, 0x1388
 
-    invoke-virtual {v2, v0, v3, v4}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
+    invoke-virtual {v2, v0, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
     :cond_2
     monitor-exit v1

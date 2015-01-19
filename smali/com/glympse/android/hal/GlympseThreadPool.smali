@@ -31,10 +31,10 @@
     .locals 1
 
     .prologue
-    .line 18
+    .line 19
     const/4 v0, 0x3
 
-    .line 19
+    .line 20
     sput v0, Lcom/glympse/android/hal/GlympseThreadPool;->bM:I
 
     sput v0, Lcom/glympse/android/hal/GlympseThreadPool;->bN:I
@@ -46,10 +46,10 @@
     .locals 0
 
     .prologue
-    .line 27
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
+    .line 29
     return-void
 .end method
 
@@ -57,7 +57,7 @@
     .locals 2
 
     .prologue
-    .line 32
+    .line 33
     const-class v1, Lcom/glympse/android/hal/GlympseThreadPool;
 
     monitor-enter v1
@@ -67,17 +67,17 @@
 
     if-nez v0, :cond_0
 
-    .line 34
+    .line 35
     new-instance v0, Lcom/glympse/android/hal/GlympseThreadPool;
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GlympseThreadPool;-><init>()V
 
-    .line 35
+    .line 36
     sput-object v0, Lcom/glympse/android/hal/GlympseThreadPool;->bO:Lcom/glympse/android/hal/GlympseThreadPool;
 
     invoke-direct {v0}, Lcom/glympse/android/hal/GlympseThreadPool;->start()V
 
-    .line 37
+    .line 38
     :cond_0
     sget-object v0, Lcom/glympse/android/hal/GlympseThreadPool;->bO:Lcom/glympse/android/hal/GlympseThreadPool;
     :try_end_0
@@ -87,7 +87,7 @@
 
     return-object v0
 
-    .line 32
+    .line 33
     :catchall_0
     move-exception v0
 
@@ -97,54 +97,70 @@
 .end method
 
 .method private start()V
-    .locals 7
+    .locals 8
 
     .prologue
-    .line 42
+    .line 43
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
     iput-object v0, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bL:Ljava/util/concurrent/BlockingQueue;
 
-    .line 43
-    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
-
-    sget v1, Lcom/glympse/android/hal/GlympseThreadPool;->bM:I
-
-    sget v2, Lcom/glympse/android/hal/GlympseThreadPool;->bN:I
-
-    const-wide/16 v3, 0x0
-
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
-
-    iget-object v6, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bL:Ljava/util/concurrent/BlockingQueue;
-
-    invoke-direct/range {v0 .. v6}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
-
-    iput-object v0, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bK:Ljava/util/concurrent/ThreadPoolExecutor;
-
     .line 44
+    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
+
+    sget v2, Lcom/glympse/android/hal/GlympseThreadPool;->bM:I
+
+    sget v3, Lcom/glympse/android/hal/GlympseThreadPool;->bN:I
+
+    const-wide/16 v4, 0x0
+
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+
+    iget-object v7, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bL:Ljava/util/concurrent/BlockingQueue;
+
+    invoke-direct/range {v1 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;)V
+
+    iput-object v1, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bK:Ljava/util/concurrent/ThreadPoolExecutor;
+
+    .line 45
     return-void
 .end method
 
 
 # virtual methods
-.method public submit(Ljava/lang/Runnable;)V
+.method public submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Runnable;",
+            ")",
+            "Ljava/util/concurrent/Future",
+            "<*>;"
+        }
+    .end annotation
 
     .prologue
-    .line 48
+    .line 49
     iget-object v0, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bK:Ljava/util/concurrent/ThreadPoolExecutor;
 
     if-eqz v0, :cond_0
 
-    .line 50
+    .line 51
     iget-object v0, p0, Lcom/glympse/android/hal/GlympseThreadPool;->bK:Ljava/util/concurrent/ThreadPoolExecutor;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ThreadPoolExecutor;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    .line 52
+    move-result-object v0
+
+    .line 53
+    :goto_0
+    return-object v0
+
     :cond_0
-    return-void
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

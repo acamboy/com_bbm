@@ -520,7 +520,7 @@
 .end method
 
 .method public a(Ljava/util/List;Lcom/google/android/gms/analytics/ab;Z)I
-    .locals 12
+    .locals 13
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -617,11 +617,11 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    move-object v11, v3
+    move-object v12, v3
 
     move v3, v0
 
-    move-object v0, v11
+    move-object v0, v12
 
     :goto_2
     add-int/lit8 v4, v6, 0x1
@@ -694,9 +694,9 @@
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v9
+    move-result-wide v10
 
-    invoke-static {v0, v9, v10}, Lcom/google/android/gms/analytics/y;->a(Lcom/google/android/gms/analytics/x;J)Ljava/lang/String;
+    invoke-static {v0, v10, v11}, Lcom/google/android/gms/analytics/y;->a(Lcom/google/android/gms/analytics/x;J)Ljava/lang/String;
 
     move-result-object v0
 

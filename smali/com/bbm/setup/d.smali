@@ -1,56 +1,44 @@
 .class final Lcom/bbm/setup/d;
-.super Lcom/bbm/j/k;
-.source "DeviceSwitchActivity.java"
+.super Ljava/lang/Object;
+.source "ContactListAccessPromptActivity.java"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/setup/DeviceSwitchActivity;
+.field final synthetic a:Lcom/bbm/setup/ContactListAccessPromptActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/setup/DeviceSwitchActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/setup/ContactListAccessPromptActivity;)V
+    .locals 0
 
     .prologue
-    .line 23
-    iput-object p1, p0, Lcom/bbm/setup/d;->a:Lcom/bbm/setup/DeviceSwitchActivity;
+    .line 112
+    iput-object p1, p0, Lcom/bbm/setup/d;->a:Lcom/bbm/setup/ContactListAccessPromptActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 2
+.method public final onCancel(Landroid/content/DialogInterface;)V
+    .locals 1
 
     .prologue
-    .line 26
-    iget-object v0, p0, Lcom/bbm/setup/d;->a:Lcom/bbm/setup/DeviceSwitchActivity;
+    .line 115
+    iget-object v0, p0, Lcom/bbm/setup/d;->a:Lcom/bbm/setup/ContactListAccessPromptActivity;
 
-    invoke-static {v0}, Lcom/bbm/setup/DeviceSwitchActivity;->a(Lcom/bbm/setup/DeviceSwitchActivity;)Lcom/bbm/setup/x;
+    invoke-static {v0}, Lcom/bbm/setup/ContactListAccessPromptActivity;->a(Lcom/bbm/setup/ContactListAccessPromptActivity;)Z
 
-    move-result-object v0
+    .line 116
+    iget-object v0, p0, Lcom/bbm/setup/d;->a:Lcom/bbm/setup/ContactListAccessPromptActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/setup/x;->a()Lcom/bbm/setup/ac;
+    invoke-virtual {v0}, Lcom/bbm/setup/ContactListAccessPromptActivity;->finish()V
 
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/setup/ac;->a:Lcom/bbm/setup/ad;
-
-    sget-object v1, Lcom/bbm/setup/ad;->d:Lcom/bbm/setup/ad;
-
-    if-eq v0, v1, :cond_0
-
-    .line 27
-    iget-object v0, p0, Lcom/bbm/setup/d;->a:Lcom/bbm/setup/DeviceSwitchActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/setup/DeviceSwitchActivity;->b()V
-
-    .line 29
-    :cond_0
+    .line 117
     return-void
 .end method

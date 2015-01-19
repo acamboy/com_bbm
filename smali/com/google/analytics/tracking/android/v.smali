@@ -1,5 +1,5 @@
 .class public final Lcom/google/analytics/tracking/android/v;
-.super Lcom/google/analytics/tracking/android/ba;
+.super Lcom/google/analytics/tracking/android/bc;
 .source "GAServiceManager.java"
 
 
@@ -59,7 +59,7 @@
     const/4 v1, 0x1
 
     .line 82
-    invoke-direct {p0}, Lcom/google/analytics/tracking/android/ba;-><init>()V
+    invoke-direct {p0}, Lcom/google/analytics/tracking/android/bc;-><init>()V
 
     .line 45
     const/16 v0, 0x708
@@ -675,7 +675,7 @@
     .line 184
     new-instance v0, Lcom/google/analytics/tracking/android/u;
 
-    invoke-direct {v0, p0}, Lcom/google/analytics/tracking/android/u;-><init>(Lcom/google/analytics/tracking/android/ba;)V
+    invoke-direct {v0, p0}, Lcom/google/analytics/tracking/android/u;-><init>(Lcom/google/analytics/tracking/android/bc;)V
 
     iput-object v0, p0, Lcom/google/analytics/tracking/android/v;->m:Lcom/google/analytics/tracking/android/u;
 
@@ -683,7 +683,31 @@
 
     iget-object v1, p0, Lcom/google/analytics/tracking/android/v;->b:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Lcom/google/analytics/tracking/android/u;->a(Landroid/content/Context;)V
+    new-instance v2, Landroid/content/IntentFilter;
+
+    invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v3, "android.net.conn.CONNECTIVITY_CHANGE"
+
+    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    new-instance v2, Landroid/content/IntentFilter;
+
+    invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
+
+    const-string v3, "com.google.analytics.RADIO_POWERED"
+
+    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 186
     :cond_3

@@ -1,35 +1,17 @@
 .class final Lcom/bbm/l/c;
 .super Ljava/lang/Object;
-.source "MediaCallManager.java"
+.source "PaymentController.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic a:Lcom/google/b/f/a/l;
-
-.field final synthetic b:Lcom/bbm/d/eu;
-
-.field final synthetic c:Z
-
-.field final synthetic d:Lcom/bbm/l/a;
+.implements Lcom/bbm/f/ac;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/l/a;Lcom/google/b/f/a/l;Lcom/bbm/d/eu;Z)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 184
-    iput-object p1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    iput-object p2, p0, Lcom/bbm/l/c;->a:Lcom/google/b/f/a/l;
-
-    iput-object p3, p0, Lcom/bbm/l/c;->b:Lcom/bbm/d/eu;
-
-    iput-boolean p4, p0, Lcom/bbm/l/c;->c:Z
-
+    .line 292
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,364 +19,131 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final a()V
+    .locals 0
 
     .prologue
-    .line 189
+    .line 296
+    return-void
+.end method
+
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 300
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
+
+    const-string v1, "paymentConfigurationResponse"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 301
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
+
+    .line 302
+    const-string v1, "response"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    .line 304
     :try_start_0
-    iget-object v0, p0, Lcom/bbm/l/c;->a:Lcom/google/b/f/a/l;
+    const-string v1, "response"
 
-    invoke-interface {v0}, Lcom/google/b/f/a/l;->get()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-lez v1, :cond_1
+
+    .line 306
+    const-string v1, "response"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
-
-    .line 190
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/l/a;->d()Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/bbm/l/c;->b:Lcom/bbm/d/eu;
+    sget-object v2, Lcom/bbm/l/b/b;->b:Lcom/bbm/l/b/b;
 
-    iget-object v2, v2, Lcom/bbm/d/eu;->x:Ljava/lang/String;
-
-    iget-object v3, p0, Lcom/bbm/l/c;->b:Lcom/bbm/d/eu;
-
-    iget-object v3, v3, Lcom/bbm/d/eu;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, v3}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/j/r;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/bbm/d/dw;
-
-    .line 191
-    iget-object v2, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    new-instance v3, Landroid/support/v4/app/ag;
-
-    iget-object v4, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v4}, Lcom/bbm/l/a;->c(Lcom/bbm/l/a;)Landroid/content/Context;
-
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Landroid/support/v4/app/ag;-><init>(Landroid/content/Context;)V
-
-    invoke-static {v2, v3}, Lcom/bbm/l/a;->a(Lcom/bbm/l/a;Landroid/support/v4/app/ag;)Landroid/support/v4/app/ag;
-
-    .line 192
-    iget-object v2, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v2}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
-
-    move-result-object v2
-
-    iget-object v1, v1, Lcom/bbm/d/dw;->b:Landroid/graphics/drawable/Drawable;
-
-    invoke-static {v1}, Lcom/bbm/util/b/h;->a(Landroid/graphics/drawable/Drawable;)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    iput-object v1, v2, Landroid/support/v4/app/ag;->g:Landroid/graphics/Bitmap;
-
-    .line 193
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
-
-    move-result-object v1
-
-    const v2, 0x7f020039
-
-    invoke-virtual {v1, v2}, Landroid/support/v4/app/ag;->a(I)Landroid/support/v4/app/ag;
-
-    .line 194
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/l/c;->b:Lcom/bbm/d/eu;
-
-    iget-object v2, v2, Lcom/bbm/d/eu;->d:Ljava/lang/String;
-
-    iput-object v2, v1, Landroid/support/v4/app/ag;->b:Ljava/lang/CharSequence;
-
-    .line 195
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v2}, Lcom/bbm/l/a;->c(Lcom/bbm/l/a;)Landroid/content/Context;
-
-    move-result-object v2
-
-    const v3, 0x7f0e0125
-
-    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    iput-object v2, v1, Landroid/support/v4/app/ag;->c:Ljava/lang/CharSequence;
-
-    .line 196
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v2}, Lcom/bbm/l/a;->h(Lcom/bbm/l/a;)J
-
-    move-result-wide v2
-
-    iget-object v1, v1, Landroid/support/v4/app/ag;->r:Landroid/app/Notification;
-
-    iput-wide v2, v1, Landroid/app/Notification;->when:J
-
-    .line 197
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    iput-boolean v2, v1, Landroid/support/v4/app/ag;->k:Z
-
-    .line 198
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    iput v2, v1, Landroid/support/v4/app/ag;->j:I
-
-    .line 199
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
-
-    move-result-object v1
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v2}, Landroid/support/v4/app/ag;->c(I)V
-
-    .line 201
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->c(Lcom/bbm/l/a;)Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/f/q;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
+    invoke-static {v0, v1, v2}, Lcom/bbm/l/b/c;->a(Ljava/lang/String;Landroid/content/Context;Lcom/bbm/l/b/b;)Lcom/bbm/l/b/c;
 
     move-result-object v0
 
-    .line 202
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
+    invoke-static {v0}, Lcom/bbm/l/a;->a(Lcom/bbm/l/b/c;)Lcom/bbm/l/b/c;
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-static {v1}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
-
-    move-result-object v1
-
-    iput-object v0, v1, Landroid/support/v4/app/ag;->d:Landroid/app/PendingIntent;
-
-    .line 205
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->c(Lcom/bbm/l/a;)Landroid/content/Context;
-
-    move-result-object v1
-
-    const-class v2, Lcom/bbm/ui/voice/MediaServiceChangeReceiver;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 206
-    const-string v1, "com.bbm.endcall"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 207
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->c(Lcom/bbm/l/a;)Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const/high16 v3, 0x10000000
-
-    invoke-static {v1, v2, v0, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    .line 208
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
-
-    move-result-object v1
-
-    const v2, 0x7f02003a
-
-    iget-object v3, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v3}, Lcom/bbm/l/a;->c(Lcom/bbm/l/a;)Landroid/content/Context;
-
-    move-result-object v3
-
-    const v4, 0x7f0e02f8
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3, v0}, Landroid/support/v4/app/ag;->a(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/support/v4/app/ag;
-
-    .line 212
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->c(Lcom/bbm/l/a;)Landroid/content/Context;
-
-    move-result-object v1
-
-    const-class v2, Lcom/bbm/ui/voice/MediaServiceChangeReceiver;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 213
-    const-string v1, "com.bbm.mutetoggle"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 214
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->c(Lcom/bbm/l/a;)Landroid/content/Context;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    const/high16 v3, 0x10000000
-
-    invoke-static {v1, v2, v0, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
-
-    move-result-object v0
-
-    .line 215
-    iget-boolean v1, p0, Lcom/bbm/l/c;->c:Z
-
-    if-eqz v1, :cond_0
-
-    .line 216
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v1}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
-
-    move-result-object v1
-
-    const v2, 0x7f02003c
-
-    iget-object v3, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v3}, Lcom/bbm/l/a;->c(Lcom/bbm/l/a;)Landroid/content/Context;
-
-    move-result-object v3
-
-    const v4, 0x7f0e06a8
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3, v0}, Landroid/support/v4/app/ag;->a(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/support/v4/app/ag;
-
-    .line 224
+    .line 317
     :goto_0
-    iget-object v0, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v0}, Lcom/bbm/l/a;->i(Lcom/bbm/l/a;)Landroid/app/NotificationManager;
+    invoke-static {}, Lcom/bbm/l/a;->f()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    const/16 v1, 0x2328
+    iget-object v0, v0, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
 
-    iget-object v2, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
 
-    invoke-static {v2}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
+    invoke-static {}, Lcom/bbm/l/a;->e()Lcom/bbm/f/ac;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2}, Landroid/support/v4/app/ag;->a()Landroid/app/Notification;
+    invoke-interface {v0, v1}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
 
-    move-result-object v2
+    .line 318
+    invoke-static {}, Lcom/bbm/l/a;->g()Lcom/bbm/f/ac;
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
-
-    .line 229
-    :goto_1
+    .line 320
+    :cond_0
     return-void
 
-    .line 220
-    :cond_0
-    iget-object v1, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
+    .line 308
+    :cond_1
+    :try_start_1
+    const-string v0, "paymentConfigurationResponse received with empty response body."
 
-    invoke-static {v1}, Lcom/bbm/l/a;->g(Lcom/bbm/l/a;)Landroid/support/v4/app/ag;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    new-array v1, v1, [Ljava/lang/Object;
 
-    const v2, 0x7f02003b
-
-    iget-object v3, p0, Lcom/bbm/l/c;->d:Lcom/bbm/l/a;
-
-    invoke-static {v3}, Lcom/bbm/l/a;->c(Lcom/bbm/l/a;)Landroid/content/Context;
-
-    move-result-object v3
-
-    const v4, 0x7f0e04e2
-
-    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3, v0}, Landroid/support/v4/app/ag;->a(ILjava/lang/CharSequence;Landroid/app/PendingIntent;)Landroid/support/v4/app/ag;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_0
 
-    .line 226
+    .line 310
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
-    goto :goto_1
+    goto :goto_0
+
+    .line 314
+    :cond_2
+    const-string v0, "paymentConfigurationResponse received with no response body."
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_0
 .end method

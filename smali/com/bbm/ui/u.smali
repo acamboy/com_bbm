@@ -1,55 +1,107 @@
 .class public final Lcom/bbm/ui/u;
 .super Ljava/lang/Object;
-.source "CellRecycler.java"
+.source "BBSpinnerAdapter.java"
+
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemSelectedListener;
 
 
 # instance fields
-.field a:Ljava/util/ArrayList;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/ArrayList",
-            "<",
-            "Landroid/view/View;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private final a:Lcom/bbm/ui/p;
 
-.field b:Ljava/util/Map;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/Map",
-            "<",
-            "Ljava/lang/Long;",
-            "Landroid/view/View;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private final b:Lcom/bbm/ui/t;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lcom/bbm/ui/p;Lcom/bbm/ui/t;)V
+    .locals 0
 
     .prologue
-    .line 23
+    .line 295
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
-    new-instance v0, Ljava/util/ArrayList;
+    .line 296
+    iput-object p1, p0, Lcom/bbm/ui/u;->a:Lcom/bbm/ui/p;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    .line 297
+    iput-object p2, p0, Lcom/bbm/ui/u;->b:Lcom/bbm/ui/t;
 
-    iput-object v0, p0, Lcom/bbm/ui/u;->a:Ljava/util/ArrayList;
+    .line 298
+    return-void
+.end method
 
-    .line 24
-    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+# virtual methods
+.method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
-    iput-object v0, p0, Lcom/bbm/ui/u;->b:Ljava/util/Map;
+    .prologue
+    .line 302
+    iget-object v0, p0, Lcom/bbm/ui/u;->a:Lcom/bbm/ui/p;
 
-    .line 25
+    iget-object v1, p0, Lcom/bbm/ui/u;->a:Lcom/bbm/ui/p;
+
+    iget v1, v1, Lcom/bbm/ui/p;->a:I
+
+    iput v1, v0, Lcom/bbm/ui/p;->b:I
+
+    .line 303
+    iget-object v0, p0, Lcom/bbm/ui/u;->a:Lcom/bbm/ui/p;
+
+    iput p3, v0, Lcom/bbm/ui/p;->a:I
+
+    .line 304
+    iget-object v0, p0, Lcom/bbm/ui/u;->a:Lcom/bbm/ui/p;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/p;->notifyDataSetChanged()V
+
+    .line 305
+    iget-object v0, p0, Lcom/bbm/ui/u;->b:Lcom/bbm/ui/t;
+
+    if-eqz v0, :cond_0
+
+    .line 306
+    iget-object v0, p0, Lcom/bbm/ui/u;->b:Lcom/bbm/ui/t;
+
+    invoke-interface {v0, p3}, Lcom/bbm/ui/t;->a(I)V
+
+    .line 308
+    :cond_0
+    return-void
+.end method
+
+.method public final onNothingSelected(Landroid/widget/AdapterView;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 312
+    iget-object v0, p0, Lcom/bbm/ui/u;->a:Lcom/bbm/ui/p;
+
+    const/4 v1, 0x0
+
+    iput v1, v0, Lcom/bbm/ui/p;->a:I
+
+    .line 313
+    iget-object v0, p0, Lcom/bbm/ui/u;->a:Lcom/bbm/ui/p;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/p;->notifyDataSetChanged()V
+
+    .line 314
     return-void
 .end method

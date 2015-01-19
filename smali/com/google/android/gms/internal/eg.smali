@@ -96,7 +96,7 @@
     goto :goto_0
 .end method
 
-.method protected static ae(Ljava/lang/String;)Z
+.method public static ae(Ljava/lang/String;)Z
     .locals 1
 
     invoke-static {}, Lcom/google/android/gms/internal/eg;->dX()Ljava/lang/ClassLoader;
@@ -156,7 +156,7 @@
     throw v0
 .end method
 
-.method protected static dY()Ljava/lang/Integer;
+.method public static dY()Ljava/lang/Integer;
     .locals 2
 
     sget-object v1, Lcom/google/android/gms/internal/eg;->Br:Ljava/lang/Object;
@@ -182,7 +182,7 @@
 
 
 # virtual methods
-.method protected dZ()Z
+.method public dZ()Z
     .locals 1
 
     iget-boolean v0, p0, Lcom/google/android/gms/internal/eg;->Bu:Z

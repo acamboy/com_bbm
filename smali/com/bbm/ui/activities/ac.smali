@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ac;
 .super Ljava/lang/Object;
-.source "BroadcastActivity.java"
+.source "BbidErrorActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/BroadcastActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/BbidErrorActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/BroadcastActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/BbidErrorActivity;)V
     .locals 0
 
     .prologue
-    .line 273
-    iput-object p1, p0, Lcom/bbm/ui/activities/ac;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+    .line 50
+    iput-object p1, p0, Lcom/bbm/ui/activities/ac;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,49 +25,53 @@
 
 
 # virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 277
-    if-nez p2, :cond_0
+    .line 54
+    const-string v0, "Retrying on BBID error"
 
-    .line 278
-    iget-object v0, p0, Lcom/bbm/ui/activities/ac;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+    const-class v1, Lcom/bbm/ui/activities/BbidErrorActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->l(Lcom/bbm/ui/activities/BroadcastActivity;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 279
-    iget-object v0, p0, Lcom/bbm/ui/activities/ac;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+    .line 56
+    iget-object v0, p0, Lcom/bbm/ui/activities/ac;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->m(Lcom/bbm/ui/activities/BroadcastActivity;)Landroid/widget/LinearLayout;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/BbidErrorActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    const/16 v1, 0x8
+    sget-object v1, Lcom/bbm/ui/activities/BbidErrorActivity;->a:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
 
-    .line 285
-    :goto_0
-    return-void
+    move-result-object v0
 
-    .line 282
+    check-cast v0, Landroid/content/Intent;
+
+    .line 57
+    if-eqz v0, :cond_0
+
+    .line 58
+    iget-object v1, p0, Lcom/bbm/ui/activities/ac;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/BbidErrorActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 61
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ac;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ac;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->m(Lcom/bbm/ui/activities/BroadcastActivity;)Landroid/widget/LinearLayout;
+    sget v1, Lcom/bbm/ui/activities/BbidErrorActivity;->b:I
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/BbidErrorActivity;->setResult(I)V
 
-    const/4 v1, 0x0
+    .line 62
+    iget-object v0, p0, Lcom/bbm/ui/activities/ac;->a:Lcom/bbm/ui/activities/BbidErrorActivity;
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/BbidErrorActivity;->finish()V
 
-    .line 283
-    iget-object v0, p0, Lcom/bbm/ui/activities/ac;->a:Lcom/bbm/ui/activities/BroadcastActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/eo;->a(Landroid/app/Activity;)V
-
-    goto :goto_0
+    .line 63
+    return-void
 .end method

@@ -3,24 +3,20 @@
 .source "StickerDetailsFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/l/d/b;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/c/fy;
+.field final synthetic a:Lcom/bbm/ui/c/gr;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/fy;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/c/gr;)V
     .locals 0
 
     .prologue
-    .line 538
-    iput-object p1, p0, Lcom/bbm/ui/c/ha;->b:Lcom/bbm/ui/c/fy;
-
-    iput-object p2, p0, Lcom/bbm/ui/c/ha;->a:Ljava/lang/String;
+    .line 821
+    iput-object p1, p0, Lcom/bbm/ui/c/ha;->a:Lcom/bbm/ui/c/gr;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,24 +25,40 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a(ZLcom/bbm/l/d/b/x;)V
     .locals 2
 
     .prologue
-    .line 541
-    const-string v0, "Grid item clicked"
+    .line 824
+    if-eqz p1, :cond_0
 
-    const-class v1, Lcom/bbm/ui/c/fy;
+    .line 825
+    iget-object v0, p0, Lcom/bbm/ui/c/ha;->a:Lcom/bbm/ui/c/gr;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, p2}, Lcom/bbm/ui/c/gr;->a(Lcom/bbm/ui/c/gr;Lcom/bbm/l/d/b/x;)Lcom/bbm/l/d/b/x;
 
-    .line 542
-    iget-object v0, p0, Lcom/bbm/ui/c/ha;->b:Lcom/bbm/ui/c/fy;
+    .line 826
+    iget-object v0, p0, Lcom/bbm/ui/c/ha;->a:Lcom/bbm/ui/c/gr;
 
-    iget-object v1, p0, Lcom/bbm/ui/c/ha;->a:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/fy;->c(Lcom/bbm/ui/c/fy;Ljava/lang/String;)V
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    .line 543
+    move-result-object v1
+
+    invoke-static {v0, p2, v1}, Lcom/bbm/ui/c/gr;->a(Lcom/bbm/ui/c/gr;Lcom/bbm/l/d/b/x;Ljava/lang/Boolean;)V
+
+    .line 830
+    :goto_0
     return-void
+
+    .line 828
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/c/ha;->a:Lcom/bbm/ui/c/gr;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/gr;->a(Lcom/bbm/ui/c/gr;Z)V
+
+    goto :goto_0
 .end method

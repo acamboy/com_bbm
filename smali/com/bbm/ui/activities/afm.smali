@@ -1,82 +1,99 @@
 .class final Lcom/bbm/ui/activities/afm;
-.super Ljava/lang/Object;
-.source "ViewChannelActivity.java"
+.super Lcom/bbm/d/b/f;
+.source "SelectContactActivity.java"
 
-# interfaces
-.implements Lcom/bbm/j/s;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/f",
+        "<",
+        "Lcom/bbm/d/gr;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Intent;
-
-.field final synthetic b:Lcom/bbm/ui/activities/ViewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelActivity;Landroid/content/Intent;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
     .locals 0
 
     .prologue
-    .line 202
-    iput-object p1, p0, Lcom/bbm/ui/activities/afm;->b:Lcom/bbm/ui/activities/ViewChannelActivity;
+    .line 556
+    iput-object p1, p0, Lcom/bbm/ui/activities/afm;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/afm;->a:Landroid/content/Intent;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method protected final a()Ljava/util/List;
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Lcom/bbm/d/gr;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 205
-    iget-object v0, p0, Lcom/bbm/ui/activities/afm;->b:Lcom/bbm/ui/activities/ViewChannelActivity;
+    .line 560
+    new-instance v1, Ljava/util/ArrayList;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ViewChannelActivity;->m:Lcom/bbm/j/a;
+    iget-object v0, p0, Lcom/bbm/ui/activities/afm;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->k(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/d/b/q;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/de;
+    invoke-virtual {v0}, Lcom/bbm/d/b/q;->g()Ljava/util/List;
 
-    iget-object v0, v0, Lcom/bbm/d/de;->Q:Lcom/bbm/util/bc;
+    move-result-object v0
 
-    sget-object v1, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
+    invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    if-ne v0, v1, :cond_0
+    .line 562
+    iget-object v0, p0, Lcom/bbm/ui/activities/afm;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    .line 206
-    const/4 v0, 0x0
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->x(Lcom/bbm/ui/activities/SelectContactActivity;)Lcom/bbm/util/ct;
 
-    .line 209
-    :goto_0
-    return v0
+    move-result-object v0
 
-    .line 208
+    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 563
+    new-instance v0, Lcom/bbm/d/gr;
+
+    invoke-direct {v0}, Lcom/bbm/d/gr;-><init>()V
+
+    .line 564
+    const-string v2, "select_contact_activity_find_more_fake_user_uri"
+
+    iput-object v2, v0, Lcom/bbm/d/gr;->B:Ljava/lang/String;
+
+    .line 565
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 567
     :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/afm;->a:Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/afm;->b:Lcom/bbm/ui/activities/ViewChannelActivity;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/afm;->b:Lcom/bbm/ui/activities/ViewChannelActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/ViewChannelActivity;->m:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/de;
-
-    invoke-static {v1, v2, v0}, Lcom/bbm/util/x;->a(Landroid/content/Intent;Landroid/content/Context;Lcom/bbm/d/de;)V
-
-    .line 209
-    const/4 v0, 0x1
-
-    goto :goto_0
+    return-object v1
 .end method

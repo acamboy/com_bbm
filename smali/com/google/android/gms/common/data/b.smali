@@ -3,9 +3,9 @@
 
 
 # instance fields
-.field protected final zU:Lcom/google/android/gms/common/data/DataHolder;
+.field public final zU:Lcom/google/android/gms/common/data/DataHolder;
 
-.field protected final zW:I
+.field public final zW:I
 
 .field private final zX:I
 
@@ -57,7 +57,7 @@
 
 
 # virtual methods
-.method protected a(Ljava/lang/String;Landroid/database/CharArrayBuffer;)V
+.method public a(Ljava/lang/String;Landroid/database/CharArrayBuffer;)V
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/gms/common/data/b;->zU:Lcom/google/android/gms/common/data/DataHolder;
@@ -71,7 +71,7 @@
     return-void
 .end method
 
-.method protected aa(Ljava/lang/String;)Landroid/net/Uri;
+.method public aa(Ljava/lang/String;)Landroid/net/Uri;
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/gms/common/data/b;->zU:Lcom/google/android/gms/common/data/DataHolder;
@@ -87,7 +87,7 @@
     return-object v0
 .end method
 
-.method protected ab(Ljava/lang/String;)Z
+.method public ab(Ljava/lang/String;)Z
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/gms/common/data/b;->zU:Lcom/google/android/gms/common/data/DataHolder;
@@ -162,7 +162,7 @@
     return v0
 .end method
 
-.method protected getBoolean(Ljava/lang/String;)Z
+.method public getBoolean(Ljava/lang/String;)Z
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/gms/common/data/b;->zU:Lcom/google/android/gms/common/data/DataHolder;
@@ -178,7 +178,7 @@
     return v0
 .end method
 
-.method protected getByteArray(Ljava/lang/String;)[B
+.method public getByteArray(Ljava/lang/String;)[B
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/gms/common/data/b;->zU:Lcom/google/android/gms/common/data/DataHolder;
@@ -194,7 +194,7 @@
     return-object v0
 .end method
 
-.method protected getInteger(Ljava/lang/String;)I
+.method public getInteger(Ljava/lang/String;)I
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/gms/common/data/b;->zU:Lcom/google/android/gms/common/data/DataHolder;
@@ -210,7 +210,7 @@
     return v0
 .end method
 
-.method protected getLong(Ljava/lang/String;)J
+.method public getLong(Ljava/lang/String;)J
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/gms/common/data/b;->zU:Lcom/google/android/gms/common/data/DataHolder;
@@ -226,7 +226,7 @@
     return-wide v0
 .end method
 
-.method protected getString(Ljava/lang/String;)Ljava/lang/String;
+.method public getString(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     iget-object v0, p0, Lcom/google/android/gms/common/data/b;->zU:Lcom/google/android/gms/common/data/DataHolder;

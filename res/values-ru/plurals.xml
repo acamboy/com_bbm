@@ -4,6 +4,27 @@
         <item quantity="other">Массовое сообщение отправлено контактам (%1$s)</item>
         <item quantity="one">Массовое сообщение отправлено 1 контакту</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">Подписчиков: %1$d</item>
+        <item quantity="zero">Нет подписчика</item>
+        <item quantity="one">Подписчик: %1$d</item>
+        <item quantity="few">Подписчиков: %1$d</item>
+        <item quantity="many">Подписчиков: %1$d</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">Участников: %1$d</item>
+        <item quantity="one">1 участник</item>
+        <item quantity="few">Участников: %1$d</item>
+        <item quantity="many">Участников: %1$d</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">сек.</item>
+        <item quantity="one">секунда</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Таймер на %1$d секунд.</item>
+        <item quantity="one">Таймер установлен на %1$d секунду.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">Элементов: %1$s</item>
         <item quantity="zero">0 элементов</item>
@@ -11,7 +32,7 @@
     </plurals>
     <plurals name="invites_received_chat_item_count">
         <item quantity="other">(ожидающих приглашений: %1$d)</item>
-        <item quantity="one">(1 ожидающее приглашение)</item>
+        <item quantity="one">(ожидающих приглашений: 1)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">Результаты: %1$s</item>
@@ -22,16 +43,16 @@
         <item quantity="one">1 активный чат</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">Новые уведомления: %1$s</item>
+        <item quantity="other">Новых уведомлений: %1$s</item>
         <item quantity="one">1 новое уведомление</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
         <item quantity="other">Новых приглашений: %1$s</item>
-        <item quantity="one">Новые приглашения: 1</item>
+        <item quantity="one">Новых приглашений: 1</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">Новые элементы: %1$s</item>
-        <item quantity="one">Новые элементы: 1</item>
+        <item quantity="other">Новых элементов: %1$s</item>
+        <item quantity="one">Новых элементов: 1</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">Контактов: %1$s</item>

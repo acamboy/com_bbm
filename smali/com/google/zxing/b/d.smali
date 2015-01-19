@@ -17,7 +17,7 @@
 # static fields
 .field public static final enum A:Lcom/google/zxing/b/d;
 
-.field private static final B:Ljava/util/Map;
+.field private static final C:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
@@ -29,7 +29,7 @@
     .end annotation
 .end field
 
-.field private static final C:Ljava/util/Map;
+.field private static final D:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
@@ -97,7 +97,7 @@
 
 
 # instance fields
-.field private final D:[I
+.field public final B:[I
 
 .field private final E:[Ljava/lang/String;
 
@@ -786,14 +786,14 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/google/zxing/b/d;->B:Ljava/util/Map;
+    sput-object v0, Lcom/google/zxing/b/d;->C:Ljava/util/Map;
 
     .line 62
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/google/zxing/b/d;->C:Ljava/util/Map;
+    sput-object v0, Lcom/google/zxing/b/d;->D:Ljava/util/Map;
 
     .line 64
     invoke-static {}, Lcom/google/zxing/b/d;->values()[Lcom/google/zxing/b/d;
@@ -810,7 +810,7 @@
     aget-object v5, v3, v2
 
     .line 65
-    iget-object v6, v5, Lcom/google/zxing/b/d;->D:[I
+    iget-object v6, v5, Lcom/google/zxing/b/d;->B:[I
 
     array-length v7, v6
 
@@ -822,7 +822,7 @@
     aget v8, v6, v0
 
     .line 66
-    sget-object v9, Lcom/google/zxing/b/d;->B:Ljava/util/Map;
+    sget-object v9, Lcom/google/zxing/b/d;->C:Ljava/util/Map;
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -837,7 +837,7 @@
 
     .line 68
     :cond_0
-    sget-object v0, Lcom/google/zxing/b/d;->C:Ljava/util/Map;
+    sget-object v0, Lcom/google/zxing/b/d;->D:Ljava/util/Map;
 
     invoke-virtual {v5}, Lcom/google/zxing/b/d;->name()Ljava/lang/String;
 
@@ -858,7 +858,7 @@
     aget-object v8, v6, v0
 
     .line 70
-    sget-object v9, Lcom/google/zxing/b/d;->C:Ljava/util/Map;
+    sget-object v9, Lcom/google/zxing/b/d;->D:Ljava/util/Map;
 
     invoke-interface {v9, v8, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -954,7 +954,7 @@
 
     aput p3, v0, v1
 
-    iput-object v0, p0, Lcom/google/zxing/b/d;->D:[I
+    iput-object v0, p0, Lcom/google/zxing/b/d;->B:[I
 
     .line 84
     iput-object p4, p0, Lcom/google/zxing/b/d;->E:[Ljava/lang/String;
@@ -978,7 +978,7 @@
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     .line 88
-    iput-object p3, p0, Lcom/google/zxing/b/d;->D:[I
+    iput-object p3, p0, Lcom/google/zxing/b/d;->B:[I
 
     .line 89
     iput-object p4, p0, Lcom/google/zxing/b/d;->E:[Ljava/lang/String;
@@ -1008,7 +1008,7 @@
 
     .line 106
     :cond_1
-    sget-object v0, Lcom/google/zxing/b/d;->B:Ljava/util/Map;
+    sget-object v0, Lcom/google/zxing/b/d;->C:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1028,7 +1028,7 @@
 
     .prologue
     .line 115
-    sget-object v0, Lcom/google/zxing/b/d;->C:Ljava/util/Map;
+    sget-object v0, Lcom/google/zxing/b/d;->D:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -1069,20 +1069,4 @@
     check-cast v0, [Lcom/google/zxing/b/d;
 
     return-object v0
-.end method
-
-
-# virtual methods
-.method public final a()I
-    .locals 2
-
-    .prologue
-    .line 93
-    iget-object v0, p0, Lcom/google/zxing/b/d;->D:[I
-
-    const/4 v1, 0x0
-
-    aget v0, v0, v1
-
-    return v0
 .end method

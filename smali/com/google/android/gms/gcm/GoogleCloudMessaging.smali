@@ -471,11 +471,11 @@
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/gcm/GoogleCloudMessaging;->Ks:Ljava/util/concurrent/BlockingQueue;
 
-    const-wide/16 v1, 0x1388
+    const-wide/16 v2, 0x1388
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-interface {v0, v1, v2, v3}, Ljava/util/concurrent/BlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v3, v1}, Ljava/util/concurrent/BlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -550,39 +550,39 @@
 .end method
 
 .method public send(Ljava/lang/String;Ljava/lang/String;JLandroid/os/Bundle;)V
-    .locals 7
+    .locals 9
 
-    const/4 v5, -0x1
+    const/4 v6, -0x1
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-object v1, p1
+    move-object v2, p1
 
-    move-object v2, p2
+    move-object v3, p2
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    move-object v6, p5
+    move-object v7, p5
 
-    invoke-direct/range {v0 .. v6}, Lcom/google/android/gms/gcm/GoogleCloudMessaging;->a(Ljava/lang/String;Ljava/lang/String;JILandroid/os/Bundle;)V
+    invoke-direct/range {v1 .. v7}, Lcom/google/android/gms/gcm/GoogleCloudMessaging;->a(Ljava/lang/String;Ljava/lang/String;JILandroid/os/Bundle;)V
 
     return-void
 .end method
 
 .method public send(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
-    .locals 6
+    .locals 7
 
-    const-wide/16 v3, -0x1
+    const-wide/16 v4, -0x1
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-object v1, p1
+    move-object v2, p1
 
-    move-object v2, p2
+    move-object v3, p2
 
-    move-object v5, p3
+    move-object v6, p3
 
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/gcm/GoogleCloudMessaging;->send(Ljava/lang/String;Ljava/lang/String;JLandroid/os/Bundle;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/google/android/gms/gcm/GoogleCloudMessaging;->send(Ljava/lang/String;Ljava/lang/String;JLandroid/os/Bundle;)V
 
     return-void
 .end method
@@ -614,11 +614,11 @@
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/gcm/GoogleCloudMessaging;->Ks:Ljava/util/concurrent/BlockingQueue;
 
-    const-wide/16 v1, 0x1388
+    const-wide/16 v2, 0x1388
 
-    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    invoke-interface {v0, v1, v2, v3}, Ljava/util/concurrent/BlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    invoke-interface {v0, v2, v3, v1}, Ljava/util/concurrent/BlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object v0
 

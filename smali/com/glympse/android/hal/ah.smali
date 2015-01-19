@@ -1,29 +1,31 @@
 .class Lcom/glympse/android/hal/ah;
 .super Ljava/lang/Object;
-.source "GlympseMutex.java"
+.source "GlympseSemaphore.java"
 
 # interfaces
-.implements Lcom/glympse/android/hal/GMutex;
+.implements Lcom/glympse/android/hal/GSemaphore;
 
 
 # instance fields
-.field private bt:Ljava/util/concurrent/locks/ReentrantLock;
+.field private bt:Ljava/util/concurrent/Semaphore;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 17
-    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
+    new-instance v0, Ljava/util/concurrent/Semaphore;
 
-    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
+    const/4 v1, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ah;->bt:Ljava/util/concurrent/locks/ReentrantLock;
+    invoke-direct {v0, v1}, Ljava/util/concurrent/Semaphore;-><init>(I)V
+
+    iput-object v0, p0, Lcom/glympse/android/hal/ah;->bt:Ljava/util/concurrent/Semaphore;
 
     .line 18
     return-void
@@ -31,28 +33,37 @@
 
 
 # virtual methods
-.method public block()V
+.method public acquire()V
     .locals 1
 
     .prologue
-    .line 22
-    iget-object v0, p0, Lcom/glympse/android/hal/ah;->bt:Ljava/util/concurrent/locks/ReentrantLock;
+    .line 24
+    :try_start_0
+    iget-object v0, p0, Lcom/glympse/android/hal/ah;->bt:Ljava/util/concurrent/Semaphore;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+    invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->acquire()V
+    :try_end_0
+    .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 23
+    .line 29
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method
 
-.method public unblock()V
+.method public notify(I)V
     .locals 1
 
     .prologue
-    .line 27
-    iget-object v0, p0, Lcom/glympse/android/hal/ah;->bt:Ljava/util/concurrent/locks/ReentrantLock;
+    .line 33
+    iget-object v0, p0, Lcom/glympse/android/hal/ah;->bt:Ljava/util/concurrent/Semaphore;
 
-    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
+    invoke-virtual {v0, p1}, Ljava/util/concurrent/Semaphore;->release(I)V
 
-    .line 28
+    .line 34
     return-void
 .end method

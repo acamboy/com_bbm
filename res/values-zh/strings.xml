@@ -13,5 +13,6 @@
     <string name="remaining_details">查看者数量：最近查看的有 %1$d 个，总共有 %2$d 个</string>
     <string name="remaining_title">Glympse：还有 %1$s</string>
     <string name="remaining_title_glympse">Glympse</string>
+    <string name="reply_with_a_glympse">使用 Glympse 回复？</string>
     <string name="request_was_received">您已收到分享请求</string>
 </resources>

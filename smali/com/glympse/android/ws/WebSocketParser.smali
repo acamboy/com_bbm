@@ -16,19 +16,19 @@
 
 .field public static final OP_TEXT:I = 0x1
 
-.field private static final vA:I = 0x80
+.field private static final wA:I = 0x1
 
-.field private static final vB:I = 0x7f
+.field private static final wB:I = 0x2
 
-.field private static final vC:I = 0x1
+.field private static final wv:I = 0xff
 
-.field private static final vD:I = 0x2
+.field private static final ww:I = 0x80
 
-.field private static final vx:I = 0xff
+.field private static final wx:I = 0xf
 
-.field private static final vy:I = 0x80
+.field private static final wy:I = 0x80
 
-.field private static final vz:I = 0xf
+.field private static final wz:I = 0x7f
 
 
 # direct methods
@@ -47,23 +47,21 @@
 
     .prologue
     .line 133
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     .line 134
     add-int/lit8 v0, p1, -0x1
 
-    mul-int/lit8 v3, v0, 0x8
+    mul-int/lit8 v4, v0, 0x8
 
     .line 135
     const/4 v0, 0x0
 
-    move v6, v0
+    move v8, v0
 
-    move-wide v7, v1
+    move-wide v0, v2
 
-    move-wide v0, v7
-
-    move v2, v6
+    move v2, v8
 
     :goto_0
     if-ge v2, p1, :cond_1
@@ -72,21 +70,21 @@
     if-lez v2, :cond_0
 
     .line 139
-    add-int v4, p2, v2
+    add-int v3, p2, v2
 
-    aget-byte v4, p0, v4
+    aget-byte v3, p0, v3
 
-    and-int/lit16 v4, v4, 0xff
+    and-int/lit16 v3, v3, 0xff
 
     mul-int/lit8 v5, v2, 0x8
 
-    sub-int v5, v3, v5
+    sub-int v5, v4, v5
 
-    shl-int/2addr v4, v5
+    shl-int/2addr v3, v5
 
-    int-to-long v4, v4
+    int-to-long v6, v3
 
-    or-long/2addr v0, v4
+    or-long/2addr v0, v6
 
     .line 135
     :goto_1
@@ -96,19 +94,19 @@
 
     .line 143
     :cond_0
-    add-int v4, p2, v2
+    add-int v3, p2, v2
 
-    aget-byte v4, p0, v4
+    aget-byte v3, p0, v3
 
     mul-int/lit8 v5, v2, 0x8
 
-    sub-int v5, v3, v5
+    sub-int v5, v4, v5
 
-    shl-int/2addr v4, v5
+    shl-int/2addr v3, v5
 
-    int-to-long v4, v4
+    int-to-long v6, v3
 
-    or-long/2addr v0, v4
+    or-long/2addr v0, v6
 
     goto :goto_1
 
@@ -302,7 +300,7 @@
     goto :goto_0
 .end method
 
-.method private static ds()[B
+.method private static dF()[B
     .locals 7
 
     .prologue
@@ -689,7 +687,7 @@
     goto :goto_0
 .end method
 
-.method public static parseReasonString(Lcom/glympse/android/hal/GByteVector;)Ljava/lang/String;
+.method public static parseReasonString(Lcom/glympse/android/hal/GByteVector;Z)Ljava/lang/String;
     .locals 4
 
     .prologue
@@ -736,9 +734,7 @@
 
     move-result-object v0
 
-    const/4 v2, 0x1
-
-    invoke-interface {v1, v0, v2}, Lcom/glympse/android/hal/GByteVector;->stringEncode(Ljava/lang/String;Z)Ljava/lang/String;
+    invoke-interface {v1, v0, p1}, Lcom/glympse/android/hal/GByteVector;->stringEncode(Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v0
 
@@ -749,15 +745,15 @@
     .locals 13
 
     .prologue
-    const/4 v12, 0x3
+    const/4 v9, 0x3
 
     const/4 v8, 0x2
 
     const/4 v5, 0x1
 
-    const/4 v11, 0x0
+    const/4 v12, 0x0
 
-    const-wide/high16 v9, 0x4000000000000000L
+    const-wide/high16 v10, 0x4000000000000000L
 
     .line 262
     array-length v0, p0
@@ -787,7 +783,7 @@
 
     int-to-byte v4, v4
 
-    aput-byte v4, v1, v11
+    aput-byte v4, v1, v12
 
     .line 269
     const/16 v4, 0x7d
@@ -803,17 +799,17 @@
 
     .line 293
     :goto_0
-    invoke-static {p0, v11, v1, v3, v0}, Lcom/glympse/android/hal/Helpers;->copyByteArray([BI[BII)V
+    invoke-static {p0, v12, v1, v3, v0}, Lcom/glympse/android/hal/Helpers;->copyByteArray([BI[BII)V
 
     .line 295
-    invoke-static {}, Lcom/glympse/android/ws/WebSocketParser;->ds()[B
+    invoke-static {}, Lcom/glympse/android/ws/WebSocketParser;->dF()[B
 
     move-result-object v0
 
     .line 298
     array-length v4, v0
 
-    invoke-static {v0, v11, v1, v2, v4}, Lcom/glympse/android/hal/Helpers;->copyByteArray([BI[BII)V
+    invoke-static {v0, v12, v1, v2, v4}, Lcom/glympse/android/hal/Helpers;->copyByteArray([BI[BII)V
 
     .line 300
     invoke-static {v1, v0, v3}, Lcom/glympse/android/ws/WebSocketParser;->a([B[BI)[B
@@ -854,7 +850,7 @@
 
     int-to-byte v4, v4
 
-    aput-byte v4, v1, v12
+    aput-byte v4, v1, v9
 
     goto :goto_0
 
@@ -869,7 +865,7 @@
 
     const-wide/high16 v6, 0x404c000000000000L
 
-    invoke-static {v9, v10, v6, v7}, Ljava/lang/Math;->pow(DD)D
+    invoke-static {v10, v11, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
 
@@ -892,7 +888,7 @@
 
     const-wide/high16 v6, 0x4048000000000000L
 
-    invoke-static {v9, v10, v6, v7}, Ljava/lang/Math;->pow(DD)D
+    invoke-static {v10, v11, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
     move-result-wide v6
 
@@ -908,26 +904,26 @@
 
     int-to-byte v4, v4
 
-    aput-byte v4, v1, v12
+    aput-byte v4, v1, v9
 
     .line 284
     const/4 v4, 0x4
 
-    int-to-double v5, v0
+    int-to-double v6, v0
 
-    const-wide/high16 v7, 0x4044000000000000L
+    const-wide/high16 v8, 0x4044000000000000L
 
-    invoke-static {v9, v10, v7, v8}, Ljava/lang/Math;->pow(DD)D
+    invoke-static {v10, v11, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
-    move-result-wide v7
+    move-result-wide v8
 
-    div-double/2addr v5, v7
+    div-double/2addr v6, v8
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->floor(D)D
+    invoke-static {v6, v7}, Ljava/lang/Math;->floor(D)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    double-to-int v5, v5
+    double-to-int v5, v6
 
     and-int/lit16 v5, v5, 0xff
 
@@ -938,21 +934,21 @@
     .line 285
     const/4 v4, 0x5
 
-    int-to-double v5, v0
+    int-to-double v6, v0
 
-    const-wide/high16 v7, 0x4040000000000000L
+    const-wide/high16 v8, 0x4040000000000000L
 
-    invoke-static {v9, v10, v7, v8}, Ljava/lang/Math;->pow(DD)D
+    invoke-static {v10, v11, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
-    move-result-wide v7
+    move-result-wide v8
 
-    div-double/2addr v5, v7
+    div-double/2addr v6, v8
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->floor(D)D
+    invoke-static {v6, v7}, Ljava/lang/Math;->floor(D)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    double-to-int v5, v5
+    double-to-int v5, v6
 
     and-int/lit16 v5, v5, 0xff
 
@@ -963,21 +959,21 @@
     .line 286
     const/4 v4, 0x6
 
-    int-to-double v5, v0
+    int-to-double v6, v0
 
-    const-wide/high16 v7, 0x4038000000000000L
+    const-wide/high16 v8, 0x4038000000000000L
 
-    invoke-static {v9, v10, v7, v8}, Ljava/lang/Math;->pow(DD)D
+    invoke-static {v10, v11, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
-    move-result-wide v7
+    move-result-wide v8
 
-    div-double/2addr v5, v7
+    div-double/2addr v6, v8
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->floor(D)D
+    invoke-static {v6, v7}, Ljava/lang/Math;->floor(D)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    double-to-int v5, v5
+    double-to-int v5, v6
 
     and-int/lit16 v5, v5, 0xff
 
@@ -988,21 +984,21 @@
     .line 287
     const/4 v4, 0x7
 
-    int-to-double v5, v0
+    int-to-double v6, v0
 
-    const-wide/high16 v7, 0x4030000000000000L
+    const-wide/high16 v8, 0x4030000000000000L
 
-    invoke-static {v9, v10, v7, v8}, Ljava/lang/Math;->pow(DD)D
+    invoke-static {v10, v11, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
-    move-result-wide v7
+    move-result-wide v8
 
-    div-double/2addr v5, v7
+    div-double/2addr v6, v8
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->floor(D)D
+    invoke-static {v6, v7}, Ljava/lang/Math;->floor(D)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    double-to-int v5, v5
+    double-to-int v5, v6
 
     and-int/lit16 v5, v5, 0xff
 
@@ -1013,21 +1009,21 @@
     .line 288
     const/16 v4, 0x8
 
-    int-to-double v5, v0
+    int-to-double v6, v0
 
-    const-wide/high16 v7, 0x4020000000000000L
+    const-wide/high16 v8, 0x4020000000000000L
 
-    invoke-static {v9, v10, v7, v8}, Ljava/lang/Math;->pow(DD)D
+    invoke-static {v10, v11, v8, v9}, Ljava/lang/Math;->pow(DD)D
 
-    move-result-wide v7
+    move-result-wide v8
 
-    div-double/2addr v5, v7
+    div-double/2addr v6, v8
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->floor(D)D
+    invoke-static {v6, v7}, Ljava/lang/Math;->floor(D)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    double-to-int v5, v5
+    double-to-int v5, v6
 
     and-int/lit16 v5, v5, 0xff
 

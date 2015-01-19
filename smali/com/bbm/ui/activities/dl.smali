@@ -1,39 +1,81 @@
 .class final Lcom/bbm/ui/activities/dl;
 .super Ljava/lang/Object;
-.source "ChannelReportsActivity.java"
+.source "ChannelPostPhotoGalleryActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field public a:Ljava/lang/String;
-
-.field public b:Ljava/lang/String;
-
-.field public c:Lcom/bbm/util/l;
-
-.field final synthetic d:Lcom/bbm/ui/activities/ChannelReportsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/ChannelReportsActivity;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)V
+    .locals 0
 
     .prologue
-    .line 101
-    iput-object p1, p0, Lcom/bbm/ui/activities/dl;->d:Lcom/bbm/ui/activities/ChannelReportsActivity;
+    .line 107
+    iput-object p1, p0, Lcom/bbm/ui/activities/dl;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 102
-    iput-object p2, p0, Lcom/bbm/ui/activities/dl;->a:Ljava/lang/String;
-
-    .line 103
-    iput-object p3, p0, Lcom/bbm/ui/activities/dl;->b:Ljava/lang/String;
-
-    .line 104
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/dl;->c:Lcom/bbm/util/l;
-
-    .line 105
     return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x0
+
+    const/4 v2, 0x4
+
+    .line 110
+    iget-object v0, p0, Lcom/bbm/ui/activities/dl;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+
+    iget-object v1, v0, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->a:Lcom/bbm/ui/FooterActionBar;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/FooterActionBar;->getVisibility()I
+
+    move-result v1
+
+    if-ne v1, v2, :cond_1
+
+    iget-object v1, v0, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->a:Lcom/bbm/ui/FooterActionBar;
+
+    invoke-virtual {v1, v3}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
+
+    iget-object v1, v0, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->b:Landroid/widget/ImageView;
+
+    invoke-virtual {v1, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->b()V
+
+    .line 111
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 110
+    :cond_1
+    iget-object v1, v0, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->a:Lcom/bbm/ui/FooterActionBar;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/FooterActionBar;->getVisibility()I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    iget-object v1, v0, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->a:Lcom/bbm/ui/FooterActionBar;
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->b:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    goto :goto_0
 .end method

@@ -1,30 +1,22 @@
 .class final Lcom/bbm/ui/c/cs;
 .super Ljava/lang/Object;
-.source "GroupMembersFragment.java"
+.source "ContactsFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
-.field final synthetic a:I
-
-.field final synthetic b:Lcom/bbm/g/l;
-
-.field final synthetic c:Lcom/bbm/ui/c/cm;
+.field final synthetic a:Lcom/bbm/ui/c/ch;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/cm;ILcom/bbm/g/l;)V
+.method constructor <init>(Lcom/bbm/ui/c/ch;)V
     .locals 0
 
     .prologue
-    .line 570
-    iput-object p1, p0, Lcom/bbm/ui/c/cs;->c:Lcom/bbm/ui/c/cm;
-
-    iput p2, p0, Lcom/bbm/ui/c/cs;->a:I
-
-    iput-object p3, p0, Lcom/bbm/ui/c/cs;->b:Lcom/bbm/g/l;
+    .line 165
+    iput-object p1, p0, Lcom/bbm/ui/c/cs;->a:Lcom/bbm/ui/c/ch;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,56 +25,19 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final onDismiss(Landroid/content/DialogInterface;)V
+    .locals 1
 
     .prologue
-    .line 573
-    const-string v0, "menu onClick"
+    .line 169
+    iget-object v0, p0, Lcom/bbm/ui/c/cs;->a:Lcom/bbm/ui/c/ch;
 
-    const-class v1, Lcom/bbm/ui/c/cm;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 574
-    iget-object v0, p0, Lcom/bbm/ui/c/cs;->c:Lcom/bbm/ui/c/cm;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/cm;->getActivity()Landroid/app/Activity;
+    invoke-static {v0}, Lcom/bbm/ui/c/ch;->a(Lcom/bbm/ui/c/ch;)Lcom/bbm/ui/dr;
 
     move-result-object v0
 
-    .line 575
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/bbm/ui/dr;->b()V
 
-    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    instance-of v1, v0, Lcom/bbm/ui/activities/eg;
-
-    if-eqz v1, :cond_0
-
-    .line 576
-    check-cast v0, Lcom/bbm/ui/activities/eg;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/eg;->v()V
-
-    .line 579
-    :cond_0
-    new-instance v0, Landroid/os/Handler;
-
-    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
-
-    new-instance v1, Lcom/bbm/ui/c/ct;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/c/ct;-><init>(Lcom/bbm/ui/c/cs;)V
-
-    const-wide/16 v2, 0x12c
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    .line 599
+    .line 170
     return-void
 .end method

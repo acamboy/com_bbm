@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/rf;
 .super Ljava/lang/Object;
-.source "GroupProfileActivity.java"
+.source "GroupPassphraseActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/gi;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPassphraseActivity;)V
     .locals 0
 
     .prologue
-    .line 98
-    iput-object p1, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    .line 29
+    iput-object p1, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,196 +25,90 @@
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    const v4, 0x7f0a01a7
+    .line 32
+    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
 
-    .line 103
-    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->getFragmentManager()Landroid/app/FragmentManager;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->a(Lcom/bbm/ui/activities/GroupPassphraseActivity;)Landroid/widget/TextView;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+    invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 104
-    iget-object v1, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;Landroid/app/FragmentTransaction;)V
+    move-result-object v1
 
-    .line 106
-    packed-switch p1, :pswitch_data_0
+    .line 33
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 133
+    const/16 v2, 0xb
+
+    if-ge v0, v2, :cond_0
+
+    .line 34
+    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
+
+    const-string v2, "clipboard"
+
+    invoke-virtual {v0, v2}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/text/ClipboardManager;
+
+    .line 35
+    invoke-virtual {v0, v1}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
+
+    .line 41
     :goto_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
 
-    invoke-static {v1, p1}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;I)I
+    iget-object v1, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
 
-    .line 134
-    iget-object v1, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    const v2, 0x7f0e02e0
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupProfileActivity;->v()V
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->getString(I)Ljava/lang/String;
 
-    .line 135
-    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
+    move-result-object v1
 
-    .line 137
-    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->invalidateOptionsMenu()V
-
-    .line 138
+    .line 42
     return-void
 
-    .line 109
-    :pswitch_0
-    new-instance v1, Landroid/os/Bundle;
+    .line 37
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
 
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+    const-string v2, "clipboard"
 
-    .line 110
-    const-string v2, "groupUri"
+    invoke-virtual {v0, v2}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+    move-result-object v0
 
-    invoke-virtual {v3}, Lcom/bbm/ui/activities/GroupProfileActivity;->i()Ljava/lang/String;
+    check-cast v0, Landroid/content/ClipboardManager;
 
-    move-result-object v3
+    .line 38
+    iget-object v2, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupPassphraseActivity;
 
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+    const v3, 0x7f0e02df
 
-    .line 111
-    iget-object v2, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    new-instance v3, Lcom/bbm/ui/c/cj;
-
-    invoke-direct {v3}, Lcom/bbm/ui/c/cj;-><init>()V
-
-    invoke-static {v2, v3}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;Lcom/bbm/ui/c/cj;)Lcom/bbm/ui/c/cj;
-
-    .line 112
-    iget-object v2, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;)Lcom/bbm/ui/c/cj;
+    invoke-virtual {v2, v3}, Lcom/bbm/ui/activities/GroupPassphraseActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/bbm/ui/c/cj;->setArguments(Landroid/os/Bundle;)V
-
-    .line 113
-    iget-object v1, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;)Lcom/bbm/ui/c/cj;
+    invoke-static {v2, v1}, Landroid/content/ClipData;->newPlainText(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Landroid/content/ClipData;
 
     move-result-object v1
 
-    invoke-virtual {v0, v4, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
+    .line 39
+    invoke-virtual {v0, v1}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
 
     goto :goto_0
-
-    .line 117
-    :pswitch_1
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    .line 118
-    const-string v2, "groupUri"
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    invoke-virtual {v3}, Lcom/bbm/ui/activities/GroupProfileActivity;->i()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 119
-    iget-object v2, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    new-instance v3, Lcom/bbm/ui/c/db;
-
-    invoke-direct {v3}, Lcom/bbm/ui/c/db;-><init>()V
-
-    invoke-static {v2, v3}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;Lcom/bbm/ui/c/db;)Lcom/bbm/ui/c/db;
-
-    .line 120
-    iget-object v2, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupProfileActivity;->b(Lcom/bbm/ui/activities/GroupProfileActivity;)Lcom/bbm/ui/c/db;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lcom/bbm/ui/c/db;->setArguments(Landroid/os/Bundle;)V
-
-    .line 121
-    iget-object v1, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupProfileActivity;->b(Lcom/bbm/ui/activities/GroupProfileActivity;)Lcom/bbm/ui/c/db;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v4, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
-
-    goto :goto_0
-
-    .line 125
-    :pswitch_2
-    new-instance v1, Landroid/os/Bundle;
-
-    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
-
-    .line 126
-    const-string v2, "groupUri"
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    invoke-virtual {v3}, Lcom/bbm/ui/activities/GroupProfileActivity;->i()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 127
-    iget-object v2, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    new-instance v3, Lcom/bbm/ui/c/cm;
-
-    invoke-direct {v3}, Lcom/bbm/ui/c/cm;-><init>()V
-
-    invoke-static {v2, v3}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;Lcom/bbm/ui/c/cm;)Lcom/bbm/ui/c/cm;
-
-    .line 128
-    iget-object v2, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupProfileActivity;->c(Lcom/bbm/ui/activities/GroupProfileActivity;)Lcom/bbm/ui/c/cm;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lcom/bbm/ui/c/cm;->setArguments(Landroid/os/Bundle;)V
-
-    .line 129
-    iget-object v1, p0, Lcom/bbm/ui/activities/rf;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupProfileActivity;->c(Lcom/bbm/ui/activities/GroupProfileActivity;)Lcom/bbm/ui/c/cm;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v4, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
-
-    goto/16 :goto_0
-
-    .line 106
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
 .end method

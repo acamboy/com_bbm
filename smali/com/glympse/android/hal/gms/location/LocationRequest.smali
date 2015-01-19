@@ -10,7 +10,7 @@
 
 .field public static final PRIORITY_NO_POWER:I = 0x69
 
-.field protected static fP:Ljava/lang/Class;
+.field protected static fW:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -19,19 +19,19 @@
     .end annotation
 .end field
 
-.field private static fQ:Ljava/lang/reflect/Method;
+.field private static fX:Ljava/lang/reflect/Method;
 
-.field private static fR:Ljava/lang/reflect/Method;
+.field private static fY:Ljava/lang/reflect/Method;
 
-.field private static fS:Ljava/lang/reflect/Method;
+.field private static fZ:Ljava/lang/reflect/Method;
 
-.field private static fT:Ljava/lang/reflect/Method;
+.field private static ga:Ljava/lang/reflect/Method;
 
-.field private static fU:Ljava/lang/reflect/Method;
+.field private static gb:Ljava/lang/reflect/Method;
 
 
 # instance fields
-.field protected fV:Ljava/lang/Object;
+.field protected gc:Ljava/lang/Object;
 
 
 # direct methods
@@ -42,22 +42,22 @@
     const/4 v0, 0x0
 
     .line 17
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fP:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fW:Ljava/lang/Class;
 
     .line 18
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fQ:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fX:Ljava/lang/reflect/Method;
 
     .line 19
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fR:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fY:Ljava/lang/reflect/Method;
 
     .line 20
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fS:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fZ:Ljava/lang/reflect/Method;
 
     .line 21
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fT:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->ga:Ljava/lang/reflect/Method;
 
     .line 22
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fU:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->gb:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -72,7 +72,7 @@
     .line 24
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fV:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/glympse/android/hal/gms/location/LocationRequest;->gc:Ljava/lang/Object;
 
     .line 42
     return-void
@@ -91,7 +91,7 @@
     invoke-direct {v0}, Lcom/glympse/android/hal/gms/location/LocationRequest;-><init>()V
 
     .line 31
-    sget-object v2, Lcom/glympse/android/hal/gms/location/LocationRequest;->fQ:Ljava/lang/reflect/Method;
+    sget-object v2, Lcom/glympse/android/hal/gms/location/LocationRequest;->fX:Ljava/lang/reflect/Method;
 
     const/4 v3, 0x0
 
@@ -101,7 +101,7 @@
 
     move-result-object v2
 
-    iput-object v2, v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fV:Ljava/lang/Object;
+    iput-object v2, v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->gc:Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -130,7 +130,7 @@
     move-result-object v0
 
     .line 93
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fP:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fW:Ljava/lang/Class;
 
     const-string v1, "create"
 
@@ -140,10 +140,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fQ:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fX:Ljava/lang/reflect/Method;
 
     .line 94
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fP:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fW:Ljava/lang/Class;
 
     const-string v1, "setPriority"
 
@@ -161,10 +161,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fR:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fY:Ljava/lang/reflect/Method;
 
     .line 95
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fP:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fW:Ljava/lang/Class;
 
     const-string v1, "setInterval"
 
@@ -182,10 +182,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fS:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fZ:Ljava/lang/reflect/Method;
 
     .line 96
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fP:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fW:Ljava/lang/Class;
 
     const-string v1, "setFastestInterval"
 
@@ -203,10 +203,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fT:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->ga:Ljava/lang/reflect/Method;
 
     .line 97
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fP:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fW:Ljava/lang/Class;
 
     const-string v1, "setSmallestDisplacement"
 
@@ -224,7 +224,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fU:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->gb:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -246,9 +246,9 @@
     .prologue
     .line 70
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fT:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->ga:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fV:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationRequest;->gc:Ljava/lang/Object;
 
     const/4 v2, 0x1
 
@@ -282,9 +282,9 @@
     .prologue
     .line 59
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fS:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fZ:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fV:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationRequest;->gc:Ljava/lang/Object;
 
     const/4 v2, 0x1
 
@@ -318,9 +318,9 @@
     .prologue
     .line 48
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fR:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fY:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fV:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationRequest;->gc:Ljava/lang/Object;
 
     const/4 v2, 0x1
 
@@ -354,9 +354,9 @@
     .prologue
     .line 81
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fU:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/location/LocationRequest;->gb:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationRequest;->fV:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationRequest;->gc:Ljava/lang/Object;
 
     const/4 v2, 0x1
 

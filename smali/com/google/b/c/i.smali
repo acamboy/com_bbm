@@ -16,7 +16,7 @@
 
 
 # virtual methods
-.method protected abstract c()Ljava/lang/Object;
+.method public abstract c()Ljava/lang/Object;
 .end method
 
 .method public toString()Ljava/lang/String;

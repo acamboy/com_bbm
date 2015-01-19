@@ -4,21 +4,21 @@
 
 
 # instance fields
-.field protected a:Lcom/bbm/d/de;
+.field protected a:Lcom/bbm/d/ee;
 
 .field protected b:Ljava/lang/String;
 
-.field private c:Lcom/bbm/ui/ObservingImageView;
+.field public c:Lcom/bbm/j/k;
 
-.field private d:Lcom/bbm/ui/InlineImageTextView;
+.field private d:Lcom/bbm/ui/ObservingImageView;
 
 .field private e:Lcom/bbm/ui/InlineImageTextView;
 
-.field private f:Landroid/widget/TextView;
+.field private f:Lcom/bbm/ui/InlineImageTextView;
 
-.field private g:Landroid/widget/ImageView;
+.field private g:Landroid/widget/TextView;
 
-.field private h:Lcom/bbm/j/k;
+.field private h:Landroid/widget/ImageView;
 
 
 # direct methods
@@ -60,7 +60,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->g:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->h:Landroid/widget/ImageView;
 
     return-object v0
 .end method
@@ -70,7 +70,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->d:Lcom/bbm/ui/InlineImageTextView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->e:Lcom/bbm/ui/InlineImageTextView;
 
     return-object v0
 .end method
@@ -80,7 +80,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->c:Lcom/bbm/ui/ObservingImageView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->d:Lcom/bbm/ui/ObservingImageView;
 
     return-object v0
 .end method
@@ -90,7 +90,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->e:Lcom/bbm/ui/InlineImageTextView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->f:Lcom/bbm/ui/InlineImageTextView;
 
     return-object v0
 .end method
@@ -100,40 +100,27 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->f:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->g:Landroid/widget/TextView;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    .prologue
-    .line 125
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->h:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
-
-    .line 126
-    return-void
-.end method
-
 .method protected final a(Landroid/content/Context;)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 50
     invoke-super {p0, p1}, Lcom/bbm/ui/views/ShadowFrame;->a(Landroid/content/Context;)V
 
     .line 52
-    const v0, 0x7f03003f
+    const v0, 0x7f030044
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->setViewStub(I)V
 
     .line 54
-    const v0, 0x7f0a01fc
+    const v0, 0x7f0b0254
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->findViewById(I)Landroid/view/View;
 
@@ -141,21 +128,17 @@
 
     check-cast v0, Lcom/bbm/ui/ObservingImageView;
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->c:Lcom/bbm/ui/ObservingImageView;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->d:Lcom/bbm/ui/ObservingImageView;
 
     .line 55
-    const v0, 0x7f0a0200
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->d:Lcom/bbm/ui/ObservingImageView;
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->findViewById(I)Landroid/view/View;
+    const/4 v1, 0x0
 
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/InlineImageTextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->d:Lcom/bbm/ui/InlineImageTextView;
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setLimitedLengthAnimation(Z)V
 
     .line 56
-    const v0, 0x7f0a0201
+    const v0, 0x7f0b0258
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->findViewById(I)Landroid/view/View;
 
@@ -165,21 +148,32 @@
 
     iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->e:Lcom/bbm/ui/InlineImageTextView;
 
-    .line 58
-    const v0, 0x7f0a0202
+    .line 57
+    const v0, 0x7f0b0259
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    check-cast v0, Lcom/bbm/ui/InlineImageTextView;
 
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->f:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->f:Lcom/bbm/ui/InlineImageTextView;
 
     .line 59
-    const v0, 0x7f0a01fd
+    const v0, 0x7f0b025a
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->g:Landroid/widget/TextView;
+
+    .line 60
+    const v0, 0x7f0b0255
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->findViewById(I)Landroid/view/View;
 
@@ -189,22 +183,9 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->g:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->h:Landroid/widget/ImageView;
 
-    .line 60
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    .prologue
-    .line 129
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->h:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
-
-    .line 130
+    .line 61
     return-void
 .end method
 
@@ -212,16 +193,16 @@
     .locals 1
 
     .prologue
-    .line 63
+    .line 64
     iput-object p1, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->b:Ljava/lang/String;
 
-    .line 65
+    .line 66
     new-instance v0, Lcom/bbm/ui/views/g;
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/views/g;-><init>(Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->h:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyChatsPaneView;->c:Lcom/bbm/j/k;
 
-    .line 122
+    .line 123
     return-void
 .end method

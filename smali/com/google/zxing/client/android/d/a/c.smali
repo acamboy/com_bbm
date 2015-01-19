@@ -448,7 +448,7 @@
 .end method
 
 .method protected onPostExecute(Ljava/lang/Object;)V
-    .locals 5
+    .locals 14
 
     .prologue
     .line 88
@@ -504,45 +504,214 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/google/zxing/client/android/c/c;
+    move-object v9, v0
+
+    check-cast v9, Lcom/google/zxing/client/android/c/c;
 
     .line 96
-    if-eqz v0, :cond_2
+    if-eqz v9, :cond_5
 
     .line 97
-    iget-object v1, p0, Lcom/google/zxing/client/android/d/a/c;->d:Ljava/util/List;
+    iget-object v0, p0, Lcom/google/zxing/client/android/d/a/c;->d:Ljava/util/List;
 
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    move-result-object v2
+    move-result-object v12
 
     :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
 
-    move-result v1
+    move-result v0
 
-    if-eqz v1, :cond_2
+    if-eqz v0, :cond_5
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v0
 
-    check-cast v1, [Ljava/lang/String;
+    check-cast v0, [Ljava/lang/String;
 
     .line 98
-    const/4 v3, 0x0
+    const/4 v1, 0x0
 
-    aget-object v3, v1, v3
+    aget-object v5, v0, v1
+
+    const/4 v1, 0x1
+
+    aget-object v11, v0, v1
+
+    new-instance v0, Lcom/google/zxing/client/android/c/a;
+
+    iget-object v1, v9, Lcom/google/zxing/client/android/c/c;->b:Landroid/app/Activity;
+
+    invoke-direct {v0, v1}, Lcom/google/zxing/client/android/c/a;-><init>(Landroid/content/Context;)V
+
+    const/4 v1, 0x0
+
+    const/4 v10, 0x0
+
+    :try_start_0
+    invoke-virtual {v0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result-object v0
+
+    :try_start_1
+    const-string v1, "history"
+
+    sget-object v2, Lcom/google/zxing/client/android/c/c;->a:[Ljava/lang/String;
+
+    const-string v3, "text=?"
 
     const/4 v4, 0x1
 
-    aget-object v1, v1, v4
+    new-array v4, v4, [Ljava/lang/String;
 
-    invoke-virtual {v0, v3, v1}, Lcom/google/zxing/client/android/c/c;->a(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v6, 0x0
+
+    aput-object v5, v4, v6
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const-string v7, "timestamp DESC"
+
+    const-string v8, "1"
+
+    invoke-virtual/range {v0 .. v8}, Landroid/database/sqlite/SQLiteDatabase;->query(Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    const/4 v1, 0x0
+
+    :try_start_2
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v4
+
+    if-eqz v4, :cond_2
+
+    const/4 v1, 0x0
+
+    invoke-interface {v2, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const/4 v1, 0x1
+
+    invoke-interface {v2, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    :cond_2
+    if-eqz v3, :cond_3
+
+    if-nez v1, :cond_4
+
+    move-object v1, v11
+
+    :goto_2
+    new-instance v4, Landroid/content/ContentValues;
+
+    invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
+
+    const-string v5, "details"
+
+    invoke-virtual {v4, v5, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string v1, "history"
+
+    const-string v5, "id=?"
+
+    const/4 v6, 0x1
+
+    new-array v6, v6, [Ljava/lang/String;
+
+    const/4 v7, 0x0
+
+    aput-object v3, v6, v7
+
+    invoke-virtual {v0, v1, v4, v5, v6}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_2
+
+    :cond_3
+    invoke-static {v2, v0}, Lcom/google/zxing/client/android/c/c;->a(Landroid/database/Cursor;Landroid/database/sqlite/SQLiteDatabase;)V
 
     goto :goto_1
 
-    .line 101
-    :cond_2
+    :cond_4
+    :try_start_3
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v4, " : "
+
+    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_2
+
+    move-result-object v1
+
+    goto :goto_2
+
+    :catchall_0
+    move-exception v0
+
+    move-object v2, v1
+
+    move-object v1, v10
+
+    :goto_3
+    invoke-static {v1, v2}, Lcom/google/zxing/client/android/c/c;->a(Landroid/database/Cursor;Landroid/database/sqlite/SQLiteDatabase;)V
+
+    throw v0
+
+    .line 99
+    :cond_5
     return-void
+
+    .line 98
+    :catchall_1
+    move-exception v1
+
+    move-object v2, v0
+
+    move-object v0, v1
+
+    move-object v1, v10
+
+    goto :goto_3
+
+    :catchall_2
+    move-exception v1
+
+    move-object v13, v1
+
+    move-object v1, v2
+
+    move-object v2, v0
+
+    move-object v0, v13
+
+    goto :goto_3
 .end method

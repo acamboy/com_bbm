@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 739
+    .line 746
     iput-object p1, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,12 +26,12 @@
 
 # virtual methods
 .method public run()V
-    .locals 11
+    .locals 13
 
     .prologue
     const/4 v0, 0x0
 
-    const/high16 v10, 0x42640000
+    const/high16 v12, 0x42640000
 
     const/high16 v9, 0x40000000
 
@@ -39,26 +39,26 @@
 
     const/4 v5, 0x1
 
-    .line 745
+    .line 752
     new-instance v1, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v2, 0x3f800000
 
     invoke-direct {v1, v6, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 746
+    .line 753
     new-instance v2, Landroid/view/animation/AccelerateInterpolator;
 
     invoke-direct {v2}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
 
     invoke-virtual {v1, v2}, Landroid/view/animation/Animation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    .line 747
+    .line 754
     const-wide/16 v2, 0xfa
 
     invoke-virtual {v1, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 748
+    .line 755
     iget-object v2, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
     invoke-static {v2}, Lcom/blackberry/ids/LoginActivity;->e(Lcom/blackberry/ids/LoginActivity;)Z
@@ -67,12 +67,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 749
+    .line 756
     const-wide/16 v2, 0xfa
 
     invoke-virtual {v1, v2, v3}, Landroid/view/animation/Animation;->setStartOffset(J)V
 
-    .line 752
+    .line 759
     :cond_0
     iget-object v2, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
@@ -82,7 +82,7 @@
 
     invoke-virtual {v2, v0}, Landroid/webkit/WebView;->setVisibility(I)V
 
-    .line 753
+    .line 760
     iget-object v2, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
     invoke-static {v2}, Lcom/blackberry/ids/LoginActivity;->b(Lcom/blackberry/ids/LoginActivity;)Landroid/webkit/WebView;
@@ -91,7 +91,7 @@
 
     invoke-virtual {v2, v1}, Landroid/webkit/WebView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 756
+    .line 763
     iget-object v1, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
     invoke-static {v1}, Lcom/blackberry/ids/LoginActivity;->c(Lcom/blackberry/ids/LoginActivity;)Landroid/widget/ProgressBar;
@@ -100,7 +100,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 757
+    .line 764
     iget-object v1, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
     invoke-static {v1}, Lcom/blackberry/ids/LoginActivity;->c(Lcom/blackberry/ids/LoginActivity;)Landroid/widget/ProgressBar;
@@ -111,7 +111,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 762
+    .line 769
     :cond_1
     iget-object v1, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
@@ -121,7 +121,7 @@
 
     if-eqz v1, :cond_4
 
-    .line 765
+    .line 772
     iget-object v1, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
     invoke-virtual {v1}, Lcom/blackberry/ids/LoginActivity;->getResources()Landroid/content/res/Resources;
@@ -134,7 +134,7 @@
 
     iget v4, v1, Landroid/util/DisplayMetrics;->density:F
 
-    .line 768
+    .line 775
     iget-object v1, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
     iget-object v1, v1, Lcom/blackberry/ids/LoginActivity;->b:Landroid/widget/ImageView;
@@ -149,15 +149,15 @@
 
     sub-float/2addr v1, v2
 
-    .line 769
+    .line 776
     new-instance v2, Landroid/graphics/Path;
 
     invoke-direct {v2}, Landroid/graphics/Path;-><init>()V
 
-    .line 771
+    .line 778
     div-float v3, v1, v9
 
-    .line 773
+    .line 780
     iget-object v7, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
     invoke-virtual {v7}, Lcom/blackberry/ids/LoginActivity;->getResources()Landroid/content/res/Resources;
@@ -170,7 +170,7 @@
 
     iget-object v7, v7, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    .line 774
+    .line 781
     invoke-virtual {v7}, Ljava/util/Locale;->getDisplayName()Ljava/lang/String;
 
     move-result-object v7
@@ -183,7 +183,7 @@
 
     move-result v7
 
-    .line 776
+    .line 783
     if-eq v7, v5, :cond_2
 
     const/4 v8, 0x2
@@ -193,16 +193,16 @@
     :cond_2
     move v0, v5
 
-    .line 777
+    .line 784
     :cond_3
     if-eqz v0, :cond_5
 
-    .line 778
+    .line 785
     mul-float v0, v4, v9
 
     neg-float v0, v0
 
-    .line 779
+    .line 786
     iget-object v7, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
     iget-object v7, v7, Lcom/blackberry/ids/LoginActivity;->b:Landroid/widget/ImageView;
@@ -217,31 +217,31 @@
 
     sub-float/2addr v7, v8
 
-    mul-float v8, v4, v10
+    mul-float v8, v4, v12
 
     add-float/2addr v7, v8
 
-    .line 780
+    .line 787
     neg-float v3, v3
 
     neg-float v1, v1
 
     invoke-virtual {v2, v0, v3, v7, v1}, Landroid/graphics/Path;->quadTo(FFFF)V
 
-    .line 786
+    .line 793
     :goto_0
     new-instance v9, Lcom/blackberry/ids/WebActivity$PathAnimation;
 
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
-    const-wide/16 v7, 0x1f4
+    const-wide/16 v10, 0x1f4
 
-    invoke-direct {v9, v0, v2, v7, v8}, Lcom/blackberry/ids/WebActivity$PathAnimation;-><init>(Lcom/blackberry/ids/WebActivity;Landroid/graphics/Path;J)V
+    invoke-direct {v9, v0, v2, v10, v11}, Lcom/blackberry/ids/WebActivity$PathAnimation;-><init>(Lcom/blackberry/ids/WebActivity;Landroid/graphics/Path;J)V
 
-    .line 787
+    .line 794
     invoke-virtual {v9, v5}, Lcom/blackberry/ids/WebActivity$PathAnimation;->setFillAfter(Z)V
 
-    .line 789
+    .line 796
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
     iget-object v0, v0, Lcom/blackberry/ids/LoginActivity;->b:Landroid/widget/ImageView;
@@ -250,7 +250,7 @@
 
     move-result v1
 
-    .line 790
+    .line 797
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
     iget-object v0, v0, Lcom/blackberry/ids/LoginActivity;->b:Landroid/widget/ImageView;
@@ -259,8 +259,8 @@
 
     move-result v3
 
-    .line 791
-    mul-float v0, v4, v10
+    .line 798
+    mul-float v0, v4, v12
 
     iget-object v2, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
@@ -274,8 +274,8 @@
 
     div-float v2, v0, v2
 
-    .line 792
-    mul-float v0, v4, v10
+    .line 799
+    mul-float v0, v4, v12
 
     iget-object v4, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
@@ -289,7 +289,7 @@
 
     div-float v4, v0, v4
 
-    .line 794
+    .line 801
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
     move v7, v5
@@ -298,40 +298,40 @@
 
     invoke-direct/range {v0 .. v8}, Landroid/view/animation/ScaleAnimation;-><init>(FFFFIFIF)V
 
-    .line 799
+    .line 806
     invoke-virtual {v0, v5}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    .line 800
-    const-wide/16 v1, 0x1f4
+    .line 807
+    const-wide/16 v2, 0x1f4
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
+    invoke-virtual {v0, v2, v3}, Landroid/view/animation/Animation;->setDuration(J)V
 
-    .line 801
+    .line 808
     new-instance v1, Landroid/view/animation/AnimationSet;
 
     invoke-direct {v1, v5}, Landroid/view/animation/AnimationSet;-><init>(Z)V
 
-    .line 802
+    .line 809
     invoke-virtual {v1, v0}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 803
+    .line 810
     invoke-virtual {v1, v9}, Landroid/view/animation/AnimationSet;->addAnimation(Landroid/view/animation/Animation;)V
 
-    .line 804
+    .line 811
     invoke-virtual {v1, v5}, Landroid/view/animation/AnimationSet;->setFillAfter(Z)V
 
-    .line 805
+    .line 812
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
     iget-object v0, v0, Lcom/blackberry/ids/LoginActivity;->b:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 809
+    .line 816
     :cond_4
     return-void
 
-    .line 782
+    .line 789
     :cond_5
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$5;->a:Lcom/blackberry/ids/LoginActivity;
 
@@ -347,10 +347,10 @@
 
     sub-float/2addr v0, v7
 
-    .line 783
+    .line 790
     mul-float v7, v4, v9
 
-    .line 784
+    .line 791
     neg-float v3, v3
 
     neg-float v0, v0

@@ -28,12 +28,12 @@
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 17
-    const v0, 0x7f030022
+    const v0, 0x7f030024
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/FirstLaunchOverlayActivity;->setContentView(I)V
 
     .line 19
-    const v0, 0x7f0a013a
+    const v0, 0x7f0b0183
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/FirstLaunchOverlayActivity;->findViewById(I)Landroid/view/View;
 

@@ -1,53 +1,75 @@
 .class final Lcom/bbm/ui/activities/sa;
-.super Ljava/lang/Object;
-.source "GroupsIconActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/ui/cn;
+.source "GroupPictureCommentsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupsIconActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupsIconActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
     .locals 0
 
     .prologue
-    .line 92
-    iput-object p1, p0, Lcom/bbm/ui/activities/sa;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
+    .line 472
+    iput-object p1, p0, Lcom/bbm/ui/activities/sa;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a()V
+    .locals 1
 
     .prologue
-    .line 96
-    const-string v0, "headerButtonActionBar Negative Button Clicked"
+    .line 481
+    iget-object v0, p0, Lcom/bbm/ui/activities/sa;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupsIconActivity;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->finish()V
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 482
+    return-void
+.end method
 
-    .line 98
-    iget-object v0, p0, Lcom/bbm/ui/activities/sa;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
+.method public final a(I)V
+    .locals 1
 
-    const/4 v1, 0x0
+    .prologue
+    .line 486
+    packed-switch p1, :pswitch_data_0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/GroupsIconActivity;->setResult(I)V
+    .line 491
+    :goto_0
+    return-void
 
-    .line 99
-    iget-object v0, p0, Lcom/bbm/ui/activities/sa;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
+    .line 488
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/sa;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupsIconActivity;->finish()V
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->i(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
 
-    .line 100
+    goto :goto_0
+
+    .line 486
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public final b()V
+    .locals 1
+
+    .prologue
+    .line 476
+    iget-object v0, p0, Lcom/bbm/ui/activities/sa;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+
+    .line 477
     return-void
 .end method

@@ -1,10 +1,10 @@
-.class final Lcom/google/zxing/client/android/c/a;
+.class public final Lcom/google/zxing/client/android/c/a;
 .super Landroid/database/sqlite/SQLiteOpenHelper;
 .source "DBHelper.java"
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 3
 
     .prologue

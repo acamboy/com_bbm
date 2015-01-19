@@ -6,9 +6,9 @@
 # instance fields
 .field private _glympse:Lcom/glympse/android/lib/GGlympsePrivate;
 
-.field private ak:Z
+.field private aj:Z
 
-.field private al:Lcom/glympse/android/hal/r;
+.field private ak:Lcom/glympse/android/hal/r;
 
 .field private e:Landroid/content/Context;
 
@@ -24,7 +24,7 @@
     .line 37
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->ak:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->aj:Z
 
     .line 38
     new-instance v0, Lcom/glympse/android/hal/r;
@@ -33,7 +33,7 @@
 
     invoke-direct {v0, p0, v1}, Lcom/glympse/android/hal/r;-><init>(Lcom/glympse/android/hal/ConnectivityListener;Lcom/glympse/android/hal/ConnectivityListener$1;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->al:Lcom/glympse/android/hal/r;
+    iput-object v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->ak:Lcom/glympse/android/hal/r;
 
     .line 39
     return-void
@@ -44,7 +44,7 @@
 
     .prologue
     .line 25
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->ak:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->aj:Z
 
     return v0
 .end method
@@ -144,7 +144,7 @@
 
     .prologue
     .line 43
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->ak:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->aj:Z
 
     if-nez v0, :cond_0
 
@@ -164,14 +164,14 @@
     .line 49
     iget-object v1, p0, Lcom/glympse/android/hal/ConnectivityListener;->e:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/ConnectivityListener;->al:Lcom/glympse/android/hal/r;
+    iget-object v2, p0, Lcom/glympse/android/hal/ConnectivityListener;->ak:Lcom/glympse/android/hal/r;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     .line 50
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->ak:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->aj:Z
 
     .line 52
     :cond_0
@@ -185,14 +185,14 @@
     const/4 v2, 0x0
 
     .line 56
-    iget-boolean v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->ak:Z
+    iget-boolean v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->aj:Z
 
     if-eqz v0, :cond_0
 
     .line 58
     iget-object v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->e:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/ConnectivityListener;->al:Lcom/glympse/android/hal/r;
+    iget-object v1, p0, Lcom/glympse/android/hal/ConnectivityListener;->ak:Lcom/glympse/android/hal/r;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
@@ -205,7 +205,7 @@
     .line 61
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->ak:Z
+    iput-boolean v0, p0, Lcom/glympse/android/hal/ConnectivityListener;->aj:Z
 
     .line 63
     :cond_0

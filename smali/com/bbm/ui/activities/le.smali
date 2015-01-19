@@ -1,75 +1,96 @@
 .class final Lcom/bbm/ui/activities/le;
-.super Ljava/lang/Object;
-.source "GroupConversationActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
+.super Lcom/bbm/ui/cn;
+.source "GroupAdminEditActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminEditActivity;)V
     .locals 0
 
     .prologue
-    .line 308
-    iput-object p1, p0, Lcom/bbm/ui/activities/le;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 107
+    iput-object p1, p0, Lcom/bbm/ui/activities/le;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
+.method public final a()V
     .locals 2
 
     .prologue
-    .line 312
-    if-eqz p2, :cond_0
+    .line 111
+    const-string v0, "menu back onBackAction"
 
-    .line 313
-    const-string v0, "mMessageInput Focused"
+    const-class v1, Lcom/bbm/ui/activities/GroupAdminEditActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupConversationActivity;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 112
+    iget-object v0, p0, Lcom/bbm/ui/activities/le;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
 
-    .line 315
-    iget-object v0, p0, Lcom/bbm/ui/activities/le;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupAdminEditActivity;->finish()V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->i(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/EmoticonInputPanel;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->b()V
-
-    .line 316
-    iget-object v0, p0, Lcom/bbm/ui/activities/le;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->j(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/widget/ListView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/le;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->j(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/widget/ListView;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/ListView;->getCount()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setSelection(I)V
-
-    .line 318
-    :cond_0
+    .line 113
     return-void
+.end method
+
+.method public final a(I)V
+    .locals 3
+
+    .prologue
+    .line 117
+    packed-switch p1, :pswitch_data_0
+
+    .line 125
+    :goto_0
+    return-void
+
+    .line 119
+    :pswitch_0
+    const-string v0, "menu add onAction"
+
+    const-class v1, Lcom/bbm/ui/activities/GroupAdminEditActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 120
+    new-instance v0, Landroid/content/Intent;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/le;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+
+    const-class v2, Lcom/bbm/ui/activities/GroupAdminAddActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 121
+    const-string v1, "groupUri"
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/le;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+
+    iget-object v2, v2, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 122
+    iget-object v1, p0, Lcom/bbm/ui/activities/le;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/GroupAdminEditActivity;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    .line 117
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

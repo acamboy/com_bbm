@@ -240,12 +240,20 @@
     <string name="activity_tap_to_invite_dialog_yes">Sì</string>
     <string name="activity_tap_to_invite_info">Allineare il retro dei dispositivi correnti. Su entrambi i dispositivi deve essere attivata la tecnologia NFC.</string>
     <string name="ad_block_channel">"Se il canale viene bloccato, non sarà possibile visualizzare i contenuti sponsorizzati dal canale \"%1$s\". Quest'azione non può essere annullata."</string>
+    <string name="ad_block_sponsor">"Non sarà possibile visualizzare i contenuti sponsorizzati da \"%1$s\". Quest'azione non può essere annullata."</string>
     <string name="ad_channel">Canale sponsorizzato</string>
     <string name="ad_notpresent_message">"L'annuncio non è più disponibile"</string>
+    <string name="ad_sponsor_label">Sponsor</string>
     <string name="add">Aggiungi</string>
     <string name="add_all">Aggiungi tutti</string>
     <string name="add_channel_post">Aggiungi post</string>
-    <string name="add_contacts">Aggiungi contatti</string>
+    <string name="add_contacts">Invita</string>
+    <string name="add_contacts_category_add_to_bbm">Tocca per continuare</string>
+    <string name="add_contacts_category_incoming_ads">Inviti sponsorizzati</string>
+    <string name="add_contacts_category_incoming_bbm">Inviti BBM</string>
+    <string name="add_contacts_category_incoming_group">Inviti di gruppo</string>
+    <string name="add_contacts_category_invite_to_bbm">Invita a effettuare il download</string>
+    <string name="add_contacts_category_sent">Inviti inviati</string>
     <string name="add_from_gallery">Aggiungi da galleria</string>
     <string name="add_group_button">Crea nuovo gruppo</string>
     <string name="add_new">Aggiungi nuovo</string>
@@ -255,6 +263,11 @@
     <string name="allow_comments_on_posts">Consenti commenti sui post</string>
     <string name="app_name">BBM</string>
     <string name="app_picker_name">Applicazioni</string>
+    <string name="app_store_details_screen_install_button">Installa</string>
+    <string name="app_store_details_screen_inventory_not_found">"Impossibile aprire l'applicazione.
+ Riprovare in seguito."</string>
+    <string name="app_store_details_screen_open_button">Apri</string>
+    <string name="app_store_invalid_app_id">Questo elemento non è disponibile</string>
     <string name="approve_comments">Approva commenti</string>
     <string name="approve_comments_description">È possibile modificare questa opzione dal sito Web dei canali.</string>
     <string name="arrived_at_destination">Glympse: Arrivato a destinazione</string>
@@ -269,6 +282,7 @@
     <string name="attach_list_file">File</string>
     <string name="attach_list_location">Posizione</string>
     <string name="attach_list_picture">Scegli da galleria</string>
+    <string name="attach_list_picture_label">Immagine</string>
     <string name="attach_list_voicenote">Nota vocale</string>
     <string name="audio_player_pause">Pausa</string>
     <string name="audio_player_play">Riproduci</string>
@@ -278,17 +292,20 @@
     <string name="auth_client_play_services_err_notification_msg">Errore Google Play Services</string>
     <string name="auth_client_requested_by_msg">Richiesta da %1$s</string>
     <string name="auth_client_using_bad_version_title">"Un'app ha tentato di usare una versione non valida di Play Services."</string>
+    <string name="avatar_file_not_support">File non supportato.</string>
     <string name="back">Indietro</string>
     <string name="backup_file_is_not_valid">"Il file di backup non è valido. Chiudere la configurazione BBM e utilizzare l'utilità Cambio dispositivo in BlackBerry Desktop Software."</string>
     <string name="barcode_info">Un contatto può acquisire il codice a barre di un utente per aggiungerlo a BBM</string>
     <string name="bbm_account_name">BBM</string>
     <string name="bbm_account_user_name">BBM Groups</string>
+    <string name="bbm_carrier_billing">Fatturazione gestore</string>
     <string name="bbm_contacts">BBM</string>
     <string name="bbm_error">Errore BBM</string>
     <string name="bbm_for_all">BBM per tutti</string>
     <string name="bbm_groups">BBM Groups</string>
     <string name="bbm_has_lost_its_connection">BBM ha perso la connessione. Attendere il tentativo di riconnessione del server.</string>
     <string name="bbm_is_unable_to_connect_to_the_server">BBM non è in grado di stabilire la connessione al server. Riprovare in seguito.</string>
+    <string name="bbm_package_name">com.bbm</string>
     <string name="bbm_service_no_connectivity">Connettività assente</string>
     <string name="bbm_service_running">Connesso</string>
     <string name="bbm_setup">Configurazione BBM</string>
@@ -325,7 +342,7 @@
     <string name="button_done">Fatto</string>
     <string name="button_email">Invia email</string>
     <string name="button_get_directions">Ottieni indirizzi</string>
-    <string name="button_google_shopper">Shopper</string>
+    <string name="button_google_shopper">Acquirente</string>
     <string name="button_mms">Invia MMS</string>
     <string name="button_ok">OK</string>
     <string name="button_open_browser">Apri browser</string>
@@ -399,7 +416,6 @@
     <string name="channel_details_copy_website">Copia sito Web</string>
     <string name="channel_details_private_channel_description">Solo tramite invito</string>
     <string name="channel_doesnt_exist">Questo canale non esiste.</string>
-    <string name="channel_geolocation_checkbox">Non chiedere più.</string>
     <string name="channel_geolocation_checkbox_accept">Accetta</string>
     <string name="channel_geolocation_checkbox_decline">Rifiuta</string>
     <string name="channel_geolocation_checkbox_description">Consentire a BBM di accedere periodicamente alla tua posizione?</string>
@@ -567,9 +583,9 @@
     <string name="chats_start_video">Avvia video chat</string>
     <string name="chats_status_no_chats">"Tocca l'angolo superiore per avviare una chat."</string>
     <string name="chats_view_bbm_profile">Visualizza profilo BBM</string>
-    <string name="click_to_expire">Fai clic qui per far scadere il tuo Glympse</string>
-    <string name="click_to_reply">Fai clic qui per rispondere...</string>
-    <string name="click_to_view">Fai clic qui per visualizzare...</string>
+    <string name="click_to_expire">Clicca qui per disattivare il tuo Glympse</string>
+    <string name="click_to_reply">Clicca qui per rispondere...</string>
+    <string name="click_to_view">Clicca qui per vedere...</string>
     <string name="close">Chiudi</string>
     <string name="coming_soon">"Questa funzione non è disponibile in questo momento.
 Disponibile a breve"</string>
@@ -621,6 +637,7 @@ Disponibile a breve"</string>
     <string name="contacts_dialog_delete_multi_title">Elimina %1$s contatti</string>
     <string name="contacts_dialog_delete_title">Elimina %1$s</string>
     <string name="contacts_invite_to_group">Invita al gruppo</string>
+    <string name="contacts_invited_to_meeting">%1d contatti invitati alla riunione.</string>
     <string name="contacts_move_contact">Sposta contatto</string>
     <string name="contacts_move_contacts">Sposta contatti</string>
     <string name="contacts_open_in_contacts">Apri in Contatti</string>
@@ -638,7 +655,9 @@ Disponibile a breve"</string>
     <string name="contents_sms">Numero SMS</string>
     <string name="contents_text">Testo puro</string>
     <string name="context_menu_copy_message">Copia messaggio</string>
+    <string name="context_menu_recall_message">Ritira messaggio</string>
     <string name="context_menu_resend_message">Reinvia messaggio</string>
+    <string name="conversation_activity_end_chat_on_voice_warning_message">La chiamata verrà interrotta e tutti i messaggi della chat verranno eliminati.</string>
     <string name="conversation_activity_end_chat_warning_message">Se si termina la chat, tutti i messaggi verranno eliminati.</string>
     <string name="conversation_activity_end_chat_warning_title">Terminare la chat?</string>
     <string name="conversation_activity_reinvite_accepted">Invito accettato</string>
@@ -672,6 +691,9 @@ Disponibile a breve"</string>
     <string name="conversation_location_message_accurace_within">Preciso entro %1$sm</string>
     <string name="conversation_location_received">Posizione ricevuta</string>
     <string name="conversation_location_sent">Posizione inviata</string>
+    <string name="conversation_message_recall_failed">Impossibile ritirare messaggio</string>
+    <string name="conversation_message_recall_pending">Ritiro messaggio in corso</string>
+    <string name="conversation_message_recalled">Messaggio ritirato</string>
     <string name="conversation_must_reinvite">Non compari tra i contatti di %1$s. Desideri invitare %1$s di nuovo?</string>
     <string name="conversation_notification_calendar_received">Appuntamento ricevuto</string>
     <string name="conversation_notification_calendar_sent">Appuntamento inviato</string>
@@ -684,6 +706,10 @@ Disponibile a breve"</string>
     <string name="conversation_notification_contact_card_sent">Biglietto da visita inviato</string>
     <string name="conversation_notification_default_incomming">Messaggio ricevuto</string>
     <string name="conversation_notification_default_outgoing">Messaggio inviato</string>
+    <string name="conversation_notification_ephemeral_default_received">Messaggio a tempo ricevuto</string>
+    <string name="conversation_notification_ephemeral_default_sent">Messaggio a tempo inviato</string>
+    <string name="conversation_notification_ephemeral_picture_received">Immagine a tempo ricevuta</string>
+    <string name="conversation_notification_ephemeral_picture_sent">Immagine a tempo inviata</string>
     <string name="conversation_notification_file_pending">Trasferimento in sospeso</string>
     <string name="conversation_notification_file_received">File ricevuto</string>
     <string name="conversation_notification_file_sent">File inviato</string>
@@ -712,9 +738,16 @@ Disponibile a breve"</string>
     <string name="conversation_voice_note_transfert">Nota vocale ricevuta</string>
     <string name="conversation_you_invited">Hai invitato &lt;b>%1$s&lt;/b> alla chat</string>
     <string name="conversation_you_joined_the_chat">Ti sei unito alla chat</string>
+    <string name="copied_group_passphrase">Passphrase copiata</string>
+    <string name="copied_group_passphrase_toast">Copiato negli appunti</string>
     <string name="copy_chat_sender_message">%1$s: %2$s</string>
+    <string name="copy_group_passphrase">Copia</string>
     <string name="create">Crea</string>
     <string name="create_channel">Crea canale</string>
+    <string name="create_non_protected_group_details">Chiunque disponga di BBM può unirsi a questo gruppo.</string>
+    <string name="create_protected_group_details">Solo chi dispone di BBM Protected può unirsi.</string>
+    <string name="create_protected_group_passphrase_details">La persone invitate a unirsi al gruppo devono immettere questa passphrase.</string>
+    <string name="create_protected_group_switch">Gruppo BBM Protected</string>
     <string name="creating_channel_toast_string">Creazione canale</string>
     <string name="creating_private_channel_confirmation">"Quest'azione non può essere annullata. Rendere riservato il canale?"</string>
     <string name="current">Corrente</string>
@@ -748,6 +781,7 @@ Disponibile a breve"</string>
     <string name="dialog_delete_group_label_admin">Tutti i dati del gruppo, inclusi calendario, elenchi, immagini e chat, verranno eliminati per tutti i membri. Impossibile annullare questa azione.</string>
     <string name="dialog_delete_group_label_last">"Sei l'ultimo membro del gruppo. Se decidi di lasciarlo, il gruppo verrà eliminato e tutti i dati correlati verranno cancellati. Questa azione non può essere annullata."</string>
     <string name="dialog_delete_group_option_admin">Eliminare il gruppo?</string>
+    <string name="dialog_ignore_checkbox">Non chiedere più.</string>
     <string name="dialog_invite_security_question_hint"><i>Immetti la risposta qui</i></string>
     <string name="dialog_invite_security_question_tip">Suggerimento: le risposte sono sensibili alla distinzione tra maiuscole e minuscole.</string>
     <string name="dialog_invite_security_question_title">Domanda segreta</string>
@@ -768,7 +802,23 @@ Disponibile a breve"</string>
     <string name="enter_an_address">Immetti un indirizzo</string>
     <string name="enter_comment"><i>Immetti un commento</i></string>
     <string name="enter_date_of_birth">Inserire la data di nascita per accedere a BBM Channels.</string>
+    <string name="enter_passphrase">Immetti passphrase</string>
+    <string name="enter_passphrase_hint"><i>Immetti passphrase</i></string>
     <string name="enter_text"><i>Immetti testo</i></string>
+    <string name="entered_passphrase_incorrect">La passphrase inserita non è corretta.</string>
+    <string name="ephemeral_hint_received">Messaggio a tempo ricevuto. Tocca e tieni premuto per visualizzare.</string>
+    <string name="ephemeral_hint_sent">Messaggio a tempo.</string>
+    <string name="ephemeral_hint_viewed">Messaggio a tempo ricevuto. Scaduto</string>
+    <string name="ephemeral_picker_disabled">Il contatto non utilizza una versione BBM che supporta questa funzione.</string>
+    <string name="ephemeral_picker_title">Imposta timer</string>
+    <string name="ephemeral_picture_expired">Immagine a tempo ricevuta. Scaduto</string>
+    <string name="ephemeral_picture_received">Immagine a tempo ricevuta. Tocca e tieni premuto per visualizzare.</string>
+    <string name="ephemeral_picture_screenshot_alert">Schermata rilevata</string>
+    <string name="ephemeral_picture_sent">Immagine a tempo.</string>
+    <string name="ephemeral_setting">Messaggi a tempo</string>
+    <string name="ephemeral_tech_tip_body">"Imposta un timer per controllare per quanto tempo i contatti possono visualizzare il tuo messaggio o l'immagine prima che si autodistrugga."</string>
+    <string name="ephemeral_tech_tip_title">Messaggi a tempo</string>
+    <string name="ephemeral_unsupport_toast">Timer rimosso. Il tipo di allegato non supporta questa funzione.</string>
     <string name="error_network_failure"><i>Errore di rete</i></string>
     <string name="exit">Esci</string>
     <string name="feature_glympse">Glympse</string>
@@ -790,6 +840,7 @@ Disponibile a breve"</string>
     <string name="file_picker_overwrite_dialog_title">Conferma sovrascrittura</string>
     <string name="file_picker_save_error_dialog_text">Immetti un nome file</string>
     <string name="file_picker_save_error_dialog_title">Errore di salvataggio</string>
+    <string name="file_picker_sd_card_label">Scheda SD</string>
     <string name="file_picker_select_file">Seleziona file</string>
     <string name="file_picker_sort">Ordina</string>
     <string name="file_picker_type">Tipo</string>
@@ -820,7 +871,7 @@ Disponibile a breve"</string>
     <string name="filetransfer_abort_writeerror">Errore di scrittura file.</string>
     <string name="filetransfer_status_downloadispending">Il download è in sospeso...</string>
     <string name="filetransfer_status_file_note_supported">Tipo di file attualmente non supportato</string>
-    <string name="filetransfer_status_higherqualitypicturehasbeenreceived">"È stata ricevuta un'immagine di qualità migliore"</string>
+    <string name="filetransfer_status_higherqualitypicturehasbeenreceived">Immagine HD ricevuta</string>
     <string name="filetransfer_status_nohandlerforfiletype">Nessun handler per questo tipo di file</string>
     <string name="filetransfer_status_picturereceived">Immagine ricevuta</string>
     <string name="filetransfer_status_picturesent">Immagine inviata</string>
@@ -829,12 +880,15 @@ Disponibile a breve"</string>
     <string name="filetransfer_status_picturetransferispending">Trasferimento immagine in sospeso...</string>
     <string name="filetransfer_status_received">%1$s ricevuto</string>
     <string name="filetransfer_status_receiving">Ricezione %1$s</string>
+    <string name="filetransfer_status_receivinghigherqualitypicture">Ricezione immagine HD in corso</string>
     <string name="filetransfer_status_receivingpicture">Ricezione immagine</string>
-    <string name="filetransfer_status_requesthigherquality">"È stata richiesta un'immagine di qualità migliore"</string>
-    <string name="filetransfer_status_requesthigherqualitypicturedenied">Richiesta di immagine di qualità migliore rifiutata</string>
-    <string name="filetransfer_status_requesthigherqualitysent">"È stata inviata un'immagine di qualità migliore"</string>
+    <string name="filetransfer_status_requesthigherquality">"È stata richiesta un'immagine HD"</string>
+    <string name="filetransfer_status_requesthigherqualitypicturecanceled">"L'immagine HD è stata annullata"</string>
+    <string name="filetransfer_status_requesthigherqualitypicturedenied">"L'immagine HD è stata negata"</string>
+    <string name="filetransfer_status_requesthigherqualitypictureexpired">Il trasferimento del file è scaduto</string>
+    <string name="filetransfer_status_requesthigherqualitysent">"È stata inviata un'immagine HD"</string>
     <string name="filetransfer_status_sending">Invio di %1$s</string>
-    <string name="filetransfer_status_sendinghigherqualitypicture">Invio immagine di qualità migliore</string>
+    <string name="filetransfer_status_sendinghigherqualitypicture">Invio immagine HD</string>
     <string name="filetransfer_status_sendingpicture">Invio immagine</string>
     <string name="filetransfer_status_sent">%1$s inviato</string>
     <string name="filetransfer_status_stickerreceived">Adesivo ricevuto</string>
@@ -849,11 +903,14 @@ Disponibile a breve"</string>
     <string name="filetransfer_type_voicenote">Nota vocale</string>
     <string name="filetransfer_type_voicenote_lowercased">nota vocale</string>
     <string name="filter_by">Filtra per</string>
+    <string name="find_friend_allow_upload_dialog_double_check_text">Sicuro? Se non si consente a BBM di accedere ai contatti, sarà necessario aggiungere manualmente i contatti BBM.</string>
+    <string name="find_friend_allow_upload_dialog_double_check_title">Non consigliato</string>
     <string name="find_friend_allow_upload_dialog_title">Trova amici su BBM</string>
-    <string name="find_friend_allow_upload_text">Consenti a BBM di accedere periodicamente ai contatti per aiutarti a trovare gli amici già presenti in BBM. È possibile modificare questa opzione nelle impostazioni BBM in qualsiasi momento.</string>
-    <string name="find_friend_category_get_bbm">Invita in BBM</string>
-    <string name="find_friend_category_invite">Amici trovati</string>
+    <string name="find_friend_allow_upload_text">Consenti a BBM di accedere ai contatti per aiutarti a trovare e aggiungere gli amici.</string>
+    <string name="find_friend_category_get_bbm">Invita a effettuare il download</string>
+    <string name="find_friend_category_invite">Tocca per aggiungere</string>
     <string name="find_friends">Trova amici su BBM</string>
+    <string name="find_more_friends">Trova altri amici</string>
     <string name="first_launch_after_upgrade_privacy_terms">"Accetto l'&lt;b>&lt;a href=http://www.blackberry.com/legal/privacy>Informativa sulla privacy&lt;/a>&lt;/b> e i &lt;b>&lt;a href=http://www.blackberry.com/legal/bbm-tos>Termini di servizio&lt;/a>&lt;/b>"</string>
     <string name="first_launch_after_upgrade_subtitle">Rendi più divertenti le tue chat BBM con gli adesivi. Disponibili ora.</string>
     <string name="first_launch_after_upgrade_title">Invia adesivi.</string>
@@ -873,7 +930,7 @@ Disponibile a breve"</string>
     <string name="glympse_expires_in_less_than_an_hour">Scade tra %1$d minuti</string>
     <string name="glympse_expires_in_min">Scade tra %1$s min.</string>
     <string name="glympse_expires_in_more_than_an_hour">Scade tra %1$d:%2$s</string>
-    <string name="glympse_follow_my_location_in_real_time_on_a_map">Seguire la posizione su una mappa?</string>
+    <string name="glympse_follow_my_location_in_real_time_on_a_map">Desideri seguire la mia posizione su una mappa?</string>
     <string name="glympse_invalid_invite_code">Codice invito non valido</string>
     <string name="glympse_loading">Caricamento in corso...</string>
     <string name="glympse_minutes_remaining">%1$d min rimanente/i</string>
@@ -932,6 +989,7 @@ Disponibile a breve"</string>
     <string name="group_admin_about">Informazioni sugli amministratori dei gruppi</string>
     <string name="group_admin_text">Gli amministratori possono effettuare le seguenti operazioni:</string>
     <string name="group_barcode_info">Un contatto può acquisire il codice a barre di un utente per entrare nel suo gruppo</string>
+    <string name="group_barcode_scan_rejected_user_not_protected">"Non disponi dell'autorizzazione per unirti al gruppo."</string>
     <string name="group_cancel">Annulla</string>
     <string name="group_chat_exists">Argomento chat già presente</string>
     <string name="group_chat_general_discussion">Discussione generale</string>
@@ -980,7 +1038,7 @@ Disponibile a breve"</string>
     <string name="group_events_status_text">Nessun evento</string>
     <string name="group_events_subject"><i>Oggetto</i></string>
     <string name="group_events_time_notice">"L'orario di fine deve essere successivo all'orario di inizio"</string>
-    <string name="group_invitation_was_received">Sei stato invitato in un gruppo Glympse</string>
+    <string name="group_invitation_was_received">Sei stato invitato in un gruppo di Glympse</string>
     <string name="group_invite_bbg_uri">%1$s</string>
     <string name="group_invite_email_message">"-----\ufffc----
 Desidero invitarti a entrare nel mio gruppo chiamato %1$s.
@@ -989,7 +1047,11 @@ Se utilizzi un dispositivo Android o iPhone, fai clic su %2$s per entrare nel gr
 
 %3$s"</string>
     <string name="group_invite_email_subject">Entra nel mio BlackBerry Group!</string>
+    <string name="group_invite_enter_passphrase">Per unirsi a questo gruppo, è necessario immettere la passphrase fornita da un membro del gruppo.</string>
+    <string name="group_invite_enter_passphrase_multi_attempts">Passphrase errata. Per unirsi a questo gruppo, è necessario immettere la passphrase fornita da un membro del gruppo. (%1$d/%2$d)</string>
     <string name="group_invite_message_default">Desidero invitarti a entrare nel mio gruppo chiamato: %1$s</string>
+    <string name="group_invite_status_enter_passphrase_max_attempts_reached">"Passphrase errata. Per entrare nel gruppo è necessario ricevere nuovamente l'invito."</string>
+    <string name="group_invite_status_enter_passphrase_multi_attempts">Passphrase errata. Per unirsi a questo gruppo, è necessario immettere la passphrase fornita da un membro del gruppo.</string>
     <string name="group_invite_www_uri">http://%1$s</string>
     <string name="group_leave">Lascia %1$s</string>
     <string name="group_leave_admin">Tutti i dati del gruppo, inclusi calendario, elenchi, immagini e chat, verranno eliminati per tutti i membri. Questa azione non può essere annullata.</string>
@@ -997,6 +1059,7 @@ Se utilizzi un dispositivo Android o iPhone, fai clic su %2$s per entrare nel gr
     <string name="group_leave_default">Lasciare il gruppo?</string>
     <string name="group_leave_lastmember">"Sei l'ultimo membro. Se decidi di lasciarlo, il gruppo verrà eliminato e tutti i dati correlati verranno cancellati. Questa azione non può essere annullata."</string>
     <string name="group_like_picture">"Mi piace l'immagine"</string>
+    <string name="group_likes_this_picture">ha messo Mi piace a questa immagine.</string>
     <string name="group_list_item_filter_all">Tutto (%1$s)</string>
     <string name="group_list_item_filter_assignedtome">Assegnato a me</string>
     <string name="group_list_item_filter_complete">Completato (%1$s)</string>
@@ -1022,7 +1085,11 @@ Se utilizzi un dispositivo Android o iPhone, fai clic su %2$s per entrare nel gr
     <string name="group_lobby_lists_no_due_date">Nessuna data di scadenza</string>
     <string name="group_lobby_pictures">Immagini</string>
     <string name="group_lobby_pictures_count">Immagini (%1$d)</string>
+    <string name="group_max_limit">"L'utente è presente in %1d gruppi. È necessario abbandonare un gruppo prima di partecipare a un altro o crearne uno nuovo."</string>
     <string name="group_max_members">Numero massimo di membri raggiunto</string>
+    <string name="group_passphrase">Passphrase gruppo</string>
+    <string name="group_passphrase_info">È possibile condividere la passphrase che deve essere inserita dalle persone invitate a unirsi al gruppo.</string>
+    <string name="group_passphrase_missing">Passphrase N/D</string>
     <string name="group_picture_add">Aggiungi immagine</string>
     <string name="group_picture_added_days">Aggiunto %1$d giorni fa da %2$s</string>
     <string name="group_picture_added_today">Aggiunto oggi alle %1$s da %2$s</string>
@@ -1093,9 +1160,14 @@ Se utilizzi un dispositivo Android o iPhone, fai clic su %2$s per entrare nel gr
     <string name="groups_restore_unrecoverable">Non esistono altri membri nel gruppo. In alternativa, chiedere a un membro del gruppo di essere nuovamente invitato.</string>
     <string name="groups_settings_edit">Modif.</string>
     <string name="groups_unknown_name">Gruppo sconosciuto</string>
+    <string name="hd_button_text_bottom">HD</string>
+    <string name="hd_button_text_top">Richiesta</string>
+    <string name="hdimage_prompt_message">Desideri accettare automaticamente le future richieste HD?</string>
+    <string name="hdimage_prompt_title">Accetta sempre richieste</string>
     <string name="help">Guida</string>
-    <string name="help_url">http://docs.blackberry.com/bbm/22/android/it</string>
+    <string name="help_url">http://docs.blackberry.com/bbm/25/android/it</string>
     <string name="high_priority">Priorità alta</string>
+    <string name="hint_protected_enabled_chat"><i>Protetto. Immetti messaggio</i></string>
     <string name="history_clear_one_history_text">Cancella</string>
     <string name="history_clear_text">Cancella cronologia</string>
     <string name="history_email_title">Cronologia scansioni codici a barre</string>
@@ -1103,9 +1175,17 @@ Se utilizzi un dispositivo Android o iPhone, fai clic su %2$s per entrare nel gr
     <string name="history_empty_detail">Nessun scansioni di codici a barre sono stati registrati</string>
     <string name="history_send">Invia cronologia</string>
     <string name="history_title">Cronologia</string>
+    <string name="home_page_view_all_string">Visualizza tutto</string>
     <string name="if_youre_an_existing_bbm_user_you_can_restore_bbm">Se si è già un utente BBM, è possibile ripristinare BBM. Se è la prima volta che si utilizza BBM, iniziare dal principio.</string>
     <string name="ignore_complaint">Ignora reclamo</string>
     <string name="ignore_invitation">"Ignorare l'invito?"</string>
+    <string name="inapp_upgrade_dialog_body_text">Si sta utilizzando una versione non aggiornata di BBM. Aggiornare alla versione più recente di BBM per ottenere nuove funzionalità e correzioni.</string>
+    <string name="inapp_upgrade_dialog_body_text2">Questa funzione richiede una versione aggiornata di BBM.</string>
+    <string name="inapp_upgrade_dialog_cancel_button">Annulla</string>
+    <string name="inapp_upgrade_dialog_ignore_button">Ignora</string>
+    <string name="inapp_upgrade_dialog_title">Aggiorna BBM</string>
+    <string name="inapp_upgrade_dialog_update_button">Aggiorna</string>
+    <string name="inapp_upgrade_dialog_update_url">http://www.bbm.com/update</string>
     <string name="incoming_call_accept">Rispondi</string>
     <string name="incoming_call_decline">Rifiuta</string>
     <string name="incoming_call_type_voice">BBM Voice</string>
@@ -1113,6 +1193,9 @@ Se utilizzi un dispositivo Android o iPhone, fai clic su %2$s per entrare nel gr
     <string name="introducing_channels_first_part">Con BBM, è possibile mettersi in contatto con i propri fan, amici e clienti in un canale utilizzando post e immagini.</string>
     <string name="introducing_channels_second_part">Gli abbonati ricevono le informazioni più recenti direttamente in BBM e possono condividere i propri pensieri.</string>
     <string name="introducing_channels_title">Introduzione di BBM Channels</string>
+    <string name="invalid_passphrase_toast">Passphrase non valida</string>
+    <string name="invitation_rejected_invitee_not_protected_message">%1$s non può unirsi al gruppo. Solo i contatti BBM Protected possono partecipare.</string>
+    <string name="invitation_rejected_invitee_not_protected_title">"Impossibile invitare l'utente a unirsi"</string>
     <string name="invitation_sent">Invito inviato</string>
     <string name="invite">Invita</string>
     <string name="invite_activity_category">Categoria</string>
@@ -1131,7 +1214,7 @@ Per raggiungermi su BBM, fai clic su
     <string name="invite_activity_security_label">Domanda segreta</string>
     <string name="invite_activity_sms_body">Aggiungimi a BBM! Se utilizzi un dispositivo BlackBerry, fai clic sul pin %1$s e seleziona \"Invita a BBM\". Se utilizzi un dispositivo Android o iPhone, fai clic su www.pin.bbm.com/%1$s per aggiungermi o per scaricare BBM.</string>
     <string name="invite_activity_to">A:</string>
-    <string name="invite_bbm_contact">Invita contatto BBM</string>
+    <string name="invite_bbm_contact">Aggiungi contatto BBM</string>
     <string name="invite_bbm_invites">Inviti BBM</string>
     <string name="invite_button_join">Iscriviti</string>
     <string name="invite_button_preview">Anteprima</string>
@@ -1148,11 +1231,11 @@ Per raggiungermi su BBM, fai clic su
     <string name="invite_group_invites">Inviti di gruppo</string>
     <string name="invite_group_notification">Nuovo invito BBM Group</string>
     <string name="invite_menu_choose_email_client">Scegli indirizzo e-mail</string>
-    <string name="invite_menu_invite_barcode">Invita con Barcode Scan</string>
-    <string name="invite_menu_invite_email">Invita tramite e-mail</string>
-    <string name="invite_menu_invite_nfc">Invita mediante NFC</string>
-    <string name="invite_menu_invite_pin">Invita tramite PIN</string>
-    <string name="invite_menu_invite_sms">Invita tramite SMS</string>
+    <string name="invite_menu_invite_barcode">Aggiungi tramite Barcode Scan</string>
+    <string name="invite_menu_invite_email">Aggiungi tramite e-mail</string>
+    <string name="invite_menu_invite_nfc">Aggiungi tramite NFC</string>
+    <string name="invite_menu_invite_pin">Aggiungi tramite PIN</string>
+    <string name="invite_menu_invite_sms">Aggiungi tramite SMS</string>
     <string name="invite_menu_title">Invia un invito a BBM</string>
     <string name="invite_message">Messaggio:</string>
     <string name="invite_message_default">Desidero invitarti alla chat tramite BBM.</string>
@@ -1167,7 +1250,8 @@ Per raggiungermi su BBM, fai clic su
     <string name="invite_send_button">Invia</string>
     <string name="invite_sms_contacts">Invita contatti SMS</string>
     <string name="invite_sponsored_invites">Inviti sponsorizzati</string>
-    <string name="invite_to_bbm">Invita a BBM</string>
+    <string name="invite_to_bbm">Aggiungi contatto</string>
+    <string name="invite_to_bbm_scan_barcode">Acquisisci codice a barre</string>
     <string name="invite_type_email">Invito e-mail</string>
     <string name="invite_your_friends_to_chat_over_bbm">Invita gli amici a chattare tramite BBM</string>
     <string name="invitemore">Invita altri</string>
@@ -1184,7 +1268,19 @@ Per raggiungermi su BBM, fai clic su
     <string name="join_channel_menu">Acquisisci per partecipare</string>
     <string name="join_channel_preview">Iscriviti</string>
     <string name="join_channel_toast_string">Iscriviti al canale per visualizzare i commenti e le immagini in formato originale.</string>
+    <string name="join_chat">Partecipa alla chat</string>
     <string name="join_group_button">Unisciti al gruppo</string>
+    <string name="key_exchange_accepted">Passphrase accettata.</string>
+    <string name="key_exchange_canceled">La passphrase è stata annullata.</string>
+    <string name="key_exchange_canceled_by_contact">&lt;b>%1$s&lt;/b> ha annullato la passphrase.</string>
+    <string name="key_exchange_canceled_by_user">Hai annullato la passphrase.</string>
+    <string name="key_exchange_failed_canceled">Passphrase annullata</string>
+    <string name="key_exchange_failed_max_attempts">Massimo numero di tentativi raggiunto</string>
+    <string name="key_exchange_hint_share">Condividi passphrase nella chat</string>
+    <string name="key_exchange_hint_waiting_passphrase_confirmation">Passphrase inserita</string>
+    <string name="key_exchange_hint_waiting_to_enter_passphrase">Immetti la passphrase per partecipare</string>
+    <string name="key_exchange_hint_waiting_to_join">In attesa che %1$s partecipi</string>
+    <string name="key_exchange_status_accepted">Passphrase accettata</string>
     <string name="learn_more_about_bbm_pins">Ulteriori informazioni sui PIN BBM</string>
     <string name="learn_more_about_restoring_bbm_data">Ulteriori informazioni sul ripristino dei dati BBM.</string>
     <string name="leave_channel">Abbandona canale</string>
@@ -1192,6 +1288,10 @@ Per raggiungermi su BBM, fai clic su
     <string name="leave_channel_warning">Se si lascia il canale, non sarà possibile commentare i post fino al nuovo accesso</string>
     <string name="leave_label">Abbandona</string>
     <string name="legal_activity_title">Settore legale</string>
+    <string name="limited_bbm_access">Accesso BBM limitato</string>
+    <string name="limited_bbm_access_info">Connessione in corso</string>
+    <string name="limited_network_connection">Connessione di rete limitata</string>
+    <string name="limited_network_connection_info">"Spostarsi in un'area con migliore copertura oppure cercare di stabilire la connessione a una rete Wi-Fi."</string>
     <string name="list_item_edit_added_by">Aggiunto da: %1$s</string>
     <string name="list_item_edit_last_edited_by">Ultima modifica di: %1$s</string>
     <string name="location_service_acquiring">Acquisizione posizione</string>
@@ -1200,7 +1300,7 @@ Per raggiungermi su BBM, fai clic su
     <string name="location_service_dialog_right_button">Impostazioni</string>
     <string name="location_service_dialog_title">Servizi di posizionamento disattivati</string>
     <string name="location_service_failed">Impossibile acquisire la posizione</string>
-    <string name="low_battey_warning">In pausa perché la batteria è scarica, fai clic qui per riprendere.</string>
+    <string name="low_battey_warning">In pausa a causa della batteria scarica, clicca per riprendere.</string>
     <string name="low_priority">Priorità bassa</string>
     <string name="main_mood_status_format">%1$s - %2$s</string>
     <string name="main_status_available">Disponibile</string>
@@ -1221,6 +1321,10 @@ Per raggiungermi su BBM, fai clic su
     <string name="message_button_decline">Rifiuta</string>
     <string name="message_button_deny">Nega</string>
     <string name="message_copied">Messaggio copiato</string>
+    <string name="message_recall_tech_tip_body">"Non desideravi inviare il messaggio?
+Tocca e tieni premuto il messaggio per ritirarlo dalla chat BBM del destinatario."</string>
+    <string name="message_recall_tech_tip_title">Ritira messaggi</string>
+    <string name="message_recall_toast_not_supported">Il contatto non utilizza una versione BBM che supporta questa funzione.</string>
     <string name="message_resent">Messaggio reinviato</string>
     <string name="message_with_context_attachment_text">%1$s %2$s</string>
     <string name="message_with_context_avatar">"Informazioni sull'immagine visualizzata"</string>
@@ -1236,7 +1340,7 @@ Per raggiungermi su BBM, fai clic su
     <string name="msg_default_meta">Metadati</string>
     <string name="msg_default_mms_subject">Ciao</string>
     <string name="msg_default_status">Posiziona un codice a barre dentro il mirino rettangolare per la scansione.</string>
-    <string name="msg_default_time">Tempo</string>
+    <string name="msg_default_time">Ora</string>
     <string name="msg_default_type">Tipo</string>
     <string name="msg_encode_contents_failed">Impossibile codificare un codice a barre dai dati forniti.</string>
     <string name="msg_google_books">Google Libri</string>
@@ -1244,6 +1348,7 @@ Per raggiungermi su BBM, fai clic su
     <string name="msg_google_shopper_missing">Google Shopper non è installato</string>
     <string name="msg_install_google_shopper">Google Shopper combina la scansione dei codici a barre con prezzi locali e online, recensioni e altro senza dover aprire il browser. Vuoi provare?</string>
     <string name="msg_intent_failed">"Spiacenti, l'applicazione richiesta non può essere avviata. Il contenuto del codice a barre può essere non valido."</string>
+    <string name="msg_no_camera_detected">Nessuna fotocamera rilevata</string>
     <string name="msg_redirect">Inoltra</string>
     <string name="msg_sbc_book_not_searchable">Spiacenti, questo libro non è ricercabile.</string>
     <string name="msg_sbc_failed">Spiacenti, la ricerca ha avuto un problema.</string>
@@ -1321,9 +1426,17 @@ Per raggiungermi su BBM, fai clic su
     <string name="num_contacts">%1$s contatti</string>
     <string name="ok">OK</string>
     <string name="open">Apri</string>
+    <string name="open_browser_ad_menu">Apri in browser</string>
     <string name="open_in_bbm">Apri in BBM</string>
     <string name="openchat">Apri chat</string>
     <string name="opening_bbm">Apertura di BBM</string>
+    <string name="out_of_band_passphrase_message_email">"Desidero avviare una chat BBM con te. La passphrase è:
+
+%1$s 
+
+Sui dispositivi BlackBerry, toccare il pin:%2$s e immettere la passphrase."</string>
+    <string name="out_of_band_passphrase_message_sms">Desidero avviare una chat BBM Protected con te. Su un dispositivo BlackBerry, toccare %1$s. Immettere la passphrase %2$s.</string>
+    <string name="out_of_band_passphrase_subject">Chat BBM Protected</string>
     <string name="overlay_bbm_ongoing_notification_reason">"Perché viene visualizzata l'icona BBM nella parte superiore dello schermo?
 
 L'icona BBM viene visualizzata nella barra di stato in quanto BBM è sempre attivo; in questo modo l'utente è sempre connesso."</string>
@@ -1333,16 +1446,60 @@ L'icona BBM viene visualizzata nella barra di stato in quanto BBM è sempre atti
     <string name="overlay_tap_to_continue">Tocca per continuare</string>
     <string name="owned_channel_invite_default_message_private">Desidero invitarti a entrare nel mio canale chiamato \"%1$s\" (Riservato).</string>
     <string name="owned_channel_invite_default_message_public">Desidero invitarti a entrare nel mio canale chiamato \"%1$s\".</string>
-    <string name="pending_group_invite_declined">Invito rifiutato</string>
+    <string name="partner_app_contact_no_regid_message">Funzione non supportata per questo contatto.</string>
+    <string name="partner_app_general_error_dialog_message">Richiesta non riuscita, riprovare.</string>
+    <string name="partner_app_invalid_request_dialog">Richiesta non valida</string>
+    <string name="partner_app_invalid_request_dialog_button">OK</string>
+    <string name="partner_app_invalid_request_dialog_title">Richiesta non valida</string>
+    <string name="partner_app_not_installed_dialog_button_cancel">Annulla</string>
+    <string name="partner_app_not_installed_dialog_button_ok">Scarica</string>
+    <string name="partner_app_not_installed_dialog_message">"Quest'applicazione non è installata. Desideri scaricarlo?"</string>
+    <string name="partner_app_not_installed_dialog_title">Scarica %1$s</string>
+    <string name="partner_app_not_registered_dialog_button_cancel">Annulla</string>
+    <string name="partner_app_not_registered_dialog_button_ok">Consenti</string>
+    <string name="partner_app_not_registered_dialog_message">"Desideri autorizzare l'applicazione %1$s ad accedere all'elenco contatti BBM e inviare notifiche?"</string>
+    <string name="partner_app_not_registered_dialog_title">Non registrato su BBM</string>
+    <string name="partner_app_notification_message">Nuovo messaggio</string>
+    <string name="partner_app_notification_name_message">Messaggio %1$s</string>
+    <string name="partner_app_register_dialog_button_cancel">Annulla</string>
+    <string name="partner_app_register_dialog_button_ok">Consenti</string>
+    <string name="partner_app_register_dialog_message">"Desideri autorizzare l'applicazione %1$s ad accedere all'elenco contatti BBM e inviare notifiche?"</string>
+    <string name="partner_app_register_dialog_title">Registrati su BBM</string>
+    <string name="partner_app_register_failed_dialog_button">OK</string>
+    <string name="partner_app_register_failed_dialog_message">Impossibile registrare %1$s su BBM</string>
+    <string name="partner_app_register_failed_dialog_outage_message">Nessuna connessione di rete rilevata</string>
+    <string name="partner_app_register_failed_dialog_title">Registrati su BBM</string>
+    <string name="passphrase">Passphrase</string>
+    <string name="passphrase_creation_details">Condividere la passphrase con il contatto BBM per partecipare alla chat. Deve contenere almeno 4 maiuscole.</string>
+    <string name="passphrase_incorrect">&lt;b>%1$s&lt;/b> non ha inserito la passphrase corretta.</string>
+    <string name="passphrase_initiated">La passphrase &lt;b>%1$s&lt;/b> è stata condivisa con &lt;b>%2$s&lt;/b>.</string>
+    <string name="passphrase_message_email">"Desidero avviare una chat BBM Protected con te.
+---o---
+Immetti la passphrase \"%1$s\" dopo aver selezionato il pin: %2$s o %3$s"</string>
+    <string name="passphrase_message_sms">Partecipa alla mia chat BBM Protected. Immetti la passphrase \"%1$s\" dopo aver selezionato il pin: %2$s o %3$s</string>
+    <string name="passphrase_rules_details">Deve contenere tre gruppi di lettere, da quattro a sette maiuscole in ogni gruppo, separate da uno spazio. Esempio TIGRI MARRONE SCURO</string>
+    <string name="passphrase_share_details">Come desideri condividere la passphrase con %1$s?</string>
+    <string name="passphrase_wait_to_join">In attesa che &lt;b>%1$s&lt;/b> partecipi.</string>
+    <string name="pay_with_blackberry">Utilizza Fatturazione gestore</string>
+    <string name="pay_with_google_play">Utilizza Google Play</string>
+    <string name="pending_group_invite_accepted">Accettato: %1$s</string>
+    <string name="pending_group_invite_declined">Invito rifiutato: %1$s</string>
+    <string name="pending_group_invite_failed">"Impossibile eseguire l'iscrizione: %1$s"</string>
+    <string name="pending_group_invite_verifying">Verifica risposta: %1$s</string>
+    <string name="pending_group_invite_verifying_passphrase">Verifica della passphrase: %1$s</string>
     <string name="pending_invite_accepted">Accettato</string>
     <string name="pending_invite_answer_incorrect">Risposta errata</string>
     <string name="pending_invite_answer_incorrect_dialog">Risposta alla domanda segreta errata. Invito annullato</string>
     <string name="pending_invite_declined">Invito rifiutato</string>
     <string name="pending_invite_deleted">Invito eliminato</string>
+    <string name="pending_invite_group_incorrect_answer">"Risposta errata. Per entrare nel gruppo è necessario ricevere nuovamente l'invito."</string>
     <string name="pending_invite_group_invites_you_to">%1$s desidera invitarti a entrare nel gruppo \"%2$s\".</string>
+    <string name="pending_invite_group_no_invitation">Negato: %1$s ha eliminato questo invito.</string>
     <string name="pending_invite_group_pending">In sospeso: %1$s</string>
     <string name="pending_invite_group_title">Invita a %1$s</string>
+    <string name="pending_invite_group_too_many_members">Negato: Il gruppo è al completo.</string>
     <string name="pending_invite_pending">In sospeso</string>
+    <string name="pending_invite_protected_group_invites_you_to">%1$s desidera invitarti a entrare nel gruppo \"%2$s\". Per unirsi a questo gruppo BBM Protected, è necessario immettere la passphrase fornita da un membro del gruppo.</string>
     <string name="personalize_profile_dialog_message">È possibile toccare il banner per aprire il profilo BBM.</string>
     <string name="personalize_profile_dialog_title">Personalizza il tuo profilo</string>
     <string name="pic_caption_hint"><i>Immetti una didascalia</i></string>
@@ -1353,7 +1510,7 @@ L'icona BBM viene visualizzata nella barra di stato in quanto BBM è sempre atti
     <string name="posts_caption">Post</string>
     <string name="pref_add_contact_on_tap">Aggiungi contatti al tocco</string>
     <string name="pref_all_notifications">Tutte le notifiche</string>
-    <string name="pref_allow_contact_upload">Consenti il caricamento dei contatti</string>
+    <string name="pref_allow_contact_upload">Trova amici che utilizzano già BBM</string>
     <string name="pref_allow_mobile_calls">Consenti chiamate BBM tramite le reti mobili</string>
     <string name="pref_led_notifications">Colore LED</string>
     <string name="pref_led_notifications_blue">Blu</string>
@@ -1376,6 +1533,7 @@ L'icona BBM viene visualizzata nella barra di stato in quanto BBM è sempre atti
     <string name="pref_sound_notifications">Suoneria</string>
     <string name="pref_sticky_notification">Icona BBM Connesso</string>
     <string name="pref_sticky_notification_warning">"Quando viene spenta l'icona BBM Connesso, i messaggi BBM potrebbero non essere consegnati o arrivare in ritardo se la memoria del dispositivo è scarsa."</string>
+    <string name="pref_swilt">Mostra file in ascolto</string>
     <string name="pref_vibrate_notifications">Vibrazione</string>
     <string name="preferences_actions_title">Quando viene trovato un codice a barre…</string>
     <string name="preferences_auto_focus_title">Utilizzare messa a fuoco automatica</string>
@@ -1432,6 +1590,24 @@ L'icona BBM viene visualizzata nella barra di stato in quanto BBM è sempre atti
     <string name="profile_share_pin">Condividi il mio PIN</string>
     <string name="profile_status_edit">Modifica messaggi di stato</string>
     <string name="profile_status_label">Stato:</string>
+    <string name="prompt_change_bbm_picture">"Cambiare l'immagine BBM?"</string>
+    <string name="prompted_after_rate_call">Grazie!</string>
+    <string name="prompted_before_rate_call">Esprimi un giudizio sulla qualità della chiamata</string>
+    <string name="protected_group_invite_message_default">Desidero invitarti a entrare nel mio gruppo chiamato: \"%1$s\". Per unirsi a questo gruppo BBM Protected, è necessario immettere la passphrase fornita da un membro del gruppo.</string>
+    <string name="protected_group_requires_join">In attesa della conferma della passphrase per ripristinare il gruppo protetto</string>
+    <string name="protected_mode_disabled_header">BBM Protected disattivato</string>
+    <string name="protected_mode_disabled_message">I tuoi contatti e le tue chat sono stati salvati, ma sei stato rimosso dalle chat di gruppo e dai gruppi che utilizzano BBM Protected.</string>
+    <string name="protected_mode_disabled_title">"L'amministratore ha disattivato BBM Protected."</string>
+    <string name="protected_mode_enabled_header">BBM Protected</string>
+    <string name="protected_mode_enabled_message">"BBM Protected ha aggiunto un ulteriore livello di crittografia a chat BBM, trasferimenti file e gruppi. Al prossimo avvio di una chat con un contatto BBM Protected, sarà necessario specificare una passphrase che l'altro contatto dovrà inserire per partecipare. Basterà specificare la passphrase una volta sola per ogni contatto BBM Protected. 
+ 
+ Per BBM Groups, è possibile scegliere se limitare o meno il numero di contatti BBM Protected. Se si crea un gruppo BBM Protected, è possibile condividere la passphrase da inserire per partecipare."</string>
+    <string name="protected_mode_enabled_title">"L'amministratore ha attivato BBM Protected sul dispositivo."</string>
+    <string name="purchase_failed_message">Impossibile elaborare il pagamento. Desideri selezionare un altro metodo di pagamento?</string>
+    <string name="purchase_options">Opzioni di pagamento</string>
+    <string name="purchase_success_message">"L'elemento è stato acquistato!"</string>
+    <string name="purchase_unexpected_error_message">"L'acquisto è stato interrotto. Riprova."</string>
+    <string name="pyk_empty_invites_allow_upload_hint">Trova amici che utilizzano già BBM</string>
     <string name="qr_description">UsersQR</string>
     <string name="quick_share_glympse_first_experience_overlay_infos">Invia un Glympse per consentire a un contatto BBM di seguire la tua posizione su una mappa per il periodo di tempo selezionato. Perfetto per quando hai un appuntamento o sei in ritardo.</string>
     <string name="quick_share_glympse_first_experience_overlay_note"><i>"Nota: quando si usa questa funzionalità le coordinate GPS vengono condivise con Glympse Inc. e saranno soggette all' "<a href="http://glympse.com/privacy">informativa sulla privacy</a></i></string>
@@ -1444,7 +1620,12 @@ L'icona BBM viene visualizzata nella barra di stato in quanto BBM è sempre atti
     <string name="quick_share_voice_note_label_delete">Rilasciare per eliminare</string>
     <string name="quick_share_voice_note_label_send">Rilasciare per inviare o scorrere per annullare</string>
     <string name="quick_share_voice_note_tost_message">Per inviare una nota vocale istantanea, toccare e tenere premuto il pulsante di registrazione</string>
-    <string name="rate_limited">Limite valutazione Glympse raggiunto.</string>
+    <string name="rate_limited">È stato raggiunto il limite di Glympse consecutivi consentiti.</string>
+    <string name="rate_my_app_ignore">No grazie</string>
+    <string name="rate_my_app_message">"Se sei soddisfatto dell'utilizzo di BBM, ti preghiamo di dedicarci qualche minuto per valutare l'applicazione. Grazie."</string>
+    <string name="rate_my_app_rate_now">Valuta ora</string>
+    <string name="rate_my_app_remind_later">Visualizza in seguito</string>
+    <string name="rate_my_app_title">Valuta questa applicazione</string>
     <string name="received_pending_group_invite_ignore">Ignora invito al gruppo da parte di %1$s?</string>
     <string name="received_pending_invite_accept">Accetta</string>
     <string name="received_pending_invite_category">Categoria</string>
@@ -1452,11 +1633,12 @@ L'icona BBM viene visualizzata nella barra di stato in quanto BBM è sempre atti
     <string name="received_pending_invite_pin">PIN %1$s</string>
     <string name="received_pending_invite_title">Invito a BBM</string>
     <string name="recent_pictures">Commenti recenti</string>
-    <string name="remaining_details">Visualizzatori: %1$d recenti, %2$d totali</string>
-    <string name="remaining_title">Glympse: tempo rimanente %1$s</string>
+    <string name="remaining_details">Che guardano: %1$d recenti, %2$d in totale</string>
+    <string name="remaining_title">Glympse: rimangono ancora %1$s</string>
     <string name="remaining_title_glympse">Glympse</string>
     <string name="remove">Rimuovi</string>
     <string name="replace_picture">Sostituisci immagine</string>
+    <string name="reply_with_a_glympse">Rispondi con un Glympse?</string>
     <string name="report_channel">Riporta canale</string>
     <string name="report_problem_activity_choose_email_client">Scegli indirizzo e-mail</string>
     <string name="report_problem_activity_email_button">Invia report tramite e-mail</string>
@@ -1484,8 +1666,9 @@ http://blackberry.com/support/bbm"</string>
     <string name="report_problem_activity_your_report_info_was_secured">Le informazioni del report sono state crittografate in modo sicuro per proteggerle durante il trasferimento.</string>
     <string name="reports_caption">Segnalati (%1d)</string>
     <string name="reports_caption_none">Segnalati</string>
-    <string name="request_was_received">Hai ricevuto una richiesta Glympse</string>
+    <string name="request_was_received">Hai ricevuto una richiesta di Glympse</string>
     <string name="required_fields">Campi obbligatori*</string>
+    <string name="resend_passphrase">Rinvia passphrase</string>
     <string name="restore_sticker_purchases">Ripristina</string>
     <string name="restore_using_device_switch">Ripristina tramite Cambio dispositivo</string>
     <string name="restore_using_email">Ripristina tramite E-mail</string>
@@ -1513,7 +1696,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="save_picture_to_gallery_space_error">"Impossibile salvare l'immagine. Verificare che sia presente sufficiente spazio e riprovare."</string>
     <string name="save_picture_to_gallery_success">Salvato nella galleria</string>
     <string name="sbc_name">Ricerca Google Book</string>
-    <string name="scanToInvite">Cerca per invitare</string>
+    <string name="scanToInvite">Acquisisci per invitare</string>
     <string name="scan_to_invite">Cerca per invitare</string>
     <string name="scan_to_join">Acquisisci per partecipare</string>
     <string name="search">Cerca</string>
@@ -1531,8 +1714,10 @@ http://blackberry.com/support/bbm"</string>
     <string name="select_category">Seleziona categoria</string>
     <string name="select_category_with_count">%1$s (%2$d)</string>
     <string name="select_contact">Seleziona contatto</string>
+    <string name="select_contact_activity_protected_title">Protetto(%1$s)</string>
     <string name="select_contact_activity_title">{0,choice,0#Seleziona contatti|1#+1 Contatto|1&lt;+{0} Contatti}</string>
     <string name="select_contact_all_filtered">Nessun contatto trovato.</string>
+    <string name="select_contacts_for_existing_protected_chat">Questa chat è protetta. Solo gli utenti BBM Protected possono partecipare.</string>
     <string name="select_contacts_to_move">Seleziona i contatti da spostare in \"%1$s\":</string>
     <string name="select_group">Seleziona gruppo</string>
     <string name="select_group_activity_title">{0,choice,0#Seleziona gruppo|1#+1 Gruppo|1&lt;+{0} Gruppi}</string>
@@ -1552,6 +1737,7 @@ http://blackberry.com/support/bbm"</string>
     <string name="setas_activity_picture_set_as_wallpaper">Immagine impostata come sfondo</string>
     <string name="setas_activity_title">Imposta come</string>
     <string name="settings">Impostazioni</string>
+    <string name="settings_activity_allow_hq_pictures">Accetta sempre richieste immagini HD</string>
     <string name="settings_activity_blackberry_id_edit">Modifica</string>
     <string name="settings_activity_blackberry_id_generic_error">Attualmente non è possibile modificare BlackBerry ID. Riprovare in seguito.</string>
     <string name="settings_activity_blocked_contacts">Contatti e feed bloccati</string>
@@ -1585,9 +1771,11 @@ http://blackberry.com/support/bbm"</string>
     <string name="setup_learn_more_about_blackberry_id">Ulteriori informazioni su BlackBerry ID</string>
     <string name="setup_not_completed">Hai quasi completato la configurazione di &lt;b>BBM.&lt;/b></string>
     <string name="setup_report_problem">Segnala problema</string>
+    <string name="setup_running_long">"L'installazione di BBM sta richiedendo più tempo del previsto. Nuovo tentativo in corso."</string>
     <string name="setup_setting_up_bbm">Configurazione di &lt;b>BBM&lt;/b></string>
     <string name="setup_share_bbm_message">Fai sapere agli amici che adesso BBM è disponibile per Android e iOS</string>
     <string name="setup_sign_in">Accedi</string>
+    <string name="setup_verify_connection">Verifica della connessione in corso.</string>
     <string name="setup_you_need_to_signin_to_blackberry_id">"È necessario accedere utilizzando BlackBerry ID per utilizzare la seguente applicazione:
 BBM"</string>
     <string name="share">Condividi</string>
@@ -1597,11 +1785,16 @@ BBM"</string>
     <string name="share_my_pin_text">"\#BBMme PIN: %1$s
 www.pin.bbm.com/%1$s"</string>
     <string name="share_name">Condividi tramite codice a barre</string>
+    <string name="share_passphrase_email">E-mail</string>
+    <string name="share_passphrase_other">Di persona</string>
+    <string name="share_passphrase_sms">Messaggio di testo</string>
+    <string name="share_passphrase_title">Condividi passphrase</string>
     <string name="sharead_sponsored_invite">Invito sponsorizzato condiviso</string>
     <string name="sharead_sponsored_post">Post sponsorizzato condiviso</string>
     <string name="shared_channel_post_default_text">Post canale condiviso</string>
     <string name="shared_channel_post_received">Post canale ricevuto</string>
     <string name="shared_channel_post_sent">Post canale inviato</string>
+    <string name="shared_sponsored_content">Contenuto sponsorizzato condiviso</string>
     <string name="shop">Negozio</string>
     <string name="show">Mostra</string>
     <string name="show_channel_preview">Anteprima</string>
@@ -1616,9 +1809,9 @@ www.pin.bbm.com/%1$s"</string>
     <string name="slide_menu_edit">Modifica</string>
     <string name="slide_menu_end_chat">Termina chat</string>
     <string name="slide_menu_group_settings">Impostazioni gruppo</string>
-    <string name="slide_menu_invite">Invita</string>
+    <string name="slide_menu_invite">Aggiungi contatto</string>
     <string name="slide_menu_invite_more">Invita altri</string>
-    <string name="slide_menu_invite_to_bbm">Invita a BBM</string>
+    <string name="slide_menu_invite_to_bbm">Aggiungi contatto</string>
     <string name="slide_menu_leave_chat">Esci dalla chat</string>
     <string name="slide_menu_leave_group">Lascia gruppo</string>
     <string name="slide_menu_mark_complete">Segna come completato</string>
@@ -1646,15 +1839,19 @@ www.pin.bbm.com/%1$s"</string>
     <string name="stacked_notification_format"><Data>&lt;b>%1$s&lt;/b>: %2$s</Data></string>
     <string name="start_chat">Avvia chat</string>
     <string name="start_chat_failed">Impossibile creare la chat</string>
+    <string name="start_meeting">Avvia BBM Meetings</string>
+    <string name="start_meeting_confirmation_dialog">Terminare la chiamata e avviare una nuova riunione?</string>
+    <string name="start_meeting_confirmation_title">Avviare BBM Meeting?</string>
     <string name="start_multiperson_chat">Avvia chat di gruppo</string>
     <string name="starts">Inizia</string>
     <string name="stats_caption">Statistiche</string>
     <string name="stay_in_touch_like_never_before_with_blackberry_messenger">"BlackBerry Messenger consente di restare in contatto come mai prima d'ora."</string>
-    <string name="sticker_picker_no_sticker_packs">Non sono presenti gruppi di adesivi.</string>
     <string name="sticker_picker_no_stickers_purchased">Nessun adesivo acquistato.</string>
-    <string name="sticker_store_collection_heading">Adesivi</string>
+    <string name="sticker_picker_preview_hint">"Per visualizzare l'anteprima, tocca e tieni premuto un adesivo."</string>
+    <string name="sticker_store_collection_heading">Sticker Collezioni</string>
     <string name="sticker_store_details_artist_channel">Canale</string>
     <string name="sticker_store_details_artist_website">Sito Web</string>
+    <string name="sticker_store_details_promo_text">VISUALIZZA QUI</string>
     <string name="sticker_store_details_screen_about">Informazioni</string>
     <string name="sticker_store_details_screen_already_purchased">"Questo elemento è già stato acquistato. Installare nuovamente l'elemento o ripristinare tutti gli acquisti?"</string>
     <string name="sticker_store_details_screen_inventory_error">Impossibile stabilire la connessione a Google Play</string>
@@ -1667,13 +1864,20 @@ www.pin.bbm.com/%1$s"</string>
     <string name="sticker_store_details_screen_purchase_not_available">Non disponibile</string>
     <string name="sticker_store_invalid_pack_id">"L'elemento non è disponibile"</string>
     <string name="sticker_store_purchase_taking_longer_than_expected">"L'installazione sta richiedendo più tempo del previsto.
-Suggerimento: è possibile uscire da questa schermata mentre l'operazione procede."</string>
+Suggerimento: È possibile uscire da questa schermata mentre l'operazione procede."</string>
     <string name="sticker_store_server_unavailable_message">Impossibile accedere al negozio BBM.</string>
     <string name="sticker_store_server_unavailable_retry_message">Verificare la connessione di rete e riprovare</string>
-    <string name="sticker_store_sticker_preview_artist">Da %1$s</string>
-    <string name="sticker_store_store_heading">Negozio BBM</string>
+    <string name="sticker_store_sticker_preview_artist">Di %1$s</string>
+    <string name="sticker_store_sticker_purchase_notification_dialog_heading">Aggiungere ai feed?</string>
+    <string name="sticker_store_sticker_purchase_notification_dialog_line">È possibile comunicare ai propri contatti di aver scaricato nuovi adesivi.</string>
+    <string name="sticker_store_sticker_purchase_notification_message">"Dai un'occhiata ai miei nuovi adesivi! http://shop.bbm.com/stickers/%1$s"</string>
     <string name="sticker_store_store_loading">Caricamento in corso...</string>
+    <string name="store_title">Negozio BBM</string>
     <string name="submit_button">Invia</string>
+    <string name="submit_passphrase">Invia</string>
+    <string name="submit_passphrase_details">Per unirsi a questa chat, immettere la passphrase fornita dal contatto.</string>
+    <string name="submit_passphrase_multi_attempts_details">Passphrase errata. Immettere la passphrase fornita dal contatto. È necessario rispettare le maiuscole e le minuscole nella passphrase. (%1$d/%2$d).</string>
+    <string name="submit_passphrase_title">BBM Protected</string>
     <string name="subscribed_channel_invite_default_message">Desidero invitarti a partecipare al canale chiamato \"%1$s\".</string>
     <string name="subscribed_channels">Canali a cui si è abbonati</string>
     <string name="subscribers_caption">Abbonati</string>
@@ -1681,8 +1885,14 @@ Suggerimento: è possibile uscire da questa schermata mentre l'operazione proced
     <string name="suggestion_sent">Suggerimento inviato</string>
     <string name="suggestion_want_to_invite_bbm_contact">Desideri invitare questo contatto BBM?</string>
     <string name="switch_bbm">Associa BBM</string>
+    <string name="system_message_new_bbm_system_message">È disponibile un nuovo bollettino BBM.</string>
+    <string name="system_message_new_bbm_system_message_single_notification_title">Avviso</string>
+    <string name="system_message_new_bbm_system_message_tap_to_view">Avvisi (%1$d) — Tocca per visualizzare</string>
+    <string name="system_message_new_bbm_system_message_title">Avvisi (%1$d)</string>
+    <string name="system_message_new_partner_app_message">Hai un nuovo messaggio da %1$s</string>
+    <string name="system_message_unknown_partner_app_message">Hai un nuovo messaggio</string>
     <string name="take_a_photo">Scatta una foto</string>
-    <string name="tapToInvite">Tocca per invitare</string>
+    <string name="tapToInvite">Tocca per aggiungere</string>
     <string name="tell_your_friends">Dillo ai tuoi amici</string>
     <string name="tell_your_friends_now">Dillo subito ai tuoi amici</string>
     <string name="temporary_server_error">Errore server temporaneo</string>
@@ -1717,6 +1927,7 @@ Suggerimento: è possibile uscire da questa schermata mentre l'operazione proced
     <string name="title_preview_channel_activity">Anteprima canale</string>
     <string name="title_private">Riservato</string>
     <string name="title_set_channel_avatar">Icona canali</string>
+    <string name="top_picks_heading">Preferiti di BBM</string>
     <string name="unable_to_complete_setup">Impossibile completare la configurazione</string>
     <string name="unable_to_connect">Impossibile stabilire la connessione</string>
     <string name="unmute">Non muto</string>
@@ -1791,19 +2002,29 @@ Suggerimento: è possibile uscire da questa schermata mentre l'operazione proced
     <string name="update_list_personalmessage">&lt;b>%1$s&lt;/b> ha detto \"%2$s\"</string>
     <string name="update_list_you">Tu</string>
     <string name="update_removed_from_blocked_list">"Rimosso dall'elenco Bloccati."</string>
+    <string name="update_sponsored_content">Contenuto sponsorizzato</string>
     <string name="update_sponsored_post">Post sponsorizzato</string>
     <string name="updates">Feed</string>
     <string name="upload">Carica</string>
     <string name="verify_date_of_birth">Verifica dalla data di nascita in corso.</string>
+    <string name="verify_passphrase">Verifica della passphrase in corso.</string>
     <string name="version">Versione</string>
+    <string name="view_ad_label">Visualizza</string>
     <string name="view_channel_info">Anteprima</string>
     <string name="view_channel_profile">Visualizza profilo canale</string>
     <string name="visits_caption">Visite</string>
+    <string name="voice_rating_bad">Pessima</string>
+    <string name="voice_rating_excellent">Eccellente</string>
+    <string name="voice_rating_fair">Discreta</string>
+    <string name="voice_rating_good">Buona</string>
+    <string name="voice_rating_poor">Scarsa</string>
+    <string name="voice_rating_title">Come valuti la qualità di questa chiamata?</string>
     <string name="voicecall_already_in_call">"Stai già effettuando una chiamata BBM. Per chiamare questo contatto, terminare l'altra chiamata e riprovare."</string>
     <string name="voicecall_status_calling">Chiamata in corso</string>
     <string name="voicecall_status_connecting">Connessione in corso</string>
     <string name="voicecall_status_duration">Chiamata vocale %1$s</string>
     <string name="voicecall_status_duration_while_mute">Audio disattivato %1$s</string>
+    <string name="wait_passphrase_confirmation">In attesa della conferma della passphrase.</string>
     <string name="widget_back_to_chat_previews">Torna alle anteprime chat</string>
     <string name="widget_change_my_status_message">Cambia messaggio di stato</string>
     <string name="widget_edit_status">Modifica stato</string>

@@ -1,22 +1,34 @@
 .class final Lcom/bbm/ui/activities/wl;
 .super Ljava/lang/Object;
-.source "NewGroupActivity.java"
+.source "MainActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewGroupActivity;
+.field final synthetic a:Landroid/view/View;
+
+.field final synthetic b:Landroid/view/View;
+
+.field final synthetic c:Landroid/widget/EditText;
+
+.field final synthetic d:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewGroupActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;Landroid/view/View;Landroid/view/View;Landroid/widget/EditText;)V
     .locals 0
 
     .prologue
-    .line 134
-    iput-object p1, p0, Lcom/bbm/ui/activities/wl;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    .line 944
+    iput-object p1, p0, Lcom/bbm/ui/activities/wl;->d:Lcom/bbm/ui/activities/MainActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/wl;->a:Landroid/view/View;
+
+    iput-object p3, p0, Lcom/bbm/ui/activities/wl;->b:Landroid/view/View;
+
+    iput-object p4, p0, Lcom/bbm/ui/activities/wl;->c:Landroid/widget/EditText;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,26 +38,62 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 138
-    const-string v0, "mHeaderActionBar PositiveButton Clicked"
+    const/4 v2, 0x0
 
-    const-class v1, Lcom/bbm/ui/activities/NewGroupActivity;
+    .line 947
+    const-string v0, "Add Contacts, cancel Clicked"
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    const-class v1, Lcom/bbm/ui/activities/MainActivity;
 
-    .line 140
-    iget-object v0, p0, Lcom/bbm/ui/activities/wl;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewGroupActivity;->c(Lcom/bbm/ui/activities/NewGroupActivity;)V
+    .line 948
+    iget-object v0, p0, Lcom/bbm/ui/activities/wl;->a:Landroid/view/View;
 
-    .line 141
-    const/4 v0, 0x0
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {p1, v0}, Landroid/view/View;->setEnabled(Z)V
+    .line 949
+    iget-object v0, p0, Lcom/bbm/ui/activities/wl;->b:Landroid/view/View;
 
-    .line 142
+    const/4 v1, 0x4
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 950
+    iget-object v0, p0, Lcom/bbm/ui/activities/wl;->c:Landroid/widget/EditText;
+
+    const-string v1, ""
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    .line 951
+    iget-object v0, p0, Lcom/bbm/ui/activities/wl;->d:Lcom/bbm/ui/activities/MainActivity;
+
+    const-string v1, "input_method"
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
+
+    .line 952
+    iget-object v1, p0, Lcom/bbm/ui/activities/wl;->c:Landroid/widget/EditText;
+
+    invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
+
+    .line 953
+    iget-object v0, p0, Lcom/bbm/ui/activities/wl;->c:Landroid/widget/EditText;
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
+
+    .line 954
     return-void
 .end method

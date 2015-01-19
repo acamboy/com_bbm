@@ -97,7 +97,7 @@
 .end method
 
 .method private a(JJJJ)V
-    .locals 2
+    .locals 3
 
     :goto_0
     iget v0, p0, Lcom/google/android/gms/internal/bb;->mI:I
@@ -331,8 +331,6 @@
 .method private b(JJJJ)V
     .locals 7
 
-    const-wide/16 v5, 0x0
-
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -345,11 +343,15 @@
 
     sub-long v0, p7, v0
 
-    cmp-long v4, v2, v5
+    const-wide/16 v4, 0x0
+
+    cmp-long v4, v2, v4
 
     if-lez v4, :cond_0
 
-    cmp-long v4, v0, v5
+    const-wide/16 v4, 0x0
+
+    cmp-long v4, v0, v4
 
     if-gtz v4, :cond_1
 
@@ -410,38 +412,38 @@
 
 # virtual methods
 .method public final b(JJ)Lcom/google/android/gms/internal/bc;
-    .locals 11
+    .locals 13
 
-    iget-object v9, p0, Lcom/google/android/gms/internal/bb;->mg:Ljava/lang/Object;
+    iget-object v10, p0, Lcom/google/android/gms/internal/bb;->mg:Ljava/lang/Object;
 
-    monitor-enter v9
+    monitor-enter v10
 
     :try_start_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    new-instance v10, Lcom/google/android/gms/internal/ba;
+    new-instance v11, Lcom/google/android/gms/internal/ba;
 
-    invoke-direct {v10}, Lcom/google/android/gms/internal/ba;-><init>()V
+    invoke-direct {v11}, Lcom/google/android/gms/internal/ba;-><init>()V
 
     sget-object v0, Lcom/google/android/gms/internal/cz;->pT:Landroid/os/Handler;
 
-    new-instance v3, Lcom/google/android/gms/internal/bb$1;
+    new-instance v1, Lcom/google/android/gms/internal/bb$1;
 
-    invoke-direct {v3, p0, v10}, Lcom/google/android/gms/internal/bb$1;-><init>(Lcom/google/android/gms/internal/bb;Lcom/google/android/gms/internal/ba;)V
+    invoke-direct {v1, p0, v11}, Lcom/google/android/gms/internal/bb$1;-><init>(Lcom/google/android/gms/internal/bb;Lcom/google/android/gms/internal/ba;)V
 
-    invoke-virtual {v0, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-wide v3, p0, Lcom/google/android/gms/internal/bb;->mD:J
+    iget-wide v4, p0, Lcom/google/android/gms/internal/bb;->mD:J
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-wide v5, p1
+    move-wide v6, p1
 
-    move-wide v7, p3
+    move-wide/from16 v8, p3
 
-    invoke-direct/range {v0 .. v8}, Lcom/google/android/gms/internal/bb;->a(JJJJ)V
+    invoke-direct/range {v1 .. v9}, Lcom/google/android/gms/internal/bb;->a(JJJJ)V
 
     new-instance v0, Lcom/google/android/gms/internal/bc;
 
@@ -453,11 +455,11 @@
 
     iget v5, p0, Lcom/google/android/gms/internal/bb;->mI:I
 
-    move-object v4, v10
+    move-object v4, v11
 
     invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/internal/bc;-><init>(Lcom/google/android/gms/internal/ax;Lcom/google/android/gms/internal/bg;Ljava/lang/String;Lcom/google/android/gms/internal/ba;I)V
 
-    monitor-exit v9
+    monitor-exit v10
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -466,7 +468,7 @@
     :catchall_0
     move-exception v0
 
-    monitor-exit v9
+    monitor-exit v10
 
     throw v0
 .end method

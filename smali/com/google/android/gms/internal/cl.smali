@@ -55,21 +55,21 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 4
 
-    const-wide/16 v1, -0x1
+    const-wide/16 v2, -0x1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-wide v1, p0, Lcom/google/android/gms/internal/cl;->oH:J
+    iput-wide v2, p0, Lcom/google/android/gms/internal/cl;->oH:J
 
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/google/android/gms/internal/cl;->oI:Z
 
-    iput-wide v1, p0, Lcom/google/android/gms/internal/cl;->oJ:J
+    iput-wide v2, p0, Lcom/google/android/gms/internal/cl;->oJ:J
 
-    iput-wide v1, p0, Lcom/google/android/gms/internal/cl;->oL:J
+    iput-wide v2, p0, Lcom/google/android/gms/internal/cl;->oL:J
 
     const/4 v0, -0x1
 
@@ -626,55 +626,59 @@
 .end method
 
 .method public final f(J)Lcom/google/android/gms/internal/cf;
-    .locals 18
+    .locals 21
 
-    new-instance v1, Lcom/google/android/gms/internal/cf;
-
-    move-object/from16 v0, p0
-
-    iget-object v2, v0, Lcom/google/android/gms/internal/cl;->oD:Ljava/lang/String;
+    new-instance v3, Lcom/google/android/gms/internal/cf;
 
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/google/android/gms/internal/cl;->oE:Ljava/lang/String;
+    iget-object v4, v0, Lcom/google/android/gms/internal/cl;->oD:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/google/android/gms/internal/cl;->oF:Ljava/util/List;
+    iget-object v5, v0, Lcom/google/android/gms/internal/cl;->oE:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Lcom/google/android/gms/internal/cl;->oG:Ljava/util/List;
+    iget-object v6, v0, Lcom/google/android/gms/internal/cl;->oF:Ljava/util/List;
 
     move-object/from16 v0, p0
 
-    iget-wide v6, v0, Lcom/google/android/gms/internal/cl;->oH:J
+    iget-object v7, v0, Lcom/google/android/gms/internal/cl;->oG:Ljava/util/List;
 
     move-object/from16 v0, p0
 
-    iget-boolean v8, v0, Lcom/google/android/gms/internal/cl;->oI:Z
-
-    const-wide/16 v9, -0x1
+    iget-wide v8, v0, Lcom/google/android/gms/internal/cl;->oH:J
 
     move-object/from16 v0, p0
 
-    iget-object v11, v0, Lcom/google/android/gms/internal/cl;->oK:Ljava/util/List;
+    iget-boolean v10, v0, Lcom/google/android/gms/internal/cl;->oI:Z
+
+    const-wide/16 v11, -0x1
 
     move-object/from16 v0, p0
 
-    iget-wide v12, v0, Lcom/google/android/gms/internal/cl;->oL:J
+    iget-object v13, v0, Lcom/google/android/gms/internal/cl;->oK:Ljava/util/List;
 
     move-object/from16 v0, p0
 
-    iget v14, v0, Lcom/google/android/gms/internal/cl;->mOrientation:I
+    iget-wide v14, v0, Lcom/google/android/gms/internal/cl;->oL:J
 
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/google/android/gms/internal/cl;->oC:Ljava/lang/String;
+    iget v0, v0, Lcom/google/android/gms/internal/cl;->mOrientation:I
 
-    move-wide/from16 v16, p1
+    move/from16 v16, v0
 
-    invoke-direct/range {v1 .. v17}, Lcom/google/android/gms/internal/cf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;JZJLjava/util/List;JILjava/lang/String;J)V
+    move-object/from16 v0, p0
 
-    return-object v1
+    iget-object v0, v0, Lcom/google/android/gms/internal/cl;->oC:Ljava/lang/String;
+
+    move-object/from16 v17, v0
+
+    move-wide/from16 v18, p1
+
+    invoke-direct/range {v3 .. v19}, Lcom/google/android/gms/internal/cf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;JZJLjava/util/List;JILjava/lang/String;J)V
+
+    return-object v3
 .end method

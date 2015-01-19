@@ -1,92 +1,76 @@
 .class final Lcom/bbm/ui/eg;
-.super Lcom/bbm/util/ci;
-.source "QuickShareGlympseView.java"
+.super Ljava/lang/Object;
+.source "NFCInviteRequest.java"
+
+# interfaces
+.implements Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/QuickShareGlympseView;
+.field final synthetic a:Lcom/bbm/ui/ef;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/QuickShareGlympseView;)V
+.method constructor <init>(Lcom/bbm/ui/ef;)V
     .locals 0
 
     .prologue
-    .line 213
-    iput-object p1, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    .line 35
+    iput-object p1, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/ef;
 
-    invoke-direct {p0}, Lcom/bbm/util/ci;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)V
+    .locals 2
 
     .prologue
-    .line 216
-    iget-object v0, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    .line 39
+    iget-object v0, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/ef;
 
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->i(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/widget/ProgressBar;
-
-    move-result-object v0
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    .line 217
-    iget-object v0, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->j(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/bbm/ui/ef;->a(Lcom/bbm/ui/ef;)Ljava/lang/ref/WeakReference;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/QuickShareGlympseView;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    const v2, 0x7f0e04a7
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 218
-    iget-object v0, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->k(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/widget/Button;
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    check-cast v0, Landroid/app/Activity;
 
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
+    .line 40
+    if-nez v0, :cond_1
 
-    .line 219
+    .line 41
+    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0, p0}, Landroid/content/SharedPreferences;->unregisterOnSharedPreferenceChangeListener(Landroid/content/SharedPreferences$OnSharedPreferenceChangeListener;)V
+
+    .line 48
+    :cond_0
+    :goto_0
     return-void
-.end method
 
-.method public final a(Landroid/location/Location;)V
-    .locals 1
+    .line 45
+    :cond_1
+    const-string v1, "add_contact_on_tap"
 
-    .prologue
-    .line 223
-    iget-object v0, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    invoke-static {v0, p1}, Lcom/bbm/ui/QuickShareGlympseView;->a(Lcom/bbm/ui/QuickShareGlympseView;Landroid/location/Location;)V
+    move-result v1
 
-    .line 224
-    iget-object v0, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    if-eqz v1, :cond_0
 
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->l(Lcom/bbm/ui/QuickShareGlympseView;)V
+    .line 46
+    iget-object v1, p0, Lcom/bbm/ui/eg;->a:Lcom/bbm/ui/ef;
 
-    .line 225
-    return-void
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/ef;->a(Landroid/app/Activity;)V
+
+    goto :goto_0
 .end method

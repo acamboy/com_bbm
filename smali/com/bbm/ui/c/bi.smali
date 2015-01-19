@@ -1,45 +1,38 @@
 .class final Lcom/bbm/ui/c/bi;
-.super Ljava/lang/Object;
-.source "ChatsFragment.java"
+.super Lcom/bbm/j/k;
+.source "ChannelsNotificationsFragment.java"
 
 
 # instance fields
-.field a:Landroid/view/ViewGroup;
-
-.field b:Lcom/bbm/ui/ObservingImageView;
-
-.field c:Lcom/bbm/ui/ObservingImageView;
-
-.field d:Landroid/view/ViewGroup;
-
-.field e:Lcom/bbm/ui/ObservingImageView;
-
-.field f:Lcom/bbm/ui/ObservingImageView;
-
-.field g:Landroid/widget/TextView;
-
-.field h:Lcom/bbm/ui/InlineImageTextView;
-
-.field i:Lcom/bbm/ui/InlineImageTextView;
-
-.field j:Landroid/widget/TextView;
-
-.field k:Landroid/widget/ImageView;
-
-.field l:Landroid/widget/ProgressBar;
-
-.field final synthetic m:Lcom/bbm/ui/c/bh;
+.field final synthetic a:Lcom/bbm/ui/c/bh;
 
 
 # direct methods
 .method constructor <init>(Lcom/bbm/ui/c/bh;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 645
-    iput-object p1, p0, Lcom/bbm/ui/c/bi;->m:Lcom/bbm/ui/c/bh;
+    .line 71
+    iput-object p1, p0, Lcom/bbm/ui/c/bi;->a:Lcom/bbm/ui/c/bh;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected final a()V
+    .locals 1
+
+    .prologue
+    .line 74
+    iget-object v0, p0, Lcom/bbm/ui/c/bi;->a:Lcom/bbm/ui/c/bh;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/bh;->a(Lcom/bbm/ui/c/bh;)V
+
+    .line 75
     return-void
 .end method

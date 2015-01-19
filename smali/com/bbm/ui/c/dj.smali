@@ -1,30 +1,22 @@
 .class final Lcom/bbm/ui/c/dj;
 .super Ljava/lang/Object;
-.source "GroupsFragment.java"
+.source "GroupMembersFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/b/o;
-
-.field final synthetic c:Lcom/bbm/ui/c/dg;
+.field final synthetic a:Lcom/bbm/ui/c/dh;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dg;Ljava/lang/String;Lcom/bbm/ui/b/o;)V
+.method constructor <init>(Lcom/bbm/ui/c/dh;)V
     .locals 0
 
     .prologue
-    .line 456
-    iput-object p1, p0, Lcom/bbm/ui/c/dj;->c:Lcom/bbm/ui/c/dg;
-
-    iput-object p2, p0, Lcom/bbm/ui/c/dj;->a:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/bbm/ui/c/dj;->b:Lcom/bbm/ui/b/o;
+    .line 186
+    iput-object p1, p0, Lcom/bbm/ui/c/dj;->a:Lcom/bbm/ui/c/dh;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,69 +25,47 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 460
-    const-string v0, "showGroupRestoreStatusDialog RightButton Clicked"
+    .line 190
+    const-string v0, "mOnItemClickListener onItemClick"
 
-    const-class v1, Lcom/bbm/ui/c/dg;
+    const-class v1, Lcom/bbm/ui/c/dh;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 462
-    new-instance v0, Ljava/util/ArrayList;
+    .line 191
+    iget-object v0, p0, Lcom/bbm/ui/c/dj;->a:Lcom/bbm/ui/c/dh;
 
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+    invoke-static {v0, p3}, Lcom/bbm/ui/c/dh;->a(Lcom/bbm/ui/c/dh;I)I
 
-    .line 464
-    :try_start_0
-    new-instance v1, Lorg/json/JSONObject;
+    .line 192
+    iget-object v0, p0, Lcom/bbm/ui/c/dj;->a:Lcom/bbm/ui/c/dh;
 
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+    const/4 v1, 0x0
 
-    const-string v2, "restoreStatusId"
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/dh;->a(Lcom/bbm/ui/c/dh;Z)Z
 
-    iget-object v3, p0, Lcom/bbm/ui/c/dj;->a:Ljava/lang/String;
+    .line 193
+    iget-object v0, p0, Lcom/bbm/ui/c/dj;->a:Lcom/bbm/ui/c/dh;
 
-    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 465
-    iget-object v1, p0, Lcom/bbm/ui/c/dj;->c:Lcom/bbm/ui/c/dg;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/dg;->a(Lcom/bbm/ui/c/dg;)Lcom/bbm/g/ab;
-
-    move-result-object v1
-
-    const-string v2, "groupRestoreStatus"
-
-    invoke-static {v0, v2}, Lcom/bbm/g/ac;->b(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/g/ca;
+    invoke-static {v0}, Lcom/bbm/ui/c/dh;->d(Lcom/bbm/ui/c/dh;)Lcom/bbm/j/u;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
 
-    .line 470
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/c/dj;->b:Lcom/bbm/ui/b/o;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
-
-    .line 471
+    .line 194
     return-void
-
-    .line 467
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
 .end method

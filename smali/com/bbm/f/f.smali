@@ -3,7 +3,7 @@
 .source "DisconnectedService.java"
 
 # interfaces
-.implements Lcom/bbm/f/z;
+.implements Lcom/bbm/f/ad;
 
 
 # instance fields
@@ -14,7 +14,18 @@
         value = {
             "Lcom/bbm/j/r",
             "<",
-            "Lcom/bbm/f/aa;",
+            "Lcom/bbm/f/ae;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final c:Lcom/bbm/j/r;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/r",
+            "<",
+            "Lcom/bbm/f/ag;",
             ">;"
         }
     .end annotation
@@ -30,15 +41,26 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 10
-    new-instance v0, Lcom/bbm/util/cm;
+    new-instance v0, Lcom/bbm/util/ct;
 
-    new-instance v1, Lcom/bbm/f/aa;
+    new-instance v1, Lcom/bbm/f/ae;
 
-    invoke-direct {v1}, Lcom/bbm/f/aa;-><init>()V
+    invoke-direct {v1}, Lcom/bbm/f/ae;-><init>()V
 
-    invoke-direct {v0, v1}, Lcom/bbm/util/cm;-><init>(Ljava/lang/Object;)V
+    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/bbm/f/f;->b:Lcom/bbm/j/r;
+
+    .line 11
+    new-instance v0, Lcom/bbm/util/ct;
+
+    new-instance v1, Lcom/bbm/f/ag;
+
+    invoke-direct {v1}, Lcom/bbm/f/ag;-><init>()V
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/f/f;->c:Lcom/bbm/j/r;
 
     return-void
 .end method
@@ -49,7 +71,7 @@
     .locals 0
 
     .prologue
-    .line 15
+    .line 16
     return-void
 .end method
 
@@ -57,7 +79,7 @@
     .locals 0
 
     .prologue
-    .line 20
+    .line 21
     return-void
 .end method
 
@@ -65,7 +87,7 @@
     .locals 1
 
     .prologue
-    .line 24
+    .line 25
     iget-object v0, p0, Lcom/bbm/f/f;->a:Lcom/bbm/f/c;
 
     return-object v0
@@ -75,7 +97,7 @@
     .locals 1
 
     .prologue
-    .line 29
+    .line 30
     iget-object v0, p0, Lcom/bbm/f/f;->a:Lcom/bbm/f/c;
 
     return-object v0
@@ -85,7 +107,7 @@
     .locals 1
 
     .prologue
-    .line 34
+    .line 35
     iget-object v0, p0, Lcom/bbm/f/f;->a:Lcom/bbm/f/c;
 
     return-object v0
@@ -98,40 +120,61 @@
             "()",
             "Lcom/bbm/j/r",
             "<",
-            "Lcom/bbm/f/aa;",
+            "Lcom/bbm/f/ae;",
             ">;"
         }
     .end annotation
 
     .prologue
-    .line 39
+    .line 40
     iget-object v0, p0, Lcom/bbm/f/f;->b:Lcom/bbm/j/r;
 
     return-object v0
 .end method
 
-.method public final g()Lcom/bbm/f/ab;
+.method public final g()Lcom/bbm/j/r;
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/bbm/j/r",
+            "<",
+            "Lcom/bbm/f/ag;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 44
-    sget-object v0, Lcom/bbm/f/ab;->d:Lcom/bbm/f/ab;
+    .line 45
+    iget-object v0, p0, Lcom/bbm/f/f;->c:Lcom/bbm/j/r;
 
     return-object v0
 .end method
 
-.method public final h()V
-    .locals 0
+.method public final h()Lcom/bbm/f/af;
+    .locals 1
 
     .prologue
-    .line 48
-    return-void
+    .line 50
+    sget-object v0, Lcom/bbm/f/af;->e:Lcom/bbm/f/af;
+
+    return-object v0
 .end method
 
 .method public final i()V
     .locals 0
 
     .prologue
-    .line 51
+    .line 55
     return-void
+.end method
+
+.method public final j()Z
+    .locals 1
+
+    .prologue
+    .line 63
+    const/4 v0, 0x0
+
+    return v0
 .end method

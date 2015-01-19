@@ -1,139 +1,130 @@
 .class public Lcom/bbm/util/cm;
 .super Ljava/lang/Object;
-.source "Mutable.java"
-
-# interfaces
-.implements Lcom/bbm/j/r;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<V:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lcom/bbm/j/r",
-        "<TV;>;"
-    }
-.end annotation
-
-
-# instance fields
-.field protected e:Ljava/lang/Object;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "TV;"
-        }
-    .end annotation
-.end field
-
-.field protected f:Lcom/bbm/j/i;
+.source "LocationServicesUtil.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)V"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 15
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 13
-    new-instance v0, Lcom/bbm/j/i;
-
-    invoke-direct {v0}, Lcom/bbm/j/i;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/util/cm;->f:Lcom/bbm/j/i;
-
-    .line 16
-    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 17
-    iput-object p1, p0, Lcom/bbm/util/cm;->e:Ljava/lang/Object;
-
-    .line 18
+    .line 22
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Lcom/bbm/j/h;)V
-    .locals 1
+.method public static a(Landroid/app/Activity;Landroid/view/View$OnClickListener;)V
+    .locals 2
 
     .prologue
-    .line 35
-    iget-object v0, p0, Lcom/bbm/util/cm;->f:Lcom/bbm/j/i;
+    .line 103
+    new-instance v0, Lcom/bbm/ui/b/o;
 
-    invoke-virtual {v0, p1}, Lcom/bbm/j/i;->a(Lcom/bbm/j/h;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
 
-    .line 36
+    .line 105
+    const v1, 0x7f0e0509
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->setTitle(I)V
+
+    .line 106
+    const v1, 0x7f0e0506
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->e(I)V
+
+    .line 107
+    const v1, 0x7f0e0507
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->b(I)V
+
+    .line 108
+    const v1, 0x7f0e0508
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->a(I)V
+
+    .line 110
+    new-instance v1, Lcom/bbm/util/cn;
+
+    invoke-direct {v1, v0}, Lcom/bbm/util/cn;-><init>(Lcom/bbm/ui/b/o;)V
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->b(Landroid/view/View$OnClickListener;)V
+
+    .line 118
+    new-instance v1, Lcom/bbm/util/co;
+
+    invoke-direct {v1, v0, p0, p1}, Lcom/bbm/util/co;-><init>(Lcom/bbm/ui/b/o;Landroid/app/Activity;Landroid/view/View$OnClickListener;)V
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->a(Landroid/view/View$OnClickListener;)V
+
+    .line 133
+    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->show()V
+
+    .line 134
     return-void
 .end method
 
-.method public final b(Lcom/bbm/j/h;)V
-    .locals 1
+.method public static a(Landroid/content/Context;)Z
+    .locals 4
 
     .prologue
-    .line 40
-    iget-object v0, p0, Lcom/bbm/util/cm;->f:Lcom/bbm/j/i;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p1}, Lcom/bbm/j/i;->b(Lcom/bbm/j/h;)V
+    .line 88
+    .line 89
+    const-string v0, "location"
 
-    .line 41
-    return-void
-.end method
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-.method public b(Ljava/lang/Object;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)V"
-        }
-    .end annotation
+    move-result-object v0
 
-    .prologue
-    .line 27
-    iget-object v0, p0, Lcom/bbm/util/cm;->e:Ljava/lang/Object;
+    check-cast v0, Landroid/location/LocationManager;
 
-    invoke-static {v0, p1}, Lcom/bbm/util/bb;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .line 94
+    :try_start_0
+    const-string v2, "gps"
+
+    invoke-virtual {v0, v2}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    const-string v2, "network"
+
+    invoke-virtual {v0, v2}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 28
-    iput-object p1, p0, Lcom/bbm/util/cm;->e:Ljava/lang/Object;
-
-    .line 29
-    iget-object v0, p0, Lcom/bbm/util/cm;->f:Lcom/bbm/j/i;
-
-    invoke-virtual {v0}, Lcom/bbm/j/i;->a()V
-
-    .line 31
     :cond_0
-    return-void
-.end method
+    const/4 v0, 0x1
 
-.method public final e()Ljava/lang/Object;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()TV;"
-        }
-    .end annotation
+    .line 99
+    :goto_0
+    return v0
 
-    .prologue
-    .line 22
-    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
+    :cond_1
+    move v0, v1
 
-    .line 23
-    iget-object v0, p0, Lcom/bbm/util/cm;->e:Ljava/lang/Object;
+    .line 94
+    goto :goto_0
 
-    return-object v0
+    .line 95
+    :catch_0
+    move-exception v0
+
+    const-string v2, "Can\'t check if Location Provider is enabled"
+
+    new-array v3, v1, [Ljava/lang/Object;
+
+    invoke-static {v0, v2, v3}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    goto :goto_0
 .end method

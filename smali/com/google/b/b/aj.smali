@@ -182,7 +182,7 @@
 
     iget-boolean v0, v2, Lcom/google/b/a/q;->b:Z
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_0
 
     move v0, v1
 
@@ -209,7 +209,7 @@
     move-result-object v0
 
     .line 3598
-    if-nez v0, :cond_3
+    if-nez v0, :cond_2
 
     .line 3599
     :try_start_0
@@ -222,23 +222,22 @@
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_1
 
     iget-object v0, p0, Lcom/google/b/b/aj;->b:Lcom/google/b/f/a/r;
 
     .line 3610
-    :cond_0
     :goto_1
     return-object v0
 
     .line 3595
-    :cond_1
+    :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
     .line 3600
-    :cond_2
+    :cond_1
     invoke-static {v0}, Lcom/google/b/f/a/g;->a(Ljava/lang/Object;)Lcom/google/b/f/a/l;
 
     move-result-object v0
@@ -246,7 +245,7 @@
     goto :goto_1
 
     .line 3602
-    :cond_3
+    :cond_2
     invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     invoke-static {v0}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
@@ -254,15 +253,6 @@
     invoke-virtual {p2}, Lcom/google/b/b/k;->a()Ljava/lang/Object;
 
     move-result-object v0
-
-    invoke-static {v0}, Lcom/google/b/f/a/g;->a(Ljava/lang/Object;)Lcom/google/b/f/a/l;
-
-    move-result-object v0
-
-    .line 3604
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/google/b/f/a/g;->a(Ljava/lang/Object;)Lcom/google/b/f/a/l;
     :try_end_0
@@ -281,7 +271,7 @@
     .line 3607
     instance-of v0, v1, Ljava/lang/InterruptedException;
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
     .line 3608
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
@@ -291,18 +281,18 @@
     invoke-virtual {v0}, Ljava/lang/Thread;->interrupt()V
 
     .line 3610
-    :cond_4
+    :cond_3
     invoke-virtual {p0, v1}, Lcom/google/b/b/aj;->a(Ljava/lang/Throwable;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_5
+    if-eqz v0, :cond_4
 
     iget-object v0, p0, Lcom/google/b/b/aj;->b:Lcom/google/b/f/a/r;
 
     goto :goto_1
 
-    :cond_5
+    :cond_4
     invoke-static {}, Lcom/google/b/f/a/r;->a()Lcom/google/b/f/a/r;
 
     move-result-object v0

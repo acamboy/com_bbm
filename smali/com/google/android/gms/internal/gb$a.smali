@@ -44,22 +44,22 @@
 
 # virtual methods
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 10
+    .locals 11
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     const/4 v7, 0x0
 
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
     sparse-switch p1, :sswitch_data_0
 
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    move-result v9
+    move-result v10
 
     :goto_0
-    return v9
+    return v10
 
     :sswitch_0
     const-string v0, "com.google.android.gms.games.internal.IGamesService"
@@ -130,9 +130,9 @@
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto :goto_0
 
@@ -172,7 +172,7 @@
     goto :goto_0
 
     :cond_1
-    move-object v0, v5
+    move-object v0, v6
 
     goto :goto_1
 
@@ -268,9 +268,9 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Lcom/google/android/gms/common/data/DataHolder;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Lcom/google/android/gms/common/data/DataHolder;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -325,7 +325,7 @@
 
     if-eqz v0, :cond_4
 
-    move v0, v9
+    move v0, v10
 
     :goto_2
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -334,7 +334,7 @@
 
     if-eqz v3, :cond_3
 
-    move v7, v9
+    move v7, v10
 
     :cond_3
     invoke-virtual {p0, v1, v2, v0, v7}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;IZZ)V
@@ -452,7 +452,7 @@
 
     if-eqz v0, :cond_5
 
-    move v6, v9
+    move v6, v10
 
     :goto_3
     move-object v0, p0
@@ -503,7 +503,7 @@
 
     if-eqz v0, :cond_6
 
-    move v6, v9
+    move v6, v10
 
     :goto_4
     move-object v0, p0
@@ -562,7 +562,7 @@
     goto/16 :goto_0
 
     :cond_7
-    move-object v0, v5
+    move-object v0, v6
 
     goto :goto_5
 
@@ -628,7 +628,7 @@
     goto/16 :goto_0
 
     :cond_8
-    move-object v0, v5
+    move-object v0, v6
 
     goto :goto_6
 
@@ -675,7 +675,7 @@
     goto/16 :goto_0
 
     :cond_9
-    move-object v0, v5
+    move-object v0, v6
 
     goto :goto_7
 
@@ -720,7 +720,7 @@
 
     move-object v5, v0
 
-    :cond_a
+    :goto_8
     move-object v0, p0
 
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;Ljava/lang/String;ILandroid/os/IBinder;Landroid/os/Bundle;)V
@@ -728,6 +728,11 @@
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
+
+    :cond_a
+    move-object v5, v6
+
+    goto :goto_8
 
     :sswitch_18
     const-string v0, "com.google.android.gms.games.internal.IGamesService"
@@ -820,9 +825,9 @@
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;J)V
+    invoke-virtual {p0, v0, v2, v3}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;J)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -854,19 +859,19 @@
 
     invoke-static {v0}, Lcom/google/android/gms/internal/ga$a;->I(Landroid/os/IBinder;)Lcom/google/android/gms/internal/ga;
 
-    move-result-object v1
+    move-result-object v2
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    move-result-object v2
+    move-result-object v3
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
-    move-result v3
+    move-result v4
 
     invoke-virtual {p2}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
-    move-result-object v4
+    move-result-object v5
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -882,7 +887,7 @@
 
     check-cast v0, Landroid/os/Bundle;
 
-    move-object v5, v0
+    move-object v6, v0
 
     :cond_b
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -891,25 +896,20 @@
 
     if-eqz v0, :cond_c
 
-    move v6, v9
+    move v7, v10
 
-    :goto_8
+    :cond_c
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    move-object v0, p0
+    move-object v1, p0
 
-    invoke-virtual/range {v0 .. v8}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;Landroid/os/IBinder;I[Ljava/lang/String;Landroid/os/Bundle;ZJ)V
+    invoke-virtual/range {v1 .. v9}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;Landroid/os/IBinder;I[Ljava/lang/String;Landroid/os/Bundle;ZJ)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
-
-    :cond_c
-    move v6, v7
-
-    goto :goto_8
 
     :sswitch_1f
     const-string v0, "com.google.android.gms.games.internal.IGamesService"
@@ -922,15 +922,15 @@
 
     invoke-static {v0}, Lcom/google/android/gms/internal/ga$a;->I(Landroid/os/IBinder;)Lcom/google/android/gms/internal/ga;
 
-    move-result-object v1
+    move-result-object v2
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
-    move-result-object v2
+    move-result-object v3
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -938,23 +938,23 @@
 
     if-eqz v0, :cond_d
 
-    move v4, v9
+    move v5, v10
 
     :goto_9
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    move-object v0, p0
+    move-object v1, p0
 
-    invoke-virtual/range {v0 .. v6}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;Landroid/os/IBinder;Ljava/lang/String;ZJ)V
+    invoke-virtual/range {v1 .. v7}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;Landroid/os/IBinder;Ljava/lang/String;ZJ)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
     :cond_d
-    move v4, v7
+    move v5, v7
 
     goto :goto_9
 
@@ -1166,7 +1166,7 @@
 
     if-eqz v0, :cond_e
 
-    move v7, v9
+    move v7, v10
 
     :cond_e
     move-object v0, p0
@@ -1216,7 +1216,7 @@
 
     if-eqz v0, :cond_f
 
-    move v7, v9
+    move v7, v10
 
     :cond_f
     move-object v0, p0
@@ -1327,7 +1327,7 @@
 
     if-eqz v0, :cond_10
 
-    move v4, v9
+    move v4, v10
 
     :goto_a
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -1336,7 +1336,7 @@
 
     if-eqz v0, :cond_11
 
-    move v5, v9
+    move v5, v10
 
     :goto_b
     move-object v0, p0
@@ -1384,7 +1384,7 @@
 
     if-eqz v0, :cond_12
 
-    move v4, v9
+    move v4, v10
 
     :goto_c
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -1393,7 +1393,7 @@
 
     if-eqz v0, :cond_13
 
-    move v5, v9
+    move v5, v10
 
     :goto_d
     move-object v0, p0
@@ -1437,7 +1437,7 @@
 
     if-eqz v0, :cond_15
 
-    move v0, v9
+    move v0, v10
 
     :goto_e
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -1446,7 +1446,7 @@
 
     if-eqz v3, :cond_14
 
-    move v7, v9
+    move v7, v10
 
     :cond_14
     invoke-virtual {p0, v1, v2, v0, v7}, Lcom/google/android/gms/internal/gb$a;->b(Lcom/google/android/gms/internal/ga;IZZ)V
@@ -1502,7 +1502,7 @@
 
     if-eqz v0, :cond_17
 
-    move v0, v9
+    move v0, v10
 
     :goto_f
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -1511,7 +1511,7 @@
 
     if-eqz v3, :cond_16
 
-    move v7, v9
+    move v7, v10
 
     :cond_16
     invoke-virtual {p0, v1, v2, v0, v7}, Lcom/google/android/gms/internal/gb$a;->c(Lcom/google/android/gms/internal/ga;IZZ)V
@@ -1630,9 +1630,9 @@
 
     if-eqz v0, :cond_18
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Lcom/google/android/gms/common/data/DataHolder;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Lcom/google/android/gms/common/data/DataHolder;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -1683,7 +1683,7 @@
 
     if-eqz v2, :cond_19
 
-    move v7, v9
+    move v7, v10
 
     :cond_19
     invoke-virtual {p0, v0, v1, v7}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;Ljava/lang/String;Z)V
@@ -1747,7 +1747,7 @@
 
     if-eqz v0, :cond_1a
 
-    move v7, v9
+    move v7, v10
 
     :cond_1a
     invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
@@ -1765,7 +1765,7 @@
 
     if-eqz v0, :cond_1b
 
-    move v7, v9
+    move v7, v10
 
     :cond_1b
     invoke-virtual {p0, v7}, Lcom/google/android/gms/internal/gb$a;->y(Z)V
@@ -1854,7 +1854,7 @@
 
     if-eqz v0, :cond_1c
 
-    move v7, v9
+    move v7, v10
 
     :cond_1c
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -1879,7 +1879,7 @@
     goto/16 :goto_0
 
     :cond_1d
-    move-object v0, v5
+    move-object v0, v6
 
     goto :goto_10
 
@@ -1900,9 +1900,9 @@
 
     if-eqz v0, :cond_1e
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/net/Uri;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/net/Uri;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -1938,7 +1938,7 @@
 
     if-eqz v0, :cond_1f
 
-    move v4, v9
+    move v4, v10
 
     :goto_11
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -1947,7 +1947,7 @@
 
     if-eqz v0, :cond_20
 
-    move v5, v9
+    move v5, v10
 
     :goto_12
     move-object v0, p0
@@ -1981,9 +1981,9 @@
 
     if-eqz v0, :cond_21
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Lcom/google/android/gms/common/data/DataHolder;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Lcom/google/android/gms/common/data/DataHolder;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -2011,7 +2011,7 @@
 
     if-eqz v1, :cond_22
 
-    move v7, v9
+    move v7, v10
 
     :cond_22
     invoke-virtual {p0, v0, v7}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;Z)V
@@ -2047,7 +2047,7 @@
 
     if-eqz v3, :cond_23
 
-    move v7, v9
+    move v7, v10
 
     :cond_23
     invoke-virtual {p0, v0, v1, v2, v7}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;Ljava/lang/String;Ljava/lang/String;Z)V
@@ -2079,7 +2079,7 @@
 
     if-eqz v0, :cond_25
 
-    move v0, v9
+    move v0, v10
 
     :goto_13
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -2088,7 +2088,7 @@
 
     if-eqz v3, :cond_24
 
-    move v7, v9
+    move v7, v10
 
     :cond_24
     invoke-virtual {p0, v1, v2, v0, v7}, Lcom/google/android/gms/internal/gb$a;->d(Lcom/google/android/gms/internal/ga;IZZ)V
@@ -2125,7 +2125,7 @@
 
     if-eqz v0, :cond_27
 
-    move v0, v9
+    move v0, v10
 
     :goto_14
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -2134,7 +2134,7 @@
 
     if-eqz v3, :cond_26
 
-    move v7, v9
+    move v7, v10
 
     :cond_26
     invoke-virtual {p0, v1, v2, v0, v7}, Lcom/google/android/gms/internal/gb$a;->e(Lcom/google/android/gms/internal/ga;IZZ)V
@@ -2175,7 +2175,7 @@
 
     if-eqz v0, :cond_29
 
-    move v4, v9
+    move v4, v10
 
     :goto_15
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -2184,7 +2184,7 @@
 
     if-eqz v0, :cond_2a
 
-    move v5, v9
+    move v5, v10
 
     :goto_16
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -2193,7 +2193,7 @@
 
     if-eqz v0, :cond_2b
 
-    move v6, v9
+    move v6, v10
 
     :goto_17
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -2202,7 +2202,7 @@
 
     if-eqz v0, :cond_28
 
-    move v7, v9
+    move v7, v10
 
     :cond_28
     move-object v0, p0
@@ -2251,7 +2251,7 @@
 
     if-eqz v2, :cond_2c
 
-    move v7, v9
+    move v7, v10
 
     :cond_2c
     invoke-virtual {p0, v0, v1, v7}, Lcom/google/android/gms/internal/gb$a;->b(Lcom/google/android/gms/internal/ga;Ljava/lang/String;Z)V
@@ -2279,7 +2279,7 @@
 
     if-eqz v1, :cond_2d
 
-    move v7, v9
+    move v7, v10
 
     :cond_2d
     invoke-virtual {p0, v0, v7}, Lcom/google/android/gms/internal/gb$a;->b(Lcom/google/android/gms/internal/ga;Z)V
@@ -2311,7 +2311,7 @@
 
     if-eqz v2, :cond_2e
 
-    move v7, v9
+    move v7, v10
 
     :cond_2e
     invoke-virtual {p0, v0, v1, v7}, Lcom/google/android/gms/internal/gb$a;->c(Lcom/google/android/gms/internal/ga;Ljava/lang/String;Z)V
@@ -2343,7 +2343,7 @@
 
     if-eqz v2, :cond_2f
 
-    move v7, v9
+    move v7, v10
 
     :cond_2f
     invoke-virtual {p0, v0, v1, v7}, Lcom/google/android/gms/internal/gb$a;->d(Lcom/google/android/gms/internal/ga;Ljava/lang/String;Z)V
@@ -2379,7 +2379,7 @@
 
     if-eqz v3, :cond_30
 
-    move v7, v9
+    move v7, v10
 
     :cond_30
     invoke-virtual {p0, v0, v1, v2, v7}, Lcom/google/android/gms/internal/gb$a;->b(Lcom/google/android/gms/internal/ga;Ljava/lang/String;Ljava/lang/String;Z)V
@@ -2416,14 +2416,14 @@
 
     if-eqz v0, :cond_32
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
     :cond_31
-    move-object v0, v5
+    move-object v0, v6
 
     goto :goto_18
 
@@ -2466,23 +2466,23 @@
 
     invoke-static {v0}, Lcom/google/android/gms/internal/ga$a;->I(Landroid/os/IBinder;)Lcom/google/android/gms/internal/ga;
 
-    move-result-object v1
+    move-result-object v2
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v3
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v5
+    move-result-object v6
 
-    move-object v0, p0
+    move-object v1, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;Ljava/lang/String;JLjava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -2529,7 +2529,7 @@
 
     move-object v5, v0
 
-    :cond_33
+    :goto_19
     move-object v0, p0
 
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/internal/gb$a;->b(Lcom/google/android/gms/internal/ga;Ljava/lang/String;ILandroid/os/IBinder;Landroid/os/Bundle;)V
@@ -2537,6 +2537,11 @@
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
+
+    :cond_33
+    move-object v5, v6
+
+    goto :goto_19
 
     :sswitch_51
     const-string v0, "com.google.android.gms.games.internal.IGamesService"
@@ -2654,7 +2659,7 @@
 
     move-object v5, v0
 
-    :cond_34
+    :goto_1a
     move-object v0, p0
 
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;II[Ljava/lang/String;Landroid/os/Bundle;)V
@@ -2662,6 +2667,11 @@
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
+
+    :cond_34
+    move-object v5, v6
+
+    goto :goto_1a
 
     :sswitch_55
     const-string v0, "com.google.android.gms.games.internal.IGamesService"
@@ -2873,9 +2883,9 @@
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/internal/gb$a;->b(Lcom/google/android/gms/internal/ga;J)V
+    invoke-virtual {p0, v0, v2, v3}, Lcom/google/android/gms/internal/gb$a;->b(Lcom/google/android/gms/internal/ga;J)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -3072,13 +3082,13 @@
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;JLjava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3, v1}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;JLjava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -3118,13 +3128,13 @@
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/google/android/gms/internal/gb$a;->b(Lcom/google/android/gms/internal/ga;JLjava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3, v1}, Lcom/google/android/gms/internal/gb$a;->b(Lcom/google/android/gms/internal/ga;JLjava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -3187,7 +3197,7 @@
 
     if-eqz v3, :cond_35
 
-    move v7, v9
+    move v7, v10
 
     :cond_35
     invoke-virtual {p0, v0, v1, v2, v7}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;Ljava/lang/String;IZ)V
@@ -3215,7 +3225,7 @@
 
     if-eqz v1, :cond_36
 
-    move v7, v9
+    move v7, v10
 
     :cond_36
     invoke-virtual {p0, v0, v7}, Lcom/google/android/gms/internal/gb$a;->c(Lcom/google/android/gms/internal/ga;Z)V
@@ -3251,18 +3261,18 @@
 
     if-eqz v0, :cond_37
 
-    move v4, v9
+    move v4, v10
 
-    :goto_19
+    :goto_1b
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_38
 
-    move v5, v9
+    move v5, v10
 
-    :goto_1a
+    :goto_1c
     move-object v0, p0
 
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/internal/gb$a;->c(Lcom/google/android/gms/internal/ga;Ljava/lang/String;IZZ)V
@@ -3274,12 +3284,12 @@
     :cond_37
     move v4, v7
 
-    goto :goto_19
+    goto :goto_1b
 
     :cond_38
     move v5, v7
 
-    goto :goto_1a
+    goto :goto_1c
 
     :sswitch_6d
     const-string v0, "com.google.android.gms.games.internal.IGamesService"
@@ -3317,9 +3327,9 @@
 
     if-eqz v0, :cond_39
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -3345,9 +3355,9 @@
 
     if-eqz v0, :cond_3a
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -3369,9 +3379,9 @@
 
     if-eqz v0, :cond_3b
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -3393,9 +3403,9 @@
 
     if-eqz v0, :cond_3c
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -3417,9 +3427,9 @@
 
     if-eqz v0, :cond_3d
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -3447,9 +3457,9 @@
 
     if-eqz v0, :cond_3e
 
-    move v0, v9
+    move v0, v10
 
-    :goto_1b
+    :goto_1d
     invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/gms/internal/gb$a;->a(IIZ)Landroid/content/Intent;
 
     move-result-object v0
@@ -3458,16 +3468,16 @@
 
     if-eqz v0, :cond_3f
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
     :cond_3e
     move v0, v7
 
-    goto :goto_1b
+    goto :goto_1d
 
     :cond_3f
     invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
@@ -3493,9 +3503,9 @@
 
     if-eqz v0, :cond_40
 
-    move v0, v9
+    move v0, v10
 
-    :goto_1c
+    :goto_1e
     invoke-virtual {p0, v1, v2, v0}, Lcom/google/android/gms/internal/gb$a;->b(IIZ)Landroid/content/Intent;
 
     move-result-object v0
@@ -3504,16 +3514,16 @@
 
     if-eqz v0, :cond_41
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
     :cond_40
     move v0, v7
 
-    goto :goto_1c
+    goto :goto_1e
 
     :cond_41
     invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
@@ -3533,9 +3543,9 @@
 
     if-eqz v0, :cond_42
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -3563,7 +3573,7 @@
 
     check-cast v0, Lcom/google/android/gms/games/multiplayer/realtime/RoomEntity;
 
-    :goto_1d
+    :goto_1f
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -3576,16 +3586,16 @@
 
     if-eqz v0, :cond_44
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
     :cond_43
-    move-object v0, v5
+    move-object v0, v6
 
-    goto :goto_1d
+    goto :goto_1f
 
     :cond_44
     invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
@@ -3605,9 +3615,9 @@
 
     if-eqz v0, :cond_45
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -3629,9 +3639,9 @@
 
     if-eqz v0, :cond_46
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -3665,7 +3675,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_48
+    if-eqz v0, :cond_47
 
     sget-object v0, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -3677,12 +3687,12 @@
 
     move-object v4, v0
 
-    :goto_1e
+    :goto_20
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    if-eqz v0, :cond_47
+    if-eqz v0, :cond_48
 
     sget-object v0, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -3694,7 +3704,7 @@
 
     move-object v5, v0
 
-    :cond_47
+    :goto_21
     move-object v0, p0
 
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/internal/gb$a;->a([Lcom/google/android/gms/games/multiplayer/ParticipantEntity;Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/net/Uri;)Landroid/content/Intent;
@@ -3705,16 +3715,21 @@
 
     if-eqz v0, :cond_49
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
-    :cond_48
-    move-object v4, v5
+    :cond_47
+    move-object v4, v6
 
-    goto :goto_1e
+    goto :goto_20
+
+    :cond_48
+    move-object v5, v6
+
+    goto :goto_21
 
     :cond_49
     invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
@@ -3763,18 +3778,18 @@
 
     if-eqz v0, :cond_4a
 
-    move v4, v9
+    move v4, v10
 
-    :goto_1f
+    :goto_22
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_4b
 
-    move v5, v9
+    move v5, v10
 
-    :goto_20
+    :goto_23
     move-object v0, p0
 
     invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/internal/gb$a;->d(Lcom/google/android/gms/internal/ga;Ljava/lang/String;IZZ)V
@@ -3786,12 +3801,12 @@
     :cond_4a
     move v4, v7
 
-    goto :goto_1f
+    goto :goto_22
 
     :cond_4b
     move v5, v7
 
-    goto :goto_20
+    goto :goto_23
 
     :sswitch_7c
     const-string v0, "com.google.android.gms.games.internal.IGamesService"
@@ -3824,18 +3839,18 @@
 
     if-eqz v0, :cond_4c
 
-    move v5, v9
+    move v5, v10
 
-    :goto_21
+    :goto_24
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_4d
 
-    move v6, v9
+    move v6, v10
 
-    :goto_22
+    :goto_25
     move-object v0, p0
 
     invoke-virtual/range {v0 .. v6}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/ga;Ljava/lang/String;Ljava/lang/String;IZZ)V
@@ -3847,12 +3862,12 @@
     :cond_4c
     move v5, v7
 
-    goto :goto_21
+    goto :goto_24
 
     :cond_4d
     move v6, v7
 
-    goto :goto_22
+    goto :goto_25
 
     :sswitch_7d
     const-string v0, "com.google.android.gms.games.internal.IGamesService"
@@ -3871,9 +3886,9 @@
 
     if-eqz v0, :cond_4e
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/os/ParcelFileDescriptor;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -3897,9 +3912,9 @@
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/internal/gb$a;->c(Lcom/google/android/gms/internal/ga;J)V
+    invoke-virtual {p0, v0, v2, v3}, Lcom/google/android/gms/internal/gb$a;->c(Lcom/google/android/gms/internal/ga;J)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -3935,13 +3950,13 @@
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {p0, v0, v1, v2, v3}, Lcom/google/android/gms/internal/gb$a;->c(Lcom/google/android/gms/internal/ga;JLjava/lang/String;)V
+    invoke-virtual {p0, v0, v2, v3, v1}, Lcom/google/android/gms/internal/gb$a;->c(Lcom/google/android/gms/internal/ga;JLjava/lang/String;)V
 
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
@@ -4212,9 +4227,9 @@
 
     if-eqz v0, :cond_4f
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -4266,9 +4281,9 @@
 
     if-eqz v0, :cond_50
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -4292,14 +4307,14 @@
 
     invoke-virtual {v0, p2}, Lcom/google/android/gms/internal/ha;->am(Landroid/os/Parcel;)Lcom/google/android/gms/internal/gz;
 
-    move-result-object v5
+    move-result-object v6
 
     :cond_51
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v5, v0}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/gz;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {p0, v6, v0}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/gz;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -4307,9 +4322,9 @@
 
     if-eqz v0, :cond_52
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 
@@ -4387,7 +4402,7 @@
 
     if-eqz v3, :cond_53
 
-    move v7, v9
+    move v7, v10
 
     :cond_53
     invoke-virtual {p0, v0, v1, v2, v7}, Lcom/google/android/gms/internal/gb$a;->b(Lcom/google/android/gms/internal/ga;Ljava/lang/String;IZ)V
@@ -4411,7 +4426,7 @@
 
     invoke-virtual {v0, p2}, Lcom/google/android/gms/internal/gx;->al(Landroid/os/Parcel;)Lcom/google/android/gms/internal/gy;
 
-    move-result-object v5
+    move-result-object v6
 
     :cond_54
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -4422,7 +4437,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v5, v0, v1}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/gy;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {p0, v6, v0, v1}, Lcom/google/android/gms/internal/gb$a;->a(Lcom/google/android/gms/internal/gy;Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
@@ -4430,9 +4445,9 @@
 
     if-eqz v0, :cond_55
 
-    invoke-virtual {p3, v9}, Landroid/os/Parcel;->writeInt(I)V
+    invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeInt(I)V
 
-    invoke-virtual {v0, p3, v9}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
+    invoke-virtual {v0, p3, v10}, Landroid/content/Intent;->writeToParcel(Landroid/os/Parcel;I)V
 
     goto/16 :goto_0
 

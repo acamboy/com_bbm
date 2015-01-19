@@ -3,28 +3,38 @@
 .source "ChannelUtil.java"
 
 # interfaces
-.implements Lcom/bbm/j/s;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
+.field final synthetic a:Lcom/bbm/ui/b/o;
 
-.field final synthetic b:Landroid/app/Activity;
+.field final synthetic b:Ljava/lang/String;
 
 .field final synthetic c:Ljava/lang/String;
 
+.field final synthetic d:Z
+
+.field final synthetic e:Landroid/app/Activity;
+
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Landroid/app/Activity;Ljava/lang/String;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/b/o;Ljava/lang/String;Ljava/lang/String;Landroid/app/Activity;)V
+    .locals 1
 
     .prologue
-    .line 641
-    iput-object p1, p0, Lcom/bbm/util/ap;->a:Ljava/lang/String;
+    .line 275
+    iput-object p1, p0, Lcom/bbm/util/ap;->a:Lcom/bbm/ui/b/o;
 
-    iput-object p2, p0, Lcom/bbm/util/ap;->b:Landroid/app/Activity;
+    iput-object p2, p0, Lcom/bbm/util/ap;->b:Ljava/lang/String;
 
     iput-object p3, p0, Lcom/bbm/util/ap;->c:Ljava/lang/String;
+
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bbm/util/ap;->d:Z
+
+    iput-object p4, p0, Lcom/bbm/util/ap;->e:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,68 +43,46 @@
 
 
 # virtual methods
-.method public final a()Z
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    .line 644
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 278
+    iget-object v0, p0, Lcom/bbm/util/ap;->a:Lcom/bbm/ui/b/o;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
+
+    .line 279
+    iget-object v0, p0, Lcom/bbm/util/ap;->b:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/bbm/d/aa;->a(Ljava/lang/String;)Lcom/bbm/d/ay;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/util/ap;->a:Ljava/lang/String;
+    .line 280
+    iget-object v1, p0, Lcom/bbm/util/ap;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->O(Ljava/lang/String;)Lcom/bbm/d/de;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/ay;->a(Ljava/lang/String;)Lcom/bbm/d/ay;
 
-    move-result-object v0
+    .line 281
+    new-instance v1, Lcom/bbm/util/aq;
 
-    .line 645
-    iget-object v0, v0, Lcom/bbm/d/de;->Q:Lcom/bbm/util/bc;
+    invoke-direct {v1, p0}, Lcom/bbm/util/aq;-><init>(Lcom/bbm/util/ap;)V
 
-    sget-object v1, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
-
-    if-ne v0, v1, :cond_0
-
-    .line 646
-    const/4 v0, 0x0
-
-    .line 652
-    :goto_0
-    return v0
-
-    .line 648
-    :cond_0
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/bbm/util/ap;->b:Landroid/app/Activity;
-
-    const-class v2, Lcom/bbm/ui/activities/SelectContactActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 649
-    const-string v1, "com.bbm.ui.activities.ViewSubscribedChannelActivity.channel_id"
-
-    iget-object v2, p0, Lcom/bbm/util/ap;->a:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 650
-    const-string v1, "com.bbm.ui.activities.ViewSubscribedChannelActivity.post_id"
-
+    .line 298
     iget-object v2, p0, Lcom/bbm/util/ap;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    iget-object v3, p0, Lcom/bbm/util/ap;->e:Landroid/app/Activity;
 
-    .line 651
-    iget-object v1, p0, Lcom/bbm/util/ap;->b:Landroid/app/Activity;
+    invoke-virtual {v1, v2, v3}, Lcom/bbm/ui/d/a;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    const/16 v2, 0x64
+    .line 299
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
-    invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+    move-result-object v1
 
-    .line 652
-    const/4 v0, 0x1
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
 
-    goto :goto_0
+    .line 300
+    return-void
 .end method

@@ -1,5 +1,5 @@
 .class public Lcom/bbm/ui/activities/NewListActivity;
-.super Lcom/bbm/ui/activities/kl;
+.super Lcom/bbm/ui/activities/mj;
 .source "NewListActivity.java"
 
 
@@ -8,7 +8,7 @@
 
 .field private b:Landroid/widget/EditText;
 
-.field private j:Lcom/bbm/ui/HeaderButtonActionBar;
+.field private d:Lcom/bbm/ui/HeaderButtonActionBar;
 
 
 # direct methods
@@ -17,21 +17,21 @@
 
     .prologue
     .line 52
-    invoke-direct {p0}, Lcom/bbm/ui/activities/kl;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/mj;-><init>()V
 
     .line 32
-    new-instance v0, Lcom/bbm/ui/activities/wp;
+    new-instance v0, Lcom/bbm/ui/activities/zt;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/wp;-><init>(Lcom/bbm/ui/activities/NewListActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/zt;-><init>(Lcom/bbm/ui/activities/NewListActivity;)V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/NewListActivity;->a:Landroid/text/TextWatcher;
 
     .line 53
-    new-instance v0, Lcom/bbm/ui/fh;
+    new-instance v0, Lcom/bbm/ui/gc;
 
-    invoke-direct {v0}, Lcom/bbm/ui/fh;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/gc;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListActivity;->a(Lcom/bbm/ui/activities/agy;)V
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListActivity;->a(Lcom/bbm/ui/activities/alb;)V
 
     .line 54
     return-void
@@ -52,7 +52,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListActivity;->j:Lcom/bbm/ui/HeaderButtonActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListActivity;->d:Lcom/bbm/ui/HeaderButtonActionBar;
 
     return-object v0
 .end method
@@ -62,7 +62,7 @@
 
     .prologue
     .line 26
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/ab;
+    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
 
     move-result-object v0
 
@@ -82,13 +82,13 @@
 
     if-nez v2, :cond_0
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/kl;->c:Ljava/lang/String;
+    iget-object v2, p0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
 
-    new-instance v3, Lcom/bbm/g/bi;
+    new-instance v3, Lcom/bbm/g/cb;
 
-    invoke-direct {v3, v2, v1}, Lcom/bbm/g/bi;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v3, v2, v1}, Lcom/bbm/g/cb;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v3}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
+    invoke-virtual {v0, v3}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/NewListActivity;->finish()V
 
@@ -107,18 +107,18 @@
     const/4 v5, -0x1
 
     .line 58
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/kl;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/mj;->onCreate(Landroid/os/Bundle;)V
 
     .line 60
-    const v0, 0x7f03003d
+    const v0, 0x7f030042
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListActivity;->setContentView(I)V
 
     .line 61
-    iput-boolean v6, p0, Lcom/bbm/ui/activities/eg;->e:Z
+    iput-boolean v6, p0, Lcom/bbm/ui/activities/ey;->y:Z
 
     .line 62
-    const v0, 0x7f0a01f8
+    const v0, 0x7f0b0250
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/NewListActivity;->findViewById(I)Landroid/view/View;
 
@@ -138,9 +138,9 @@
     .line 64
     iget-object v0, p0, Lcom/bbm/ui/activities/NewListActivity;->b:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/bbm/ui/activities/wq;
+    new-instance v1, Lcom/bbm/ui/activities/zu;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/wq;-><init>(Lcom/bbm/ui/activities/NewListActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/zu;-><init>(Lcom/bbm/ui/activities/NewListActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
@@ -149,7 +149,7 @@
 
     const/16 v1, 0x200
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/gg;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/gg;
+    invoke-static {v0, v1}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
 
     .line 77
     new-instance v0, Lcom/bbm/ui/HeaderButtonActionBar;
@@ -158,7 +158,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e039f
+    const v2, 0x7f0e03d7
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -168,7 +168,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e0167
+    const v3, 0x7f0e0177
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -178,7 +178,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e02c7
+    const v4, 0x7f0e02e3
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -186,28 +186,28 @@
 
     invoke-direct {v0, p0, v1, v2, v3}, Lcom/bbm/ui/HeaderButtonActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/NewListActivity;->j:Lcom/bbm/ui/HeaderButtonActionBar;
+    iput-object v0, p0, Lcom/bbm/ui/activities/NewListActivity;->d:Lcom/bbm/ui/HeaderButtonActionBar;
 
     .line 79
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListActivity;->j:Lcom/bbm/ui/HeaderButtonActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListActivity;->d:Lcom/bbm/ui/HeaderButtonActionBar;
 
     invoke-virtual {v0, v6}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
 
     .line 80
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListActivity;->j:Lcom/bbm/ui/HeaderButtonActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListActivity;->d:Lcom/bbm/ui/HeaderButtonActionBar;
 
-    new-instance v1, Lcom/bbm/ui/activities/wr;
+    new-instance v1, Lcom/bbm/ui/activities/zv;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/wr;-><init>(Lcom/bbm/ui/activities/NewListActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/zv;-><init>(Lcom/bbm/ui/activities/NewListActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 89
-    iget-object v0, p0, Lcom/bbm/ui/activities/NewListActivity;->j:Lcom/bbm/ui/HeaderButtonActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/NewListActivity;->d:Lcom/bbm/ui/HeaderButtonActionBar;
 
-    new-instance v1, Lcom/bbm/ui/activities/ws;
+    new-instance v1, Lcom/bbm/ui/activities/zw;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ws;-><init>(Lcom/bbm/ui/activities/NewListActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/zw;-><init>(Lcom/bbm/ui/activities/NewListActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -217,7 +217,7 @@
     move-result-object v0
 
     .line 100
-    iget-object v1, p0, Lcom/bbm/ui/activities/NewListActivity;->j:Lcom/bbm/ui/HeaderButtonActionBar;
+    iget-object v1, p0, Lcom/bbm/ui/activities/NewListActivity;->d:Lcom/bbm/ui/HeaderButtonActionBar;
 
     new-instance v2, Landroid/app/ActionBar$LayoutParams;
 
@@ -239,7 +239,7 @@
 
     .prologue
     .line 115
-    invoke-super {p0}, Lcom/bbm/ui/activities/kl;->onPause()V
+    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onPause()V
 
     .line 116
     return-void

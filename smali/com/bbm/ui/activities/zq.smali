@@ -1,69 +1,55 @@
-.class final synthetic Lcom/bbm/ui/activities/zq;
+.class final Lcom/bbm/ui/activities/zq;
 .super Ljava/lang/Object;
-.source "ProfileIconSourceActivity.java"
+.source "NewGroupActivity.java"
+
+# interfaces
+.implements Landroid/text/TextWatcher;
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/activities/NewGroupActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/activities/NewGroupActivity;)V
+    .locals 0
 
     .prologue
-    .line 134
-    invoke-static {}, Lcom/bbm/ui/activities/zt;->values()[Lcom/bbm/ui/activities/zt;
+    .line 213
+    iput-object p1, p0, Lcom/bbm/ui/activities/zq;->a:Lcom/bbm/ui/activities/NewGroupActivity;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/bbm/ui/activities/zq;->a:[I
-
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/activities/zq;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/activities/zt;->a:Lcom/bbm/ui/activities/zt;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/zt;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/activities/zq;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/activities/zt;->b:Lcom/bbm/ui/activities/zt;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/zt;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
-
-    :goto_1
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
 
-    goto :goto_1
+# virtual methods
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
-    :catch_1
-    move-exception v0
+    .prologue
+    .line 218
+    return-void
+.end method
 
-    goto :goto_0
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .prologue
+    .line 223
+    return-void
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 1
+
+    .prologue
+    .line 227
+    iget-object v0, p0, Lcom/bbm/ui/activities/zq;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/NewGroupActivity;->a()V
+
+    .line 228
+    return-void
 .end method

@@ -64,7 +64,7 @@
 
     .prologue
     .line 45
-    invoke-virtual {p0}, Lcom/google/zxing/client/android/d/p;->d()Z
+    invoke-virtual {p0}, Lcom/google/zxing/client/android/d/p;->c()Z
 
     move-result v0
 

@@ -1,58 +1,46 @@
 .class final Lcom/bbm/ui/activities/lc;
-.super Ljava/lang/Object;
-.source "GroupConversationActivity.java"
+.super Lcom/bbm/d/b/m;
+.source "GroupAdminEditActivity.java"
 
-# interfaces
-.implements Landroid/view/View$OnKeyListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/m",
+        "<",
+        "Lcom/bbm/g/ac;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminEditActivity;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
-    .line 256
-    iput-object p1, p0, Lcom/bbm/ui/activities/lc;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 73
+    iput-object p1, p0, Lcom/bbm/ui/activities/lc;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
-    .locals 2
+.method protected final bridge synthetic a(Ljava/lang/Object;)Z
+    .locals 1
 
     .prologue
-    const/4 v0, 0x1
+    .line 73
+    check-cast p1, Lcom/bbm/g/ac;
 
-    .line 260
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+    iget-boolean v0, p1, Lcom/bbm/g/ac;->a:Z
 
-    move-result v1
-
-    if-ne v1, v0, :cond_0
-
-    const/16 v1, 0x42
-
-    if-ne p2, v1, :cond_0
-
-    .line 262
-    iget-object v1, p0, Lcom/bbm/ui/activities/lc;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->g()V
-
-    .line 265
-    :goto_0
     return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

@@ -1,75 +1,46 @@
 .class final Lcom/bbm/ui/activities/pw;
-.super Lcom/bbm/ui/by;
-.source "GroupPictureCommentsActivity.java"
+.super Ljava/lang/Object;
+.source "GroupLobbyActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
     .locals 0
 
     .prologue
-    .line 489
-    iput-object p1, p0, Lcom/bbm/ui/activities/pw;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 349
+    iput-object p1, p0, Lcom/bbm/ui/activities/pw;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 498
-    iget-object v0, p0, Lcom/bbm/ui/activities/pw;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 352
+    const-string v0, "barGroupHeaderContainer Clicked"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->finish()V
+    const-class v1, Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    .line 499
-    return-void
-.end method
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-.method public final a(I)V
-    .locals 1
+    .line 354
+    iget-object v0, p0, Lcom/bbm/ui/activities/pw;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    .prologue
-    .line 503
-    packed-switch p1, :pswitch_data_0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->b()V
 
-    .line 508
-    :goto_0
-    return-void
-
-    .line 505
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/pw;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->i(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
-
-    goto :goto_0
-
-    .line 503
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method public final b()V
-    .locals 1
-
-    .prologue
-    .line 493
-    iget-object v0, p0, Lcom/bbm/ui/activities/pw;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->k(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
-
-    .line 494
+    .line 355
     return-void
 .end method

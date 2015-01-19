@@ -1,132 +1,149 @@
-.class public final enum Lcom/bbm/d/v;
-.super Ljava/lang/Enum;
+.class final Lcom/bbm/d/v;
+.super Ljava/lang/Object;
 .source "BbmdsModel.java"
+
+# interfaces
+.implements Ljava/util/Comparator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Enum",
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
         "<",
-        "Lcom/bbm/d/v;",
+        "Lcom/bbm/d/ec;",
         ">;"
     }
 .end annotation
 
 
-# static fields
-.field public static final enum a:Lcom/bbm/d/v;
+# instance fields
+.field final synthetic a:J
 
-.field public static final enum b:Lcom/bbm/d/v;
-
-.field public static final enum c:Lcom/bbm/d/v;
-
-.field private static final synthetic d:[Lcom/bbm/d/v;
+.field final synthetic b:Lcom/bbm/d/u;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
-
-    .prologue
-    const/4 v4, 0x2
-
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    .line 494
-    new-instance v0, Lcom/bbm/d/v;
-
-    const-string v1, "NONE"
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/d/v;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/d/v;->a:Lcom/bbm/d/v;
-
-    .line 495
-    new-instance v0, Lcom/bbm/d/v;
-
-    const-string v1, "DEFAULT_ON_TOP"
-
-    invoke-direct {v0, v1, v3}, Lcom/bbm/d/v;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/d/v;->b:Lcom/bbm/d/v;
-
-    .line 496
-    new-instance v0, Lcom/bbm/d/v;
-
-    const-string v1, "DEFAULT_ON_BOTTOM"
-
-    invoke-direct {v0, v1, v4}, Lcom/bbm/d/v;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/d/v;->c:Lcom/bbm/d/v;
-
-    .line 493
-    const/4 v0, 0x3
-
-    new-array v0, v0, [Lcom/bbm/d/v;
-
-    sget-object v1, Lcom/bbm/d/v;->a:Lcom/bbm/d/v;
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/bbm/d/v;->b:Lcom/bbm/d/v;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/bbm/d/v;->c:Lcom/bbm/d/v;
-
-    aput-object v1, v0, v4
-
-    sput-object v0, Lcom/bbm/d/v;->d:[Lcom/bbm/d/v;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
+.method constructor <init>(Lcom/bbm/d/u;J)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
 
     .prologue
-    .line 493
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+    .line 650
+    iput-object p1, p0, Lcom/bbm/d/v;->b:Lcom/bbm/d/u;
+
+    iput-wide p2, p0, Lcom/bbm/d/v;->a:J
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/d/v;
-    .locals 1
+
+# virtual methods
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 6
 
     .prologue
-    .line 493
-    const-class v0, Lcom/bbm/d/v;
+    const/4 v1, 0x1
 
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    const/4 v0, -0x1
 
-    move-result-object v0
+    .line 650
+    check-cast p1, Lcom/bbm/d/ec;
 
-    check-cast v0, Lcom/bbm/d/v;
+    check-cast p2, Lcom/bbm/d/ec;
 
-    return-object v0
-.end method
+    iget-wide v2, p1, Lcom/bbm/d/ec;->b:J
 
-.method public static values()[Lcom/bbm/d/v;
-    .locals 1
+    iget-wide v4, p2, Lcom/bbm/d/ec;->b:J
 
-    .prologue
-    .line 493
-    sget-object v0, Lcom/bbm/d/v;->d:[Lcom/bbm/d/v;
+    cmp-long v2, v2, v4
 
-    invoke-virtual {v0}, [Lcom/bbm/d/v;->clone()Ljava/lang/Object;
+    if-nez v2, :cond_1
 
-    move-result-object v0
+    const/4 v0, 0x0
 
-    check-cast v0, [Lcom/bbm/d/v;
+    :cond_0
+    :goto_0
+    return v0
 
-    return-object v0
+    :cond_1
+    sget-object v2, Lcom/bbm/d/n;->a:[I
+
+    iget-object v3, p0, Lcom/bbm/d/v;->b:Lcom/bbm/d/u;
+
+    iget-object v3, v3, Lcom/bbm/d/u;->a:Lcom/bbm/d/x;
+
+    invoke-virtual {v3}, Lcom/bbm/d/x;->ordinal()I
+
+    move-result v3
+
+    aget v2, v2, v3
+
+    packed-switch v2, :pswitch_data_0
+
+    :cond_2
+    iget-object v0, p1, Lcom/bbm/d/ec;->c:Ljava/lang/String;
+
+    iget-object v1, p2, Lcom/bbm/d/ec;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :pswitch_0
+    iget-wide v2, p1, Lcom/bbm/d/ec;->b:J
+
+    iget-wide v4, p0, Lcom/bbm/d/v;->a:J
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_0
+
+    iget-wide v2, p2, Lcom/bbm/d/ec;->b:J
+
+    iget-wide v4, p0, Lcom/bbm/d/v;->a:J
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_2
+
+    move v0, v1
+
+    goto :goto_0
+
+    :pswitch_1
+    iget-wide v2, p1, Lcom/bbm/d/ec;->b:J
+
+    iget-wide v4, p0, Lcom/bbm/d/v;->a:J
+
+    cmp-long v2, v2, v4
+
+    if-nez v2, :cond_3
+
+    move v0, v1
+
+    goto :goto_0
+
+    :cond_3
+    iget-wide v2, p2, Lcom/bbm/d/ec;->b:J
+
+    iget-wide v4, p0, Lcom/bbm/d/v;->a:J
+
+    cmp-long v1, v2, v4
+
+    if-nez v1, :cond_2
+
+    goto :goto_0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

@@ -1,40 +1,30 @@
 .class public final Lcom/bbm/d/bd;
-.super Lcom/bbm/d/da;
+.super Lcom/bbm/d/dy;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 1931
-    const-string v0, "fileTransferAccept"
+    .line 1544
+    const-string v0, "clearMessageHistory"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/da;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
 
-    .line 1933
-    const-string v0, "id"
-
-    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/bd;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 1934
-    const-string v0, "path"
-
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/bd;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 1935
+    .line 1546
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a()Lcom/bbm/f/x;
+.method public final bridge synthetic a()Lcom/bbm/f/ab;
     .locals 1
 
     .prologue
-    .line 1929
-    invoke-super {p0}, Lcom/bbm/d/da;->a()Lcom/bbm/f/x;
+    .line 1542
+    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

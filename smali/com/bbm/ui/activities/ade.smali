@@ -1,48 +1,37 @@
-.class final Lcom/bbm/ui/activities/ade;
+.class public final Lcom/bbm/ui/activities/ade;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
-
-# interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.source "ProfileIconSourceActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field public final a:I
+
+.field public final b:Ljava/lang/String;
+
+.field public final c:Lcom/bbm/ui/activities/adg;
+
+.field final synthetic d:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method public constructor <init>(Lcom/bbm/ui/activities/ProfileIconSourceActivity;ILjava/lang/String;Lcom/bbm/ui/activities/adg;)V
     .locals 0
 
     .prologue
-    .line 381
-    iput-object p1, p0, Lcom/bbm/ui/activities/ade;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 236
+    iput-object p1, p0, Lcom/bbm/ui/activities/ade;->d:Lcom/bbm/ui/activities/ProfileIconSourceActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 237
+    iput p2, p0, Lcom/bbm/ui/activities/ade;->a:I
 
+    .line 238
+    iput-object p3, p0, Lcom/bbm/ui/activities/ade;->b:Ljava/lang/String;
 
-# virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+    .line 239
+    iput-object p4, p0, Lcom/bbm/ui/activities/ade;->c:Lcom/bbm/ui/activities/adg;
 
-    .prologue
-    .line 385
-    const-string v0, "allow contact upload onCheckedChanged"
-
-    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 386
-    iget-object v0, p0, Lcom/bbm/ui/activities/ade;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    const-string v1, "icerberg_upload_allowed"
-
-    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
-
-    .line 387
+    .line 240
     return-void
 .end method
