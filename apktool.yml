@@ -1,9 +1,5 @@
 version: 2.0.0-RC3
-<<<<<<< HEAD
 apkFileName: com.bbm-2.6.0.30.apk
-=======
-apkFileName: 83D7BD.apk
->>>>>>> 6b1cf3e09f98d020488e56a8acee88793cc7ea03
 isFrameworkApk: false
 usesFramework:
   ids:
