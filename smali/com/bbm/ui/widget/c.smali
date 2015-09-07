@@ -8,7 +8,7 @@
     value = {
         "Lcom/bbm/d/b/f",
         "<",
-        "Lcom/bbm/ui/activities/ef;",
+        "Lcom/bbm/ui/activities/ex;",
         ">;"
     }
 .end annotation
@@ -34,13 +34,13 @@
 
 # virtual methods
 .method protected final a()Ljava/util/List;
-    .locals 13
+    .locals 14
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/ef;",
+            "Lcom/bbm/ui/activities/ex;",
             ">;"
         }
     .end annotation
@@ -49,21 +49,21 @@
     const/4 v4, 0x0
 
     .line 119
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v3
 
     .line 121
-    invoke-virtual {v3}, Lcom/bbm/d/a;->j()Lcom/bbm/j/r;
+    invoke-virtual {v3}, Lcom/bbm/d/a;->p()Lcom/bbm/j/r;
 
     move-result-object v1
 
     .line 122
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/ab;
+    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/g/ab;->d()Lcom/bbm/j/w;
+    invoke-virtual {v0}, Lcom/bbm/g/al;->d()Lcom/bbm/j/w;
 
     move-result-object v5
 
@@ -103,7 +103,7 @@
 
     if-nez v5, :cond_0
 
-    invoke-virtual {v3}, Lcom/bbm/d/a;->E()Lcom/bbm/j/w;
+    invoke-virtual {v3}, Lcom/bbm/d/a;->N()Lcom/bbm/j/w;
 
     move-result-object v3
 
@@ -116,7 +116,7 @@
     :cond_0
     move-object v0, v2
 
-    .line 212
+    .line 211
     :goto_0
     return-object v0
 
@@ -158,11 +158,11 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/bbm/l/a;->a(Landroid/content/Context;)Lcom/bbm/l/a;
+    invoke-static {v2}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/bbm/l/a;->e()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/bbm/n/b;->d()Ljava/lang/String;
 
     move-result-object v8
 
@@ -177,24 +177,24 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/bbm/d/dp;
+    check-cast v2, Lcom/bbm/d/eu;
 
     .line 144
     if-eqz v8, :cond_3
 
-    iget-boolean v9, v2, Lcom/bbm/d/dp;->h:Z
+    iget-boolean v9, v2, Lcom/bbm/d/eu;->i:Z
 
     if-nez v9, :cond_3
 
-    iget-boolean v9, v2, Lcom/bbm/d/dp;->j:Z
+    iget-boolean v9, v2, Lcom/bbm/d/eu;->k:Z
 
     if-nez v9, :cond_3
 
-    iget-object v9, v2, Lcom/bbm/d/dp;->q:Ljava/util/List;
+    iget-object v9, v2, Lcom/bbm/d/eu;->r:Ljava/util/List;
 
     if-eqz v9, :cond_3
 
-    iget-object v9, v2, Lcom/bbm/d/dp;->q:Ljava/util/List;
+    iget-object v9, v2, Lcom/bbm/d/eu;->r:Ljava/util/List;
 
     invoke-interface {v9}, Ljava/util/List;->size()I
 
@@ -202,7 +202,7 @@
 
     if-lez v9, :cond_3
 
-    iget-object v2, v2, Lcom/bbm/d/dp;->q:Ljava/util/List;
+    iget-object v2, v2, Lcom/bbm/d/eu;->r:Ljava/util/List;
 
     invoke-interface {v2, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -215,9 +215,9 @@
     if-eqz v2, :cond_3
 
     .line 146
-    const-wide v9, 0x7fffffffffffffffL
+    const-wide v10, 0x7fffffffffffffffL
 
-    aput-wide v9, v6, v3
+    aput-wide v10, v6, v3
 
     .line 142
     :goto_2
@@ -227,24 +227,24 @@
 
     goto :goto_1
 
-    .line 149
+    .line 148
     :cond_3
     invoke-interface {v1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/bbm/d/dp;
+    check-cast v2, Lcom/bbm/d/eu;
 
-    iget-wide v9, v2, Lcom/bbm/d/dp;->n:J
+    iget-wide v10, v2, Lcom/bbm/d/eu;->o:J
 
-    aput-wide v9, v6, v3
+    aput-wide v10, v6, v3
 
     goto :goto_2
 
     :cond_4
     move v3, v4
 
-    .line 153
+    .line 152
     :goto_3
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -252,29 +252,29 @@
 
     if-ge v3, v2, :cond_5
 
-    .line 154
+    .line 153
     add-int v8, v3, v7
 
-    .line 155
+    .line 154
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/bbm/g/n;
+    check-cast v2, Lcom/bbm/g/q;
 
-    iget-wide v9, v2, Lcom/bbm/g/n;->h:J
+    iget-wide v10, v2, Lcom/bbm/g/q;->j:J
 
-    .line 156
-    aput-wide v9, v6, v8
+    .line 155
+    aput-wide v10, v6, v8
 
-    .line 153
+    .line 152
     add-int/lit8 v2, v3, 0x1
 
     move v3, v2
 
     goto :goto_3
 
-    .line 162
+    .line 161
     :cond_5
     new-instance v8, Ljava/util/PriorityQueue;
 
@@ -286,18 +286,18 @@
 
     move v2, v4
 
-    .line 179
+    .line 178
     :goto_4
     if-ge v2, v7, :cond_6
 
-    .line 180
+    .line 179
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {v8, v3}, Ljava/util/PriorityQueue;->add(Ljava/lang/Object;)Z
 
-    .line 179
+    .line 178
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
@@ -305,33 +305,33 @@
     :cond_6
     move v2, v7
 
-    .line 183
+    .line 182
     :goto_5
     if-ge v2, v5, :cond_8
 
-    .line 185
-    aget-wide v9, v6, v2
+    .line 184
+    aget-wide v10, v6, v2
 
-    const-wide/16 v11, 0x0
+    const-wide/16 v12, 0x0
 
-    cmp-long v3, v9, v11
+    cmp-long v3, v10, v12
 
     if-lez v3, :cond_7
 
-    .line 186
+    .line 185
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-virtual {v8, v3}, Ljava/util/PriorityQueue;->add(Ljava/lang/Object;)Z
 
-    .line 183
+    .line 182
     :cond_7
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_5
 
-    .line 197
+    .line 196
     :cond_8
     new-instance v5, Ljava/util/ArrayList;
 
@@ -339,7 +339,7 @@
 
     move v6, v4
 
-    .line 199
+    .line 198
     :goto_6
     const/16 v2, 0xc
 
@@ -351,7 +351,7 @@
 
     if-nez v2, :cond_d
 
-    .line 200
+    .line 199
     invoke-virtual {v8}, Ljava/util/PriorityQueue;->remove()Ljava/lang/Object;
 
     move-result-object v2
@@ -362,22 +362,22 @@
 
     move-result v2
 
-    .line 202
+    .line 201
     if-ge v2, v7, :cond_c
 
-    .line 203
+    .line 202
     invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
-    check-cast v2, Lcom/bbm/d/dp;
+    check-cast v2, Lcom/bbm/d/eu;
 
-    .line 204
-    iget-object v3, v2, Lcom/bbm/d/dp;->q:Ljava/util/List;
+    .line 203
+    iget-object v3, v2, Lcom/bbm/d/eu;->r:Ljava/util/List;
 
     if-eqz v3, :cond_9
 
-    iget-object v3, v2, Lcom/bbm/d/dp;->q:Ljava/util/List;
+    iget-object v3, v2, Lcom/bbm/d/eu;->r:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -385,7 +385,7 @@
 
     if-lez v3, :cond_9
 
-    iget-object v3, v2, Lcom/bbm/d/dp;->q:Ljava/util/List;
+    iget-object v3, v2, Lcom/bbm/d/eu;->r:Ljava/util/List;
 
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -393,7 +393,7 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 205
+    .line 204
     :goto_7
     if-eqz v3, :cond_b
 
@@ -417,7 +417,7 @@
 
     move-result-object v3
 
-    iget-object v10, v2, Lcom/bbm/d/dp;->b:Ljava/lang/String;
+    iget-object v10, v2, Lcom/bbm/d/eu;->b:Ljava/lang/String;
 
     invoke-virtual {v3, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -427,25 +427,25 @@
 
     move-result-object v3
 
-    invoke-virtual {v9, v3}, Lcom/bbm/d/a;->k(Ljava/lang/String;)Lcom/bbm/util/bc;
+    invoke-virtual {v9, v3}, Lcom/bbm/d/a;->o(Ljava/lang/String;)Lcom/bbm/util/bi;
 
     move-result-object v3
 
-    sget-object v9, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v9, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-ne v3, v9, :cond_a
 
     const/4 v3, 0x1
 
-    .line 206
+    .line 205
     :goto_8
-    new-instance v9, Lcom/bbm/ui/activities/ef;
+    new-instance v9, Lcom/bbm/ui/activities/ex;
 
-    invoke-direct {v9, v2, v3}, Lcom/bbm/ui/activities/ef;-><init>(Lcom/bbm/d/dp;Z)V
+    invoke-direct {v9, v2, v3}, Lcom/bbm/ui/activities/ex;-><init>(Lcom/bbm/d/eu;Z)V
 
     invoke-virtual {v5, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 199
+    .line 198
     :goto_9
     add-int/lit8 v2, v6, 0x1
 
@@ -453,7 +453,7 @@
 
     goto :goto_6
 
-    .line 204
+    .line 203
     :cond_9
     const/4 v3, 0x0
 
@@ -462,7 +462,7 @@
     :cond_a
     move v3, v4
 
-    .line 205
+    .line 204
     goto :goto_8
 
     :cond_b
@@ -470,9 +470,9 @@
 
     goto :goto_8
 
-    .line 208
+    .line 207
     :cond_c
-    new-instance v3, Lcom/bbm/ui/activities/ef;
+    new-instance v3, Lcom/bbm/ui/activities/ex;
 
     sub-int/2addr v2, v7
 
@@ -480,9 +480,9 @@
 
     move-result-object v2
 
-    check-cast v2, Lcom/bbm/g/n;
+    check-cast v2, Lcom/bbm/g/q;
 
-    invoke-direct {v3, v2}, Lcom/bbm/ui/activities/ef;-><init>(Lcom/bbm/g/n;)V
+    invoke-direct {v3, v2}, Lcom/bbm/ui/activities/ex;-><init>(Lcom/bbm/g/q;)V
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -491,6 +491,6 @@
     :cond_d
     move-object v0, v5
 
-    .line 212
+    .line 211
     goto/16 :goto_0
 .end method

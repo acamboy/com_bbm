@@ -14,7 +14,7 @@
     .locals 0
 
     .prologue
-    .line 1162
+    .line 1172
     iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/n;->c:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,7 +26,7 @@
     .locals 0
 
     .prologue
-    .line 1162
+    .line 1172
     invoke-direct {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/n;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;)V
 
     return-void
@@ -38,7 +38,7 @@
     .locals 1
 
     .prologue
-    .line 1166
+    .line 1176
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/n;->c:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-static {v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->c(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;)I
@@ -47,7 +47,7 @@
 
     iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/n;->a:I
 
-    .line 1167
+    .line 1177
     return-void
 .end method
 
@@ -55,7 +55,7 @@
     .locals 2
 
     .prologue
-    .line 1170
+    .line 1180
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/n;->c:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-virtual {v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->hasWindowFocus()Z

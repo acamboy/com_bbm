@@ -13,13 +13,7 @@
 .method public abstract findMemberByUserId(Ljava/lang/String;)Lcom/glympse/android/api/GGroupMember;
 .end method
 
-.method public abstract getActiveCount()J
-.end method
-
 .method public abstract getAvatar()Lcom/glympse/android/api/GImage;
-.end method
-
-.method public abstract getEventsCount()J
 .end method
 
 .method public abstract getId()Ljava/lang/String;
@@ -35,9 +29,6 @@
             ">;"
         }
     .end annotation
-.end method
-
-.method public abstract getLastEventsCount()J
 .end method
 
 .method public abstract getMembers()Lcom/glympse/android/core/GArray;
@@ -58,12 +49,6 @@
 .method public abstract getState()I
 .end method
 
-.method public abstract getTotalCount()J
-.end method
-
-.method public abstract getWatchingCount()J
-.end method
-
 .method public abstract leave()V
 .end method
 
@@ -71,7 +56,4 @@
 .end method
 
 .method public abstract send(Lcom/glympse/android/api/GInvite;Ljava/lang/String;)Z
-.end method
-
-.method public abstract setLastEventsCount(J)V
 .end method

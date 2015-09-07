@@ -127,7 +127,7 @@
 .end method
 
 .method public b(Ljava/lang/String;Landroid/content/Context;)Landroid/os/Bundle;
-    .locals 5
+    .locals 6
 
     iget-object v1, p0, Lcom/google/android/gms/internal/cq;->mg:Ljava/lang/Object;
 
@@ -146,15 +146,15 @@
 
     const-string v2, "basets"
 
-    iget-wide v3, p0, Lcom/google/android/gms/internal/cq;->pC:J
+    iget-wide v4, p0, Lcom/google/android/gms/internal/cq;->pC:J
 
-    invoke-virtual {v0, v2, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {v0, v2, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string v2, "currts"
 
-    iget-wide v3, p0, Lcom/google/android/gms/internal/cq;->pB:J
+    iget-wide v4, p0, Lcom/google/android/gms/internal/cq;->pB:J
 
-    invoke-virtual {v0, v2, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {v0, v2, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string v2, "seq_num"
 

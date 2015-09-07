@@ -1,98 +1,68 @@
 .class final Lcom/bbm/util/al;
-.super Lcom/bbm/ui/d/a;
+.super Ljava/lang/Object;
 .source "ChannelUtil.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/util/ak;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Ljava/lang/String;
+
+.field final synthetic c:Ljava/lang/String;
+
+.field final synthetic d:Lcom/bbm/ui/b/o;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/ak;)V
+.method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/bbm/ui/b/o;)V
     .locals 0
 
     .prologue
-    .line 311
-    iput-object p1, p0, Lcom/bbm/util/al;->a:Lcom/bbm/util/ak;
+    .line 988
+    iput-object p1, p0, Lcom/bbm/util/al;->a:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/bbm/ui/d/a;-><init>()V
+    iput-object p2, p0, Lcom/bbm/util/al;->b:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/bbm/util/al;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lcom/bbm/util/al;->d:Lcom/bbm/ui/b/o;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 5
 
     .prologue
-    .line 314
-    iget-object v0, p0, Lcom/bbm/util/al;->a:Lcom/bbm/util/ak;
+    .line 992
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
-    iget-boolean v0, v0, Lcom/bbm/util/ak;->d:Z
+    move-result-object v0
 
-    if-eqz v0, :cond_0
+    iget-object v1, p0, Lcom/bbm/util/al;->a:Ljava/lang/String;
 
-    .line 315
-    new-instance v0, Landroid/content/Intent;
+    iget-object v2, p0, Lcom/bbm/util/al;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/bbm/util/al;->a:Lcom/bbm/util/ak;
+    iget-object v3, p0, Lcom/bbm/util/al;->c:Ljava/lang/String;
 
-    iget-object v1, v1, Lcom/bbm/util/ak;->e:Landroid/app/Activity;
+    new-instance v4, Lcom/bbm/d/br;
 
-    const-class v2, Lcom/bbm/ui/activities/MainActivity;
+    invoke-direct {v4, v1, v2, v3}, Lcom/bbm/d/br;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    invoke-virtual {v0, v4}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
 
-    .line 316
-    iget-object v1, p0, Lcom/bbm/util/al;->a:Lcom/bbm/util/ak;
+    .line 993
+    iget-object v0, p0, Lcom/bbm/util/al;->d:Lcom/bbm/ui/b/o;
 
-    iget-object v1, v1, Lcom/bbm/util/ak;->e:Landroid/app/Activity;
+    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
 
-    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
-
-    .line 317
-    iget-object v0, p0, Lcom/bbm/util/al;->a:Lcom/bbm/util/ak;
-
-    iget-object v0, v0, Lcom/bbm/util/ak;->e:Landroid/app/Activity;
-
-    instance-of v0, v0, Lcom/bbm/ui/activities/MainActivity;
-
-    if-nez v0, :cond_0
-
-    .line 318
-    iget-object v0, p0, Lcom/bbm/util/al;->a:Lcom/bbm/util/ak;
-
-    iget-object v0, v0, Lcom/bbm/util/ak;->e:Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
-
-    .line 321
-    :cond_0
-    return-void
-.end method
-
-.method public final a(I)V
-    .locals 3
-
-    .prologue
-    .line 324
-    iget-object v0, p0, Lcom/bbm/util/al;->a:Lcom/bbm/util/ak;
-
-    iget-object v0, v0, Lcom/bbm/util/ak;->e:Landroid/app/Activity;
-
-    iget-object v1, p0, Lcom/bbm/util/al;->a:Lcom/bbm/util/ak;
-
-    iget-object v1, v1, Lcom/bbm/util/ak;->e:Landroid/app/Activity;
-
-    invoke-virtual {v1, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/eo;->a(Landroid/content/Context;Ljava/lang/String;I)V
-
-    .line 325
+    .line 994
     return-void
 .end method

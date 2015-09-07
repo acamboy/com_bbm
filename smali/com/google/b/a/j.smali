@@ -116,7 +116,7 @@
 .end method
 
 .method public final a(Ljava/lang/String;J)Lcom/google/b/a/j;
-    .locals 1
+    .locals 2
 
     .prologue
     .line 287

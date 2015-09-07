@@ -4,10 +4,10 @@
 
 
 # instance fields
-.field protected final a:Lcom/bbm/util/ev;
+.field protected final a:Lcom/bbm/util/fp;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/bbm/util/ev",
+            "Lcom/bbm/util/fp",
             "<",
             "Lcom/bbm/j/h;",
             ">;"
@@ -25,11 +25,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 11
-    new-instance v0, Lcom/bbm/util/ev;
+    new-instance v0, Lcom/bbm/util/fp;
 
-    invoke-direct {v0}, Lcom/bbm/util/ev;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/util/fp;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/j/i;->a:Lcom/bbm/util/ev;
+    iput-object v0, p0, Lcom/bbm/j/i;->a:Lcom/bbm/util/fp;
 
     return-void
 .end method
@@ -46,9 +46,9 @@
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
     .line 15
-    iget-object v0, p0, Lcom/bbm/j/i;->a:Lcom/bbm/util/ev;
+    iget-object v0, p0, Lcom/bbm/j/i;->a:Lcom/bbm/util/fp;
 
-    invoke-virtual {v0}, Lcom/bbm/util/ev;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Lcom/bbm/util/fp;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
@@ -107,9 +107,9 @@
     invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 26
-    iget-object v0, p0, Lcom/bbm/j/i;->a:Lcom/bbm/util/ev;
+    iget-object v0, p0, Lcom/bbm/j/i;->a:Lcom/bbm/util/fp;
 
-    invoke-virtual {v0, p1}, Lcom/bbm/util/ev;->a(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/bbm/util/fp;->a(Ljava/lang/Object;)V
 
     .line 27
     return-void
@@ -120,9 +120,9 @@
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/bbm/j/i;->a:Lcom/bbm/util/ev;
+    iget-object v0, p0, Lcom/bbm/j/i;->a:Lcom/bbm/util/fp;
 
-    invoke-virtual {v0, p1}, Lcom/bbm/util/ev;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, p1}, Lcom/bbm/util/fp;->b(Ljava/lang/Object;)V
 
     .line 31
     return-void

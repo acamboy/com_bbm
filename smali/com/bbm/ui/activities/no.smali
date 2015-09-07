@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/no;
 .super Ljava/lang/Object;
-.source "GroupListsCommentActivity.java"
+.source "GroupEventDetailsActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupListsCommentActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupEventDetailsActivity;)V
     .locals 0
 
     .prologue
-    .line 178
-    iput-object p1, p0, Lcom/bbm/ui/activities/no;->a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
+    .line 133
+    iput-object p1, p0, Lcom/bbm/ui/activities/no;->a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,35 +25,26 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
 
     .prologue
-    .line 182
-    iget-object v0, p0, Lcom/bbm/ui/activities/no;->a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
+    .line 137
+    const-string v0, "headerActionBar Negative Button Clicked"
 
-    invoke-static {v0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
+    const-class v1, Lcom/bbm/ui/activities/GroupEventDetailsActivity;
 
-    .line 183
-    iget-object v0, p0, Lcom/bbm/ui/activities/no;->a:Lcom/bbm/ui/activities/GroupListsCommentActivity;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListsCommentActivity;->b(Lcom/bbm/ui/activities/GroupListsCommentActivity;)Lcom/bbm/ui/SendEditText;
+    .line 139
+    iget-object v0, p0, Lcom/bbm/ui/activities/no;->a:Lcom/bbm/ui/activities/GroupEventDetailsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupEventDetailsActivity;->d(Lcom/bbm/ui/activities/GroupEventDetailsActivity;)Lcom/bbm/j/u;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/SendEditText;->setVisibility(I)V
-
-    .line 184
+    .line 140
     return-void
 .end method

@@ -43,9 +43,11 @@
 
 
 # instance fields
-.field protected Q:Lcom/glympse/android/hal/GCalendarListener;
+.field protected P:Lcom/glympse/android/hal/GCalendarListener;
 
-.field private R:Lcom/glympse/android/hal/n;
+.field private Q:Lcom/glympse/android/hal/n;
+
+.field private R:Ljava/util/concurrent/Future;
 
 .field private S:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
@@ -58,9 +60,9 @@
     .end annotation
 .end field
 
-.field protected e:Landroid/content/Context;
+.field protected _handler:Lcom/glympse/android/core/GHandler;
 
-.field protected f:Lcom/glympse/android/core/GHandler;
+.field protected e:Landroid/content/Context;
 
 
 # direct methods
@@ -74,7 +76,7 @@
 
     const/4 v3, 0x0
 
-    .line 32
+    .line 33
     const/4 v0, 0x7
 
     new-array v0, v0, [Ljava/lang/String;
@@ -117,7 +119,7 @@
 
     sput-object v0, Lcom/glympse/android/hal/l;->T:[Ljava/lang/String;
 
-    .line 52
+    .line 53
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "attendeeName"
@@ -137,18 +139,18 @@
     .locals 1
 
     .prologue
-    .line 62
+    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
+    .line 30
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/glympse/android/hal/l;->S:Lcom/glympse/android/hal/GVector;
 
-    .line 63
+    .line 64
     iput-object p1, p0, Lcom/glympse/android/hal/l;->e:Landroid/content/Context;
 
-    .line 64
+    .line 65
     return-void
 .end method
 
@@ -156,31 +158,31 @@
     .locals 4
 
     .prologue
-    .line 295
+    .line 288
     :try_start_0
     invoke-static {p2}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
     move-result-object v0
 
-    .line 296
+    .line 289
     if-eqz v0, :cond_0
 
-    .line 298
+    .line 291
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v1
 
-    .line 299
+    .line 292
     if-eqz v1, :cond_0
 
-    .line 301
+    .line 294
     invoke-virtual {v0, p0, p1}, Ljava/util/TimeZone;->getOffset(J)I
 
     move-result v0
 
     int-to-long v2, v0
 
-    .line 302
+    .line 295
     invoke-virtual {v1, p0, p1}, Ljava/util/TimeZone;->getOffset(J)I
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
@@ -189,17 +191,17 @@
 
     int-to-long v0, v0
 
-    .line 304
+    .line 297
     add-long/2addr v2, p0
 
     sub-long p0, v2, v0
 
-    .line 313
+    .line 306
     :cond_0
     :goto_0
     return-wide p0
 
-    .line 308
+    .line 301
     :catch_0
     move-exception v0
 
@@ -244,7 +246,7 @@
 
 
 # virtual methods
-.method public a(Lcom/glympse/android/hal/GVector;)V
+.method public complete(Lcom/glympse/android/hal/GVector;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -257,25 +259,25 @@
     .end annotation
 
     .prologue
-    .line 110
+    .line 111
     iput-object p1, p0, Lcom/glympse/android/hal/l;->S:Lcom/glympse/android/hal/GVector;
 
-    .line 111
+    .line 112
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/glympse/android/hal/l;->R:Lcom/glympse/android/hal/n;
+    iput-object v0, p0, Lcom/glympse/android/hal/l;->Q:Lcom/glympse/android/hal/n;
 
-    .line 112
-    iget-object v0, p0, Lcom/glympse/android/hal/l;->Q:Lcom/glympse/android/hal/GCalendarListener;
+    .line 113
+    iget-object v0, p0, Lcom/glympse/android/hal/l;->P:Lcom/glympse/android/hal/GCalendarListener;
 
     if-eqz v0, :cond_0
 
-    .line 114
-    iget-object v0, p0, Lcom/glympse/android/hal/l;->Q:Lcom/glympse/android/hal/GCalendarListener;
+    .line 115
+    iget-object v0, p0, Lcom/glympse/android/hal/l;->P:Lcom/glympse/android/hal/GCalendarListener;
 
     invoke-interface {v0, p0}, Lcom/glympse/android/hal/GCalendarListener;->calendarChanged(Lcom/glympse/android/hal/GCalendarProvider;)V
 
-    .line 116
+    .line 117
     :cond_0
     return-void
 .end method
@@ -293,7 +295,7 @@
     .end annotation
 
     .prologue
-    .line 120
+    .line 121
     iget-object v0, p0, Lcom/glympse/android/hal/l;->S:Lcom/glympse/android/hal/GVector;
 
     return-object v0
@@ -303,31 +305,39 @@
     .locals 3
 
     .prologue
-    .line 99
-    iget-object v0, p0, Lcom/glympse/android/hal/l;->R:Lcom/glympse/android/hal/n;
+    .line 100
+    iget-object v0, p0, Lcom/glympse/android/hal/l;->Q:Lcom/glympse/android/hal/n;
 
     if-eqz v0, :cond_0
 
-    .line 106
+    .line 107
     :goto_0
     return-void
 
-    .line 104
+    .line 105
     :cond_0
     new-instance v0, Lcom/glympse/android/hal/n;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/l;->Q:Lcom/glympse/android/hal/GCalendarListener;
+    iget-object v1, p0, Lcom/glympse/android/hal/l;->P:Lcom/glympse/android/hal/GCalendarListener;
 
     iget-object v2, p0, Lcom/glympse/android/hal/l;->e:Landroid/content/Context;
 
     invoke-direct {v0, p0, v1, v2}, Lcom/glympse/android/hal/n;-><init>(Lcom/glympse/android/hal/l;Lcom/glympse/android/hal/GCalendarListener;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/l;->R:Lcom/glympse/android/hal/n;
+    iput-object v0, p0, Lcom/glympse/android/hal/l;->Q:Lcom/glympse/android/hal/n;
 
-    .line 105
-    iget-object v0, p0, Lcom/glympse/android/hal/l;->R:Lcom/glympse/android/hal/n;
+    .line 106
+    invoke-static {}, Lcom/glympse/android/hal/GlympseThreadPool;->instance()Lcom/glympse/android/hal/GlympseThreadPool;
 
-    invoke-virtual {v0}, Lcom/glympse/android/hal/n;->start()V
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/glympse/android/hal/l;->Q:Lcom/glympse/android/hal/n;
+
+    invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GlympseThreadPool;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/glympse/android/hal/l;->R:Ljava/util/concurrent/Future;
 
     goto :goto_0
 .end method
@@ -336,55 +346,55 @@
     .locals 0
 
     .prologue
-    .line 72
-    iput-object p1, p0, Lcom/glympse/android/hal/l;->Q:Lcom/glympse/android/hal/GCalendarListener;
-
     .line 73
-    iput-object p2, p0, Lcom/glympse/android/hal/l;->f:Lcom/glympse/android/core/GHandler;
+    iput-object p1, p0, Lcom/glympse/android/hal/l;->P:Lcom/glympse/android/hal/GCalendarListener;
 
-    .line 75
-    invoke-virtual {p0}, Lcom/glympse/android/hal/l;->refresh()V
+    .line 74
+    iput-object p2, p0, Lcom/glympse/android/hal/l;->_handler:Lcom/glympse/android/core/GHandler;
 
     .line 76
+    invoke-virtual {p0}, Lcom/glympse/android/hal/l;->refresh()V
+
+    .line 77
     return-void
 .end method
 
 .method public stop()V
-    .locals 2
+    .locals 3
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    .line 80
-    iget-object v0, p0, Lcom/glympse/android/hal/l;->R:Lcom/glympse/android/hal/n;
+    .line 81
+    iget-object v0, p0, Lcom/glympse/android/hal/l;->Q:Lcom/glympse/android/hal/n;
 
     if-eqz v0, :cond_0
 
-    .line 84
-    :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/l;->R:Lcom/glympse/android/hal/n;
-
-    invoke-virtual {v0}, Lcom/glympse/android/hal/n;->cancel()V
-
     .line 85
-    iget-object v0, p0, Lcom/glympse/android/hal/l;->R:Lcom/glympse/android/hal/n;
+    :try_start_0
+    iget-object v0, p0, Lcom/glympse/android/hal/l;->R:Ljava/util/concurrent/Future;
 
-    invoke-virtual {v0}, Lcom/glympse/android/hal/n;->join()V
+    const/4 v1, 0x1
+
+    invoke-interface {v0, v1}, Ljava/util/concurrent/Future;->cancel(Z)Z
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 90
     :goto_0
-    iput-object v1, p0, Lcom/glympse/android/hal/l;->R:Lcom/glympse/android/hal/n;
+    iput-object v2, p0, Lcom/glympse/android/hal/l;->Q:Lcom/glympse/android/hal/n;
 
-    .line 92
-    :cond_0
-    iput-object v1, p0, Lcom/glympse/android/hal/l;->Q:Lcom/glympse/android/hal/GCalendarListener;
+    .line 91
+    iput-object v2, p0, Lcom/glympse/android/hal/l;->R:Ljava/util/concurrent/Future;
 
     .line 93
-    iput-object v1, p0, Lcom/glympse/android/hal/l;->f:Lcom/glympse/android/core/GHandler;
+    :cond_0
+    iput-object v2, p0, Lcom/glympse/android/hal/l;->P:Lcom/glympse/android/hal/GCalendarListener;
 
     .line 94
+    iput-object v2, p0, Lcom/glympse/android/hal/l;->_handler:Lcom/glympse/android/core/GHandler;
+
+    .line 95
     return-void
 
     :catch_0

@@ -26,7 +26,7 @@
 
 # virtual methods
 .method public final a()Ljava/lang/String;
-    .locals 7
+    .locals 8
 
     .prologue
     .line 83
@@ -47,14 +47,14 @@
     .line 86
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     .line 87
-    iget-wide v5, p0, Lcom/a/a/aa;->a:J
+    iget-wide v6, p0, Lcom/a/a/aa;->a:J
 
-    sub-long v0, v3, v0
+    sub-long v0, v4, v0
 
-    add-long/2addr v0, v5
+    add-long/2addr v0, v6
 
     iput-wide v0, p0, Lcom/a/a/aa;->a:J
 
@@ -74,7 +74,7 @@
 .end method
 
 .method public final readLine()Ljava/lang/String;
-    .locals 7
+    .locals 8
 
     .prologue
     .line 65
@@ -103,7 +103,7 @@
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 73
     invoke-super {p0}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -113,16 +113,16 @@
     .line 74
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     .line 75
-    iget-wide v5, p0, Lcom/a/a/aa;->a:J
+    iget-wide v6, p0, Lcom/a/a/aa;->a:J
 
-    sub-long v1, v3, v1
+    sub-long v2, v4, v2
 
-    add-long/2addr v1, v5
+    add-long/2addr v2, v6
 
-    iput-wide v1, p0, Lcom/a/a/aa;->a:J
+    iput-wide v2, p0, Lcom/a/a/aa;->a:J
 
     goto :goto_0
 .end method

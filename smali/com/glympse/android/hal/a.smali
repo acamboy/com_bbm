@@ -17,19 +17,19 @@
 
 
 # instance fields
+.field private _handler:Lcom/glympse/android/core/GHandler;
+
 .field private e:Landroid/content/Context;
 
-.field private f:Lcom/glympse/android/core/GHandler;
+.field private f:Ljava/lang/String;
 
-.field private g:Ljava/lang/String;
+.field private g:Lcom/glympse/android/lib/GAccountImportListener;
 
-.field private h:Lcom/glympse/android/lib/GAccountImportListener;
+.field private h:Ljava/lang/String;
 
-.field private i:Ljava/lang/String;
+.field private i:Lcom/glympse/android/hal/c;
 
-.field private j:Lcom/glympse/android/hal/c;
-
-.field private k:Lcom/glympse/android/hal/d;
+.field private j:Lcom/glympse/android/hal/d;
 
 
 # direct methods
@@ -44,10 +44,10 @@
     iput-object p1, p0, Lcom/glympse/android/hal/a;->e:Landroid/content/Context;
 
     .line 53
-    iput-object p2, p0, Lcom/glympse/android/hal/a;->f:Lcom/glympse/android/core/GHandler;
+    iput-object p2, p0, Lcom/glympse/android/hal/a;->_handler:Lcom/glympse/android/core/GHandler;
 
     .line 54
-    iput-object p3, p0, Lcom/glympse/android/hal/a;->g:Ljava/lang/String;
+    iput-object p3, p0, Lcom/glympse/android/hal/a;->f:Ljava/lang/String;
 
     .line 55
     return-void
@@ -58,7 +58,7 @@
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/glympse/android/hal/a;->i:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/hal/a;->h:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -128,7 +128,7 @@
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/glympse/android/hal/a;->f:Lcom/glympse/android/core/GHandler;
+    iget-object v0, p0, Lcom/glympse/android/hal/a;->_handler:Lcom/glympse/android/core/GHandler;
 
     return-object v0
 .end method
@@ -138,7 +138,7 @@
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/glympse/android/hal/a;->h:Lcom/glympse/android/lib/GAccountImportListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/a;->g:Lcom/glympse/android/lib/GAccountImportListener;
 
     return-object v0
 .end method
@@ -152,7 +152,7 @@
     const/4 v2, 0x0
 
     .line 106
-    iget-object v0, p0, Lcom/glympse/android/hal/a;->i:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/hal/a;->h:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -165,14 +165,14 @@
     :try_start_0
     iget-object v0, p0, Lcom/glympse/android/hal/a;->e:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/a;->j:Lcom/glympse/android/hal/c;
+    iget-object v1, p0, Lcom/glympse/android/hal/a;->i:Lcom/glympse/android/hal/c;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 117
-    iget-object v0, p0, Lcom/glympse/android/hal/a;->f:Lcom/glympse/android/core/GHandler;
+    iget-object v0, p0, Lcom/glympse/android/hal/a;->_handler:Lcom/glympse/android/core/GHandler;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/a;->k:Lcom/glympse/android/hal/d;
+    iget-object v1, p0, Lcom/glympse/android/hal/a;->j:Lcom/glympse/android/hal/d;
 
     invoke-interface {v0, v1}, Lcom/glympse/android/core/GHandler;->cancel(Ljava/lang/Runnable;)V
     :try_end_0
@@ -180,16 +180,16 @@
 
     .line 124
     :goto_1
-    iput-object v2, p0, Lcom/glympse/android/hal/a;->j:Lcom/glympse/android/hal/c;
+    iput-object v2, p0, Lcom/glympse/android/hal/a;->i:Lcom/glympse/android/hal/c;
 
     .line 125
-    iput-object v2, p0, Lcom/glympse/android/hal/a;->k:Lcom/glympse/android/hal/d;
+    iput-object v2, p0, Lcom/glympse/android/hal/a;->j:Lcom/glympse/android/hal/d;
 
     .line 126
-    iput-object v2, p0, Lcom/glympse/android/hal/a;->i:Ljava/lang/String;
+    iput-object v2, p0, Lcom/glympse/android/hal/a;->h:Ljava/lang/String;
 
     .line 127
-    iput-object v2, p0, Lcom/glympse/android/hal/a;->h:Lcom/glympse/android/lib/GAccountImportListener;
+    iput-object v2, p0, Lcom/glympse/android/hal/a;->g:Lcom/glympse/android/lib/GAccountImportListener;
 
     goto :goto_0
 
@@ -205,13 +205,13 @@
 .end method
 
 .method public create(Ljava/lang/String;)Z
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v0, 0x0
 
     .line 69
-    iget-object v1, p0, Lcom/glympse/android/hal/a;->i:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/hal/a;->h:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
@@ -226,14 +226,14 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/glympse/android/hal/a;->i:Ljava/lang/String;
+    iput-object v1, p0, Lcom/glympse/android/hal/a;->h:Ljava/lang/String;
 
     .line 78
     iget-object v1, p0, Lcom/glympse/android/hal/a;->e:Landroid/content/Context;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/a;->g:Ljava/lang/String;
+    iget-object v2, p0, Lcom/glympse/android/hal/a;->f:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/glympse/android/hal/a;->i:Ljava/lang/String;
+    iget-object v3, p0, Lcom/glympse/android/hal/a;->h:Ljava/lang/String;
 
     invoke-static {v1, v2, p1, v3}, Lcom/glympse/android/hal/j;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -253,12 +253,12 @@
 
     invoke-direct {v3, p0, v4}, Lcom/glympse/android/hal/c;-><init>(Lcom/glympse/android/hal/a;Lcom/glympse/android/hal/a$1;)V
 
-    iput-object v3, p0, Lcom/glympse/android/hal/a;->j:Lcom/glympse/android/hal/c;
+    iput-object v3, p0, Lcom/glympse/android/hal/a;->i:Lcom/glympse/android/hal/c;
 
     .line 83
     iget-object v3, p0, Lcom/glympse/android/hal/a;->e:Landroid/content/Context;
 
-    iget-object v4, p0, Lcom/glympse/android/hal/a;->j:Lcom/glympse/android/hal/c;
+    iget-object v4, p0, Lcom/glympse/android/hal/a;->i:Lcom/glympse/android/hal/c;
 
     invoke-virtual {v3, v4, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -274,16 +274,16 @@
 
     invoke-direct {v1, p0, v2}, Lcom/glympse/android/hal/d;-><init>(Lcom/glympse/android/hal/a;Lcom/glympse/android/hal/a$1;)V
 
-    iput-object v1, p0, Lcom/glympse/android/hal/a;->k:Lcom/glympse/android/hal/d;
+    iput-object v1, p0, Lcom/glympse/android/hal/a;->j:Lcom/glympse/android/hal/d;
 
     .line 90
-    iget-object v1, p0, Lcom/glympse/android/hal/a;->f:Lcom/glympse/android/core/GHandler;
+    iget-object v1, p0, Lcom/glympse/android/hal/a;->_handler:Lcom/glympse/android/core/GHandler;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/a;->k:Lcom/glympse/android/hal/d;
+    iget-object v2, p0, Lcom/glympse/android/hal/a;->j:Lcom/glympse/android/hal/d;
 
-    const-wide/16 v3, 0x7d0
+    const-wide/16 v4, 0x7d0
 
-    invoke-interface {v1, v2, v3, v4}, Lcom/glympse/android/core/GHandler;->postDelayed(Ljava/lang/Runnable;J)V
+    invoke-interface {v1, v2, v4, v5}, Lcom/glympse/android/core/GHandler;->postDelayed(Ljava/lang/Runnable;J)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -306,7 +306,7 @@
 
     .prologue
     .line 63
-    iput-object p1, p0, Lcom/glympse/android/hal/a;->h:Lcom/glympse/android/lib/GAccountImportListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/a;->g:Lcom/glympse/android/lib/GAccountImportListener;
 
     .line 64
     return-void

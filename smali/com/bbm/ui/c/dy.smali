@@ -1,58 +1,75 @@
 .class final Lcom/bbm/ui/c/dy;
-.super Ljava/lang/Object;
-.source "MyChannelsFragment.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
+.super Lcom/bbm/d/b/r;
+.source "GroupUpdatesFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
+        "Lcom/bbm/d/b/r",
         "<",
-        "Lcom/bbm/d/de;",
+        "Lcom/bbm/g/aj;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/dx;
+.field final synthetic b:Lcom/bbm/ui/c/dw;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dx;)V
+.method constructor <init>(Lcom/bbm/ui/c/dw;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
-    .line 117
-    iput-object p1, p0, Lcom/bbm/ui/c/dy;->a:Lcom/bbm/ui/c/dx;
+    .line 121
+    iput-object p1, p0, Lcom/bbm/ui/c/dy;->b:Lcom/bbm/ui/c/dw;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/r;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
+.method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
     .prologue
-    .line 117
-    check-cast p1, Lcom/bbm/d/de;
+    .line 121
+    check-cast p1, Lcom/bbm/g/aj;
 
-    check-cast p2, Lcom/bbm/d/de;
+    check-cast p2, Lcom/bbm/g/aj;
 
-    iget-object v0, p1, Lcom/bbm/d/de;->k:Ljava/lang/String;
+    iget-wide v0, p1, Lcom/bbm/g/aj;->k:J
 
-    iget-object v1, p2, Lcom/bbm/d/de;->k:Ljava/lang/String;
+    iget-wide v2, p2, Lcom/bbm/g/aj;->k:J
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
+    cmp-long v0, v0, v2
 
-    move-result v0
+    if-gez v0, :cond_0
 
+    const/4 v0, 0x1
+
+    :goto_0
     return v0
+
+    :cond_0
+    iget-wide v0, p1, Lcom/bbm/g/aj;->k:J
+
+    iget-wide v2, p2, Lcom/bbm/g/aj;->k:J
+
+    cmp-long v0, v0, v2
+
+    if-lez v0, :cond_1
+
+    const/4 v0, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

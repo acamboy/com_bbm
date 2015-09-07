@@ -1,22 +1,30 @@
 .class final Lcom/bbm/ui/c/dn;
 .super Ljava/lang/Object;
-.source "GroupsFragment.java"
+.source "GroupMembersFragment.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/dg;
+.field final synthetic a:I
+
+.field final synthetic b:Lcom/bbm/g/o;
+
+.field final synthetic c:Lcom/bbm/ui/c/dh;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dg;)V
+.method constructor <init>(Lcom/bbm/ui/c/dh;ILcom/bbm/g/o;)V
     .locals 0
 
     .prologue
-    .line 262
-    iput-object p1, p0, Lcom/bbm/ui/c/dn;->a:Lcom/bbm/ui/c/dg;
+    .line 553
+    iput-object p1, p0, Lcom/bbm/ui/c/dn;->c:Lcom/bbm/ui/c/dh;
+
+    iput p2, p0, Lcom/bbm/ui/c/dn;->a:I
+
+    iput-object p3, p0, Lcom/bbm/ui/c/dn;->b:Lcom/bbm/g/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,82 +33,62 @@
 
 
 # virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    .line 266
-    iget-object v0, p0, Lcom/bbm/ui/c/dn;->a:Lcom/bbm/ui/c/dg;
+    .line 556
+    const-string v0, "menu onClick"
 
-    invoke-static {v0}, Lcom/bbm/ui/c/dg;->d(Lcom/bbm/ui/c/dg;)Lcom/bbm/ui/ds;
+    const-class v1, Lcom/bbm/ui/c/dh;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 557
+    iget-object v0, p0, Lcom/bbm/ui/c/dn;->c:Lcom/bbm/ui/c/dh;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/dh;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/ds;->getItem(I)Ljava/lang/Object;
+    .line 558
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
 
-    check-cast v0, Lcom/bbm/ui/c/dv;
+    move-result v1
 
-    .line 267
-    sget-object v1, Lcom/bbm/ui/c/dk;->a:[I
+    if-nez v1, :cond_0
 
-    iget-object v2, v0, Lcom/bbm/ui/c/dv;->a:Lcom/bbm/ui/c/dw;
+    instance-of v1, v0, Lcom/bbm/ui/activities/ey;
 
-    invoke-virtual {v2}, Lcom/bbm/ui/c/dw;->ordinal()I
+    if-eqz v1, :cond_0
 
-    move-result v2
+    .line 559
+    check-cast v0, Lcom/bbm/ui/activities/ey;
 
-    aget v1, v1, v2
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    packed-switch v1, :pswitch_data_0
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    .line 276
-    :goto_0
-    const/4 v0, 0x1
+    const/4 v1, 0x1
 
-    return v0
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    .line 269
-    :pswitch_0
-    iget-object v0, v0, Lcom/bbm/ui/c/dv;->c:Lcom/bbm/d/a/a;
+    .line 562
+    :cond_0
+    new-instance v0, Landroid/os/Handler;
 
-    check-cast v0, Lcom/bbm/g/a;
+    invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    .line 270
-    iget-object v1, p0, Lcom/bbm/ui/c/dn;->a:Lcom/bbm/ui/c/dg;
+    new-instance v1, Lcom/bbm/ui/c/do;
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/c/dg;->a(Lcom/bbm/ui/c/dg;Lcom/bbm/g/a;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/c/do;-><init>(Lcom/bbm/ui/c/dn;)V
 
-    goto :goto_0
+    const-wide/16 v2, 0x12c
 
-    .line 273
-    :pswitch_1
-    iget-object v1, p0, Lcom/bbm/ui/c/dn;->a:Lcom/bbm/ui/c/dg;
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    iget-object v0, v0, Lcom/bbm/ui/c/dv;->c:Lcom/bbm/d/a/a;
-
-    check-cast v0, Lcom/bbm/g/z;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/c/dg;->a(Lcom/bbm/ui/c/dg;Lcom/bbm/g/z;)V
-
-    goto :goto_0
-
-    .line 267
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    .line 580
+    return-void
 .end method

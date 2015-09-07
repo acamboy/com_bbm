@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/fd;
 .super Ljava/lang/Object;
-.source "SegmentedControl.java"
+.source "QuickShareGlympseView.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/SegmentedControl;
+.field final synthetic a:Lcom/bbm/ui/QuickShareGlympseView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/SegmentedControl;)V
+.method constructor <init>(Lcom/bbm/ui/QuickShareGlympseView;)V
     .locals 0
 
     .prologue
-    .line 115
-    iput-object p1, p0, Lcom/bbm/ui/fd;->a:Lcom/bbm/ui/SegmentedControl;
+    .line 261
+    iput-object p1, p0, Lcom/bbm/ui/fd;->a:Lcom/bbm/ui/QuickShareGlympseView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,60 +26,108 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 6
 
     .prologue
-    .line 119
-    iget-object v0, p0, Lcom/bbm/ui/fd;->a:Lcom/bbm/ui/SegmentedControl;
+    .line 264
+    const-string v0, "Upgrading button Clicked"
 
-    invoke-static {v0}, Lcom/bbm/ui/SegmentedControl;->a(Lcom/bbm/ui/SegmentedControl;)Landroid/widget/LinearLayout;
+    const-class v1, Lcom/bbm/ui/QuickShareGlympseView;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 266
+    if-eqz p1, :cond_0
+
+    instance-of v0, p1, Landroid/widget/Button;
+
+    if-eqz v0, :cond_0
+
+    .line 267
+    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
-    if-ne p1, v0, :cond_1
+    invoke-virtual {v0}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
 
-    .line 120
-    const-string v0, "Left option clicked"
+    move-result-object v0
 
-    const-class v1, Lcom/bbm/ui/SegmentedControl;
+    .line 271
+    :try_start_0
+    iget-object v1, p0, Lcom/bbm/ui/fd;->a:Lcom/bbm/ui/QuickShareGlympseView;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-virtual {v1}, Lcom/bbm/ui/QuickShareGlympseView;->getContext()Landroid/content/Context;
 
-    .line 121
-    iget-object v0, p0, Lcom/bbm/ui/fd;->a:Lcom/bbm/ui/SegmentedControl;
+    move-result-object v1
 
-    const/4 v1, 0x0
+    new-instance v2, Landroid/content/Intent;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/SegmentedControl;->a(I)V
+    const-string v3, "android.intent.action.VIEW"
 
-    .line 127
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "market://details?id=com.google.android.gms&hl="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v4
+
+    invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 278
     :cond_0
     :goto_0
     return-void
 
-    .line 123
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/fd;->a:Lcom/bbm/ui/SegmentedControl;
+    .line 274
+    :catch_0
+    move-exception v1
 
-    invoke-static {v0}, Lcom/bbm/ui/SegmentedControl;->b(Lcom/bbm/ui/SegmentedControl;)Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/bbm/ui/fd;->a:Lcom/bbm/ui/QuickShareGlympseView;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/QuickShareGlympseView;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    new-instance v2, Landroid/content/Intent;
+
+    const-string v3, "android.intent.action.VIEW"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string v5, "http://play.google.com/store/apps/details?id=com.google.android.gms&hl="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    if-ne p1, v0, :cond_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 124
-    const-string v0, "Right option clicked"
+    move-result-object v0
 
-    const-class v1, Lcom/bbm/ui/SegmentedControl;
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 125
-    iget-object v0, p0, Lcom/bbm/ui/fd;->a:Lcom/bbm/ui/SegmentedControl;
+    invoke-direct {v2, v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/SegmentedControl;->a(I)V
+    invoke-virtual {v1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
     goto :goto_0
 .end method

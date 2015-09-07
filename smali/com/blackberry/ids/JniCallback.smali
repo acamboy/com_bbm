@@ -11,7 +11,7 @@
 
 # direct methods
 .method public constructor <init>(JJ)V
-    .locals 2
+    .locals 3
 
     .prologue
     .line 7

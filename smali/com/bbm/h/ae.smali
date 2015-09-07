@@ -1,32 +1,60 @@
-.class public final Lcom/bbm/h/ae;
-.super Ljava/lang/Object;
-.source "InvitesFragment.java"
+.class final Lcom/bbm/h/ae;
+.super Lcom/bbm/d/b/m;
+.source "AddContactsFragment.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/m",
+        "<",
+        "Lcom/bbm/h/al;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field private final a:Lcom/bbm/j/u;
+.field final synthetic a:Lcom/bbm/h/l;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Landroid/view/View;Lcom/bbm/util/dy;)V
+.method constructor <init>(Lcom/bbm/h/l;Lcom/bbm/j/r;)V
+    .locals 0
+
+    .prologue
+    .line 73
+    iput-object p1, p0, Lcom/bbm/h/ae;->a:Lcom/bbm/h/l;
+
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected final synthetic a(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
-    .line 312
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 73
+    check-cast p1, Lcom/bbm/h/al;
 
-    .line 313
-    new-instance v0, Lcom/bbm/h/af;
+    iget-object v0, p0, Lcom/bbm/h/ae;->a:Lcom/bbm/h/l;
 
-    invoke-direct {v0, p0, p3, p2, p1}, Lcom/bbm/h/af;-><init>(Lcom/bbm/h/ae;Lcom/bbm/util/dy;Landroid/view/View;Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/bbm/h/l;->a(Lcom/bbm/h/l;)Lcom/bbm/util/ct;
 
-    iput-object v0, p0, Lcom/bbm/h/ae;->a:Lcom/bbm/j/u;
+    move-result-object v0
 
-    .line 343
-    iget-object v0, p0, Lcom/bbm/h/ae;->a:Lcom/bbm/j/u;
+    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
+    move-result-object v0
 
-    .line 344
-    return-void
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {p1, v0}, Lcom/bbm/h/al;->a(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
 .end method

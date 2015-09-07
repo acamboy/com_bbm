@@ -14,8 +14,8 @@
     return-void
 .end method
 
-.method public static H(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
-    .locals 3
+.method public static P(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    .locals 4
 
     .prologue
     .line 72
@@ -30,9 +30,9 @@
 
     move-result v1
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-static {v1, v2}, Lcom/glympse/android/hal/Helpers;->toString(J)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/glympse/android/hal/Helpers;->toString(J)Ljava/lang/String;
 
     move-result-object v1
 

@@ -1,16 +1,25 @@
 .class interface abstract Lcom/glympse/android/lib/br;
 .super Ljava/lang/Object;
-.source "GHandoffProviderPrivate.java"
+.source "GDirectionsProvider.java"
 
 # interfaces
-.implements Lcom/glympse/android/api/GHandoffProvider;
+.implements Lcom/glympse/android/lib/bq;
 
 
 # virtual methods
-.method public abstract bd()Lcom/glympse/android/core/GPrimitive;
+.method public abstract aQ()Lcom/glympse/android/core/GLatLng;
 .end method
 
-.method public abstract setActive(Z)V
+.method public abstract aR()Z
+.end method
+
+.method public abstract aS()V
+.end method
+
+.method public abstract addTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
+.end method
+
+.method public abstract removeTicket(Lcom/glympse/android/lib/GTicketPrivate;)V
 .end method
 
 .method public abstract start(Lcom/glympse/android/lib/GGlympsePrivate;)V

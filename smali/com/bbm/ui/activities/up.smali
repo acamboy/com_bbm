@@ -1,42 +1,71 @@
 .class final Lcom/bbm/ui/activities/up;
-.super Ljava/lang/Object;
-.source "MainActivity.java"
-
-# interfaces
-.implements Lcom/bbm/ui/c/fu;
+.super Lcom/bbm/j/k;
+.source "ImageViewerActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ImageViewerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
+    .locals 1
 
     .prologue
-    .line 2165
-    iput-object p1, p0, Lcom/bbm/ui/activities/up;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 135
+    iput-object p1, p0, Lcom/bbm/ui/activities/up;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 2
+.method protected final a()V
+    .locals 4
 
     .prologue
-    .line 2168
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    .line 139
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
-    .line 2169
-    iget-object v1, p0, Lcom/bbm/ui/activities/up;->a:Lcom/bbm/ui/activities/MainActivity;
+    move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/MainActivity;->d(Lcom/bbm/ui/activities/MainActivity;I)Z
+    .line 140
+    iget-object v1, p0, Lcom/bbm/ui/activities/up;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
 
-    .line 2170
+    invoke-static {v1}, Lcom/bbm/ui/activities/ImageViewerActivity;->e(Lcom/bbm/ui/activities/ImageViewerActivity;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
+
+    move-result-object v1
+
+    .line 141
+    iget-object v2, p0, Lcom/bbm/ui/activities/up;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/ImageViewerActivity;->f(Lcom/bbm/ui/activities/ImageViewerActivity;)Lcom/bbm/ui/TouchImageView;
+
+    move-result-object v2
+
+    iget-object v3, v1, Lcom/bbm/d/gr;->B:Ljava/lang/String;
+
+    iget-object v1, v1, Lcom/bbm/d/gr;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v3, v1}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/j/r;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Lcom/bbm/ui/TouchImageView;->setObservableImage(Lcom/bbm/j/r;)V
+
+    .line 142
+    iget-object v0, p0, Lcom/bbm/ui/activities/up;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->g(Lcom/bbm/ui/activities/ImageViewerActivity;)Z
+
+    .line 143
     return-void
 .end method

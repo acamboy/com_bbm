@@ -4,14 +4,35 @@
         <item quantity="other">Messaggio broadcast inviato a %1$s contatti</item>
         <item quantity="one">Messaggio broadcast inviato a 1 contatto</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">Abbonati %1$d</item>
+        <item quantity="zero">Nessun abbonato</item>
+        <item quantity="one">Abbonato %1$d</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">Membri %1$d</item>
+        <item quantity="one">Membro %1$d</item>
+    </plurals>
+    <plurals name="common_days_1d">
+        <item quantity="other">%1$d giorni</item>
+        <item quantity="one">%1$d giorno</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">secondi</item>
+        <item quantity="one">secondo</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Timer impostato per %1$d secondi.</item>
+        <item quantity="one">Timer impostato per %1$d secondo.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s elementi</item>
         <item quantity="zero">0 elementi</item>
         <item quantity="one">1 elemento</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d inviti in attesa)</item>
-        <item quantity="one">(1 invito in attesa)</item>
+        <item quantity="other">(%1$d in sospeso)</item>
+        <item quantity="one">(1 in sospeso)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s risultati</item>

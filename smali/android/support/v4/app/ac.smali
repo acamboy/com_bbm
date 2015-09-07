@@ -1,86 +1,54 @@
-.class public final Landroid/support/v4/app/ac;
+.class final Landroid/support/v4/app/ac;
 .super Ljava/lang/Object;
-.source "NotificationCompat.java"
+.source "Fragment.java"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
 
 
-# static fields
-.field private static final a:Landroid/support/v4/app/ai;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Landroid/support/v4/app/FragmentState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 2
+.method constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 153
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 141
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_0
-
-    .line 154
-    new-instance v0, Landroid/support/v4/app/am;
-
-    invoke-direct {v0}, Landroid/support/v4/app/am;-><init>()V
-
-    sput-object v0, Landroid/support/v4/app/ac;->a:Landroid/support/v4/app/ai;
-
-    .line 162
-    :goto_0
     return-void
-
-    .line 155
-    :cond_0
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xe
-
-    if-lt v0, v1, :cond_1
-
-    .line 156
-    new-instance v0, Landroid/support/v4/app/al;
-
-    invoke-direct {v0}, Landroid/support/v4/app/al;-><init>()V
-
-    sput-object v0, Landroid/support/v4/app/ac;->a:Landroid/support/v4/app/ai;
-
-    goto :goto_0
-
-    .line 157
-    :cond_1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v1, 0xb
-
-    if-lt v0, v1, :cond_2
-
-    .line 158
-    new-instance v0, Landroid/support/v4/app/ak;
-
-    invoke-direct {v0}, Landroid/support/v4/app/ak;-><init>()V
-
-    sput-object v0, Landroid/support/v4/app/ac;->a:Landroid/support/v4/app/ai;
-
-    goto :goto_0
-
-    .line 160
-    :cond_2
-    new-instance v0, Landroid/support/v4/app/aj;
-
-    invoke-direct {v0}, Landroid/support/v4/app/aj;-><init>()V
-
-    sput-object v0, Landroid/support/v4/app/ac;->a:Landroid/support/v4/app/ai;
-
-    goto :goto_0
 .end method
 
-.method static synthetic a()Landroid/support/v4/app/ai;
+
+# virtual methods
+.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 34
-    sget-object v0, Landroid/support/v4/app/ac;->a:Landroid/support/v4/app/ai;
+    .line 141
+    new-instance v0, Landroid/support/v4/app/FragmentState;
+
+    invoke-direct {v0, p1}, Landroid/support/v4/app/FragmentState;-><init>(Landroid/os/Parcel;)V
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 141
+    new-array v0, p1, [Landroid/support/v4/app/FragmentState;
 
     return-object v0
 .end method

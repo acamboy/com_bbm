@@ -30,6 +30,8 @@
 
 .field public static final MS_PER_MIN:I = 0xea60
 
+.field public static final PHONE_FAV_DEFAULT_DURATION:I = 0x1b7740
+
 .field public static final RECENTS_DEFAULT_DURATION:I = 0x1b7740
 
 .field public static final SMS_REQUEST_DEFAULT_DURATION:I = 0x1b7740
@@ -69,7 +71,7 @@
 
     .prologue
     .line 34
-    const-string v0, "1.0"
+    const-string v0, "1.2"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -127,21 +129,7 @@
 
     .prologue
     .line 24
-    const-string v0, "1.0"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static PROVIDER_TOO_OLD()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 58
-    const-string v0, "provider_too_old"
+    const-string v0, "1.2"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -154,7 +142,7 @@
     .locals 1
 
     .prologue
-    .line 113
+    .line 114
     const-string v0, "XXX-XXX"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
@@ -168,8 +156,22 @@
     .locals 1
 
     .prologue
-    .line 108
+    .line 109
     const-string v0, "XXXX-XXXX-XXXX"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static VERSION_NOT_SUPPORTED()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 58
+    const-string v0, "version_not_supported"
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
 

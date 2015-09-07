@@ -34,11 +34,11 @@
     if-eqz v0, :cond_1
 
     .line 16
-    invoke-static {p1}, Lcom/bbm/l/a;->a(Landroid/content/Context;)Lcom/bbm/l/a;
+    invoke-static {p1}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/l/a;->a()V
+    invoke-virtual {v0}, Lcom/bbm/n/b;->a()V
 
     .line 20
     :cond_0
@@ -60,11 +60,43 @@
     if-eqz v0, :cond_0
 
     .line 18
-    invoke-static {p1}, Lcom/bbm/l/a;->a(Landroid/content/Context;)Lcom/bbm/l/a;
+    invoke-static {p1}, Lcom/bbm/n/b;->a(Landroid/content/Context;)Lcom/bbm/n/b;
+
+    move-result-object v1
+
+    iget-object v0, v1, Lcom/bbm/n/b;->c:Lcom/bbm/j/t;
+
+    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/l/a;->j()Z
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-virtual {v1, v0}, Lcom/bbm/n/b;->a(Z)V
+
+    iget-object v0, v1, Lcom/bbm/n/b;->c:Lcom/bbm/j/t;
+
+    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     goto :goto_0
+
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_1
 .end method

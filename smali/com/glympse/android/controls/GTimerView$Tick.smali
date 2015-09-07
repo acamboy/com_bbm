@@ -15,7 +15,7 @@
 
 # direct methods
 .method private constructor <init>(Lcom/glympse/android/controls/GTimerView;ZDI)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 1032
@@ -37,7 +37,7 @@
 .end method
 
 .method synthetic constructor <init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 1024

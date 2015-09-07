@@ -1,125 +1,189 @@
 .class final Lcom/bbm/ui/activities/oz;
-.super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
+.super Lcom/bbm/d/b/r;
+.source "GroupListItemsActivity.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/r",
+        "<",
+        "Lcom/bbm/g/y;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ow;
+.field final synthetic b:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ow;)V
+.method constructor <init>(Lcom/bbm/j/r;Lcom/bbm/ui/activities/GroupListItemsActivity;)V
     .locals 0
 
     .prologue
-    .line 969
-    iput-object p1, p0, Lcom/bbm/ui/activities/oz;->a:Lcom/bbm/ui/activities/ow;
+    .line 454
+    iput-object p2, p0, Lcom/bbm/ui/activities/oz;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p1}, Lcom/bbm/d/b/r;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final synthetic a(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 6
 
     .prologue
-    .line 973
-    const-string v0, "mOnRightButtonClickListener Clicked"
+    const/4 v0, 0x1
 
-    const-class v1, Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 454
+    check-cast p1, Lcom/bbm/g/y;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    check-cast p2, Lcom/bbm/g/y;
 
-    .line 975
-    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->a:Lcom/bbm/ui/activities/ow;
+    iget-object v1, p0, Lcom/bbm/ui/activities/oz;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ow;->d(Lcom/bbm/ui/activities/ow;)Lcom/bbm/j/r;
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupListItemsActivity;->h(Lcom/bbm/ui/activities/GroupListItemsActivity;)I
 
-    move-result-object v0
+    move-result v1
 
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
+    if-nez v1, :cond_2
 
-    move-result-object v0
+    iget-wide v2, p1, Lcom/bbm/g/y;->h:J
 
-    check-cast v0, Ljava/util/List;
+    iget-wide v4, p2, Lcom/bbm/g/y;->h:J
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    cmp-long v1, v2, v4
 
-    move-result v0
+    if-lez v1, :cond_0
 
-    const/4 v1, 0x1
-
-    if-le v0, v1, :cond_1
-
-    .line 976
-    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->a:Lcom/bbm/ui/activities/ow;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ow;->e(Lcom/bbm/ui/activities/ow;)V
-
-    .line 984
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->a:Lcom/bbm/ui/activities/ow;
+    return v0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ow;->f(Lcom/bbm/ui/activities/ow;)Lcom/bbm/j/u;
+    :cond_0
+    iget-wide v0, p1, Lcom/bbm/g/y;->h:J
 
-    move-result-object v0
+    iget-wide v2, p2, Lcom/bbm/g/y;->h:J
 
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
+    cmp-long v0, v0, v2
 
-    .line 986
-    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->a:Lcom/bbm/ui/activities/ow;
+    if-gez v0, :cond_1
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ow;->dismiss()V
+    const/4 v0, -0x1
 
-    .line 987
-    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->a:Lcom/bbm/ui/activities/ow;
+    goto :goto_0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ow;->g(Lcom/bbm/ui/activities/ow;)Z
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
+
+    invoke-static {p1, p2}, Lcom/bbm/ui/activities/GroupListItemsActivity;->a(Lcom/bbm/g/y;Lcom/bbm/g/y;)I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    goto :goto_0
 
-    .line 988
-    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->a:Lcom/bbm/ui/activities/ow;
+    :cond_2
+    iget-object v1, p0, Lcom/bbm/ui/activities/oz;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ow;->h(Lcom/bbm/ui/activities/ow;)Landroid/app/Activity;
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupListItemsActivity;->h(Lcom/bbm/ui/activities/GroupListItemsActivity;)I
 
-    move-result-object v0
+    move-result v1
 
-    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+    if-ne v1, v0, :cond_3
 
-    .line 990
-    :cond_0
-    return-void
+    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    .line 980
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->a:Lcom/bbm/ui/activities/ow;
+    invoke-static {p1, p2}, Lcom/bbm/ui/activities/GroupListItemsActivity;->a(Lcom/bbm/g/y;Lcom/bbm/g/y;)I
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ow;->a(Lcom/bbm/ui/activities/ow;)Lcom/bbm/g/ab;
+    move-result v0
 
-    move-result-object v0
+    goto :goto_0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/oz;->a:Lcom/bbm/ui/activities/ow;
+    :cond_3
+    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ow;->b(Lcom/bbm/ui/activities/ow;)Lcom/bbm/g/a;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->h(Lcom/bbm/ui/activities/GroupListItemsActivity;)I
 
-    move-result-object v1
+    move-result v0
 
-    iget-object v1, v1, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    const/4 v1, 0x2
 
-    invoke-static {v1}, Lcom/bbm/g/ac;->b(Ljava/lang/String;)Lcom/bbm/g/bb;
+    if-ne v0, v1, :cond_5
 
-    move-result-object v1
+    iget-object v0, p1, Lcom/bbm/g/y;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
+    iget-object v1, p2, Lcom/bbm/g/y;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p1, Lcom/bbm/g/y;->c:Ljava/lang/String;
+
+    iget-object v1, p2, Lcom/bbm/g/y;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_4
+    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
+
+    invoke-static {p1, p2}, Lcom/bbm/ui/activities/GroupListItemsActivity;->a(Lcom/bbm/g/y;Lcom/bbm/g/y;)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_5
+    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->h(Lcom/bbm/ui/activities/GroupListItemsActivity;)I
+
+    move-result v0
+
+    const/4 v1, 0x3
+
+    if-ne v0, v1, :cond_7
+
+    iget-object v0, p1, Lcom/bbm/g/y;->b:Ljava/lang/String;
+
+    iget-object v1, p2, Lcom/bbm/g/y;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p1, Lcom/bbm/g/y;->b:Ljava/lang/String;
+
+    iget-object v1, p2, Lcom/bbm/g/y;->b:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_6
+    iget-object v0, p0, Lcom/bbm/ui/activities/oz;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
+
+    invoke-static {p1, p2}, Lcom/bbm/ui/activities/GroupListItemsActivity;->a(Lcom/bbm/g/y;Lcom/bbm/g/y;)I
+
+    move-result v0
+
+    goto :goto_0
+
+    :cond_7
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

@@ -1,40 +1,40 @@
 .class public Lcom/bbm/ui/activities/PreviewChannelActivity;
-.super Lcom/bbm/ui/activities/by;
+.super Lcom/bbm/ui/activities/cq;
 .source "PreviewChannelActivity.java"
 
 
 # instance fields
-.field private a:Lcom/bbm/ui/FooterActionBar;
+.field public a:Lcom/bbm/util/ba;
 
-.field private b:Lcom/bbm/ui/SegmentedControl;
+.field private b:Lcom/bbm/ui/FooterActionBar;
 
-.field private c:I
+.field private c:Lcom/bbm/ui/SegmentedControl;
 
-.field private j:Z
+.field private d:I
 
-.field private k:Lcom/bbm/d/de;
+.field private e:Z
 
-.field private l:Lcom/bbm/ui/c/q;
+.field private f:Lcom/bbm/d/ee;
 
-.field private m:Lcom/bbm/ui/c/ao;
+.field private g:Lcom/bbm/ui/c/ag;
 
-.field private n:Lcom/bbm/util/aw;
+.field private h:Lcom/bbm/ui/c/be;
 
-.field private final o:Lcom/bbm/d;
+.field private final i:Lcom/bbm/e;
 
-.field private final p:Lcom/bbm/d/a;
+.field private final j:Lcom/bbm/d/a;
 
-.field private q:Ljava/lang/String;
+.field private k:Ljava/lang/String;
 
-.field private r:Z
+.field private l:Z
 
-.field private final s:Lcom/bbm/ui/fe;
+.field private final m:Lcom/bbm/ui/fz;
 
-.field private final t:Lcom/bbm/ui/by;
+.field private final n:Lcom/bbm/ui/cn;
 
-.field private final u:Lcom/bbm/ui/c/fu;
+.field private final o:Lcom/bbm/ui/c/gn;
 
-.field private final v:Lcom/bbm/j/k;
+.field private final p:Lcom/bbm/j/k;
 
 
 # direct methods
@@ -43,66 +43,66 @@
 
     .prologue
     .line 46
-    invoke-direct {p0}, Lcom/bbm/ui/activities/by;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/cq;-><init>()V
 
     .line 49
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->a:Lcom/bbm/ui/FooterActionBar;
+    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
 
     .line 52
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->c:I
+    iput v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->d:I
 
     .line 53
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->j:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->e:Z
 
     .line 61
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->o:Lcom/bbm/d;
+    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->i:Lcom/bbm/e;
 
     .line 62
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/d;->b:Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->p:Lcom/bbm/d/a;
+    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->j:Lcom/bbm/d/a;
 
     .line 69
-    new-instance v0, Lcom/bbm/ui/activities/yn;
+    new-instance v0, Lcom/bbm/ui/activities/aca;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/yn;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/aca;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->s:Lcom/bbm/ui/fe;
+    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->m:Lcom/bbm/ui/fz;
 
     .line 103
-    new-instance v0, Lcom/bbm/ui/activities/yo;
+    new-instance v0, Lcom/bbm/ui/activities/acb;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/yo;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/acb;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->t:Lcom/bbm/ui/by;
+    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->n:Lcom/bbm/ui/cn;
 
     .line 123
-    new-instance v0, Lcom/bbm/ui/activities/yp;
+    new-instance v0, Lcom/bbm/ui/activities/acc;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/yp;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/acc;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->u:Lcom/bbm/ui/c/fu;
+    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->o:Lcom/bbm/ui/c/gn;
 
     .line 129
-    new-instance v0, Lcom/bbm/ui/activities/yq;
+    new-instance v0, Lcom/bbm/ui/activities/acd;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/yq;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/acd;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->v:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->p:Lcom/bbm/j/k;
 
     return-void
 .end method
@@ -112,7 +112,7 @@
 
     .prologue
     .line 46
-    iget v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->c:I
+    iget v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->d:I
 
     return v0
 .end method
@@ -122,17 +122,17 @@
 
     .prologue
     .line 46
-    iput p1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->c:I
+    iput p1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->d:I
 
     return p1
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/PreviewChannelActivity;Lcom/bbm/d/de;)Lcom/bbm/d/de;
+.method static synthetic a(Lcom/bbm/ui/activities/PreviewChannelActivity;Lcom/bbm/d/ee;)Lcom/bbm/d/ee;
     .locals 0
 
     .prologue
     .line 46
-    iput-object p1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Lcom/bbm/d/de;
+    iput-object p1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->f:Lcom/bbm/d/ee;
 
     return-object p1
 .end method
@@ -142,79 +142,27 @@
 
     .prologue
     .line 46
-    iput-object p1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->q:Ljava/lang/String;
+    iput-object p1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Ljava/lang/String;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/PreviewChannelActivity;Lcom/bbm/ui/c/fq;)V
+.method static synthetic a(Lcom/bbm/ui/activities/PreviewChannelActivity;Lcom/bbm/ui/c/gj;)V
     .locals 0
 
     .prologue
     .line 46
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/PreviewChannelActivity;->b(Lcom/bbm/ui/c/fq;)V
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/PreviewChannelActivity;->b(Lcom/bbm/ui/c/gj;)V
 
     return-void
 .end method
 
-.method private a(Ljava/lang/String;)V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 209
-    const v0, 0x7f0a0228
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    .line 210
-    const v0, 0x7f0a0229
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 211
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/SegmentedControl;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/SegmentedControl;->a()V
-
-    .line 212
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->a:Lcom/bbm/ui/FooterActionBar;
-
-    const v1, 0x7f0a002c
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->setActionEnabled(IZ)V
-
-    .line 213
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->a:Lcom/bbm/ui/FooterActionBar;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
-
-    .line 214
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->j:Z
-
-    .line 215
-    return-void
-.end method
-
-.method static synthetic b(Lcom/bbm/ui/activities/PreviewChannelActivity;)Lcom/bbm/ui/c/q;
+.method static synthetic b(Lcom/bbm/ui/activities/PreviewChannelActivity;)Lcom/bbm/ui/c/ag;
     .locals 1
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->l:Lcom/bbm/ui/c/q;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->g:Lcom/bbm/ui/c/ag;
 
     return-object v0
 .end method
@@ -223,6 +171,8 @@
     .locals 2
 
     .prologue
+    const/4 v1, 0x1
+
     .line 46
     sparse-switch p1, :sswitch_data_0
 
@@ -230,58 +180,58 @@
     return-void
 
     :sswitch_0
-    invoke-static {}, Lcom/bbm/util/x;->b()Z
+    invoke-static {}, Lcom/bbm/util/ac;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/bbm/ui/b/b;
+    new-instance v0, Lcom/bbm/ui/b/a;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/b/b;-><init>(Landroid/app/Activity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/b/a;-><init>(Landroid/app/Activity;)V
 
-    new-instance v1, Lcom/bbm/ui/activities/yr;
+    new-instance v1, Lcom/bbm/ui/activities/ace;
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/yr;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;Lcom/bbm/ui/b/b;)V
+    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/ace;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;Lcom/bbm/ui/b/a;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/b;->a(Lcom/bbm/ui/b/g;)V
+    iput-object v1, v0, Lcom/bbm/ui/b/a;->a:Lcom/bbm/ui/b/f;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/b;->show()V
+    invoke-virtual {v0}, Lcom/bbm/ui/b/a;->show()V
 
     goto :goto_0
 
     :cond_0
-    invoke-direct {p0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->i()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->f()V
 
     goto :goto_0
 
     :sswitch_1
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->z:Lcom/slidingmenu/lib/a/c;
+    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
     iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->c()V
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Lcom/bbm/d/de;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->f:Lcom/bbm/d/ee;
 
-    iget-object v0, v0, Lcom/bbm/d/de;->N:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/d/ee;->O:Ljava/lang/String;
 
-    invoke-static {p0, v0}, Lcom/bbm/util/x;->a(Lcom/bbm/ui/activities/eg;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lcom/bbm/util/ac;->a(Lcom/bbm/ui/activities/ey;Ljava/lang/String;)V
 
     goto :goto_0
 
     :sswitch_2
-    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->z:Lcom/slidingmenu/lib/a/c;
+    iget-object v0, p0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
     iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->c()V
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Lcom/bbm/d/de;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->f:Lcom/bbm/d/ee;
 
-    iget-object v0, v0, Lcom/bbm/d/de;->N:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/d/ee;->O:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/x;->d(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/bbm/util/ac;->d(Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -289,23 +239,23 @@
 
     :sswitch_data_0
     .sparse-switch
-        0x7f0a002c -> :sswitch_0
-        0x7f0a0030 -> :sswitch_2
-        0x7f0a0034 -> :sswitch_1
+        0x7f0b0021 -> :sswitch_0
+        0x7f0b0025 -> :sswitch_2
+        0x7f0b0029 -> :sswitch_1
     .end sparse-switch
 .end method
 
-.method private b(Lcom/bbm/ui/c/fq;)V
+.method private b(Lcom/bbm/ui/c/gj;)V
     .locals 9
 
     .prologue
-    const v7, 0x7f02027d
-
-    const/4 v8, 0x0
+    const v7, 0x7f0202a3
 
     const/4 v2, 0x1
 
     const/4 v1, 0x0
+
+    const/4 v8, 0x0
 
     .line 255
     new-instance v3, Ljava/util/ArrayList;
@@ -315,15 +265,15 @@
     .line 256
     new-instance v4, Lcom/bbm/ui/slidingmenu/a;
 
-    const v0, 0x7f0a002c
+    const v0, 0x7f0b0021
 
-    const v5, 0x7f02001b
+    const v5, 0x7f02001f
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v5
 
-    const v6, 0x7f0e0490
+    const v6, 0x7f0e04e3
 
     invoke-virtual {p0, v6}, Lcom/bbm/ui/activities/PreviewChannelActivity;->getString(I)Ljava/lang/String;
 
@@ -332,11 +282,11 @@
     invoke-direct {v4, v0, v5, v6, v8}, Lcom/bbm/ui/slidingmenu/a;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 257
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->j:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->e:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->r:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->l:Z
 
     if-eqz v0, :cond_5
 
@@ -347,11 +297,11 @@
     invoke-virtual {v4, v0}, Lcom/bbm/ui/slidingmenu/a;->d(Z)V
 
     .line 258
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->j:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->e:Z
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->r:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->l:Z
 
     if-nez v0, :cond_6
 
@@ -365,22 +315,22 @@
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 260
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Lcom/bbm/d/de;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->f:Lcom/bbm/d/ee;
 
-    iget-boolean v0, v0, Lcom/bbm/d/de;->l:Z
+    iget-boolean v0, v0, Lcom/bbm/d/ee;->l:Z
 
     if-eqz v0, :cond_7
 
     .line 261
     new-instance v0, Lcom/bbm/ui/slidingmenu/a;
 
-    const v5, 0x7f0a0030
+    const v5, 0x7f0b0025
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
-    const v7, 0x7f0e01e7
+    const v7, 0x7f0e01f6
 
     invoke-virtual {p0, v7}, Lcom/bbm/ui/activities/PreviewChannelActivity;->getString(I)Ljava/lang/String;
 
@@ -392,11 +342,11 @@
 
     .line 265
     :goto_2
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->j:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->e:Z
 
     if-eqz v0, :cond_2
 
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->r:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->l:Z
 
     if-eqz v0, :cond_8
 
@@ -407,11 +357,11 @@
     invoke-virtual {v4, v0}, Lcom/bbm/ui/slidingmenu/a;->d(Z)V
 
     .line 266
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->j:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->e:Z
 
     if-nez v0, :cond_3
 
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->r:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->l:Z
 
     if-nez v0, :cond_4
 
@@ -422,12 +372,12 @@
     invoke-virtual {v4, v1}, Lcom/bbm/ui/slidingmenu/a;->b(Z)V
 
     .line 267
-    invoke-virtual {p1, v3}, Lcom/bbm/ui/c/fq;->a(Ljava/util/List;)V
+    invoke-virtual {p1, v3, v8, v8}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
 
     .line 268
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->u:Lcom/bbm/ui/c/fu;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->o:Lcom/bbm/ui/c/gn;
 
-    invoke-virtual {p1, v0}, Lcom/bbm/ui/c/fq;->a(Lcom/bbm/ui/c/fu;)V
+    iput-object v0, p1, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
 
     .line 269
     return-void
@@ -448,13 +398,13 @@
     :cond_7
     new-instance v0, Lcom/bbm/ui/slidingmenu/a;
 
-    const v5, 0x7f0a0034
+    const v5, 0x7f0b0029
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
-    const v7, 0x7f0e05a7
+    const v7, 0x7f0e0653
 
     invoke-virtual {p0, v7}, Lcom/bbm/ui/activities/PreviewChannelActivity;->getString(I)Ljava/lang/String;
 
@@ -473,34 +423,84 @@
     goto :goto_3
 .end method
 
-.method static synthetic c(Lcom/bbm/ui/activities/PreviewChannelActivity;)Lcom/bbm/ui/c/ao;
+.method static synthetic c(Lcom/bbm/ui/activities/PreviewChannelActivity;)Lcom/bbm/ui/c/be;
     .locals 1
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->m:Lcom/bbm/ui/c/ao;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->h:Lcom/bbm/ui/c/be;
 
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/bbm/ui/activities/PreviewChannelActivity;)Lcom/bbm/d;
+.method static synthetic d(Lcom/bbm/ui/activities/PreviewChannelActivity;)Lcom/bbm/e;
     .locals 1
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->o:Lcom/bbm/d;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->i:Lcom/bbm/e;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/bbm/ui/activities/PreviewChannelActivity;)Lcom/bbm/d/de;
+.method static synthetic e(Lcom/bbm/ui/activities/PreviewChannelActivity;)Lcom/bbm/d/ee;
     .locals 1
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Lcom/bbm/d/de;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->f:Lcom/bbm/d/ee;
 
     return-object v0
+.end method
+
+.method private f()V
+    .locals 4
+
+    .prologue
+    .line 178
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->f:Lcom/bbm/d/ee;
+
+    iget-object v0, v0, Lcom/bbm/d/ee;->O:Ljava/lang/String;
+
+    sget-object v1, Lcom/bbm/d/ba;->h:Lcom/bbm/d/ba;
+
+    invoke-static {v0, v1}, Lcom/bbm/d/aa;->a(Ljava/lang/String;Lcom/bbm/d/ba;)Lcom/bbm/d/az;
+
+    move-result-object v0
+
+    .line 179
+    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->f:Lcom/bbm/d/ee;
+
+    iget-wide v2, v1, Lcom/bbm/d/ee;->z:J
+
+    invoke-virtual {v0, v2, v3}, Lcom/bbm/d/az;->a(J)Lcom/bbm/d/az;
+
+    .line 180
+    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/az;->a(Ljava/lang/String;)Lcom/bbm/d/az;
+
+    .line 181
+    new-instance v1, Lcom/bbm/ui/activities/acf;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->f:Lcom/bbm/d/ee;
+
+    iget-object v2, v2, Lcom/bbm/d/ee;->O:Ljava/lang/String;
+
+    invoke-direct {v1, p0, v2}, Lcom/bbm/ui/activities/acf;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;Ljava/lang/String;)V
+
+    .line 196
+    iget-object v2, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, p0}, Lcom/bbm/ui/d/e;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 197
+    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->j:Lcom/bbm/d/a;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+
+    .line 198
+    return-void
 .end method
 
 .method static synthetic f(Lcom/bbm/ui/activities/PreviewChannelActivity;)Z
@@ -510,7 +510,7 @@
     .line 46
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->r:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->l:Z
 
     return v0
 .end method
@@ -520,7 +520,7 @@
 
     .prologue
     .line 46
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->r:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->l:Z
 
     return v0
 .end method
@@ -530,59 +530,9 @@
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->a:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
 
     return-object v0
-.end method
-
-.method private i()V
-    .locals 3
-
-    .prologue
-    .line 178
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Lcom/bbm/d/de;
-
-    iget-object v0, v0, Lcom/bbm/d/de;->N:Ljava/lang/String;
-
-    const-string v1, "featuredChannel"
-
-    invoke-static {v0, v1}, Lcom/bbm/d/y;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/av;
-
-    move-result-object v0
-
-    .line 179
-    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Lcom/bbm/d/de;
-
-    iget-wide v1, v1, Lcom/bbm/d/de;->y:J
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/d/av;->a(J)Lcom/bbm/d/av;
-
-    .line 180
-    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->q:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/av;->a(Ljava/lang/String;)Lcom/bbm/d/av;
-
-    .line 181
-    new-instance v1, Lcom/bbm/ui/activities/ys;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Lcom/bbm/d/de;
-
-    iget-object v2, v2, Lcom/bbm/d/de;->N:Ljava/lang/String;
-
-    invoke-direct {v1, p0, v2}, Lcom/bbm/ui/activities/ys;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;Ljava/lang/String;)V
-
-    .line 196
-    iget-object v2, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->q:Ljava/lang/String;
-
-    invoke-virtual {v1, v2, p0}, Lcom/bbm/ui/d/e;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 197
-    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->p:Lcom/bbm/d/a;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-
-    .line 198
-    return-void
 .end method
 
 .method static synthetic i(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
@@ -590,33 +540,110 @@
 
     .prologue
     .line 46
-    invoke-direct {p0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->i()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->f()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/bbm/util/aw;)V
-    .locals 0
+.method protected final a()V
+    .locals 1
 
     .prologue
-    .line 272
-    iput-object p1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->n:Lcom/bbm/util/aw;
+    .line 277
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->a()V
 
-    .line 273
+    .line 278
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->a:Lcom/bbm/util/ba;
+
+    if-eqz v0, :cond_0
+
+    .line 279
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->a:Lcom/bbm/util/ba;
+
+    invoke-interface {v0}, Lcom/bbm/util/ba;->d()V
+
+    .line 281
+    :cond_0
     return-void
 .end method
 
-.method protected final a(Lcom/bbm/ui/c/fq;)Z
+.method public final a(Ljava/lang/String;)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 209
+    const v0, 0x7f0b0283
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 210
+    const v0, 0x7f0b0284
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 211
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->c:Lcom/bbm/ui/SegmentedControl;
+
+    iget-object v1, v0, Lcom/bbm/ui/SegmentedControl;->a:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setFocusable(Z)V
+
+    iget-object v1, v0, Lcom/bbm/ui/SegmentedControl;->a:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setClickable(Z)V
+
+    iget-object v1, v0, Lcom/bbm/ui/SegmentedControl;->b:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setFocusable(Z)V
+
+    iget-object v0, v0, Lcom/bbm/ui/SegmentedControl;->b:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setClickable(Z)V
+
+    .line 212
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
+
+    const v1, 0x7f0b0021
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->setActionEnabled(IZ)V
+
+    .line 213
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
+
+    invoke-virtual {v0, v2}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
+
+    .line 214
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->e:Z
+
+    .line 215
+    return-void
+.end method
+
+.method protected final a(Lcom/bbm/ui/c/gj;)Z
     .locals 1
 
     .prologue
     .line 304
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/PreviewChannelActivity;->b(Lcom/bbm/ui/c/fq;)V
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/PreviewChannelActivity;->b(Lcom/bbm/ui/c/gj;)V
 
     .line 305
-    invoke-static {p0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
 
     .line 306
     const/4 v0, 0x1
@@ -624,29 +651,7 @@
     return v0
 .end method
 
-.method protected final b_()V
-    .locals 1
-
-    .prologue
-    .line 277
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->b_()V
-
-    .line 278
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->n:Lcom/bbm/util/aw;
-
-    if-eqz v0, :cond_0
-
-    .line 279
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->n:Lcom/bbm/util/aw;
-
-    invoke-interface {v0}, Lcom/bbm/util/aw;->e()V
-
-    .line 281
-    :cond_0
-    return-void
-.end method
-
-.method protected final c_()Z
+.method protected final c()Z
     .locals 1
 
     .prologue
@@ -656,81 +661,39 @@
     return v0
 .end method
 
-.method public final g()V
-    .locals 2
-
-    .prologue
-    .line 201
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0e018e
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->a(Ljava/lang/String;)V
-
-    .line 202
-    return-void
-.end method
-
-.method public final h()V
-    .locals 2
-
-    .prologue
-    .line 205
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0e01ee
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->a(Ljava/lang/String;)V
-
-    .line 206
-    return-void
-.end method
-
 .method public onActivityResult(IILandroid/content/Intent;)V
     .locals 1
 
     .prologue
-    .line 312
-    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/by;->onActivityResult(IILandroid/content/Intent;)V
+    .line 311
+    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/cq;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 313
+    .line 312
     if-nez p1, :cond_1
 
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_1
 
-    .line 314
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Lcom/bbm/d/de;
+    .line 313
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->f:Lcom/bbm/d/ee;
 
     if-nez v0, :cond_0
 
-    .line 315
-    new-instance v0, Lcom/bbm/ui/activities/yt;
+    .line 314
+    new-instance v0, Lcom/bbm/ui/activities/acg;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/yt;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/acg;-><init>(Lcom/bbm/ui/activities/PreviewChannelActivity;)V
 
     invoke-static {v0}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
 
-    .line 326
+    .line 325
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->k:Lcom/bbm/d/de;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->f:Lcom/bbm/d/ee;
 
-    invoke-static {p3, p0, v0}, Lcom/bbm/util/x;->a(Landroid/content/Intent;Landroid/content/Context;Lcom/bbm/d/de;)V
+    invoke-static {p3, p0, v0}, Lcom/bbm/util/ac;->a(Landroid/content/Intent;Landroid/content/Context;Lcom/bbm/d/ee;)V
 
-    .line 328
+    .line 327
     :cond_1
     return-void
 .end method
@@ -739,7 +702,7 @@
     .locals 6
 
     .prologue
-    const v5, 0x7f0a002c
+    const v5, 0x7f0b0021
 
     const/4 v4, 0x1
 
@@ -747,15 +710,15 @@
     invoke-virtual {p0, v4}, Lcom/bbm/ui/activities/PreviewChannelActivity;->requestWindowFeature(I)Z
 
     .line 222
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/by;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/cq;->onCreate(Landroid/os/Bundle;)V
 
     .line 225
-    const v0, 0x7f030044
+    const v0, 0x7f03004a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->setContentView(I)V
 
     .line 226
-    const v0, 0x7f0a0227
+    const v0, 0x7f0b0282
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->findViewById(I)Landroid/view/View;
 
@@ -763,14 +726,14 @@
 
     check-cast v0, Lcom/bbm/ui/SegmentedControl;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/SegmentedControl;
+    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->c:Lcom/bbm/ui/SegmentedControl;
 
     .line 227
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/SegmentedControl;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->c:Lcom/bbm/ui/SegmentedControl;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->s:Lcom/bbm/ui/fe;
+    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->m:Lcom/bbm/ui/fz;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/SegmentedControl;->setOnOptionSelectedListener(Lcom/bbm/ui/fe;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/SegmentedControl;->setOnOptionSelectedListener(Lcom/bbm/ui/fz;)V
 
     .line 229
     invoke-virtual {p0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->b()Ljava/lang/String;
@@ -778,31 +741,31 @@
     move-result-object v0
 
     .line 230
-    new-instance v1, Lcom/bbm/ui/c/q;
+    new-instance v1, Lcom/bbm/ui/c/ag;
 
-    invoke-direct {v1}, Lcom/bbm/ui/c/q;-><init>()V
+    invoke-direct {v1}, Lcom/bbm/ui/c/ag;-><init>()V
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->l:Lcom/bbm/ui/c/q;
+    iput-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->g:Lcom/bbm/ui/c/ag;
 
     .line 231
-    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->l:Lcom/bbm/ui/c/q;
+    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->g:Lcom/bbm/ui/c/ag;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/q;->a(Ljava/lang/String;)V
+    iput-object v0, v1, Lcom/bbm/ui/c/ag;->d:Ljava/lang/String;
 
     .line 233
-    new-instance v1, Lcom/bbm/ui/c/ao;
+    new-instance v1, Lcom/bbm/ui/c/be;
 
-    invoke-direct {v1}, Lcom/bbm/ui/c/ao;-><init>()V
+    invoke-direct {v1}, Lcom/bbm/ui/c/be;-><init>()V
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->m:Lcom/bbm/ui/c/ao;
+    iput-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->h:Lcom/bbm/ui/c/be;
 
     .line 234
-    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->m:Lcom/bbm/ui/c/ao;
+    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->h:Lcom/bbm/ui/c/be;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/ao;->a(Ljava/lang/String;)V
+    iput-object v0, v1, Lcom/bbm/ui/c/be;->a:Ljava/lang/String;
 
     .line 236
-    const v0, 0x7f0a00a0
+    const v0, 0x7f0b00bf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/PreviewChannelActivity;->findViewById(I)Landroid/view/View;
 
@@ -810,37 +773,37 @@
 
     check-cast v0, Lcom/bbm/ui/FooterActionBar;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->a:Lcom/bbm/ui/FooterActionBar;
+    iput-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
 
     .line 237
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->a:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
 
     new-instance v1, Lcom/bbm/ui/ActionBarItem;
 
-    const v2, 0x7f02001b
+    const v2, 0x7f02001f
 
-    const v3, 0x7f0e0490
+    const v3, 0x7f0e04e3
 
     invoke-direct {v1, p0, v2, v3}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;II)V
 
     invoke-virtual {v0, v1, v5}, Lcom/bbm/ui/FooterActionBar;->a(Lcom/bbm/ui/ActionBarItem;I)V
 
     .line 238
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->a:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
 
     invoke-virtual {v0, v4}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
 
     .line 239
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->a:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->t:Lcom/bbm/ui/by;
+    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->n:Lcom/bbm/ui/cn;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/by;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
 
     .line 240
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->a:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/FooterActionBar;
 
-    iget-boolean v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->r:Z
+    iget-boolean v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->l:Z
 
     invoke-virtual {v0, v5, v1}, Lcom/bbm/ui/FooterActionBar;->setActionEnabled(IZ)V
 
@@ -855,7 +818,7 @@
 
     .line 244
     :goto_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->b:Lcom/bbm/ui/SegmentedControl;
+    iget-object v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->c:Lcom/bbm/ui/SegmentedControl;
 
     invoke-virtual {v1, v0}, Lcom/bbm/ui/SegmentedControl;->a(I)V
 
@@ -874,15 +837,15 @@
 
     .prologue
     .line 291
-    invoke-static {p0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
+    invoke-static {p0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
 
     .line 292
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->v:Lcom/bbm/j/k;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->p:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
 
     .line 293
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->onPause()V
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onPause()V
 
     .line 294
     return-void
@@ -893,10 +856,10 @@
 
     .prologue
     .line 285
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->onResume()V
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onResume()V
 
     .line 286
-    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->v:Lcom/bbm/j/k;
+    iget-object v0, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->p:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
@@ -909,12 +872,12 @@
 
     .prologue
     .line 249
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/by;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/cq;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     .line 250
     const-string v0, "activeFragment"
 
-    iget v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->c:I
+    iget v1, p0, Lcom/bbm/ui/activities/PreviewChannelActivity;->d:I
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 

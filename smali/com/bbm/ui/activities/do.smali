@@ -1,58 +1,51 @@
 .class final Lcom/bbm/ui/activities/do;
-.super Lcom/bbm/j/a;
-.source "ChannelSettingsActivity.java"
+.super Ljava/lang/Object;
+.source "ChannelPostPhotoGalleryActivity.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/j/a",
-        "<",
-        "Lcom/bbm/d/de;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lcom/bbm/ui/c/gn;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelSettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)V
     .locals 0
 
     .prologue
-    .line 48
-    iput-object p1, p0, Lcom/bbm/ui/activities/do;->a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
+    .line 223
+    iput-object p1, p0, Lcom/bbm/ui/activities/do;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
 
-    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a()Ljava/lang/Object;
+.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
     .locals 2
 
     .prologue
-    .line 48
-    iget-object v0, p0, Lcom/bbm/ui/activities/do;->a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
+    .line 226
+    iget-object v0, p0, Lcom/bbm/ui/activities/do;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->b(Lcom/bbm/ui/activities/ChannelSettingsActivity;)Lcom/bbm/d/a;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->g(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)Z
 
-    move-result-object v0
+    move-result v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/do;->a:Lcom/bbm/ui/activities/ChannelSettingsActivity;
+    if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->a(Lcom/bbm/ui/activities/ChannelSettingsActivity;)Ljava/lang/String;
+    .line 227
+    iget-object v0, p0, Lcom/bbm/ui/activities/do;->a:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
 
-    move-result-object v1
+    iget v1, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->O(Ljava/lang/String;)Lcom/bbm/d/de;
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->a(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;I)V
 
-    move-result-object v0
-
-    return-object v0
+    .line 229
+    :cond_0
+    return-void
 .end method

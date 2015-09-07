@@ -4,14 +4,33 @@
         <item quantity="other">Mesaj difuzat trimis către %1$s contacte</item>
         <item quantity="one">Mesaj difuzat trimis către 1 contact</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d de abonaţi</item>
+        <item quantity="zero">Niciun abonat</item>
+        <item quantity="one">%1$d abonat</item>
+        <item quantity="few">%1$d abonaţi</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d de membri</item>
+        <item quantity="one">%1$d membru</item>
+        <item quantity="few">%1$d membri</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">secunde</item>
+        <item quantity="one">secundă</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Limita de timp a fost setată la %1$d secunde.</item>
+        <item quantity="one">Limita de timp a fost setată la %1$d secundă.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s elemente</item>
         <item quantity="zero">0 elemente</item>
         <item quantity="one">1 element</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d de invitaţii în aşteptare)</item>
-        <item quantity="one">(1 invitaţie în aşteptare)</item>
+        <item quantity="other">(%1$d în aşteptare)</item>
+        <item quantity="one">(1 în aşteptare)</item>
         <item quantity="few">(%1$d invitaţii în aşteptare)</item>
     </plurals>
     <plurals name="search_number_of_results">

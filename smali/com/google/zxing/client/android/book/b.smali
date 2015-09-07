@@ -4,9 +4,7 @@
 
 
 # static fields
-.field private static final a:Ljava/lang/String;
-
-.field private static final b:Ljava/util/regex/Pattern;
+.field private static final b:Ljava/lang/String;
 
 .field private static final c:Ljava/util/regex/Pattern;
 
@@ -16,9 +14,11 @@
 
 .field private static final f:Ljava/util/regex/Pattern;
 
+.field private static final g:Ljava/util/regex/Pattern;
+
 
 # instance fields
-.field private g:Ljava/lang/String;
+.field a:Ljava/lang/String;
 
 .field private h:Landroid/widget/EditText;
 
@@ -49,7 +49,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/zxing/client/android/book/b;->a:Ljava/lang/String;
+    sput-object v0, Lcom/google/zxing/client/android/book/b;->b:Ljava/lang/String;
 
     .line 59
     const-string v0, "\\<.*?\\>"
@@ -58,7 +58,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/zxing/client/android/book/b;->b:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/google/zxing/client/android/book/b;->c:Ljava/util/regex/Pattern;
 
     .line 60
     const-string v0, "&lt;"
@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/zxing/client/android/book/b;->c:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/google/zxing/client/android/book/b;->d:Ljava/util/regex/Pattern;
 
     .line 61
     const-string v0, "&gt;"
@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/zxing/client/android/book/b;->d:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/google/zxing/client/android/book/b;->e:Ljava/util/regex/Pattern;
 
     .line 62
     const-string v0, "&#39;"
@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/zxing/client/android/book/b;->e:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/google/zxing/client/android/book/b;->f:Ljava/util/regex/Pattern;
 
     .line 63
     const-string v0, "&quot;"
@@ -94,7 +94,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/google/zxing/client/android/book/b;->f:Ljava/util/regex/Pattern;
+    sput-object v0, Lcom/google/zxing/client/android/book/b;->g:Ljava/util/regex/Pattern;
 
     return-void
 .end method
@@ -135,6 +135,16 @@
 
     .line 75
     return-void
+.end method
+
+.method static synthetic a()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 55
+    sget-object v0, Lcom/google/zxing/client/android/book/b;->b:Ljava/lang/String;
+
+    return-object v0
 .end method
 
 .method static synthetic a(Lcom/google/zxing/client/android/book/b;)V
@@ -187,7 +197,7 @@
 
     aput-object v0, v3, v4
 
-    iget-object v0, p0, Lcom/google/zxing/client/android/book/b;->g:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/zxing/client/android/book/b;->a:Ljava/lang/String;
 
     aput-object v0, v3, v5
 
@@ -227,12 +237,12 @@
     return-object v0
 .end method
 
-.method static synthetic b()Ljava/lang/String;
+.method static synthetic b()Ljava/util/regex/Pattern;
     .locals 1
 
     .prologue
     .line 55
-    sget-object v0, Lcom/google/zxing/client/android/book/b;->a:Ljava/lang/String;
+    sget-object v0, Lcom/google/zxing/client/android/book/b;->c:Ljava/util/regex/Pattern;
 
     return-object v0
 .end method
@@ -252,7 +262,7 @@
 
     .prologue
     .line 55
-    sget-object v0, Lcom/google/zxing/client/android/book/b;->b:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/google/zxing/client/android/book/b;->d:Ljava/util/regex/Pattern;
 
     return-object v0
 .end method
@@ -272,7 +282,7 @@
 
     .prologue
     .line 55
-    sget-object v0, Lcom/google/zxing/client/android/book/b;->c:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/google/zxing/client/android/book/b;->e:Ljava/util/regex/Pattern;
 
     return-object v0
 .end method
@@ -292,7 +302,7 @@
 
     .prologue
     .line 55
-    sget-object v0, Lcom/google/zxing/client/android/book/b;->d:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/google/zxing/client/android/book/b;->f:Ljava/util/regex/Pattern;
 
     return-object v0
 .end method
@@ -302,33 +312,13 @@
 
     .prologue
     .line 55
-    sget-object v0, Lcom/google/zxing/client/android/book/b;->e:Ljava/util/regex/Pattern;
-
-    return-object v0
-.end method
-
-.method static synthetic g()Ljava/util/regex/Pattern;
-    .locals 1
-
-    .prologue
-    .line 55
-    sget-object v0, Lcom/google/zxing/client/android/book/b;->f:Ljava/util/regex/Pattern;
+    sget-object v0, Lcom/google/zxing/client/android/book/b;->g:Ljava/util/regex/Pattern;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method final a()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 96
-    iget-object v0, p0, Lcom/google/zxing/client/android/book/b;->g:Ljava/lang/String;
-
-    return-object v0
-.end method
-
 .method public final onCreate(Landroid/os/Bundle;)V
     .locals 4
 
@@ -382,10 +372,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/zxing/client/android/book/b;->g:Ljava/lang/String;
+    iput-object v0, p0, Lcom/google/zxing/client/android/book/b;->a:Ljava/lang/String;
 
     .line 114
-    iget-object v0, p0, Lcom/google/zxing/client/android/book/b;->g:Ljava/lang/String;
+    iget-object v0, p0, Lcom/google/zxing/client/android/book/b;->a:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/google/zxing/client/android/r;->a(Ljava/lang/String;)Z
 
@@ -528,7 +518,7 @@
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/google/zxing/client/android/book/b;->g:Ljava/lang/String;
+    iget-object v2, p0, Lcom/google/zxing/client/android/book/b;->a:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

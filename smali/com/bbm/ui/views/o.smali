@@ -40,9 +40,7 @@
 
     check-cast v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->h()I
-
-    move-result v0
+    iget v0, v0, Lcom/bbm/ui/activities/ViewChannelPostActivity;->e:I
 
     .line 45
     const-string v1, "sammydm"

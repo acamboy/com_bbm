@@ -1,20 +1,15 @@
-.class interface abstract Landroid/support/v4/view/a/x;
-.super Ljava/lang/Object;
+.class Landroid/support/v4/view/a/x;
+.super Landroid/support/v4/view/a/w;
 .source "AccessibilityRecordCompat.java"
 
 
-# virtual methods
-.method public abstract a()Ljava/lang/Object;
-.end method
+# direct methods
+.method constructor <init>()V
+    .locals 0
 
-.method public abstract a(Ljava/lang/Object;I)V
-.end method
+    .prologue
+    .line 476
+    invoke-direct {p0}, Landroid/support/v4/view/a/w;-><init>()V
 
-.method public abstract a(Ljava/lang/Object;Z)V
-.end method
-
-.method public abstract b(Ljava/lang/Object;I)V
-.end method
-
-.method public abstract c(Ljava/lang/Object;I)V
+    return-void
 .end method

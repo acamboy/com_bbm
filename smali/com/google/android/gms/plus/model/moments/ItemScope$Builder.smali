@@ -1165,7 +1165,7 @@
 .end method
 
 .method public setLatitude(D)Lcom/google/android/gms/plus/model/moments/ItemScope$Builder;
-    .locals 2
+    .locals 3
 
     iput-wide p1, p0, Lcom/google/android/gms/plus/model/moments/ItemScope$Builder;->KX:D
 
@@ -1203,7 +1203,7 @@
 .end method
 
 .method public setLongitude(D)Lcom/google/android/gms/plus/model/moments/ItemScope$Builder;
-    .locals 2
+    .locals 3
 
     iput-wide p1, p0, Lcom/google/android/gms/plus/model/moments/ItemScope$Builder;->KY:D
 

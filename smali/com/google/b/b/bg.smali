@@ -87,7 +87,7 @@
 
 # virtual methods
 .method public final b(J)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 1522

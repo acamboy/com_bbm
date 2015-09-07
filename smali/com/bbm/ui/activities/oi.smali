@@ -1,44 +1,38 @@
 .class final Lcom/bbm/ui/activities/oi;
-.super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/k;
+.source "GroupListItemsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
+    .locals 1
 
     .prologue
-    .line 764
-    iput-object p1, p0, Lcom/bbm/ui/activities/oi;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 111
+    iput-object p1, p0, Lcom/bbm/ui/activities/oi;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method protected final a()V
     .locals 1
 
     .prologue
-    .line 768
-    iget-object v0, p0, Lcom/bbm/ui/activities/oi;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 115
+    iget-object v0, p0, Lcom/bbm/ui/activities/oi;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->v()V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->b()V
 
-    .line 769
-    iget-object v0, p0, Lcom/bbm/ui/activities/oi;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->d(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
-
-    .line 770
+    .line 116
     return-void
 .end method

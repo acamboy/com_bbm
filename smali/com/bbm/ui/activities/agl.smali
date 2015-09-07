@@ -1,39 +1,48 @@
-.class final Lcom/bbm/ui/activities/agl;
+.class final synthetic Lcom/bbm/ui/activities/agl;
 .super Ljava/lang/Object;
-.source "ViewChannelPostActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "SetChannelAvatarActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 344
-    iput-object p1, p0, Lcom/bbm/ui/activities/agl;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 87
+    invoke-static {}, Lcom/bbm/ui/activities/ago;->values()[Lcom/bbm/ui/activities/ago;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/activities/agl;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/activities/agl;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/activities/ago;->a:Lcom/bbm/ui/activities/ago;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/ago;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
-
-    .prologue
-    .line 347
-    iget-object v0, p0, Lcom/bbm/ui/activities/agl;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->i(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    .line 348
-    return-void
+    goto :goto_0
 .end method

@@ -1,85 +1,68 @@
 .class final Lcom/bbm/ui/activities/jt;
-.super Lcom/bbm/j/k;
-.source "GroupChatHistorySettingsActivity.java"
+.super Ljava/lang/Object;
+.source "FilePickerActivity.java"
+
+# interfaces
+.implements Lcom/bbm/ui/t;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/FilePickerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/FilePickerActivity;)V
+    .locals 0
 
     .prologue
-    .line 160
-    iput-object p1, p0, Lcom/bbm/ui/activities/jt;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    .line 210
+    iput-object p1, p0, Lcom/bbm/ui/activities/jt;->a:Lcom/bbm/ui/activities/FilePickerActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 3
+.method public final a(I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
 
     .prologue
-    .line 163
-    iget-object v0, p0, Lcom/bbm/ui/activities/jt;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a:Lcom/bbm/g/ab;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/jt;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->b(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->o(Ljava/lang/String;)Lcom/bbm/g/n;
+    .line 214
+    invoke-static {}, Lcom/bbm/ui/activities/kh;->values()[Lcom/bbm/ui/activities/kh;
 
     move-result-object v0
 
-    .line 164
-    iget-object v1, v0, Lcom/bbm/g/n;->l:Lcom/bbm/util/bc;
+    aget-object v0, v0, p1
 
-    sget-object v2, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->a(Lcom/bbm/ui/activities/kh;)Lcom/bbm/ui/activities/kh;
 
-    if-ne v1, v2, :cond_0
+    .line 215
+    iget-object v0, p0, Lcom/bbm/ui/activities/jt;->a:Lcom/bbm/ui/activities/FilePickerActivity;
 
-    .line 165
-    iget-object v1, p0, Lcom/bbm/ui/activities/jt;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->a(Lcom/bbm/ui/activities/FilePickerActivity;)Z
 
-    iget-object v0, v0, Lcom/bbm/g/n;->f:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/jx;->a(Ljava/lang/String;)Lcom/bbm/ui/activities/jx;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;Lcom/bbm/ui/activities/jx;)Lcom/bbm/ui/activities/jx;
-
-    .line 166
-    iget-object v0, p0, Lcom/bbm/ui/activities/jt;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->c(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/ui/activities/jv;
-
-    move-result-object v0
+    move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 167
-    iget-object v0, p0, Lcom/bbm/ui/activities/jt;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    .line 216
+    iget-object v0, p0, Lcom/bbm/ui/activities/jt;->a:Lcom/bbm/ui/activities/FilePickerActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->c(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/ui/activities/jv;
+    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->b(Lcom/bbm/ui/activities/FilePickerActivity;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/jv;->notifyDataSetChanged()V
-
-    .line 170
+    .line 218
     :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/jt;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->c(Lcom/bbm/ui/activities/FilePickerActivity;)Z
+
+    .line 219
     return-void
 .end method

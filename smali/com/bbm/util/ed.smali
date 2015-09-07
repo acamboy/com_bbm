@@ -1,22 +1,22 @@
 .class final Lcom/bbm/util/ed;
 .super Ljava/lang/Object;
-.source "UpdatesFragmentUtil.java"
+.source "TpaUtil.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/bbm/f/ac;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/util/ec;
+.field final synthetic a:Lcom/bbm/util/ct;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/ec;)V
+.method constructor <init>(Lcom/bbm/util/ct;)V
     .locals 0
 
     .prologue
-    .line 952
-    iput-object p1, p0, Lcom/bbm/util/ed;->a:Lcom/bbm/util/ec;
+    .line 458
+    iput-object p1, p0, Lcom/bbm/util/ed;->a:Lcom/bbm/util/ct;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,74 +25,125 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final a()V
+    .locals 0
 
     .prologue
-    .line 956
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 461
+    return-void
+.end method
 
-    const-string v1, "ADS: Ad marked as viewed - id:"
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 2
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .prologue
+    .line 465
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/bbm/util/ed;->a:Lcom/bbm/util/ec;
+    const-string v1, "checkPartnerTokenResponse"
 
-    iget-object v1, v1, Lcom/bbm/util/ec;->a:Lcom/bbm/util/ea;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    iget-object v1, v1, Lcom/bbm/util/ea;->d:Ljava/lang/String;
+    move-result v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
+
+    .line 466
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
+
+    .line 467
+    const-string v1, "valid"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 469
+    :try_start_0
+    const-string v1, "valid"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getBoolean(Ljava/lang/String;)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 470
+    iget-object v1, p0, Lcom/bbm/util/ed;->a:Lcom/bbm/util/ct;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-virtual {v1, v0}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    new-array v1, v1, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 957
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/b/k;
+    .line 474
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    const-string v1, "Viewed"
+    iget-object v0, v0, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
 
-    const-string v2, "Banner"
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
 
-    iget-object v3, p0, Lcom/bbm/util/ed;->a:Lcom/bbm/util/ec;
+    invoke-interface {v0, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
 
-    iget-object v3, v3, Lcom/bbm/util/ec;->a:Lcom/bbm/util/ea;
+    .line 480
+    :cond_0
+    :goto_0
+    return-void
 
-    iget-object v3, v3, Lcom/bbm/util/ea;->d:Ljava/lang/String;
+    .line 471
+    :catch_0
+    move-exception v0
 
-    invoke-static {v1, v2, v3}, Lcom/bbm/b/p;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/b/z;
+    :try_start_1
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 474
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
+
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    invoke-interface {v0, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/b/k;->a(Lcom/bbm/b/aa;)V
+    iget-object v1, v1, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
 
-    .line 959
-    iget-object v0, p0, Lcom/bbm/util/ed;->a:Lcom/bbm/util/ec;
+    iget-object v1, v1, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
 
-    iget-object v0, v0, Lcom/bbm/util/ec;->a:Lcom/bbm/util/ea;
+    invoke-interface {v1, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
 
-    invoke-static {v0}, Lcom/bbm/util/ea;->a(Lcom/bbm/util/ea;)V
+    throw v0
 
-    .line 960
-    iget-object v0, p0, Lcom/bbm/util/ed;->a:Lcom/bbm/util/ec;
+    .line 477
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/util/ed;->a:Lcom/bbm/util/ct;
 
-    iget-object v0, v0, Lcom/bbm/util/ec;->a:Lcom/bbm/util/ea;
+    const/4 v1, 0x0
 
-    iget-object v0, v0, Lcom/bbm/util/ea;->c:Lcom/bbm/j/k;
+    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
-
-    .line 961
-    return-void
+    goto :goto_0
 .end method

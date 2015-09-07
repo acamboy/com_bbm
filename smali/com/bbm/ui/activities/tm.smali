@@ -1,52 +1,70 @@
 .class final Lcom/bbm/ui/activities/tm;
-.super Ljava/lang/Object;
-.source "MainActivity.java"
+.super Lcom/bbm/j/a;
+.source "GroupProfileActivity.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/widget/EditText;
-
-.field final synthetic b:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;Landroid/widget/EditText;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 619
-    iput-object p1, p0, Lcom/bbm/ui/activities/tm;->b:Lcom/bbm/ui/activities/MainActivity;
+    .line 79
+    iput-object p1, p0, Lcom/bbm/ui/activities/tm;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/tm;->a:Landroid/widget/EditText;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method protected final synthetic a()Ljava/lang/Object;
     .locals 2
 
     .prologue
-    .line 622
-    const-string v0, "clearButton Clicked"
+    .line 79
+    iget-object v0, p0, Lcom/bbm/ui/activities/tm;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/MainActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;)Lcom/bbm/g/al;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 624
-    iget-object v0, p0, Lcom/bbm/ui/activities/tm;->a:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/bbm/ui/activities/tm;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    const-string v1, ""
+    iget-object v1, v1, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->g(Ljava/lang/String;)Lcom/bbm/j/w;
 
-    .line 625
-    return-void
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
 .end method

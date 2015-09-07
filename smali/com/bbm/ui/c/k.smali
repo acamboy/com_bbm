@@ -1,90 +1,48 @@
-.class final synthetic Lcom/bbm/ui/c/k;
-.super Ljava/lang/Object;
-.source "BlockedContactsFragment.java"
+.class final Lcom/bbm/ui/c/k;
+.super Lcom/bbm/j/a;
+.source "AppDetailsFragment.java"
 
 
-# static fields
-.field static final synthetic a:[I
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Lcom/bbm/l/b/f;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/c/a;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/c/a;)V
+    .locals 0
 
     .prologue
-    .line 225
-    invoke-static {}, Lcom/bbm/util/bc;->values()[Lcom/bbm/util/bc;
+    .line 534
+    iput-object p1, p0, Lcom/bbm/ui/c/k;->a:Lcom/bbm/ui/c/a;
+
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 534
+    iget-object v0, p0, Lcom/bbm/ui/c/k;->a:Lcom/bbm/ui/c/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/a;->d(Lcom/bbm/ui/c/a;)Lcom/bbm/l/b/f;
 
     move-result-object v0
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/bbm/ui/c/k;->a:[I
-
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/c/k;->a:[I
-
-    sget-object v1, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
-
-    invoke-virtual {v1}, Lcom/bbm/util/bc;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/c/k;->a:[I
-
-    sget-object v1, Lcom/bbm/util/bc;->b:Lcom/bbm/util/bc;
-
-    invoke-virtual {v1}, Lcom/bbm/util/bc;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/c/k;->a:[I
-
-    sget-object v1, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
-
-    invoke-virtual {v1}, Lcom/bbm/util/bc;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
-
-    :goto_2
-    return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_0
+    return-object v0
 .end method

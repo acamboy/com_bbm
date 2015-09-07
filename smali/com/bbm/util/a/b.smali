@@ -9,24 +9,24 @@
 # instance fields
 .field private final a:Landroid/content/Context;
 
-.field private final b:Lcom/bbm/ui/activities/vd;
+.field private final b:Lcom/bbm/ui/activities/ye;
 
 .field private final c:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/ix;",
+            "Lcom/bbm/ui/activities/kt;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private final d:Lcom/bbm/d/dp;
+.field private final d:Lcom/bbm/d/eu;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/util/List;Lcom/bbm/d/dp;)V
+.method public constructor <init>(Landroid/content/Context;Ljava/util/List;Lcom/bbm/d/eu;)V
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -34,9 +34,9 @@
             "Landroid/content/Context;",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/ix;",
+            "Lcom/bbm/ui/activities/kt;",
             ">;",
-            "Lcom/bbm/d/dp;",
+            "Lcom/bbm/d/eu;",
             ")V"
         }
     .end annotation
@@ -46,11 +46,11 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 32
-    new-instance v0, Lcom/bbm/ui/activities/vd;
+    new-instance v0, Lcom/bbm/ui/activities/ye;
 
-    invoke-direct {v0}, Lcom/bbm/ui/activities/vd;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/activities/ye;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/util/a/b;->b:Lcom/bbm/ui/activities/vd;
+    iput-object v0, p0, Lcom/bbm/util/a/b;->b:Lcom/bbm/ui/activities/ye;
 
     .line 37
     iput-object p1, p0, Lcom/bbm/util/a/b;->a:Landroid/content/Context;
@@ -59,7 +59,7 @@
     iput-object p2, p0, Lcom/bbm/util/a/b;->c:Ljava/util/List;
 
     .line 39
-    iput-object p3, p0, Lcom/bbm/util/a/b;->d:Lcom/bbm/d/dp;
+    iput-object p3, p0, Lcom/bbm/util/a/b;->d:Lcom/bbm/d/eu;
 
     .line 40
     return-void
@@ -76,7 +76,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f03011f
+    const v1, 0x7f030136
 
     const/4 v2, 0x0
 
@@ -85,7 +85,7 @@
     move-result-object v5
 
     .line 65
-    const v0, 0x7f0a053b
+    const v0, 0x7f0b05f3
 
     invoke-virtual {v5, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -94,7 +94,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 66
-    const v1, 0x7f0a053a
+    const v1, 0x7f0b05f2
 
     invoke-virtual {v5, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -103,7 +103,7 @@
     check-cast v1, Landroid/widget/LinearLayout;
 
     .line 67
-    const v2, 0x7f0a053c
+    const v2, 0x7f0b05f4
 
     invoke-virtual {v5, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -112,7 +112,7 @@
     check-cast v2, Lcom/bbm/ui/InlineImageTextView;
 
     .line 68
-    const v3, 0x7f0a053d
+    const v3, 0x7f0b05f5
 
     invoke-virtual {v5, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -165,29 +165,29 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 106
+    .line 105
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/bbm/util/a/b;->c:Ljava/util/List;
 
-    iget-object v4, p0, Lcom/bbm/util/a/b;->b:Lcom/bbm/ui/activities/vd;
+    iget-object v4, p0, Lcom/bbm/util/a/b;->b:Lcom/bbm/ui/activities/ye;
 
-    iget-object v6, p0, Lcom/bbm/util/a/b;->d:Lcom/bbm/d/dp;
+    iget-object v6, p0, Lcom/bbm/util/a/b;->d:Lcom/bbm/d/eu;
 
-    invoke-static {p1, v0, v4, v6}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;Ljava/util/List;Lcom/bbm/ui/activities/vd;Lcom/bbm/d/dp;)I
+    invoke-static {p1, v0, v4, v6}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;Ljava/util/List;Lcom/bbm/ui/activities/ye;Lcom/bbm/d/eu;)I
 
     move-result v0
 
     invoke-virtual {v1, v0}, Landroid/widget/LinearLayout;->setBackgroundResource(I)V
 
-    .line 107
+    .line 106
     invoke-interface {p1}, Lcom/glympse/android/api/GUser;->getNickname()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v2, v0}, Lcom/bbm/ui/InlineImageTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 108
+    .line 107
     iget-object v0, p0, Lcom/bbm/util/a/b;->a:Landroid/content/Context;
 
     invoke-static {p1, v0}, Lcom/bbm/util/a/k;->a(Lcom/glympse/android/api/GUser;Landroid/content/Context;)Ljava/lang/String;
@@ -196,23 +196,23 @@
 
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 109
+    .line 108
     return-object v5
 
-    .line 82
+    .line 81
     :cond_1
-    const v6, 0x7f0200d0
+    const v6, 0x7f0200da
 
     invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 83
+    .line 82
     new-instance v6, Lcom/bbm/util/a/c;
 
     invoke-direct {v6, p0, v4, v0}, Lcom/bbm/util/a/c;-><init>(Lcom/bbm/util/a/b;Lcom/glympse/android/api/GImage;Landroid/widget/ImageView;)V
 
     invoke-interface {v4, v6}, Lcom/glympse/android/api/GImage;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 102
+    .line 101
     invoke-interface {v4}, Lcom/glympse/android/api/GImage;->load()Z
 
     goto :goto_0
@@ -223,13 +223,11 @@
 
     .prologue
     .line 54
-    invoke-static {}, Lcom/bbm/n;->a()Lcom/bbm/n;
+    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/n;->c()Lcom/glympse/android/api/GGlympse;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
@@ -242,13 +240,11 @@
     if-nez v0, :cond_0
 
     .line 57
-    invoke-static {}, Lcom/bbm/n;->a()Lcom/bbm/n;
+    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/n;->c()Lcom/glympse/android/api/GGlympse;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 

@@ -1,22 +1,30 @@
 .class final Lcom/bbm/ui/activities/vj;
 .super Ljava/lang/Object;
-.source "NewChannelActivity.java"
+.source "InviteActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewChannelActivity;
+.field final synthetic a:Ljava/util/ArrayList;
+
+.field final synthetic b:Ljava/util/ArrayList;
+
+.field final synthetic c:Lcom/bbm/ui/activities/vi;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/vi;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 0
 
     .prologue
-    .line 488
-    iput-object p1, p0, Lcom/bbm/ui/activities/vj;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 275
+    iput-object p1, p0, Lcom/bbm/ui/activities/vj;->c:Lcom/bbm/ui/activities/vi;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/vj;->a:Ljava/util/ArrayList;
+
+    iput-object p3, p0, Lcom/bbm/ui/activities/vj;->b:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,67 +33,50 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 3
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 2
 
     .prologue
-    const/4 v2, 0x1
+    .line 279
+    const-string v0, "unblockContacts Dialog onPositive button Clicked"
 
-    const/4 v1, 0x0
+    const-class v1, Lcom/bbm/ui/activities/InviteActivity;
 
-    .line 491
-    iget-object v0, p0, Lcom/bbm/ui/activities/vj;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->a(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/Switch;
+    .line 281
+    iget-object v0, p0, Lcom/bbm/ui/activities/vj;->a:Ljava/util/ArrayList;
 
-    move-result-object v0
+    invoke-static {v0}, Lcom/bbm/h/aq;->a(Ljava/util/List;)V
 
-    invoke-virtual {v0}, Landroid/widget/Switch;->isChecked()Z
+    .line 283
+    iget-object v0, p0, Lcom/bbm/ui/activities/vj;->c:Lcom/bbm/ui/activities/vi;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/vi;->a:Lcom/bbm/ui/activities/InviteActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->g(Lcom/bbm/ui/activities/InviteActivity;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 492
-    iget-object v0, p0, Lcom/bbm/ui/activities/vj;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 284
+    iget-object v0, p0, Lcom/bbm/ui/activities/vj;->c:Lcom/bbm/ui/activities/vi;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->o(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/Switch;
+    iget-object v0, v0, Lcom/bbm/ui/activities/vi;->a:Lcom/bbm/ui/activities/InviteActivity;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/bbm/ui/activities/vj;->b:Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Landroid/widget/Switch;->setChecked(Z)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/InviteActivity;->a(Lcom/bbm/ui/activities/InviteActivity;Ljava/util/List;)V
 
-    .line 493
-    iget-object v0, p0, Lcom/bbm/ui/activities/vj;->a:Lcom/bbm/ui/activities/NewChannelActivity;
+    .line 285
+    iget-object v0, p0, Lcom/bbm/ui/activities/vj;->c:Lcom/bbm/ui/activities/vi;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->o(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/Switch;
+    iget-object v0, v0, Lcom/bbm/ui/activities/vi;->a:Lcom/bbm/ui/activities/InviteActivity;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/InviteActivity;->finish()V
 
-    invoke-virtual {v0, v1}, Landroid/widget/Switch;->setEnabled(Z)V
-
-    .line 499
-    :goto_0
-    return-void
-
-    .line 496
+    .line 287
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/vj;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->o(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/Switch;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/widget/Switch;->setEnabled(Z)V
-
-    .line 497
-    iget-object v0, p0, Lcom/bbm/ui/activities/vj;->a:Lcom/bbm/ui/activities/NewChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelActivity;->o(Lcom/bbm/ui/activities/NewChannelActivity;)Landroid/widget/Switch;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/widget/Switch;->setChecked(Z)V
-
-    goto :goto_0
+    return-void
 .end method

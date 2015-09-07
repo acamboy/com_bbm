@@ -3,7 +3,7 @@
 .source "GLinkedList.java"
 
 # interfaces
-.implements Ljava/util/Iterator;
+.implements Ljava/util/Enumeration;
 
 
 # annotations
@@ -13,14 +13,14 @@
         "Ljava/lang/Object;",
         ">",
         "Ljava/lang/Object;",
-        "Ljava/util/Iterator",
+        "Ljava/util/Enumeration",
         "<TT;>;"
     }
 .end annotation
 
 
 # instance fields
-.field private ba:Ljava/util/Iterator;
+.field private aZ:Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Iterator",
@@ -42,24 +42,24 @@
     .end annotation
 
     .prologue
-    .line 96
+    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
-    iput-object p1, p0, Lcom/glympse/android/hal/z;->ba:Ljava/util/Iterator;
+    .line 57
+    iput-object p1, p0, Lcom/glympse/android/hal/z;->aZ:Ljava/util/Iterator;
 
-    .line 98
+    .line 58
     return-void
 .end method
 
 
 # virtual methods
-.method public hasNext()Z
+.method public hasMoreElements()Z
     .locals 1
 
     .prologue
-    .line 102
-    iget-object v0, p0, Lcom/glympse/android/hal/z;->ba:Ljava/util/Iterator;
+    .line 62
+    iget-object v0, p0, Lcom/glympse/android/hal/z;->aZ:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
@@ -68,7 +68,7 @@
     return v0
 .end method
 
-.method public next()Ljava/lang/Object;
+.method public nextElement()Ljava/lang/Object;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -77,20 +77,12 @@
     .end annotation
 
     .prologue
-    .line 107
-    iget-object v0, p0, Lcom/glympse/android/hal/z;->ba:Ljava/util/Iterator;
+    .line 67
+    iget-object v0, p0, Lcom/glympse/android/hal/z;->aZ:Ljava/util/Iterator;
 
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     return-object v0
-.end method
-
-.method public remove()V
-    .locals 0
-
-    .prologue
-    .line 113
-    return-void
 .end method

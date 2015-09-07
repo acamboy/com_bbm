@@ -185,7 +185,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/c/a/a/a;->b(Lorg/json/JSONObject;)V
+    invoke-virtual {v1, v0}, Lcom/c/a/a/a;->a(Lorg/json/JSONObject;)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -296,7 +296,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/c/a/a/a;->b(Lorg/json/JSONObject;)V
+    invoke-virtual {v1, v0}, Lcom/c/a/a/a;->a(Lorg/json/JSONObject;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -465,7 +465,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/c/a/a/a;->b(Lorg/json/JSONObject;)V
+    invoke-virtual {v1, v0}, Lcom/c/a/a/a;->a(Lorg/json/JSONObject;)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 

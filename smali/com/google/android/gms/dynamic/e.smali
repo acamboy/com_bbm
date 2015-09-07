@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method protected abstract d(Landroid/os/IBinder;)Ljava/lang/Object;
+.method public abstract d(Landroid/os/IBinder;)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -48,7 +48,7 @@
     .end annotation
 .end method
 
-.method protected final z(Landroid/content/Context;)Ljava/lang/Object;
+.method public final z(Landroid/content/Context;)Ljava/lang/Object;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {

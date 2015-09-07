@@ -1827,16 +1827,16 @@
 
     :cond_0
     :try_start_0
-    instance-of v0, p1, Landroid/support/v4/app/h;
+    instance-of v0, p1, Landroid/support/v4/app/q;
     :try_end_0
     .catch Ljava/lang/NoClassDefFoundError; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_1
     if-eqz v0, :cond_1
 
-    check-cast p1, Landroid/support/v4/app/h;
+    check-cast p1, Landroid/support/v4/app/q;
 
-    invoke-virtual {p1}, Landroid/support/v4/app/h;->getSupportFragmentManager()Landroid/support/v4/app/n;
+    invoke-virtual {p1}, Landroid/support/v4/app/q;->getSupportFragmentManager()Landroid/support/v4/app/v;
 
     move-result-object v0
 
@@ -1846,7 +1846,7 @@
 
     const-string v2, "GooglePlayServicesErrorDialog"
 
-    invoke-virtual {v1, v0, v2}, Lcom/google/android/gms/common/b;->show(Landroid/support/v4/app/n;Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v2}, Lcom/google/android/gms/common/b;->show(Landroid/support/v4/app/v;Ljava/lang/String;)V
 
     :goto_2
     const/4 v0, 0x1

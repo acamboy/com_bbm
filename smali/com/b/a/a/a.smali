@@ -1,4 +1,4 @@
-.class interface abstract Lcom/b/a/a/a;
+.class public interface abstract Lcom/b/a/a/a;
 .super Ljava/lang/Object;
 .source "ActivityLike.java"
 
@@ -13,5 +13,5 @@
 .method public abstract b()Landroid/app/FragmentManager;
 .end method
 
-.method public abstract c()Landroid/support/v4/app/n;
+.method public abstract c()Landroid/support/v4/app/v;
 .end method

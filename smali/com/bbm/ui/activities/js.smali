@@ -1,22 +1,30 @@
 .class final Lcom/bbm/ui/activities/js;
 .super Ljava/lang/Object;
-.source "GroupChatHistorySettingsActivity.java"
+.source "FilePickerActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/t;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+.field final synthetic a:Ljava/util/LinkedHashMap;
+
+.field final synthetic b:Ljava/util/ArrayList;
+
+.field final synthetic c:Lcom/bbm/ui/activities/FilePickerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/FilePickerActivity;Ljava/util/LinkedHashMap;Ljava/util/ArrayList;)V
     .locals 0
 
     .prologue
-    .line 74
-    iput-object p1, p0, Lcom/bbm/ui/activities/js;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    .line 187
+    iput-object p1, p0, Lcom/bbm/ui/activities/js;->c:Lcom/bbm/ui/activities/FilePickerActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/js;->a:Ljava/util/LinkedHashMap;
+
+    iput-object p3, p0, Lcom/bbm/ui/activities/js;->b:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,60 +33,39 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final a(I)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
 
     .prologue
-    .line 78
-    const-string v0, "headerActionBar Positive Button Clicked"
+    .line 190
+    iget-object v0, p0, Lcom/bbm/ui/activities/js;->a:Ljava/util/LinkedHashMap;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    iget-object v1, p0, Lcom/bbm/ui/activities/js;->b:Ljava/util/ArrayList;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 80
-    iget-object v0, p0, Lcom/bbm/ui/activities/js;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/ui/activities/jx;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 85
-    :goto_0
-    return-void
-
-    .line 83
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/js;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a:Lcom/bbm/g/ab;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/js;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->b(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Ljava/lang/String;
+    invoke-virtual {v1, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/js;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
+    invoke-virtual {v0, v1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->a(Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;)Lcom/bbm/ui/activities/jx;
+    move-result-object v0
 
-    move-result-object v2
+    check-cast v0, Ljava/lang/String;
 
-    iget-object v2, v2, Lcom/bbm/ui/activities/jx;->i:Ljava/lang/String;
+    .line 192
+    if-eqz v0, :cond_0
 
-    new-instance v3, Lcom/bbm/g/au;
+    .line 193
+    iget-object v1, p0, Lcom/bbm/ui/activities/js;->c:Lcom/bbm/ui/activities/FilePickerActivity;
 
-    invoke-direct {v3, v1, v2}, Lcom/bbm/g/au;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/FilePickerActivity;->a(Lcom/bbm/ui/activities/FilePickerActivity;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v3}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
-
-    .line 84
-    iget-object v0, p0, Lcom/bbm/ui/activities/js;->a:Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupChatHistorySettingsActivity;->finish()V
-
-    goto :goto_0
+    .line 195
+    :cond_0
+    return-void
 .end method

@@ -1,119 +1,50 @@
 .class final Lcom/bbm/ui/activities/sr;
-.super Lcom/bbm/ui/by;
-.source "InviteActivity.java"
+.super Ljava/lang/Object;
+.source "GroupPictureCommentsActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
     .locals 0
 
     .prologue
-    .line 788
-    iput-object p1, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/InviteActivity;
+    .line 264
+    iput-object p1, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 792
-    packed-switch p1, :pswitch_data_0
+    .line 267
+    const-string v0, "rootView Clicked"
 
-    .line 809
-    :goto_0
+    const-class v1, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 268
+    iget-object v0, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/EmoticonInputPanel;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->d()Z
+
+    .line 269
     return-void
-
-    .line 794
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->h(Lcom/bbm/ui/activities/InviteActivity;)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 795
-    iget-object v0, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/InviteActivity;->getApplicationContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/bbm/h/c;->a(Landroid/content/Context;)Lcom/bbm/h/c;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/InviteActivity;->y(Lcom/bbm/ui/activities/InviteActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/InviteActivity;->z(Lcom/bbm/ui/activities/InviteActivity;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const/4 v4, 0x1
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/bbm/h/c;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;I)V
-
-    goto :goto_0
-
-    .line 799
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/bbm/h/c;->a(Landroid/app/Activity;I)V
-
-    goto :goto_0
-
-    .line 804
-    :pswitch_1
-    new-instance v0, Landroid/content/Intent;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    const-class v2, Lcom/bbm/ui/activities/TapToInviteActivity;
-
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 805
-    iget-object v1, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/InviteActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 806
-    iget-object v0, p0, Lcom/bbm/ui/activities/sr;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/InviteActivity;->finish()V
-
-    goto :goto_0
-
-    .line 792
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

@@ -1,62 +1,53 @@
 .class final Lcom/bbm/ui/activities/aci;
-.super Lcom/bbm/ui/by;
-.source "SentPendingInviteActivity.java"
+.super Ljava/lang/Object;
+.source "ProfileActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SentPendingInviteActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SentPendingInviteActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 67
-    iput-object p1, p0, Lcom/bbm/ui/activities/aci;->a:Lcom/bbm/ui/activities/SentPendingInviteActivity;
+    .line 383
+    iput-object p1, p0, Lcom/bbm/ui/activities/aci;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 71
-    iget-object v0, p0, Lcom/bbm/ui/activities/aci;->a:Lcom/bbm/ui/activities/SentPendingInviteActivity;
+    .line 387
+    const-string v0, "mKeyboardButtonArea Clicked"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SentPendingInviteActivity;->finish()V
+    const-class v1, Lcom/bbm/ui/activities/ProfileActivity;
 
-    .line 72
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 389
+    iget-object v0, p0, Lcom/bbm/ui/activities/aci;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileActivity;->e(Lcom/bbm/ui/activities/ProfileActivity;)V
+
+    .line 390
+    iget-object v0, p0, Lcom/bbm/ui/activities/aci;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->b(Lcom/bbm/ui/activities/ProfileActivity;Z)V
+
+    .line 391
     return-void
-.end method
-
-.method public final a(I)V
-    .locals 1
-
-    .prologue
-    .line 76
-    packed-switch p1, :pswitch_data_0
-
-    .line 80
-    :goto_0
-    return-void
-
-    .line 78
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/aci;->a:Lcom/bbm/ui/activities/SentPendingInviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SentPendingInviteActivity;->a(Lcom/bbm/ui/activities/SentPendingInviteActivity;)V
-
-    goto :goto_0
-
-    .line 76
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
 .end method

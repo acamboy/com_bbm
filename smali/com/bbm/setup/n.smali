@@ -1,22 +1,22 @@
 .class final Lcom/bbm/setup/n;
 .super Ljava/lang/Object;
-.source "LoadingActivity.java"
+.source "PykAddFriendsActivity.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/setup/LoadingActivity;
+.field final synthetic a:Lcom/bbm/setup/PykAddFriendsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/setup/LoadingActivity;)V
+.method constructor <init>(Lcom/bbm/setup/PykAddFriendsActivity;)V
     .locals 0
 
     .prologue
-    .line 296
-    iput-object p1, p0, Lcom/bbm/setup/n;->a:Lcom/bbm/setup/LoadingActivity;
+    .line 42
+    iput-object p1, p0, Lcom/bbm/setup/n;->a:Lcom/bbm/setup/PykAddFriendsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,35 +25,34 @@
 
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 299
-    iget-object v0, p0, Lcom/bbm/setup/n;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->e(Lcom/bbm/setup/LoadingActivity;)Lcom/bbm/util/cm;
+    .line 45
+    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    move-result-object v0
 
-    move-result-object v1
+    const-string v1, "has_shown_pyk_add"
 
-    invoke-virtual {v0, v1}, Lcom/bbm/util/cm;->b(Ljava/lang/Object;)V
+    const/4 v2, 0x1
 
-    .line 300
-    iget-object v0, p0, Lcom/bbm/setup/n;->a:Lcom/bbm/setup/LoadingActivity;
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->o(Lcom/bbm/setup/LoadingActivity;)Landroid/app/Dialog;
+    move-result-object v0
 
-    .line 301
-    iget-object v0, p0, Lcom/bbm/setup/n;->a:Lcom/bbm/setup/LoadingActivity;
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    invoke-virtual {v0}, Lcom/bbm/setup/LoadingActivity;->finish()V
+    .line 49
+    iget-object v0, p0, Lcom/bbm/setup/n;->a:Lcom/bbm/setup/PykAddFriendsActivity;
 
-    .line 302
+    invoke-virtual {v0}, Lcom/bbm/setup/PykAddFriendsActivity;->a()V
+
+    .line 50
     return-void
 .end method

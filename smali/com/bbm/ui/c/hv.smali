@@ -1,138 +1,216 @@
-.class final Lcom/bbm/ui/c/hv;
-.super Ljava/lang/Object;
-.source "UpdatesFragment.java"
-
-# interfaces
-.implements Lcom/bbm/ui/gi;
+.class final enum Lcom/bbm/ui/c/hv;
+.super Ljava/lang/Enum;
+.source "StickerDetailsFragment.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/c/hm;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/c/hv;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/bbm/ui/c/hv;
+
+.field public static final enum b:Lcom/bbm/ui/c/hv;
+
+.field public static final enum c:Lcom/bbm/ui/c/hv;
+
+.field public static final enum d:Lcom/bbm/ui/c/hv;
+
+.field public static final enum e:Lcom/bbm/ui/c/hv;
+
+.field public static final enum f:Lcom/bbm/ui/c/hv;
+
+.field public static final enum g:Lcom/bbm/ui/c/hv;
+
+.field public static final enum h:Lcom/bbm/ui/c/hv;
+
+.field private static final synthetic i:[Lcom/bbm/ui/c/hv;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/hm;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 8
 
     .prologue
-    .line 336
-    iput-object p1, p0, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hm;
+    const/4 v7, 0x4
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v6, 0x3
+
+    const/4 v5, 0x2
+
+    const/4 v4, 0x1
+
+    const/4 v3, 0x0
+
+    .line 169
+    new-instance v0, Lcom/bbm/ui/c/hv;
+
+    const-string v1, "UNKNOWN"
+
+    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hv;
+
+    new-instance v0, Lcom/bbm/ui/c/hv;
+
+    const-string v1, "INSTALL"
+
+    invoke-direct {v0, v1, v4}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/hv;->b:Lcom/bbm/ui/c/hv;
+
+    new-instance v0, Lcom/bbm/ui/c/hv;
+
+    const-string v1, "INSTALLING"
+
+    invoke-direct {v0, v1, v5}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/hv;->c:Lcom/bbm/ui/c/hv;
+
+    new-instance v0, Lcom/bbm/ui/c/hv;
+
+    const-string v1, "INSTALLED"
+
+    invoke-direct {v0, v1, v6}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/hv;->d:Lcom/bbm/ui/c/hv;
+
+    new-instance v0, Lcom/bbm/ui/c/hv;
+
+    const-string v1, "UNAVAILABLE"
+
+    invoke-direct {v0, v1, v7}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/hv;->e:Lcom/bbm/ui/c/hv;
+
+    new-instance v0, Lcom/bbm/ui/c/hv;
+
+    const-string v1, "FREE"
+
+    const/4 v2, 0x5
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/hv;->f:Lcom/bbm/ui/c/hv;
+
+    new-instance v0, Lcom/bbm/ui/c/hv;
+
+    const-string v1, "PAID_UNPRICED"
+
+    const/4 v2, 0x6
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/hv;->g:Lcom/bbm/ui/c/hv;
+
+    new-instance v0, Lcom/bbm/ui/c/hv;
+
+    const-string v1, "PAID"
+
+    const/4 v2, 0x7
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/c/hv;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/hv;->h:Lcom/bbm/ui/c/hv;
+
+    .line 168
+    const/16 v0, 0x8
+
+    new-array v0, v0, [Lcom/bbm/ui/c/hv;
+
+    sget-object v1, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hv;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/bbm/ui/c/hv;->b:Lcom/bbm/ui/c/hv;
+
+    aput-object v1, v0, v4
+
+    sget-object v1, Lcom/bbm/ui/c/hv;->c:Lcom/bbm/ui/c/hv;
+
+    aput-object v1, v0, v5
+
+    sget-object v1, Lcom/bbm/ui/c/hv;->d:Lcom/bbm/ui/c/hv;
+
+    aput-object v1, v0, v6
+
+    sget-object v1, Lcom/bbm/ui/c/hv;->e:Lcom/bbm/ui/c/hv;
+
+    aput-object v1, v0, v7
+
+    const/4 v1, 0x5
+
+    sget-object v2, Lcom/bbm/ui/c/hv;->f:Lcom/bbm/ui/c/hv;
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x6
+
+    sget-object v2, Lcom/bbm/ui/c/hv;->g:Lcom/bbm/ui/c/hv;
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x7
+
+    sget-object v2, Lcom/bbm/ui/c/hv;->h:Lcom/bbm/ui/c/hv;
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/bbm/ui/c/hv;->i:[Lcom/bbm/ui/c/hv;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(I)V
-    .locals 3
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
-    const v2, 0x7f0a0395
+    .line 168
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 339
-    iget-object v0, p0, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hm;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/hm;->c(Lcom/bbm/ui/c/hm;)I
-
-    move-result v0
-
-    if-ne v0, p1, :cond_1
-
-    .line 361
-    :cond_0
-    :goto_0
     return-void
+.end method
 
-    .line 343
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hm;
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/c/hv;
+    .locals 1
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/hm;->getFragmentManager()Landroid/app/FragmentManager;
+    .prologue
+    .line 168
+    const-class v0, Lcom/bbm/ui/c/hv;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/app/FragmentManager;->beginTransaction()Landroid/app/FragmentTransaction;
+    check-cast v0, Lcom/bbm/ui/c/hv;
+
+    return-object v0
+.end method
+
+.method public static values()[Lcom/bbm/ui/c/hv;
+    .locals 1
+
+    .prologue
+    .line 168
+    sget-object v0, Lcom/bbm/ui/c/hv;->i:[Lcom/bbm/ui/c/hv;
+
+    invoke-virtual {v0}, [Lcom/bbm/ui/c/hv;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 345
-    packed-switch p1, :pswitch_data_0
+    check-cast v0, [Lcom/bbm/ui/c/hv;
 
-    .line 356
-    :goto_1
-    iget-object v1, p0, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hm;
-
-    invoke-static {v1, p1}, Lcom/bbm/ui/c/hm;->a(Lcom/bbm/ui/c/hm;I)I
-
-    .line 358
-    iget-object v1, p0, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hm;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/hm;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hm;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/hm;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/app/Activity;->isFinishing()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 359
-    invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
-
-    goto :goto_0
-
-    .line 347
-    :pswitch_0
-    iget-object v1, p0, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hm;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/hm;->d(Lcom/bbm/ui/c/hm;)Lcom/bbm/ui/c/a;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v2, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
-
-    goto :goto_1
-
-    .line 350
-    :pswitch_1
-    iget-object v1, p0, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hm;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/hm;->e(Lcom/bbm/ui/c/hm;)Lcom/bbm/ui/c/cc;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v2, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
-
-    goto :goto_1
-
-    .line 353
-    :pswitch_2
-    iget-object v1, p0, Lcom/bbm/ui/c/hv;->a:Lcom/bbm/ui/c/hm;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/hm;->f(Lcom/bbm/ui/c/hm;)Lcom/bbm/ui/c/ay;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v2, v1}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;)Landroid/app/FragmentTransaction;
-
-    goto :goto_1
-
-    .line 345
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
+    return-object v0
 .end method

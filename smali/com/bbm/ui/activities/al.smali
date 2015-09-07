@@ -3,7 +3,7 @@
 .source "BroadcastActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 484
+    .line 369
     iput-object p1, p0, Lcom/bbm/ui/activities/al;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,19 +25,44 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 487
+    .line 372
+    const-string v0, "mEmoticonButton Clicked"
+
+    const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 374
     iget-object v0, p0, Lcom/bbm/ui/activities/al;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->p(Lcom/bbm/ui/activities/BroadcastActivity;)Landroid/view/ViewGroup;
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->n(Lcom/bbm/ui/activities/BroadcastActivity;)Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->requestLayout()V
+    if-eqz v0, :cond_0
 
-    .line 488
+    .line 375
+    iget-object v0, p0, Lcom/bbm/ui/activities/al;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/BroadcastActivity;->a(Lcom/bbm/ui/activities/BroadcastActivity;Z)V
+
+    .line 379
+    :goto_0
     return-void
+
+    .line 377
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/al;->a:Lcom/bbm/ui/activities/BroadcastActivity;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/BroadcastActivity;->a(Lcom/bbm/ui/activities/BroadcastActivity;Z)V
+
+    goto :goto_0
 .end method

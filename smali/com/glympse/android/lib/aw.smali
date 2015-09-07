@@ -1,65 +1,98 @@
 .class Lcom/glympse/android/lib/aw;
-.super Lcom/glympse/android/lib/v;
-.source "DiagnosticsManager.java"
+.super Ljava/lang/Object;
+.source "DemoMode.java"
+
+# interfaces
+.implements Lcom/glympse/android/core/GLocationProvider;
+
+
+# instance fields
+.field private bZ:Lcom/glympse/android/core/GLocationListener;
+
+.field private hL:Lcom/glympse/android/core/GLocation;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GBatchListener;Lcom/glympse/android/hal/GVector;)V
+.method public constructor <init>(Lcom/glympse/android/core/GLocation;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/glympse/android/lib/GGlympsePrivate;",
-            "Lcom/glympse/android/lib/GBatchListener;",
-            "Lcom/glympse/android/hal/GVector",
-            "<",
-            "Lcom/glympse/android/lib/GApiEndpoint;",
-            ">;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 507
-    invoke-direct {p0, p1, p2, p3}, Lcom/glympse/android/lib/v;-><init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/lib/GBatchListener;Lcom/glympse/android/hal/GVector;)V
+    .line 358
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 508
+    .line 359
+    iput-object p1, p0, Lcom/glympse/android/lib/aw;->hL:Lcom/glympse/android/core/GLocation;
+
+    .line 360
     return-void
 .end method
 
 
 # virtual methods
-.method public onComplete()V
+.method public applyProfile(Lcom/glympse/android/core/GLocationProfile;)V
+    .locals 0
+
+    .prologue
+    .line 391
+    return-void
+.end method
+
+.method public getLastKnownLocation()Lcom/glympse/android/core/GLocation;
+    .locals 1
+
+    .prologue
+    .line 386
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public isStarted()Z
+    .locals 1
+
+    .prologue
+    .line 381
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public setLocationListener(Lcom/glympse/android/core/GLocationListener;)V
+    .locals 0
+
+    .prologue
+    .line 364
+    iput-object p1, p0, Lcom/glympse/android/lib/aw;->bZ:Lcom/glympse/android/core/GLocationListener;
+
+    .line 365
+    return-void
+.end method
+
+.method public start()V
     .locals 2
 
     .prologue
-    .line 512
-    invoke-super {p0}, Lcom/glympse/android/lib/v;->onComplete()V
+    .line 369
+    iget-object v0, p0, Lcom/glympse/android/lib/aw;->bZ:Lcom/glympse/android/core/GLocationListener;
 
-    .line 514
-    invoke-virtual {p0}, Lcom/glympse/android/lib/aw;->isSucceeded()Z
+    if-eqz v0, :cond_0
 
-    move-result v0
+    .line 371
+    iget-object v0, p0, Lcom/glympse/android/lib/aw;->bZ:Lcom/glympse/android/core/GLocationListener;
 
-    if-nez v0, :cond_0
+    iget-object v1, p0, Lcom/glympse/android/lib/aw;->hL:Lcom/glympse/android/core/GLocation;
 
-    .line 518
-    iget v0, p0, Lcom/glympse/android/lib/aw;->mW:I
+    invoke-interface {v0, v1}, Lcom/glympse/android/core/GLocationListener;->locationChanged(Lcom/glympse/android/core/GLocation;)V
 
-    const/4 v1, 0x1
-
-    if-le v0, v1, :cond_0
-
-    .line 520
-    invoke-virtual {p0}, Lcom/glympse/android/lib/aw;->abort()V
-
-    .line 526
-    iget-object v0, p0, Lcom/glympse/android/lib/aw;->ht:Lcom/glympse/android/lib/GBatchListener;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/aw;->hu:Lcom/glympse/android/hal/GVector;
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GBatchListener;->batchFailed(Lcom/glympse/android/hal/GVector;)V
-
-    .line 531
+    .line 373
     :cond_0
+    return-void
+.end method
+
+.method public stop()V
+    .locals 0
+
+    .prologue
+    .line 377
     return-void
 .end method

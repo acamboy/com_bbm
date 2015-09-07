@@ -44,7 +44,7 @@
 
     iget-boolean v2, p0, Lcom/cropimage/j;->b:Z
 
-    invoke-virtual {v0, v1, v2}, Lcom/cropimage/i;->a(Lcom/cropimage/m;Z)V
+    invoke-virtual {v0, v1, v2}, Lcom/cropimage/i;->setImageRotateBitmapResetBase(Lcom/cropimage/m;Z)V
 
     .line 160
     return-void

@@ -3,20 +3,24 @@
 .source "AvatarViewerActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/fu;
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+.field final synthetic a:Landroid/widget/RelativeLayout;
+
+.field final synthetic b:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/AvatarViewerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/AvatarViewerActivity;Landroid/widget/RelativeLayout;)V
     .locals 0
 
     .prologue
-    .line 145
-    iput-object p1, p0, Lcom/bbm/ui/activities/x;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    .line 59
+    iput-object p1, p0, Lcom/bbm/ui/activities/x;->b:Lcom/bbm/ui/activities/AvatarViewerActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/x;->a:Landroid/widget/RelativeLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,27 +29,28 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+.method public final onGlobalLayout()V
     .locals 2
 
     .prologue
-    .line 148
-    const-string v0, "slide menu onItemClick"
+    .line 62
+    iget-object v0, p0, Lcom/bbm/ui/activities/x;->a:Landroid/widget/RelativeLayout;
 
-    const-class v1, Lcom/bbm/ui/activities/AvatarViewerActivity;
+    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    move-result-object v0
 
-    .line 149
-    iget-object v0, p0, Lcom/bbm/ui/activities/x;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->v()V
+    .line 63
+    iget-object v0, p0, Lcom/bbm/ui/activities/x;->b:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    .line 150
-    iget-object v0, p0, Lcom/bbm/ui/activities/x;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    iget-object v1, p0, Lcom/bbm/ui/activities/x;->b:Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->c(Lcom/bbm/ui/activities/AvatarViewerActivity;)V
+    iget-object v1, v1, Lcom/bbm/ui/activities/ey;->A:Lcom/bbm/ui/c/gj;
 
-    .line 151
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/AvatarViewerActivity;->a(Lcom/bbm/ui/activities/AvatarViewerActivity;Lcom/bbm/ui/c/gj;)V
+
+    .line 64
     return-void
 .end method

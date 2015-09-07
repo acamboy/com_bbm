@@ -144,11 +144,11 @@
 
     const/4 v10, 0x4
 
-    const/4 v5, 0x3
+    const/4 v6, 0x3
 
     const/4 v4, 0x2
 
-    const/4 v9, 0x1
+    const/4 v5, 0x1
 
     const/4 v1, 0x0
 
@@ -181,24 +181,24 @@
     move-result v0
 
     :goto_1
-    invoke-virtual {v3, v5}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    invoke-virtual {v3, v6}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    invoke-virtual {v3, v5, v1}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {v3, v6, v1}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 
     :goto_2
     new-instance v4, Lcom/google/android/gms/maps/model/LatLng;
 
-    float-to-double v5, v0
+    float-to-double v6, v0
 
-    float-to-double v7, v2
+    float-to-double v8, v2
 
-    invoke-direct {v4, v5, v6, v7, v8}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v4, v6, v7, v8, v9}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
     invoke-static {}, Lcom/google/android/gms/maps/model/CameraPosition;->builder()Lcom/google/android/gms/maps/model/CameraPosition$Builder;
 
@@ -223,13 +223,13 @@
     invoke-virtual {v0, v2}, Lcom/google/android/gms/maps/model/CameraPosition$Builder;->zoom(F)Lcom/google/android/gms/maps/model/CameraPosition$Builder;
 
     :cond_1
-    invoke-virtual {v3, v9}, Landroid/content/res/TypedArray;->hasValue(I)Z
+    invoke-virtual {v3, v5}, Landroid/content/res/TypedArray;->hasValue(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    invoke-virtual {v3, v9, v1}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    invoke-virtual {v3, v5, v1}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v2
 

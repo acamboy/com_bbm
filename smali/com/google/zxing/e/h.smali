@@ -416,17 +416,17 @@
 .end method
 
 .method private static a(Lcom/google/zxing/b/a;IILjava/lang/StringBuilder;)V
-    .locals 9
+    .locals 10
 
     .prologue
+    const/16 v9, 0xa
+
     const/4 v1, 0x0
 
     const/4 v8, 0x5
 
     .line 142
-    const/16 v0, 0xa
-
-    new-array v3, v0, [I
+    new-array v3, v9, [I
 
     .line 143
     new-array v4, v8, [I
@@ -494,20 +494,18 @@
 
     invoke-virtual {p3, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 162
-    array-length v6, v3
-
     move v2, v0
 
     move v0, v1
 
+    .line 162
     :goto_2
-    if-ge v0, v6, :cond_1
+    if-ge v0, v9, :cond_1
 
-    aget v7, v3, v0
+    aget v6, v3, v0
 
     .line 163
-    add-int/2addr v2, v7
+    add-int/2addr v2, v6
 
     .line 162
     add-int/lit8 v0, v0, 0x1

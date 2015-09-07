@@ -11,17 +11,17 @@
 
 .field public b:Z
 
-.field public c:Ljava/lang/String;
+.field public c:Z
 
-.field public d:Z
+.field public d:Ljava/lang/String;
 
-.field public e:Ljava/lang/String;
+.field public e:Z
 
 .field public f:Ljava/lang/String;
 
-.field public g:J
+.field public g:Ljava/lang/String;
 
-.field public h:Z
+.field public h:J
 
 .field public i:Z
 
@@ -39,17 +39,19 @@
 
 .field public p:Z
 
-.field public q:Ljava/lang/String;
+.field public q:Z
 
 .field public r:Ljava/lang/String;
 
-.field public s:Z
+.field public s:Ljava/lang/String;
 
 .field public t:Z
 
-.field public u:Ljava/lang/String;
+.field public u:Z
 
-.field public v:Lcom/bbm/util/bc;
+.field public v:Ljava/lang/String;
+
+.field public w:Lcom/bbm/util/bi;
 
 
 # direct methods
@@ -61,7 +63,7 @@
 
     const/4 v2, 0x0
 
-    .line 138
+    .line 143
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 22
@@ -71,17 +73,15 @@
     iput-boolean v2, p0, Lcom/bbm/g/a;->b:Z
 
     .line 32
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/bbm/g/a;->c:Ljava/lang/String;
+    iput-boolean v2, p0, Lcom/bbm/g/a;->c:Z
 
     .line 37
-    iput-boolean v2, p0, Lcom/bbm/g/a;->d:Z
-
-    .line 42
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/bbm/g/a;->e:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/g/a;->d:Ljava/lang/String;
+
+    .line 42
+    iput-boolean v2, p0, Lcom/bbm/g/a;->e:Z
 
     .line 47
     const-string v0, ""
@@ -89,12 +89,14 @@
     iput-object v0, p0, Lcom/bbm/g/a;->f:Ljava/lang/String;
 
     .line 52
-    const-wide/16 v0, 0x0
+    const-string v0, ""
 
-    iput-wide v0, p0, Lcom/bbm/g/a;->g:J
+    iput-object v0, p0, Lcom/bbm/g/a;->g:Ljava/lang/String;
 
     .line 57
-    iput-boolean v2, p0, Lcom/bbm/g/a;->h:Z
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/bbm/g/a;->h:J
 
     .line 62
     iput-boolean v2, p0, Lcom/bbm/g/a;->i:Z
@@ -121,9 +123,7 @@
     iput-boolean v2, p0, Lcom/bbm/g/a;->p:Z
 
     .line 102
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/bbm/g/a;->q:Ljava/lang/String;
+    iput-boolean v2, p0, Lcom/bbm/g/a;->q:Z
 
     .line 107
     const-string v0, ""
@@ -131,22 +131,27 @@
     iput-object v0, p0, Lcom/bbm/g/a;->r:Ljava/lang/String;
 
     .line 112
-    iput-boolean v3, p0, Lcom/bbm/g/a;->s:Z
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/bbm/g/a;->s:Ljava/lang/String;
 
     .line 117
     iput-boolean v3, p0, Lcom/bbm/g/a;->t:Z
 
     .line 122
+    iput-boolean v3, p0, Lcom/bbm/g/a;->u:Z
+
+    .line 127
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    .line 132
-    sget-object v0, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
+    .line 137
+    sget-object v0, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
 
-    iput-object v0, p0, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
+    iput-object v0, p0, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
 
-    .line 138
+    .line 143
     return-void
 .end method
 
@@ -158,7 +163,7 @@
 
     const/4 v2, 0x0
 
-    .line 145
+    .line 150
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 22
@@ -168,17 +173,15 @@
     iput-boolean v2, p0, Lcom/bbm/g/a;->b:Z
 
     .line 32
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/bbm/g/a;->c:Ljava/lang/String;
+    iput-boolean v2, p0, Lcom/bbm/g/a;->c:Z
 
     .line 37
-    iput-boolean v2, p0, Lcom/bbm/g/a;->d:Z
-
-    .line 42
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/bbm/g/a;->e:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/g/a;->d:Ljava/lang/String;
+
+    .line 42
+    iput-boolean v2, p0, Lcom/bbm/g/a;->e:Z
 
     .line 47
     const-string v0, ""
@@ -186,12 +189,14 @@
     iput-object v0, p0, Lcom/bbm/g/a;->f:Ljava/lang/String;
 
     .line 52
-    const-wide/16 v0, 0x0
+    const-string v0, ""
 
-    iput-wide v0, p0, Lcom/bbm/g/a;->g:J
+    iput-object v0, p0, Lcom/bbm/g/a;->g:Ljava/lang/String;
 
     .line 57
-    iput-boolean v2, p0, Lcom/bbm/g/a;->h:Z
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/bbm/g/a;->h:J
 
     .line 62
     iput-boolean v2, p0, Lcom/bbm/g/a;->i:Z
@@ -218,9 +223,7 @@
     iput-boolean v2, p0, Lcom/bbm/g/a;->p:Z
 
     .line 102
-    const-string v0, ""
-
-    iput-object v0, p0, Lcom/bbm/g/a;->q:Ljava/lang/String;
+    iput-boolean v2, p0, Lcom/bbm/g/a;->q:Z
 
     .line 107
     const-string v0, ""
@@ -228,132 +231,142 @@
     iput-object v0, p0, Lcom/bbm/g/a;->r:Ljava/lang/String;
 
     .line 112
-    iput-boolean v3, p0, Lcom/bbm/g/a;->s:Z
+    const-string v0, ""
+
+    iput-object v0, p0, Lcom/bbm/g/a;->s:Ljava/lang/String;
 
     .line 117
     iput-boolean v3, p0, Lcom/bbm/g/a;->t:Z
 
     .line 122
+    iput-boolean v3, p0, Lcom/bbm/g/a;->u:Z
+
+    .line 127
     const-string v0, ""
 
-    iput-object v0, p0, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    .line 132
-    sget-object v0, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
+    .line 137
+    sget-object v0, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
 
-    iput-object v0, p0, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
+    iput-object v0, p0, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
 
-    .line 146
+    .line 151
     iget-boolean v0, p1, Lcom/bbm/g/a;->a:Z
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->a:Z
 
-    .line 147
+    .line 152
     iget-boolean v0, p1, Lcom/bbm/g/a;->b:Z
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->b:Z
 
-    .line 148
-    iget-object v0, p1, Lcom/bbm/g/a;->c:Ljava/lang/String;
+    .line 153
+    iget-boolean v0, p1, Lcom/bbm/g/a;->c:Z
 
-    iput-object v0, p0, Lcom/bbm/g/a;->c:Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/bbm/g/a;->c:Z
 
-    .line 149
-    iget-boolean v0, p1, Lcom/bbm/g/a;->d:Z
+    .line 154
+    iget-object v0, p1, Lcom/bbm/g/a;->d:Ljava/lang/String;
 
-    iput-boolean v0, p0, Lcom/bbm/g/a;->d:Z
+    iput-object v0, p0, Lcom/bbm/g/a;->d:Ljava/lang/String;
 
-    .line 150
-    iget-object v0, p1, Lcom/bbm/g/a;->e:Ljava/lang/String;
+    .line 155
+    iget-boolean v0, p1, Lcom/bbm/g/a;->e:Z
 
-    iput-object v0, p0, Lcom/bbm/g/a;->e:Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/bbm/g/a;->e:Z
 
-    .line 151
+    .line 156
     iget-object v0, p1, Lcom/bbm/g/a;->f:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/bbm/g/a;->f:Ljava/lang/String;
 
-    .line 152
-    iget-wide v0, p1, Lcom/bbm/g/a;->g:J
+    .line 157
+    iget-object v0, p1, Lcom/bbm/g/a;->g:Ljava/lang/String;
 
-    iput-wide v0, p0, Lcom/bbm/g/a;->g:J
+    iput-object v0, p0, Lcom/bbm/g/a;->g:Ljava/lang/String;
 
-    .line 153
-    iget-boolean v0, p1, Lcom/bbm/g/a;->h:Z
+    .line 158
+    iget-wide v0, p1, Lcom/bbm/g/a;->h:J
 
-    iput-boolean v0, p0, Lcom/bbm/g/a;->h:Z
+    iput-wide v0, p0, Lcom/bbm/g/a;->h:J
 
-    .line 154
+    .line 159
     iget-boolean v0, p1, Lcom/bbm/g/a;->i:Z
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->i:Z
 
-    .line 155
+    .line 160
     iget-boolean v0, p1, Lcom/bbm/g/a;->j:Z
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->j:Z
 
-    .line 156
+    .line 161
     iget-boolean v0, p1, Lcom/bbm/g/a;->k:Z
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->k:Z
 
-    .line 157
+    .line 162
     iget-boolean v0, p1, Lcom/bbm/g/a;->l:Z
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->l:Z
 
-    .line 158
+    .line 163
     iget-boolean v0, p1, Lcom/bbm/g/a;->m:Z
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->m:Z
 
-    .line 159
+    .line 164
     iget-boolean v0, p1, Lcom/bbm/g/a;->n:Z
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->n:Z
 
-    .line 160
+    .line 165
     iget-boolean v0, p1, Lcom/bbm/g/a;->o:Z
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->o:Z
 
-    .line 161
+    .line 166
     iget-boolean v0, p1, Lcom/bbm/g/a;->p:Z
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->p:Z
 
-    .line 162
-    iget-object v0, p1, Lcom/bbm/g/a;->q:Ljava/lang/String;
+    .line 167
+    iget-boolean v0, p1, Lcom/bbm/g/a;->q:Z
 
-    iput-object v0, p0, Lcom/bbm/g/a;->q:Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/bbm/g/a;->q:Z
 
-    .line 163
+    .line 168
     iget-object v0, p1, Lcom/bbm/g/a;->r:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/bbm/g/a;->r:Ljava/lang/String;
 
-    .line 164
-    iget-boolean v0, p1, Lcom/bbm/g/a;->s:Z
+    .line 169
+    iget-object v0, p1, Lcom/bbm/g/a;->s:Ljava/lang/String;
 
-    iput-boolean v0, p0, Lcom/bbm/g/a;->s:Z
+    iput-object v0, p0, Lcom/bbm/g/a;->s:Ljava/lang/String;
 
-    .line 165
+    .line 170
     iget-boolean v0, p1, Lcom/bbm/g/a;->t:Z
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->t:Z
 
-    .line 166
-    iget-object v0, p1, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    .line 171
+    iget-boolean v0, p1, Lcom/bbm/g/a;->u:Z
 
-    iput-object v0, p0, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/bbm/g/a;->u:Z
 
-    .line 167
-    iget-object v0, p1, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
+    .line 172
+    iget-object v0, p1, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
+    iput-object v0, p0, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    .line 168
+    .line 173
+    iget-object v0, p1, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
+
+    iput-object v0, p0, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
+
+    .line 174
     return-void
 .end method
 
@@ -363,20 +376,20 @@
     .locals 1
 
     .prologue
-    .line 172
-    iget-object v0, p0, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    .line 178
+    iget-object v0, p0, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public final a(Lcom/bbm/util/bc;)V
+.method public final a(Lcom/bbm/util/bi;)V
     .locals 0
 
     .prologue
-    .line 213
-    iput-object p1, p0, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
+    .line 220
+    iput-object p1, p0, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
 
-    .line 214
+    .line 221
     return-void
 .end method
 
@@ -384,7 +397,7 @@
     .locals 2
 
     .prologue
-    .line 178
+    .line 184
     const-string v0, "allowNonAdminToInvite"
 
     iget-boolean v1, p0, Lcom/bbm/g/a;->a:Z
@@ -395,8 +408,8 @@
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->a:Z
 
-    .line 179
-    const-string v0, "canRequestAdminByPassword"
+    .line 185
+    const-string v0, "canAssumeAdmin"
 
     iget-boolean v1, p0, Lcom/bbm/g/a;->b:Z
 
@@ -406,41 +419,41 @@
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->b:Z
 
-    .line 180
-    const-string v0, "customIcon"
+    .line 186
+    const-string v0, "canRequestAdminByPassword"
 
-    iget-object v1, p0, Lcom/bbm/g/a;->c:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/g/a;->c:Ljava/lang/String;
-
-    .line 181
-    const-string v0, "deletePictureFromMessageAppInvoked"
-
-    iget-boolean v1, p0, Lcom/bbm/g/a;->d:Z
+    iget-boolean v1, p0, Lcom/bbm/g/a;->c:Z
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/bbm/g/a;->d:Z
+    iput-boolean v0, p0, Lcom/bbm/g/a;->c:Z
 
-    .line 182
-    const-string v0, "description"
+    .line 187
+    const-string v0, "customIcon"
 
-    iget-object v1, p0, Lcom/bbm/g/a;->e:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/g/a;->d:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/g/a;->e:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/g/a;->d:Ljava/lang/String;
 
-    .line 183
-    const-string v0, "groupUniqueName"
+    .line 188
+    const-string v0, "deletePictureFromMessageAppInvoked"
+
+    iget-boolean v1, p0, Lcom/bbm/g/a;->e:Z
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/bbm/g/a;->e:Z
+
+    .line 189
+    const-string v0, "description"
 
     iget-object v1, p0, Lcom/bbm/g/a;->f:Ljava/lang/String;
 
@@ -450,7 +463,18 @@
 
     iput-object v0, p0, Lcom/bbm/g/a;->f:Ljava/lang/String;
 
-    .line 185
+    .line 190
+    const-string v0, "groupUniqueName"
+
+    iget-object v1, p0, Lcom/bbm/g/a;->g:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/g/a;->g:Ljava/lang/String;
+
+    .line 192
     const-string v0, "icon"
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -459,7 +483,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 186
+    .line 193
     const-string v0, "icon"
 
     const-string v1, ""
@@ -468,7 +492,7 @@
 
     move-result-object v0
 
-    .line 187
+    .line 194
     invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v1
@@ -478,22 +502,11 @@
     const-wide/16 v0, 0x0
 
     :goto_0
-    iput-wide v0, p0, Lcom/bbm/g/a;->g:J
+    iput-wide v0, p0, Lcom/bbm/g/a;->h:J
 
-    .line 189
+    .line 196
     :cond_0
     const-string v0, "ignoreUpdatesForThisGroup"
-
-    iget-boolean v1, p0, Lcom/bbm/g/a;->h:Z
-
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/bbm/g/a;->h:Z
-
-    .line 190
-    const-string v0, "isAdmin"
 
     iget-boolean v1, p0, Lcom/bbm/g/a;->i:Z
 
@@ -503,8 +516,8 @@
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->i:Z
 
-    .line 191
-    const-string v0, "isCalendarUpdated"
+    .line 197
+    const-string v0, "isAdmin"
 
     iget-boolean v1, p0, Lcom/bbm/g/a;->j:Z
 
@@ -514,8 +527,8 @@
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->j:Z
 
-    .line 192
-    const-string v0, "isChatsUpdated"
+    .line 198
+    const-string v0, "isCalendarUpdated"
 
     iget-boolean v1, p0, Lcom/bbm/g/a;->k:Z
 
@@ -525,8 +538,8 @@
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->k:Z
 
-    .line 193
-    const-string v0, "isGroupUpdated"
+    .line 199
+    const-string v0, "isChatsUpdated"
 
     iget-boolean v1, p0, Lcom/bbm/g/a;->l:Z
 
@@ -536,8 +549,8 @@
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->l:Z
 
-    .line 194
-    const-string v0, "isListsUpdated"
+    .line 200
+    const-string v0, "isGroupUpdated"
 
     iget-boolean v1, p0, Lcom/bbm/g/a;->m:Z
 
@@ -547,8 +560,8 @@
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->m:Z
 
-    .line 195
-    const-string v0, "isMembersUpated"
+    .line 201
+    const-string v0, "isListsUpdated"
 
     iget-boolean v1, p0, Lcom/bbm/g/a;->n:Z
 
@@ -558,8 +571,8 @@
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->n:Z
 
-    .line 196
-    const-string v0, "isPicturesUpdated"
+    .line 202
+    const-string v0, "isMembersUpated"
 
     iget-boolean v1, p0, Lcom/bbm/g/a;->o:Z
 
@@ -569,8 +582,8 @@
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->o:Z
 
-    .line 197
-    const-string v0, "isProtected"
+    .line 203
+    const-string v0, "isPicturesUpdated"
 
     iget-boolean v1, p0, Lcom/bbm/g/a;->p:Z
 
@@ -580,19 +593,19 @@
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->p:Z
 
-    .line 198
+    .line 204
+    const-string v0, "isProtected"
+
+    iget-boolean v1, p0, Lcom/bbm/g/a;->q:Z
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/bbm/g/a;->q:Z
+
+    .line 205
     const-string v0, "name"
-
-    iget-object v1, p0, Lcom/bbm/g/a;->q:Ljava/lang/String;
-
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/g/a;->q:Ljava/lang/String;
-
-    .line 199
-    const-string v0, "passphrase"
 
     iget-object v1, p0, Lcom/bbm/g/a;->r:Ljava/lang/String;
 
@@ -602,19 +615,19 @@
 
     iput-object v0, p0, Lcom/bbm/g/a;->r:Ljava/lang/String;
 
-    .line 200
+    .line 206
+    const-string v0, "passphrase"
+
+    iget-object v1, p0, Lcom/bbm/g/a;->s:Ljava/lang/String;
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/g/a;->s:Ljava/lang/String;
+
+    .line 207
     const-string v0, "showThisGroupsChatMessagesInTheMessageApp"
-
-    iget-boolean v1, p0, Lcom/bbm/g/a;->s:Z
-
-    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    iput-boolean v0, p0, Lcom/bbm/g/a;->s:Z
-
-    .line 201
-    const-string v0, "showThisGroupsPicturesInTheMessageApp"
 
     iget-boolean v1, p0, Lcom/bbm/g/a;->t:Z
 
@@ -624,21 +637,32 @@
 
     iput-boolean v0, p0, Lcom/bbm/g/a;->t:Z
 
-    .line 202
+    .line 208
+    const-string v0, "showThisGroupsPicturesInTheMessageApp"
+
+    iget-boolean v1, p0, Lcom/bbm/g/a;->u:Z
+
+    invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/bbm/g/a;->u:Z
+
+    .line 209
     const-string v0, "uri"
 
-    iget-object v1, p0, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    .line 203
+    .line 210
     return-void
 
-    .line 187
+    .line 194
     :cond_1
     invoke-static {v0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
@@ -651,7 +675,7 @@
     .locals 1
 
     .prologue
-    .line 208
+    .line 215
     new-instance v0, Lcom/bbm/g/a;
 
     invoke-direct {v0, p0}, Lcom/bbm/g/a;-><init>(Lcom/bbm/g/a;)V
@@ -659,12 +683,12 @@
     return-object v0
 .end method
 
-.method public final c()Lcom/bbm/util/bc;
+.method public final c()Lcom/bbm/util/bi;
     .locals 1
 
     .prologue
-    .line 218
-    iget-object v0, p0, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
+    .line 225
+    iget-object v0, p0, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
 
     return-object v0
 .end method
@@ -677,24 +701,24 @@
 
     const/4 v1, 0x0
 
-    .line 254
+    .line 262
     if-ne p0, p1, :cond_1
 
-    .line 356
+    .line 367
     :cond_0
     :goto_0
     return v0
 
-    .line 257
+    .line 265
     :cond_1
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 258
+    .line 266
     goto :goto_0
 
-    .line 260
+    .line 268
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -708,14 +732,14 @@
 
     move v0, v1
 
-    .line 261
+    .line 269
     goto :goto_0
 
-    .line 263
+    .line 271
     :cond_3
     check-cast p1, Lcom/bbm/g/a;
 
-    .line 264
+    .line 272
     iget-boolean v2, p0, Lcom/bbm/g/a;->a:Z
 
     iget-boolean v3, p1, Lcom/bbm/g/a;->a:Z
@@ -724,10 +748,10 @@
 
     move v0, v1
 
-    .line 265
+    .line 273
     goto :goto_0
 
-    .line 267
+    .line 275
     :cond_4
     iget-boolean v2, p0, Lcom/bbm/g/a;->b:Z
 
@@ -737,98 +761,62 @@
 
     move v0, v1
 
-    .line 268
+    .line 276
     goto :goto_0
 
-    .line 270
+    .line 278
     :cond_5
-    iget-object v2, p0, Lcom/bbm/g/a;->c:Ljava/lang/String;
+    iget-boolean v2, p0, Lcom/bbm/g/a;->c:Z
 
-    if-nez v2, :cond_6
+    iget-boolean v3, p1, Lcom/bbm/g/a;->c:Z
 
-    .line 271
-    iget-object v2, p1, Lcom/bbm/g/a;->c:Ljava/lang/String;
-
-    if-eqz v2, :cond_7
+    if-eq v2, v3, :cond_6
 
     move v0, v1
 
-    .line 272
+    .line 279
     goto :goto_0
 
-    .line 274
+    .line 281
     :cond_6
-    iget-object v2, p0, Lcom/bbm/g/a;->c:Ljava/lang/String;
-
-    iget-object v3, p1, Lcom/bbm/g/a;->c:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
+    iget-object v2, p0, Lcom/bbm/g/a;->d:Ljava/lang/String;
 
     if-nez v2, :cond_7
 
-    move v0, v1
-
-    .line 275
-    goto :goto_0
-
-    .line 277
-    :cond_7
-    iget-boolean v2, p0, Lcom/bbm/g/a;->d:Z
-
-    iget-boolean v3, p1, Lcom/bbm/g/a;->d:Z
-
-    if-eq v2, v3, :cond_8
-
-    move v0, v1
-
-    .line 278
-    goto :goto_0
-
-    .line 280
-    :cond_8
-    iget-object v2, p0, Lcom/bbm/g/a;->e:Ljava/lang/String;
-
-    if-nez v2, :cond_9
-
-    .line 281
-    iget-object v2, p1, Lcom/bbm/g/a;->e:Ljava/lang/String;
-
-    if-eqz v2, :cond_a
-
-    move v0, v1
-
     .line 282
+    iget-object v2, p1, Lcom/bbm/g/a;->d:Ljava/lang/String;
+
+    if-eqz v2, :cond_8
+
+    move v0, v1
+
+    .line 283
     goto :goto_0
 
-    .line 284
-    :cond_9
-    iget-object v2, p0, Lcom/bbm/g/a;->e:Ljava/lang/String;
+    .line 285
+    :cond_7
+    iget-object v2, p0, Lcom/bbm/g/a;->d:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/bbm/g/a;->e:Ljava/lang/String;
+    iget-object v3, p1, Lcom/bbm/g/a;->d:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-nez v2, :cond_a
+    if-nez v2, :cond_8
 
     move v0, v1
 
-    .line 285
+    .line 286
     goto :goto_0
 
-    .line 287
-    :cond_a
-    iget-object v2, p0, Lcom/bbm/g/a;->f:Ljava/lang/String;
-
-    if-nez v2, :cond_b
-
     .line 288
-    iget-object v2, p1, Lcom/bbm/g/a;->f:Ljava/lang/String;
+    :cond_8
+    iget-boolean v2, p0, Lcom/bbm/g/a;->e:Z
 
-    if-eqz v2, :cond_c
+    iget-boolean v3, p1, Lcom/bbm/g/a;->e:Z
+
+    if-eq v2, v3, :cond_9
 
     move v0, v1
 
@@ -836,7 +824,23 @@
     goto :goto_0
 
     .line 291
-    :cond_b
+    :cond_9
+    iget-object v2, p0, Lcom/bbm/g/a;->f:Ljava/lang/String;
+
+    if-nez v2, :cond_a
+
+    .line 292
+    iget-object v2, p1, Lcom/bbm/g/a;->f:Ljava/lang/String;
+
+    if-eqz v2, :cond_b
+
+    move v0, v1
+
+    .line 293
+    goto :goto_0
+
+    .line 295
+    :cond_a
     iget-object v2, p0, Lcom/bbm/g/a;->f:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/bbm/g/a;->f:Ljava/lang/String;
@@ -845,42 +849,62 @@
 
     move-result v2
 
-    if-nez v2, :cond_c
+    if-nez v2, :cond_b
 
     move v0, v1
 
-    .line 292
+    .line 296
     goto :goto_0
 
-    .line 294
-    :cond_c
-    iget-wide v2, p0, Lcom/bbm/g/a;->g:J
+    .line 298
+    :cond_b
+    iget-object v2, p0, Lcom/bbm/g/a;->g:Ljava/lang/String;
 
-    iget-wide v4, p1, Lcom/bbm/g/a;->g:J
+    if-nez v2, :cond_c
 
-    cmp-long v2, v2, v4
+    .line 299
+    iget-object v2, p1, Lcom/bbm/g/a;->g:Ljava/lang/String;
 
     if-eqz v2, :cond_d
 
     move v0, v1
 
-    .line 295
+    .line 300
     goto :goto_0
 
-    .line 297
-    :cond_d
-    iget-boolean v2, p0, Lcom/bbm/g/a;->h:Z
+    .line 302
+    :cond_c
+    iget-object v2, p0, Lcom/bbm/g/a;->g:Ljava/lang/String;
 
-    iget-boolean v3, p1, Lcom/bbm/g/a;->h:Z
+    iget-object v3, p1, Lcom/bbm/g/a;->g:Ljava/lang/String;
 
-    if-eq v2, v3, :cond_e
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_d
 
     move v0, v1
 
-    .line 298
+    .line 303
     goto :goto_0
 
-    .line 300
+    .line 305
+    :cond_d
+    iget-wide v2, p0, Lcom/bbm/g/a;->h:J
+
+    iget-wide v4, p1, Lcom/bbm/g/a;->h:J
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_e
+
+    move v0, v1
+
+    .line 306
+    goto :goto_0
+
+    .line 308
     :cond_e
     iget-boolean v2, p0, Lcom/bbm/g/a;->i:Z
 
@@ -890,10 +914,10 @@
 
     move v0, v1
 
-    .line 301
+    .line 309
     goto/16 :goto_0
 
-    .line 303
+    .line 311
     :cond_f
     iget-boolean v2, p0, Lcom/bbm/g/a;->j:Z
 
@@ -903,10 +927,10 @@
 
     move v0, v1
 
-    .line 304
+    .line 312
     goto/16 :goto_0
 
-    .line 306
+    .line 314
     :cond_10
     iget-boolean v2, p0, Lcom/bbm/g/a;->k:Z
 
@@ -916,10 +940,10 @@
 
     move v0, v1
 
-    .line 307
+    .line 315
     goto/16 :goto_0
 
-    .line 309
+    .line 317
     :cond_11
     iget-boolean v2, p0, Lcom/bbm/g/a;->l:Z
 
@@ -929,10 +953,10 @@
 
     move v0, v1
 
-    .line 310
+    .line 318
     goto/16 :goto_0
 
-    .line 312
+    .line 320
     :cond_12
     iget-boolean v2, p0, Lcom/bbm/g/a;->m:Z
 
@@ -942,10 +966,10 @@
 
     move v0, v1
 
-    .line 313
+    .line 321
     goto/16 :goto_0
 
-    .line 315
+    .line 323
     :cond_13
     iget-boolean v2, p0, Lcom/bbm/g/a;->n:Z
 
@@ -955,10 +979,10 @@
 
     move v0, v1
 
-    .line 316
+    .line 324
     goto/16 :goto_0
 
-    .line 318
+    .line 326
     :cond_14
     iget-boolean v2, p0, Lcom/bbm/g/a;->o:Z
 
@@ -968,10 +992,10 @@
 
     move v0, v1
 
-    .line 319
+    .line 327
     goto/16 :goto_0
 
-    .line 321
+    .line 329
     :cond_15
     iget-boolean v2, p0, Lcom/bbm/g/a;->p:Z
 
@@ -981,52 +1005,16 @@
 
     move v0, v1
 
-    .line 322
+    .line 330
     goto/16 :goto_0
-
-    .line 324
-    :cond_16
-    iget-object v2, p0, Lcom/bbm/g/a;->q:Ljava/lang/String;
-
-    if-nez v2, :cond_17
-
-    .line 325
-    iget-object v2, p1, Lcom/bbm/g/a;->q:Ljava/lang/String;
-
-    if-eqz v2, :cond_18
-
-    move v0, v1
-
-    .line 326
-    goto/16 :goto_0
-
-    .line 328
-    :cond_17
-    iget-object v2, p0, Lcom/bbm/g/a;->q:Ljava/lang/String;
-
-    iget-object v3, p1, Lcom/bbm/g/a;->q:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_18
-
-    move v0, v1
-
-    .line 329
-    goto/16 :goto_0
-
-    .line 331
-    :cond_18
-    iget-object v2, p0, Lcom/bbm/g/a;->r:Ljava/lang/String;
-
-    if-nez v2, :cond_19
 
     .line 332
-    iget-object v2, p1, Lcom/bbm/g/a;->r:Ljava/lang/String;
+    :cond_16
+    iget-boolean v2, p0, Lcom/bbm/g/a;->q:Z
 
-    if-eqz v2, :cond_1a
+    iget-boolean v3, p1, Lcom/bbm/g/a;->q:Z
+
+    if-eq v2, v3, :cond_17
 
     move v0, v1
 
@@ -1034,7 +1022,23 @@
     goto/16 :goto_0
 
     .line 335
-    :cond_19
+    :cond_17
+    iget-object v2, p0, Lcom/bbm/g/a;->r:Ljava/lang/String;
+
+    if-nez v2, :cond_18
+
+    .line 336
+    iget-object v2, p1, Lcom/bbm/g/a;->r:Ljava/lang/String;
+
+    if-eqz v2, :cond_19
+
+    move v0, v1
+
+    .line 337
+    goto/16 :goto_0
+
+    .line 339
+    :cond_18
     iget-object v2, p0, Lcom/bbm/g/a;->r:Ljava/lang/String;
 
     iget-object v3, p1, Lcom/bbm/g/a;->r:Ljava/lang/String;
@@ -1043,27 +1047,47 @@
 
     move-result v2
 
+    if-nez v2, :cond_19
+
+    move v0, v1
+
+    .line 340
+    goto/16 :goto_0
+
+    .line 342
+    :cond_19
+    iget-object v2, p0, Lcom/bbm/g/a;->s:Ljava/lang/String;
+
     if-nez v2, :cond_1a
 
+    .line 343
+    iget-object v2, p1, Lcom/bbm/g/a;->s:Ljava/lang/String;
+
+    if-eqz v2, :cond_1b
+
     move v0, v1
 
-    .line 336
+    .line 344
     goto/16 :goto_0
 
-    .line 338
+    .line 346
     :cond_1a
-    iget-boolean v2, p0, Lcom/bbm/g/a;->s:Z
+    iget-object v2, p0, Lcom/bbm/g/a;->s:Ljava/lang/String;
 
-    iget-boolean v3, p1, Lcom/bbm/g/a;->s:Z
+    iget-object v3, p1, Lcom/bbm/g/a;->s:Ljava/lang/String;
 
-    if-eq v2, v3, :cond_1b
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1b
 
     move v0, v1
 
-    .line 339
+    .line 347
     goto/16 :goto_0
 
-    .line 341
+    .line 349
     :cond_1b
     iget-boolean v2, p0, Lcom/bbm/g/a;->t:Z
 
@@ -1073,49 +1097,62 @@
 
     move v0, v1
 
-    .line 342
+    .line 350
     goto/16 :goto_0
 
-    .line 344
+    .line 352
     :cond_1c
-    iget-object v2, p0, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iget-boolean v2, p0, Lcom/bbm/g/a;->u:Z
 
-    if-nez v2, :cond_1d
+    iget-boolean v3, p1, Lcom/bbm/g/a;->u:Z
 
-    .line 345
-    iget-object v2, p1, Lcom/bbm/g/a;->u:Ljava/lang/String;
-
-    if-eqz v2, :cond_1e
+    if-eq v2, v3, :cond_1d
 
     move v0, v1
 
-    .line 346
+    .line 353
     goto/16 :goto_0
 
-    .line 348
+    .line 355
     :cond_1d
-    iget-object v2, p0, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iget-object v2, p0, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    if-nez v2, :cond_1e
+
+    .line 356
+    iget-object v2, p1, Lcom/bbm/g/a;->v:Ljava/lang/String;
+
+    if-eqz v2, :cond_1f
+
+    move v0, v1
+
+    .line 357
+    goto/16 :goto_0
+
+    .line 359
+    :cond_1e
+    iget-object v2, p0, Lcom/bbm/g/a;->v:Ljava/lang/String;
+
+    iget-object v3, p1, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-nez v2, :cond_1e
+    if-nez v2, :cond_1f
 
     move v0, v1
 
-    .line 349
+    .line 360
     goto/16 :goto_0
 
-    .line 352
-    :cond_1e
-    iget-object v2, p0, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
+    .line 363
+    :cond_1f
+    iget-object v2, p0, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
 
-    iget-object v3, p1, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
+    iget-object v3, p1, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
 
-    invoke-virtual {v2, v3}, Lcom/bbm/util/bc;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Lcom/bbm/util/bi;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -1123,7 +1160,7 @@
 
     move v0, v1
 
-    .line 353
+    .line 364
     goto/16 :goto_0
 .end method
 
@@ -1137,7 +1174,7 @@
 
     const/16 v1, 0x4cf
 
-    .line 224
+    .line 231
     iget-boolean v0, p0, Lcom/bbm/g/a;->a:Z
 
     if-eqz v0, :cond_0
@@ -1147,7 +1184,7 @@
     :goto_0
     add-int/lit8 v0, v0, 0x1f
 
-    .line 227
+    .line 234
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/bbm/g/a;->b:Z
@@ -1159,43 +1196,43 @@
     :goto_1
     add-int/2addr v0, v4
 
-    .line 228
+    .line 235
     mul-int/lit8 v4, v0, 0x1f
 
-    iget-object v0, p0, Lcom/bbm/g/a;->c:Ljava/lang/String;
+    iget-boolean v0, p0, Lcom/bbm/g/a;->c:Z
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_2
 
-    move v0, v3
+    move v0, v1
 
     :goto_2
     add-int/2addr v0, v4
 
-    .line 229
+    .line 236
     mul-int/lit8 v4, v0, 0x1f
 
-    iget-boolean v0, p0, Lcom/bbm/g/a;->d:Z
+    iget-object v0, p0, Lcom/bbm/g/a;->d:Ljava/lang/String;
 
-    if-eqz v0, :cond_3
+    if-nez v0, :cond_3
 
-    move v0, v1
+    move v0, v3
 
     :goto_3
     add-int/2addr v0, v4
 
-    .line 230
+    .line 237
     mul-int/lit8 v4, v0, 0x1f
 
-    iget-object v0, p0, Lcom/bbm/g/a;->e:Ljava/lang/String;
+    iget-boolean v0, p0, Lcom/bbm/g/a;->e:Z
 
-    if-nez v0, :cond_4
+    if-eqz v0, :cond_4
 
-    move v0, v3
+    move v0, v1
 
     :goto_4
     add-int/2addr v0, v4
 
-    .line 231
+    .line 238
     mul-int/lit8 v4, v0, 0x1f
 
     iget-object v0, p0, Lcom/bbm/g/a;->f:Ljava/lang/String;
@@ -1207,28 +1244,28 @@
     :goto_5
     add-int/2addr v0, v4
 
-    .line 232
+    .line 239
+    mul-int/lit8 v4, v0, 0x1f
+
+    iget-object v0, p0, Lcom/bbm/g/a;->g:Ljava/lang/String;
+
+    if-nez v0, :cond_6
+
+    move v0, v3
+
+    :goto_6
+    add-int/2addr v0, v4
+
+    .line 240
     mul-int/lit8 v0, v0, 0x1f
 
-    iget-wide v4, p0, Lcom/bbm/g/a;->g:J
+    iget-wide v4, p0, Lcom/bbm/g/a;->h:J
 
     long-to-int v4, v4
 
     add-int/2addr v0, v4
 
-    .line 233
-    mul-int/lit8 v4, v0, 0x1f
-
-    iget-boolean v0, p0, Lcom/bbm/g/a;->h:Z
-
-    if-eqz v0, :cond_6
-
-    move v0, v1
-
-    :goto_6
-    add-int/2addr v0, v4
-
-    .line 234
+    .line 241
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/bbm/g/a;->i:Z
@@ -1240,7 +1277,7 @@
     :goto_7
     add-int/2addr v0, v4
 
-    .line 235
+    .line 242
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/bbm/g/a;->j:Z
@@ -1252,7 +1289,7 @@
     :goto_8
     add-int/2addr v0, v4
 
-    .line 236
+    .line 243
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/bbm/g/a;->k:Z
@@ -1264,7 +1301,7 @@
     :goto_9
     add-int/2addr v0, v4
 
-    .line 237
+    .line 244
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/bbm/g/a;->l:Z
@@ -1276,7 +1313,7 @@
     :goto_a
     add-int/2addr v0, v4
 
-    .line 238
+    .line 245
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/bbm/g/a;->m:Z
@@ -1288,7 +1325,7 @@
     :goto_b
     add-int/2addr v0, v4
 
-    .line 239
+    .line 246
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/bbm/g/a;->n:Z
@@ -1300,7 +1337,7 @@
     :goto_c
     add-int/2addr v0, v4
 
-    .line 240
+    .line 247
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/bbm/g/a;->o:Z
@@ -1312,7 +1349,7 @@
     :goto_d
     add-int/2addr v0, v4
 
-    .line 241
+    .line 248
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/bbm/g/a;->p:Z
@@ -1324,19 +1361,19 @@
     :goto_e
     add-int/2addr v0, v4
 
-    .line 242
+    .line 249
     mul-int/lit8 v4, v0, 0x1f
 
-    iget-object v0, p0, Lcom/bbm/g/a;->q:Ljava/lang/String;
+    iget-boolean v0, p0, Lcom/bbm/g/a;->q:Z
 
-    if-nez v0, :cond_f
+    if-eqz v0, :cond_f
 
-    move v0, v3
+    move v0, v1
 
     :goto_f
     add-int/2addr v0, v4
 
-    .line 243
+    .line 250
     mul-int/lit8 v4, v0, 0x1f
 
     iget-object v0, p0, Lcom/bbm/g/a;->r:Ljava/lang/String;
@@ -1348,92 +1385,100 @@
     :goto_10
     add-int/2addr v0, v4
 
-    .line 244
+    .line 251
     mul-int/lit8 v4, v0, 0x1f
 
-    iget-boolean v0, p0, Lcom/bbm/g/a;->s:Z
+    iget-object v0, p0, Lcom/bbm/g/a;->s:Ljava/lang/String;
 
-    if-eqz v0, :cond_11
+    if-nez v0, :cond_11
 
-    move v0, v1
+    move v0, v3
 
     :goto_11
     add-int/2addr v0, v4
 
-    .line 245
-    mul-int/lit8 v0, v0, 0x1f
+    .line 252
+    mul-int/lit8 v4, v0, 0x1f
 
-    iget-boolean v4, p0, Lcom/bbm/g/a;->t:Z
+    iget-boolean v0, p0, Lcom/bbm/g/a;->t:Z
 
-    if-eqz v4, :cond_12
+    if-eqz v0, :cond_12
+
+    move v0, v1
 
     :goto_12
-    add-int/2addr v0, v1
+    add-int/2addr v0, v4
 
-    .line 246
-    mul-int/lit8 v1, v0, 0x1f
+    .line 253
+    mul-int/lit8 v0, v0, 0x1f
 
-    iget-object v0, p0, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iget-boolean v4, p0, Lcom/bbm/g/a;->u:Z
 
-    if-nez v0, :cond_13
-
-    move v0, v3
+    if-eqz v4, :cond_13
 
     :goto_13
     add-int/2addr v0, v1
 
-    .line 247
-    mul-int/lit8 v0, v0, 0x1f
+    .line 254
+    mul-int/lit8 v1, v0, 0x1f
 
-    iget-object v1, p0, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
+    iget-object v0, p0, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    if-nez v1, :cond_14
+    if-nez v0, :cond_14
+
+    move v0, v3
 
     :goto_14
+    add-int/2addr v0, v1
+
+    .line 255
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget-object v1, p0, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
+
+    if-nez v1, :cond_15
+
+    :goto_15
     add-int/2addr v0, v3
 
-    .line 248
+    .line 256
     return v0
 
     :cond_0
     move v0, v2
 
-    .line 224
+    .line 231
     goto/16 :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 227
+    .line 234
     goto/16 :goto_1
 
-    .line 228
     :cond_2
-    iget-object v0, p0, Lcom/bbm/g/a;->c:Ljava/lang/String;
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    goto/16 :goto_2
-
-    :cond_3
     move v0, v2
 
-    .line 229
-    goto/16 :goto_3
+    .line 235
+    goto/16 :goto_2
 
-    .line 230
-    :cond_4
-    iget-object v0, p0, Lcom/bbm/g/a;->e:Ljava/lang/String;
+    .line 236
+    :cond_3
+    iget-object v0, p0, Lcom/bbm/g/a;->d:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
+    goto/16 :goto_3
+
+    :cond_4
+    move v0, v2
+
+    .line 237
     goto/16 :goto_4
 
-    .line 231
+    .line 238
     :cond_5
     iget-object v0, p0, Lcom/bbm/g/a;->f:Ljava/lang/String;
 
@@ -1443,71 +1488,71 @@
 
     goto/16 :goto_5
 
-    :cond_6
-    move v0, v2
-
-    .line 233
-    goto/16 :goto_6
-
-    :cond_7
-    move v0, v2
-
-    .line 234
-    goto/16 :goto_7
-
-    :cond_8
-    move v0, v2
-
-    .line 235
-    goto/16 :goto_8
-
-    :cond_9
-    move v0, v2
-
-    .line 236
-    goto/16 :goto_9
-
-    :cond_a
-    move v0, v2
-
-    .line 237
-    goto :goto_a
-
-    :cond_b
-    move v0, v2
-
-    .line 238
-    goto :goto_b
-
-    :cond_c
-    move v0, v2
-
     .line 239
-    goto :goto_c
-
-    :cond_d
-    move v0, v2
-
-    .line 240
-    goto :goto_d
-
-    :cond_e
-    move v0, v2
-
-    .line 241
-    goto :goto_e
-
-    .line 242
-    :cond_f
-    iget-object v0, p0, Lcom/bbm/g/a;->q:Ljava/lang/String;
+    :cond_6
+    iget-object v0, p0, Lcom/bbm/g/a;->g:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    goto :goto_f
+    goto/16 :goto_6
+
+    :cond_7
+    move v0, v2
+
+    .line 241
+    goto/16 :goto_7
+
+    :cond_8
+    move v0, v2
+
+    .line 242
+    goto/16 :goto_8
+
+    :cond_9
+    move v0, v2
 
     .line 243
+    goto/16 :goto_9
+
+    :cond_a
+    move v0, v2
+
+    .line 244
+    goto/16 :goto_a
+
+    :cond_b
+    move v0, v2
+
+    .line 245
+    goto/16 :goto_b
+
+    :cond_c
+    move v0, v2
+
+    .line 246
+    goto :goto_c
+
+    :cond_d
+    move v0, v2
+
+    .line 247
+    goto :goto_d
+
+    :cond_e
+    move v0, v2
+
+    .line 248
+    goto :goto_e
+
+    :cond_f
+    move v0, v2
+
+    .line 249
+    goto :goto_f
+
+    .line 250
     :cond_10
     iget-object v0, p0, Lcom/bbm/g/a;->r:Ljava/lang/String;
 
@@ -1517,35 +1562,45 @@
 
     goto :goto_10
 
+    .line 251
     :cond_11
-    move v0, v2
-
-    .line 244
-    goto :goto_11
-
-    :cond_12
-    move v1, v2
-
-    .line 245
-    goto :goto_12
-
-    .line 246
-    :cond_13
-    iget-object v0, p0, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/g/a;->s:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
+    goto :goto_11
+
+    :cond_12
+    move v0, v2
+
+    .line 252
+    goto :goto_12
+
+    :cond_13
+    move v1, v2
+
+    .line 253
     goto :goto_13
 
-    .line 247
+    .line 254
     :cond_14
-    iget-object v1, p0, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
+    iget-object v0, p0, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcom/bbm/util/bc;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    goto :goto_14
+
+    .line 255
+    :cond_15
+    iget-object v1, p0, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
+
+    invoke-virtual {v1}, Lcom/bbm/util/bi;->hashCode()I
 
     move-result v3
 
-    goto :goto_14
+    goto :goto_15
 .end method

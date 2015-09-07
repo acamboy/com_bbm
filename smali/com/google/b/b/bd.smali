@@ -66,7 +66,7 @@
 
 # direct methods
 .method constructor <init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;ILcom/google/b/b/am;)V
-    .locals 3
+    .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -78,13 +78,13 @@
     .end annotation
 
     .prologue
-    const-wide v1, 0x7fffffffffffffffL
+    const-wide v2, 0x7fffffffffffffffL
 
     .line 1556
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/google/b/b/be;-><init>(Ljava/lang/ref/ReferenceQueue;Ljava/lang/Object;ILcom/google/b/b/am;)V
 
     .line 1561
-    iput-wide v1, p0, Lcom/google/b/b/bd;->a:J
+    iput-wide v2, p0, Lcom/google/b/b/bd;->a:J
 
     .line 1573
     invoke-static {}, Lcom/google/b/b/n;->k()Lcom/google/b/b/am;
@@ -101,7 +101,7 @@
     iput-object v0, p0, Lcom/google/b/b/bd;->c:Lcom/google/b/b/am;
 
     .line 1601
-    iput-wide v1, p0, Lcom/google/b/b/bd;->d:J
+    iput-wide v2, p0, Lcom/google/b/b/bd;->d:J
 
     .line 1613
     invoke-static {}, Lcom/google/b/b/n;->k()Lcom/google/b/b/am;
@@ -124,7 +124,7 @@
 
 # virtual methods
 .method public final a(J)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 1570
@@ -153,7 +153,7 @@
 .end method
 
 .method public final b(J)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 1610

@@ -51,24 +51,12 @@
     invoke-virtual {v0, v1}, Lcom/google/analytics/tracking/android/al;->a(Lcom/google/analytics/tracking/android/am;)V
 
     .line 58
-    if-eqz p1, :cond_0
-
-    .line 59
     iget-object v0, p0, Lcom/google/analytics/tracking/android/at;->a:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 63
-    :goto_0
-    return-object p0
-
     .line 61
-    :cond_0
-    const-string v0, " MapBuilder.set() called with a null paramName."
-
-    invoke-static {v0}, Lcom/google/analytics/tracking/android/aq;->d(Ljava/lang/String;)V
-
-    goto :goto_0
+    return-object p0
 .end method
 
 .method public final a()Ljava/util/Map;

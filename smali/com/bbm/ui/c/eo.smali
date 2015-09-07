@@ -1,22 +1,30 @@
 .class final Lcom/bbm/ui/c/eo;
 .super Ljava/lang/Object;
-.source "OwnProfileDetailsFragment.java"
+.source "GroupsFragment.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/em;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/bbm/ui/b/o;
+
+.field final synthetic c:Lcom/bbm/ui/c/eb;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/em;)V
+.method constructor <init>(Lcom/bbm/ui/c/eb;Ljava/lang/String;Lcom/bbm/ui/b/o;)V
     .locals 0
 
     .prologue
-    .line 95
-    iput-object p1, p0, Lcom/bbm/ui/c/eo;->a:Lcom/bbm/ui/c/em;
+    .line 412
+    iput-object p1, p0, Lcom/bbm/ui/c/eo;->c:Lcom/bbm/ui/c/eb;
+
+    iput-object p2, p0, Lcom/bbm/ui/c/eo;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/bbm/ui/c/eo;->b:Lcom/bbm/ui/b/o;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,46 +34,34 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 99
-    const-string v0, "mOnClickListener onClick"
+    .line 416
+    const-string v0, "showGroupRestoreStatusDialog RightButton Clicked"
 
-    const-class v1, Lcom/bbm/ui/c/em;
+    const-class v1, Lcom/bbm/ui/c/eb;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 100
-    iget-object v0, p0, Lcom/bbm/ui/c/eo;->a:Lcom/bbm/ui/c/em;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/em;->getActivity()Landroid/app/Activity;
+    .line 418
+    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    iget-object v1, p0, Lcom/bbm/ui/c/eo;->a:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/bbm/util/eo;->a(Landroid/app/Activity;Z)V
+    new-instance v2, Lcom/bbm/g/cq;
 
-    .line 101
-    iget-object v0, p0, Lcom/bbm/ui/c/eo;->a:Lcom/bbm/ui/c/em;
+    invoke-direct {v2, v1}, Lcom/bbm/g/cq;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/c/em;->c(Lcom/bbm/ui/c/em;)Lcom/bbm/ui/c/ey;
+    invoke-virtual {v0, v2}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
 
-    move-result-object v0
+    .line 419
+    iget-object v0, p0, Lcom/bbm/ui/c/eo;->b:Lcom/bbm/ui/b/o;
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
 
-    .line 102
-    iget-object v0, p0, Lcom/bbm/ui/c/eo;->a:Lcom/bbm/ui/c/em;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/em;->c(Lcom/bbm/ui/c/em;)Lcom/bbm/ui/c/ey;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/ui/c/ey;->a()V
-
-    .line 104
-    :cond_0
+    .line 420
     return-void
 .end method

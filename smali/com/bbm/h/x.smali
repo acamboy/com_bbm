@@ -1,38 +1,55 @@
 .class final Lcom/bbm/h/x;
-.super Lcom/bbm/j/k;
-.source "InvitesFragment.java"
+.super Lcom/bbm/d/b/l;
+.source "AddContactsFragment.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/l",
+        "<",
+        "Lcom/bbm/b/a;",
+        "Lcom/bbm/h/al;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/h/w;
+.field final synthetic b:Lcom/bbm/h/l;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/h/w;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/h/l;Lcom/bbm/j/r;)V
+    .locals 0
 
     .prologue
-    .line 77
-    iput-object p1, p0, Lcom/bbm/h/x;->a:Lcom/bbm/h/w;
+    .line 67
+    iput-object p1, p0, Lcom/bbm/h/x;->b:Lcom/bbm/h/l;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/l;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 1
+.method public final synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
 
     .prologue
-    .line 80
-    iget-object v0, p0, Lcom/bbm/h/x;->a:Lcom/bbm/h/w;
+    .line 67
+    check-cast p1, Lcom/bbm/b/a;
 
-    invoke-static {v0}, Lcom/bbm/h/w;->a(Lcom/bbm/h/w;)V
+    new-instance v0, Lcom/bbm/h/ao;
 
-    .line 81
-    return-void
+    invoke-direct {v0, p1}, Lcom/bbm/h/ao;-><init>(Lcom/bbm/b/a;)V
+
+    sget-object v1, Lcom/bbm/h/an;->a:Lcom/bbm/h/an;
+
+    invoke-static {v0, v1}, Lcom/bbm/h/al;->a(Lcom/bbm/h/ao;Lcom/bbm/h/an;)Lcom/bbm/h/al;
+
+    move-result-object v0
+
+    return-object v0
 .end method

@@ -1,231 +1,474 @@
 .class Lcom/glympse/android/lib/p;
 .super Ljava/lang/Object;
-.source "ArrayAdapter.java"
+.source "Application.java"
 
 # interfaces
-.implements Lcom/glympse/android/core/GArray;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<FROM:",
-        "Ljava/lang/Object;",
-        "TO:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lcom/glympse/android/core/GArray",
-        "<TTO;>;"
-    }
-.end annotation
+.implements Lcom/glympse/android/lib/GApplicationPrivate;
 
 
 # instance fields
-.field private hg:Lcom/glympse/android/core/GArray;
+.field private _name:Ljava/lang/String;
+
+.field private hA:Ljava/lang/String;
+
+.field private hB:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Lcom/glympse/android/core/GArray",
-            "<TFROM;>;"
+            "Lcom/glympse/android/hal/GVector",
+            "<",
+            "Lcom/glympse/android/lib/GMethodArgument;",
+            ">;"
         }
     .end annotation
 .end field
 
-.field private hh:Lcom/glympse/android/lib/bl;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/glympse/android/lib/bl",
-            "<TFROM;TTO;>;"
-        }
-    .end annotation
-.end field
+.field private ho:Ljava/lang/String;
+
+.field private hp:Lcom/glympse/android/api/GImage;
+
+.field private hq:Ljava/lang/String;
+
+.field private hr:Ljava/lang/String;
+
+.field private hs:Ljava/lang/String;
+
+.field private ht:Ljava/lang/String;
+
+.field private hu:Ljava/lang/String;
+
+.field private hv:Ljava/lang/String;
+
+.field private hw:Ljava/lang/String;
+
+.field private hx:Ljava/lang/String;
+
+.field private hy:I
+
+.field private hz:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/core/GArray;Lcom/glympse/android/lib/bl;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/glympse/android/core/GArray",
-            "<TFROM;>;",
-            "Lcom/glympse/android/lib/bl",
-            "<TFROM;TTO;>;)V"
-        }
-    .end annotation
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 23
+    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
-    iput-object p1, p0, Lcom/glympse/android/lib/p;->hg:Lcom/glympse/android/core/GArray;
+    .line 50
+    const/4 v0, 0x0
 
-    .line 25
-    iput-object p2, p0, Lcom/glympse/android/lib/p;->hh:Lcom/glympse/android/lib/bl;
+    iput v0, p0, Lcom/glympse/android/lib/p;->hy:I
 
-    .line 26
+    .line 51
+    new-instance v0, Lcom/glympse/android/hal/GVector;
+
+    invoke-direct {v0}, Lcom/glympse/android/hal/GVector;-><init>()V
+
+    iput-object v0, p0, Lcom/glympse/android/lib/p;->hB:Lcom/glympse/android/hal/GVector;
+
+    .line 52
     return-void
 .end method
 
 
 # virtual methods
-.method public at(I)Ljava/lang/Object;
+.method public addLaunchArgument(ILjava/lang/String;Ljava/lang/String;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)TTO;"
-        }
-    .end annotation
 
     .prologue
-    .line 39
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hh:Lcom/glympse/android/lib/bl;
+    .line 219
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hB:Lcom/glympse/android/hal/GVector;
 
-    iget-object v1, p0, Lcom/glympse/android/lib/p;->hg:Lcom/glympse/android/core/GArray;
+    new-instance v1, Lcom/glympse/android/lib/gb;
 
-    invoke-interface {v1, p1}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
+    invoke-direct {v1, p1, p2, p3}, Lcom/glympse/android/lib/gb;-><init>(ILjava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/bl;->c(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 220
+    return-void
+.end method
+
+.method public canAddressPerson()Z
+    .locals 1
+
+    .prologue
+    .line 66
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hA:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public createInvite()Lcom/glympse/android/api/GInvite;
+    .locals 4
+
+    .prologue
+    .line 61
+    const/16 v0, 0xb
+
+    iget-object v1, p0, Lcom/glympse/android/lib/p;->ho:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/glympse/android/lib/p;->_name:Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    invoke-static {v0, v1, v2, v3}, Lcom/glympse/android/api/GlympseFactory;->createInvite(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public clone()Lcom/glympse/android/core/GArray;
-    .locals 5
+.method public decode(Lcom/glympse/android/core/GPrimitive;)V
+    .locals 0
+
+    .prologue
+    .line 249
+    return-void
+.end method
+
+.method public encode(Lcom/glympse/android/core/GPrimitive;I)V
+    .locals 0
+
+    .prologue
+    .line 244
+    return-void
+.end method
+
+.method public getIcon()Lcom/glympse/android/api/GImage;
+    .locals 1
+
+    .prologue
+    .line 85
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hp:Lcom/glympse/android/api/GImage;
+
+    return-object v0
+.end method
+
+.method public getId()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->ho:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getInstallPackage()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 109
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hq:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getInstallScheme()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 124
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hr:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getInstallUri()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 134
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hs:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getLaunchAction()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 164
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hv:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getLaunchArguments()Lcom/glympse/android/core/GArray;
+    .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
             "Lcom/glympse/android/core/GArray",
-            "<TTO;>;"
+            "<",
+            "Lcom/glympse/android/lib/GMethodArgument;",
+            ">;"
         }
     .end annotation
 
     .prologue
-    .line 49
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hg:Lcom/glympse/android/core/GArray;
+    .line 224
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hB:Lcom/glympse/android/hal/GVector;
 
-    invoke-interface {v0}, Lcom/glympse/android/core/GArray;->length()I
-
-    move-result v1
-
-    .line 50
-    new-instance v2, Lcom/glympse/android/hal/GVector;
-
-    invoke-direct {v2, v1}, Lcom/glympse/android/hal/GVector;-><init>(I)V
-
-    .line 51
-    const/4 v0, 0x0
-
-    :goto_0
-    if-ge v0, v1, :cond_0
-
-    .line 53
-    iget-object v3, p0, Lcom/glympse/android/lib/p;->hg:Lcom/glympse/android/core/GArray;
-
-    invoke-interface {v3, v0}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    .line 54
-    iget-object v4, p0, Lcom/glympse/android/lib/p;->hh:Lcom/glympse/android/lib/bl;
-
-    invoke-interface {v4, v3}, Lcom/glympse/android/lib/bl;->c(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
-
-    .line 51
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    .line 56
-    :cond_0
-    return-object v2
+    return-object v0
 .end method
 
-.method public bridge synthetic clone()Ljava/lang/Object;
+.method public getLaunchClassName()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 16
-    invoke-virtual {p0}, Lcom/glympse/android/lib/p;->clone()Lcom/glympse/android/core/GArray;
-
-    move-result-object v0
+    .line 184
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hx:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method public elements()Ljava/util/Enumeration;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Enumeration",
-            "<TTO;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 44
-    new-instance v0, Lcom/glympse/android/lib/q;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/p;->hg:Lcom/glympse/android/core/GArray;
-
-    invoke-interface {v1}, Lcom/glympse/android/core/GArray;->elements()Ljava/util/Enumeration;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/glympse/android/lib/p;->hh:Lcom/glympse/android/lib/bl;
-
-    invoke-direct {v0, p0, v1, v2}, Lcom/glympse/android/lib/q;-><init>(Lcom/glympse/android/lib/p;Ljava/util/Enumeration;Lcom/glympse/android/lib/bl;)V
-
-    return-object v0
-.end method
-
-.method public iterator()Ljava/util/Iterator;
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/Iterator",
-            "<TTO;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 150
-    new-instance v0, Lcom/glympse/android/lib/r;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/p;->hg:Lcom/glympse/android/core/GArray;
-
-    invoke-interface {v1}, Lcom/glympse/android/core/GArray;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/glympse/android/lib/p;->hh:Lcom/glympse/android/lib/bl;
-
-    invoke-direct {v0, p0, v1, v2}, Lcom/glympse/android/lib/r;-><init>(Lcom/glympse/android/lib/p;Ljava/util/Iterator;Lcom/glympse/android/lib/bl;)V
-
-    return-object v0
-.end method
-
-.method public length()I
+.method public getLaunchFlags()I
     .locals 1
 
     .prologue
-    .line 34
-    iget-object v0, p0, Lcom/glympse/android/lib/p;->hg:Lcom/glympse/android/core/GArray;
-
-    invoke-interface {v0}, Lcom/glympse/android/core/GArray;->length()I
-
-    move-result v0
+    .line 194
+    iget v0, p0, Lcom/glympse/android/lib/p;->hy:I
 
     return v0
+.end method
+
+.method public getLaunchMimeType()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 174
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hw:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getLaunchMode()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 144
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->ht:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getLaunchPackage()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 154
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hu:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getLaunchUri()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 204
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hz:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getLaunchUriDirect()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 214
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->hA:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public getName()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 80
+    iget-object v0, p0, Lcom/glympse/android/lib/p;->_name:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public isEqual(Lcom/glympse/android/core/GCommon;)Z
+    .locals 1
+
+    .prologue
+    .line 234
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public setIcon(Lcom/glympse/android/api/GImage;)V
+    .locals 0
+
+    .prologue
+    .line 104
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hp:Lcom/glympse/android/api/GImage;
+
+    .line 105
+    return-void
+.end method
+
+.method public setInstallPackage(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 114
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hq:Ljava/lang/String;
+
+    .line 115
+    return-void
+.end method
+
+.method public setInstallScheme(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 119
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hr:Ljava/lang/String;
+
+    .line 120
+    return-void
+.end method
+
+.method public setInstallUri(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 129
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hs:Ljava/lang/String;
+
+    .line 130
+    return-void
+.end method
+
+.method public setLaunchAction(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 159
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hv:Ljava/lang/String;
+
+    .line 160
+    return-void
+.end method
+
+.method public setLaunchClassName(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 179
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hx:Ljava/lang/String;
+
+    .line 180
+    return-void
+.end method
+
+.method public setLaunchFlags(I)V
+    .locals 0
+
+    .prologue
+    .line 189
+    iput p1, p0, Lcom/glympse/android/lib/p;->hy:I
+
+    .line 190
+    return-void
+.end method
+
+.method public setLaunchMimeType(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 169
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hw:Ljava/lang/String;
+
+    .line 170
+    return-void
+.end method
+
+.method public setLaunchMode(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 139
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->ht:Ljava/lang/String;
+
+    .line 140
+    return-void
+.end method
+
+.method public setLaunchPackage(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 149
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hu:Ljava/lang/String;
+
+    .line 150
+    return-void
+.end method
+
+.method public setLaunchUri(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 199
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hz:Ljava/lang/String;
+
+    .line 200
+    return-void
+.end method
+
+.method public setLaunchUriDirect(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 209
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->hA:Ljava/lang/String;
+
+    .line 210
+    return-void
+.end method
+
+.method public setName(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 99
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->_name:Ljava/lang/String;
+
+    .line 100
+    return-void
+.end method
+
+.method public setSubtype(Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 94
+    iput-object p1, p0, Lcom/glympse/android/lib/p;->ho:Ljava/lang/String;
+
+    .line 95
+    return-void
 .end method

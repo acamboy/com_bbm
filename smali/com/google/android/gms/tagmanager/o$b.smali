@@ -83,7 +83,7 @@
 .end method
 
 .method public a(Lcom/google/android/gms/tagmanager/bg$a;)V
-    .locals 3
+    .locals 4
 
     iget-object v0, p0, Lcom/google/android/gms/tagmanager/o$b;->Ul:Lcom/google/android/gms/tagmanager/o;
 
@@ -95,9 +95,9 @@
 
     iget-object v0, p0, Lcom/google/android/gms/tagmanager/o$b;->Ul:Lcom/google/android/gms/tagmanager/o;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/google/android/gms/tagmanager/o;->a(Lcom/google/android/gms/tagmanager/o;J)V
+    invoke-static {v0, v2, v3}, Lcom/google/android/gms/tagmanager/o;->a(Lcom/google/android/gms/tagmanager/o;J)V
 
     :cond_0
     return-void

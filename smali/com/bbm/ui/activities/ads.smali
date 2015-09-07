@@ -1,46 +1,68 @@
 .class final Lcom/bbm/ui/activities/ads;
-.super Ljava/lang/Object;
-.source "SettingsActivity.java"
+.super Lcom/bbm/j/a;
+.source "ReceivedPendingGroupInviteActivity.java"
 
-# interfaces
-.implements Lcom/bbm/ui/p;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)V
     .locals 0
 
     .prologue
-    .line 216
-    iput-object p1, p0, Lcom/bbm/ui/activities/ads;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 280
+    iput-object p1, p0, Lcom/bbm/ui/activities/ads;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)V"
-        }
-    .end annotation
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 220
-    iget-object v0, p0, Lcom/bbm/ui/activities/ads;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 280
+    iget-object v0, p0, Lcom/bbm/ui/activities/ads;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
-    const-string v1, "notification_led_colour"
+    invoke-static {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->a(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)Lcom/bbm/e;
 
-    invoke-static {v0, v1, p1}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;I)V
+    move-result-object v0
 
-    .line 221
-    return-void
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
+
+    invoke-virtual {v0}, Lcom/bbm/g/al;->e()Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    return-object v0
 .end method

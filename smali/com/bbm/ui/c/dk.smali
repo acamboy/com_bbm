@@ -1,208 +1,71 @@
-.class final synthetic Lcom/bbm/ui/c/dk;
+.class final Lcom/bbm/ui/c/dk;
 .super Ljava/lang/Object;
-.source "GroupsFragment.java"
+.source "GroupMembersFragment.java"
+
+# interfaces
+.implements Landroid/widget/AdapterView$OnItemLongClickListener;
 
 
-# static fields
-.field static final synthetic a:[I
-
-.field static final synthetic b:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/c/dh;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/c/dh;)V
+    .locals 0
 
     .prologue
-    .line 295
-    invoke-static {}, Lcom/bbm/ui/c/du;->values()[Lcom/bbm/ui/c/du;
+    .line 197
+    iput-object p1, p0, Lcom/bbm/ui/c/dk;->a:Lcom/bbm/ui/c/dh;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/bbm/ui/c/dk;->b:[I
-
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/c/dk;->b:[I
-
-    sget-object v1, Lcom/bbm/ui/c/du;->a:Lcom/bbm/ui/c/du;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/du;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_7
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/c/dk;->b:[I
-
-    sget-object v1, Lcom/bbm/ui/c/du;->f:Lcom/bbm/ui/c/du;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/du;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_6
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/c/dk;->b:[I
-
-    sget-object v1, Lcom/bbm/ui/c/du;->e:Lcom/bbm/ui/c/du;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/du;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_5
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/ui/c/dk;->b:[I
-
-    sget-object v1, Lcom/bbm/ui/c/du;->c:Lcom/bbm/ui/c/du;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/du;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_4
-
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/bbm/ui/c/dk;->b:[I
-
-    sget-object v1, Lcom/bbm/ui/c/du;->d:Lcom/bbm/ui/c/du;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/du;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_3
-
-    :goto_4
-    :try_start_5
-    sget-object v0, Lcom/bbm/ui/c/dk;->b:[I
-
-    sget-object v1, Lcom/bbm/ui/c/du;->b:Lcom/bbm/ui/c/du;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/du;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_2
-
-    .line 193
-    :goto_5
-    invoke-static {}, Lcom/bbm/ui/c/dw;->values()[Lcom/bbm/ui/c/dw;
-
-    move-result-object v0
-
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/bbm/ui/c/dk;->a:[I
-
-    :try_start_6
-    sget-object v0, Lcom/bbm/ui/c/dk;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/c/dw;->a:Lcom/bbm/ui/c/dw;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/dw;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_1
-
-    :goto_6
-    :try_start_7
-    sget-object v0, Lcom/bbm/ui/c/dk;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/c/dw;->b:Lcom/bbm/ui/c/dw;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/dw;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_0
-
-    :goto_7
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
 
-    goto :goto_7
+# virtual methods
+.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)Z"
+        }
+    .end annotation
 
-    :catch_1
-    move-exception v0
+    .prologue
+    const/4 v2, 0x1
 
-    goto :goto_6
+    .line 200
+    const-string v0, "mOnItemLongClickListener onItemLongClick"
 
-    :catch_2
-    move-exception v0
+    const-class v1, Lcom/bbm/ui/c/dh;
 
-    goto :goto_5
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    :catch_3
-    move-exception v0
+    .line 201
+    iget-object v0, p0, Lcom/bbm/ui/c/dk;->a:Lcom/bbm/ui/c/dh;
 
-    goto :goto_4
+    invoke-static {v0, p3}, Lcom/bbm/ui/c/dh;->a(Lcom/bbm/ui/c/dh;I)I
 
-    :catch_4
-    move-exception v0
+    .line 202
+    iget-object v0, p0, Lcom/bbm/ui/c/dk;->a:Lcom/bbm/ui/c/dh;
 
-    goto :goto_3
+    invoke-static {v0, v2}, Lcom/bbm/ui/c/dh;->a(Lcom/bbm/ui/c/dh;Z)Z
 
-    :catch_5
-    move-exception v0
+    .line 203
+    iget-object v0, p0, Lcom/bbm/ui/c/dk;->a:Lcom/bbm/ui/c/dh;
 
-    goto :goto_2
+    invoke-static {v0}, Lcom/bbm/ui/c/dh;->d(Lcom/bbm/ui/c/dh;)Lcom/bbm/j/u;
 
-    :catch_6
-    move-exception v0
+    move-result-object v0
 
-    goto :goto_1
+    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
 
-    :catch_7
-    move-exception v0
-
-    goto :goto_0
+    .line 204
+    return v2
 .end method

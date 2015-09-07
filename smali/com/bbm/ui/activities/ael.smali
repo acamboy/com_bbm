@@ -1,162 +1,149 @@
-.class public final Lcom/bbm/ui/activities/ael;
-.super Ljava/lang/Object;
-.source "ShuntProperties.java"
-
-# interfaces
-.implements Ljava/io/Serializable;
+.class final enum Lcom/bbm/ui/activities/ael;
+.super Ljava/lang/Enum;
+.source "ReportProblemActivity.java"
 
 
-# instance fields
-.field private final a:Ljava/util/Properties;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/activities/ael;",
+        ">;"
+    }
+.end annotation
 
 
-# virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 2
+# static fields
+.field public static final enum a:Lcom/bbm/ui/activities/ael;
+
+.field public static final enum b:Lcom/bbm/ui/activities/ael;
+
+.field public static final enum c:Lcom/bbm/ui/activities/ael;
+
+.field public static final enum d:Lcom/bbm/ui/activities/ael;
+
+.field private static final synthetic e:[Lcom/bbm/ui/activities/ael;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 6
 
     .prologue
-    .line 24
-    iget-object v0, p0, Lcom/bbm/ui/activities/ael;->a:Ljava/util/Properties;
+    const/4 v5, 0x3
 
-    const-string v1, "host"
+    const/4 v4, 0x2
 
-    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+    const/4 v3, 0x1
+
+    const/4 v2, 0x0
+
+    .line 288
+    new-instance v0, Lcom/bbm/ui/activities/ael;
+
+    const-string v1, "STEP01"
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/activities/ael;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/activities/ael;->a:Lcom/bbm/ui/activities/ael;
+
+    .line 289
+    new-instance v0, Lcom/bbm/ui/activities/ael;
+
+    const-string v1, "STEP02"
+
+    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/activities/ael;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/activities/ael;->b:Lcom/bbm/ui/activities/ael;
+
+    .line 290
+    new-instance v0, Lcom/bbm/ui/activities/ael;
+
+    const-string v1, "STEP03"
+
+    invoke-direct {v0, v1, v4}, Lcom/bbm/ui/activities/ael;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/activities/ael;->c:Lcom/bbm/ui/activities/ael;
+
+    .line 291
+    new-instance v0, Lcom/bbm/ui/activities/ael;
+
+    const-string v1, "DONE"
+
+    invoke-direct {v0, v1, v5}, Lcom/bbm/ui/activities/ael;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/activities/ael;->d:Lcom/bbm/ui/activities/ael;
+
+    .line 287
+    const/4 v0, 0x4
+
+    new-array v0, v0, [Lcom/bbm/ui/activities/ael;
+
+    sget-object v1, Lcom/bbm/ui/activities/ael;->a:Lcom/bbm/ui/activities/ael;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/bbm/ui/activities/ael;->b:Lcom/bbm/ui/activities/ael;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/bbm/ui/activities/ael;->c:Lcom/bbm/ui/activities/ael;
+
+    aput-object v1, v0, v4
+
+    sget-object v1, Lcom/bbm/ui/activities/ael;->d:Lcom/bbm/ui/activities/ael;
+
+    aput-object v1, v0, v5
+
+    sput-object v0, Lcom/bbm/ui/activities/ael;->e:[Lcom/bbm/ui/activities/ael;
+
+    return-void
+.end method
+
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    .prologue
+    .line 287
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/activities/ael;
+    .locals 1
+
+    .prologue
+    .line 287
+    const-class v0, Lcom/bbm/ui/activities/ael;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/ael;
 
     return-object v0
 .end method
 
-.method public final b()I
-    .locals 3
+.method public static values()[Lcom/bbm/ui/activities/ael;
+    .locals 1
 
     .prologue
-    .line 28
-    const/16 v0, 0x89e
+    .line 287
+    sget-object v0, Lcom/bbm/ui/activities/ael;->e:[Lcom/bbm/ui/activities/ael;
 
-    .line 29
-    iget-object v1, p0, Lcom/bbm/ui/activities/ael;->a:Ljava/util/Properties;
-
-    const-string v2, "port"
-
-    invoke-virtual {v1, v2}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 30
-    if-eqz v1, :cond_0
-
-    .line 32
-    :try_start_0
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v0
-
-    .line 38
-    :cond_0
-    :goto_0
-    return v0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
-.end method
-
-.method public final c()I
-    .locals 3
-
-    .prologue
-    .line 42
-    const/16 v0, 0x89f
-
-    .line 43
-    iget-object v1, p0, Lcom/bbm/ui/activities/ael;->a:Ljava/util/Properties;
-
-    const-string v2, "groupPort"
-
-    invoke-virtual {v1, v2}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 44
-    if-eqz v1, :cond_0
-
-    .line 46
-    :try_start_0
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v0
-
-    .line 53
-    :cond_0
-    :goto_0
-    return v0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
-.end method
-
-.method public final d()I
-    .locals 3
-
-    .prologue
-    .line 57
-    const/16 v0, 0x8a0
-
-    .line 58
-    iget-object v1, p0, Lcom/bbm/ui/activities/ael;->a:Ljava/util/Properties;
-
-    const-string v2, "adsPort"
-
-    invoke-virtual {v1, v2}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 59
-    if-eqz v1, :cond_0
-
-    .line 61
-    :try_start_0
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v0
-
-    .line 68
-    :cond_0
-    :goto_0
-    return v0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
-.end method
-
-.method public final e()Z
-    .locals 2
-
-    .prologue
-    .line 76
-    iget-object v0, p0, Lcom/bbm/ui/activities/ael;->a:Ljava/util/Properties;
-
-    const-string v1, "shunt"
-
-    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v0}, [Lcom/bbm/ui/activities/ael;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
+    check-cast v0, [Lcom/bbm/ui/activities/ael;
 
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

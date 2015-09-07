@@ -79,7 +79,7 @@
 .end method
 
 .method public setPrice(D)Lcom/google/android/gms/analytics/HitBuilders$ItemBuilder;
-    .locals 2
+    .locals 3
 
     const-string v0, "&ip"
 
@@ -93,7 +93,7 @@
 .end method
 
 .method public setQuantity(J)Lcom/google/android/gms/analytics/HitBuilders$ItemBuilder;
-    .locals 2
+    .locals 3
 
     const-string v0, "&iq"
 

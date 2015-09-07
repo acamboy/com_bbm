@@ -305,7 +305,7 @@
     return v0
 .end method
 
-.method protected abstract c(II)Ljava/lang/Object;
+.method public abstract c(II)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(II)TT;"
@@ -352,5 +352,5 @@
     return v0
 .end method
 
-.method protected abstract getPrimaryDataMarkerColumn()Ljava/lang/String;
+.method public abstract getPrimaryDataMarkerColumn()Ljava/lang/String;
 .end method

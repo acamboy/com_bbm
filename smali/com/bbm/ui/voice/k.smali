@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 129
+    .line 151
     iput-object p1, p0, Lcom/bbm/ui/voice/k;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,22 +26,36 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 133
+    .line 154
     iget-object v0, p0, Lcom/bbm/ui/voice/k;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->getContext()Landroid/content/Context;
+    invoke-static {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->d(Lcom/bbm/ui/voice/OutgoingCallActionBar;)Landroid/widget/ImageButton;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/l/a;->a(Landroid/content/Context;)Lcom/bbm/l/a;
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->isActivated()Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0}, Lcom/bbm/l/a;->a()V
+    if-nez v0, :cond_0
 
-    .line 134
+    const/4 v0, 0x1
+
+    .line 155
+    :goto_0
+    iget-object v1, p0, Lcom/bbm/ui/voice/k;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
+
+    invoke-static {v1, v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->b(Lcom/bbm/ui/voice/OutgoingCallActionBar;Z)V
+
+    .line 156
     return-void
+
+    .line 154
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

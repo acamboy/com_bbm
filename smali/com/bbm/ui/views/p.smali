@@ -1,128 +1,237 @@
 .class final Lcom/bbm/ui/views/p;
-.super Landroid/widget/BaseAdapter;
-.source "QuickActionAttachmentsView.java"
+.super Ljava/lang/Object;
+.source "EphemeralPickerPagerV2.java"
+
+# interfaces
+.implements Lcom/bbm/ui/views/y;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/views/QuickActionAttachmentsView;
+.field final synthetic a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/ui/views/QuickActionAttachmentsView;)V
+.method constructor <init>(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)V
     .locals 0
 
     .prologue
-    .line 62
-    iput-object p1, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/QuickActionAttachmentsView;
+    .line 63
+    iput-object p1, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/bbm/ui/views/QuickActionAttachmentsView;B)V
-    .locals 0
-
-    .prologue
-    .line 62
-    invoke-direct {p0, p1}, Lcom/bbm/ui/views/p;-><init>(Lcom/bbm/ui/views/QuickActionAttachmentsView;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Lcom/bbm/ui/views/r;
-    .locals 1
+.method public final a(I)V
+    .locals 8
 
     .prologue
-    .line 71
-    iget-object v0, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/QuickActionAttachmentsView;
+    const/4 v7, 0x5
 
-    invoke-static {v0}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->a(Lcom/bbm/ui/views/QuickActionAttachmentsView;)Ljava/util/ArrayList;
+    const/4 v6, 0x3
 
-    move-result-object v0
+    const/4 v5, 0x2
 
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    const/4 v4, 0x0
 
-    move-result-object v0
+    const v3, 0x7f0a0151
 
-    check-cast v0, Lcom/bbm/ui/views/r;
-
-    return-object v0
-.end method
-
-.method public final getCount()I
-    .locals 1
-
-    .prologue
     .line 66
-    iget-object v0, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/QuickActionAttachmentsView;
+    iget-object v0, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
-    invoke-static {v0}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->a(Lcom/bbm/ui/views/QuickActionAttachmentsView;)Ljava/util/ArrayList;
+    invoke-virtual {v0}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    return v0
-.end method
+    mul-int/lit8 v0, v0, 0x2
 
-.method public final synthetic getItem(I)Ljava/lang/Object;
-    .locals 1
+    sub-int v0, p1, v0
 
-    .prologue
-    .line 62
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/views/p;->a(I)Lcom/bbm/ui/views/r;
+    .line 67
+    mul-int/lit8 v1, v0, 0x3
+
+    div-int/lit8 v1, v1, 0x4
+
+    iget-object v2, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+
+    invoke-virtual {v2}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    mul-int/lit8 v2, v2, 0x3
+
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/2addr v1, v2
+
+    .line 68
+    mul-int/lit8 v0, v0, 0x11
+
+    div-int/lit8 v0, v0, 0x14
+
+    iget-object v2, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+
+    invoke-virtual {v2}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    mul-int/lit8 v2, v2, 0x3
+
+    div-int/lit8 v2, v2, 0x2
+
+    add-int/2addr v2, v0
+
+    .line 69
+    iget-object v0, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+
+    invoke-static {v0}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->a(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)[Landroid/widget/TextView;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    aget-object v0, v0, v4
 
-.method public final getItemId(I)J
-    .locals 2
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    .prologue
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    .line 70
+    iget-object v0, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+
+    invoke-static {v0}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->a(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)[Landroid/widget/TextView;
+
+    move-result-object v0
+
+    aget-object v0, v0, v4
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
+
+    .line 71
+    iget-object v0, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+
+    invoke-static {v0}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->a(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)[Landroid/widget/TextView;
+
+    move-result-object v0
+
+    aget-object v0, v0, v5
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    .line 72
+    iget-object v0, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+
+    invoke-static {v0}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->a(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)[Landroid/widget/TextView;
+
+    move-result-object v0
+
+    aget-object v0, v0, v5
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    .line 73
+    iget-object v0, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+
+    invoke-static {v0}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->a(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)[Landroid/widget/TextView;
+
+    move-result-object v0
+
+    aget-object v0, v0, v6
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+
+    .line 74
+    iget-object v0, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+
+    invoke-static {v0}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->a(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)[Landroid/widget/TextView;
+
+    move-result-object v0
+
+    aget-object v0, v0, v6
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    .line 75
+    iget-object v0, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+
+    invoke-static {v0}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->a(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)[Landroid/widget/TextView;
+
+    move-result-object v0
+
+    aget-object v0, v0, v7
+
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+
+    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->rightMargin:I
+
     .line 76
-    int-to-long v0, p1
+    iget-object v0, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
-    return-wide v0
-.end method
+    invoke-static {v0}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->a(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)[Landroid/widget/TextView;
 
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 2
+    move-result-object v0
 
-    .prologue
-    .line 83
-    new-instance v0, Landroid/widget/ImageView;
+    aget-object v0, v0, v7
 
-    iget-object v1, p0, Lcom/bbm/ui/views/p;->a:Lcom/bbm/ui/views/QuickActionAttachmentsView;
+    invoke-virtual {v0}, Landroid/widget/TextView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->getContext()Landroid/content/Context;
+    move-result-object v0
 
-    move-result-object v1
+    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-direct {v0, v1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
+    iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->bottomMargin:I
 
-    .line 84
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/views/p;->a(I)Lcom/bbm/ui/views/r;
-
-    move-result-object v1
-
-    iget v1, v1, Lcom/bbm/ui/views/r;->a:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 85
-    new-instance v1, Lcom/bbm/ui/views/q;
-
-    invoke-direct {v1, p0, p1, p2}, Lcom/bbm/ui/views/q;-><init>(Lcom/bbm/ui/views/p;ILandroid/view/View;)V
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 95
-    return-object v0
+    .line 77
+    return-void
 .end method

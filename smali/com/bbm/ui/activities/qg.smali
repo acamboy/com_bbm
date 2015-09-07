@@ -1,132 +1,86 @@
 .class final Lcom/bbm/ui/activities/qg;
-.super Ljava/lang/Object;
-.source "GroupPictureCommentsActivity.java"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.super Lcom/bbm/ui/cn;
+.source "GroupLobbyActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
     .locals 0
 
     .prologue
-    .line 218
-    iput-object p1, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 121
+    iput-object p1, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 8
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public final a()V
+    .locals 1
 
     .prologue
-    const/4 v7, 0x1
+    .line 130
+    iget-object v0, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    .line 221
-    const-string v0, "comment long click"
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->finish()V
 
-    const-class v1, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 131
+    return-void
+.end method
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+.method public final a(I)V
+    .locals 2
 
-    .line 223
-    iget-object v0, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .prologue
+    .line 135
+    packed-switch p1, :pswitch_data_0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->d(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/ListView;
+    .line 141
+    :goto_0
+    return-void
 
-    move-result-object v0
+    .line 137
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    const/4 v1, 0x0
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setTranscriptMode(I)V
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    .line 224
-    iget-object v0, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    const/4 v1, 0x1
 
-    invoke-static {v0, p3}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->c(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;I)I
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    .line 225
-    iget-object v0, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 138
+    iget-object v0, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->d(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Landroid/widget/ListView;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->b(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
 
-    move-result-object v0
+    goto :goto_0
 
-    invoke-virtual {v0, p3, v7}, Landroid/widget/ListView;->setItemChecked(IZ)V
+    .line 135
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    .line 226
-    iget-object v0, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+.method public final b()V
+    .locals 1
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/d;
+    .prologue
+    .line 125
+    iget-object v0, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->o()V
 
-    iget-object v1, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->e(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/activities/qo;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/qo;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/g/x;
-
-    iget-object v0, v0, Lcom/bbm/g/x;->d:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/g/ab;->q(Ljava/lang/String;)Lcom/bbm/g/l;
-
-    move-result-object v2
-
-    .line 227
-    iget-object v6, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    new-instance v0, Lcom/bbm/ui/activities/qh;
-
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
-
-    move-result-object v3
-
-    move-object v1, p0
-
-    move-object v4, v2
-
-    move v5, p3
-
-    invoke-direct/range {v0 .. v5}, Lcom/bbm/ui/activities/qh;-><init>(Lcom/bbm/ui/activities/qg;Lcom/bbm/g/l;Lcom/bbm/d/a;Lcom/bbm/g/l;I)V
-
-    invoke-static {v6, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;Lcom/bbm/util/d/d;)Lcom/bbm/util/d/d;
-
-    .line 240
-    iget-object v0, p0, Lcom/bbm/ui/activities/qg;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->f(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/util/d/d;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/util/d/d;->c()V
-
-    .line 242
-    return v7
+    .line 126
+    return-void
 .end method

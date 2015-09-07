@@ -1,5 +1,5 @@
 .class public Lcom/bbm/setup/SetupWrapperActivity;
-.super Lcom/bbm/setup/r;
+.super Lcom/bbm/setup/q;
 .source "SetupWrapperActivity.java"
 
 
@@ -8,8 +8,8 @@
     .locals 0
 
     .prologue
-    .line 13
-    invoke-direct {p0}, Lcom/bbm/setup/r;-><init>()V
+    .line 12
+    invoke-direct {p0}, Lcom/bbm/setup/q;-><init>()V
 
     return-void
 .end method
@@ -22,28 +22,28 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 24
+    .line 23
     const-string v0, "onActivityResult"
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->c(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 25
+    .line 24
     if-nez p1, :cond_0
 
-    .line 26
+    .line 25
     sput p2, Lcom/bbm/setup/LoginWrapperActivity;->a:I
 
-    .line 27
+    .line 26
     invoke-virtual {p0}, Lcom/bbm/setup/SetupWrapperActivity;->finish()V
 
-    .line 28
+    .line 27
     invoke-virtual {p0, v2, v2}, Lcom/bbm/setup/SetupWrapperActivity;->overridePendingTransition(II)V
 
-    .line 30
+    .line 29
     :cond_0
     return-void
 .end method
@@ -52,12 +52,12 @@
     .locals 0
 
     .prologue
-    .line 17
-    invoke-super {p0}, Lcom/bbm/setup/r;->onResume()V
+    .line 16
+    invoke-super {p0}, Lcom/bbm/setup/q;->onResume()V
 
-    .line 19
+    .line 18
     invoke-virtual {p0}, Lcom/bbm/setup/SetupWrapperActivity;->a()V
 
-    .line 20
+    .line 19
     return-void
 .end method

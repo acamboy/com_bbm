@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 92
+    .line 90
     iput-object p1, p0, Lcom/bbm/ui/channel/activities/a;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,11 +29,11 @@
     .locals 1
 
     .prologue
-    .line 95
+    .line 93
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/a;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     invoke-static {v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->a(Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;)V
 
-    .line 96
+    .line 94
     return-void
 .end method

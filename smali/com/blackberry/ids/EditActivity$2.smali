@@ -32,9 +32,7 @@
     .line 384
     iget-object v0, p0, Lcom/blackberry/ids/EditActivity$2;->a:Lcom/blackberry/ids/EditActivity;
 
-    invoke-virtual {v0}, Lcom/blackberry/ids/EditActivity;->c()Z
-
-    move-result v0
+    iget-boolean v0, v0, Lcom/blackberry/ids/WebActivity;->d:Z
 
     if-nez v0, :cond_0
 

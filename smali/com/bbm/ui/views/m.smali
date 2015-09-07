@@ -12,7 +12,7 @@
     .locals 0
 
     .prologue
-    .line 220
+    .line 225
     iput-object p1, p0, Lcom/bbm/ui/views/m;->a:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
     invoke-direct {p0}, Lcom/bbm/ui/d/i;-><init>()V
@@ -26,12 +26,12 @@
     .locals 1
 
     .prologue
-    .line 223
+    .line 228
     iget-object v0, p0, Lcom/bbm/ui/views/m;->a:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
     invoke-virtual {v0}, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;->a()V
 
-    .line 224
+    .line 229
     return-void
 .end method
 
@@ -39,7 +39,7 @@
     .locals 2
 
     .prologue
-    .line 228
+    .line 233
     iget-object v0, p0, Lcom/bbm/ui/views/m;->a:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
     invoke-static {v0}, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;->c(Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;)Landroid/content/Context;
@@ -48,8 +48,8 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, p1, v1}, Lcom/bbm/util/eo;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    invoke-static {v0, p1, v1}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 229
+    .line 234
     return-void
 .end method

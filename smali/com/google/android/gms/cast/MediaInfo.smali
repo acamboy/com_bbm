@@ -57,7 +57,7 @@
 .end method
 
 .method constructor <init>(Lorg/json/JSONObject;)V
-    .locals 3
+    .locals 4
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -129,9 +129,9 @@
     :cond_0
     const-string v0, "duration"
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-virtual {p1, v0, v1, v2}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
+    invoke-virtual {p1, v0, v2, v3}, Lorg/json/JSONObject;->optDouble(Ljava/lang/String;D)D
 
     move-result-wide v0
 
@@ -364,7 +364,7 @@
 .end method
 
 .method public final equals(Ljava/lang/Object;)Z
-    .locals 7
+    .locals 8
 
     const/4 v1, 0x1
 
@@ -456,11 +456,11 @@
 
     if-eqz v0, :cond_0
 
-    iget-wide v3, p0, Lcom/google/android/gms/cast/MediaInfo;->wO:J
+    iget-wide v4, p0, Lcom/google/android/gms/cast/MediaInfo;->wO:J
 
-    iget-wide v5, p1, Lcom/google/android/gms/cast/MediaInfo;->wO:J
+    iget-wide v6, p1, Lcom/google/android/gms/cast/MediaInfo;->wO:J
 
-    cmp-long v0, v3, v5
+    cmp-long v0, v4, v6
 
     if-nez v0, :cond_0
 
@@ -590,7 +590,7 @@
 .end method
 
 .method final j(J)V
-    .locals 2
+    .locals 3
 
     const-wide/16 v0, 0x0
 

@@ -124,7 +124,7 @@
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x0
 
@@ -151,11 +151,11 @@
 
     if-ne v1, v2, :cond_0
 
-    iget-wide v1, p0, Lcom/google/android/gms/location/b;->Lj:J
+    iget-wide v2, p0, Lcom/google/android/gms/location/b;->Lj:J
 
-    iget-wide v3, p1, Lcom/google/android/gms/location/b;->Lj:J
+    iget-wide v4, p1, Lcom/google/android/gms/location/b;->Lj:J
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_0
 

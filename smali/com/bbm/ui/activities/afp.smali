@@ -1,48 +1,38 @@
 .class final Lcom/bbm/ui/activities/afp;
-.super Ljava/lang/Object;
-.source "ViewChannelPostActivity.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
+.super Lcom/bbm/j/k;
+.source "SelectContactActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
+    .locals 1
 
     .prologue
-    .line 490
-    iput-object p1, p0, Lcom/bbm/ui/activities/afp;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 231
+    iput-object p1, p0, Lcom/bbm/ui/activities/afp;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method protected final a()V
     .locals 1
 
     .prologue
-    .line 493
-    iget-object v0, p0, Lcom/bbm/ui/activities/afp;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 235
+    iget-object v0, p0, Lcom/bbm/ui/activities/afp;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->e(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Landroid/widget/EditText;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->n(Lcom/bbm/ui/activities/SelectContactActivity;)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
-
-    .line 494
-    iget-object v0, p0, Lcom/bbm/ui/activities/afp;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/eo;->a(Landroid/app/Activity;)V
-
-    .line 495
+    .line 236
     return-void
 .end method

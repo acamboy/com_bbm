@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 621
+    .line 668
     iput-object p1, p0, Lcom/rim/bbm/BbmPlatformService$1;->val$pin:Ljava/lang/String;
 
     iput p2, p0, Lcom/rim/bbm/BbmPlatformService$1;->val$error:I
@@ -33,29 +33,29 @@
     .locals 3
 
     .prologue
-    .line 626
+    .line 673
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$PinState;
 
     invoke-direct {v0}, Lcom/rim/bbm/BbmPlatformService$PinState;-><init>()V
 
-    .line 627
+    .line 674
     iget-object v1, p0, Lcom/rim/bbm/BbmPlatformService$1;->val$pin:Ljava/lang/String;
 
     iput-object v1, v0, Lcom/rim/bbm/BbmPlatformService$PinState;->pin:Ljava/lang/String;
 
-    .line 630
+    .line 677
     iget v1, p0, Lcom/rim/bbm/BbmPlatformService$1;->val$error:I
 
     const/4 v2, -0x1
 
     if-ne v1, v2, :cond_0
 
-    .line 631
+    .line 678
     sget-object v1, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_SUCCESS:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     iput-object v1, v0, Lcom/rim/bbm/BbmPlatformService$PinState;->getter_state:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
-    .line 636
+    .line 683
     :goto_0
     # getter for: Lcom/rim/bbm/BbmPlatformService;->mIDSDelegate:Lcom/rim/bbm/BbmPlatformService$IDSDelegate;
     invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->access$000()Lcom/rim/bbm/BbmPlatformService$IDSDelegate;
@@ -64,10 +64,10 @@
 
     invoke-interface {v1, v0}, Lcom/rim/bbm/BbmPlatformService$IDSDelegate;->pinUpdated(Lcom/rim/bbm/BbmPlatformService$PinState;)V
 
-    .line 637
+    .line 684
     return-void
 
-    .line 633
+    .line 680
     :cond_0
     sget-object v1, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_FAILURE:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 

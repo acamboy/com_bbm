@@ -1,119 +1,132 @@
-.class final Lcom/bbm/ui/c/u;
-.super Ljava/lang/Object;
-.source "ChannelDetailsFragment.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.class final enum Lcom/bbm/ui/c/u;
+.super Ljava/lang/Enum;
+.source "AppStoreFragment.java"
 
 
-# instance fields
-.field final synthetic a:Landroid/widget/TextView;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/c/u;",
+        ">;"
+    }
+.end annotation
 
-.field final synthetic b:Landroid/widget/Button;
 
-.field final synthetic c:Ljava/lang/String;
+# static fields
+.field public static final enum a:Lcom/bbm/ui/c/u;
 
-.field final synthetic d:Lcom/bbm/ui/c/q;
+.field public static final enum b:Lcom/bbm/ui/c/u;
+
+.field public static final enum c:Lcom/bbm/ui/c/u;
+
+.field private static final synthetic d:[Lcom/bbm/ui/c/u;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/q;Landroid/widget/TextView;Landroid/widget/Button;Ljava/lang/String;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
     .prologue
-    .line 526
-    iput-object p1, p0, Lcom/bbm/ui/c/u;->d:Lcom/bbm/ui/c/q;
+    const/4 v4, 0x2
 
-    iput-object p2, p0, Lcom/bbm/ui/c/u;->a:Landroid/widget/TextView;
+    const/4 v3, 0x1
 
-    iput-object p3, p0, Lcom/bbm/ui/c/u;->b:Landroid/widget/Button;
+    const/4 v2, 0x0
 
-    iput-object p4, p0, Lcom/bbm/ui/c/u;->c:Ljava/lang/String;
+    .line 328
+    new-instance v0, Lcom/bbm/ui/c/u;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string v1, "FEATURED_CAROUSEL"
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/c/u;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/u;->a:Lcom/bbm/ui/c/u;
+
+    .line 329
+    new-instance v0, Lcom/bbm/ui/c/u;
+
+    const-string v1, "STICKER_PACK"
+
+    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/c/u;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/u;->b:Lcom/bbm/ui/c/u;
+
+    .line 330
+    new-instance v0, Lcom/bbm/ui/c/u;
+
+    const-string v1, "APP"
+
+    invoke-direct {v0, v1, v4}, Lcom/bbm/ui/c/u;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/u;->c:Lcom/bbm/ui/c/u;
+
+    .line 327
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Lcom/bbm/ui/c/u;
+
+    sget-object v1, Lcom/bbm/ui/c/u;->a:Lcom/bbm/ui/c/u;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/bbm/ui/c/u;->b:Lcom/bbm/ui/c/u;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/bbm/ui/c/u;->c:Lcom/bbm/ui/c/u;
+
+    aput-object v1, v0, v4
+
+    sput-object v0, Lcom/bbm/ui/c/u;->d:[Lcom/bbm/ui/c/u;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
-    const/16 v1, 0x8
+    .line 327
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    const/4 v3, 0x0
-
-    const/16 v2, 0xf
-
-    .line 530
-    iget-object v0, p0, Lcom/bbm/ui/c/u;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 531
-    iget-object v0, p0, Lcom/bbm/ui/c/u;->b:Landroid/widget/Button;
-
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 533
-    iget-object v0, p0, Lcom/bbm/ui/c/u;->d:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->i(Lcom/bbm/ui/c/q;)Landroid/view/View;
-
-    move-result-object v0
-
-    const v1, 0x7f0a057c
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    .line 534
-    const/16 v1, 0x80
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/gg;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/gg;
-
-    .line 535
-    invoke-virtual {v0, v3}, Landroid/widget/EditText;->setVisibility(I)V
-
-    .line 536
-    iget-object v1, p0, Lcom/bbm/ui/c/u;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 537
-    const v1, 0x7f0200f3
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setBackgroundResource(I)V
-
-    .line 538
-    invoke-virtual {v0, v2, v2, v2, v2}, Landroid/widget/EditText;->setPadding(IIII)V
-
-    .line 539
-    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
-
-    .line 540
-    iget-object v1, p0, Lcom/bbm/ui/c/u;->d:Lcom/bbm/ui/c/q;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/q;->h(Lcom/bbm/ui/c/q;)Lcom/bbm/ui/activities/by;
-
-    move-result-object v1
-
-    const-string v2, "input_method"
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/by;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/view/inputmethod/InputMethodManager;
-
-    .line 541
-    invoke-virtual {v1, v0, v3}, Landroid/view/inputmethod/InputMethodManager;->showSoftInput(Landroid/view/View;I)Z
-
-    .line 542
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/c/u;
+    .locals 1
+
+    .prologue
+    .line 327
+    const-class v0, Lcom/bbm/ui/c/u;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/c/u;
+
+    return-object v0
+.end method
+
+.method public static values()[Lcom/bbm/ui/c/u;
+    .locals 1
+
+    .prologue
+    .line 327
+    sget-object v0, Lcom/bbm/ui/c/u;->d:[Lcom/bbm/ui/c/u;
+
+    invoke-virtual {v0}, [Lcom/bbm/ui/c/u;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/ui/c/u;
+
+    return-object v0
 .end method

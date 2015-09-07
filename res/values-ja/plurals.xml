@@ -4,14 +4,35 @@
         <item quantity="other">%1$s 個の連絡先に送信された一括送信メッセージ</item>
         <item quantity="one">1個の連絡先に送信された一括送信メッセージ</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d人のサブスクライバー</item>
+        <item quantity="zero">サブスクライバ―がいません</item>
+        <item quantity="one">%1$d人のサブスクライバ―</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d人のメンバー</item>
+        <item quantity="one">%1$d人のメンバー</item>
+    </plurals>
+    <plurals name="common_days_1d">
+        <item quantity="other">%1$d 日間</item>
+        <item quantity="one">%1$d 日間</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">秒</item>
+        <item quantity="one">秒</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">タイマーは%1$d秒に設定されています。</item>
+        <item quantity="one">タイマーは%1$d秒に設定されています。</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s個のアイテム</item>
         <item quantity="zero">0個のアイテム</item>
         <item quantity="one">1個のアイテム</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d件が招待待ちです)</item>
-        <item quantity="one">(1件が招待待ちです)</item>
+        <item quantity="other">(%1$dが保留中)</item>
+        <item quantity="one">(1件保留中)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s件の結果</item>

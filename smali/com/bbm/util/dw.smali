@@ -1,33 +1,31 @@
-.class public final Lcom/bbm/util/dw;
-.super Lcom/bbm/util/eg;
-.source "UpdatesFragmentUtil.java"
+.class final Lcom/bbm/util/dw;
+.super Ljava/lang/Object;
+.source "TpaUtil.java"
 
-
-# instance fields
-.field public a:Lcom/bbm/ui/LinkifyTextView;
-
-.field public b:Lcom/bbm/ui/LinkifyTextView;
-
-.field public c:Landroid/widget/TextView;
-
-.field public d:Landroid/widget/ImageButton;
-
-.field public e:Ljava/lang/String;
-
-.field public f:Ljava/lang/String;
-
-.field public g:Lcom/bbm/util/n;
-
-.field public h:Z
+# interfaces
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 93
-    invoke-direct {p0}, Lcom/bbm/util/eg;-><init>()V
+    .line 315
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 0
+
+    .prologue
+    .line 317
+    invoke-interface {p1}, Landroid/content/DialogInterface;->cancel()V
+
+    .line 318
     return-void
 .end method

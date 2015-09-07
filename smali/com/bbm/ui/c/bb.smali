@@ -1,90 +1,227 @@
-.class final synthetic Lcom/bbm/ui/c/bb;
+.class final Lcom/bbm/ui/c/bb;
 .super Ljava/lang/Object;
-.source "ChannelsUpdateFragment.java"
+.source "ChannelDetailsFragment.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Landroid/view/View;
+
+.field final synthetic b:Lcom/bbm/ui/c/ag;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/c/ag;Landroid/view/View;)V
+    .locals 0
 
     .prologue
-    .line 80
-    invoke-static {}, Lcom/bbm/util/ef;->values()[Lcom/bbm/util/ef;
+    .line 271
+    iput-object p1, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
+
+    iput-object p2, p0, Lcom/bbm/ui/c/bb;->a:Landroid/view/View;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x0
+
+    const/16 v2, 0x8
+
+    .line 275
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->a:Landroid/view/View;
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 276
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
 
     move-result-object v0
 
-    array-length v0, v0
+    const v1, 0x7f0b063f
 
-    new-array v0, v0, [I
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    sput-object v0, Lcom/bbm/ui/c/bb;->a:[I
+    move-result-object v0
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/c/bb;->a:[I
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    sget-object v1, Lcom/bbm/util/ef;->c:Lcom/bbm/util/ef;
+    .line 277
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
 
-    invoke-virtual {v1}, Lcom/bbm/util/ef;->ordinal()I
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
 
-    move-result v1
+    move-result-object v0
 
-    const/4 v2, 0x1
+    const v1, 0x7f0b0643
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/c/bb;->a:[I
+    move-result-object v0
 
-    sget-object v1, Lcom/bbm/util/ef;->d:Lcom/bbm/util/ef;
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v1}, Lcom/bbm/util/ef;->ordinal()I
+    .line 278
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
 
-    move-result v1
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
 
-    const/4 v2, 0x2
+    move-result-object v0
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+    const v1, 0x7f0b0644
 
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/c/bb;->a:[I
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    sget-object v1, Lcom/bbm/util/ef;->e:Lcom/bbm/util/ef;
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcom/bbm/util/ef;->ordinal()I
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    move-result v1
+    .line 279
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
 
-    const/4 v2, 0x3
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
+    move-result-object v0
 
-    :goto_2
+    const v1, 0x7f0b0648
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 280
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0b0649
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 281
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0b0389
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+
+    .line 283
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0b0641
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+
+    .line 284
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0b0642
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+
+    .line 286
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0b0646
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+
+    .line 287
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0b0647
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+
+    .line 289
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0b064b
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+
+    .line 290
+    iget-object v0, p0, Lcom/bbm/ui/c/bb;->b:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->i(Lcom/bbm/ui/c/ag;)Landroid/view/View;
+
+    move-result-object v0
+
+    const v1, 0x7f0b064c
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
+
+    .line 291
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_0
 .end method

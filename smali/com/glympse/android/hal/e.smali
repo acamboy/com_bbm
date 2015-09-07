@@ -1,24 +1,24 @@
 .class Lcom/glympse/android/hal/e;
-.super Lcom/glympse/android/hal/ba;
+.super Lcom/glympse/android/hal/bb;
 .source "AccountNotifier.java"
 
 
 # static fields
 .field public static final INTENT_EXTRA_FLAGS:Ljava/lang/String; = "flags"
 
-.field public static final o:Ljava/lang/String; = "com.glympse.android.hal.acc.CHANGED"
+.field public static final n:Ljava/lang/String; = "com.glympse.android.hal.acc.CHANGED"
 
-.field public static final p:Ljava/lang/String; = "account"
+.field public static final o:Ljava/lang/String; = "account"
 
-.field public static final q:Ljava/lang/String; = "package"
+.field public static final p:Ljava/lang/String; = "package"
 
 
 # instance fields
 .field private e:Landroid/content/Context;
 
-.field private r:Lcom/glympse/android/lib/GGlympsePrivate;
+.field private q:Lcom/glympse/android/lib/GGlympsePrivate;
 
-.field private s:Lcom/glympse/android/hal/f;
+.field private r:Lcom/glympse/android/hal/f;
 
 
 # direct methods
@@ -27,19 +27,29 @@
 
     .prologue
     .line 22
-    invoke-direct {p0}, Lcom/glympse/android/hal/ba;-><init>()V
+    invoke-direct {p0}, Lcom/glympse/android/hal/bb;-><init>()V
 
     .line 129
     return-void
 .end method
 
-.method private a(Landroid/content/Intent;)V
+.method static synthetic a(Lcom/glympse/android/hal/e;Landroid/content/Intent;)V
+    .locals 0
+
+    .prologue
+    .line 22
+    invoke-direct {p0, p1}, Lcom/glympse/android/hal/e;->b(Landroid/content/Intent;)V
+
+    return-void
+.end method
+
+.method private b(Landroid/content/Intent;)V
     .locals 2
 
     .prologue
     .line 67
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/e;->cC:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, p0, Lcom/glympse/android/hal/e;->cI:Lcom/glympse/android/api/GGlympse;
 
     if-nez v0, :cond_1
 
@@ -100,7 +110,7 @@
     if-eqz v0, :cond_0
 
     .line 94
-    iget-object v1, p0, Lcom/glympse/android/hal/e;->r:Lcom/glympse/android/lib/GGlympsePrivate;
+    iget-object v1, p0, Lcom/glympse/android/hal/e;->q:Lcom/glympse/android/lib/GGlympsePrivate;
 
     invoke-interface {v1}, Lcom/glympse/android/lib/GGlympsePrivate;->getNotificationCenter()Lcom/glympse/android/lib/GNotificationCenter;
 
@@ -119,16 +129,6 @@
     goto :goto_0
 .end method
 
-.method static synthetic a(Lcom/glympse/android/hal/e;Landroid/content/Intent;)V
-    .locals 0
-
-    .prologue
-    .line 22
-    invoke-direct {p0, p1}, Lcom/glympse/android/hal/e;->a(Landroid/content/Intent;)V
-
-    return-void
-.end method
-
 .method private c()Ljava/lang/String;
     .locals 2
 
@@ -138,7 +138,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/glympse/android/hal/e;->cD:Lcom/glympse/android/api/GUser;
+    iget-object v1, p0, Lcom/glympse/android/hal/e;->cJ:Lcom/glympse/android/api/GUser;
 
     invoke-interface {v1}, Lcom/glympse/android/api/GUser;->getId()Ljava/lang/String;
 
@@ -154,7 +154,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/e;->r:Lcom/glympse/android/lib/GGlympsePrivate;
+    iget-object v1, p0, Lcom/glympse/android/hal/e;->q:Lcom/glympse/android/lib/GGlympsePrivate;
 
     invoke-interface {v1}, Lcom/glympse/android/lib/GGlympsePrivate;->getBaseUrl()Ljava/lang/String;
 
@@ -189,14 +189,14 @@
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/glympse/android/hal/e;->cC:Lcom/glympse/android/api/GGlympse;
+    iget-object v0, p0, Lcom/glympse/android/hal/e;->cI:Lcom/glympse/android/api/GGlympse;
 
     check-cast v0, Lcom/glympse/android/lib/GGlympsePrivate;
 
-    iput-object v0, p0, Lcom/glympse/android/hal/e;->r:Lcom/glympse/android/lib/GGlympsePrivate;
+    iput-object v0, p0, Lcom/glympse/android/hal/e;->q:Lcom/glympse/android/lib/GGlympsePrivate;
 
     .line 41
-    iget-object v0, p0, Lcom/glympse/android/hal/e;->r:Lcom/glympse/android/lib/GGlympsePrivate;
+    iget-object v0, p0, Lcom/glympse/android/hal/e;->q:Lcom/glympse/android/lib/GGlympsePrivate;
 
     invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getContextHolder()Lcom/glympse/android/hal/GContextHolder;
 
@@ -215,12 +215,12 @@
 
     invoke-direct {v0, p0, v1}, Lcom/glympse/android/hal/f;-><init>(Lcom/glympse/android/hal/e;Lcom/glympse/android/hal/e$1;)V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/e;->s:Lcom/glympse/android/hal/f;
+    iput-object v0, p0, Lcom/glympse/android/hal/e;->r:Lcom/glympse/android/hal/f;
 
     .line 45
     iget-object v0, p0, Lcom/glympse/android/hal/e;->e:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/e;->s:Lcom/glympse/android/hal/f;
+    iget-object v1, p0, Lcom/glympse/android/hal/e;->r:Lcom/glympse/android/hal/f;
 
     new-instance v2, Landroid/content/IntentFilter;
 
@@ -243,18 +243,18 @@
     .line 51
     iget-object v0, p0, Lcom/glympse/android/hal/e;->e:Landroid/content/Context;
 
-    iget-object v1, p0, Lcom/glympse/android/hal/e;->s:Lcom/glympse/android/hal/f;
+    iget-object v1, p0, Lcom/glympse/android/hal/e;->r:Lcom/glympse/android/hal/f;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 52
-    iput-object v2, p0, Lcom/glympse/android/hal/e;->s:Lcom/glympse/android/hal/f;
+    iput-object v2, p0, Lcom/glympse/android/hal/e;->r:Lcom/glympse/android/hal/f;
 
     .line 55
     iput-object v2, p0, Lcom/glympse/android/hal/e;->e:Landroid/content/Context;
 
     .line 56
-    iput-object v2, p0, Lcom/glympse/android/hal/e;->r:Lcom/glympse/android/lib/GGlympsePrivate;
+    iput-object v2, p0, Lcom/glympse/android/hal/e;->q:Lcom/glympse/android/lib/GGlympsePrivate;
 
     .line 57
     return-void

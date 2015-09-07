@@ -37,7 +37,7 @@
     .end annotation
 .end field
 
-.field private g:Lcom/bbm/ui/bn;
+.field private g:Lcom/bbm/ui/bv;
 
 .field private h:I
 
@@ -122,7 +122,7 @@
     .line 38
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/EmoticonPicker;->g:Lcom/bbm/ui/bn;
+    iput-object v0, p0, Lcom/bbm/ui/EmoticonPicker;->g:Lcom/bbm/ui/bv;
 
     .line 52
     invoke-virtual {p0}, Lcom/bbm/ui/EmoticonPicker;->isInEditMode()Z
@@ -140,9 +140,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/c/c;->a()Ljava/util/List;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/util/c/c;->a:Ljava/util/List;
 
     iput-object v0, p0, Lcom/bbm/ui/EmoticonPicker;->e:Ljava/util/List;
 
@@ -203,14 +201,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f03011a
+    const v1, 0x7f03012f
 
     const/4 v3, 0x1
 
     invoke-virtual {v0, v1, p0, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 63
-    const v0, 0x7f0a0528
+    const v0, 0x7f0b05d0
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/EmoticonPicker;->findViewById(I)Landroid/view/View;
 
@@ -219,9 +217,9 @@
     check-cast v0, Landroid/widget/GridView;
 
     .line 64
-    new-instance v1, Lcom/bbm/ui/bl;
+    new-instance v1, Lcom/bbm/ui/bt;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/bl;-><init>(Lcom/bbm/ui/EmoticonPicker;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/bt;-><init>(Lcom/bbm/ui/EmoticonPicker;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
@@ -230,7 +228,7 @@
 
     move-result-object v1
 
-    const v3, 0x7f0c000b
+    const v3, 0x7f0c000c
 
     invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
@@ -241,7 +239,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0b0134
+    const v4, 0x7f0a0141
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -322,9 +320,9 @@
 
     .line 87
     :cond_2
-    new-instance v1, Lcom/bbm/ui/bm;
+    new-instance v1, Lcom/bbm/ui/bu;
 
-    invoke-direct {v1, p0, v2}, Lcom/bbm/ui/bm;-><init>(Lcom/bbm/ui/EmoticonPicker;B)V
+    invoke-direct {v1, p0, v2}, Lcom/bbm/ui/bu;-><init>(Lcom/bbm/ui/EmoticonPicker;B)V
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
@@ -333,12 +331,12 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/EmoticonPicker;)Lcom/bbm/ui/bn;
+.method static synthetic a(Lcom/bbm/ui/EmoticonPicker;)Lcom/bbm/ui/bv;
     .locals 1
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/bbm/ui/EmoticonPicker;->g:Lcom/bbm/ui/bn;
+    iget-object v0, p0, Lcom/bbm/ui/EmoticonPicker;->g:Lcom/bbm/ui/bv;
 
     return-object v0
 .end method
@@ -498,12 +496,12 @@
     return-void
 .end method
 
-.method public setEmoticonPickerListener(Lcom/bbm/ui/bn;)V
+.method public setEmoticonPickerListener(Lcom/bbm/ui/bv;)V
     .locals 0
 
     .prologue
     .line 92
-    iput-object p1, p0, Lcom/bbm/ui/EmoticonPicker;->g:Lcom/bbm/ui/bn;
+    iput-object p1, p0, Lcom/bbm/ui/EmoticonPicker;->g:Lcom/bbm/ui/bv;
 
     .line 93
     return-void

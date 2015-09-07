@@ -1,6 +1,6 @@
-.class Landroid/support/v4/view/bi;
+.class final Landroid/support/v4/view/bi;
 .super Landroid/support/v4/view/bh;
-.source "ViewGroupCompat.java"
+.source "ViewConfigurationCompat.java"
 
 
 # direct methods
@@ -8,7 +8,7 @@
     .locals 0
 
     .prologue
-    .line 83
+    .line 74
     invoke-direct {p0}, Landroid/support/v4/view/bh;-><init>()V
 
     return-void

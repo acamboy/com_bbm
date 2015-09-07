@@ -76,7 +76,7 @@
     return v0
 .end method
 
-.method protected abstract b()Ljava/util/Collection;
+.method public abstract b()Ljava/util/Collection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -86,7 +86,7 @@
     .end annotation
 .end method
 
-.method protected synthetic c()Ljava/lang/Object;
+.method public synthetic c()Ljava/lang/Object;
     .locals 1
 
     .prologue

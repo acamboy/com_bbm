@@ -112,9 +112,9 @@
 
     const/4 v0, 0x2
 
-    iget-wide v1, p0, Lcom/google/android/gms/internal/c$c;->eY:J
+    iget-wide v2, p0, Lcom/google/android/gms/internal/c$c;->eY:J
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/google/android/gms/internal/jz;->b(IJ)V
+    invoke-virtual {p1, v0, v2, v3}, Lcom/google/android/gms/internal/jz;->b(IJ)V
 
     :cond_1
     iget-wide v0, p0, Lcom/google/android/gms/internal/c$c;->eZ:J
@@ -127,9 +127,9 @@
 
     const/4 v0, 0x3
 
-    iget-wide v1, p0, Lcom/google/android/gms/internal/c$c;->eZ:J
+    iget-wide v2, p0, Lcom/google/android/gms/internal/c$c;->eZ:J
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/google/android/gms/internal/jz;->b(IJ)V
+    invoke-virtual {p1, v0, v2, v3}, Lcom/google/android/gms/internal/jz;->b(IJ)V
 
     :cond_2
     iget-boolean v0, p0, Lcom/google/android/gms/internal/c$c;->fa:Z
@@ -151,9 +151,9 @@
 
     const/4 v0, 0x5
 
-    iget-wide v1, p0, Lcom/google/android/gms/internal/c$c;->fb:J
+    iget-wide v2, p0, Lcom/google/android/gms/internal/c$c;->fb:J
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/google/android/gms/internal/jz;->b(IJ)V
+    invoke-virtual {p1, v0, v2, v3}, Lcom/google/android/gms/internal/jz;->b(IJ)V
 
     :cond_4
     invoke-super {p0, p1}, Lcom/google/android/gms/internal/ka;->a(Lcom/google/android/gms/internal/jz;)V
@@ -172,9 +172,9 @@
 .end method
 
 .method public final c()I
-    .locals 7
+    .locals 8
 
-    const-wide/16 v5, 0x0
+    const-wide/16 v6, 0x0
 
     invoke-super {p0}, Lcom/google/android/gms/internal/ka;->c()I
 
@@ -201,9 +201,9 @@
     add-int/2addr v0, v1
 
     :cond_0
-    iget-wide v1, p0, Lcom/google/android/gms/internal/c$c;->eY:J
+    iget-wide v2, p0, Lcom/google/android/gms/internal/c$c;->eY:J
 
-    cmp-long v1, v1, v5
+    cmp-long v1, v2, v6
 
     if-eqz v1, :cond_1
 
@@ -218,11 +218,11 @@
     add-int/2addr v0, v1
 
     :cond_1
-    iget-wide v1, p0, Lcom/google/android/gms/internal/c$c;->eZ:J
+    iget-wide v2, p0, Lcom/google/android/gms/internal/c$c;->eZ:J
 
-    const-wide/32 v3, 0x7fffffff
+    const-wide/32 v4, 0x7fffffff
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-eqz v1, :cond_2
 
@@ -252,9 +252,9 @@
     add-int/2addr v0, v1
 
     :cond_3
-    iget-wide v1, p0, Lcom/google/android/gms/internal/c$c;->fb:J
+    iget-wide v2, p0, Lcom/google/android/gms/internal/c$c;->fb:J
 
-    cmp-long v1, v1, v5
+    cmp-long v1, v2, v6
 
     if-eqz v1, :cond_4
 

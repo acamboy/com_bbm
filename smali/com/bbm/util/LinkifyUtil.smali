@@ -55,7 +55,7 @@
     .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 201
+    .line 202
     return-void
 .end method
 
@@ -65,17 +65,17 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 55
+    .line 56
     new-instance v1, Landroid/text/SpannableString;
 
     invoke-direct {v1, p1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 58
+    .line 59
     const/4 v0, 0x3
 
     invoke-static {v1, v0}, Landroid/text/util/Linkify;->addLinks(Landroid/text/Spannable;I)Z
 
-    .line 61
+    .line 62
     invoke-interface {v1}, Landroid/text/Spannable;->length()I
 
     move-result v0
@@ -88,35 +88,35 @@
 
     check-cast v0, [Landroid/text/style/ClickableSpan;
 
-    .line 64
-    new-instance v2, Lcom/bbm/util/bx;
+    .line 65
+    new-instance v2, Lcom/bbm/util/ce;
 
-    invoke-direct {v2, v0, v1}, Lcom/bbm/util/bx;-><init>([Landroid/text/style/ClickableSpan;Landroid/text/Spannable;)V
+    invoke-direct {v2, v0, v1}, Lcom/bbm/util/ce;-><init>([Landroid/text/style/ClickableSpan;Landroid/text/Spannable;)V
 
-    .line 82
+    .line 83
     invoke-static {p0, p1, v1, v2}, Lcom/bbm/util/LinkifyUtil;->a(Landroid/content/Context;Ljava/lang/CharSequence;Landroid/text/Spannable;Landroid/text/util/Linkify$MatchFilter;)V
 
-    .line 86
-    :try_start_0
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/d/a;->v()Lcom/bbm/util/au;
-
-    move-result-object v0
-
     .line 87
-    sget-object v3, Lcom/bbm/util/au;->a:Lcom/bbm/util/au;
+    :try_start_0
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/d/a;->B()Lcom/bbm/util/ay;
+
+    move-result-object v0
+
+    .line 88
+    sget-object v3, Lcom/bbm/util/ay;->a:Lcom/bbm/util/ay;
 
     if-eq v0, v3, :cond_0
 
-    .line 89
+    .line 90
     invoke-static {p0, p1, v1, v2}, Lcom/bbm/util/LinkifyUtil;->b(Landroid/content/Context;Ljava/lang/CharSequence;Landroid/text/Spannable;Landroid/text/util/Linkify$MatchFilter;)V
     :try_end_0
     .catch Lcom/bbm/j/z; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 96
+    .line 97
     :cond_0
     :goto_0
     invoke-interface {v1}, Landroid/text/Spannable;->length()I
@@ -131,12 +131,12 @@
 
     check-cast v0, [Landroid/text/style/ClickableSpan;
 
-    .line 99
-    new-instance v2, Lcom/bbm/util/by;
+    .line 100
+    new-instance v2, Lcom/bbm/util/cf;
 
-    invoke-direct {v2, v0, v1}, Lcom/bbm/util/by;-><init>([Landroid/text/style/ClickableSpan;Landroid/text/Spannable;)V
+    invoke-direct {v2, v0, v1}, Lcom/bbm/util/cf;-><init>([Landroid/text/style/ClickableSpan;Landroid/text/Spannable;)V
 
-    .line 127
+    .line 128
     sget-object v0, Lcom/bbm/util/LinkifyUtil;->c:Ljava/util/regex/Pattern;
 
     const-string v3, "tel:"
@@ -145,7 +145,7 @@
 
     invoke-static {v1, v0, v3, v2, v4}, Landroid/text/util/Linkify;->addLinks(Landroid/text/Spannable;Ljava/util/regex/Pattern;Ljava/lang/String;Landroid/text/util/Linkify$MatchFilter;Landroid/text/util/Linkify$TransformFilter;)Z
 
-    .line 128
+    .line 129
     return-object v1
 
     :catch_0
@@ -158,14 +158,14 @@
     .locals 5
 
     .prologue
-    .line 133
+    .line 134
     sget-object v0, Lcom/bbm/util/LinkifyUtil;->a:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v2
 
-    .line 134
+    .line 135
     :cond_0
     :goto_0
     invoke-virtual {v2}, Ljava/util/regex/Matcher;->find()Z
@@ -174,7 +174,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 135
+    .line 136
     invoke-virtual {v2}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
     move-result-object v0
@@ -197,37 +197,37 @@
 
     move-result-object v0
 
-    .line 137
-    :goto_1
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->g(Ljava/lang/String;)Lcom/bbm/d/ed;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/d/ed;->b:Ljava/lang/String;
-
     .line 138
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    :goto_1
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->h(Ljava/lang/String;)Lcom/bbm/d/fx;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/d/fx;->b:Ljava/lang/String;
+
+    .line 139
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v3
 
-    invoke-virtual {v3, v1}, Lcom/bbm/d/a;->F(Ljava/lang/String;)Lcom/bbm/util/bc;
+    invoke-virtual {v3, v1}, Lcom/bbm/d/a;->L(Ljava/lang/String;)Lcom/bbm/util/bi;
 
     move-result-object v3
 
-    sget-object v4, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v4, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-ne v3, v4, :cond_2
 
-    .line 141
-    new-instance v0, Lcom/bbm/util/bz;
+    .line 142
+    new-instance v0, Lcom/bbm/util/cg;
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/util/bz;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/util/cg;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 160
+    .line 161
     :goto_2
     invoke-virtual {v2}, Ljava/util/regex/Matcher;->start()I
 
@@ -243,7 +243,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 161
+    .line 162
     invoke-virtual {v2}, Ljava/util/regex/Matcher;->start()I
 
     move-result v1
@@ -258,7 +258,7 @@
 
     goto :goto_0
 
-    .line 135
+    .line 136
     :cond_1
     invoke-virtual {v2}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
@@ -266,17 +266,17 @@
 
     goto :goto_1
 
-    .line 150
+    .line 151
     :cond_2
-    new-instance v1, Lcom/bbm/util/ca;
+    new-instance v1, Lcom/bbm/util/ch;
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/util/ca;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v1, p0, v0}, Lcom/bbm/util/ch;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
     move-object v0, v1
 
     goto :goto_2
 
-    .line 164
+    .line 165
     :cond_3
     return-void
 .end method
@@ -287,14 +287,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 187
+    .line 188
     invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
     check-cast v0, Landroid/text/Spannable;
 
-    .line 188
+    .line 189
     invoke-interface {v0}, Landroid/text/Spannable;->length()I
 
     move-result v1
@@ -307,7 +307,7 @@
 
     check-cast v1, [Landroid/text/style/URLSpan;
 
-    .line 189
+    .line 190
     array-length v4, v1
 
     move v2, v3
@@ -317,20 +317,20 @@
 
     aget-object v5, v1, v2
 
-    .line 190
+    .line 191
     invoke-interface {v0, v5}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
 
     move-result v6
 
-    .line 191
+    .line 192
     invoke-interface {v0, v5}, Landroid/text/Spannable;->getSpanEnd(Ljava/lang/Object;)I
 
     move-result v7
 
-    .line 192
+    .line 193
     invoke-interface {v0, v5}, Landroid/text/Spannable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 193
+    .line 194
     new-instance v8, Lcom/bbm/util/LinkifyUtil$URLSpanNoUnderline;
 
     invoke-virtual {v5}, Landroid/text/style/URLSpan;->getURL()Ljava/lang/String;
@@ -339,19 +339,19 @@
 
     invoke-direct {v8, v5}, Lcom/bbm/util/LinkifyUtil$URLSpanNoUnderline;-><init>(Ljava/lang/String;)V
 
-    .line 194
+    .line 195
     invoke-interface {v0, v8, v6, v7, v3}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
-    .line 189
+    .line 190
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 196
+    .line 197
     :cond_0
     invoke-virtual {p0, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 197
+    .line 198
     return-void
 .end method
 
@@ -359,14 +359,14 @@
     .locals 5
 
     .prologue
-    .line 168
+    .line 169
     sget-object v0, Lcom/bbm/util/LinkifyUtil;->b:Ljava/util/regex/Pattern;
 
     invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 169
+    .line 170
     :cond_0
     :goto_0
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
@@ -375,17 +375,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 170
+    .line 171
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 171
-    new-instance v2, Lcom/bbm/util/cb;
+    .line 172
+    new-instance v2, Lcom/bbm/util/ci;
 
-    invoke-direct {v2, p0, v1}, Lcom/bbm/util/cb;-><init>(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-direct {v2, p0, v1}, Lcom/bbm/util/ci;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 179
+    .line 180
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
 
     move-result v1
@@ -400,7 +400,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 180
+    .line 181
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->start()I
 
     move-result v1
@@ -415,7 +415,7 @@
 
     goto :goto_0
 
-    .line 183
+    .line 184
     :cond_1
     return-void
 .end method

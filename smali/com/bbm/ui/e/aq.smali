@@ -1,23 +1,17 @@
-.class final Lcom/bbm/ui/e/aq;
+.class public final Lcom/bbm/ui/e/aq;
 .super Ljava/lang/Object;
-.source "MessagesDelegateAdapter.java"
+.source "HeaderHolder.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/e/am;
+.implements Lcom/bbm/ui/e/bd;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/e/am;)V
+.method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 152
-    iput-object p1, p0, Lcom/bbm/ui/e/aq;->a:Lcom/bbm/ui/e/am;
-
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,20 +19,29 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 1
+.method public final a(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 3
 
     .prologue
-    .line 155
-    iget-object v0, p0, Lcom/bbm/ui/e/aq;->a:Lcom/bbm/ui/e/am;
+    .line 11
+    new-instance v0, Lcom/bbm/ui/e/a;
 
-    invoke-static {v0}, Lcom/bbm/ui/e/am;->e(Lcom/bbm/ui/e/am;)Z
+    invoke-virtual {p1}, Landroid/view/LayoutInflater;->getContext()Landroid/content/Context;
 
-    .line 156
-    iget-object v0, p0, Lcom/bbm/ui/e/aq;->a:Lcom/bbm/ui/e/am;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/bbm/ui/e/am;->notifyDataSetChanged()V
+    const/4 v2, 0x0
 
-    .line 157
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/e/a;-><init>(Landroid/content/Context;B)V
+
+    .line 12
+    return-object v0
+.end method
+
+.method public final a(Lcom/bbm/ui/e/j;Z)V
+    .locals 0
+
+    .prologue
+    .line 17
     return-void
 .end method

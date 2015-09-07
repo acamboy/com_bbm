@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 124
+    .line 129
     iput-object p1, p0, Lcom/google/analytics/tracking/android/ai;->b:Lcom/google/analytics/tracking/android/ah;
 
     iput-object p2, p0, Lcom/google/analytics/tracking/android/ai;->a:Ljava/util/Map;
@@ -35,7 +35,7 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 129
+    .line 134
     iget-object v0, p0, Lcom/google/analytics/tracking/android/ai;->a:Ljava/util/Map;
 
     const-string v1, "&cid"
@@ -52,7 +52,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 130
+    .line 135
     iget-object v0, p0, Lcom/google/analytics/tracking/android/ai;->a:Ljava/util/Map;
 
     const-string v1, "&cid"
@@ -65,7 +65,7 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
+    .line 143
     :cond_0
     iget-object v0, p0, Lcom/google/analytics/tracking/android/ai;->b:Lcom/google/analytics/tracking/android/ah;
 
@@ -77,7 +77,17 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/analytics/tracking/android/an;->c()Z
+    invoke-static {}, Lcom/google/analytics/tracking/android/al;->a()Lcom/google/analytics/tracking/android/al;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/google/analytics/tracking/android/am;->R:Lcom/google/analytics/tracking/android/am;
+
+    invoke-virtual {v1, v2}, Lcom/google/analytics/tracking/android/al;->a(Lcom/google/analytics/tracking/android/am;)V
+
+    iget-object v0, v0, Lcom/google/analytics/tracking/android/an;->b:Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
@@ -93,12 +103,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 154
+    .line 159
     :cond_1
     :goto_0
     return-void
 
-    .line 141
+    .line 146
     :cond_2
     iget-object v0, p0, Lcom/google/analytics/tracking/android/ai;->b:Lcom/google/analytics/tracking/android/ah;
 
@@ -112,14 +122,14 @@
 
     if-nez v0, :cond_3
 
-    .line 142
+    .line 147
     invoke-static {}, Lcom/google/analytics/tracking/android/al;->a()Lcom/google/analytics/tracking/android/al;
 
     move-result-object v0
 
     invoke-virtual {v0, v5}, Lcom/google/analytics/tracking/android/al;->a(Z)V
 
-    .line 143
+    .line 148
     iget-object v2, p0, Lcom/google/analytics/tracking/android/ai;->a:Ljava/util/Map;
 
     new-instance v1, Lcom/google/analytics/tracking/android/at;
@@ -140,7 +150,7 @@
 
     invoke-virtual {v3, v4}, Lcom/google/analytics/tracking/android/al;->a(Lcom/google/analytics/tracking/android/am;)V
 
-    invoke-static {v0}, Lcom/google/analytics/tracking/android/bg;->d(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/google/analytics/tracking/android/bi;->d(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -159,7 +169,7 @@
 
     invoke-interface {v2, v0}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 144
+    .line 149
     invoke-static {}, Lcom/google/analytics/tracking/android/al;->a()Lcom/google/analytics/tracking/android/al;
 
     move-result-object v0
@@ -168,12 +178,12 @@
 
     invoke-virtual {v0, v1}, Lcom/google/analytics/tracking/android/al;->a(Z)V
 
-    .line 145
+    .line 150
     iget-object v0, p0, Lcom/google/analytics/tracking/android/ai;->b:Lcom/google/analytics/tracking/android/ah;
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/ah;->d(Lcom/google/analytics/tracking/android/ah;)Ljava/lang/String;
 
-    .line 147
+    .line 152
     :cond_3
     iget-object v0, p0, Lcom/google/analytics/tracking/android/ai;->b:Lcom/google/analytics/tracking/android/ah;
 
@@ -181,7 +191,7 @@
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/ah;->c(Ljava/util/Map;)V
 
-    .line 148
+    .line 153
     iget-object v0, p0, Lcom/google/analytics/tracking/android/ai;->a:Ljava/util/Map;
 
     new-instance v1, Ljava/util/HashMap;
@@ -254,9 +264,9 @@
 
     goto :goto_2
 
-    .line 143
+    .line 148
     :cond_5
-    invoke-static {v0}, Lcom/google/analytics/tracking/android/bg;->a(Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v0}, Lcom/google/analytics/tracking/android/bi;->a(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v3
 
@@ -372,11 +382,11 @@
 
     goto/16 :goto_1
 
-    .line 149
+    .line 154
     :cond_6
     iget-object v0, p0, Lcom/google/analytics/tracking/android/ai;->b:Lcom/google/analytics/tracking/android/ah;
 
-    invoke-static {v0}, Lcom/google/analytics/tracking/android/ah;->f(Lcom/google/analytics/tracking/android/ah;)Lcom/google/analytics/tracking/android/bb;
+    invoke-static {v0}, Lcom/google/analytics/tracking/android/ah;->f(Lcom/google/analytics/tracking/android/ah;)Lcom/google/analytics/tracking/android/bd;
 
     move-result-object v0
 
@@ -412,7 +422,7 @@
 
     move-result-object v5
 
-    invoke-interface/range {v0 .. v5}, Lcom/google/analytics/tracking/android/bb;->a(Ljava/util/Map;JLjava/lang/String;Ljava/util/List;)V
+    invoke-interface/range {v0 .. v5}, Lcom/google/analytics/tracking/android/bd;->a(Ljava/util/Map;JLjava/lang/String;Ljava/util/List;)V
 
     goto/16 :goto_0
 .end method

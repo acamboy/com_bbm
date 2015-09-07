@@ -127,13 +127,13 @@
 
     .prologue
     .line 61
-    new-instance v0, Lcom/glympse/android/hal/ac;
+    new-instance v0, Lcom/glympse/android/hal/ab;
 
     invoke-super {p0}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/glympse/android/hal/ac;-><init>(Ljava/util/Iterator;)V
+    invoke-direct {v0, v1}, Lcom/glympse/android/hal/ab;-><init>(Ljava/util/Iterator;)V
 
     return-object v0
 .end method

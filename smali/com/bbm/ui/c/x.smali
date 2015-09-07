@@ -1,19 +1,19 @@
 .class final Lcom/bbm/ui/c/x;
 .super Lcom/bbm/j/u;
-.source "ChannelDetailsFragment.java"
+.source "BlockedContactsFragment.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/q;
+.field final synthetic a:Lcom/bbm/ui/c/v;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/q;)V
+.method constructor <init>(Lcom/bbm/ui/c/v;)V
     .locals 0
 
     .prologue
-    .line 710
-    iput-object p1, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
+    .line 207
+    iput-object p1, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
 
     invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
@@ -23,592 +23,243 @@
 
 # virtual methods
 .method protected final b()Z
-    .locals 6
+    .locals 7
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v3, 0x0
 
     const/4 v2, 0x1
 
-    .line 714
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
+    .line 210
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
 
-    iget-object v0, v0, Lcom/bbm/ui/c/q;->a:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/c/v;->a(Lcom/bbm/ui/c/v;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/de;
+    if-nez v0, :cond_0
 
-    iget-object v0, v0, Lcom/bbm/d/de;->Q:Lcom/bbm/util/bc;
+    move v0, v2
 
-    sget-object v3, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
-
-    if-ne v0, v3, :cond_0
-
-    move v0, v1
-
-    .line 789
+    .line 257
     :goto_0
     return v0
 
-    .line 718
+    .line 214
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
 
-    iget-object v0, v0, Lcom/bbm/ui/c/q;->a:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/de;
-
-    iget-boolean v0, v0, Lcom/bbm/d/de;->s:Z
-
-    if-eqz v0, :cond_8
-
-    .line 719
-    new-instance v3, Lorg/json/JSONObject;
-
-    invoke-direct {v3}, Lorg/json/JSONObject;-><init>()V
-
-    .line 721
-    :try_start_0
-    const-string v0, "uri"
-
-    iget-object v4, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v4}, Lcom/bbm/ui/c/q;->a(Lcom/bbm/ui/c/q;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 724
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->l(Lcom/bbm/ui/c/q;)Ljava/lang/String;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->l(Lcom/bbm/ui/c/q;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+    invoke-virtual {v0}, Lcom/bbm/ui/c/v;->isAdded()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 725
-    const-string v0, "imagePath"
+    move v0, v2
 
-    iget-object v1, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
+    .line 215
+    goto :goto_0
 
-    invoke-static {v1}, Lcom/bbm/ui/c/q;->l(Lcom/bbm/ui/c/q;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move v1, v2
-
-    .line 729
+    .line 218
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->i(Lcom/bbm/ui/c/q;)Landroid/view/View;
-
-    move-result-object v0
-
-    const v4, 0x7f0a0579
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0}, Lcom/bbm/ui/c/v;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/EditText;
+    check-cast v0, Lcom/bbm/ui/activities/BlockedContactsActivity;
 
-    .line 730
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    .line 219
+    iget-object v4, v0, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
 
-    move-result-object v4
+    .line 220
+    iget-object v1, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
 
-    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    iget-object v5, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
 
-    move-result-object v4
+    invoke-static {v5}, Lcom/bbm/ui/c/v;->a(Lcom/bbm/ui/c/v;)Ljava/lang/Object;
 
-    .line 731
-    invoke-virtual {v0}, Landroid/widget/EditText;->getVisibility()I
+    move-result-object v5
 
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/q;->a:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/de;
-
-    iget-object v0, v0, Lcom/bbm/d/de;->k:Ljava/lang/String;
-
-    invoke-virtual {v4, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
-
-    move-result v0
-
-    if-nez v0, :cond_2
-
-    .line 732
-    const-string v0, "displayName"
-
-    invoke-virtual {v3, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move v1, v2
-
-    .line 736
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->i(Lcom/bbm/ui/c/q;)Landroid/view/View;
-
-    move-result-object v0
-
-    const v4, 0x7f0a057a
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    .line 737
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 738
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/q;->a:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/de;
-
-    iget-object v0, v0, Lcom/bbm/d/de;->h:Ljava/lang/String;
-
-    invoke-virtual {v4, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    .line 739
-    const-string v0, "customStatus"
-
-    invoke-virtual {v3, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move v1, v2
-
-    .line 743
-    :cond_3
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->i(Lcom/bbm/ui/c/q;)Landroid/view/View;
-
-    move-result-object v0
-
-    const v4, 0x7f0a057c
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    .line 744
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 745
-    invoke-virtual {v0}, Landroid/widget/EditText;->getVisibility()I
-
-    move-result v0
-
-    if-nez v0, :cond_4
-
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/q;->a:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/de;
-
-    iget-object v0, v0, Lcom/bbm/d/de;->j:Ljava/lang/String;
-
-    invoke-virtual {v4, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-eqz v0, :cond_4
-
-    .line 746
-    const-string v0, "description"
-
-    invoke-virtual {v3, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move v1, v2
-
-    .line 750
-    :cond_4
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->i(Lcom/bbm/ui/c/q;)Landroid/view/View;
-
-    move-result-object v0
-
-    const v4, 0x7f0a058a
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    .line 751
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 752
-    invoke-virtual {v0}, Landroid/widget/EditText;->getVisibility()I
-
-    move-result v0
-
-    if-nez v0, :cond_5
-
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/q;->a:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/de;
-
-    iget-object v0, v0, Lcom/bbm/d/de;->G:Ljava/lang/String;
-
-    invoke-virtual {v4, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    .line 753
-    const-string v0, "phoneNumber"
-
-    invoke-virtual {v3, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move v1, v2
-
-    .line 757
-    :cond_5
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->i(Lcom/bbm/ui/c/q;)Landroid/view/View;
-
-    move-result-object v0
-
-    const v4, 0x7f0a058f
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    .line 758
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 759
-    invoke-virtual {v0}, Landroid/widget/EditText;->getVisibility()I
-
-    move-result v0
-
-    if-nez v0, :cond_6
-
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/q;->a:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/de;
-
-    iget-object v0, v0, Lcom/bbm/d/de;->f:Ljava/lang/String;
-
-    invoke-virtual {v4, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-eqz v0, :cond_6
-
-    .line 760
-    const-string v0, "contactEmailAddress"
-
-    invoke-virtual {v3, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move v1, v2
-
-    .line 764
-    :cond_6
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->i(Lcom/bbm/ui/c/q;)Landroid/view/View;
-
-    move-result-object v0
-
-    const v4, 0x7f0a0594
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/EditText;
-
-    .line 765
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 766
-    invoke-virtual {v0}, Landroid/widget/EditText;->getVisibility()I
-
-    move-result v0
-
-    if-nez v0, :cond_7
-
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/q;->a:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/de;
-
-    iget-object v0, v0, Lcom/bbm/d/de;->O:Ljava/lang/String;
-
-    invoke-virtual {v4, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
-
-    move-result v0
-
-    if-eqz v0, :cond_7
-
-    .line 767
-    const-string v0, "webAddress"
-
-    invoke-virtual {v3, v0, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move v1, v2
-
-    .line 771
-    :cond_7
-    iget-object v4, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->i(Lcom/bbm/ui/c/q;)Landroid/view/View;
-
-    move-result-object v0
-
-    const v5, 0x7f0a059d
-
-    invoke-virtual {v0, v5}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Spinner;
-
-    invoke-static {v4, v0}, Lcom/bbm/ui/c/q;->a(Lcom/bbm/ui/c/q;Landroid/widget/Spinner;)Landroid/widget/Spinner;
-
-    .line 772
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->p(Lcom/bbm/ui/c/q;)I
-
-    move-result v0
-
-    iget-object v4, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v4}, Lcom/bbm/ui/c/q;->q(Lcom/bbm/ui/c/q;)Landroid/widget/Spinner;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Landroid/widget/Spinner;->getSelectedItemPosition()I
-
-    move-result v4
-
-    if-eq v0, v4, :cond_9
-
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->q(Lcom/bbm/ui/c/q;)Landroid/widget/Spinner;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Spinner;->getSelectedItemPosition()I
-
-    move-result v0
-
-    if-lez v0, :cond_9
-
-    .line 773
-    new-instance v1, Lorg/json/JSONObject;
-
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/q;->a:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/de;
-
-    iget-object v0, v0, Lcom/bbm/d/de;->x:Lorg/json/JSONObject;
-
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
-
-    .line 774
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->h(Lcom/bbm/ui/c/q;)Lcom/bbm/ui/activities/by;
-
-    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/q;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/q;->q(Lcom/bbm/ui/c/q;)Landroid/widget/Spinner;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/Spinner;->getSelectedItemPosition()I
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/bbm/util/ax;->a(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 775
-    const-string v4, "country"
-
-    invoke-virtual {v1, v4, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 776
-    const-string v0, "location"
-
-    invoke-virtual {v3, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move v0, v2
-
-    .line 780
-    :goto_1
-    if-eqz v0, :cond_8
-
-    .line 781
-    new-instance v0, Ljava/util/LinkedList;
-
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
-
-    .line 782
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 783
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-virtual {v1, v5}, Lcom/bbm/ui/c/v;->c(Ljava/lang/Object;)Lcom/bbm/d/a/a;
 
     move-result-object v1
 
-    const-string v3, "channel"
+    .line 222
+    instance-of v5, v1, Lcom/bbm/d/gu;
 
-    invoke-static {v0, v3}, Lcom/bbm/d/y;->b(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/cg;
+    if-eqz v5, :cond_3
 
-    move-result-object v0
+    .line 223
+    iget-object v5, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    iget-object v5, v5, Lcom/bbm/ui/c/v;->a:Lcom/bbm/d/a;
 
-    :cond_8
-    :goto_2
+    check-cast v1, Lcom/bbm/d/gu;
+
+    iget-object v1, v1, Lcom/bbm/d/gu;->c:Ljava/lang/String;
+
+    invoke-virtual {v5, v1}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
+
+    move-result-object v1
+
+    .line 224
+    sget-object v5, Lcom/bbm/ui/c/aa;->a:[I
+
+    iget-object v6, v1, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
+
+    invoke-virtual {v6}, Lcom/bbm/util/bi;->ordinal()I
+
+    move-result v6
+
+    aget v5, v5, v6
+
+    packed-switch v5, :pswitch_data_0
+
+    .line 255
+    :cond_2
+    :goto_1
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/BlockedContactsActivity;->o()V
+
+    .line 256
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/v;->b(Lcom/bbm/ui/c/v;)Ljava/lang/Object;
+
     move v0, v2
 
-    .line 789
-    goto/16 :goto_0
+    .line 257
+    goto :goto_0
 
-    .line 785
-    :catch_0
-    move-exception v0
+    :pswitch_0
+    move v0, v3
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    .line 226
+    goto :goto_0
 
-    goto :goto_2
+    .line 229
+    :pswitch_1
+    const-string v0, "No user found for Uri %s"
 
-    :cond_9
-    move v0, v1
+    new-array v4, v2, [Ljava/lang/Object;
+
+    iget-object v1, v1, Lcom/bbm/d/gr;->B:Ljava/lang/String;
+
+    aput-object v1, v4, v3
+
+    invoke-static {v0, v4}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 230
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/v;->b(Lcom/bbm/ui/c/v;)Ljava/lang/Object;
+
+    move v0, v2
+
+    .line 231
+    goto :goto_0
+
+    .line 234
+    :pswitch_2
+    invoke-static {v1}, Lcom/bbm/d/b/a;->a(Lcom/bbm/d/gr;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 235
+    iget-object v5, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
+
+    iget-object v1, v1, Lcom/bbm/d/gr;->d:Ljava/lang/String;
+
+    invoke-static {v5, v4, v1, v3}, Lcom/bbm/ui/c/v;->a(Lcom/bbm/ui/c/v;Lcom/bbm/ui/c/gj;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
+
+    .line 238
+    :cond_3
+    instance-of v5, v1, Lcom/bbm/g/a;
+
+    if-eqz v5, :cond_2
+
+    .line 239
+    check-cast v1, Lcom/bbm/g/a;
+
+    .line 240
+    sget-object v5, Lcom/bbm/ui/c/aa;->a:[I
+
+    iget-object v6, v1, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
+
+    invoke-virtual {v6}, Lcom/bbm/util/bi;->ordinal()I
+
+    move-result v6
+
+    aget v5, v5, v6
+
+    packed-switch v5, :pswitch_data_1
+
+    goto :goto_1
+
+    :pswitch_3
+    move v0, v3
+
+    .line 242
+    goto :goto_0
+
+    .line 245
+    :pswitch_4
+    const-string v0, "No group found for Uri %s"
+
+    new-array v4, v2, [Ljava/lang/Object;
+
+    iget-object v1, v1, Lcom/bbm/g/a;->v:Ljava/lang/String;
+
+    aput-object v1, v4, v3
+
+    invoke-static {v0, v4}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 246
+    iget-object v0, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/v;->b(Lcom/bbm/ui/c/v;)Ljava/lang/Object;
+
+    move v0, v2
+
+    .line 247
+    goto/16 :goto_0
+
+    .line 250
+    :pswitch_5
+    iget-object v3, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
+
+    iget-object v1, v1, Lcom/bbm/g/a;->r:Ljava/lang/String;
+
+    iget-object v5, p0, Lcom/bbm/ui/c/x;->a:Lcom/bbm/ui/c/v;
+
+    const v6, 0x7f0e013d
+
+    invoke-virtual {v5, v6}, Lcom/bbm/ui/c/v;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v3, v4, v1, v5}, Lcom/bbm/ui/c/v;->a(Lcom/bbm/ui/c/v;Lcom/bbm/ui/c/gj;Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 224
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
+
+    .line 240
+    :pswitch_data_1
+    .packed-switch 0x1
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+    .end packed-switch
 .end method

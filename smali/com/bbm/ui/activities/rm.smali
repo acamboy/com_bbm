@@ -1,56 +1,60 @@
 .class final Lcom/bbm/ui/activities/rm;
-.super Lcom/bbm/d/b/m;
-.source "GroupSelectNewAdminActivity.java"
+.super Ljava/lang/Object;
+.source "GroupPictureActivity.java"
+
+# interfaces
+.implements Ljava/util/Comparator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/d/b/m",
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
         "<",
-        "Lcom/bbm/g/u;",
+        "Lcom/bbm/g/af;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/rk;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;Lcom/bbm/j/r;)V
+.method constructor <init>(Lcom/bbm/ui/activities/rk;)V
     .locals 0
 
     .prologue
-    .line 110
-    iput-object p1, p0, Lcom/bbm/ui/activities/rm;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
+    .line 193
+    iput-object p1, p0, Lcom/bbm/ui/activities/rm;->a:Lcom/bbm/ui/activities/rk;
 
-    invoke-direct {p0, p2}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final bridge synthetic a(Ljava/lang/Object;)Z
-    .locals 1
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
     .prologue
-    .line 110
-    check-cast p1, Lcom/bbm/g/u;
+    .line 193
+    check-cast p1, Lcom/bbm/g/af;
 
-    iget-boolean v0, p1, Lcom/bbm/g/u;->a:Z
+    check-cast p2, Lcom/bbm/g/af;
 
-    if-nez v0, :cond_0
+    iget-wide v0, p2, Lcom/bbm/g/af;->k:J
 
-    const/4 v0, 0x1
+    iget-wide v2, p1, Lcom/bbm/g/af;->k:J
 
-    :goto_0
+    sub-long/2addr v0, v2
+
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(J)I
+
+    move-result v0
+
     return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

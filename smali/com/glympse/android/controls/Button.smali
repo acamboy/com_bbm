@@ -41,11 +41,9 @@
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 4
+    .locals 3
 
     .prologue
-    const/4 v3, 0x0
-
     const/high16 v1, 0x3f800000
 
     .line 42
@@ -65,12 +63,14 @@
     .line 45
     sget-object v0, Lcom/glympse/android/controls/R$styleable;->GlympseButton:[I
 
-    invoke-virtual {p1, p2, v0, p3, v3}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
+    const/4 v1, 0x0
+
+    invoke-virtual {p1, p2, v0, p3, v1}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
     .line 47
-    const/4 v1, 0x3
+    sget v1, Lcom/glympse/android/controls/R$styleable;->GlympseButton_android_endColor:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/TypedArray;->getColorStateList(I)Landroid/content/res/ColorStateList;
 
@@ -79,7 +79,7 @@
     iput-object v1, p0, Lcom/glympse/android/controls/Button;->_shadowColorStateList:Landroid/content/res/ColorStateList;
 
     .line 48
-    const/4 v1, 0x2
+    sget v1, Lcom/glympse/android/controls/R$styleable;->GlympseButton_android_shadowRadius:I
 
     iget v2, p0, Lcom/glympse/android/controls/Button;->_shadowRadius:F
 
@@ -90,16 +90,18 @@
     iput v1, p0, Lcom/glympse/android/controls/Button;->_shadowRadius:F
 
     .line 49
-    iget v1, p0, Lcom/glympse/android/controls/Button;->_shadowDx:F
+    sget v1, Lcom/glympse/android/controls/R$styleable;->GlympseButton_android_shadowDx:I
 
-    invoke-virtual {v0, v3, v1}, Landroid/content/res/TypedArray;->getFloat(IF)F
+    iget v2, p0, Lcom/glympse/android/controls/Button;->_shadowDx:F
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/res/TypedArray;->getFloat(IF)F
 
     move-result v1
 
     iput v1, p0, Lcom/glympse/android/controls/Button;->_shadowDx:F
 
     .line 50
-    const/4 v1, 0x1
+    sget v1, Lcom/glympse/android/controls/R$styleable;->GlympseButton_android_shadowDy:I
 
     iget v2, p0, Lcom/glympse/android/controls/Button;->_shadowDy:F
 

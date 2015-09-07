@@ -19,6 +19,9 @@
 .method public abstract getAvatarUploader()Lcom/glympse/android/lib/GAvatarUploader;
 .end method
 
+.method public abstract getBatteryManagerPrivate()Lcom/glympse/android/lib/GBatteryManagerPrivate;
+.end method
+
 .method public abstract getConfigPrivate()Lcom/glympse/android/lib/GConfigPrivate;
 .end method
 
@@ -28,16 +31,31 @@
 .method public abstract getCorrectedTime()Lcom/glympse/android/lib/GCorrectedTime;
 .end method
 
+.method public abstract getDirectionsManagerPrivate()Lcom/glympse/android/lib/GDirectionsManagerPrivate;
+.end method
+
 .method public abstract getHandlerManager()Lcom/glympse/android/lib/GHandlerManager;
 .end method
 
+.method public abstract getHistoryManagerPrivate()Lcom/glympse/android/lib/GHistoryManagerPrivate;
+.end method
+
+.method public abstract getImageCachePrivate()Lcom/glympse/android/lib/GImageCachePrivate;
+.end method
+
 .method public abstract getJobQueue()Lcom/glympse/android/lib/GJobQueue;
+.end method
+
+.method public abstract getLocationManagerPrivate()Lcom/glympse/android/lib/GLocationManagerPrivate;
 .end method
 
 .method public abstract getMessageCenter()Lcom/glympse/android/lib/GMessageCenter;
 .end method
 
 .method public abstract getMotdUrl()Ljava/lang/String;
+.end method
+
+.method public abstract getNetworkManagerPrivate()Lcom/glympse/android/lib/GNetworkManagerPrivate;
 .end method
 
 .method public abstract getNotificationCenter()Lcom/glympse/android/lib/GNotificationCenter;
@@ -50,6 +68,9 @@
 .end method
 
 .method public abstract getTicketProtocol()Lcom/glympse/android/lib/GTicketProtocol;
+.end method
+
+.method public abstract getUserManagerPrivate()Lcom/glympse/android/lib/GUserManagerPrivate;
 .end method
 
 .method public abstract getWifiManager()Lcom/glympse/android/lib/bw;

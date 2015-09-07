@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/glympse_topbar_active" android:layout_above="@id/actionbar_divider_line">
+    <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/conference_topbar_actions" android:layout_above="@id/actionbar_divider_line">
         <ImageView android:id="@id/actionbar_count" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/chat_count" android:adjustViewBounds="true" android:layout_alignParentTop="true" android:layout_centerVertical="true" android:contentDescription="@string/blank" style="?android:attr/borderlessButtonStyle" />
         <TextView android:textSize="10.0sp" android:textColor="#ff000000" android:gravity="center" android:id="@id/actionbar_count_text" android:paddingRight="@dimen/actionbar_count_text_padding" android:paddingBottom="@dimen/actionbar_count_text_padding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/actionbar_count" android:layout_alignTop="@id/actionbar_count" android:layout_alignRight="@id/actionbar_count" android:layout_alignBottom="@id/actionbar_count" />
         <HorizontalScrollView android:id="@id/actionbar_group_avatar_view" android:scrollbars="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/actionbar_count">
             <LinearLayout android:orientation="horizontal" android:id="@id/actionbar_group_participant_avatars" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         </HorizontalScrollView>
     </RelativeLayout>
-    <ImageView android:id="@id/glympse_topbar_active" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/glympse_active_margin_right" android:src="@drawable/glympse_indicator" android:adjustViewBounds="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@string/blank" style="?android:attr/borderlessButtonStyle" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/conference_topbar_actions" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/glympse_active_margin_right" android:layout_marginRight="@dimen/glympse_active_margin_right" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/glympse_topbar_active" android:background="@null" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/glympse_indicator" android:adjustViewBounds="true" android:contentDescription="@string/blank" style="?android:attr/borderlessButtonStyle" />
+        <ImageButton android:id="@id/actionbar_start_meeting_button" android:background="@null" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bbm_start_meeting_icon" android:contentDescription="@string/blank" />
+    </LinearLayout>
     <include layout="@layout/view_merge_header_actionbar_divider_line" />
 </RelativeLayout>

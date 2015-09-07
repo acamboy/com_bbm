@@ -1,34 +1,34 @@
 .class public Lcom/bbm/ui/activities/GroupEventsAddActivity;
-.super Lcom/bbm/ui/activities/kl;
+.super Lcom/bbm/ui/activities/mj;
 .source "GroupEventsAddActivity.java"
 
 
 # instance fields
-.field protected a:Lcom/bbm/g/ab;
+.field protected a:Lcom/bbm/g/al;
 
 .field protected b:Landroid/widget/EditText;
 
-.field protected j:Landroid/widget/EditText;
+.field protected d:Landroid/widget/EditText;
 
-.field protected k:Landroid/widget/EditText;
+.field protected e:Landroid/widget/EditText;
 
-.field protected l:Lcom/bbm/ui/DateTimePickerView;
+.field protected f:Lcom/bbm/ui/DateTimePickerView;
 
-.field protected m:Lcom/bbm/ui/DateTimePickerView;
+.field protected g:Lcom/bbm/ui/DateTimePickerView;
 
-.field protected n:Landroid/widget/Switch;
+.field protected h:Landroid/widget/Switch;
 
-.field protected o:I
+.field protected i:I
 
-.field protected p:I
+.field protected j:I
 
-.field protected q:Z
+.field protected k:Z
 
-.field private r:Landroid/widget/LinearLayout;
+.field private l:Landroid/widget/LinearLayout;
 
-.field private s:Lcom/bbm/ui/FooterActionBar;
+.field private m:Lcom/bbm/ui/FooterActionBar;
 
-.field private final t:Lcom/bbm/ui/az;
+.field private final n:Lcom/bbm/ui/be;
 
 
 # direct methods
@@ -37,21 +37,21 @@
 
     .prologue
     .line 78
-    invoke-direct {p0}, Lcom/bbm/ui/activities/kl;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/mj;-><init>()V
 
     .line 69
-    new-instance v0, Lcom/bbm/ui/activities/ly;
+    new-instance v0, Lcom/bbm/ui/activities/ob;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ly;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/ob;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->t:Lcom/bbm/ui/az;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->n:Lcom/bbm/ui/be;
 
     .line 79
-    new-instance v0, Lcom/bbm/ui/fh;
+    new-instance v0, Lcom/bbm/ui/gc;
 
-    invoke-direct {v0}, Lcom/bbm/ui/fh;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/gc;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->a(Lcom/bbm/ui/activities/agy;)V
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->a(Lcom/bbm/ui/activities/alb;)V
 
     .line 80
     return-void
@@ -63,32 +63,32 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 270
+    .line 267
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 271
+    .line 268
     invoke-virtual {v0, p0}, Ljava/util/Calendar;->setTime(Ljava/util/Date;)V
 
-    .line 272
+    .line 269
     const/16 v1, 0xa
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->add(II)V
 
-    .line 273
+    .line 270
     const/16 v1, 0xd
 
     invoke-virtual {v0, v1, v3}, Ljava/util/Calendar;->set(II)V
 
-    .line 274
+    .line 271
     const/16 v1, 0xe
 
     invoke-virtual {v0, v1, v3}, Ljava/util/Calendar;->set(II)V
 
-    .line 275
+    .line 272
     invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
     move-result-object v0
@@ -97,7 +97,7 @@
 .end method
 
 .method static synthetic a(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
-    .locals 9
+    .locals 10
 
     .prologue
     .line 39
@@ -109,13 +109,13 @@
 
     invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->l:Lcom/bbm/ui/DateTimePickerView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->f:Lcom/bbm/ui/DateTimePickerView;
 
     invoke-virtual {v0}, Lcom/bbm/ui/DateTimePickerView;->getDate()Ljava/util/Date;
 
     move-result-object v4
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->m:Lcom/bbm/ui/DateTimePickerView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->g:Lcom/bbm/ui/DateTimePickerView;
 
     invoke-virtual {v0}, Lcom/bbm/ui/DateTimePickerView;->getDate()Ljava/util/Date;
 
@@ -129,9 +129,9 @@
 
     if-nez v0, :cond_0
 
-    const v0, 0x7f0e03c8
+    const v0, 0x7f0e0401
 
-    const v1, 0x7f0e03c7
+    const v1, 0x7f0e0400
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->a(II)V
 
@@ -145,9 +145,9 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0e03ce
+    const v0, 0x7f0e0407
 
-    const v1, 0x7f0e03d3
+    const v1, 0x7f0e040c
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->a(II)V
 
@@ -155,7 +155,7 @@
 
     :cond_1
     :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->n:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->h:Landroid/widget/Switch;
 
     invoke-virtual {v0}, Landroid/widget/Switch;->isChecked()Z
 
@@ -167,18 +167,18 @@
 
     invoke-virtual {v1}, Ljava/util/Date;->getTime()J
 
-    move-result-wide v5
+    move-result-wide v6
 
-    const-wide/32 v7, 0x5265c00
+    const-wide/32 v8, 0x5265c00
 
-    add-long/2addr v5, v7
+    add-long/2addr v6, v8
 
-    invoke-direct {v0, v5, v6}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v0, v6, v7}, Ljava/util/Date;-><init>(J)V
 
     :goto_1
     const-string v1, "allDayEvent"
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->n:Landroid/widget/Switch;
+    iget-object v5, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->h:Landroid/widget/Switch;
 
     invoke-virtual {v5}, Landroid/widget/Switch;->isChecked()Z
 
@@ -206,7 +206,7 @@
 
     const-string v2, "location"
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->j:Landroid/widget/EditText;
+    iget-object v5, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->d:Landroid/widget/EditText;
 
     invoke-virtual {v5}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -222,7 +222,7 @@
 
     const-string v2, "notes"
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->k:Landroid/widget/EditText;
+    iget-object v5, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->e:Landroid/widget/EditText;
 
     invoke-virtual {v5}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -269,21 +269,21 @@
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     :goto_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->a:Lcom/bbm/g/ab;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->a:Lcom/bbm/g/al;
 
     const-string v1, "groupCalendarAppointment"
 
-    new-instance v2, Lcom/bbm/g/by;
+    new-instance v2, Lcom/bbm/g/cs;
 
-    invoke-direct {v2, v3, v1}, Lcom/bbm/g/by;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    invoke-direct {v2, v3, v1}, Lcom/bbm/g/cs;-><init>(Ljava/util/List;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/kl;->c:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
 
-    invoke-virtual {v2, v1}, Lcom/bbm/g/by;->a(Ljava/lang/String;)Lcom/bbm/g/by;
+    invoke-virtual {v2, v1}, Lcom/bbm/g/cs;->a(Ljava/lang/String;)Lcom/bbm/g/cs;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
 
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->finish()V
 
@@ -292,7 +292,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->c(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->c(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
@@ -302,7 +302,7 @@
     goto :goto_1
 .end method
 
-.method private static h()Ljava/util/Date;
+.method private static k()Ljava/util/Date;
     .locals 6
 
     .prologue
@@ -314,30 +314,30 @@
 
     const/16 v3, 0xb
 
-    .line 248
+    .line 246
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 249
+    .line 247
     invoke-virtual {v0, v3, v5}, Ljava/util/Calendar;->add(II)V
 
-    .line 250
+    .line 248
     const/16 v1, 0xc
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
 
-    .line 251
+    .line 249
     const/16 v1, 0xd
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
 
-    .line 252
+    .line 250
     const/16 v1, 0xe
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Calendar;->set(II)V
 
-    .line 253
+    .line 251
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
     move-result v1
@@ -346,15 +346,15 @@
 
     if-lt v1, v2, :cond_1
 
-    .line 254
+    .line 252
     invoke-virtual {v0, v3, v4}, Ljava/util/Calendar;->set(II)V
 
-    .line 255
+    .line 253
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1, v5}, Ljava/util/Calendar;->add(II)V
 
-    .line 260
+    .line 257
     :cond_0
     :goto_0
     invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
@@ -363,7 +363,7 @@
 
     return-object v0
 
-    .line 257
+    .line 254
     :cond_1
     invoke-virtual {v0, v3}, Ljava/util/Calendar;->get(I)I
 
@@ -371,7 +371,7 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 258
+    .line 255
     invoke-virtual {v0, v3, v4}, Ljava/util/Calendar;->set(II)V
 
     goto :goto_0
@@ -383,29 +383,29 @@
     .locals 2
 
     .prologue
-    .line 309
+    .line 307
     new-instance v0, Lcom/bbm/ui/b/o;
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
 
-    .line 310
+    .line 308
     invoke-virtual {v0, p1}, Lcom/bbm/ui/b/o;->setTitle(I)V
 
-    .line 311
+    .line 309
     invoke-virtual {v0, p2}, Lcom/bbm/ui/b/o;->e(I)V
 
-    .line 312
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->d()V
+    .line 310
+    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->a()V
 
-    .line 313
-    const v1, 0x7f0e051f
+    .line 311
+    const v1, 0x7f0e0586
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->b(I)V
 
-    .line 315
+    .line 313
     invoke-virtual {v0}, Lcom/bbm/ui/b/o;->show()V
 
-    .line 316
+    .line 314
     return-void
 .end method
 
@@ -422,7 +422,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0e03ca
+    const v2, 0x7f0e0403
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -432,7 +432,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e0167
+    const v3, 0x7f0e0177
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -442,7 +442,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e05d6
+    const v4, 0x7f0e0683
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -451,16 +451,16 @@
     invoke-direct {v0, p0, v1, v2, v3}, Lcom/bbm/ui/HeaderButtonActionBar;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 176
-    new-instance v1, Lcom/bbm/ui/activities/mb;
+    new-instance v1, Lcom/bbm/ui/activities/oe;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/mb;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/oe;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 185
-    new-instance v1, Lcom/bbm/ui/activities/mc;
+    new-instance v1, Lcom/bbm/ui/activities/of;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/mc;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/of;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -485,13 +485,13 @@
     return-void
 .end method
 
-.method protected final g()Z
+.method protected final f()Z
     .locals 6
 
     .prologue
     const-wide/16 v4, 0x3e8
 
-    .line 290
+    .line 287
     iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->b:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -512,7 +512,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->j:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->d:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -532,7 +532,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->k:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->e:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -552,7 +552,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->n:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->h:Landroid/widget/Switch;
 
     invoke-virtual {v0}, Landroid/widget/Switch;->isChecked()Z
 
@@ -560,7 +560,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->l:Lcom/bbm/ui/DateTimePickerView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->f:Lcom/bbm/ui/DateTimePickerView;
 
     invoke-virtual {v0}, Lcom/bbm/ui/DateTimePickerView;->getDate()Ljava/util/Date;
 
@@ -572,7 +572,7 @@
 
     div-long/2addr v0, v4
 
-    invoke-static {}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->h()Ljava/util/Date;
+    invoke-static {}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->k()Ljava/util/Date;
 
     move-result-object v2
 
@@ -586,7 +586,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->m:Lcom/bbm/ui/DateTimePickerView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->g:Lcom/bbm/ui/DateTimePickerView;
 
     invoke-virtual {v0}, Lcom/bbm/ui/DateTimePickerView;->getDate()Ljava/util/Date;
 
@@ -598,7 +598,7 @@
 
     div-long/2addr v0, v4
 
-    invoke-static {}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->h()Ljava/util/Date;
+    invoke-static {}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->k()Ljava/util/Date;
 
     move-result-object v2
 
@@ -619,56 +619,56 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 297
+    .line 294
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 298
+    .line 295
     new-instance v1, Lcom/bbm/ui/b/o;
 
     invoke-direct {v1, p0}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
 
-    const v2, 0x7f0e03c6
+    const v2, 0x7f0e03ff
 
     invoke-virtual {v1, v2}, Lcom/bbm/ui/b/o;->setTitle(I)V
 
-    const v2, 0x7f0e03c5
+    const v2, 0x7f0e03fe
 
     invoke-virtual {v1, v2}, Lcom/bbm/ui/b/o;->e(I)V
 
-    const v2, 0x7f0e03c3
+    const v2, 0x7f0e03fc
 
     invoke-virtual {v1, v2}, Lcom/bbm/ui/b/o;->b(I)V
 
-    const v2, 0x7f0e03c4
+    const v2, 0x7f0e03fd
 
     invoke-virtual {v1, v2}, Lcom/bbm/ui/b/o;->a(I)V
 
-    new-instance v2, Lcom/bbm/ui/activities/md;
+    new-instance v2, Lcom/bbm/ui/activities/og;
 
-    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/md;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
+    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/og;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
 
     invoke-virtual {v1, v2}, Lcom/bbm/ui/b/o;->b(Landroid/view/View$OnClickListener;)V
 
-    new-instance v2, Lcom/bbm/ui/activities/me;
+    new-instance v2, Lcom/bbm/ui/activities/oh;
 
-    invoke-direct {v2, p0, v1}, Lcom/bbm/ui/activities/me;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;Lcom/bbm/ui/b/o;)V
+    invoke-direct {v2, p0, v1}, Lcom/bbm/ui/activities/oh;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;Lcom/bbm/ui/b/o;)V
 
     invoke-virtual {v1, v2}, Lcom/bbm/ui/b/o;->a(Landroid/view/View$OnClickListener;)V
 
     invoke-virtual {v1}, Lcom/bbm/ui/b/o;->show()V
 
-    .line 304
+    .line 300
     :goto_1
     return v0
 
-    .line 290
+    .line 287
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 301
+    .line 297
     :cond_2
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->finish()V
 
@@ -679,10 +679,10 @@
     .locals 0
 
     .prologue
-    .line 167
-    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->g()Z
+    .line 166
+    invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->f()Z
 
-    .line 168
+    .line 167
     return-void
 .end method
 
@@ -695,27 +695,27 @@
     const/16 v1, 0x8
 
     .line 84
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/kl;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/mj;->onCreate(Landroid/os/Bundle;)V
 
     .line 85
-    const v0, 0x7f030028
+    const v0, 0x7f03002a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->setContentView(I)V
 
     .line 87
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/ab;
+    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->a:Lcom/bbm/g/ab;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->a:Lcom/bbm/g/al;
 
     .line 89
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/eg;->e:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ey;->y:Z
 
     .line 90
-    const v0, 0x7f0a0143
+    const v0, 0x7f0b018c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->findViewById(I)Landroid/view/View;
 
@@ -723,10 +723,10 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->r:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->l:Landroid/widget/LinearLayout;
 
     .line 91
-    const v0, 0x7f0a00a0
+    const v0, 0x7f0b00bf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->findViewById(I)Landroid/view/View;
 
@@ -734,15 +734,15 @@
 
     check-cast v0, Lcom/bbm/ui/FooterActionBar;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->s:Lcom/bbm/ui/FooterActionBar;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->m:Lcom/bbm/ui/FooterActionBar;
 
     .line 92
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->s:Lcom/bbm/ui/FooterActionBar;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->m:Lcom/bbm/ui/FooterActionBar;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
 
     .line 93
-    const v0, 0x7f0a0123
+    const v0, 0x7f0b0137
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->findViewById(I)Landroid/view/View;
 
@@ -753,7 +753,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 94
-    const v0, 0x7f0a014c
+    const v0, 0x7f0b0195
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->findViewById(I)Landroid/view/View;
 
@@ -766,7 +766,7 @@
     .line 95
     iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->b:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lcom/bbm/ui/gg;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/gg;
+    invoke-static {v0, v2}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
 
     .line 96
     iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->b:Landroid/widget/EditText;
@@ -774,7 +774,7 @@
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 97
-    const v0, 0x7f0a014d
+    const v0, 0x7f0b0196
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->findViewById(I)Landroid/view/View;
 
@@ -782,15 +782,15 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->j:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->d:Landroid/widget/EditText;
 
     .line 98
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->j:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->d:Landroid/widget/EditText;
 
-    invoke-static {v0, v2}, Lcom/bbm/ui/gg;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/gg;
+    invoke-static {v0, v2}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
 
     .line 99
-    const v0, 0x7f0a014e
+    const v0, 0x7f0b0197
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->findViewById(I)Landroid/view/View;
 
@@ -798,17 +798,17 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->k:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->e:Landroid/widget/EditText;
 
     .line 100
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->k:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->e:Landroid/widget/EditText;
 
     const/16 v1, 0x2134
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/gg;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/gg;
+    invoke-static {v0, v1}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
 
     .line 101
-    const v0, 0x7f0a0150
+    const v0, 0x7f0b0199
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->findViewById(I)Landroid/view/View;
 
@@ -816,10 +816,10 @@
 
     check-cast v0, Landroid/widget/Switch;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->n:Landroid/widget/Switch;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->h:Landroid/widget/Switch;
 
     .line 102
-    const v0, 0x7f0a0151
+    const v0, 0x7f0b019a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->findViewById(I)Landroid/view/View;
 
@@ -827,10 +827,10 @@
 
     check-cast v0, Lcom/bbm/ui/DateTimePickerView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->l:Lcom/bbm/ui/DateTimePickerView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->f:Lcom/bbm/ui/DateTimePickerView;
 
     .line 103
-    const v0, 0x7f0a0152
+    const v0, 0x7f0b019b
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->findViewById(I)Landroid/view/View;
 
@@ -838,17 +838,17 @@
 
     check-cast v0, Lcom/bbm/ui/DateTimePickerView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->m:Lcom/bbm/ui/DateTimePickerView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->g:Lcom/bbm/ui/DateTimePickerView;
 
     .line 105
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->l:Lcom/bbm/ui/DateTimePickerView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->f:Lcom/bbm/ui/DateTimePickerView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->t:Lcom/bbm/ui/az;
+    iget-object v1, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->n:Lcom/bbm/ui/be;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/DateTimePickerView;->setOnDateTimePickerViewChangeListener(Lcom/bbm/ui/az;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/DateTimePickerView;->setOnDateTimePickerViewChangeListener(Lcom/bbm/ui/be;)V
 
     .line 107
-    invoke-static {}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->h()Ljava/util/Date;
+    invoke-static {}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->k()Ljava/util/Date;
 
     move-result-object v0
 
@@ -858,37 +858,37 @@
     move-result-object v1
 
     .line 110
-    iget-object v2, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->l:Lcom/bbm/ui/DateTimePickerView;
+    iget-object v2, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->f:Lcom/bbm/ui/DateTimePickerView;
 
     invoke-virtual {v2, v0}, Lcom/bbm/ui/DateTimePickerView;->setDate(Ljava/util/Date;)V
 
     .line 111
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->m:Lcom/bbm/ui/DateTimePickerView;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->g:Lcom/bbm/ui/DateTimePickerView;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/DateTimePickerView;->setDate(Ljava/util/Date;)V
 
     .line 113
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->r:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->l:Landroid/widget/LinearLayout;
 
-    new-instance v1, Lcom/bbm/ui/activities/lz;
+    new-instance v1, Lcom/bbm/ui/activities/oc;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/lz;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/oc;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 123
-    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->n:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/bbm/ui/activities/GroupEventsAddActivity;->h:Landroid/widget/Switch;
 
-    new-instance v1, Lcom/bbm/ui/activities/ma;
+    new-instance v1, Lcom/bbm/ui/activities/od;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ma;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/od;-><init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
-    .line 147
+    .line 146
     invoke-virtual {p0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->b()V
 
-    .line 148
+    .line 147
     return-void
 .end method
 
@@ -896,9 +896,9 @@
     .locals 0
 
     .prologue
-    .line 152
-    invoke-super {p0}, Lcom/bbm/ui/activities/kl;->onPause()V
+    .line 151
+    invoke-super {p0}, Lcom/bbm/ui/activities/mj;->onPause()V
 
-    .line 153
+    .line 152
     return-void
 .end method

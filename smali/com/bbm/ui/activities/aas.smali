@@ -1,149 +1,271 @@
-.class final enum Lcom/bbm/ui/activities/aas;
-.super Ljava/lang/Enum;
-.source "ReportProblemActivity.java"
+.class final Lcom/bbm/ui/activities/aas;
+.super Ljava/lang/Object;
+.source "OpenInBbmActivity.java"
+
+# interfaces
+.implements Lcom/bbm/f/ac;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Enum",
-        "<",
-        "Lcom/bbm/ui/activities/aas;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Ljava/lang/String;
 
+.field final synthetic b:Landroid/os/Handler;
 
-# static fields
-.field public static final enum a:Lcom/bbm/ui/activities/aas;
+.field final synthetic c:Ljava/lang/Runnable;
 
-.field public static final enum b:Lcom/bbm/ui/activities/aas;
-
-.field public static final enum c:Lcom/bbm/ui/activities/aas;
-
-.field public static final enum d:Lcom/bbm/ui/activities/aas;
-
-.field private static final synthetic e:[Lcom/bbm/ui/activities/aas;
+.field final synthetic d:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
+.method constructor <init>(Lcom/bbm/ui/activities/OpenInBbmActivity;Ljava/lang/String;Landroid/os/Handler;Ljava/lang/Runnable;)V
+    .locals 0
 
     .prologue
-    const/4 v5, 0x3
+    .line 287
+    iput-object p1, p0, Lcom/bbm/ui/activities/aas;->d:Lcom/bbm/ui/activities/OpenInBbmActivity;
 
-    const/4 v4, 0x2
+    iput-object p2, p0, Lcom/bbm/ui/activities/aas;->a:Ljava/lang/String;
 
-    const/4 v3, 0x1
+    iput-object p3, p0, Lcom/bbm/ui/activities/aas;->b:Landroid/os/Handler;
 
+    iput-object p4, p0, Lcom/bbm/ui/activities/aas;->c:Ljava/lang/Runnable;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a()V
+    .locals 0
+
+    .prologue
+    .line 323
+    return-void
+.end method
+
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 4
+
+    .prologue
+    .line 290
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
+
+    const-string v1, "listAdd"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 291
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
+
+    .line 292
+    const-string v1, "cookie"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 294
+    :try_start_0
+    const-string v1, "cookie"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 295
+    iget-object v2, p0, Lcom/bbm/ui/activities/aas;->a:Ljava/lang/String;
+
+    invoke-static {v2, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 296
+    const-string v1, "elements"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+
+    move-result-object v0
+
+    .line 297
+    new-instance v1, Lcom/bbm/d/fp;
+
+    invoke-direct {v1}, Lcom/bbm/d/fp;-><init>()V
+
+    .line 298
     const/4 v2, 0x0
 
-    .line 282
-    new-instance v0, Lcom/bbm/ui/activities/aas;
-
-    const-string v1, "STEP01"
-
-    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/activities/aas;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/activities/aas;->a:Lcom/bbm/ui/activities/aas;
-
-    .line 283
-    new-instance v0, Lcom/bbm/ui/activities/aas;
-
-    const-string v1, "STEP02"
-
-    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/activities/aas;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/activities/aas;->b:Lcom/bbm/ui/activities/aas;
-
-    .line 284
-    new-instance v0, Lcom/bbm/ui/activities/aas;
-
-    const-string v1, "STEP03"
-
-    invoke-direct {v0, v1, v4}, Lcom/bbm/ui/activities/aas;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/activities/aas;->c:Lcom/bbm/ui/activities/aas;
-
-    .line 285
-    new-instance v0, Lcom/bbm/ui/activities/aas;
-
-    const-string v1, "DONE"
-
-    invoke-direct {v0, v1, v5}, Lcom/bbm/ui/activities/aas;-><init>(Ljava/lang/String;I)V
-
-    sput-object v0, Lcom/bbm/ui/activities/aas;->d:Lcom/bbm/ui/activities/aas;
-
-    .line 281
-    const/4 v0, 0x4
-
-    new-array v0, v0, [Lcom/bbm/ui/activities/aas;
-
-    sget-object v1, Lcom/bbm/ui/activities/aas;->a:Lcom/bbm/ui/activities/aas;
-
-    aput-object v1, v0, v2
-
-    sget-object v1, Lcom/bbm/ui/activities/aas;->b:Lcom/bbm/ui/activities/aas;
-
-    aput-object v1, v0, v3
-
-    sget-object v1, Lcom/bbm/ui/activities/aas;->c:Lcom/bbm/ui/activities/aas;
-
-    aput-object v1, v0, v4
-
-    sget-object v1, Lcom/bbm/ui/activities/aas;->d:Lcom/bbm/ui/activities/aas;
-
-    aput-object v1, v0, v5
-
-    sput-object v0, Lcom/bbm/ui/activities/aas;->e:[Lcom/bbm/ui/activities/aas;
-
-    return-void
-.end method
-
-.method private constructor <init>(Ljava/lang/String;I)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()V"
-        }
-    .end annotation
-
-    .prologue
-    .line 281
-    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
-
-    return-void
-.end method
-
-.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/activities/aas;
-    .locals 1
-
-    .prologue
-    .line 281
-    const-class v0, Lcom/bbm/ui/activities/aas;
-
-    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+    invoke-virtual {v0, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/aas;
+    invoke-virtual {v1, v0}, Lcom/bbm/d/fp;->a(Lorg/json/JSONObject;)V
 
-    return-object v0
-.end method
+    .line 299
+    iget-object v0, v1, Lcom/bbm/d/fp;->h:Lcom/bbm/d/fr;
 
-.method public static values()[Lcom/bbm/ui/activities/aas;
-    .locals 1
+    sget-object v2, Lcom/bbm/d/fr;->b:Lcom/bbm/d/fr;
 
-    .prologue
-    .line 281
-    sget-object v0, Lcom/bbm/ui/activities/aas;->e:[Lcom/bbm/ui/activities/aas;
+    if-ne v0, v2, :cond_2
 
-    invoke-virtual {v0}, [Lcom/bbm/ui/activities/aas;->clone()Ljava/lang/Object;
+    .line 300
+    iget-object v0, p0, Lcom/bbm/ui/activities/aas;->d:Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    iget-object v1, v1, Lcom/bbm/d/fp;->j:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 308
+    :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/aas;->d:Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->finish()V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 313
+    :cond_0
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
-    check-cast v0, [Lcom/bbm/ui/activities/aas;
+    iget-object v0, v0, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
 
-    return-object v0
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    invoke-interface {v0, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    .line 314
+    iget-object v0, p0, Lcom/bbm/ui/activities/aas;->b:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/aas;->c:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 315
+    iget-object v0, p0, Lcom/bbm/ui/activities/aas;->d:Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->b(Lcom/bbm/ui/activities/OpenInBbmActivity;)Lcom/bbm/f/ac;
+
+    .line 319
+    :cond_1
+    :goto_1
+    return-void
+
+    .line 302
+    :cond_2
+    :try_start_1
+    new-instance v2, Landroid/content/Intent;
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/aas;->d:Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    iget-boolean v0, v1, Lcom/bbm/d/fp;->d:Z
+
+    if-eqz v0, :cond_3
+
+    const-class v0, Lcom/bbm/ui/activities/ReceivedPendingInviteActivity;
+
+    :goto_2
+    invoke-direct {v2, v3, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 304
+    iget-boolean v0, v1, Lcom/bbm/d/fp;->d:Z
+
+    const-string v0, "pending_contact_id"
+
+    iget-object v1, v1, Lcom/bbm/d/fp;->c:Ljava/lang/String;
+
+    invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 306
+    iget-object v0, p0, Lcom/bbm/ui/activities/aas;->d:Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-virtual {v0, v2}, Lcom/bbm/ui/activities/OpenInBbmActivity;->startActivity(Landroid/content/Intent;)V
+    :try_end_1
+    .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    goto :goto_0
+
+    .line 310
+    :catch_0
+    move-exception v0
+
+    :try_start_2
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    .line 313
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
+
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    invoke-interface {v0, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    .line 314
+    iget-object v0, p0, Lcom/bbm/ui/activities/aas;->b:Landroid/os/Handler;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/aas;->c:Ljava/lang/Runnable;
+
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 315
+    iget-object v0, p0, Lcom/bbm/ui/activities/aas;->d:Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/OpenInBbmActivity;->b(Lcom/bbm/ui/activities/OpenInBbmActivity;)Lcom/bbm/f/ac;
+
+    goto :goto_1
+
+    .line 302
+    :cond_3
+    :try_start_3
+    const-class v0, Lcom/bbm/ui/activities/SentPendingInviteActivity;
+    :try_end_3
+    .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    goto :goto_2
+
+    .line 313
+    :catchall_0
+    move-exception v0
+
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
+
+    iget-object v1, v1, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    invoke-interface {v1, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    .line 314
+    iget-object v1, p0, Lcom/bbm/ui/activities/aas;->b:Landroid/os/Handler;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/aas;->c:Ljava/lang/Runnable;
+
+    invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
+
+    .line 315
+    iget-object v1, p0, Lcom/bbm/ui/activities/aas;->d:Lcom/bbm/ui/activities/OpenInBbmActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/OpenInBbmActivity;->b(Lcom/bbm/ui/activities/OpenInBbmActivity;)Lcom/bbm/f/ac;
+
+    throw v0
 .end method

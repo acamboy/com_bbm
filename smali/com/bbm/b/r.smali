@@ -1,41 +1,43 @@
-.class public abstract Lcom/bbm/b/r;
+.class final Lcom/bbm/b/r;
 .super Ljava/lang/Object;
-.source "AdsProtocol.java"
+.source "AdUtils.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
+
+
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/b/o;
+
+.field final synthetic b:Lcom/bbm/b/p;
 
 
 # direct methods
-.method public static a(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/b/w;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lorg/json/JSONObject;",
-            ">;",
-            "Ljava/lang/String;",
-            ")",
-            "Lcom/bbm/b/w;"
-        }
-    .end annotation
+.method constructor <init>(Lcom/bbm/b/p;Lcom/bbm/ui/b/o;)V
+    .locals 0
 
     .prologue
-    .line 494
-    new-instance v0, Lcom/bbm/b/w;
+    .line 388
+    iput-object p1, p0, Lcom/bbm/b/r;->b:Lcom/bbm/b/p;
 
-    invoke-direct {v0, p0, p1}, Lcom/bbm/b/w;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    iput-object p2, p0, Lcom/bbm/b/r;->a:Lcom/bbm/ui/b/o;
 
-    return-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
 .end method
 
-.method public static a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/b/z;
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
     .locals 1
 
     .prologue
-    .line 985
-    new-instance v0, Lcom/bbm/b/z;
+    .line 391
+    iget-object v0, p0, Lcom/bbm/b/r;->a:Lcom/bbm/ui/b/o;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/bbm/b/z;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
 
-    return-object v0
+    .line 392
+    return-void
 .end method

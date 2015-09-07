@@ -1,115 +1,50 @@
 .class final Lcom/bbm/ui/ed;
-.super Ljava/lang/Object;
-.source "QuickShareGlympseView.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/k;
+.source "MonitoredAdapter.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/QuickShareGlympseView;
+.field final synthetic a:Landroid/view/View;
+
+.field final synthetic b:Ljava/lang/Object;
+
+.field final synthetic c:Lcom/bbm/ui/ec;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/QuickShareGlympseView;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/ec;Landroid/view/View;Ljava/lang/Object;)V
+    .locals 1
 
     .prologue
-    .line 121
-    iput-object p1, p0, Lcom/bbm/ui/ed;->a:Lcom/bbm/ui/QuickShareGlympseView;
+    .line 68
+    iput-object p1, p0, Lcom/bbm/ui/ed;->c:Lcom/bbm/ui/ec;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/bbm/ui/ed;->a:Landroid/view/View;
+
+    iput-object p3, p0, Lcom/bbm/ui/ed;->b:Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a()V
     .locals 3
 
     .prologue
-    const/4 v2, 0x0
+    .line 71
+    iget-object v0, p0, Lcom/bbm/ui/ed;->c:Lcom/bbm/ui/ec;
 
-    .line 125
-    invoke-virtual {p1}, Landroid/view/View;->getId()I
+    iget-object v1, p0, Lcom/bbm/ui/ed;->a:Landroid/view/View;
 
-    move-result v0
+    iget-object v2, p0, Lcom/bbm/ui/ed;->b:Ljava/lang/Object;
 
-    sparse-switch v0, :sswitch_data_0
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/ec;->a(Landroid/view/View;Ljava/lang/Object;)V
 
-    .line 143
-    :goto_0
+    .line 72
     return-void
-
-    .line 127
-    :sswitch_0
-    const-string v0, "Send clicked"
-
-    const-class v1, Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 128
-    iget-object v0, p0, Lcom/bbm/ui/ed;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->b(Lcom/bbm/ui/QuickShareGlympseView;)Landroid/widget/Button;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/widget/Button;->setEnabled(Z)V
-
-    .line 129
-    iget-object v0, p0, Lcom/bbm/ui/ed;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->c(Lcom/bbm/ui/QuickShareGlympseView;)V
-
-    goto :goto_0
-
-    .line 133
-    :sswitch_1
-    const-string v0, "Update clicked"
-
-    const-class v1, Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 134
-    iget-object v0, p0, Lcom/bbm/ui/ed;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->d(Lcom/bbm/ui/QuickShareGlympseView;)V
-
-    .line 135
-    iget-object v0, p0, Lcom/bbm/ui/ed;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareGlympseView;->e(Lcom/bbm/ui/QuickShareGlympseView;)Lcom/bbm/ui/em;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/ui/em;->a()V
-
-    goto :goto_0
-
-    .line 139
-    :sswitch_2
-    const-string v0, "Retry clicked"
-
-    const-class v1, Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 140
-    iget-object v0, p0, Lcom/bbm/ui/ed;->a:Lcom/bbm/ui/QuickShareGlympseView;
-
-    invoke-static {v0, v2}, Lcom/bbm/ui/QuickShareGlympseView;->a(Lcom/bbm/ui/QuickShareGlympseView;Z)V
-
-    goto :goto_0
-
-    .line 125
-    :sswitch_data_0
-    .sparse-switch
-        0x7f0a05b4 -> :sswitch_0
-        0x7f0a05b5 -> :sswitch_1
-        0x7f0a05c2 -> :sswitch_2
-    .end sparse-switch
 .end method

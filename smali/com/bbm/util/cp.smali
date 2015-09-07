@@ -1,41 +1,15 @@
-.class public final Lcom/bbm/util/cp;
+.class public abstract Lcom/bbm/util/cp;
 .super Ljava/lang/Object;
-.source "ObservableHashMap.java"
+.source "LocationServicesUtil.java"
 
 # interfaces
-.implements Lcom/bbm/j/r;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "<K:",
-        "Ljava/lang/Object;",
-        "V:",
-        "Ljava/lang/Object;",
-        ">",
-        "Ljava/lang/Object;",
-        "Lcom/bbm/j/r",
-        "<",
-        "Ljava/util/Map",
-        "<TK;TV;>;>;"
-    }
-.end annotation
+.implements Landroid/location/LocationListener;
 
 
 # instance fields
-.field public final a:Lcom/bbm/j/i;
+.field private a:Landroid/os/Handler;
 
-.field public b:Ljava/util/HashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/HashMap",
-            "<TK;TV;>;"
-        }
-    .end annotation
-.end field
-
-.field private c:Z
+.field private b:Z
 
 
 # direct methods
@@ -43,160 +17,179 @@
     .locals 1
 
     .prologue
-    .line 41
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
-    new-instance v0, Lcom/bbm/j/i;
+    .line 24
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Lcom/bbm/j/i;-><init>()V
+    iput-boolean v0, p0, Lcom/bbm/util/cp;->b:Z
 
-    iput-object v0, p0, Lcom/bbm/util/cp;->a:Lcom/bbm/j/i;
-
-    .line 36
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/bbm/util/cp;->c:Z
-
-    .line 42
-    new-instance v0, Ljava/util/HashMap;
-
-    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/util/cp;->b:Ljava/util/HashMap;
-
-    .line 43
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()Ljava/util/HashMap;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/HashMap",
-            "<TK;TV;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 74
-    iget-boolean v0, p0, Lcom/bbm/util/cp;->c:Z
-
-    if-eqz v0, :cond_0
-
-    .line 75
-    iget-object v0, p0, Lcom/bbm/util/cp;->b:Ljava/util/HashMap;
-
-    .line 82
-    :goto_0
-    return-object v0
-
-    .line 79
-    :cond_0
-    new-instance v0, Ljava/util/HashMap;
-
-    iget-object v1, p0, Lcom/bbm/util/cp;->b:Ljava/util/HashMap;
-
-    invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
-
-    iput-object v0, p0, Lcom/bbm/util/cp;->b:Ljava/util/HashMap;
-
-    .line 80
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/bbm/util/cp;->c:Z
-
-    .line 82
-    iget-object v0, p0, Lcom/bbm/util/cp;->b:Ljava/util/HashMap;
-
-    goto :goto_0
-.end method
-
-.method public final a(Lcom/bbm/j/h;)V
+.method static synthetic a(Lcom/bbm/util/cp;)Z
     .locals 1
 
     .prologue
-    .line 150
-    iget-object v0, p0, Lcom/bbm/util/cp;->a:Lcom/bbm/j/i;
-
-    invoke-virtual {v0, p1}, Lcom/bbm/j/i;->a(Lcom/bbm/j/h;)V
-
-    .line 151
-    return-void
-.end method
-
-.method public final a(Ljava/lang/Object;)Z
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TK;)Z"
-        }
-    .end annotation
-
-    .prologue
-    .line 103
-    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
-
-    .line 104
-    iget-object v0, p0, Lcom/bbm/util/cp;->b:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
+    .line 22
+    iget-boolean v0, p0, Lcom/bbm/util/cp;->b:Z
 
     return v0
 .end method
 
-.method public final b(Ljava/lang/Object;)Ljava/lang/Object;
+.method static synthetic b(Lcom/bbm/util/cp;)Z
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TK;)TV;"
-        }
-    .end annotation
 
     .prologue
-    .line 126
-    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
+    .line 22
+    const/4 v0, 0x1
 
-    .line 127
-    iget-object v0, p0, Lcom/bbm/util/cp;->b:Ljava/util/HashMap;
+    iput-boolean v0, p0, Lcom/bbm/util/cp;->b:Z
 
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    return v0
+.end method
+
+
+# virtual methods
+.method public abstract a()V
+.end method
+
+.method public final a(Landroid/content/Context;I)V
+    .locals 6
+
+    .prologue
+    const/4 v3, 0x0
+
+    .line 27
+    const-string v0, "location"
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Landroid/location/LocationManager;
+
+    .line 29
+    :try_start_0
+    const-string v1, "gps"
+
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 31
+    const-string v1, "gps"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, p0, v2}, Landroid/location/LocationManager;->requestSingleUpdate(Ljava/lang/String;Landroid/location/LocationListener;Landroid/os/Looper;)V
+
+    .line 33
+    :cond_0
+    const-string v1, "network"
+
+    invoke-virtual {v0, v1}, Landroid/location/LocationManager;->isProviderEnabled(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 35
+    const-string v1, "network"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, p0, v2}, Landroid/location/LocationManager;->requestSingleUpdate(Ljava/lang/String;Landroid/location/LocationListener;Landroid/os/Looper;)V
+    :try_end_0
+    .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 41
+    :cond_1
+    new-instance v1, Landroid/os/Handler;
+
+    invoke-direct {v1}, Landroid/os/Handler;-><init>()V
+
+    iput-object v1, p0, Lcom/bbm/util/cp;->a:Landroid/os/Handler;
+
+    .line 42
+    iput-boolean v3, p0, Lcom/bbm/util/cp;->b:Z
+
+    .line 43
+    iget-object v1, p0, Lcom/bbm/util/cp;->a:Landroid/os/Handler;
+
+    new-instance v2, Lcom/bbm/util/cq;
+
+    invoke-direct {v2, p0, v0}, Lcom/bbm/util/cq;-><init>(Lcom/bbm/util/cp;Landroid/location/LocationManager;)V
+
+    int-to-long v4, p2
+
+    invoke-virtual {v1, v2, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 53
+    :goto_0
+    return-void
+
+    .line 37
+    :catch_0
+    move-exception v0
+
+    const-string v1, "Can\'t request Single Update from Location Manager"
+
+    new-array v2, v3, [Ljava/lang/Object;
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_0
 .end method
 
-.method public final b(Lcom/bbm/j/h;)V
+.method public abstract a(Landroid/location/Location;)V
+.end method
+
+.method public onLocationChanged(Landroid/location/Location;)V
     .locals 1
 
     .prologue
-    .line 159
-    iget-object v0, p0, Lcom/bbm/util/cp;->a:Lcom/bbm/j/i;
+    .line 61
+    iget-boolean v0, p0, Lcom/bbm/util/cp;->b:Z
 
-    invoke-virtual {v0, p1}, Lcom/bbm/j/i;->b(Lcom/bbm/j/h;)V
+    if-nez v0, :cond_0
 
-    .line 160
+    .line 62
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/bbm/util/cp;->b:Z
+
+    .line 63
+    invoke-virtual {p0, p1}, Lcom/bbm/util/cp;->a(Landroid/location/Location;)V
+
+    .line 65
+    :cond_0
     return-void
 .end method
 
-.method public final synthetic e()Ljava/lang/Object;
-    .locals 1
+.method public onProviderDisabled(Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 17
-    const/4 v0, 0x0
+    .line 78
+    return-void
+.end method
 
-    iput-boolean v0, p0, Lcom/bbm/util/cp;->c:Z
+.method public onProviderEnabled(Ljava/lang/String;)V
+    .locals 0
 
-    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
+    .prologue
+    .line 74
+    return-void
+.end method
 
-    iget-object v0, p0, Lcom/bbm/util/cp;->b:Ljava/util/HashMap;
+.method public onStatusChanged(Ljava/lang/String;ILandroid/os/Bundle;)V
+    .locals 0
 
-    return-object v0
+    .prologue
+    .line 70
+    return-void
 .end method

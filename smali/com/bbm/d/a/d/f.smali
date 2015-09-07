@@ -1,5 +1,5 @@
-.class final Lcom/bbm/d/a/d/f;
-.super Lcom/bbm/util/em;
+.class public final Lcom/bbm/d/a/d/f;
+.super Lcom/bbm/util/ff;
 .source "BbmdsStreamManager.java"
 
 
@@ -12,62 +12,62 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/d/a/d/c;Landroid/content/Context;Lcom/bbm/util/cm;ZLjava/lang/String;)V
+.method public constructor <init>(Lcom/bbm/d/a/d/c;Landroid/content/Context;Lcom/bbm/util/ct;ZLjava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 143
+    .line 151
     iput-object p1, p0, Lcom/bbm/d/a/d/f;->c:Lcom/bbm/d/a/d/c;
 
     iput-boolean p4, p0, Lcom/bbm/d/a/d/f;->a:Z
 
     iput-object p5, p0, Lcom/bbm/d/a/d/f;->b:Ljava/lang/String;
 
-    invoke-direct {p0, p2, p3}, Lcom/bbm/util/em;-><init>(Landroid/content/Context;Lcom/bbm/util/cm;)V
+    invoke-direct {p0, p2, p3}, Lcom/bbm/util/ff;-><init>(Landroid/content/Context;Lcom/bbm/util/ct;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Lcom/bbm/d/dw;)V
+.method protected final a(Lcom/bbm/d/ff;)V
     .locals 3
 
     .prologue
-    .line 146
-    invoke-super {p0, p1}, Lcom/bbm/util/em;->a(Lcom/bbm/d/dw;)V
+    .line 154
+    invoke-super {p0, p1}, Lcom/bbm/util/ff;->a(Lcom/bbm/d/ff;)V
 
-    .line 147
+    .line 155
     iget-boolean v0, p0, Lcom/bbm/d/a/d/f;->a:Z
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 148
+    .line 156
     iget-object v0, p0, Lcom/bbm/d/a/d/f;->c:Lcom/bbm/d/a/d/c;
 
     iget-object v1, p0, Lcom/bbm/d/a/d/f;->b:Ljava/lang/String;
 
-    invoke-virtual {p1}, Lcom/bbm/d/dw;->c()[B
+    invoke-virtual {p1}, Lcom/bbm/d/ff;->c()[B
 
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Lcom/bbm/d/a/d/c;->a(Ljava/lang/String;[B)V
 
-    .line 150
+    .line 158
     :cond_0
     return-void
 .end method
 
-.method protected final bridge synthetic a(Ljava/lang/Object;)V
+.method protected final synthetic b(Ljava/lang/Object;)V
     .locals 0
 
     .prologue
-    .line 143
-    check-cast p1, Lcom/bbm/d/dw;
+    .line 151
+    check-cast p1, Lcom/bbm/d/ff;
 
-    invoke-virtual {p0, p1}, Lcom/bbm/d/a/d/f;->a(Lcom/bbm/d/dw;)V
+    invoke-virtual {p0, p1}, Lcom/bbm/d/a/d/f;->a(Lcom/bbm/d/ff;)V
 
     return-void
 .end method

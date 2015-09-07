@@ -11,7 +11,7 @@
     .locals 0
 
     .prologue
-    .line 847
+    .line 860
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,11 +23,11 @@
     .locals 1
 
     .prologue
-    .line 850
+    .line 863
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/glympse/android/hal/DebugBase;->logDiagnostics(Landroid/content/Context;)V
 
-    .line 851
+    .line 864
     return-void
 .end method

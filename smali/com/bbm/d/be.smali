@@ -1,5 +1,5 @@
 .class public final Lcom/bbm/d/be;
-.super Lcom/bbm/d/da;
+.super Lcom/bbm/d/dy;
 .source "BbmdsProtocol.java"
 
 
@@ -8,28 +8,28 @@
     .locals 1
 
     .prologue
-    .line 1961
-    const-string v0, "fileTransferCancel"
+    .line 1585
+    const-string v0, "clearRecentChannelPostsNewFlag"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/da;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
 
-    .line 1963
+    .line 1587
     const-string v0, "id"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/be;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1964
+    .line 1588
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a()Lcom/bbm/f/x;
+.method public final bridge synthetic a()Lcom/bbm/f/ab;
     .locals 1
 
     .prologue
-    .line 1959
-    invoke-super {p0}, Lcom/bbm/d/da;->a()Lcom/bbm/f/x;
+    .line 1583
+    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

@@ -4,14 +4,31 @@
         <item quantity="other">Uitsaai-boodskap na %1$s kontakte gestuur</item>
         <item quantity="one">Uitsaai-boodskap na 1 kontak gestuur</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d Intekenare</item>
+        <item quantity="zero">Geen Intekenaar nie</item>
+        <item quantity="one">%1$d Intekenaar</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d Lede</item>
+        <item quantity="one">%1$d Lid</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">sekondes</item>
+        <item quantity="one">sekonde</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Tydhouer vir %1$d sekondes gestel.</item>
+        <item quantity="one">Tydhouer vir %1$d sekonde gestel.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s items</item>
         <item quantity="zero">0 item</item>
         <item quantity="one">1 item</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d hangende uitnodigings)</item>
-        <item quantity="one">(1 hangende uitnodiging)</item>
+        <item quantity="other">(%1$d hangend)</item>
+        <item quantity="one">(1 hangend)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s Resultate</item>

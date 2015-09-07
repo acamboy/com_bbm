@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/um;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "ImageViewerActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/fu;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ImageViewerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
     .locals 0
 
     .prologue
-    .line 2091
-    iput-object p1, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 74
+    iput-object p1, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,65 +25,79 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+.method public final onClick(Landroid/view/View;)V
     .locals 4
 
     .prologue
-    .line 2094
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    const/4 v3, 0x4
 
-    .line 2095
-    packed-switch v0, :pswitch_data_0
+    const/4 v2, 0x0
 
-    .line 2108
-    :pswitch_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 78
+    const-string v0, "mOnClickListener Clicked"
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/MainActivity;->d(Lcom/bbm/ui/activities/MainActivity;I)Z
+    const-class v1, Lcom/bbm/ui/activities/ImageViewerActivity;
 
-    .line 2111
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 80
+    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Lcom/bbm/ui/activities/ImageViewerActivity;)Lcom/bbm/ui/FooterActionBar;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ui/FooterActionBar;->getVisibility()I
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 81
+    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Lcom/bbm/ui/activities/ImageViewerActivity;)Lcom/bbm/ui/FooterActionBar;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
+
+    .line 82
+    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->b(Lcom/bbm/ui/activities/ImageViewerActivity;)Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 88
     :goto_0
     return-void
 
-    .line 2098
-    :pswitch_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 84
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->v()V
+    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->a(Lcom/bbm/ui/activities/ImageViewerActivity;)Lcom/bbm/ui/FooterActionBar;
 
-    .line 2099
-    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/MainActivity;
+    move-result-object v0
 
-    new-instance v1, Landroid/content/Intent;
+    invoke-virtual {v0, v2}, Lcom/bbm/ui/FooterActionBar;->setVisibility(I)V
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 85
+    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
 
-    const-class v3, Lcom/bbm/ui/activities/NewGroupActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->b(Lcom/bbm/ui/activities/ImageViewerActivity;)Landroid/widget/ImageView;
 
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->startActivity(Landroid/content/Intent;)V
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    goto :goto_0
+    .line 86
+    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
 
-    .line 2104
-    :pswitch_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->v()V
-
-    .line 2105
-    iget-object v0, p0, Lcom/bbm/ui/activities/um;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->r(Lcom/bbm/ui/activities/MainActivity;)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->c(Lcom/bbm/ui/activities/ImageViewerActivity;)V
 
     goto :goto_0
-
-    .line 2095
-    :pswitch_data_0
-    .packed-switch 0x7f0a0053
-        :pswitch_1
-        :pswitch_0
-        :pswitch_2
-    .end packed-switch
 .end method

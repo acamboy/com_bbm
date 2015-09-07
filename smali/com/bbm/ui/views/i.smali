@@ -12,7 +12,7 @@
     .locals 1
 
     .prologue
-    .line 85
+    .line 86
     iput-object p1, p0, Lcom/bbm/ui/views/i;->a:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
     const/4 v0, 0x0
@@ -28,11 +28,11 @@
     .locals 1
 
     .prologue
-    .line 88
+    .line 89
     iget-object v0, p0, Lcom/bbm/ui/views/i;->a:Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;
 
     invoke-static {v0}, Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;->a(Lcom/bbm/ui/views/ChannelLobbyReportsPaneView;)V
 
-    .line 89
+    .line 90
     return-void
 .end method

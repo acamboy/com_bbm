@@ -101,7 +101,7 @@
 .end method
 
 .method static b(Lcom/blackberry/ids/UserAuthState$AuthState;)V
-    .locals 4
+    .locals 6
 
     .prologue
     const/4 v1, 0x0
@@ -197,7 +197,7 @@
     invoke-static {v0, v2}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 36
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v2
 
@@ -205,11 +205,17 @@
 
     .line 37
     :try_start_0
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->l()V
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v0, v3, v4, v5}, Lcom/blackberry/ids/BBIDStorage;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 38
     monitor-exit v2

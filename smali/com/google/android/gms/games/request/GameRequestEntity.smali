@@ -142,15 +142,15 @@
 
     invoke-interface {p1}, Lcom/google/android/gms/games/request/GameRequest;->getCreationTimestamp()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/google/android/gms/games/request/GameRequestEntity;->Jr:J
+    iput-wide v2, p0, Lcom/google/android/gms/games/request/GameRequestEntity;->Jr:J
 
     invoke-interface {p1}, Lcom/google/android/gms/games/request/GameRequest;->getExpirationTimestamp()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/google/android/gms/games/request/GameRequestEntity;->Ko:J
+    iput-wide v2, p0, Lcom/google/android/gms/games/request/GameRequestEntity;->Ko:J
 
     invoke-interface {p1}, Lcom/google/android/gms/games/request/GameRequest;->getData()[B
 
@@ -334,7 +334,7 @@
 .end method
 
 .method static a(Lcom/google/android/gms/games/request/GameRequest;Ljava/lang/Object;)Z
-    .locals 5
+    .locals 6
 
     const/4 v1, 0x1
 
@@ -460,9 +460,9 @@
 
     invoke-interface {p0}, Lcom/google/android/gms/games/request/GameRequest;->getCreationTimestamp()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -482,9 +482,9 @@
 
     invoke-interface {p0}, Lcom/google/android/gms/games/request/GameRequest;->getExpirationTimestamp()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 

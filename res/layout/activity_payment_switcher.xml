@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minWidth="@dimen/payment_activity_dialog_minWidth"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/payment_activity_dialog_text_title" android:ellipsize="end" android:id="@id/switch_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/payment_activity_dialog_text_title_margin_bottom" android:text="@string/purchase_options" android:maxLines="1" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingLeft="@dimen/payment_activity_padding" android:paddingRight="@dimen/payment_activity_padding" android:paddingBottom="@dimen/payment_activity_padding" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:gravity="left|center" android:id="@id/go_with_cb_button" android:paddingLeft="@dimen/payment_activity_padding" android:text="@string/pay_with_blackberry" android:drawableLeft="@drawable/ic_carrier_billing" android:drawablePadding="@dimen/payment_button_icon_padding" style="@style/cusButton" />
+        <View style="@style/cusDivider" />
+        <Button android:gravity="left|center" android:id="@id/go_with_primary_button" android:paddingLeft="@dimen/payment_activity_padding" android:text="@string/pay_with_google_play" android:drawableLeft="@drawable/ic_google_play" android:drawablePadding="@dimen/payment_button_icon_padding" style="@style/cusButton" />
+    </LinearLayout>
+</LinearLayout>

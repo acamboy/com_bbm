@@ -1,62 +1,47 @@
-.class public final Lcom/bbm/ui/activities/vf;
-.super Lcom/bbm/ui/activities/agx;
-.source "NFCLifeCycleListener.java"
+.class final Lcom/bbm/ui/activities/vf;
+.super Ljava/lang/Object;
+.source "InviteActivity.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/activities/ve;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/bbm/ui/activities/ve;)V
     .locals 0
 
     .prologue
-    .line 9
-    invoke-direct {p0}, Lcom/bbm/ui/activities/agx;-><init>()V
+    .line 168
+    iput-object p1, p0, Lcom/bbm/ui/activities/vf;->a:Lcom/bbm/ui/activities/ve;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final b(Lcom/bbm/ui/activities/agw;)V
-    .locals 3
+.method public final run()V
+    .locals 2
 
     .prologue
-    .line 13
-    invoke-virtual {p1}, Lcom/bbm/ui/activities/agw;->getPackageManager()Landroid/content/pm/PackageManager;
+    .line 171
+    iget-object v0, p0, Lcom/bbm/ui/activities/vf;->a:Lcom/bbm/ui/activities/ve;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ve;->a:Lcom/bbm/ui/activities/InviteActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->c(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/ScrollView;
 
     move-result-object v0
 
-    const-string v1, "android.hardware.nfc"
+    const/16 v1, 0x82
 
-    invoke-virtual {v0, v1}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Landroid/widget/ScrollView;->fullScroll(I)Z
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 24
-    :cond_0
-    :goto_0
+    .line 172
     return-void
-
-    .line 17
-    :cond_1
-    invoke-static {p1}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
-
-    move-result-object v0
-
-    .line 18
-    if-eqz v0, :cond_0
-
-    .line 23
-    invoke-static {p1}, Lcom/bbm/ui/dp;->b(Landroid/app/Activity;)Lcom/bbm/ui/dp;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    new-array v2, v2, [Landroid/app/Activity;
-
-    invoke-virtual {v0, v1, p1, v2}, Landroid/nfc/NfcAdapter;->setOnNdefPushCompleteCallback(Landroid/nfc/NfcAdapter$OnNdefPushCompleteCallback;Landroid/app/Activity;[Landroid/app/Activity;)V
-
-    goto :goto_0
 .end method

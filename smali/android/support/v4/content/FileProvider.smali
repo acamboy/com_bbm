@@ -14,7 +14,7 @@
             "Ljava/util/HashMap",
             "<",
             "Ljava/lang/String;",
-            "Landroid/support/v4/content/a;",
+            "Landroid/support/v4/content/b;",
             ">;"
         }
     .end annotation
@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field private d:Landroid/support/v4/content/a;
+.field private d:Landroid/support/v4/content/b;
 
 
 # direct methods
@@ -84,19 +84,19 @@
 
     .prologue
     .line 376
-    invoke-static {p0, p1}, Landroid/support/v4/content/FileProvider;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/a;
+    invoke-static {p0, p1}, Landroid/support/v4/content/FileProvider;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/b;
 
     move-result-object v0
 
     .line 377
-    invoke-interface {v0, p2}, Landroid/support/v4/content/a;->a(Ljava/io/File;)Landroid/net/Uri;
+    invoke-interface {v0, p2}, Landroid/support/v4/content/b;->a(Ljava/io/File;)Landroid/net/Uri;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method private static a(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/a;
+.method private static a(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/b;
     .locals 10
 
     .prologue
@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    check-cast v0, Landroid/support/v4/content/a;
+    check-cast v0, Landroid/support/v4/content/b;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -126,9 +126,9 @@
 
     .line 534
     :try_start_1
-    new-instance v0, Landroid/support/v4/content/b;
+    new-instance v0, Landroid/support/v4/content/c;
 
-    invoke-direct {v0, p1}, Landroid/support/v4/content/b;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0, p1}, Landroid/support/v4/content/c;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -200,7 +200,7 @@
     move-result-object v1
 
     :try_start_4
-    iget-object v6, v0, Landroid/support/v4/content/b;->a:Ljava/util/HashMap;
+    iget-object v6, v0, Landroid/support/v4/content/c;->a:Ljava/util/HashMap;
 
     invoke-virtual {v6, v5, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -430,19 +430,17 @@
     .locals 5
 
     .prologue
+    const/4 v3, 0x0
+
     .line 753
-    array-length v3, p1
-
-    const/4 v0, 0x0
-
-    move v2, v0
+    move v2, v3
 
     move-object v1, p0
 
     :goto_0
-    if-ge v2, v3, :cond_0
+    if-gtz v2, :cond_0
 
-    aget-object v4, p1, v2
+    aget-object v4, p1, v3
 
     .line 755
     if-eqz v4, :cond_1
@@ -514,11 +512,11 @@
     :cond_1
     iget-object v0, p2, Landroid/content/pm/ProviderInfo;->authority:Ljava/lang/String;
 
-    invoke-static {p1, v0}, Landroid/support/v4/content/FileProvider;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/a;
+    invoke-static {p1, v0}, Landroid/support/v4/content/FileProvider;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/support/v4/content/b;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/content/FileProvider;->d:Landroid/support/v4/content/a;
+    iput-object v0, p0, Landroid/support/v4/content/FileProvider;->d:Landroid/support/v4/content/b;
 
     .line 353
     return-void
@@ -529,9 +527,9 @@
 
     .prologue
     .line 497
-    iget-object v0, p0, Landroid/support/v4/content/FileProvider;->d:Landroid/support/v4/content/a;
+    iget-object v0, p0, Landroid/support/v4/content/FileProvider;->d:Landroid/support/v4/content/b;
 
-    invoke-interface {v0, p1}, Landroid/support/v4/content/a;->a(Landroid/net/Uri;)Ljava/io/File;
+    invoke-interface {v0, p1}, Landroid/support/v4/content/b;->a(Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object v0
 
@@ -558,9 +556,9 @@
 
     .prologue
     .line 451
-    iget-object v0, p0, Landroid/support/v4/content/FileProvider;->d:Landroid/support/v4/content/a;
+    iget-object v0, p0, Landroid/support/v4/content/FileProvider;->d:Landroid/support/v4/content/b;
 
-    invoke-interface {v0, p1}, Landroid/support/v4/content/a;->a(Landroid/net/Uri;)Ljava/io/File;
+    invoke-interface {v0, p1}, Landroid/support/v4/content/b;->a(Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object v0
 
@@ -640,9 +638,9 @@
 
     .prologue
     .line 519
-    iget-object v0, p0, Landroid/support/v4/content/FileProvider;->d:Landroid/support/v4/content/a;
+    iget-object v0, p0, Landroid/support/v4/content/FileProvider;->d:Landroid/support/v4/content/b;
 
-    invoke-interface {v0, p1}, Landroid/support/v4/content/a;->a(Landroid/net/Uri;)Ljava/io/File;
+    invoke-interface {v0, p1}, Landroid/support/v4/content/b;->a(Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object v1
 
@@ -756,9 +754,9 @@
     const/4 v3, 0x0
 
     .line 412
-    iget-object v0, p0, Landroid/support/v4/content/FileProvider;->d:Landroid/support/v4/content/a;
+    iget-object v0, p0, Landroid/support/v4/content/FileProvider;->d:Landroid/support/v4/content/b;
 
-    invoke-interface {v0, p1}, Landroid/support/v4/content/a;->a(Landroid/net/Uri;)Ljava/io/File;
+    invoke-interface {v0, p1}, Landroid/support/v4/content/b;->a(Landroid/net/Uri;)Ljava/io/File;
 
     move-result-object v4
 

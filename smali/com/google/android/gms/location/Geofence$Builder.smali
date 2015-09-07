@@ -188,7 +188,7 @@
 .end method
 
 .method public final setExpirationDuration(J)Lcom/google/android/gms/location/Geofence$Builder;
-    .locals 2
+    .locals 3
 
     const-wide/16 v0, 0x0
 

@@ -1,4 +1,4 @@
-.class final Lcom/google/zxing/client/android/i;
+.class public final Lcom/google/zxing/client/android/i;
 .super Ljava/lang/Thread;
 .source "DecodeThread.java"
 
@@ -24,7 +24,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/google/zxing/client/android/CaptureActivity;Ljava/util/Collection;Ljava/lang/String;Lcom/google/zxing/p;)V
+.method public constructor <init>(Lcom/google/zxing/client/android/CaptureActivity;Ljava/util/Collection;Ljava/lang/String;Lcom/google/zxing/p;)V
     .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -165,7 +165,7 @@
 
 
 # virtual methods
-.method final a()Landroid/os/Handler;
+.method public final a()Landroid/os/Handler;
     .locals 1
 
     .prologue

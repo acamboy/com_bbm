@@ -1136,7 +1136,7 @@
 .end method
 
 .method public final blockingConnect(JLjava/util/concurrent/TimeUnit;)Lcom/google/android/gms/common/ConnectionResult;
-    .locals 4
+    .locals 5
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 

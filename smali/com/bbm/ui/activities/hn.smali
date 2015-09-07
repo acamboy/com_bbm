@@ -1,6 +1,9 @@
 .class final Lcom/bbm/ui/activities/hn;
-.super Lcom/bbm/j/u;
+.super Ljava/lang/Object;
 .source "ConversationActivity.java"
+
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
 
 
 # instance fields
@@ -12,105 +15,42 @@
     .locals 0
 
     .prologue
-    .line 691
+    .line 2692
     iput-object p1, p0, Lcom/bbm/ui/activities/hn;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 3
+.method public final onGlobalLayout()V
+    .locals 2
 
     .prologue
-    .line 696
+    .line 2696
     iget-object v0, p0, Lcom/bbm/ui/activities/hn;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->aD(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/EmoticonPanelViewLayout;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/hn;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->l(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/d/dp;
+    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonPanelViewLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    .line 697
-    iget-object v1, v0, Lcom/bbm/d/dp;->t:Lcom/bbm/util/bc;
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    sget-object v2, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
-
-    if-ne v1, v2, :cond_1
-
-    .line 698
-    iget-object v0, v0, Lcom/bbm/d/dp;->d:Ljava/lang/String;
-
-    .line 700
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/hn;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->y(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 702
-    iget-object v1, p0, Lcom/bbm/ui/activities/hn;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->y(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    const-string v2, ""
-
-    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 704
-    iget-object v1, p0, Lcom/bbm/ui/activities/hn;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->y(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/EditText;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/widget/EditText;->append(Ljava/lang/CharSequence;)V
-
-    .line 705
+    .line 2697
     iget-object v0, p0, Lcom/bbm/ui/activities/hn;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->z(Lcom/bbm/ui/activities/ConversationActivity;)V
+    iget-object v1, p0, Lcom/bbm/ui/activities/hn;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 708
-    :cond_0
-    const/4 v0, 0x1
+    iget-object v1, v1, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
 
-    .line 711
-    :goto_0
-    return v0
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->b(Lcom/bbm/ui/activities/ConversationActivity;Lcom/bbm/ui/c/gj;)V
 
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+    .line 2698
+    return-void
 .end method

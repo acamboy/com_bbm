@@ -1,111 +1,73 @@
-.class final synthetic Lcom/bbm/ui/c/bs;
+.class final Lcom/bbm/ui/c/bs;
 .super Ljava/lang/Object;
-.source "ContactsFragment.java"
+.source "ChatsFragment.java"
+
+# interfaces
+.implements Landroid/widget/ExpandableListView$OnGroupCollapseListener;
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/c/bo;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/c/bo;)V
+    .locals 0
 
     .prologue
-    .line 654
-    invoke-static {}, Lcom/bbm/ui/c/cb;->values()[Lcom/bbm/ui/c/cb;
+    .line 926
+    iput-object p1, p0, Lcom/bbm/ui/c/bs;->a:Lcom/bbm/ui/c/bo;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onGroupCollapse(I)V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 929
+    iget-object v0, p0, Lcom/bbm/ui/c/bs;->a:Lcom/bbm/ui/c/bo;
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/bo;->a(Lcom/bbm/ui/c/bo;Z)V
+
+    .line 931
+    iget-object v0, p0, Lcom/bbm/ui/c/bs;->a:Lcom/bbm/ui/c/bo;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/bo;->g(Lcom/bbm/ui/c/bo;)Lcom/bbm/ui/e/cm;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-virtual {v0, p1}, Lcom/bbm/ui/e/cm;->getChildrenCount(I)I
 
-    new-array v0, v0, [I
+    move-result v0
 
-    sput-object v0, Lcom/bbm/ui/c/bs;->a:[I
+    if-nez v0, :cond_0
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/c/bs;->a:[I
+    .line 932
+    iget-object v0, p0, Lcom/bbm/ui/c/bs;->a:Lcom/bbm/ui/c/bo;
 
-    sget-object v1, Lcom/bbm/ui/c/cb;->d:Lcom/bbm/ui/c/cb;
+    invoke-static {v0}, Lcom/bbm/ui/c/bo;->g(Lcom/bbm/ui/c/bo;)Lcom/bbm/ui/e/cm;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/c/cb;->ordinal()I
+    move-result-object v0
 
-    move-result v1
+    invoke-virtual {v0, p1, v1}, Lcom/bbm/ui/e/cm;->getChild(II)Ljava/lang/Object;
 
-    const/4 v2, 0x1
+    move-result-object v0
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+    check-cast v0, Lcom/bbm/d/gn;
 
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/c/bs;->a:[I
+    .line 933
+    iget-object v1, p0, Lcom/bbm/ui/c/bs;->a:Lcom/bbm/ui/c/bo;
 
-    sget-object v1, Lcom/bbm/ui/c/cb;->a:Lcom/bbm/ui/c/cb;
+    invoke-static {v1, v0}, Lcom/bbm/ui/c/bo;->a(Lcom/bbm/ui/c/bo;Lcom/bbm/d/gn;)V
 
-    invoke-virtual {v1}, Lcom/bbm/ui/c/cb;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/c/bs;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/c/cb;->c:Lcom/bbm/ui/c/cb;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/cb;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/ui/c/bs;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/c/cb;->b:Lcom/bbm/ui/c/cb;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/cb;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_3
+    .line 935
+    :cond_0
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_0
 .end method

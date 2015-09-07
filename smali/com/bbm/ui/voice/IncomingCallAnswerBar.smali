@@ -4,35 +4,35 @@
 
 
 # instance fields
-.field private a:I
+.field public a:Z
 
-.field private b:I
+.field public b:Z
 
-.field private c:I
+.field public c:Z
 
-.field private d:I
+.field public d:Landroid/animation/AnimatorSet;
 
-.field private e:Z
+.field public e:Landroid/animation/AnimatorSet;
 
-.field private f:Z
+.field public f:Landroid/animation/AnimatorSet;
 
-.field private g:Z
+.field private g:I
 
-.field private h:Landroid/graphics/drawable/Drawable;
+.field private h:I
 
-.field private i:Landroid/graphics/drawable/Drawable;
+.field private i:I
 
-.field private j:Landroid/graphics/drawable/Drawable;
+.field private j:I
 
 .field private k:Landroid/graphics/drawable/Drawable;
 
 .field private l:Landroid/graphics/drawable/Drawable;
 
-.field private m:Landroid/animation/AnimatorSet;
+.field private m:Landroid/graphics/drawable/Drawable;
 
-.field private n:Landroid/animation/AnimatorSet;
+.field private n:Landroid/graphics/drawable/Drawable;
 
-.field private o:Landroid/animation/AnimatorSet;
+.field private o:Landroid/graphics/drawable/Drawable;
 
 .field private p:Lcom/bbm/ui/voice/g;
 
@@ -46,7 +46,7 @@
     invoke-direct {p0, p1}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;)V
 
     .line 56
-    invoke-direct {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g()V
+    invoke-direct {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a()V
 
     .line 57
     return-void
@@ -60,7 +60,7 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 61
-    invoke-direct {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g()V
+    invoke-direct {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a()V
 
     .line 62
     return-void
@@ -74,130 +74,47 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 66
-    invoke-direct {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g()V
+    invoke-direct {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a()V
 
     .line 67
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
-    .locals 1
+.method private a()V
+    .locals 10
 
     .prologue
-    .line 23
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Z
+    const/4 v9, 0x1
 
-    return v0
-.end method
+    const/4 v8, 0x0
 
-.method static synthetic b(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
-    .locals 1
-
-    .prologue
-    .line 23
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Z
-
-    return v0
-.end method
-
-.method static synthetic c(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
-    .locals 1
-
-    .prologue
-    .line 23
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:Z
-
-    return v0
-.end method
-
-.method static synthetic d(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/animation/AnimatorSet;
-    .locals 1
-
-    .prologue
-    .line 23
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->m:Landroid/animation/AnimatorSet;
-
-    return-object v0
-.end method
-
-.method static synthetic e(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)I
-    .locals 1
-
-    .prologue
-    .line 23
-    iget v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:I
-
-    return v0
-.end method
-
-.method static synthetic f(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)I
-    .locals 1
-
-    .prologue
-    .line 23
-    iget v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->b:I
-
-    return v0
-.end method
-
-.method static synthetic g(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/graphics/drawable/Drawable;
-    .locals 1
-
-    .prologue
-    .line 23
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->k:Landroid/graphics/drawable/Drawable;
-
-    return-object v0
-.end method
-
-.method private g()V
-    .locals 9
-
-    .prologue
-    const/4 v8, 0x1
-
-    const/4 v7, 0x0
-
-    .line 242
+    .line 236
     invoke-virtual {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0c001e
+    const v1, 0x7f0c0021
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:I
+    iput v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:I
 
-    .line 243
+    .line 237
     invoke-virtual {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0c001d
+    const v1, 0x7f0c0020
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->b:I
+    iput v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->h:I
 
-    .line 244
-    invoke-virtual {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0c001c
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->c:I
-
-    .line 246
+    .line 238
     invoke-virtual {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -208,10 +125,23 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->d:I
+    iput v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->i:I
 
-    .line 249
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->h:Landroid/graphics/drawable/Drawable;
+    .line 240
+    invoke-virtual {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f0c0022
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->j:I
+
+    .line 243
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->k:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -219,10 +149,10 @@
 
     div-int/lit8 v0, v0, 0x2
 
-    .line 250
+    .line 244
     invoke-virtual {p0, v0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->setThumbOffset(I)V
 
-    .line 251
+    .line 245
     invoke-virtual {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getPaddingTop()I
 
     move-result v1
@@ -233,156 +163,16 @@
 
     invoke-virtual {p0, v0, v1, v0, v2}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->setPadding(IIII)V
 
-    .line 253
+    .line 247
     invoke-virtual {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0c0018
+    const v1, 0x7f0c001b
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v0
-
-    invoke-virtual {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    const v2, 0x7f0c0017
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v1
-
-    invoke-virtual {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    const v3, 0x7f0c0019
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
-
-    move-result v2
-
-    new-instance v3, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v3}, Landroid/animation/AnimatorSet;-><init>()V
-
-    iput-object v3, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->n:Landroid/animation/AnimatorSet;
-
-    iget-object v3, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->n:Landroid/animation/AnimatorSet;
-
-    const-string v4, "progress"
-
-    new-array v5, v8, [I
-
-    iget v6, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:I
-
-    add-int/2addr v6, v0
-
-    aput v6, v5, v7
-
-    invoke-static {p0, v4, v5}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object v4
-
-    int-to-long v5, v1
-
-    invoke-virtual {v4, v5, v6}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    move-result-object v3
-
-    const-string v4, "progress"
-
-    new-array v5, v8, [I
-
-    iget v6, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:I
-
-    aput v6, v5, v7
-
-    invoke-static {p0, v4, v5}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object v4
-
-    int-to-long v5, v2
-
-    invoke-virtual {v4, v5, v6}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Landroid/animation/AnimatorSet$Builder;->before(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    iget-object v3, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->n:Landroid/animation/AnimatorSet;
-
-    new-instance v4, Lcom/bbm/ui/voice/a;
-
-    invoke-direct {v4, p0}, Lcom/bbm/ui/voice/a;-><init>(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)V
-
-    invoke-virtual {v3, v4}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
-
-    new-instance v3, Landroid/animation/AnimatorSet;
-
-    invoke-direct {v3}, Landroid/animation/AnimatorSet;-><init>()V
-
-    iput-object v3, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->o:Landroid/animation/AnimatorSet;
-
-    iget-object v3, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->o:Landroid/animation/AnimatorSet;
-
-    const-string v4, "progress"
-
-    new-array v5, v8, [I
-
-    iget v6, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:I
-
-    sub-int/2addr v6, v0
-
-    aput v6, v5, v7
-
-    invoke-static {p0, v4, v5}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object v4
-
-    int-to-long v5, v1
-
-    invoke-virtual {v4, v5, v6}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    move-result-object v1
-
-    invoke-virtual {v3, v1}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    move-result-object v1
-
-    const-string v3, "progress"
-
-    new-array v4, v8, [I
-
-    iget v5, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:I
-
-    aput v5, v4, v7
-
-    invoke-static {p0, v3, v4}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
-
-    move-result-object v3
-
-    int-to-long v4, v2
-
-    invoke-virtual {v3, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet$Builder;->before(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
-
-    iget-object v1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->o:Landroid/animation/AnimatorSet;
-
-    new-instance v2, Lcom/bbm/ui/voice/b;
-
-    invoke-direct {v2, p0}, Lcom/bbm/ui/voice/b;-><init>(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)V
-
-    invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
     invoke-virtual {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getResources()Landroid/content/res/Resources;
 
@@ -398,15 +188,155 @@
 
     move-result-object v2
 
-    const v3, 0x7f0c001b
+    const v3, 0x7f0c001c
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
 
     move-result v2
 
-    new-array v3, v8, [I
+    new-instance v3, Landroid/animation/AnimatorSet;
 
-    aput v7, v3, v7
+    invoke-direct {v3}, Landroid/animation/AnimatorSet;-><init>()V
+
+    iput-object v3, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Landroid/animation/AnimatorSet;
+
+    iget-object v3, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Landroid/animation/AnimatorSet;
+
+    const-string v4, "progress"
+
+    new-array v5, v9, [I
+
+    iget v6, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:I
+
+    add-int/2addr v6, v0
+
+    aput v6, v5, v8
+
+    invoke-static {p0, v4, v5}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
+
+    move-result-object v4
+
+    int-to-long v6, v1
+
+    invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    move-result-object v3
+
+    const-string v4, "progress"
+
+    new-array v5, v9, [I
+
+    iget v6, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:I
+
+    aput v6, v5, v8
+
+    invoke-static {p0, v4, v5}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
+
+    move-result-object v4
+
+    int-to-long v6, v2
+
+    invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/animation/AnimatorSet$Builder;->before(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    iget-object v3, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Landroid/animation/AnimatorSet;
+
+    new-instance v4, Lcom/bbm/ui/voice/a;
+
+    invoke-direct {v4, p0}, Lcom/bbm/ui/voice/a;-><init>(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)V
+
+    invoke-virtual {v3, v4}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    new-instance v3, Landroid/animation/AnimatorSet;
+
+    invoke-direct {v3}, Landroid/animation/AnimatorSet;-><init>()V
+
+    iput-object v3, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Landroid/animation/AnimatorSet;
+
+    iget-object v3, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Landroid/animation/AnimatorSet;
+
+    const-string v4, "progress"
+
+    new-array v5, v9, [I
+
+    iget v6, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:I
+
+    sub-int/2addr v6, v0
+
+    aput v6, v5, v8
+
+    invoke-static {p0, v4, v5}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
+
+    move-result-object v4
+
+    int-to-long v6, v1
+
+    invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    move-result-object v1
+
+    const-string v3, "progress"
+
+    new-array v4, v9, [I
+
+    iget v5, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:I
+
+    aput v5, v4, v8
+
+    invoke-static {p0, v3, v4}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
+
+    move-result-object v3
+
+    int-to-long v4, v2
+
+    invoke-virtual {v3, v4, v5}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet$Builder;->before(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
+
+    iget-object v1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Landroid/animation/AnimatorSet;
+
+    new-instance v2, Lcom/bbm/ui/voice/b;
+
+    invoke-direct {v2, p0}, Lcom/bbm/ui/voice/b;-><init>(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)V
+
+    invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
+
+    invoke-virtual {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f0c001d
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v1
+
+    invoke-virtual {p0}, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0c001e
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getInteger(I)I
+
+    move-result v2
+
+    new-array v3, v9, [I
+
+    aput v8, v3, v8
 
     invoke-static {v3}, Landroid/animation/ValueAnimator;->ofInt([I)Landroid/animation/ValueAnimator;
 
@@ -418,13 +348,13 @@
 
     const-string v1, "progress"
 
-    new-array v4, v8, [I
+    new-array v4, v9, [I
 
-    iget v5, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:I
+    iget v5, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:I
 
     add-int/2addr v5, v0
 
-    aput v5, v4, v7
+    aput v5, v4, v8
 
     invoke-static {p0, v1, v4}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
 
@@ -442,13 +372,13 @@
 
     const-string v4, "progress"
 
-    new-array v5, v8, [I
+    new-array v5, v9, [I
 
-    iget v6, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:I
+    iget v6, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:I
 
     sub-int v0, v6, v0
 
-    aput v0, v5, v7
+    aput v0, v5, v8
 
     invoke-static {p0, v4, v5}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
 
@@ -468,11 +398,11 @@
 
     const-string v4, "progress"
 
-    new-array v5, v8, [I
+    new-array v5, v9, [I
 
-    iget v6, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:I
+    iget v6, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:I
 
-    aput v6, v5, v7
+    aput v6, v5, v8
 
     invoke-static {p0, v4, v5}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
 
@@ -484,17 +414,17 @@
 
     invoke-virtual {v4, v5}, Landroid/animation/ObjectAnimator;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    int-to-long v5, v2
+    int-to-long v6, v2
 
-    invoke-virtual {v4, v5, v6}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+    invoke-virtual {v4, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
     const/4 v2, 0x4
 
     new-array v2, v2, [Landroid/animation/Animator;
 
-    aput-object v3, v2, v7
+    aput-object v3, v2, v8
 
-    aput-object v1, v2, v8
+    aput-object v1, v2, v9
 
     const/4 v1, 0x2
 
@@ -508,13 +438,13 @@
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->m:Landroid/animation/AnimatorSet;
+    iput-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->d:Landroid/animation/AnimatorSet;
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->m:Landroid/animation/AnimatorSet;
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->d:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0, v2}, Landroid/animation/AnimatorSet;->playSequentially([Landroid/animation/Animator;)V
 
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->m:Landroid/animation/AnimatorSet;
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->d:Landroid/animation/AnimatorSet;
 
     new-instance v1, Lcom/bbm/ui/voice/c;
 
@@ -522,15 +452,85 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 255
+    .line 249
     new-instance v0, Lcom/bbm/ui/voice/d;
 
-    invoke-direct {v0, p0, v7}, Lcom/bbm/ui/voice/d;-><init>(Lcom/bbm/ui/voice/IncomingCallAnswerBar;B)V
+    invoke-direct {v0, p0, v8}, Lcom/bbm/ui/voice/d;-><init>(Lcom/bbm/ui/voice/IncomingCallAnswerBar;B)V
 
     invoke-super {p0, v0}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
-    .line 256
+    .line 250
     return-void
+.end method
+
+.method static synthetic a(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
+    .locals 1
+
+    .prologue
+    .line 23
+    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:Z
+
+    return v0
+.end method
+
+.method static synthetic b(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
+    .locals 1
+
+    .prologue
+    .line 23
+    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->b:Z
+
+    return v0
+.end method
+
+.method static synthetic c(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Z
+    .locals 1
+
+    .prologue
+    .line 23
+    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->c:Z
+
+    return v0
+.end method
+
+.method static synthetic d(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/animation/AnimatorSet;
+    .locals 1
+
+    .prologue
+    .line 23
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->d:Landroid/animation/AnimatorSet;
+
+    return-object v0
+.end method
+
+.method static synthetic e(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)I
+    .locals 1
+
+    .prologue
+    .line 23
+    iget v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:I
+
+    return v0
+.end method
+
+.method static synthetic f(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)I
+    .locals 1
+
+    .prologue
+    .line 23
+    iget v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->h:I
+
+    return v0
+.end method
+
+.method static synthetic g(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/graphics/drawable/Drawable;
+    .locals 1
+
+    .prologue
+    .line 23
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->n:Landroid/graphics/drawable/Drawable;
+
+    return-object v0
 .end method
 
 .method static synthetic h(Lcom/bbm/ui/voice/IncomingCallAnswerBar;)Landroid/graphics/drawable/Drawable;
@@ -538,7 +538,7 @@
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->l:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->o:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -548,7 +548,7 @@
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->i:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->l:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -558,7 +558,7 @@
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->j:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->m:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
@@ -578,7 +578,7 @@
 
     .prologue
     .line 23
-    iget v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->d:I
+    iget v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->j:I
 
     return v0
 .end method
@@ -588,7 +588,7 @@
 
     .prologue
     .line 23
-    iget v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->c:I
+    iget v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->i:I
 
     return v0
 .end method
@@ -598,7 +598,7 @@
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->n:Landroid/animation/AnimatorSet;
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Landroid/animation/AnimatorSet;
 
     return-object v0
 .end method
@@ -608,7 +608,7 @@
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->o:Landroid/animation/AnimatorSet;
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Landroid/animation/AnimatorSet;
 
     return-object v0
 .end method
@@ -620,7 +620,7 @@
     .line 23
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->c:Z
 
     return v0
 .end method
@@ -632,153 +632,13 @@
     .line 23
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->b:Z
 
     return v0
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 1
-
-    .prologue
-    .line 181
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Z
-
-    return v0
-.end method
-
-.method public final b()Z
-    .locals 1
-
-    .prologue
-    .line 189
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:Z
-
-    return v0
-.end method
-
-.method public final c()V
-    .locals 1
-
-    .prologue
-    .line 199
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:Z
-
-    if-nez v0, :cond_0
-
-    .line 200
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->m:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
-
-    .line 201
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->o:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
-
-    .line 203
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->n:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
-
-    .line 205
-    :cond_0
-    return-void
-.end method
-
-.method public final d()V
-    .locals 1
-
-    .prologue
-    .line 214
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:Z
-
-    if-nez v0, :cond_0
-
-    .line 215
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->m:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
-
-    .line 216
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->n:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
-
-    .line 218
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->o:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
-
-    .line 220
-    :cond_0
-    return-void
-.end method
-
-.method public final e()V
-    .locals 1
-
-    .prologue
-    .line 227
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Z
-
-    if-nez v0, :cond_0
-
-    iget-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:Z
-
-    if-nez v0, :cond_0
-
-    .line 228
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->m:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
-
-    .line 230
-    :cond_0
-    return-void
-.end method
-
-.method public final f()V
-    .locals 1
-
-    .prologue
-    .line 236
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->m:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->end()V
-
-    .line 237
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->n:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->end()V
-
-    .line 238
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->o:Landroid/animation/AnimatorSet;
-
-    invoke-virtual {v0}, Landroid/animation/AnimatorSet;->end()V
-
-    .line 239
-    return-void
-.end method
-
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 5
 
@@ -787,21 +647,21 @@
 
     const/4 v0, 0x1
 
-    .line 133
-    iget-boolean v1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->f:Z
+    .line 130
+    iget-boolean v1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->b:Z
 
     if-nez v1, :cond_0
 
-    iget-boolean v1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->g:Z
+    iget-boolean v1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->c:Z
 
     if-eqz v1, :cond_1
 
-    .line 173
+    .line 167
     :cond_0
     :goto_0
     return v0
 
-    .line 147
+    .line 144
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -809,8 +669,8 @@
 
     if-nez v1, :cond_4
 
-    .line 148
-    iget-object v1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->h:Landroid/graphics/drawable/Drawable;
+    .line 145
+    iget-object v1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->k:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
@@ -834,10 +694,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 149
-    iput-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Z
+    .line 146
+    iput-boolean v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:Z
 
-    .line 173
+    .line 167
     :cond_2
     :goto_1
     invoke-super {p0, p1}, Landroid/widget/SeekBar;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -846,17 +706,17 @@
 
     goto :goto_0
 
-    .line 152
+    .line 148
     :cond_3
     const-string v1, "onTouchEvent() - block ACTION_DOWN"
 
     new-array v2, v4, [Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Lcom/bbm/w;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 156
+    .line 151
     :cond_4
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -864,27 +724,27 @@
 
     if-ne v1, v0, :cond_6
 
-    .line 157
-    iget-boolean v1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Z
+    .line 152
+    iget-boolean v1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:Z
 
     if-nez v1, :cond_5
 
-    .line 158
+    .line 153
     const-string v1, "onTouchEvent() - block ACTION_UP"
 
     new-array v2, v4, [Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Lcom/bbm/w;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v1, v2}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 161
+    .line 156
     :cond_5
-    iput-boolean v4, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Z
+    iput-boolean v4, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:Z
 
     goto :goto_1
 
-    .line 163
+    .line 157
     :cond_6
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -894,8 +754,8 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 164
-    iget-boolean v1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->e:Z
+    .line 158
+    iget-boolean v1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->a:Z
 
     if-nez v1, :cond_2
 
@@ -906,10 +766,10 @@
     .locals 0
 
     .prologue
-    .line 93
+    .line 90
     iput-object p1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->p:Lcom/bbm/ui/voice/g;
 
-    .line 94
+    .line 91
     return-void
 .end method
 
@@ -917,7 +777,7 @@
     .locals 0
 
     .prologue
-    .line 82
+    .line 80
     return-void
 .end method
 
@@ -927,26 +787,35 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 105
+    .line 102
     invoke-super {p0, p1}, Landroid/widget/SeekBar;->setThumb(Landroid/graphics/drawable/Drawable;)V
 
-    .line 106
-    iput-object p1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->h:Landroid/graphics/drawable/Drawable;
+    .line 103
+    iput-object p1, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->k:Landroid/graphics/drawable/Drawable;
 
-    .line 119
+    .line 116
     check-cast p1, Landroid/graphics/drawable/LayerDrawable;
 
-    .line 120
-    const v0, 0x7f0a05e7
+    .line 117
+    const v0, 0x7f0b06ad
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->k:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->n:Landroid/graphics/drawable/Drawable;
 
-    .line 121
-    const v0, 0x7f0a05e9
+    .line 118
+    const v0, 0x7f0b06af
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->o:Landroid/graphics/drawable/Drawable;
+
+    .line 119
+    const v0, 0x7f0b06ae
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
 
@@ -954,44 +823,35 @@
 
     iput-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->l:Landroid/graphics/drawable/Drawable;
 
+    .line 120
+    const v0, 0x7f0b06b0
+
+    invoke-virtual {p1, v0}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->m:Landroid/graphics/drawable/Drawable;
+
     .line 122
-    const v0, 0x7f0a05e8
-
-    invoke-virtual {p1, v0}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->i:Landroid/graphics/drawable/Drawable;
-
-    .line 123
-    const v0, 0x7f0a05ea
-
-    invoke-virtual {p1, v0}, Landroid/graphics/drawable/LayerDrawable;->findDrawableByLayerId(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->j:Landroid/graphics/drawable/Drawable;
-
-    .line 125
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->k:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->n:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 126
+    .line 123
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->o:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
+
+    .line 124
     iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->l:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 127
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->i:Landroid/graphics/drawable/Drawable;
+    .line 125
+    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->m:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 128
-    iget-object v0, p0, Lcom/bbm/ui/voice/IncomingCallAnswerBar;->j:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
-
-    .line 129
+    .line 126
     return-void
 .end method

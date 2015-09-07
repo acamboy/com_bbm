@@ -1,74 +1,68 @@
 .class final Lcom/bbm/ui/activities/afs;
-.super Lcom/bbm/ui/by;
-.source "ViewChannelPostActivity.java"
+.super Ljava/lang/Object;
+.source "SelectContactActivity.java"
+
+# interfaces
+.implements Landroid/widget/TextView$OnEditorActionListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
     .locals 0
 
     .prologue
-    .line 608
-    iput-object p1, p0, Lcom/bbm/ui/activities/afs;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 350
+    iput-object p1, p0, Lcom/bbm/ui/activities/afs;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
+    .locals 3
 
     .prologue
-    .line 618
-    iget-object v0, p0, Lcom/bbm/ui/activities/afs;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 353
+    iget-object v0, p0, Lcom/bbm/ui/activities/afs;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->finish()V
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 619
-    return-void
-.end method
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-.method public final a(I)V
-    .locals 1
+    invoke-virtual {p1}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
-    .prologue
-    .line 623
-    iget-object v0, p0, Lcom/bbm/ui/activities/afs;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    move-result-object v2
 
-    invoke-virtual {v0, p1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b(I)V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 624
-    return-void
-.end method
+    move-result-object v1
 
-.method public final b()V
-    .locals 2
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .prologue
-    .line 611
-    iget-object v0, p0, Lcom/bbm/ui/activities/afs;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    move-result-object v1
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->k()Lcom/bbm/ui/c/fq;
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/SelectContactActivity;->a(Ljava/lang/String;)V
+
+    .line 354
+    iget-object v0, p0, Lcom/bbm/ui/activities/afs;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->q(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    .line 612
-    iget-object v1, p0, Lcom/bbm/ui/activities/afs;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    const/4 v1, 0x6
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a(Lcom/bbm/ui/activities/ViewChannelPostActivity;Lcom/bbm/ui/c/fq;)V
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setImeOptions(I)V
 
-    .line 613
-    iget-object v0, p0, Lcom/bbm/ui/activities/afs;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 355
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->w()V
-
-    .line 614
-    return-void
+    return v0
 .end method

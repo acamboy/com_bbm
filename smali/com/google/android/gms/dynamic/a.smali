@@ -285,7 +285,7 @@
     return-void
 .end method
 
-.method protected abstract a(Lcom/google/android/gms/dynamic/d;)V
+.method public abstract a(Lcom/google/android/gms/dynamic/d;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

@@ -1,97 +1,66 @@
 .class final Lcom/bbm/h/q;
-.super Ljava/lang/Object;
-.source "InvitesAdapter.java"
+.super Lcom/bbm/d/b/r;
+.source "AddContactsFragment.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/r",
+        "<",
+        "Lcom/bbm/h/al;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/g/p;
-
-.field final synthetic b:Lcom/bbm/h/n;
+.field final synthetic b:Lcom/bbm/h/l;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/h/n;Lcom/bbm/g/p;)V
+.method constructor <init>(Lcom/bbm/h/l;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
-    .line 189
-    iput-object p1, p0, Lcom/bbm/h/q;->b:Lcom/bbm/h/n;
+    .line 158
+    iput-object p1, p0, Lcom/bbm/h/q;->b:Lcom/bbm/h/l;
 
-    iput-object p2, p0, Lcom/bbm/h/q;->a:Lcom/bbm/g/p;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/r;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
     .prologue
-    .line 192
-    const-string v0, "incoming group invite clicked"
+    .line 158
+    check-cast p1, Lcom/bbm/h/al;
 
-    const-class v1, Lcom/bbm/h/n;
+    check-cast p2, Lcom/bbm/h/al;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    iget-object v0, p2, Lcom/bbm/h/al;->b:Lcom/bbm/h/ao;
 
-    .line 194
-    new-instance v0, Landroid/content/Intent;
+    iget-wide v0, v0, Lcom/bbm/h/ao;->b:J
 
-    iget-object v1, p0, Lcom/bbm/h/q;->b:Lcom/bbm/h/n;
+    iget-object v2, p1, Lcom/bbm/h/al;->b:Lcom/bbm/h/ao;
 
-    invoke-static {v1}, Lcom/bbm/h/n;->a(Lcom/bbm/h/n;)Lcom/bbm/h/w;
+    iget-wide v2, v2, Lcom/bbm/h/ao;->b:J
 
-    move-result-object v1
+    cmp-long v0, v0, v2
 
-    invoke-virtual {v1}, Lcom/bbm/h/w;->getActivity()Landroid/app/Activity;
+    if-lez v0, :cond_0
 
-    move-result-object v1
+    const/4 v0, 0x1
 
-    const-class v2, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+    :goto_0
+    return v0
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    :cond_0
+    const/4 v0, -0x1
 
-    .line 195
-    const-string v1, "invite_id"
-
-    iget-object v2, p0, Lcom/bbm/h/q;->a:Lcom/bbm/g/p;
-
-    iget-object v2, v2, Lcom/bbm/g/p;->g:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 196
-    iget-object v1, p0, Lcom/bbm/h/q;->b:Lcom/bbm/h/n;
-
-    invoke-static {v1}, Lcom/bbm/h/n;->a(Lcom/bbm/h/n;)Lcom/bbm/h/w;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/bbm/h/w;->startActivity(Landroid/content/Intent;)V
-
-    .line 197
-    iget-object v0, p0, Lcom/bbm/h/q;->b:Lcom/bbm/h/n;
-
-    invoke-static {v0}, Lcom/bbm/h/n;->a(Lcom/bbm/h/n;)Lcom/bbm/h/w;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/h/w;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const v1, 0x7f040001
-
-    const v2, 0x7f040004
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->overridePendingTransition(II)V
-
-    .line 198
-    return-void
+    goto :goto_0
 .end method

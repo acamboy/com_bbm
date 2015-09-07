@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ql;
 .super Ljava/lang/Object;
-.source "GroupPictureCommentsActivity.java"
+.source "GroupLobbyActivity.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Lcom/bbm/ui/b/ah;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
     .locals 0
 
     .prologue
-    .line 292
-    iput-object p1, p0, Lcom/bbm/ui/activities/ql;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 842
+    iput-object p1, p0, Lcom/bbm/ui/activities/ql;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,43 +25,40 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method public final a()V
+    .locals 4
 
     .prologue
-    .line 295
-    return-void
-.end method
+    .line 846
+    iget-object v0, p0, Lcom/bbm/ui/activities/ql;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    .prologue
-    .line 299
-    return-void
-.end method
-
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 3
-
-    .prologue
-    .line 303
-    iget-object v0, p0, Lcom/bbm/ui/activities/ql;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->j(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/ui/FooterActionBar;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/g/al;
 
     move-result-object v0
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/bbm/ui/activities/ql;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ql;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    iget-object v1, v1, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Z
+    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->t(Ljava/lang/String;)Lcom/bbm/g/a;
 
-    move-result v2
+    move-result-object v0
 
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/FooterActionBar;->setActionEnabled(IZ)V
+    .line 847
+    iget-object v1, p0, Lcom/bbm/ui/activities/ql;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    .line 304
+    iget-object v2, p0, Lcom/bbm/ui/activities/ql;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+
+    iget-object v2, v2, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+
+    iget-object v3, v0, Lcom/bbm/g/a;->r:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/bbm/util/db;->a(Lcom/bbm/g/a;)Z
+
+    move-result v0
+
+    invoke-static {v1, v2, v3, v0}, Lcom/bbm/h/aq;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;Z)V
+
+    .line 848
     return-void
 .end method

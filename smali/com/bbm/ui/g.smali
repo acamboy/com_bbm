@@ -16,7 +16,7 @@
     .locals 0
 
     .prologue
-    .line 78
+    .line 75
     iput p1, p0, Lcom/bbm/ui/g;->a:I
 
     iput-object p2, p0, Lcom/bbm/ui/g;->b:Landroid/view/View;
@@ -34,30 +34,30 @@
     .locals 4
 
     .prologue
-    .line 81
+    .line 78
     const/high16 v0, 0x3f800000
 
     cmpl-float v0, p1, v0
 
     if-nez v0, :cond_1
 
-    .line 82
+    .line 79
     iget v0, p0, Lcom/bbm/ui/g;->a:I
 
     if-nez v0, :cond_0
 
-    .line 83
+    .line 80
     iget-object v0, p0, Lcom/bbm/ui/g;->b:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 92
+    .line 89
     :goto_0
     return-void
 
-    .line 85
+    .line 82
     :cond_0
     iget-object v0, p0, Lcom/bbm/ui/g;->b:Landroid/view/View;
 
@@ -69,14 +69,14 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 86
+    .line 83
     iget-object v0, p0, Lcom/bbm/ui/g;->b:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
     goto :goto_0
 
-    .line 89
+    .line 86
     :cond_1
     iget-object v0, p0, Lcom/bbm/ui/g;->b:Landroid/view/View;
 
@@ -102,7 +102,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 90
+    .line 87
     iget-object v0, p0, Lcom/bbm/ui/g;->b:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
@@ -114,7 +114,7 @@
     .locals 1
 
     .prologue
-    .line 96
+    .line 93
     const/4 v0, 0x1
 
     return v0

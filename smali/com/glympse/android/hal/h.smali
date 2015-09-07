@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field final synthetic C:Lcom/glympse/android/hal/g;
+.field final synthetic B:Lcom/glympse/android/hal/g;
 
 
 # direct methods
@@ -13,7 +13,7 @@
 
     .prologue
     .line 201
-    iput-object p1, p0, Lcom/glympse/android/hal/h;->C:Lcom/glympse/android/hal/g;
+    iput-object p1, p0, Lcom/glympse/android/hal/h;->B:Lcom/glympse/android/hal/g;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -58,7 +58,7 @@
     if-eqz v0, :cond_0
 
     .line 213
-    iget-object v1, p0, Lcom/glympse/android/hal/h;->C:Lcom/glympse/android/hal/g;
+    iget-object v1, p0, Lcom/glympse/android/hal/h;->B:Lcom/glympse/android/hal/g;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/gms/location/DetectedActivity;->getType()I
 
@@ -74,7 +74,7 @@
     move-result v2
 
     .line 217
-    iget-object v0, p0, Lcom/glympse/android/hal/h;->C:Lcom/glympse/android/hal/g;
+    iget-object v0, p0, Lcom/glympse/android/hal/h;->B:Lcom/glympse/android/hal/g;
 
     invoke-static {v0}, Lcom/glympse/android/hal/g;->a(Lcom/glympse/android/hal/g;)Ljava/util/Hashtable;
 

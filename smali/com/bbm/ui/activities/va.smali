@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/va;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "InviteActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/o;
-
-.field final synthetic b:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;Lcom/bbm/ui/b/o;)V
+.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
     .locals 0
 
     .prologue
-    .line 493
-    iput-object p1, p0, Lcom/bbm/ui/activities/va;->b:Lcom/bbm/ui/activities/MainActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/va;->a:Lcom/bbm/ui/b/o;
+    .line 499
+    iput-object p1, p0, Lcom/bbm/ui/activities/va;->a:Lcom/bbm/ui/activities/InviteActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,41 +25,19 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final run()V
+    .locals 1
 
     .prologue
-    .line 497
-    :try_start_0
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "android.settings.LOCATION_SOURCE_SETTINGS"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 498
-    iget-object v1, p0, Lcom/bbm/ui/activities/va;->b:Lcom/bbm/ui/activities/MainActivity;
-
-    const/4 v2, 0x7
-
-    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
     .line 503
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/va;->a:Lcom/bbm/ui/b/o;
+    iget-object v0, p0, Lcom/bbm/ui/activities/va;->a:Lcom/bbm/ui/activities/InviteActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
+    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->r(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
     .line 504
     return-void
-
-    .line 500
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
 .end method

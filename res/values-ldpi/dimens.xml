@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="ephemeral_picker_margin">0.0dip</dimen>
     <dimen name="first_launch_after_upgrade_bottom_container_padding">5.0dip</dimen>
     <dimen name="first_launch_after_upgrade_image_padding_bottom">5.0dip</dimen>
     <dimen name="first_launch_after_upgrade_image_padding_top">45.0dip</dimen>
@@ -9,4 +10,9 @@
     <dimen name="first_time_set_avatar_padding">5.0dip</dimen>
     <dimen name="first_time_set_avatar_text_size">20.0sp</dimen>
     <dimen name="group_picture_comment_top_comment_container_height">120.0dip</dimen>
+    <dimen name="sticker_pack_dialog_padding_end">10.0dip</dimen>
+    <dimen name="sticker_pack_padding_small">7.0dip</dimen>
+    <dimen name="sticker_picker_preview_image_height">112.5dip</dimen>
+    <dimen name="store_home_page_app_grid_height">155.0dip</dimen>
+    <dimen name="store_home_page_banner_height">105.0dip</dimen>
 </resources>

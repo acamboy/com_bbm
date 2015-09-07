@@ -41,7 +41,7 @@
 
 .field private volatile f:Ljava/lang/String;
 
-.field private volatile h:Lcom/google/analytics/tracking/android/bb;
+.field private volatile h:Lcom/google/analytics/tracking/android/bd;
 
 .field private final i:Landroid/content/Context;
 
@@ -53,42 +53,42 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 63
+    .line 67
     const-string v0, "GAThread"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 41
+    .line 45
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
 
     iput-object v0, p0, Lcom/google/analytics/tracking/android/ah;->a:Ljava/util/concurrent/LinkedBlockingQueue;
 
-    .line 44
+    .line 48
     iput-boolean v1, p0, Lcom/google/analytics/tracking/android/ah;->b:Z
 
-    .line 45
+    .line 49
     iput-boolean v1, p0, Lcom/google/analytics/tracking/android/ah;->c:Z
 
-    .line 64
+    .line 68
     if-eqz p1, :cond_0
 
-    .line 65
+    .line 69
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/google/analytics/tracking/android/ah;->i:Landroid/content/Context;
 
-    .line 69
+    .line 73
     :goto_0
     invoke-virtual {p0}, Lcom/google/analytics/tracking/android/ah;->start()V
 
-    .line 70
+    .line 74
     return-void
 
-    .line 67
+    .line 71
     :cond_0
     iput-object p1, p0, Lcom/google/analytics/tracking/android/ah;->i:Landroid/content/Context;
 
@@ -99,19 +99,19 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 59
     sget-object v0, Lcom/google/analytics/tracking/android/ah;->g:Lcom/google/analytics/tracking/android/ah;
 
     if-nez v0, :cond_0
 
-    .line 56
+    .line 60
     new-instance v0, Lcom/google/analytics/tracking/android/ah;
 
     invoke-direct {v0, p0}, Lcom/google/analytics/tracking/android/ah;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/google/analytics/tracking/android/ah;->g:Lcom/google/analytics/tracking/android/ah;
 
-    .line 58
+    .line 62
     :cond_0
     sget-object v0, Lcom/google/analytics/tracking/android/ah;->g:Lcom/google/analytics/tracking/android/ah;
 
@@ -132,23 +132,23 @@
     .locals 2
 
     .prologue
-    .line 325
+    .line 330
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 326
+    .line 331
     new-instance v1, Ljava/io/PrintStream;
 
     invoke-direct {v1, v0}, Ljava/io/PrintStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 327
+    .line 332
     invoke-virtual {p0, v1}, Ljava/lang/Throwable;->printStackTrace(Ljava/io/PrintStream;)V
 
-    .line 328
+    .line 333
     invoke-virtual {v1}, Ljava/io/PrintStream;->flush()V
 
-    .line 329
+    .line 334
     new-instance v1, Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
@@ -166,12 +166,12 @@
     .end annotation
 
     .prologue
-    .line 274
+    .line 279
     iget-object v0, p0, Lcom/google/analytics/tracking/android/ah;->a:Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/LinkedBlockingQueue;->add(Ljava/lang/Object;)Z
 
-    .line 275
+    .line 280
     return-void
 .end method
 
@@ -193,7 +193,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 286
+    .line 291
     :try_start_0
     const-string v1, "gaInstallData"
 
@@ -201,12 +201,12 @@
 
     move-result-object v1
 
-    .line 291
+    .line 296
     const/16 v2, 0x2000
 
     new-array v2, v2, [B
 
-    .line 292
+    .line 297
     const/4 v3, 0x0
 
     const/16 v4, 0x2000
@@ -215,43 +215,43 @@
 
     move-result v3
 
-    .line 293
+    .line 298
     invoke-virtual {v1}, Ljava/io/FileInputStream;->available()I
 
     move-result v4
 
     if-lez v4, :cond_0
 
-    .line 296
+    .line 301
     const-string v2, "Too much campaign data, ignoring it."
 
     invoke-static {v2}, Lcom/google/analytics/tracking/android/aq;->a(Ljava/lang/String;)V
 
-    .line 297
+    .line 302
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
 
-    .line 298
+    .line 303
     const-string v1, "gaInstallData"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->deleteFile(Ljava/lang/String;)Z
 
-    .line 320
+    .line 325
     :goto_0
     return-object v0
 
-    .line 301
+    .line 306
     :cond_0
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
 
-    .line 302
+    .line 307
     const-string v1, "gaInstallData"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->deleteFile(Ljava/lang/String;)Z
 
-    .line 303
+    .line 308
     if-gtz v3, :cond_1
 
-    .line 304
+    .line 309
     const-string v1, "Campaign file is empty."
 
     invoke-static {v1}, Lcom/google/analytics/tracking/android/aq;->d(Ljava/lang/String;)V
@@ -261,7 +261,7 @@
 
     goto :goto_0
 
-    .line 313
+    .line 318
     :catch_0
     move-exception v1
 
@@ -271,7 +271,7 @@
 
     goto :goto_0
 
-    .line 307
+    .line 312
     :cond_1
     :try_start_1
     new-instance v1, Ljava/lang/String;
@@ -280,7 +280,7 @@
 
     invoke-direct {v1, v2, v4, v3}, Ljava/lang/String;-><init>([BII)V
 
-    .line 308
+    .line 313
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "Campaign found: "
@@ -302,10 +302,10 @@
 
     move-object v0, v1
 
-    .line 309
+    .line 314
     goto :goto_0
 
-    .line 318
+    .line 323
     :catch_1
     move-exception v1
 
@@ -313,7 +313,7 @@
 
     invoke-static {v1}, Lcom/google/analytics/tracking/android/aq;->a(Ljava/lang/String;)V
 
-    .line 319
+    .line 324
     const-string v1, "gaInstallData"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->deleteFile(Ljava/lang/String;)Z
@@ -322,10 +322,10 @@
 .end method
 
 .method static synthetic b(Ljava/util/Map;)Z
-    .locals 11
+    .locals 12
 
     .prologue
-    const-wide/high16 v9, 0x4059000000000000L
+    const-wide/high16 v10, 0x4059000000000000L
 
     const/4 v2, 0x1
 
@@ -348,11 +348,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/google/analytics/tracking/android/bg;->b(Ljava/lang/String;)D
+    invoke-static {v0}, Lcom/google/analytics/tracking/android/bi;->b(Ljava/lang/String;)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    cmpl-double v0, v5, v9
+    cmpl-double v0, v6, v10
 
     if-gez v0, :cond_3
 
@@ -385,7 +385,7 @@
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->charAt(I)C
 
-    move-result v7
+    move-result v5
 
     shl-int/lit8 v1, v1, 0x6
 
@@ -393,21 +393,21 @@
 
     and-int/2addr v1, v8
 
-    add-int/2addr v1, v7
+    add-int/2addr v1, v5
 
-    shl-int/lit8 v7, v7, 0xe
+    shl-int/lit8 v5, v5, 0xe
 
-    add-int/2addr v1, v7
+    add-int/2addr v1, v5
 
-    const/high16 v7, 0xfe00000
+    const/high16 v5, 0xfe00000
 
-    and-int/2addr v7, v1
+    and-int/2addr v5, v1
 
-    if-eqz v7, :cond_0
+    if-eqz v5, :cond_0
 
-    shr-int/lit8 v7, v7, 0x15
+    shr-int/lit8 v5, v5, 0x15
 
-    xor-int/2addr v1, v7
+    xor-int/2addr v1, v5
 
     :cond_0
     add-int/lit8 v4, v4, -0x1
@@ -422,7 +422,7 @@
 
     int-to-double v0, v0
 
-    mul-double v4, v5, v9
+    mul-double v4, v6, v10
 
     cmpl-double v0, v0, v4
 
@@ -503,7 +503,7 @@
 
     move-result-object v2
 
-    invoke-static {p0, v1, v2}, Lcom/google/analytics/tracking/android/bg;->a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v1, v2}, Lcom/google/analytics/tracking/android/bi;->a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "&av"
 
@@ -513,7 +513,7 @@
 
     move-result-object v2
 
-    invoke-static {p0, v1, v2}, Lcom/google/analytics/tracking/android/bg;->a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v1, v2}, Lcom/google/analytics/tracking/android/bi;->a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "&aid"
 
@@ -523,7 +523,7 @@
 
     move-result-object v2
 
-    invoke-static {p0, v1, v2}, Lcom/google/analytics/tracking/android/bg;->a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v1, v2}, Lcom/google/analytics/tracking/android/bi;->a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v1, "&aiid"
 
@@ -533,7 +533,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v1, v0}, Lcom/google/analytics/tracking/android/bg;->a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, v1, v0}, Lcom/google/analytics/tracking/android/bi;->a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
     const-string v0, "&v"
 
@@ -577,7 +577,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/google/analytics/tracking/android/bg;->c(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/google/analytics/tracking/android/bi;->c(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -604,12 +604,12 @@
     return-object v0
 .end method
 
-.method static synthetic f(Lcom/google/analytics/tracking/android/ah;)Lcom/google/analytics/tracking/android/bb;
+.method static synthetic f(Lcom/google/analytics/tracking/android/ah;)Lcom/google/analytics/tracking/android/bd;
     .locals 1
 
     .prologue
     .line 28
-    iget-object v0, p0, Lcom/google/analytics/tracking/android/ah;->h:Lcom/google/analytics/tracking/android/bb;
+    iget-object v0, p0, Lcom/google/analytics/tracking/android/ah;->h:Lcom/google/analytics/tracking/android/bd;
 
     return-object v0
 .end method
@@ -620,14 +620,14 @@
     .locals 1
 
     .prologue
-    .line 243
+    .line 248
     new-instance v0, Lcom/google/analytics/tracking/android/aj;
 
     invoke-direct {v0, p0}, Lcom/google/analytics/tracking/android/aj;-><init>(Lcom/google/analytics/tracking/android/ah;)V
 
     invoke-direct {p0, v0}, Lcom/google/analytics/tracking/android/ah;->a(Ljava/lang/Runnable;)V
 
-    .line 250
+    .line 255
     return-void
 .end method
 
@@ -645,12 +645,12 @@
     .end annotation
 
     .prologue
-    .line 106
+    .line 111
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1, p1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    .line 111
+    .line 116
     const-string v0, "&ht"
 
     invoke-interface {p1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -659,10 +659,10 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 112
+    .line 117
     if-eqz v0, :cond_0
 
-    .line 114
+    .line 119
     :try_start_0
     invoke-static {v0}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -672,17 +672,17 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 120
+    .line 125
     :cond_0
     :goto_0
     if-nez v0, :cond_1
 
-    .line 121
+    .line 126
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 122
+    .line 127
     const-string v0, "&ht"
 
     invoke-static {v2, v3}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
@@ -691,7 +691,7 @@
 
     invoke-interface {v1, v0, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 124
+    .line 129
     :cond_1
     new-instance v0, Lcom/google/analytics/tracking/android/ai;
 
@@ -699,10 +699,10 @@
 
     invoke-direct {p0, v0}, Lcom/google/analytics/tracking/android/ah;->a(Ljava/lang/Runnable;)V
 
-    .line 156
+    .line 161
     return-void
 
-    .line 117
+    .line 122
     :catch_0
     move-exception v0
 
@@ -715,14 +715,14 @@
     .locals 1
 
     .prologue
-    .line 264
+    .line 269
     new-instance v0, Lcom/google/analytics/tracking/android/ak;
 
     invoke-direct {v0, p0}, Lcom/google/analytics/tracking/android/ak;-><init>(Lcom/google/analytics/tracking/android/ah;)V
 
     invoke-direct {p0, v0}, Lcom/google/analytics/tracking/android/ah;->a(Ljava/lang/Runnable;)V
 
-    .line 270
+    .line 275
     return-void
 .end method
 
@@ -739,7 +739,7 @@
     .end annotation
 
     .prologue
-    .line 396
+    .line 401
     iget-object v0, p0, Lcom/google/analytics/tracking/android/ah;->a:Ljava/util/concurrent/LinkedBlockingQueue;
 
     return-object v0
@@ -749,19 +749,17 @@
     .locals 0
 
     .prologue
-    .line 401
+    .line 406
     return-object p0
 .end method
 
 .method public final run()V
-    .locals 7
+    .locals 6
 
     .prologue
-    const/4 v6, 0x0
-
     const/4 v5, 0x1
 
-    .line 341
+    .line 346
     const-wide/16 v0, 0x1388
 
     :try_start_0
@@ -769,26 +767,27 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 349
+    .line 355
     :goto_0
-    iget-object v0, p0, Lcom/google/analytics/tracking/android/ah;->h:Lcom/google/analytics/tracking/android/bb;
+    :try_start_1
+    iget-object v0, p0, Lcom/google/analytics/tracking/android/ah;->h:Lcom/google/analytics/tracking/android/bd;
 
     if-nez v0, :cond_0
 
-    .line 350
+    .line 356
     new-instance v0, Lcom/google/analytics/tracking/android/y;
 
     iget-object v1, p0, Lcom/google/analytics/tracking/android/ah;->i:Landroid/content/Context;
 
     invoke-direct {v0, v1, p0}, Lcom/google/analytics/tracking/android/y;-><init>(Landroid/content/Context;Lcom/google/analytics/tracking/android/h;)V
 
-    iput-object v0, p0, Lcom/google/analytics/tracking/android/ah;->h:Lcom/google/analytics/tracking/android/bb;
+    iput-object v0, p0, Lcom/google/analytics/tracking/android/ah;->h:Lcom/google/analytics/tracking/android/bd;
 
-    .line 352
+    .line 358
     :cond_0
-    iget-object v0, p0, Lcom/google/analytics/tracking/android/ah;->h:Lcom/google/analytics/tracking/android/bb;
+    iget-object v0, p0, Lcom/google/analytics/tracking/android/ah;->h:Lcom/google/analytics/tracking/android/bd;
 
-    invoke-interface {v0}, Lcom/google/analytics/tracking/android/bb;->e()V
+    invoke-interface {v0}, Lcom/google/analytics/tracking/android/bd;->e()V
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -804,11 +803,13 @@
 
     const-string v3, "&_v"
 
-    invoke-virtual {v3, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    const/4 v4, 0x1
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v3
 
-    const-string v4, "ma3.0.0"
+    const-string v4, "ma3.0.2"
 
     invoke-direct {v1, v2, v3, v4}, Lcom/google/android/gms/analytics/internal/Command;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -822,11 +823,15 @@
 
     const-string v3, "&qt"
 
-    invoke-virtual {v3, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    const/4 v4, 0x1
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v3, v6}, Lcom/google/android/gms/analytics/internal/Command;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v2, v3, v4}, Lcom/google/android/gms/analytics/internal/Command;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -838,16 +843,19 @@
 
     const-string v3, "&z"
 
-    invoke-virtual {v3, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    const/4 v4, 0x1
+
+    invoke-virtual {v3, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v3, v6}, Lcom/google/android/gms/analytics/internal/Command;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v4, 0x0
+
+    invoke-direct {v1, v2, v3, v4}, Lcom/google/android/gms/analytics/internal/Command;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 362
-    :try_start_1
+    .line 367
     invoke-static {}, Lcom/google/analytics/tracking/android/j;->a()Lcom/google/analytics/tracking/android/j;
 
     move-result-object v0
@@ -860,7 +868,7 @@
 
     iput-object v0, p0, Lcom/google/analytics/tracking/android/ah;->f:Ljava/lang/String;
 
-    .line 363
+    .line 368
     iget-object v0, p0, Lcom/google/analytics/tracking/android/ah;->i:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/ah;->b(Landroid/content/Context;)Ljava/lang/String;
@@ -871,14 +879,14 @@
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 371
+    .line 376
     :cond_1
     :goto_1
     iget-boolean v0, p0, Lcom/google/analytics/tracking/android/ah;->c:Z
 
     if-nez v0, :cond_2
 
-    .line 377
+    .line 382
     :try_start_2
     iget-object v0, p0, Lcom/google/analytics/tracking/android/ah;->a:Ljava/util/concurrent/LinkedBlockingQueue;
 
@@ -888,12 +896,12 @@
 
     check-cast v0, Ljava/lang/Runnable;
 
-    .line 378
+    .line 383
     iget-boolean v1, p0, Lcom/google/analytics/tracking/android/ah;->b:Z
 
     if-nez v1, :cond_1
 
-    .line 379
+    .line 384
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
     :try_end_2
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
@@ -901,7 +909,7 @@
 
     goto :goto_1
 
-    .line 381
+    .line 386
     :catch_0
     move-exception v0
 
@@ -916,11 +924,11 @@
 
     goto :goto_1
 
-    .line 384
+    .line 389
     :catch_1
     move-exception v0
 
-    .line 385
+    .line 390
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Error on GAThread: "
@@ -941,17 +949,17 @@
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/aq;->a(Ljava/lang/String;)V
 
-    .line 388
+    .line 393
     const-string v0, "Google Analytics is shutting down."
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/aq;->a(Ljava/lang/String;)V
 
-    .line 389
+    .line 394
     iput-boolean v5, p0, Lcom/google/analytics/tracking/android/ah;->b:Z
 
     goto :goto_1
 
-    .line 344
+    .line 349
     :catch_2
     move-exception v0
 
@@ -961,11 +969,11 @@
 
     goto/16 :goto_0
 
-    .line 364
+    .line 369
     :catch_3
     move-exception v0
 
-    .line 365
+    .line 370
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "Error initializing the GAThread: "
@@ -986,17 +994,17 @@
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/aq;->a(Ljava/lang/String;)V
 
-    .line 368
+    .line 373
     const-string v0, "Google Analytics will not start up."
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/aq;->a(Ljava/lang/String;)V
 
-    .line 369
+    .line 374
     iput-boolean v5, p0, Lcom/google/analytics/tracking/android/ah;->b:Z
 
     goto :goto_1
 
-    .line 392
+    .line 397
     :cond_2
     return-void
 .end method

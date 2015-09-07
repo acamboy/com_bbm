@@ -1,237 +1,391 @@
-.class final synthetic Lcom/bbm/setup/w;
-.super Ljava/lang/Object;
+.class final Lcom/bbm/setup/w;
+.super Lcom/bbm/j/k;
 .source "SetupErrorActivity.java"
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/setup/SetupErrorActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/setup/SetupErrorActivity;)V
+    .locals 1
 
     .prologue
-    .line 56
-    invoke-static {}, Lcom/bbm/aj;->values()[Lcom/bbm/aj;
+    .line 28
+    iput-object p1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method protected final a()V
+    .locals 7
+
+    .prologue
+    const v5, 0x7f0e074e
+
+    const v4, 0x7f0e00e0
+
+    const v6, 0x7f0e00df
+
+    .line 31
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+
+    .line 33
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
     move-result-object v0
 
-    array-length v0, v0
+    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
 
-    new-array v0, v0, [I
+    .line 34
+    sget-object v1, Lcom/bbm/Alaska;->f:Lcom/bbm/setup/z;
 
-    sput-object v0, Lcom/bbm/setup/w;->a:[I
+    .line 36
+    invoke-virtual {v1}, Lcom/bbm/setup/z;->a()Lcom/bbm/setup/af;
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/setup/w;->a:[I
+    move-result-object v1
 
-    sget-object v1, Lcom/bbm/aj;->m:Lcom/bbm/aj;
+    iget-object v1, v1, Lcom/bbm/setup/af;->a:Lcom/bbm/setup/ag;
 
-    invoke-virtual {v1}, Lcom/bbm/aj;->ordinal()I
+    .line 37
+    sget-object v2, Lcom/bbm/setup/ag;->j:Lcom/bbm/setup/ag;
 
-    move-result v1
+    if-eq v1, v2, :cond_1
 
-    const/4 v2, 0x1
+    .line 39
+    iget-object v0, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_9
+    invoke-virtual {v0}, Lcom/bbm/setup/SetupErrorActivity;->b()V
 
+    .line 110
+    :cond_0
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/setup/w;->a:[I
-
-    sget-object v1, Lcom/bbm/aj;->i:Lcom/bbm/aj;
-
-    invoke-virtual {v1}, Lcom/bbm/aj;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_8
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/setup/w;->a:[I
-
-    sget-object v1, Lcom/bbm/aj;->h:Lcom/bbm/aj;
-
-    invoke-virtual {v1}, Lcom/bbm/aj;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_7
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/setup/w;->a:[I
-
-    sget-object v1, Lcom/bbm/aj;->g:Lcom/bbm/aj;
-
-    invoke-virtual {v1}, Lcom/bbm/aj;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_6
-
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/bbm/setup/w;->a:[I
-
-    sget-object v1, Lcom/bbm/aj;->f:Lcom/bbm/aj;
-
-    invoke-virtual {v1}, Lcom/bbm/aj;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_5
-
-    :goto_4
-    :try_start_5
-    sget-object v0, Lcom/bbm/setup/w;->a:[I
-
-    sget-object v1, Lcom/bbm/aj;->e:Lcom/bbm/aj;
-
-    invoke-virtual {v1}, Lcom/bbm/aj;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_4
-
-    :goto_5
-    :try_start_6
-    sget-object v0, Lcom/bbm/setup/w;->a:[I
-
-    sget-object v1, Lcom/bbm/aj;->l:Lcom/bbm/aj;
-
-    invoke-virtual {v1}, Lcom/bbm/aj;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_3
-
-    :goto_6
-    :try_start_7
-    sget-object v0, Lcom/bbm/setup/w;->a:[I
-
-    sget-object v1, Lcom/bbm/aj;->d:Lcom/bbm/aj;
-
-    invoke-virtual {v1}, Lcom/bbm/aj;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x8
-
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_2
-
-    :goto_7
-    :try_start_8
-    sget-object v0, Lcom/bbm/setup/w;->a:[I
-
-    sget-object v1, Lcom/bbm/aj;->b:Lcom/bbm/aj;
-
-    invoke-virtual {v1}, Lcom/bbm/aj;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0x9
-
-    aput v2, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_1
-
-    :goto_8
-    :try_start_9
-    sget-object v0, Lcom/bbm/setup/w;->a:[I
-
-    sget-object v1, Lcom/bbm/aj;->c:Lcom/bbm/aj;
-
-    invoke-virtual {v1}, Lcom/bbm/aj;->ordinal()I
-
-    move-result v1
-
-    const/16 v2, 0xa
-
-    aput v2, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_0
-
-    :goto_9
     return-void
 
-    :catch_0
-    move-exception v0
+    .line 45
+    :cond_1
+    const-string v1, ""
 
-    goto :goto_9
+    .line 48
+    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
 
-    :catch_1
-    move-exception v0
+    .line 51
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
 
-    goto :goto_8
+    move-result-object v2
 
-    :catch_2
-    move-exception v0
+    invoke-virtual {v2}, Lcom/bbm/Alaska;->n()Z
 
-    goto :goto_7
+    move-result v2
 
-    :catch_3
-    move-exception v0
+    if-eqz v2, :cond_2
 
-    goto :goto_6
+    .line 52
+    sget-object v0, Lcom/bbm/am;->h:Lcom/bbm/am;
 
-    :catch_4
-    move-exception v0
+    invoke-static {v0}, Lcom/google/b/a/l;->b(Ljava/lang/Object;)Lcom/google/b/a/l;
 
-    goto :goto_5
+    move-result-object v0
 
-    :catch_5
-    move-exception v0
+    .line 57
+    :goto_1
+    sget-object v2, Lcom/bbm/am;->k:Lcom/bbm/am;
 
-    goto :goto_4
+    invoke-virtual {v0, v2}, Lcom/google/b/a/l;->a(Ljava/lang/Object;)Ljava/lang/Object;
 
-    :catch_6
-    move-exception v0
+    move-result-object v0
 
-    goto :goto_3
+    check-cast v0, Lcom/bbm/am;
 
-    :catch_7
-    move-exception v0
+    .line 59
+    sget-object v2, Lcom/bbm/setup/y;->a:[I
 
-    goto :goto_2
+    invoke-virtual {v0}, Lcom/bbm/am;->ordinal()I
 
-    :catch_8
-    move-exception v0
+    move-result v3
+
+    aget v2, v2, v3
+
+    packed-switch v2, :pswitch_data_0
+
+    .line 98
+    const-string v2, "Default Error title used for error  %s"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v0}, Lcom/bbm/am;->name()Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-static {v2, v3}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 99
+    iget-object v2, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    invoke-virtual {v2, v6}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 103
+    :goto_2
+    iget-object v3, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    invoke-static {v3}, Lcom/bbm/setup/SetupErrorActivity;->a(Lcom/bbm/setup/SetupErrorActivity;)Landroid/widget/TextView;
+
+    move-result-object v3
+
+    invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 104
+    iget-object v2, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    invoke-static {v2}, Lcom/bbm/setup/SetupErrorActivity;->b(Lcom/bbm/setup/SetupErrorActivity;)Landroid/widget/TextView;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 106
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    invoke-static {v1}, Lcom/bbm/setup/SetupErrorActivity;->c(Lcom/bbm/setup/SetupErrorActivity;)Lcom/bbm/am;
+
+    move-result-object v1
+
+    if-eq v1, v0, :cond_0
+
+    .line 107
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    invoke-static {v1, v0}, Lcom/bbm/setup/SetupErrorActivity;->a(Lcom/bbm/setup/SetupErrorActivity;Lcom/bbm/am;)Lcom/bbm/am;
+
+    .line 108
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    invoke-static {v1}, Lcom/bbm/setup/SetupErrorActivity;->c(Lcom/bbm/setup/SetupErrorActivity;)Lcom/bbm/am;
+
+    move-result-object v1
+
+    iget v2, v0, Lcom/bbm/c/c;->ah:I
+
+    add-int/lit8 v2, v2, 0x1
+
+    iput v2, v0, Lcom/bbm/c/c;->ah:I
+
+    iput-object v1, v0, Lcom/bbm/c/c;->ap:Lcom/bbm/am;
+
+    goto :goto_0
+
+    .line 54
+    :cond_2
+    invoke-virtual {v0}, Lcom/bbm/d/a;->c()Lcom/google/b/a/l;
+
+    move-result-object v0
 
     goto :goto_1
 
-    :catch_9
-    move-exception v0
+    .line 61
+    :pswitch_0
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
 
-    goto :goto_0
+    const v2, 0x7f0e033a
+
+    invoke-virtual {v1, v2}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 62
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    const v3, 0x7f0e0125
+
+    invoke-virtual {v1, v3}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    .line 65
+    :pswitch_1
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    const v2, 0x7f0e0315
+
+    invoke-virtual {v1, v2}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 66
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    const v3, 0x7f0e0751
+
+    invoke-virtual {v1, v3}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    .line 69
+    :pswitch_2
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    invoke-virtual {v1, v5}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 70
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    invoke-virtual {v1, v4}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    .line 73
+    :pswitch_3
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    const v2, 0x7f0e049f
+
+    invoke-virtual {v1, v2}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 74
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    const v3, 0x7f0e05cf
+
+    invoke-virtual {v1, v3}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto :goto_2
+
+    .line 77
+    :pswitch_4
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    const v2, 0x7f0e0558
+
+    invoke-virtual {v1, v2}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 78
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    const v3, 0x7f0e012f
+
+    invoke-virtual {v1, v3}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto/16 :goto_2
+
+    .line 81
+    :pswitch_5
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    invoke-virtual {v1, v5}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 82
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    invoke-virtual {v1, v4}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto/16 :goto_2
+
+    .line 85
+    :pswitch_6
+    iget-object v2, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    const v3, 0x7f0e012e
+
+    invoke-virtual {v2, v3}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto/16 :goto_2
+
+    .line 88
+    :pswitch_7
+    iget-object v2, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    invoke-virtual {v2, v6}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto/16 :goto_2
+
+    .line 91
+    :pswitch_8
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    const v2, 0x7f0e0770
+
+    invoke-virtual {v1, v2}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 92
+    iget-object v1, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    const v3, 0x7f0e07e3
+
+    invoke-virtual {v1, v3}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    goto/16 :goto_2
+
+    .line 95
+    :pswitch_9
+    iget-object v2, p0, Lcom/bbm/setup/w;->a:Lcom/bbm/setup/SetupErrorActivity;
+
+    invoke-virtual {v2, v6}, Lcom/bbm/setup/SetupErrorActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    goto/16 :goto_2
+
+    .line 59
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
+        :pswitch_6
+        :pswitch_7
+        :pswitch_8
+        :pswitch_9
+    .end packed-switch
 .end method

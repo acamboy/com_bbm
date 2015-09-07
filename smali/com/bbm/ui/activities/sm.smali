@@ -1,22 +1,34 @@
 .class final Lcom/bbm/ui/activities/sm;
 .super Ljava/lang/Object;
-.source "InviteActivity.java"
+.source "GroupPictureCommentsActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/bbm/g/af;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/sl;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/sl;)V
     .locals 0
 
     .prologue
-    .line 128
-    iput-object p1, p0, Lcom/bbm/ui/activities/sm;->a:Lcom/bbm/ui/activities/InviteActivity;
+    .line 157
+    iput-object p1, p0, Lcom/bbm/ui/activities/sm;->a:Lcom/bbm/ui/activities/sl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,19 +37,22 @@
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 2
+.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
     .prologue
-    .line 132
-    iget-object v0, p0, Lcom/bbm/ui/activities/sm;->a:Lcom/bbm/ui/activities/InviteActivity;
+    .line 157
+    check-cast p1, Lcom/bbm/g/af;
 
-    const/4 v1, 0x1
+    check-cast p2, Lcom/bbm/g/af;
 
-    invoke-static {v0, v1}, Lcom/bbm/util/eo;->a(Landroid/app/Activity;Z)V
+    iget-wide v0, p2, Lcom/bbm/g/af;->k:J
 
-    .line 133
-    const/4 v0, 0x0
+    iget-wide v2, p1, Lcom/bbm/g/af;->k:J
+
+    sub-long/2addr v0, v2
+
+    long-to-int v0, v0
 
     return v0
 .end method

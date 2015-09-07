@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 460
+    .line 467
     iput-object p1, p0, Lcom/blackberry/ids/LoginActivity$3;->a:Lcom/blackberry/ids/LoginActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,12 +29,10 @@
     .locals 2
 
     .prologue
-    .line 463
+    .line 470
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$3;->a:Lcom/blackberry/ids/LoginActivity;
 
-    invoke-virtual {v0}, Lcom/blackberry/ids/LoginActivity;->c()Z
-
-    move-result v0
+    iget-boolean v0, v0, Lcom/blackberry/ids/WebActivity;->d:Z
 
     if-nez v0, :cond_0
 
@@ -60,7 +58,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 466
+    .line 473
     :cond_0
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$3;->a:Lcom/blackberry/ids/LoginActivity;
 
@@ -70,7 +68,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 467
+    .line 474
     iget-object v0, p0, Lcom/blackberry/ids/LoginActivity$3;->a:Lcom/blackberry/ids/LoginActivity;
 
     invoke-static {v0}, Lcom/blackberry/ids/LoginActivity;->c(Lcom/blackberry/ids/LoginActivity;)Landroid/widget/ProgressBar;
@@ -81,7 +79,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
-    .line 470
+    .line 477
     :cond_1
     return-void
 .end method

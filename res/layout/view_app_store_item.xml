@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="@dimen/sticker_store_item_width" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/app_avatar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/sticker_store_item_margin">
+        <ImageView android:layout_gravity="bottom|center" android:id="@id/appView" android:layout_width="@dimen/app_store_item_width" android:layout_height="@dimen/app_store_item_width" android:contentDescription="@string/blank" />
+        <ImageView android:layout_gravity="top|right|center" android:id="@id/app_splat" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_badge_40_40" android:contentDescription="@string/blank" />
+    </FrameLayout>
+    <FrameLayout android:id="@id/app_textLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/app_title_margin_top">
+        <TextView android:textSize="@dimen/sticker_pack_primary" android:textColor="@color/black" android:ellipsize="marquee" android:gravity="center_horizontal" android:id="@id/app_titleView" android:paddingLeft="@dimen/sticker_pack_padding_small" android:paddingTop="@dimen/sticker_pack_padding_small" android:paddingRight="@dimen/sticker_pack_padding_small" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="APP1" android:maxLines="2" />
+    </FrameLayout>
+</LinearLayout>

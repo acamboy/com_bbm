@@ -123,7 +123,7 @@
     if-lez v3, :cond_1
 
     .line 258
-    invoke-static {}, Lcom/google/zxing/client/android/book/b;->c()Ljava/util/regex/Pattern;
+    invoke-static {}, Lcom/google/zxing/client/android/book/b;->b()Ljava/util/regex/Pattern;
 
     move-result-object v3
 
@@ -138,7 +138,7 @@
     move-result-object v1
 
     .line 259
-    invoke-static {}, Lcom/google/zxing/client/android/book/b;->d()Ljava/util/regex/Pattern;
+    invoke-static {}, Lcom/google/zxing/client/android/book/b;->c()Ljava/util/regex/Pattern;
 
     move-result-object v3
 
@@ -153,7 +153,7 @@
     move-result-object v1
 
     .line 260
-    invoke-static {}, Lcom/google/zxing/client/android/book/b;->e()Ljava/util/regex/Pattern;
+    invoke-static {}, Lcom/google/zxing/client/android/book/b;->d()Ljava/util/regex/Pattern;
 
     move-result-object v3
 
@@ -168,7 +168,7 @@
     move-result-object v1
 
     .line 261
-    invoke-static {}, Lcom/google/zxing/client/android/book/b;->f()Ljava/util/regex/Pattern;
+    invoke-static {}, Lcom/google/zxing/client/android/book/b;->e()Ljava/util/regex/Pattern;
 
     move-result-object v3
 
@@ -183,7 +183,7 @@
     move-result-object v1
 
     .line 262
-    invoke-static {}, Lcom/google/zxing/client/android/book/b;->g()Ljava/util/regex/Pattern;
+    invoke-static {}, Lcom/google/zxing/client/android/book/b;->f()Ljava/util/regex/Pattern;
 
     move-result-object v3
 
@@ -407,7 +407,7 @@
     move-exception v0
 
     .line 193
-    invoke-static {}, Lcom/google/zxing/client/android/book/b;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/google/zxing/client/android/book/b;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -425,7 +425,7 @@
     move-exception v0
 
     .line 196
-    invoke-static {}, Lcom/google/zxing/client/android/book/b;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/google/zxing/client/android/book/b;->a()Ljava/lang/String;
 
     move-result-object v2
 
@@ -634,7 +634,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {}, Lcom/google/zxing/client/android/book/b;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/google/zxing/client/android/book/b;->a()Ljava/lang/String;
 
     move-result-object v1
 

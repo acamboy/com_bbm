@@ -1,126 +1,56 @@
 .class Lcom/glympse/android/lib/em;
 .super Ljava/lang/Object;
-.source "InviteLite.java"
+.source "InviteCreate.java"
 
 # interfaces
-.implements Lcom/glympse/android/lite/GInviteLite;
+.implements Lcom/glympse/android/hal/GSmsListener;
 
 
 # instance fields
-.field private lZ:Lcom/glympse/android/api/GInvite;
+.field private ow:Lcom/glympse/android/lib/ek;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/api/GInvite;)V
+.method public constructor <init>(Lcom/glympse/android/lib/ek;)V
     .locals 0
 
     .prologue
-    .line 23
+    .line 540
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
-    iput-object p1, p0, Lcom/glympse/android/lib/em;->lZ:Lcom/glympse/android/api/GInvite;
+    .line 541
+    iput-object p1, p0, Lcom/glympse/android/lib/em;->ow:Lcom/glympse/android/lib/ek;
 
-    .line 25
+    .line 542
     return-void
 .end method
 
 
 # virtual methods
-.method public getAddress()Ljava/lang/String;
+.method public complete(ZILjava/lang/String;Lcom/glympse/android/core/GCommon;)V
     .locals 1
 
     .prologue
-    .line 43
-    iget-object v0, p0, Lcom/glympse/android/lib/em;->lZ:Lcom/glympse/android/api/GInvite;
+    .line 547
+    iget-object v0, p0, Lcom/glympse/android/lib/em;->ow:Lcom/glympse/android/lib/ek;
 
-    invoke-interface {v0}, Lcom/glympse/android/api/GInvite;->getAddress()Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcom/glympse/android/lib/ek;->g(Z)V
 
-    move-result-object v0
-
-    return-object v0
+    .line 548
+    return-void
 .end method
 
-.method public getCreatedTime()J
+.method public serviceNoLongerAvailable()V
     .locals 2
 
     .prologue
-    .line 53
-    iget-object v0, p0, Lcom/glympse/android/lib/em;->lZ:Lcom/glympse/android/api/GInvite;
+    .line 557
+    iget-object v0, p0, Lcom/glympse/android/lib/em;->ow:Lcom/glympse/android/lib/ek;
 
-    invoke-interface {v0}, Lcom/glympse/android/api/GInvite;->getCreatedTime()J
+    const/4 v1, 0x0
 
-    move-result-wide v0
+    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/ek;->g(Z)V
 
-    return-wide v0
-.end method
-
-.method public getLastViewTime()J
-    .locals 2
-
-    .prologue
-    .line 58
-    iget-object v0, p0, Lcom/glympse/android/lib/em;->lZ:Lcom/glympse/android/api/GInvite;
-
-    invoke-interface {v0}, Lcom/glympse/android/api/GInvite;->getLastViewTime()J
-
-    move-result-wide v0
-
-    return-wide v0
-.end method
-
-.method public getName()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 38
-    iget-object v0, p0, Lcom/glympse/android/lib/em;->lZ:Lcom/glympse/android/api/GInvite;
-
-    invoke-interface {v0}, Lcom/glympse/android/api/GInvite;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getType()I
-    .locals 1
-
-    .prologue
-    .line 33
-    iget-object v0, p0, Lcom/glympse/android/lib/em;->lZ:Lcom/glympse/android/api/GInvite;
-
-    invoke-interface {v0}, Lcom/glympse/android/api/GInvite;->getType()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public getUrl()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 48
-    iget-object v0, p0, Lcom/glympse/android/lib/em;->lZ:Lcom/glympse/android/api/GInvite;
-
-    invoke-interface {v0}, Lcom/glympse/android/api/GInvite;->getUrl()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public getViewers()I
-    .locals 1
-
-    .prologue
-    .line 63
-    iget-object v0, p0, Lcom/glympse/android/lib/em;->lZ:Lcom/glympse/android/api/GInvite;
-
-    invoke-interface {v0}, Lcom/glympse/android/api/GInvite;->getViewers()I
-
-    move-result v0
-
-    return v0
+    .line 558
+    return-void
 .end method

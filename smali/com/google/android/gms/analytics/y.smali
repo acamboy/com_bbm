@@ -4,9 +4,9 @@
 
 # direct methods
 .method static a(Lcom/google/android/gms/analytics/x;J)Ljava/lang/String;
-    .locals 5
+    .locals 7
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -20,29 +20,29 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/analytics/x;->cj()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-lez v1, :cond_0
 
     invoke-virtual {p0}, Lcom/google/android/gms/analytics/x;->cj()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    sub-long v1, p1, v1
+    sub-long v2, p1, v2
 
-    cmp-long v3, v1, v3
+    cmp-long v1, v2, v4
 
-    if-ltz v3, :cond_0
+    if-ltz v1, :cond_0
 
-    const-string v3, "&qt="
+    const-string v1, "&qt="
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v3
+    move-result-object v1
 
-    invoke-virtual {v3, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     :cond_0
     const-string v1, "&z="

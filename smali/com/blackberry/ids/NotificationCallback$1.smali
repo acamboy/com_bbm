@@ -38,12 +38,12 @@
 
 # virtual methods
 .method public run()V
-    .locals 10
+    .locals 11
 
     .prologue
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
     .line 14
     const-string v0, "enter NotificationCallback type=%d info=%s notification=%d"
@@ -58,11 +58,11 @@
 
     move-result-object v2
 
-    aput-object v2, v1, v8
+    aput-object v2, v1, v9
 
     iget-object v2, p0, Lcom/blackberry/ids/NotificationCallback$1;->b:Ljava/lang/String;
 
-    aput-object v2, v1, v9
+    aput-object v2, v1, v10
 
     const/4 v2, 0x2
 
@@ -78,30 +78,30 @@
 
     .line 17
     :try_start_0
-    iget-object v0, p0, Lcom/blackberry/ids/NotificationCallback$1;->d:Lcom/blackberry/ids/NotificationCallback;
-
     iget-object v1, p0, Lcom/blackberry/ids/NotificationCallback$1;->d:Lcom/blackberry/ids/NotificationCallback;
 
-    iget-wide v1, v1, Lcom/blackberry/ids/NotificationCallback;->a:J
+    iget-object v0, p0, Lcom/blackberry/ids/NotificationCallback$1;->d:Lcom/blackberry/ids/NotificationCallback;
 
-    iget-object v3, p0, Lcom/blackberry/ids/NotificationCallback$1;->d:Lcom/blackberry/ids/NotificationCallback;
+    iget-wide v2, v0, Lcom/blackberry/ids/NotificationCallback;->a:J
 
-    iget-wide v3, v3, Lcom/blackberry/ids/NotificationCallback;->b:J
+    iget-object v0, p0, Lcom/blackberry/ids/NotificationCallback$1;->d:Lcom/blackberry/ids/NotificationCallback;
 
-    iget v5, p0, Lcom/blackberry/ids/NotificationCallback$1;->a:I
+    iget-wide v4, v0, Lcom/blackberry/ids/NotificationCallback;->b:J
 
-    iget-object v6, p0, Lcom/blackberry/ids/NotificationCallback$1;->b:Ljava/lang/String;
+    iget v6, p0, Lcom/blackberry/ids/NotificationCallback$1;->a:I
 
-    iget v7, p0, Lcom/blackberry/ids/NotificationCallback$1;->c:I
+    iget-object v7, p0, Lcom/blackberry/ids/NotificationCallback$1;->b:Ljava/lang/String;
 
-    invoke-static/range {v0 .. v7}, Lcom/blackberry/ids/NotificationCallback;->a(Lcom/blackberry/ids/NotificationCallback;JJILjava/lang/String;I)V
+    iget v8, p0, Lcom/blackberry/ids/NotificationCallback$1;->c:I
+
+    invoke-static/range {v1 .. v8}, Lcom/blackberry/ids/NotificationCallback;->a(Lcom/blackberry/ids/NotificationCallback;JJILjava/lang/String;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 20
     const-string v0, "exit NotificationCallback type = %d"
 
-    new-array v1, v9, [Ljava/lang/Object;
+    new-array v1, v10, [Ljava/lang/Object;
 
     iget v2, p0, Lcom/blackberry/ids/NotificationCallback$1;->a:I
 
@@ -109,7 +109,7 @@
 
     move-result-object v2
 
-    aput-object v2, v1, v8
+    aput-object v2, v1, v9
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
@@ -122,7 +122,7 @@
 
     const-string v1, "exit NotificationCallback type = %d"
 
-    new-array v2, v9, [Ljava/lang/Object;
+    new-array v2, v10, [Ljava/lang/Object;
 
     iget v3, p0, Lcom/blackberry/ids/NotificationCallback$1;->a:I
 
@@ -130,7 +130,7 @@
 
     move-result-object v3
 
-    aput-object v3, v2, v8
+    aput-object v3, v2, v9
 
     invoke-static {v1, v2}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 

@@ -98,6 +98,12 @@
 .method public abstract getTravelMode()Lcom/glympse/android/api/GTravelMode;
 .end method
 
+.method public abstract getUser()Lcom/glympse/android/api/GUser;
+.end method
+
+.method public abstract getVisibility()Lcom/glympse/android/core/GPrimitive;
+.end method
+
 .method public abstract isActive()Z
 .end method
 
@@ -113,6 +119,9 @@
 .method public abstract isSomeoneWatching()Z
 .end method
 
+.method public abstract isVisible()Z
+.end method
+
 .method public abstract isWatching()Z
 .end method
 
@@ -123,6 +132,9 @@
 .end method
 
 .method public abstract setRequestEndTime(J)V
+.end method
+
+.method public abstract setVisibility(Ljava/lang/String;Ljava/lang/String;)Z
 .end method
 
 .method public abstract updateEta(J)V

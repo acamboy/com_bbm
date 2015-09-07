@@ -4,14 +4,31 @@
         <item quantity="other">Pesan Siaran dikirim ke %1$s kontak</item>
         <item quantity="one">Pesan Siaran dikirim ke 1 kontak</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d Pelanggan</item>
+        <item quantity="zero">Tidak Ada Pelanggan</item>
+        <item quantity="one">%1$d Pelanggan</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d Anggota</item>
+        <item quantity="one">%1$d Anggota</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">detik</item>
+        <item quantity="one">detik</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Timer diatur selama %1$d detik.</item>
+        <item quantity="one">Timer diatur selama %1$d detik.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s Item</item>
         <item quantity="zero">0 Item</item>
         <item quantity="one">1 Item</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d undangan menunggu)</item>
-        <item quantity="one">(1 undangan menunggu)</item>
+        <item quantity="other">(%1$d menunggu)</item>
+        <item quantity="one">(1 menunggu)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s Hasil</item>

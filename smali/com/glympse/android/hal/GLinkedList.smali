@@ -99,13 +99,13 @@
 
     .prologue
     .line 30
-    new-instance v0, Lcom/glympse/android/hal/aa;
+    new-instance v0, Lcom/glympse/android/hal/z;
 
     invoke-super {p0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/glympse/android/hal/aa;-><init>(Ljava/util/Iterator;)V
+    invoke-direct {v0, v1}, Lcom/glympse/android/hal/z;-><init>(Ljava/util/Iterator;)V
 
     return-object v0
 .end method
@@ -122,7 +122,7 @@
 
     .prologue
     .line 35
-    new-instance v0, Lcom/glympse/android/hal/ab;
+    new-instance v0, Lcom/glympse/android/hal/aa;
 
     invoke-virtual {p0}, Lcom/glympse/android/hal/GLinkedList;->size()I
 
@@ -134,7 +134,7 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/glympse/android/hal/ab;-><init>(Ljava/util/ListIterator;)V
+    invoke-direct {v0, v1}, Lcom/glympse/android/hal/aa;-><init>(Ljava/util/ListIterator;)V
 
     return-object v0
 .end method
@@ -151,13 +151,13 @@
 
     .prologue
     .line 43
-    new-instance v0, Lcom/glympse/android/hal/z;
+    new-instance v0, Lcom/glympse/android/hal/y;
 
     invoke-super {p0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/glympse/android/hal/z;-><init>(Ljava/util/Iterator;)V
+    invoke-direct {v0, v1}, Lcom/glympse/android/hal/y;-><init>(Ljava/util/Iterator;)V
 
     return-object v0
 .end method

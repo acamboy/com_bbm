@@ -1,111 +1,68 @@
-.class final synthetic Lcom/bbm/ui/activities/if;
+.class final Lcom/bbm/ui/activities/if;
 .super Ljava/lang/Object;
-.source "FilePickerActivity.java"
+.source "ConversationActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+    .locals 0
 
     .prologue
-    .line 639
-    invoke-static {}, Lcom/bbm/ui/activities/il;->values()[Lcom/bbm/ui/activities/il;
+    .line 3052
+    iput-object p1, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    sput-object v0, Lcom/bbm/ui/activities/if;->a:[I
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/activities/if;->a:[I
+    .prologue
+    .line 3056
+    const-string v0, "quickshare attach location clicked"
 
-    sget-object v1, Lcom/bbm/ui/activities/il;->a:Lcom/bbm/ui/activities/il;
+    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/il;->ordinal()I
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    move-result v1
+    .line 3057
+    iget-object v0, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    const/4 v2, 0x1
+    invoke-static {v0}, Lcom/bbm/util/cm;->a(Landroid/content/Context;)Z
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+    move-result v0
 
+    if-eqz v0, :cond_0
+
+    .line 3058
+    iget-object v0, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->g(Lcom/bbm/ui/activities/ConversationActivity;)V
+
+    .line 3069
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/activities/if;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/activities/il;->b:Lcom/bbm/ui/activities/il;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/il;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/activities/if;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/activities/il;->c:Lcom/bbm/ui/activities/il;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/il;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/ui/activities/if;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/activities/il;->d:Lcom/bbm/ui/activities/il;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/il;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_3
     return-void
 
-    :catch_0
-    move-exception v0
+    .line 3060
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/if;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    goto :goto_3
+    new-instance v1, Lcom/bbm/ui/activities/ig;
 
-    :catch_1
-    move-exception v0
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ig;-><init>(Lcom/bbm/ui/activities/if;)V
 
-    goto :goto_2
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_3
-    move-exception v0
+    invoke-static {v0, v1}, Lcom/bbm/util/cm;->a(Landroid/app/Activity;Landroid/view/View$OnClickListener;)V
 
     goto :goto_0
 .end method

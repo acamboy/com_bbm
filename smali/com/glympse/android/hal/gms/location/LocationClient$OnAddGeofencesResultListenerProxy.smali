@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private fN:Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListener;
+.field private fU:Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListener;
 
 
 # direct methods
@@ -19,7 +19,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 295
-    iput-object p1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListenerProxy;->fN:Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListenerProxy;->fU:Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListener;
 
     .line 296
     return-void
@@ -30,7 +30,7 @@
 
     .prologue
     .line 287
-    invoke-static {}, Lcom/glympse/android/hal/gms/location/LocationClient;->Z()Ljava/lang/Class;
+    invoke-static {}, Lcom/glympse/android/hal/gms/location/LocationClient;->aa()Ljava/lang/Class;
 
     move-result-object v0
 
@@ -44,7 +44,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {}, Lcom/glympse/android/hal/gms/location/LocationClient;->Z()Ljava/lang/Class;
+    invoke-static {}, Lcom/glympse/android/hal/gms/location/LocationClient;->aa()Ljava/lang/Class;
 
     move-result-object v3
 
@@ -69,7 +69,7 @@
     .prologue
     .line 302
     :try_start_0
-    invoke-static {}, Lcom/glympse/android/hal/gms/location/LocationClient;->aa()Ljava/lang/reflect/Method;
+    invoke-static {}, Lcom/glympse/android/hal/gms/location/LocationClient;->ab()Ljava/lang/reflect/Method;
 
     move-result-object v0
 
@@ -80,7 +80,7 @@
     if-eqz v0, :cond_0
 
     .line 304
-    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListenerProxy;->fN:Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListener;
+    iget-object v1, p0, Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListenerProxy;->fU:Lcom/glympse/android/hal/gms/location/LocationClient$OnAddGeofencesResultListener;
 
     const/4 v0, 0x0
 
@@ -111,7 +111,7 @@
 
     .line 308
     :cond_0
-    invoke-static {}, Lcom/glympse/android/hal/gms/location/LocationClient;->O()Ljava/lang/Class;
+    invoke-static {}, Lcom/glympse/android/hal/gms/location/LocationClient;->P()Ljava/lang/Class;
 
     move-result-object v0
 

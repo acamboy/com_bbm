@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 98
+    .line 97
     iput-object p1, p0, Lcom/bbm/d/a/a/c;->b:Lcom/bbm/d/a/a/b;
 
     iput-object p2, p0, Lcom/bbm/d/a/a/c;->a:Ljava/util/ListIterator;
@@ -46,7 +46,7 @@
     .end annotation
 
     .prologue
-    .line 102
+    .line 101
     iget-object v0, p0, Lcom/bbm/d/a/a/c;->a:Ljava/util/ListIterator;
 
     return-object v0
@@ -56,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 98
+    .line 97
     iget-object v0, p0, Lcom/bbm/d/a/a/c;->a:Ljava/util/ListIterator;
 
     return-object v0
@@ -66,7 +66,7 @@
     .locals 1
 
     .prologue
-    .line 98
+    .line 97
     iget-object v0, p0, Lcom/bbm/d/a/a/c;->a:Ljava/util/ListIterator;
 
     return-object v0
@@ -76,7 +76,7 @@
     .locals 1
 
     .prologue
-    .line 107
+    .line 106
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V

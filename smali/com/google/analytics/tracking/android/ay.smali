@@ -242,9 +242,9 @@
 
     invoke-interface {v1}, Lcom/google/analytics/tracking/android/l;->a()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/google/analytics/tracking/android/ay;->c:J
+    iput-wide v2, p0, Lcom/google/analytics/tracking/android/ay;->c:J
 
     .line 651
     :try_start_0

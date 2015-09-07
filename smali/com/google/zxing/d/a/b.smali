@@ -226,9 +226,9 @@
     invoke-direct {v2, v3}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
     .line 72
-    int-to-long v3, v0
+    int-to-long v4, v0
 
-    invoke-virtual {v2, v3, v4}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
+    invoke-virtual {v2, v4, v5}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
 
     move-result-object v0
 
@@ -244,9 +244,9 @@
 
     move-result v3
 
-    int-to-long v3, v3
+    int-to-long v4, v3
 
-    invoke-virtual {v2, v3, v4}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
+    invoke-virtual {v2, v4, v5}, Ljava/text/NumberFormat;->format(J)Ljava/lang/String;
 
     move-result-object v2
 

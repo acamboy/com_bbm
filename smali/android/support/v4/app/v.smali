@@ -1,20 +1,33 @@
-.class final Landroid/support/v4/app/v;
+.class public abstract Landroid/support/v4/app/v;
 .super Ljava/lang/Object;
-.source "FragmentTabHost.java"
+.source "FragmentManager.java"
 
 
-# instance fields
-.field final a:Ljava/lang/String;
+# direct methods
+.method public constructor <init>()V
+    .locals 0
 
-.field final b:Ljava/lang/Class;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/lang/Class",
-            "<*>;"
-        }
-    .end annotation
-.end field
+    .prologue
+    .line 67
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-.field final c:Landroid/os/Bundle;
+    .line 124
+    return-void
+.end method
 
-.field d:Landroid/support/v4/app/Fragment;
+
+# virtual methods
+.method public abstract a(I)Landroid/support/v4/app/Fragment;
+.end method
+
+.method public abstract a(Ljava/lang/String;)Landroid/support/v4/app/Fragment;
+.end method
+
+.method public abstract a()Landroid/support/v4/app/af;
+.end method
+
+.method public abstract b(I)V
+.end method
+
+.method public abstract b()Z
+.end method

@@ -1,261 +1,116 @@
 .class final Lcom/bbm/ui/activities/abm;
-.super Lcom/bbm/ui/dt;
-.source "SelectCategoryActivity.java"
+.super Ljava/lang/Object;
+.source "OwnProfileActivity.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/ui/dt",
-        "<",
-        "Lcom/bbm/d/dc;",
-        "Ljava/lang/String;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
-.field final synthetic b:Lcom/bbm/ui/activities/SelectCategoryActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/SelectCategoryActivity;Lcom/bbm/j/r;)V
+.method constructor <init>(Lcom/bbm/ui/activities/OwnProfileActivity;)V
     .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bbm/j/r",
-            "<",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/dc;",
-            ">;>;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 345
-    iput-object p1, p0, Lcom/bbm/ui/activities/abm;->b:Lcom/bbm/ui/activities/SelectCategoryActivity;
+    .line 249
+    iput-object p1, p0, Lcom/bbm/ui/activities/abm;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
-    .line 346
-    invoke-direct {p0, p2}, Lcom/bbm/ui/dt;-><init>(Lcom/bbm/j/r;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 347
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 4
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 6
 
     .prologue
-    const/4 v3, 0x0
+    .line 256
+    iget-object v0, p0, Lcom/bbm/ui/activities/abm;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
-    .line 351
-    iget-object v0, p0, Lcom/bbm/ui/activities/abm;->b:Lcom/bbm/ui/activities/SelectCategoryActivity;
-
-    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->j(Lcom/bbm/ui/activities/OwnProfileActivity;)Lcom/bbm/ui/FooterActionBar;
 
     move-result-object v0
 
-    const v1, 0x7f0300e5
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+    .line 257
+    sub-int v0, p5, p3
 
-    move-result-object v1
+    .line 259
+    new-instance v1, Landroid/graphics/Point;
 
-    .line 356
-    new-instance v2, Lcom/bbm/ui/activities/abn;
+    invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
-    invoke-direct {v2, p0, v3}, Lcom/bbm/ui/activities/abn;-><init>(Lcom/bbm/ui/activities/abm;B)V
+    .line 260
+    iget-object v2, p0, Lcom/bbm/ui/activities/abm;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
-    .line 357
-    const v0, 0x7f0a0482
+    invoke-virtual {v2}, Lcom/bbm/ui/activities/OwnProfileActivity;->getWindowManager()Landroid/view/WindowManager;
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
-    check-cast v0, Landroid/widget/TextView;
+    move-result-object v2
 
-    iput-object v0, v2, Lcom/bbm/ui/activities/abn;->a:Landroid/widget/TextView;
+    .line 261
+    invoke-virtual {v2, v1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 358
-    const v0, 0x7f0a0483
+    .line 263
+    int-to-double v2, v0
 
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    iget v0, v1, Landroid/graphics/Point;->y:I
 
-    move-result-object v0
+    int-to-double v0, v0
 
-    check-cast v0, Landroid/widget/TextView;
+    const-wide v4, 0x3fe999999999999aL
 
-    iput-object v0, v2, Lcom/bbm/ui/activities/abn;->b:Landroid/widget/TextView;
+    mul-double/2addr v0, v4
 
-    .line 359
-    invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+    cmpg-double v0, v2, v0
 
-    .line 362
-    return-object v1
-.end method
+    if-gez v0, :cond_1
 
-.method protected final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+    const/4 v0, 0x1
 
-    .prologue
-    .line 339
-    check-cast p1, Lcom/bbm/d/dc;
-
-    invoke-virtual {p1}, Lcom/bbm/d/dc;->a()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected final synthetic a(Landroid/view/View;Ljava/lang/Object;)V
-    .locals 10
-
-    .prologue
-    const/4 v9, 0x0
-
-    const/4 v8, 0x1
-
-    const/4 v2, 0x0
-
-    .line 339
-    check-cast p2, Lcom/bbm/d/dc;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/abn;
-
-    invoke-static {}, Lcom/bbm/ui/activities/SelectCategoryActivity;->a()Lcom/bbm/d/a;
-
-    move-result-object v1
-
-    invoke-virtual {p2}, Lcom/bbm/d/dc;->a()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v1, v3}, Lcom/bbm/d/a;->P(Ljava/lang/String;)Lcom/bbm/j/w;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Ljava/util/List;
-
-    iget-object v3, v0, Lcom/bbm/ui/activities/abn;->a:Landroid/widget/TextView;
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/abm;->b:Lcom/bbm/ui/activities/SelectCategoryActivity;
-
-    const v5, 0x7f0e05ed
-
-    const/4 v6, 0x2
-
-    new-array v6, v6, [Ljava/lang/Object;
-
-    iget-object v7, p2, Lcom/bbm/d/dc;->c:Ljava/lang/String;
-
-    aput-object v7, v6, v2
-
-    invoke-interface {v1}, Ljava/util/List;->size()I
-
-    move-result v7
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    aput-object v7, v6, v8
-
-    invoke-virtual {v4, v5, v6}, Lcom/bbm/ui/activities/SelectCategoryActivity;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/abm;->b:Lcom/bbm/ui/activities/SelectCategoryActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/SelectCategoryActivity;->b(Lcom/bbm/ui/activities/SelectCategoryActivity;)Ljava/util/ArrayList;
-
-    move-result-object v3
-
-    if-eqz v3, :cond_2
-
-    new-instance v3, Ljava/util/ArrayList;
-
-    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
-
-    invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
+    .line 265
     :goto_0
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    if-eqz v0, :cond_2
 
-    move-result v1
+    .line 266
+    iget-object v0, p0, Lcom/bbm/ui/activities/abm;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
-    if-eqz v1, :cond_0
+    const/4 v1, 0x1
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/OwnProfileActivity;->a(Lcom/bbm/ui/activities/OwnProfileActivity;Z)V
 
-    move-result-object v1
+    .line 267
+    iget-object v0, p0, Lcom/bbm/ui/activities/abm;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
-    check-cast v1, Lcom/bbm/d/dd;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->b()V
 
-    iget-object v1, v1, Lcom/bbm/d/dd;->a:Ljava/lang/String;
+    .line 272
+    :cond_0
+    :goto_1
+    return-void
 
-    invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    .line 263
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
 
-    :cond_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/abm;->b:Lcom/bbm/ui/activities/SelectCategoryActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/SelectCategoryActivity;->b(Lcom/bbm/ui/activities/SelectCategoryActivity;)Ljava/util/ArrayList;
-
-    move-result-object v1
-
-    invoke-static {v3, v1}, Lcom/bbm/ui/activities/SelectCategoryActivity;->a(Ljava/util/Collection;Ljava/util/Collection;)Z
-
-    move-result v1
-
-    :goto_1
-    if-eqz v1, :cond_1
-
-    iget-object v1, v0, Lcom/bbm/ui/activities/abn;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v9, v8}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/abn;->b:Landroid/widget/TextView;
-
-    invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
-
-    :goto_2
-    return-void
-
-    :cond_1
-    iget-object v1, v0, Lcom/bbm/ui/activities/abn;->a:Landroid/widget/TextView;
-
-    invoke-virtual {v1, v9, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/abn;->b:Landroid/widget/TextView;
-
-    const/4 v1, 0x4
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
-
-    goto :goto_2
-
+    .line 269
     :cond_2
-    move v1, v2
+    iget-object v0, p0, Lcom/bbm/ui/activities/abm;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/OwnProfileActivity;->a(Lcom/bbm/ui/activities/OwnProfileActivity;Z)V
 
     goto :goto_1
 .end method

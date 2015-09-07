@@ -312,7 +312,7 @@
 .end method
 
 .method private p(Ljava/util/Map;)Z
-    .locals 9
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -326,7 +326,7 @@
 
     const/4 v2, 0x1
 
-    const-wide/high16 v7, 0x4059000000000000L
+    const-wide/high16 v8, 0x4059000000000000L
 
     const/4 v1, 0x0
 
@@ -352,11 +352,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0, v7, v8}, Lcom/google/android/gms/analytics/ak;->a(Ljava/lang/String;D)D
+    invoke-static {v0, v8, v9}, Lcom/google/android/gms/analytics/ak;->a(Ljava/lang/String;D)D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    cmpl-double v0, v3, v7
+    cmpl-double v0, v4, v8
 
     if-ltz v0, :cond_1
 
@@ -379,11 +379,11 @@
 
     rem-int/lit16 v0, v0, 0x2710
 
-    int-to-double v5, v0
+    int-to-double v6, v0
 
-    mul-double/2addr v3, v7
+    mul-double/2addr v4, v8
 
-    cmpl-double v0, v5, v3
+    cmpl-double v0, v6, v4
 
     if-ltz v0, :cond_3
 

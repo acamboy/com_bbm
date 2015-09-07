@@ -21,7 +21,7 @@
     .locals 0
 
     .prologue
-    .line 2032
+    .line 2043
     iput-object p1, p0, Lcom/blackberry/ids/IDS$14;->a:Lcom/blackberry/ids/RequestId;
 
     iput-object p2, p0, Lcom/blackberry/ids/IDS$14;->b:Ljava/lang/Object;
@@ -45,7 +45,7 @@
 
     const/4 v5, 0x0
 
-    .line 2035
+    .line 2046
     const-string v0, "enter do_VerifyEmail as runnable, request_id=%s"
 
     new-array v1, v6, [Ljava/lang/Object;
@@ -56,7 +56,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 2038
+    .line 2049
     :try_start_0
     iget-object v0, p0, Lcom/blackberry/ids/IDS$14;->b:Ljava/lang/Object;
 
@@ -71,7 +71,7 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2047
+    .line 2058
     const-string v0, "exit do_VerifyEmail, request_id=%s"
 
     new-array v1, v6, [Ljava/lang/Object;
@@ -82,15 +82,15 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 2048
+    .line 2059
     :goto_0
     return-void
 
-    .line 2040
+    .line 2051
     :catch_0
     move-exception v0
 
-    .line 2041
+    .line 2052
     :try_start_1
     const-string v1, "caught Throwable from do_VerifyEmail, request_id=%s"
 
@@ -106,7 +106,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 2044
+    .line 2055
     iget-object v1, p0, Lcom/blackberry/ids/IDS$14;->d:Lcom/blackberry/ids/IFailureCallback;
 
     iget-object v2, p0, Lcom/blackberry/ids/IDS$14;->a:Lcom/blackberry/ids/RequestId;
@@ -125,7 +125,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2047
+    .line 2058
     const-string v0, "exit do_VerifyEmail, request_id=%s"
 
     new-array v1, v6, [Ljava/lang/Object;

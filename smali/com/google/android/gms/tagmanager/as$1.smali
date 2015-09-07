@@ -17,7 +17,7 @@
 
 # direct methods
 .method constructor <init>(Lcom/google/android/gms/tagmanager/as;Lcom/google/android/gms/tagmanager/ar;JLjava/lang/String;)V
-    .locals 0
+    .locals 1
 
     iput-object p1, p0, Lcom/google/android/gms/tagmanager/as$1;->Vh:Lcom/google/android/gms/tagmanager/as;
 
@@ -74,11 +74,11 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/google/android/gms/tagmanager/as$1;->Vf:J
+    iget-wide v2, p0, Lcom/google/android/gms/tagmanager/as$1;->Vf:J
 
-    iget-object v3, p0, Lcom/google/android/gms/tagmanager/as$1;->Vg:Ljava/lang/String;
+    iget-object v1, p0, Lcom/google/android/gms/tagmanager/as$1;->Vg:Ljava/lang/String;
 
-    invoke-interface {v0, v1, v2, v3}, Lcom/google/android/gms/tagmanager/at;->e(JLjava/lang/String;)V
+    invoke-interface {v0, v2, v3, v1}, Lcom/google/android/gms/tagmanager/at;->e(JLjava/lang/String;)V
 
     return-void
 .end method

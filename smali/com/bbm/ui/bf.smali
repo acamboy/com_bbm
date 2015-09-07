@@ -3,7 +3,7 @@
 .source "EmoticonInputPanel.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 544
+    .line 105
     iput-object p1, p0, Lcom/bbm/ui/bf;->a:Lcom/bbm/ui/EmoticonInputPanel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,48 +25,12 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 1
 
     .prologue
-    .line 548
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 109
+    const/4 v0, 0x1
 
-    const-string v1, "quickShareAction Clicked: "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-class v1, Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 550
-    iget-object v1, p0, Lcom/bbm/ui/bf;->a:Lcom/bbm/ui/EmoticonInputPanel;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/EmoticonInputPanel;->setSelectedQuickShareAction(I)V
-
-    .line 551
-    return-void
+    return v0
 .end method

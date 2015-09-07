@@ -1,54 +1,114 @@
-.class final Lcom/bbm/ui/n;
-.super Ljava/lang/Object;
-.source "BBSpinnerAdapter.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
+.class final enum Lcom/bbm/ui/n;
+.super Ljava/lang/Enum;
+.source "AudioProgressBar.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
+        "Ljava/lang/Enum",
         "<",
-        "Ljava/lang/String;",
+        "Lcom/bbm/ui/n;",
         ">;"
     }
 .end annotation
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/l;
+# static fields
+.field public static final enum a:Lcom/bbm/ui/n;
+
+.field public static final enum b:Lcom/bbm/ui/n;
+
+.field private static final synthetic c:[Lcom/bbm/ui/n;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/l;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
     .prologue
-    .line 130
-    iput-object p1, p0, Lcom/bbm/ui/n;->a:Lcom/bbm/ui/l;
+    const/4 v3, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    .line 28
+    new-instance v0, Lcom/bbm/ui/n;
+
+    const-string v1, "Record"
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/n;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/n;->a:Lcom/bbm/ui/n;
+
+    new-instance v0, Lcom/bbm/ui/n;
+
+    const-string v1, "Playback"
+
+    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/n;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/n;->b:Lcom/bbm/ui/n;
+
+    .line 27
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lcom/bbm/ui/n;
+
+    sget-object v1, Lcom/bbm/ui/n;->a:Lcom/bbm/ui/n;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/bbm/ui/n;->b:Lcom/bbm/ui/n;
+
+    aput-object v1, v0, v3
+
+    sput-object v0, Lcom/bbm/ui/n;->c:[Lcom/bbm/ui/n;
 
     return-void
 .end method
 
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
-# virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .prologue
+    .line 27
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/n;
     .locals 1
 
     .prologue
-    .line 130
-    check-cast p1, Ljava/lang/String;
+    .line 27
+    const-class v0, Lcom/bbm/ui/n;
 
-    check-cast p2, Ljava/lang/String;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    invoke-virtual {p1, p2}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+    move-result-object v0
 
-    move-result v0
+    check-cast v0, Lcom/bbm/ui/n;
 
-    return v0
+    return-object v0
+.end method
+
+.method public static values()[Lcom/bbm/ui/n;
+    .locals 1
+
+    .prologue
+    .line 27
+    sget-object v0, Lcom/bbm/ui/n;->c:[Lcom/bbm/ui/n;
+
+    invoke-virtual {v0}, [Lcom/bbm/ui/n;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/ui/n;
+
+    return-object v0
 .end method

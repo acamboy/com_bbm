@@ -32,9 +32,9 @@
 .end method
 
 .method public constructor <init>()V
-    .locals 3
+    .locals 4
 
-    const-wide/16 v1, -0x1
+    const-wide/16 v2, -0x1
 
     invoke-direct {p0}, Lcom/google/android/gms/internal/ke;-><init>()V
 
@@ -46,9 +46,9 @@
 
     iput-object v0, p0, Lcom/google/android/gms/drive/internal/y;->DV:Ljava/lang/String;
 
-    iput-wide v1, p0, Lcom/google/android/gms/drive/internal/y;->DW:J
+    iput-wide v2, p0, Lcom/google/android/gms/drive/internal/y;->DW:J
 
-    iput-wide v1, p0, Lcom/google/android/gms/drive/internal/y;->DX:J
+    iput-wide v2, p0, Lcom/google/android/gms/drive/internal/y;->DX:J
 
     const/4 v0, -0x1
 
@@ -76,7 +76,7 @@
 
 # virtual methods
 .method public final a(Lcom/google/android/gms/internal/jz;)V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -92,15 +92,15 @@
 
     const/4 v0, 0x3
 
-    iget-wide v1, p0, Lcom/google/android/gms/drive/internal/y;->DW:J
+    iget-wide v2, p0, Lcom/google/android/gms/drive/internal/y;->DW:J
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/google/android/gms/internal/jz;->c(IJ)V
+    invoke-virtual {p1, v0, v2, v3}, Lcom/google/android/gms/internal/jz;->c(IJ)V
 
     const/4 v0, 0x4
 
-    iget-wide v1, p0, Lcom/google/android/gms/drive/internal/y;->DX:J
+    iget-wide v2, p0, Lcom/google/android/gms/drive/internal/y;->DX:J
 
-    invoke-virtual {p1, v0, v1, v2}, Lcom/google/android/gms/internal/jz;->c(IJ)V
+    invoke-virtual {p1, v0, v2, v3}, Lcom/google/android/gms/internal/jz;->c(IJ)V
 
     return-void
 .end method

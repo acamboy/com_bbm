@@ -7,11 +7,11 @@
 
 
 # static fields
-.field private static aM:Landroid/content/Context;
+.field private static aL:Landroid/content/Context;
 
 
 # instance fields
-.field private aL:Lcom/glympse/android/hal/GResourceGateway;
+.field private aK:Lcom/glympse/android/hal/GResourceGateway;
 
 .field private e:Landroid/content/Context;
 
@@ -21,26 +21,26 @@
     .locals 1
 
     .prologue
-    .line 29
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
+    .line 31
     iput-object p1, p0, Lcom/glympse/android/hal/t;->e:Landroid/content/Context;
 
-    .line 31
-    new-instance v0, Lcom/glympse/android/hal/bh;
+    .line 32
+    new-instance v0, Lcom/glympse/android/hal/bi;
 
-    invoke-direct {v0}, Lcom/glympse/android/hal/bh;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/hal/bi;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/hal/t;->aL:Lcom/glympse/android/hal/GResourceGateway;
+    iput-object v0, p0, Lcom/glympse/android/hal/t;->aK:Lcom/glympse/android/hal/GResourceGateway;
 
-    .line 34
-    sput-object p1, Lcom/glympse/android/hal/t;->aM:Landroid/content/Context;
-
-    .line 37
-    invoke-static {}, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->init()V
+    .line 35
+    sput-object p1, Lcom/glympse/android/hal/t;->aL:Landroid/content/Context;
 
     .line 38
+    invoke-static {}, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->init()V
+
+    .line 39
     return-void
 .end method
 
@@ -48,24 +48,24 @@
     .locals 1
 
     .prologue
-    .line 98
+    .line 99
     if-eqz p0, :cond_1
 
-    .line 100
-    sget-object v0, Lcom/glympse/android/hal/t;->aM:Landroid/content/Context;
+    .line 101
+    sget-object v0, Lcom/glympse/android/hal/t;->aL:Landroid/content/Context;
 
     if-nez v0, :cond_0
 
-    .line 102
-    sput-object p0, Lcom/glympse/android/hal/t;->aM:Landroid/content/Context;
+    .line 103
+    sput-object p0, Lcom/glympse/android/hal/t;->aL:Landroid/content/Context;
 
-    .line 106
+    .line 107
     :cond_0
     :goto_0
     return-object p0
 
     :cond_1
-    sget-object p0, Lcom/glympse/android/hal/t;->aM:Landroid/content/Context;
+    sget-object p0, Lcom/glympse/android/hal/t;->aL:Landroid/content/Context;
 
     goto :goto_0
 .end method
@@ -81,7 +81,7 @@
     .end annotation
 
     .prologue
-    .line 115
+    .line 116
     iget-object v0, p0, Lcom/glympse/android/hal/t;->e:Landroid/content/Context;
 
     invoke-static {v0, p1}, Lcom/glympse/android/hal/t;->a(Landroid/content/Context;Ljava/lang/Class;)Z
@@ -90,7 +90,7 @@
 
     if-nez v0, :cond_0
 
-    .line 117
+    .line 118
     new-instance v0, Lcom/glympse/android/hal/GlympseException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -115,46 +115,7 @@
 
     throw v0
 
-    .line 119
-    :cond_0
-    return-void
-.end method
-
-.method private a(Ljava/lang/String;)V
-    .locals 3
-
-    .prologue
-    .line 123
-    iget-object v0, p0, Lcom/glympse/android/hal/t;->e:Landroid/content/Context;
-
-    invoke-static {v0, p1}, Lcom/glympse/android/hal/t;->b(Landroid/content/Context;Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 125
-    new-instance v0, Lcom/glympse/android/hal/GlympseException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Missing required manifest permission: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/glympse/android/hal/GlympseException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 127
+    .line 120
     :cond_0
     return-void
 .end method
@@ -163,7 +124,7 @@
     .locals 3
 
     .prologue
-    .line 131
+    .line 132
     iget-object v0, p0, Lcom/glympse/android/hal/t;->e:Landroid/content/Context;
 
     invoke-static {v0, p1, p2}, Lcom/glympse/android/hal/t;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
@@ -172,7 +133,7 @@
 
     if-nez v0, :cond_0
 
-    .line 133
+    .line 134
     new-instance v0, Lcom/glympse/android/hal/GlympseException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -203,7 +164,7 @@
 
     throw v0
 
-    .line 135
+    .line 136
     :cond_0
     return-void
 .end method
@@ -220,31 +181,31 @@
     .end annotation
 
     .prologue
-    .line 188
+    .line 189
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p0, p1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 189
+    .line 190
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 192
+    .line 193
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 193
+    .line 194
     const/high16 v2, 0x10000
 
     invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->queryIntentServices(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 196
+    .line 197
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -266,7 +227,7 @@
     .locals 2
 
     .prologue
-    .line 139
+    .line 140
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -296,15 +257,15 @@
     .locals 2
 
     .prologue
-    .line 160
+    .line 161
     invoke-static {p0, p1}, Lcom/glympse/android/hal/t;->c(Landroid/content/Context;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 161
+    .line 162
     if-eqz v0, :cond_0
 
-    .line 163
+    .line 164
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -321,30 +282,30 @@
 
     check-cast v0, Landroid/content/pm/ResolveInfo;
 
-    .line 167
+    .line 168
     iget-object v1, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v1, :cond_0
 
-    .line 170
+    .line 171
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 171
+    .line 172
     if-eqz v0, :cond_0
 
-    .line 173
+    .line 174
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 175
+    .line 176
     const/4 v0, 0x1
 
-    .line 178
+    .line 179
     :goto_0
     return v0
 
@@ -370,21 +331,21 @@
     .end annotation
 
     .prologue
-    .line 145
+    .line 146
     new-instance v0, Landroid/content/Intent;
 
     const/4 v1, 0x0
 
     invoke-direct {v0, p1, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 146
+    .line 147
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 147
+    .line 148
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
@@ -398,16 +359,55 @@
     return-object v0
 .end method
 
+.method private d(Ljava/lang/String;)V
+    .locals 3
+
+    .prologue
+    .line 124
+    iget-object v0, p0, Lcom/glympse/android/hal/t;->e:Landroid/content/Context;
+
+    invoke-static {v0, p1}, Lcom/glympse/android/hal/t;->b(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 126
+    new-instance v0, Lcom/glympse/android/hal/GlympseException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "Missing required manifest permission: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/glympse/android/hal/GlympseException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 128
+    :cond_0
+    return-void
+.end method
+
 .method public static d(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 1
 
     .prologue
-    .line 153
+    .line 154
     invoke-static {p0, p1}, Lcom/glympse/android/hal/t;->c(Landroid/content/Context;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 154
+    .line 155
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -431,8 +431,8 @@
     .locals 1
 
     .prologue
-    .line 93
-    sget-object v0, Lcom/glympse/android/hal/t;->aM:Landroid/content/Context;
+    .line 94
+    sget-object v0, Lcom/glympse/android/hal/t;->aL:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -443,7 +443,7 @@
     .locals 1
 
     .prologue
-    .line 55
+    .line 56
     iget-object v0, p0, Lcom/glympse/android/hal/t;->e:Landroid/content/Context;
 
     return-object v0
@@ -453,8 +453,8 @@
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/glympse/android/hal/t;->aL:Lcom/glympse/android/hal/GResourceGateway;
+    .line 70
+    iget-object v0, p0, Lcom/glympse/android/hal/t;->aK:Lcom/glympse/android/hal/GResourceGateway;
 
     return-object v0
 .end method
@@ -463,14 +463,14 @@
     .locals 0
 
     .prologue
-    .line 46
+    .line 47
     if-nez p1, :cond_0
 
-    .line 51
+    .line 52
     :goto_0
     return-void
 
-    .line 50
+    .line 51
     :cond_0
     iput-object p1, p0, Lcom/glympse/android/hal/t;->e:Landroid/content/Context;
 
@@ -481,16 +481,16 @@
     .locals 0
 
     .prologue
-    .line 60
+    .line 61
     if-nez p1, :cond_0
 
-    .line 65
+    .line 66
     :goto_0
     return-void
 
-    .line 64
+    .line 65
     :cond_0
-    iput-object p1, p0, Lcom/glympse/android/hal/t;->aL:Lcom/glympse/android/hal/GResourceGateway;
+    iput-object p1, p0, Lcom/glympse/android/hal/t;->aK:Lcom/glympse/android/hal/GResourceGateway;
 
     goto :goto_0
 .end method
@@ -499,19 +499,21 @@
     .locals 2
 
     .prologue
-    .line 74
+    .line 75
     const-string v0, "android.permission.INTERNET"
 
-    invoke-direct {p0, v0}, Lcom/glympse/android/hal/t;->a(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/glympse/android/hal/t;->d(Ljava/lang/String;)V
 
-    .line 76
-    invoke-interface {p1}, Lcom/glympse/android/api/GGlympse;->isAccountSharingEnabled()Z
+    .line 77
+    check-cast p1, Lcom/glympse/android/lib/GGlympsePrivate;
+
+    invoke-interface {p1}, Lcom/glympse/android/lib/GGlympsePrivate;->isAccountSharingEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 78
+    .line 79
     const-string v0, "com.glympse.android.hal.auth.REQUEST"
 
     const-class v1, Lcom/glympse/android/hal/AuthReceiver;
@@ -522,7 +524,7 @@
 
     invoke-direct {p0, v0, v1}, Lcom/glympse/android/hal/t;->a(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 80
+    .line 81
     :cond_0
     return-void
 .end method
@@ -531,11 +533,11 @@
     .locals 1
 
     .prologue
-    .line 84
+    .line 85
     const-class v0, Lcom/glympse/android/hal/GlympseService;
 
     invoke-direct {p0, v0}, Lcom/glympse/android/hal/t;->a(Ljava/lang/Class;)V
 
-    .line 85
+    .line 86
     return-void
 .end method

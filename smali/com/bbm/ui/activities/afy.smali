@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/afy;
 .super Ljava/lang/Object;
-.source "ViewChannelPostActivity.java"
+.source "SelectGroupActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectGroupActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectGroupActivity;)V
     .locals 0
 
     .prologue
-    .line 188
-    iput-object p1, p0, Lcom/bbm/ui/activities/afy;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 113
+    iput-object p1, p0, Lcom/bbm/ui/activities/afy;->a:Lcom/bbm/ui/activities/SelectGroupActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,32 +26,21 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 191
-    iget-object v0, p0, Lcom/bbm/ui/activities/afy;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 116
+    const-string v0, "mHeaderActionBar PositiveButton Clicked"
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->a(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Z
+    const-class v1, Lcom/bbm/ui/activities/SelectGroupActivity;
 
-    move-result v0
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    if-nez v0, :cond_0
+    .line 118
+    iget-object v0, p0, Lcom/bbm/ui/activities/afy;->a:Lcom/bbm/ui/activities/SelectGroupActivity;
 
-    .line 192
-    iget-object v0, p0, Lcom/bbm/ui/activities/afy;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectGroupActivity;->d(Lcom/bbm/ui/activities/SelectGroupActivity;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    .line 196
-    :goto_0
+    .line 119
     return-void
-
-    .line 194
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/afy;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->c(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    goto :goto_0
 .end method

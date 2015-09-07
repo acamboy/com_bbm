@@ -103,7 +103,7 @@
 .end method
 
 .method protected final a(Ljava/lang/String;JLjava/lang/String;)V
-    .locals 6
+    .locals 8
 
     iget-object v0, p0, Lcom/google/android/gms/internal/dp;->xB:Lcom/google/android/gms/internal/du;
 
@@ -123,17 +123,17 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/internal/du;->a(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v0, p0, Lcom/google/android/gms/internal/dp;->xD:Lcom/google/android/gms/internal/dw;
+    iget-object v1, p0, Lcom/google/android/gms/internal/dp;->xD:Lcom/google/android/gms/internal/dw;
 
-    iget-object v1, p0, Lcom/google/android/gms/internal/dp;->xC:Ljava/lang/String;
+    iget-object v2, p0, Lcom/google/android/gms/internal/dp;->xC:Ljava/lang/String;
 
-    move-object v2, p1
+    move-object v3, p1
 
-    move-wide v3, p2
+    move-wide v4, p2
 
-    move-object v5, p4
+    move-object v6, p4
 
-    invoke-interface/range {v0 .. v5}, Lcom/google/android/gms/internal/dw;->a(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-interface/range {v1 .. v6}, Lcom/google/android/gms/internal/dw;->a(Ljava/lang/String;Ljava/lang/String;JLjava/lang/String;)V
 
     return-void
 .end method

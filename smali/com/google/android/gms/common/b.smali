@@ -1,5 +1,5 @@
 .class public Lcom/google/android/gms/common/b;
-.super Landroid/support/v4/app/d;
+.super Landroid/support/v4/app/m;
 
 
 # instance fields
@@ -14,7 +14,7 @@
 
     const/4 v0, 0x0
 
-    invoke-direct {p0}, Landroid/support/v4/app/d;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/app/m;-><init>()V
 
     iput-object v0, p0, Lcom/google/android/gms/common/b;->mDialog:Landroid/app/Dialog;
 
@@ -79,10 +79,10 @@
     return-object v0
 .end method
 
-.method public show(Landroid/support/v4/app/n;Ljava/lang/String;)V
+.method public show(Landroid/support/v4/app/v;Ljava/lang/String;)V
     .locals 0
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/d;->show(Landroid/support/v4/app/n;Ljava/lang/String;)V
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/m;->show(Landroid/support/v4/app/v;Ljava/lang/String;)V
 
     return-void
 .end method

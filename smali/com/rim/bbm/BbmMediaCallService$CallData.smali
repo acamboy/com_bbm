@@ -28,6 +28,8 @@
 
 .field public peerName:Ljava/lang/String;
 
+.field public rateCall:Z
+
 .field public videoEnabled:Z
 
 .field public videoState:I
@@ -38,7 +40,7 @@
     .locals 0
 
     .prologue
-    .line 250
+    .line 259
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

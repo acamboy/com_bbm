@@ -1,34 +1,22 @@
 .class final Lcom/bbm/ui/activities/aen;
 .super Ljava/lang/Object;
-.source "SponsoredAdActivity.java"
+.source "SearchResultsChannelsActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/google/b/f/a/l;
-
-.field final synthetic b:Ljava/lang/String;
-
-.field final synthetic c:Ljava/lang/String;
-
-.field final synthetic d:Lcom/bbm/ui/activities/SponsoredAdActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SponsoredAdActivity;Lcom/google/b/f/a/l;Ljava/lang/String;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
     .locals 0
 
     .prologue
-    .line 114
-    iput-object p1, p0, Lcom/bbm/ui/activities/aen;->d:Lcom/bbm/ui/activities/SponsoredAdActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/aen;->a:Lcom/google/b/f/a/l;
-
-    iput-object p3, p0, Lcom/bbm/ui/activities/aen;->b:Ljava/lang/String;
-
-    iput-object p4, p0, Lcom/bbm/ui/activities/aen;->c:Ljava/lang/String;
+    .line 498
+    iput-object p1, p0, Lcom/bbm/ui/activities/aen;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,117 +25,80 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 119
+    .line 502
     :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/aen;->a:Lcom/google/b/f/a/l;
+    iget-object v0, p0, Lcom/bbm/ui/activities/aen;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    invoke-interface {v0}, Lcom/google/b/f/a/l;->get()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->j(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Lcom/bbm/j/x;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
-
-    .line 120
-    const-string v1, "Starting chat with %s -> %s"
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/aen;->b:Ljava/lang/String;
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    aput-object v0, v2, v3
-
-    invoke-static {v1, v2}, Lcom/bbm/w;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 122
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/aen;->d:Lcom/bbm/ui/activities/SponsoredAdActivity;
-
-    const-class v3, Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 123
-    const-string v2, "conversation_uri"
-
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 125
-    iget-object v0, p0, Lcom/bbm/ui/activities/aen;->c:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-interface {v0}, Lcom/bbm/j/x;->f()Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 126
-    const-string v0, "contextContentId"
+    .line 503
+    iget-object v0, p0, Lcom/bbm/ui/activities/aen;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/aen;->c:Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->h(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Landroid/widget/EditText;
 
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    move-result-object v0
 
-    .line 129
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/aen;->b:Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    move-result-object v0
 
-    move-result v0
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    if-nez v0, :cond_1
+    move-result-object v0
 
-    .line 130
-    const-string v0, "contextUserUri"
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/aen;->b:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    .line 504
+    iget-object v1, p0, Lcom/bbm/ui/activities/aen;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    .line 131
-    const-string v0, "contextContentType"
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->a(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;Ljava/lang/String;)V
 
-    const-string v2, "contextContentType_shareAd"
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 134
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/aen;->d:Lcom/bbm/ui/activities/SponsoredAdActivity;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/SponsoredAdActivity;->startActivity(Landroid/content/Intent;)V
-
-    .line 135
-    const-string v0, "open"
-
-    const-string v1, "Conversation"
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->a(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 140
+    .line 513
     :goto_0
     return-void
 
-    .line 137
+    .line 506
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/aen;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->j(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Lcom/bbm/j/x;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-interface {v0, v1}, Lcom/bbm/j/x;->a(Z)V
+
+    .line 508
+    iget-object v0, p0, Lcom/bbm/ui/activities/aen;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->m(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)Lcom/bbm/ui/activities/aew;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/aew;->notifyDataSetChanged()V
+    :try_end_0
+    .catch Lcom/bbm/j/z; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 513
     :catch_0
     move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method

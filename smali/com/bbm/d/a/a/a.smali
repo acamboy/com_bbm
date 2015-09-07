@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method protected final c()V
+.method public final c()V
     .locals 1
 
     .prologue

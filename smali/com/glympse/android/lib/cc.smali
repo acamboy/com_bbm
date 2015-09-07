@@ -3,119 +3,77 @@
 .source "GlympseLite.java"
 
 # interfaces
-.implements Lcom/glympse/android/api/GEventListener;
+.implements Lcom/glympse/android/lib/bp;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/glympse/android/lib/bp",
+        "<",
+        "Lcom/glympse/android/api/GTicket;",
+        "Lcom/glympse/android/lite/GTicketLite;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic lj:Lcom/glympse/android/lib/ca;
+.field final synthetic lO:Lcom/glympse/android/lib/cb;
 
 
 # direct methods
-.method private constructor <init>(Lcom/glympse/android/lib/ca;)V
+.method private constructor <init>(Lcom/glympse/android/lib/cb;)V
     .locals 0
 
     .prologue
-    .line 397
-    iput-object p1, p0, Lcom/glympse/android/lib/cc;->lj:Lcom/glympse/android/lib/ca;
+    .line 381
+    iput-object p1, p0, Lcom/glympse/android/lib/cc;->lO:Lcom/glympse/android/lib/cb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/glympse/android/lib/ca;Lcom/glympse/android/lib/ca$1;)V
+.method synthetic constructor <init>(Lcom/glympse/android/lib/cb;Lcom/glympse/android/lib/cb$1;)V
     .locals 0
 
     .prologue
-    .line 397
-    invoke-direct {p0, p1}, Lcom/glympse/android/lib/cc;-><init>(Lcom/glympse/android/lib/ca;)V
+    .line 381
+    invoke-direct {p0, p1}, Lcom/glympse/android/lib/cc;-><init>(Lcom/glympse/android/lib/cb;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
+.method public a(Lcom/glympse/android/api/GTicket;)Lcom/glympse/android/lite/GTicketLite;
     .locals 2
 
     .prologue
-    .line 402
-    move-object v0, p1
+    .line 385
+    const-wide v0, 0x1000000001001L
 
-    check-cast v0, Lcom/glympse/android/lib/GGlympsePrivate;
-
-    .line 403
-    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->isStarted()Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 436
-    :cond_0
-    :goto_0
-    :pswitch_0
-    return-void
-
-    .line 408
-    :cond_1
-    and-int/lit8 v0, p3, 0x1
-
-    if-eqz v0, :cond_0
-
-    .line 410
-    check-cast p4, Lcom/glympse/android/api/GImage;
-
-    .line 411
-    invoke-interface {p4}, Lcom/glympse/android/api/GImage;->getState()I
-
-    move-result v0
-
-    .line 412
-    packed-switch v0, :pswitch_data_0
-
-    .line 431
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {p1, v0, v1}, Lcom/glympse/android/api/GTicket;->getContext(J)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/glympse/android/api/GEventListener;
+    check-cast v0, Lcom/glympse/android/lite/GTicketLite;
 
-    invoke-interface {p4, v0}, Lcom/glympse/android/api/GImage;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
+    return-object v0
+.end method
 
-    goto :goto_0
+.method public synthetic c(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
 
-    .line 422
-    :pswitch_1
-    invoke-interface {p1}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
+    .prologue
+    .line 381
+    check-cast p1, Lcom/glympse/android/api/GTicket;
 
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/glympse/android/api/GUserManager;->getSelf()Lcom/glympse/android/api/GUser;
-
-    move-result-object v0
-
-    invoke-interface {p4}, Lcom/glympse/android/api/GImage;->getDrawable()Lcom/glympse/android/core/GDrawable;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/api/GUser;->setAvatar(Lcom/glympse/android/core/GDrawable;)Z
-
-    .line 425
-    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {p0, p1}, Lcom/glympse/android/lib/cc;->a(Lcom/glympse/android/api/GTicket;)Lcom/glympse/android/lite/GTicketLite;
 
     move-result-object v0
 
-    check-cast v0, Lcom/glympse/android/api/GEventListener;
-
-    invoke-interface {p4, v0}, Lcom/glympse/android/api/GImage;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
-
-    goto :goto_0
-
-    .line 412
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    return-object v0
 .end method

@@ -1,94 +1,97 @@
-.class public final Lcom/bbm/util/ew;
-.super Ljava/lang/Object;
-.source "WifiStatusMonitor.java"
+.class public Lcom/bbm/util/ew;
+.super Lcom/bbm/d/a/a/a;
+.source "UpdatesFragmentUtil.java"
+
+# interfaces
+.implements Landroid/widget/AbsListView$OnScrollListener;
 
 
 # instance fields
-.field final a:Lcom/bbm/j/t;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/bbm/j/t",
-            "<",
-            "Ljava/lang/Boolean;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field private a:I
 
-.field public final b:Landroid/content/Context;
-
-.field public c:Z
-
-.field public final d:Landroid/content/BroadcastReceiver;
+.field private b:I
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;)V
-    .locals 2
+.method public constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 46
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 954
+    invoke-direct {p0}, Lcom/bbm/d/a/a/a;-><init>()V
 
-    .line 31
-    new-instance v0, Lcom/bbm/util/ex;
-
-    invoke-direct {v0, p0}, Lcom/bbm/util/ex;-><init>(Lcom/bbm/util/ew;)V
-
-    iput-object v0, p0, Lcom/bbm/util/ew;->d:Landroid/content/BroadcastReceiver;
-
-    .line 47
-    iput-object p1, p0, Lcom/bbm/util/ew;->b:Landroid/content/Context;
-
-    .line 48
-    new-instance v0, Lcom/bbm/j/t;
-
-    const/4 v1, 0x0
-
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/bbm/j/t;-><init>(Ljava/lang/Object;)V
-
-    iput-object v0, p0, Lcom/bbm/util/ew;->a:Lcom/bbm/j/t;
-
-    .line 49
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
+.method public final a()I
     .locals 1
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/bbm/util/ew;->a:Lcom/bbm/j/t;
+    .line 959
+    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->b()Z
+    .line 960
+    iget v0, p0, Lcom/bbm/util/ew;->a:I
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/util/ew;->a:Lcom/bbm/j/t;
-
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    :goto_0
     return v0
+.end method
 
-    :cond_0
-    const/4 v0, 0x0
+.method public final b()I
+    .locals 1
 
-    goto :goto_0
+    .prologue
+    .line 964
+    invoke-static {p0}, Lcom/bbm/j/p;->a(Lcom/bbm/j/g;)V
+
+    .line 965
+    iget v0, p0, Lcom/bbm/util/ew;->b:I
+
+    return v0
+.end method
+
+.method public onScroll(Landroid/widget/AbsListView;III)V
+    .locals 2
+
+    .prologue
+    .line 971
+    const/4 v0, 0x2
+
+    new-array v0, v0, [I
+
+    .line 972
+    invoke-virtual {p1, v0}, Landroid/widget/AbsListView;->getLocationOnScreen([I)V
+
+    .line 973
+    const/4 v1, 0x1
+
+    aget v0, v0, v1
+
+    iput v0, p0, Lcom/bbm/util/ew;->a:I
+
+    .line 974
+    iget v0, p0, Lcom/bbm/util/ew;->a:I
+
+    invoke-virtual {p1}, Landroid/widget/AbsListView;->getHeight()I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    iput v0, p0, Lcom/bbm/util/ew;->b:I
+
+    .line 975
+    invoke-virtual {p0}, Lcom/bbm/util/ew;->c()V
+
+    .line 976
+    return-void
+.end method
+
+.method public onScrollStateChanged(Landroid/widget/AbsListView;I)V
+    .locals 0
+
+    .prologue
+    .line 980
+    return-void
 .end method

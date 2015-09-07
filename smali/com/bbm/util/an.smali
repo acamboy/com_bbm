@@ -1,91 +1,111 @@
-.class final Lcom/bbm/util/an;
+.class final synthetic Lcom/bbm/util/an;
 .super Ljava/lang/Object;
 .source "ChannelUtil.java"
 
-# interfaces
-.implements Ljava/util/Comparator;
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lorg/json/JSONObject;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 506
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 1123
+    invoke-static {}, Lcom/bbm/util/ax;->values()[Lcom/bbm/util/ax;
 
-    return-void
-.end method
+    move-result-object v0
 
-.method private static a(Lorg/json/JSONObject;)I
-    .locals 2
+    array-length v0, v0
 
-    .prologue
-    .line 525
-    const-string v0, "dayOfWeek"
+    new-array v0, v0, [I
 
-    const/4 v1, 0x1
+    sput-object v0, Lcom/bbm/util/an;->a:[I
 
-    invoke-virtual {p0, v0, v1}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+    :try_start_0
+    sget-object v0, Lcom/bbm/util/an;->a:[I
 
-    move-result v0
+    sget-object v1, Lcom/bbm/util/ax;->a:Lcom/bbm/util/ax;
 
-    .line 527
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x7
-
-    :cond_0
-    return v0
-.end method
-
-
-# virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
-
-    .prologue
-    .line 506
-    check-cast p1, Lorg/json/JSONObject;
-
-    check-cast p2, Lorg/json/JSONObject;
-
-    invoke-static {p1}, Lcom/bbm/util/an;->a(Lorg/json/JSONObject;)I
-
-    move-result v0
-
-    invoke-static {p2}, Lcom/bbm/util/an;->a(Lorg/json/JSONObject;)I
+    invoke-virtual {v1}, Lcom/bbm/util/ax;->ordinal()I
 
     move-result v1
 
-    if-ge v0, v1, :cond_0
+    const/4 v2, 0x1
 
-    const/4 v0, -0x1
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
 
     :goto_0
-    return v0
+    :try_start_1
+    sget-object v0, Lcom/bbm/util/an;->a:[I
 
-    :cond_0
-    if-ne v0, v1, :cond_1
+    sget-object v1, Lcom/bbm/util/ax;->b:Lcom/bbm/util/ax;
 
-    const/4 v0, 0x0
+    invoke-virtual {v1}, Lcom/bbm/util/ax;->ordinal()I
 
-    goto :goto_0
+    move-result v1
 
-    :cond_1
-    const/4 v0, 0x1
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/util/an;->a:[I
+
+    sget-object v1, Lcom/bbm/util/ax;->c:Lcom/bbm/util/ax;
+
+    invoke-virtual {v1}, Lcom/bbm/util/ax;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/util/an;->a:[I
+
+    sget-object v1, Lcom/bbm/util/ax;->d:Lcom/bbm/util/ax;
+
+    invoke-virtual {v1}, Lcom/bbm/util/ax;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
+
+    :goto_3
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_3
+    move-exception v0
 
     goto :goto_0
 .end method

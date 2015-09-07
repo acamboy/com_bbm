@@ -1,78 +1,69 @@
-.class final Lcom/bbm/ui/activities/add;
+.class final synthetic Lcom/bbm/ui/activities/add;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
-
-# interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.source "ProfileIconSourceActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
-    .locals 0
-
-    .prologue
-    .line 367
-    iput-object p1, p0, Lcom/bbm/ui/activities/add;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+.method static constructor <clinit>()V
     .locals 3
 
     .prologue
-    .line 370
-    iget-object v0, p0, Lcom/bbm/ui/activities/add;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
+    .line 147
+    invoke-static {}, Lcom/bbm/ui/activities/adg;->values()[Lcom/bbm/ui/activities/adg;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->d()Z
+    array-length v0, v0
 
-    move-result v0
+    new-array v0, v0, [I
 
-    if-ne p2, v0, :cond_0
+    sput-object v0, Lcom/bbm/ui/activities/add;->a:[I
 
-    .line 376
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/activities/add;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/activities/adg;->a:Lcom/bbm/ui/activities/adg;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/adg;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+
     :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/activities/add;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/activities/adg;->b:Lcom/bbm/ui/activities/adg;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/adg;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_1
     return-void
 
-    .line 373
-    :cond_0
-    const-string v0, "show music update onCheckedChanged"
+    :catch_0
+    move-exception v0
 
-    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
+    goto :goto_1
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 374
-    iget-object v0, p0, Lcom/bbm/ui/activities/add;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->m(Lcom/bbm/ui/activities/SettingsActivity;)Z
-
-    .line 375
-    iget-object v0, p0, Lcom/bbm/ui/activities/add;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    const-string v1, "receiveMusicUpdates"
-
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
+    :catch_1
+    move-exception v0
 
     goto :goto_0
 .end method

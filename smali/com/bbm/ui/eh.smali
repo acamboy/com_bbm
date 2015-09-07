@@ -1,73 +1,161 @@
 .class final Lcom/bbm/ui/eh;
-.super Ljava/lang/Object;
-.source "QuickShareGlympseView.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/k;
+.source "NFCInviteRequest.java"
 
 
 # instance fields
-.field final synthetic a:Landroid/widget/RelativeLayout;
-
-.field final synthetic b:Landroid/content/SharedPreferences;
-
-.field final synthetic c:Lcom/bbm/ui/QuickShareGlympseView;
+.field final synthetic a:Lcom/bbm/ui/ef;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/QuickShareGlympseView;Landroid/widget/RelativeLayout;Landroid/content/SharedPreferences;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/ef;)V
+    .locals 1
 
     .prologue
-    .line 250
-    iput-object p1, p0, Lcom/bbm/ui/eh;->c:Lcom/bbm/ui/QuickShareGlympseView;
+    .line 51
+    iput-object p1, p0, Lcom/bbm/ui/eh;->a:Lcom/bbm/ui/ef;
 
-    iput-object p2, p0, Lcom/bbm/ui/eh;->a:Landroid/widget/RelativeLayout;
+    const/4 v0, 0x0
 
-    iput-object p3, p0, Lcom/bbm/ui/eh;->b:Landroid/content/SharedPreferences;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method protected final a()V
     .locals 3
 
     .prologue
-    .line 254
-    iget-object v0, p0, Lcom/bbm/ui/eh;->a:Landroid/widget/RelativeLayout;
+    .line 56
+    iget-object v0, p0, Lcom/bbm/ui/eh;->a:Lcom/bbm/ui/ef;
 
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setVisibility(I)V
-
-    .line 255
-    iget-object v0, p0, Lcom/bbm/ui/eh;->b:Landroid/content/SharedPreferences;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-static {v0}, Lcom/bbm/ui/ef;->b(Lcom/bbm/ui/ef;)Ljava/lang/String;
 
     move-result-object v0
 
-    const-string v1, "glympse_first_experience"
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
-    const/4 v2, 0x0
+    move-result v0
 
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    if-eqz v0, :cond_0
+
+    .line 57
+    iget-object v0, p0, Lcom/bbm/ui/eh;->a:Lcom/bbm/ui/ef;
+
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+
+    invoke-virtual {v1}, Lcom/bbm/d/a;->j()Lcom/bbm/d/gr;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/d/gr;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/ef;->a(Lcom/bbm/ui/ef;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 60
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/eh;->a:Lcom/bbm/ui/ef;
+
+    invoke-static {v0}, Lcom/bbm/ui/ef;->c(Lcom/bbm/ui/ef;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
-    .line 256
-    iget-object v0, p0, Lcom/bbm/ui/eh;->c:Lcom/bbm/ui/QuickShareGlympseView;
+    move-result v0
 
-    const/4 v1, 0x1
+    if-nez v0, :cond_1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/QuickShareGlympseView;->a(Lcom/bbm/ui/QuickShareGlympseView;Z)V
+    .line 62
+    iget-object v0, p0, Lcom/bbm/ui/eh;->a:Lcom/bbm/ui/ef;
 
-    .line 257
+    invoke-static {v0}, Lcom/bbm/ui/ef;->b(Lcom/bbm/ui/ef;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+
+    invoke-virtual {v1}, Lcom/bbm/d/a;->j()Lcom/bbm/d/gr;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/bbm/d/gr;->d:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lcom/bbm/util/bh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 63
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    .line 64
+    iget-object v1, p0, Lcom/bbm/ui/eh;->a:Lcom/bbm/ui/ef;
+
+    invoke-static {v1}, Lcom/bbm/ui/ef;->c(Lcom/bbm/ui/ef;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/bbm/d/aa;->e(Ljava/lang/String;)Lcom/bbm/d/bt;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+
+    .line 66
+    iget-object v1, p0, Lcom/bbm/ui/eh;->a:Lcom/bbm/ui/ef;
+
+    const-string v2, ""
+
+    invoke-static {v1, v2}, Lcom/bbm/ui/ef;->b(Lcom/bbm/ui/ef;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 67
+    iget-object v1, p0, Lcom/bbm/ui/eh;->a:Lcom/bbm/ui/ef;
+
+    invoke-static {v1}, Lcom/bbm/ui/ef;->d(Lcom/bbm/ui/ef;)[B
+
+    .line 69
+    iget-object v1, p0, Lcom/bbm/ui/eh;->a:Lcom/bbm/ui/ef;
+
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+
+    invoke-virtual {v2}, Lcom/bbm/d/a;->j()Lcom/bbm/d/gr;
+
+    move-result-object v2
+
+    iget-object v2, v2, Lcom/bbm/d/gr;->d:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lcom/bbm/ui/ef;->a(Lcom/bbm/ui/ef;Ljava/lang/String;)Ljava/lang/String;
+
+    .line 71
+    invoke-static {}, Lcom/bbm/ui/ef;->b()Lcom/bbm/d/bv;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/bbm/d/aa;->a(Lcom/bbm/d/bv;)Lcom/bbm/d/bu;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+
+    .line 74
+    :cond_1
     return-void
 .end method

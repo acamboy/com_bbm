@@ -333,7 +333,7 @@
 .end method
 
 .method public await(JLjava/util/concurrent/TimeUnit;)Lcom/google/android/gms/common/api/Result;
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",

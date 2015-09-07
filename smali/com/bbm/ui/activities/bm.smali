@@ -1,196 +1,151 @@
 .class final Lcom/bbm/ui/activities/bm;
 .super Ljava/lang/Object;
-.source "ChangeStatusActivity.java"
+.source "CaptureBarcodeActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/f/ac;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/el;
-
-.field final synthetic b:Lcom/bbm/ui/activities/bn;
-
-.field final synthetic c:Lcom/bbm/ui/activities/bj;
+.field final synthetic a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/bj;Lcom/bbm/d/el;Lcom/bbm/ui/activities/bn;)V
+.method private constructor <init>(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)V
     .locals 0
 
     .prologue
-    .line 376
-    iput-object p1, p0, Lcom/bbm/ui/activities/bm;->c:Lcom/bbm/ui/activities/bj;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/bm;->a:Lcom/bbm/d/el;
-
-    iput-object p3, p0, Lcom/bbm/ui/activities/bm;->b:Lcom/bbm/ui/activities/bn;
+    .line 427
+    iput-object p1, p0, Lcom/bbm/ui/activities/bm;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 7
+.method synthetic constructor <init>(Lcom/bbm/ui/activities/CaptureBarcodeActivity;B)V
+    .locals 0
 
     .prologue
-    const/4 v1, 0x1
+    .line 427
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/bm;-><init>(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)V
 
-    const/4 v2, 0x0
-
-    .line 380
-    const-string v0, "busyButton Clicked"
-
-    const-class v3, Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    invoke-static {v0, v3}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 382
-    iget-object v0, p0, Lcom/bbm/ui/activities/bm;->c:Lcom/bbm/ui/activities/bj;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/bj;->b:Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->b(Lcom/bbm/ui/activities/ChangeStatusActivity;)Landroid/view/ActionMode;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 383
-    iget-object v0, p0, Lcom/bbm/ui/activities/bm;->c:Lcom/bbm/ui/activities/bj;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/bj;->b:Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->b(Lcom/bbm/ui/activities/ChangeStatusActivity;)Landroid/view/ActionMode;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/ActionMode;->finish()V
-
-    .line 403
-    :goto_0
     return-void
+.end method
 
-    .line 386
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/bm;->c:Lcom/bbm/ui/activities/bj;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/bj;->b:Lcom/bbm/ui/activities/ChangeStatusActivity;
+# virtual methods
+.method public final a()V
+    .locals 0
 
-    const-wide/16 v3, -0x1
+    .prologue
+    .line 444
+    return-void
+.end method
 
-    invoke-static {v0, v3, v4}, Lcom/bbm/ui/activities/ChangeStatusActivity;->b(Lcom/bbm/ui/activities/ChangeStatusActivity;J)J
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 4
 
-    .line 387
-    invoke-virtual {p1}, Landroid/view/View;->isActivated()Z
+    .prologue
+    .line 431
+    iget-object v0, p0, Lcom/bbm/ui/activities/bm;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    move v0, v1
-
-    :goto_1
-    invoke-virtual {p1, v0}, Landroid/view/View;->setActivated(Z)V
-
-    .line 388
-    iget-object v0, p0, Lcom/bbm/ui/activities/bm;->a:Lcom/bbm/d/el;
-
-    iget-wide v3, v0, Lcom/bbm/d/el;->a:J
-
-    .line 389
-    iget-object v0, p0, Lcom/bbm/ui/activities/bm;->a:Lcom/bbm/d/el;
-
-    iget-boolean v0, v0, Lcom/bbm/d/el;->c:Z
-
-    if-nez v0, :cond_2
-
-    .line 391
-    :goto_2
-    new-instance v2, Lorg/json/JSONObject;
-
-    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
-
-    .line 392
-    new-instance v5, Ljava/util/LinkedList;
-
-    invoke-direct {v5}, Ljava/util/LinkedList;-><init>()V
-
-    .line 394
-    iget-object v0, p0, Lcom/bbm/ui/activities/bm;->b:Lcom/bbm/ui/activities/bn;
-
-    iget-object v6, v0, Lcom/bbm/ui/activities/bn;->a:Landroid/widget/LinearLayout;
-
-    if-eqz v1, :cond_3
-
-    const-string v0, "listItemIconBusy"
-
-    :goto_3
-    invoke-virtual {v6, v0}, Landroid/widget/LinearLayout;->setContentDescription(Ljava/lang/CharSequence;)V
-
-    .line 396
-    :try_start_0
-    const-string v0, "id"
-
-    invoke-virtual {v2, v0, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+    invoke-static {v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->l(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/e;
 
     move-result-object v0
 
-    const-string v2, "showBusy"
+    iget-object v0, v0, Lcom/bbm/e;->c:Lcom/bbm/g/al;
 
-    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    iget-object v0, v0, Lcom/bbm/g/an;->a:Lcom/bbm/d/a/f;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
 
-    invoke-interface {v5, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lcom/bbm/ui/activities/bm;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
 
-    .line 397
-    iget-object v0, p0, Lcom/bbm/ui/activities/bm;->c:Lcom/bbm/ui/activities/bj;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/bj;->b:Lcom/bbm/ui/activities/ChangeStatusActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->j(Lcom/bbm/ui/activities/ChangeStatusActivity;)Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    const-string v1, "status"
-
-    invoke-static {v5, v1}, Lcom/bbm/d/y;->b(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/cg;
+    invoke-static {v1}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->t(Lcom/bbm/ui/activities/CaptureBarcodeActivity;)Lcom/bbm/ui/activities/bm;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
+    invoke-interface {v0, v1}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    .line 432
+    const-string v0, "ShowGroupBarCode"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v2, "=> Message: "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Lcom/bbm/f/ab;->b()Lorg/json/JSONObject;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 433
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
+
+    .line 435
+    :try_start_0
+    const-string v1, "ShowGroupBarCode"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "=> QRCode: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    const-string v3, "qrcode"
+
+    invoke-virtual {v0, v3}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 436
+    iget-object v1, p0, Lcom/bbm/ui/activities/bm;->a:Lcom/bbm/ui/activities/CaptureBarcodeActivity;
+
+    const-string v2, "qrcode"
+
+    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/CaptureBarcodeActivity;->a(Lcom/bbm/ui/activities/CaptureBarcodeActivity;Ljava/lang/String;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    .line 440
+    :goto_0
+    return-void
 
-    .line 400
+    .line 437
     :catch_0
     move-exception v0
 
-    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
-
-    :cond_1
-    move v0, v2
-
-    .line 387
-    goto :goto_1
-
-    :cond_2
-    move v1, v2
-
-    .line 389
-    goto :goto_2
-
-    .line 394
-    :cond_3
-    const-string v0, "listItemIconAvailable"
-
-    goto :goto_3
 .end method

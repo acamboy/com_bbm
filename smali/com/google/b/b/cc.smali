@@ -62,7 +62,7 @@
 .end method
 
 .method constructor <init>(J)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 97
@@ -76,7 +76,7 @@
 
 # virtual methods
 .method final a(JJ)Z
-    .locals 8
+    .locals 9
 
     .prologue
     .line 100

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<LinearLayout android:orientation="vertical" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
     <com.bbm.ui.ThreeButtonSegmentedControl android:layout_gravity="top|center" android:id="@id/groupProfileFragmentSelector" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:segmentLeftOption="@string/profile_selector_details" custom:segmentMiddleOption="@string/profile_selector_updates" custom:segmentRightOption="@string/profile_selector_members" />
     <ImageView android:id="@id/groupProfileFragmentDropShadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/group_profile_drop_shadow_margin_left" android:layout_marginRight="@dimen/group_profile_drop_shadow_margin_right" android:src="@drawable/divider_shadow" android:scaleType="fitXY" android:layout_below="@id/groupProfileFragmentSelector" android:contentDescription="@string/blank" />
-    <FrameLayout android:orientation="vertical" android:id="@id/groupProfileFragmentContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/footer_action_bar" android:layout_below="@id/groupProfileFragmentDropShadow" />
-    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
-</RelativeLayout>
+    <FrameLayout android:orientation="vertical" android:id="@id/groupProfileFragmentContainer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    <include android:layout_gravity="bottom" android:id="@id/footer_bar_group_profile" layout="@layout/view_merge_footer_actionbar_dropshadow" />
+</LinearLayout>

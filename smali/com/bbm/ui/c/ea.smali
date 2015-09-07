@@ -1,52 +1,27 @@
-.class final Lcom/bbm/ui/c/ea;
+.class public final Lcom/bbm/ui/c/ea;
 .super Ljava/lang/Object;
-.source "MyChannelsFragment.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "GroupUpdatesFragment.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/dx;
+.field a:Lcom/bbm/ui/ObservingImageView;
+
+.field b:Landroid/widget/TextView;
+
+.field c:Landroid/widget/TextView;
+
+.field final synthetic d:Lcom/bbm/ui/c/dz;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dx;)V
+.method protected constructor <init>(Lcom/bbm/ui/c/dz;)V
     .locals 0
 
     .prologue
-    .line 507
-    iput-object p1, p0, Lcom/bbm/ui/c/ea;->a:Lcom/bbm/ui/c/dx;
+    .line 236
+    iput-object p1, p0, Lcom/bbm/ui/c/ea;->d:Lcom/bbm/ui/c/dz;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
-
-    .prologue
-    .line 511
-    const-string v0, "browseButton Clicked"
-
-    const-class v1, Lcom/bbm/ui/c/dx;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 513
-    iget-object v0, p0, Lcom/bbm/ui/c/ea;->a:Lcom/bbm/ui/c/dx;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/dx;->j(Lcom/bbm/ui/c/dx;)Lcom/bbm/ui/activities/MainActivity;
-
-    move-result-object v0
-
-    const v1, 0x7f0a0064
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->a(I)V
-
-    .line 514
     return-void
 .end method

@@ -99,7 +99,7 @@
 
 
 # virtual methods
-.method protected abstract a(Landroid/os/Bundle;Ljava/lang/Object;)V
+.method public abstract a(Landroid/os/Bundle;Ljava/lang/Object;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -162,7 +162,7 @@
     goto :goto_0
 .end method
 
-.method protected abstract b(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/lang/Object;
+.method public abstract b(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -257,7 +257,7 @@
     goto :goto_0
 .end method
 
-.method protected abstract e(Landroid/os/Bundle;)Ljava/lang/Object;
+.method public abstract e(Landroid/os/Bundle;)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

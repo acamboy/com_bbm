@@ -77,15 +77,15 @@
 
 # virtual methods
 .method public final a()V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 223
     iget-object v0, p0, Lcom/google/b/b/b;->a:Lcom/google/b/b/bm;
 
-    const-wide/16 v1, 0x1
+    const-wide/16 v2, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/google/b/b/bm;->a(J)V
+    invoke-interface {v0, v2, v3}, Lcom/google/b/b/bm;->a(J)V
 
     .line 224
     return-void
@@ -110,15 +110,15 @@
 .end method
 
 .method public final b()V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 231
     iget-object v0, p0, Lcom/google/b/b/b;->b:Lcom/google/b/b/bm;
 
-    const-wide/16 v1, 0x1
+    const-wide/16 v2, 0x1
 
-    invoke-interface {v0, v1, v2}, Lcom/google/b/b/bm;->a(J)V
+    invoke-interface {v0, v2, v3}, Lcom/google/b/b/bm;->a(J)V
 
     .line 232
     return-void

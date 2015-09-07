@@ -53,28 +53,28 @@
 
     .prologue
     .line 83
-    invoke-static {}, Lcom/c/a/a/g;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/c/a/a/g;->a()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 84
-    invoke-static {}, Lcom/c/a/a/g;->c()Ljava/lang/String;
+    invoke-static {}, Lcom/c/a/a/g;->b()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 85
-    invoke-static {}, Lcom/c/a/a/g;->d()Ljava/lang/String;
+    invoke-static {}, Lcom/c/a/a/g;->c()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 86
-    invoke-static {}, Lcom/c/a/a/g;->e()Ljava/lang/String;
+    invoke-static {}, Lcom/c/a/a/g;->d()Ljava/lang/String;
 
     move-result-object v0
 
@@ -97,9 +97,7 @@
 
     sget-object v1, Lcom/c/a/a/i;->a:Lcom/c/a/a/i;
 
-    invoke-virtual {v1}, Lcom/c/a/a/i;->a()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, v1, Lcom/c/a/a/i;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -120,9 +118,7 @@
 
     sget-object v1, Lcom/c/a/a/i;->b:Lcom/c/a/a/i;
 
-    invoke-virtual {v1}, Lcom/c/a/a/i;->a()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, v1, Lcom/c/a/a/i;->c:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -135,28 +131,28 @@
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 95
-    invoke-static {}, Lcom/c/a/a/g;->b()Ljava/lang/String;
+    invoke-static {}, Lcom/c/a/a/g;->a()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 96
-    invoke-static {}, Lcom/c/a/a/g;->c()Ljava/lang/String;
+    invoke-static {}, Lcom/c/a/a/g;->b()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 97
-    invoke-static {}, Lcom/c/a/a/g;->d()Ljava/lang/String;
+    invoke-static {}, Lcom/c/a/a/g;->c()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
     .line 98
-    invoke-static {}, Lcom/c/a/a/g;->e()Ljava/lang/String;
+    invoke-static {}, Lcom/c/a/a/g;->d()Ljava/lang/String;
 
     move-result-object v0
 

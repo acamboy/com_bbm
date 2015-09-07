@@ -157,11 +157,11 @@
 
     .line 58
     :pswitch_1
-    iget-wide v1, v0, Lcom/google/zxing/client/a/m;->a:D
+    iget-wide v2, v0, Lcom/google/zxing/client/a/m;->a:D
 
-    iget-wide v3, v0, Lcom/google/zxing/client/a/m;->b:D
+    iget-wide v0, v0, Lcom/google/zxing/client/a/m;->b:D
 
-    new-instance v0, Landroid/content/Intent;
+    new-instance v4, Landroid/content/Intent;
 
     const-string v5, "android.intent.action.VIEW"
 
@@ -187,29 +187,29 @@
 
     move-result-object v6
 
-    invoke-virtual {v6, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0, v1}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-direct {v0, v5, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v4, v5, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    invoke-virtual {p0, v0}, Lcom/google/zxing/client/android/d/j;->b(Landroid/content/Intent;)V
+    invoke-virtual {p0, v4}, Lcom/google/zxing/client/android/d/j;->b(Landroid/content/Intent;)V
 
     goto/16 :goto_0
 

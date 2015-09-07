@@ -1,111 +1,62 @@
-.class final synthetic Lcom/bbm/h/u;
+.class final Lcom/bbm/h/u;
 .super Ljava/lang/Object;
-.source "InvitesAdapter.java"
+.source "AddContactsFragment.java"
+
+# interfaces
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/h/l;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/h/l;)V
+    .locals 0
 
     .prologue
-    .line 81
-    invoke-static {}, Lcom/bbm/h/b;->values()[Lcom/bbm/h/b;
+    .line 276
+    iput-object p1, p0, Lcom/bbm/h/u;->a:Lcom/bbm/h/l;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 2
+
+    .prologue
+    .line 279
+    const-string v0, "allow contact upload onCheckedChanged"
+
+    const-class v1, Lcom/bbm/h/l;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 280
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
-    new-array v0, v0, [I
+    move-result-object v0
 
-    sput-object v0, Lcom/bbm/h/u;->a:[I
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/h/u;->a:[I
+    move-result-object v0
 
-    sget-object v1, Lcom/bbm/h/b;->a:Lcom/bbm/h/b;
+    .line 281
+    const-string v1, "icerberg_upload_allowed"
 
-    invoke-virtual {v1}, Lcom/bbm/h/b;->ordinal()I
+    invoke-interface {v0, v1, p2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    move-result v1
+    .line 282
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/h/u;->a:[I
-
-    sget-object v1, Lcom/bbm/h/b;->b:Lcom/bbm/h/b;
-
-    invoke-virtual {v1}, Lcom/bbm/h/b;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/h/u;->a:[I
-
-    sget-object v1, Lcom/bbm/h/b;->c:Lcom/bbm/h/b;
-
-    invoke-virtual {v1}, Lcom/bbm/h/b;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/h/u;->a:[I
-
-    sget-object v1, Lcom/bbm/h/b;->d:Lcom/bbm/h/b;
-
-    invoke-virtual {v1}, Lcom/bbm/h/b;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_3
+    .line 283
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_0
 .end method

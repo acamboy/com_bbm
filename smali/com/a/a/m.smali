@@ -195,12 +195,12 @@
     .locals 7
 
     .prologue
+    const/16 v6, 0xa
+
     const/4 v1, 0x0
 
     .line 240
-    const/16 v0, 0xa
-
-    new-array v4, v0, [Ljava/lang/String;
+    new-array v4, v6, [Ljava/lang/String;
 
     iget-object v0, p0, Lcom/a/a/m;->a:Ljava/lang/String;
 
@@ -260,20 +260,18 @@
 
     aput-object v2, v4, v0
 
-    .line 244
-    array-length v5, v4
-
     move v2, v1
 
     move v0, v1
 
+    .line 244
     :goto_0
-    if-ge v2, v5, :cond_1
+    if-ge v2, v6, :cond_1
 
     aget-object v3, v4, v2
 
     .line 245
-    mul-int/lit8 v6, v0, 0x1f
+    mul-int/lit8 v5, v0, 0x1f
 
     if-eqz v3, :cond_0
 
@@ -282,7 +280,7 @@
     move-result v0
 
     :goto_1
-    add-int v3, v6, v0
+    add-int v3, v5, v0
 
     .line 244
     add-int/lit8 v0, v2, 0x1

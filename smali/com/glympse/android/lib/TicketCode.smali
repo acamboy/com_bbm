@@ -532,12 +532,12 @@
 .end method
 
 .method public static longToBase32(J)Ljava/lang/String;
-    .locals 10
+    .locals 12
 
     .prologue
-    const-wide/16 v8, 0x1f
+    const-wide/16 v10, 0x1f
 
-    const/4 v7, 0x5
+    const/4 v8, 0x5
 
     .line 238
     new-instance v2, Ljava/lang/StringBuilder;
@@ -549,22 +549,22 @@
     .line 241
     sget-object v0, Lcom/glympse/android/lib/TicketCode;->_base32Encode:[C
 
-    and-long v3, p0, v8
+    and-long v4, p0, v10
 
-    long-to-int v1, v3
+    long-to-int v1, v4
 
     aget-char v0, v0, v1
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 242
-    ushr-long v0, p0, v7
+    ushr-long v0, p0, v8
 
     .line 245
     :goto_0
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v3, v3, v0
+    cmp-long v3, v4, v0
 
     if-eqz v3, :cond_0
 
@@ -573,16 +573,16 @@
 
     sget-object v4, Lcom/glympse/android/lib/TicketCode;->_base32Encode:[C
 
-    and-long v5, v0, v8
+    and-long v6, v0, v10
 
-    long-to-int v5, v5
+    long-to-int v5, v6
 
     aget-char v4, v4, v5
 
     invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->insert(IC)Ljava/lang/StringBuilder;
 
     .line 248
-    ushr-long/2addr v0, v7
+    ushr-long/2addr v0, v8
 
     goto :goto_0
 
@@ -608,7 +608,7 @@
 .end method
 
 .method public static toString(J)Ljava/lang/String;
-    .locals 1
+    .locals 2
 
     .prologue
     .line 83

@@ -4,6 +4,30 @@
         <item quantity="other">تم إرسال رسالة بث إلى %1$sجهة اتصال</item>
         <item quantity="one">تم إرسال رسالة بث إلى جهة اتصال واحدة</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d مشتركًا</item>
+        <item quantity="zero">لا يوجد مشتركون</item>
+        <item quantity="one">%1$d مشترك</item>
+        <item quantity="two">مشتركان</item>
+        <item quantity="few">%1$d مشتركون</item>
+        <item quantity="many">%1$d مشتركًا</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d من الأعضاء</item>
+        <item quantity="zero">0 عضو</item>
+        <item quantity="one">عضو واحد</item>
+        <item quantity="two">عضوان</item>
+        <item quantity="few">%1$d من الأعضاء</item>
+        <item quantity="many">%1$d من الأعضاء</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">ثوانٍ</item>
+        <item quantity="one">ثانية</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">تم ضبط المؤقت على %1$d من الثواني.</item>
+        <item quantity="one">تم ضبط المؤقت على %1$d ثانية.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">عنصرًا%1$s</item>
         <item quantity="zero">0 عنصر</item>
@@ -13,7 +37,7 @@
         <item quantity="many">عنصر%1$s</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d من الدعوات قيد الانتظار)</item>
+        <item quantity="other">(%1$d معلق)</item>
         <item quantity="zero">( دعوة قيد الانتظار0)</item>
         <item quantity="one">(دعوة واحدة قيد الانتظار)</item>
         <item quantity="two">( دعوة قيد الانتظار2)</item>

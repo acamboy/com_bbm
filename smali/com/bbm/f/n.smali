@@ -3,83 +3,87 @@
 .source "NativeServiceLayer.java"
 
 # interfaces
-.implements Lcom/rim/bbm/BbmPlatformService$IDSDelegate;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/f/i;
+.field final synthetic a:Lcom/bbm/f/l;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/f/i;)V
+.method constructor <init>(Lcom/bbm/f/l;)V
     .locals 0
 
     .prologue
-    .line 365
-    iput-object p1, p0, Lcom/bbm/f/n;->a:Lcom/bbm/f/i;
+    .line 285
+    iput-object p1, p0, Lcom/bbm/f/n;->a:Lcom/bbm/f/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method private a()V
-    .locals 1
-
-    .prologue
-    .line 388
-    iget-object v0, p0, Lcom/bbm/f/n;->a:Lcom/bbm/f/i;
-
-    iget-object v0, v0, Lcom/bbm/f/i;->c:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->c()V
-
-    .line 389
-    return-void
-.end method
-
 
 # virtual methods
-.method public final bbidPropertiesUpdated(Lcom/rim/bbm/BbmPlatformService$BbidPropertiesState;)V
-    .locals 0
+.method public final run()V
+    .locals 3
 
     .prologue
-    .line 384
-    invoke-direct {p0}, Lcom/bbm/f/n;->a()V
+    const/4 v2, 0x0
 
-    .line 385
-    return-void
-.end method
+    .line 288
+    iget-object v0, p0, Lcom/bbm/f/n;->a:Lcom/bbm/f/l;
 
-.method public final bbmTokenUpdated(Lcom/rim/bbm/BbmPlatformService$BbmTokenState;)V
-    .locals 0
+    iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
 
-    .prologue
-    .line 379
-    invoke-direct {p0}, Lcom/bbm/f/n;->a()V
+    invoke-static {v0}, Lcom/bbm/f/j;->a(Lcom/bbm/f/j;)Lcom/bbm/util/ct;
 
-    .line 380
-    return-void
-.end method
+    move-result-object v0
 
-.method public final onIdsErrorStateChange()V
-    .locals 0
+    sget-object v1, Lcom/bbm/f/b;->b:Lcom/bbm/f/b;
 
-    .prologue
-    .line 369
-    invoke-direct {p0}, Lcom/bbm/f/n;->a()V
+    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
 
-    .line 370
-    return-void
-.end method
+    .line 289
+    const-string v0, "Service layer status: connected"
 
-.method public final pinUpdated(Lcom/rim/bbm/BbmPlatformService$PinState;)V
-    .locals 0
+    new-array v1, v2, [Ljava/lang/Object;
 
-    .prologue
-    .line 374
-    invoke-direct {p0}, Lcom/bbm/f/n;->a()V
+    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 375
+    .line 290
+    iget-object v0, p0, Lcom/bbm/f/n;->a:Lcom/bbm/f/l;
+
+    iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
+
+    invoke-static {v0}, Lcom/bbm/f/j;->i(Lcom/bbm/f/j;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 291
+    const-string v0, "Resynch with bbmcore"
+
+    new-array v1, v2, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 292
+    iget-object v0, p0, Lcom/bbm/f/n;->a:Lcom/bbm/f/l;
+
+    iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
+
+    invoke-static {v0}, Lcom/bbm/f/j;->j(Lcom/bbm/f/j;)V
+
+    .line 294
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/f/n;->a:Lcom/bbm/f/l;
+
+    iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
+
+    invoke-static {v0}, Lcom/bbm/f/j;->k(Lcom/bbm/f/j;)Z
+
+    .line 295
     return-void
 .end method

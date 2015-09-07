@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/activities/xa;
 .super Ljava/lang/Object;
-.source "NewListItemActivity.java"
+.source "MainActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/p;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewListItemActivity;
+.field final synthetic a:Lcom/bbm/d/gn;
+
+.field final synthetic b:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;Lcom/bbm/d/gn;)V
     .locals 0
 
     .prologue
-    .line 427
-    iput-object p1, p0, Lcom/bbm/ui/activities/xa;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    .line 2237
+    iput-object p1, p0, Lcom/bbm/ui/activities/xa;->b:Lcom/bbm/ui/activities/MainActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/xa;->a:Lcom/bbm/d/gn;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,58 +29,77 @@
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)V"
-        }
-    .end annotation
+.method public final onClick(Landroid/view/View;)V
+    .locals 6
 
     .prologue
-    .line 432
-    if-nez p1, :cond_0
+    const/4 v5, 0x1
 
-    .line 433
-    new-instance v0, Lcom/bbm/ui/b/k;
+    .line 2240
+    const-string v0, "SystemMessagesContextSlideMenu Delete Item Clicked"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/xa;->a:Lcom/bbm/ui/activities/NewListItemActivity;
+    const-class v1, Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {v0, v1}, Lcom/bbm/ui/b/k;-><init>(Landroid/content/Context;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 435
-    const v1, 0x7f0e038f
+    .line 2242
+    const/4 v0, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->setTitle(I)V
+    :try_start_0
+    new-array v0, v0, [Lorg/json/JSONObject;
 
-    .line 436
-    const v1, 0x7f0e038e
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->c(I)V
+    new-instance v2, Lorg/json/JSONObject;
 
-    .line 437
-    const/16 v1, 0x40
+    invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->d(I)V
+    const-string v3, "id"
 
-    .line 439
-    new-instance v1, Lcom/bbm/ui/activities/xb;
+    iget-object v4, p0, Lcom/bbm/ui/activities/xa;->a:Lcom/bbm/d/gn;
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/xb;-><init>(Lcom/bbm/ui/activities/xa;Lcom/bbm/ui/b/k;)V
+    iget-object v4, v4, Lcom/bbm/d/gn;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->b(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 450
-    new-instance v1, Lcom/bbm/ui/activities/xc;
+    move-result-object v2
 
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/xc;-><init>(Lcom/bbm/ui/activities/xa;Lcom/bbm/ui/b/k;)V
+    aput-object v2, v0, v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->a(Landroid/view/View$OnClickListener;)V
+    invoke-static {v0}, Lcom/google/b/c/p;->a([Ljava/lang/Object;)Ljava/util/ArrayList;
 
-    .line 469
-    invoke-virtual {v0}, Lcom/bbm/ui/b/k;->show()V
+    move-result-object v0
 
-    .line 472
-    :cond_0
+    .line 2243
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
+
+    move-result-object v1
+
+    const-string v2, "systemMessage"
+
+    invoke-static {v0, v2}, Lcom/bbm/d/aa;->d(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/de;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 2247
+    :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/xa;->b:Lcom/bbm/ui/activities/MainActivity;
+
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+
+    invoke-virtual {v0, v5}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+
+    .line 2248
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

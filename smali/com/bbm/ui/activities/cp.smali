@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/cp;
 .super Ljava/lang/Object;
-.source "ChannelPickerActivity.java"
+.source "ChannelChatListActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelPickerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/co;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelPickerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/co;)V
     .locals 0
 
     .prologue
-    .line 119
-    iput-object p1, p0, Lcom/bbm/ui/activities/cp;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
+    .line 468
+    iput-object p1, p0, Lcom/bbm/ui/activities/cp;->a:Lcom/bbm/ui/activities/co;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,57 +25,34 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 123
-    iget-object v0, p0, Lcom/bbm/ui/activities/cp;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
+    .line 472
+    iget-object v0, p0, Lcom/bbm/ui/activities/cp;->a:Lcom/bbm/ui/activities/co;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->getIntent()Landroid/content/Intent;
+    iget-object v0, v0, Lcom/bbm/ui/activities/co;->c:Lcom/bbm/ui/activities/ChannelChatListActivity;
 
-    move-result-object v1
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    .line 124
-    const-string v2, "picked channel"
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/cp;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
+    const/4 v1, 0x1
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->c(Lcom/bbm/ui/activities/ChannelPickerActivity;)Lcom/bbm/ui/activities/cr;
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    move-result-object v0
+    .line 473
+    iget-object v0, p0, Lcom/bbm/ui/activities/cp;->a:Lcom/bbm/ui/activities/co;
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/cr;->getItem(I)Ljava/lang/Object;
+    iget-object v0, v0, Lcom/bbm/ui/activities/co;->c:Lcom/bbm/ui/activities/ChannelChatListActivity;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/bbm/ui/activities/cp;->a:Lcom/bbm/ui/activities/co;
 
-    check-cast v0, Lcom/bbm/d/de;
+    iget-object v1, v1, Lcom/bbm/ui/activities/co;->b:Lcom/bbm/ui/activities/ex;
 
-    iget-object v0, v0, Lcom/bbm/d/de;->N:Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChannelChatListActivity;->b(Lcom/bbm/ui/activities/ChannelChatListActivity;Lcom/bbm/ui/activities/ex;)V
 
-    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 125
-    iget-object v0, p0, Lcom/bbm/ui/activities/cp;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v0, v2, v1}, Lcom/bbm/ui/activities/ChannelPickerActivity;->setResult(ILandroid/content/Intent;)V
-
-    .line 126
-    iget-object v0, p0, Lcom/bbm/ui/activities/cp;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->finish()V
-
-    .line 127
+    .line 474
     return-void
 .end method

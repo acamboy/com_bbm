@@ -3,39 +3,59 @@
 .source "Group.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lcom/glympse/android/api/GEventListener;
 
 
 # instance fields
-.field private lO:Lcom/glympse/android/lib/cp;
+.field private mr:Lcom/glympse/android/lib/cq;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/cp;)V
+.method public constructor <init>(Lcom/glympse/android/lib/cq;)V
     .locals 0
 
     .prologue
-    .line 699
+    .line 650
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 700
-    iput-object p1, p0, Lcom/glympse/android/lib/cr;->lO:Lcom/glympse/android/lib/cp;
+    .line 651
+    iput-object p1, p0, Lcom/glympse/android/lib/cr;->mr:Lcom/glympse/android/lib/cq;
 
-    .line 701
+    .line 652
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
+.method public eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
     .locals 1
 
     .prologue
-    .line 705
-    iget-object v0, p0, Lcom/glympse/android/lib/cr;->lO:Lcom/glympse/android/lib/cp;
+    .line 659
+    and-int/lit8 v0, p3, 0x4
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/cp;->orderChanged()V
+    if-eqz v0, :cond_1
 
-    .line 706
+    .line 661
+    iget-object v0, p0, Lcom/glympse/android/lib/cr;->mr:Lcom/glympse/android/lib/cq;
+
+    invoke-virtual {v0}, Lcom/glympse/android/lib/cq;->bJ()V
+
+    .line 669
+    :cond_0
+    :goto_0
     return-void
+
+    .line 663
+    :cond_1
+    and-int/lit8 v0, p3, 0x2
+
+    if-eqz v0, :cond_0
+
+    .line 665
+    iget-object v0, p0, Lcom/glympse/android/lib/cr;->mr:Lcom/glympse/android/lib/cq;
+
+    invoke-virtual {v0}, Lcom/glympse/android/lib/cq;->bJ()V
+
+    goto :goto_0
 .end method

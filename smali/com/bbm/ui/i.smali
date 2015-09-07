@@ -1,69 +1,78 @@
-.class final synthetic Lcom/bbm/ui/i;
+.class final Lcom/bbm/ui/i;
 .super Ljava/lang/Object;
-.source "AudioProgressBar.java"
+.source "AppItemView.java"
+
+# interfaces
+.implements Lcom/bbm/ui/k;
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/AppItemView;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/AppItemView;)V
+    .locals 0
 
     .prologue
-    .line 38
-    invoke-static {}, Lcom/bbm/ui/j;->values()[Lcom/bbm/ui/j;
+    .line 143
+    iput-object p1, p0, Lcom/bbm/ui/i;->a:Lcom/bbm/ui/AppItemView;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/bbm/d/ff;Ljava/lang/String;)V
+    .locals 2
+
+    .prologue
+    .line 146
+    iget-object v0, p0, Lcom/bbm/ui/i;->a:Lcom/bbm/ui/AppItemView;
+
+    invoke-static {v0}, Lcom/bbm/ui/AppItemView;->a(Lcom/bbm/ui/AppItemView;)Ljava/lang/String;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-static {v0, p2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    new-array v0, v0, [I
+    move-result v0
 
-    sput-object v0, Lcom/bbm/ui/i;->a:[I
+    if-eqz v0, :cond_0
 
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/i;->a:[I
+    .line 147
+    if-nez p1, :cond_1
 
-    sget-object v1, Lcom/bbm/ui/j;->a:Lcom/bbm/ui/j;
+    .line 148
+    iget-object v0, p0, Lcom/bbm/ui/i;->a:Lcom/bbm/ui/AppItemView;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/j;->ordinal()I
+    invoke-static {v0}, Lcom/bbm/ui/AppItemView;->b(Lcom/bbm/ui/AppItemView;)Landroid/widget/ImageView;
 
-    move-result v1
+    move-result-object v0
 
-    const/4 v2, 0x1
+    const/4 v1, 0x0
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
+    .line 154
+    :cond_0
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/i;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/j;->b:Lcom/bbm/ui/j;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/j;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
-
-    :goto_1
     return-void
 
-    :catch_0
-    move-exception v0
+    .line 151
+    :cond_1
+    iget-object v0, p1, Lcom/bbm/d/ff;->b:Landroid/graphics/drawable/Drawable;
 
-    goto :goto_1
+    .line 152
+    iget-object v1, p0, Lcom/bbm/ui/i;->a:Lcom/bbm/ui/AppItemView;
 
-    :catch_1
-    move-exception v0
+    invoke-static {v1}, Lcom/bbm/ui/AppItemView;->b(Lcom/bbm/ui/AppItemView;)Landroid/widget/ImageView;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 .end method

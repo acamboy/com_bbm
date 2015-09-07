@@ -1,50 +1,68 @@
 .class final Lcom/bbm/ui/dn;
-.super Lcom/bbm/j/k;
-.source "MonitoredAdapter.java"
+.super Ljava/lang/Object;
+.source "LinkifyTextView.java"
+
+# interfaces
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Landroid/text/style/ClickableSpan;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Landroid/view/View;
+.field final synthetic a:Landroid/text/Spannable;
 
-.field final synthetic b:Ljava/lang/Object;
-
-.field final synthetic c:Lcom/bbm/ui/dm;
+.field final synthetic b:Lcom/bbm/ui/LinkifyTextView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/dm;Landroid/view/View;Ljava/lang/Object;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/LinkifyTextView;Landroid/text/Spannable;)V
+    .locals 0
 
     .prologue
-    .line 68
-    iput-object p1, p0, Lcom/bbm/ui/dn;->c:Lcom/bbm/ui/dm;
+    .line 98
+    iput-object p1, p0, Lcom/bbm/ui/dn;->b:Lcom/bbm/ui/LinkifyTextView;
 
-    iput-object p2, p0, Lcom/bbm/ui/dn;->a:Landroid/view/View;
+    iput-object p2, p0, Lcom/bbm/ui/dn;->a:Landroid/text/Spannable;
 
-    iput-object p3, p0, Lcom/bbm/ui/dn;->b:Ljava/lang/Object;
-
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 2
 
     .prologue
-    .line 71
-    iget-object v0, p0, Lcom/bbm/ui/dn;->c:Lcom/bbm/ui/dm;
+    .line 98
+    check-cast p1, Landroid/text/style/ClickableSpan;
 
-    iget-object v1, p0, Lcom/bbm/ui/dn;->a:Landroid/view/View;
+    check-cast p2, Landroid/text/style/ClickableSpan;
 
-    iget-object v2, p0, Lcom/bbm/ui/dn;->b:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/bbm/ui/dn;->a:Landroid/text/Spannable;
 
-    invoke-virtual {v0, v1, v2}, Lcom/bbm/ui/dm;->a(Landroid/view/View;Ljava/lang/Object;)V
+    invoke-interface {v0, p1}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
 
-    .line 72
-    return-void
+    move-result v0
+
+    iget-object v1, p0, Lcom/bbm/ui/dn;->a:Landroid/text/Spannable;
+
+    invoke-interface {v1, p2}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
+
+    move-result v1
+
+    sub-int/2addr v0, v1
+
+    return v0
 .end method

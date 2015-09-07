@@ -1,110 +1,113 @@
-.class final Lcom/bbm/ui/activities/ru;
-.super Ljava/lang/Object;
-.source "GroupSettingsActivity.java"
-
-# interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.class final enum Lcom/bbm/ui/activities/ru;
+.super Ljava/lang/Enum;
+.source "GroupPictureActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/activities/ru;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/bbm/ui/activities/ru;
+
+.field public static final enum b:Lcom/bbm/ui/activities/ru;
+
+.field private static final synthetic c:[Lcom/bbm/ui/activities/ru;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupSettingsActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
     .prologue
-    .line 136
-    iput-object p1, p0, Lcom/bbm/ui/activities/ru;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+    const/4 v3, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    .line 561
+    new-instance v0, Lcom/bbm/ui/activities/ru;
+
+    const-string v1, "RecentPictures"
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/activities/ru;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/activities/ru;->a:Lcom/bbm/ui/activities/ru;
+
+    new-instance v0, Lcom/bbm/ui/activities/ru;
+
+    const-string v1, "AllPictures"
+
+    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/activities/ru;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/activities/ru;->b:Lcom/bbm/ui/activities/ru;
+
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lcom/bbm/ui/activities/ru;
+
+    sget-object v1, Lcom/bbm/ui/activities/ru;->a:Lcom/bbm/ui/activities/ru;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/bbm/ui/activities/ru;->b:Lcom/bbm/ui/activities/ru;
+
+    aput-object v1, v0, v3
+
+    sput-object v0, Lcom/bbm/ui/activities/ru;->c:[Lcom/bbm/ui/activities/ru;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 4
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
-    .line 139
-    iget-object v0, p0, Lcom/bbm/ui/activities/ru;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
+    .line 561
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSettingsActivity;->c(Lcom/bbm/ui/activities/GroupSettingsActivity;)Lcom/bbm/g/a;
-
-    move-result-object v0
-
-    iget-boolean v0, v0, Lcom/bbm/g/a;->s:Z
-
-    .line 140
-    if-eq p2, v0, :cond_0
-
-    .line 141
-    new-instance v0, Lorg/json/JSONObject;
-
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
-
-    .line 142
-    new-instance v1, Ljava/util/LinkedList;
-
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
-
-    .line 144
-    :try_start_0
-    invoke-interface {v1}, Ljava/util/List;->clear()V
-
-    .line 145
-    const-string v2, "uri"
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/ru;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    invoke-virtual {v3}, Lcom/bbm/ui/activities/GroupSettingsActivity;->i()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    const-string v2, "showThisGroupsChatMessagesInTheMessageApp"
-
-    invoke-virtual {v0, v2, p2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 146
-    iget-object v0, p0, Lcom/bbm/ui/activities/ru;->a:Lcom/bbm/ui/activities/GroupSettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSettingsActivity;->f(Lcom/bbm/ui/activities/GroupSettingsActivity;)Lcom/bbm/d;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
-
-    const-string v2, "group"
-
-    invoke-static {v1, v2}, Lcom/bbm/g/ac;->a(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/g/bz;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 152
-    :cond_0
-    :goto_0
     return-void
+.end method
 
-    .line 148
-    :catch_0
-    move-exception v0
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/activities/ru;
+    .locals 1
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    .prologue
+    .line 561
+    const-class v0, Lcom/bbm/ui/activities/ru;
 
-    goto :goto_0
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/ru;
+
+    return-object v0
+.end method
+
+.method public static values()[Lcom/bbm/ui/activities/ru;
+    .locals 1
+
+    .prologue
+    .line 561
+    sget-object v0, Lcom/bbm/ui/activities/ru;->c:[Lcom/bbm/ui/activities/ru;
+
+    invoke-virtual {v0}, [Lcom/bbm/ui/activities/ru;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/ui/activities/ru;
+
+    return-object v0
 .end method

@@ -669,7 +669,7 @@
     move-result-object v3
 
     .line 98
-    invoke-virtual {v3}, Lcom/google/zxing/g/a/q;->d()I
+    invoke-virtual {v3}, Lcom/google/zxing/g/a/q;->a()I
 
     move-result v4
 
@@ -679,9 +679,7 @@
     const/4 v11, 0x0
 
     .line 102
-    invoke-virtual {v3}, Lcom/google/zxing/g/a/q;->b()[I
-
-    move-result-object v3
+    iget-object v3, v3, Lcom/google/zxing/g/a/q;->b:[I
 
     array-length v3, v3
 

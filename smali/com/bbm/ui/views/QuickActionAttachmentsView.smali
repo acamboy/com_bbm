@@ -6,14 +6,14 @@
 # instance fields
 .field private a:Landroid/widget/GridView;
 
-.field private final b:Lcom/bbm/ui/views/p;
+.field private final b:Lcom/bbm/ui/views/v;
 
 .field private final c:Ljava/util/ArrayList;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/ArrayList",
             "<",
-            "Lcom/bbm/ui/views/r;",
+            "Lcom/bbm/ui/views/x;",
             ">;"
         }
     .end annotation
@@ -25,29 +25,29 @@
     .locals 2
 
     .prologue
-    .line 25
+    .line 29
     invoke-direct {p0, p1}, Lcom/bbm/ui/QuickShareBaseView;-><init>(Landroid/content/Context;)V
 
-    .line 21
-    new-instance v0, Lcom/bbm/ui/views/p;
+    .line 25
+    new-instance v0, Lcom/bbm/ui/views/v;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/views/p;-><init>(Lcom/bbm/ui/views/QuickActionAttachmentsView;B)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/views/v;-><init>(Lcom/bbm/ui/views/QuickActionAttachmentsView;B)V
 
-    iput-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b:Lcom/bbm/ui/views/p;
+    iput-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b:Lcom/bbm/ui/views/v;
 
-    .line 22
+    .line 26
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->c:Ljava/util/ArrayList;
 
-    .line 26
+    .line 30
     invoke-direct {p0}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->c()V
 
-    .line 27
+    .line 31
     return-void
 .end method
 
@@ -55,29 +55,29 @@
     .locals 2
 
     .prologue
-    .line 35
+    .line 39
     invoke-direct {p0, p1, p2}, Lcom/bbm/ui/QuickShareBaseView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 21
-    new-instance v0, Lcom/bbm/ui/views/p;
+    .line 25
+    new-instance v0, Lcom/bbm/ui/views/v;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/views/p;-><init>(Lcom/bbm/ui/views/QuickActionAttachmentsView;B)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/views/v;-><init>(Lcom/bbm/ui/views/QuickActionAttachmentsView;B)V
 
-    iput-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b:Lcom/bbm/ui/views/p;
+    iput-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b:Lcom/bbm/ui/views/v;
 
-    .line 22
+    .line 26
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->c:Ljava/util/ArrayList;
 
-    .line 36
+    .line 40
     invoke-direct {p0}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->c()V
 
-    .line 37
+    .line 41
     return-void
 .end method
 
@@ -85,29 +85,29 @@
     .locals 2
 
     .prologue
-    .line 30
+    .line 34
     invoke-direct {p0, p1, p2, p3}, Lcom/bbm/ui/QuickShareBaseView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 21
-    new-instance v0, Lcom/bbm/ui/views/p;
+    .line 25
+    new-instance v0, Lcom/bbm/ui/views/v;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/views/p;-><init>(Lcom/bbm/ui/views/QuickActionAttachmentsView;B)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/views/v;-><init>(Lcom/bbm/ui/views/QuickActionAttachmentsView;B)V
 
-    iput-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b:Lcom/bbm/ui/views/p;
+    iput-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b:Lcom/bbm/ui/views/v;
 
-    .line 22
+    .line 26
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->c:Ljava/util/ArrayList;
 
-    .line 31
+    .line 35
     invoke-direct {p0}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->c()V
 
-    .line 32
+    .line 36
     return-void
 .end method
 
@@ -115,18 +115,18 @@
     .locals 1
 
     .prologue
-    .line 18
+    .line 22
     iget-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->c:Ljava/util/ArrayList;
 
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/bbm/ui/views/QuickActionAttachmentsView;)Lcom/bbm/ui/views/p;
+.method static synthetic b(Lcom/bbm/ui/views/QuickActionAttachmentsView;)Lcom/bbm/ui/views/v;
     .locals 1
 
     .prologue
-    .line 18
-    iget-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b:Lcom/bbm/ui/views/p;
+    .line 22
+    iget-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b:Lcom/bbm/ui/views/v;
 
     return-object v0
 .end method
@@ -137,10 +137,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 45
+    .line 49
     invoke-virtual {p0, v2}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->setClickable(Z)V
 
-    .line 47
+    .line 51
     invoke-virtual {p0}, Lcom/bbm/ui/views/QuickActionAttachmentsView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -149,14 +149,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f03012c
+    const v1, 0x7f030143
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v0
 
-    .line 48
-    const v1, 0x7f0a05ad
+    .line 52
+    const v1, 0x7f0b0665
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -166,33 +166,33 @@
 
     iput-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->a:Landroid/widget/GridView;
 
-    .line 49
+    .line 53
     iget-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->a:Landroid/widget/GridView;
 
-    iget-object v1, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b:Lcom/bbm/ui/views/p;
+    iget-object v1, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b:Lcom/bbm/ui/views/v;
 
     invoke-virtual {v0, v1}, Landroid/widget/GridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 50
+    .line 54
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/views/r;)V
+.method public final a(Lcom/bbm/ui/views/x;)V
     .locals 1
 
     .prologue
-    .line 40
+    .line 44
     iget-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->c:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 41
-    iget-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b:Lcom/bbm/ui/views/p;
+    .line 45
+    iget-object v0, p0, Lcom/bbm/ui/views/QuickActionAttachmentsView;->b:Lcom/bbm/ui/views/v;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/views/p;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/bbm/ui/views/v;->notifyDataSetChanged()V
 
-    .line 42
+    .line 46
     return-void
 .end method

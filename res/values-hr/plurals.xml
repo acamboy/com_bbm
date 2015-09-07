@@ -4,6 +4,27 @@
         <item quantity="other">Emitirana poruka poslana za %1$s kontakata</item>
         <item quantity="one">Emitirana poruka poslana 1 kontaktu</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d pretplatnika</item>
+        <item quantity="zero">Nema pretplatnika</item>
+        <item quantity="one">%1$d pretplatnik</item>
+        <item quantity="few">%1$d pretplatnika</item>
+        <item quantity="many">%1$d pretplatnika</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d članova</item>
+        <item quantity="one">%1$d član</item>
+        <item quantity="few">%1$d člana</item>
+        <item quantity="many">%1$d članova</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">sekunde/i</item>
+        <item quantity="one">sekunda</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Mjerač vremena postavljen na %1$d sekunde/i.</item>
+        <item quantity="one">Mjerač vremena postavljen na %1$d sekundu.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s stavki</item>
         <item quantity="zero">0 stavki</item>
@@ -42,7 +63,7 @@
         <item quantity="many">%1$s novih pozivnica</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
-        <item quantity="other">%1$s nove stavke</item>
+        <item quantity="other">%1$s novih stavki</item>
         <item quantity="one">1 nova stavka</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">

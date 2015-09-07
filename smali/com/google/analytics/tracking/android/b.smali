@@ -69,7 +69,7 @@
     .locals 2
 
     .prologue
-    .line 143
+    .line 146
     iget-object v0, p0, Lcom/google/analytics/tracking/android/b;->e:Lcom/google/android/gms/analytics/internal/IAnalyticsService;
 
     if-eqz v0, :cond_0
@@ -92,7 +92,7 @@
 
     goto :goto_0
 
-    .line 144
+    .line 147
     :cond_1
     iget-object v0, p0, Lcom/google/analytics/tracking/android/b;->e:Lcom/google/android/gms/analytics/internal/IAnalyticsService;
 
@@ -105,7 +105,7 @@
     .locals 3
 
     .prologue
-    .line 137
+    .line 140
     :try_start_0
     invoke-direct {p0}, Lcom/google/analytics/tracking/android/b;->d()Lcom/google/android/gms/analytics/internal/IAnalyticsService;
 
@@ -115,15 +115,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 141
+    .line 144
     :goto_0
     return-void
 
-    .line 138
+    .line 141
     :catch_0
     move-exception v0
 
-    .line 139
+    .line 142
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "clear hits failed: "
@@ -162,7 +162,7 @@
     .end annotation
 
     .prologue
-    .line 128
+    .line 131
     :try_start_0
     invoke-direct {p0}, Lcom/google/analytics/tracking/android/b;->d()Lcom/google/android/gms/analytics/internal/IAnalyticsService;
 
@@ -180,15 +180,15 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 132
+    .line 135
     :goto_0
     return-void
 
-    .line 129
+    .line 132
     :catch_0
     move-exception v0
 
-    .line 130
+    .line 133
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "sendHit failed: "
@@ -220,6 +220,17 @@
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
     .line 76
+    new-instance v1, Landroid/content/ComponentName;
+
+    const-string v2, "com.google.android.gms"
+
+    const-string v3, "com.google.android.gms.analytics.service.AnalyticsService"
+
+    invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
+
+    .line 79
     const-string v1, "app_package_name"
 
     iget-object v2, p0, Lcom/google/analytics/tracking/android/b;->d:Landroid/content/Context;
@@ -230,22 +241,22 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 77
+    .line 80
     iget-object v1, p0, Lcom/google/analytics/tracking/android/b;->a:Landroid/content/ServiceConnection;
 
     if-eqz v1, :cond_1
 
-    .line 78
+    .line 81
     const-string v0, "Calling connect() while still connected, missing disconnect()."
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/aq;->a(Ljava/lang/String;)V
 
-    .line 89
+    .line 92
     :cond_0
     :goto_0
     return-void
 
-    .line 81
+    .line 84
     :cond_1
     new-instance v1, Lcom/google/analytics/tracking/android/c;
 
@@ -253,7 +264,7 @@
 
     iput-object v1, p0, Lcom/google/analytics/tracking/android/b;->a:Landroid/content/ServiceConnection;
 
-    .line 82
+    .line 85
     iget-object v1, p0, Lcom/google/analytics/tracking/android/b;->d:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/google/analytics/tracking/android/b;->a:Landroid/content/ServiceConnection;
@@ -264,7 +275,7 @@
 
     move-result v1
 
-    .line 84
+    .line 87
     new-instance v2, Ljava/lang/StringBuilder;
 
     const-string v3, "connect: bindService returned "
@@ -291,15 +302,15 @@
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/aq;->c(Ljava/lang/String;)V
 
-    .line 85
+    .line 88
     if-nez v1, :cond_0
 
-    .line 86
+    .line 89
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/google/analytics/tracking/android/b;->a:Landroid/content/ServiceConnection;
 
-    .line 87
+    .line 90
     iget-object v0, p0, Lcom/google/analytics/tracking/android/b;->c:Lcom/google/analytics/tracking/android/e;
 
     const/4 v1, 0x1
@@ -315,15 +326,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 100
+    .line 103
     iput-object v2, p0, Lcom/google/analytics/tracking/android/b;->e:Lcom/google/android/gms/analytics/internal/IAnalyticsService;
 
-    .line 101
+    .line 104
     iget-object v0, p0, Lcom/google/analytics/tracking/android/b;->a:Landroid/content/ServiceConnection;
 
     if-eqz v0, :cond_0
 
-    .line 110
+    .line 113
     :try_start_0
     iget-object v0, p0, Lcom/google/analytics/tracking/android/b;->d:Landroid/content/Context;
 
@@ -334,16 +345,16 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 119
+    .line 122
     :goto_0
     iput-object v2, p0, Lcom/google/analytics/tracking/android/b;->a:Landroid/content/ServiceConnection;
 
-    .line 120
+    .line 123
     iget-object v0, p0, Lcom/google/analytics/tracking/android/b;->b:Lcom/google/analytics/tracking/android/d;
 
     invoke-interface {v0}, Lcom/google/analytics/tracking/android/d;->b()V
 
-    .line 122
+    .line 125
     :cond_0
     return-void
 
@@ -352,7 +363,7 @@
 
     goto :goto_0
 
-    .line 118
+    .line 121
     :catch_1
     move-exception v0
 

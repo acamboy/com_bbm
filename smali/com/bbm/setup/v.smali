@@ -1,48 +1,48 @@
-.class final Lcom/bbm/setup/v;
+.class final synthetic Lcom/bbm/setup/v;
 .super Ljava/lang/Object;
-.source "SetupErrorActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "SetupBbidErrorActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/setup/SetupErrorActivity;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/setup/SetupErrorActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 114
-    iput-object p1, p0, Lcom/bbm/setup/v;->a:Lcom/bbm/setup/SetupErrorActivity;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
-
-    .prologue
-    .line 117
-    const-string v0, "Retry"
-
-    const-class v1, Lcom/bbm/setup/SetupErrorActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 122
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 41
+    invoke-static {}, Lcom/bbm/al;->values()[Lcom/bbm/al;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->a()V
+    array-length v0, v0
 
-    .line 123
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/setup/v;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/setup/v;->a:[I
+
+    sget-object v1, Lcom/bbm/al;->b:Lcom/bbm/al;
+
+    invoke-virtual {v1}, Lcom/bbm/al;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
+
+    :goto_0
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method

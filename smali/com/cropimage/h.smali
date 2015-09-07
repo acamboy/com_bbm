@@ -35,7 +35,7 @@
 
     const/4 v2, 0x0
 
-    .line 414
+    .line 413
     new-instance v0, Lcom/cropimage/h;
 
     const-string v1, "None"
@@ -90,7 +90,7 @@
     .end annotation
 
     .prologue
-    .line 414
+    .line 413
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -100,7 +100,7 @@
     .locals 1
 
     .prologue
-    .line 414
+    .line 413
     const-class v0, Lcom/cropimage/h;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -116,7 +116,7 @@
     .locals 1
 
     .prologue
-    .line 414
+    .line 413
     sget-object v0, Lcom/cropimage/h;->d:[Lcom/cropimage/h;
 
     invoke-virtual {v0}, [Lcom/cropimage/h;->clone()Ljava/lang/Object;

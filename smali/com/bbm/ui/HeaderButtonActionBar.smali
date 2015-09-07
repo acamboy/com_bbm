@@ -18,26 +18,26 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 17
+    .line 18
     invoke-direct {p0, p1}, Lcom/bbm/ui/CustomView;-><init>(Landroid/content/Context;)V
 
-    .line 12
+    .line 13
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->a:Landroid/widget/Button;
 
-    .line 13
+    .line 14
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
-    .line 14
+    .line 15
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
 
-    .line 18
+    .line 19
     const-string v0, ""
 
     invoke-virtual {p0}, Lcom/bbm/ui/HeaderButtonActionBar;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0e0167
+    const v2, 0x7f0e0177
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -45,7 +45,7 @@
 
     invoke-direct {p0, v0, v1, p1}, Lcom/bbm/ui/HeaderButtonActionBar;->a(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V
 
-    .line 19
+    .line 20
     return-void
 .end method
 
@@ -55,22 +55,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 30
+    .line 32
     invoke-direct {p0, p1}, Lcom/bbm/ui/CustomView;-><init>(Landroid/content/Context;)V
 
-    .line 12
+    .line 13
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->a:Landroid/widget/Button;
 
-    .line 13
+    .line 14
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
-    .line 14
+    .line 15
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
 
-    .line 31
+    .line 33
     invoke-direct {p0, p2, p3, p1}, Lcom/bbm/ui/HeaderButtonActionBar;->a(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)V
 
-    .line 32
+    .line 34
     return-void
 .end method
 
@@ -82,50 +82,50 @@
 
     const/4 v0, 0x0
 
-    .line 44
+    .line 47
     invoke-direct {p0, p1}, Lcom/bbm/ui/CustomView;-><init>(Landroid/content/Context;)V
 
-    .line 12
+    .line 13
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->a:Landroid/widget/Button;
 
-    .line 13
+    .line 14
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
-    .line 14
+    .line 15
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
 
-    .line 45
+    .line 48
     if-eqz p3, :cond_1
 
-    .line 46
+    .line 49
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f03010a
+    const v1, 0x7f03011c
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 47
+    .line 50
     invoke-direct {p0, p2, p3, p1, p4}, Lcom/bbm/ui/HeaderButtonActionBar;->a(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 57
+    .line 60
     :cond_0
     :goto_0
     return-void
 
-    .line 49
+    .line 52
     :cond_1
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030106
+    const v1, 0x7f030118
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 50
-    const v0, 0x7f0a04f1
+    .line 53
+    const v0, 0x7f0b058c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->findViewById(I)Landroid/view/View;
 
@@ -135,13 +135,13 @@
 
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
 
-    .line 51
+    .line 54
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
 
     invoke-virtual {v0, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 52
-    const v0, 0x7f0a04f2
+    .line 55
+    const v0, 0x7f0b058d
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->findViewById(I)Landroid/view/View;
 
@@ -151,10 +151,10 @@
 
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
-    .line 53
+    .line 56
     if-eqz p4, :cond_0
 
-    .line 54
+    .line 57
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
     invoke-virtual {v0, p4}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
@@ -166,12 +166,12 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 63
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->a(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 61
+    .line 64
     return-void
 .end method
 
@@ -181,20 +181,20 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 64
+    .line 67
     if-eqz p4, :cond_1
 
-    .line 65
+    .line 68
     invoke-static {p3}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f03010a
+    const v1, 0x7f03011c
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 66
-    const v0, 0x7f0a04f2
+    .line 69
+    const v0, 0x7f0b058d
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->findViewById(I)Landroid/view/View;
 
@@ -204,14 +204,14 @@
 
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
-    .line 67
+    .line 70
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
     invoke-virtual {v0, p4}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 72
+    .line 75
     :goto_0
-    const v0, 0x7f0a04f1
+    const v0, 0x7f0b058c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->findViewById(I)Landroid/view/View;
 
@@ -221,13 +221,13 @@
 
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
 
-    .line 73
+    .line 76
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 75
-    const v0, 0x7f0a04f0
+    .line 78
+    const v0, 0x7f0b058b
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->findViewById(I)Landroid/view/View;
 
@@ -237,27 +237,27 @@
 
     iput-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->a:Landroid/widget/Button;
 
-    .line 76
+    .line 79
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->a:Landroid/widget/Button;
 
     if-eqz v0, :cond_0
 
-    .line 77
+    .line 80
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->a:Landroid/widget/Button;
 
     invoke-virtual {v0, p2}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 79
+    .line 82
     :cond_0
     return-void
 
-    .line 69
+    .line 72
     :cond_1
     invoke-static {p3}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f030105
+    const v1, 0x7f030117
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -270,17 +270,17 @@
     .locals 1
 
     .prologue
-    .line 113
+    .line 116
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->a:Landroid/widget/Button;
 
     if-eqz v0, :cond_0
 
-    .line 114
+    .line 117
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->a:Landroid/widget/Button;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 116
+    .line 119
     :cond_0
     return-void
 .end method
@@ -289,17 +289,17 @@
     .locals 1
 
     .prologue
-    .line 95
+    .line 98
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->a:Landroid/widget/Button;
 
     if-eqz v0, :cond_0
 
-    .line 96
+    .line 99
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->a:Landroid/widget/Button;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 98
+    .line 101
     :cond_0
     return-void
 .end method
@@ -308,17 +308,17 @@
     .locals 1
 
     .prologue
-    .line 119
+    .line 122
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->a:Landroid/widget/Button;
 
     if-eqz v0, :cond_0
 
-    .line 120
+    .line 123
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->a:Landroid/widget/Button;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 122
+    .line 125
     :cond_0
     return-void
 .end method
@@ -327,17 +327,17 @@
     .locals 1
 
     .prologue
-    .line 107
+    .line 110
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
     if-eqz v0, :cond_0
 
-    .line 108
+    .line 111
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 110
+    .line 113
     :cond_0
     return-void
 .end method
@@ -346,17 +346,17 @@
     .locals 1
 
     .prologue
-    .line 101
+    .line 104
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
     if-eqz v0, :cond_0
 
-    .line 102
+    .line 105
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 104
+    .line 107
     :cond_0
     return-void
 .end method
@@ -365,17 +365,17 @@
     .locals 1
 
     .prologue
-    .line 125
+    .line 128
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
     if-eqz v0, :cond_0
 
-    .line 126
+    .line 129
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->b:Landroid/widget/Button;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 128
+    .line 131
     :cond_0
     return-void
 .end method
@@ -384,12 +384,12 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 89
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 87
+    .line 90
     return-void
 .end method
 
@@ -397,12 +397,12 @@
     .locals 1
 
     .prologue
-    .line 82
+    .line 85
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 83
+    .line 86
     return-void
 .end method
 
@@ -410,11 +410,36 @@
     .locals 1
 
     .prologue
-    .line 91
+    .line 94
     iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextSize(F)V
 
-    .line 92
+    .line 95
+    return-void
+.end method
+
+.method public setTitleTextStyle(I)V
+    .locals 2
+
+    .prologue
+    .line 138
+    iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
+
+    if-eqz v0, :cond_0
+
+    .line 139
+    iget-object v0, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/bbm/ui/HeaderButtonActionBar;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v1}, Landroid/widget/TextView;->getTypeface()Landroid/graphics/Typeface;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, p1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;I)V
+
+    .line 141
+    :cond_0
     return-void
 .end method

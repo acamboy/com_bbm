@@ -14,7 +14,7 @@
 
 # direct methods
 .method constructor <init>(Lcom/google/android/gms/internal/gj;Ljava/lang/String;JLjava/lang/String;)V
-    .locals 0
+    .locals 1
 
     iput-object p1, p0, Lcom/google/android/gms/internal/gj$7;->HS:Lcom/google/android/gms/internal/gj;
 
@@ -42,19 +42,19 @@
 .end method
 
 .method protected a(Lcom/google/android/gms/internal/fx;)V
-    .locals 6
+    .locals 7
 
-    iget-object v2, p0, Lcom/google/android/gms/internal/gj$7;->HT:Ljava/lang/String;
+    iget-object v3, p0, Lcom/google/android/gms/internal/gj$7;->HT:Ljava/lang/String;
 
-    iget-wide v3, p0, Lcom/google/android/gms/internal/gj$7;->HZ:J
+    iget-wide v4, p0, Lcom/google/android/gms/internal/gj$7;->HZ:J
 
-    iget-object v5, p0, Lcom/google/android/gms/internal/gj$7;->Ia:Ljava/lang/String;
+    iget-object v6, p0, Lcom/google/android/gms/internal/gj$7;->Ia:Ljava/lang/String;
 
-    move-object v0, p1
+    move-object v1, p1
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/internal/fx;->a(Lcom/google/android/gms/common/api/a$c;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/google/android/gms/internal/fx;->a(Lcom/google/android/gms/common/api/a$c;Ljava/lang/String;JLjava/lang/String;)V
 
     return-void
 .end method

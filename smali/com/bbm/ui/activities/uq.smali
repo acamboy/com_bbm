@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/activities/uq;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "ImageViewerActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/fu;
+.implements Lcom/slidingmenu/lib/i;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/slidingmenu/lib/SlidingMenu;
+
+.field final synthetic b:Lcom/bbm/ui/activities/ImageViewerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ImageViewerActivity;Lcom/slidingmenu/lib/SlidingMenu;)V
     .locals 0
 
     .prologue
-    .line 2179
-    iput-object p1, p0, Lcom/bbm/ui/activities/uq;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 224
+    iput-object p1, p0, Lcom/bbm/ui/activities/uq;->b:Lcom/bbm/ui/activities/ImageViewerActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/uq;->a:Lcom/slidingmenu/lib/SlidingMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,51 +29,17 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+.method public final a()V
     .locals 2
 
     .prologue
-    .line 2182
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    .line 228
+    iget-object v0, p0, Lcom/bbm/ui/activities/uq;->a:Lcom/slidingmenu/lib/SlidingMenu;
 
-    .line 2183
-    packed-switch v0, :pswitch_data_0
+    const/4 v1, 0x0
 
-    .line 2190
-    iget-object v1, p0, Lcom/bbm/ui/activities/uq;->a:Lcom/bbm/ui/activities/MainActivity;
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->setTouchInterceptEnabled(Z)V
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/MainActivity;->d(Lcom/bbm/ui/activities/MainActivity;I)Z
-
-    .line 2193
-    :goto_0
+    .line 229
     return-void
-
-    .line 2185
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/uq;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->o()Lcom/google/b/a/l;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/c/hc;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/hc;->a()V
-
-    .line 2186
-    iget-object v0, p0, Lcom/bbm/ui/activities/uq;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->v()V
-
-    goto :goto_0
-
-    .line 2183
-    :pswitch_data_0
-    .packed-switch 0x7f0a0080
-        :pswitch_0
-    .end packed-switch
 .end method

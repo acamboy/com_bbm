@@ -190,7 +190,7 @@
     move-result-object v0
 
     .line 67
-    const/4 v1, 0x0
+    sget v1, Lcom/glympse/android/controls/R$styleable;->GlympseTimer_android_maxWidth:I
 
     iget v2, p0, Lcom/glympse/android/controls/GTimerView;->_maxWidth:I
 
@@ -201,7 +201,7 @@
     iput v1, p0, Lcom/glympse/android/controls/GTimerView;->_maxWidth:I
 
     .line 68
-    const/4 v1, 0x1
+    sget v1, Lcom/glympse/android/controls/R$styleable;->GlympseTimer_android_maxHeight:I
 
     iget v2, p0, Lcom/glympse/android/controls/GTimerView;->_maxHeight:I
 
@@ -294,479 +294,479 @@
     iput-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
     .line 89
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const-wide/16 v3, 0x0
-
-    const/4 v5, 0x0
+    const-wide/16 v4, 0x0
 
     const/4 v6, 0x0
 
-    move-object v1, p0
+    const/4 v7, 0x0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    move-object v2, p0
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 90
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x3fd0c152382d7365L
+    const-wide v4, 0x3fd0c152382d7365L
 
-    const v5, 0x493e0
+    const v6, 0x493e0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 91
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x3fe0c152382d7365L
+    const-wide v4, 0x3fe0c152382d7365L
 
-    const v5, 0x927c0
+    const v6, 0x927c0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 93
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const-wide v3, 0x3fe921fb54442d18L
+    const-wide v4, 0x3fe921fb54442d18L
 
-    const v5, 0xdbba0
+    const v6, 0xdbba0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 94
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x3ff0c152382d7365L
+    const-wide v4, 0x3ff0c152382d7365L
 
-    const v5, 0x124f80
+    const v6, 0x124f80
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 95
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x3ff4f1a6c638d03eL
+    const-wide v4, 0x3ff4f1a6c638d03eL
 
-    const v5, 0x16e360
+    const v6, 0x16e360
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 97
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const-wide v3, 0x3ff921fb54442d18L
+    const-wide v4, 0x3ff921fb54442d18L
 
-    const v5, 0x1b7740
+    const v6, 0x1b7740
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 98
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x3ffd524fe24f89f1L
+    const-wide v4, 0x3ffd524fe24f89f1L
 
-    const v5, 0x200b20
+    const v6, 0x200b20
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 99
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x4000c152382d7365L
+    const-wide v4, 0x4000c152382d7365L
 
-    const v5, 0x249f00
+    const v6, 0x249f00
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 101
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const-wide v3, 0x4002d97c7f3321d2L
+    const-wide v4, 0x4002d97c7f3321d2L
 
-    const v5, 0x2932e0
+    const v6, 0x2932e0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 102
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x4004f1a6c638d03fL
+    const-wide v4, 0x4004f1a6c638d03fL
 
-    const v5, 0x2dc6c0
+    const v6, 0x2dc6c0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 103
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x400709d10d3e7eabL
+    const-wide v4, 0x400709d10d3e7eabL
 
-    const v5, 0x325aa0
+    const v6, 0x325aa0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 105
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const-wide v3, 0x400921fb54442d18L
+    const-wide v4, 0x400921fb54442d18L
 
-    const v5, 0x36ee80
+    const v6, 0x36ee80
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 106
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x400ab41b09886feaL
+    const-wide v4, 0x400ab41b09886feaL
 
-    const v5, 0x44aa20
+    const v6, 0x44aa20
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 107
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x400c463abeccb2bbL
+    const-wide v4, 0x400c463abeccb2bbL
 
-    const v5, 0x5265c0
+    const v6, 0x5265c0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 108
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x400dd85a7410f58cL
+    const-wide v4, 0x400dd85a7410f58cL
 
-    const v5, 0x602160
+    const v6, 0x602160
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 110
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const-wide v3, 0x400f6a7a2955385eL
+    const-wide v4, 0x400f6a7a2955385eL
 
-    const v5, 0x6ddd00
+    const v6, 0x6ddd00
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 111
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x40107e4cef4cbd98L
+    const-wide v4, 0x40107e4cef4cbd98L
 
-    const v5, 0x7b98a0
+    const v6, 0x7b98a0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 112
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x4011475cc9eedf00L
+    const-wide v4, 0x4011475cc9eedf00L
 
-    const v5, 0x895440
+    const v6, 0x895440
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 113
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x4012106ca4910069L
+    const-wide v4, 0x4012106ca4910069L
 
-    const v5, 0x970fe0
+    const v6, 0x970fe0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 115
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const-wide v3, 0x4012d97c7f3321d2L
+    const-wide v4, 0x4012d97c7f3321d2L
 
-    const v5, 0xa4cb80
+    const v6, 0xa4cb80
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 116
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x4013a28c59d5433bL
+    const-wide v4, 0x4013a28c59d5433bL
 
-    const v5, 0xb28720
+    const v6, 0xb28720
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 117
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x40146b9c347764a4L
+    const-wide v4, 0x40146b9c347764a4L
 
-    const v5, 0xc042c0
+    const v6, 0xc042c0
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 118
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    const-wide v3, 0x401534ac0f19860cL
+    const-wide v4, 0x401534ac0f19860cL
 
-    const v5, 0xcdfe60
+    const v6, 0xcdfe60
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 120
-    iget-object v7, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
+    iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_ticks:Ljava/util/Vector;
 
-    new-instance v0, Lcom/glympse/android/controls/GTimerView$Tick;
+    new-instance v1, Lcom/glympse/android/controls/GTimerView$Tick;
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    const-wide v3, 0x4015fdbbe9bba775L
+    const-wide v4, 0x4015fdbbe9bba775L
 
-    const v5, 0xdbba00
+    const v6, 0xdbba00
 
-    const/4 v6, 0x0
+    const/4 v7, 0x0
 
-    move-object v1, p0
+    move-object v2, p0
 
-    invoke-direct/range {v0 .. v6}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
+    invoke-direct/range {v1 .. v7}, Lcom/glympse/android/controls/GTimerView$Tick;-><init>(Lcom/glympse/android/controls/GTimerView;ZDILcom/glympse/android/controls/GTimerView$1;)V
 
-    invoke-virtual {v7, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
     .line 121
     return-void
@@ -1182,7 +1182,7 @@
 .end method
 
 .method private getRotation(I)D
-    .locals 9
+    .locals 10
 
     .prologue
     .line 380
@@ -1276,14 +1276,14 @@
 
     sub-int/2addr v1, p1
 
-    int-to-double v3, v1
+    int-to-double v4, v1
 
     # getter for: Lcom/glympse/android/controls/GTimerView$Tick;->_rotation:D
     invoke-static {v2}, Lcom/glympse/android/controls/GTimerView$Tick;->access$300(Lcom/glympse/android/controls/GTimerView$Tick;)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    mul-double/2addr v3, v5
+    mul-double/2addr v4, v6
 
     # getter for: Lcom/glympse/android/controls/GTimerView$Tick;->_duration:I
     invoke-static {v2}, Lcom/glympse/android/controls/GTimerView$Tick;->access$400(Lcom/glympse/android/controls/GTimerView$Tick;)I
@@ -1292,16 +1292,16 @@
 
     sub-int v1, p1, v1
 
-    int-to-double v5, v1
+    int-to-double v6, v1
 
     # getter for: Lcom/glympse/android/controls/GTimerView$Tick;->_rotation:D
     invoke-static {v0}, Lcom/glympse/android/controls/GTimerView$Tick;->access$300(Lcom/glympse/android/controls/GTimerView$Tick;)D
 
-    move-result-wide v7
+    move-result-wide v8
 
-    mul-double/2addr v5, v7
+    mul-double/2addr v6, v8
 
-    add-double/2addr v3, v5
+    add-double/2addr v4, v6
 
     # getter for: Lcom/glympse/android/controls/GTimerView$Tick;->_duration:I
     invoke-static {v0}, Lcom/glympse/android/controls/GTimerView$Tick;->access$400(Lcom/glympse/android/controls/GTimerView$Tick;)I
@@ -1317,7 +1317,7 @@
 
     int-to-double v0, v0
 
-    div-double v0, v3, v0
+    div-double v0, v4, v0
 
     goto :goto_1
 
@@ -1328,7 +1328,7 @@
 .end method
 
 .method private getTick(D)Lcom/glympse/android/controls/GTimerView$Tick;
-    .locals 7
+    .locals 9
 
     .prologue
     .line 359
@@ -1403,18 +1403,18 @@
     # getter for: Lcom/glympse/android/controls/GTimerView$Tick;->_rotation:D
     invoke-static {v2}, Lcom/glympse/android/controls/GTimerView$Tick;->access$300(Lcom/glympse/android/controls/GTimerView$Tick;)D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    sub-double v3, p1, v3
+    sub-double v4, p1, v4
 
     # getter for: Lcom/glympse/android/controls/GTimerView$Tick;->_rotation:D
     invoke-static {v0}, Lcom/glympse/android/controls/GTimerView$Tick;->access$300(Lcom/glympse/android/controls/GTimerView$Tick;)D
 
-    move-result-wide v5
+    move-result-wide v6
 
-    sub-double/2addr v5, p1
+    sub-double/2addr v6, p1
 
-    cmpl-double v1, v3, v5
+    cmpl-double v1, v4, v6
 
     if-lez v1, :cond_2
 
@@ -1531,33 +1531,33 @@
 
     invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 925
     if-eqz p3, :cond_1
 
     iget v0, p0, Lcom/glympse/android/controls/GTimerView;->_innerRadius:F
 
-    const/high16 v3, 0x40400000
+    const/high16 v1, 0x40400000
 
-    div-float/2addr v0, v3
+    div-float/2addr v0, v1
 
     :goto_0
-    float-to-double v3, v0
+    float-to-double v0, v0
 
-    cmpg-double v0, v1, v3
+    cmpg-double v0, v2, v0
 
     if-ltz v0, :cond_0
 
     iget v0, p0, Lcom/glympse/android/controls/GTimerView;->_bodySize:F
 
-    const v3, 0x3fe66666
+    const v1, 0x3fe66666
 
-    div-float/2addr v0, v3
+    div-float/2addr v0, v1
 
-    float-to-double v3, v0
+    float-to-double v0, v0
 
-    cmpl-double v0, v1, v3
+    cmpl-double v0, v2, v0
 
     if-lez v0, :cond_2
 
@@ -1591,44 +1591,44 @@
 
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->atan2(DD)D
 
-    move-result-wide v1
+    move-result-wide v2
 
     .line 932
     :goto_2
-    const-wide v3, 0x401921fb54442d18L
+    const-wide v0, 0x401921fb54442d18L
 
-    cmpl-double v0, v1, v3
+    cmpl-double v0, v2, v0
 
     if-lez v0, :cond_3
 
     .line 934
-    const-wide v3, 0x401921fb54442d18L
+    const-wide v0, 0x401921fb54442d18L
 
-    sub-double/2addr v1, v3
+    sub-double/2addr v2, v0
 
     goto :goto_2
 
     .line 936
     :cond_3
     :goto_3
-    const-wide/16 v3, 0x0
+    const-wide/16 v0, 0x0
 
-    cmpg-double v0, v1, v3
+    cmpg-double v0, v2, v0
 
     if-gez v0, :cond_4
 
     .line 938
-    const-wide v3, 0x401921fb54442d18L
+    const-wide v0, 0x401921fb54442d18L
 
-    add-double/2addr v1, v3
+    add-double/2addr v2, v0
 
     goto :goto_3
 
     .line 942
     :cond_4
-    const-wide v3, 0x40178fdb9effea46L
+    const-wide v0, 0x40178fdb9effea46L
 
-    cmpl-double v0, v1, v3
+    cmpl-double v0, v2, v0
 
     if-ltz v0, :cond_8
 
@@ -1685,9 +1685,9 @@
     const/4 v2, 0x0
 
     .line 980
-    iget-wide v3, p0, Lcom/glympse/android/controls/GTimerView;->_rotation:D
+    iget-wide v4, p0, Lcom/glympse/android/controls/GTimerView;->_rotation:D
 
-    cmpl-double v3, v3, v0
+    cmpl-double v3, v4, v0
 
     if-eqz v3, :cond_6
 
@@ -1749,9 +1749,9 @@
     # getter for: Lcom/glympse/android/controls/GTimerView$Tick;->_rotation:D
     invoke-static {v0}, Lcom/glympse/android/controls/GTimerView$Tick;->access$300(Lcom/glympse/android/controls/GTimerView$Tick;)D
 
-    move-result-wide v3
+    move-result-wide v0
 
-    cmpl-double v0, v1, v3
+    cmpl-double v0, v2, v0
 
     if-lez v0, :cond_a
 
@@ -1804,7 +1804,7 @@
     goto :goto_5
 
     :cond_a
-    move-wide v0, v1
+    move-wide v0, v2
 
     goto/16 :goto_4
 .end method
@@ -1992,7 +1992,7 @@
 .end method
 
 .method private startTimerIfNeeded()V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 325
@@ -2023,9 +2023,9 @@
     .line 328
     iget-object v0, p0, Lcom/glympse/android/controls/GTimerView;->_runnable:Lcom/glympse/android/controls/GTimerView$TimerRunnable;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/glympse/android/controls/GTimerView;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {p0, v0, v2, v3}, Lcom/glympse/android/controls/GTimerView;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 330
     :cond_1
@@ -2296,11 +2296,11 @@
     .line 653
     iget v1, p0, Lcom/glympse/android/controls/GTimerView;->_duration:I
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    const-wide/32 v3, 0x668a0
+    const-wide/32 v4, 0x668a0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-gtz v1, :cond_3
 
@@ -2401,11 +2401,11 @@
     .line 684
     iget v1, p0, Lcom/glympse/android/controls/GTimerView;->_duration:I
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    const-wide/32 v3, 0x493e0
+    const-wide/32 v4, 0x493e0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-ltz v1, :cond_0
 
@@ -2751,13 +2751,13 @@
 
     iget v2, p0, Lcom/glympse/android/controls/GTimerView;->_middleRadius:F
 
-    iget-wide v3, p0, Lcom/glympse/android/controls/GTimerView;->_rotation:D
+    iget-wide v4, p0, Lcom/glympse/android/controls/GTimerView;->_rotation:D
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->sin(D)D
+    invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    double-to-float v3, v3
+    double-to-float v3, v4
 
     mul-float/2addr v2, v3
 
@@ -2854,13 +2854,13 @@
     # getter for: Lcom/glympse/android/controls/GTimerView$Tick;->_rotation:D
     invoke-static {v0}, Lcom/glympse/android/controls/GTimerView$Tick;->access$300(Lcom/glympse/android/controls/GTimerView$Tick;)D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Math;->cos(D)D
+    invoke-static {v4, v5}, Ljava/lang/Math;->cos(D)D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    double-to-float v3, v3
+    double-to-float v3, v4
 
     mul-float/2addr v2, v3
 
@@ -2910,9 +2910,9 @@
 
     int-to-long v4, v1
 
-    const-wide/32 v7, 0x36ee80
+    const-wide/32 v8, 0x36ee80
 
-    div-long/2addr v4, v7
+    div-long/2addr v4, v8
 
     long-to-int v1, v4
 
@@ -2924,9 +2924,9 @@
 
     int-to-long v4, v4
 
-    const-wide/32 v7, 0xea60
+    const-wide/32 v8, 0xea60
 
-    div-long/2addr v4, v7
+    div-long/2addr v4, v8
 
     long-to-int v4, v4
 
@@ -3017,17 +3017,17 @@
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Path;->lineTo(FF)V
 
     .line 675
-    iget-wide v1, p0, Lcom/glympse/android/controls/GTimerView;->_rotation:D
+    iget-wide v2, p0, Lcom/glympse/android/controls/GTimerView;->_rotation:D
 
-    const-wide v3, 0x4066800000000000L
+    const-wide v4, 0x4066800000000000L
 
-    mul-double/2addr v1, v3
+    mul-double/2addr v2, v4
 
-    const-wide v3, 0x400921fb54442d18L
+    const-wide v4, 0x400921fb54442d18L
 
-    div-double/2addr v1, v3
+    div-double/2addr v2, v4
 
-    double-to-float v1, v1
+    double-to-float v1, v2
 
     .line 676
     new-instance v2, Landroid/graphics/RectF;

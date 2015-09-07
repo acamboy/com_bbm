@@ -1,9 +1,6 @@
 .class final Lcom/bbm/ui/activities/ft;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/u;
 .source "ConversationActivity.java"
-
-# interfaces
-.implements Landroid/text/TextWatcher;
 
 
 # instance fields
@@ -15,95 +12,80 @@
     .locals 0
 
     .prologue
-    .line 1564
+    .line 902
     iput-object p1, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method protected final b()Z
+    .locals 4
 
     .prologue
-    .line 1592
-    return-void
-.end method
+    const/4 v0, 0x0
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    .prologue
-    .line 1588
-    return-void
-.end method
-
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 2
-
-    .prologue
-    .line 1567
-    const-string v0, "onTextChanged"
-
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 1568
-    iget-object v0, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->z(Lcom/bbm/ui/activities/ConversationActivity;)V
-
-    .line 1570
-    iget-object v0, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->V(Lcom/bbm/ui/activities/ConversationActivity;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 1571
-    iget-object v0, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
-
-    move-result-object v0
-
+    .line 907
     iget-object v1, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->l(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->j(Ljava/lang/String;)V
+    iget-object v2, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 1576
+    invoke-static {v2}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->K(Ljava/lang/String;)Lcom/bbm/d/eu;
+
+    move-result-object v1
+
+    .line 908
+    iget-object v2, v1, Lcom/bbm/d/eu;->u:Lcom/bbm/util/bi;
+
+    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+
+    if-ne v2, v3, :cond_2
+
+    .line 909
+    iget-object v2, v1, Lcom/bbm/d/eu;->d:Lorg/json/JSONObject;
+
+    const-string v3, "message"
+
+    invoke-virtual {v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 910
+    iget-object v1, v1, Lcom/bbm/d/eu;->d:Lorg/json/JSONObject;
+
+    const-string v3, "viewTime"
+
+    invoke-virtual {v1, v3, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    .line 911
+    if-nez v0, :cond_0
+
+    .line 912
+    const/4 v0, -0x1
+
+    .line 914
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->ah(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/ui/activities/ConversationActivity;->e:Lcom/bbm/ui/EmoticonInputPanel;
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/EmoticonInputPanel;->setTimebombValue(I)V
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    .line 916
+    invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
@@ -111,40 +93,50 @@
 
     iget-object v0, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->g()Z
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->v(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/EditText;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 1578
+    .line 918
     iget-object v0, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->ai(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/activities/afg;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->v(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    const-string v1, ""
 
-    .line 1579
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    .line 920
     iget-object v0, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->ai(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/activities/afg;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->v(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/afg;->a()V
+    invoke-virtual {v0, v2}, Landroid/widget/EditText;->append(Ljava/lang/CharSequence;)V
 
-    .line 1583
+    .line 921
+    iget-object v0, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->A(Lcom/bbm/ui/activities/ConversationActivity;)V
+
+    .line 924
     :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ft;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    const/4 v0, 0x1
 
-    invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->b(Lcom/bbm/ui/activities/ConversationActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 1584
-    return-void
+    .line 927
+    :cond_2
+    return v0
 .end method

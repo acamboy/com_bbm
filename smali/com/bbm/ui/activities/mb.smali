@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/mb;
 .super Ljava/lang/Object;
-.source "GroupEventsAddActivity.java"
+.source "GroupChatListActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupChatListActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupChatListActivity;)V
     .locals 0
 
     .prologue
-    .line 176
-    iput-object p1, p0, Lcom/bbm/ui/activities/mb;->a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
+    .line 309
+    iput-object p1, p0, Lcom/bbm/ui/activities/mb;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,18 +29,18 @@
     .locals 2
 
     .prologue
-    .line 180
-    const-string v0, "headerActionBar Negative Button Clicked"
+    .line 312
+    const-string v0, "barGroupHeaderContainer Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/GroupEventsAddActivity;
+    const-class v1, Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 182
-    iget-object v0, p0, Lcom/bbm/ui/activities/mb;->a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
+    .line 314
+    iget-object v0, p0, Lcom/bbm/ui/activities/mb;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->g()Z
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupChatListActivity;->b()V
 
-    .line 183
+    .line 315
     return-void
 .end method

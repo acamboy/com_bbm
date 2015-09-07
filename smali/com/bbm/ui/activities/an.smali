@@ -3,7 +3,7 @@
 .source "BroadcastActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 167
+    .line 393
     iput-object p1, p0, Lcom/bbm/ui/activities/an;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,45 +25,22 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
 
     .prologue
-    .line 171
-    const-string v0, "mGridOnItemClickListener onItemClick"
+    .line 397
+    const-string v0, "mEmoticonButtonArea Clicked"
 
     const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 172
+    .line 399
     iget-object v0, p0, Lcom/bbm/ui/activities/an;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->c(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/util/cm;
+    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/an;->a:Lcom/bbm/ui/activities/BroadcastActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/BroadcastActivity;->b(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/ui/activities/aw;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p3}, Lcom/bbm/ui/activities/aw;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/util/cm;->b(Ljava/lang/Object;)V
-
-    .line 173
+    .line 400
     return-void
 .end method

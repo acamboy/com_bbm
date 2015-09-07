@@ -1,5 +1,5 @@
 .class final Lcom/bbm/ui/channel/activities/c;
-.super Lcom/bbm/ui/by;
+.super Lcom/bbm/ui/cn;
 .source "ChannelInviteToBBM.java"
 
 
@@ -12,10 +12,10 @@
     .locals 0
 
     .prologue
-    .line 156
+    .line 154
     iput-object p1, p0, Lcom/bbm/ui/channel/activities/c;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
@@ -26,12 +26,12 @@
     .locals 1
 
     .prologue
-    .line 163
+    .line 161
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/c;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
     invoke-virtual {v0}, Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;->finish()V
 
-    .line 164
+    .line 162
     return-void
 .end method
 
@@ -39,17 +39,17 @@
     .locals 4
 
     .prologue
-    .line 169
+    .line 167
     sparse-switch p1, :sswitch_data_0
 
-    .line 182
+    .line 179
     :goto_0
     :sswitch_0
     return-void
 
-    .line 173
+    .line 171
     :sswitch_1
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
@@ -59,11 +59,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->f(Ljava/lang/String;)Lcom/google/b/f/a/l;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->g(Ljava/lang/String;)Lcom/google/b/f/a/l;
 
     move-result-object v0
 
-    .line 174
+    .line 172
     new-instance v1, Landroid/content/Intent;
 
     iget-object v2, p0, Lcom/bbm/ui/channel/activities/c;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
@@ -72,7 +72,7 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 176
+    .line 174
     :try_start_0
     const-string v2, "conversation_uri"
 
@@ -86,7 +86,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 181
+    .line 178
     :goto_1
     iget-object v0, p0, Lcom/bbm/ui/channel/activities/c;->a:Lcom/bbm/ui/channel/activities/ChannelInviteToBBM;
 
@@ -94,21 +94,21 @@
 
     goto :goto_0
 
-    .line 178
+    .line 175
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 169
+    .line 167
     nop
 
     :sswitch_data_0
     .sparse-switch
-        0x7f0a0045 -> :sswitch_1
-        0x7f0a00bb -> :sswitch_0
+        0x7f0b003a -> :sswitch_1
+        0x7f0b00ff -> :sswitch_0
     .end sparse-switch
 .end method
 
@@ -116,6 +116,6 @@
     .locals 0
 
     .prologue
-    .line 159
+    .line 157
     return-void
 .end method

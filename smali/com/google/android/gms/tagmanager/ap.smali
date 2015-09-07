@@ -14,7 +14,7 @@
 
 # direct methods
 .method constructor <init>(JJJ)V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

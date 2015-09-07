@@ -22,15 +22,15 @@
 
 
 # instance fields
-.field private i:[I
+.field i:Lcom/google/zxing/b/b/b;
 
-.field private j:[I
+.field final j:I
 
-.field private k:Lcom/google/zxing/b/b/b;
+.field private k:[I
 
-.field private l:Lcom/google/zxing/b/b/b;
+.field private l:[I
 
-.field private final m:I
+.field private m:Lcom/google/zxing/b/b/b;
 
 .field private final n:I
 
@@ -133,13 +133,13 @@
     iput p1, p0, Lcom/google/zxing/b/b/a;->n:I
 
     .line 60
-    iput p2, p0, Lcom/google/zxing/b/b/a;->m:I
+    iput p2, p0, Lcom/google/zxing/b/b/a;->j:I
 
     .line 62
     if-gtz p2, :cond_0
 
     .line 63
-    invoke-direct {p0}, Lcom/google/zxing/b/b/a;->d()V
+    invoke-direct {p0}, Lcom/google/zxing/b/b/a;->c()V
 
     .line 65
     :cond_0
@@ -156,7 +156,7 @@
     return v0
 .end method
 
-.method private d()V
+.method private c()V
     .locals 5
 
     .prologue
@@ -165,18 +165,18 @@
     const/4 v1, 0x0
 
     .line 68
-    iget v0, p0, Lcom/google/zxing/b/b/a;->m:I
+    iget v0, p0, Lcom/google/zxing/b/b/a;->j:I
 
     new-array v0, v0, [I
 
-    iput-object v0, p0, Lcom/google/zxing/b/b/a;->i:[I
+    iput-object v0, p0, Lcom/google/zxing/b/b/a;->k:[I
 
     .line 69
-    iget v0, p0, Lcom/google/zxing/b/b/a;->m:I
+    iget v0, p0, Lcom/google/zxing/b/b/a;->j:I
 
     new-array v0, v0, [I
 
-    iput-object v0, p0, Lcom/google/zxing/b/b/a;->j:[I
+    iput-object v0, p0, Lcom/google/zxing/b/b/a;->l:[I
 
     move v0, v1
 
@@ -184,12 +184,12 @@
 
     .line 71
     :goto_0
-    iget v4, p0, Lcom/google/zxing/b/b/a;->m:I
+    iget v4, p0, Lcom/google/zxing/b/b/a;->j:I
 
     if-ge v0, v4, :cond_1
 
     .line 72
-    iget-object v4, p0, Lcom/google/zxing/b/b/a;->i:[I
+    iget-object v4, p0, Lcom/google/zxing/b/b/a;->k:[I
 
     aput v2, v4, v0
 
@@ -197,7 +197,7 @@
     shl-int/lit8 v2, v2, 0x1
 
     .line 74
-    iget v4, p0, Lcom/google/zxing/b/b/a;->m:I
+    iget v4, p0, Lcom/google/zxing/b/b/a;->j:I
 
     if-lt v2, v4, :cond_0
 
@@ -207,7 +207,7 @@
     xor-int/2addr v2, v4
 
     .line 76
-    iget v4, p0, Lcom/google/zxing/b/b/a;->m:I
+    iget v4, p0, Lcom/google/zxing/b/b/a;->j:I
 
     add-int/lit8 v4, v4, -0x1
 
@@ -224,16 +224,16 @@
 
     .line 79
     :goto_1
-    iget v2, p0, Lcom/google/zxing/b/b/a;->m:I
+    iget v2, p0, Lcom/google/zxing/b/b/a;->j:I
 
     add-int/lit8 v2, v2, -0x1
 
     if-ge v0, v2, :cond_2
 
     .line 80
-    iget-object v2, p0, Lcom/google/zxing/b/b/a;->j:[I
+    iget-object v2, p0, Lcom/google/zxing/b/b/a;->l:[I
 
-    iget-object v4, p0, Lcom/google/zxing/b/b/a;->i:[I
+    iget-object v4, p0, Lcom/google/zxing/b/b/a;->k:[I
 
     aget v4, v4, v0
 
@@ -254,7 +254,7 @@
 
     invoke-direct {v0, p0, v2}, Lcom/google/zxing/b/b/b;-><init>(Lcom/google/zxing/b/b/a;[I)V
 
-    iput-object v0, p0, Lcom/google/zxing/b/b/a;->k:Lcom/google/zxing/b/b/b;
+    iput-object v0, p0, Lcom/google/zxing/b/b/a;->m:Lcom/google/zxing/b/b/b;
 
     .line 84
     new-instance v0, Lcom/google/zxing/b/b/b;
@@ -265,29 +265,12 @@
 
     invoke-direct {v0, p0, v2}, Lcom/google/zxing/b/b/b;-><init>(Lcom/google/zxing/b/b/a;[I)V
 
-    iput-object v0, p0, Lcom/google/zxing/b/b/a;->l:Lcom/google/zxing/b/b/b;
+    iput-object v0, p0, Lcom/google/zxing/b/b/a;->i:Lcom/google/zxing/b/b/b;
 
     .line 85
     iput-boolean v3, p0, Lcom/google/zxing/b/b/a;->o:Z
 
     .line 86
-    return-void
-.end method
-
-.method private e()V
-    .locals 1
-
-    .prologue
-    .line 89
-    iget-boolean v0, p0, Lcom/google/zxing/b/b/a;->o:Z
-
-    if-nez v0, :cond_0
-
-    .line 90
-    invoke-direct {p0}, Lcom/google/zxing/b/b/a;->d()V
-
-    .line 92
-    :cond_0
     return-void
 .end method
 
@@ -298,27 +281,14 @@
 
     .prologue
     .line 136
-    invoke-direct {p0}, Lcom/google/zxing/b/b/a;->e()V
+    invoke-virtual {p0}, Lcom/google/zxing/b/b/a;->a()V
 
     .line 138
-    iget-object v0, p0, Lcom/google/zxing/b/b/a;->i:[I
+    iget-object v0, p0, Lcom/google/zxing/b/b/a;->k:[I
 
     aget v0, v0, p1
 
     return v0
-.end method
-
-.method final a()Lcom/google/zxing/b/b/b;
-    .locals 1
-
-    .prologue
-    .line 95
-    invoke-direct {p0}, Lcom/google/zxing/b/b/a;->e()V
-
-    .line 97
-    iget-object v0, p0, Lcom/google/zxing/b/b/a;->k:Lcom/google/zxing/b/b/b;
-
-    return-object v0
 .end method
 
 .method final a(II)Lcom/google/zxing/b/b/b;
@@ -326,7 +296,7 @@
 
     .prologue
     .line 110
-    invoke-direct {p0}, Lcom/google/zxing/b/b/a;->e()V
+    invoke-virtual {p0}, Lcom/google/zxing/b/b/a;->a()V
 
     .line 112
     if-gez p1, :cond_0
@@ -343,7 +313,7 @@
     if-nez p2, :cond_1
 
     .line 116
-    iget-object v0, p0, Lcom/google/zxing/b/b/a;->k:Lcom/google/zxing/b/b/b;
+    iget-object v0, p0, Lcom/google/zxing/b/b/a;->m:Lcom/google/zxing/b/b/b;
 
     .line 120
     :goto_0
@@ -368,12 +338,29 @@
     goto :goto_0
 .end method
 
+.method final a()V
+    .locals 1
+
+    .prologue
+    .line 89
+    iget-boolean v0, p0, Lcom/google/zxing/b/b/a;->o:Z
+
+    if-nez v0, :cond_0
+
+    .line 90
+    invoke-direct {p0}, Lcom/google/zxing/b/b/a;->c()V
+
+    .line 92
+    :cond_0
+    return-void
+.end method
+
 .method final b(I)I
     .locals 1
 
     .prologue
     .line 145
-    invoke-direct {p0}, Lcom/google/zxing/b/b/a;->e()V
+    invoke-virtual {p0}, Lcom/google/zxing/b/b/a;->a()V
 
     .line 147
     if-nez p1, :cond_0
@@ -387,7 +374,7 @@
 
     .line 150
     :cond_0
-    iget-object v0, p0, Lcom/google/zxing/b/b/a;->j:[I
+    iget-object v0, p0, Lcom/google/zxing/b/b/a;->l:[I
 
     aget v0, v0, p1
 
@@ -398,23 +385,13 @@
     .locals 1
 
     .prologue
-    .line 101
-    invoke-direct {p0}, Lcom/google/zxing/b/b/a;->e()V
+    .line 95
+    invoke-virtual {p0}, Lcom/google/zxing/b/b/a;->a()V
 
-    .line 103
-    iget-object v0, p0, Lcom/google/zxing/b/b/a;->l:Lcom/google/zxing/b/b/b;
+    .line 97
+    iget-object v0, p0, Lcom/google/zxing/b/b/a;->m:Lcom/google/zxing/b/b/b;
 
     return-object v0
-.end method
-
-.method public final c()I
-    .locals 1
-
-    .prologue
-    .line 178
-    iget v0, p0, Lcom/google/zxing/b/b/a;->m:I
-
-    return v0
 .end method
 
 .method final c(I)I
@@ -422,7 +399,7 @@
 
     .prologue
     .line 157
-    invoke-direct {p0}, Lcom/google/zxing/b/b/a;->e()V
+    invoke-virtual {p0}, Lcom/google/zxing/b/b/a;->a()V
 
     .line 159
     if-nez p1, :cond_0
@@ -436,11 +413,11 @@
 
     .line 162
     :cond_0
-    iget-object v0, p0, Lcom/google/zxing/b/b/a;->i:[I
+    iget-object v0, p0, Lcom/google/zxing/b/b/a;->k:[I
 
-    iget v1, p0, Lcom/google/zxing/b/b/a;->m:I
+    iget v1, p0, Lcom/google/zxing/b/b/a;->j:I
 
-    iget-object v2, p0, Lcom/google/zxing/b/b/a;->j:[I
+    iget-object v2, p0, Lcom/google/zxing/b/b/a;->l:[I
 
     aget v2, v2, p1
 
@@ -458,7 +435,7 @@
 
     .prologue
     .line 169
-    invoke-direct {p0}, Lcom/google/zxing/b/b/a;->e()V
+    invoke-virtual {p0}, Lcom/google/zxing/b/b/a;->a()V
 
     .line 171
     if-eqz p1, :cond_0
@@ -474,19 +451,19 @@
     return v0
 
     :cond_1
-    iget-object v0, p0, Lcom/google/zxing/b/b/a;->i:[I
+    iget-object v0, p0, Lcom/google/zxing/b/b/a;->k:[I
 
-    iget-object v1, p0, Lcom/google/zxing/b/b/a;->j:[I
+    iget-object v1, p0, Lcom/google/zxing/b/b/a;->l:[I
 
     aget v1, v1, p1
 
-    iget-object v2, p0, Lcom/google/zxing/b/b/a;->j:[I
+    iget-object v2, p0, Lcom/google/zxing/b/b/a;->l:[I
 
     aget v2, v2, p2
 
     add-int/2addr v1, v2
 
-    iget v2, p0, Lcom/google/zxing/b/b/a;->m:I
+    iget v2, p0, Lcom/google/zxing/b/b/a;->j:I
 
     add-int/lit8 v2, v2, -0x1
 

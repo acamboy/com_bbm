@@ -3,7 +3,7 @@
 .source "SparseListManager.java"
 
 # interfaces
-.implements Lcom/bbm/f/y;
+.implements Lcom/bbm/f/ac;
 
 
 # instance fields
@@ -23,11 +23,11 @@
 
 .field public final c:Lcom/bbm/f/a;
 
-.field public final d:Lcom/bbm/util/cx;
+.field public final d:Lcom/bbm/util/di;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/f/a;Lcom/bbm/d/a/h;Lcom/bbm/util/cx;)V
+.method public constructor <init>(Lcom/bbm/f/a;Lcom/bbm/d/a/h;Lcom/bbm/util/di;)V
     .locals 1
 
     .prologue
@@ -60,10 +60,10 @@
     iput-object p1, p0, Lcom/bbm/d/a/c/e;->c:Lcom/bbm/f/a;
 
     .line 27
-    iput-object p3, p0, Lcom/bbm/d/a/c/e;->d:Lcom/bbm/util/cx;
+    iput-object p3, p0, Lcom/bbm/d/a/c/e;->d:Lcom/bbm/util/di;
 
     .line 28
-    invoke-interface {p1, p0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/y;)V
+    invoke-interface {p1, p0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
 
     .line 29
     return-void
@@ -75,7 +75,7 @@
     .locals 3
 
     .prologue
-    .line 65
+    .line 63
     iget-object v0, p0, Lcom/bbm/d/a/c/e;->a:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -99,7 +99,7 @@
 
     check-cast v0, Lcom/bbm/d/a/d;
 
-    .line 66
+    .line 64
     iget-object v2, p0, Lcom/bbm/d/a/c/e;->a:Ljava/util/Map;
 
     invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -108,22 +108,22 @@
 
     check-cast v0, Lcom/bbm/d/a/c/a;
 
-    .line 67
+    .line 65
     invoke-virtual {v0}, Lcom/bbm/d/a/c/a;->a()V
 
-    .line 69
+    .line 67
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Lcom/bbm/d/a/c/a;->a(Z)V
 
     goto :goto_0
 
-    .line 71
+    .line 69
     :cond_0
     return-void
 .end method
 
-.method public final a(Lcom/bbm/f/x;)V
+.method public final a(Lcom/bbm/f/ab;)V
     .locals 4
 
     .prologue
@@ -132,7 +132,7 @@
 
     iget-object v1, p0, Lcom/bbm/d/a/c/e;->b:Lcom/bbm/d/a/h;
 
-    invoke-virtual {v1, p1}, Lcom/bbm/d/a/h;->a(Lcom/bbm/f/x;)Lcom/bbm/d/a/d;
+    invoke-virtual {v1, p1}, Lcom/bbm/d/a/h;->a(Lcom/bbm/f/ab;)Lcom/bbm/d/a/d;
 
     move-result-object v1
 
@@ -146,14 +146,10 @@
     if-eqz v0, :cond_0
 
     .line 49
-    invoke-virtual {p1}, Lcom/bbm/f/x;->f()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
     .line 50
-    invoke-virtual {p1}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
-
-    move-result-object v2
+    iget-object v2, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
     .line 51
     const-string v3, "sparseChange"
@@ -167,12 +163,12 @@
     .line 52
     invoke-virtual {v0, v2}, Lcom/bbm/d/a/c/a;->c(Lorg/json/JSONObject;)V
 
-    .line 61
+    .line 59
     :cond_0
     :goto_0
     return-void
 
-    .line 54
+    .line 53
     :cond_1
     const-string v3, "sparseChunk"
 
@@ -182,12 +178,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 55
+    .line 54
     invoke-virtual {v0, v2}, Lcom/bbm/d/a/c/a;->a(Lorg/json/JSONObject;)V
 
     goto :goto_0
 
-    .line 57
+    .line 55
     :cond_2
     const-string v3, "sparseElements"
 
@@ -197,7 +193,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 58
+    .line 56
     invoke-virtual {v0, v2}, Lcom/bbm/d/a/c/a;->b(Lorg/json/JSONObject;)V
 
     goto :goto_0

@@ -8,15 +8,15 @@
 
 
 # instance fields
-.field private final b:[I
+.field public final b:[I
 
-.field private final c:[I
+.field public final c:[I
 
-.field private final d:Lcom/google/zxing/f/a/a/c;
+.field public final d:Lcom/google/zxing/f/a/a/c;
 
-.field private final e:Lcom/google/zxing/f/a/a/c;
+.field public final e:Lcom/google/zxing/f/a/a/c;
 
-.field private final f:I
+.field final f:I
 
 
 # direct methods
@@ -136,25 +136,36 @@
 
 # virtual methods
 .method public final a(I)I
-    .locals 1
+    .locals 3
 
     .prologue
-    .line 82
+    .line 93
+    if-nez p1, :cond_0
+
+    .line 94
+    new-instance v0, Ljava/lang/ArithmeticException;
+
+    invoke-direct {v0}, Ljava/lang/ArithmeticException;-><init>()V
+
+    throw v0
+
+    .line 96
+    :cond_0
     iget-object v0, p0, Lcom/google/zxing/f/a/a/b;->b:[I
 
-    aget v0, v0, p1
+    iget v1, p0, Lcom/google/zxing/f/a/a/b;->f:I
+
+    iget-object v2, p0, Lcom/google/zxing/f/a/a/b;->c:[I
+
+    aget v2, v2, p1
+
+    sub-int/2addr v1, v2
+
+    add-int/lit8 v1, v1, -0x1
+
+    aget v0, v0, v1
 
     return v0
-.end method
-
-.method public final a()Lcom/google/zxing/f/a/a/c;
-    .locals 1
-
-    .prologue
-    .line 54
-    iget-object v0, p0, Lcom/google/zxing/f/a/a/b;->d:Lcom/google/zxing/f/a/a/c;
-
-    return-object v0
 .end method
 
 .method public final a(II)Lcom/google/zxing/f/a/a/c;
@@ -201,29 +212,6 @@
     goto :goto_0
 .end method
 
-.method public final b(I)I
-    .locals 1
-
-    .prologue
-    .line 86
-    if-nez p1, :cond_0
-
-    .line 87
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
-
-    throw v0
-
-    .line 89
-    :cond_0
-    iget-object v0, p0, Lcom/google/zxing/f/a/a/b;->c:[I
-
-    aget v0, v0, p1
-
-    return v0
-.end method
-
 .method final b(II)I
     .locals 2
 
@@ -234,59 +222,6 @@
     iget v1, p0, Lcom/google/zxing/f/a/a/b;->f:I
 
     rem-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public final b()Lcom/google/zxing/f/a/a/c;
-    .locals 1
-
-    .prologue
-    .line 58
-    iget-object v0, p0, Lcom/google/zxing/f/a/a/b;->e:Lcom/google/zxing/f/a/a/c;
-
-    return-object v0
-.end method
-
-.method final c()I
-    .locals 1
-
-    .prologue
-    .line 107
-    iget v0, p0, Lcom/google/zxing/f/a/a/b;->f:I
-
-    return v0
-.end method
-
-.method public final c(I)I
-    .locals 3
-
-    .prologue
-    .line 93
-    if-nez p1, :cond_0
-
-    .line 94
-    new-instance v0, Ljava/lang/ArithmeticException;
-
-    invoke-direct {v0}, Ljava/lang/ArithmeticException;-><init>()V
-
-    throw v0
-
-    .line 96
-    :cond_0
-    iget-object v0, p0, Lcom/google/zxing/f/a/a/b;->b:[I
-
-    iget v1, p0, Lcom/google/zxing/f/a/a/b;->f:I
-
-    iget-object v2, p0, Lcom/google/zxing/f/a/a/b;->c:[I
-
-    aget v2, v2, p1
-
-    sub-int/2addr v1, v2
-
-    add-int/lit8 v1, v1, -0x1
-
-    aget v0, v0, v1
 
     return v0
 .end method

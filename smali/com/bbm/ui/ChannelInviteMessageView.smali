@@ -26,10 +26,10 @@
     .locals 0
 
     .prologue
-    .line 32
+    .line 33
     invoke-direct {p0, p1, p2}, Lcom/bbm/ui/MessageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 33
+    .line 34
     return-void
 .end method
 
@@ -37,21 +37,21 @@
     .locals 2
 
     .prologue
-    .line 98
+    .line 99
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->g:Landroid/widget/TextView;
 
     const-string v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 99
+    .line 100
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->g:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 100
+    .line 101
     return-void
 .end method
 
@@ -63,41 +63,41 @@
     .prologue
     const/16 v2, 0x8
 
-    .line 86
+    .line 87
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->d:Lcom/bbm/ui/ObservingImageView;
 
     iget-object v1, p1, Lcom/bbm/d/a;->a:Lcom/bbm/d/a/d/c;
 
-    invoke-virtual {v1}, Lcom/bbm/d/a/d/c;->c()Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v1}, Lcom/bbm/d/a/d/c;->b()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 88
+    .line 89
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->setChanneNameText(Ljava/lang/String;)V
 
-    .line 89
+    .line 90
     const-string v0, ""
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->setChanneDescriptionText(Ljava/lang/String;)V
 
-    .line 91
+    .line 92
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->e:Landroid/widget/Button;
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 92
+    .line 93
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->f:Landroid/widget/Button;
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 94
+    .line 95
     invoke-direct {p0}, Lcom/bbm/ui/ChannelInviteMessageView;->b()V
 
-    .line 95
+    .line 96
     return-void
 .end method
 
@@ -105,11 +105,11 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 38
     invoke-super {p0}, Lcom/bbm/ui/MessageView;->onFinishInflate()V
 
-    .line 39
-    const v0, 0x7f0a01e1
+    .line 40
+    const v0, 0x7f0b0233
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->findViewById(I)Landroid/view/View;
 
@@ -119,8 +119,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->a:Landroid/widget/TextView;
 
-    .line 40
-    const v0, 0x7f0a01e2
+    .line 41
+    const v0, 0x7f0b0234
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->findViewById(I)Landroid/view/View;
 
@@ -130,8 +130,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->b:Landroid/widget/TextView;
 
-    .line 41
-    const v0, 0x7f0a0449
+    .line 42
+    const v0, 0x7f0b04cd
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->findViewById(I)Landroid/view/View;
 
@@ -141,8 +141,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->c:Landroid/widget/TextView;
 
-    .line 42
-    const v0, 0x7f0a0324
+    .line 43
+    const v0, 0x7f0b0385
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->findViewById(I)Landroid/view/View;
 
@@ -152,8 +152,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->d:Lcom/bbm/ui/ObservingImageView;
 
-    .line 43
-    const v0, 0x7f0a0447
+    .line 44
+    const v0, 0x7f0b04cb
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->findViewById(I)Landroid/view/View;
 
@@ -161,8 +161,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->h:Landroid/view/View;
 
-    .line 44
-    const v0, 0x7f0a044b
+    .line 45
+    const v0, 0x7f0b04cf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->findViewById(I)Landroid/view/View;
 
@@ -172,8 +172,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->e:Landroid/widget/Button;
 
-    .line 45
-    const v0, 0x7f0a044c
+    .line 46
+    const v0, 0x7f0b04d0
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->findViewById(I)Landroid/view/View;
 
@@ -183,8 +183,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->f:Landroid/widget/Button;
 
-    .line 46
-    const v0, 0x7f0a044d
+    .line 47
+    const v0, 0x7f0b04d1
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelInviteMessageView;->findViewById(I)Landroid/view/View;
 
@@ -194,7 +194,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->g:Landroid/widget/TextView;
 
-    .line 47
+    .line 48
     return-void
 .end method
 
@@ -202,12 +202,12 @@
     .locals 2
 
     .prologue
-    .line 111
+    .line 114
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->b:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 112
+    .line 115
     iget-object v1, p0, Lcom/bbm/ui/ChannelInviteMessageView;->b:Landroid/widget/TextView;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -221,10 +221,10 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 113
+    .line 116
     return-void
 
-    .line 112
+    .line 115
     :cond_0
     const/4 v0, 0x0
 
@@ -235,34 +235,51 @@
     .locals 1
 
     .prologue
-    .line 107
+    .line 110
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->a:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 108
+    .line 111
     return-void
 .end method
 
-.method public setChannelAvatar(Lcom/bbm/j/r;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bbm/j/r",
-            "<",
-            "Lcom/bbm/d/dw;",
-            ">;)V"
-        }
-    .end annotation
+.method public setChannelAvatar(Lcom/bbm/d/ee;)V
+    .locals 4
 
     .prologue
-    .line 103
+    .line 104
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->d:Lcom/bbm/ui/ObservingImageView;
 
-    invoke-virtual {v0, p1}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/j/r;)V
+    invoke-virtual {v0}, Lcom/bbm/ui/ObservingImageView;->getContext()Landroid/content/Context;
 
-    .line 104
+    move-result-object v0
+
+    check-cast v0, Landroid/app/Activity;
+
+    .line 105
+    new-instance v1, Lcom/bbm/util/b/a;
+
+    invoke-virtual {v0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0a003f
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    invoke-direct {v1, v0, v2}, Lcom/bbm/util/b/a;-><init>(Landroid/app/Activity;I)V
+
+    .line 106
+    iget-object v0, p1, Lcom/bbm/d/ee;->o:Ljava/lang/String;
+
+    iget-object v2, p0, Lcom/bbm/ui/ChannelInviteMessageView;->d:Lcom/bbm/ui/ObservingImageView;
+
+    invoke-virtual {v1, v0, v2}, Lcom/bbm/util/b/a;->a(Ljava/lang/Object;Landroid/widget/ImageView;)V
+
+    .line 107
     return-void
 .end method
 
@@ -270,7 +287,7 @@
     .locals 2
 
     .prologue
-    .line 116
+    .line 119
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->c:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/bbm/ui/ChannelInviteMessageView;->getContext()Landroid/content/Context;
@@ -283,7 +300,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 117
+    .line 120
     return-void
 .end method
 
@@ -291,12 +308,12 @@
     .locals 1
 
     .prologue
-    .line 120
+    .line 123
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->c:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 121
+    .line 124
     return-void
 .end method
 
@@ -308,29 +325,29 @@
 
     const/4 v3, 0x0
 
-    .line 71
+    .line 72
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->e:Landroid/widget/Button;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 72
+    .line 73
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->f:Landroid/widget/Button;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 73
+    .line 74
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->g:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 74
+    .line 75
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->g:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/bbm/ui/ChannelInviteMessageView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0e01ee
+    const v2, 0x7f0e01fd
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -338,12 +355,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 75
+    .line 76
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->g:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 76
+    .line 77
     return-void
 .end method
 
@@ -355,34 +372,34 @@
 
     const/4 v0, 0x0
 
-    .line 50
+    .line 51
     if-eqz p1, :cond_0
 
-    .line 51
+    .line 52
     iget-object v2, p0, Lcom/bbm/ui/ChannelInviteMessageView;->e:Landroid/widget/Button;
 
     invoke-virtual {v2, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 52
+    .line 53
     iget-object v2, p0, Lcom/bbm/ui/ChannelInviteMessageView;->f:Landroid/widget/Button;
 
     invoke-virtual {v2, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 53
+    .line 54
     iget-object v1, p0, Lcom/bbm/ui/ChannelInviteMessageView;->g:Landroid/widget/TextView;
 
     const/16 v2, 0x11
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 54
+    .line 55
     iget-object v1, p0, Lcom/bbm/ui/ChannelInviteMessageView;->g:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/bbm/ui/ChannelInviteMessageView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    const v3, 0x7f0e046a
+    const v3, 0x7f0e04bc
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -390,28 +407,28 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 55
+    .line 56
     iget-object v1, p0, Lcom/bbm/ui/ChannelInviteMessageView;->g:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 68
+    .line 69
     :goto_0
     return-void
 
-    .line 58
+    .line 59
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/bbm/d/a;->v()Lcom/bbm/util/au;
+    invoke-virtual {v2}, Lcom/bbm/d/a;->B()Lcom/bbm/util/ay;
 
     move-result-object v2
 
-    .line 59
-    sget-object v3, Lcom/bbm/util/au;->a:Lcom/bbm/util/au;
+    .line 60
+    sget-object v3, Lcom/bbm/util/ay;->a:Lcom/bbm/util/ay;
 
     if-eq v2, v3, :cond_1
 
@@ -419,7 +436,7 @@
 
     move v3, v2
 
-    .line 60
+    .line 61
     :goto_1
     iget-object v4, p0, Lcom/bbm/ui/ChannelInviteMessageView;->e:Landroid/widget/Button;
 
@@ -430,7 +447,7 @@
     :goto_2
     invoke-virtual {v4, v2}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 61
+    .line 62
     iget-object v2, p0, Lcom/bbm/ui/ChannelInviteMessageView;->f:Landroid/widget/Button;
 
     if-eqz v3, :cond_3
@@ -440,7 +457,7 @@
     :try_end_0
     .catch Lcom/bbm/j/z; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 66
+    .line 67
     :goto_4
     invoke-direct {p0}, Lcom/bbm/ui/ChannelInviteMessageView;->b()V
 
@@ -449,19 +466,19 @@
     :cond_1
     move v3, v0
 
-    .line 59
+    .line 60
     goto :goto_1
 
     :cond_2
     move v2, v1
 
-    .line 60
+    .line 61
     goto :goto_2
 
     :cond_3
     move v0, v1
 
-    .line 61
+    .line 62
     goto :goto_3
 
     :catch_0
@@ -476,19 +493,19 @@
     .prologue
     const/16 v1, 0x8
 
-    .line 79
+    .line 80
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->e:Landroid/widget/Button;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 80
+    .line 81
     iget-object v0, p0, Lcom/bbm/ui/ChannelInviteMessageView;->f:Landroid/widget/Button;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 81
+    .line 82
     invoke-direct {p0}, Lcom/bbm/ui/ChannelInviteMessageView;->b()V
 
-    .line 82
+    .line 83
     return-void
 .end method

@@ -4,14 +4,35 @@
         <item quantity="other">%1$s명의 대화 상대에게 브로드캐스트 메시지가 전송됨</item>
         <item quantity="one">1명의 대화 상대에게 브로드캐스트 메시지가 전송됨</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">구독자 %1$명</item>
+        <item quantity="zero">구독자 없음</item>
+        <item quantity="one">구독자 %1$명</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">구성원 %1$d명</item>
+        <item quantity="one">구성원 %1$d명</item>
+    </plurals>
+    <plurals name="common_days_1d">
+        <item quantity="other">%1$d 일</item>
+        <item quantity="one">%1$d 일</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">초</item>
+        <item quantity="one">초</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">%1$d초로 타이머 설정</item>
+        <item quantity="one">%1$d초로 타이머 설정</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s개 항목</item>
         <item quantity="zero">0개 항목</item>
         <item quantity="one">1개 항목</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d개 초대 대기 중)</item>
-        <item quantity="one">(1개 초대 대기 중)</item>
+        <item quantity="other">(%1$d개 보류 중)</item>
+        <item quantity="one">(1개 보류 중)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">결과 %1$s개</item>

@@ -352,7 +352,7 @@
 .end method
 
 .method public final a(Ljava/util/Map;)V
-    .locals 7
+    .locals 10
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -436,15 +436,15 @@
 
     invoke-virtual {v1}, Ljava/lang/Number;->doubleValue()D
 
-    move-result-wide v5
+    move-result-wide v6
 
     invoke-virtual {v2}, Ljava/lang/Number;->doubleValue()D
 
-    move-result-wide v1
+    move-result-wide v8
 
-    add-double/2addr v1, v5
+    add-double/2addr v6, v8
 
-    invoke-static {v1, v2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {v6, v7}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v1
 

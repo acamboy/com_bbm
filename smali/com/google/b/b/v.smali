@@ -329,7 +329,7 @@
     invoke-static {p1, v0}, Lcom/google/b/b/n;->a(Lcom/google/b/b/am;Lcom/google/b/b/am;)V
 
     .line 606
-    invoke-static {p0}, Lcom/google/b/b/n;->b(Lcom/google/b/b/am;)V
+    invoke-static {p0}, Lcom/google/b/b/n;->a(Lcom/google/b/b/am;)V
 
     .line 607
     return-void
@@ -374,7 +374,7 @@
     invoke-static {p1, v0}, Lcom/google/b/b/n;->b(Lcom/google/b/b/am;Lcom/google/b/b/am;)V
 
     .line 618
-    invoke-static {p0}, Lcom/google/b/b/n;->c(Lcom/google/b/b/am;)V
+    invoke-static {p0}, Lcom/google/b/b/n;->b(Lcom/google/b/b/am;)V
 
     .line 619
     return-void

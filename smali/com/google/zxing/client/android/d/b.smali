@@ -134,21 +134,15 @@
     invoke-direct {v3, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 148
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->b()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, v0, Lcom/google/zxing/client/a/g;->a:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lcom/google/zxing/client/a/q;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 150
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->c()Ljava/util/Date;
-
-    move-result-object v1
+    iget-object v1, v0, Lcom/google/zxing/client/a/g;->b:Ljava/util/Date;
 
     .line 151
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->d()Z
-
-    move-result v2
+    iget-boolean v2, v0, Lcom/google/zxing/client/a/g;->c:Z
 
     invoke-static {v2, v1}, Lcom/google/zxing/client/android/d/b;->a(ZLjava/util/Date;)Ljava/lang/String;
 
@@ -157,17 +151,13 @@
     invoke-static {v2, v3}, Lcom/google/zxing/client/a/q;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 153
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->e()Ljava/util/Date;
-
-    move-result-object v2
+    iget-object v2, v0, Lcom/google/zxing/client/a/g;->d:Ljava/util/Date;
 
     .line 154
     if-eqz v2, :cond_0
 
     .line 155
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->f()Z
-
-    move-result v4
+    iget-boolean v4, v0, Lcom/google/zxing/client/a/g;->e:Z
 
     if-eqz v4, :cond_1
 
@@ -192,9 +182,7 @@
 
     .line 162
     :goto_0
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->f()Z
-
-    move-result v2
+    iget-boolean v2, v0, Lcom/google/zxing/client/a/g;->e:Z
 
     invoke-static {v2, v1}, Lcom/google/zxing/client/android/d/b;->a(ZLjava/util/Date;)Ljava/lang/String;
 
@@ -204,30 +192,22 @@
 
     .line 165
     :cond_0
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->g()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, v0, Lcom/google/zxing/client/a/g;->f:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lcom/google/zxing/client/a/q;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 166
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->h()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, v0, Lcom/google/zxing/client/a/g;->g:Ljava/lang/String;
 
     invoke-static {v1, v3}, Lcom/google/zxing/client/a/q;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 167
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->i()[Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, v0, Lcom/google/zxing/client/a/g;->h:[Ljava/lang/String;
 
     invoke-static {v1, v3}, Lcom/google/zxing/client/a/q;->a([Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
     .line 168
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->j()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/google/zxing/client/a/g;->i:Ljava/lang/String;
 
     invoke-static {v0, v3}, Lcom/google/zxing/client/a/q;->a(Ljava/lang/String;Ljava/lang/StringBuilder;)V
 
@@ -245,7 +225,7 @@
 .end method
 
 .method public final b(I)V
-    .locals 11
+    .locals 12
 
     .prologue
     .line 61
@@ -257,14 +237,10 @@
     check-cast v0, Lcom/google/zxing/client/a/g;
 
     .line 64
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->j()Ljava/lang/String;
-
-    move-result-object v2
+    iget-object v2, v0, Lcom/google/zxing/client/a/g;->i:Ljava/lang/String;
 
     .line 65
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->h()Ljava/lang/String;
-
-    move-result-object v1
+    iget-object v1, v0, Lcom/google/zxing/client/a/g;->g:Ljava/lang/String;
 
     .line 66
     if-eqz v1, :cond_6
@@ -274,29 +250,17 @@
 
     .line 74
     :goto_0
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->b()Ljava/lang/String;
+    iget-object v4, v0, Lcom/google/zxing/client/a/g;->a:Ljava/lang/String;
 
-    move-result-object v4
+    iget-object v2, v0, Lcom/google/zxing/client/a/g;->b:Ljava/util/Date;
 
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->c()Ljava/util/Date;
+    iget-boolean v5, v0, Lcom/google/zxing/client/a/g;->c:Z
 
-    move-result-object v2
+    iget-object v6, v0, Lcom/google/zxing/client/a/g;->d:Ljava/util/Date;
 
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->d()Z
+    iget-object v7, v0, Lcom/google/zxing/client/a/g;->f:Ljava/lang/String;
 
-    move-result v5
-
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->e()Ljava/util/Date;
-
-    move-result-object v6
-
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->g()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-virtual {v0}, Lcom/google/zxing/client/a/g;->i()[Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/google/zxing/client/a/g;->h:[Ljava/lang/String;
 
     new-instance v8, Landroid/content/Intent;
 
@@ -329,9 +293,9 @@
 
     if-eqz v5, :cond_1
 
-    const-wide/32 v5, 0x5265c00
+    const-wide/32 v10, 0x5265c00
 
-    add-long/2addr v2, v5
+    add-long/2addr v2, v10
 
     :cond_1
     :goto_1
@@ -422,5 +386,5 @@
     :cond_6
     move-object v1, v2
 
-    goto/16 :goto_0
+    goto :goto_0
 .end method

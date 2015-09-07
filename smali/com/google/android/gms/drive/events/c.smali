@@ -4,23 +4,23 @@
 
 # direct methods
 .method public static a(ILcom/google/android/gms/drive/DriveId;)Z
-    .locals 5
+    .locals 6
 
     const/4 v0, 0x1
 
     if-nez p1, :cond_0
 
-    const-wide/16 v1, 0x4
+    const-wide/16 v2, 0x4
 
-    shl-int v3, v0, p0
+    shl-int v1, v0, p0
 
-    int-to-long v3, v3
+    int-to-long v4, v1
 
-    and-long/2addr v1, v3
+    and-long/2addr v2, v4
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-eqz v1, :cond_1
 

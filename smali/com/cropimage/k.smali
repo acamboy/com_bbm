@@ -24,7 +24,7 @@
 
 # direct methods
 .method constructor <init>(Lcom/cropimage/i;JFFFF)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 325
@@ -52,7 +52,7 @@
 
 # virtual methods
 .method public final run()V
-    .locals 5
+    .locals 6
 
     .prologue
     .line 328
@@ -63,9 +63,9 @@
     .line 329
     iget v2, p0, Lcom/cropimage/k;->a:F
 
-    iget-wide v3, p0, Lcom/cropimage/k;->b:J
+    iget-wide v4, p0, Lcom/cropimage/k;->b:J
 
-    sub-long/2addr v0, v3
+    sub-long/2addr v0, v4
 
     long-to-float v0, v0
 

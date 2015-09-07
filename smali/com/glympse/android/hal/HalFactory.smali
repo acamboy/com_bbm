@@ -18,7 +18,7 @@
     .locals 1
 
     .prologue
-    .line 194
+    .line 199
     new-instance v0, Lcom/glympse/android/hal/a;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/glympse/android/hal/a;-><init>(Landroid/content/Context;Lcom/glympse/android/core/GHandler;Ljava/lang/String;)V
@@ -43,9 +43,9 @@
 
     .prologue
     .line 125
-    new-instance v0, Lcom/glympse/android/hal/au;
+    new-instance v0, Lcom/glympse/android/hal/at;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/au;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/at;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -117,9 +117,9 @@
 
     .prologue
     .line 85
-    new-instance v0, Lcom/glympse/android/hal/ad;
+    new-instance v0, Lcom/glympse/android/hal/ac;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/ad;-><init>(Landroid/graphics/drawable/BitmapDrawable;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/ac;-><init>(Landroid/graphics/drawable/BitmapDrawable;)V
 
     return-object v0
 .end method
@@ -129,7 +129,7 @@
 
     .prologue
     .line 90
-    invoke-static {p0, p1}, Lcom/glympse/android/hal/ad;->a(Ljava/lang/String;I)Lcom/glympse/android/core/GDrawable;
+    invoke-static {p0, p1}, Lcom/glympse/android/hal/ac;->a(Ljava/lang/String;I)Lcom/glympse/android/core/GDrawable;
 
     move-result-object v0
 
@@ -153,9 +153,9 @@
 
     .prologue
     .line 130
-    new-instance v0, Lcom/glympse/android/hal/az;
+    new-instance v0, Lcom/glympse/android/hal/ay;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/az;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/ay;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -165,9 +165,9 @@
 
     .prologue
     .line 28
-    new-instance v0, Lcom/glympse/android/hal/ae;
+    new-instance v0, Lcom/glympse/android/hal/ad;
 
-    invoke-direct {v0}, Lcom/glympse/android/hal/ae;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/hal/ad;-><init>()V
 
     return-object v0
 .end method
@@ -177,9 +177,33 @@
 
     .prologue
     .line 95
-    new-instance v0, Lcom/glympse/android/hal/af;
+    new-instance v0, Lcom/glympse/android/hal/ae;
 
-    invoke-direct {v0}, Lcom/glympse/android/hal/af;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/hal/ae;-><init>()V
+
+    return-object v0
+.end method
+
+.method public static createIntent()Lcom/glympse/android/hal/GIntent;
+    .locals 1
+
+    .prologue
+    .line 224
+    new-instance v0, Lcom/glympse/android/hal/GlympseIntent;
+
+    invoke-direct {v0}, Lcom/glympse/android/hal/GlympseIntent;-><init>()V
+
+    return-object v0
+.end method
+
+.method public static createInvocationAgent(Landroid/content/Context;)Lcom/glympse/android/hal/GInvocationAgent;
+    .locals 1
+
+    .prologue
+    .line 219
+    new-instance v0, Lcom/glympse/android/hal/InvocationAgent;
+
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/InvocationAgent;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -189,9 +213,9 @@
 
     .prologue
     .line 179
-    new-instance v0, Lcom/glympse/android/hal/ap;
+    new-instance v0, Lcom/glympse/android/hal/ao;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/ap;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/ao;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -201,7 +225,7 @@
 
     .prologue
     .line 149
-    invoke-static {p0}, Lcom/glympse/android/hal/au;->b(I)Lcom/glympse/android/core/GLocationProfile;
+    invoke-static {p0}, Lcom/glympse/android/hal/at;->b(I)Lcom/glympse/android/core/GLocationProfile;
 
     move-result-object v0
 
@@ -213,23 +237,23 @@
 
     .prologue
     .line 118
-    invoke-static {p0}, Lcom/glympse/android/hal/az;->isSupported(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/glympse/android/hal/ay;->isSupported(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/glympse/android/hal/az;
+    new-instance v0, Lcom/glympse/android/hal/ay;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/az;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/ay;-><init>(Landroid/content/Context;)V
 
     :goto_0
     return-object v0
 
     :cond_0
-    new-instance v0, Lcom/glympse/android/hal/au;
+    new-instance v0, Lcom/glympse/android/hal/at;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/au;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/at;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 .end method
@@ -239,9 +263,21 @@
 
     .prologue
     .line 33
-    new-instance v0, Lcom/glympse/android/hal/ah;
+    new-instance v0, Lcom/glympse/android/hal/ag;
 
-    invoke-direct {v0}, Lcom/glympse/android/hal/ah;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/hal/ag;-><init>()V
+
+    return-object v0
+.end method
+
+.method public static createPhoneFavoriteProvider(Landroid/content/Context;)Lcom/glympse/android/hal/GPhoneFavoriteProvider;
+    .locals 1
+
+    .prologue
+    .line 189
+    new-instance v0, Lcom/glympse/android/hal/PhoneFavoriteProvider;
+
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/PhoneFavoriteProvider;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -250,7 +286,7 @@
     .locals 1
 
     .prologue
-    .line 189
+    .line 194
     new-instance v0, Lcom/glympse/android/hal/PhoneHistoryProvider;
 
     invoke-direct {v0, p0}, Lcom/glympse/android/hal/PhoneHistoryProvider;-><init>(Landroid/content/Context;)V
@@ -263,23 +299,23 @@
 
     .prologue
     .line 135
-    invoke-static {p0}, Lcom/glympse/android/hal/bd;->isSupported(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/glympse/android/hal/be;->isSupported(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    new-instance v0, Lcom/glympse/android/hal/bd;
+    new-instance v0, Lcom/glympse/android/hal/be;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bd;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/be;-><init>(Landroid/content/Context;)V
 
     :goto_0
     return-object v0
 
     :cond_0
-    new-instance v0, Lcom/glympse/android/hal/bb;
+    new-instance v0, Lcom/glympse/android/hal/bc;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bb;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bc;-><init>(Landroid/content/Context;)V
 
     goto :goto_0
 .end method
@@ -289,9 +325,9 @@
 
     .prologue
     .line 38
-    new-instance v0, Lcom/glympse/android/hal/ai;
+    new-instance v0, Lcom/glympse/android/hal/ah;
 
-    invoke-direct {v0}, Lcom/glympse/android/hal/ai;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/hal/ah;-><init>()V
 
     return-object v0
 .end method
@@ -301,9 +337,9 @@
 
     .prologue
     .line 174
-    new-instance v0, Lcom/glympse/android/hal/bj;
+    new-instance v0, Lcom/glympse/android/hal/bk;
 
-    invoke-direct {v0}, Lcom/glympse/android/hal/bj;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/hal/bk;-><init>()V
 
     return-object v0
 .end method
@@ -313,9 +349,9 @@
 
     .prologue
     .line 164
-    new-instance v0, Lcom/glympse/android/hal/bl;
+    new-instance v0, Lcom/glympse/android/hal/bm;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bl;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bm;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -325,9 +361,9 @@
 
     .prologue
     .line 169
-    new-instance v0, Lcom/glympse/android/hal/bp;
+    new-instance v0, Lcom/glympse/android/hal/bq;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bp;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bq;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -336,10 +372,10 @@
     .locals 1
 
     .prologue
-    .line 199
-    new-instance v0, Lcom/glympse/android/hal/aj;
+    .line 204
+    new-instance v0, Lcom/glympse/android/hal/ai;
 
-    invoke-direct {v0}, Lcom/glympse/android/hal/aj;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/hal/ai;-><init>()V
 
     return-object v0
 .end method
@@ -351,7 +387,9 @@
     .line 43
     new-instance v0, Ljava/lang/Thread;
 
-    invoke-direct {v0, p0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
+    const-string v1, "glympse.worker"
+
+    invoke-direct {v0, p0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     .line 44
     const/4 v1, 0x1
@@ -367,9 +405,9 @@
 
     .prologue
     .line 55
-    new-instance v0, Lcom/glympse/android/hal/br;
+    new-instance v0, Lcom/glympse/android/hal/bs;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/glympse/android/hal/br;-><init>(Ljava/lang/Runnable;JLcom/glympse/android/core/GHandler;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/glympse/android/hal/bs;-><init>(Ljava/lang/Runnable;JLcom/glympse/android/core/GHandler;)V
 
     return-object v0
 .end method
@@ -378,10 +416,10 @@
     .locals 1
 
     .prologue
-    .line 209
-    new-instance v0, Lcom/glympse/android/hal/bs;
+    .line 214
+    new-instance v0, Lcom/glympse/android/hal/bt;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bs;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bt;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -390,10 +428,10 @@
     .locals 1
 
     .prologue
-    .line 204
-    new-instance v0, Lcom/glympse/android/hal/bu;
+    .line 209
+    new-instance v0, Lcom/glympse/android/hal/bv;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bu;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bv;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -403,7 +441,7 @@
 
     .prologue
     .line 100
-    invoke-static {p0}, Lcom/glympse/android/hal/az;->isSupported(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/glympse/android/hal/ay;->isSupported(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -415,7 +453,7 @@
 
     .prologue
     .line 144
-    invoke-static {p0}, Lcom/glympse/android/hal/bd;->isSupported(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/glympse/android/hal/be;->isSupported(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -441,9 +479,9 @@
 
     .prologue
     .line 65
-    new-instance v0, Lcom/glympse/android/hal/ao;
+    new-instance v0, Lcom/glympse/android/hal/an;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/ao;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/an;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method
@@ -453,9 +491,9 @@
 
     .prologue
     .line 70
-    new-instance v0, Lcom/glympse/android/hal/bk;
+    new-instance v0, Lcom/glympse/android/hal/bl;
 
-    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bk;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lcom/glympse/android/hal/bl;-><init>(Landroid/content/Context;)V
 
     return-object v0
 .end method

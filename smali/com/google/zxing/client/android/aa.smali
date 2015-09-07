@@ -1,4 +1,4 @@
-.class final Lcom/google/zxing/client/android/aa;
+.class public final Lcom/google/zxing/client/android/aa;
 .super Ljava/lang/Object;
 .source "ViewfinderResultPointCallback.java"
 
@@ -11,7 +11,7 @@
 
 
 # direct methods
-.method constructor <init>(Lcom/google/zxing/client/android/ViewfinderView;)V
+.method public constructor <init>(Lcom/google/zxing/client/android/ViewfinderView;)V
     .locals 0
 
     .prologue
@@ -28,14 +28,48 @@
 
 # virtual methods
 .method public final a(Lcom/google/zxing/o;)V
-    .locals 1
+    .locals 3
 
     .prologue
     .line 32
     iget-object v0, p0, Lcom/google/zxing/client/android/aa;->a:Lcom/google/zxing/client/android/ViewfinderView;
 
-    invoke-virtual {v0, p1}, Lcom/google/zxing/client/android/ViewfinderView;->a(Lcom/google/zxing/o;)V
+    iget-object v1, v0, Lcom/google/zxing/client/android/ViewfinderView;->a:Ljava/util/List;
 
-    .line 33
+    monitor-enter v1
+
+    :try_start_0
+    invoke-interface {v1, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-interface {v1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/16 v2, 0x14
+
+    if-le v0, v2, :cond_0
+
+    const/4 v2, 0x0
+
+    add-int/lit8 v0, v0, -0xa
+
+    invoke-interface {v1, v2, v0}, Ljava/util/List;->subList(II)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->clear()V
+
+    :cond_0
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
     return-void
+
+    :catchall_0
+    move-exception v0
+
+    monitor-exit v1
+
+    throw v0
 .end method

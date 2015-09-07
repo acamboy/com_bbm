@@ -1,151 +1,176 @@
 .class final Lcom/bbm/ui/f/p;
 .super Lcom/bbm/j/u;
-.source "GroupPictureNotificationItem.java"
+.source "GroupPictureCommentNotificationItem.java"
 
 # interfaces
 .implements Lcom/bbm/ui/f/e;
 
 
 # instance fields
-.field private final a:Landroid/content/Context;
+.field private a:Landroid/content/Context;
 
-.field private final b:Lcom/bbm/g/ab;
+.field private final b:Lcom/bbm/g/al;
 
-.field private final c:Lcom/bbm/ui/f/n;
+.field private final c:Lcom/bbm/ui/f/o;
 
-.field private final d:Lcom/bbm/g/w;
+.field private final d:Lcom/bbm/g/ag;
 
 .field private final e:Ljava/lang/String;
 
-.field private f:Lcom/bbm/g/a;
+.field private final f:Ljava/lang/String;
 
-.field private g:Lcom/bbm/g/l;
+.field private g:Lcom/bbm/g/a;
+
+.field private n:Lcom/bbm/g/af;
+
+.field private o:Lcom/bbm/g/o;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/f/n;Lcom/bbm/g/w;)V
+.method public constructor <init>(Lcom/bbm/ui/f/o;Lcom/bbm/g/ag;Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 31
+    .line 35
     invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
-    .line 32
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/ab;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/f/p;->b:Lcom/bbm/g/ab;
-
-    .line 33
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
+    .line 36
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/f/p;->a:Landroid/content/Context;
 
-    .line 34
-    iput-object p1, p0, Lcom/bbm/ui/f/p;->c:Lcom/bbm/ui/f/n;
-
-    .line 36
-    iput-object p2, p0, Lcom/bbm/ui/f/p;->d:Lcom/bbm/g/w;
-
     .line 37
-    iget-object v0, p0, Lcom/bbm/ui/f/p;->d:Lcom/bbm/g/w;
+    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
 
-    iget-object v0, v0, Lcom/bbm/g/w;->l:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/ak;->a(Ljava/lang/String;)Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/f/p;->b:Lcom/bbm/g/al;
+
+    .line 38
+    iput-object p1, p0, Lcom/bbm/ui/f/p;->c:Lcom/bbm/ui/f/o;
+
+    .line 40
+    iput-object p2, p0, Lcom/bbm/ui/f/p;->d:Lcom/bbm/g/ag;
+
+    .line 41
+    iput-object p3, p0, Lcom/bbm/ui/f/p;->f:Ljava/lang/String;
+
+    .line 42
+    iget-object v0, p0, Lcom/bbm/ui/f/p;->f:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/bbm/an;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/bbm/ui/f/p;->e:Ljava/lang/String;
 
-    .line 38
+    .line 43
     return-void
 .end method
 
 
 # virtual methods
 .method protected final b()Z
-    .locals 4
+    .locals 5
 
     .prologue
     const/4 v1, 0x1
 
     const/4 v0, 0x0
 
-    .line 87
-    iget-object v2, p0, Lcom/bbm/ui/f/p;->b:Lcom/bbm/g/ab;
+    .line 102
+    iget-object v2, p0, Lcom/bbm/ui/f/p;->b:Lcom/bbm/g/al;
 
     iget-object v3, p0, Lcom/bbm/ui/f/p;->e:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/bbm/g/ab;->t(Ljava/lang/String;)Lcom/bbm/g/a;
+    invoke-virtual {v2, v3}, Lcom/bbm/g/al;->t(Ljava/lang/String;)Lcom/bbm/g/a;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/bbm/ui/f/p;->f:Lcom/bbm/g/a;
+    iput-object v2, p0, Lcom/bbm/ui/f/p;->g:Lcom/bbm/g/a;
 
-    .line 88
-    iget-object v2, p0, Lcom/bbm/ui/f/p;->f:Lcom/bbm/g/a;
+    .line 103
+    iget-object v2, p0, Lcom/bbm/ui/f/p;->g:Lcom/bbm/g/a;
 
-    iget-object v2, v2, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
+    iget-object v2, v2, Lcom/bbm/g/a;->w:Lcom/bbm/util/bi;
 
-    sget-object v3, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-eq v2, v3, :cond_1
 
-    .line 105
+    .line 125
     :cond_0
     :goto_0
     return v0
 
-    .line 95
+    .line 110
     :cond_1
-    iget-object v2, p0, Lcom/bbm/ui/f/p;->f:Lcom/bbm/g/a;
+    iget-object v2, p0, Lcom/bbm/ui/f/p;->g:Lcom/bbm/g/a;
 
-    iget-boolean v2, v2, Lcom/bbm/g/a;->t:Z
+    iget-boolean v2, v2, Lcom/bbm/g/a;->u:Z
 
     if-nez v2, :cond_2
 
     move v0, v1
 
-    .line 96
+    .line 111
     goto :goto_0
 
-    .line 99
+    .line 114
     :cond_2
-    iget-object v2, p0, Lcom/bbm/ui/f/p;->b:Lcom/bbm/g/ab;
+    iget-object v2, p0, Lcom/bbm/ui/f/p;->b:Lcom/bbm/g/al;
 
-    iget-object v3, p0, Lcom/bbm/ui/f/p;->d:Lcom/bbm/g/w;
+    iget-object v3, p0, Lcom/bbm/ui/f/p;->f:Ljava/lang/String;
 
-    iget-object v3, v3, Lcom/bbm/g/w;->c:Ljava/lang/String;
+    iget-object v4, p0, Lcom/bbm/ui/f/p;->e:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/bbm/g/ab;->q(Ljava/lang/String;)Lcom/bbm/g/l;
+    invoke-virtual {v2, v3, v4}, Lcom/bbm/g/al;->c(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/af;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/bbm/ui/f/p;->g:Lcom/bbm/g/l;
+    iput-object v2, p0, Lcom/bbm/ui/f/p;->n:Lcom/bbm/g/af;
 
-    .line 100
-    iget-object v2, p0, Lcom/bbm/ui/f/p;->g:Lcom/bbm/g/l;
+    .line 115
+    iget-object v2, p0, Lcom/bbm/ui/f/p;->n:Lcom/bbm/g/af;
 
-    iget-object v2, v2, Lcom/bbm/g/l;->g:Lcom/bbm/util/bc;
+    iget-object v2, v2, Lcom/bbm/g/af;->m:Lcom/bbm/util/bi;
 
-    sget-object v3, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-ne v2, v3, :cond_0
 
-    .line 104
-    iget-object v0, p0, Lcom/bbm/ui/f/p;->c:Lcom/bbm/ui/f/n;
+    .line 119
+    iget-object v2, p0, Lcom/bbm/ui/f/p;->b:Lcom/bbm/g/al;
+
+    iget-object v3, p0, Lcom/bbm/ui/f/p;->d:Lcom/bbm/g/ag;
+
+    iget-object v3, v3, Lcom/bbm/g/ag;->d:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lcom/bbm/g/al;->q(Ljava/lang/String;)Lcom/bbm/g/o;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/bbm/ui/f/p;->o:Lcom/bbm/g/o;
+
+    .line 120
+    iget-object v2, p0, Lcom/bbm/ui/f/p;->o:Lcom/bbm/g/o;
+
+    iget-object v2, v2, Lcom/bbm/g/o;->h:Lcom/bbm/util/bi;
+
+    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+
+    if-ne v2, v3, :cond_0
+
+    .line 124
+    iget-object v0, p0, Lcom/bbm/ui/f/p;->c:Lcom/bbm/ui/f/o;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Lcom/bbm/ui/f/p;->d:Lcom/bbm/g/w;
-
-    iget-object v3, v3, Lcom/bbm/g/w;->l:Ljava/lang/String;
+    iget-object v3, p0, Lcom/bbm/ui/f/p;->f:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -161,28 +186,26 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/f/n;->b(Ljava/lang/String;)V
+    invoke-virtual {v0, v2}, Lcom/bbm/ui/f/o;->b(Ljava/lang/String;)V
 
     move v0, v1
 
-    .line 105
+    .line 125
     goto :goto_0
 .end method
 
-.method public final d_()Ljava/lang/String;
+.method public final b_()Ljava/lang/String;
     .locals 6
 
     .prologue
-    .line 42
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
+    .line 47
+    iget-object v0, p0, Lcom/bbm/ui/f/p;->a:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v1, 0x7f0e050f
+    const v1, 0x7f0e0576
 
     const/4 v2, 0x2
 
@@ -190,15 +213,13 @@
 
     const/4 v3, 0x0
 
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
+    iget-object v4, p0, Lcom/bbm/ui/f/p;->a:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v4
-
-    const v5, 0x7f0e050c
+    const v5, 0x7f0e0573
 
     invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -208,9 +229,9 @@
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lcom/bbm/ui/f/p;->f:Lcom/bbm/g/a;
+    iget-object v4, p0, Lcom/bbm/ui/f/p;->g:Lcom/bbm/g/a;
 
-    iget-object v4, v4, Lcom/bbm/g/a;->q:Ljava/lang/String;
+    iget-object v4, v4, Lcom/bbm/g/a;->r:Ljava/lang/String;
 
     aput-object v4, v2, v3
 
@@ -221,20 +242,18 @@
     return-object v0
 .end method
 
-.method public final e()Landroid/graphics/Bitmap;
+.method public final c_()Landroid/graphics/Bitmap;
     .locals 4
 
     .prologue
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/f/p;->d:Lcom/bbm/g/w;
+    .line 75
+    iget-object v0, p0, Lcom/bbm/ui/f/p;->n:Lcom/bbm/g/af;
 
-    iget-object v0, v0, Lcom/bbm/g/w;->j:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/g/af;->j:Ljava/lang/String;
 
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
+    iget-object v1, p0, Lcom/bbm/ui/f/p;->a:Landroid/content/Context;
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
@@ -246,11 +265,9 @@
 
     float-to-int v1, v1
 
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
+    iget-object v2, p0, Lcom/bbm/ui/f/p;->a:Landroid/content/Context;
 
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
@@ -266,11 +283,11 @@
 
     move-result-object v0
 
-    .line 64
+    .line 79
     if-nez v0, :cond_0
 
-    .line 65
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
+    .line 80
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
 
     move-result-object v0
 
@@ -278,31 +295,43 @@
 
     move-result-object v0
 
-    const v1, 0x7f0200d0
+    const v1, 0x7f0200da
 
     invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 67
+    .line 82
     :cond_0
     return-object v0
 .end method
 
-.method public final e_()Ljava/lang/String;
+.method public final d()Ljava/lang/String;
     .locals 5
 
     .prologue
-    .line 49
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
+    .line 54
+    iget-object v0, p0, Lcom/bbm/ui/f/p;->a:Landroid/content/Context;
+
+    if-nez v0, :cond_0
+
+    .line 55
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
+    iput-object v0, p0, Lcom/bbm/ui/f/p;->a:Landroid/content/Context;
+
+    .line 57
+    :cond_0
+    :try_start_0
+    iget-object v0, p0, Lcom/bbm/ui/f/p;->a:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const v1, 0x7f0e050e
+    const v1, 0x7f0e0574
 
     const/4 v2, 0x1
 
@@ -310,24 +339,39 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/bbm/ui/f/p;->g:Lcom/bbm/g/l;
+    iget-object v4, p0, Lcom/bbm/ui/f/p;->o:Lcom/bbm/g/o;
 
-    iget-object v4, v4, Lcom/bbm/g/l;->c:Ljava/lang/String;
+    iget-object v4, v4, Lcom/bbm/g/o;->c:Ljava/lang/String;
 
     aput-object v4, v2, v3
 
     invoke-virtual {v0, v1, v2}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
+    .line 64
+    :goto_0
     return-object v0
+
+    .line 60
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Throwable;)V
+
+    .line 62
+    const-string v0, ""
+
+    goto :goto_0
 .end method
 
 .method public final f()I
     .locals 1
 
     .prologue
-    .line 54
+    .line 69
     const/4 v0, -0x1
 
     return v0
@@ -337,10 +381,10 @@
     .locals 2
 
     .prologue
-    .line 72
-    iget-object v0, p0, Lcom/bbm/ui/f/p;->d:Lcom/bbm/g/w;
+    .line 87
+    iget-object v0, p0, Lcom/bbm/ui/f/p;->d:Lcom/bbm/g/ag;
 
-    iget-wide v0, v0, Lcom/bbm/g/w;->k:J
+    iget-wide v0, v0, Lcom/bbm/g/ag;->e:J
 
     invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -353,16 +397,14 @@
     .locals 3
 
     .prologue
-    .line 77
+    .line 92
     iget-object v0, p0, Lcom/bbm/ui/f/p;->a:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/bbm/ui/f/p;->e:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/bbm/ui/f/p;->d:Lcom/bbm/g/w;
+    iget-object v2, p0, Lcom/bbm/ui/f/p;->f:Ljava/lang/String;
 
-    iget-object v2, v2, Lcom/bbm/g/w;->l:Ljava/lang/String;
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/ui/f/q;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/app/PendingIntent;
+    invoke-static {v0, v1, v2}, Lcom/bbm/ui/f/r;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v0
 
@@ -373,7 +415,7 @@
     .locals 1
 
     .prologue
-    .line 82
+    .line 97
     const/4 v0, 0x0
 
     return-object v0
@@ -383,7 +425,7 @@
     .locals 1
 
     .prologue
-    .line 110
+    .line 130
     const/16 v0, 0x10
 
     return v0

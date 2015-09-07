@@ -16,7 +16,7 @@
 
 .field private f:Ljava/lang/CharSequence;
 
-.field private g:Lcom/bbm/ui/fc;
+.field private g:Lcom/bbm/ui/fx;
 
 
 # direct methods
@@ -36,7 +36,7 @@
     iput-object v0, p0, Lcom/bbm/ui/SearchEditText;->f:Ljava/lang/CharSequence;
 
     .line 34
-    iput-object v0, p0, Lcom/bbm/ui/SearchEditText;->g:Lcom/bbm/ui/fc;
+    iput-object v0, p0, Lcom/bbm/ui/SearchEditText;->g:Lcom/bbm/ui/fx;
 
     .line 38
     invoke-direct {p0, p1, v0}, Lcom/bbm/ui/SearchEditText;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -61,7 +61,7 @@
     iput-object v0, p0, Lcom/bbm/ui/SearchEditText;->f:Ljava/lang/CharSequence;
 
     .line 34
-    iput-object v0, p0, Lcom/bbm/ui/SearchEditText;->g:Lcom/bbm/ui/fc;
+    iput-object v0, p0, Lcom/bbm/ui/SearchEditText;->g:Lcom/bbm/ui/fx;
 
     .line 43
     invoke-direct {p0, p1, p2}, Lcom/bbm/ui/SearchEditText;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -86,7 +86,7 @@
     iput-object v0, p0, Lcom/bbm/ui/SearchEditText;->f:Ljava/lang/CharSequence;
 
     .line 34
-    iput-object v0, p0, Lcom/bbm/ui/SearchEditText;->g:Lcom/bbm/ui/fc;
+    iput-object v0, p0, Lcom/bbm/ui/SearchEditText;->g:Lcom/bbm/ui/fx;
 
     .line 48
     invoke-direct {p0, p1, p2}, Lcom/bbm/ui/SearchEditText;->a(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -95,12 +95,12 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/SearchEditText;)Lcom/bbm/ui/fc;
+.method static synthetic a(Lcom/bbm/ui/SearchEditText;)Lcom/bbm/ui/fx;
     .locals 1
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/bbm/ui/SearchEditText;->g:Lcom/bbm/ui/fc;
+    iget-object v0, p0, Lcom/bbm/ui/SearchEditText;->g:Lcom/bbm/ui/fx;
 
     return-object v0
 .end method
@@ -115,7 +115,7 @@
     iput-object p1, p0, Lcom/bbm/ui/SearchEditText;->a:Landroid/content/Context;
 
     .line 54
-    sget-object v0, Lcom/bbm/ac;->SearchEditText:[I
+    sget-object v0, Lcom/bbm/ae;->SearchEditText:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -145,14 +145,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f030131
+    const v1, 0x7f030149
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     move-result-object v1
 
     .line 61
-    const v0, 0x7f0a0256
+    const v0, 0x7f0b02b6
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -163,7 +163,7 @@
     iput-object v0, p0, Lcom/bbm/ui/SearchEditText;->b:Landroid/widget/EditText;
 
     .line 62
-    const v0, 0x7f0a0258
+    const v0, 0x7f0b02b8
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -174,7 +174,7 @@
     iput-object v0, p0, Lcom/bbm/ui/SearchEditText;->c:Landroid/widget/Button;
 
     .line 63
-    const v0, 0x7f0a0257
+    const v0, 0x7f0b02b7
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -221,49 +221,49 @@
     :cond_1
     iget-object v0, p0, Lcom/bbm/ui/SearchEditText;->b:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/bbm/ui/ex;
+    new-instance v1, Lcom/bbm/ui/fs;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/ex;-><init>(Lcom/bbm/ui/SearchEditText;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/fs;-><init>(Lcom/bbm/ui/SearchEditText;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 92
     iget-object v0, p0, Lcom/bbm/ui/SearchEditText;->b:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/bbm/ui/ey;
+    new-instance v1, Lcom/bbm/ui/ft;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/ey;-><init>(Lcom/bbm/ui/SearchEditText;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/ft;-><init>(Lcom/bbm/ui/SearchEditText;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
     .line 102
     iget-object v0, p0, Lcom/bbm/ui/SearchEditText;->b:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/bbm/ui/ez;
+    new-instance v1, Lcom/bbm/ui/fu;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/ez;-><init>(Lcom/bbm/ui/SearchEditText;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/fu;-><init>(Lcom/bbm/ui/SearchEditText;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
     .line 114
     iget-object v0, p0, Lcom/bbm/ui/SearchEditText;->c:Landroid/widget/Button;
 
-    new-instance v1, Lcom/bbm/ui/fa;
+    new-instance v1, Lcom/bbm/ui/fv;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/fa;-><init>(Lcom/bbm/ui/SearchEditText;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/fv;-><init>(Lcom/bbm/ui/SearchEditText;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 127
     iget-object v0, p0, Lcom/bbm/ui/SearchEditText;->d:Landroid/widget/LinearLayout;
 
-    new-instance v1, Lcom/bbm/ui/fb;
+    new-instance v1, Lcom/bbm/ui/fw;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/fb;-><init>(Lcom/bbm/ui/SearchEditText;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/fw;-><init>(Lcom/bbm/ui/SearchEditText;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 138
+    .line 135
     return-void
 .end method
 
@@ -309,12 +309,12 @@
 
 
 # virtual methods
-.method public getListener()Lcom/bbm/ui/fc;
+.method public getListener()Lcom/bbm/ui/fx;
     .locals 1
 
     .prologue
-    .line 141
-    iget-object v0, p0, Lcom/bbm/ui/SearchEditText;->g:Lcom/bbm/ui/fc;
+    .line 138
+    iget-object v0, p0, Lcom/bbm/ui/SearchEditText;->g:Lcom/bbm/ui/fx;
 
     return-object v0
 .end method
@@ -323,7 +323,7 @@
     .locals 1
 
     .prologue
-    .line 149
+    .line 146
     iget-object v0, p0, Lcom/bbm/ui/SearchEditText;->b:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -337,7 +337,7 @@
     .locals 1
 
     .prologue
-    .line 154
+    .line 151
     iget-object v0, p0, Lcom/bbm/ui/SearchEditText;->b:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
@@ -347,13 +347,13 @@
     return-object v0
 .end method
 
-.method public setListener(Lcom/bbm/ui/fc;)V
+.method public setListener(Lcom/bbm/ui/fx;)V
     .locals 0
 
     .prologue
-    .line 145
-    iput-object p1, p0, Lcom/bbm/ui/SearchEditText;->g:Lcom/bbm/ui/fc;
+    .line 142
+    iput-object p1, p0, Lcom/bbm/ui/SearchEditText;->g:Lcom/bbm/ui/fx;
 
-    .line 146
+    .line 143
     return-void
 .end method

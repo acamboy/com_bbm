@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/ki;
 .super Ljava/lang/Object;
-.source "GroupChatListActivity.java"
+.source "FileSearchActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/k;
-
-.field final synthetic b:Lcom/bbm/ui/activities/kh;
+.field final synthetic a:Lcom/bbm/ui/activities/FileSearchActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/kh;Lcom/bbm/ui/b/k;)V
+.method constructor <init>(Lcom/bbm/ui/activities/FileSearchActivity;)V
     .locals 0
 
     .prologue
-    .line 391
-    iput-object p1, p0, Lcom/bbm/ui/activities/ki;->b:Lcom/bbm/ui/activities/kh;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/ki;->a:Lcom/bbm/ui/b/k;
+    .line 62
+    iput-object p1, p0, Lcom/bbm/ui/activities/ki;->a:Lcom/bbm/ui/activities/FileSearchActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,42 +25,57 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 395
-    iget-object v0, p0, Lcom/bbm/ui/activities/ki;->a:Lcom/bbm/ui/b/k;
+    .line 66
+    new-instance v1, Landroid/content/Intent;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/k;->dismiss()V
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 397
-    iget-object v0, p0, Lcom/bbm/ui/activities/ki;->a:Lcom/bbm/ui/b/k;
+    .line 67
+    const-string v2, "extra_selected_file_path"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/k;->b()Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ki;->a:Lcom/bbm/ui/activities/FileSearchActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/FileSearchActivity;->a(Lcom/bbm/ui/activities/FileSearchActivity;)Lcom/bbm/ui/activities/km;
 
     move-result-object v0
 
-    .line 398
-    new-instance v1, Lcom/bbm/ui/activities/kj;
+    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/km;->getItem(I)Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ki;->b:Lcom/bbm/ui/activities/kh;
+    move-result-object v0
 
-    iget-object v2, v2, Lcom/bbm/ui/activities/kh;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
+    check-cast v0, Ljava/io/File;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ki;->b:Lcom/bbm/ui/activities/kh;
+    invoke-virtual {v0}, Ljava/io/File;->getPath()Ljava/lang/String;
 
-    iget-object v3, v3, Lcom/bbm/ui/activities/kh;->a:Lcom/bbm/ui/activities/GroupChatListActivity;
+    move-result-object v0
 
-    invoke-virtual {v3}, Lcom/bbm/ui/activities/GroupChatListActivity;->i()Ljava/lang/String;
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object v3
+    .line 68
+    iget-object v0, p0, Lcom/bbm/ui/activities/ki;->a:Lcom/bbm/ui/activities/FileSearchActivity;
 
-    invoke-direct {v1, v2, v3, v0}, Lcom/bbm/ui/activities/kj;-><init>(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v2, -0x1
 
-    .line 400
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/kj;->c()V
+    invoke-virtual {v0, v2, v1}, Lcom/bbm/ui/activities/FileSearchActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 401
+    .line 69
+    iget-object v0, p0, Lcom/bbm/ui/activities/ki;->a:Lcom/bbm/ui/activities/FileSearchActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/FileSearchActivity;->finish()V
+
+    .line 70
     return-void
 .end method

@@ -1,56 +1,95 @@
 .class final Lcom/bbm/b/l;
-.super Lcom/bbm/d/b/m;
-.source "AdsModel.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/m",
-        "<",
-        "Lcom/bbm/b/a;",
-        ">;"
-    }
-.end annotation
+.super Lcom/bbm/ui/d/e;
+.source "AdUtils.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/b/k;
+.field final synthetic a:Landroid/app/Activity;
+
+.field final synthetic b:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/b/k;Lcom/bbm/j/r;)V
+.method constructor <init>(Ljava/lang/String;Landroid/app/Activity;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 102
-    iput-object p1, p0, Lcom/bbm/b/l;->a:Lcom/bbm/b/k;
+    .line 172
+    iput-object p2, p0, Lcom/bbm/b/l;->a:Landroid/app/Activity;
 
-    invoke-direct {p0, p2}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
+    iput-object p3, p0, Lcom/bbm/b/l;->b:Ljava/lang/String;
+
+    invoke-direct {p0, p1}, Lcom/bbm/ui/d/e;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final bridge synthetic a(Ljava/lang/Object;)Z
-    .locals 1
+.method public final a()V
+    .locals 3
 
     .prologue
-    .line 102
-    check-cast p1, Lcom/bbm/b/a;
+    .line 175
+    iget-object v0, p0, Lcom/bbm/b/l;->a:Landroid/app/Activity;
 
-    iget-boolean v0, p1, Lcom/bbm/b/a;->j:Z
+    iget-object v1, p0, Lcom/bbm/b/l;->b:Ljava/lang/String;
+
+    invoke-static {v0, v1}, Lcom/bbm/util/ac;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 176
+    iget-object v0, p0, Lcom/bbm/b/l;->a:Landroid/app/Activity;
+
+    iget-object v1, p0, Lcom/bbm/b/l;->a:Landroid/app/Activity;
+
+    const v2, 0x7f0e04bc
+
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    .line 177
+    iget-object v0, p0, Lcom/bbm/b/l;->a:Landroid/app/Activity;
+
+    instance-of v0, v0, Lcom/bbm/ui/activities/MainActivity;
 
     if-nez v0, :cond_0
 
-    const/4 v0, 0x1
+    .line 178
+    iget-object v0, p0, Lcom/bbm/b/l;->a:Landroid/app/Activity;
 
-    :goto_0
-    return v0
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
+    .line 180
     :cond_0
-    const/4 v0, 0x0
+    return-void
+.end method
 
-    goto :goto_0
+.method public final a(I)V
+    .locals 3
+
+    .prologue
+    .line 184
+    iget-object v0, p0, Lcom/bbm/b/l;->a:Landroid/app/Activity;
+
+    iget-object v1, p0, Lcom/bbm/b/l;->a:Landroid/app/Activity;
+
+    invoke-virtual {v1, p1}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;I)V
+
+    .line 185
+    return-void
 .end method

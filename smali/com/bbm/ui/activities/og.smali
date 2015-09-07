@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/og;
 .super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
+.source "GroupEventsAddActivity.java"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/InlineImageTextView;
-
-.field final synthetic b:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;Lcom/bbm/ui/InlineImageTextView;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
     .locals 0
 
     .prologue
-    .line 601
-    iput-object p1, p0, Lcom/bbm/ui/activities/og;->b:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/og;->a:Lcom/bbm/ui/InlineImageTextView;
+    .line 322
+    iput-object p1, p0, Lcom/bbm/ui/activities/og;->a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,30 +25,15 @@
 
 
 # virtual methods
-.method public final onGlobalLayout()V
-    .locals 2
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
     .prologue
-    .line 605
-    iget-object v0, p0, Lcom/bbm/ui/activities/og;->a:Lcom/bbm/ui/InlineImageTextView;
+    .line 326
+    iget-object v0, p0, Lcom/bbm/ui/activities/og;->a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/InlineImageTextView;->getHeight()I
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->finish()V
 
-    move-result v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/og;->a:Lcom/bbm/ui/InlineImageTextView;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/InlineImageTextView;->getLineHeight()I
-
-    move-result v1
-
-    div-int/2addr v0, v1
-
-    .line 606
-    iget-object v1, p0, Lcom/bbm/ui/activities/og;->a:Lcom/bbm/ui/InlineImageTextView;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/InlineImageTextView;->setMaxLines(I)V
-
-    .line 607
+    .line 327
     return-void
 .end method

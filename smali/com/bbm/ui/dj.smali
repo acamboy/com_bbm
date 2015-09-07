@@ -1,201 +1,98 @@
 .class final Lcom/bbm/ui/dj;
-.super Ljava/lang/Object;
-.source "MainTabBarView.java"
-
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
+.super Landroid/text/SpannableStringBuilder;
+.source "InlineImageEditText.java"
 
 
 # instance fields
-.field final synthetic a:Landroid/view/ViewGroup;
-
-.field final synthetic b:Z
-
-.field final synthetic c:Landroid/widget/ImageView;
-
-.field final synthetic d:Lcom/bbm/ui/MainTabBarView;
+.field final synthetic a:Lcom/bbm/ui/InlineImageEditText;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/MainTabBarView;Landroid/view/ViewGroup;ZLandroid/widget/ImageView;)V
+.method public constructor <init>(Lcom/bbm/ui/InlineImageEditText;Ljava/lang/CharSequence;)V
     .locals 0
 
     .prologue
-    .line 368
-    iput-object p1, p0, Lcom/bbm/ui/dj;->d:Lcom/bbm/ui/MainTabBarView;
+    .line 36
+    iput-object p1, p0, Lcom/bbm/ui/dj;->a:Lcom/bbm/ui/InlineImageEditText;
 
-    iput-object p2, p0, Lcom/bbm/ui/dj;->a:Landroid/view/ViewGroup;
+    .line 37
+    invoke-direct {p0, p2}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    iput-boolean p3, p0, Lcom/bbm/ui/dj;->b:Z
-
-    iput-object p4, p0, Lcom/bbm/ui/dj;->c:Landroid/widget/ImageView;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
+    .line 38
     return-void
 .end method
 
 
 # virtual methods
-.method public final onPreDraw()Z
-    .locals 6
+.method public final bridge synthetic replace(IILjava/lang/CharSequence;II)Landroid/text/Editable;
+    .locals 1
 
     .prologue
-    const/4 v5, 0x1
-
-    const/4 v3, 0x0
-
-    .line 371
-    iget-object v0, p0, Lcom/bbm/ui/dj;->a:Landroid/view/ViewGroup;
-
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    .line 35
+    invoke-virtual/range {p0 .. p5}, Lcom/bbm/ui/dj;->replace(IILjava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+    return-object v0
+.end method
 
-    .line 373
-    iget-object v0, p0, Lcom/bbm/ui/dj;->a:Landroid/view/ViewGroup;
+.method public final replace(IILjava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
+    .locals 4
 
-    invoke-virtual {v0}, Landroid/view/ViewGroup;->getMeasuredWidth()I
+    .prologue
+    .line 43
+    const-string v0, "LE::replace %d %d %s %d %d"
 
-    move-result v0
+    const/4 v1, 0x5
 
-    iget-object v1, p0, Lcom/bbm/ui/dj;->d:Lcom/bbm/ui/MainTabBarView;
+    new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v1}, Lcom/bbm/ui/MainTabBarView;->a(Lcom/bbm/ui/MainTabBarView;)I
+    const/4 v2, 0x0
 
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    div-int/lit8 v0, v0, 0x2
-
-    iget-object v1, p0, Lcom/bbm/ui/dj;->d:Lcom/bbm/ui/MainTabBarView;
-
-    invoke-static {v1}, Lcom/bbm/ui/MainTabBarView;->a(Lcom/bbm/ui/MainTabBarView;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    iget-object v1, p0, Lcom/bbm/ui/dj;->d:Lcom/bbm/ui/MainTabBarView;
-
-    invoke-static {v1}, Lcom/bbm/ui/MainTabBarView;->b(Lcom/bbm/ui/MainTabBarView;)I
-
-    move-result v1
-
-    sub-int/2addr v0, v1
-
-    int-to-float v1, v0
-
-    .line 375
-    iget-boolean v0, p0, Lcom/bbm/ui/dj;->b:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/dj;->d:Lcom/bbm/ui/MainTabBarView;
-
-    invoke-static {v0}, Lcom/bbm/ui/MainTabBarView;->c(Lcom/bbm/ui/MainTabBarView;)[I
-
-    move-result-object v0
-
-    aget v0, v0, v3
-
-    int-to-float v0, v0
-
-    .line 376
-    :goto_0
-    iget-boolean v2, p0, Lcom/bbm/ui/dj;->b:Z
-
-    if-eqz v2, :cond_1
-
-    iget-object v2, p0, Lcom/bbm/ui/dj;->d:Lcom/bbm/ui/MainTabBarView;
-
-    invoke-static {v2}, Lcom/bbm/ui/MainTabBarView;->c(Lcom/bbm/ui/MainTabBarView;)[I
-
-    move-result-object v2
-
-    aget v2, v2, v3
-
-    int-to-float v2, v2
-
-    sub-float v1, v2, v1
-
-    .line 378
-    :goto_1
-    new-instance v2, Landroid/view/animation/TranslateAnimation;
-
-    iget-object v3, p0, Lcom/bbm/ui/dj;->d:Lcom/bbm/ui/MainTabBarView;
-
-    invoke-static {v3}, Lcom/bbm/ui/MainTabBarView;->c(Lcom/bbm/ui/MainTabBarView;)[I
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
-    aget v3, v3, v5
+    aput-object v3, v1, v2
 
-    int-to-float v3, v3
+    const/4 v2, 0x1
 
-    iget-object v4, p0, Lcom/bbm/ui/dj;->d:Lcom/bbm/ui/MainTabBarView;
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    invoke-static {v4}, Lcom/bbm/ui/MainTabBarView;->c(Lcom/bbm/ui/MainTabBarView;)[I
+    move-result-object v3
 
-    move-result-object v4
+    aput-object v3, v1, v2
 
-    aget v4, v4, v5
+    const/4 v2, 0x2
 
-    int-to-float v4, v4
+    aput-object p3, v1, v2
 
-    invoke-direct {v2, v0, v1, v3, v4}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
+    const/4 v2, 0x3
 
-    .line 380
-    invoke-virtual {v2, v5}, Landroid/view/animation/TranslateAnimation;->setFillAfter(Z)V
+    invoke-static {p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 381
-    const-wide/16 v0, 0xc8
+    move-result-object v3
 
-    invoke-virtual {v2, v0, v1}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
+    aput-object v3, v1, v2
 
-    .line 382
-    const-wide/16 v0, 0x96
+    const/4 v2, 0x4
 
-    invoke-virtual {v2, v0, v1}, Landroid/view/animation/TranslateAnimation;->setStartOffset(J)V
+    invoke-static {p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 384
-    iget-object v0, p0, Lcom/bbm/ui/dj;->c:Landroid/widget/ImageView;
+    move-result-object v3
 
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
+    aput-object v3, v1, v2
 
-    .line 386
-    return v5
+    invoke-static {v0, v1}, Lcom/bbm/y;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 375
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/dj;->d:Lcom/bbm/ui/MainTabBarView;
+    .line 45
+    invoke-super/range {p0 .. p5}, Landroid/text/SpannableStringBuilder;->replace(IILjava/lang/CharSequence;II)Landroid/text/SpannableStringBuilder;
 
-    invoke-static {v0}, Lcom/bbm/ui/MainTabBarView;->c(Lcom/bbm/ui/MainTabBarView;)[I
+    .line 46
+    iget-object v0, p0, Lcom/bbm/ui/dj;->a:Lcom/bbm/ui/InlineImageEditText;
 
-    move-result-object v0
+    invoke-static {v0, p0}, Lcom/bbm/ui/InlineImageEditText;->a(Lcom/bbm/ui/InlineImageEditText;Landroid/text/Editable;)V
 
-    aget v0, v0, v3
-
-    int-to-float v0, v0
-
-    sub-float/2addr v0, v1
-
-    goto :goto_0
-
-    .line 376
-    :cond_1
-    iget-object v1, p0, Lcom/bbm/ui/dj;->d:Lcom/bbm/ui/MainTabBarView;
-
-    invoke-static {v1}, Lcom/bbm/ui/MainTabBarView;->c(Lcom/bbm/ui/MainTabBarView;)[I
-
-    move-result-object v1
-
-    aget v1, v1, v3
-
-    int-to-float v1, v1
-
-    goto :goto_1
+    .line 48
+    return-object p0
 .end method

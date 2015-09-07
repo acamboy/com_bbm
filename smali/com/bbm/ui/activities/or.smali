@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/or;
 .super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
+.source "GroupListItemsActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
     .locals 0
 
     .prologue
-    .line 285
-    iput-object p1, p0, Lcom/bbm/ui/activities/or;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 181
+    iput-object p1, p0, Lcom/bbm/ui/activities/or;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,18 +29,18 @@
     .locals 2
 
     .prologue
-    .line 288
-    const-string v0, "mGroupChatTile Clicked"
+    .line 184
+    const-string v0, "addListItemButton Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/GroupLobbyActivity;
+    const-class v1, Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 290
-    iget-object v0, p0, Lcom/bbm/ui/activities/or;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 186
+    iget-object v0, p0, Lcom/bbm/ui/activities/or;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->n(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->c(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
 
-    .line 291
+    .line 187
     return-void
 .end method

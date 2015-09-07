@@ -40,7 +40,7 @@
 .end method
 
 .method public constructor <init>(J)V
-    .locals 2
+    .locals 3
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -78,7 +78,7 @@
 
 # virtual methods
 .method public final a(JLcom/google/android/gms/internal/dx;)V
-    .locals 6
+    .locals 7
 
     sget-object v1, Lcom/google/android/gms/internal/dy;->yD:Ljava/lang/Object;
 
@@ -119,7 +119,7 @@
 .end method
 
 .method public final b(JILorg/json/JSONObject;)Z
-    .locals 8
+    .locals 9
 
     const/4 v1, 0x1
 
@@ -241,7 +241,7 @@
 .end method
 
 .method public final d(JI)Z
-    .locals 10
+    .locals 11
 
     const/4 v3, 0x0
 
@@ -284,9 +284,9 @@
 
     const/4 v6, 0x0
 
-    iget-wide v7, p0, Lcom/google/android/gms/internal/dy;->yA:J
+    iget-wide v8, p0, Lcom/google/android/gms/internal/dy;->yA:J
 
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v7
 
@@ -366,7 +366,7 @@
 .end method
 
 .method public final m(J)Z
-    .locals 6
+    .locals 7
 
     sget-object v1, Lcom/google/android/gms/internal/dy;->yD:Ljava/lang/Object;
 

@@ -32,7 +32,7 @@
 
 
 # virtual methods
-.method protected abstract b()Ljava/util/Iterator;
+.method public abstract b()Ljava/util/Iterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -42,7 +42,7 @@
     .end annotation
 .end method
 
-.method protected synthetic c()Ljava/lang/Object;
+.method public synthetic c()Ljava/lang/Object;
     .locals 1
 
     .prologue

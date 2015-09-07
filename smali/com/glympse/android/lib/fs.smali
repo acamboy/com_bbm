@@ -1,17 +1,18 @@
 .class Lcom/glympse/android/lib/fs;
-.super Lcom/glympse/android/lib/ft;
-.source "MemoryCache.java"
+.super Ljava/lang/Object;
+.source "LocationManager.java"
+
+# interfaces
+.implements Lcom/glympse/android/api/GEventListener;
 
 
 # direct methods
 .method private constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 130
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/glympse/android/lib/ft;-><init>(Lcom/glympse/android/lib/fr$1;)V
+    .line 849
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -20,8 +21,30 @@
     .locals 0
 
     .prologue
-    .line 130
+    .line 849
     invoke-direct {p0}, Lcom/glympse/android/lib/fs;-><init>()V
 
+    return-void
+.end method
+
+
+# virtual methods
+.method public eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
+    .locals 1
+
+    .prologue
+    .line 853
+    and-int/lit8 v0, p3, 0x2
+
+    if-eqz v0, :cond_0
+
+    .line 856
+    check-cast p1, Lcom/glympse/android/lib/GGlympsePrivate;
+
+    .line 857
+    invoke-interface {p1}, Lcom/glympse/android/lib/GGlympsePrivate;->startStopLocation()V
+
+    .line 859
+    :cond_0
     return-void
 .end method

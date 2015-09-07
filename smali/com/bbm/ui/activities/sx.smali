@@ -1,30 +1,22 @@
 .class final Lcom/bbm/ui/activities/sx;
 .super Ljava/lang/Object;
-.source "InviteActivity.java"
+.source "GroupPictureShareActivity.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/util/ArrayList;
-
-.field final synthetic b:Ljava/util/ArrayList;
-
-.field final synthetic c:Lcom/bbm/ui/activities/sw;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/sw;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureShareActivity;)V
     .locals 0
 
     .prologue
-    .line 274
-    iput-object p1, p0, Lcom/bbm/ui/activities/sx;->c:Lcom/bbm/ui/activities/sw;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/sx;->a:Ljava/util/ArrayList;
-
-    iput-object p3, p0, Lcom/bbm/ui/activities/sx;->b:Ljava/util/ArrayList;
+    .line 73
+    iput-object p1, p0, Lcom/bbm/ui/activities/sx;->a:Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,50 +25,70 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 2
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 278
-    const-string v0, "unblockContacts Dialog onPositive button Clicked"
+    .line 76
+    new-instance v0, Landroid/content/Intent;
 
-    const-class v1, Lcom/bbm/ui/activities/InviteActivity;
+    iget-object v1, p0, Lcom/bbm/ui/activities/sx;->a:Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    const-class v2, Lcom/bbm/ui/activities/GroupPictureUploadActivity;
 
-    .line 280
-    iget-object v0, p0, Lcom/bbm/ui/activities/sx;->a:Ljava/util/ArrayList;
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-static {v0}, Lcom/bbm/h/c;->a(Ljava/util/List;)V
+    .line 78
+    const-string v1, "groupUri"
 
-    .line 282
-    iget-object v0, p0, Lcom/bbm/ui/activities/sx;->c:Lcom/bbm/ui/activities/sw;
+    iget-object v2, p0, Lcom/bbm/ui/activities/sx;->a:Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/sw;->a:Lcom/bbm/ui/activities/InviteActivity;
+    invoke-static {v2}, Lcom/bbm/ui/activities/GroupPictureShareActivity;->a(Lcom/bbm/ui/activities/GroupPictureShareActivity;)Lcom/bbm/ui/activities/sz;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->g(Lcom/bbm/ui/activities/InviteActivity;)Z
+    move-result-object v2
 
-    move-result v0
+    invoke-virtual {v2, p3}, Lcom/bbm/ui/activities/sz;->a(I)Lcom/bbm/g/a;
 
-    if-eqz v0, :cond_0
+    move-result-object v2
 
-    .line 283
-    iget-object v0, p0, Lcom/bbm/ui/activities/sx;->c:Lcom/bbm/ui/activities/sw;
+    iget-object v2, v2, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/sw;->a:Lcom/bbm/ui/activities/InviteActivity;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/sx;->b:Ljava/util/ArrayList;
+    .line 79
+    const-string v1, "picturePath"
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/InviteActivity;->a(Lcom/bbm/ui/activities/InviteActivity;Ljava/util/List;)V
+    iget-object v2, p0, Lcom/bbm/ui/activities/sx;->a:Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
-    .line 284
-    iget-object v0, p0, Lcom/bbm/ui/activities/sx;->c:Lcom/bbm/ui/activities/sw;
+    invoke-static {v2}, Lcom/bbm/ui/activities/GroupPictureShareActivity;->b(Lcom/bbm/ui/activities/GroupPictureShareActivity;)Landroid/net/Uri;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/sw;->a:Lcom/bbm/ui/activities/InviteActivity;
+    move-result-object v2
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/InviteActivity;->finish()V
+    invoke-virtual {v2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
-    .line 286
-    :cond_0
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 81
+    iget-object v1, p0, Lcom/bbm/ui/activities/sx;->a:Lcom/bbm/ui/activities/GroupPictureShareActivity;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/GroupPictureShareActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 82
+    iget-object v0, p0, Lcom/bbm/ui/activities/sx;->a:Lcom/bbm/ui/activities/GroupPictureShareActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupPictureShareActivity;->finish()V
+
+    .line 83
     return-void
 .end method

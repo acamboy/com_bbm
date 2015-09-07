@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 149
+    .line 137
     iput-object p1, p0, Lcom/bbm/ui/activities/h;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,12 +29,12 @@
     .locals 4
 
     .prologue
-    .line 152
+    .line 140
     iget-object v0, p0, Lcom/bbm/ui/activities/h;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
-    invoke-static {v0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
+    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
 
-    .line 153
+    .line 141
     iget-object v0, p0, Lcom/bbm/ui/activities/h;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->i(Lcom/bbm/ui/activities/AddChannelPostActivity;)Lcom/bbm/ui/InlineImageEditText;
@@ -75,9 +75,9 @@
 
     move-result-object v3
 
-    invoke-static {v0, v1, v2, v3}, Lcom/bbm/util/x;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1, v2, v3}, Lcom/bbm/util/ac;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 154
+    .line 142
     iget-object v0, p0, Lcom/bbm/ui/activities/h;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->l(Lcom/bbm/ui/activities/AddChannelPostActivity;)I
@@ -88,7 +88,7 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 155
+    .line 143
     new-instance v0, Landroid/content/Intent;
 
     iget-object v1, p0, Lcom/bbm/ui/activities/h;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
@@ -97,19 +97,19 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 156
+    .line 144
     iget-object v1, p0, Lcom/bbm/ui/activities/h;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     sget v2, Lcom/bbm/ui/activities/ViewOwnedChannelActivity;->a:I
 
     invoke-virtual {v1, v2, v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->setResult(ILandroid/content/Intent;)V
 
-    .line 158
+    .line 146
     :cond_0
     iget-object v0, p0, Lcom/bbm/ui/activities/h;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-virtual {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->finish()V
 
-    .line 159
+    .line 147
     return-void
 .end method

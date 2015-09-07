@@ -1,70 +1,107 @@
-.class public final Lcom/bbm/ak;
-.super Ljava/lang/Object;
-.source "URIConstants.java"
+.class abstract Lcom/bbm/ak;
+.super Lcom/bbm/util/ct;
+.source "Settings.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lcom/bbm/util/ct",
+        "<TV;>;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic d:Lcom/bbm/ag;
 
 
 # direct methods
-.method public static a(Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
+.method constructor <init>(Lcom/bbm/ag;Ljava/lang/Object;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TV;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 10
-    const-string v0, "/"
+    .line 167
+    iput-object p1, p0, Lcom/bbm/ak;->d:Lcom/bbm/ag;
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
+    .line 168
+    invoke-direct {p0, p2}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+
+    .line 169
+    return-void
+.end method
+
+
+# virtual methods
+.method protected abstract a()V
+.end method
+
+.method protected abstract a(Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TV;)Z"
+        }
+    .end annotation
+.end method
+
+.method public final b(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TV;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 173
+    iget-object v0, p0, Lcom/bbm/ak;->e:Ljava/lang/Object;
+
+    invoke-static {v0, p1}, Lcom/bbm/util/bh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 11
-    const-string v1, "_"
+    if-nez v0, :cond_0
 
-    invoke-virtual {p0, v1, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;I)I
+    .line 174
+    invoke-virtual {p0, p1}, Lcom/bbm/ak;->a(Ljava/lang/Object;)Z
 
-    move-result v1
+    move-result v0
 
-    .line 13
-    new-instance v2, Ljava/lang/StringBuilder;
+    if-eqz v0, :cond_0
 
-    const-string v3, "bbgpim://group/"
+    .line 175
+    invoke-virtual {p0, p1}, Lcom/bbm/ak;->c(Ljava/lang/Object;)V
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-virtual {p0, v0, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 14
-    return-object v0
+    .line 178
+    :cond_0
+    return-void
 .end method
 
-.method public static b(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+.method final c(Ljava/lang/Object;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TV;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 18
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 181
+    iput-object p1, p0, Lcom/bbm/ak;->e:Ljava/lang/Object;
 
-    const-string v1, "bbmpim://conversation/"
+    .line 182
+    iget-object v0, p0, Lcom/bbm/ak;->f:Lcom/bbm/j/i;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0}, Lcom/bbm/j/i;->a()V
 
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    .line 183
+    return-void
 .end method

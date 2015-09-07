@@ -4,14 +4,31 @@
         <item quantity="other">प्रसारण संदेश %1$s संपर्कों को भेजा गया</item>
         <item quantity="one">प्रसारण संदेश 1 संपर्क को भेजा गया</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d सदस्य</item>
+        <item quantity="zero">कोई सदस्य नहीं</item>
+        <item quantity="one">%1$d सदस्य</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d सदस्य</item>
+        <item quantity="one">%1$d सदस्य</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">सेकेंड</item>
+        <item quantity="one">सेकेंड</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">टाइमर %1$d सेकेंड के लिए सेट है.</item>
+        <item quantity="one">टाइमर %1$d सेकेंड के लिए सेट है.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s आइटम</item>
         <item quantity="zero">0 आइटम</item>
         <item quantity="one">1 आइटम</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d आमंत्रण प्रतीक्षारत)</item>
-        <item quantity="one">(1 आमंत्रण प्रतीक्षारत)</item>
+        <item quantity="other">(%1$d लंबित)</item>
+        <item quantity="one">(1 लंबित)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s परिणाम</item>

@@ -70,29 +70,6 @@
     return-object v0
 .end method
 
-.method public final a(Lcom/google/b/a/f;)Lcom/google/b/c/bv;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<F:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Lcom/google/b/a/f",
-            "<TF;+TT;>;)",
-            "Lcom/google/b/c/bv",
-            "<TF;>;"
-        }
-    .end annotation
-
-    .prologue
-    .line 349
-    new-instance v0, Lcom/google/b/c/c;
-
-    invoke-direct {v0, p1, p0}, Lcom/google/b/c/c;-><init>(Lcom/google/b/a/f;Lcom/google/b/c/bv;)V
-
-    return-object v0
-.end method
-
 .method public abstract compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .annotation system Ldalvik/annotation/Signature;
         value = {

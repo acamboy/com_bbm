@@ -1,119 +1,124 @@
 .class final Lcom/bbm/ui/activities/pb;
-.super Lcom/bbm/j/u;
-.source "GroupLobbyActivity.java"
+.super Ljava/lang/Object;
+.source "GroupListItemsActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ow;
+.field final synthetic a:Landroid/widget/CheckBox;
+
+.field final synthetic b:Lcom/bbm/g/y;
+
+.field final synthetic c:Lcom/bbm/ui/activities/oy;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ow;)V
+.method constructor <init>(Lcom/bbm/ui/activities/oy;Landroid/widget/CheckBox;Lcom/bbm/g/y;)V
     .locals 0
 
     .prologue
-    .line 1022
-    iput-object p1, p0, Lcom/bbm/ui/activities/pb;->a:Lcom/bbm/ui/activities/ow;
+    .line 520
+    iput-object p1, p0, Lcom/bbm/ui/activities/pb;->c:Lcom/bbm/ui/activities/oy;
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    iput-object p2, p0, Lcom/bbm/ui/activities/pb;->a:Landroid/widget/CheckBox;
+
+    iput-object p3, p0, Lcom/bbm/ui/activities/pb;->b:Lcom/bbm/g/y;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
+.method public final onClick(Landroid/view/View;)V
     .locals 3
 
     .prologue
-    .line 1027
-    iget-object v0, p0, Lcom/bbm/ui/activities/pb;->a:Lcom/bbm/ui/activities/ow;
+    .line 524
+    const-string v0, "checkboxView Clicked"
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ow;->a(Lcom/bbm/ui/activities/ow;)Lcom/bbm/g/ab;
+    const-class v1, Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/pb;->a:Lcom/bbm/ui/activities/ow;
+    .line 526
+    iget-object v0, p0, Lcom/bbm/ui/activities/pb;->a:Landroid/widget/CheckBox;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ow;->i(Lcom/bbm/ui/activities/ow;)Lcom/bbm/g/u;
+    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
 
-    move-result-object v1
+    move-result v0
 
-    iget-object v1, v1, Lcom/bbm/g/u;->c:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->q(Ljava/lang/String;)Lcom/bbm/g/l;
+    .line 527
+    iget-object v0, p0, Lcom/bbm/ui/activities/pb;->c:Lcom/bbm/ui/activities/oy;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/ui/activities/oy;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    .line 1028
-    iget-object v1, v0, Lcom/bbm/g/l;->g:Lcom/bbm/util/bc;
+    iget-object v0, v0, Lcom/bbm/ui/activities/GroupListItemsActivity;->a:Lcom/bbm/g/al;
 
-    sget-object v2, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    iget-object v1, p0, Lcom/bbm/ui/activities/pb;->c:Lcom/bbm/ui/activities/oy;
 
-    if-ne v1, v2, :cond_0
+    iget-object v1, v1, Lcom/bbm/ui/activities/oy;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    .line 1029
-    iget-object v1, p0, Lcom/bbm/ui/activities/pb;->a:Lcom/bbm/ui/activities/ow;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ow;->a(Lcom/bbm/ui/activities/ow;)Lcom/bbm/g/ab;
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupListItemsActivity;->b(Lcom/bbm/ui/activities/GroupListItemsActivity;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/bbm/g/l;->f:Ljava/lang/String;
+    iget-object v2, p0, Lcom/bbm/ui/activities/pb;->b:Lcom/bbm/g/y;
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/pb;->a:Lcom/bbm/ui/activities/ow;
+    iget-object v2, v2, Lcom/bbm/g/y;->k:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/ow;->b(Lcom/bbm/ui/activities/ow;)Lcom/bbm/g/a;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcom/bbm/g/a;->u:Ljava/lang/String;
-
-    invoke-static {v0, v2}, Lcom/bbm/g/ac;->e(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bj;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
-
-    .line 1030
-    iget-object v0, p0, Lcom/bbm/ui/activities/pb;->a:Lcom/bbm/ui/activities/ow;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ow;->a(Lcom/bbm/ui/activities/ow;)Lcom/bbm/g/ab;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/pb;->a:Lcom/bbm/ui/activities/ow;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ow;->b(Lcom/bbm/ui/activities/ow;)Lcom/bbm/g/a;
+    invoke-static {v1, v2}, Lcom/bbm/g/am;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bx;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    sget-object v2, Lcom/bbm/g/bz;->b:Lcom/bbm/g/bz;
 
-    invoke-static {v1}, Lcom/bbm/g/ac;->b(Ljava/lang/String;)Lcom/bbm/g/bb;
+    invoke-virtual {v1, v2}, Lcom/bbm/g/bx;->a(Lcom/bbm/g/bz;)Lcom/bbm/g/bx;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
 
-    .line 1033
-    iget-object v0, p0, Lcom/bbm/ui/activities/pb;->a:Lcom/bbm/ui/activities/ow;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ow;->f(Lcom/bbm/ui/activities/ow;)Lcom/bbm/j/u;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
-
-    .line 1034
-    const/4 v0, 0x1
-
-    .line 1036
+    .line 533
     :goto_0
-    return v0
+    return-void
 
+    .line 530
     :cond_0
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/bbm/ui/activities/pb;->c:Lcom/bbm/ui/activities/oy;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/oy;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/GroupListItemsActivity;->a:Lcom/bbm/g/al;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/pb;->c:Lcom/bbm/ui/activities/oy;
+
+    iget-object v1, v1, Lcom/bbm/ui/activities/oy;->b:Lcom/bbm/ui/activities/GroupListItemsActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupListItemsActivity;->b(Lcom/bbm/ui/activities/GroupListItemsActivity;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/pb;->b:Lcom/bbm/g/y;
+
+    iget-object v2, v2, Lcom/bbm/g/y;->k:Ljava/lang/String;
+
+    invoke-static {v1, v2}, Lcom/bbm/g/am;->b(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/g/bx;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/bbm/g/bz;->a:Lcom/bbm/g/bz;
+
+    invoke-virtual {v1, v2}, Lcom/bbm/g/bx;->a(Lcom/bbm/g/bz;)Lcom/bbm/g/bx;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
 
     goto :goto_0
 .end method

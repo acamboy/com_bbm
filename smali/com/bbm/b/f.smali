@@ -1,112 +1,189 @@
-.class final Lcom/bbm/b/f;
-.super Ljava/lang/Object;
-.source "AdUtils.java"
-
-# interfaces
-.implements Lcom/bbm/j/s;
+.class public final Lcom/bbm/b/f;
+.super Lcom/bbm/b/g;
+.source "AdImageData.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/b/a;
+.field final synthetic a:Lcom/bbm/util/b/d;
 
-.field final synthetic b:Lcom/bbm/ui/c/fq;
+.field final synthetic b:Lcom/bbm/util/ct;
 
-.field final synthetic c:Lcom/bbm/ui/slidingmenu/a;
+.field final synthetic c:Ljava/lang/String;
 
-.field final synthetic d:Lcom/bbm/ui/slidingmenu/a;
+.field final synthetic d:Lcom/bbm/b/e;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/b/a;Lcom/bbm/ui/c/fq;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
+.method public constructor <init>(Lcom/bbm/b/e;Landroid/content/Context;Lcom/bbm/util/ct;Lcom/bbm/util/b/d;Lcom/bbm/util/ct;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 201
-    iput-object p1, p0, Lcom/bbm/b/f;->a:Lcom/bbm/b/a;
+    .line 117
+    iput-object p1, p0, Lcom/bbm/b/f;->d:Lcom/bbm/b/e;
 
-    iput-object p2, p0, Lcom/bbm/b/f;->b:Lcom/bbm/ui/c/fq;
+    iput-object p4, p0, Lcom/bbm/b/f;->a:Lcom/bbm/util/b/d;
 
-    iput-object p3, p0, Lcom/bbm/b/f;->c:Lcom/bbm/ui/slidingmenu/a;
+    iput-object p5, p0, Lcom/bbm/b/f;->b:Lcom/bbm/util/ct;
 
-    iput-object p4, p0, Lcom/bbm/b/f;->d:Lcom/bbm/ui/slidingmenu/a;
+    iput-object p6, p0, Lcom/bbm/b/f;->c:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2, p3}, Lcom/bbm/b/g;-><init>(Landroid/content/Context;Lcom/bbm/util/ct;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 5
+.method protected final a(Lcom/bbm/d/ff;)V
+    .locals 2
 
     .prologue
+    .line 121
+    iget-object v0, p0, Lcom/bbm/b/f;->d:Lcom/bbm/b/e;
+
+    invoke-static {v0}, Lcom/bbm/b/e;->a(Lcom/bbm/b/e;)Ljava/lang/ref/WeakReference;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/b/f;->d:Lcom/bbm/b/e;
+
+    invoke-static {v0}, Lcom/bbm/b/e;->a(Lcom/bbm/b/e;)Ljava/lang/ref/WeakReference;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/b/f;->d:Lcom/bbm/b/e;
+
+    invoke-static {v0}, Lcom/bbm/b/e;->a(Lcom/bbm/b/e;)Ljava/lang/ref/WeakReference;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/b/g;
+
+    iget-boolean v0, v0, Lcom/bbm/b/g;->f:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/b/f;->a:Lcom/bbm/util/b/d;
+
+    if-eqz v0, :cond_1
+
+    .line 125
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {}, Lcom/bbm/b/e;->b()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, "Hit OOM error"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
     const/4 v1, 0x0
 
-    const/4 v0, 0x1
+    new-array v1, v1, [Ljava/lang/Object;
 
-    .line 204
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {v0, v1}, Lcom/bbm/y;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    move-result-object v2
+    .line 126
+    iget-object v0, p0, Lcom/bbm/b/f;->a:Lcom/bbm/util/b/d;
 
-    iget-object v3, p0, Lcom/bbm/b/f;->a:Lcom/bbm/b/a;
+    invoke-virtual {v0}, Lcom/bbm/util/b/d;->a()V
 
-    iget-object v3, v3, Lcom/bbm/b/a;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Lcom/bbm/d/a;->x(Ljava/lang/String;)Lcom/bbm/util/bc;
-
-    move-result-object v2
-
-    .line 205
-    iget-object v3, p0, Lcom/bbm/b/f;->b:Lcom/bbm/ui/c/fq;
-
-    invoke-virtual {v3}, Lcom/bbm/ui/c/fq;->a()Lcom/bbm/ui/slidingmenu/a;
-
-    move-result-object v3
-
-    iget-object v4, p0, Lcom/bbm/b/f;->c:Lcom/bbm/ui/slidingmenu/a;
-
-    if-eq v3, v4, :cond_0
-
-    .line 220
-    :goto_0
-    return v0
-
-    .line 210
+    .line 138
     :cond_0
-    sget-object v3, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
+    :goto_0
+    return-void
 
-    if-ne v2, v3, :cond_1
-
-    .line 211
-    iget-object v2, p0, Lcom/bbm/b/f;->d:Lcom/bbm/ui/slidingmenu/a;
-
-    invoke-virtual {v2, v0}, Lcom/bbm/ui/slidingmenu/a;->e(Z)V
-
-    move v0, v1
-
-    .line 212
-    goto :goto_0
-
-    .line 214
+    .line 129
     :cond_1
-    sget-object v3, Lcom/bbm/util/bc;->b:Lcom/bbm/util/bc;
+    if-eqz p1, :cond_0
 
-    if-ne v2, v3, :cond_2
+    .line 131
+    iget-object v0, p0, Lcom/bbm/b/f;->b:Lcom/bbm/util/ct;
 
-    .line 215
-    iget-object v1, p0, Lcom/bbm/b/f;->d:Lcom/bbm/ui/slidingmenu/a;
+    invoke-virtual {v0, p1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/slidingmenu/a;->e(Z)V
+    .line 132
+    iget-object v0, p0, Lcom/bbm/b/f;->d:Lcom/bbm/b/e;
+
+    invoke-static {v0}, Lcom/bbm/b/e;->b(Lcom/bbm/b/e;)Lcom/bbm/ui/ObservingImageView;
+
+    move-result-object v0
+
+    sget-object v1, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
+
+    .line 134
+    iget-object v0, p0, Lcom/bbm/b/f;->a:Lcom/bbm/util/b/d;
+
+    if-eqz v0, :cond_0
+
+    .line 135
+    iget-object v0, p0, Lcom/bbm/b/f;->a:Lcom/bbm/util/b/d;
+
+    iget-object v1, p0, Lcom/bbm/b/f;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p1}, Lcom/bbm/util/b/d;->a(Ljava/lang/String;Lcom/bbm/d/ff;)V
 
     goto :goto_0
+.end method
 
-    .line 218
-    :cond_2
-    iget-object v2, p0, Lcom/bbm/b/f;->d:Lcom/bbm/ui/slidingmenu/a;
+.method protected final bridge synthetic a(Ljava/lang/Object;)V
+    .locals 2
 
-    invoke-virtual {v2, v1}, Lcom/bbm/ui/slidingmenu/a;->e(Z)V
+    .prologue
+    .line 117
+    check-cast p1, Lcom/bbm/d/ff;
 
-    goto :goto_0
+    iget-object v0, p0, Lcom/bbm/b/f;->a:Lcom/bbm/util/b/d;
+
+    if-eqz v0, :cond_0
+
+    if-eqz p1, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/b/f;->a:Lcom/bbm/util/b/d;
+
+    iget-object v1, p0, Lcom/bbm/b/f;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, p1}, Lcom/bbm/util/b/d;->a(Ljava/lang/String;Lcom/bbm/d/ff;)V
+
+    :cond_0
+    return-void
+.end method
+
+.method protected final synthetic b(Ljava/lang/Object;)V
+    .locals 0
+
+    .prologue
+    .line 117
+    check-cast p1, Lcom/bbm/d/ff;
+
+    invoke-virtual {p0, p1}, Lcom/bbm/b/f;->a(Lcom/bbm/d/ff;)V
+
+    return-void
 .end method

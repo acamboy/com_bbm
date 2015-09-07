@@ -1,100 +1,54 @@
 .class final Landroid/support/v4/app/ab;
-.super Landroid/widget/FrameLayout;
-.source "NoSaveStateFrameLayout.java"
+.super Ljava/lang/Object;
+.source "FragmentManager.java"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator",
+        "<",
+        "Landroid/support/v4/app/FragmentManagerState;",
+        ">;"
+    }
+.end annotation
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 45
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+    .line 387
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     return-void
-.end method
-
-.method static a(Landroid/view/View;)Landroid/view/ViewGroup;
-    .locals 3
-
-    .prologue
-    const/4 v2, -0x1
-
-    .line 32
-    new-instance v0, Landroid/support/v4/app/ab;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/support/v4/app/ab;-><init>(Landroid/content/Context;)V
-
-    .line 33
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    .line 34
-    if-eqz v1, :cond_0
-
-    .line 35
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/ab;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 37
-    :cond_0
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-direct {v1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    .line 39
-    invoke-virtual {p0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 40
-    invoke-virtual {v0, p0}, Landroid/support/v4/app/ab;->addView(Landroid/view/View;)V
-
-    .line 41
-    return-object v0
 .end method
 
 
 # virtual methods
-.method protected final dispatchRestoreInstanceState(Landroid/util/SparseArray;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/util/SparseArray",
-            "<",
-            "Landroid/os/Parcelable;",
-            ">;)V"
-        }
-    .end annotation
+.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 61
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/ab;->dispatchThawSelfOnly(Landroid/util/SparseArray;)V
+    .line 387
+    new-instance v0, Landroid/support/v4/app/FragmentManagerState;
 
-    .line 62
-    return-void
+    invoke-direct {v0, p1}, Landroid/support/v4/app/FragmentManagerState;-><init>(Landroid/os/Parcel;)V
+
+    return-object v0
 .end method
 
-.method protected final dispatchSaveInstanceState(Landroid/util/SparseArray;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/util/SparseArray",
-            "<",
-            "Landroid/os/Parcelable;",
-            ">;)V"
-        }
-    .end annotation
+.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 53
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/ab;->dispatchFreezeSelfOnly(Landroid/util/SparseArray;)V
+    .line 387
+    new-array v0, p1, [Landroid/support/v4/app/FragmentManagerState;
 
-    .line 54
-    return-void
+    return-object v0
 .end method

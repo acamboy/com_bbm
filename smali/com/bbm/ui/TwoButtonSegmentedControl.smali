@@ -8,7 +8,7 @@
 
 .field private b:Landroid/widget/LinearLayout;
 
-.field private c:Lcom/bbm/ui/gm;
+.field private c:Lcom/bbm/ui/hk;
 
 .field private final d:Landroid/view/View$OnClickListener;
 
@@ -50,12 +50,12 @@
     .line 24
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/TwoButtonSegmentedControl;->c:Lcom/bbm/ui/gm;
+    iput-object v0, p0, Lcom/bbm/ui/TwoButtonSegmentedControl;->c:Lcom/bbm/ui/hk;
 
-    .line 98
-    new-instance v0, Lcom/bbm/ui/gl;
+    .line 97
+    new-instance v0, Lcom/bbm/ui/hj;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/gl;-><init>(Lcom/bbm/ui/TwoButtonSegmentedControl;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/hj;-><init>(Lcom/bbm/ui/TwoButtonSegmentedControl;)V
 
     iput-object v0, p0, Lcom/bbm/ui/TwoButtonSegmentedControl;->d:Landroid/view/View$OnClickListener;
 
@@ -64,14 +64,14 @@
 
     move-result-object v0
 
-    const v1, 0x7f03013b
+    const v1, 0x7f030155
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 42
-    const v0, 0x7f0a05ce
+    const v0, 0x7f0b0687
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/TwoButtonSegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -80,7 +80,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 43
-    const v1, 0x7f0a05d0
+    const v1, 0x7f0b0689
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/TwoButtonSegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -93,7 +93,7 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/bbm/ac;->ThreeButtonSegmentControl:[I
+    sget-object v3, Lcom/bbm/ae;->ThreeButtonSegmentControl:[I
 
     const/4 v4, 0x0
 
@@ -127,7 +127,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b02d2
+    const v1, 0x7f0a0316
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -138,7 +138,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b02dd
+    const v2, 0x7f0a0321
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -207,20 +207,20 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setActivated(Z)V
 
-    .line 89
+    .line 88
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/TwoButtonSegmentedControl;->c:Lcom/bbm/ui/gm;
+    iget-object v0, p0, Lcom/bbm/ui/TwoButtonSegmentedControl;->c:Lcom/bbm/ui/hk;
 
     if-eqz v0, :cond_0
 
-    .line 90
-    iget-object v0, p0, Lcom/bbm/ui/TwoButtonSegmentedControl;->c:Lcom/bbm/ui/gm;
+    .line 89
+    iget-object v0, p0, Lcom/bbm/ui/TwoButtonSegmentedControl;->c:Lcom/bbm/ui/hk;
 
-    .line 92
+    .line 91
     :cond_0
     return-void
 
-    .line 85
+    .line 84
     :cond_1
     iget-object v0, p0, Lcom/bbm/ui/TwoButtonSegmentedControl;->b:Landroid/widget/LinearLayout;
 
@@ -237,7 +237,7 @@
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
     .line 66
-    const v0, 0x7f0a05cd
+    const v0, 0x7f0b0686
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/TwoButtonSegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -255,7 +255,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 69
-    const v0, 0x7f0a05cf
+    const v0, 0x7f0b0688
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/TwoButtonSegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -281,13 +281,13 @@
     return-void
 .end method
 
-.method public setOnOptionSelectedListener(Lcom/bbm/ui/gm;)V
+.method public setOnOptionSelectedListener(Lcom/bbm/ui/hk;)V
     .locals 0
 
     .prologue
-    .line 95
-    iput-object p1, p0, Lcom/bbm/ui/TwoButtonSegmentedControl;->c:Lcom/bbm/ui/gm;
+    .line 94
+    iput-object p1, p0, Lcom/bbm/ui/TwoButtonSegmentedControl;->c:Lcom/bbm/ui/hk;
 
-    .line 96
+    .line 95
     return-void
 .end method

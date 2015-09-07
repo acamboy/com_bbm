@@ -21,25 +21,25 @@
     .locals 3
 
     .prologue
-    .line 11
+    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
+    .line 17
     const-string v0, "NotSubscribed"
 
     iput-object v0, p0, Lcom/bbm/ui/d/b;->b:Ljava/lang/String;
 
-    .line 21
+    .line 20
     const-string v0, "ChannelListChanging"
 
     iput-object v0, p0, Lcom/bbm/ui/d/b;->c:Ljava/lang/String;
 
-    .line 23
+    .line 22
     const-string v0, "ChannelNotFound"
 
     iput-object v0, p0, Lcom/bbm/ui/d/b;->d:Ljava/lang/String;
 
-    .line 25
+    .line 24
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -69,19 +69,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/f/x;)V
+.method public final a(Lcom/bbm/f/ab;)V
     .locals 3
 
     .prologue
+    .line 32
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
+
     .line 33
-    invoke-virtual {p1}, Lcom/bbm/f/x;->f()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 34
-    invoke-virtual {p1}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
-
-    move-result-object v1
+    iget-object v1, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
     const-string v2, "error"
 
@@ -89,7 +85,7 @@
 
     move-result-object v1
 
-    .line 35
+    .line 34
     const-string v2, "channelInvitationSendError"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -98,15 +94,15 @@
 
     if-eqz v2, :cond_0
 
-    const v0, 0x7f0e019a
+    const v0, 0x7f0e01a9
 
     :goto_0
-    invoke-static {v0}, Lcom/bbm/util/eo;->a(I)V
-
-    .line 36
-    return-void
+    invoke-static {v0}, Lcom/bbm/util/fh;->a(I)V
 
     .line 35
+    return-void
+
+    .line 34
     :cond_0
     const-string v2, "channelBlockUserError"
 
@@ -124,7 +120,7 @@
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f0e0171
+    const v0, 0x7f0e0181
 
     goto :goto_0
 
@@ -137,7 +133,7 @@
 
     if-eqz v0, :cond_2
 
-    const v0, 0x7f0e0170
+    const v0, 0x7f0e0180
 
     goto :goto_0
 
@@ -150,12 +146,12 @@
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f0e016c
+    const v0, 0x7f0e017c
 
     goto :goto_0
 
     :cond_3
-    const v0, 0x7f0e016f
+    const v0, 0x7f0e017f
 
     goto :goto_0
 
@@ -168,7 +164,7 @@
 
     if-eqz v0, :cond_5
 
-    const v0, 0x7f0e01b6
+    const v0, 0x7f0e01c5
 
     goto :goto_0
 

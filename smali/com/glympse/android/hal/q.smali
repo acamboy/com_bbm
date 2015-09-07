@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static aj:Landroid/net/ConnectivityManager;
+.field private static ai:Landroid/net/ConnectivityManager;
 
 
 # direct methods
@@ -15,7 +15,7 @@
     .line 90
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/hal/q;->aj:Landroid/net/ConnectivityManager;
+    sput-object v0, Lcom/glympse/android/hal/q;->ai:Landroid/net/ConnectivityManager;
 
     return-void
 .end method
@@ -36,7 +36,7 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    sput-object v0, Lcom/glympse/android/hal/q;->aj:Landroid/net/ConnectivityManager;
+    sput-object v0, Lcom/glympse/android/hal/q;->ai:Landroid/net/ConnectivityManager;
 
     .line 95
     return-void
@@ -49,7 +49,7 @@
 
     .prologue
     .line 99
-    sget-object v0, Lcom/glympse/android/hal/q;->aj:Landroid/net/ConnectivityManager;
+    sget-object v0, Lcom/glympse/android/hal/q;->ai:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 

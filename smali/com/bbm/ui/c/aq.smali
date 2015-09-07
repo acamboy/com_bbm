@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/c/aq;
 .super Ljava/lang/Object;
-.source "ChannelPostPreviewFragment.java"
+.source "ChannelDetailsFragment.java"
 
 # interfaces
-.implements Lcom/bbm/j/s;
+.implements Landroid/view/View$OnLongClickListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/content/Context;
-
-.field final synthetic b:Lcom/bbm/ui/c/ao;
+.field final synthetic a:Lcom/bbm/ui/c/ag;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/ao;Landroid/content/Context;)V
+.method constructor <init>(Lcom/bbm/ui/c/ag;)V
     .locals 0
 
     .prologue
-    .line 58
-    iput-object p1, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
-
-    iput-object p2, p0, Lcom/bbm/ui/c/aq;->a:Landroid/content/Context;
+    .line 946
+    iput-object p1, p0, Lcom/bbm/ui/c/aq;->a:Lcom/bbm/ui/c/ag;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,152 +25,76 @@
 
 
 # virtual methods
-.method public final a()Z
-    .locals 5
+.method public final onLongClick(Landroid/view/View;)Z
+    .locals 8
 
     .prologue
-    .line 61
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    const/4 v7, 0x0
+
+    .line 949
+    iget-object v0, p0, Lcom/bbm/ui/c/aq;->a:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->h(Lcom/bbm/ui/c/ag;)Lcom/bbm/ui/activities/cq;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
+    iget-object v0, v0, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
 
-    invoke-static {v1}, Lcom/bbm/ui/c/ao;->c(Lcom/bbm/ui/c/ao;)Ljava/lang/String;
+    .line 950
+    iget-object v1, p0, Lcom/bbm/ui/c/aq;->a:Lcom/bbm/ui/c/ag;
 
-    move-result-object v1
+    new-instance v2, Ljava/util/ArrayList;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->O(Ljava/lang/String;)Lcom/bbm/d/de;
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    move-result-object v1
+    new-instance v3, Lcom/bbm/ui/slidingmenu/a;
 
-    .line 62
-    iget-object v0, v1, Lcom/bbm/d/de;->Q:Lcom/bbm/util/bc;
+    const v4, 0x7f0b001b
 
-    sget-object v2, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
+    const v5, 0x7f020276
 
-    if-ne v0, v2, :cond_0
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 63
-    const/4 v0, 0x0
+    move-result-object v5
 
-    .line 77
-    :goto_0
-    return v0
+    const v6, 0x7f0e019a
 
-    .line 65
-    :cond_0
-    iget-object v2, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
+    invoke-virtual {v1, v6}, Lcom/bbm/ui/c/ag;->getString(I)Ljava/lang/String;
 
-    new-instance v3, Lcom/bbm/ui/a/a;
+    move-result-object v6
 
-    iget-object v0, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
+    invoke-direct {v3, v4, v5, v6, v7}, Lcom/bbm/ui/slidingmenu/a;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/c/ao;->a(Lcom/bbm/ui/c/ao;)Lcom/bbm/j/x;
+    invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    move-result-object v4
+    new-instance v3, Lcom/bbm/ui/c/ar;
 
-    iget-object v0, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
+    invoke-direct {v3, v1}, Lcom/bbm/ui/c/ar;-><init>(Lcom/bbm/ui/c/ag;)V
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/ao;->getActivity()Landroid/app/Activity;
+    iput-object v3, v0, Lcom/bbm/ui/c/gj;->b:Lcom/bbm/ui/c/gn;
 
-    move-result-object v0
+    invoke-virtual {v0, v2, v7, v7}, Lcom/bbm/ui/c/gj;->a(Ljava/util/List;Lcom/bbm/ui/slidingmenu/a;Lcom/bbm/ui/slidingmenu/a;)V
 
-    check-cast v0, Lcom/bbm/ui/activities/by;
+    .line 951
+    iget-object v0, p0, Lcom/bbm/ui/c/aq;->a:Lcom/bbm/ui/c/ag;
 
-    invoke-direct {v3, v4, v1, v0}, Lcom/bbm/ui/a/a;-><init>(Lcom/bbm/j/x;Lcom/bbm/d/de;Lcom/bbm/ui/activities/by;)V
-
-    invoke-static {v2, v3}, Lcom/bbm/ui/c/ao;->a(Lcom/bbm/ui/c/ao;Lcom/bbm/ui/a/a;)Lcom/bbm/ui/a/a;
-
-    .line 66
-    iget-object v0, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ao;->d(Lcom/bbm/ui/c/ao;)Lcom/bbm/ui/a/a;
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->h(Lcom/bbm/ui/c/ag;)Lcom/bbm/ui/activities/cq;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/a/a;->d()V
+    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
 
-    .line 67
-    iget-object v0, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
+    .line 952
+    iget-object v0, p0, Lcom/bbm/ui/c/aq;->a:Lcom/bbm/ui/c/ag;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/ao;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/PreviewChannelActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/ao;->d(Lcom/bbm/ui/c/ao;)Lcom/bbm/ui/a/a;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/PreviewChannelActivity;->a(Lcom/bbm/util/aw;)V
-
-    .line 70
-    iget-object v0, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
-
-    new-instance v1, Lcom/bbm/ui/ci;
-
-    iget-object v2, p0, Lcom/bbm/ui/c/aq;->a:Landroid/content/Context;
-
-    iget-object v3, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
-
-    invoke-static {v3}, Lcom/bbm/ui/c/ao;->d(Lcom/bbm/ui/c/ao;)Lcom/bbm/ui/a/a;
-
-    move-result-object v3
-
-    invoke-direct {v1, v2, v3}, Lcom/bbm/ui/ci;-><init>(Landroid/content/Context;Landroid/widget/ListAdapter;)V
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/c/ao;->a(Lcom/bbm/ui/c/ao;Lcom/bbm/ui/ci;)Lcom/bbm/ui/ci;
-
-    .line 71
-    iget-object v0, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ao;->e(Lcom/bbm/ui/c/ao;)Lcom/bbm/ui/ci;
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->h(Lcom/bbm/ui/c/ag;)Lcom/bbm/ui/activities/cq;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/ci;->i()V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/cq;->o()V
 
-    .line 74
-    iget-object v0, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ao;->b(Lcom/bbm/ui/c/ao;)Landroid/view/View;
-
-    move-result-object v0
-
-    const v1, 0x7f0a032e
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ListView;
-
-    .line 75
-    iget-object v1, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/ao;->e(Lcom/bbm/ui/c/ao;)Lcom/bbm/ui/ci;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
-
-    .line 76
-    iget-object v1, p0, Lcom/bbm/ui/c/aq;->b:Lcom/bbm/ui/c/ao;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/ao;->d(Lcom/bbm/ui/c/ao;)Lcom/bbm/ui/a/a;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/bbm/ui/a/a;->d:Landroid/widget/AdapterView$OnItemLongClickListener;
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
-
-    .line 77
+    .line 953
     const/4 v0, 0x1
 
-    goto :goto_0
+    return v0
 .end method

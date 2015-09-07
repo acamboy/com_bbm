@@ -16,23 +16,29 @@
 
 .field public static final CONSUMER_MESSAGE_CALL_LOG:I = 0x2
 
-.field public static final CONSUMER_MESSAGE_FAVORITES:I = 0x4
+.field public static final CONSUMER_MESSAGE_DESTINATIONS:I = 0x40
 
-.field public static final CONSUMER_MESSAGE_INVITE_AVATAR:I = 0x10
+.field public static final CONSUMER_MESSAGE_ERROR_RESPONSE:I = 0x200000
 
-.field public static final CONSUMER_MESSAGE_NOTIFICATIONS:I = 0x40
+.field public static final CONSUMER_MESSAGE_FAVORITES:I = 0x8
 
-.field public static final CONSUMER_MESSAGE_RECENTS_LIST:I = 0x200
+.field public static final CONSUMER_MESSAGE_INVITE_AVATAR:I = 0x20
 
-.field public static final CONSUMER_MESSAGE_RECENT_TICKET:I = 0x400
+.field public static final CONSUMER_MESSAGE_NOTIFICATIONS:I = 0x80
+
+.field public static final CONSUMER_MESSAGE_PHONE_FAVORITES:I = 0x4
+
+.field public static final CONSUMER_MESSAGE_RECENTS_LIST:I = 0x400
+
+.field public static final CONSUMER_MESSAGE_RECENT_TICKET:I = 0x800
 
 .field public static final CONSUMER_MESSAGE_REQUEST_INVITE:I = 0x2000
 
-.field public static final CONSUMER_MESSAGE_SHARING:I = 0x100
+.field public static final CONSUMER_MESSAGE_SHARING:I = 0x200
 
-.field public static final CONSUMER_MESSAGE_SOCIAL_TOKENS:I = 0x8
+.field public static final CONSUMER_MESSAGE_SOCIAL_TOKENS:I = 0x10
 
-.field public static final CONSUMER_MESSAGE_SYSTEM_HEALTH:I = 0x80
+.field public static final CONSUMER_MESSAGE_SYSTEM_HEALTH:I = 0x100
 
 .field public static final CONSUMER_MESSAGE_TICKET_INVITE:I = 0x1000
 

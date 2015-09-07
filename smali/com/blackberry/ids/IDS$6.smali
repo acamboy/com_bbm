@@ -11,7 +11,7 @@
     .locals 0
 
     .prologue
-    .line 1140
+    .line 1151
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 1148
+    .line 1159
     const-string v0, "grant_type"
 
     const-string v1, "refresh_token"
@@ -34,11 +34,11 @@
 
     const-string v1, "refresh_token"
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/blackberry/ids/BBIDStorage;->g()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/blackberry/ids/BBIDStorage;->d()Ljava/lang/String;
 
     move-result-object v2
 
@@ -53,7 +53,7 @@
     .locals 1
 
     .prologue
-    .line 1143
+    .line 1154
     const-string v0, "refreshToken"
 
     invoke-virtual {p1, v0}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
@@ -67,7 +67,7 @@
     .locals 4
 
     .prologue
-    .line 1173
+    .line 1184
     const-string v0, "do_refresh_token request_id=%d failed, result=%d info=%s"
 
     const/4 v1, 0x3
@@ -96,7 +96,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->w(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 1175
+    .line 1186
     return-void
 .end method
 
@@ -115,7 +115,7 @@
     .end annotation
 
     .prologue
-    .line 1159
+    .line 1170
     const-string v0, "refresh_token"
 
     invoke-interface {p2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -128,7 +128,7 @@
 
     move-result-object v0
 
-    .line 1161
+    .line 1172
     const-string v1, ":"
 
     const/4 v2, 0x2
@@ -137,23 +137,23 @@
 
     move-result-object v0
 
-    .line 1162
+    .line 1173
     const/4 v1, 0x0
 
     aget-object v1, v0, v1
 
-    .line 1163
+    .line 1174
     const/4 v2, 0x1
 
     aget-object v0, v0, v2
 
-    .line 1165
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    .line 1176
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v2
 
     invoke-virtual {v2, p1, v1, v0}, Lcom/blackberry/ids/BBIDStorage;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1167
+    .line 1178
     return-void
 .end method

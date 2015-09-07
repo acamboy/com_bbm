@@ -21,7 +21,9 @@
 
     .prologue
     .line 13
-    invoke-static {}, Lcom/bbm/Alaska;->E()V
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+
+    invoke-static {}, Lcom/bbm/Alaska;->A()V
 
     .line 14
     return-void

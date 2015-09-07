@@ -1,56 +1,65 @@
 .class final Lcom/bbm/ui/activities/afi;
-.super Lcom/bbm/j/a;
-.source "ViewChannelActivity.java"
+.super Ljava/lang/Object;
+.source "SelectContactActivity.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/j/a",
-        "<",
-        "Lcom/bbm/d/de;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ViewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
     .locals 0
 
     .prologue
-    .line 46
-    iput-object p1, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/ViewChannelActivity;
+    .line 127
+    iput-object p1, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a()Ljava/lang/Object;
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
     .prologue
-    .line 46
-    iget-object v0, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/ViewChannelActivity;
+    .line 131
+    iget-object v0, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ViewChannelActivity;->c:Lcom/bbm/d/a;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/ViewChannelActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ViewChannelActivity;->b()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->O(Ljava/lang/String;)Lcom/bbm/d/de;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->getWindow()Landroid/view/Window;
 
     move-result-object v0
 
-    return-object v0
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->getWindow()Landroid/view/Window;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 132
+    iget-object v0, p0, Lcom/bbm/ui/activities/afi;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
+
+    .line 134
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

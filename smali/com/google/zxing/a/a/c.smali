@@ -1,4 +1,4 @@
-.class final enum Lcom/google/zxing/a/a/c;
+.class public final enum Lcom/google/zxing/a/a/c;
 .super Ljava/lang/Enum;
 .source "Decoder.java"
 

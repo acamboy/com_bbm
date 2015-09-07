@@ -1,121 +1,187 @@
 .class final Lcom/bbm/ui/fp;
-.super Lcom/bbm/d/b/f;
-.source "StickerPicker.java"
+.super Ljava/lang/Object;
+.source "QuickShareVoicenoteView.java"
 
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/f",
-        "<",
-        "Lcom/bbm/d/em;",
-        ">;"
-    }
-.end annotation
+# interfaces
+.implements Lcom/bbm/ui/fq;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/StickerPicker;
+.field final synthetic a:Lcom/bbm/ui/QuickShareVoicenoteView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/StickerPicker;)V
+.method constructor <init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
     .locals 0
 
     .prologue
-    .line 75
-    iput-object p1, p0, Lcom/bbm/ui/fp;->a:Lcom/bbm/ui/StickerPicker;
+    .line 306
+    iput-object p1, p0, Lcom/bbm/ui/fp;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
 
-    invoke-direct {p0}, Lcom/bbm/d/b/f;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()Ljava/util/List;
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/em;",
-            ">;"
-        }
-    .end annotation
+.method public final a()V
+    .locals 7
 
     .prologue
-    .line 78
-    new-instance v1, Ljava/util/ArrayList;
+    const/4 v6, 0x1
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    .line 310
+    iget-object v0, p0, Lcom/bbm/ui/fp;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
 
-    .line 79
-    new-instance v0, Lcom/bbm/d/en;
-
-    invoke-direct {v0}, Lcom/bbm/d/en;-><init>()V
-
-    .line 80
-    iget-object v2, p0, Lcom/bbm/ui/fp;->a:Lcom/bbm/ui/StickerPicker;
-
-    invoke-static {v2}, Lcom/bbm/ui/StickerPicker;->c(Lcom/bbm/ui/StickerPicker;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/google/b/a/l;->b(Ljava/lang/Object;)Lcom/google/b/a/l;
-
-    move-result-object v2
-
-    iput-object v2, v0, Lcom/bbm/d/en;->a:Lcom/google/b/a/l;
-
-    .line 81
-    iget-object v2, p0, Lcom/bbm/ui/fp;->a:Lcom/bbm/ui/StickerPicker;
-
-    invoke-static {v2}, Lcom/bbm/ui/StickerPicker;->d(Lcom/bbm/ui/StickerPicker;)Lcom/bbm/d/a;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/en;)Lcom/bbm/j/w;
+    invoke-static {v0}, Lcom/bbm/ui/QuickShareVoicenoteView;->f(Lcom/bbm/ui/QuickShareVoicenoteView;)Lcom/bbm/util/fm;
 
     move-result-object v0
 
-    .line 82
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    invoke-virtual {v0}, Lcom/bbm/util/fm;->a()V
 
-    move-result-object v0
+    new-instance v1, Landroid/media/MediaRecorder;
 
-    check-cast v0, Ljava/util/List;
+    invoke-direct {v1}, Landroid/media/MediaRecorder;-><init>()V
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v1, v6}, Landroid/media/MediaRecorder;->setAudioSource(I)V
+
+    const/4 v2, 0x3
+
+    invoke-virtual {v1, v2}, Landroid/media/MediaRecorder;->setOutputFormat(I)V
+
+    invoke-virtual {v1, v6}, Landroid/media/MediaRecorder;->setAudioEncoder(I)V
+
+    invoke-static {v1}, Lcom/google/b/a/l;->b(Ljava/lang/Object;)Lcom/google/b/a/l;
 
     move-result-object v2
 
-    :cond_0
+    iput-object v2, v0, Lcom/bbm/util/fm;->a:Lcom/google/b/a/l;
+
+    new-instance v2, Ljava/text/SimpleDateFormat;
+
+    const-string v3, "yyyy-MM-dd HH.mm.ss.SSS"
+
+    sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
+
+    invoke-direct {v2, v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+
+    const-string v3, "UTC"
+
+    invoke-static {v3}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    new-instance v3, Ljava/util/Date;
+
+    invoke-direct {v3, v4, v5}, Ljava/util/Date;-><init>(J)V
+
+    invoke-virtual {v2, v3}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, "Voice Note-%s.%s"
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    aput-object v2, v4, v5
+
+    const-string v2, "amr"
+
+    aput-object v2, v4, v6
+
+    invoke-static {v3, v4}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v2
+
+    new-instance v3, Ljava/io/File;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v5, v0, Lcom/bbm/util/fm;->b:Landroid/content/Context;
+
+    invoke-static {v5}, Lcom/bbm/util/bj;->a(Landroid/content/Context;)Ljava/io/File;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    sget-object v5, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v3, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3}, Ljava/io/File;->getParentFile()Ljava/io/File;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/io/File;->mkdirs()Z
+
+    invoke-static {v3}, Lcom/google/b/a/l;->b(Ljava/lang/Object;)Lcom/google/b/a/l;
+
+    move-result-object v2
+
+    iput-object v2, v0, Lcom/bbm/util/fm;->d:Lcom/google/b/a/l;
+
+    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/media/MediaRecorder;->setOutputFile(Ljava/lang/String;)V
+
+    :try_start_0
+    invoke-virtual {v1}, Landroid/media/MediaRecorder;->prepare()V
+
+    invoke-virtual {v1}, Landroid/media/MediaRecorder;->start()V
+
+    const/4 v1, 0x1
+
+    iput-boolean v1, v0, Lcom/bbm/util/fm;->e:Z
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    iput-wide v2, v0, Lcom/bbm/util/fm;->c:J
+
+    invoke-virtual {v0}, Lcom/bbm/util/fm;->c()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 311
     :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    return-void
 
-    move-result v0
+    .line 310
+    :catch_0
+    move-exception v0
 
-    if-eqz v0, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/em;
-
-    .line 83
-    iget-boolean v3, v0, Lcom/bbm/d/em;->c:Z
-
-    if-nez v3, :cond_0
-
-    .line 84
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
-
-    .line 88
-    :cond_1
-    return-object v1
 .end method

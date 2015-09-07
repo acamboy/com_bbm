@@ -12,7 +12,7 @@
 
 .field private g:I
 
-.field private h:Lcom/bbm/ui/gg;
+.field private h:Lcom/bbm/ui/he;
 
 .field private final i:Landroid/text/TextWatcher;
 
@@ -22,7 +22,7 @@
     .locals 1
 
     .prologue
-    .line 54
+    .line 53
     invoke-direct {p0, p1}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
 
     .line 24
@@ -37,7 +37,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/b/k;->i:Landroid/text/TextWatcher;
 
-    .line 55
+    .line 54
     return-void
 .end method
 
@@ -53,21 +53,21 @@
 
 
 # virtual methods
-.method protected final a()I
+.method protected final b()I
     .locals 1
 
     .prologue
-    .line 59
-    const v0, 0x7f030073
+    .line 58
+    const v0, 0x7f030078
 
     return v0
 .end method
 
-.method public final b()Ljava/lang/String;
+.method public final c()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 132
+    .line 129
     iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -85,10 +85,10 @@
     .locals 2
 
     .prologue
-    .line 68
+    .line 67
     if-lez p1, :cond_0
 
-    .line 69
+    .line 68
     invoke-virtual {p0}, Lcom/bbm/ui/b/k;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -115,84 +115,53 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 71
+    .line 70
     :cond_0
     return-void
-.end method
-
-.method public final c(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 79
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 80
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
-
-    invoke-virtual {v0, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 85
-    :goto_0
-    return-void
-
-    .line 83
-    :cond_0
-    iput-object p1, p0, Lcom/bbm/ui/b/k;->f:Ljava/lang/String;
-
-    goto :goto_0
 .end method
 
 .method public final d(I)V
     .locals 2
 
     .prologue
-    .line 115
+    .line 112
     iput p1, p0, Lcom/bbm/ui/b/k;->g:I
 
-    .line 116
+    .line 113
     iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
 
     if-eqz v0, :cond_1
 
-    .line 117
-    iget-object v0, p0, Lcom/bbm/ui/b/k;->h:Lcom/bbm/ui/gg;
+    .line 114
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->h:Lcom/bbm/ui/he;
 
     if-eqz v0, :cond_0
 
-    .line 118
+    .line 115
     iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/bbm/ui/b/k;->h:Lcom/bbm/ui/gg;
+    iget-object v1, p0, Lcom/bbm/ui/b/k;->h:Lcom/bbm/ui/he;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 120
+    .line 117
     :cond_0
     iget v0, p0, Lcom/bbm/ui/b/k;->g:I
 
     if-ltz v0, :cond_1
 
-    .line 121
+    .line 118
     iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
 
     iget v1, p0, Lcom/bbm/ui/b/k;->g:I
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/gg;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/gg;
+    invoke-static {v0, v1}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/b/k;->h:Lcom/bbm/ui/gg;
+    iput-object v0, p0, Lcom/bbm/ui/b/k;->h:Lcom/bbm/ui/he;
 
-    .line 124
+    .line 121
     :cond_1
     return-void
 .end method
@@ -201,7 +170,7 @@
     .locals 1
 
     .prologue
-    .line 103
+    .line 78
     iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
 
     if-eqz v0, :cond_0
@@ -212,12 +181,43 @@
 
     if-nez v0, :cond_0
 
-    .line 104
+    .line 79
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
+
+    invoke-virtual {v0, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    .line 83
+    :goto_0
+    return-void
+
+    .line 81
+    :cond_0
+    iput-object p1, p0, Lcom/bbm/ui/b/k;->f:Ljava/lang/String;
+
+    goto :goto_0
+.end method
+
+.method public final e(Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 101
+    iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
+
+    if-eqz v0, :cond_0
+
+    invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 102
     iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setError(Ljava/lang/CharSequence;)V
 
-    .line 106
+    .line 104
     :cond_0
     return-void
 .end method
@@ -228,11 +228,11 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 142
+    .line 139
     invoke-super {p0, p1}, Lcom/bbm/ui/b/o;->onCreate(Landroid/os/Bundle;)V
 
-    .line 143
-    const v0, 0x7f0a031a
+    .line 140
+    const v0, 0x7f0b036a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/b/k;->findViewById(I)Landroid/view/View;
 
@@ -242,12 +242,12 @@
 
     iput-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
 
-    .line 144
+    .line 141
     iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setVisibility(I)V
 
-    .line 145
+    .line 142
     iget-object v0, p0, Lcom/bbm/ui/b/k;->e:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -256,14 +256,14 @@
 
     if-nez v0, :cond_0
 
-    .line 146
+    .line 143
     iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
 
     iget-object v2, p0, Lcom/bbm/ui/b/k;->e:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 148
+    .line 145
     :cond_0
     iget-object v0, p0, Lcom/bbm/ui/b/k;->f:Ljava/lang/String;
 
@@ -273,14 +273,14 @@
 
     if-nez v0, :cond_1
 
-    .line 149
+    .line 146
     iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
 
     iget-object v2, p0, Lcom/bbm/ui/b/k;->f:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->append(Ljava/lang/CharSequence;)V
 
-    .line 150
+    .line 147
     iget-object v2, p0, Lcom/bbm/ui/b/k;->c:Landroid/widget/Button;
 
     iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
@@ -300,7 +300,7 @@
     :goto_0
     invoke-virtual {v2, v0}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 152
+    .line 149
     :cond_1
     iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
 
@@ -308,23 +308,23 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 153
+    .line 150
     iget v0, p0, Lcom/bbm/ui/b/k;->g:I
 
     if-ltz v0, :cond_2
 
-    .line 154
+    .line 151
     iget-object v0, p0, Lcom/bbm/ui/b/k;->d:Landroid/widget/EditText;
 
     iget v2, p0, Lcom/bbm/ui/b/k;->g:I
 
-    invoke-static {v0, v2}, Lcom/bbm/ui/gg;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/gg;
+    invoke-static {v0, v2}, Lcom/bbm/ui/he;->a(Landroid/widget/EditText;I)Lcom/bbm/ui/he;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/b/k;->h:Lcom/bbm/ui/gg;
+    iput-object v0, p0, Lcom/bbm/ui/b/k;->h:Lcom/bbm/ui/he;
 
-    .line 157
+    .line 154
     :cond_2
     invoke-virtual {p0}, Lcom/bbm/ui/b/k;->getWindow()Landroid/view/Window;
 
@@ -334,17 +334,17 @@
 
     invoke-virtual {v0, v2}, Landroid/view/Window;->setSoftInputMode(I)V
 
-    .line 160
+    .line 157
     iget-object v0, p0, Lcom/bbm/ui/b/k;->c:Landroid/widget/Button;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 161
+    .line 158
     return-void
 
     :cond_3
     move v0, v1
 
-    .line 150
+    .line 147
     goto :goto_0
 .end method

@@ -273,7 +273,7 @@
 .end method
 
 .method public a(ZDZ)V
-    .locals 5
+    .locals 6
 
     const/4 v1, 0x0
 

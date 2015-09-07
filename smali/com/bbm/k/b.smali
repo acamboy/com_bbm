@@ -28,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 66
+    .line 68
     iput-object p1, p0, Lcom/bbm/k/b;->b:Lcom/bbm/k/a;
 
     invoke-direct {p0, p2}, Lcom/bbm/d/b/l;-><init>(Lcom/bbm/j/r;)V
@@ -42,12 +42,12 @@
     .locals 6
 
     .prologue
-    .line 66
+    .line 68
     check-cast p1, Lcom/bbm/g/a;
 
     iget-object v1, p0, Lcom/bbm/k/b;->b:Lcom/bbm/k/a;
 
-    iget-object v2, p1, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iget-object v2, p1, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
     iget-object v0, v1, Lcom/bbm/k/a;->c:Ljava/util/HashMap;
 
@@ -67,7 +67,7 @@
 
     aput-object v2, v4, v5
 
-    invoke-static {v3, v4}, Lcom/bbm/w;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v3, v4}, Lcom/bbm/y;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     if-eqz v0, :cond_0
 
@@ -77,9 +77,9 @@
     :cond_0
     new-instance v0, Lcom/bbm/k/c;
 
-    iget-object v3, v1, Lcom/bbm/k/a;->a:Lcom/bbm/g/ab;
+    iget-object v3, v1, Lcom/bbm/k/a;->a:Lcom/bbm/g/al;
 
-    invoke-virtual {v3, v2}, Lcom/bbm/g/ab;->r(Ljava/lang/String;)Lcom/bbm/j/w;
+    invoke-virtual {v3, v2}, Lcom/bbm/g/al;->r(Ljava/lang/String;)Lcom/bbm/j/w;
 
     move-result-object v3
 

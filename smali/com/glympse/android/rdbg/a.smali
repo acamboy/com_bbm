@@ -35,7 +35,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/glympse/android/lib/Invite;->typeEnumToString(I)Ljava/lang/String;
+    invoke-static {v0}, Lcom/glympse/android/api/GlympseTools;->inviteTypeEnumToString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -196,7 +196,7 @@
 
     move-result v1
 
-    invoke-static {v1}, Lcom/glympse/android/lib/Invite;->typeEnumToString(I)Ljava/lang/String;
+    invoke-static {v1}, Lcom/glympse/android/api/GlympseTools;->inviteTypeEnumToString(I)Ljava/lang/String;
 
     move-result-object v1
 
@@ -263,7 +263,7 @@
 .end method
 
 .method public static a(Lcom/glympse/android/api/GPlace;Lcom/glympse/android/core/GPrimitive;Z)V
-    .locals 3
+    .locals 4
 
     .prologue
     const/4 v2, 0x6
@@ -383,9 +383,9 @@
 
     invoke-interface {p0}, Lcom/glympse/android/api/GPlace;->getLatitude()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
 
     .line 297
     const-string v0, "lon"
@@ -396,9 +396,9 @@
 
     invoke-interface {p0}, Lcom/glympse/android/api/GPlace;->getLongitude()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
 
     goto :goto_0
 
@@ -428,7 +428,7 @@
 .end method
 
 .method public static a(Lcom/glympse/android/api/GTicket;Lcom/glympse/android/core/GPrimitive;ZZ)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 118
@@ -621,9 +621,9 @@
 
     move-result v1
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
 
     goto/16 :goto_0
 
@@ -689,9 +689,9 @@
 
     invoke-interface {p0}, Lcom/glympse/android/api/GTicket;->getStartTime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
 
     .line 177
     const-string v0, "end_time"
@@ -702,9 +702,9 @@
 
     invoke-interface {p0}, Lcom/glympse/android/api/GTicket;->getExpireTime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
 
     goto :goto_3
 
@@ -987,12 +987,12 @@
 .end method
 
 .method public static a(Lcom/glympse/android/core/GLocation;Lcom/glympse/android/core/GPrimitive;Z)V
-    .locals 4
+    .locals 5
 
     .prologue
     const/4 v2, 0x6
 
-    const/4 v3, 0x4
+    const/4 v4, 0x4
 
     .line 338
     if-eqz p2, :cond_7
@@ -1098,7 +1098,7 @@
 
     float-to-double v0, v0
 
-    invoke-static {v0, v1, v3}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
+    invoke-static {v0, v1, v4}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1132,7 +1132,7 @@
 
     float-to-double v0, v0
 
-    invoke-static {v0, v1, v3}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
+    invoke-static {v0, v1, v4}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1166,7 +1166,7 @@
 
     float-to-double v0, v0
 
-    invoke-static {v0, v1, v3}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
+    invoke-static {v0, v1, v4}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1200,7 +1200,7 @@
 
     float-to-double v0, v0
 
-    invoke-static {v0, v1, v3}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
+    invoke-static {v0, v1, v4}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1234,7 +1234,7 @@
 
     float-to-double v0, v0
 
-    invoke-static {v0, v1, v3}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
+    invoke-static {v0, v1, v4}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1287,9 +1287,9 @@
 
     invoke-interface {p0}, Lcom/glympse/android/core/GLocation;->getLatitude()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
 
     .line 348
     const-string v0, "lon"
@@ -1300,9 +1300,9 @@
 
     invoke-interface {p0}, Lcom/glympse/android/core/GLocation;->getLongitude()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
 
     goto/16 :goto_0
 
@@ -1318,9 +1318,9 @@
 
     move-result v1
 
-    int-to-long v1, v1
+    int-to-long v2, v1
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
 
     goto/16 :goto_1
 
@@ -1336,9 +1336,9 @@
 
     move-result v1
 
-    float-to-double v1, v1
+    float-to-double v2, v1
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
 
     goto/16 :goto_2
 
@@ -1354,9 +1354,9 @@
 
     move-result v1
 
-    float-to-double v1, v1
+    float-to-double v2, v1
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
 
     goto/16 :goto_3
 
@@ -1372,9 +1372,9 @@
 
     move-result v1
 
-    float-to-double v1, v1
+    float-to-double v2, v1
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
 
     goto/16 :goto_4
 
@@ -1390,9 +1390,9 @@
 
     move-result v1
 
-    float-to-double v1, v1
+    float-to-double v2, v1
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
 
     goto/16 :goto_5
 
@@ -1408,9 +1408,9 @@
 
     move-result v1
 
-    float-to-double v1, v1
+    float-to-double v2, v1
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
 
     goto/16 :goto_6
 
@@ -1424,9 +1424,9 @@
 
     invoke-interface {p0}, Lcom/glympse/android/core/GLocation;->getTime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
 
     goto/16 :goto_7
 .end method

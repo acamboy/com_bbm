@@ -103,7 +103,7 @@
 .end method
 
 .method public sendHit(Ljava/util/Map;JLjava/lang/String;Ljava/util/List;)V
-    .locals 5
+    .locals 6
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",

@@ -26,7 +26,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/f/x;)V
+.method public final a(Lcom/bbm/f/ab;)V
     .locals 4
 
     .prologue
@@ -45,7 +45,7 @@
     invoke-static {v0}, Lcom/google/b/a/o;->b(Z)V
 
     .line 17
-    invoke-virtual {p1}, Lcom/bbm/f/x;->a()Z
+    invoke-virtual {p1}, Lcom/bbm/f/ab;->a()Z
 
     move-result v0
 
@@ -55,13 +55,11 @@
     iput-boolean v1, p0, Lcom/bbm/d/a/d/b;->a:Z
 
     .line 19
-    invoke-virtual {p1}, Lcom/bbm/f/x;->c()[B
-
-    move-result-object v0
+    iget-object v0, p1, Lcom/bbm/f/ab;->d:[B
 
     invoke-virtual {p0, v0}, Lcom/bbm/d/a/d/b;->a([B)V
 
-    .line 25
+    .line 24
     :cond_0
     :goto_1
     return-void
@@ -72,11 +70,9 @@
     .line 16
     goto :goto_0
 
-    .line 21
+    .line 20
     :cond_2
-    invoke-virtual {p1}, Lcom/bbm/f/x;->f()Ljava/lang/String;
-
-    move-result-object v0
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
     const-string v3, "streamError"
 
@@ -86,14 +82,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 22
+    .line 21
     const-string v0, "Stream error :("
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-static {v0, v2}, Lcom/bbm/w;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v2}, Lcom/bbm/y;->a(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 23
+    .line 22
     iput-boolean v1, p0, Lcom/bbm/d/a/d/b;->a:Z
 
     goto :goto_1

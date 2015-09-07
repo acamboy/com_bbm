@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field final synthetic n:Lcom/glympse/android/hal/a;
+.field final synthetic m:Lcom/glympse/android/hal/a;
 
 
 # direct methods
@@ -13,7 +13,7 @@
 
     .prologue
     .line 135
-    iput-object p1, p0, Lcom/glympse/android/hal/c;->n:Lcom/glympse/android/hal/a;
+    iput-object p1, p0, Lcom/glympse/android/hal/c;->m:Lcom/glympse/android/hal/a;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -77,7 +77,7 @@
     move-result-object v0
 
     .line 149
-    iget-object v2, p0, Lcom/glympse/android/hal/c;->n:Lcom/glympse/android/hal/a;
+    iget-object v2, p0, Lcom/glympse/android/hal/c;->m:Lcom/glympse/android/hal/a;
 
     invoke-static {v2}, Lcom/glympse/android/hal/a;->b(Lcom/glympse/android/hal/a;)Lcom/glympse/android/core/GHandler;
 
@@ -85,9 +85,9 @@
 
     new-instance v3, Lcom/glympse/android/hal/b;
 
-    iget-object v4, p0, Lcom/glympse/android/hal/c;->n:Lcom/glympse/android/hal/a;
+    iget-object v4, p0, Lcom/glympse/android/hal/c;->m:Lcom/glympse/android/hal/a;
 
-    iget-object v5, p0, Lcom/glympse/android/hal/c;->n:Lcom/glympse/android/hal/a;
+    iget-object v5, p0, Lcom/glympse/android/hal/c;->m:Lcom/glympse/android/hal/a;
 
     invoke-static {v5}, Lcom/glympse/android/hal/a;->a(Lcom/glympse/android/hal/a;)Ljava/lang/String;
 

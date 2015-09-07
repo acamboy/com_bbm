@@ -3,7 +3,7 @@
 .source "PykInviteFriendsActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 61
+    .line 82
     iput-object p1, p0, Lcom/bbm/setup/p;->a:Lcom/bbm/setup/PykInviteFriendsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,68 +25,34 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 65
-    invoke-virtual {p1}, Landroid/widget/AdapterView;->getAdapter()Landroid/widget/Adapter;
+    .line 85
+    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    invoke-interface {v0, p3}, Landroid/widget/Adapter;->getItem(I)Ljava/lang/Object;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/iceberg/j;
+    const-string v1, "has_shown_pyk_invite"
 
-    .line 66
-    invoke-virtual {v0}, Lcom/bbm/iceberg/j;->a()Z
+    const/4 v2, 0x1
 
-    move-result v1
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    if-eqz v1, :cond_0
+    move-result-object v0
 
-    .line 67
-    iget-object v1, p0, Lcom/bbm/setup/p;->a:Lcom/bbm/setup/PykInviteFriendsActivity;
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    iget-object v2, p0, Lcom/bbm/setup/p;->a:Lcom/bbm/setup/PykInviteFriendsActivity;
+    .line 89
+    iget-object v0, p0, Lcom/bbm/setup/p;->a:Lcom/bbm/setup/PykInviteFriendsActivity;
 
-    const v3, 0x7f0e061e
+    invoke-virtual {v0}, Lcom/bbm/setup/PykInviteFriendsActivity;->a()V
 
-    invoke-virtual {v2, v3}, Lcom/bbm/setup/PykInviteFriendsActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/bbm/util/eo;->a(Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 68
-    iget-object v1, p0, Lcom/bbm/setup/p;->a:Lcom/bbm/setup/PykInviteFriendsActivity;
-
-    invoke-static {v1}, Lcom/bbm/h/c;->a(Landroid/content/Context;)Lcom/bbm/h/c;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/bbm/h/c;->a(Lcom/bbm/iceberg/j;)V
-
-    .line 72
-    :goto_0
+    .line 90
     return-void
-
-    .line 70
-    :cond_0
-    iget-object v1, p0, Lcom/bbm/setup/p;->a:Lcom/bbm/setup/PykInviteFriendsActivity;
-
-    invoke-static {v1, v0}, Lcom/bbm/h/c;->a(Landroid/content/Context;Lcom/bbm/iceberg/j;)V
-
-    goto :goto_0
 .end method

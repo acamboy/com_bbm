@@ -1,17 +1,12 @@
 .class Lcom/glympse/android/hal/bj;
 .super Ljava/lang/Object;
-.source "ServiceWrapper.java"
-
-# interfaces
-.implements Lcom/glympse/android/hal/GServiceWrapper;
+.source "ServerCert.java"
 
 
-# instance fields
-.field private e:Landroid/content/Context;
+# static fields
+.field public static final eq:I = 0x80
 
-.field private em:Lcom/glympse/android/hal/e;
-
-.field private en:Lcom/glympse/android/hal/ConnectivityListener;
+.field private static er:Ljava/lang/String;
 
 
 # direct methods
@@ -25,196 +20,140 @@
     return-void
 .end method
 
-.method private S()V
-    .locals 4
+.method public static Q()Ljava/lang/String;
+    .locals 1
 
     .prologue
-    .line 101
-    iget-object v0, p0, Lcom/glympse/android/hal/bj;->e:Landroid/content/Context;
+    .line 28
+    const-string v0, "Glympse Account Sharing"
 
-    new-instance v1, Landroid/content/Intent;
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/bj;->e:Landroid/content/Context;
+    move-result-object v0
 
-    const-class v3, Lcom/glympse/android/hal/GlympseService;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-
-    .line 102
-    return-void
+    return-object v0
 .end method
 
-.method private T()V
-    .locals 4
-
-    .prologue
-    .line 106
-    iget-object v0, p0, Lcom/glympse/android/hal/bj;->e:Landroid/content/Context;
-
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/glympse/android/hal/bj;->e:Landroid/content/Context;
-
-    const-class v3, Lcom/glympse/android/hal/GlympseService;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
-
-    .line 107
-    return-void
-.end method
-
-
-# virtual methods
-.method public setActive(Z)V
+.method public static R()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 84
-    if-eqz p1, :cond_0
+    .line 36
+    sget-object v0, Lcom/glympse/android/hal/bj;->er:Ljava/lang/String;
 
-    .line 90
-    const/4 v0, 0x1
-
-    const-string v1, "ServiceWrapper.setActive() - calling local startService()"
-
-    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
-
-    .line 91
-    invoke-direct {p0}, Lcom/glympse/android/hal/bj;->S()V
-
-    .line 93
-    :cond_0
-    return-void
-.end method
-
-.method public start(Lcom/glympse/android/api/GGlympse;)V
-    .locals 3
-
-    .prologue
-    .line 30
-    move-object v0, p1
-
-    check-cast v0, Lcom/glympse/android/lib/GGlympsePrivate;
-
-    .line 31
-    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->getContextHolder()Lcom/glympse/android/hal/GContextHolder;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Lcom/glympse/android/hal/GContextHolder;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    iput-object v1, p0, Lcom/glympse/android/hal/bj;->e:Landroid/content/Context;
-
-    .line 34
-    sput-object v0, Lcom/glympse/android/hal/GlympseService;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    .line 37
-    const/4 v1, 0x1
-
-    const-string v2, "ServiceWrapper.start() - calling local startService()"
-
-    invoke-static {v1, v2}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
+    if-nez v0, :cond_0
 
     .line 38
-    invoke-direct {p0}, Lcom/glympse/android/hal/bj;->S()V
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const/16 v1, 0x4b0
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    .line 39
+    const-string v1, "MIIC/DCCAmWgAwIBAgIJAOehbVU7DVKNMA0GCSqGSIb3DQEBBQUAMIGWMQswCQYD"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 40
+    const-string v1, "VQQGEwJVUzELMAkGA1UECAwCV0ExEDAOBgNVBAcMB1NlYXR0bGUxEDAOBgNVBAoM"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 41
-    invoke-static {}, Lcom/glympse/android/hal/GlympseService;->initializeNotifications()V
+    const-string v1, "B0dseW1wc2UxFDASBgNVBAsMC0RldmVsb3BtZW50MSAwHgYDVQQDDBdHbHltcHNl"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 42
+    const-string v1, "IEFjY291bnQgU2hhcmluZzEeMBwGCSqGSIb3DQEJARYPb3BzQGdseW1wc2UuY29t"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 43
+    const-string v1, "MB4XDTEzMDIwNjIzMzIzNVoXDTIzMDIwNDIzMzIzNVowgZYxCzAJBgNVBAYTAlVT"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 44
-    invoke-interface {p1}, Lcom/glympse/android/api/GGlympse;->isAccountSharingEnabled()Z
+    const-string v1, "MQswCQYDVQQIDAJXQTEQMA4GA1UEBwwHU2VhdHRsZTEQMA4GA1UECgwHR2x5bXBz"
 
-    move-result v1
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v1, :cond_0
+    .line 45
+    const-string v1, "ZTEUMBIGA1UECwwLRGV2ZWxvcG1lbnQxIDAeBgNVBAMMF0dseW1wc2UgQWNjb3Vu"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 46
-    new-instance v1, Lcom/glympse/android/hal/e;
+    const-string v1, "dCBTaGFyaW5nMR4wHAYJKoZIhvcNAQkBFg9vcHNAZ2x5bXBzZS5jb20wgZ8wDQYJ"
 
-    invoke-direct {v1}, Lcom/glympse/android/hal/e;-><init>()V
-
-    iput-object v1, p0, Lcom/glympse/android/hal/bj;->em:Lcom/glympse/android/hal/e;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 47
-    iget-object v1, p0, Lcom/glympse/android/hal/bj;->em:Lcom/glympse/android/hal/e;
+    const-string v1, "KoZIhvcNAQEBBQADgY0AMIGJAoGBAKmW6hLPj43ePz8hf9NnpIFiwzhloyt7BKFk"
 
-    invoke-virtual {v1, v0}, Lcom/glympse/android/hal/e;->start(Lcom/glympse/android/api/GGlympse;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 48
+    const-string v1, "6Ix76xD6n/6vXop9jON1h/JAxoi9diUxaCMQdaVgFudbR1mjWy/Iypso7ib+r45B"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 49
+    const-string v1, "9aw840NU+IGG1MuCJKlsdoBdyv2DjTTwyKDb3tKNot301W4LxNPkj8rrOmhPuX6R"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 50
+    const-string v1, "i/sGa4Y5AgMBAAGjUDBOMB0GA1UdDgQWBBT5sER12T7XE00TCVCLLyJKaHXdOjAf"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 51
-    :cond_0
-    new-instance v1, Lcom/glympse/android/hal/ConnectivityListener;
+    const-string v1, "BgNVHSMEGDAWgBT5sER12T7XE00TCVCLLyJKaHXdOjAMBgNVHRMEBTADAQH/MA0G"
 
-    invoke-direct {v1}, Lcom/glympse/android/hal/ConnectivityListener;-><init>()V
-
-    iput-object v1, p0, Lcom/glympse/android/hal/bj;->en:Lcom/glympse/android/hal/ConnectivityListener;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 52
-    iget-object v1, p0, Lcom/glympse/android/hal/bj;->en:Lcom/glympse/android/hal/ConnectivityListener;
+    const-string v1, "CSqGSIb3DQEBBQUAA4GBAEbjdXDWmuZmhC8GIiqWaoB6USu0JGTCzf3ySPr3DbXZ"
 
-    iget-object v2, p0, Lcom/glympse/android/hal/bj;->e:Landroid/content/Context;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2, v0}, Lcom/glympse/android/hal/ConnectivityListener;->start(Landroid/content/Context;Lcom/glympse/android/lib/GGlympsePrivate;)V
+    .line 53
+    const-string v1, "AOX5DyV3lVpK31VvA4opg1RnsWhX4soAV2nsozECRMkOJq7pf4k+a4VPbQe1Qbpv"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 54
+    const-string v1, "qvSp0ZQg7iMYyiRO+PhfwOQi2UzvR/x2iUH/+7vOtQ3vBiZC7tm4W94UVyankkMT"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 55
-    invoke-static {}, Lcom/glympse/android/hal/GCMReceiver;->register()V
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 56
-    return-void
+    move-result-object v0
+
+    sput-object v0, Lcom/glympse/android/hal/bj;->er:Ljava/lang/String;
+
+    .line 57
+    :cond_0
+    sget-object v0, Lcom/glympse/android/hal/bj;->er:Ljava/lang/String;
+
+    return-object v0
 .end method
 
-.method public stop()V
-    .locals 2
+.method public static S()Ljava/lang/String;
+    .locals 1
 
     .prologue
-    const/4 v1, 0x0
+    .line 65
+    const-string v0, "51D7EA41717D"
 
-    .line 61
-    iget-object v0, p0, Lcom/glympse/android/hal/bj;->en:Lcom/glympse/android/hal/ConnectivityListener;
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    .line 63
-    iget-object v0, p0, Lcom/glympse/android/hal/bj;->en:Lcom/glympse/android/hal/ConnectivityListener;
-
-    invoke-virtual {v0}, Lcom/glympse/android/hal/ConnectivityListener;->stop()V
-
-    .line 64
-    iput-object v1, p0, Lcom/glympse/android/hal/bj;->en:Lcom/glympse/android/hal/ConnectivityListener;
-
-    .line 68
-    :cond_0
-    iget-object v0, p0, Lcom/glympse/android/hal/bj;->em:Lcom/glympse/android/hal/e;
-
-    if-eqz v0, :cond_1
-
-    .line 70
-    iget-object v0, p0, Lcom/glympse/android/hal/bj;->em:Lcom/glympse/android/hal/e;
-
-    invoke-virtual {v0}, Lcom/glympse/android/hal/e;->stop()V
-
-    .line 71
-    iput-object v1, p0, Lcom/glympse/android/hal/bj;->em:Lcom/glympse/android/hal/e;
-
-    .line 75
-    :cond_1
-    sput-object v1, Lcom/glympse/android/hal/GlympseService;->_glympse:Lcom/glympse/android/lib/GGlympsePrivate;
-
-    .line 78
-    const/4 v0, 0x1
-
-    const-string v1, "ServiceWrapper.stopService() - calling local stopService()"
-
-    invoke-static {v0, v1}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
-
-    .line 79
-    invoke-direct {p0}, Lcom/glympse/android/hal/bj;->T()V
-
-    .line 80
-    return-void
+    return-object v0
 .end method

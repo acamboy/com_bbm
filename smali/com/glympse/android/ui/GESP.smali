@@ -10,6 +10,10 @@
 
 .field public static final PLATFORM_INVITES_LIST_CHANGED:I = 0x1
 
+.field public static final PLATFORM_INVITE_REQUEST_PRIVATE:I = 0x40
+
+.field public static final PLATFORM_INVITE_TICKET_PRIVATE:I = 0x80
+
 .field public static final PLATFORM_REMOVE_NOTIFICATION:I = 0x20
 
 .field public static final PLATFORM_REQUESTS_LIST_CHANGED:I = 0x4

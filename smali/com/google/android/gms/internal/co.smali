@@ -286,7 +286,7 @@
 .end method
 
 .method public g(J)V
-    .locals 6
+    .locals 7
 
     iget-object v1, p0, Lcom/google/android/gms/internal/co;->mg:Ljava/lang/Object;
 
@@ -321,7 +321,7 @@
 .end method
 
 .method public h(J)V
-    .locals 6
+    .locals 7
 
     iget-object v1, p0, Lcom/google/android/gms/internal/co;->mg:Ljava/lang/Object;
 
@@ -436,7 +436,7 @@
 .end method
 
 .method public toBundle()Landroid/os/Bundle;
-    .locals 5
+    .locals 6
 
     iget-object v1, p0, Lcom/google/android/gms/internal/co;->mg:Ljava/lang/Object;
 
@@ -467,39 +467,39 @@
 
     const-string v0, "treq"
 
-    iget-wide v3, p0, Lcom/google/android/gms/internal/co;->pq:J
+    iget-wide v4, p0, Lcom/google/android/gms/internal/co;->pq:J
 
-    invoke-virtual {v2, v0, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {v2, v0, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string v0, "tresponse"
 
-    iget-wide v3, p0, Lcom/google/android/gms/internal/co;->pr:J
+    iget-wide v4, p0, Lcom/google/android/gms/internal/co;->pr:J
 
-    invoke-virtual {v2, v0, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {v2, v0, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string v0, "timp"
 
-    iget-wide v3, p0, Lcom/google/android/gms/internal/co;->pn:J
+    iget-wide v4, p0, Lcom/google/android/gms/internal/co;->pn:J
 
-    invoke-virtual {v2, v0, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {v2, v0, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string v0, "tload"
 
-    iget-wide v3, p0, Lcom/google/android/gms/internal/co;->po:J
+    iget-wide v4, p0, Lcom/google/android/gms/internal/co;->po:J
 
-    invoke-virtual {v2, v0, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {v2, v0, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string v0, "pcc"
 
-    iget-wide v3, p0, Lcom/google/android/gms/internal/co;->pp:J
+    iget-wide v4, p0, Lcom/google/android/gms/internal/co;->pp:J
 
-    invoke-virtual {v2, v0, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {v2, v0, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     const-string v0, "tfetch"
 
-    iget-wide v3, p0, Lcom/google/android/gms/internal/co;->pm:J
+    iget-wide v4, p0, Lcom/google/android/gms/internal/co;->pm:J
 
-    invoke-virtual {v2, v0, v3, v4}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {v2, v0, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     new-instance v3, Ljava/util/ArrayList;
 

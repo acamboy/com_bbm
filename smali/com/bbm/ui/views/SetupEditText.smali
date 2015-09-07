@@ -8,13 +8,13 @@
     .locals 0
 
     .prologue
-    .line 13
+    .line 12
     invoke-direct {p0, p1}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
 
-    .line 15
+    .line 14
     invoke-direct {p0}, Lcom/bbm/ui/views/SetupEditText;->a()V
 
-    .line 16
+    .line 15
     return-void
 .end method
 
@@ -22,13 +22,13 @@
     .locals 0
 
     .prologue
-    .line 19
+    .line 18
     invoke-direct {p0, p1, p2}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 21
+    .line 20
     invoke-direct {p0}, Lcom/bbm/ui/views/SetupEditText;->a()V
 
-    .line 22
+    .line 21
     return-void
 .end method
 
@@ -36,13 +36,13 @@
     .locals 0
 
     .prologue
-    .line 25
+    .line 24
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/EditText;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 27
+    .line 26
     invoke-direct {p0}, Lcom/bbm/ui/views/SetupEditText;->a()V
 
-    .line 28
+    .line 27
     return-void
 .end method
 
@@ -50,22 +50,22 @@
     .locals 1
 
     .prologue
-    .line 31
-    const v0, 0x7f090155
+    .line 30
+    const v0, 0x7f09016c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/SetupEditText;->setHintTextColor(I)V
 
-    .line 32
-    const v0, 0x7f090156
+    .line 31
+    const v0, 0x7f09016d
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/SetupEditText;->setTextColor(I)V
 
-    .line 33
-    const v0, 0x7f090154
+    .line 32
+    const v0, 0x7f09016b
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/SetupEditText;->setBackgroundResource(I)V
 
-    .line 34
+    .line 33
     return-void
 .end method
 
@@ -75,9 +75,9 @@
     .locals 0
 
     .prologue
-    .line 37
+    .line 36
     invoke-super {p0, p1, p2, p3}, Landroid/widget/EditText;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
-    .line 39
+    .line 38
     return-void
 .end method

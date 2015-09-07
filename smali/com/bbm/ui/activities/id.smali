@@ -1,21 +1,24 @@
 .class final Lcom/bbm/ui/activities/id;
-.super Lcom/bbm/ui/by;
-.source "FilePickerActivity.java"
+.super Ljava/lang/Object;
+.source "ConversationActivity.java"
+
+# interfaces
+.implements Lcom/bbm/f/ac;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/FilePickerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/FilePickerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 338
-    iput-object p1, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    .line 483
+    iput-object p1, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -23,156 +26,97 @@
 
 # virtual methods
 .method public final a()V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 342
-    iget-object v0, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->finish()V
-
-    .line 343
+    .line 509
     return-void
 .end method
 
-.method public final a(I)V
-    .locals 4
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 3
 
     .prologue
-    const/4 v0, 0x1
+    .line 486
+    const-string v0, "messageRecallResult"
 
-    const/4 v1, 0x0
+    iget-object v1, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    .line 347
-    packed-switch p1, :pswitch_data_0
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 379
-    :goto_0
-    return-void
+    move-result v0
 
-    .line 349
-    :pswitch_0
-    new-instance v0, Lcom/bbm/ui/b/k;
+    if-eqz v0, :cond_0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    .line 488
+    :try_start_0
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
-    invoke-direct {v0, v1}, Lcom/bbm/ui/b/k;-><init>(Landroid/content/Context;)V
+    .line 490
+    const-string v1, "conversationUri"
 
-    .line 350
-    const v1, 0x7f0e030a
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->setTitle(I)V
-
-    .line 351
-    iget-object v1, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    const v2, 0x7f0e030e
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/FilePickerActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->c(Ljava/lang/String;)V
+    .line 491
+    iget-object v2, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 352
-    const v1, 0x7f0e0165
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->b(I)V
-
-    .line 353
-    const v1, 0x7f0e00f2
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->a(I)V
-
-    .line 354
-    new-instance v1, Lcom/bbm/ui/activities/ie;
-
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/ie;-><init>(Lcom/bbm/ui/activities/id;Lcom/bbm/ui/b/k;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/k;->a(Landroid/view/View$OnClickListener;)V
-
-    .line 365
-    invoke-virtual {v0}, Lcom/bbm/ui/b/k;->show()V
-
-    goto :goto_0
-
-    .line 368
-    :pswitch_1
-    new-instance v1, Landroid/content/Intent;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    const-class v3, Lcom/bbm/ui/activities/FileSearchActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 369
-    iget-object v2, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-virtual {v2, v1, v0}, Lcom/bbm/ui/activities/FilePickerActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto :goto_0
-
-    .line 372
-    :pswitch_2
-    invoke-static {}, Lcom/bbm/ui/activities/FilePickerActivity;->g()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    :goto_1
-    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->c(Z)Z
-
-    .line 373
-    iget-object v0, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->j(Lcom/bbm/ui/activities/FilePickerActivity;)V
-
-    goto :goto_0
-
-    :cond_0
-    move v0, v1
-
-    .line 372
-    goto :goto_1
-
-    .line 376
-    :pswitch_3
-    iget-object v0, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->k(Lcom/bbm/ui/activities/FilePickerActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/FilePickerActivity;->k(Lcom/bbm/ui/activities/FilePickerActivity;)Landroid/widget/LinearLayout;
+    invoke-static {v2}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Landroid/widget/LinearLayout;->getVisibility()I
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result v2
+    move-result v1
 
-    if-eqz v2, :cond_1
+    if-eqz v1, :cond_0
 
-    :goto_2
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    .line 492
+    const-string v1, "recallStatus"
+
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/bbm/d/fk;->a(Ljava/lang/String;)Lcom/bbm/d/fk;
+
+    move-result-object v0
+
+    .line 495
+    sget-object v1, Lcom/bbm/d/fk;->b:Lcom/bbm/d/fk;
+
+    invoke-virtual {v1, v0}, Lcom/bbm/d/fk;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 496
+    iget-object v0, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/id;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    const v2, 0x7f0e02b0
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/ConversationActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
+    :try_end_0
+    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 504
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 500
+    :catch_0
+    move-exception v0
+
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
-
-    :cond_1
-    const/16 v1, 0x8
-
-    goto :goto_2
-
-    .line 347
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
 .end method

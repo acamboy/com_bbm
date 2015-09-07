@@ -1,84 +1,218 @@
 .class final Lcom/bbm/util/bx;
-.super Ljava/lang/Object;
-.source "LinkifyUtil.java"
+.super Lcom/bbm/util/b;
+.source "HttpLoader.java"
 
-# interfaces
-.implements Landroid/text/util/Linkify$MatchFilter;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/util/b",
+        "<",
+        "Ljava/lang/Void;",
+        "Ljava/lang/Integer;",
+        "Lcom/bbm/util/by;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:[Landroid/text/style/ClickableSpan;
+.field private final a:Lcom/bbm/util/bq;
 
-.field final synthetic b:Landroid/text/Spannable;
+.field private final b:Ljava/net/URL;
+
+.field private final c:Lcom/bbm/util/bw;
 
 
 # direct methods
-.method constructor <init>([Landroid/text/style/ClickableSpan;Landroid/text/Spannable;)V
+.method public constructor <init>(Lcom/bbm/util/bq;Ljava/net/URL;Lcom/bbm/util/bw;)V
     .locals 0
 
     .prologue
-    .line 64
-    iput-object p1, p0, Lcom/bbm/util/bx;->a:[Landroid/text/style/ClickableSpan;
+    .line 349
+    invoke-direct {p0}, Lcom/bbm/util/b;-><init>()V
 
-    iput-object p2, p0, Lcom/bbm/util/bx;->b:Landroid/text/Spannable;
+    .line 350
+    iput-object p1, p0, Lcom/bbm/util/bx;->a:Lcom/bbm/util/bq;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 351
+    iput-object p2, p0, Lcom/bbm/util/bx;->b:Ljava/net/URL;
 
+    .line 352
+    iput-object p3, p0, Lcom/bbm/util/bx;->c:Lcom/bbm/util/bw;
+
+    .line 353
     return-void
 .end method
 
-
-# virtual methods
-.method public final acceptMatch(Ljava/lang/CharSequence;II)Z
-    .locals 7
+.method private varargs c()Lcom/bbm/util/by;
+    .locals 4
 
     .prologue
     const/4 v0, 0x0
 
-    .line 68
-    iget-object v2, p0, Lcom/bbm/util/bx;->a:[Landroid/text/style/ClickableSpan;
+    .line 357
+    new-instance v1, Lcom/bbm/util/by;
 
-    array-length v3, v2
+    invoke-direct {v1, v0}, Lcom/bbm/util/by;-><init>(B)V
 
-    move v1, v0
+    .line 359
+    :try_start_0
+    iget-object v0, p0, Lcom/bbm/util/bx;->a:Lcom/bbm/util/bq;
 
-    :goto_0
-    if-ge v1, v3, :cond_1
+    iget-object v2, p0, Lcom/bbm/util/bx;->b:Ljava/net/URL;
 
-    aget-object v4, v2, v1
+    invoke-virtual {v0, v2}, Lcom/bbm/util/bq;->c(Ljava/net/URL;)[Ljava/lang/Object;
 
-    .line 69
-    iget-object v5, p0, Lcom/bbm/util/bx;->b:Landroid/text/Spannable;
+    move-result-object v2
 
-    invoke-interface {v5, v4}, Landroid/text/Spannable;->getSpanStart(Ljava/lang/Object;)I
+    .line 360
+    if-eqz v2, :cond_1
 
-    move-result v5
+    .line 361
+    const/4 v0, 0x0
 
-    .line 70
-    iget-object v6, p0, Lcom/bbm/util/bx;->b:Landroid/text/Spannable;
+    aget-object v0, v2, v0
 
-    invoke-interface {v6, v4}, Landroid/text/Spannable;->getSpanEnd(Ljava/lang/Object;)I
+    if-eqz v0, :cond_0
 
-    move-result v4
+    .line 362
+    const/4 v0, 0x0
 
-    .line 71
-    if-ge p2, v4, :cond_0
+    aget-object v0, v2, v0
 
-    if-le p3, v5, :cond_0
+    check-cast v0, [B
 
-    .line 76
-    :goto_1
-    return v0
+    check-cast v0, [B
 
-    .line 68
+    iput-object v0, v1, Lcom/bbm/util/by;->a:[B
+
+    .line 364
     :cond_0
-    add-int/lit8 v1, v1, 0x1
+    const/4 v0, 0x1
+
+    aget-object v0, v2, v0
+
+    if-eqz v0, :cond_1
+
+    .line 365
+    const/4 v0, 0x1
+
+    aget-object v0, v2, v0
+
+    check-cast v0, Ljava/util/Map;
+
+    iput-object v0, v1, Lcom/bbm/util/by;->b:Ljava/util/Map;
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
+
+    .line 378
+    :cond_1
+    :goto_0
+    return-object v1
+
+    .line 368
+    :catch_0
+    move-exception v0
+
+    .line 369
+    iput-object v0, v1, Lcom/bbm/util/by;->c:Ljava/lang/Exception;
+
+    .line 370
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 76
-    :cond_1
-    const/4 v0, 0x1
+    .line 371
+    :catch_1
+    move-exception v0
 
-    goto :goto_1
+    .line 372
+    new-instance v2, Ljava/lang/Exception;
+
+    invoke-virtual {v0}, Ljava/lang/OutOfMemoryError;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    iput-object v2, v1, Lcom/bbm/util/by;->c:Ljava/lang/Exception;
+
+    .line 373
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    .line 374
+    :catch_2
+    move-exception v0
+
+    .line 375
+    new-instance v2, Ljava/lang/Exception;
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-direct {v2, v3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
+
+    iput-object v2, v1, Lcom/bbm/util/by;->c:Ljava/lang/Exception;
+
+    .line 376
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method protected final synthetic a([Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 343
+    invoke-direct {p0}, Lcom/bbm/util/bx;->c()Lcom/bbm/util/by;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method protected final synthetic b(Ljava/lang/Object;)V
+    .locals 3
+
+    .prologue
+    .line 343
+    check-cast p1, Lcom/bbm/util/by;
+
+    iget-object v0, p0, Lcom/bbm/util/bx;->c:Lcom/bbm/util/bw;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p1, Lcom/bbm/util/by;->c:Ljava/lang/Exception;
+
+    if-nez v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/util/bx;->c:Lcom/bbm/util/bw;
+
+    iget-object v1, p1, Lcom/bbm/util/by;->a:[B
+
+    iget-object v2, p1, Lcom/bbm/util/by;->b:Ljava/util/Map;
+
+    invoke-interface {v0, v1, v2}, Lcom/bbm/util/bw;->a([BLjava/util/Map;)V
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/util/bx;->c:Lcom/bbm/util/bw;
+
+    iget-object v1, p1, Lcom/bbm/util/by;->c:Ljava/lang/Exception;
+
+    invoke-interface {v0, v1}, Lcom/bbm/util/bw;->a(Ljava/lang/Exception;)V
+
+    goto :goto_0
 .end method

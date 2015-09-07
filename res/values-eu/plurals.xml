@@ -4,14 +4,31 @@
         <item quantity="other">Difusio-mezua %1$s kontakturi bidali zaie</item>
         <item quantity="one">Difusio-mezua kontaktu bati bidali zaio</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d harpidedun</item>
+        <item quantity="zero">Ez dago harpidedunik</item>
+        <item quantity="one">%1$d harpidedun</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d kide</item>
+        <item quantity="one">%1$d kide</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">segundo</item>
+        <item quantity="one">segundo</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Tenporizadorea ezarri da %1$d segundorako.</item>
+        <item quantity="one">Tenporizadorea ezarri da %1$d segundorako.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s elementu</item>
         <item quantity="zero">0 elementu</item>
         <item quantity="one">1 elementu</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d gonbidapen zain)</item>
-        <item quantity="one">(1 gonbidapen zain)</item>
+        <item quantity="other">(%1$d zain)</item>
+        <item quantity="one">(1 zain)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s emaitza</item>

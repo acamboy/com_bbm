@@ -4,14 +4,31 @@
         <item quantity="other">"El missatge de difusió s'ha enviat a %1$s contactes"</item>
         <item quantity="one">"El missatge de difusió s'ha enviat a 1 contacte"</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d subscriptors</item>
+        <item quantity="zero">Sense subscriptor</item>
+        <item quantity="one">%1$d subscriptor</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d membres</item>
+        <item quantity="one">%1$d membre</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">segons</item>
+        <item quantity="one">segon</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Temporitzador definit en %1$d segons.</item>
+        <item quantity="one">Temporitzador definit en %1$d segon.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s elements</item>
         <item quantity="zero">0 elements</item>
         <item quantity="one">1 element</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d invitacions en espera)</item>
-        <item quantity="one">(1 invitació en espera)</item>
+        <item quantity="other">(%1$d invitacions pendents)</item>
+        <item quantity="one">(1 pendent)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s resultats</item>

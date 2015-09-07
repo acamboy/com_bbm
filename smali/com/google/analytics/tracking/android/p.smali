@@ -1,5 +1,5 @@
 .class public final Lcom/google/analytics/tracking/android/p;
-.super Lcom/google/analytics/tracking/android/be;
+.super Lcom/google/analytics/tracking/android/bg;
 .source "EasyTracker.java"
 
 
@@ -36,7 +36,7 @@
 
 .field private j:Lcom/google/analytics/tracking/android/au;
 
-.field private k:Lcom/google/analytics/tracking/android/ba;
+.field private k:Lcom/google/analytics/tracking/android/bc;
 
 .field private l:Lcom/google/analytics/tracking/android/l;
 
@@ -63,13 +63,13 @@
 
     move-result-object v2
 
-    invoke-direct {p0, p1, v0, v1, v2}, Lcom/google/analytics/tracking/android/p;-><init>(Landroid/content/Context;Lcom/google/analytics/tracking/android/au;Lcom/google/analytics/tracking/android/an;Lcom/google/analytics/tracking/android/ba;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lcom/google/analytics/tracking/android/p;-><init>(Landroid/content/Context;Lcom/google/analytics/tracking/android/au;Lcom/google/analytics/tracking/android/an;Lcom/google/analytics/tracking/android/bc;)V
 
     .line 96
     return-void
 .end method
 
-.method private constructor <init>(Landroid/content/Context;Lcom/google/analytics/tracking/android/au;Lcom/google/analytics/tracking/android/an;Lcom/google/analytics/tracking/android/ba;)V
+.method private constructor <init>(Landroid/content/Context;Lcom/google/analytics/tracking/android/au;Lcom/google/analytics/tracking/android/an;Lcom/google/analytics/tracking/android/bc;)V
     .locals 6
 
     .prologue
@@ -78,7 +78,7 @@
     .line 100
     const-string v0, "easy_tracker"
 
-    invoke-direct {p0, v0, p3}, Lcom/google/analytics/tracking/android/be;-><init>(Ljava/lang/String;Lcom/google/analytics/tracking/android/bf;)V
+    invoke-direct {p0, v0, p3}, Lcom/google/analytics/tracking/android/bg;-><init>(Ljava/lang/String;Lcom/google/analytics/tracking/android/bh;)V
 
     .line 155
     iput-boolean v1, p0, Lcom/google/analytics/tracking/android/p;->e:Z
@@ -127,7 +127,7 @@
 
     iput-object v0, p0, Lcom/google/analytics/tracking/android/p;->h:Landroid/content/Context;
 
-    iput-object p4, p0, Lcom/google/analytics/tracking/android/p;->k:Lcom/google/analytics/tracking/android/ba;
+    iput-object p4, p0, Lcom/google/analytics/tracking/android/p;->k:Lcom/google/analytics/tracking/android/bc;
 
     iput-object p2, p0, Lcom/google/analytics/tracking/android/p;->j:Lcom/google/analytics/tracking/android/au;
 
@@ -278,9 +278,7 @@
 
     iget-object v2, p0, Lcom/google/analytics/tracking/android/p;->c:Lcom/google/analytics/tracking/android/an;
 
-    invoke-virtual {v2}, Lcom/google/analytics/tracking/android/an;->d()Lcom/google/analytics/tracking/android/ar;
-
-    move-result-object v2
+    iget-object v2, v2, Lcom/google/analytics/tracking/android/an;->c:Lcom/google/analytics/tracking/android/ar;
 
     invoke-interface {v2, v0}, Lcom/google/analytics/tracking/android/ar;->a(Lcom/google/analytics/tracking/android/as;)V
 
@@ -326,9 +324,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-static {v3, v4}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
+    invoke-static {v4, v5}, Ljava/lang/Double;->toString(D)Ljava/lang/String;
 
     move-result-object v3
 
@@ -377,9 +375,9 @@
 
     invoke-static {v2}, Lcom/google/analytics/tracking/android/aq;->c(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/google/analytics/tracking/android/p;->k:Lcom/google/analytics/tracking/android/ba;
+    iget-object v2, p0, Lcom/google/analytics/tracking/android/p;->k:Lcom/google/analytics/tracking/android/bc;
 
-    invoke-virtual {v2, v0}, Lcom/google/analytics/tracking/android/ba;->a(I)V
+    invoke-virtual {v2, v0}, Lcom/google/analytics/tracking/android/bc;->a(I)V
 
     iget-object v0, p0, Lcom/google/analytics/tracking/android/p;->j:Lcom/google/analytics/tracking/android/au;
 
@@ -508,7 +506,7 @@
 
     new-instance v0, Lcom/google/analytics/tracking/android/s;
 
-    iget-object v1, p0, Lcom/google/analytics/tracking/android/p;->k:Lcom/google/analytics/tracking/android/ba;
+    iget-object v1, p0, Lcom/google/analytics/tracking/android/p;->k:Lcom/google/analytics/tracking/android/bc;
 
     invoke-static {}, Ljava/lang/Thread;->getDefaultUncaughtExceptionHandler()Ljava/lang/Thread$UncaughtExceptionHandler;
 
@@ -516,7 +514,7 @@
 
     iget-object v3, p0, Lcom/google/analytics/tracking/android/p;->h:Landroid/content/Context;
 
-    invoke-direct {v0, p0, v1, v2, v3}, Lcom/google/analytics/tracking/android/s;-><init>(Lcom/google/analytics/tracking/android/be;Lcom/google/analytics/tracking/android/ba;Ljava/lang/Thread$UncaughtExceptionHandler;Landroid/content/Context;)V
+    invoke-direct {v0, p0, v1, v2, v3}, Lcom/google/analytics/tracking/android/s;-><init>(Lcom/google/analytics/tracking/android/bg;Lcom/google/analytics/tracking/android/bc;Ljava/lang/Thread$UncaughtExceptionHandler;Landroid/content/Context;)V
 
     invoke-static {v0}, Ljava/lang/Thread;->setDefaultUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
 
@@ -549,7 +547,15 @@
 
     iget-object v1, p0, Lcom/google/analytics/tracking/android/p;->c:Lcom/google/analytics/tracking/android/an;
 
-    invoke-virtual {v1, v0}, Lcom/google/analytics/tracking/android/an;->a(Z)V
+    invoke-static {}, Lcom/google/analytics/tracking/android/al;->a()Lcom/google/analytics/tracking/android/al;
+
+    move-result-object v2
+
+    sget-object v3, Lcom/google/analytics/tracking/android/am;->ac:Lcom/google/analytics/tracking/android/am;
+
+    invoke-virtual {v2, v3}, Lcom/google/analytics/tracking/android/al;->a(Lcom/google/analytics/tracking/android/am;)V
+
+    iput-boolean v0, v1, Lcom/google/analytics/tracking/android/an;->a:Z
 
     .line 110
     new-instance v0, Lcom/google/analytics/tracking/android/q;
@@ -631,7 +637,7 @@
 
     .line 431
     :cond_0
-    invoke-super {p0, p1}, Lcom/google/analytics/tracking/android/be;->a(Ljava/util/Map;)V
+    invoke-super {p0, p1}, Lcom/google/analytics/tracking/android/bg;->a(Ljava/util/Map;)V
 
     .line 432
     return-void

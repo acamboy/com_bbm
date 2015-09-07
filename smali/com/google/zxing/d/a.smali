@@ -49,7 +49,7 @@
 
 # virtual methods
 .method public final a(Lcom/google/zxing/c;Ljava/util/Map;)Lcom/google/zxing/m;
-    .locals 11
+    .locals 12
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -64,7 +64,7 @@
 
     .prologue
     .line 67
-    if-eqz p2, :cond_d
+    if-eqz p2, :cond_10
 
     sget-object v0, Lcom/google/zxing/e;->b:Lcom/google/zxing/e;
 
@@ -72,7 +72,7 @@
 
     move-result v0
 
-    if-eqz v0, :cond_d
+    if-eqz v0, :cond_10
 
     .line 68
     invoke-virtual {p1}, Lcom/google/zxing/c;->a()Lcom/google/zxing/b/b;
@@ -111,7 +111,7 @@
 
     aget v8, v6, v8
 
-    if-eqz v8, :cond_10
+    if-eqz v8, :cond_13
 
     if-ge v0, v3, :cond_0
 
@@ -125,7 +125,7 @@
     :cond_1
     mul-int/lit8 v6, v5, 0x20
 
-    if-ge v6, v4, :cond_f
+    if-ge v6, v4, :cond_12
 
     const/4 v6, 0x0
 
@@ -145,7 +145,7 @@
 
     add-int/2addr v9, v6
 
-    if-ge v9, v4, :cond_f
+    if-ge v9, v4, :cond_12
 
     mul-int/lit8 v4, v5, 0x20
 
@@ -158,7 +158,7 @@
 
     add-int/lit8 v4, v4, 0x1f
 
-    if-le v4, v2, :cond_e
+    if-le v4, v2, :cond_11
 
     const/16 v4, 0x1f
 
@@ -176,7 +176,7 @@
 
     add-int/2addr v8, v4
 
-    if-le v8, v2, :cond_e
+    if-le v8, v2, :cond_11
 
     mul-int/lit8 v2, v5, 0x20
 
@@ -345,14 +345,79 @@
     :cond_b
     iget-object v0, p0, Lcom/google/zxing/d/a;->b:Lcom/google/zxing/d/a/c;
 
-    new-instance v1, Lcom/google/zxing/d/a/a;
+    new-instance v4, Lcom/google/zxing/d/a/a;
 
-    invoke-direct {v1, v6}, Lcom/google/zxing/d/a/a;-><init>(Lcom/google/zxing/b/b;)V
+    invoke-direct {v4, v6}, Lcom/google/zxing/d/a/a;-><init>(Lcom/google/zxing/b/b;)V
 
-    invoke-virtual {v1}, Lcom/google/zxing/d/a/a;->a()[B
+    const/16 v1, 0x90
 
-    move-result-object v1
+    new-array v1, v1, [B
 
+    iget-object v2, v4, Lcom/google/zxing/d/a/a;->b:Lcom/google/zxing/b/b;
+
+    iget v5, v2, Lcom/google/zxing/b/b;->b:I
+
+    iget-object v2, v4, Lcom/google/zxing/d/a/a;->b:Lcom/google/zxing/b/b;
+
+    iget v6, v2, Lcom/google/zxing/b/b;->a:I
+
+    const/4 v2, 0x0
+
+    :goto_9
+    if-ge v2, v5, :cond_e
+
+    sget-object v3, Lcom/google/zxing/d/a/a;->a:[[I
+
+    aget-object v7, v3, v2
+
+    const/4 v3, 0x0
+
+    :goto_a
+    if-ge v3, v6, :cond_d
+
+    aget v8, v7, v3
+
+    if-ltz v8, :cond_c
+
+    iget-object v9, v4, Lcom/google/zxing/d/a/a;->b:Lcom/google/zxing/b/b;
+
+    invoke-virtual {v9, v3, v2}, Lcom/google/zxing/b/b;->a(II)Z
+
+    move-result v9
+
+    if-eqz v9, :cond_c
+
+    div-int/lit8 v9, v8, 0x6
+
+    aget-byte v10, v1, v9
+
+    const/4 v11, 0x1
+
+    rem-int/lit8 v8, v8, 0x6
+
+    rsub-int/lit8 v8, v8, 0x5
+
+    shl-int v8, v11, v8
+
+    int-to-byte v8, v8
+
+    or-int/2addr v8, v10
+
+    int-to-byte v8, v8
+
+    aput-byte v8, v1, v9
+
+    :cond_c
+    add-int/lit8 v3, v3, 0x1
+
+    goto :goto_a
+
+    :cond_d
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_9
+
+    :cond_e
     const/4 v2, 0x0
 
     const/16 v3, 0xa
@@ -402,7 +467,7 @@
 
     new-array v0, v0, [B
 
-    :goto_9
+    :goto_b
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -443,7 +508,7 @@
     iget-object v0, v0, Lcom/google/zxing/b/e;->d:Ljava/lang/String;
 
     .line 78
-    if-eqz v0, :cond_c
+    if-eqz v0, :cond_f
 
     .line 79
     sget-object v1, Lcom/google/zxing/n;->d:Lcom/google/zxing/n;
@@ -451,7 +516,7 @@
     invoke-virtual {v2, v1, v0}, Lcom/google/zxing/m;->a(Lcom/google/zxing/n;Ljava/lang/Object;)V
 
     .line 81
-    :cond_c
+    :cond_f
     return-object v2
 
     .line 69
@@ -480,17 +545,17 @@
 
     new-array v0, v0, [B
 
-    goto :goto_9
+    goto :goto_b
 
     .line 71
-    :cond_d
+    :cond_10
     invoke-static {}, Lcom/google/zxing/i;->a()Lcom/google/zxing/i;
 
     move-result-object v0
 
     throw v0
 
-    :cond_e
+    :cond_11
     move v4, v3
 
     move v3, v2
@@ -499,12 +564,12 @@
 
     goto/16 :goto_5
 
-    :cond_f
+    :cond_12
     move v6, v4
 
     goto/16 :goto_3
 
-    :cond_10
+    :cond_13
     move v6, v4
 
     move v4, v3

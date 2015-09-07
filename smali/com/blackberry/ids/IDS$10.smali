@@ -17,7 +17,7 @@
     .locals 0
 
     .prologue
-    .line 1705
+    .line 1716
     iput-object p1, p0, Lcom/blackberry/ids/IDS$10;->a:Landroid/content/Context;
 
     iput p2, p0, Lcom/blackberry/ids/IDS$10;->b:I
@@ -39,7 +39,7 @@
 
     const/4 v4, 0x0
 
-    .line 1708
+    .line 1719
     const-string v0, "enter IDS.do_setActivityContext startActivityContext=%s startActivityFlags=%x"
 
     new-array v1, v3, [Ljava/lang/Object;
@@ -58,20 +58,20 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 1711
+    .line 1722
     :try_start_0
     iget-object v0, p0, Lcom/blackberry/ids/IDS$10;->a:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/blackberry/ids/IDS;->a(Landroid/content/Context;)Landroid/content/Context;
 
-    .line 1712
+    .line 1723
     iget v0, p0, Lcom/blackberry/ids/IDS$10;->b:I
 
     invoke-static {v0}, Lcom/blackberry/ids/IDS;->a(I)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1715
+    .line 1726
     const-string v0, "exit IDS.do_setActivityContext startActivityContext=%s startActivityFlags=%x"
 
     new-array v1, v3, [Ljava/lang/Object;
@@ -90,10 +90,10 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 1717
+    .line 1728
     return-void
 
-    .line 1715
+    .line 1726
     :catchall_0
     move-exception v0
 

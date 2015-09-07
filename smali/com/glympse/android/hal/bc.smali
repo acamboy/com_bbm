@@ -1,113 +1,350 @@
 .class Lcom/glympse/android/hal/bc;
-.super Landroid/content/BroadcastReceiver;
+.super Ljava/lang/Object;
 .source "ProximityProvider.java"
+
+# interfaces
+.implements Lcom/glympse/android/core/GProximityProvider;
+
+
+# static fields
+.field private static final cK:Ljava/lang/String; = "com.glympse.android.hal.proximity.REGION"
 
 
 # instance fields
-.field private E:Landroid/app/PendingIntent;
+.field private cL:Lcom/glympse/android/core/GProximityListener;
 
-.field private cH:Lcom/glympse/android/core/GRegion;
+.field private cM:Ljava/util/Hashtable;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Hashtable",
+            "<",
+            "Lcom/glympse/android/core/GRegion;",
+            "Lcom/glympse/android/hal/bd;",
+            ">;"
+        }
+    .end annotation
+.end field
 
-.field final synthetic cI:Lcom/glympse/android/hal/bb;
+.field private ca:Landroid/location/LocationManager;
+
+.field private e:Landroid/content/Context;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/hal/bb;Landroid/app/PendingIntent;Lcom/glympse/android/core/GRegion;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
     .prologue
-    .line 127
-    iput-object p1, p0, Lcom/glympse/android/hal/bc;->cI:Lcom/glympse/android/hal/bb;
+    .line 33
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
+    .line 34
+    iput-object p1, p0, Lcom/glympse/android/hal/bc;->e:Landroid/content/Context;
 
-    .line 128
-    iput-object p2, p0, Lcom/glympse/android/hal/bc;->E:Landroid/app/PendingIntent;
+    .line 35
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->e:Landroid/content/Context;
 
-    .line 129
-    iput-object p3, p0, Lcom/glympse/android/hal/bc;->cH:Lcom/glympse/android/core/GRegion;
+    const-string v1, "location"
 
-    .line 130
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/location/LocationManager;
+
+    iput-object v0, p0, Lcom/glympse/android/hal/bc;->ca:Landroid/location/LocationManager;
+
+    .line 36
+    new-instance v0, Ljava/util/Hashtable;
+
+    invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
+
+    iput-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
+
+    .line 37
     return-void
 .end method
 
-
-# virtual methods
-.method public K()Landroid/app/PendingIntent;
+.method static synthetic a(Lcom/glympse/android/hal/bc;)Lcom/glympse/android/core/GProximityListener;
     .locals 1
 
     .prologue
-    .line 155
-    iget-object v0, p0, Lcom/glympse/android/hal/bc;->E:Landroid/app/PendingIntent;
+    .line 22
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cL:Lcom/glympse/android/core/GProximityListener;
 
     return-object v0
 .end method
 
-.method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 2
+
+# virtual methods
+.method public detachRegions()Lcom/glympse/android/core/GArray;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/glympse/android/core/GArray",
+            "<",
+            "Lcom/glympse/android/core/GRegion;",
+            ">;"
+        }
+    .end annotation
 
     .prologue
-    .line 135
-    invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
+    .line 104
+    new-instance v1, Lcom/glympse/android/hal/GVector;
 
-    move-result-object v0
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
 
-    const-string v1, "com.glympse.android.hal.proximity.REGION"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    invoke-virtual {v0}, Ljava/util/Hashtable;->size()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    invoke-direct {v1, v0}, Lcom/glympse/android/hal/GVector;-><init>(I)V
 
-    .line 138
-    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cI:Lcom/glympse/android/hal/bb;
+    .line 105
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
 
-    invoke-static {v0}, Lcom/glympse/android/hal/bb;->a(Lcom/glympse/android/hal/bb;)Lcom/glympse/android/core/GProximityListener;
+    invoke-virtual {v0}, Ljava/util/Hashtable;->keys()Ljava/util/Enumeration;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    :goto_0
+    invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
 
-    .line 140
-    const-string v0, "entering"
+    move-result v2
 
-    const/4 v1, 0x1
+    if-eqz v2, :cond_0
 
-    invoke-virtual {p2, v0, v1}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+    .line 107
+    invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 111
+    :cond_0
+    invoke-virtual {v1}, Lcom/glympse/android/hal/GVector;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    .line 141
     if-eqz v0, :cond_1
 
-    .line 143
-    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cI:Lcom/glympse/android/hal/bb;
-
-    invoke-static {v0}, Lcom/glympse/android/hal/bb;->a(Lcom/glympse/android/hal/bb;)Lcom/glympse/android/core/GProximityListener;
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/bc;->cH:Lcom/glympse/android/core/GRegion;
+    check-cast v0, Lcom/glympse/android/core/GRegion;
 
-    invoke-interface {v0, v1}, Lcom/glympse/android/core/GProximityListener;->regionEntered(Lcom/glympse/android/core/GRegion;)V
+    .line 113
+    invoke-virtual {p0, v0}, Lcom/glympse/android/hal/bc;->stopMonitoring(Lcom/glympse/android/core/GRegion;)V
 
-    .line 151
+    goto :goto_1
+
+    .line 115
+    :cond_1
+    return-object v1
+.end method
+
+.method public locationChanged(Lcom/glympse/android/core/GLocation;)V
+    .locals 0
+
+    .prologue
+    .line 99
+    return-void
+.end method
+
+.method public setProximityListener(Lcom/glympse/android/core/GProximityListener;)V
+    .locals 0
+
+    .prologue
+    .line 45
+    iput-object p1, p0, Lcom/glympse/android/hal/bc;->cL:Lcom/glympse/android/core/GProximityListener;
+
+    .line 46
+    return-void
+.end method
+
+.method public startMonitoring(Lcom/glympse/android/core/GArray;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glympse/android/core/GArray",
+            "<",
+            "Lcom/glympse/android/core/GRegion;",
+            ">;)V"
+        }
+    .end annotation
+
+    .prologue
+    .line 71
+    invoke-interface {p1}, Lcom/glympse/android/core/GArray;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/core/GRegion;
+
+    .line 73
+    invoke-virtual {p0, v0}, Lcom/glympse/android/hal/bc;->startMonitoring(Lcom/glympse/android/core/GRegion;)V
+
+    goto :goto_0
+
+    .line 75
     :cond_0
+    return-void
+.end method
+
+.method public startMonitoring(Lcom/glympse/android/core/GRegion;)V
+    .locals 11
+
+    .prologue
+    const/4 v3, 0x0
+
+    .line 50
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
+
+    invoke-virtual {v0, p1}, Ljava/util/Hashtable;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 67
     :goto_0
     return-void
 
-    .line 147
-    :cond_1
-    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cI:Lcom/glympse/android/hal/bb;
+    .line 57
+    :cond_0
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcom/glympse/android/hal/bb;->a(Lcom/glympse/android/hal/bb;)Lcom/glympse/android/core/GProximityListener;
+    const-string v1, "com.glympse.android.hal.proximity.REGION_"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/bc;->cH:Lcom/glympse/android/core/GRegion;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lcom/glympse/android/core/GProximityListener;->regionLeft(Lcom/glympse/android/core/GRegion;)V
+    move-result-object v0
+
+    .line 58
+    iget-object v1, p0, Lcom/glympse/android/hal/bc;->e:Landroid/content/Context;
+
+    new-instance v2, Landroid/content/Intent;
+
+    invoke-direct {v2, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v1, v3, v2, v3}, Landroid/app/PendingIntent;->getBroadcast(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v9
+
+    .line 59
+    new-instance v10, Lcom/glympse/android/hal/bd;
+
+    invoke-direct {v10, p0, v9, p1}, Lcom/glympse/android/hal/bd;-><init>(Lcom/glympse/android/hal/bc;Landroid/app/PendingIntent;Lcom/glympse/android/core/GRegion;)V
+
+    .line 60
+    iget-object v1, p0, Lcom/glympse/android/hal/bc;->e:Landroid/content/Context;
+
+    new-instance v2, Landroid/content/IntentFilter;
+
+    invoke-direct {v2, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, v10, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    .line 63
+    iget-object v1, p0, Lcom/glympse/android/hal/bc;->ca:Landroid/location/LocationManager;
+
+    invoke-interface {p1}, Lcom/glympse/android/core/GRegion;->getLatitude()D
+
+    move-result-wide v2
+
+    invoke-interface {p1}, Lcom/glympse/android/core/GRegion;->getLongitude()D
+
+    move-result-wide v4
+
+    invoke-interface {p1}, Lcom/glympse/android/core/GRegion;->getRadius()D
+
+    move-result-wide v6
+
+    double-to-float v6, v6
+
+    const-wide/16 v7, -0x1
+
+    invoke-virtual/range {v1 .. v9}, Landroid/location/LocationManager;->addProximityAlert(DDFJLandroid/app/PendingIntent;)V
+
+    .line 66
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
+
+    invoke-virtual {v0, p1, v10}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+.end method
+
+.method public stopMonitoring(Lcom/glympse/android/core/GRegion;)V
+    .locals 3
+
+    .prologue
+    .line 79
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
+
+    invoke-virtual {v0, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/hal/bd;
+
+    .line 80
+    if-nez v0, :cond_0
+
+    .line 93
+    :goto_0
+    return-void
+
+    .line 86
+    :cond_0
+    iget-object v1, p0, Lcom/glympse/android/hal/bc;->ca:Landroid/location/LocationManager;
+
+    invoke-virtual {v0}, Lcom/glympse/android/hal/bd;->L()Landroid/app/PendingIntent;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Landroid/location/LocationManager;->removeProximityAlert(Landroid/app/PendingIntent;)V
+
+    .line 89
+    iget-object v1, p0, Lcom/glympse/android/hal/bc;->e:Landroid/content/Context;
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
+
+    .line 92
+    iget-object v0, p0, Lcom/glympse/android/hal/bc;->cM:Ljava/util/Hashtable;
+
+    invoke-virtual {v0, p1}, Ljava/util/Hashtable;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method

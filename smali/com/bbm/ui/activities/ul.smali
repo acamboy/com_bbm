@@ -1,97 +1,139 @@
-.class final Lcom/bbm/ui/activities/ul;
-.super Ljava/lang/Object;
-.source "MainActivity.java"
-
-# interfaces
-.implements Lcom/bbm/ui/activities/abo;
+.class public final Lcom/bbm/ui/activities/ul;
+.super Landroid/widget/BaseAdapter;
+.source "GroupsIconActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/uj;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupsIconActivity;
+
+.field private final b:I
+
+.field private final c:Landroid/view/LayoutInflater;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/uj;)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/ui/activities/GroupsIconActivity;Landroid/content/Context;I)V
+    .locals 1
 
     .prologue
-    .line 2059
-    iput-object p1, p0, Lcom/bbm/ui/activities/ul;->a:Lcom/bbm/ui/activities/uj;
+    .line 267
+    iput-object p1, p0, Lcom/bbm/ui/activities/ul;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
+    .line 268
+    iput p3, p0, Lcom/bbm/ui/activities/ul;->b:I
+
+    .line 269
+    const-string v0, "layout_inflater"
+
+    invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/LayoutInflater;
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ul;->c:Landroid/view/LayoutInflater;
+
+    .line 270
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Ljava/lang/String;J)V
-    .locals 6
+.method public final getCount()I
+    .locals 1
 
     .prologue
-    const/4 v5, 0x1
+    .line 290
+    iget v0, p0, Lcom/bbm/ui/activities/ul;->b:I
 
-    const/4 v4, 0x0
+    return v0
+.end method
 
-    .line 2063
-    new-instance v0, Landroid/content/Intent;
+.method public final getItem(I)Ljava/lang/Object;
+    .locals 1
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ul;->a:Lcom/bbm/ui/activities/uj;
+    .prologue
+    .line 295
+    const/4 v0, 0x0
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/uj;->a:Lcom/bbm/ui/activities/MainActivity;
+    return-object v0
+.end method
 
-    const-class v2, Lcom/bbm/ui/activities/SelectContactActivity;
+.method public final getItemId(I)J
+    .locals 2
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    .prologue
+    .line 300
+    const-wide/16 v0, 0x0
 
-    .line 2064
-    const-string v1, "com.bbm.selectedcategoryid"
+    return-wide v0
+.end method
 
-    invoke-virtual {v0, v1, p2, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 4
 
-    .line 2065
-    iget-object v1, p0, Lcom/bbm/ui/activities/ul;->a:Lcom/bbm/ui/activities/uj;
+    .prologue
+    .line 275
+    if-nez p2, :cond_0
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/uj;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 276
+    iget-object v0, p0, Lcom/bbm/ui/activities/ul;->c:Landroid/view/LayoutInflater;
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/MainActivity;->getResources()Landroid/content/res/Resources;
+    const v1, 0x7f0300cf
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object p2
+
+    .line 278
+    :cond_0
+    const v0, 0x7f0b04ae
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    .line 282
+    iget-object v1, p0, Lcom/bbm/ui/activities/ul;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupsIconActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    const v2, 0x7f0e05f1
+    const v2, 0x7f070007
 
-    new-array v3, v5, [Ljava/lang/Object;
-
-    aput-object p1, v3, v4
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
-    .line 2066
-    const-string v2, "com.bbm.additionalmessage"
+    .line 283
+    iget-object v2, p0, Lcom/bbm/ui/activities/ul;->a:Lcom/bbm/ui/activities/GroupsIconActivity;
 
-    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v2}, Lcom/bbm/ui/activities/GroupsIconActivity;->getResources()Landroid/content/res/Resources;
 
-    .line 2067
-    const-string v1, "com.bbm.selectall"
+    move-result-object v2
 
-    invoke-virtual {v0, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    const/4 v3, 0x0
 
-    .line 2068
-    const-string v1, "com.bbm.cancelisskip"
+    invoke-virtual {v1, p1, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    move-result v3
 
-    .line 2069
-    iget-object v1, p0, Lcom/bbm/ui/activities/ul;->a:Lcom/bbm/ui/activities/uj;
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/uj;->a:Lcom/bbm/ui/activities/MainActivity;
+    move-result-object v2
 
-    const/4 v2, 0x5
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/MainActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    .line 284
+    invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 2070
-    return-void
+    .line 285
+    return-object p2
 .end method

@@ -122,9 +122,7 @@
     .line 79
     iget-object v1, v10, Lcom/google/zxing/c/a/a;->c:Lcom/google/zxing/c/a/g;
 
-    invoke-virtual {v1}, Lcom/google/zxing/c/a/g;->f()I
-
-    move-result v1
+    iget v1, v1, Lcom/google/zxing/c/a/g;->g:I
 
     new-array v12, v1, [B
 
@@ -318,9 +316,7 @@
 
     iget-object v1, v10, Lcom/google/zxing/c/a/a;->c:Lcom/google/zxing/c/a/g;
 
-    invoke-virtual {v1}, Lcom/google/zxing/c/a/g;->f()I
-
-    move-result v1
+    iget v1, v1, Lcom/google/zxing/c/a/g;->g:I
 
     if-eq v7, v1, :cond_26
 
@@ -914,9 +910,7 @@
 
     .line 81
     :cond_26
-    invoke-virtual {v11}, Lcom/google/zxing/c/a/g;->g()Lcom/google/zxing/c/a/i;
-
-    move-result-object v5
+    iget-object v5, v11, Lcom/google/zxing/c/a/g;->f:Lcom/google/zxing/c/a/i;
 
     const/4 v2, 0x0
 
@@ -1048,9 +1042,7 @@
     goto :goto_9
 
     :cond_2b
-    invoke-virtual {v11}, Lcom/google/zxing/c/a/g;->a()I
-
-    move-result v1
+    iget v1, v11, Lcom/google/zxing/c/a/g;->a:I
 
     const/16 v5, 0x18
 

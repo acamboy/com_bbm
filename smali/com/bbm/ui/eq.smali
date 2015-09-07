@@ -1,115 +1,267 @@
 .class final Lcom/bbm/ui/eq;
-.super Lcom/bbm/j/k;
-.source "QuickShareVoicenoteView.java"
+.super Ljava/lang/Object;
+.source "PassphraseEditTextView.java"
+
+# interfaces
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/QuickShareVoicenoteView;
+.field final synthetic a:Lcom/bbm/ui/PassphraseEditTextView;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/QuickShareVoicenoteView;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/PassphraseEditTextView;)V
+    .locals 0
 
     .prologue
-    .line 83
-    iput-object p1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
+    .line 73
+    iput-object p1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
+
+    .prologue
+    .line 78
+    return-void
+.end method
+
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .prologue
+    .line 83
+    return-void
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
     .locals 2
 
     .prologue
     .line 87
-    iget-object v1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
 
-    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/QuickShareVoicenoteView;->getContext()Landroid/content/Context;
+    invoke-virtual {v0}, Lcom/bbm/ui/PassphraseEditTextView;->getPassphrase()Ljava/lang/String;
 
     move-result-object v0
-
-    invoke-static {v0}, Lcom/bbm/l/a;->a(Landroid/content/Context;)Lcom/bbm/l/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/l/a;->f()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-static {v1, v0}, Lcom/bbm/ui/QuickShareVoicenoteView;->a(Lcom/bbm/ui/QuickShareVoicenoteView;Z)Z
 
     .line 88
-    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
+    invoke-static {v0}, Lcom/bbm/util/db;->b(Ljava/lang/String;)Z
 
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareVoicenoteView;->d(Lcom/bbm/ui/QuickShareVoicenoteView;)Landroid/widget/ImageView;
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 90
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/PassphraseEditTextView;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v1}, Lcom/bbm/ui/PassphraseEditTextView;->a(Lcom/bbm/ui/PassphraseEditTextView;)I
+
+    move-result v1
+
+    aget-object v0, v0, v1
+
+    if-nez v0, :cond_2
+
+    .line 91
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    iget-object v1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v1}, Lcom/bbm/ui/PassphraseEditTextView;->g(Lcom/bbm/ui/PassphraseEditTextView;)Landroid/graphics/drawable/AnimationDrawable;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
+    invoke-static {v0, v1}, Lcom/bbm/ui/PassphraseEditTextView;->a(Lcom/bbm/ui/PassphraseEditTextView;Landroid/graphics/drawable/Drawable;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareVoicenoteView;->c(Lcom/bbm/ui/QuickShareVoicenoteView;)Z
+    .line 97
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
 
-    move-result v0
+    invoke-static {v0}, Lcom/bbm/ui/PassphraseEditTextView;->i(Lcom/bbm/ui/PassphraseEditTextView;)V
+
+    .line 115
+    :goto_1
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v0}, Lcom/bbm/ui/PassphraseEditTextView;->k(Lcom/bbm/ui/PassphraseEditTextView;)Lcom/bbm/ui/er;
+
+    move-result-object v0
 
     if-eqz v0, :cond_1
 
-    const v0, 0x7f020365
+    .line 116
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
 
-    :goto_1
-    invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-static {v0}, Lcom/bbm/ui/PassphraseEditTextView;->k(Lcom/bbm/ui/PassphraseEditTextView;)Lcom/bbm/ui/er;
 
-    .line 89
-    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
+    move-result-object v0
 
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareVoicenoteView;->e(Lcom/bbm/ui/QuickShareVoicenoteView;)Landroid/widget/TextView;
+    invoke-interface {v0}, Lcom/bbm/ui/er;->a()V
+
+    .line 118
+    :cond_1
+    return-void
+
+    .line 92
+    :cond_2
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/PassphraseEditTextView;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v1}, Lcom/bbm/ui/PassphraseEditTextView;->a(Lcom/bbm/ui/PassphraseEditTextView;)I
+
+    move-result v1
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v1}, Lcom/bbm/ui/PassphraseEditTextView;->g(Lcom/bbm/ui/PassphraseEditTextView;)Landroid/graphics/drawable/AnimationDrawable;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/QuickShareVoicenoteView;
+    if-eq v0, v1, :cond_0
 
-    invoke-static {v0}, Lcom/bbm/ui/QuickShareVoicenoteView;->c(Lcom/bbm/ui/QuickShareVoicenoteView;)Z
+    .line 93
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
 
-    move-result v0
+    invoke-static {v0}, Lcom/bbm/ui/PassphraseEditTextView;->h(Lcom/bbm/ui/PassphraseEditTextView;)V
 
-    if-eqz v0, :cond_2
+    .line 94
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
 
-    const v0, 0x7f0e0596
+    iget-object v1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
 
-    :goto_2
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
+    invoke-static {v1}, Lcom/bbm/ui/PassphraseEditTextView;->g(Lcom/bbm/ui/PassphraseEditTextView;)Landroid/graphics/drawable/AnimationDrawable;
 
-    .line 90
-    return-void
+    move-result-object v1
 
-    .line 87
-    :cond_0
-    const/4 v0, 0x0
+    invoke-static {v0, v1}, Lcom/bbm/ui/PassphraseEditTextView;->a(Lcom/bbm/ui/PassphraseEditTextView;Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
-    .line 88
-    :cond_1
-    const v0, 0x7f020364
+    .line 98
+    :cond_3
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 101
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v0}, Lcom/bbm/ui/PassphraseEditTextView;->h(Lcom/bbm/ui/PassphraseEditTextView;)V
+
+    .line 103
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    iget-object v1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v1}, Lcom/bbm/ui/PassphraseEditTextView;->f(Lcom/bbm/ui/PassphraseEditTextView;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/PassphraseEditTextView;->a(Lcom/bbm/ui/PassphraseEditTextView;Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_1
 
-    .line 89
-    :cond_2
-    const v0, 0x7f0e0595
+    .line 106
+    :cond_4
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/PassphraseEditTextView;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v1}, Lcom/bbm/ui/PassphraseEditTextView;->a(Lcom/bbm/ui/PassphraseEditTextView;)I
+
+    move-result v1
+
+    aget-object v0, v0, v1
+
+    if-nez v0, :cond_6
+
+    .line 107
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    iget-object v1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v1}, Lcom/bbm/ui/PassphraseEditTextView;->j(Lcom/bbm/ui/PassphraseEditTextView;)Landroid/graphics/drawable/AnimationDrawable;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/PassphraseEditTextView;->a(Lcom/bbm/ui/PassphraseEditTextView;Landroid/graphics/drawable/Drawable;)V
+
+    .line 113
+    :cond_5
+    :goto_2
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v0}, Lcom/bbm/ui/PassphraseEditTextView;->i(Lcom/bbm/ui/PassphraseEditTextView;)V
+
+    goto :goto_1
+
+    .line 108
+    :cond_6
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/PassphraseEditTextView;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v1}, Lcom/bbm/ui/PassphraseEditTextView;->a(Lcom/bbm/ui/PassphraseEditTextView;)I
+
+    move-result v1
+
+    aget-object v0, v0, v1
+
+    iget-object v1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v1}, Lcom/bbm/ui/PassphraseEditTextView;->j(Lcom/bbm/ui/PassphraseEditTextView;)Landroid/graphics/drawable/AnimationDrawable;
+
+    move-result-object v1
+
+    if-eq v0, v1, :cond_5
+
+    .line 109
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v0}, Lcom/bbm/ui/PassphraseEditTextView;->h(Lcom/bbm/ui/PassphraseEditTextView;)V
+
+    .line 110
+    iget-object v0, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    iget-object v1, p0, Lcom/bbm/ui/eq;->a:Lcom/bbm/ui/PassphraseEditTextView;
+
+    invoke-static {v1}, Lcom/bbm/ui/PassphraseEditTextView;->j(Lcom/bbm/ui/PassphraseEditTextView;)Landroid/graphics/drawable/AnimationDrawable;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/PassphraseEditTextView;->a(Lcom/bbm/ui/PassphraseEditTextView;Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_2
 .end method

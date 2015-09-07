@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/group_passphrase_info" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/group_passphrase_info" />
+    <include android:id="@id/divider_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_margin" android:layout_marginTop="10.0dip" android:layout_marginRight="@dimen/activity_horizontal_margin" android:layout_marginBottom="5.0dip" android:layout_below="@id/group_passphrase_info" layout="@layout/divider_common" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/group_passphrase_section" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/divider_top">
+        <TextView android:textSize="@dimen/fontSizeMedium" android:layout_gravity="left|center" android:id="@id/group_passphrase" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/group_passphrase_missing" android:editable="false" android:layout_weight="0.6" />
+        <Button android:textSize="@dimen/fontSizeMedium" android:layout_gravity="right|center" android:id="@id/group_passphrase_copy" android:background="@drawable/selector_cascades_button_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/copy_group_passphrase" android:layout_weight="0.4" />
+    </LinearLayout>
+    <include android:id="@id/divider_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_horizontal_margin" android:layout_marginTop="5.0dip" android:layout_marginRight="@dimen/activity_horizontal_margin" android:layout_marginBottom="10.0dip" android:layout_below="@id/group_passphrase_section" layout="@layout/divider_common" />
+    <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
+</RelativeLayout>

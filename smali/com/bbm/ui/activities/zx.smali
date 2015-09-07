@@ -1,71 +1,43 @@
 .class final Lcom/bbm/ui/activities/zx;
-.super Lcom/bbm/ui/by;
-.source "ReceivedPendingGroupInviteActivity.java"
+.super Ljava/lang/Object;
+.source "NewListItemActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/NewListItemActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/NewListItemActivity;)V
     .locals 0
 
     .prologue
-    .line 94
-    iput-object p1, p0, Lcom/bbm/ui/activities/zx;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+    .line 85
+    iput-object p1, p0, Lcom/bbm/ui/activities/zx;->a:Lcom/bbm/ui/activities/NewListItemActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 2
 
     .prologue
-    .line 98
-    iget-object v0, p0, Lcom/bbm/ui/activities/zx;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
+    .line 89
+    iget-object v0, p0, Lcom/bbm/ui/activities/zx;->a:Lcom/bbm/ui/activities/NewListItemActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->finish()V
+    const/4 v1, 0x1
 
-    .line 99
-    return-void
-.end method
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
 
-.method public final a(I)V
-    .locals 1
+    .line 90
+    const/4 v0, 0x0
 
-    .prologue
-    .line 103
-    packed-switch p1, :pswitch_data_0
-
-    .line 111
-    :goto_0
-    return-void
-
-    .line 105
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/zx;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->b(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)V
-
-    goto :goto_0
-
-    .line 108
-    :pswitch_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/zx;->a:Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;->c(Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;)V
-
-    goto :goto_0
-
-    .line 103
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    return v0
 .end method

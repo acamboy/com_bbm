@@ -88,16 +88,12 @@
     .line 403
     iget-object v0, p0, Lcom/google/zxing/c/a/a;->c:Lcom/google/zxing/c/a/g;
 
-    invoke-virtual {v0}, Lcom/google/zxing/c/a/g;->b()I
-
-    move-result v0
+    iget v0, v0, Lcom/google/zxing/c/a/g;->b:I
 
     .line 404
     iget-object v1, p0, Lcom/google/zxing/c/a/a;->c:Lcom/google/zxing/c/a/g;
 
-    invoke-virtual {v1}, Lcom/google/zxing/c/a/g;->c()I
-
-    move-result v1
+    iget v1, v1, Lcom/google/zxing/c/a/g;->c:I
 
     .line 406
     iget v2, p1, Lcom/google/zxing/b/b;->b:I
@@ -117,16 +113,12 @@
     :cond_0
     iget-object v2, p0, Lcom/google/zxing/c/a/a;->c:Lcom/google/zxing/c/a/g;
 
-    invoke-virtual {v2}, Lcom/google/zxing/c/a/g;->d()I
-
-    move-result v4
+    iget v4, v2, Lcom/google/zxing/c/a/g;->d:I
 
     .line 411
     iget-object v2, p0, Lcom/google/zxing/c/a/a;->c:Lcom/google/zxing/c/a/g;
 
-    invoke-virtual {v2}, Lcom/google/zxing/c/a/g;->e()I
-
-    move-result v5
+    iget v5, v2, Lcom/google/zxing/c/a/g;->e:I
 
     .line 413
     div-int v6, v0, v4

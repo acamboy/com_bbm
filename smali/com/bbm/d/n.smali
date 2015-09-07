@@ -1,102 +1,124 @@
-.class final Lcom/bbm/d/n;
-.super Lcom/bbm/j/a;
+.class final synthetic Lcom/bbm/d/n;
+.super Ljava/lang/Object;
 .source "BbmdsModel.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/j/a",
-        "<",
-        "Ljava/util/Map",
-        "<",
-        "Ljava/lang/String;",
-        "Ljava/util/List",
-        "<",
-        "Lcom/bbm/d/ev;",
-        ">;>;>;"
-    }
-.end annotation
+# static fields
+.field static final synthetic a:[I
 
-
-# instance fields
-.field final synthetic a:Lcom/bbm/d/a;
+.field static final synthetic b:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/d/a;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 120
-    iput-object p1, p0, Lcom/bbm/d/n;->a:Lcom/bbm/d/a;
-
-    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method protected final synthetic a()Ljava/lang/Object;
-    .locals 5
-
-    .prologue
-    .line 120
-    new-instance v2, Ljava/util/HashMap;
-
-    invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
-
-    iget-object v0, p0, Lcom/bbm/d/n;->a:Lcom/bbm/d/a;
-
-    invoke-virtual {v0}, Lcom/bbm/d/a;->r()Lcom/bbm/j/w;
+    .line 1564
+    invoke-static {}, Lcom/bbm/util/bi;->values()[Lcom/bbm/util/bi;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    array-length v0, v0
 
-    move-result-object v0
+    new-array v0, v0, [I
 
-    check-cast v0, Ljava/util/List;
+    sput-object v0, Lcom/bbm/d/n;->b:[I
 
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    :try_start_0
+    sget-object v0, Lcom/bbm/d/n;->b:[I
 
-    move-result-object v3
+    sget-object v1, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+
+    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
 
     :goto_0
-    invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
+    :try_start_1
+    sget-object v0, Lcom/bbm/d/n;->b:[I
 
-    move-result v0
+    sget-object v1, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
 
-    invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
+
+    .line 657
+    :goto_1
+    invoke-static {}, Lcom/bbm/d/x;->values()[Lcom/bbm/d/x;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/ev;
+    array-length v0, v0
 
-    iget-object v4, v0, Lcom/bbm/d/ev;->c:Ljava/lang/String;
+    new-array v0, v0, [I
 
-    invoke-interface {v2, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    sput-object v0, Lcom/bbm/d/n;->a:[I
 
-    move-result-object v1
+    :try_start_2
+    sget-object v0, Lcom/bbm/d/n;->a:[I
 
-    check-cast v1, Ljava/util/List;
+    sget-object v1, Lcom/bbm/d/x;->b:Lcom/bbm/d/x;
 
-    if-nez v1, :cond_0
+    invoke-virtual {v1}, Lcom/bbm/d/x;->ordinal()I
 
-    new-instance v1, Ljava/util/ArrayList;
+    move-result v1
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    const/4 v2, 0x1
 
-    invoke-interface {v2, v4, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
 
-    :cond_0
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/d/n;->a:[I
+
+    sget-object v1, Lcom/bbm/d/x;->c:Lcom/bbm/d/x;
+
+    invoke-virtual {v1}, Lcom/bbm/d/x;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
+
+    :goto_3
+    return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_3
+    move-exception v0
 
     goto :goto_0
-
-    :cond_1
-    return-object v2
 .end method

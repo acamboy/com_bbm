@@ -1,46 +1,90 @@
-.class final Lcom/bbm/ui/e/ae;
+.class final synthetic Lcom/bbm/ui/e/ae;
 .super Ljava/lang/Object;
-.source "InviteHolder.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "FileTransferHolder.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/e/ac;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/e/ac;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 57
-    iput-object p1, p0, Lcom/bbm/ui/e/ae;->a:Lcom/bbm/ui/e/ac;
+    .line 131
+    invoke-static {}, Lcom/bbm/d/fm;->values()[Lcom/bbm/d/fm;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    move-result-object v0
 
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/e/ae;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/e/ae;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->e:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/e/ae;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->f:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/e/ae;->a:[I
+
+    sget-object v1, Lcom/bbm/d/fm;->g:Lcom/bbm/d/fm;
+
+    invoke-virtual {v1}, Lcom/bbm/d/fm;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
+
+    :goto_2
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+    goto :goto_2
 
-    .prologue
-    .line 60
-    const-string v0, "Reject Clicked"
+    :catch_1
+    move-exception v0
 
-    const-class v1, Lcom/bbm/ui/e/ac;
+    goto :goto_1
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    :catch_2
+    move-exception v0
 
-    .line 62
-    iget-object v0, p0, Lcom/bbm/ui/e/ae;->a:Lcom/bbm/ui/e/ac;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/e/ac;->b()V
-
-    .line 63
-    return-void
+    goto :goto_0
 .end method

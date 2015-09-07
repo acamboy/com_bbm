@@ -1,6 +1,6 @@
 .class final Lcom/bbm/ui/c/hd;
 .super Ljava/lang/Object;
-.source "StoreFragment.java"
+.source "StickerDetailsFragment.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 104
+    .line 891
     iput-object p1, p0, Lcom/bbm/ui/c/hd;->a:Lcom/bbm/ui/c/hc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,41 +26,35 @@
 
 # virtual methods
 .method public final onClick(Landroid/view/View;)V
-    .locals 2
+    .locals 3
 
     .prologue
-    .line 107
+    .line 894
     iget-object v0, p0, Lcom/bbm/ui/c/hd;->a:Lcom/bbm/ui/c/hc;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->a(Lcom/bbm/ui/c/hc;)Landroid/view/View;
+    invoke-virtual {v0}, Lcom/bbm/ui/c/hc;->dismiss()V
 
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 108
+    .line 895
     iget-object v0, p0, Lcom/bbm/ui/c/hd;->a:Lcom/bbm/ui/c/hc;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->b(Lcom/bbm/ui/c/hc;)Landroid/view/View;
+    iget-object v0, v0, Lcom/bbm/ui/c/hc;->a:Lcom/bbm/ui/c/gr;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/bbm/ui/c/hd;->a:Lcom/bbm/ui/c/hc;
 
-    const/16 v1, 0x8
+    iget-object v1, v1, Lcom/bbm/ui/c/hc;->a:Lcom/bbm/ui/c/gr;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {v1}, Lcom/bbm/ui/c/gr;->p(Lcom/bbm/ui/c/gr;)Lcom/bbm/l/d/b/x;
 
-    .line 109
-    iget-object v0, p0, Lcom/bbm/ui/c/hd;->a:Lcom/bbm/ui/c/hc;
+    move-result-object v1
 
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->c(Lcom/bbm/ui/c/hc;)I
+    const/4 v2, 0x0
 
-    .line 110
-    iget-object v0, p0, Lcom/bbm/ui/c/hd;->a:Lcom/bbm/ui/c/hc;
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->d(Lcom/bbm/ui/c/hc;)V
+    move-result-object v2
 
-    .line 111
+    invoke-static {v0, v1, v2}, Lcom/bbm/ui/c/gr;->a(Lcom/bbm/ui/c/gr;Lcom/bbm/l/d/b/x;Ljava/lang/Boolean;)V
+
+    .line 896
     return-void
 .end method

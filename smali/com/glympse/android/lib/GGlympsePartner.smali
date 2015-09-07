@@ -7,6 +7,12 @@
 
 
 # virtual methods
+.method public abstract applyInitialProfile(Ljava/lang/String;Ljava/lang/String;)V
+.end method
+
+.method public abstract enableAccountSharing(Z)V
+.end method
+
 .method public abstract enablePushEchoing(Z)V
 .end method
 
@@ -49,7 +55,13 @@
 .method public abstract handleRemoteNotification(Ljava/lang/String;)V
 .end method
 
+.method public abstract handleRemoteNotification(Ljava/lang/String;Ljava/lang/String;)V
+.end method
+
 .method public abstract hasValidDeviceToken()Z
+.end method
+
+.method public abstract isAccountSharingEnabled()Z
 .end method
 
 .method public abstract isPushEchoingEbabled()Z

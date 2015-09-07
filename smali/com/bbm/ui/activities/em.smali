@@ -1,51 +1,94 @@
 .class final Lcom/bbm/ui/activities/em;
-.super Lcom/bbm/ui/activities/eq;
-.source "ChildActivity.java"
+.super Lcom/bbm/j/u;
+.source "ChannelStatsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/eg;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/eg;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
+    .locals 0
 
     .prologue
-    .line 211
-    iput-object p1, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/eg;
+    .line 167
+    iput-object p1, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/bbm/ui/activities/eq;-><init>(Lcom/bbm/ui/activities/eg;B)V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method protected final b()Z
+    .locals 4
 
     .prologue
-    .line 215
-    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/eg;
+    .line 170
+    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/eg;->u()V
+    iget-object v1, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    .line 216
-    return-void
-.end method
+    invoke-static {v1}, Lcom/bbm/ui/activities/ChannelStatsActivity;->c(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/d/a;
 
-.method public final b()V
-    .locals 1
+    move-result-object v1
 
-    .prologue
-    .line 220
-    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/eg;
+    iget-object v2, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/eg;->u()V
+    invoke-virtual {v2}, Lcom/bbm/ui/activities/ChannelStatsActivity;->b()Ljava/lang/String;
 
-    .line 221
-    return-void
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-static {v3}, Lcom/bbm/ui/activities/ChannelStatsActivity;->b(Lcom/bbm/ui/activities/ChannelStatsActivity;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/bbm/ui/activities/cg;->a(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->Q(Ljava/lang/String;)Lcom/bbm/d/eo;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;Lcom/bbm/d/eo;)Lcom/bbm/d/eo;
+
+    .line 171
+    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/d/eo;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/d/eo;->j:Lcom/bbm/util/bi;
+
+    sget-object v1, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+
+    if-eq v0, v1, :cond_0
+
+    .line 173
+    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->d(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
+
+    .line 174
+    iget-object v0, p0, Lcom/bbm/ui/activities/em;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->e(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
+
+    .line 175
+    const/4 v0, 0x1
+
+    .line 177
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

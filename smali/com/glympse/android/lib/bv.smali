@@ -3,7 +3,7 @@
 .source "GTicketLitePrivate.java"
 
 # interfaces
-.implements Lcom/glympse/android/lib/bl;
+.implements Lcom/glympse/android/lib/bp;
 .implements Lcom/glympse/android/lite/GTicketLite;
 
 
@@ -11,7 +11,7 @@
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/glympse/android/lib/bl",
+        "Lcom/glympse/android/lib/bp",
         "<",
         "Lcom/glympse/android/api/GInvite;",
         "Lcom/glympse/android/lite/GInviteLite;",

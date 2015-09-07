@@ -49,9 +49,7 @@
     :goto_0
     iget-object v4, p0, Lcom/google/zxing/f/a/a/a;->a:Lcom/google/zxing/f/a/a/b;
 
-    invoke-virtual {v4}, Lcom/google/zxing/f/a/a/b;->c()I
-
-    move-result v4
+    iget v4, v4, Lcom/google/zxing/f/a/a/b;->f:I
 
     if-ge v0, v4, :cond_1
 
@@ -67,7 +65,7 @@
     .line 144
     iget-object v4, p0, Lcom/google/zxing/f/a/a/a;->a:Lcom/google/zxing/f/a/a/b;
 
-    invoke-virtual {v4, v0}, Lcom/google/zxing/f/a/a/b;->c(I)I
+    invoke-virtual {v4, v0}, Lcom/google/zxing/f/a/a/b;->a(I)I
 
     move-result v4
 
@@ -165,7 +163,7 @@
 
     aget v6, p3, v0
 
-    invoke-virtual {v5, v6}, Lcom/google/zxing/f/a/a/b;->c(I)I
+    invoke-virtual {v5, v6}, Lcom/google/zxing/f/a/a/b;->a(I)I
 
     move-result v5
 
@@ -187,7 +185,7 @@
 
     move-result v5
 
-    invoke-virtual {v7, v5}, Lcom/google/zxing/f/a/a/b;->c(I)I
+    invoke-virtual {v7, v5}, Lcom/google/zxing/f/a/a/b;->a(I)I
 
     move-result v5
 

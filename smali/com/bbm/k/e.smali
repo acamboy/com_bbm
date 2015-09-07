@@ -3,14 +3,14 @@
 .source "GroupsCalendarProvider.java"
 
 # interfaces
-.implements Lcom/bbm/util/ce;
+.implements Lcom/bbm/util/cl;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
         "Ljava/lang/Object;",
-        "Lcom/bbm/util/ce",
+        "Lcom/bbm/util/cl",
         "<",
         "Lcom/bbm/g/a;",
         ">;"
@@ -46,11 +46,11 @@
 
     const-string v0, ""
 
-    iget-object v1, p1, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iget-object v1, p1, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p1, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iget-object v0, p1, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
     :cond_0
     return-object v0

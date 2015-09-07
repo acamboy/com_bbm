@@ -438,41 +438,41 @@
     .line 396
     invoke-static {p1, p3}, Lcom/google/zxing/g/b/e;->a([II)F
 
-    move-result v0
+    move-result v2
 
     .line 397
-    float-to-int v2, v0
+    float-to-int v1, v2
 
     const/4 v0, 0x2
 
-    aget v1, p1, v0
+    aget v4, p1, v0
 
-    iget-object v4, p0, Lcom/google/zxing/g/b/e;->a:Lcom/google/zxing/b/b;
+    iget-object v5, p0, Lcom/google/zxing/g/b/e;->a:Lcom/google/zxing/b/b;
 
-    iget v5, v4, Lcom/google/zxing/b/b;->b:I
+    iget v6, v5, Lcom/google/zxing/b/b;->b:I
 
     invoke-direct {p0}, Lcom/google/zxing/g/b/e;->b()[I
 
-    move-result-object v6
+    move-result-object v7
 
     move v0, p2
 
     :goto_0
     if-ltz v0, :cond_0
 
-    invoke-virtual {v4, v2, v0}, Lcom/google/zxing/b/b;->a(II)Z
+    invoke-virtual {v5, v1, v0}, Lcom/google/zxing/b/b;->a(II)Z
 
-    move-result v7
+    move-result v8
 
-    if-eqz v7, :cond_0
+    if-eqz v8, :cond_0
 
-    const/4 v7, 0x2
+    const/4 v8, 0x2
 
-    aget v8, v6, v7
+    aget v9, v7, v8
 
-    add-int/lit8 v8, v8, 0x1
+    add-int/lit8 v9, v9, 0x1
 
-    aput v8, v6, v7
+    aput v9, v7, v8
 
     add-int/lit8 v0, v0, -0x1
 
@@ -494,6 +494,8 @@
     if-nez v0, :cond_25
 
     .line 400
+    float-to-int v2, v2
+
     float-to-int v4, v1
 
     const/4 v0, 0x2
@@ -536,25 +538,25 @@
     :goto_3
     if-ltz v0, :cond_2
 
-    invoke-virtual {v4, v2, v0}, Lcom/google/zxing/b/b;->a(II)Z
+    invoke-virtual {v5, v1, v0}, Lcom/google/zxing/b/b;->a(II)Z
 
-    move-result v7
+    move-result v8
 
-    if-nez v7, :cond_2
+    if-nez v8, :cond_2
 
-    const/4 v7, 0x1
+    const/4 v8, 0x1
 
-    aget v7, v6, v7
+    aget v8, v7, v8
 
-    if-gt v7, v1, :cond_2
+    if-gt v8, v4, :cond_2
 
-    const/4 v7, 0x1
+    const/4 v8, 0x1
 
-    aget v8, v6, v7
+    aget v9, v7, v8
 
-    add-int/lit8 v8, v8, 0x1
+    add-int/lit8 v9, v9, 0x1
 
-    aput v8, v6, v7
+    aput v9, v7, v8
 
     add-int/lit8 v0, v0, -0x1
 
@@ -563,11 +565,11 @@
     :cond_2
     if-ltz v0, :cond_3
 
-    const/4 v7, 0x1
+    const/4 v8, 0x1
 
-    aget v7, v6, v7
+    aget v8, v7, v8
 
-    if-le v7, v1, :cond_4
+    if-le v8, v4, :cond_4
 
     :cond_3
     const/high16 v0, 0x7fc00000
@@ -580,25 +582,25 @@
     :goto_4
     if-ltz v0, :cond_5
 
-    invoke-virtual {v4, v2, v0}, Lcom/google/zxing/b/b;->a(II)Z
+    invoke-virtual {v5, v1, v0}, Lcom/google/zxing/b/b;->a(II)Z
 
-    move-result v7
+    move-result v8
 
-    if-eqz v7, :cond_5
+    if-eqz v8, :cond_5
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    aget v7, v6, v7
+    aget v8, v7, v8
 
-    if-gt v7, v1, :cond_5
+    if-gt v8, v4, :cond_5
 
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    aget v8, v6, v7
+    aget v9, v7, v8
 
-    add-int/lit8 v8, v8, 0x1
+    add-int/lit8 v9, v9, 0x1
 
-    aput v8, v6, v7
+    aput v9, v7, v8
 
     add-int/lit8 v0, v0, -0x1
 
@@ -607,9 +609,9 @@
     :cond_5
     const/4 v0, 0x0
 
-    aget v0, v6, v0
+    aget v0, v7, v0
 
-    if-le v0, v1, :cond_6
+    if-le v0, v4, :cond_6
 
     const/high16 v0, 0x7fc00000
 
@@ -621,71 +623,71 @@
     add-int/lit8 v0, p2, 0x1
 
     :goto_5
-    if-ge v0, v5, :cond_7
+    if-ge v0, v6, :cond_7
 
-    invoke-virtual {v4, v2, v0}, Lcom/google/zxing/b/b;->a(II)Z
+    invoke-virtual {v5, v1, v0}, Lcom/google/zxing/b/b;->a(II)Z
 
-    move-result v7
+    move-result v8
 
-    if-eqz v7, :cond_7
+    if-eqz v8, :cond_7
 
-    const/4 v7, 0x2
+    const/4 v8, 0x2
 
-    aget v8, v6, v7
+    aget v9, v7, v8
 
-    add-int/lit8 v8, v8, 0x1
+    add-int/lit8 v9, v9, 0x1
 
-    aput v8, v6, v7
+    aput v9, v7, v8
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_5
 
     :cond_7
-    if-ne v0, v5, :cond_8
+    if-ne v0, v6, :cond_8
 
     const/high16 v0, 0x7fc00000
 
     move v1, v0
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_8
     :goto_6
-    if-ge v0, v5, :cond_9
+    if-ge v0, v6, :cond_9
 
-    invoke-virtual {v4, v2, v0}, Lcom/google/zxing/b/b;->a(II)Z
+    invoke-virtual {v5, v1, v0}, Lcom/google/zxing/b/b;->a(II)Z
 
-    move-result v7
+    move-result v8
 
-    if-nez v7, :cond_9
+    if-nez v8, :cond_9
 
-    const/4 v7, 0x3
+    const/4 v8, 0x3
 
-    aget v7, v6, v7
+    aget v8, v7, v8
 
-    if-ge v7, v1, :cond_9
+    if-ge v8, v4, :cond_9
 
-    const/4 v7, 0x3
+    const/4 v8, 0x3
 
-    aget v8, v6, v7
+    aget v9, v7, v8
 
-    add-int/lit8 v8, v8, 0x1
+    add-int/lit8 v9, v9, 0x1
 
-    aput v8, v6, v7
+    aput v9, v7, v8
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_6
 
     :cond_9
-    if-eq v0, v5, :cond_a
+    if-eq v0, v6, :cond_a
 
-    const/4 v7, 0x3
+    const/4 v8, 0x3
 
-    aget v7, v6, v7
+    aget v8, v7, v8
 
-    if-lt v7, v1, :cond_b
+    if-lt v8, v4, :cond_b
 
     :cond_a
     const/high16 v0, 0x7fc00000
@@ -696,38 +698,38 @@
 
     :cond_b
     :goto_7
-    if-ge v0, v5, :cond_c
+    if-ge v0, v6, :cond_c
 
-    invoke-virtual {v4, v2, v0}, Lcom/google/zxing/b/b;->a(II)Z
+    invoke-virtual {v5, v1, v0}, Lcom/google/zxing/b/b;->a(II)Z
 
-    move-result v7
+    move-result v8
 
-    if-eqz v7, :cond_c
+    if-eqz v8, :cond_c
 
-    const/4 v7, 0x4
+    const/4 v8, 0x4
 
-    aget v7, v6, v7
+    aget v8, v7, v8
 
-    if-ge v7, v1, :cond_c
+    if-ge v8, v4, :cond_c
 
-    const/4 v7, 0x4
+    const/4 v8, 0x4
 
-    aget v8, v6, v7
+    aget v9, v7, v8
 
-    add-int/lit8 v8, v8, 0x1
+    add-int/lit8 v9, v9, 0x1
 
-    aput v8, v6, v7
+    aput v9, v7, v8
 
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_7
 
     :cond_c
-    const/4 v4, 0x4
+    const/4 v1, 0x4
 
-    aget v4, v6, v4
+    aget v1, v7, v1
 
-    if-lt v4, v1, :cond_d
+    if-lt v1, v4, :cond_d
 
     const/high16 v0, 0x7fc00000
 
@@ -738,29 +740,29 @@
     :cond_d
     const/4 v1, 0x0
 
-    aget v1, v6, v1
+    aget v1, v7, v1
 
     const/4 v4, 0x1
 
-    aget v4, v6, v4
+    aget v4, v7, v4
 
     add-int/2addr v1, v4
 
     const/4 v4, 0x2
 
-    aget v4, v6, v4
+    aget v4, v7, v4
 
     add-int/2addr v1, v4
 
     const/4 v4, 0x3
 
-    aget v4, v6, v4
+    aget v4, v7, v4
 
     add-int/2addr v1, v4
 
     const/4 v4, 0x4
 
-    aget v4, v6, v4
+    aget v4, v7, v4
 
     add-int/2addr v1, v4
 
@@ -783,13 +785,13 @@
     goto/16 :goto_1
 
     :cond_e
-    invoke-static {v6}, Lcom/google/zxing/g/b/e;->a([I)Z
+    invoke-static {v7}, Lcom/google/zxing/g/b/e;->a([I)Z
 
     move-result v1
 
     if-eqz v1, :cond_f
 
-    invoke-static {v6, v0}, Lcom/google/zxing/g/b/e;->a([II)F
+    invoke-static {v7, v0}, Lcom/google/zxing/g/b/e;->a([II)F
 
     move-result v0
 

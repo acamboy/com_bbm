@@ -6,34 +6,34 @@
 # instance fields
 .field protected a:Ljava/lang/String;
 
-.field private b:Lcom/bbm/ui/ObservingImageView;
+.field public final b:Lcom/bbm/j/k;
 
-.field private c:Landroid/widget/TextView;
+.field private c:Lcom/bbm/ui/ObservingImageView;
 
-.field private d:Lcom/bbm/ui/InlineImageTextView;
+.field private d:Landroid/widget/TextView;
 
 .field private e:Lcom/bbm/ui/InlineImageTextView;
 
-.field private f:Landroid/widget/ImageView;
+.field private f:Lcom/bbm/ui/InlineImageTextView;
 
-.field private g:Lcom/bbm/d/di;
+.field private g:Landroid/widget/ImageView;
 
-.field private h:Lcom/bbm/j/x;
+.field private h:Lcom/bbm/d/em;
+
+.field private i:Lcom/bbm/j/x;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/bbm/j/x",
             "<",
-            "Lcom/bbm/d/di;",
+            "Lcom/bbm/d/em;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private i:Lcom/bbm/util/n;
+.field private j:Lcom/bbm/util/o;
 
-.field private j:Z
-
-.field private final k:Lcom/bbm/j/k;
+.field private k:Z
 
 
 # direct methods
@@ -47,14 +47,14 @@
     .line 47
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->k:Z
 
     .line 49
     new-instance v0, Lcom/bbm/ui/views/h;
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/views/h;-><init>(Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->k:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->b:Lcom/bbm/j/k;
 
     .line 59
     return-void
@@ -70,14 +70,14 @@
     .line 47
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->k:Z
 
     .line 49
     new-instance v0, Lcom/bbm/ui/views/h;
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/views/h;-><init>(Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->k:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->b:Lcom/bbm/j/k;
 
     .line 63
     return-void
@@ -93,14 +93,14 @@
     .line 47
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Z
+    iput-boolean v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->k:Z
 
     .line 49
     new-instance v0, Lcom/bbm/ui/views/h;
 
     invoke-direct {v0, p0}, Lcom/bbm/ui/views/h;-><init>(Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->k:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->b:Lcom/bbm/j/k;
 
     .line 67
     return-void
@@ -119,7 +119,7 @@
     const/4 v4, 0x0
 
     .line 29
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->h:Lcom/bbm/j/x;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->i:Lcom/bbm/j/x;
 
     invoke-interface {v0}, Lcom/bbm/j/x;->b()Z
 
@@ -127,7 +127,7 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->h:Lcom/bbm/j/x;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->i:Lcom/bbm/j/x;
 
     invoke-interface {v0}, Lcom/bbm/j/x;->f()Z
 
@@ -135,7 +135,7 @@
 
     if-nez v0, :cond_8
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->h:Lcom/bbm/j/x;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->i:Lcom/bbm/j/x;
 
     invoke-interface {v0, v4, v3}, Lcom/bbm/j/x;->a(II)Ljava/util/List;
 
@@ -151,25 +151,25 @@
     if-nez v2, :cond_2
 
     :cond_0
-    iput-boolean v4, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Z
+    iput-boolean v4, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->k:Z
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->b:Lcom/bbm/ui/ObservingImageView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->c:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v0, v5}, Lcom/bbm/ui/ObservingImageView;->setVisibility(I)V
-
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->d:Lcom/bbm/ui/InlineImageTextView;
-
-    invoke-virtual {v0, v5}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->e:Lcom/bbm/ui/InlineImageTextView;
 
     invoke-virtual {v0, v5}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->c:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->f:Lcom/bbm/ui/InlineImageTextView;
+
+    invoke-virtual {v0, v5}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->d:Landroid/widget/TextView;
 
     invoke-virtual {v0, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->f:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->g:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
@@ -182,47 +182,47 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/di;
+    check-cast v0, Lcom/bbm/d/em;
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->g:Lcom/bbm/d/di;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->h:Lcom/bbm/d/em;
 
-    iput-boolean v3, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Z
+    iput-boolean v3, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->k:Z
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->g:Lcom/bbm/d/di;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->h:Lcom/bbm/d/em;
 
-    iget-object v0, v0, Lcom/bbm/d/di;->s:Lcom/bbm/util/bc;
+    iget-object v0, v0, Lcom/bbm/d/em;->t:Lcom/bbm/util/bi;
 
-    sget-object v2, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v2, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-ne v0, v2, :cond_1
-
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->d:Lcom/bbm/ui/InlineImageTextView;
-
-    invoke-virtual {v0, v4}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
     iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->e:Lcom/bbm/ui/InlineImageTextView;
 
     invoke-virtual {v0, v4}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->c:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->f:Lcom/bbm/ui/InlineImageTextView;
+
+    invoke-virtual {v0, v4}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
+
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->d:Landroid/widget/TextView;
 
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->f:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->g:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->i:Lcom/bbm/util/n;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Lcom/bbm/util/o;
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->g:Lcom/bbm/d/di;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->h:Lcom/bbm/d/em;
 
-    iget-object v0, v0, Lcom/bbm/d/di;->j:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/d/em;->j:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->i:Lcom/bbm/util/n;
+    iget-object v2, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Lcom/bbm/util/o;
 
-    iget-object v2, v2, Lcom/bbm/util/n;->g:Ljava/lang/String;
+    iget-object v2, v2, Lcom/bbm/util/o;->g:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -230,12 +230,12 @@
 
     if-nez v0, :cond_3
 
-    iput-object v1, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->i:Lcom/bbm/util/n;
+    iput-object v1, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Lcom/bbm/util/o;
 
     :cond_3
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->g:Lcom/bbm/d/di;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->h:Lcom/bbm/d/em;
 
-    iget-object v0, v0, Lcom/bbm/d/di;->k:Ljava/util/List;
+    iget-object v0, v0, Lcom/bbm/d/em;->k:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -243,32 +243,32 @@
 
     if-lez v2, :cond_6
 
-    iget-object v2, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->i:Lcom/bbm/util/n;
+    iget-object v2, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Lcom/bbm/util/o;
 
     if-nez v2, :cond_4
 
     iget-object v2, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->a:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->g:Lcom/bbm/d/di;
+    iget-object v3, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->h:Lcom/bbm/d/em;
 
-    iget-object v3, v3, Lcom/bbm/d/di;->j:Ljava/lang/String;
+    iget-object v3, v3, Lcom/bbm/d/em;->j:Ljava/lang/String;
 
-    invoke-static {v0, v2, v3}, Lcom/bbm/util/q;->a(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/util/n;
+    invoke-static {v0, v2, v3}, Lcom/bbm/util/r;->a(Ljava/util/List;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/util/o;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->i:Lcom/bbm/util/n;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Lcom/bbm/util/o;
 
     :cond_4
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->i:Lcom/bbm/util/n;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Lcom/bbm/util/o;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->b:Lcom/bbm/ui/ObservingImageView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->c:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v0, v4}, Lcom/bbm/ui/ObservingImageView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->b:Lcom/bbm/ui/ObservingImageView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->c:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v0}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -276,7 +276,7 @@
 
     iget v0, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    iget-object v2, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->b:Lcom/bbm/ui/ObservingImageView;
+    iget-object v2, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->c:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v2}, Lcom/bbm/ui/ObservingImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -284,52 +284,52 @@
 
     iget v2, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    iget-object v3, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->i:Lcom/bbm/util/n;
+    iget-object v3, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Lcom/bbm/util/o;
 
-    iget-object v4, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->b:Lcom/bbm/ui/ObservingImageView;
+    iget-object v4, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->c:Lcom/bbm/ui/ObservingImageView;
 
-    invoke-virtual {v3, v4, v1, v0, v2}, Lcom/bbm/util/n;->a(Lcom/bbm/ui/ObservingImageView;Lcom/bbm/util/b/d;II)V
+    invoke-virtual {v3, v4, v1, v0, v2}, Lcom/bbm/util/o;->a(Lcom/bbm/ui/ObservingImageView;Lcom/bbm/util/b/d;II)V
 
     :cond_5
     :goto_2
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->g:Lcom/bbm/d/di;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->h:Lcom/bbm/d/em;
 
-    iget-object v0, v0, Lcom/bbm/d/di;->r:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/d/em;->s:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/bbm/util/dq;->b(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_7
 
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->d:Lcom/bbm/ui/InlineImageTextView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->e:Lcom/bbm/ui/InlineImageTextView;
 
-    iget-object v1, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->g:Lcom/bbm/d/di;
+    iget-object v1, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->h:Lcom/bbm/d/em;
 
-    iget-object v1, v1, Lcom/bbm/d/di;->r:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/em;->s:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/InlineImageTextView;->setText(Ljava/lang/CharSequence;)V
 
     :goto_3
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->e:Lcom/bbm/ui/InlineImageTextView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->f:Lcom/bbm/ui/InlineImageTextView;
 
-    iget-object v1, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->g:Lcom/bbm/d/di;
+    iget-object v1, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->h:Lcom/bbm/d/em;
 
-    iget-object v1, v1, Lcom/bbm/d/di;->d:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/em;->d:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/InlineImageTextView;->setText(Ljava/lang/CharSequence;)V
 
     goto/16 :goto_1
 
     :cond_6
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->b:Lcom/bbm/ui/ObservingImageView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->c:Lcom/bbm/ui/ObservingImageView;
 
     invoke-virtual {v0, v5}, Lcom/bbm/ui/ObservingImageView;->setVisibility(I)V
 
     goto :goto_2
 
     :cond_7
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->d:Lcom/bbm/ui/InlineImageTextView;
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->e:Lcom/bbm/ui/InlineImageTextView;
 
     invoke-virtual {v0, v5}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
 
@@ -343,33 +343,20 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    .prologue
-    .line 153
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->k:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
-
-    .line 154
-    return-void
-.end method
-
 .method protected final a(Landroid/content/Context;)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 71
     invoke-super {p0, p1}, Lcom/bbm/ui/views/ShadowFrame;->a(Landroid/content/Context;)V
 
     .line 72
-    const v0, 0x7f030041
+    const v0, 0x7f030046
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->setViewStub(I)V
 
     .line 75
-    const v0, 0x7f0a0208
+    const v0, 0x7f0b0260
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->findViewById(I)Landroid/view/View;
 
@@ -377,21 +364,17 @@
 
     check-cast v0, Lcom/bbm/ui/ObservingImageView;
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->b:Lcom/bbm/ui/ObservingImageView;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->c:Lcom/bbm/ui/ObservingImageView;
 
     .line 76
-    const v0, 0x7f0a020d
+    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->c:Lcom/bbm/ui/ObservingImageView;
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->findViewById(I)Landroid/view/View;
+    const/4 v1, 0x0
 
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/InlineImageTextView;
-
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->d:Lcom/bbm/ui/InlineImageTextView;
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/ObservingImageView;->setLimitedLengthAnimation(Z)V
 
     .line 77
-    const v0, 0x7f0a020e
+    const v0, 0x7f0b0265
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->findViewById(I)Landroid/view/View;
 
@@ -401,8 +384,19 @@
 
     iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->e:Lcom/bbm/ui/InlineImageTextView;
 
-    .line 79
-    const v0, 0x7f0a020b
+    .line 78
+    const v0, 0x7f0b0266
+
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/InlineImageTextView;
+
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->f:Lcom/bbm/ui/InlineImageTextView;
+
+    .line 80
+    const v0, 0x7f0b0263
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->findViewById(I)Landroid/view/View;
 
@@ -410,10 +404,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->c:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->d:Landroid/widget/TextView;
 
-    .line 80
-    const v0, 0x7f0a020a
+    .line 81
+    const v0, 0x7f0b0262
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->findViewById(I)Landroid/view/View;
 
@@ -421,22 +415,9 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->f:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->g:Landroid/widget/ImageView;
 
-    .line 81
-    return-void
-.end method
-
-.method public final b()V
-    .locals 1
-
-    .prologue
-    .line 157
-    iget-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->k:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
-
-    .line 158
+    .line 82
     return-void
 .end method
 
@@ -444,8 +425,8 @@
     .locals 1
 
     .prologue
-    .line 89
-    iget-boolean v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->j:Z
+    .line 90
+    iget-boolean v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->k:Z
 
     return v0
 .end method
@@ -454,11 +435,11 @@
     .locals 3
 
     .prologue
-    .line 84
+    .line 85
     iput-object p1, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->a:Ljava/lang/String;
 
-    .line 85
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 86
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
@@ -470,8 +451,8 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->h:Lcom/bbm/j/x;
+    iput-object v0, p0, Lcom/bbm/ui/views/ChannelLobbyPostsPaneView;->i:Lcom/bbm/j/x;
 
-    .line 86
+    .line 87
     return-void
 .end method

@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/oe;
 .super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
+.source "GroupEventsAddActivity.java"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;Ljava/lang/String;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupEventsAddActivity;)V
     .locals 0
 
     .prologue
-    .line 541
-    iput-object p1, p0, Lcom/bbm/ui/activities/oe;->b:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/oe;->a:Ljava/lang/String;
+    .line 176
+    iput-object p1, p0, Lcom/bbm/ui/activities/oe;->a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,30 +25,22 @@
 
 
 # virtual methods
-.method public final onGlobalLayout()V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 544
-    iget-object v0, p0, Lcom/bbm/ui/activities/oe;->b:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 180
+    const-string v0, "headerActionBar Negative Button Clicked"
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->q(Lcom/bbm/ui/activities/GroupLobbyActivity;)Landroid/widget/LinearLayout;
+    const-class v1, Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    .line 182
+    iget-object v0, p0, Lcom/bbm/ui/activities/oe;->a:Lcom/bbm/ui/activities/GroupEventsAddActivity;
 
-    move-result-object v0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupEventsAddActivity;->f()Z
 
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    .line 545
-    iget-object v0, p0, Lcom/bbm/ui/activities/oe;->b:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/oe;->a:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;Ljava/lang/String;)V
-
-    .line 546
+    .line 183
     return-void
 .end method

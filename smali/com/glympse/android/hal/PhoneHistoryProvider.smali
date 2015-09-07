@@ -7,11 +7,11 @@
 
 
 # static fields
-.field private static final cA:[Ljava/lang/String;
+.field private static final cG:[Ljava/lang/String;
 
 
 # instance fields
-.field private cz:J
+.field private cF:J
 
 .field private e:Landroid/content/Context;
 
@@ -38,7 +38,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cA:[Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cG:[Ljava/lang/String;
 
     return-void
 .end method
@@ -56,7 +56,7 @@
     .line 29
     const-wide v0, 0x9a7ec800L
 
-    iput-wide v0, p0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cz:J
+    iput-wide v0, p0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cF:J
 
     .line 30
     return-void
@@ -100,24 +100,24 @@
 
     invoke-virtual {v1, v2}, Landroid/text/format/Time;->toMillis(Z)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-wide v5, p0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cz:J
+    iget-wide v6, p0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cF:J
 
-    sub-long v5, v1, v5
+    sub-long v6, v2, v6
 
     .line 50
     sget-object v1, Landroid/provider/CallLog$Calls;->CONTENT_URI:Landroid/net/Uri;
 
-    sget-object v2, Lcom/glympse/android/hal/PhoneHistoryProvider;->cA:[Ljava/lang/String;
+    sget-object v2, Lcom/glympse/android/hal/PhoneHistoryProvider;->cG:[Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
-    const-string v7, "date>="
+    const-string v5, "date>="
 
-    invoke-direct {v3, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v3, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v3, v6, v7}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
@@ -211,11 +211,11 @@
 .end method
 
 .method public setLookback(J)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 38
-    iput-wide p1, p0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cz:J
+    iput-wide p1, p0, Lcom/glympse/android/hal/PhoneHistoryProvider;->cF:J
 
     .line 39
     return-void

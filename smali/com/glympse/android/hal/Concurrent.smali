@@ -45,7 +45,7 @@
 .end method
 
 .method public static sleep(J)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 46

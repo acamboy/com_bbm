@@ -1,197 +1,109 @@
 .class final Lcom/bbm/ui/activities/na;
-.super Lcom/bbm/j/k;
-.source "GroupListsActivity.java"
+.super Ljava/lang/Object;
+.source "GroupConversationActivity.java"
+
+# interfaces
+.implements Lcom/bbm/ui/c/gn;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupListsActivity;
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 81
-    iput-object p1, p0, Lcom/bbm/ui/activities/na;->a:Lcom/bbm/ui/activities/GroupListsActivity;
+    .line 899
+    iput-object p1, p0, Lcom/bbm/ui/activities/na;->b:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lcom/bbm/ui/activities/na;->a:Ljava/lang/String;
 
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 5
+.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+    .locals 3
 
     .prologue
-    .line 84
-    iget-object v0, p0, Lcom/bbm/ui/activities/na;->a:Lcom/bbm/ui/activities/GroupListsActivity;
+    .line 902
+    packed-switch p2, :pswitch_data_0
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/GroupListsActivity;->a:Lcom/bbm/g/ab;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/na;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupListsActivity;->i()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->t(Ljava/lang/String;)Lcom/bbm/g/a;
-
-    move-result-object v1
-
-    .line 85
-    iget-object v0, v1, Lcom/bbm/g/a;->v:Lcom/bbm/util/bc;
-
-    sget-object v2, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
-
-    if-eq v0, v2, :cond_0
-
-    .line 106
+    .line 909
     :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/na;->b:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+
+    .line 914
     return-void
 
-    .line 89
-    :cond_0
-    const/4 v0, 0x0
+    .line 904
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/na;->b:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    .line 90
-    iget-object v2, v1, Lcom/bbm/g/a;->c:Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/na;->a:Ljava/lang/String;
 
-    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->a(Lcom/bbm/ui/activities/GroupConversationActivity;Ljava/lang/String;)V
 
-    move-result v2
+    .line 905
+    iget-object v0, p0, Lcom/bbm/ui/activities/na;->b:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    if-nez v2, :cond_1
+    iget-object v1, p0, Lcom/bbm/ui/activities/na;->b:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    .line 91
-    iget-object v0, v1, Lcom/bbm/g/a;->c:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/graphics/drawable/Drawable;->createFromPath(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    .line 93
-    :cond_1
-    if-nez v0, :cond_2
-
-    .line 94
-    iget-object v0, p0, Lcom/bbm/ui/activities/na;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupListsActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    .line 95
-    const v2, 0x7f070007
-
-    invoke-virtual {v0, v2}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
-
-    move-result-object v2
-
-    .line 96
-    iget-wide v3, v1, Lcom/bbm/g/a;->g:J
-
-    long-to-int v0, v3
-
-    invoke-virtual {v2, v0}, Landroid/content/res/TypedArray;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    .line 97
-    invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
-
-    .line 99
-    :cond_2
-    iget-object v2, p0, Lcom/bbm/ui/activities/na;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupListsActivity;->a(Lcom/bbm/ui/activities/GroupListsActivity;)Lcom/bbm/ui/ObservingImageView;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v0}, Lcom/bbm/ui/ObservingImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 101
-    iget-object v0, p0, Lcom/bbm/ui/activities/na;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListsActivity;->b(Lcom/bbm/ui/activities/GroupListsActivity;)Lcom/bbm/ui/InlineImageTextView;
-
-    move-result-object v0
-
-    iget-object v2, v1, Lcom/bbm/g/a;->q:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/InlineImageTextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 102
-    iget-object v0, p0, Lcom/bbm/ui/activities/na;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListsActivity;->c(Lcom/bbm/ui/activities/GroupListsActivity;)Lcom/bbm/ui/InlineImageTextView;
-
-    move-result-object v0
-
-    iget-object v2, v1, Lcom/bbm/g/a;->e:Ljava/lang/String;
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/InlineImageTextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 103
-    iget-object v0, p0, Lcom/bbm/ui/activities/na;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListsActivity;->c(Lcom/bbm/ui/activities/GroupListsActivity;)Lcom/bbm/ui/InlineImageTextView;
-
-    move-result-object v2
-
-    iget-object v0, v1, Lcom/bbm/g/a;->e:Ljava/lang/String;
-
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    const/16 v0, 0x8
-
-    :goto_1
-    invoke-virtual {v2, v0}, Lcom/bbm/ui/InlineImageTextView;->setVisibility(I)V
-
-    .line 105
-    iget-object v0, p0, Lcom/bbm/ui/activities/na;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListsActivity;->d(Lcom/bbm/ui/activities/GroupListsActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/na;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/GroupListsActivity;->a:Lcom/bbm/g/ab;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/na;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/GroupListsActivity;->i()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/bbm/g/ab;->g(Ljava/lang/String;)Lcom/bbm/j/w;
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->u(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/widget/TextView;
 
     move-result-object v1
 
-    invoke-interface {v1}, Lcom/bbm/j/w;->d()I
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->b(Lcom/bbm/ui/activities/GroupConversationActivity;Landroid/widget/TextView;)V
 
-    move-result v1
+    .line 906
+    iget-object v0, p0, Lcom/bbm/ui/activities/na;->b:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->b(Lcom/bbm/ui/activities/GroupConversationActivity;Z)Z
+
+    .line 907
+    iget-object v0, p0, Lcom/bbm/ui/activities/na;->b:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/na;->b:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    iget-object v1, v1, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->a(Lcom/bbm/ui/activities/GroupConversationActivity;Lcom/bbm/ui/c/gj;)V
+
+    .line 908
+    iget-object v0, p0, Lcom/bbm/ui/activities/na;->b:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/na;->b:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    const v2, 0x7f0e051f
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/GroupConversationActivity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 103
-    :cond_3
-    const/4 v0, 0x0
-
-    goto :goto_1
+    .line 902
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
 .end method

@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 98
+    .line 94
     iput-object p1, p0, Lcom/slidingmenu/lib/a/d;->c:Lcom/slidingmenu/lib/a/c;
 
     iput-boolean p2, p0, Lcom/slidingmenu/lib/a/d;->a:Z
@@ -39,28 +39,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 101
+    .line 97
     iget-boolean v0, p0, Lcom/slidingmenu/lib/a/d;->a:Z
 
     if-eqz v0, :cond_1
 
-    .line 102
+    .line 98
     iget-boolean v0, p0, Lcom/slidingmenu/lib/a/d;->b:Z
 
     if-eqz v0, :cond_0
 
-    .line 103
+    .line 99
     iget-object v0, p0, Lcom/slidingmenu/lib/a/d;->c:Lcom/slidingmenu/lib/a/c;
 
     iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
     invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->b(Z)V
 
-    .line 112
+    .line 106
     :goto_0
     return-void
 
-    .line 106
+    .line 101
     :cond_0
     iget-object v0, p0, Lcom/slidingmenu/lib/a/d;->c:Lcom/slidingmenu/lib/a/c;
 
@@ -70,7 +70,7 @@
 
     goto :goto_0
 
-    .line 110
+    .line 104
     :cond_1
     iget-object v0, p0, Lcom/slidingmenu/lib/a/d;->c:Lcom/slidingmenu/lib/a/c;
 

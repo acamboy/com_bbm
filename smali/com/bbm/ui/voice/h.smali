@@ -3,7 +3,7 @@
 .source "OutgoingCallActionBar.java"
 
 # interfaces
-.implements Lcom/bbm/l/i;
+.implements Lcom/bbm/n/j;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 29
+    .line 36
     iput-object p1, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -26,33 +26,20 @@
 
 # virtual methods
 .method public final a()V
-    .locals 1
-
-    .prologue
-    .line 33
-    iget-object v0, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
-
-    invoke-static {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->a(Lcom/bbm/ui/voice/OutgoingCallActionBar;)V
-
-    .line 34
-    return-void
-.end method
-
-.method public final b()V
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
-    .line 42
+    .line 49
     iget-object v0, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
 
     invoke-virtual {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->c()V
 
-    .line 43
+    .line 50
     iget-object v0, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->b(Lcom/bbm/ui/voice/OutgoingCallActionBar;)Lcom/google/b/a/l;
+    invoke-static {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->a(Lcom/bbm/ui/voice/OutgoingCallActionBar;)Lcom/google/b/a/l;
 
     move-result-object v0
 
@@ -62,10 +49,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 44
+    .line 51
     iget-object v0, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->b(Lcom/bbm/ui/voice/OutgoingCallActionBar;)Lcom/google/b/a/l;
+    invoke-static {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->a(Lcom/bbm/ui/voice/OutgoingCallActionBar;)Lcom/google/b/a/l;
 
     move-result-object v0
 
@@ -73,22 +60,48 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/voice/l;
+    check-cast v0, Lcom/bbm/ui/voice/n;
 
-    invoke-interface {v0}, Lcom/bbm/ui/voice/l;->c()V
+    invoke-interface {v0}, Lcom/bbm/ui/voice/n;->c()V
 
-    .line 46
+    .line 53
     :cond_0
     iget-object v0, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->setMuteActivated(Z)V
 
-    .line 47
+    .line 54
     iget-object v0, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->setSpeakerPhoneActivated(Z)V
 
-    .line 48
+    .line 55
+    return-void
+.end method
+
+.method public final a(Z)V
+    .locals 1
+
+    .prologue
+    .line 40
+    iget-object v0, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
+
+    invoke-static {v0, p1}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->a(Lcom/bbm/ui/voice/OutgoingCallActionBar;Z)V
+
+    .line 41
+    return-void
+.end method
+
+.method public final b()V
+    .locals 1
+
+    .prologue
+    .line 63
+    iget-object v0, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
+
+    invoke-static {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->b(Lcom/bbm/ui/voice/OutgoingCallActionBar;)Z
+
+    .line 64
     return-void
 .end method
 
@@ -96,15 +109,15 @@
     .locals 1
 
     .prologue
-    .line 64
+    .line 72
     iget-object v0, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
 
     invoke-virtual {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->b()V
 
-    .line 65
+    .line 73
     iget-object v0, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->b(Lcom/bbm/ui/voice/OutgoingCallActionBar;)Lcom/google/b/a/l;
+    invoke-static {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->a(Lcom/bbm/ui/voice/OutgoingCallActionBar;)Lcom/google/b/a/l;
 
     move-result-object v0
 
@@ -114,10 +127,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 66
+    .line 74
     iget-object v0, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
 
-    invoke-static {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->b(Lcom/bbm/ui/voice/OutgoingCallActionBar;)Lcom/google/b/a/l;
+    invoke-static {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->a(Lcom/bbm/ui/voice/OutgoingCallActionBar;)Lcom/google/b/a/l;
 
     move-result-object v0
 
@@ -125,11 +138,24 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/voice/l;
+    check-cast v0, Lcom/bbm/ui/voice/n;
 
-    invoke-interface {v0}, Lcom/bbm/ui/voice/l;->b()V
+    invoke-interface {v0}, Lcom/bbm/ui/voice/n;->b()V
 
-    .line 68
+    .line 76
     :cond_0
+    return-void
+.end method
+
+.method public final d()V
+    .locals 1
+
+    .prologue
+    .line 94
+    iget-object v0, p0, Lcom/bbm/ui/voice/h;->a:Lcom/bbm/ui/voice/OutgoingCallActionBar;
+
+    invoke-static {v0}, Lcom/bbm/ui/voice/OutgoingCallActionBar;->b(Lcom/bbm/ui/voice/OutgoingCallActionBar;)Z
+
+    .line 95
     return-void
 .end method

@@ -113,7 +113,7 @@
     return-object v1
 .end method
 
-.method protected abstract a(Ljava/lang/Object;)Z
+.method public abstract a(Ljava/lang/Object;)Z
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TT;)Z"

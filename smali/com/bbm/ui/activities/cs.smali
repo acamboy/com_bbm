@@ -1,37 +1,49 @@
 .class final Lcom/bbm/ui/activities/cs;
-.super Ljava/lang/Object;
-.source "ChannelPickerActivity.java"
+.super Lcom/bbm/ui/cn;
+.source "ChannelDetailsActivity.java"
 
 
 # instance fields
-.field a:Lcom/bbm/ui/ObservingImageView;
-
-.field b:Landroid/widget/TextView;
-
-.field c:Landroid/widget/TextView;
-
-.field final synthetic d:Lcom/bbm/ui/activities/cr;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelDetailsActivity;
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/ui/activities/cr;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelDetailsActivity;)V
     .locals 0
 
     .prologue
-    .line 74
-    iput-object p1, p0, Lcom/bbm/ui/activities/cs;->d:Lcom/bbm/ui/activities/cr;
+    .line 22
+    iput-object p1, p0, Lcom/bbm/ui/activities/cs;->a:Lcom/bbm/ui/activities/ChannelDetailsActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
-.method synthetic constructor <init>(Lcom/bbm/ui/activities/cr;B)V
-    .locals 0
+
+# virtual methods
+.method public final a()V
+    .locals 1
 
     .prologue
-    .line 74
-    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/cs;-><init>(Lcom/bbm/ui/activities/cr;)V
+    .line 25
+    iget-object v0, p0, Lcom/bbm/ui/activities/cs;->a:Lcom/bbm/ui/activities/ChannelDetailsActivity;
 
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelDetailsActivity;->finish()V
+
+    .line 26
+    return-void
+.end method
+
+.method public final a(I)V
+    .locals 1
+
+    .prologue
+    .line 30
+    iget-object v0, p0, Lcom/bbm/ui/activities/cs;->a:Lcom/bbm/ui/activities/ChannelDetailsActivity;
+
+    invoke-static {v0, p1}, Lcom/bbm/ui/activities/ChannelDetailsActivity;->a(Lcom/bbm/ui/activities/ChannelDetailsActivity;I)V
+
+    .line 31
     return-void
 .end method

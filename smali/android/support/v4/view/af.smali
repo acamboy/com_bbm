@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public a:Landroid/database/DataSetObservable;
+.field private a:Landroid/database/DataSetObservable;
 
 
 # direct methods
@@ -57,7 +57,7 @@
     return-void
 .end method
 
-.method public a(Landroid/view/ViewGroup;Ljava/lang/Object;)V
+.method public a(Landroid/view/ViewGroup;ILjava/lang/Object;)V
     .locals 2
 
     .prologue
@@ -72,6 +72,19 @@
 .end method
 
 .method public abstract a(Landroid/view/View;Ljava/lang/Object;)Z
+.end method
+
+.method public b()V
+    .locals 1
+
+    .prologue
+    .line 276
+    iget-object v0, p0, Landroid/support/v4/view/af;->a:Landroid/database/DataSetObservable;
+
+    invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
+
+    .line 277
+    return-void
 .end method
 
 .method public final b(Landroid/database/DataSetObserver;)V

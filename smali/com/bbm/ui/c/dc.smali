@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/c/dc;
 .super Ljava/lang/Object;
-.source "GroupUpdatesFragment.java"
+.source "DiscoverChannelsFragment.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/db;
+.field final synthetic a:Lcom/bbm/ui/c/da;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/db;)V
+.method constructor <init>(Lcom/bbm/ui/c/da;)V
     .locals 0
 
     .prologue
-    .line 67
-    iput-object p1, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/db;
+    .line 111
+    iput-object p1, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/da;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,222 +25,66 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 70
-    iget-object v0, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/db;
+    .line 116
+    :try_start_0
+    iget-object v0, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/da;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/db;->a(Lcom/bbm/ui/c/db;)Lcom/bbm/ui/ci;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/ci;->getItem(I)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/c/da;->b(Lcom/bbm/ui/c/da;)Lcom/bbm/j/w;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/g/aa;
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
 
-    .line 71
-    iget-object v1, v0, Lcom/bbm/g/aa;->m:Ljava/lang/String;
+    move-result-object v0
 
-    .line 73
-    invoke-static {}, Lcom/bbm/ui/c/db;->a()Lcom/bbm/ui/e/x;
+    check-cast v0, Ljava/util/List;
 
-    move-result-object v2
+    iget-object v1, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/da;
 
-    invoke-virtual {v2, v1}, Lcom/bbm/ui/e/x;->a(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 74
-    const-string v1, "new user onClick"
-
-    const-class v2, Lcom/bbm/ui/c/db;
-
-    invoke-static {v1, v2}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 75
-    invoke-static {}, Lcom/bbm/ui/c/db;->a()Lcom/bbm/ui/e/x;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/db;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/db;->getActivity()Landroid/app/Activity;
+    invoke-static {v1}, Lcom/bbm/ui/c/da;->a(Lcom/bbm/ui/c/da;)Landroid/widget/GridLayout;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/db;
+    invoke-virtual {v1, p1}, Landroid/widget/GridLayout;->indexOfChild(Landroid/view/View;)I
 
-    invoke-static {v2}, Lcom/bbm/ui/c/db;->b(Lcom/bbm/ui/c/db;)Ljava/lang/String;
+    move-result v1
 
-    invoke-static {v1, v0}, Lcom/bbm/ui/e/x;->a(Landroid/app/Activity;Lcom/bbm/g/aa;)V
+    invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
-    .line 93
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/ex;
+
+    .line 117
+    if-eqz v0, :cond_0
+
+    .line 118
+    iget-object v1, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/da;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/da;->c(Lcom/bbm/ui/c/da;)Landroid/content/Context;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lcom/bbm/d/ex;->a:Ljava/lang/String;
+
+    invoke-static {v1, v0}, Lcom/bbm/util/ac;->a(Landroid/content/Context;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 123
     :cond_0
     :goto_0
     return-void
 
-    .line 77
-    :cond_1
-    invoke-static {}, Lcom/bbm/ui/c/db;->b()Lcom/bbm/ui/e/y;
+    .line 120
+    :catch_0
+    move-exception v0
 
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lcom/bbm/ui/e/y;->a(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    .line 78
-    const-string v1, "group picture onClick"
-
-    const-class v2, Lcom/bbm/ui/c/db;
-
-    invoke-static {v1, v2}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 79
-    invoke-static {}, Lcom/bbm/ui/c/db;->b()Lcom/bbm/ui/e/y;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/db;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/db;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/db;
-
-    invoke-static {v2}, Lcom/bbm/ui/c/db;->b(Lcom/bbm/ui/c/db;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2, v0}, Lcom/bbm/ui/e/y;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/bbm/g/aa;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
-
-    .line 81
-    :cond_2
-    invoke-static {}, Lcom/bbm/ui/c/db;->c()Lcom/bbm/ui/e/w;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lcom/bbm/ui/e/w;->a(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    .line 82
-    const-string v1, "group list onClick"
-
-    const-class v2, Lcom/bbm/ui/c/db;
-
-    invoke-static {v1, v2}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 83
-    invoke-static {}, Lcom/bbm/ui/c/db;->c()Lcom/bbm/ui/e/w;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/db;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/db;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/db;
-
-    invoke-static {v2}, Lcom/bbm/ui/c/db;->b(Lcom/bbm/ui/c/db;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2, v0}, Lcom/bbm/ui/e/w;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/bbm/g/aa;)V
-
-    goto :goto_0
-
-    .line 85
-    :cond_3
-    invoke-static {}, Lcom/bbm/ui/c/db;->d()Lcom/bbm/ui/e/v;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lcom/bbm/ui/e/v;->a(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    .line 86
-    const-string v1, "group list comment onClick"
-
-    const-class v2, Lcom/bbm/ui/c/db;
-
-    invoke-static {v1, v2}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 87
-    invoke-static {}, Lcom/bbm/ui/c/db;->d()Lcom/bbm/ui/e/v;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/db;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/db;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/db;
-
-    invoke-static {v2}, Lcom/bbm/ui/c/db;->b(Lcom/bbm/ui/c/db;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2, v0}, Lcom/bbm/ui/e/v;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/bbm/g/aa;)V
-
-    goto :goto_0
-
-    .line 89
-    :cond_4
-    invoke-static {}, Lcom/bbm/ui/c/db;->e()Lcom/bbm/ui/e/u;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Lcom/bbm/ui/e/u;->a(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 90
-    const-string v1, "group calendar onClick"
-
-    const-class v2, Lcom/bbm/ui/c/db;
-
-    invoke-static {v1, v2}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 91
-    invoke-static {}, Lcom/bbm/ui/c/db;->e()Lcom/bbm/ui/e/u;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/db;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/c/db;->getActivity()Landroid/app/Activity;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/bbm/ui/c/dc;->a:Lcom/bbm/ui/c/db;
-
-    invoke-static {v2}, Lcom/bbm/ui/c/db;->b(Lcom/bbm/ui/c/db;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2, v0}, Lcom/bbm/ui/e/u;->a(Landroid/app/Activity;Ljava/lang/String;Lcom/bbm/g/aa;)V
-
-    goto/16 :goto_0
 .end method

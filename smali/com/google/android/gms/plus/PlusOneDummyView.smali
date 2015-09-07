@@ -50,7 +50,7 @@
 .end method
 
 .method private bA(I)Landroid/graphics/Point;
-    .locals 8
+    .locals 9
 
     const/16 v1, 0x18
 
@@ -58,7 +58,7 @@
 
     const/4 v4, 0x1
 
-    const-wide/high16 v5, 0x3fe0000000000000L
+    const-wide/high16 v6, 0x3fe0000000000000L
 
     new-instance v2, Landroid/graphics/Point;
 
@@ -68,11 +68,11 @@
 
     const/16 v0, 0x26
 
-    move v7, v1
+    move v8, v1
 
     move v1, v0
 
-    move v0, v7
+    move v0, v8
 
     :goto_0
     invoke-virtual {p0}, Lcom/google/android/gms/plus/PlusOneDummyView;->getResources()Landroid/content/res/Resources;
@@ -95,17 +95,17 @@
 
     move-result v0
 
-    float-to-double v3, v1
+    float-to-double v4, v1
 
-    add-double/2addr v3, v5
+    add-double/2addr v4, v6
 
-    double-to-int v1, v3
+    double-to-int v1, v4
 
     iput v1, v2, Landroid/graphics/Point;->x:I
 
     float-to-double v0, v0
 
-    add-double/2addr v0, v5
+    add-double/2addr v0, v6
 
     double-to-int v0, v0
 

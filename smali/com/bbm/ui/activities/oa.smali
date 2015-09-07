@@ -1,65 +1,85 @@
 .class final Lcom/bbm/ui/activities/oa;
-.super Lcom/bbm/j/k;
-.source "GroupLobbyActivity.java"
+.super Ljava/lang/Object;
+.source "GroupEventsActivity.java"
+
+# interfaces
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/bbm/g/s;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/nz;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/nz;)V
+    .locals 0
 
     .prologue
-    .line 423
-    iput-object p1, p0, Lcom/bbm/ui/activities/oa;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 236
+    iput-object p1, p0, Lcom/bbm/ui/activities/oa;->a:Lcom/bbm/ui/activities/nz;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 2
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 4
 
     .prologue
-    .line 426
-    iget-object v0, p0, Lcom/bbm/ui/activities/oa;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 236
+    check-cast p1, Lcom/bbm/g/s;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/g/ab;
+    check-cast p2, Lcom/bbm/g/s;
 
-    move-result-object v0
+    iget-wide v0, p1, Lcom/bbm/g/s;->h:J
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/oa;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    iget-wide v2, p2, Lcom/bbm/g/s;->h:J
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupLobbyActivity;->i()Ljava/lang/String;
+    cmp-long v0, v0, v2
 
-    move-result-object v1
+    if-lez v0, :cond_0
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->e(Ljava/lang/String;)Lcom/bbm/j/w;
+    const/4 v0, 0x1
 
-    move-result-object v0
+    :goto_0
+    return v0
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    :cond_0
+    iget-wide v0, p1, Lcom/bbm/g/s;->h:J
 
-    move-result-object v0
+    iget-wide v2, p2, Lcom/bbm/g/s;->h:J
 
-    check-cast v0, Ljava/util/List;
+    cmp-long v0, v0, v2
 
-    invoke-interface {v0}, Ljava/util/List;->size()I
+    if-gez v0, :cond_1
+
+    const/4 v0, -0x1
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p1, Lcom/bbm/g/s;->i:Ljava/lang/String;
+
+    iget-object v1, p2, Lcom/bbm/g/s;->i:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 427
-    iget-object v1, p0, Lcom/bbm/ui/activities/oa;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->b(Lcom/bbm/ui/activities/GroupLobbyActivity;I)V
-
-    .line 428
-    return-void
+    goto :goto_0
 .end method

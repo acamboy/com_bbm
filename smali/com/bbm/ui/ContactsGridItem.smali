@@ -75,7 +75,7 @@
     iput-boolean v0, p0, Lcom/bbm/ui/ContactsGridItem;->b:Z
 
     .line 59
-    const v0, 0x7f0a040a
+    const v0, 0x7f0b048a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ContactsGridItem;->findViewById(I)Landroid/view/View;
 
@@ -86,7 +86,7 @@
     iput-object v0, p0, Lcom/bbm/ui/ContactsGridItem;->c:Lcom/bbm/ui/ObservingImageView;
 
     .line 60
-    const v0, 0x7f0a040b
+    const v0, 0x7f0b048b
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ContactsGridItem;->findViewById(I)Landroid/view/View;
 
@@ -95,7 +95,7 @@
     iput-object v0, p0, Lcom/bbm/ui/ContactsGridItem;->d:Landroid/view/View;
 
     .line 61
-    const v0, 0x7f0a040c
+    const v0, 0x7f0b048c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ContactsGridItem;->findViewById(I)Landroid/view/View;
 
@@ -106,7 +106,7 @@
     iput-object v0, p0, Lcom/bbm/ui/ContactsGridItem;->e:Landroid/widget/TextView;
 
     .line 62
-    const v0, 0x7f0a040d
+    const v0, 0x7f0b048d
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ContactsGridItem;->findViewById(I)Landroid/view/View;
 
@@ -115,7 +115,7 @@
     iput-object v0, p0, Lcom/bbm/ui/ContactsGridItem;->f:Landroid/view/View;
 
     .line 63
-    const v0, 0x7f0a040e
+    const v0, 0x7f0b048e
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ContactsGridItem;->findViewById(I)Landroid/view/View;
 

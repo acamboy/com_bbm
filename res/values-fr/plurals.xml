@@ -4,6 +4,27 @@
         <item quantity="other">Message de diffusion envoyé aux contacts %1$s</item>
         <item quantity="one">Message de diffusion envoyé à 1 contact</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d abonnés</item>
+        <item quantity="zero">Aucun abonné</item>
+        <item quantity="one">%1$d abonné</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d membres</item>
+        <item quantity="one">%1$d membre</item>
+    </plurals>
+    <plurals name="common_days_1d">
+        <item quantity="other">%1$d jours</item>
+        <item quantity="one">%1$d jour</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">secondes</item>
+        <item quantity="one">seconde</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Compteur défini sur %1$d secondes.</item>
+        <item quantity="one">Compteur défini sur %1$d seconde.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s éléments</item>
         <item quantity="zero">0 élément</item>
@@ -11,7 +32,7 @@
     </plurals>
     <plurals name="invites_received_chat_item_count">
         <item quantity="other">(%1$d invitations en attente)</item>
-        <item quantity="one">(1 invitation en attente)</item>
+        <item quantity="one">(1 en attente)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s résultats</item>

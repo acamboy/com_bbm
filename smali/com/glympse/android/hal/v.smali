@@ -4,31 +4,31 @@
 
 
 # instance fields
-.field private aR:J
+.field private aQ:J
 
-.field private aS:Ljava/lang/Runnable;
+.field private aR:Ljava/lang/Runnable;
 
 
 # direct methods
 .method private constructor <init>(JLjava/lang/Runnable;)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 209
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
     .line 210
-    iput-wide p1, p0, Lcom/glympse/android/hal/v;->aR:J
+    iput-wide p1, p0, Lcom/glympse/android/hal/v;->aQ:J
 
     .line 211
-    iput-object p3, p0, Lcom/glympse/android/hal/v;->aS:Ljava/lang/Runnable;
+    iput-object p3, p0, Lcom/glympse/android/hal/v;->aR:Ljava/lang/Runnable;
 
     .line 212
     return-void
 .end method
 
 .method synthetic constructor <init>(JLjava/lang/Runnable;Lcom/glympse/android/hal/DebugBase$1;)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 203
@@ -45,7 +45,7 @@
     .prologue
     .line 218
     :try_start_0
-    iget-wide v0, p0, Lcom/glympse/android/hal/v;->aR:J
+    iget-wide v0, p0, Lcom/glympse/android/hal/v;->aQ:J
 
     invoke-static {v0, v1}, Ljava/lang/Thread;->sleep(J)V
 
@@ -59,7 +59,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/Thread;->setPriority(I)V
 
     .line 220
-    iget-object v0, p0, Lcom/glympse/android/hal/v;->aS:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/glympse/android/hal/v;->aR:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
     :try_end_0

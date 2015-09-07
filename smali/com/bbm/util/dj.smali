@@ -1,92 +1,205 @@
-.class final Lcom/bbm/util/dj;
+.class public Lcom/bbm/util/dj;
 .super Ljava/lang/Object;
-.source "UpdatesFragmentUtil.java"
+.source "SearchStringMatcher.java"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field private static final b:Lcom/bbm/util/dj;
+
+.field private static final c:Lcom/bbm/util/dj;
+
+.field private static final d:[Ljava/lang/String;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/util/di;
+.field private final a:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/di;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 749
-    iput-object p1, p0, Lcom/bbm/util/dj;->a:Lcom/bbm/util/di;
+    .line 21
+    new-instance v0, Lcom/bbm/util/dk;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/util/dk;-><init>()V
+
+    sput-object v0, Lcom/bbm/util/dj;->b:Lcom/bbm/util/dj;
+
+    .line 28
+    new-instance v0, Lcom/bbm/util/dl;
+
+    invoke-direct {v0}, Lcom/bbm/util/dl;-><init>()V
+
+    sput-object v0, Lcom/bbm/util/dj;->c:Lcom/bbm/util/dj;
+
+    .line 62
+    const/4 v0, 0x5
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string v2, ":)"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x1
+
+    const-string v2, ":D"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x2
+
+    const-string v2, "#=-s"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x3
+
+    const-string v2, "\\=D/"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x4
+
+    const-string v2, ":|"
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/bbm/util/dj;->d:[Ljava/lang/String;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 4
+.method private constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 753
-    :try_start_0
-    new-instance v0, Ljava/util/LinkedList;
+    .line 12
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    .line 13
+    const/4 v0, 0x0
 
-    .line 754
-    new-instance v1, Lorg/json/JSONObject;
+    iput-object v0, p0, Lcom/bbm/util/dj;->a:Ljava/util/regex/Pattern;
 
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+    .line 14
+    return-void
+.end method
 
-    .line 755
-    const-string v2, "uri"
+.method synthetic constructor <init>(B)V
+    .locals 0
 
-    iget-object v3, p0, Lcom/bbm/util/dj;->a:Lcom/bbm/util/di;
+    .prologue
+    .line 8
+    invoke-direct {p0}, Lcom/bbm/util/dj;-><init>()V
 
-    iget-object v3, v3, Lcom/bbm/util/di;->b:Lcom/bbm/g/a;
+    return-void
+.end method
 
-    iget-object v3, v3, Lcom/bbm/g/a;->u:Ljava/lang/String;
+.method private constructor <init>(Ljava/lang/String;)V
+    .locals 3
 
-    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    .prologue
+    .line 16
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 756
-    const-string v2, "ignoreUpdatesForThisGroup"
+    .line 17
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    const/4 v3, 0x1
+    const-string v1, "\\b"
 
-    invoke-virtual {v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 757
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    const-string v1, "\\s+"
 
-    .line 758
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    const-string v2, " "
+
+    invoke-virtual {p1, v1, v2}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
+    invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    const-string v2, "group"
+    move-result-object v1
 
-    invoke-static {v0, v2}, Lcom/bbm/g/ac;->a(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/g/bz;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 763
-    :goto_0
+    move-result-object v0
+
+    const/4 v1, 0x2
+
+    invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/util/dj;->a:Ljava/util/regex/Pattern;
+
+    .line 19
     return-void
+.end method
 
-    .line 760
+.method public static a(Ljava/lang/String;)Lcom/bbm/util/dj;
+    .locals 1
+
+    .prologue
+    .line 36
+    invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 37
+    sget-object v0, Lcom/bbm/util/dj;->b:Lcom/bbm/util/dj;
+
+    .line 44
+    :goto_0
+    return-object v0
+
+    .line 40
+    :cond_0
+    :try_start_0
+    new-instance v0, Lcom/bbm/util/dj;
+
+    invoke-direct {v0, p0}, Lcom/bbm/util/dj;-><init>(Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/util/regex/PatternSyntaxException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 44
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    sget-object v0, Lcom/bbm/util/dj;->c:Lcom/bbm/util/dj;
 
     goto :goto_0
+.end method
+
+
+# virtual methods
+.method public b(Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 94
+    iget-object v0, p0, Lcom/bbm/util/dj;->a:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
+
+    move-result v0
+
+    return v0
 .end method

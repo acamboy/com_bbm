@@ -1,110 +1,115 @@
-.class final Lcom/bbm/ui/activities/adg;
-.super Ljava/lang/Object;
-.source "SettingsActivity.java"
-
-# interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.class final enum Lcom/bbm/ui/activities/adg;
+.super Ljava/lang/Enum;
+.source "ProfileIconSourceActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/activities/adg;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/bbm/ui/activities/adg;
+
+.field public static final enum b:Lcom/bbm/ui/activities/adg;
+
+.field private static final synthetic c:[Lcom/bbm/ui/activities/adg;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
     .prologue
-    .line 402
-    iput-object p1, p0, Lcom/bbm/ui/activities/adg;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    const/4 v3, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v2, 0x0
+
+    .line 227
+    new-instance v0, Lcom/bbm/ui/activities/adg;
+
+    const-string v1, "PICTURE"
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/activities/adg;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/activities/adg;->a:Lcom/bbm/ui/activities/adg;
+
+    .line 228
+    new-instance v0, Lcom/bbm/ui/activities/adg;
+
+    const-string v1, "SAMPLE_PICTURE"
+
+    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/activities/adg;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/activities/adg;->b:Lcom/bbm/ui/activities/adg;
+
+    .line 226
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lcom/bbm/ui/activities/adg;
+
+    sget-object v1, Lcom/bbm/ui/activities/adg;->a:Lcom/bbm/ui/activities/adg;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/bbm/ui/activities/adg;->b:Lcom/bbm/ui/activities/adg;
+
+    aput-object v1, v0, v3
+
+    sput-object v0, Lcom/bbm/ui/activities/adg;->c:[Lcom/bbm/ui/activities/adg;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
-    .locals 2
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
-    .line 405
-    iget-object v0, p0, Lcom/bbm/ui/activities/adg;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 226
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/d/a;->c()Z
-
-    move-result v0
-
-    if-ne p2, v0, :cond_0
-
-    .line 442
-    :goto_0
     return-void
+.end method
 
-    .line 408
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/adg;->a:Lcom/bbm/ui/activities/SettingsActivity;
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/activities/adg;
+    .locals 1
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->n(Lcom/bbm/ui/activities/SettingsActivity;)Z
+    .prologue
+    .line 226
+    const-class v0, Lcom/bbm/ui/activities/adg;
 
-    .line 409
-    if-eqz p2, :cond_1
-
-    .line 411
-    new-instance v0, Lcom/bbm/ui/b/o;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/adg;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-direct {v0, v1}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
-
-    .line 412
-    const v1, 0x7f0e0608
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->setTitle(I)V
-
-    .line 413
-    const v1, 0x7f0e060a
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->e(I)V
-
-    .line 414
-    const v1, 0x7f0e013e
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->a(I)V
-
-    .line 416
-    new-instance v1, Lcom/bbm/ui/activities/adh;
-
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/adh;-><init>(Lcom/bbm/ui/activities/adg;Lcom/bbm/ui/b/o;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->b(Landroid/view/View$OnClickListener;)V
-
-    .line 426
-    new-instance v1, Lcom/bbm/ui/activities/adi;
-
-    invoke-direct {v1, p0, v0}, Lcom/bbm/ui/activities/adi;-><init>(Lcom/bbm/ui/activities/adg;Lcom/bbm/ui/b/o;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->a(Landroid/view/View$OnClickListener;)V
-
-    .line 436
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->show()V
-
-    goto :goto_0
-
-    .line 440
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/adg;->a:Lcom/bbm/ui/activities/SettingsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
-    invoke-virtual {v0, p2}, Lcom/bbm/d/a;->a(Z)V
+    check-cast v0, Lcom/bbm/ui/activities/adg;
 
-    goto :goto_0
+    return-object v0
+.end method
+
+.method public static values()[Lcom/bbm/ui/activities/adg;
+    .locals 1
+
+    .prologue
+    .line 226
+    sget-object v0, Lcom/bbm/ui/activities/adg;->c:[Lcom/bbm/ui/activities/adg;
+
+    invoke-virtual {v0}, [Lcom/bbm/ui/activities/adg;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/ui/activities/adg;
+
+    return-object v0
 .end method

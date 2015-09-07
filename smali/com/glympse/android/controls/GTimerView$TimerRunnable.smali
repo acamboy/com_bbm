@@ -36,7 +36,7 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 1071
@@ -48,9 +48,9 @@
     .line 1074
     iget-object v0, p0, Lcom/glympse/android/controls/GTimerView$TimerRunnable;->this$0:Lcom/glympse/android/controls/GTimerView;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    invoke-virtual {v0, p0, v1, v2}, Lcom/glympse/android/controls/GTimerView;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, p0, v2, v3}, Lcom/glympse/android/controls/GTimerView;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 1075
     return-void

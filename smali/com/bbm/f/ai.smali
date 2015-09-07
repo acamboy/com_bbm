@@ -1,217 +1,239 @@
-.class final Lcom/bbm/f/ai;
-.super Ljava/lang/Thread;
+.class public final Lcom/bbm/f/ai;
+.super Ljava/lang/Object;
 .source "ShuntBroker.java"
+
+# interfaces
+.implements Lcom/bbm/f/a;
 
 
 # instance fields
-.field a:Z
+.field final a:Ljava/lang/String;
 
-.field final synthetic b:Lcom/bbm/f/ac;
+.field final b:I
 
-.field private final c:Ljava/net/Socket;
+.field c:Lcom/bbm/f/al;
+
+.field d:Lcom/bbm/f/ao;
+
+.field final e:Lcom/bbm/util/ct;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/util/ct",
+            "<",
+            "Lcom/bbm/f/b;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field final f:Lcom/bbm/f/aa;
+
+.field final g:Ljava/util/concurrent/BlockingQueue;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/concurrent/BlockingQueue",
+            "<",
+            "Lcom/bbm/f/ab;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field final h:Lcom/bbm/util/di;
+
+.field final i:Lcom/bbm/util/fg;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/f/ac;Ljava/net/Socket;)V
+.method public constructor <init>(Ljava/lang/String;I)V
     .locals 1
 
     .prologue
-    .line 166
-    iput-object p1, p0, Lcom/bbm/f/ai;->b:Lcom/bbm/f/ac;
+    .line 38
+    invoke-static {}, Lcom/bbm/util/bp;->a()Lcom/bbm/util/bp;
 
-    .line 167
-    const-string v0, "ShuntProtocolConnection WritingThread"
+    move-result-object v0
 
-    invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, p1, p2, v0}, Lcom/bbm/f/ai;-><init>(Ljava/lang/String;ILcom/bbm/util/di;)V
 
-    .line 164
-    const/4 v0, 0x0
+    .line 39
+    return-void
+.end method
 
-    iput-boolean v0, p0, Lcom/bbm/f/ai;->a:Z
+.method private constructor <init>(Ljava/lang/String;ILcom/bbm/util/di;)V
+    .locals 2
 
-    .line 168
-    iput-object p2, p0, Lcom/bbm/f/ai;->c:Ljava/net/Socket;
+    .prologue
+    .line 41
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 169
+    .line 31
+    new-instance v0, Lcom/bbm/util/ct;
+
+    sget-object v1, Lcom/bbm/f/b;->c:Lcom/bbm/f/b;
+
+    invoke-direct {v0, v1}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+
+    iput-object v0, p0, Lcom/bbm/f/ai;->e:Lcom/bbm/util/ct;
+
+    .line 32
+    new-instance v0, Lcom/bbm/f/aa;
+
+    invoke-direct {v0}, Lcom/bbm/f/aa;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/f/ai;->f:Lcom/bbm/f/aa;
+
+    .line 33
+    new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
+
+    invoke-direct {v0}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/f/ai;->g:Ljava/util/concurrent/BlockingQueue;
+
+    .line 35
+    new-instance v0, Lcom/bbm/util/fg;
+
+    invoke-direct {v0}, Lcom/bbm/util/fg;-><init>()V
+
+    iput-object v0, p0, Lcom/bbm/f/ai;->i:Lcom/bbm/util/fg;
+
+    .line 42
+    invoke-static {p1}, Lcom/google/b/a/o;->a(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 43
+    iput-object p1, p0, Lcom/bbm/f/ai;->a:Ljava/lang/String;
+
+    .line 44
+    iput p2, p0, Lcom/bbm/f/ai;->b:I
+
+    .line 45
+    iput-object p3, p0, Lcom/bbm/f/ai;->h:Lcom/bbm/util/di;
+
+    .line 46
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final a()Lcom/bbm/f/b;
+    .locals 1
 
     .prologue
+    .line 60
+    iget-object v0, p0, Lcom/bbm/f/ai;->e:Lcom/bbm/util/ct;
+
+    invoke-virtual {v0}, Lcom/bbm/util/ct;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/f/b;
+
+    return-object v0
+.end method
+
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 1
+
+    .prologue
+    .line 55
+    iget-object v0, p0, Lcom/bbm/f/ai;->g:Ljava/util/concurrent/BlockingQueue;
+
+    invoke-interface {v0, p1}, Ljava/util/concurrent/BlockingQueue;->add(Ljava/lang/Object;)Z
+
+    .line 56
+    return-void
+.end method
+
+.method public final a(Lcom/bbm/f/ac;)V
+    .locals 1
+
+    .prologue
+    .line 50
+    iget-object v0, p0, Lcom/bbm/f/ai;->f:Lcom/bbm/f/aa;
+
+    invoke-virtual {v0, p1}, Lcom/bbm/f/aa;->a(Lcom/bbm/f/ac;)V
+
+    .line 51
+    return-void
+.end method
+
+.method public final b()V
+    .locals 2
+
+    .prologue
+    .line 216
+    iget-object v0, p0, Lcom/bbm/f/ai;->e:Lcom/bbm/util/ct;
+
+    sget-object v1, Lcom/bbm/f/b;->a:Lcom/bbm/f/b;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+
+    .line 217
+    new-instance v0, Lcom/bbm/f/aj;
+
+    invoke-direct {v0, p0}, Lcom/bbm/f/aj;-><init>(Lcom/bbm/f/ai;)V
+
     const/4 v1, 0x0
 
-    .line 175
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/f/ai;->c:Ljava/net/Socket;
+    new-array v1, v1, [Ljava/lang/Void;
 
-    invoke-virtual {v0}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
+    invoke-virtual {v0, v1}, Lcom/bbm/f/aj;->b([Ljava/lang/Object;)Lcom/bbm/util/b;
 
-    move-result-object v2
-
-    .line 177
-    iget-object v0, p0, Lcom/bbm/f/ai;->b:Lcom/bbm/f/ac;
-
-    iget-object v0, v0, Lcom/bbm/f/ac;->h:Lcom/bbm/util/cx;
-
-    new-instance v3, Lcom/bbm/f/aj;
-
-    invoke-direct {v3, p0}, Lcom/bbm/f/aj;-><init>(Lcom/bbm/f/ai;)V
-
-    invoke-interface {v0, v3}, Lcom/bbm/util/cx;->a(Ljava/lang/Runnable;)V
-
-    .line 184
-    :goto_0
-    iget-boolean v0, p0, Lcom/bbm/f/ai;->a:Z
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
-
-    if-nez v0, :cond_0
-
-    .line 187
-    :try_start_1
-    iget-object v0, p0, Lcom/bbm/f/ai;->b:Lcom/bbm/f/ac;
-
-    iget-object v0, v0, Lcom/bbm/f/ac;->g:Ljava/util/concurrent/BlockingQueue;
-
-    invoke-interface {v0}, Ljava/util/concurrent/BlockingQueue;->take()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/f/x;
-
-    invoke-virtual {v0}, Lcom/bbm/f/x;->d()Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    .line 189
-    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v0, "\n"
-
-    invoke-virtual {v3, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
-
-    move-result v0
-
-    const/4 v4, -0x1
-
-    if-ne v0, v4, :cond_1
-
-    const/4 v0, 0x1
-
-    :goto_1
-    invoke-static {v0}, Lcom/google/b/a/o;->a(Z)V
-
-    invoke-virtual {v3}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v0
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    array-length v4, v0
-
-    invoke-static {v4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, "\n"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v3
-
-    array-length v4, v3
-
-    array-length v5, v0
-
-    add-int/2addr v4, v5
-
-    new-array v4, v4, [B
-
-    const/4 v5, 0x0
-
-    const/4 v6, 0x0
-
-    array-length v7, v3
-
-    invoke-static {v3, v5, v4, v6, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    const/4 v5, 0x0
-
-    array-length v3, v3
-
-    array-length v6, v0
-
-    invoke-static {v0, v5, v4, v3, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    invoke-virtual {v2, v4}, Ljava/io/OutputStream;->write([B)V
-
-    .line 190
-    invoke-virtual {v2}, Ljava/io/OutputStream;->flush()V
-
-    .line 191
-    invoke-static {}, Lcom/bbm/f/ai;->yield()V
-    :try_end_1
-    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
-
-    goto :goto_0
-
-    :catch_0
-    move-exception v0
-
-    .line 194
-    :cond_0
-    :try_start_2
-    invoke-virtual {v2}, Ljava/io/OutputStream;->close()V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
-
-    .line 204
-    :goto_2
-    iget-object v0, p0, Lcom/bbm/f/ai;->b:Lcom/bbm/f/ac;
-
-    iget-object v0, v0, Lcom/bbm/f/ac;->h:Lcom/bbm/util/cx;
-
-    new-instance v1, Lcom/bbm/f/ak;
-
-    invoke-direct {v1, p0}, Lcom/bbm/f/ak;-><init>(Lcom/bbm/f/ai;)V
-
-    invoke-interface {v0, v1}, Lcom/bbm/util/cx;->a(Ljava/lang/Runnable;)V
-
-    .line 210
+    .line 241
     return-void
+.end method
 
+.method public final b(Lcom/bbm/f/ac;)V
+    .locals 1
+
+    .prologue
+    .line 257
+    iget-object v0, p0, Lcom/bbm/f/ai;->f:Lcom/bbm/f/aa;
+
+    invoke-virtual {v0, p1}, Lcom/bbm/f/aa;->b(Lcom/bbm/f/ac;)V
+
+    .line 258
+    return-void
+.end method
+
+.method public final c()V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x1
+
+    .line 244
+    iget-object v0, p0, Lcom/bbm/f/ai;->c:Lcom/bbm/f/al;
+
+    if-eqz v0, :cond_0
+
+    .line 245
+    iget-object v0, p0, Lcom/bbm/f/ai;->c:Lcom/bbm/f/al;
+
+    iput-boolean v1, v0, Lcom/bbm/f/al;->a:Z
+
+    .line 246
+    iget-object v0, p0, Lcom/bbm/f/ai;->c:Lcom/bbm/f/al;
+
+    invoke-virtual {v0}, Lcom/bbm/f/al;->interrupt()V
+
+    .line 249
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/f/ai;->d:Lcom/bbm/f/ao;
+
+    if-eqz v0, :cond_1
+
+    .line 250
+    iget-object v0, p0, Lcom/bbm/f/ai;->d:Lcom/bbm/f/ao;
+
+    iput-boolean v1, v0, Lcom/bbm/f/ao;->a:Z
+
+    .line 251
+    iget-object v0, p0, Lcom/bbm/f/ai;->d:Lcom/bbm/f/ao;
+
+    invoke-virtual {v0}, Lcom/bbm/f/ao;->interrupt()V
+
+    .line 253
     :cond_1
-    move v0, v1
-
-    .line 189
-    goto :goto_1
-
-    .line 200
-    :catch_1
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_2
+    return-void
 .end method

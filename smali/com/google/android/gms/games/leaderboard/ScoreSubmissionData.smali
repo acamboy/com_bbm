@@ -119,82 +119,82 @@
     :goto_0
     invoke-static {v0}, Lcom/google/android/gms/internal/er;->x(Z)V
 
-    move v6, v1
+    move v0, v1
 
     :goto_1
-    if-ge v6, v7, :cond_3
+    if-ge v0, v7, :cond_3
 
-    invoke-virtual {p1, v6}, Lcom/google/android/gms/common/data/DataHolder;->I(I)I
+    invoke-virtual {p1, v0}, Lcom/google/android/gms/common/data/DataHolder;->I(I)I
 
     move-result v8
 
-    if-nez v6, :cond_0
+    if-nez v0, :cond_0
 
-    const-string v0, "leaderboardId"
+    const-string v1, "leaderboardId"
 
-    invoke-virtual {p1, v0, v6, v8}, Lcom/google/android/gms/common/data/DataHolder;->getString(Ljava/lang/String;II)Ljava/lang/String;
+    invoke-virtual {p1, v1, v0, v8}, Lcom/google/android/gms/common/data/DataHolder;->getString(Ljava/lang/String;II)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData;->IJ:Ljava/lang/String;
+    iput-object v1, p0, Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData;->IJ:Ljava/lang/String;
 
-    const-string v0, "playerId"
+    const-string v1, "playerId"
 
-    invoke-virtual {p1, v0, v6, v8}, Lcom/google/android/gms/common/data/DataHolder;->getString(Ljava/lang/String;II)Ljava/lang/String;
+    invoke-virtual {p1, v1, v0, v8}, Lcom/google/android/gms/common/data/DataHolder;->getString(Ljava/lang/String;II)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData;->Gh:Ljava/lang/String;
+    iput-object v1, p0, Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData;->Gh:Ljava/lang/String;
 
     :cond_0
-    const-string v0, "hasResult"
+    const-string v1, "hasResult"
 
-    invoke-virtual {p1, v0, v6, v8}, Lcom/google/android/gms/common/data/DataHolder;->getBoolean(Ljava/lang/String;II)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    new-instance v0, Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData$Result;
-
-    const-string v1, "rawScore"
-
-    invoke-virtual {p1, v1, v6, v8}, Lcom/google/android/gms/common/data/DataHolder;->getLong(Ljava/lang/String;II)J
-
-    move-result-wide v1
-
-    const-string v3, "formattedScore"
-
-    invoke-virtual {p1, v3, v6, v8}, Lcom/google/android/gms/common/data/DataHolder;->getString(Ljava/lang/String;II)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "scoreTag"
-
-    invoke-virtual {p1, v4, v6, v8}, Lcom/google/android/gms/common/data/DataHolder;->getString(Ljava/lang/String;II)Ljava/lang/String;
-
-    move-result-object v4
-
-    const-string v5, "newBest"
-
-    invoke-virtual {p1, v5, v6, v8}, Lcom/google/android/gms/common/data/DataHolder;->getBoolean(Ljava/lang/String;II)Z
-
-    move-result v5
-
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData$Result;-><init>(JLjava/lang/String;Ljava/lang/String;Z)V
-
-    const-string v1, "timeSpan"
-
-    invoke-virtual {p1, v1, v6, v8}, Lcom/google/android/gms/common/data/DataHolder;->getInteger(Ljava/lang/String;II)I
+    invoke-virtual {p1, v1, v0, v8}, Lcom/google/android/gms/common/data/DataHolder;->getBoolean(Ljava/lang/String;II)Z
 
     move-result v1
 
-    invoke-direct {p0, v0, v1}, Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData;->a(Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData$Result;I)V
+    if-eqz v1, :cond_1
+
+    new-instance v1, Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData$Result;
+
+    const-string v2, "rawScore"
+
+    invoke-virtual {p1, v2, v0, v8}, Lcom/google/android/gms/common/data/DataHolder;->getLong(Ljava/lang/String;II)J
+
+    move-result-wide v2
+
+    const-string v4, "formattedScore"
+
+    invoke-virtual {p1, v4, v0, v8}, Lcom/google/android/gms/common/data/DataHolder;->getString(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string v5, "scoreTag"
+
+    invoke-virtual {p1, v5, v0, v8}, Lcom/google/android/gms/common/data/DataHolder;->getString(Ljava/lang/String;II)Ljava/lang/String;
+
+    move-result-object v5
+
+    const-string v6, "newBest"
+
+    invoke-virtual {p1, v6, v0, v8}, Lcom/google/android/gms/common/data/DataHolder;->getBoolean(Ljava/lang/String;II)Z
+
+    move-result v6
+
+    invoke-direct/range {v1 .. v6}, Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData$Result;-><init>(JLjava/lang/String;Ljava/lang/String;Z)V
+
+    const-string v2, "timeSpan"
+
+    invoke-virtual {p1, v2, v0, v8}, Lcom/google/android/gms/common/data/DataHolder;->getInteger(Ljava/lang/String;II)I
+
+    move-result v2
+
+    invoke-direct {p0, v1, v2}, Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData;->a(Lcom/google/android/gms/games/leaderboard/ScoreSubmissionData$Result;I)V
 
     :cond_1
-    add-int/lit8 v1, v6, 0x1
+    add-int/lit8 v1, v0, 0x1
 
-    move v6, v1
+    move v0, v1
 
     goto :goto_1
 

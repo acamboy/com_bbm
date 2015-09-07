@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field final synthetic t:Lcom/glympse/android/hal/e;
+.field final synthetic s:Lcom/glympse/android/hal/e;
 
 
 # direct methods
@@ -13,7 +13,7 @@
 
     .prologue
     .line 129
-    iput-object p1, p0, Lcom/glympse/android/hal/f;->t:Lcom/glympse/android/hal/e;
+    iput-object p1, p0, Lcom/glympse/android/hal/f;->s:Lcom/glympse/android/hal/e;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -37,7 +37,7 @@
 
     .prologue
     .line 136
-    iget-object v0, p0, Lcom/glympse/android/hal/f;->t:Lcom/glympse/android/hal/e;
+    iget-object v0, p0, Lcom/glympse/android/hal/f;->s:Lcom/glympse/android/hal/e;
 
     invoke-static {v0, p2}, Lcom/glympse/android/hal/e;->a(Lcom/glympse/android/hal/e;Landroid/content/Intent;)V
 

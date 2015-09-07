@@ -7,13 +7,13 @@
 
 
 # instance fields
-.field private i:Ljava/lang/String;
+.field private h:Ljava/lang/String;
+
+.field private k:Ljava/lang/String;
 
 .field private l:Ljava/lang/String;
 
-.field private m:Ljava/lang/String;
-
-.field final synthetic n:Lcom/glympse/android/hal/a;
+.field final synthetic m:Lcom/glympse/android/hal/a;
 
 
 # direct methods
@@ -22,18 +22,18 @@
 
     .prologue
     .line 183
-    iput-object p1, p0, Lcom/glympse/android/hal/b;->n:Lcom/glympse/android/hal/a;
+    iput-object p1, p0, Lcom/glympse/android/hal/b;->m:Lcom/glympse/android/hal/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 184
-    iput-object p2, p0, Lcom/glympse/android/hal/b;->l:Ljava/lang/String;
+    iput-object p2, p0, Lcom/glympse/android/hal/b;->k:Ljava/lang/String;
 
     .line 185
-    iput-object p3, p0, Lcom/glympse/android/hal/b;->m:Ljava/lang/String;
+    iput-object p3, p0, Lcom/glympse/android/hal/b;->l:Ljava/lang/String;
 
     .line 186
-    iput-object p4, p0, Lcom/glympse/android/hal/b;->i:Ljava/lang/String;
+    iput-object p4, p0, Lcom/glympse/android/hal/b;->h:Ljava/lang/String;
 
     .line 187
     return-void
@@ -48,7 +48,7 @@
     const/4 v1, 0x0
 
     .line 191
-    iget-object v0, p0, Lcom/glympse/android/hal/b;->n:Lcom/glympse/android/hal/a;
+    iget-object v0, p0, Lcom/glympse/android/hal/b;->m:Lcom/glympse/android/hal/a;
 
     invoke-static {v0}, Lcom/glympse/android/hal/a;->c(Lcom/glympse/android/hal/a;)Lcom/glympse/android/lib/GAccountImportListener;
 
@@ -62,6 +62,14 @@
 
     .line 197
     :cond_0
+    iget-object v0, p0, Lcom/glympse/android/hal/b;->k:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
     iget-object v0, p0, Lcom/glympse/android/hal/b;->l:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
@@ -70,15 +78,7 @@
 
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/glympse/android/hal/b;->m:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/glympse/android/hal/b;->i:Ljava/lang/String;
+    iget-object v0, p0, Lcom/glympse/android/hal/b;->h:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
@@ -93,23 +93,23 @@
     if-eqz v0, :cond_2
 
     .line 202
-    iget-object v0, p0, Lcom/glympse/android/hal/b;->n:Lcom/glympse/android/hal/a;
+    iget-object v0, p0, Lcom/glympse/android/hal/b;->m:Lcom/glympse/android/hal/a;
 
     invoke-static {v0}, Lcom/glympse/android/hal/a;->c(Lcom/glympse/android/hal/a;)Lcom/glympse/android/lib/GAccountImportListener;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/b;->l:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/hal/b;->k:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/glympse/android/hal/b;->m:Ljava/lang/String;
+    iget-object v2, p0, Lcom/glympse/android/hal/b;->l:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/glympse/android/hal/b;->i:Ljava/lang/String;
+    iget-object v3, p0, Lcom/glympse/android/hal/b;->h:Ljava/lang/String;
 
     invoke-interface {v0, v1, v2, v3}, Lcom/glympse/android/lib/GAccountImportListener;->accountImported(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 210
     :goto_2
-    iget-object v0, p0, Lcom/glympse/android/hal/b;->n:Lcom/glympse/android/hal/a;
+    iget-object v0, p0, Lcom/glympse/android/hal/b;->m:Lcom/glympse/android/hal/a;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/a;->cancel()V
 
@@ -123,7 +123,7 @@
 
     .line 206
     :cond_2
-    iget-object v0, p0, Lcom/glympse/android/hal/b;->n:Lcom/glympse/android/hal/a;
+    iget-object v0, p0, Lcom/glympse/android/hal/b;->m:Lcom/glympse/android/hal/a;
 
     invoke-static {v0}, Lcom/glympse/android/hal/a;->c(Lcom/glympse/android/hal/a;)Lcom/glympse/android/lib/GAccountImportListener;
 

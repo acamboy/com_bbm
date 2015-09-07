@@ -4,28 +4,28 @@
 
 
 # instance fields
-.field private final a:Landroid/content/Context;
+.field a:I
 
-.field private b:I
+.field b:Z
 
-.field private c:Z
+.field c:Landroid/database/DataSetObserver;
 
-.field private d:Landroid/database/DataSetObserver;
+.field final d:Lcom/tonicartos/widget/stickygridheaders/a;
 
-.field private final e:Lcom/tonicartos/widget/stickygridheaders/a;
+.field e:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-.field private f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+.field f:Landroid/view/View;
 
-.field private g:Landroid/view/View;
+.field g:Landroid/view/View;
 
-.field private h:Landroid/view/View;
+.field h:I
 
-.field private i:I
+.field private final i:Landroid/content/Context;
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;Lcom/tonicartos/widget/stickygridheaders/a;)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 83
@@ -34,33 +34,35 @@
     .line 58
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->c:Z
+    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:Z
 
     .line 60
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/b;
 
     invoke-direct {v0, p0}, Lcom/tonicartos/widget/stickygridheaders/b;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;)V
 
-    iput-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Landroid/database/DataSetObserver;
+    iput-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->c:Landroid/database/DataSetObserver;
 
     .line 80
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->i:I
+    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->h:I
 
     .line 84
-    iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a:Landroid/content/Context;
+    iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->i:Landroid/content/Context;
 
     .line 85
-    iput-object p3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    iput-object p3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     .line 86
-    iput-object p2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    iput-object p2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     .line 87
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Landroid/database/DataSetObserver;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
-    invoke-interface {p3, v0}, Lcom/tonicartos/widget/stickygridheaders/a;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->c:Landroid/database/DataSetObserver;
+
+    invoke-interface {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/a;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
     .line 88
     return-void
@@ -70,24 +72,24 @@
     .locals 1
 
     .prologue
-    .line 252
+    .line 269
     check-cast p1, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$FillerView;
 
-    .line 253
+    .line 270
     if-nez p1, :cond_0
 
-    .line 254
+    .line 271
     new-instance p1, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$FillerView;
 
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a:Landroid/content/Context;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->i:Landroid/content/Context;
 
     invoke-direct {p1, p0, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$FillerView;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;Landroid/content/Context;)V
 
-    .line 257
+    .line 274
     :cond_0
     invoke-virtual {p1, p2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$FillerView;->setMeasureTarget(Landroid/view/View;)V
 
-    .line 259
+    .line 276
     return-object p1
 .end method
 
@@ -98,7 +100,7 @@
     .line 33
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->c:Z
+    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:Z
 
     return v0
 .end method
@@ -108,7 +110,7 @@
 
     .prologue
     .line 33
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     return-object v0
 .end method
@@ -117,18 +119,18 @@
     .locals 2
 
     .prologue
-    .line 280
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    .line 297
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v0, p1}, Lcom/tonicartos/widget/stickygridheaders/a;->a(I)I
 
     move-result v0
 
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->i:I
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->h:I
 
     rem-int/2addr v0, v1
 
-    .line 281
+    .line 298
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
@@ -137,7 +139,7 @@
     return v0
 
     :cond_0
-    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->i:I
+    iget v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->h:I
 
     sub-int v0, v1, v0
 
@@ -152,18 +154,18 @@
 
     const/4 v6, -0x1
 
-    .line 297
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    .line 314
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v0}, Lcom/tonicartos/widget/stickygridheaders/a;->b()I
 
     move-result v3
 
-    .line 298
+    .line 315
     if-nez v3, :cond_1
 
-    .line 299
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    .line 316
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v0}, Lcom/tonicartos/widget/stickygridheaders/a;->getCount()I
 
@@ -171,16 +173,16 @@
 
     if-lt p1, v0, :cond_0
 
-    .line 300
+    .line 317
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/c;
 
     invoke-direct {v0, p0, v6, v1}, Lcom/tonicartos/widget/stickygridheaders/c;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;II)V
 
-    .line 342
+    .line 359
     :goto_0
     return-object v0
 
-    .line 302
+    .line 319
     :cond_0
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/c;
 
@@ -191,21 +193,21 @@
     :cond_1
     move v0, p1
 
-    .line 307
+    .line 324
     :goto_1
     if-ge v1, v3, :cond_6
 
-    .line 311
-    iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    .line 328
+    iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v2, v1}, Lcom/tonicartos/widget/stickygridheaders/a;->a(I)I
 
     move-result v2
 
-    .line 315
+    .line 332
     if-nez v0, :cond_2
 
-    .line 317
+    .line 334
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/c;
 
     const/4 v2, -0x2
@@ -214,16 +216,16 @@
 
     goto :goto_0
 
-    .line 319
+    .line 336
     :cond_2
-    iget v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->i:I
+    iget v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->h:I
 
     sub-int/2addr v0, v4
 
-    .line 320
+    .line 337
     if-gez v0, :cond_3
 
-    .line 322
+    .line 339
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/c;
 
     const/4 v2, -0x3
@@ -232,47 +234,47 @@
 
     goto :goto_0
 
-    .line 324
+    .line 341
     :cond_3
-    iget v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->i:I
+    iget v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->h:I
 
     sub-int v4, p1, v4
 
-    .line 326
+    .line 343
     if-ge v0, v2, :cond_4
 
-    .line 327
+    .line 344
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/c;
 
     invoke-direct {v0, p0, v4, v1}, Lcom/tonicartos/widget/stickygridheaders/c;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;II)V
 
     goto :goto_0
 
-    .line 331
+    .line 348
     :cond_4
     invoke-direct {p0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->c(I)I
 
     move-result v5
 
-    .line 332
+    .line 349
     sub-int p1, v4, v5
 
-    .line 333
+    .line 350
     add-int/2addr v2, v5
 
     sub-int v2, v0, v2
 
-    .line 335
+    .line 352
     if-gez v2, :cond_5
 
-    .line 337
+    .line 354
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/c;
 
     invoke-direct {v0, p0, v6, v1}, Lcom/tonicartos/widget/stickygridheaders/c;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;II)V
 
     goto :goto_0
 
-    .line 310
+    .line 327
     :cond_5
     add-int/lit8 v0, v1, 0x1
 
@@ -282,7 +284,7 @@
 
     goto :goto_1
 
-    .line 342
+    .line 359
     :cond_6
     new-instance v0, Lcom/tonicartos/widget/stickygridheaders/c;
 
@@ -297,8 +299,8 @@
     .locals 2
 
     .prologue
-    .line 289
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    .line 306
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v0}, Lcom/tonicartos/widget/stickygridheaders/a;->b()I
 
@@ -306,15 +308,15 @@
 
     if-nez v0, :cond_0
 
-    .line 290
+    .line 307
     const/4 v0, 0x0
 
-    .line 293
+    .line 310
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-direct {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d(I)Lcom/tonicartos/widget/stickygridheaders/c;
 
@@ -329,90 +331,19 @@
     goto :goto_0
 .end method
 
-.method protected final a()V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x1
-
-    const/4 v0, 0x0
-
-    .line 346
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:I
-
-    .line 347
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
-
-    invoke-interface {v1}, Lcom/tonicartos/widget/stickygridheaders/a;->b()I
-
-    move-result v1
-
-    .line 348
-    if-nez v1, :cond_0
-
-    .line 349
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
-
-    invoke-interface {v0}, Lcom/tonicartos/widget/stickygridheaders/a;->getCount()I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:I
-
-    .line 350
-    iput-boolean v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->c:Z
-
-    .line 358
-    :goto_0
-    return-void
-
-    .line 354
-    :cond_0
-    :goto_1
-    if-ge v0, v1, :cond_1
-
-    .line 355
-    iget v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:I
-
-    iget-object v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
-
-    invoke-interface {v3, v0}, Lcom/tonicartos/widget/stickygridheaders/a;->a(I)I
-
-    move-result v3
-
-    iget v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->i:I
-
-    add-int/2addr v3, v4
-
-    add-int/2addr v2, v3
-
-    iput v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:I
-
-    .line 354
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    .line 357
-    :cond_1
-    iput-boolean v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->c:Z
-
-    goto :goto_0
-.end method
-
 .method public final a(I)V
     .locals 1
 
     .prologue
-    .line 240
-    iput p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->i:I
+    .line 257
+    iput p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->h:I
 
-    .line 241
+    .line 258
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->c:Z
+    iput-boolean v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:Z
 
-    .line 243
+    .line 260
     return-void
 .end method
 
@@ -420,7 +351,7 @@
     .locals 1
 
     .prologue
-    .line 92
+    .line 109
     const/4 v0, 0x0
 
     return v0
@@ -430,7 +361,7 @@
     .locals 2
 
     .prologue
-    .line 285
+    .line 302
     invoke-direct {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d(I)Lcom/tonicartos/widget/stickygridheaders/c;
 
     move-result-object v0
@@ -450,58 +381,58 @@
 
     const/4 v0, 0x0
 
-    .line 97
-    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->c:Z
+    .line 114
+    iget-boolean v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:Z
 
     if-eqz v1, :cond_0
 
-    .line 98
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:I
+    .line 115
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a:I
 
-    .line 114
+    .line 131
     :goto_0
     return v0
 
-    .line 100
+    .line 117
     :cond_0
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:I
+    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a:I
 
-    .line 101
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    .line 118
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v1}, Lcom/tonicartos/widget/stickygridheaders/a;->b()I
 
     move-result v1
 
-    .line 102
+    .line 119
     if-nez v1, :cond_1
 
-    .line 103
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    .line 120
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v0}, Lcom/tonicartos/widget/stickygridheaders/a;->getCount()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:I
+    iput v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a:I
 
-    .line 104
-    iput-boolean v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->c:Z
+    .line 121
+    iput-boolean v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:Z
 
-    .line 105
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:I
+    .line 122
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a:I
 
     goto :goto_0
 
-    .line 108
+    .line 125
     :cond_1
     :goto_1
     if-ge v0, v1, :cond_2
 
-    .line 111
-    iget v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:I
+    .line 128
+    iget v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a:I
 
-    iget-object v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    iget-object v3, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v3, v0}, Lcom/tonicartos/widget/stickygridheaders/a;->a(I)I
 
@@ -513,25 +444,25 @@
 
     add-int/2addr v3, v4
 
-    iget v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->i:I
+    iget v4, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->h:I
 
     add-int/2addr v3, v4
 
     add-int/2addr v2, v3
 
-    iput v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:I
+    iput v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a:I
 
-    .line 108
+    .line 125
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 113
+    .line 130
     :cond_2
-    iput-boolean v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->c:Z
+    iput-boolean v5, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:Z
 
-    .line 114
-    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->b:I
+    .line 131
+    iget v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a:I
 
     goto :goto_0
 .end method
@@ -540,12 +471,12 @@
     .locals 3
 
     .prologue
-    .line 131
+    .line 148
     invoke-direct {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d(I)Lcom/tonicartos/widget/stickygridheaders/c;
 
     move-result-object v0
 
-    .line 132
+    .line 149
     iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
     const/4 v2, -0x1
@@ -558,16 +489,16 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 135
+    .line 152
     :cond_0
     const/4 v0, 0x0
 
-    .line 138
+    .line 155
     :goto_0
     return-object v0
 
     :cond_1
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     iget v0, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
@@ -582,26 +513,26 @@
     .locals 3
 
     .prologue
-    .line 143
+    .line 160
     invoke-direct {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d(I)Lcom/tonicartos/widget/stickygridheaders/c;
 
     move-result-object v0
 
-    .line 144
+    .line 161
     iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
     const/4 v2, -0x2
 
     if-ne v1, v2, :cond_0
 
-    .line 145
+    .line 162
     const-wide/16 v0, -0x1
 
-    .line 153
+    .line 170
     :goto_0
     return-wide v0
 
-    .line 147
+    .line 164
     :cond_0
     iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
@@ -609,12 +540,12 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 148
+    .line 165
     const-wide/16 v0, -0x2
 
     goto :goto_0
 
-    .line 150
+    .line 167
     :cond_1
     iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
@@ -622,14 +553,14 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 151
+    .line 168
     const-wide/16 v0, -0x3
 
     goto :goto_0
 
-    .line 153
+    .line 170
     :cond_2
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     iget v0, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
@@ -646,38 +577,38 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 158
+    .line 175
     invoke-direct {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d(I)Lcom/tonicartos/widget/stickygridheaders/c;
 
     move-result-object v0
 
-    .line 159
+    .line 176
     iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
     const/4 v2, -0x2
 
     if-ne v1, v2, :cond_1
 
-    .line 160
+    .line 177
     const/4 v0, 0x1
 
-    .line 172
+    .line 189
     :cond_0
     :goto_0
     return v0
 
-    .line 162
+    .line 179
     :cond_1
     iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
     if-ne v1, v3, :cond_2
 
-    .line 163
+    .line 180
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 165
+    .line 182
     :cond_2
     iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
@@ -685,14 +616,14 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 166
+    .line 183
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 168
+    .line 185
     :cond_3
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     iget v0, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
@@ -700,10 +631,10 @@
 
     move-result v0
 
-    .line 169
+    .line 186
     if-eq v0, v3, :cond_0
 
-    .line 172
+    .line 189
     add-int/lit8 v0, v0, 0x3
 
     goto :goto_0
@@ -713,19 +644,19 @@
     .locals 3
 
     .prologue
-    .line 177
+    .line 194
     invoke-direct {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d(I)Lcom/tonicartos/widget/stickygridheaders/c;
 
     move-result-object v0
 
-    .line 178
+    .line 195
     iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
     const/4 v2, -0x2
 
     if-ne v1, v2, :cond_1
 
-    .line 179
+    .line 196
     iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->a:I
 
     check-cast p2, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$HeaderFillerView;
@@ -734,13 +665,13 @@
 
     new-instance p2, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$HeaderFillerView;
 
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a:Landroid/content/Context;
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->i:Landroid/content/Context;
 
     invoke-direct {p2, p0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$HeaderFillerView;-><init>(Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;Landroid/content/Context;)V
 
-    .line 180
+    .line 197
     :cond_0
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     iget v2, v0, Lcom/tonicartos/widget/stickygridheaders/c;->a:I
 
@@ -754,8 +685,8 @@
 
     move-result-object v1
 
-    .line 181
-    iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    .line 198
+    iget-object v2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
     invoke-virtual {p2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$HeaderFillerView;->getTag()Ljava/lang/Object;
 
@@ -763,27 +694,27 @@
 
     check-cast v0, Landroid/view/View;
 
-    invoke-virtual {v2, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->c(Landroid/view/View;)V
+    invoke-virtual {v2, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->b(Landroid/view/View;)V
 
-    .line 182
+    .line 199
     invoke-virtual {p2, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$HeaderFillerView;->setTag(Ljava/lang/Object;)V
 
-    .line 183
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->f:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    .line 200
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
 
-    invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->b(Landroid/view/View;)V
+    invoke-virtual {v0, v1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->a(Landroid/view/View;)V
 
-    .line 185
-    iput-object p2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->g:Landroid/view/View;
+    .line 202
+    iput-object p2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->f:Landroid/view/View;
 
-    .line 186
+    .line 203
     invoke-virtual {p2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$HeaderFillerView;->forceLayout()V
 
-    .line 197
+    .line 214
     :goto_0
     return-object p2
 
-    .line 187
+    .line 204
     :cond_1
     iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
@@ -791,19 +722,19 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 188
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->g:Landroid/view/View;
+    .line 205
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->f:Landroid/view/View;
 
     invoke-direct {p0, p2, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a(Landroid/view/View;Landroid/view/View;)Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$FillerView;
 
     move-result-object p2
 
-    .line 189
+    .line 206
     invoke-virtual {p2}, Landroid/view/View;->forceLayout()V
 
     goto :goto_0
 
-    .line 190
+    .line 207
     :cond_2
     iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
@@ -811,8 +742,8 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 191
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->h:Landroid/view/View;
+    .line 208
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->g:Landroid/view/View;
 
     invoke-direct {p0, p2, v0}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->a(Landroid/view/View;Landroid/view/View;)Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$FillerView;
 
@@ -820,9 +751,9 @@
 
     goto :goto_0
 
-    .line 193
+    .line 210
     :cond_3
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     iget v0, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
@@ -830,8 +761,8 @@
 
     move-result-object p2
 
-    .line 194
-    iput-object p2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->h:Landroid/view/View;
+    .line 211
+    iput-object p2, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->g:Landroid/view/View;
 
     goto :goto_0
 .end method
@@ -840,8 +771,8 @@
     .locals 1
 
     .prologue
-    .line 202
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    .line 219
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v0}, Lcom/tonicartos/widget/stickygridheaders/a;->getViewTypeCount()I
 
@@ -856,8 +787,8 @@
     .locals 1
 
     .prologue
-    .line 214
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    .line 231
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v0}, Lcom/tonicartos/widget/stickygridheaders/a;->hasStableIds()Z
 
@@ -870,8 +801,8 @@
     .locals 1
 
     .prologue
-    .line 219
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    .line 236
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v0}, Lcom/tonicartos/widget/stickygridheaders/a;->isEmpty()Z
 
@@ -884,12 +815,12 @@
     .locals 3
 
     .prologue
-    .line 224
+    .line 241
     invoke-direct {p0, p1}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d(I)Lcom/tonicartos/widget/stickygridheaders/c;
 
     move-result-object v0
 
-    .line 225
+    .line 242
     iget v1, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
     const/4 v2, -0x1
@@ -902,16 +833,16 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 227
+    .line 244
     :cond_0
     const/4 v0, 0x0
 
-    .line 230
+    .line 247
     :goto_0
     return v0
 
     :cond_1
-    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    iget-object v1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     iget v0, v0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
@@ -926,15 +857,15 @@
     .locals 1
 
     .prologue
-    .line 235
+    .line 252
     invoke-super {p0, p1}, Landroid/widget/BaseAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 236
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    .line 253
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v0, p1}, Lcom/tonicartos/widget/stickygridheaders/a;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 237
+    .line 254
     return-void
 .end method
 
@@ -942,14 +873,14 @@
     .locals 1
 
     .prologue
-    .line 247
+    .line 264
     invoke-super {p0, p1}, Landroid/widget/BaseAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 248
-    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->e:Lcom/tonicartos/widget/stickygridheaders/a;
+    .line 265
+    iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;->d:Lcom/tonicartos/widget/stickygridheaders/a;
 
     invoke-interface {v0, p1}, Lcom/tonicartos/widget/stickygridheaders/a;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 249
+    .line 266
     return-void
 .end method

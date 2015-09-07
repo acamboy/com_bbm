@@ -182,7 +182,7 @@
     return v0
 .end method
 
-.method protected abstract b()Ljava/lang/Object;
+.method public abstract b()Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TV;"
@@ -235,7 +235,7 @@
     return-void
 .end method
 
-.method protected abstract d(Ljava/lang/Object;)I
+.method public abstract d(Ljava/lang/Object;)I
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TV;)I"

@@ -1,71 +1,111 @@
-.class final Lcom/bbm/b/i;
+.class final synthetic Lcom/bbm/b/i;
 .super Ljava/lang/Object;
-.source "AdUtils.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "AdTrackingActionManager.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/b/o;
-
-.field final synthetic b:Lcom/bbm/b/h;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/b/h;Lcom/bbm/ui/b/o;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 248
-    iput-object p1, p0, Lcom/bbm/b/i;->b:Lcom/bbm/b/h;
-
-    iput-object p2, p0, Lcom/bbm/b/i;->a:Lcom/bbm/ui/b/o;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
-
-    .prologue
-    .line 251
-    iget-object v0, p0, Lcom/bbm/b/i;->a:Lcom/bbm/ui/b/o;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
-
-    .line 252
-    iget-object v0, p0, Lcom/bbm/b/i;->b:Lcom/bbm/b/h;
-
-    iget-object v0, v0, Lcom/bbm/b/h;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->v()V
-
-    .line 253
-    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/b/k;
+    .line 53
+    invoke-static {}, Lcom/bbm/b/as;->values()[Lcom/bbm/b/as;
 
     move-result-object v0
 
-    const-string v1, "Banner"
+    array-length v0, v0
 
-    iget-object v2, p0, Lcom/bbm/b/i;->b:Lcom/bbm/b/h;
+    new-array v0, v0, [I
 
-    iget-object v2, v2, Lcom/bbm/b/h;->b:Lcom/bbm/b/a;
+    sput-object v0, Lcom/bbm/b/i;->a:[I
 
-    invoke-virtual {v2}, Lcom/bbm/b/a;->a()Ljava/lang/String;
+    :try_start_0
+    sget-object v0, Lcom/bbm/b/i;->a:[I
 
-    move-result-object v2
+    sget-object v1, Lcom/bbm/b/as;->a:Lcom/bbm/b/as;
 
-    new-instance v3, Lcom/bbm/b/s;
+    invoke-virtual {v1}, Lcom/bbm/b/as;->ordinal()I
 
-    invoke-direct {v3, v1, v2}, Lcom/bbm/b/s;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    move-result v1
 
-    invoke-virtual {v0, v3}, Lcom/bbm/b/k;->a(Lcom/bbm/b/aa;)V
+    const/4 v2, 0x1
 
-    .line 254
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/b/i;->a:[I
+
+    sget-object v1, Lcom/bbm/b/as;->b:Lcom/bbm/b/as;
+
+    invoke-virtual {v1}, Lcom/bbm/b/as;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
+
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/b/i;->a:[I
+
+    sget-object v1, Lcom/bbm/b/as;->c:Lcom/bbm/b/as;
+
+    invoke-virtual {v1}, Lcom/bbm/b/as;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/b/i;->a:[I
+
+    sget-object v1, Lcom/bbm/b/as;->d:Lcom/bbm/b/as;
+
+    invoke-virtual {v1}, Lcom/bbm/b/as;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
+
+    :goto_3
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_0
 .end method

@@ -1,79 +1,60 @@
 .class final Lcom/bbm/ui/activities/afk;
-.super Lcom/bbm/ui/by;
-.source "ViewChannelActivity.java"
+.super Ljava/lang/Object;
+.source "SelectContactActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ViewChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
     .locals 0
 
     .prologue
-    .line 102
-    iput-object p1, p0, Lcom/bbm/ui/activities/afk;->a:Lcom/bbm/ui/activities/ViewChannelActivity;
+    .line 443
+    iput-object p1, p0, Lcom/bbm/ui/activities/afk;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
-
-    .prologue
-    .line 113
-    iget-object v0, p0, Lcom/bbm/ui/activities/afk;->a:Lcom/bbm/ui/activities/ViewChannelActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ViewChannelActivity;->finish()V
-
-    .line 114
-    return-void
-.end method
-
-.method public final a(I)V
-    .locals 1
-
-    .prologue
-    .line 118
-    iget-object v0, p0, Lcom/bbm/ui/activities/afk;->a:Lcom/bbm/ui/activities/ViewChannelActivity;
-
-    invoke-virtual {v0, p1}, Lcom/bbm/ui/activities/ViewChannelActivity;->a(I)V
-
-    .line 119
-    return-void
-.end method
-
-.method public final b()V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 105
-    iget-object v0, p0, Lcom/bbm/ui/activities/afk;->a:Lcom/bbm/ui/activities/ViewChannelActivity;
+    .line 447
+    const-string v0, "mHeaderActionBar NegativeButton Clicked"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ViewChannelActivity;->k()Lcom/bbm/ui/c/fq;
+    const-class v1, Lcom/bbm/ui/activities/SelectContactActivity;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 106
-    iget-object v1, p0, Lcom/bbm/ui/activities/afk;->a:Lcom/bbm/ui/activities/ViewChannelActivity;
+    .line 449
+    iget-object v0, p0, Lcom/bbm/ui/activities/afk;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/ViewChannelActivity;->b(Lcom/bbm/ui/c/fq;)V
+    const/4 v1, 0x1
 
-    .line 107
-    iget-object v0, p0, Lcom/bbm/ui/activities/afk;->a:Lcom/bbm/ui/activities/ViewChannelActivity;
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
 
-    invoke-static {v0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
+    .line 450
+    iget-object v0, p0, Lcom/bbm/ui/activities/afk;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    .line 108
-    iget-object v0, p0, Lcom/bbm/ui/activities/afk;->a:Lcom/bbm/ui/activities/ViewChannelActivity;
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ViewChannelActivity;->w()V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/SelectContactActivity;->setResult(I)V
 
-    .line 109
+    .line 451
+    iget-object v0, p0, Lcom/bbm/ui/activities/afk;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->finish()V
+
+    .line 452
     return-void
 .end method

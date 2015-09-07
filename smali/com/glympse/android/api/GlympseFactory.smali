@@ -46,7 +46,7 @@
     .locals 1
 
     .prologue
-    .line 222
+    .line 235
     invoke-static {p0}, Lcom/glympse/android/lib/LinkedAccountsManager;->createEvernoteAccountProfile(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0
@@ -58,8 +58,20 @@
     .locals 1
 
     .prologue
-    .line 196
+    .line 209
     invoke-static {p0}, Lcom/glympse/android/lib/LinkedAccountsManager;->createFacebookAccountProfile(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static createGeoTrigger(Ljava/lang/String;ZLcom/glympse/android/api/GTicket;Lcom/glympse/android/core/GLatLng;DI)Lcom/glympse/android/api/GGeoTrigger;
+    .locals 2
+
+    .prologue
+    .line 294
+    invoke-static/range {p0 .. p6}, Lcom/glympse/android/lib/LibFactory;->createGeoTrigger(Ljava/lang/String;ZLcom/glympse/android/api/GTicket;Lcom/glympse/android/core/GLatLng;DI)Lcom/glympse/android/api/GGeoTrigger;
 
     move-result-object v0
 
@@ -140,11 +152,35 @@
     throw v0
 .end method
 
+.method public static createGoogleAccountProfile(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    .locals 1
+
+    .prologue
+    .line 252
+    invoke-static {p0}, Lcom/glympse/android/lib/LinkedAccountsManager;->createGoogleAccountProfile(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static createGoogleServerAuthorizationProfile(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+    .locals 1
+
+    .prologue
+    .line 274
+    invoke-static {p0}, Lcom/glympse/android/lib/LinkedAccountsManager;->createGoogleServerAuthorizationProfile(Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public static createImage(Lcom/glympse/android/core/GDrawable;)Lcom/glympse/android/api/GImage;
     .locals 1
 
     .prologue
-    .line 185
+    .line 198
     invoke-static {p0}, Lcom/glympse/android/lib/LibFactory;->createImage(Lcom/glympse/android/core/GDrawable;)Lcom/glympse/android/lib/GImagePrivate;
 
     move-result-object v0
@@ -164,11 +200,23 @@
     return-object v0
 .end method
 
-.method public static createPlace(DDLjava/lang/String;)Lcom/glympse/android/api/GPlace;
+.method public static createInvite(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
     .locals 1
 
     .prologue
-    .line 177
+    .line 151
+    invoke-static {p0, p1, p2, p3}, Lcom/glympse/android/lib/LibFactory;->createInvite(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/glympse/android/api/GInvite;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static createPlace(DDLjava/lang/String;)Lcom/glympse/android/api/GPlace;
+    .locals 2
+
+    .prologue
+    .line 190
     invoke-static {p0, p1, p2, p3, p4}, Lcom/glympse/android/lib/LibFactory;->createPlace(DDLjava/lang/String;)Lcom/glympse/android/api/GPlace;
 
     move-result-object v0
@@ -180,7 +228,7 @@
     .locals 2
 
     .prologue
-    .line 152
+    .line 165
     const/4 v0, 0x7
 
     const/4 v1, 0x0
@@ -196,23 +244,23 @@
     .locals 1
 
     .prologue
-    .line 165
+    .line 178
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/glympse/android/lib/LibFactory;->createTicket(Z)Lcom/glympse/android/lib/GTicketPrivate;
 
     move-result-object v0
 
-    .line 166
+    .line 179
     invoke-interface {v0, p0}, Lcom/glympse/android/lib/GTicketPrivate;->setDuration(I)V
 
-    .line 167
+    .line 180
     invoke-interface {v0, p1}, Lcom/glympse/android/lib/GTicketPrivate;->setMessage(Ljava/lang/String;)V
 
-    .line 168
+    .line 181
     invoke-interface {v0, p2}, Lcom/glympse/android/lib/GTicketPrivate;->setDestination(Lcom/glympse/android/api/GPlace;)V
 
-    .line 169
+    .line 182
     return-object v0
 .end method
 
@@ -220,7 +268,7 @@
     .locals 1
 
     .prologue
-    .line 232
+    .line 284
     invoke-static {}, Lcom/glympse/android/lib/LibFactory;->createTrackBuilder()Lcom/glympse/android/api/GTrackBuilder;
 
     move-result-object v0
@@ -232,7 +280,7 @@
     .locals 1
 
     .prologue
-    .line 211
+    .line 224
     invoke-static {p0, p1, p2, p3}, Lcom/glympse/android/lib/LinkedAccountsManager;->createTwitterAccountProfile(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/glympse/android/core/GPrimitive;
 
     move-result-object v0

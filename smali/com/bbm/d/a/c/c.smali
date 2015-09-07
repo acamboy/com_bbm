@@ -25,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 87
+    .line 89
     iput-object p1, p0, Lcom/bbm/d/a/c/c;->a:Lcom/bbm/d/a/c/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -39,7 +39,7 @@
     .locals 2
 
     .prologue
-    .line 87
+    .line 89
     check-cast p1, Lcom/bbm/d/a/a;
 
     check-cast p2, Lcom/bbm/d/a/a;

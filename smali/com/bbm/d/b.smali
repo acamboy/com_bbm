@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 93
+    .line 102
     iput-object p1, p0, Lcom/bbm/d/b;->a:Lcom/bbm/d/a;
 
     invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
@@ -37,18 +37,16 @@
     .locals 3
 
     .prologue
-    .line 93
+    .line 102
     iget-object v0, p0, Lcom/bbm/d/b;->a:Lcom/bbm/d/a;
 
     const-string v1, "localUri"
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->z(Ljava/lang/String;)Lcom/bbm/util/bg;
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/bg;->d()Lorg/json/JSONObject;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
 
     const-string v1, "value"
 

@@ -1,131 +1,157 @@
 .class Lcom/glympse/android/lib/ex;
-.super Ljava/lang/Object;
-.source "Job.java"
-
-# interfaces
-.implements Lcom/glympse/android/lib/GJob;
+.super Lcom/glympse/android/lib/j;
+.source "InviteUpdate.java"
 
 
 # instance fields
-.field protected f:Lcom/glympse/android/core/GHandler;
+.field private jx:Lcom/glympse/android/lib/l;
 
-.field protected ha:Lcom/glympse/android/lib/GJobQueue;
+.field private oX:Lcom/glympse/android/api/GInvite;
 
-.field protected oM:Z
+.field private oY:I
+
+.field private om:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/api/GInvite;)V
     .locals 1
 
     .prologue
     .line 25
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/glympse/android/lib/j;-><init>()V
 
     .line 26
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/glympse/android/lib/ex;->ha:Lcom/glympse/android/lib/GJobQueue;
+    iput-object p2, p0, Lcom/glympse/android/lib/ex;->oX:Lcom/glympse/android/api/GInvite;
 
     .line 27
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/glympse/android/lib/ex;->oX:Lcom/glympse/android/api/GInvite;
 
-    iput-boolean v0, p0, Lcom/glympse/android/lib/ex;->oM:Z
+    invoke-interface {v0}, Lcom/glympse/android/api/GInvite;->getCode()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/glympse/android/lib/ex;->om:Ljava/lang/String;
 
     .line 28
+    iget-object v0, p0, Lcom/glympse/android/lib/ex;->oX:Lcom/glympse/android/api/GInvite;
+
+    invoke-interface {v0}, Lcom/glympse/android/api/GInvite;->getState()I
+
+    move-result v0
+
+    iput v0, p0, Lcom/glympse/android/lib/ex;->oY:I
+
+    .line 30
+    new-instance v0, Lcom/glympse/android/lib/l;
+
+    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
+
+    iput-object v0, p0, Lcom/glympse/android/lib/ex;->jx:Lcom/glympse/android/lib/l;
+
+    .line 31
+    iget-object v0, p0, Lcom/glympse/android/lib/ex;->jx:Lcom/glympse/android/lib/l;
+
+    iput-object v0, p0, Lcom/glympse/android/lib/ex;->hc:Lcom/glympse/android/lib/k;
+
+    .line 32
     return-void
 .end method
 
 
 # virtual methods
-.method public abort()V
+.method public cancel()V
     .locals 1
 
     .prologue
-    .line 69
+    .line 70
+    new-instance v0, Lcom/glympse/android/lib/l;
+
+    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
+
+    iput-object v0, p0, Lcom/glympse/android/lib/ex;->jx:Lcom/glympse/android/lib/l;
+
+    .line 71
+    iget-object v0, p0, Lcom/glympse/android/lib/ex;->jx:Lcom/glympse/android/lib/l;
+
+    iput-object v0, p0, Lcom/glympse/android/lib/ex;->hc:Lcom/glympse/android/lib/k;
+
+    .line 72
+    return-void
+.end method
+
+.method public process()Z
+    .locals 2
+
+    .prologue
+    .line 56
+    iget-object v0, p0, Lcom/glympse/android/lib/ex;->jx:Lcom/glympse/android/lib/l;
+
+    iget-object v0, v0, Lcom/glympse/android/lib/l;->hf:Ljava/lang/String;
+
+    const-string v1, "ok"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 63
+    const/4 v0, 0x0
+
+    .line 65
+    :goto_0
+    return v0
+
+    :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/glympse/android/lib/ex;->oM:Z
-
-    .line 70
-    return-void
+    goto :goto_0
 .end method
 
-.method public isAborted()Z
-    .locals 1
+.method public url(Ljava/lang/StringBuilder;)Z
+    .locals 2
 
     .prologue
-    .line 64
-    iget-boolean v0, p0, Lcom/glympse/android/lib/ex;->oM:Z
+    .line 40
+    const-string v0, "invites/"
 
-    return v0
-.end method
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public onAbort()V
-    .locals 0
+    .line 41
+    iget-object v0, p0, Lcom/glympse/android/lib/ex;->om:Ljava/lang/String;
 
-    .prologue
-    .line 47
-    return-void
-.end method
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public onComplete()V
-    .locals 0
+    .line 42
+    const-string v0, "/update?status="
 
-    .prologue
-    .line 51
-    return-void
-.end method
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-.method public onProcess()V
-    .locals 0
-
-    .prologue
     .line 43
-    return-void
-.end method
+    const/4 v0, 0x4
 
-.method public onRetry()V
-    .locals 0
+    iget v1, p0, Lcom/glympse/android/lib/ex;->oY:I
 
-    .prologue
-    .line 39
-    return-void
-.end method
+    if-ne v0, v1, :cond_0
 
-.method public onSchedule(Lcom/glympse/android/lib/GJobQueue;Lcom/glympse/android/core/GHandler;)V
-    .locals 1
+    .line 45
+    const-string v0, "sent"
 
-    .prologue
-    .line 32
-    iput-object p1, p0, Lcom/glympse/android/lib/ex;->ha:Lcom/glympse/android/lib/GJobQueue;
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 33
-    iput-object p2, p0, Lcom/glympse/android/lib/ex;->f:Lcom/glympse/android/core/GHandler;
-
-    .line 34
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/glympse/android/lib/ex;->oM:Z
-
-    .line 35
-    return-void
-.end method
-
-.method public reset()V
-    .locals 0
-
-    .prologue
-    .line 60
-    return-void
-.end method
-
-.method public useHandler()Z
-    .locals 1
-
-    .prologue
-    .line 55
-    const/4 v0, 0x0
+    .line 51
+    :goto_0
+    const/4 v0, 0x1
 
     return v0
+
+    .line 49
+    :cond_0
+    const-string v0, "failed"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_0
 .end method

@@ -318,9 +318,9 @@
 
     invoke-interface {v1}, Lcom/google/android/gms/internal/fl;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/google/android/gms/tagmanager/cb$b;->uj:J
+    iput-wide v2, p0, Lcom/google/android/gms/tagmanager/cb$b;->uj:J
 
     :try_start_0
     invoke-super {p0}, Landroid/database/sqlite/SQLiteOpenHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;

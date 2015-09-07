@@ -1,58 +1,48 @@
 .class final Lcom/bbm/ui/c/cr;
-.super Ljava/lang/Object;
-.source "GroupMembersFragment.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
+.super Lcom/bbm/d/b/q;
+.source "ContactsFragment.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
+        "Lcom/bbm/d/b/q",
         "<",
-        "Lcom/bbm/ui/c/cz;",
+        "Lcom/bbm/d/gr;",
         ">;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/cq;
+.field final synthetic a:Lcom/bbm/ui/c/ch;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/cq;)V
+.method constructor <init>(Lcom/bbm/ui/c/ch;Lcom/bbm/j/r;)V
     .locals 0
 
     .prologue
-    .line 327
-    iput-object p1, p0, Lcom/bbm/ui/c/cr;->a:Lcom/bbm/ui/c/cq;
+    .line 155
+    iput-object p1, p0, Lcom/bbm/ui/c/cr;->a:Lcom/bbm/ui/c/ch;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/q;-><init>(Lcom/bbm/j/r;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
+.method public final bridge synthetic b(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 1
 
     .prologue
-    .line 327
-    check-cast p1, Lcom/bbm/ui/c/cz;
+    .line 155
+    check-cast p1, Lcom/bbm/d/gr;
 
-    check-cast p2, Lcom/bbm/ui/c/cz;
+    invoke-static {p1}, Lcom/bbm/d/b/a;->b(Lcom/bbm/d/gr;)Ljava/lang/String;
 
-    iget-object v0, p1, Lcom/bbm/ui/c/cz;->b:Ljava/lang/String;
+    move-result-object v0
 
-    iget-object v1, p2, Lcom/bbm/ui/c/cz;->b:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
-
-    move-result v0
-
-    return v0
+    return-object v0
 .end method

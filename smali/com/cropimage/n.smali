@@ -8,15 +8,15 @@
     .locals 7
 
     .prologue
-    .line 230
+    .line 228
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 232
+    .line 230
     invoke-virtual {v5, p2}, Landroid/graphics/Matrix;->postRotate(F)Z
 
-    .line 234
+    .line 232
     :try_start_0
     iget v0, p1, Landroid/graphics/Point;->x:I
 
@@ -30,7 +30,7 @@
 
     div-float/2addr v0, v1
 
-    .line 235
+    .line 233
     iget v1, p1, Landroid/graphics/Point;->y:I
 
     int-to-float v1, v1
@@ -43,15 +43,15 @@
 
     div-float/2addr v1, v2
 
-    .line 236
+    .line 234
     cmpl-float v2, v1, v0
 
     if-lez v2, :cond_0
 
-    .line 238
+    .line 235
     invoke-virtual {v5, v1, v1}, Landroid/graphics/Matrix;->preScale(FF)Z
 
-    .line 243
+    .line 239
     :goto_0
     const/4 v1, 0x0
 
@@ -73,16 +73,16 @@
 
     move-result-object v0
 
-    .line 244
+    .line 240
     invoke-virtual {p0}, Landroid/graphics/Bitmap;->recycle()V
 
     move-object p0, v0
 
-    .line 251
+    .line 245
     :goto_1
     return-object p0
 
-    .line 241
+    .line 237
     :cond_0
     invoke-virtual {v5, v0, v0}, Landroid/graphics/Matrix;->preScale(FF)Z
     :try_end_0
@@ -90,11 +90,11 @@
 
     goto :goto_0
 
-    .line 247
+    .line 242
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_1
 .end method
@@ -103,14 +103,14 @@
     .locals 1
 
     .prologue
-    .line 153
+    .line 151
     if-nez p0, :cond_0
 
-    .line 161
+    .line 159
     :goto_0
     return-void
 
-    .line 157
+    .line 155
     :cond_0
     :try_start_0
     invoke-interface {p0}, Ljava/io/Closeable;->close()V
@@ -119,7 +119,7 @@
 
     goto :goto_0
 
-    .line 161
+    .line 159
     :catch_0
     move-exception v0
 

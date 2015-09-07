@@ -257,9 +257,9 @@
     .line 110
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v1
 
@@ -280,7 +280,7 @@
 .end method
 
 .method public final a(Ljava/io/File;)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 91
@@ -342,9 +342,9 @@
     .line 102
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p1, v1, v2}, Ljava/io/File;->setLastModified(J)Z
+    invoke-virtual {p1, v2, v3}, Ljava/io/File;->setLastModified(J)Z
 
     .line 103
     iget-object v1, p0, Lcom/d/a/a/a/c;->c:Ljava/util/Map;
@@ -355,5 +355,5 @@
     return-void
 .end method
 
-.method protected abstract b(Ljava/io/File;)I
+.method public abstract b(Ljava/io/File;)I
 .end method

@@ -1,169 +1,176 @@
-.class public final Lcom/bbm/util/bu;
-.super Lcom/bbm/util/bj;
-.source "HttpsLoader.java"
+.class final Lcom/bbm/util/bu;
+.super Ljava/lang/Object;
+.source "HttpLoader.java"
+
+
+# static fields
+.field static final a:Ljava/util/concurrent/atomic/AtomicLong;
+
+.field public static final h:Ljava/util/Comparator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/Comparator",
+            "<",
+            "Lcom/bbm/util/bu;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# instance fields
+.field final b:J
+
+.field public final c:Lcom/bbm/ui/activities/akz;
+
+.field public final d:Lcom/bbm/util/bt;
+
+.field public e:Z
+
+.field public final f:Lcom/bbm/util/bq;
+
+.field public final g:Ljava/net/URL;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/agw;ZILcom/bbm/util/bm;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 4
 
     .prologue
-    .line 20
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/bbm/util/bj;-><init>(Lcom/bbm/ui/activities/agw;ZILcom/bbm/util/bm;)V
+    .line 242
+    new-instance v0, Ljava/util/concurrent/atomic/AtomicLong;
 
-    .line 21
+    const-wide/high16 v2, -0x8000000000000000L
+
+    invoke-direct {v0, v2, v3}, Ljava/util/concurrent/atomic/AtomicLong;-><init>(J)V
+
+    sput-object v0, Lcom/bbm/util/bu;->a:Ljava/util/concurrent/atomic/AtomicLong;
+
+    .line 279
+    new-instance v0, Lcom/bbm/util/bv;
+
+    invoke-direct {v0}, Lcom/bbm/util/bv;-><init>()V
+
+    sput-object v0, Lcom/bbm/util/bu;->h:Ljava/util/Comparator;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/bbm/ui/activities/akz;Lcom/bbm/util/bt;Lcom/bbm/util/bq;Ljava/net/URL;)V
+    .locals 2
+
+    .prologue
+    .line 251
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 243
+    sget-object v0, Lcom/bbm/util/bu;->a:Ljava/util/concurrent/atomic/AtomicLong;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicLong;->getAndIncrement()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/bbm/util/bu;->b:J
+
+    .line 247
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/bbm/util/bu;->e:Z
+
+    .line 252
+    iput-object p1, p0, Lcom/bbm/util/bu;->c:Lcom/bbm/ui/activities/akz;
+
+    .line 253
+    iput-object p2, p0, Lcom/bbm/util/bu;->d:Lcom/bbm/util/bt;
+
+    .line 254
+    iput-object p3, p0, Lcom/bbm/util/bu;->f:Lcom/bbm/util/bq;
+
+    .line 255
+    iput-object p4, p0, Lcom/bbm/util/bu;->g:Ljava/net/URL;
+
+    .line 256
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b(Ljava/net/URL;)Ljava/net/URLConnection;
-    .locals 5
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 6
 
     .prologue
+    const/4 v0, 0x1
+
     const/4 v1, 0x0
 
-    .line 25
-    const-string v0, "https"
+    .line 266
+    if-ne p0, p1, :cond_1
 
-    invoke-virtual {p1}, Ljava/net/URL;->getProtocol()Ljava/lang/String;
+    .line 276
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 269
+    :cond_1
+    if-nez p1, :cond_2
+
+    move v0, v1
+
+    .line 270
+    goto :goto_0
+
+    .line 272
+    :cond_2
+    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    .line 28
-    :try_start_0
-    const-string v0, "TLS"
-
-    invoke-static {v0}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
-
-    move-result-object v0
-
-    .line 29
-    const/4 v2, 0x0
-
-    invoke-static {}, Lcom/bbm/Alaska;->G()Ljavax/net/ssl/TrustManagerFactory;
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
+    if-eq v2, v3, :cond_3
 
-    move-result-object v3
+    move v0, v1
 
-    const/4 v4, 0x0
-
-    invoke-virtual {v0, v2, v3, v4}, Ljavax/net/ssl/SSLContext;->init([Ljavax/net/ssl/KeyManager;[Ljavax/net/ssl/TrustManager;Ljava/security/SecureRandom;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-object v1, v0
-
-    .line 35
-    :goto_0
-    invoke-virtual {p1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
-
-    move-result-object v0
-
-    check-cast v0, Ljavax/net/ssl/HttpsURLConnection;
-
-    .line 36
-    if-eqz v1, :cond_0
-
-    .line 37
-    invoke-virtual {v1}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljavax/net/ssl/HttpsURLConnection;->setSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
-
-    .line 39
-    :cond_0
-    const-string v2, "Cache-Control"
-
-    iget-boolean v1, p0, Lcom/bbm/util/bu;->b:Z
-
-    if-eqz v1, :cond_1
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "max-age="
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v3, p0, Lcom/bbm/util/bu;->c:I
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    :goto_1
-    invoke-virtual {v0, v2, v1}, Ljavax/net/ssl/HttpsURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 45
-    :goto_2
-    return-object v0
-
-    .line 30
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
+    .line 273
     goto :goto_0
 
-    .line 39
-    :cond_1
-    const-string v1, "no-cache"
-
-    goto :goto_1
-
-    .line 43
-    :cond_2
-    invoke-virtual {p1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/net/HttpURLConnection;
-
-    .line 44
-    const-string v2, "Cache-Control"
-
-    iget-boolean v1, p0, Lcom/bbm/util/bu;->b:Z
-
-    if-eqz v1, :cond_3
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v3, "max-age="
-
-    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v3, p0, Lcom/bbm/util/bu;->c:I
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    :goto_3
-    invoke-virtual {v0, v2, v1}, Ljava/net/HttpURLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_2
-
+    .line 275
     :cond_3
-    const-string v1, "no-cache"
+    check-cast p1, Lcom/bbm/util/bu;
 
-    goto :goto_3
+    .line 276
+    iget-wide v2, p0, Lcom/bbm/util/bu;->b:J
+
+    iget-wide v4, p1, Lcom/bbm/util/bu;->b:J
+
+    cmp-long v2, v2, v4
+
+    if-eqz v2, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method public final hashCode()I
+    .locals 5
+
+    .prologue
+    .line 261
+    iget-wide v0, p0, Lcom/bbm/util/bu;->b:J
+
+    iget-wide v2, p0, Lcom/bbm/util/bu;->b:J
+
+    const/16 v4, 0x20
+
+    ushr-long/2addr v2, v4
+
+    xor-long/2addr v0, v2
+
+    long-to-int v0, v0
+
+    return v0
 .end method

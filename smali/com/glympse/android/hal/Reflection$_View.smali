@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cL:Z
+.field private static cR:Z
 
-.field private static ei:Ljava/lang/reflect/Method;
+.field private static eo:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -17,12 +17,12 @@
     .line 332
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_View;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_View;->cR:Z
 
     .line 333
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_View;->ei:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_View;->eo:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -44,12 +44,12 @@
     const/4 v1, 0x1
 
     .line 338
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_View;->cL:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_View;->cR:Z
 
     if-nez v0, :cond_0
 
     .line 340
-    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_View;->cL:Z
+    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_View;->cR:Z
 
     .line 344
     :try_start_0
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_View;->ei:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_View;->eo:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -105,13 +105,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_View;->Load()V
 
     .line 359
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_View;->ei:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_View;->eo:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 363
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_View;->ei:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_View;->eo:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x2
 

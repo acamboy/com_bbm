@@ -1235,7 +1235,7 @@
 .end method
 
 .method public a(Lcom/google/android/gms/internal/ga;J)V
-    .locals 5
+    .locals 6
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -1295,7 +1295,7 @@
 .end method
 
 .method public a(Lcom/google/android/gms/internal/ga;JLjava/lang/String;)V
-    .locals 5
+    .locals 6
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -4368,7 +4368,7 @@
 .end method
 
 .method public b(Lcom/google/android/gms/internal/ga;J)V
-    .locals 5
+    .locals 6
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -4428,7 +4428,7 @@
 .end method
 
 .method public b(Lcom/google/android/gms/internal/ga;JLjava/lang/String;)V
-    .locals 5
+    .locals 6
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -5600,7 +5600,7 @@
 .end method
 
 .method public c(Lcom/google/android/gms/internal/ga;J)V
-    .locals 5
+    .locals 6
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
@@ -5660,7 +5660,7 @@
 .end method
 
 .method public c(Lcom/google/android/gms/internal/ga;JLjava/lang/String;)V
-    .locals 5
+    .locals 6
 
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 

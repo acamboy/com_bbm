@@ -33,57 +33,57 @@
     .locals 1
 
     .prologue
-    .line 30
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
+    .line 14
     const-string v0, "listAdd"
 
     iput-object v0, p0, Lcom/bbm/ui/d/e;->a:Ljava/lang/String;
 
-    .line 17
+    .line 15
     const-string v0, "channelSubscribeError"
 
     iput-object v0, p0, Lcom/bbm/ui/d/e;->b:Ljava/lang/String;
 
-    .line 20
+    .line 18
     const-string v0, "GeneralFailure"
 
     iput-object v0, p0, Lcom/bbm/ui/d/e;->d:Ljava/lang/String;
 
-    .line 21
+    .line 19
     const-string v0, "Alreadysubscribed"
 
     iput-object v0, p0, Lcom/bbm/ui/d/e;->e:Ljava/lang/String;
 
-    .line 22
+    .line 20
     const-string v0, "SubscriptionChanging"
 
     iput-object v0, p0, Lcom/bbm/ui/d/e;->f:Ljava/lang/String;
 
-    .line 23
+    .line 21
     const-string v0, "ChannelNotFound"
 
     iput-object v0, p0, Lcom/bbm/ui/d/e;->g:Ljava/lang/String;
 
-    .line 24
+    .line 22
     const-string v0, "PrivateChannelLimitReached"
 
     iput-object v0, p0, Lcom/bbm/ui/d/e;->h:Ljava/lang/String;
 
-    .line 25
+    .line 23
     const-string v0, "ChannelMinAgeVerificationFailure"
 
     iput-object v0, p0, Lcom/bbm/ui/d/e;->i:Ljava/lang/String;
 
-    .line 31
+    .line 29
     new-instance v0, Lcom/bbm/ui/d/f;
 
     invoke-direct {v0, p0, p1}, Lcom/bbm/ui/d/f;-><init>(Lcom/bbm/ui/d/e;Ljava/lang/String;)V
 
     iput-object v0, p0, Lcom/bbm/ui/d/e;->j:Lcom/bbm/j/u;
 
-    .line 43
+    .line 41
     return-void
 .end method
 
@@ -95,16 +95,14 @@
 .method public abstract a(I)V
 .end method
 
-.method public final a(Lcom/bbm/f/x;)V
+.method public final a(Lcom/bbm/f/ab;)V
     .locals 3
 
     .prologue
-    .line 53
-    invoke-virtual {p1}, Lcom/bbm/f/x;->f()Ljava/lang/String;
+    .line 51
+    iget-object v0, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    move-result-object v0
-
-    .line 54
+    .line 52
     const-string v1, "channelSubscribeError"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -113,10 +111,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 55
-    invoke-virtual {p1}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
-
-    move-result-object v0
+    .line 53
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
     const-string v1, "error"
 
@@ -124,13 +120,13 @@
 
     move-result-object v0
 
-    .line 56
+    .line 54
     iget-object v1, p0, Lcom/bbm/ui/d/e;->j:Lcom/bbm/j/u;
 
-    invoke-virtual {v1}, Lcom/bbm/j/u;->d()V
+    invoke-virtual {v1}, Lcom/bbm/j/u;->e()V
 
-    .line 57
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 55
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v1
 
@@ -140,7 +136,7 @@
 
     invoke-virtual {v1, v2, p0}, Lcom/bbm/ui/d/d;->a(Ljava/lang/Object;Lcom/bbm/ui/d/c;)V
 
-    .line 58
+    .line 56
     const-string v1, "Alreadysubscribed"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -149,16 +145,16 @@
 
     if-eqz v1, :cond_1
 
-    const v0, 0x7f0e020f
+    const v0, 0x7f0e021e
 
     :goto_0
     invoke-virtual {p0, v0}, Lcom/bbm/ui/d/e;->a(I)V
 
-    .line 60
+    .line 58
     :cond_0
     return-void
 
-    .line 58
+    .line 56
     :cond_1
     const-string v1, "ChannelNotFound"
 
@@ -168,7 +164,7 @@
 
     if-eqz v1, :cond_2
 
-    const v0, 0x7f0e0173
+    const v0, 0x7f0e0183
 
     goto :goto_0
 
@@ -181,23 +177,23 @@
 
     if-eqz v0, :cond_3
 
-    const v0, 0x7f0e020e
+    const v0, 0x7f0e021d
 
     goto :goto_0
 
     :cond_3
-    invoke-static {}, Lcom/bbm/util/x;->a()Z
+    invoke-static {}, Lcom/bbm/util/ac;->a()Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    const v0, 0x7f0e01a5
+    const v0, 0x7f0e01b4
 
     goto :goto_0
 
     :cond_4
-    const v0, 0x7f0e0210
+    const v0, 0x7f0e021f
 
     goto :goto_0
 .end method
@@ -206,11 +202,11 @@
     .locals 1
 
     .prologue
-    .line 46
+    .line 44
     iput-object p2, p0, Lcom/bbm/ui/d/e;->c:Ljava/lang/Object;
 
-    .line 47
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 45
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v0
 
@@ -218,11 +214,11 @@
 
     invoke-virtual {v0, p1, p0, p2}, Lcom/bbm/ui/d/d;->a(Ljava/lang/String;Lcom/bbm/ui/d/c;Ljava/lang/Object;)V
 
-    .line 48
+    .line 46
     iget-object v0, p0, Lcom/bbm/ui/d/e;->j:Lcom/bbm/j/u;
 
     invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
 
-    .line 49
+    .line 47
     return-void
 .end method

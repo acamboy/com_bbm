@@ -33,7 +33,7 @@
 
 
 # virtual methods
-.method protected abstract a()Ljava/util/List;
+.method public abstract a()Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -86,7 +86,7 @@
     return v0
 .end method
 
-.method protected synthetic b()Ljava/util/Collection;
+.method public synthetic b()Ljava/util/Collection;
     .locals 1
 
     .prologue
@@ -98,7 +98,7 @@
     return-object v0
 .end method
 
-.method protected synthetic c()Ljava/lang/Object;
+.method public synthetic c()Ljava/lang/Object;
     .locals 1
 
     .prologue

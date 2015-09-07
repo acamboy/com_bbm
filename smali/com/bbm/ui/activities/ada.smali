@@ -1,53 +1,127 @@
-.class final Lcom/bbm/ui/activities/ada;
-.super Ljava/lang/Object;
-.source "SettingsActivity.java"
-
-# interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.class public final Lcom/bbm/ui/activities/ada;
+.super Landroid/widget/BaseAdapter;
+.source "ProfileDefaultIconActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ProfileDefaultIconActivity;
+
+.field private final b:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method public constructor <init>(Lcom/bbm/ui/activities/ProfileDefaultIconActivity;Landroid/content/Context;)V
     .locals 0
 
     .prologue
-    .line 330
-    iput-object p1, p0, Lcom/bbm/ui/activities/ada;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 101
+    iput-object p1, p0, Lcom/bbm/ui/activities/ada;->a:Lcom/bbm/ui/activities/ProfileDefaultIconActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
+    .line 102
+    iput-object p2, p0, Lcom/bbm/ui/activities/ada;->b:Landroid/content/Context;
+
+    .line 103
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+.method public final getCount()I
+    .locals 1
+
+    .prologue
+    .line 121
+    iget-object v0, p0, Lcom/bbm/ui/activities/ada;->a:Lcom/bbm/ui/activities/ProfileDefaultIconActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a(Lcom/bbm/ui/activities/ProfileDefaultIconActivity;)[Ljava/lang/String;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    return v0
+.end method
+
+.method public final getItem(I)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 126
+    iget-object v0, p0, Lcom/bbm/ui/activities/ada;->a:Lcom/bbm/ui/activities/ProfileDefaultIconActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a(Lcom/bbm/ui/activities/ProfileDefaultIconActivity;)[Ljava/lang/String;
+
+    move-result-object v0
+
+    aget-object v0, v0, p1
+
+    return-object v0
+.end method
+
+.method public final getItemId(I)J
     .locals 2
 
     .prologue
-    .line 334
-    const-string v0, "sticky notification onCheckedChanged"
+    .line 131
+    int-to-long v0, p1
 
-    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
+    return-wide v0
+.end method
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 3
 
-    .line 335
-    iget-object v0, p0, Lcom/bbm/ui/activities/ada;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .prologue
+    .line 107
+    iget-object v0, p0, Lcom/bbm/ui/activities/ada;->b:Landroid/content/Context;
 
-    const-string v1, "sticky_notification"
+    const-string v1, "layout_inflater"
 
-    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
+    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 336
-    iget-object v0, p0, Lcom/bbm/ui/activities/ada;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    move-result-object v0
 
-    invoke-static {v0, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Z)V
+    check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 337
-    return-void
+    .line 109
+    if-nez p2, :cond_0
+
+    .line 110
+    const v1, 0x7f0300ef
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object p2
+
+    .line 113
+    :cond_0
+    const v0, 0x7f0b0506
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    .line 114
+    iget-object v1, p0, Lcom/bbm/ui/activities/ada;->a:Lcom/bbm/ui/activities/ProfileDefaultIconActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->a(Lcom/bbm/ui/activities/ProfileDefaultIconActivity;)[Ljava/lang/String;
+
+    move-result-object v1
+
+    aget-object v1, v1, p1
+
+    invoke-static {v1}, Landroid/graphics/drawable/Drawable;->createFromPath(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 116
+    return-object p2
 .end method

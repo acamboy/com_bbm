@@ -86,11 +86,11 @@
     :pswitch_1
     iget-object v2, p0, Lcom/bbm/k/i;->a:Lcom/bbm/k/a;
 
-    iget-object v2, v2, Lcom/bbm/k/a;->d:Lcom/bbm/g/c;
+    iget-object v2, v2, Lcom/bbm/k/a;->d:Lcom/bbm/g/f;
 
-    iget-object v0, v0, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    invoke-virtual {v2, v0}, Lcom/bbm/g/c;->a(Ljava/lang/String;)Lcom/bbm/g/g;
+    invoke-virtual {v2, v0}, Lcom/bbm/g/f;->a(Ljava/lang/String;)Lcom/bbm/g/j;
 
     goto :goto_0
 
@@ -98,11 +98,11 @@
     :pswitch_2
     iget-object v2, p0, Lcom/bbm/k/i;->a:Lcom/bbm/k/a;
 
-    iget-object v2, v2, Lcom/bbm/k/a;->d:Lcom/bbm/g/c;
+    iget-object v2, v2, Lcom/bbm/k/a;->d:Lcom/bbm/g/f;
 
-    iget-object v0, v0, Lcom/bbm/g/a;->u:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    invoke-virtual {v2, v0}, Lcom/bbm/g/c;->b(Ljava/lang/String;)Z
+    invoke-virtual {v2, v0}, Lcom/bbm/g/f;->b(Ljava/lang/String;)Z
 
     goto :goto_0
 
@@ -143,28 +143,28 @@
     .line 180
     iget-object v0, p0, Lcom/bbm/k/i;->a:Lcom/bbm/k/a;
 
-    iget-object v0, v0, Lcom/bbm/k/a;->f:Lcom/bbm/util/ce;
+    iget-object v0, v0, Lcom/bbm/k/a;->f:Lcom/bbm/util/cl;
 
-    invoke-static {p1, p2, v0}, Lcom/bbm/util/cc;->a(Ljava/util/Collection;Ljava/util/Collection;Lcom/bbm/util/ce;)Lcom/bbm/util/cd;
+    invoke-static {p1, p2, v0}, Lcom/bbm/util/cj;->a(Ljava/util/Collection;Ljava/util/Collection;Lcom/bbm/util/cl;)Lcom/bbm/util/ck;
 
     move-result-object v0
 
     .line 183
-    iget-object v1, v0, Lcom/bbm/util/cd;->a:Ljava/util/Collection;
+    iget-object v1, v0, Lcom/bbm/util/ck;->a:Ljava/util/Collection;
 
     sget-object v2, Lcom/bbm/k/j;->a:Lcom/bbm/k/j;
 
     invoke-direct {p0, v1, v2}, Lcom/bbm/k/i;->a(Ljava/util/Collection;Lcom/bbm/k/j;)V
 
     .line 184
-    iget-object v1, v0, Lcom/bbm/util/cd;->b:Ljava/util/Collection;
+    iget-object v1, v0, Lcom/bbm/util/ck;->b:Ljava/util/Collection;
 
     sget-object v2, Lcom/bbm/k/j;->b:Lcom/bbm/k/j;
 
     invoke-direct {p0, v1, v2}, Lcom/bbm/k/i;->a(Ljava/util/Collection;Lcom/bbm/k/j;)V
 
     .line 185
-    iget-object v0, v0, Lcom/bbm/util/cd;->c:Ljava/util/Collection;
+    iget-object v0, v0, Lcom/bbm/util/ck;->c:Ljava/util/Collection;
 
     sget-object v1, Lcom/bbm/k/j;->c:Lcom/bbm/k/j;
 

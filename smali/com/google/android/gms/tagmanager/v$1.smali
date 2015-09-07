@@ -15,7 +15,7 @@
 
 # direct methods
 .method constructor <init>(Lcom/google/android/gms/tagmanager/v;Ljava/util/List;J)V
-    .locals 0
+    .locals 1
 
     iput-object p1, p0, Lcom/google/android/gms/tagmanager/v$1;->UJ:Lcom/google/android/gms/tagmanager/v;
 

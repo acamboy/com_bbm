@@ -11,6 +11,9 @@
 .method public abstract getAvatar()Lcom/glympse/android/api/GImage;
 .end method
 
+.method public abstract getGlympse()Lcom/glympse/android/lib/GGlympsePrivate;
+.end method
+
 .method public abstract getMessage()Ljava/lang/String;
 .end method
 
@@ -27,6 +30,9 @@
 .end method
 
 .method public abstract setCode(Ljava/lang/String;)V
+.end method
+
+.method public abstract setCreateOnly(Z)V
 .end method
 
 .method public abstract setCreatedTime(J)V
@@ -51,6 +57,9 @@
 .end method
 
 .method public abstract setState(I)V
+.end method
+
+.method public abstract setSubtype(Ljava/lang/String;)V
 .end method
 
 .method public abstract setText(Ljava/lang/String;)V

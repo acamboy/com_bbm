@@ -1,9 +1,6 @@
 .class final Lcom/bbm/ui/activities/gm;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/u;
 .source "ConversationActivity.java"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
 
 
 # instance fields
@@ -15,130 +12,133 @@
     .locals 0
 
     .prologue
-    .line 2335
+    .line 1359
     iput-object p1, p0, Lcom/bbm/ui/activities/gm;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method protected final b()Z
+    .locals 4
 
     .prologue
-    const/4 v4, 0x1
+    const/4 v0, 0x0
 
-    .line 2340
-    const-string v0, "on message item long press"
-
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 2341
-    iget-object v0, p0, Lcom/bbm/ui/activities/gm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->ap(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 2342
-    iget-object v0, p0, Lcom/bbm/ui/activities/gm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
+    .line 1364
     iget-object v1, p0, Lcom/bbm/ui/activities/gm;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->ap(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->R(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/fi;
 
     move-result-object v1
 
-    const v2, 0x7f090064
+    iget-object v1, v1, Lcom/bbm/d/fi;->v:Lcom/bbm/util/bi;
 
-    const v3, 0x7f090062
+    sget-object v2, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/bbm/ui/activities/ConversationActivity;->a(Lcom/bbm/ui/activities/ConversationActivity;Landroid/widget/TextView;II)V
+    if-ne v1, v2, :cond_3
 
-    .line 2344
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/gm;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 1365
+    iget-object v1, p0, Lcom/bbm/ui/activities/gm;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->ag(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/e/am;
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->R(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/fi;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/e/am;->a(I)Lcom/bbm/d/dz;
+    iget-object v1, v1, Lcom/bbm/d/fi;->m:Ljava/lang/String;
 
-    move-result-object v0
-
-    .line 2346
-    iget-object v1, v0, Lcom/bbm/d/dz;->n:Ljava/lang/String;
-
-    const-string v2, "Failed"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-nez v1, :cond_2
 
-    .line 2347
+    .line 1366
     iget-object v1, p0, Lcom/bbm/ui/activities/gm;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-static {v1, v4}, Lcom/bbm/ui/activities/ConversationActivity;->e(Lcom/bbm/ui/activities/ConversationActivity;Z)Z
-
-    .line 2353
-    :goto_0
-    iget-object v1, p0, Lcom/bbm/ui/activities/gm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    iget-object v2, v0, Lcom/bbm/d/dz;->n:Ljava/lang/String;
-
-    const-string v3, "Failed"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v2
-
-    invoke-static {v1, v2}, Lcom/bbm/ui/activities/ConversationActivity;->e(Lcom/bbm/ui/activities/ConversationActivity;Z)Z
-
-    .line 2354
-    iget-object v1, p0, Lcom/bbm/ui/activities/gm;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->aq(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/ui/ci;
-
-    invoke-static {p2}, Lcom/bbm/ui/ci;->a(Landroid/view/View;)Landroid/view/View;
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
 
     move-result-object v1
 
-    .line 2355
-    new-instance v2, Lcom/bbm/ui/activities/gn;
+    iget-object v2, p0, Lcom/bbm/ui/activities/gm;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {v2, p0, v0, v1, p2}, Lcom/bbm/ui/activities/gn;-><init>(Lcom/bbm/ui/activities/gm;Lcom/bbm/d/dz;Landroid/view/View;Landroid/view/View;)V
+    invoke-static {v2}, Lcom/bbm/ui/activities/ConversationActivity;->R(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/fi;
 
-    invoke-static {v2}, Lcom/bbm/j/u;->a(Lcom/bbm/j/s;)V
+    move-result-object v2
 
-    .line 2395
-    return v4
+    iget-object v2, v2, Lcom/bbm/d/fi;->m:Ljava/lang/String;
 
-    .line 2350
+    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->x(Ljava/lang/String;)Lcom/bbm/d/fu;
+
+    move-result-object v1
+
+    .line 1368
+    iget-object v2, v1, Lcom/bbm/d/fu;->r:Lcom/bbm/util/bi;
+
+    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+
+    if-ne v2, v3, :cond_3
+
+    .line 1369
+    iget-object v0, v1, Lcom/bbm/d/fu;->o:Ljava/lang/String;
+
+    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    iget-object v0, v1, Lcom/bbm/d/fu;->o:Ljava/lang/String;
+
+    .line 1371
+    :goto_0
+    invoke-static {v0}, Lcom/bbm/util/b/h;->d(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 1372
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 1373
+    :cond_0
+    iget-object v0, v1, Lcom/bbm/d/fu;->a:Ljava/lang/String;
+
+    .line 1375
     :cond_1
-    iget-object v1, p0, Lcom/bbm/ui/activities/gm;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    iget-object v2, p0, Lcom/bbm/ui/activities/gm;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    const/4 v2, 0x0
+    iget-object v1, v1, Lcom/bbm/d/fu;->i:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lcom/bbm/ui/activities/ConversationActivity;->e(Lcom/bbm/ui/activities/ConversationActivity;Z)Z
+    invoke-static {v1, v2, v0}, Lcom/bbm/util/b/h;->a(Ljava/lang/String;Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 1381
+    :cond_2
+    const/4 v0, 0x1
+
+    .line 1384
+    :cond_3
+    return v0
+
+    .line 1369
+    :cond_4
+    new-instance v0, Ljava/io/File;
+
+    iget-object v2, v1, Lcom/bbm/d/fu;->i:Ljava/lang/String;
+
+    invoke-direct {v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->getName()Ljava/lang/String;
+
+    move-result-object v0
 
     goto :goto_0
 .end method

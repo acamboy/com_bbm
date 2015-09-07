@@ -1,30 +1,44 @@
 .class public final Lcom/bbm/d/ax;
-.super Lcom/bbm/d/da;
+.super Lcom/bbm/d/dy;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>()V
+.method public constructor <init>(Ljava/util/List;)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Lorg/json/JSONObject;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 1363
-    const-string v0, "clearMessageHistory"
+    .line 1188
+    const-string v0, "channelRefreshStatsForPosts"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/da;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
 
-    .line 1365
+    .line 1190
+    const-string v0, "ids"
+
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/ax;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 1191
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a()Lcom/bbm/f/x;
+.method public final bridge synthetic a()Lcom/bbm/f/ab;
     .locals 1
 
     .prologue
-    .line 1361
-    invoke-super {p0}, Lcom/bbm/d/da;->a()Lcom/bbm/f/x;
+    .line 1186
+    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

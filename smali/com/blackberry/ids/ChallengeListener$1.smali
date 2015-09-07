@@ -70,7 +70,7 @@
     invoke-static {v1, v2}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 79
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v1
 
@@ -101,7 +101,7 @@
     invoke-virtual {v1, v2, v3, v4, v5}, Lcom/blackberry/ids/BBIDStorage;->b(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 84
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v1
 
@@ -111,7 +111,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/blackberry/ids/BBIDStorage;->g(Ljava/lang/String;)V
+    invoke-virtual {v1, v2}, Lcom/blackberry/ids/BBIDStorage;->b(Ljava/lang/String;)V
 
     .line 85
     iget-object v1, p0, Lcom/blackberry/ids/ChallengeListener$1;->a:Lcom/blackberry/ids/IChallengeCallback;

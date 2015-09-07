@@ -1,140 +1,144 @@
 .class final Lcom/bbm/ui/activities/ks;
-.super Lcom/bbm/util/d/d;
-.source "GroupConversationActivity.java"
+.super Lcom/bbm/j/k;
+.source "GlympseViewerActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/g/l;
-
-.field final synthetic b:Lcom/bbm/g/v;
-
-.field final synthetic c:Lcom/bbm/ui/activities/kr;
+.field final synthetic a:Lcom/bbm/ui/activities/GlympseViewerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/kr;Lcom/bbm/g/l;Lcom/bbm/d/a;Lcom/bbm/g/l;Lcom/bbm/g/v;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/GlympseViewerActivity;)V
+    .locals 1
 
     .prologue
-    .line 500
-    iput-object p1, p0, Lcom/bbm/ui/activities/ks;->c:Lcom/bbm/ui/activities/kr;
+    .line 129
+    iput-object p1, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
 
-    iput-object p4, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/g/l;
+    const/4 v0, 0x0
 
-    iput-object p5, p0, Lcom/bbm/ui/activities/ks;->b:Lcom/bbm/g/v;
-
-    invoke-direct {p0, p2, p3}, Lcom/bbm/util/d/d;-><init>(Lcom/bbm/g/l;Lcom/bbm/d/a;)V
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Lcom/google/b/a/l;)V
+.method protected final a()V
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/google/b/a/l",
-            "<",
-            "Lcom/bbm/d/eu;",
-            ">;)V"
-        }
-    .end annotation
 
     .prologue
-    const/4 v1, 0x1
+    .line 133
+    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
 
-    .line 504
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->c:Lcom/bbm/ui/activities/kr;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    invoke-static {v1}, Lcom/bbm/ui/activities/GlympseViewerActivity;->b(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/a;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->r(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/widget/TextView;
+    move-result-object v1
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
 
-    instance-of v0, v0, Lcom/bbm/ui/LinkifyTextView;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->c:Lcom/bbm/ui/activities/kr;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->r(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/LinkifyTextView;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/LinkifyTextView;->a()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 506
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->c:Lcom/bbm/ui/activities/kr;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->r(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/LinkifyTextView;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/LinkifyTextView;->setSpanClicked(Z)V
-
-    .line 508
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->c:Lcom/bbm/ui/activities/kr;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->b(Lcom/bbm/ui/activities/GroupConversationActivity;Z)Z
-
-    .line 510
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/g/l;
-
-    invoke-static {p1, v0}, Lcom/bbm/d/b/a;->a(Lcom/google/b/a/l;Lcom/bbm/g/l;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 511
-    iget-object v1, p0, Lcom/bbm/ui/activities/ks;->c:Lcom/bbm/ui/activities/kr;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/ks;->c:Lcom/bbm/ui/activities/kr;
-
-    iget-object v2, v2, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/GroupConversationActivity;->k()Lcom/bbm/ui/c/fq;
+    invoke-static {v2}, Lcom/bbm/ui/activities/GlympseViewerActivity;->c(Lcom/bbm/ui/activities/GlympseViewerActivity;)Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ks;->b:Lcom/bbm/g/v;
+    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->K(Ljava/lang/String;)Lcom/bbm/d/eu;
 
-    iget-object v3, v3, Lcom/bbm/g/v;->b:Ljava/lang/String;
+    move-result-object v1
 
-    invoke-virtual {v1, v2, v0, v3}, Lcom/bbm/ui/activities/GroupConversationActivity;->a(Lcom/bbm/ui/c/fq;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Lcom/bbm/ui/activities/GlympseViewerActivity;Lcom/bbm/d/eu;)Lcom/bbm/d/eu;
 
-    .line 512
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->c:Lcom/bbm/ui/activities/kr;
+    .line 134
+    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->d(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/eu;
 
-    invoke-static {v0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
+    move-result-object v0
 
-    .line 513
-    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->c:Lcom/bbm/ui/activities/kr;
+    iget-object v0, v0, Lcom/bbm/d/eu;->u:Lcom/bbm/util/bi;
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    sget-object v1, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->w()V
+    if-ne v0, v1, :cond_0
 
-    .line 514
+    .line 135
+    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->b(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
+
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GlympseViewerActivity;->e(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/f/ac;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Lcom/bbm/f/a;->a(Lcom/bbm/f/ac;)V
+
+    .line 136
+    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->b(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/d/gp;->e:Lcom/bbm/d/gp;
+
+    invoke-virtual {v1}, Lcom/bbm/d/gp;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/GlympseViewerActivity;->c(Lcom/bbm/ui/activities/GlympseViewerActivity;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string v3, ""
+
+    invoke-static {v1, v2, v3}, Lcom/bbm/d/aa;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/d/df;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+
+    .line 137
+    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/glympse/map/lib/Map;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GlympseViewerActivity;->d(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/eu;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/glympse/map/lib/Map;->attachConversation(Lcom/bbm/d/eu;)V
+
+    .line 138
+    iget-object v0, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->f(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/ui/GlympseUserSelector;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/ks;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GlympseViewerActivity;->d(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/eu;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/GlympseUserSelector;->a(Lcom/bbm/d/eu;)V
+
+    .line 140
+    :cond_0
     return-void
 .end method

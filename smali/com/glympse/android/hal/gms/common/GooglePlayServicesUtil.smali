@@ -6,7 +6,7 @@
 # static fields
 .field public static GOOGLE_PLAY_SERVICES_VERSION_CODE:I
 
-.field private static eR:Ljava/lang/Class;
+.field private static eY:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -15,7 +15,7 @@
     .end annotation
 .end field
 
-.field private static eS:Ljava/lang/reflect/Method;
+.field private static eZ:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -26,10 +26,10 @@
     const/4 v0, 0x0
 
     .line 21
-    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eR:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eY:Ljava/lang/Class;
 
     .line 22
-    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eS:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eZ:Ljava/lang/reflect/Method;
 
     .line 24
     const/4 v0, 0x0
@@ -55,14 +55,24 @@
     .prologue
     .line 82
     :try_start_0
+    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eY:Ljava/lang/Class;
+
+    if-eqz v0, :cond_0
+
+    .line 105
+    :goto_0
+    return-void
+
+    .line 87
+    :cond_0
     const-string v0, "com.google.android.gms.common.GooglePlayServicesUtil"
 
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 83
-    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eR:Ljava/lang/Class;
+    .line 88
+    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eY:Ljava/lang/Class;
 
     const-string v1, "isGooglePlayServicesAvailable"
 
@@ -80,25 +90,25 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eS:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eZ:Ljava/lang/reflect/Method;
 
-    .line 86
-    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eR:Ljava/lang/Class;
+    .line 91
+    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eY:Ljava/lang/Class;
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_1
 
-    .line 88
+    .line 93
     invoke-static {}, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->init()V
 
-    .line 89
+    .line 94
     invoke-static {}, Lcom/glympse/android/hal/gms/location/ActivityRecognitionClient;->init()V
 
-    .line 90
+    .line 95
     invoke-static {}, Lcom/glympse/android/hal/gms/location/LocationClient;->init()V
 
-    .line 94
-    :cond_0
-    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eR:Ljava/lang/Class;
+    .line 99
+    :cond_1
+    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eY:Ljava/lang/Class;
 
     const-string v1, "GOOGLE_PLAY_SERVICES_VERSION_CODE"
 
@@ -106,8 +116,8 @@
 
     move-result-object v0
 
-    .line 95
-    sget-object v1, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eR:Ljava/lang/Class;
+    .line 100
+    sget-object v1, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eY:Ljava/lang/Class;
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->getInt(Ljava/lang/Object;)I
 
@@ -117,10 +127,9 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 100
-    :goto_0
-    return-void
+    goto :goto_0
 
+    .line 105
     :catch_0
     move-exception v0
 
@@ -135,12 +144,12 @@
 
     .line 67
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eR:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eY:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
     .line 69
-    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eS:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesUtil;->eZ:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 

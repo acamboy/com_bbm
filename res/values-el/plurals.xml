@@ -4,14 +4,31 @@
         <item quantity="other">Έγινε αποστολή μηνύματος εκπομπής σε %1$s επαφές</item>
         <item quantity="one">Το μήνυμα εκπομπής εστάλη σε 1 επαφή</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d συνδρομητές</item>
+        <item quantity="zero">Δεν υπάρχει κανένας συνδρομητής</item>
+        <item quantity="one">%1$d συνδρομητής</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d μέλη</item>
+        <item quantity="one">%1$d μέλος</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">δευτερόλεπτα</item>
+        <item quantity="one">δευτερόλεπτο</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Ο χρονομετρητής έχει ρυθμιστεί για %1$d δευτερόλεπτα.</item>
+        <item quantity="one">Ο χρονομετρητής έχει ρυθμιστεί για %1$d δευτερόλεπτο.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s στοιχεία</item>
         <item quantity="zero">0 στοιχεία</item>
         <item quantity="one">1 στοιχείο</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d προσκλήσεις σε αναμονή)</item>
-        <item quantity="one">(1 πρόσκληση σε αναμονή)</item>
+        <item quantity="other">(%1$d σε εκκρεμότητα)</item>
+        <item quantity="one">(1 σε εκκρεμότητα)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s αποτελέσματα</item>
@@ -22,8 +39,8 @@
         <item quantity="one">1 Ενεργή συνομιλία</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s νέες ειδοποιήσεις</item>
-        <item quantity="one">1 νέα ειδοποίηση</item>
+        <item quantity="other">%1$s Νέες ειδοποιήσεις</item>
+        <item quantity="one">1 Νέα ειδοποίηση</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
         <item quantity="other">%1$s Νέες προσκλήσεις</item>

@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 741
+    .line 752
     iput-object p1, p0, Lcom/blackberry/ids/IDS$3;->a:Ljava/lang/String;
 
     iput-object p2, p0, Lcom/blackberry/ids/IDS$3;->b:Ljava/lang/String;
@@ -45,14 +45,14 @@
     .locals 4
 
     .prologue
-    .line 749
+    .line 760
     const-string v0, "code"
 
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/blackberry/ids/BBIDStorage;->g()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/blackberry/ids/BBIDStorage;->d()Ljava/lang/String;
 
     move-result-object v1
 
@@ -107,7 +107,7 @@
     .locals 1
 
     .prologue
-    .line 744
+    .line 755
     const-string v0, "token"
 
     invoke-virtual {p1, v0}, Landroid/net/Uri$Builder;->appendPath(Ljava/lang/String;)Landroid/net/Uri$Builder;
@@ -123,7 +123,7 @@
     .prologue
     const v0, 0xc359
 
-    .line 803
+    .line 814
     const v1, 0x11192
 
     if-eq p4, v1, :cond_0
@@ -132,7 +132,7 @@
 
     if-ne p4, v1, :cond_1
 
-    .line 807
+    .line 818
     :cond_0
     const-string v1, "do_get_token -- GOT a BAD APPLIES TO from server --- adding to BlockedTokenList"
 
@@ -142,8 +142,8 @@
 
     invoke-static {v1, v2}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 810
-    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BlockedTokenList;
+    .line 821
+    invoke-static {}, Lcom/blackberry/ids/IDS;->c()Lcom/blackberry/ids/BlockedTokenList;
 
     move-result-object v1
 
@@ -161,13 +161,13 @@
 
     move p2, v0
 
-    .line 812
+    .line 823
     :cond_1
     iget-object v0, p0, Lcom/blackberry/ids/IDS$3;->e:Lcom/blackberry/ids/IFailureCallback;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/blackberry/ids/IFailureCallback;->call(IILjava/lang/String;)V
 
-    .line 813
+    .line 824
     return-void
 .end method
 
@@ -192,7 +192,7 @@
 
     const/4 v6, 0x0
 
-    .line 761
+    .line 772
     const-string v0, "refresh_token"
 
     invoke-interface {p2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -205,27 +205,27 @@
 
     move-result-object v0
 
-    .line 763
+    .line 774
     const-string v1, ":"
 
     invoke-virtual {v0, v1, v5}, Ljava/lang/String;->split(Ljava/lang/String;I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 764
+    .line 775
     aget-object v1, v0, v6
 
-    .line 765
+    .line 776
     aget-object v0, v0, v7
 
-    .line 767
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    .line 778
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v2
 
     invoke-virtual {v2, p1, v1, v0}, Lcom/blackberry/ids/BBIDStorage;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 772
+    .line 783
     new-instance v1, Ljava/util/StringTokenizer;
 
     const-string v0, "access_token"
@@ -244,17 +244,17 @@
 
     invoke-direct {v1, v0, v2}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 775
+    .line 786
     invoke-virtual {v1}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 776
+    .line 787
     invoke-virtual {v1}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 777
+    .line 788
     const-string v0, "expires_in"
 
     invoke-interface {p2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -263,28 +263,28 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 778
-    invoke-static {}, Lcom/blackberry/ids/IDS;->g()Lcom/blackberry/ids/TokenTempCache;
+    .line 789
+    invoke-static {}, Lcom/blackberry/ids/IDS;->h()Lcom/blackberry/ids/TokenTempCache;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 779
+    .line 790
     :try_start_0
-    invoke-static {}, Lcom/blackberry/ids/IDS;->g()Lcom/blackberry/ids/TokenTempCache;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->h()Lcom/blackberry/ids/TokenTempCache;
 
     iget-object v4, p0, Lcom/blackberry/ids/IDS$3;->b:Ljava/lang/String;
 
     invoke-static {v4, v2, v3, v0}, Lcom/blackberry/ids/TokenTempCache;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 780
+    .line 791
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 782
-    invoke-static {}, Lcom/blackberry/ids/IDS;->g()Lcom/blackberry/ids/TokenTempCache;
+    .line 793
+    invoke-static {}, Lcom/blackberry/ids/IDS;->h()Lcom/blackberry/ids/TokenTempCache;
 
     iget-object v1, p0, Lcom/blackberry/ids/IDS$3;->b:Ljava/lang/String;
 
@@ -292,10 +292,10 @@
 
     move-result-object v1
 
-    .line 783
+    .line 794
     if-nez v1, :cond_0
 
-    .line 786
+    .line 797
     new-array v1, v5, [Lcom/blackberry/ids/TokenParam;
 
     new-instance v4, Lcom/blackberry/ids/TokenParam;
@@ -314,7 +314,7 @@
 
     aput-object v3, v1, v7
 
-    .line 790
+    .line 801
     const-string v0, "do_get_token success - request_id=%s - error while retrieving just stored tok params, so using server params directly for now"
 
     new-array v3, v7, [Ljava/lang/Object;
@@ -327,7 +327,7 @@
 
     move-object v0, v1
 
-    .line 794
+    .line 805
     :goto_0
     iget-object v1, p0, Lcom/blackberry/ids/IDS$3;->d:Lcom/blackberry/ids/IGetTokenCallback;
 
@@ -339,10 +339,10 @@
 
     invoke-interface {v1, v3, v2, v0}, Lcom/blackberry/ids/IGetTokenCallback;->call(ILjava/lang/String;[Lcom/blackberry/ids/TokenParam;)V
 
-    .line 798
+    .line 809
     return-void
 
-    .line 780
+    .line 791
     :catchall_0
     move-exception v0
 

@@ -42,7 +42,7 @@
 
 # virtual methods
 .method public final a()Ljava/lang/String;
-    .locals 5
+    .locals 6
 
     .prologue
     .line 84
@@ -53,9 +53,9 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 85
-    iget-wide v1, p0, Lcom/google/zxing/client/a/m;->a:D
+    iget-wide v2, p0, Lcom/google/zxing/client/a/m;->a:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     .line 86
     const-string v1, ", "
@@ -63,16 +63,16 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 87
-    iget-wide v1, p0, Lcom/google/zxing/client/a/m;->b:D
+    iget-wide v2, p0, Lcom/google/zxing/client/a/m;->b:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     .line 88
-    iget-wide v1, p0, Lcom/google/zxing/client/a/m;->c:D
+    iget-wide v2, p0, Lcom/google/zxing/client/a/m;->c:D
 
-    const-wide/16 v3, 0x0
+    const-wide/16 v4, 0x0
 
-    cmpl-double v1, v1, v3
+    cmpl-double v1, v2, v4
 
     if-lez v1, :cond_0
 
@@ -82,9 +82,9 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 90
-    iget-wide v1, p0, Lcom/google/zxing/client/a/m;->c:D
+    iget-wide v2, p0, Lcom/google/zxing/client/a/m;->c:D
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     .line 91
     const/16 v1, 0x6d

@@ -1,83 +1,132 @@
-.class final Lcom/bbm/ui/ck;
-.super Landroid/database/DataSetObserver;
-.source "IncrementalListAdapter.java"
+.class public final enum Lcom/bbm/ui/ck;
+.super Ljava/lang/Enum;
+.source "EmoticonStickerPager.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/ci;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/ck;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/bbm/ui/ck;
+
+.field public static final enum b:Lcom/bbm/ui/ck;
+
+.field public static final enum c:Lcom/bbm/ui/ck;
+
+.field private static final synthetic d:[Lcom/bbm/ui/ck;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/ci;)V
+.method static constructor <clinit>()V
+    .locals 5
+
+    .prologue
+    const/4 v4, 0x2
+
+    const/4 v3, 0x1
+
+    const/4 v2, 0x0
+
+    .line 225
+    new-instance v0, Lcom/bbm/ui/ck;
+
+    const-string v1, "STICKERS_DISABLED_EMOTICON_DEFAULT"
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/ck;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/ck;->a:Lcom/bbm/ui/ck;
+
+    .line 226
+    new-instance v0, Lcom/bbm/ui/ck;
+
+    const-string v1, "STICKERS_ENABLED_EMOTICON_DEFAULT"
+
+    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/ck;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/ck;->b:Lcom/bbm/ui/ck;
+
+    .line 227
+    new-instance v0, Lcom/bbm/ui/ck;
+
+    const-string v1, "STICKERS_ENABLED_STICKERS_DEFAULT"
+
+    invoke-direct {v0, v1, v4}, Lcom/bbm/ui/ck;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/ck;->c:Lcom/bbm/ui/ck;
+
+    .line 224
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Lcom/bbm/ui/ck;
+
+    sget-object v1, Lcom/bbm/ui/ck;->a:Lcom/bbm/ui/ck;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/bbm/ui/ck;->b:Lcom/bbm/ui/ck;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/bbm/ui/ck;->c:Lcom/bbm/ui/ck;
+
+    aput-object v1, v0, v4
+
+    sput-object v0, Lcom/bbm/ui/ck;->d:[Lcom/bbm/ui/ck;
+
+    return-void
+.end method
+
+.method private constructor <init>(Ljava/lang/String;I)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
-    .line 496
-    iput-object p1, p0, Lcom/bbm/ui/ck;->a:Lcom/bbm/ui/ci;
-
-    invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
+    .line 224
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onChanged()V
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/ck;
     .locals 1
 
     .prologue
-    .line 502
-    iget-object v0, p0, Lcom/bbm/ui/ck;->a:Lcom/bbm/ui/ci;
+    .line 224
+    const-class v0, Lcom/bbm/ui/ck;
 
-    invoke-static {v0}, Lcom/bbm/ui/ci;->k(Lcom/bbm/ui/ci;)V
-
-    .line 503
-    iget-object v0, p0, Lcom/bbm/ui/ck;->a:Lcom/bbm/ui/ci;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/ci;->d()V
-
-    .line 504
-    invoke-super {p0}, Landroid/database/DataSetObserver;->onChanged()V
-
-    .line 505
-    iget-object v0, p0, Lcom/bbm/ui/ck;->a:Lcom/bbm/ui/ci;
-
-    invoke-static {v0}, Lcom/bbm/ui/ci;->l(Lcom/bbm/ui/ci;)Landroid/database/DataSetObservable;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyChanged()V
+    check-cast v0, Lcom/bbm/ui/ck;
 
-    .line 506
-    return-void
+    return-object v0
 .end method
 
-.method public final onInvalidated()V
+.method public static values()[Lcom/bbm/ui/ck;
     .locals 1
 
     .prologue
-    .line 511
-    iget-object v0, p0, Lcom/bbm/ui/ck;->a:Lcom/bbm/ui/ci;
+    .line 224
+    sget-object v0, Lcom/bbm/ui/ck;->d:[Lcom/bbm/ui/ck;
 
-    invoke-static {v0}, Lcom/bbm/ui/ci;->k(Lcom/bbm/ui/ci;)V
-
-    .line 512
-    iget-object v0, p0, Lcom/bbm/ui/ck;->a:Lcom/bbm/ui/ci;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/ci;->d()V
-
-    .line 513
-    invoke-super {p0}, Landroid/database/DataSetObserver;->onInvalidated()V
-
-    .line 514
-    iget-object v0, p0, Lcom/bbm/ui/ck;->a:Lcom/bbm/ui/ci;
-
-    invoke-static {v0}, Lcom/bbm/ui/ci;->l(Lcom/bbm/ui/ci;)Landroid/database/DataSetObservable;
+    invoke-virtual {v0}, [Lcom/bbm/ui/ck;->clone()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/database/DataSetObservable;->notifyInvalidated()V
+    check-cast v0, [Lcom/bbm/ui/ck;
 
-    .line 515
-    return-void
+    return-object v0
 .end method

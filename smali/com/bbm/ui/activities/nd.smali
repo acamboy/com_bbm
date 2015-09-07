@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/nd;
 .super Ljava/lang/Object;
-.source "GroupListsActivity.java"
+.source "GroupConversationActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupListsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 230
-    iput-object p1, p0, Lcom/bbm/ui/activities/nd;->a:Lcom/bbm/ui/activities/GroupListsActivity;
+    .line 247
+    iput-object p1, p0, Lcom/bbm/ui/activities/nd;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,67 +25,85 @@
 
 
 # virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 0
 
     .prologue
-    .line 233
-    const-string v0, "listgridview onItemLongClick"
+    .line 263
+    return-void
+.end method
 
-    const-class v1, Lcom/bbm/ui/activities/GroupListsActivity;
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .prologue
+    .line 259
+    return-void
+.end method
 
-    .line 234
-    iget-object v0, p0, Lcom/bbm/ui/activities/nd;->a:Lcom/bbm/ui/activities/GroupListsActivity;
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 4
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListsActivity;->g(Lcom/bbm/ui/activities/GroupListsActivity;)Lcom/bbm/ui/activities/ng;
+    .prologue
+    .line 250
+    iget-object v0, p0, Lcom/bbm/ui/activities/nd;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->g(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+
+    .line 251
+    iget-object v0, p0, Lcom/bbm/ui/activities/nd;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->h(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/activities/ajk;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/ng;->getItem(I)Ljava/lang/Object;
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/nd;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->h(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/activities/ajk;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/g/r;
+    iget-wide v0, v0, Lcom/bbm/ui/activities/ajk;->f:J
 
-    .line 235
+    const-wide/16 v2, -0x1
+
+    cmp-long v0, v0, v2
+
     if-eqz v0, :cond_0
 
-    iget-object v1, v0, Lcom/bbm/g/r;->g:Lcom/bbm/util/bc;
+    iget-object v0, p0, Lcom/bbm/ui/activities/nd;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    sget-object v2, Lcom/bbm/util/bc;->b:Lcom/bbm/util/bc;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->h(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/activities/ajk;
 
-    if-eq v1, v2, :cond_0
+    move-result-object v0
 
-    .line 236
-    iget-object v1, p0, Lcom/bbm/ui/activities/nd;->a:Lcom/bbm/ui/activities/GroupListsActivity;
+    iget-wide v0, v0, Lcom/bbm/ui/activities/ajk;->f:J
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/nd;->a:Lcom/bbm/ui/activities/GroupListsActivity;
+    const-wide/16 v2, 0x7530
 
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/GroupListsActivity;->k()Lcom/bbm/ui/c/fq;
+    add-long/2addr v0, v2
 
-    move-result-object v2
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-virtual {v1, v2, v0}, Lcom/bbm/ui/activities/GroupListsActivity;->a(Lcom/bbm/ui/c/fq;Lcom/bbm/g/r;)V
+    move-result-wide v2
 
-    .line 237
-    iget-object v0, p0, Lcom/bbm/ui/activities/nd;->a:Lcom/bbm/ui/activities/GroupListsActivity;
+    cmp-long v0, v0, v2
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupListsActivity;->w()V
+    if-gez v0, :cond_1
 
-    .line 240
+    .line 253
     :cond_0
-    const/4 v0, 0x1
+    iget-object v0, p0, Lcom/bbm/ui/activities/nd;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    return v0
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->h(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/activities/ajk;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ajk;->a()V
+
+    .line 255
+    :cond_1
+    return-void
 .end method

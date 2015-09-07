@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/a/m;
 .super Ljava/lang/Object;
-.source "ChannelPostCommentListAdapter.java"
+.source "ChannelPostAdapter.java"
 
 # interfaces
-.implements Lcom/bbm/j/s;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/a/k;
+.field final synthetic a:Lcom/bbm/ui/a/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/a/k;)V
+.method constructor <init>(Lcom/bbm/ui/a/f;)V
     .locals 0
 
     .prologue
-    .line 113
-    iput-object p1, p0, Lcom/bbm/ui/a/m;->a:Lcom/bbm/ui/a/k;
+    .line 438
+    iput-object p1, p0, Lcom/bbm/ui/a/m;->a:Lcom/bbm/ui/a/f;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,124 +25,42 @@
 
 
 # virtual methods
-.method public final a()Z
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 3
 
     .prologue
-    .line 116
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    .line 441
+    const-string v0, "SlideMenuItem bottomItem Clicked"
+
+    const-class v1, Lcom/bbm/ui/a/f;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 442
+    iget-object v0, p0, Lcom/bbm/ui/a/m;->a:Lcom/bbm/ui/a/f;
+
+    invoke-static {v0}, Lcom/bbm/ui/a/f;->a(Lcom/bbm/ui/a/f;)Lcom/bbm/ui/activities/cq;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->G()Lcom/bbm/j/w;
+    iget-object v1, p0, Lcom/bbm/ui/a/m;->a:Lcom/bbm/ui/a/f;
 
-    move-result-object v0
-
-    .line 117
-    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    .line 118
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+    invoke-static {v1}, Lcom/bbm/ui/a/f;->e(Lcom/bbm/ui/a/f;)Lcom/bbm/d/ee;
 
     move-result-object v1
 
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    iget-object v1, v1, Lcom/bbm/d/ee;->O:Ljava/lang/String;
 
-    move-result v0
+    iget-object v2, p0, Lcom/bbm/ui/a/m;->a:Lcom/bbm/ui/a/f;
 
-    if-eqz v0, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/dh;
-
-    .line 119
-    iget-object v2, v0, Lcom/bbm/d/dh;->f:Ljava/lang/String;
-
-    const-string v3, "CommentOnPost"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_1
-
-    iget-object v2, v0, Lcom/bbm/d/dh;->f:Ljava/lang/String;
-
-    const-string v3, "CommentOnComments"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    :cond_1
-    iget-object v2, p0, Lcom/bbm/ui/a/m;->a:Lcom/bbm/ui/a/k;
-
-    invoke-static {v2}, Lcom/bbm/ui/a/k;->b(Lcom/bbm/ui/a/k;)Lcom/bbm/d/de;
+    invoke-static {v2}, Lcom/bbm/ui/a/f;->g(Lcom/bbm/ui/a/f;)Lcom/bbm/d/em;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/bbm/d/de;->N:Ljava/lang/String;
+    iget-object v2, v2, Lcom/bbm/d/em;->j:Ljava/lang/String;
 
-    iget-object v3, v0, Lcom/bbm/d/dh;->d:Lorg/json/JSONObject;
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/ac;->a(Lcom/bbm/ui/activities/ey;Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string v4, "channelUri"
-
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 120
-    iget-object v2, p0, Lcom/bbm/ui/a/m;->a:Lcom/bbm/ui/a/k;
-
-    iget-object v2, v2, Lcom/bbm/ui/a/k;->e:Ljava/util/HashMap;
-
-    iget-object v3, v0, Lcom/bbm/d/dh;->d:Lorg/json/JSONObject;
-
-    const-string v4, "triggerCommentId"
-
-    invoke-virtual {v3, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iget-object v0, v0, Lcom/bbm/d/dh;->b:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    .line 123
-    :cond_2
-    const/4 v0, 0x1
-
-    .line 126
-    :goto_1
-    return v0
-
-    :cond_3
-    const/4 v0, 0x0
-
-    goto :goto_1
+    .line 443
+    return-void
 .end method

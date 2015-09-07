@@ -1,260 +1,182 @@
 .class final Lcom/bbm/ui/activities/agn;
-.super Lcom/bbm/j/u;
-.source "ViewOwnedChannelActivity.java"
+.super Landroid/widget/BaseAdapter;
+.source "SetChannelAvatarActivity.java"
+
+# interfaces
+.implements Landroid/widget/ListAdapter;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
+
+.field private final b:Landroid/view/LayoutInflater;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewOwnedChannelActivity;)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;Landroid/content/Context;)V
+    .locals 1
 
     .prologue
-    .line 65
-    iput-object p1, p0, Lcom/bbm/ui/activities/agn;->a:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
+    .line 182
+    iput-object p1, p0, Lcom/bbm/ui/activities/agn;->a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
+    .line 183
+    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/agn;->b:Landroid/view/LayoutInflater;
+
+    .line 184
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 9
+.method public final a(I)Lcom/bbm/ui/activities/agm;
+    .locals 1
 
     .prologue
-    const/16 v8, 0x190
+    .line 216
+    iget-object v0, p0, Lcom/bbm/ui/activities/agn;->a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
-    const/4 v1, 0x0
-
-    .line 68
-    iget-object v0, p0, Lcom/bbm/ui/activities/agn;->a:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/ViewOwnedChannelActivity;->m:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->c(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/de;
-
-    iget-object v0, v0, Lcom/bbm/d/de;->Q:Lcom/bbm/util/bc;
-
-    sget-object v2, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
-
-    if-ne v0, v2, :cond_0
-
-    move v0, v1
-
-    .line 103
-    :goto_0
-    return v0
-
-    .line 71
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/agn;->a:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewOwnedChannelActivity;->b(Lcom/bbm/ui/activities/ViewOwnedChannelActivity;)V
-
-    .line 72
-    iget-object v0, p0, Lcom/bbm/ui/activities/agn;->a:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewOwnedChannelActivity;->c(Lcom/bbm/ui/activities/ViewOwnedChannelActivity;)V
-
-    .line 75
-    new-instance v2, Ljava/util/LinkedList;
-
-    invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
-
-    .line 76
-    new-instance v3, Ljava/util/LinkedList;
-
-    invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
-
-    .line 77
-    iget-object v0, p0, Lcom/bbm/ui/activities/agn;->a:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewOwnedChannelActivity;->d(Lcom/bbm/ui/activities/ViewOwnedChannelActivity;)Lcom/bbm/j/w;
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    check-cast v0, Lcom/bbm/ui/activities/agm;
+
+    return-object v0
+.end method
+
+.method public final getCount()I
+    .locals 1
+
+    .prologue
+    .line 211
+    iget-object v0, p0, Lcom/bbm/ui/activities/agn;->a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->c(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :cond_1
-    :goto_1
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    return v0
+.end method
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+.method public final synthetic getItem(I)Ljava/lang/Object;
+    .locals 1
+
+    .prologue
+    .line 178
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/agn;->a(I)Lcom/bbm/ui/activities/agm;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/d/eb;
+    return-object v0
+.end method
 
-    .line 78
-    iget-object v1, v0, Lcom/bbm/d/eb;->a:Ljava/lang/String;
+.method public final getItemId(I)J
+    .locals 2
 
-    iget-object v5, p0, Lcom/bbm/ui/activities/agn;->a:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
+    .prologue
+    .line 221
+    int-to-long v0, p1
 
-    invoke-virtual {v5}, Lcom/bbm/ui/activities/ViewOwnedChannelActivity;->b()Ljava/lang/String;
+    return-wide v0
+.end method
 
-    move-result-object v5
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 4
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .prologue
+    .line 191
+    if-nez p2, :cond_0
 
-    move-result v1
+    .line 192
+    new-instance v1, Lcom/bbm/ui/activities/agp;
 
-    if-eqz v1, :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/agn;->a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
 
-    iget-object v1, v0, Lcom/bbm/d/eb;->e:Ljava/lang/String;
+    invoke-direct {v1, v0}, Lcom/bbm/ui/activities/agp;-><init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)V
 
-    const-string v5, ""
+    .line 193
+    iget-object v0, p0, Lcom/bbm/ui/activities/agn;->b:Landroid/view/LayoutInflater;
 
-    invoke-virtual {v1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    const v2, 0x7f0300b1
 
-    move-result v1
+    const/4 v3, 0x0
 
-    if-nez v1, :cond_1
+    invoke-virtual {v0, v2, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 81
-    :try_start_0
-    new-instance v1, Lorg/json/JSONObject;
+    move-result-object p2
 
-    invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
+    .line 194
+    const v0, 0x7f0b0450
 
-    .line 82
-    const-string v5, "id"
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    iget-object v6, v0, Lcom/bbm/d/eb;->f:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v1, v5, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    check-cast v0, Landroid/widget/ImageView;
 
-    .line 83
-    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    iput-object v0, v1, Lcom/bbm/ui/activities/agp;->a:Landroid/widget/ImageView;
 
-    .line 84
-    new-instance v5, Lorg/json/JSONObject;
+    .line 195
+    const v0, 0x7f0b0451
 
-    invoke-direct {v5}, Lorg/json/JSONObject;-><init>()V
+    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    .line 85
-    const-string v1, "title"
+    move-result-object v0
 
-    iget-object v6, v0, Lcom/bbm/d/eb;->i:Ljava/lang/String;
+    check-cast v0, Landroid/widget/TextView;
 
-    invoke-virtual {v5, v1, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    iput-object v0, v1, Lcom/bbm/ui/activities/agp;->b:Landroid/widget/TextView;
 
-    .line 86
-    iget-object v1, v0, Lcom/bbm/d/eb;->b:Ljava/lang/String;
+    .line 196
+    invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 87
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
+    move-object v0, v1
 
-    move-result v6
-
-    if-le v6, v8, :cond_2
-
-    .line 88
-    const/4 v6, 0x0
-
-    const/16 v7, 0x190
-
-    invoke-virtual {v1, v6, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    .line 201
+    :goto_0
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/agn;->a(I)Lcom/bbm/ui/activities/agm;
 
     move-result-object v1
 
-    .line 90
-    :cond_2
-    const-string v6, "content"
+    .line 203
+    iget-object v2, v0, Lcom/bbm/ui/activities/agp;->a:Landroid/widget/ImageView;
 
-    invoke-virtual {v5, v6, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    iget v3, v1, Lcom/bbm/ui/activities/agm;->a:I
 
-    .line 91
-    const-string v1, "channelUri"
+    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    iget-object v6, v0, Lcom/bbm/d/eb;->a:Ljava/lang/String;
+    .line 204
+    iget-object v0, v0, Lcom/bbm/ui/activities/agp;->b:Landroid/widget/TextView;
 
-    invoke-virtual {v5, v1, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    iget-object v1, v1, Lcom/bbm/ui/activities/agm;->b:Ljava/lang/String;
 
-    .line 92
-    iget-object v1, v0, Lcom/bbm/d/eb;->g:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    if-eqz v1, :cond_3
+    .line 206
+    return-object p2
 
-    iget-object v1, v0, Lcom/bbm/d/eb;->g:Ljava/lang/String;
+    .line 198
+    :cond_0
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    invoke-static {v1}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
+    move-result-object v0
 
-    move-result v1
+    check-cast v0, Lcom/bbm/ui/activities/agp;
 
-    if-nez v1, :cond_3
-
-    .line 93
-    const-string v1, "imagePath"
-
-    iget-object v0, v0, Lcom/bbm/d/eb;->g:Ljava/lang/String;
-
-    invoke-virtual {v5, v1, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 95
-    :cond_3
-    invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    .line 96
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_1
-
-    .line 101
-    :cond_4
-    iget-object v0, p0, Lcom/bbm/ui/activities/agn;->a:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/ViewOwnedChannelActivity;->c:Lcom/bbm/d/a;
-
-    const-string v1, "pendingPost"
-
-    invoke-static {v2, v1}, Lcom/bbm/d/y;->d(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/ci;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-
-    .line 102
-    iget-object v0, p0, Lcom/bbm/ui/activities/agn;->a:Lcom/bbm/ui/activities/ViewOwnedChannelActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/ViewOwnedChannelActivity;->c:Lcom/bbm/d/a;
-
-    const-string v1, "pendingPost"
-
-    invoke-static {v3, v1}, Lcom/bbm/d/y;->a(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/cf;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-
-    .line 103
-    const/4 v0, 0x1
-
-    goto/16 :goto_0
+    goto :goto_0
 .end method

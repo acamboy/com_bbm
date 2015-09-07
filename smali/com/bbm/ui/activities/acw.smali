@@ -1,55 +1,70 @@
 .class final Lcom/bbm/ui/activities/acw;
-.super Lcom/bbm/j/k;
-.source "SettingsActivity.java"
+.super Ljava/lang/Object;
+.source "ProfileActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
+    .locals 0
 
     .prologue
-    .line 94
-    iput-object p1, p0, Lcom/bbm/ui/activities/acw;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 370
+    iput-object p1, p0, Lcom/bbm/ui/activities/acw;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 98
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
+    .line 373
+    const-string v0, "mEmoticonButton Clicked"
 
-    invoke-static {}, Lcom/bbm/Alaska;->n()Lcom/bbm/f/aa;
+    const-class v1, Lcom/bbm/ui/activities/ProfileActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 375
+    invoke-static {}, Lcom/bbm/ui/activities/ProfileActivity;->b()Ljava/lang/Boolean;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/bbm/f/aa;->b:Ljava/lang/String;
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+    move-result v0
 
-    move-result-object v0
+    if-eqz v0, :cond_0
 
-    .line 99
-    iget-object v1, p0, Lcom/bbm/ui/activities/acw;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 376
+    iget-object v0, p0, Lcom/bbm/ui/activities/acw;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;)Landroid/widget/TextView;
+    const/4 v1, 0x0
 
-    move-result-object v1
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->c(Lcom/bbm/ui/activities/ProfileActivity;Z)V
 
-    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 100
+    .line 380
+    :goto_0
     return-void
+
+    .line 378
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/acw;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->c(Lcom/bbm/ui/activities/ProfileActivity;Z)V
+
+    goto :goto_0
 .end method

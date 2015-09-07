@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cL:Z
+.field private static cR:Z
 
-.field private static cM:Ljava/lang/Class;
+.field private static cS:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -15,17 +15,17 @@
     .end annotation
 .end field
 
-.field private static ec:Ljava/lang/Object;
+.field private static ei:Ljava/lang/Object;
 
-.field private static ed:Ljava/lang/reflect/Method;
+.field private static ej:Ljava/lang/reflect/Method;
 
-.field private static ee:Ljava/lang/reflect/Method;
+.field private static ek:Ljava/lang/reflect/Method;
 
-.field private static ef:Ljava/lang/reflect/Method;
+.field private static el:Ljava/lang/reflect/Method;
 
-.field private static eg:Ljava/lang/reflect/Method;
+.field private static em:Ljava/lang/reflect/Method;
 
-.field private static eh:Ljava/lang/reflect/Method;
+.field private static en:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -38,28 +38,28 @@
     .line 2632
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cR:Z
 
     .line 2633
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cM:Ljava/lang/Class;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cS:Ljava/lang/Class;
 
     .line 2634
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
 
     .line 2635
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ed:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ej:Ljava/lang/reflect/Method;
 
     .line 2636
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ee:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ek:Ljava/lang/reflect/Method;
 
     .line 2637
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ef:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->el:Ljava/lang/reflect/Method;
 
     .line 2638
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->eg:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->em:Ljava/lang/reflect/Method;
 
     .line 2639
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->eh:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->en:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -83,12 +83,12 @@
     const/4 v5, 0x0
 
     .line 2644
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cL:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cR:Z
 
     if-nez v0, :cond_0
 
     .line 2646
-    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cL:Z
+    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cR:Z
 
     .line 2650
     :try_start_0
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cM:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cS:Ljava/lang/Class;
 
     .line 2651
     const-string v0, "uimode"
@@ -107,23 +107,23 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
     .line 2657
     :goto_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cS:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
     .line 2661
     :try_start_1
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cS:Ljava/lang/Class;
 
     const-string v1, "getCurrentModeType"
 
@@ -133,10 +133,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ed:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ej:Ljava/lang/reflect/Method;
 
     .line 2662
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cS:Ljava/lang/Class;
 
     const-string v1, "disableCarMode"
 
@@ -154,10 +154,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ee:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ek:Ljava/lang/reflect/Method;
 
     .line 2663
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cS:Ljava/lang/Class;
 
     const-string v1, "enableCarMode"
 
@@ -175,10 +175,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ef:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->el:Ljava/lang/reflect/Method;
 
     .line 2664
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cS:Ljava/lang/Class;
 
     const-string v1, "getNightMode"
 
@@ -188,10 +188,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->eg:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->em:Ljava/lang/reflect/Method;
 
     .line 2665
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->cS:Ljava/lang/Class;
 
     const-string v1, "setNightMode"
 
@@ -209,7 +209,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->eh:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->en:Ljava/lang/reflect/Method;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -242,19 +242,19 @@
     invoke-static {p0}, Lcom/glympse/android/hal/Reflection$_UiModeManager;->Load(Landroid/content/Context;)V
 
     .line 2700
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ee:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ek:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 2704
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ee:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ek:Ljava/lang/reflect/Method;
 
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
 
     const/4 v2, 0x1
 
@@ -296,19 +296,19 @@
     invoke-static {p0}, Lcom/glympse/android/hal/Reflection$_UiModeManager;->Load(Landroid/content/Context;)V
 
     .line 2718
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ef:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->el:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 2722
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ef:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->el:Ljava/lang/reflect/Method;
 
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
 
     const/4 v2, 0x1
 
@@ -350,19 +350,19 @@
     invoke-static {p0}, Lcom/glympse/android/hal/Reflection$_UiModeManager;->Load(Landroid/content/Context;)V
 
     .line 2680
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ed:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ej:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 2684
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ed:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ej:Ljava/lang/reflect/Method;
 
-    sget-object v2, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sget-object v2, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
 
     const/4 v3, 0x0
 
@@ -403,19 +403,19 @@
     invoke-static {p0}, Lcom/glympse/android/hal/Reflection$_UiModeManager;->Load(Landroid/content/Context;)V
 
     .line 2735
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->eg:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->em:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 2739
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->eg:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->em:Ljava/lang/reflect/Method;
 
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
 
     const/4 v2, 0x0
 
@@ -460,19 +460,19 @@
     invoke-static {p0}, Lcom/glympse/android/hal/Reflection$_UiModeManager;->Load(Landroid/content/Context;)V
 
     .line 2754
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->eh:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->en:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 2758
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->eh:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_UiModeManager;->en:Ljava/lang/reflect/Method;
 
-    sget-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ec:Ljava/lang/Object;
+    sget-object v1, Lcom/glympse/android/hal/Reflection$_UiModeManager;->ei:Ljava/lang/Object;
 
     const/4 v2, 0x1
 

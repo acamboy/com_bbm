@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private a:Lcom/bbm/receiver/c;
+.field public a:Lcom/bbm/receiver/c;
 
 
 # direct methods
@@ -21,22 +21,11 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/receiver/c;)V
-    .locals 0
-
-    .prologue
-    .line 32
-    iput-object p1, p0, Lcom/bbm/receiver/b;->a:Lcom/bbm/receiver/c;
-
-    .line 33
-    return-void
-.end method
-
 .method public final onReceive(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 2
 
     .prologue
-    .line 19
+    .line 20
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -49,12 +38,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 20
+    .line 21
     iget-object v0, p0, Lcom/bbm/receiver/b;->a:Lcom/bbm/receiver/c;
 
     if-eqz v0, :cond_0
 
-    .line 21
+    .line 22
     iget-object v0, p0, Lcom/bbm/receiver/b;->a:Lcom/bbm/receiver/c;
 
     .line 29

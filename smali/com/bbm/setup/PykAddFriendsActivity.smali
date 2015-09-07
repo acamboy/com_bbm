@@ -1,10 +1,10 @@
 .class public Lcom/bbm/setup/PykAddFriendsActivity;
-.super Lcom/bbm/setup/r;
+.super Lcom/bbm/setup/q;
 .source "PykAddFriendsActivity.java"
 
 
 # instance fields
-.field private a:Lcom/bbm/util/cx;
+.field private a:Lcom/bbm/util/di;
 
 
 # direct methods
@@ -12,15 +12,15 @@
     .locals 1
 
     .prologue
-    .line 20
-    invoke-direct {p0}, Lcom/bbm/setup/r;-><init>()V
+    .line 21
+    invoke-direct {p0}, Lcom/bbm/setup/q;-><init>()V
 
-    .line 24
-    invoke-static {}, Lcom/bbm/util/bi;->a()Lcom/bbm/util/bi;
+    .line 25
+    invoke-static {}, Lcom/bbm/util/bp;->a()Lcom/bbm/util/bp;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/setup/PykAddFriendsActivity;->a:Lcom/bbm/util/cx;
+    iput-object v0, p0, Lcom/bbm/setup/PykAddFriendsActivity;->a:Lcom/bbm/util/di;
 
     return-void
 .end method
@@ -31,10 +31,10 @@
     .locals 0
 
     .prologue
-    .line 91
-    invoke-super {p0}, Lcom/bbm/setup/r;->onBackPressed()V
+    .line 94
+    invoke-super {p0}, Lcom/bbm/setup/q;->onBackPressed()V
 
-    .line 92
+    .line 95
     return-void
 .end method
 
@@ -44,47 +44,47 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 28
-    invoke-super {p0, p1}, Lcom/bbm/setup/r;->onCreate(Landroid/os/Bundle;)V
+    .line 29
+    invoke-super {p0, p1}, Lcom/bbm/setup/q;->onCreate(Landroid/os/Bundle;)V
 
-    .line 30
-    const v0, 0x7f030056
+    .line 31
+    const v0, 0x7f03005d
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/PykAddFriendsActivity;->setContentView(I)V
 
-    .line 32
+    .line 33
     new-instance v0, Lcom/bbm/i/b;
 
-    invoke-static {}, Lcom/bbm/Alaska;->C()Lcom/bbm/j/r;
+    invoke-static {}, Lcom/bbm/Alaska;->x()Lcom/bbm/j/r;
 
     move-result-object v1
 
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
     move-result-object v2
 
-    invoke-direct {v0, v1, v2}, Lcom/bbm/i/b;-><init>(Lcom/bbm/j/r;Lcom/bbm/d;)V
+    invoke-direct {v0, v1, v2}, Lcom/bbm/i/b;-><init>(Lcom/bbm/j/r;Lcom/bbm/e;)V
 
-    .line 36
-    new-instance v1, Lcom/bbm/ui/c/fb;
+    .line 37
+    new-instance v1, Lcom/bbm/ui/c/fv;
 
-    iget-object v2, p0, Lcom/bbm/setup/PykAddFriendsActivity;->a:Lcom/bbm/util/cx;
+    iget-object v2, p0, Lcom/bbm/setup/PykAddFriendsActivity;->a:Lcom/bbm/util/di;
 
-    invoke-static {p0}, Lcom/bbm/h/c;->a(Landroid/content/Context;)Lcom/bbm/h/c;
+    invoke-static {p0}, Lcom/bbm/h/aq;->a(Landroid/content/Context;)Lcom/bbm/h/aq;
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v0, v3}, Lcom/bbm/ui/c/fb;-><init>(Lcom/bbm/util/cx;Lcom/bbm/i/b;Lcom/bbm/h/c;)V
+    invoke-direct {v1, v2, v0, v3}, Lcom/bbm/ui/c/fv;-><init>(Lcom/bbm/util/di;Lcom/bbm/i/b;Lcom/bbm/h/aq;)V
 
-    .line 41
-    new-instance v0, Lcom/bbm/setup/o;
+    .line 42
+    new-instance v0, Lcom/bbm/setup/n;
 
-    invoke-direct {v0, p0}, Lcom/bbm/setup/o;-><init>(Lcom/bbm/setup/PykAddFriendsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/setup/n;-><init>(Lcom/bbm/setup/PykAddFriendsActivity;)V
 
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/fb;->a(Landroid/view/View$OnClickListener;)V
+    iput-object v0, v1, Lcom/bbm/ui/c/fv;->a:Landroid/view/View$OnClickListener;
 
-    .line 51
-    const v0, 0x7f0e0352
+    .line 52
+    const v0, 0x7f0e0389
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/PykAddFriendsActivity;->getString(I)Ljava/lang/String;
 
@@ -116,7 +116,7 @@
 
     invoke-virtual {v0, v2}, Landroid/app/ActionBar;->setDisplayOptions(I)V
 
-    .line 52
+    .line 53
     invoke-virtual {p0}, Lcom/bbm/setup/PykAddFriendsActivity;->getFragmentManager()Landroid/app/FragmentManager;
 
     move-result-object v0
@@ -125,36 +125,45 @@
 
     move-result-object v0
 
-    .line 53
-    const v2, 0x7f0a02a6
+    .line 54
+    const v2, 0x7f0b030a
 
     const-string v3, "tag_pyk_invite_friends_fragment"
 
     invoke-virtual {v0, v2, v1, v3}, Landroid/app/FragmentTransaction;->replace(ILandroid/app/Fragment;Ljava/lang/String;)Landroid/app/FragmentTransaction;
 
-    .line 54
+    .line 55
     invoke-virtual {p0}, Lcom/bbm/setup/PykAddFriendsActivity;->isFinishing()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 55
+    .line 56
     invoke-virtual {v0}, Landroid/app/FragmentTransaction;->commit()I
 
-    .line 57
+    .line 58
     :cond_0
     return-void
 .end method
 
 .method protected onPause()V
-    .locals 0
+    .locals 2
 
     .prologue
-    .line 86
-    invoke-super {p0}, Lcom/bbm/setup/r;->onPause()V
+    .line 88
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
 
-    .line 87
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/c/o;->av:Lcom/bbm/c/o;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/o;)V
+
+    .line 89
+    invoke-super {p0}, Lcom/bbm/setup/q;->onPause()V
+
+    .line 90
     return-void
 .end method
 
@@ -162,11 +171,20 @@
     .locals 3
 
     .prologue
-    .line 74
-    invoke-super {p0}, Lcom/bbm/setup/r;->onResume()V
+    .line 75
+    invoke-super {p0}, Lcom/bbm/setup/q;->onResume()V
 
-    .line 79
-    invoke-static {}, Lcom/bbm/Alaska;->l()Landroid/content/SharedPreferences;
+    .line 76
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/c/o;->av:Lcom/bbm/c/o;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/o;)V
+
+    .line 81
+    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -184,6 +202,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 82
+    .line 84
     return-void
 .end method

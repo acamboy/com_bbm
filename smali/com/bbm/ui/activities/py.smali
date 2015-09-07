@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/py;
 .super Ljava/lang/Object;
-.source "GroupPictureCommentsActivity.java"
+.source "GroupLobbyActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/fu;
+.implements Lcom/slidingmenu/lib/a/b;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
     .locals 0
 
     .prologue
-    .line 641
-    iput-object p1, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 370
+    iput-object p1, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,158 +25,59 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 3
+.method public final a()V
+    .locals 2
 
     .prologue
-    .line 644
-    packed-switch p2, :pswitch_data_0
+    .line 374
+    const-string v0, "onHardwareMenuButtonClicked"
 
-    .line 675
-    :goto_0
-    return-void
+    const-class v1, Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    .line 647
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->i(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+    .line 375
+    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    .line 648
-    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->v()V
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    goto :goto_0
-
-    .line 651
-    :pswitch_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->c(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/g/w;
-
-    move-result-object v0
-
-    iget-boolean v0, v0, Lcom/bbm/g/w;->b:Z
-
-    if-eqz v0, :cond_0
-
-    .line 652
-    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/d;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/bbm/g/bs;
-
-    invoke-direct {v2, v1}, Lcom/bbm/g/bs;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
-
-    .line 657
-    :goto_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->v()V
-
-    goto :goto_0
-
-    .line 655
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/d;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->b(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Ljava/lang/String;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/bbm/g/br;
-
-    invoke-direct {v2, v1}, Lcom/bbm/g/br;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
-
-    goto :goto_1
-
-    .line 660
-    :pswitch_2
-    const-string v0, "mounted"
-
-    invoke-static {}, Landroid/os/Environment;->getExternalStorageState()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->b()Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 662
-    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 376
+    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->c(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/g/w;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    iget-object v0, v0, Lcom/bbm/g/w;->i:Ljava/lang/String;
+    const/4 v1, 0x1
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 381
+    :goto_0
+    return-void
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->c(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Lcom/bbm/g/w;
+    .line 378
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    move-result-object v2
+    iget-object v1, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    iget-object v2, v2, Lcom/bbm/g/w;->i:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/ui/activities/ey;->B:Lcom/bbm/ui/c/gj;
 
-    invoke-static {v2}, Lcom/bbm/util/b/h;->e(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;Lcom/bbm/ui/c/gj;)V
 
-    move-result-object v2
+    .line 379
+    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/b/h;->a(Ljava/lang/String;Landroid/content/Context;Ljava/lang/String;)V
-
-    .line 666
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->v()V
-
-    goto :goto_0
-
-    .line 672
-    :pswitch_3
-    iget-object v0, p0, Lcom/bbm/ui/activities/py;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->g()V
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->o()V
 
     goto :goto_0
-
-    .line 644
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
 .end method

@@ -1,77 +1,52 @@
 .class final Lcom/bbm/ui/activities/dx;
-.super Ljava/lang/Object;
-.source "ChannelStatsActivity.java"
-
-# interfaces
-.implements Lcom/bbm/ui/p;
+.super Lcom/bbm/ui/cn;
+.source "ChannelReportsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelReportsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
     .locals 0
 
     .prologue
-    .line 253
-    iput-object p1, p0, Lcom/bbm/ui/activities/dx;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+    .line 464
+    iput-object p1, p0, Lcom/bbm/ui/activities/dx;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)V"
-        }
-    .end annotation
+.method public final a()V
+    .locals 1
 
     .prologue
-    .line 257
-    const/4 v0, 0x4
+    .line 472
+    iget-object v0, p0, Lcom/bbm/ui/activities/dx;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
 
-    if-le p1, v0, :cond_0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->onBackPressed()V
 
-    .line 258
-    new-instance v0, Ljava/lang/IndexOutOfBoundsException;
-
-    const-string v1, "time period spinner position out of range"
-
-    invoke-direct {v0, v1}, Ljava/lang/IndexOutOfBoundsException;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
-    .line 264
-    :goto_0
+    .line 473
     return-void
+.end method
 
-    .line 261
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/dx;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
+.method public final a(I)V
+    .locals 0
 
-    invoke-static {}, Lcom/bbm/ui/activities/ChannelStatsActivity;->i()[Ljava/lang/String;
+    .prologue
+    .line 477
+    return-void
+.end method
 
-    move-result-object v1
+.method public final b()V
+    .locals 0
 
-    aget-object v1, v1, p1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChannelStatsActivity;->a(Lcom/bbm/ui/activities/ChannelStatsActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 262
-    iget-object v0, p0, Lcom/bbm/ui/activities/dx;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->f(Lcom/bbm/ui/activities/ChannelStatsActivity;)Lcom/bbm/j/u;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
-
-    goto :goto_0
+    .prologue
+    .line 468
+    return-void
 .end method

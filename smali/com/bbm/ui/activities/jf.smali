@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/jf;
 .super Ljava/lang/Object;
-.source "GroupAdminEditActivity.java"
+.source "ConversationActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/je;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminEditActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/je;)V
     .locals 0
 
     .prologue
-    .line 84
-    iput-object p1, p0, Lcom/bbm/ui/activities/jf;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+    .line 574
+    iput-object p1, p0, Lcom/bbm/ui/activities/jf;->a:Lcom/bbm/ui/activities/je;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,80 +25,24 @@
 
 
 # virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 88
-    iget-object v0, p0, Lcom/bbm/ui/activities/jf;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+    .line 578
+    const-string v0, "mAttachmentView RemoveAttachment Clicked"
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/GroupAdminEditActivity;->a:Lcom/bbm/ui/activities/ji;
+    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/ji;->getItem(I)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    move-result-object v0
+    .line 580
+    iget-object v0, p0, Lcom/bbm/ui/activities/jf;->a:Lcom/bbm/ui/activities/je;
 
-    check-cast v0, Lcom/bbm/g/u;
+    iget-object v0, v0, Lcom/bbm/ui/activities/je;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 89
-    iget-object v1, v0, Lcom/bbm/g/u;->c:Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->f()V
 
-    .line 90
-    const-string v2, "/"
-
-    invoke-virtual {v1, v2}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
-
-    move-result v2
-
-    .line 91
-    add-int/lit8 v2, v2, 0x1
-
-    invoke-virtual {v1}, Ljava/lang/String;->length()I
-
-    move-result v3
-
-    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 92
-    invoke-static {}, Lcom/bbm/Alaska;->n()Lcom/bbm/f/aa;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lcom/bbm/f/aa;->a:Ljava/lang/String;
-
-    .line 93
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 94
-    iget-object v1, p0, Lcom/bbm/ui/activities/jf;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupAdminEditActivity;->a(Lcom/bbm/ui/activities/GroupAdminEditActivity;Lcom/bbm/g/u;)Lcom/bbm/g/u;
-
-    .line 95
-    iget-object v0, p0, Lcom/bbm/ui/activities/jf;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupAdminEditActivity;->w()V
-
-    .line 97
-    :cond_0
-    const/4 v0, 0x0
-
-    return v0
+    .line 581
+    return-void
 .end method

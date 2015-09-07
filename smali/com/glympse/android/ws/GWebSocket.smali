@@ -24,3 +24,6 @@
 
 .method public abstract setStateHandler(Lcom/glympse/android/core/GHandler;)V
 .end method
+
+.method public abstract validateUtf8(Z)V
+.end method

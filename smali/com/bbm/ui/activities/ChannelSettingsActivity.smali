@@ -1,10 +1,10 @@
 .class public Lcom/bbm/ui/activities/ChannelSettingsActivity;
-.super Lcom/bbm/ui/activities/by;
+.super Lcom/bbm/ui/activities/cq;
 .source "ChannelSettingsActivity.java"
 
 
 # instance fields
-.field private final a:Lcom/bbm/d;
+.field private final a:Lcom/bbm/e;
 
 .field private final b:Lcom/bbm/d/a;
 
@@ -13,35 +13,35 @@
         value = {
             "Lcom/bbm/j/a",
             "<",
-            "Lcom/bbm/d/de;",
+            "Lcom/bbm/d/ee;",
             ">;"
         }
     .end annotation
 .end field
 
-.field private j:Ljava/lang/String;
+.field private d:Ljava/lang/String;
 
-.field private k:Z
+.field private e:Z
 
-.field private l:Lorg/json/JSONArray;
+.field private f:Lorg/json/JSONArray;
 
-.field private m:Z
+.field private g:Z
 
-.field private n:Landroid/widget/RelativeLayout;
+.field private h:Landroid/widget/RelativeLayout;
 
-.field private o:Landroid/widget/Switch;
+.field private i:Landroid/widget/Switch;
 
-.field private p:Landroid/widget/Switch;
+.field private j:Landroid/widget/Switch;
 
-.field private q:Landroid/widget/Switch;
+.field private k:Landroid/widget/Switch;
 
-.field private r:Landroid/widget/Switch;
+.field private l:Landroid/widget/Switch;
 
-.field private s:Landroid/widget/Switch;
+.field private m:Landroid/widget/Switch;
 
-.field private t:Landroid/widget/TextView;
+.field private n:Landroid/widget/TextView;
 
-.field private final u:Lcom/bbm/j/k;
+.field private final o:Lcom/bbm/j/k;
 
 
 # direct methods
@@ -52,41 +52,41 @@
     const/4 v1, 0x0
 
     .line 88
-    invoke-direct {p0}, Lcom/bbm/ui/activities/by;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/cq;-><init>()V
 
     .line 45
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->a:Lcom/bbm/d;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->a:Lcom/bbm/e;
 
     .line 46
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->a:Lcom/bbm/d;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->a:Lcom/bbm/e;
 
-    iget-object v0, v0, Lcom/bbm/d;->b:Lcom/bbm/d/a;
+    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->b:Lcom/bbm/d/a;
 
     .line 48
-    new-instance v0, Lcom/bbm/ui/activities/do;
+    new-instance v0, Lcom/bbm/ui/activities/eg;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/do;-><init>(Lcom/bbm/ui/activities/ChannelSettingsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/eg;-><init>(Lcom/bbm/ui/activities/ChannelSettingsActivity;)V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->c:Lcom/bbm/j/a;
 
     .line 56
-    iput-boolean v1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->k:Z
+    iput-boolean v1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->e:Z
 
     .line 68
-    new-instance v0, Lcom/bbm/ui/activities/dp;
+    new-instance v0, Lcom/bbm/ui/activities/eh;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/dp;-><init>(Lcom/bbm/ui/activities/ChannelSettingsActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/eh;-><init>(Lcom/bbm/ui/activities/ChannelSettingsActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->u:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->o:Lcom/bbm/j/k;
 
     .line 89
-    iput-boolean v1, p0, Lcom/bbm/ui/activities/eg;->e:Z
+    iput-boolean v1, p0, Lcom/bbm/ui/activities/ey;->y:Z
 
     .line 90
     return-void
@@ -97,7 +97,7 @@
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->j:Ljava/lang/String;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->d:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -107,12 +107,12 @@
 
     .prologue
     .line 37
-    iput-object p1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->l:Lorg/json/JSONArray;
+    iput-object p1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->f:Lorg/json/JSONArray;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/ChannelSettingsActivity;Lcom/bbm/d/de;)V
+.method static synthetic a(Lcom/bbm/ui/activities/ChannelSettingsActivity;Lcom/bbm/d/ee;)V
     .locals 4
 
     .prologue
@@ -121,13 +121,13 @@
     const/4 v1, 0x0
 
     .line 37
-    const v0, 0x7f0a010c
+    const v0, 0x7f0b0150
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    iget-boolean v0, p1, Lcom/bbm/d/de;->s:Z
+    iget-boolean v0, p1, Lcom/bbm/d/ee;->t:Z
 
     if-eqz v0, :cond_2
 
@@ -136,53 +136,53 @@
     :goto_0
     invoke-virtual {v3, v0}, Landroid/view/View;->setVisibility(I)V
 
-    iget-boolean v0, p1, Lcom/bbm/d/de;->s:Z
+    iget-boolean v0, p1, Lcom/bbm/d/ee;->t:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p1, Lcom/bbm/d/de;->D:Z
+    iget-boolean v0, p1, Lcom/bbm/d/ee;->E:Z
 
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->c(Z)V
+    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->b(Z)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->o:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->i:Landroid/widget/Switch;
 
-    iget-boolean v3, p1, Lcom/bbm/d/de;->d:Z
+    iget-boolean v3, p1, Lcom/bbm/d/ee;->d:Z
 
     invoke-virtual {v0, v3}, Landroid/widget/Switch;->setChecked(Z)V
 
-    iget-boolean v0, p1, Lcom/bbm/d/de;->d:Z
+    iget-boolean v0, p1, Lcom/bbm/d/ee;->d:Z
 
     invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->a(Z)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->p:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->j:Landroid/widget/Switch;
 
-    iget-boolean v3, p1, Lcom/bbm/d/de;->e:Z
-
-    invoke-virtual {v0, v3}, Landroid/widget/Switch;->setChecked(Z)V
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->q:Landroid/widget/Switch;
-
-    iget-boolean v3, p1, Lcom/bbm/d/de;->z:Z
+    iget-boolean v3, p1, Lcom/bbm/d/ee;->e:Z
 
     invoke-virtual {v0, v3}, Landroid/widget/Switch;->setChecked(Z)V
 
-    iget-boolean v0, p1, Lcom/bbm/d/de;->t:Z
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->k:Landroid/widget/Switch;
+
+    iget-boolean v3, p1, Lcom/bbm/d/ee;->A:Z
+
+    invoke-virtual {v0, v3}, Landroid/widget/Switch;->setChecked(Z)V
+
+    iget-boolean v0, p1, Lcom/bbm/d/ee;->u:Z
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->r:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->l:Landroid/widget/Switch;
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setEnabled(Z)V
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->r:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->l:Landroid/widget/Switch;
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setChecked(Z)V
 
     :cond_0
     :goto_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->s:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->m:Landroid/widget/Switch;
 
-    iget-boolean v3, p1, Lcom/bbm/d/de;->n:Z
+    iget-boolean v3, p1, Lcom/bbm/d/ee;->n:Z
 
     if-nez v3, :cond_1
 
@@ -191,7 +191,7 @@
     :cond_1
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setChecked(Z)V
 
-    iput-boolean v2, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->k:Z
+    iput-boolean v2, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->e:Z
 
     return-void
 
@@ -201,9 +201,9 @@
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->r:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->l:Landroid/widget/Switch;
 
-    iget-boolean v3, p1, Lcom/bbm/d/de;->J:Z
+    iget-boolean v3, p1, Lcom/bbm/d/ee;->K:Z
 
     invoke-virtual {v0, v3}, Landroid/widget/Switch;->setChecked(Z)V
 
@@ -214,8 +214,8 @@
     .locals 2
 
     .prologue
-    .line 203
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->n:Landroid/widget/RelativeLayout;
+    .line 205
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->h:Landroid/widget/RelativeLayout;
 
     if-eqz p1, :cond_0
 
@@ -224,10 +224,10 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/RelativeLayout;->setVisibility(I)V
 
-    .line 204
+    .line 206
     return-void
 
-    .line 203
+    .line 205
     :cond_0
     const/16 v0, 0x8
 
@@ -244,7 +244,7 @@
     return-object v0
 .end method
 
-.method static synthetic b(Lcom/bbm/ui/activities/ChannelSettingsActivity;Lcom/bbm/d/de;)V
+.method static synthetic b(Lcom/bbm/ui/activities/ChannelSettingsActivity;Lcom/bbm/d/ee;)V
     .locals 5
 
     .prologue
@@ -258,23 +258,23 @@
     invoke-direct {v2}, Lorg/json/JSONObject;-><init>()V
 
     :try_start_0
-    iget-boolean v3, p1, Lcom/bbm/d/de;->s:Z
+    iget-boolean v3, p1, Lcom/bbm/d/ee;->t:Z
 
     if-eqz v3, :cond_5
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->o:Landroid/widget/Switch;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->i:Landroid/widget/Switch;
 
     invoke-virtual {v3}, Landroid/widget/Switch;->isChecked()Z
 
     move-result v3
 
-    iget-boolean v4, p1, Lcom/bbm/d/de;->d:Z
+    iget-boolean v4, p1, Lcom/bbm/d/ee;->d:Z
 
     if-eq v3, v4, :cond_0
 
     const-string v3, "chatEnabled"
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->o:Landroid/widget/Switch;
+    iget-object v4, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->i:Landroid/widget/Switch;
 
     invoke-virtual {v4}, Landroid/widget/Switch;->isChecked()Z
 
@@ -283,20 +283,20 @@
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     :cond_0
-    iget-boolean v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->m:Z
+    iget-boolean v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->g:Z
 
-    iget-boolean v4, p1, Lcom/bbm/d/de;->D:Z
+    iget-boolean v4, p1, Lcom/bbm/d/ee;->E:Z
 
     if-eq v3, v4, :cond_1
 
     const-string v3, "officeHoursAlwaysAvailable"
 
-    iget-boolean v4, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->m:Z
+    iget-boolean v4, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->g:Z
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     :cond_1
-    iget-object v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->o:Landroid/widget/Switch;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->i:Landroid/widget/Switch;
 
     invoke-virtual {v3}, Landroid/widget/Switch;->isChecked()Z
 
@@ -304,17 +304,17 @@
 
     if-eqz v3, :cond_2
 
-    iget-boolean v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->m:Z
+    iget-boolean v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->g:Z
 
     if-nez v3, :cond_2
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->l:Lorg/json/JSONArray;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->f:Lorg/json/JSONArray;
 
     invoke-virtual {v3}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
 
     move-result-object v3
 
-    iget-object v4, p1, Lcom/bbm/d/de;->C:Ljava/util/List;
+    iget-object v4, p1, Lcom/bbm/d/ee;->D:Ljava/util/List;
 
     invoke-virtual {v4}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
@@ -328,7 +328,7 @@
 
     const-string v3, "officeHours"
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->l:Lorg/json/JSONArray;
+    iget-object v4, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->f:Lorg/json/JSONArray;
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
@@ -354,24 +354,24 @@
 
     const-string v3, "officeHoursAlwaysAvailable"
 
-    iget-boolean v4, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->m:Z
+    iget-boolean v4, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->g:Z
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     :cond_2
-    iget-object v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->p:Landroid/widget/Switch;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->j:Landroid/widget/Switch;
 
     invoke-virtual {v3}, Landroid/widget/Switch;->isChecked()Z
 
     move-result v3
 
-    iget-boolean v4, p1, Lcom/bbm/d/de;->e:Z
+    iget-boolean v4, p1, Lcom/bbm/d/ee;->e:Z
 
     if-eq v3, v4, :cond_3
 
     const-string v3, "commentsEnabled"
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->p:Landroid/widget/Switch;
+    iget-object v4, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->j:Landroid/widget/Switch;
 
     invoke-virtual {v4}, Landroid/widget/Switch;->isChecked()Z
 
@@ -380,19 +380,19 @@
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     :cond_3
-    iget-object v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->r:Landroid/widget/Switch;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->l:Landroid/widget/Switch;
 
     invoke-virtual {v3}, Landroid/widget/Switch;->isChecked()Z
 
     move-result v3
 
-    iget-boolean v4, p1, Lcom/bbm/d/de;->J:Z
+    iget-boolean v4, p1, Lcom/bbm/d/ee;->K:Z
 
     if-eq v3, v4, :cond_4
 
     const-string v3, "searchable"
 
-    iget-object v4, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->r:Landroid/widget/Switch;
+    iget-object v4, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->l:Landroid/widget/Switch;
 
     invoke-virtual {v4}, Landroid/widget/Switch;->isChecked()Z
 
@@ -409,7 +409,7 @@
 
     const-string v3, "uri"
 
-    iget-object v4, p1, Lcom/bbm/d/de;->N:Ljava/lang/String;
+    iget-object v4, p1, Lcom/bbm/d/ee;->O:Ljava/lang/String;
 
     invoke-virtual {v2, v3, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
@@ -423,14 +423,14 @@
 
     const-string v4, "channel"
 
-    invoke-static {v3, v4}, Lcom/bbm/d/y;->b(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/cg;
+    invoke-static {v3, v4}, Lcom/bbm/d/aa;->b(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/db;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
+    invoke-virtual {v2, v3}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
 
     :cond_5
-    iget-object v2, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->s:Landroid/widget/Switch;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->m:Landroid/widget/Switch;
 
     invoke-virtual {v2}, Landroid/widget/Switch;->isChecked()Z
 
@@ -441,13 +441,13 @@
     move v2, v0
 
     :goto_0
-    iget-boolean v3, p1, Lcom/bbm/d/de;->n:Z
+    iget-boolean v3, p1, Lcom/bbm/d/ee;->n:Z
 
     if-eq v2, v3, :cond_6
 
-    iget-object v2, p1, Lcom/bbm/d/de;->N:Ljava/lang/String;
+    iget-object v2, p1, Lcom/bbm/d/ee;->O:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->s:Landroid/widget/Switch;
+    iget-object v3, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->m:Landroid/widget/Switch;
 
     invoke-virtual {v3}, Landroid/widget/Switch;->isChecked()Z
 
@@ -456,13 +456,13 @@
     if-nez v3, :cond_8
 
     :goto_1
-    invoke-static {v2, v0}, Lcom/bbm/d/y;->a(Ljava/lang/String;Z)Lcom/bbm/d/aj;
+    invoke-static {v2, v0}, Lcom/bbm/d/aa;->a(Ljava/lang/String;Z)Lcom/bbm/d/an;
 
     move-result-object v0
 
     iget-object v1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->b:Lcom/bbm/d/a;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -483,34 +483,34 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_2
 .end method
 
-.method private c(Z)V
+.method private b(Z)V
     .locals 2
 
     .prologue
-    .line 207
-    iput-boolean p1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->m:Z
+    .line 209
+    iput-boolean p1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->g:Z
 
-    .line 208
-    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->t:Landroid/widget/TextView;
+    .line 210
+    iget-object v1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->n:Landroid/widget/TextView;
 
     if-eqz p1, :cond_0
 
-    const v0, 0x7f0e0179
+    const v0, 0x7f0e0189
 
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(I)V
 
-    .line 209
+    .line 211
     return-void
 
-    .line 208
+    .line 210
     :cond_0
-    const v0, 0x7f0e017f
+    const v0, 0x7f0e018f
 
     goto :goto_0
 .end method
@@ -520,7 +520,7 @@
 
     .prologue
     .line 37
-    iget-boolean v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->k:Z
+    iget-boolean v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->e:Z
 
     return v0
 .end method
@@ -540,7 +540,7 @@
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->l:Lorg/json/JSONArray;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->f:Lorg/json/JSONArray;
 
     return-object v0
 .end method
@@ -551,27 +551,27 @@
     .locals 1
 
     .prologue
-    .line 297
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->d()V
-
-    .line 298
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->u:Lcom/bbm/j/k;
-
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
-
     .line 299
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->k:Z
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->d()V
 
     .line 300
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->o:Lcom/bbm/j/k;
+
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
+
+    .line 301
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->e:Z
+
+    .line 302
     invoke-virtual {p0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/app/ActionBar;->hide()V
 
-    .line 301
+    .line 303
     return-void
 .end method
 
@@ -582,7 +582,7 @@
     const/4 v0, 0x1
 
     .line 145
-    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/by;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Lcom/bbm/ui/activities/cq;->onActivityResult(IILandroid/content/Intent;)V
 
     .line 146
     if-ne p1, v0, :cond_0
@@ -606,7 +606,7 @@
     move-result v1
 
     .line 149
-    invoke-direct {p0, v1}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->c(Z)V
+    invoke-direct {p0, v1}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->b(Z)V
 
     .line 151
     :try_start_0
@@ -614,7 +614,7 @@
 
     invoke-direct {v1, v0}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
 
-    iput-object v1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->l:Lorg/json/JSONArray;
+    iput-object v1, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->f:Lorg/json/JSONArray;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -627,7 +627,7 @@
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 .end method
@@ -636,17 +636,17 @@
     .locals 1
 
     .prologue
-    .line 183
+    .line 184
     check-cast p1, Landroid/widget/Switch;
 
     invoke-virtual {p1}, Landroid/widget/Switch;->isChecked()Z
 
     move-result v0
 
-    .line 184
+    .line 185
     invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->a(Z)V
 
-    .line 185
+    .line 186
     return-void
 .end method
 
@@ -655,10 +655,10 @@
 
     .prologue
     .line 94
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/by;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/cq;->onCreate(Landroid/os/Bundle;)V
 
     .line 95
-    const v0, 0x7f03001b
+    const v0, 0x7f03001c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->setContentView(I)V
 
@@ -667,10 +667,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->j:Ljava/lang/String;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->d:Ljava/lang/String;
 
     .line 98
-    const v0, 0x7f0a010e
+    const v0, 0x7f0b0152
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -678,10 +678,10 @@
 
     check-cast v0, Landroid/widget/RelativeLayout;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->n:Landroid/widget/RelativeLayout;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->h:Landroid/widget/RelativeLayout;
 
     .line 99
-    const v0, 0x7f0a010f
+    const v0, 0x7f0b0153
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -689,10 +689,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->t:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->n:Landroid/widget/TextView;
 
     .line 100
-    const v0, 0x7f0a010d
+    const v0, 0x7f0b0151
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -700,10 +700,10 @@
 
     check-cast v0, Landroid/widget/Switch;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->o:Landroid/widget/Switch;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->i:Landroid/widget/Switch;
 
     .line 101
-    const v0, 0x7f0a0110
+    const v0, 0x7f0b0154
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -711,10 +711,10 @@
 
     check-cast v0, Landroid/widget/Switch;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->p:Landroid/widget/Switch;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->j:Landroid/widget/Switch;
 
     .line 102
-    const v0, 0x7f0a0111
+    const v0, 0x7f0b0155
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -722,10 +722,10 @@
 
     check-cast v0, Landroid/widget/Switch;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->q:Landroid/widget/Switch;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->k:Landroid/widget/Switch;
 
     .line 103
-    const v0, 0x7f0a0112
+    const v0, 0x7f0b0156
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -733,10 +733,10 @@
 
     check-cast v0, Landroid/widget/Switch;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->r:Landroid/widget/Switch;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->l:Landroid/widget/Switch;
 
     .line 104
-    const v0, 0x7f0a0113
+    const v0, 0x7f0b0157
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -744,14 +744,14 @@
 
     check-cast v0, Landroid/widget/Switch;
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->s:Landroid/widget/Switch;
+    iput-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->m:Landroid/widget/Switch;
 
     .line 106
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->o:Landroid/widget/Switch;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->i:Landroid/widget/Switch;
 
-    new-instance v1, Lcom/bbm/ui/activities/dq;
+    new-instance v1, Lcom/bbm/ui/activities/ei;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/dq;-><init>(Lcom/bbm/ui/activities/ChannelSettingsActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ei;-><init>(Lcom/bbm/ui/activities/ChannelSettingsActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Switch;->setOnCheckedChangeListener(Landroid/widget/CompoundButton$OnCheckedChangeListener;)V
 
@@ -761,7 +761,7 @@
     move-result-object v1
 
     .line 115
-    const v0, 0x7f030107
+    const v0, 0x7f030119
 
     invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setCustomView(I)V
 
@@ -770,7 +770,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0a04f3
+    const v2, 0x7f0b058e
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -779,7 +779,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 117
-    const v2, 0x7f0e01ef
+    const v2, 0x7f0e01fe
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(I)V
 
@@ -789,7 +789,7 @@
     invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setDisplayOptions(I)V
 
     .line 121
-    const v0, 0x7f0a00a0
+    const v0, 0x7f0b00bf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->findViewById(I)Landroid/view/View;
 
@@ -803,11 +803,11 @@
     invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
 
     .line 123
-    new-instance v1, Lcom/bbm/ui/activities/dr;
+    new-instance v1, Lcom/bbm/ui/activities/ej;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/dr;-><init>(Lcom/bbm/ui/activities/ChannelSettingsActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ej;-><init>(Lcom/bbm/ui/activities/ChannelSettingsActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/by;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
 
     .line 141
     return-void
@@ -818,12 +818,12 @@
 
     .prologue
     .line 174
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->u:Lcom/bbm/j/k;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->o:Lcom/bbm/j/k;
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
 
     .line 175
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->onPause()V
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onPause()V
 
     .line 176
     return-void
@@ -834,10 +834,10 @@
 
     .prologue
     .line 164
-    invoke-super {p0}, Lcom/bbm/ui/activities/by;->onResume()V
+    invoke-super {p0}, Lcom/bbm/ui/activities/cq;->onResume()V
 
     .line 165
-    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->u:Lcom/bbm/j/k;
+    iget-object v0, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->o:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
@@ -849,17 +849,17 @@
     .locals 3
 
     .prologue
-    .line 192
+    .line 194
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 193
+    .line 195
     const-string v1, "officeHours"
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->l:Lorg/json/JSONArray;
+    iget-object v2, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->f:Lorg/json/JSONArray;
 
     invoke-virtual {v2}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
 
@@ -867,18 +867,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 194
+    .line 196
     const-string v1, "alwaysAvailable"
 
-    iget-boolean v2, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->m:Z
+    iget-boolean v2, p0, Lcom/bbm/ui/activities/ChannelSettingsActivity;->g:Z
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 195
+    .line 197
     const/4 v1, 0x1
 
     invoke-virtual {p0, v0, v1}, Lcom/bbm/ui/activities/ChannelSettingsActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 196
+    .line 198
     return-void
 .end method

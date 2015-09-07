@@ -130,7 +130,7 @@
     check-cast v0, Lcom/glympse/android/lib/GInvitePrivate;
 
     .line 80
-    invoke-static {v0, v3}, Lcom/glympse/android/rpc/d;->a(Lcom/glympse/android/lib/GInvitePrivate;Lcom/glympse/android/core/GPrimitive;)V
+    invoke-static {v0, v3}, Lcom/glympse/android/rpc/d;->a(Lcom/glympse/android/lib/GInvitePrivate;Lcom/glympse/android/core/GPrimitive;)Ljava/lang/String;
 
     .line 81
     invoke-virtual {p0, v0}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V

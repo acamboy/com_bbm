@@ -1,47 +1,28 @@
-.class interface abstract Landroid/support/v4/view/bb;
-.super Ljava/lang/Object;
+.class Landroid/support/v4/view/bb;
+.super Landroid/support/v4/view/ba;
 .source "ViewCompat.java"
 
 
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 1090
+    invoke-direct {p0}, Landroid/support/v4/view/ba;-><init>()V
+
+    return-void
+.end method
+
+
 # virtual methods
-.method public abstract a(Landroid/view/View;)I
-.end method
+.method public final b(Landroid/view/View;I)V
+    .locals 0
 
-.method public abstract a(Landroid/view/View;IIII)V
-.end method
+    .prologue
+    .line 1103
+    invoke-virtual {p1, p2}, Landroid/view/View;->setImportantForAccessibility(I)V
 
-.method public abstract a(Landroid/view/View;ILandroid/graphics/Paint;)V
-.end method
-
-.method public abstract a(Landroid/view/View;Landroid/graphics/Paint;)V
-.end method
-
-.method public abstract a(Landroid/view/View;Landroid/support/v4/view/a;)V
-.end method
-
-.method public abstract a(Landroid/view/View;Ljava/lang/Runnable;)V
-.end method
-
-.method public abstract a(Landroid/view/View;I)Z
-.end method
-
-.method public abstract b(Landroid/view/View;)V
-.end method
-
-.method public abstract c(Landroid/view/View;)I
-.end method
-
-.method public abstract d(Landroid/view/View;)V
-.end method
-
-.method public abstract e(Landroid/view/View;)I
-.end method
-
-.method public abstract f(Landroid/view/View;)I
-.end method
-
-.method public abstract g(Landroid/view/View;)Landroid/view/ViewParent;
-.end method
-
-.method public abstract h(Landroid/view/View;)Z
+    .line 1104
+    return-void
 .end method

@@ -1,303 +1,43 @@
 .class final Landroid/support/v4/view/bs;
-.super Landroid/support/v4/view/a;
+.super Ljava/lang/Object;
 .source "ViewPager.java"
 
-
-# instance fields
-.field final synthetic b:Landroid/support/v4/view/ViewPager;
+# interfaces
+.implements Landroid/view/animation/Interpolator;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/view/ViewPager;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 2760
-    iput-object p1, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-direct {p0}, Landroid/support/v4/view/a;-><init>()V
+    .line 128
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
-.end method
-
-.method private b()Z
-    .locals 2
-
-    .prologue
-    const/4 v0, 0x1
-
-    .line 2812
-    iget-object v1, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v1}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/af;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    iget-object v1, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v1}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/af;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/support/v4/view/af;->a()I
-
-    move-result v1
-
-    if-le v1, v0, :cond_0
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
-    .locals 2
-
-    .prologue
-    .line 2778
-    invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->a(Landroid/view/View;Landroid/support/v4/view/a/a;)V
-
-    .line 2779
-    const-class v0, Landroid/support/v4/view/ViewPager;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->b(Ljava/lang/CharSequence;)V
-
-    .line 2780
-    invoke-direct {p0}, Landroid/support/v4/view/bs;->b()Z
-
-    move-result v0
-
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->i(Z)V
-
-    .line 2781
-    iget-object v0, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->canScrollHorizontally(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 2782
-    const/16 v0, 0x1000
-
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->a(I)V
-
-    .line 2784
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->canScrollHorizontally(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 2785
-    const/16 v0, 0x2000
-
-    invoke-virtual {p2, v0}, Landroid/support/v4/view/a/a;->a(I)V
-
-    .line 2787
-    :cond_1
-    return-void
-.end method
-
-.method public final a(Landroid/view/View;ILandroid/os/Bundle;)Z
-    .locals 4
-
-    .prologue
-    const/4 v1, 0x0
-
-    const/4 v0, 0x1
-
-    .line 2791
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/view/a;->a(Landroid/view/View;ILandroid/os/Bundle;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 2808
-    :goto_0
-    return v0
-
-    .line 2794
-    :cond_0
-    sparse-switch p2, :sswitch_data_0
-
-    move v0, v1
-
-    .line 2808
-    goto :goto_0
-
-    .line 2796
-    :sswitch_0
-    iget-object v2, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-virtual {v2, v0}, Landroid/support/v4/view/ViewPager;->canScrollHorizontally(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 2797
-    iget-object v1, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    iget-object v2, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v2}, Landroid/support/v4/view/ViewPager;->c(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, 0x1
-
-    invoke-virtual {v1, v2}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
-
-    goto :goto_0
-
-    :cond_1
-    move v0, v1
-
-    .line 2800
-    goto :goto_0
-
-    .line 2802
-    :sswitch_1
-    iget-object v2, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    const/4 v3, -0x1
-
-    invoke-virtual {v2, v3}, Landroid/support/v4/view/ViewPager;->canScrollHorizontally(I)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    .line 2803
-    iget-object v1, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    iget-object v2, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v2}, Landroid/support/v4/view/ViewPager;->c(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v2
-
-    add-int/lit8 v2, v2, -0x1
-
-    invoke-virtual {v1, v2}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
-
-    goto :goto_0
-
-    :cond_2
-    move v0, v1
-
-    .line 2806
-    goto :goto_0
-
-    .line 2794
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x1000 -> :sswitch_0
-        0x2000 -> :sswitch_1
-    .end sparse-switch
-.end method
-
-.method public final d(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+.method public final getInterpolation(F)F
     .locals 3
 
     .prologue
-    .line 2764
-    invoke-super {p0, p1, p2}, Landroid/support/v4/view/a;->d(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)V
+    const/high16 v2, 0x3f800000
 
-    .line 2765
-    const-class v0, Landroid/support/v4/view/ViewPager;
+    .line 130
+    sub-float v0, p1, v2
 
-    invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    .line 131
+    mul-float v1, v0, v0
 
-    move-result-object v0
+    mul-float/2addr v1, v0
 
-    invoke-virtual {p2, v0}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
+    mul-float/2addr v1, v0
 
-    .line 2766
-    invoke-static {}, Landroid/support/v4/view/a/u;->a()Landroid/support/v4/view/a/u;
+    mul-float/2addr v0, v1
 
-    move-result-object v0
+    add-float/2addr v0, v2
 
-    .line 2767
-    invoke-direct {p0}, Landroid/support/v4/view/bs;->b()Z
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/a/u;->a(Z)V
-
-    .line 2768
-    invoke-virtual {p2}, Landroid/view/accessibility/AccessibilityEvent;->getEventType()I
-
-    move-result v1
-
-    const/16 v2, 0x1000
-
-    if-ne v1, v2, :cond_0
-
-    iget-object v1, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v1}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/af;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_0
-
-    .line 2770
-    iget-object v1, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v1}, Landroid/support/v4/view/ViewPager;->b(Landroid/support/v4/view/ViewPager;)Landroid/support/v4/view/af;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/support/v4/view/af;->a()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/a/u;->a(I)V
-
-    .line 2771
-    iget-object v1, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v1}, Landroid/support/v4/view/ViewPager;->c(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/a/u;->b(I)V
-
-    .line 2772
-    iget-object v1, p0, Landroid/support/v4/view/bs;->b:Landroid/support/v4/view/ViewPager;
-
-    invoke-static {v1}, Landroid/support/v4/view/ViewPager;->c(Landroid/support/v4/view/ViewPager;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/support/v4/view/a/u;->c(I)V
-
-    .line 2774
-    :cond_0
-    return-void
+    return v0
 .end method

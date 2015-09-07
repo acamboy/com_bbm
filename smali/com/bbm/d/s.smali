@@ -1,149 +1,84 @@
 .class final Lcom/bbm/d/s;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/a;
 .source "BbmdsModel.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
+        "Lcom/bbm/j/a",
         "<",
-        "Lcom/bbm/d/dc;",
-        ">;"
+        "Ljava/util/List",
+        "<",
+        "Ljava/lang/String;",
+        ">;>;"
     }
 .end annotation
 
 
 # instance fields
-.field final synthetic a:J
-
-.field final synthetic b:Lcom/bbm/d/r;
+.field final synthetic a:Lcom/bbm/d/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/d/r;J)V
+.method constructor <init>(Lcom/bbm/d/a;)V
     .locals 0
 
     .prologue
-    .line 515
-    iput-object p1, p0, Lcom/bbm/d/s;->b:Lcom/bbm/d/r;
+    .line 184
+    iput-object p1, p0, Lcom/bbm/d/s;->a:Lcom/bbm/d/a;
 
-    iput-wide p2, p0, Lcom/bbm/d/s;->a:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 6
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 3
 
     .prologue
-    const/4 v1, 0x1
+    .line 184
+    new-instance v1, Ljava/util/ArrayList;
 
-    const/4 v0, -0x1
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 515
-    check-cast p1, Lcom/bbm/d/dc;
+    iget-object v0, p0, Lcom/bbm/d/s;->a:Lcom/bbm/d/a;
 
-    check-cast p2, Lcom/bbm/d/dc;
+    invoke-virtual {v0}, Lcom/bbm/d/a;->O()Lcom/bbm/j/w;
 
-    iget-wide v2, p1, Lcom/bbm/d/dc;->b:J
+    move-result-object v0
 
-    iget-wide v4, p2, Lcom/bbm/d/dc;->b:J
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
 
-    cmp-long v2, v2, v4
+    move-result-object v0
 
-    if-nez v2, :cond_1
+    check-cast v0, Ljava/util/List;
 
-    const/4 v0, 0x0
+    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
-    :cond_0
+    move-result-object v2
+
     :goto_0
-    return v0
-
-    :cond_1
-    sget-object v2, Lcom/bbm/d/l;->a:[I
-
-    iget-object v3, p0, Lcom/bbm/d/s;->b:Lcom/bbm/d/r;
-
-    iget-object v3, v3, Lcom/bbm/d/r;->a:Lcom/bbm/d/v;
-
-    invoke-virtual {v3}, Lcom/bbm/d/v;->ordinal()I
-
-    move-result v3
-
-    aget v2, v2, v3
-
-    packed-switch v2, :pswitch_data_0
-
-    :cond_2
-    iget-object v0, p1, Lcom/bbm/d/dc;->c:Ljava/lang/String;
-
-    iget-object v1, p2, Lcom/bbm/d/dc;->c:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    goto :goto_0
+    if-eqz v0, :cond_0
 
-    :pswitch_0
-    iget-wide v2, p1, Lcom/bbm/d/dc;->b:J
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    iget-wide v4, p0, Lcom/bbm/d/s;->a:J
+    move-result-object v0
 
-    cmp-long v2, v2, v4
+    check-cast v0, Lcom/bbm/d/et;
 
-    if-eqz v2, :cond_0
+    iget-object v0, v0, Lcom/bbm/d/et;->a:Ljava/lang/String;
 
-    iget-wide v2, p2, Lcom/bbm/d/dc;->b:J
-
-    iget-wide v4, p0, Lcom/bbm/d/s;->a:J
-
-    cmp-long v0, v2, v4
-
-    if-nez v0, :cond_2
-
-    move v0, v1
+    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    :pswitch_1
-    iget-wide v2, p1, Lcom/bbm/d/dc;->b:J
-
-    iget-wide v4, p0, Lcom/bbm/d/s;->a:J
-
-    cmp-long v2, v2, v4
-
-    if-nez v2, :cond_3
-
-    move v0, v1
-
-    goto :goto_0
-
-    :cond_3
-    iget-wide v1, p2, Lcom/bbm/d/dc;->b:J
-
-    iget-wide v3, p0, Lcom/bbm/d/s;->a:J
-
-    cmp-long v1, v1, v3
-
-    if-nez v1, :cond_2
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    :cond_0
+    return-object v1
 .end method

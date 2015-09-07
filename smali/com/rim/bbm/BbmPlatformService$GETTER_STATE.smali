@@ -35,7 +35,7 @@
 
     const/4 v2, 0x0
 
-    .line 258
+    .line 307
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     const-string v1, "GET_SUCCESS"
@@ -44,7 +44,7 @@
 
     sput-object v0, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_SUCCESS:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
-    .line 264
+    .line 313
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     const-string v1, "GET_PENDING"
@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_PENDING:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
-    .line 269
+    .line 318
     new-instance v0, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     const-string v1, "GET_FAILURE"
@@ -62,7 +62,7 @@
 
     sput-object v0, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->GET_FAILURE:Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
-    .line 256
+    .line 305
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
@@ -93,7 +93,7 @@
     .end annotation
 
     .prologue
-    .line 256
+    .line 305
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -103,7 +103,7 @@
     .locals 1
 
     .prologue
-    .line 256
+    .line 305
     const-class v0, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -119,7 +119,7 @@
     .locals 1
 
     .prologue
-    .line 256
+    .line 305
     sget-object v0, Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->$VALUES:[Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;
 
     invoke-virtual {v0}, [Lcom/rim/bbm/BbmPlatformService$GETTER_STATE;->clone()Ljava/lang/Object;

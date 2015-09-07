@@ -34,7 +34,7 @@
 
 
 # virtual methods
-.method protected abstract a(Lcom/google/android/gms/drive/metadata/MetadataField;)Ljava/lang/Object;
+.method public abstract a(Lcom/google/android/gms/drive/metadata/MetadataField;)Ljava/lang/Object;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "<T:",

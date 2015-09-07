@@ -23,7 +23,7 @@
 
 
 # instance fields
-.field private final c:Ljava/lang/String;
+.field final c:Ljava/lang/String;
 
 
 # direct methods
@@ -124,18 +124,6 @@
     move-result-object v0
 
     check-cast v0, [Lcom/c/a/a/i;
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final a()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 36
-    iget-object v0, p0, Lcom/c/a/a/i;->c:Ljava/lang/String;
 
     return-object v0
 .end method

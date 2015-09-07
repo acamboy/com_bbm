@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 156
+    .line 152
     iput-object p1, p0, Lcom/bbm/ui/b/n;->a:Lcom/bbm/ui/b/m;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -31,10 +31,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 160
+    .line 156
     if-eqz p2, :cond_0
 
-    .line 161
+    .line 157
     iget-object v0, p0, Lcom/bbm/ui/b/n;->a:Lcom/bbm/ui/b/m;
 
     invoke-static {v0}, Lcom/bbm/ui/b/m;->a(Lcom/bbm/ui/b/m;)Landroid/widget/RadioButton;
@@ -43,7 +43,7 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 162
+    .line 158
     iget-object v0, p0, Lcom/bbm/ui/b/n;->a:Lcom/bbm/ui/b/m;
 
     invoke-static {v0}, Lcom/bbm/ui/b/m;->b(Lcom/bbm/ui/b/m;)Landroid/widget/RadioButton;
@@ -52,7 +52,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/RadioButton;->setChecked(Z)V
 
-    .line 167
+    .line 162
     :goto_0
     iget-object v0, p0, Lcom/bbm/ui/b/n;->a:Lcom/bbm/ui/b/m;
 
@@ -62,11 +62,11 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 169
+    .line 164
     :cond_0
     return-void
 
-    .line 165
+    .line 160
     :cond_1
     iget-object v0, p0, Lcom/bbm/ui/b/n;->a:Lcom/bbm/ui/b/m;
 

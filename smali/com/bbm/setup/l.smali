@@ -3,7 +3,7 @@
 .source "LoadingActivity.java"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.implements Landroid/content/DialogInterface$OnDismissListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 124
+    .line 320
     iput-object p1, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,165 +25,30 @@
 
 
 # virtual methods
-.method public final onGlobalLayout()V
+.method public final onDismiss(Landroid/content/DialogInterface;)V
     .locals 2
 
     .prologue
-    .line 127
+    .line 323
     iget-object v0, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
 
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->k(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->g(Lcom/bbm/setup/LoadingActivity;)Lcom/bbm/util/ct;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    const/4 v1, 0x0
 
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
-
-    .line 129
-    iget-object v0, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->l(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->l(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getWidth()I
+    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
 
-    move-result v1
-
-    div-int/lit8 v1, v1, 0x2
-
-    int-to-float v1, v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setPivotX(F)V
-
-    .line 130
+    .line 324
     iget-object v0, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
 
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->l(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
+    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->q(Lcom/bbm/setup/LoadingActivity;)Landroid/app/Dialog;
 
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->l(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getHeight()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setPivotY(F)V
-
-    .line 132
-    iget-object v0, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->m(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->m(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getWidth()I
-
-    move-result v1
-
-    div-int/lit8 v1, v1, 0x2
-
-    int-to-float v1, v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setPivotX(F)V
-
-    .line 133
-    iget-object v0, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->m(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->m(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getHeight()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setPivotY(F)V
-
-    .line 135
-    iget-object v0, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->n(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->n(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getWidth()I
-
-    move-result v1
-
-    div-int/lit8 v1, v1, 0x2
-
-    int-to-float v1, v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setPivotX(F)V
-
-    .line 136
-    iget-object v0, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->n(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v1}, Lcom/bbm/setup/LoadingActivity;->n(Lcom/bbm/setup/LoadingActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/LinearLayout;->getHeight()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setPivotY(F)V
-
-    .line 138
-    iget-object v0, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->i(Lcom/bbm/setup/LoadingActivity;)V
-
-    .line 139
-    iget-object v0, p0, Lcom/bbm/setup/l;->a:Lcom/bbm/setup/LoadingActivity;
-
-    invoke-static {v0}, Lcom/bbm/setup/LoadingActivity;->j(Lcom/bbm/setup/LoadingActivity;)V
-
-    .line 140
+    .line 325
     return-void
 .end method

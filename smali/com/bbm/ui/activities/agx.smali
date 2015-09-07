@@ -1,17 +1,23 @@
-.class public Lcom/bbm/ui/activities/agx;
+.class final Lcom/bbm/ui/activities/agx;
 .super Ljava/lang/Object;
-.source "WatchedActivity.java"
+.source "SettingsActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/activities/agy;
+.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+
+
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
 
 
 # direct methods
-.method public constructor <init>()V
+.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 60
+    .line 376
+    iput-object p1, p0, Lcom/bbm/ui/activities/agx;->a:Lcom/bbm/ui/activities/SettingsActivity;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,82 +25,54 @@
 
 
 # virtual methods
-.method public a()V
-    .locals 0
+.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+    .locals 3
 
     .prologue
-    .line 71
+    .line 379
+    iget-object v0, p0, Lcom/bbm/ui/activities/agx;->a:Lcom/bbm/ui/activities/SettingsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/d/a;->f()Z
+
+    move-result v0
+
+    if-ne p2, v0, :cond_0
+
+    .line 386
+    :goto_0
     return-void
-.end method
 
-.method public a(Lcom/bbm/ui/activities/agw;)V
-    .locals 0
+    .line 383
+    :cond_0
+    const-string v0, "SWILT onCheckedChnaged"
 
-    .prologue
-    .line 63
-    return-void
-.end method
+    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
 
-.method public a(Lcom/bbm/ui/activities/agw;II)V
-    .locals 0
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .prologue
-    .line 91
-    return-void
-.end method
+    .line 384
+    iget-object v0, p0, Lcom/bbm/ui/activities/agx;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-.method public a(Lcom/bbm/ui/activities/agw;Landroid/os/Bundle;)V
-    .locals 0
+    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->q(Lcom/bbm/ui/activities/SettingsActivity;)Z
 
-    .prologue
-    .line 95
-    return-void
-.end method
+    .line 385
+    iget-object v0, p0, Lcom/bbm/ui/activities/agx;->a:Lcom/bbm/ui/activities/SettingsActivity;
 
-.method public b()V
-    .locals 0
+    invoke-static {v0}, Lcom/bbm/ui/activities/SettingsActivity;->c(Lcom/bbm/ui/activities/SettingsActivity;)Lcom/bbm/d/a;
 
-    .prologue
-    .line 67
-    return-void
-.end method
+    move-result-object v0
 
-.method public b(Lcom/bbm/ui/activities/agw;)V
-    .locals 0
+    const-string v1, "nowPlayingMessageEnabled"
 
-    .prologue
-    .line 75
-    return-void
-.end method
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-.method public b(Lcom/bbm/ui/activities/agw;Landroid/os/Bundle;)V
-    .locals 0
+    move-result-object v2
 
-    .prologue
-    .line 99
-    return-void
-.end method
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-.method public c()V
-    .locals 0
-
-    .prologue
-    .line 79
-    return-void
-.end method
-
-.method public c(Lcom/bbm/ui/activities/agw;)V
-    .locals 0
-
-    .prologue
-    .line 87
-    return-void
-.end method
-
-.method public d(Lcom/bbm/ui/activities/agw;)V
-    .locals 0
-
-    .prologue
-    .line 83
-    return-void
+    goto :goto_0
 .end method

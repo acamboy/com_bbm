@@ -1,92 +1,169 @@
-.class final Lcom/bbm/util/dq;
+.class public final Lcom/bbm/util/dq;
 .super Ljava/lang/Object;
-.source "UpdatesFragmentUtil.java"
-
-# interfaces
-.implements Lcom/bbm/ui/c/fu;
+.source "StringUtil.java"
 
 
-# instance fields
-.field final synthetic a:Landroid/app/Activity;
-
-.field final synthetic b:Landroid/content/Context;
-
-.field final synthetic c:Lcom/bbm/d/eg;
+# static fields
+.field private static final a:Ljava/util/regex/Pattern;
 
 
 # direct methods
-.method constructor <init>(Landroid/app/Activity;Landroid/content/Context;Lcom/bbm/d/eg;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 633
-    iput-object p1, p0, Lcom/bbm/util/dq;->a:Landroid/app/Activity;
+    .line 7
+    const-string v0, "[\r\t\n]+"
 
-    iput-object p2, p0, Lcom/bbm/util/dq;->b:Landroid/content/Context;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
-    iput-object p3, p0, Lcom/bbm/util/dq;->c:Lcom/bbm/d/eg;
+    move-result-object v0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lcom/bbm/util/dq;->a:Ljava/util/regex/Pattern;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
-    .locals 3
+.method public static a(Ljava/lang/Object;)Ljava/lang/String;
+    .locals 1
 
     .prologue
-    .line 636
-    iget-object v0, p0, Lcom/bbm/util/dq;->a:Landroid/app/Activity;
+    .line 27
+    if-eqz p0, :cond_0
 
-    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
+    .line 28
+    invoke-virtual {p0}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->v()V
+    move-result-object v0
 
-    .line 637
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 645
+    .line 30
     :goto_0
-    return-void
+    return-object v0
 
-    .line 639
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/util/dq;->b:Landroid/content/Context;
-
-    iget-object v1, p0, Lcom/bbm/util/dq;->c:Lcom/bbm/d/eg;
-
-    iget-object v1, v1, Lcom/bbm/d/eg;->b:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lcom/bbm/util/x;->a(Landroid/content/Context;Ljava/lang/String;)V
+    :cond_0
+    const-string v0, ""
 
     goto :goto_0
+.end method
 
-    .line 642
-    :pswitch_1
-    iget-object v0, p0, Lcom/bbm/util/dq;->a:Landroid/app/Activity;
+.method public static a(Ljava/lang/String;)Ljava/lang/String;
+    .locals 0
 
-    iget-object v1, p0, Lcom/bbm/util/dq;->c:Lcom/bbm/d/eg;
+    .prologue
+    .line 19
+    if-nez p0, :cond_0
 
-    iget-object v1, v1, Lcom/bbm/d/eg;->b:Ljava/lang/String;
+    const-string p0, ""
 
-    iget-object v2, p0, Lcom/bbm/util/dq;->c:Lcom/bbm/d/eg;
+    :cond_0
+    return-object p0
+.end method
 
-    iget-object v2, v2, Lcom/bbm/d/eg;->j:Ljava/lang/String;
+.method public static a(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List",
+            "<",
+            "Ljava/lang/String;",
+            ">;",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/lang/String;"
+        }
+    .end annotation
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/x;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;)V
+    .prologue
+    .line 51
+    if-nez p0, :cond_0
+
+    .line 52
+    const/4 v0, 0x0
+
+    .line 60
+    :goto_0
+    return-object v0
+
+    .line 55
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 56
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 57
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 58
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    goto :goto_1
+
+    .line 60
+    :cond_1
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     goto :goto_0
+.end method
 
-    .line 637
-    nop
+.method public static b(Ljava/lang/String;)Z
+    .locals 2
 
-    :pswitch_data_0
-    .packed-switch 0x7f0a003c
-        :pswitch_1
-        :pswitch_0
-    .end packed-switch
+    .prologue
+    .line 37
+    invoke-static {p0}, Lcom/bbm/util/dq;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string v1, ""
+
+    invoke-static {v0, v1}, Lcom/bbm/util/bh;->a(Ljava/lang/Object;Ljava/lang/Object;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static c(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 47
+    sget-object v0, Lcom/bbm/util/dq;->a:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    const-string v1, " "
+
+    invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->replaceAll(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

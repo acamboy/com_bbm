@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private aN:Lcom/glympse/android/hal/GUiControlListener;
+.field private aM:Lcom/glympse/android/hal/GUiControlListener;
 
-.field private aO:Ljava/lang/String;
+.field private aN:Ljava/lang/String;
 
 
 # direct methods
@@ -21,10 +21,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 109
-    iput-object p1, p0, Lcom/glympse/android/hal/u;->aN:Lcom/glympse/android/hal/GUiControlListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/u;->aM:Lcom/glympse/android/hal/GUiControlListener;
 
     .line 110
-    iput-object p2, p0, Lcom/glympse/android/hal/u;->aO:Ljava/lang/String;
+    iput-object p2, p0, Lcom/glympse/android/hal/u;->aN:Ljava/lang/String;
 
     .line 111
     return-void
@@ -39,7 +39,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/u;->aO:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/hal/u;->aN:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/kit/send/GlympseHolder;->clearGlympseLite(Ljava/lang/String;)V
 
@@ -48,7 +48,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/u;->aO:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/hal/u;->aN:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/kit/send/GlympseHolder;->clearGlympse(Ljava/lang/String;)V
 
@@ -57,7 +57,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/u;->aO:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/hal/u;->aN:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/kit/send/GlympseHolder;->clearTicket(Ljava/lang/String;)V
 
@@ -66,7 +66,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/glympse/android/hal/u;->aO:Ljava/lang/String;
+    iget-object v1, p0, Lcom/glympse/android/hal/u;->aN:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Lcom/glympse/android/kit/send/GlympseHolder;->clearControlListener(Ljava/lang/String;)V
 
@@ -82,12 +82,12 @@
     .prologue
     .line 132
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/u;->aN:Lcom/glympse/android/hal/GUiControlListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/u;->aM:Lcom/glympse/android/hal/GUiControlListener;
 
     if-eqz v0, :cond_0
 
     .line 134
-    iget-object v0, p0, Lcom/glympse/android/hal/u;->aN:Lcom/glympse/android/hal/GUiControlListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/u;->aM:Lcom/glympse/android/hal/GUiControlListener;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GUiControlListener;->onCancelled()V
 
@@ -113,12 +113,12 @@
     .prologue
     .line 117
     :try_start_0
-    iget-object v0, p0, Lcom/glympse/android/hal/u;->aN:Lcom/glympse/android/hal/GUiControlListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/u;->aM:Lcom/glympse/android/hal/GUiControlListener;
 
     if-eqz v0, :cond_0
 
     .line 119
-    iget-object v0, p0, Lcom/glympse/android/hal/u;->aN:Lcom/glympse/android/hal/GUiControlListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/u;->aM:Lcom/glympse/android/hal/GUiControlListener;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GUiControlListener;->onCompleted()V
 

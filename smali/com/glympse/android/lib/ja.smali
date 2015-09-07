@@ -1,109 +1,173 @@
 .class Lcom/glympse/android/lib/ja;
-.super Lcom/glympse/android/lib/j;
-.source "UserEcho.java"
+.super Ljava/lang/Object;
+.source "TriggersManager.java"
+
+# interfaces
+.implements Lcom/glympse/android/api/GEventListener;
+.implements Lcom/glympse/android/lib/iz;
 
 
 # instance fields
-.field private iZ:Lcom/glympse/android/lib/l;
+.field private ii:Lcom/glympse/android/lib/GLocationManagerPrivate;
 
-.field private m:Ljava/lang/String;
+.field private tv:Lcom/glympse/android/core/GProximityListener;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/GGlympsePrivate;Ljava/lang/String;)V
-    .locals 1
+.method private constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 23
-    invoke-direct {p0}, Lcom/glympse/android/lib/j;-><init>()V
+    .line 348
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
-    iput-object p2, p0, Lcom/glympse/android/lib/ja;->m:Ljava/lang/String;
+    return-void
+.end method
 
-    .line 25
-    new-instance v0, Lcom/glympse/android/lib/l;
+.method synthetic constructor <init>(Lcom/glympse/android/lib/iy$1;)V
+    .locals 0
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
+    .prologue
+    .line 348
+    invoke-direct {p0}, Lcom/glympse/android/lib/ja;-><init>()V
 
-    iput-object v0, p0, Lcom/glympse/android/lib/ja;->iZ:Lcom/glympse/android/lib/l;
-
-    .line 26
-    iget-object v0, p0, Lcom/glympse/android/lib/ja;->iZ:Lcom/glympse/android/lib/l;
-
-    iput-object v0, p0, Lcom/glympse/android/lib/ja;->gT:Lcom/glympse/android/lib/k;
-
-    .line 27
     return-void
 .end method
 
 
 # virtual methods
-.method public cancel()V
-    .locals 1
-
-    .prologue
-    .line 55
-    new-instance v0, Lcom/glympse/android/lib/l;
-
-    invoke-direct {v0}, Lcom/glympse/android/lib/l;-><init>()V
-
-    iput-object v0, p0, Lcom/glympse/android/lib/ja;->iZ:Lcom/glympse/android/lib/l;
-
-    .line 56
-    iget-object v0, p0, Lcom/glympse/android/lib/ja;->iZ:Lcom/glympse/android/lib/l;
-
-    iput-object v0, p0, Lcom/glympse/android/lib/ja;->gT:Lcom/glympse/android/lib/k;
-
-    .line 57
-    return-void
-.end method
-
-.method public process()Z
+.method public a(Lcom/glympse/android/lib/GGlympsePrivate;Lcom/glympse/android/core/GProximityListener;)V
     .locals 2
 
     .prologue
-    .line 42
-    iget-object v0, p0, Lcom/glympse/android/lib/ja;->iZ:Lcom/glympse/android/lib/l;
+    .line 360
+    invoke-interface {p1}, Lcom/glympse/android/lib/GGlympsePrivate;->getLocationManagerPrivate()Lcom/glympse/android/lib/GLocationManagerPrivate;
 
-    iget-object v0, v0, Lcom/glympse/android/lib/l;->gW:Ljava/lang/String;
+    move-result-object v0
 
-    const-string v1, "ok"
+    iput-object v0, p0, Lcom/glympse/android/lib/ja;->ii:Lcom/glympse/android/lib/GLocationManagerPrivate;
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    .line 361
+    iput-object p2, p0, Lcom/glympse/android/lib/ja;->tv:Lcom/glympse/android/core/GProximityListener;
 
-    move-result v0
+    .line 362
+    iget-object v1, p0, Lcom/glympse/android/lib/ja;->ii:Lcom/glympse/android/lib/GLocationManagerPrivate;
 
-    if-nez v0, :cond_0
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 48
-    const/4 v0, 0x0
+    move-result-object v0
 
-    .line 50
-    :goto_0
-    return v0
+    check-cast v0, Lcom/glympse/android/api/GEventListener;
 
+    invoke-interface {v1, v0}, Lcom/glympse/android/lib/GLocationManagerPrivate;->addListener(Lcom/glympse/android/api/GEventListener;)Z
+
+    .line 363
+    return-void
+.end method
+
+.method public eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
+    .locals 1
+
+    .prologue
+    .line 388
+    const/16 v0, 0x8
+
+    if-ne v0, p2, :cond_0
+
+    .line 390
+    and-int/lit8 v0, p3, 0x10
+
+    if-eqz v0, :cond_1
+
+    .line 392
+    iget-object v0, p0, Lcom/glympse/android/lib/ja;->tv:Lcom/glympse/android/core/GProximityListener;
+
+    if-eqz v0, :cond_0
+
+    .line 394
+    check-cast p4, Lcom/glympse/android/core/GRegion;
+
+    .line 395
+    iget-object v0, p0, Lcom/glympse/android/lib/ja;->tv:Lcom/glympse/android/core/GProximityListener;
+
+    invoke-interface {v0, p4}, Lcom/glympse/android/core/GProximityListener;->regionEntered(Lcom/glympse/android/core/GRegion;)V
+
+    .line 407
     :cond_0
-    const/4 v0, 0x1
+    :goto_0
+    return-void
+
+    .line 398
+    :cond_1
+    and-int/lit8 v0, p3, 0x20
+
+    if-eqz v0, :cond_0
+
+    .line 400
+    iget-object v0, p0, Lcom/glympse/android/lib/ja;->tv:Lcom/glympse/android/core/GProximityListener;
+
+    if-eqz v0, :cond_0
+
+    .line 402
+    check-cast p4, Lcom/glympse/android/core/GRegion;
+
+    .line 403
+    iget-object v0, p0, Lcom/glympse/android/lib/ja;->tv:Lcom/glympse/android/core/GProximityListener;
+
+    invoke-interface {v0, p4}, Lcom/glympse/android/core/GProximityListener;->regionLeft(Lcom/glympse/android/core/GRegion;)V
 
     goto :goto_0
 .end method
 
-.method public url(Ljava/lang/StringBuilder;)Z
+.method public startMonitoring(Lcom/glympse/android/core/GRegion;)V
     .locals 1
 
     .prologue
-    .line 35
-    const-string v0, "users/self/echo?data="
+    .line 374
+    iget-object v0, p0, Lcom/glympse/android/lib/ja;->ii:Lcom/glympse/android/lib/GLocationManagerPrivate;
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v0, p1}, Lcom/glympse/android/lib/GLocationManagerPrivate;->startMonitoring(Lcom/glympse/android/core/GRegion;)V
 
-    .line 36
-    iget-object v0, p0, Lcom/glympse/android/lib/ja;->m:Ljava/lang/String;
+    .line 375
+    return-void
+.end method
 
-    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public stop()V
+    .locals 3
 
-    .line 37
-    const/4 v0, 0x1
+    .prologue
+    const/4 v2, 0x0
 
-    return v0
+    .line 367
+    iget-object v1, p0, Lcom/glympse/android/lib/ja;->ii:Lcom/glympse/android/lib/GLocationManagerPrivate;
+
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/glympse/android/api/GEventListener;
+
+    invoke-interface {v1, v0}, Lcom/glympse/android/lib/GLocationManagerPrivate;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
+
+    .line 368
+    iput-object v2, p0, Lcom/glympse/android/lib/ja;->ii:Lcom/glympse/android/lib/GLocationManagerPrivate;
+
+    .line 369
+    iput-object v2, p0, Lcom/glympse/android/lib/ja;->tv:Lcom/glympse/android/core/GProximityListener;
+
+    .line 370
+    return-void
+.end method
+
+.method public stopMonitoring(Lcom/glympse/android/core/GRegion;)V
+    .locals 1
+
+    .prologue
+    .line 379
+    iget-object v0, p0, Lcom/glympse/android/lib/ja;->ii:Lcom/glympse/android/lib/GLocationManagerPrivate;
+
+    invoke-interface {v0, p1}, Lcom/glympse/android/lib/GLocationManagerPrivate;->stopMonitoring(Lcom/glympse/android/core/GRegion;)V
+
+    .line 380
+    return-void
 .end method

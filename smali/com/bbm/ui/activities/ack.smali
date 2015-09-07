@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ack;
 .super Ljava/lang/Object;
-.source "SetAsActivity.java"
+.source "ProfileActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Lcom/bbm/ui/bv;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SetAsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SetAsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 73
-    iput-object p1, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/SetAsActivity;
+    .line 409
+    iput-object p1, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,190 +25,80 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final a(Ljava/lang/String;)V
+    .locals 3
 
     .prologue
-    .line 78
-    iget-object v0, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/SetAsActivity;
+    .line 413
+    iget-object v0, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SetAsActivity;->a(Lcom/bbm/ui/activities/SetAsActivity;)Lcom/bbm/ui/activities/acm;
+    const v1, 0x7f0b03e4
 
-    move-result-object v0
-
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/acm;->a(I)Lcom/bbm/ui/activities/aco;
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iget v0, v0, Lcom/bbm/ui/activities/aco;->a:I
+    check-cast v0, Lcom/bbm/ui/SendEditText;
 
-    packed-switch v0, :pswitch_data_0
+    .line 414
+    iget-object v1, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-    .line 116
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 81
-    :pswitch_0
-    const-string v0, "set as bbm pic OnItemClick"
-
-    const-class v1, Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 82
-    iget-object v0, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    const/4 v1, 0x1
-
-    new-instance v2, Ljava/io/File;
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/SetAsActivity;->b(Lcom/bbm/ui/activities/SetAsActivity;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v2}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
-
-    move-result-object v2
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/ui/dz;->a(Landroid/app/Activity;ILandroid/net/Uri;)Z
-
-    move-result v0
-
-    .line 86
-    if-eqz v0, :cond_0
-
-    .line 87
-    iget-object v0, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SetAsActivity;->finish()V
-
-    goto :goto_0
-
-    .line 93
-    :pswitch_1
-    const-string v0, "set contact picture onClick"
-
-    const-class v1, Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 94
-    new-instance v0, Landroid/content/Intent;
-
-    const-string v1, "android.intent.action.PICK"
-
-    invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
-
-    .line 95
-    const-string v1, "vnd.android.cursor.dir/contact"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 96
-    iget-object v1, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    const/4 v2, 0x2
-
-    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/SetAsActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    goto :goto_0
-
-    .line 101
-    :pswitch_2
-    :try_start_0
-    const-string v0, "set as wallpaper OnItemClick"
-
-    const-class v1, Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 102
-    iget-object v0, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-static {v0}, Landroid/app/WallpaperManager;->getInstance(Landroid/content/Context;)Landroid/app/WallpaperManager;
-
-    move-result-object v0
-
-    .line 103
-    new-instance v1, Ljava/io/File;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/SetAsActivity;->b(Lcom/bbm/ui/activities/SetAsActivity;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 104
-    new-instance v2, Ljava/io/FileInputStream;
-
-    invoke-direct {v2, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
-
-    .line 106
-    invoke-virtual {v0, v2}, Landroid/app/WallpaperManager;->setStream(Ljava/io/InputStream;)V
-
-    .line 107
-    iget-object v0, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/SetAsActivity;
-
-    const v2, 0x7f0e0601
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/SetAsActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/ProfileActivity;->getCurrentFocus()Landroid/view/View;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/util/eo;->b(Landroid/content/Context;Ljava/lang/String;)V
+    .line 415
+    instance-of v2, v1, Landroid/widget/EditText;
 
-    .line 108
-    iget-object v0, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/SetAsActivity;
+    if-eqz v2, :cond_1
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SetAsActivity;->finish()V
-    :try_end_0
-    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .line 416
+    iget-object v2, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/ProfileActivity;->d(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/google/b/a/l;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+
+    move-result-object v2
+
+    if-ne v1, v2, :cond_2
+
+    .line 417
+    iget-object v0, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ProfileActivity;->d(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/google/b/a/l;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/EditText;
+
+    invoke-static {v0, p1}, Lcom/bbm/ui/EmoticonPicker;->a(Landroid/widget/EditText;Ljava/lang/String;)V
+
+    .line 422
+    :cond_0
+    :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/ack;->a:Lcom/bbm/ui/activities/ProfileActivity;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->c(Lcom/bbm/ui/activities/ProfileActivity;Z)V
+
+    .line 425
+    :cond_1
+    return-void
+
+    .line 418
+    :cond_2
+    if-ne v1, v0, :cond_0
+
+    .line 419
+    invoke-static {v0, p1}, Lcom/bbm/ui/EmoticonPicker;->a(Landroid/widget/EditText;Ljava/lang/String;)V
 
     goto :goto_0
-
-    .line 110
-    :catch_0
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
-
-    goto :goto_0
-
-    .line 113
-    :catch_1
-    move-exception v0
-
-    invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
-
-    goto :goto_0
-
-    .line 78
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
 .end method

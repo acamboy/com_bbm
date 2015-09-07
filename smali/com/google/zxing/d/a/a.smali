@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final a:[[I
+.field public static final a:[[I
 
 
 # instance fields
-.field private final b:Lcom/google/zxing/b/b;
+.field public final b:Lcom/google/zxing/b/b;
 
 
 # direct methods
@@ -1424,98 +1424,4 @@
 
     .line 70
     return-void
-.end method
-
-
-# virtual methods
-.method public final a()[B
-    .locals 11
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 73
-    const/16 v0, 0x90
-
-    new-array v3, v0, [B
-
-    .line 74
-    iget-object v0, p0, Lcom/google/zxing/d/a/a;->b:Lcom/google/zxing/b/b;
-
-    iget v4, v0, Lcom/google/zxing/b/b;->b:I
-
-    .line 75
-    iget-object v0, p0, Lcom/google/zxing/d/a/a;->b:Lcom/google/zxing/b/b;
-
-    iget v5, v0, Lcom/google/zxing/b/b;->a:I
-
-    move v2, v1
-
-    .line 76
-    :goto_0
-    if-ge v2, v4, :cond_2
-
-    .line 77
-    sget-object v0, Lcom/google/zxing/d/a/a;->a:[[I
-
-    aget-object v6, v0, v2
-
-    move v0, v1
-
-    .line 78
-    :goto_1
-    if-ge v0, v5, :cond_1
-
-    .line 79
-    aget v7, v6, v0
-
-    .line 80
-    if-ltz v7, :cond_0
-
-    iget-object v8, p0, Lcom/google/zxing/d/a/a;->b:Lcom/google/zxing/b/b;
-
-    invoke-virtual {v8, v0, v2}, Lcom/google/zxing/b/b;->a(II)Z
-
-    move-result v8
-
-    if-eqz v8, :cond_0
-
-    .line 81
-    div-int/lit8 v8, v7, 0x6
-
-    aget-byte v9, v3, v8
-
-    const/4 v10, 0x1
-
-    rem-int/lit8 v7, v7, 0x6
-
-    rsub-int/lit8 v7, v7, 0x5
-
-    shl-int v7, v10, v7
-
-    int-to-byte v7, v7
-
-    or-int/2addr v7, v9
-
-    int-to-byte v7, v7
-
-    aput-byte v7, v3, v8
-
-    .line 78
-    :cond_0
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_1
-
-    .line 76
-    :cond_1
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    goto :goto_0
-
-    .line 85
-    :cond_2
-    return-object v3
 .end method

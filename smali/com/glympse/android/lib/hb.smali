@@ -1,9 +1,13 @@
 .class Lcom/glympse/android/lib/hb;
 .super Ljava/lang/Object;
-.source "SearchResult.java"
+.source "Region.java"
 
 # interfaces
-.implements Lcom/glympse/android/lib/GSearchResult;
+.implements Lcom/glympse/android/core/GRegion;
+
+
+# static fields
+.field public static final rx:I = 0x8
 
 
 # instance fields
@@ -11,108 +15,265 @@
 
 .field private _longitude:D
 
-.field private _name:Ljava/lang/String;
+.field private hm:Ljava/lang/String;
 
-.field private eq:Ljava/lang/String;
+.field private qg:D
 
-.field private jS:Ljava/lang/String;
+.field public rA:Z
 
-.field private re:Lcom/glympse/android/api/GImage;
+.field private rt:D
 
-.field private rf:Lcom/glympse/android/hal/GVector;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/glympse/android/hal/GVector",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public ru:J
 
-.field private rg:Lcom/glympse/android/hal/GVector;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Lcom/glympse/android/hal/GVector",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field public rv:F
+
+.field public rw:F
+
+.field public ry:[J
+
+.field public rz:Z
 
 
 # direct methods
-.method public constructor <init>(DDLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Lcom/glympse/android/api/GImage;Lcom/glympse/android/hal/GVector;Lcom/glympse/android/hal/GVector;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(DD",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Ljava/lang/String;",
-            "Lcom/glympse/android/api/GImage;",
-            "Lcom/glympse/android/hal/GVector",
-            "<",
-            "Ljava/lang/String;",
-            ">;",
-            "Lcom/glympse/android/hal/GVector",
-            "<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
+.method public constructor <init>(DDDDLjava/lang/String;)V
+    .locals 9
 
     .prologue
-    .line 36
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v7, 0x8
 
-    .line 37
-    iput-wide p1, p0, Lcom/glympse/android/lib/hb;->_latitude:D
+    const v6, 0x7f7fffff
 
-    .line 38
-    iput-wide p3, p0, Lcom/glympse/android/lib/hb;->_longitude:D
-
-    .line 39
-    iput-object p5, p0, Lcom/glympse/android/lib/hb;->_name:Ljava/lang/String;
-
-    .line 40
-    iput-object p6, p0, Lcom/glympse/android/lib/hb;->eq:Ljava/lang/String;
+    const/4 v2, 0x0
 
     .line 41
-    iput-object p7, p0, Lcom/glympse/android/lib/hb;->jS:Ljava/lang/String;
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 36
+    new-array v3, v7, [J
+
+    iput-object v3, p0, Lcom/glympse/android/lib/hb;->ry:[J
 
     .line 42
-    iput-object p8, p0, Lcom/glympse/android/lib/hb;->re:Lcom/glympse/android/api/GImage;
+    iput-wide p1, p0, Lcom/glympse/android/lib/hb;->_latitude:D
 
     .line 43
-    iput-object p9, p0, Lcom/glympse/android/lib/hb;->rf:Lcom/glympse/android/hal/GVector;
+    iput-wide p3, p0, Lcom/glympse/android/lib/hb;->_longitude:D
 
     .line 44
-    iput-object p10, p0, Lcom/glympse/android/lib/hb;->rg:Lcom/glympse/android/hal/GVector;
+    iput-wide p5, p0, Lcom/glympse/android/lib/hb;->rt:D
 
     .line 45
+    move-wide/from16 v0, p7
+
+    iput-wide v0, p0, Lcom/glympse/android/lib/hb;->qg:D
+
+    .line 46
+    move-object/from16 v0, p9
+
+    iput-object v0, p0, Lcom/glympse/android/lib/hb;->hm:Ljava/lang/String;
+
+    .line 48
+    const-wide v4, 0x7fffffffffffffffL
+
+    iput-wide v4, p0, Lcom/glympse/android/lib/hb;->ru:J
+
+    .line 49
+    iput v6, p0, Lcom/glympse/android/lib/hb;->rv:F
+
+    .line 50
+    iput v6, p0, Lcom/glympse/android/lib/hb;->rw:F
+
+    .line 51
+    iput-boolean v2, p0, Lcom/glympse/android/lib/hb;->rz:Z
+
+    .line 52
+    iput-boolean v2, p0, Lcom/glympse/android/lib/hb;->rA:Z
+
+    .line 53
+    :goto_0
+    if-ge v2, v7, :cond_0
+
+    .line 55
+    iget-object v3, p0, Lcom/glympse/android/lib/hb;->ry:[J
+
+    const-wide/16 v4, 0x0
+
+    aput-wide v4, v3, v2
+
+    .line 53
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_0
+
+    .line 57
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public getAddress()Ljava/lang/String;
-    .locals 1
+.method public decode(Lcom/glympse/android/core/GPrimitive;)V
+    .locals 2
 
     .prologue
-    .line 81
-    iget-object v0, p0, Lcom/glympse/android/lib/hb;->eq:Ljava/lang/String;
+    .line 135
+    const-string v0, "lat"
 
-    return-object v0
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lcom/glympse/android/core/GPrimitive;->getDouble(Ljava/lang/String;)D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/glympse/android/lib/hb;->_latitude:D
+
+    .line 136
+    const-string v0, "lng"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lcom/glympse/android/core/GPrimitive;->getDouble(Ljava/lang/String;)D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/glympse/android/lib/hb;->_longitude:D
+
+    .line 137
+    const-string v0, "rds"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lcom/glympse/android/core/GPrimitive;->getDouble(Ljava/lang/String;)D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/glympse/android/lib/hb;->rt:D
+
+    .line 138
+    const-string v0, "acc"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lcom/glympse/android/core/GPrimitive;->getDouble(Ljava/lang/String;)D
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/glympse/android/lib/hb;->qg:D
+
+    .line 139
+    const-string v0, "id"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {p1, v0}, Lcom/glympse/android/core/GPrimitive;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/glympse/android/lib/hb;->hm:Ljava/lang/String;
+
+    .line 140
+    return-void
 .end method
 
-.method public getIcon()Lcom/glympse/android/api/GImage;
+.method public encode(Lcom/glympse/android/core/GPrimitive;I)V
+    .locals 4
+
+    .prologue
+    .line 123
+    const-string v0, "lat"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-wide v2, p0, Lcom/glympse/android/lib/hb;->_latitude:D
+
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+
+    .line 124
+    const-string v0, "lng"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-wide v2, p0, Lcom/glympse/android/lib/hb;->_longitude:D
+
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+
+    .line 125
+    const-string v0, "rds"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-wide v2, p0, Lcom/glympse/android/lib/hb;->rt:D
+
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+
+    .line 126
+    const-string v0, "acc"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-wide v2, p0, Lcom/glympse/android/lib/hb;->qg:D
+
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+
+    .line 127
+    iget-object v0, p0, Lcom/glympse/android/lib/hb;->hm:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 129
+    const-string v0, "id"
+
+    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/glympse/android/lib/hb;->hm:Ljava/lang/String;
+
+    invoke-interface {p1, v0, v1}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 131
+    :cond_0
+    return-void
+.end method
+
+.method public getAccuracy()D
+    .locals 2
+
+    .prologue
+    .line 70
+    iget-wide v0, p0, Lcom/glympse/android/lib/hb;->qg:D
+
+    return-wide v0
+.end method
+
+.method public getId()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 91
-    iget-object v0, p0, Lcom/glympse/android/lib/hb;->re:Lcom/glympse/android/api/GImage;
+    .line 75
+    iget-object v0, p0, Lcom/glympse/android/lib/hb;->hm:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -121,140 +282,107 @@
     .locals 2
 
     .prologue
-    .line 49
+    .line 89
     iget-wide v0, p0, Lcom/glympse/android/lib/hb;->_latitude:D
 
     return-wide v0
+.end method
+
+.method public getLatitudeE6()I
+    .locals 4
+
+    .prologue
+    .line 99
+    iget-wide v0, p0, Lcom/glympse/android/lib/hb;->_latitude:D
+
+    const-wide v2, 0x412e848000000000L
+
+    mul-double/2addr v0, v2
+
+    double-to-int v0, v0
+
+    return v0
 .end method
 
 .method public getLongitude()D
     .locals 2
 
     .prologue
-    .line 54
+    .line 94
     iget-wide v0, p0, Lcom/glympse/android/lib/hb;->_longitude:D
 
     return-wide v0
 .end method
 
-.method public getName()Ljava/lang/String;
-    .locals 5
+.method public getLongitudeE6()I
+    .locals 4
 
     .prologue
-    const-wide/16 v3, 0x0
+    .line 104
+    iget-wide v0, p0, Lcom/glympse/android/lib/hb;->_longitude:D
 
-    .line 60
-    iget-object v0, p0, Lcom/glympse/android/lib/hb;->_name:Ljava/lang/String;
+    const-wide v2, 0x412e848000000000L
 
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
+    mul-double/2addr v0, v2
+
+    double-to-int v0, v0
+
+    return v0
+.end method
+
+.method public getRadius()D
+    .locals 2
+
+    .prologue
+    .line 65
+    iget-wide v0, p0, Lcom/glympse/android/lib/hb;->rt:D
+
+    return-wide v0
+.end method
+
+.method public hasLocation()Z
+    .locals 4
+
+    .prologue
+    .line 84
+    iget-wide v0, p0, Lcom/glympse/android/lib/hb;->_latitude:D
+
+    iget-wide v2, p0, Lcom/glympse/android/lib/hb;->_longitude:D
+
+    invoke-static {v0, v1, v2, v3}, Lcom/glympse/android/lib/Location;->isValid(DD)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    return v0
+.end method
 
-    .line 62
-    new-instance v0, Ljava/lang/StringBuilder;
+.method public isEqual(Lcom/glympse/android/core/GCommon;)Z
+    .locals 2
 
-    const/16 v1, 0x40
+    .prologue
+    .line 113
+    check-cast p1, Lcom/glympse/android/lib/hb;
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
+    .line 114
+    if-eqz p1, :cond_0
 
-    .line 63
-    iget-wide v1, p0, Lcom/glympse/android/lib/hb;->_latitude:D
+    iget-object v0, p0, Lcom/glympse/android/lib/hb;->hm:Ljava/lang/String;
 
-    cmpl-double v1, v3, v1
+    iget-object v1, p1, Lcom/glympse/android/lib/hb;->hm:Ljava/lang/String;
 
-    if-eqz v1, :cond_0
+    invoke-static {v0, v1}, Lcom/glympse/android/hal/Helpers;->safeEquals(Ljava/lang/String;Ljava/lang/String;)Z
 
-    iget-wide v1, p0, Lcom/glympse/android/lib/hb;->_longitude:D
+    move-result v0
 
-    cmpl-double v1, v3, v1
+    if-eqz v0, :cond_0
 
-    if-nez v1, :cond_2
+    const/4 v0, 0x1
 
-    .line 65
-    :cond_0
-    const-string v1, "no name"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 73
     :goto_0
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    return v0
 
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/glympse/android/lib/hb;->_name:Ljava/lang/String;
-
-    .line 76
-    :cond_1
-    iget-object v0, p0, Lcom/glympse/android/lib/hb;->_name:Ljava/lang/String;
-
-    return-object v0
-
-    .line 69
-    :cond_2
-    iget-wide v1, p0, Lcom/glympse/android/lib/hb;->_latitude:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
-
-    .line 70
-    const-string v1, ", "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 71
-    iget-wide v1, p0, Lcom/glympse/android/lib/hb;->_longitude:D
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
-.end method
-
-.method public getPhoneNumberTypes()Lcom/glympse/android/core/GArray;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/glympse/android/core/GArray",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 96
-    iget-object v0, p0, Lcom/glympse/android/lib/hb;->rf:Lcom/glympse/android/hal/GVector;
-
-    return-object v0
-.end method
-
-.method public getPhoneNumbers()Lcom/glympse/android/core/GArray;
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/glympse/android/core/GArray",
-            "<",
-            "Ljava/lang/String;",
-            ">;"
-        }
-    .end annotation
-
-    .prologue
-    .line 101
-    iget-object v0, p0, Lcom/glympse/android/lib/hb;->rg:Lcom/glympse/android/hal/GVector;
-
-    return-object v0
-.end method
-
-.method public getUrl()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 86
-    iget-object v0, p0, Lcom/glympse/android/lib/hb;->jS:Ljava/lang/String;
-
-    return-object v0
 .end method

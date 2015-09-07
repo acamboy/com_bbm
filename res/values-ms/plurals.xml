@@ -4,14 +4,31 @@
         <item quantity="other">Mesej Siaran dihantar kepada %1$s kenalan</item>
         <item quantity="one">Mesej Siaran dihantar kepada 1 kenalan</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d Pelanggan</item>
+        <item quantity="zero">Tiada Pelanggan</item>
+        <item quantity="one">%1$d Pelanggan</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d Ahli</item>
+        <item quantity="one">%1$d Ahli</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">saat</item>
+        <item quantity="one">saat</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Pemasa ditetapkan untuk %1$ saat.</item>
+        <item quantity="one">Pemasa ditetapkan untuk %1$ saat.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s Item</item>
         <item quantity="zero">0 Item</item>
         <item quantity="one">1 Item</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d jemputan sedang menunggu)</item>
-        <item quantity="one">(1 jemputan menunggu)</item>
+        <item quantity="other">(%1$d belum selesai)</item>
+        <item quantity="one">(1 belum selesai)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s Hasil</item>
@@ -22,12 +39,12 @@
         <item quantity="one">1 Sembang Aktif</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">%1$s Pemberitahuan Baru</item>
-        <item quantity="one">1 Pemberitahuan Baru</item>
+        <item quantity="other">%1$s Pemberitahuan Baharu</item>
+        <item quantity="one">1 Pemberitahuan Baharu</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
-        <item quantity="other">%1$s Jemputan Baru</item>
-        <item quantity="one">1 Jemputan Baru</item>
+        <item quantity="other">%1$s Jemputan Baharu</item>
+        <item quantity="one">1 Jemputan Baharu</item>
     </plurals>
     <plurals name="slide_menu_new_updates">
         <item quantity="other">%1$s Item Baru</item>

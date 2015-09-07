@@ -33,7 +33,7 @@
 
 
 # virtual methods
-.method protected abstract a()Ljava/util/ListIterator;
+.method public abstract a()Ljava/util/ListIterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -63,7 +63,7 @@
     return-void
 .end method
 
-.method protected synthetic b()Ljava/util/Iterator;
+.method public synthetic b()Ljava/util/Iterator;
     .locals 1
 
     .prologue
@@ -75,7 +75,7 @@
     return-object v0
 .end method
 
-.method protected synthetic c()Ljava/lang/Object;
+.method public synthetic c()Ljava/lang/Object;
     .locals 1
 
     .prologue

@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/xs;
 .super Ljava/lang/Object;
-.source "OwnProfileActivity.java"
+.source "MainActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/c/gn;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/OwnProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
     .locals 0
 
     .prologue
-    .line 383
-    iput-object p1, p0, Lcom/bbm/ui/activities/xs;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    .line 2716
+    iput-object p1, p0, Lcom/bbm/ui/activities/xs;->a:Lcom/bbm/ui/activities/MainActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,43 +25,18 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
     .locals 2
 
     .prologue
-    .line 386
-    const-string v0, "mRootView Clicked"
+    .line 2719
+    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
 
-    const-class v1, Lcom/bbm/ui/activities/OwnProfileActivity;
+    .line 2720
+    iget-object v1, p0, Lcom/bbm/ui/activities/xs;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/MainActivity;->g(Lcom/bbm/ui/activities/MainActivity;I)Z
 
-    .line 388
-    iget-object v0, p0, Lcom/bbm/ui/activities/xs;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    .line 389
-    iget-object v0, p0, Lcom/bbm/ui/activities/xs;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->b()V
-
-    .line 390
-    iget-object v0, p0, Lcom/bbm/ui/activities/xs;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->b(Lcom/bbm/ui/activities/OwnProfileActivity;)Landroid/widget/LinearLayout;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->requestFocus()Z
-
-    .line 391
-    iget-object v0, p0, Lcom/bbm/ui/activities/xs;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/util/eo;->a(Landroid/app/Activity;Z)V
-
-    .line 392
+    .line 2721
     return-void
 .end method

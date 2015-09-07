@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@color/connection_status_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_width="@dimen/avatar_size" android:layout_height="@dimen/avatar_size">
+        <ProgressBar android:id="@id/limited_connection_progress_bar" android:layout_width="@dimen/limited_connection_size" android:layout_height="@dimen/limited_connection_size" style="?android:attr/progressBarStyleLargeInverse" />
+        <ImageView android:id="@id/limited_connection_image" android:visibility="gone" android:layout_width="@dimen/limited_connection_image_size" android:layout_height="@dimen/limited_connection_image_size" android:src="@drawable/ic_notification" android:scaleType="centerCrop" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/profile_actionbar_name_padding_left" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="@dimen/fontSizeListItemTitle" android:textColor="@color/white" android:ellipsize="none" android:id="@id/limited_connection_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/limited_bbm_access" android:singleLine="true" android:drawablePadding="2.0dip" android:textIsSelectable="false" />
+        <TextView android:textSize="@dimen/fontSizeListItemSubTitle" android:textStyle="italic" android:textColor="@color/white" android:ellipsize="none" android:id="@id/limited_connection_message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/limited_bbm_access_info" android:drawablePadding="2.0dip" android:textIsSelectable="false" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,57 +1,60 @@
 .class final Lcom/bbm/ui/activities/afb;
-.super Lcom/bbm/ui/by;
-.source "StoreActivity.java"
+.super Ljava/lang/Object;
+.source "SelectCategoryActivity.java"
+
+# interfaces
+.implements Lcom/bbm/ui/activities/afh;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/StoreActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/aez;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/StoreActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/aez;)V
     .locals 0
 
     .prologue
-    .line 79
-    iput-object p1, p0, Lcom/bbm/ui/activities/afb;->a:Lcom/bbm/ui/activities/StoreActivity;
+    .line 88
+    iput-object p1, p0, Lcom/bbm/ui/activities/afb;->a:Lcom/bbm/ui/activities/aez;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 1
+.method public final a(Ljava/lang/String;J)V
+    .locals 2
 
     .prologue
-    .line 88
-    iget-object v0, p0, Lcom/bbm/ui/activities/afb;->a:Lcom/bbm/ui/activities/StoreActivity;
+    .line 91
+    invoke-static {}, Lcom/bbm/ui/activities/SelectCategoryActivity;->a()Lcom/bbm/d/a;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/StoreActivity;->finish()V
+    move-result-object v0
 
-    .line 89
-    return-void
-.end method
+    iget-object v1, p0, Lcom/bbm/ui/activities/afb;->a:Lcom/bbm/ui/activities/aez;
 
-.method public final a(I)V
-    .locals 0
+    iget-object v1, v1, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
 
-    .prologue
-    .line 94
-    return-void
-.end method
+    invoke-static {v1}, Lcom/bbm/ui/activities/SelectCategoryActivity;->b(Lcom/bbm/ui/activities/SelectCategoryActivity;)Ljava/util/ArrayList;
 
-.method public final b()V
-    .locals 1
+    move-result-object v1
 
-    .prologue
-    .line 83
-    iget-object v0, p0, Lcom/bbm/ui/activities/afb;->a:Lcom/bbm/ui/activities/StoreActivity;
+    invoke-static {v1, p2, p3}, Lcom/bbm/d/aa;->a(Ljava/util/List;J)Lcom/bbm/d/cx;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/StoreActivity;->a(Lcom/bbm/ui/activities/StoreActivity;)V
+    move-result-object v1
 
-    .line 84
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
+
+    .line 92
+    iget-object v0, p0, Lcom/bbm/ui/activities/afb;->a:Lcom/bbm/ui/activities/aez;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/aez;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectCategoryActivity;->finish()V
+
+    .line 93
     return-void
 .end method

@@ -1,79 +1,111 @@
-.class final Lcom/bbm/ui/activities/aef;
+.class final synthetic Lcom/bbm/ui/activities/aef;
 .super Ljava/lang/Object;
-.source "ShowBarCodeActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "ReportProblemActivity.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ShowBarCodeActivity;
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ShowBarCodeActivity;)V
-    .locals 0
-
-    .prologue
-    .line 236
-    iput-object p1, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/ShowBarCodeActivity;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method static constructor <clinit>()V
     .locals 3
 
     .prologue
-    .line 240
-    new-instance v0, Landroid/content/Intent;
+    .line 300
+    invoke-static {}, Lcom/bbm/ui/activities/ael;->values()[Lcom/bbm/ui/activities/ael;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/ShowBarCodeActivity;
+    move-result-object v0
 
-    const-class v2, Lcom/google/zxing/client/android/CaptureActivity;
+    array-length v0, v0
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    new-array v0, v0, [I
 
-    .line 241
-    const-string v1, "com.google.zxing.client.android.SCAN"
+    sput-object v0, Lcom/bbm/ui/activities/aef;->a:[I
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/activities/aef;->a:[I
 
-    .line 242
-    const-string v1, "SCAN_MODE"
+    sget-object v1, Lcom/bbm/ui/activities/ael;->a:Lcom/bbm/ui/activities/ael;
 
-    const-string v2, "QR_CODE_MODE"
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/ael;->ordinal()I
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    move-result v1
 
-    .line 243
-    const/high16 v1, 0x10000
+    const/4 v2, 0x1
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 244
-    iget-object v1, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/ShowBarCodeActivity;
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/activities/aef;->a:[I
 
-    const/4 v2, 0x0
+    sget-object v1, Lcom/bbm/ui/activities/ael;->b:Lcom/bbm/ui/activities/ael;
 
-    invoke-virtual {v1, v0, v2}, Lcom/bbm/ui/activities/ShowBarCodeActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/ael;->ordinal()I
 
-    .line 245
-    const-string v0, "mCaptureSwitchButton Clicked"
+    move-result v1
 
-    const-class v1, Lcom/bbm/ui/activities/ShowBarCodeActivity;
+    const/4 v2, 0x2
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 246
-    iget-object v0, p0, Lcom/bbm/ui/activities/aef;->a:Lcom/bbm/ui/activities/ShowBarCodeActivity;
+    :goto_1
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/activities/aef;->a:[I
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ShowBarCodeActivity;->finish()V
+    sget-object v1, Lcom/bbm/ui/activities/ael;->c:Lcom/bbm/ui/activities/ael;
 
-    .line 247
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/ael;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x3
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/activities/aef;->a:[I
+
+    sget-object v1, Lcom/bbm/ui/activities/ael;->d:Lcom/bbm/ui/activities/ael;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/ael;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x4
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
+
+    :goto_3
     return-void
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_3
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_2
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_3
+    move-exception v0
+
+    goto :goto_0
 .end method

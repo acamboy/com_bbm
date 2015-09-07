@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/blueDividingLine" android:layout_width="fill_parent" android:layout_height="@dimen/sticker_pack_divider_height" android:src="@color/grid_header_line_color" />
+    <LinearLayout android:id="@id/list_header_content" android:background="@color/app_store_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@android:color/black" android:ellipsize="marquee" android:id="@id/label" android:paddingLeft="@dimen/list_header_view_horizontal_margin" android:paddingTop="@dimen/store_home_page_margin_top" android:paddingRight="@dimen/store_home_page_view_all_margin_right" android:layout_width="0.0px" android:layout_height="wrap_content" android:text="@string/contacts" android:maxLines="1" android:layout_weight="1.0" style="@style/GridHeaderFont" />
+        <TextView android:textColor="@color/blue_link" android:id="@id/viewAll" android:paddingLeft="@dimen/store_home_page_view_all_margin_left" android:paddingTop="@dimen/store_home_page_margin_top" android:paddingRight="@dimen/store_home_page_view_all_margin_right" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_page_view_all_string" android:drawableRight="@drawable/ic_view_all_white" android:drawablePadding="@dimen/store_home_page_view_all_drawable_margin_left" style="@style/ContactsHeaderFont" />
+    </LinearLayout>
+</LinearLayout>

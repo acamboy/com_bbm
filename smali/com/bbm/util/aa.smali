@@ -1,40 +1,26 @@
 .class final Lcom/bbm/util/aa;
 .super Ljava/lang/Object;
-.source "ChannelUtil.java"
+.source "ChannelJoinUtil.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/o;
+.field final synthetic a:I
 
-.field final synthetic b:Ljava/lang/String;
-
-.field final synthetic c:Ljava/lang/String;
-
-.field final synthetic d:Lcom/bbm/ui/activities/by;
-
-.field final synthetic e:Z
+.field final synthetic b:Lcom/bbm/util/y;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/b/o;Ljava/lang/String;Ljava/lang/String;Lcom/bbm/ui/activities/by;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/util/y;I)V
+    .locals 0
 
     .prologue
-    .line 803
-    iput-object p1, p0, Lcom/bbm/util/aa;->a:Lcom/bbm/ui/b/o;
+    .line 134
+    iput-object p1, p0, Lcom/bbm/util/aa;->b:Lcom/bbm/util/y;
 
-    iput-object p2, p0, Lcom/bbm/util/aa;->b:Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/bbm/util/aa;->c:Ljava/lang/String;
-
-    iput-object p4, p0, Lcom/bbm/util/aa;->d:Lcom/bbm/ui/activities/by;
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/bbm/util/aa;->e:Z
+    iput p2, p0, Lcom/bbm/util/aa;->a:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,90 +29,29 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
+.method public final run()V
+    .locals 3
 
     .prologue
-    .line 806
-    iget-object v0, p0, Lcom/bbm/util/aa;->a:Lcom/bbm/ui/b/o;
+    .line 137
+    iget-object v0, p0, Lcom/bbm/util/aa;->b:Lcom/bbm/util/y;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->dismiss()V
+    iget-object v0, v0, Lcom/bbm/util/y;->b:Landroid/app/Activity;
 
-    .line 807
-    new-instance v0, Ljava/lang/StringBuilder;
+    iget-object v1, p0, Lcom/bbm/util/aa;->b:Lcom/bbm/util/y;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    iget-object v1, v1, Lcom/bbm/util/y;->b:Landroid/app/Activity;
 
-    iget-object v1, p0, Lcom/bbm/util/aa;->b:Ljava/lang/String;
+    iget v2, p0, Lcom/bbm/util/aa;->a:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
+    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/util/UUID;->toString()Ljava/lang/String;
+    const/4 v2, 0x1
 
-    move-result-object v1
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;I)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 808
-    iget-object v1, p0, Lcom/bbm/util/aa;->b:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/util/aa;->c:Ljava/lang/String;
-
-    new-instance v3, Lcom/bbm/d/ce;
-
-    invoke-direct {v3, v1, v2}, Lcom/bbm/d/ce;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 809
-    invoke-virtual {v3, v0}, Lcom/bbm/d/ce;->a(Ljava/lang/String;)Lcom/bbm/d/ce;
-
-    .line 810
-    new-instance v1, Lcom/bbm/util/ab;
-
-    invoke-direct {v1, p0}, Lcom/bbm/util/ab;-><init>(Lcom/bbm/util/aa;)V
-
-    .line 825
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcom/bbm/d/a;->c:Lcom/bbm/ui/d/d;
-
-    iget-object v4, p0, Lcom/bbm/util/aa;->d:Lcom/bbm/ui/activities/by;
-
-    invoke-virtual {v2, v0, v1, v4}, Lcom/bbm/ui/d/d;->a(Ljava/lang/String;Lcom/bbm/ui/d/c;Ljava/lang/Object;)V
-
-    .line 826
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d/a;->c:Lcom/bbm/ui/d/d;
-
-    const-string v2, "channelDeletePostError"
-
-    iget-object v4, p0, Lcom/bbm/util/aa;->d:Lcom/bbm/ui/activities/by;
-
-    invoke-virtual {v0, v2, v1, v4}, Lcom/bbm/ui/d/d;->b(Ljava/lang/String;Lcom/bbm/ui/d/c;Ljava/lang/Object;)V
-
-    .line 827
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-
-    .line 828
+    .line 138
     return-void
 .end method

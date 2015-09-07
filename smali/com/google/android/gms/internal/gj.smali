@@ -296,45 +296,45 @@
 .end method
 
 .method public final submitScore(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/lang/String;J)V
-    .locals 6
+    .locals 7
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-object v1, p1
+    move-object v2, p1
 
-    move-object v2, p2
+    move-object v3, p2
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/internal/gj;->submitScore(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/google/android/gms/internal/gj;->submitScore(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/lang/String;JLjava/lang/String;)V
 
     return-void
 .end method
 
 .method public final submitScore(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/lang/String;JLjava/lang/String;)V
-    .locals 6
+    .locals 7
 
     invoke-static {p1}, Lcom/google/android/gms/games/Games;->c(Lcom/google/android/gms/common/api/GoogleApiClient;)Lcom/google/android/gms/internal/fx;
 
-    move-result-object v0
+    move-result-object v1
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    move-object v2, p2
+    move-object v3, p2
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    move-object v5, p5
+    move-object v6, p5
 
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/internal/fx;->a(Lcom/google/android/gms/common/api/a$c;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-virtual/range {v1 .. v6}, Lcom/google/android/gms/internal/fx;->a(Lcom/google/android/gms/common/api/a$c;Ljava/lang/String;JLjava/lang/String;)V
 
     return-void
 .end method
 
 .method public final submitScoreImmediate(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/lang/String;J)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -348,17 +348,17 @@
         }
     .end annotation
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    move-object v0, p0
+    move-object v1, p0
 
-    move-object v1, p1
+    move-object v2, p1
 
-    move-object v2, p2
+    move-object v3, p2
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    invoke-virtual/range {v0 .. v5}, Lcom/google/android/gms/internal/gj;->submitScoreImmediate(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/lang/String;JLjava/lang/String;)Lcom/google/android/gms/common/api/PendingResult;
+    invoke-virtual/range {v1 .. v6}, Lcom/google/android/gms/internal/gj;->submitScoreImmediate(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/lang/String;JLjava/lang/String;)Lcom/google/android/gms/common/api/PendingResult;
 
     move-result-object v0
 
@@ -366,7 +366,7 @@
 .end method
 
 .method public final submitScoreImmediate(Lcom/google/android/gms/common/api/GoogleApiClient;Ljava/lang/String;JLjava/lang/String;)Lcom/google/android/gms/common/api/PendingResult;
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -382,19 +382,19 @@
         }
     .end annotation
 
-    new-instance v0, Lcom/google/android/gms/internal/gj$7;
+    new-instance v1, Lcom/google/android/gms/internal/gj$7;
 
-    move-object v1, p0
+    move-object v2, p0
 
-    move-object v2, p2
+    move-object v3, p2
 
-    move-wide v3, p3
+    move-wide v4, p3
 
-    move-object v5, p5
+    move-object v6, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/google/android/gms/internal/gj$7;-><init>(Lcom/google/android/gms/internal/gj;Ljava/lang/String;JLjava/lang/String;)V
+    invoke-direct/range {v1 .. v6}, Lcom/google/android/gms/internal/gj$7;-><init>(Lcom/google/android/gms/internal/gj;Ljava/lang/String;JLjava/lang/String;)V
 
-    invoke-interface {p1, v0}, Lcom/google/android/gms/common/api/GoogleApiClient;->b(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
+    invoke-interface {p1, v1}, Lcom/google/android/gms/common/api/GoogleApiClient;->b(Lcom/google/android/gms/common/api/a$a;)Lcom/google/android/gms/common/api/a$a;
 
     move-result-object v0
 

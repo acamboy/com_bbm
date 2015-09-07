@@ -14,13 +14,13 @@
     .locals 0
 
     .prologue
-    .line 368
+    .line 385
     iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$FillerView;->a:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
-    .line 369
+    .line 386
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 370
+    .line 387
     return-void
 .end method
 
@@ -30,12 +30,12 @@
     .locals 2
 
     .prologue
-    .line 387
+    .line 404
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$FillerView;->b:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 388
+    .line 405
     iget-object v0, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$FillerView;->b:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getMeasuredHeight()I
@@ -48,11 +48,11 @@
 
     move-result p2
 
-    .line 391
+    .line 408
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/view/View;->onMeasure(II)V
 
-    .line 392
+    .line 409
     return-void
 .end method
 
@@ -60,9 +60,9 @@
     .locals 0
 
     .prologue
-    .line 381
+    .line 398
     iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper$FillerView;->b:Landroid/view/View;
 
-    .line 382
+    .line 399
     return-void
 .end method

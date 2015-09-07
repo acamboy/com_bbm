@@ -1,24 +1,20 @@
-.class public final Landroid/support/v4/app/ae;
-.super Landroid/support/v4/app/an;
-.source "NotificationCompat.java"
+.class final Landroid/support/v4/app/ae;
+.super Ljava/lang/Object;
+.source "FragmentTabHost.java"
 
 
 # instance fields
-.field a:Landroid/graphics/Bitmap;
+.field final a:Ljava/lang/String;
 
-.field b:Landroid/graphics/Bitmap;
+.field final b:Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class",
+            "<*>;"
+        }
+    .end annotation
+.end field
 
-.field c:Z
+.field final c:Landroid/os/Bundle;
 
-
-# direct methods
-.method public constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 656
-    invoke-direct {p0}, Landroid/support/v4/app/an;-><init>()V
-
-    .line 657
-    return-void
-.end method
+.field d:Landroid/support/v4/app/Fragment;

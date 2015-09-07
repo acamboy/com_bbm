@@ -25,10 +25,10 @@
     .locals 1
 
     .prologue
-    .line 1321
-    new-instance v0, Landroid/support/v4/widget/w;
+    .line 1464
+    new-instance v0, Landroid/support/v4/widget/ao;
 
-    invoke-direct {v0}, Landroid/support/v4/widget/w;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/widget/ao;-><init>()V
 
     sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -39,10 +39,10 @@
     .locals 1
 
     .prologue
-    .line 1311
+    .line 1454
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcel;)V
 
-    .line 1312
+    .line 1455
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -54,10 +54,10 @@
     :goto_0
     iput-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->a:Z
 
-    .line 1313
+    .line 1456
     return-void
 
-    .line 1312
+    .line 1455
     :cond_0
     const/4 v0, 0x0
 
@@ -68,7 +68,7 @@
     .locals 0
 
     .prologue
-    .line 1303
+    .line 1446
     invoke-direct {p0, p1}, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -78,10 +78,10 @@
     .locals 0
 
     .prologue
-    .line 1307
+    .line 1450
     invoke-direct {p0, p1}, Landroid/view/View$BaseSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 1308
+    .line 1451
     return-void
 .end method
 
@@ -91,10 +91,10 @@
     .locals 1
 
     .prologue
-    .line 1317
+    .line 1460
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 1318
+    .line 1461
     iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->a:Z
 
     if-eqz v0, :cond_0
@@ -104,10 +104,10 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1319
+    .line 1462
     return-void
 
-    .line 1318
+    .line 1461
     :cond_0
     const/4 v0, 0x0
 

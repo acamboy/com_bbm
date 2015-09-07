@@ -1,229 +1,116 @@
 .class Lcom/glympse/android/lib/dq;
 .super Ljava/lang/Object;
-.source "HistoryListener.java"
+.source "HashCodeBuilder.java"
 
 # interfaces
-.implements Lcom/glympse/android/api/GEventListener;
+.implements Lcom/glympse/android/core/GCommon;
 
 
 # instance fields
-.field private mu:Lcom/glympse/android/lite/GGlympseLite;
+.field private mY:I
 
-.field private mv:Lcom/glympse/android/lib/bv;
+.field private mZ:I
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lite/GGlympseLite;Lcom/glympse/android/lite/GTicketLite;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 116
+    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 117
-    iput-object p1, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
+    .line 30
+    const/16 v0, 0x25
 
-    .line 118
-    check-cast p2, Lcom/glympse/android/lib/bv;
+    iput v0, p0, Lcom/glympse/android/lib/dq;->mY:I
 
-    iput-object p2, p0, Lcom/glympse/android/lib/dq;->mv:Lcom/glympse/android/lib/bv;
+    .line 31
+    const/16 v0, 0x11
 
-    .line 119
+    iput v0, p0, Lcom/glympse/android/lib/dq;->mZ:I
+
+    .line 32
     return-void
 .end method
 
 
 # virtual methods
-.method public eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
-    .locals 8
+.method public a(F)V
+    .locals 2
 
     .prologue
-    const/4 v3, 0x4
+    .line 59
+    iget v0, p0, Lcom/glympse/android/lib/dq;->mZ:I
 
-    const/4 v4, 0x0
+    iget v1, p0, Lcom/glympse/android/lib/dq;->mY:I
 
-    .line 123
-    if-ne v3, p2, :cond_0
+    mul-int/2addr v0, v1
 
-    .line 125
-    check-cast p4, Lcom/glympse/android/api/GTicket;
+    invoke-static {p1}, Lcom/glympse/android/hal/Helpers;->floatToIntBits(F)I
 
-    .line 126
-    and-int/lit8 v0, p3, 0x1
+    move-result v1
 
-    if-eqz v0, :cond_1
+    add-int/2addr v0, v1
 
-    .line 128
-    iget-object v0, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
+    iput v0, p0, Lcom/glympse/android/lib/dq;->mZ:I
 
-    iget-object v1, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
-
-    iget-object v2, p0, Lcom/glympse/android/lib/dq;->mv:Lcom/glympse/android/lib/bv;
-
-    invoke-interface {v0, v1, v3, v2, v4}, Lcom/glympse/android/lite/GGlympseLite;->eventsOccurred(Lcom/glympse/android/lite/GGlympseLite;ILjava/lang/Object;Ljava/lang/Object;)V
-
-    .line 170
-    :cond_0
-    :goto_0
+    .line 60
     return-void
+.end method
 
-    .line 130
-    :cond_1
-    and-int/lit16 v0, p3, 0x2000
+.method public append(I)V
+    .locals 2
 
-    if-eqz v0, :cond_2
+    .prologue
+    .line 70
+    iget v0, p0, Lcom/glympse/android/lib/dq;->mZ:I
 
-    .line 132
-    iget-object v0, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
+    iget v1, p0, Lcom/glympse/android/lib/dq;->mY:I
 
-    iget-object v1, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
+    mul-int/2addr v0, v1
 
-    const/16 v2, 0x40
+    add-int/2addr v0, p1
 
-    iget-object v3, p0, Lcom/glympse/android/lib/dq;->mv:Lcom/glympse/android/lib/bv;
+    iput v0, p0, Lcom/glympse/android/lib/dq;->mZ:I
 
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/glympse/android/lite/GGlympseLite;->eventsOccurred(Lcom/glympse/android/lite/GGlympseLite;ILjava/lang/Object;Ljava/lang/Object;)V
+    .line 71
+    return-void
+.end method
 
-    goto :goto_0
+.method public bP()I
+    .locals 1
 
-    .line 134
-    :cond_2
-    const/high16 v0, 0x10000
+    .prologue
+    .line 80
+    iget v0, p0, Lcom/glympse/android/lib/dq;->mZ:I
 
-    and-int/2addr v0, p3
+    return v0
+.end method
 
-    if-eqz v0, :cond_3
+.method public f(J)V
+    .locals 5
 
-    .line 136
-    iget-object v0, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
+    .prologue
+    .line 49
+    iget v0, p0, Lcom/glympse/android/lib/dq;->mZ:I
 
-    iget-object v1, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
+    iget v1, p0, Lcom/glympse/android/lib/dq;->mY:I
 
-    const/16 v2, 0x100
+    mul-int/2addr v0, v1
 
-    iget-object v3, p0, Lcom/glympse/android/lib/dq;->mv:Lcom/glympse/android/lib/bv;
+    const/16 v1, 0x20
 
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/glympse/android/lite/GGlympseLite;->eventsOccurred(Lcom/glympse/android/lite/GGlympseLite;ILjava/lang/Object;Ljava/lang/Object;)V
+    shr-long v2, p1, v1
 
-    goto :goto_0
+    xor-long/2addr v2, p1
 
-    .line 138
-    :cond_3
-    and-int/lit16 v0, p3, 0x1000
+    long-to-int v1, v2
 
-    if-eqz v0, :cond_6
+    add-int/2addr v0, v1
 
-    .line 142
-    invoke-interface {p4}, Lcom/glympse/android/api/GTicket;->getInvites()Lcom/glympse/android/core/GArray;
+    iput v0, p0, Lcom/glympse/android/lib/dq;->mZ:I
 
-    move-result-object v2
-
-    .line 143
-    invoke-interface {v2}, Lcom/glympse/android/core/GArray;->length()I
-
-    move-result v3
-
-    .line 144
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    :goto_1
-    if-ge v1, v3, :cond_0
-
-    .line 146
-    invoke-interface {v2, v1}, Lcom/glympse/android/core/GArray;->at(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/api/GInvite;
-
-    .line 147
-    const/4 v4, 0x6
-
-    invoke-interface {v0}, Lcom/glympse/android/api/GInvite;->getType()I
-
-    move-result v5
-
-    if-eq v4, v5, :cond_4
-
-    const/4 v4, 0x3
-
-    invoke-interface {v0}, Lcom/glympse/android/api/GInvite;->getState()I
-
-    move-result v5
-
-    if-ne v4, v5, :cond_5
-
-    .line 151
-    :cond_4
-    const/4 v4, 0x1
-
-    invoke-interface {v0, v4}, Lcom/glympse/android/api/GInvite;->completeClientSideSend(Z)Z
-
-    .line 154
-    iget-object v4, p0, Lcom/glympse/android/lib/dq;->mv:Lcom/glympse/android/lib/bv;
-
-    invoke-interface {v4, v0}, Lcom/glympse/android/lib/bv;->c(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/glympse/android/lite/GInviteLite;
-
-    .line 157
-    iget-object v4, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
-
-    iget-object v5, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
-
-    const/16 v6, 0x80
-
-    iget-object v7, p0, Lcom/glympse/android/lib/dq;->mv:Lcom/glympse/android/lib/bv;
-
-    invoke-interface {v4, v5, v6, v7, v0}, Lcom/glympse/android/lite/GGlympseLite;->eventsOccurred(Lcom/glympse/android/lite/GGlympseLite;ILjava/lang/Object;Ljava/lang/Object;)V
-
-    .line 144
-    :cond_5
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    goto :goto_1
-
-    .line 161
-    :cond_6
-    and-int/lit16 v0, p3, 0x4000
-
-    if-eqz v0, :cond_7
-
-    .line 163
-    iget-object v0, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
-
-    const/16 v2, 0x200
-
-    iget-object v3, p0, Lcom/glympse/android/lib/dq;->mv:Lcom/glympse/android/lib/bv;
-
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/glympse/android/lite/GGlympseLite;->eventsOccurred(Lcom/glympse/android/lite/GGlympseLite;ILjava/lang/Object;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 165
-    :cond_7
-    and-int/lit8 v0, p3, 0x2
-
-    if-eqz v0, :cond_0
-
-    .line 167
-    iget-object v0, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/dq;->mu:Lcom/glympse/android/lite/GGlympseLite;
-
-    const/16 v2, 0x8
-
-    iget-object v3, p0, Lcom/glympse/android/lib/dq;->mv:Lcom/glympse/android/lib/bv;
-
-    invoke-interface {v0, v1, v2, v3, v4}, Lcom/glympse/android/lite/GGlympseLite;->eventsOccurred(Lcom/glympse/android/lite/GGlympseLite;ILjava/lang/Object;Ljava/lang/Object;)V
-
-    goto :goto_0
+    .line 50
+    return-void
 .end method

@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout android:orientation="vertical" android:id="@id/chats_fragment_root" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <RelativeLayout android:id="@id/invites_item" android:background="@drawable/list_item_default_background" android:paddingBottom="@dimen/contact_list_item_padding_bottom" android:clickable="true" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content">
-        <ImageView android:id="@id/invites_image" android:background="@drawable/main_tab_bar_background_unselected_gradient" android:layout_width="@dimen/avatar_size" android:layout_height="@dimen/avatar_size" android:layout_marginRight="2.0dip" android:src="@drawable/invite_ic" android:layout_alignParentLeft="true" />
-        <LinearLayout android:orientation="vertical" android:paddingRight="@dimen/contact_list_item_padding_right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_toRightOf="@id/invites_image" android:layout_alignParentRight="true">
-            <TextView android:focusableInTouchMode="false" android:duplicateParentState="false" android:text="@string/invites_received_chat_item" style="@style/ListItemTitleField" />
-            <TextView android:id="@id/invites_count" style="@style/ListItemSubtitleField" />
+    <include android:id="@id/limited_connection_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/view_connection_status" />
+    <LinearLayout android:orientation="vertical" android:id="@id/invites_item" android:background="@drawable/list_item_default_background" android:paddingBottom="@dimen/contact_list_item_padding_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:paddingRight="@dimen/contact_list_item_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/invites_image" android:background="@drawable/main_tab_bar_background_unselected_gradient" android:layout_width="@dimen/avatar_size" android:layout_height="@dimen/avatar_size" android:layout_marginRight="2.0dip" android:src="@drawable/invite_ic" />
+            <LinearLayout android:orientation="vertical" android:paddingRight="@dimen/contact_list_item_padding_right" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/invites_image">
+                <TextView android:focusableInTouchMode="false" android:duplicateParentState="false" android:text="@string/invites_received_chat_item" style="@style/ListItemTitleField" />
+                <TextView android:id="@id/invites_count" style="@style/ListItemSubtitleField" />
+            </LinearLayout>
         </LinearLayout>
-        <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/settings_item_small_padding_bottom" android:layout_below="@id/invites_image" layout="@layout/divider_common" />
-    </RelativeLayout>
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/divider_common" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/system_message_layout" android:background="@drawable/list_item_default_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ExpandableListView android:id="@id/system_message_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@color/white" android:cacheColorHint="#00000000" android:groupIndicator="@null" android:divider="@drawable/list_item_default_divider" android:footerDividersEnabled="true" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/divider_common" />
+    </LinearLayout>
     <RelativeLayout android:orientation="vertical" android:id="@id/chats_empty_layout" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <ImageView android:id="@id/image_chat_zoom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/chats_empty_view_image_right_margin" android:src="@drawable/android_chat_zoom" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <ImageView android:id="@id/image_chat_zoom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/chats_empty_view_image_right_margin" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
         <TextView android:textSize="@dimen/chats_empty_view_text_size" android:textColor="@color/chats_empty_color" android:gravity="center" android:id="@id/chats_empty_label" android:paddingLeft="@dimen/chats_empty_view_text_padding" android:paddingTop="@dimen/chats_status_padding" android:paddingRight="@dimen/chats_empty_view_text_padding" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/chats_status_no_chats" android:layout_below="@id/image_chat_zoom" />
     </RelativeLayout>
-    <ListView android:id="@id/chatslist" android:layout_width="fill_parent" android:layout_height="0.0dip" android:listSelector="@color/white" android:cacheColorHint="#00000000" android:divider="@drawable/list_item_default_divider" android:layout_weight="1.0" android:footerDividersEnabled="true" />
+    <ListView android:id="@id/chatslist" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@color/white" android:cacheColorHint="#00000000" android:divider="@drawable/list_item_default_divider" android:footerDividersEnabled="true" />
 </LinearLayout>

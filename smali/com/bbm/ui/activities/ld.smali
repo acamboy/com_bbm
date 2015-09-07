@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ld;
 .super Ljava/lang/Object;
-.source "GroupConversationActivity.java"
+.source "GroupAdminEditActivity.java"
 
 # interfaces
-.implements Lcom/bbm/j/s;
+.implements Landroid/widget/AdapterView$OnItemLongClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminEditActivity;)V
     .locals 0
 
     .prologue
-    .line 274
-    iput-object p1, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 84
+    iput-object p1, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,150 +25,80 @@
 
 
 # virtual methods
-.method public final a()Z
-    .locals 5
+.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)Z"
+        }
+    .end annotation
 
     .prologue
-    const/4 v1, 0x0
+    .line 88
+    iget-object v0, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
 
-    const/4 v0, 0x1
+    iget-object v0, v0, Lcom/bbm/ui/activities/GroupAdminEditActivity;->a:Lcom/bbm/ui/activities/lg;
 
-    .line 277
-    iget-object v2, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/lg;->getItem(I)Ljava/lang/Object;
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupConversationActivity;->e(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/g/ab;
+    move-result-object v0
 
-    move-result-object v2
+    check-cast v0, Lcom/bbm/g/ac;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 89
+    iget-object v1, v0, Lcom/bbm/g/ac;->c:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/bbm/ui/activities/GroupConversationActivity;->d(Lcom/bbm/ui/activities/GroupConversationActivity;)Ljava/lang/String;
+    .line 90
+    const-string v2, "/"
 
-    move-result-object v3
+    invoke-virtual {v1, v2}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
 
-    invoke-virtual {v2, v3}, Lcom/bbm/g/ab;->o(Ljava/lang/String;)Lcom/bbm/g/n;
+    move-result v2
 
-    move-result-object v2
+    .line 91
+    add-int/lit8 v2, v2, 0x1
 
-    .line 278
-    iget-object v3, v2, Lcom/bbm/g/n;->l:Lcom/bbm/util/bc;
-
-    sget-object v4, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
-
-    if-ne v3, v4, :cond_4
-
-    .line 281
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/ae;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Lcom/bbm/ae;->u()Z
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
 
     move-result v3
 
-    if-nez v3, :cond_0
+    invoke-virtual {v1, v2, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    iget-object v2, v2, Lcom/bbm/g/n;->g:Ljava/lang/String;
+    move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/String;->length()I
+    .line 92
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/f/ae;
 
-    move-result v2
+    move-result-object v3
 
-    if-nez v2, :cond_1
+    iget-object v3, v3, Lcom/bbm/f/ae;->a:Ljava/lang/String;
 
-    .line 283
+    .line 93
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 94
+    iget-object v1, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupAdminEditActivity;->a(Lcom/bbm/ui/activities/GroupAdminEditActivity;Lcom/bbm/g/ac;)Lcom/bbm/g/ac;
+
+    .line 95
+    iget-object v0, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupAdminEditActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupAdminEditActivity;->o()V
+
+    .line 97
     :cond_0
-    iget-object v2, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    const/4 v0, 0x0
 
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/GroupConversationActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v2
-
-    const/4 v3, 0x4
-
-    invoke-virtual {v2, v3}, Landroid/view/Window;->setSoftInputMode(I)V
-
-    .line 284
-    iget-object v2, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupConversationActivity;->f(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/widget/EditText;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/widget/EditText;->requestFocus()Z
-
-    .line 286
-    :cond_1
-    iget-object v2, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupConversationActivity;->i(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/EmoticonInputPanel;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/bbm/ui/EmoticonInputPanel;->h()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    .line 287
-    iget-object v2, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v2}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    .line 288
-    iget-object v2, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v2, v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->a(Lcom/bbm/ui/activities/GroupConversationActivity;Z)V
-
-    .line 297
-    :cond_2
-    :goto_0
     return v0
-
-    .line 290
-    :cond_3
-    iget-object v1, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->i(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/EmoticonInputPanel;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/bbm/ui/EmoticonInputPanel;->c()Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    .line 291
-    iget-object v1, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->i(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/EmoticonInputPanel;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/bbm/ui/EmoticonInputPanel;->e()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_2
-
-    .line 292
-    iget-object v1, p0, Lcom/bbm/ui/activities/ld;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->a(Lcom/bbm/ui/activities/GroupConversationActivity;Z)V
-
-    goto :goto_0
-
-    .line 297
-    :cond_4
-    iget-object v2, v2, Lcom/bbm/g/n;->l:Lcom/bbm/util/bc;
-
-    sget-object v3, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
-
-    if-ne v2, v3, :cond_2
-
-    move v0, v1
-
-    goto :goto_0
 .end method

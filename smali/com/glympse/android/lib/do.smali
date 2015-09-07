@@ -1,116 +1,54 @@
 .class Lcom/glympse/android/lib/do;
 .super Ljava/lang/Object;
-.source "HashCodeBuilder.java"
+.source "HandlerManager.java"
 
 # interfaces
-.implements Lcom/glympse/android/core/GCommon;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private ms:I
+.field private mU:Lcom/glympse/android/lib/dn;
 
-.field private mt:I
+.field private mV:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method public constructor <init>(Lcom/glympse/android/lib/dn;Ljava/lang/Runnable;)V
+    .locals 0
 
     .prologue
-    .line 29
+    .line 159
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
-    const/16 v0, 0x25
+    .line 160
+    iput-object p1, p0, Lcom/glympse/android/lib/do;->mU:Lcom/glympse/android/lib/dn;
 
-    iput v0, p0, Lcom/glympse/android/lib/do;->ms:I
+    .line 161
+    iput-object p2, p0, Lcom/glympse/android/lib/do;->mV:Ljava/lang/Runnable;
 
-    .line 31
-    const/16 v0, 0x11
-
-    iput v0, p0, Lcom/glympse/android/lib/do;->mt:I
-
-    .line 32
+    .line 162
     return-void
 .end method
 
 
 # virtual methods
-.method public a(F)V
-    .locals 2
-
-    .prologue
-    .line 59
-    iget v0, p0, Lcom/glympse/android/lib/do;->mt:I
-
-    iget v1, p0, Lcom/glympse/android/lib/do;->ms:I
-
-    mul-int/2addr v0, v1
-
-    invoke-static {p1}, Lcom/glympse/android/hal/Helpers;->floatToIntBits(F)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lcom/glympse/android/lib/do;->mt:I
-
-    .line 60
-    return-void
-.end method
-
-.method public append(I)V
-    .locals 2
-
-    .prologue
-    .line 70
-    iget v0, p0, Lcom/glympse/android/lib/do;->mt:I
-
-    iget v1, p0, Lcom/glympse/android/lib/do;->ms:I
-
-    mul-int/2addr v0, v1
-
-    add-int/2addr v0, p1
-
-    iput v0, p0, Lcom/glympse/android/lib/do;->mt:I
-
-    .line 71
-    return-void
-.end method
-
-.method public bM()I
-    .locals 1
-
-    .prologue
-    .line 80
-    iget v0, p0, Lcom/glympse/android/lib/do;->mt:I
-
-    return v0
-.end method
-
-.method public f(J)V
+.method public run()V
     .locals 3
 
     .prologue
-    .line 49
-    iget v0, p0, Lcom/glympse/android/lib/do;->mt:I
+    .line 166
+    iget-object v1, p0, Lcom/glympse/android/lib/do;->mU:Lcom/glympse/android/lib/dn;
 
-    iget v1, p0, Lcom/glympse/android/lib/do;->ms:I
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
-    mul-int/2addr v0, v1
+    move-result-object v0
 
-    const/16 v1, 0x20
+    check-cast v0, Ljava/lang/Runnable;
 
-    shr-long v1, p1, v1
+    iget-object v2, p0, Lcom/glympse/android/lib/do;->mV:Ljava/lang/Runnable;
 
-    xor-long/2addr v1, p1
+    invoke-virtual {v1, v0, v2}, Lcom/glympse/android/lib/dn;->a(Ljava/lang/Runnable;Ljava/lang/Runnable;)V
 
-    long-to-int v1, v1
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lcom/glympse/android/lib/do;->mt:I
-
-    .line 50
+    .line 167
     return-void
 .end method

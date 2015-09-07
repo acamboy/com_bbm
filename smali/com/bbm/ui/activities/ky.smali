@@ -1,30 +1,22 @@
 .class final Lcom/bbm/ui/activities/ky;
 .super Ljava/lang/Object;
-.source "GroupConversationActivity.java"
+.source "GroupAdminAddActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnTouchListener;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-.field private b:F
-
-.field private c:F
-
-.field private d:F
-
-.field private e:F
+.field final synthetic a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupAdminAddActivity;)V
     .locals 0
 
     .prologue
-    .line 147
-    iput-object p1, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 93
+    iput-object p1, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -33,173 +25,131 @@
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
-    .locals 2
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)V"
+        }
+    .end annotation
 
     .prologue
-    .line 158
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    .line 97
+    iget-object v0, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
-    move-result v0
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->c(Lcom/bbm/ui/activities/GroupAdminAddActivity;)Landroid/widget/ListView;
 
-    if-nez v0, :cond_1
+    move-result-object v0
 
-    .line 159
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+    invoke-virtual {v0, p3}, Landroid/widget/ListView;->getItemAtPosition(I)Ljava/lang/Object;
 
-    move-result v0
+    move-result-object v0
 
-    iput v0, p0, Lcom/bbm/ui/activities/ky;->b:F
+    check-cast v0, Lcom/bbm/g/ac;
 
-    .line 160
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+    .line 99
+    invoke-virtual {p2}, Landroid/view/View;->isActivated()Z
 
-    move-result v0
+    move-result v1
 
-    iput v0, p0, Lcom/bbm/ui/activities/ky;->d:F
-
-    .line 178
-    :cond_0
-    :goto_0
-    const/4 v0, 0x0
-
-    return v0
-
-    .line 162
-    :cond_1
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
+    if-nez v1, :cond_0
 
     const/4 v1, 0x1
 
-    if-ne v0, v1, :cond_0
+    move v2, v1
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 100
+    :goto_0
+    const v1, 0x7f0b044f
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->a(Lcom/bbm/ui/activities/GroupConversationActivity;)Z
+    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
-    move-result v0
+    move-result-object v1
 
-    if-nez v0, :cond_0
+    check-cast v1, Landroid/widget/TextView;
 
-    .line 163
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
+    if-eqz v2, :cond_1
 
-    move-result v0
+    iget-object v3, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
-    iput v0, p0, Lcom/bbm/ui/activities/ky;->c:F
+    invoke-virtual {v3}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->getResources()Landroid/content/res/Resources;
 
-    .line 164
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
+    move-result-object v3
 
-    move-result v0
+    const v4, 0x7f0901b4
 
-    iput v0, p0, Lcom/bbm/ui/activities/ky;->e:F
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
 
-    .line 165
-    iget-object v0, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    move-result v3
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->getWindow()Landroid/view/Window;
+    :goto_1
+    invoke-virtual {v1, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    move-result-object v0
+    .line 103
+    invoke-virtual {p2, v2}, Landroid/view/View;->setActivated(Z)V
 
-    if-eqz v0, :cond_2
+    .line 104
+    if-eqz v2, :cond_2
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 105
+    iget-object v1, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->getWindow()Landroid/view/Window;
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->a(Lcom/bbm/ui/activities/GroupAdminAddActivity;)Ljava/util/ArrayList;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
+    iget-object v0, v0, Lcom/bbm/g/ac;->c:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    if-eqz v0, :cond_2
+    .line 109
+    :goto_2
+    iget-object v0, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
 
-    .line 167
-    iget v0, p0, Lcom/bbm/ui/activities/ky;->e:F
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->d(Lcom/bbm/ui/activities/GroupAdminAddActivity;)V
 
-    iget v1, p0, Lcom/bbm/ui/activities/ky;->d:F
+    .line 110
+    return-void
 
-    sub-float/2addr v0, v1
+    .line 99
+    :cond_0
+    const/4 v1, 0x0
 
-    invoke-static {v0}, Ljava/lang/Math;->abs(F)F
-
-    move-result v0
-
-    const/high16 v1, 0x41f00000
-
-    cmpg-float v0, v0, v1
-
-    if-gez v0, :cond_2
-
-    .line 168
-    iget-object v0, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/eo;->b(Landroid/app/Activity;)V
-
-    .line 169
-    iget-object v0, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->b()V
-
-    .line 170
-    iget-object v0, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->getWindow()Landroid/view/Window;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/Window;->getCurrentFocus()Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->clearFocus()V
-
-    .line 173
-    :cond_2
-    iget v0, p0, Lcom/bbm/ui/activities/ky;->c:F
-
-    iget v1, p0, Lcom/bbm/ui/activities/ky;->b:F
-
-    sub-float/2addr v0, v1
-
-    const/high16 v1, 0x43480000
-
-    cmpl-float v0, v0, v1
-
-    if-lez v0, :cond_0
-
-    iget v0, p0, Lcom/bbm/ui/activities/ky;->e:F
-
-    iget v1, p0, Lcom/bbm/ui/activities/ky;->d:F
-
-    sub-float/2addr v0, v1
-
-    const/high16 v1, 0x42480000
-
-    cmpg-float v0, v0, v1
-
-    if-gez v0, :cond_0
-
-    iget v0, p0, Lcom/bbm/ui/activities/ky;->e:F
-
-    iget v1, p0, Lcom/bbm/ui/activities/ky;->d:F
-
-    sub-float/2addr v0, v1
-
-    const/high16 v1, -0x3db80000
-
-    cmpl-float v0, v0, v1
-
-    if-lez v0, :cond_0
-
-    .line 175
-    iget-object v0, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->l()V
+    move v2, v1
 
     goto :goto_0
+
+    .line 100
+    :cond_1
+    iget-object v3, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
+
+    invoke-virtual {v3}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v3
+
+    const v4, 0x7f090010
+
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v3
+
+    goto :goto_1
+
+    .line 107
+    :cond_2
+    iget-object v1, p0, Lcom/bbm/ui/activities/ky;->a:Lcom/bbm/ui/activities/GroupAdminAddActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupAdminAddActivity;->a(Lcom/bbm/ui/activities/GroupAdminAddActivity;)Ljava/util/ArrayList;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lcom/bbm/g/ac;->c:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
+
+    goto :goto_2
 .end method

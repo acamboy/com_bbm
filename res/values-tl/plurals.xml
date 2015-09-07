@@ -4,14 +4,31 @@
         <item quantity="other">Ipinadala ang Mensahe sa Pag-broadcast sa %1$s (na) contact</item>
         <item quantity="one">Ipinadala ang Mensahe sa Pag-broadcast sa 1 contact</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d (na) Subscriber</item>
+        <item quantity="zero">Walang Subscriber</item>
+        <item quantity="one">%1$d Subscriber</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d (na) Miyembro</item>
+        <item quantity="one">%1$d Miyembro</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">segundo</item>
+        <item quantity="one">segundo</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Nai-set ang timer ng %1$d segundo</item>
+        <item quantity="one">Nai-set ang timer ng %1$d segundo.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">%1$s (na) Item</item>
         <item quantity="zero">0 Item</item>
         <item quantity="one">1 Item</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(%1$d (na) imbitasyon ang naghihintay)</item>
-        <item quantity="one">(1 imbitasyon ang naghihintay)</item>
+        <item quantity="other">(%1$d ang nakabinbin)</item>
+        <item quantity="one">(1 ang nakabinbin)</item>
     </plurals>
     <plurals name="search_number_of_results">
         <item quantity="other">%1$s (na) Resulta</item>
@@ -31,7 +48,7 @@
     </plurals>
     <plurals name="slide_menu_new_updates">
         <item quantity="other">%1$s Mga Bagong Item</item>
-        <item quantity="one">1 Bagong Item</item>
+        <item quantity="one">1 (na) Bagong Item</item>
     </plurals>
     <plurals name="slide_menu_total_contacts">
         <item quantity="other">%1$s (na) Contact</item>
@@ -39,7 +56,7 @@
     </plurals>
     <plurals name="slide_menu_total_groups">
         <item quantity="other">%1$s (na) Grupo</item>
-        <item quantity="one">1 Grupo</item>
+        <item quantity="one">1 (na) Grupo</item>
     </plurals>
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s (na) Komento</item>

@@ -1,45 +1,33 @@
-.class final Lcom/bbm/ui/a/v;
+.class public final Lcom/bbm/ui/a/v;
 .super Ljava/lang/Object;
-.source "GroupMessageListAdapter.java"
+.source "ChannelPostCommentListAdapter.java"
 
 
 # instance fields
-.field a:Lcom/bbm/ui/ObservingImageView;
+.field public a:Lcom/bbm/ui/SquaredObservingImageView;
 
-.field b:Landroid/widget/ImageView;
+.field public b:Landroid/widget/ImageView;
 
-.field c:Landroid/widget/TextView;
+.field public c:Landroid/widget/ImageView;
 
-.field d:Landroid/widget/TextView;
+.field public d:Landroid/widget/TextView;
 
-.field e:Landroid/widget/TextView;
+.field public e:Landroid/widget/TextView;
 
-.field f:I
+.field public f:Landroid/widget/TextView;
 
-.field g:Z
+.field public g:Landroid/widget/TextView;
 
-.field final synthetic h:Lcom/bbm/ui/a/s;
+.field public h:Landroid/widget/ImageView;
 
 
 # direct methods
-.method private constructor <init>(Lcom/bbm/ui/a/s;)V
+.method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 54
-    iput-object p1, p0, Lcom/bbm/ui/a/v;->h:Lcom/bbm/ui/a/s;
-
+    .line 397
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method synthetic constructor <init>(Lcom/bbm/ui/a/s;B)V
-    .locals 0
-
-    .prologue
-    .line 54
-    invoke-direct {p0, p1}, Lcom/bbm/ui/a/v;-><init>(Lcom/bbm/ui/a/s;)V
 
     return-void
 .end method

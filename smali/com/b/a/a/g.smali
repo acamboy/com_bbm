@@ -41,7 +41,7 @@
     .line 100
     iget-object v0, p0, Lcom/b/a/a/g;->a:Lcom/b/a/a/f;
 
-    invoke-virtual {v0}, Lcom/b/a/a/f;->getActivity()Landroid/support/v4/app/h;
+    invoke-virtual {v0}, Lcom/b/a/a/f;->getActivity()Landroid/support/v4/app/q;
 
     move-result-object v0
 

@@ -55,7 +55,7 @@
 .end method
 
 .method public static createPlace(DDLjava/lang/String;)Lcom/glympse/android/api/GPlace;
-    .locals 1
+    .locals 2
 
     .prologue
     .line 63

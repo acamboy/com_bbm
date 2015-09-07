@@ -1,82 +1,72 @@
 .class final Landroid/support/v4/app/i;
-.super Landroid/os/Handler;
-.source "FragmentActivity.java"
+.super Ljava/lang/Object;
+.source "BackStackRecord.java"
+
+# interfaces
+.implements Landroid/view/ViewTreeObserver$OnPreDrawListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/support/v4/app/h;
+.field final synthetic a:Landroid/view/View;
+
+.field final synthetic b:Landroid/support/v4/app/k;
+
+.field final synthetic c:I
+
+.field final synthetic d:Ljava/lang/Object;
+
+.field final synthetic e:Landroid/support/v4/app/f;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/app/h;)V
+.method constructor <init>(Landroid/support/v4/app/f;Landroid/view/View;Landroid/support/v4/app/k;ILjava/lang/Object;)V
     .locals 0
 
     .prologue
-    .line 86
-    iput-object p1, p0, Landroid/support/v4/app/i;->a:Landroid/support/v4/app/h;
+    .line 1365
+    iput-object p1, p0, Landroid/support/v4/app/i;->e:Landroid/support/v4/app/f;
 
-    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+    iput-object p2, p0, Landroid/support/v4/app/i;->a:Landroid/view/View;
+
+    iput-object p3, p0, Landroid/support/v4/app/i;->b:Landroid/support/v4/app/k;
+
+    iput p4, p0, Landroid/support/v4/app/i;->c:I
+
+    iput-object p5, p0, Landroid/support/v4/app/i;->d:Ljava/lang/Object;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 2
+.method public final onPreDraw()Z
+    .locals 4
 
     .prologue
-    .line 89
-    iget v0, p1, Landroid/os/Message;->what:I
+    .line 1367
+    iget-object v0, p0, Landroid/support/v4/app/i;->a:Landroid/view/View;
 
-    packed-switch v0, :pswitch_data_0
+    invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    .line 100
-    invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
+    move-result-object v0
 
-    .line 102
-    :cond_0
-    :goto_0
-    return-void
+    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 91
-    :pswitch_0
-    iget-object v0, p0, Landroid/support/v4/app/i;->a:Landroid/support/v4/app/h;
+    .line 1368
+    iget-object v0, p0, Landroid/support/v4/app/i;->e:Landroid/support/v4/app/f;
 
-    iget-boolean v0, v0, Landroid/support/v4/app/h;->mStopped:Z
+    iget-object v1, p0, Landroid/support/v4/app/i;->b:Landroid/support/v4/app/k;
 
-    if-eqz v0, :cond_0
+    iget v2, p0, Landroid/support/v4/app/i;->c:I
 
-    .line 92
-    iget-object v0, p0, Landroid/support/v4/app/i;->a:Landroid/support/v4/app/h;
+    iget-object v3, p0, Landroid/support/v4/app/i;->d:Ljava/lang/Object;
 
-    const/4 v1, 0x0
+    invoke-static {v0, v1, v2, v3}, Landroid/support/v4/app/f;->a(Landroid/support/v4/app/f;Landroid/support/v4/app/k;ILjava/lang/Object;)V
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/h;->doReallyStop(Z)V
+    .line 1369
+    const/4 v0, 0x1
 
-    goto :goto_0
-
-    .line 96
-    :pswitch_1
-    iget-object v0, p0, Landroid/support/v4/app/i;->a:Landroid/support/v4/app/h;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/h;->onResumeFragments()V
-
-    .line 97
-    iget-object v0, p0, Landroid/support/v4/app/i;->a:Landroid/support/v4/app/h;
-
-    iget-object v0, v0, Landroid/support/v4/app/h;->mFragments:Landroid/support/v4/app/o;
-
-    invoke-virtual {v0}, Landroid/support/v4/app/o;->d()Z
-
-    goto :goto_0
-
-    .line 89
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
+    return v0
 .end method

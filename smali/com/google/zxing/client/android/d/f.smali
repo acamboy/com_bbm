@@ -32,9 +32,7 @@
     .line 45
     iget-object v0, p0, Lcom/google/zxing/client/android/d/f;->a:Lcom/google/zxing/client/android/d/e;
 
-    invoke-virtual {v0}, Lcom/google/zxing/client/android/d/e;->c()Lcom/google/zxing/client/a/q;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/google/zxing/client/android/d/j;->a:Lcom/google/zxing/client/a/q;
 
     check-cast v0, Lcom/google/zxing/client/a/o;
 

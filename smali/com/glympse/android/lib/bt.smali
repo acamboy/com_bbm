@@ -1,26 +1,76 @@
 .class interface abstract Lcom/glympse/android/lib/bt;
 .super Ljava/lang/Object;
-.source "GNetworkManagerPrivate.java"
+.source "GListNode.java"
 
 # interfaces
-.implements Lcom/glympse/android/api/GNetworkManager;
+.implements Lcom/glympse/android/core/GCommon;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lcom/glympse/android/core/GCommon;"
+    }
+.end annotation
 
 
 # virtual methods
-.method public abstract c(Z)V
+.method public abstract a(Lcom/glympse/android/lib/bt;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glympse/android/lib/bt",
+            "<TT;>;)V"
+        }
+    .end annotation
 .end method
 
-.method public abstract d(Z)V
+.method public abstract b(Lcom/glympse/android/lib/bt;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/glympse/android/lib/bt",
+            "<TT;>;)V"
+        }
+    .end annotation
 .end method
 
-.method public abstract e(Z)V
+.method public abstract be()Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
 .end method
 
-.method public abstract f(Z)V
+.method public abstract bf()Lcom/glympse/android/lib/bt;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/glympse/android/lib/bt",
+            "<TT;>;"
+        }
+    .end annotation
 .end method
 
-.method public abstract start(Lcom/glympse/android/lib/GGlympsePrivate;)V
+.method public abstract bg()Lcom/glympse/android/lib/bt;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Lcom/glympse/android/lib/bt",
+            "<TT;>;"
+        }
+    .end annotation
 .end method
 
-.method public abstract stop()V
+.method public abstract d(Ljava/lang/Object;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
 .end method

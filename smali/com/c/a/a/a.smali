@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static d:I
+.field static b:I
 
-.field private static e:I
+.field static c:I
 
-.field private static f:I
+.field static d:I
 
 .field private static g:I
 
@@ -32,11 +32,11 @@
 
 
 # instance fields
-.field private final a:Ljava/util/concurrent/atomic/AtomicBoolean;
+.field final a:Lcom/c/a/a/b;
 
-.field private final b:Lcom/c/a/a/b;
+.field private final e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-.field private final c:Landroid/content/Context;
+.field private final f:Landroid/content/Context;
 
 
 # direct methods
@@ -47,37 +47,37 @@
     .line 368
     const/4 v0, 0x0
 
-    sput v0, Lcom/c/a/a/a;->d:I
+    sput v0, Lcom/c/a/a/a;->g:I
 
     .line 369
     const/4 v0, 0x1
 
-    sput v0, Lcom/c/a/a/a;->e:I
+    sput v0, Lcom/c/a/a/a;->b:I
 
     .line 370
     const/4 v0, 0x2
 
-    sput v0, Lcom/c/a/a/a;->f:I
+    sput v0, Lcom/c/a/a/a;->c:I
 
     .line 371
     const/4 v0, 0x4
 
-    sput v0, Lcom/c/a/a/a;->g:I
+    sput v0, Lcom/c/a/a/a;->h:I
 
     .line 372
     const/4 v0, 0x5
 
-    sput v0, Lcom/c/a/a/a;->h:I
+    sput v0, Lcom/c/a/a/a;->i:I
 
     .line 373
     const/4 v0, 0x6
 
-    sput v0, Lcom/c/a/a/a;->i:I
+    sput v0, Lcom/c/a/a/a;->j:I
 
     .line 374
     const/4 v0, 0x7
 
-    sput v0, Lcom/c/a/a/a;->j:I
+    sput v0, Lcom/c/a/a/a;->d:I
 
     .line 378
     new-instance v0, Ljava/util/HashMap;
@@ -97,7 +97,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 28
-    iput-object p1, p0, Lcom/c/a/a/a;->c:Landroid/content/Context;
+    iput-object p1, p0, Lcom/c/a/a/a;->f:Landroid/content/Context;
 
     .line 29
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -106,17 +106,27 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;-><init>(Z)V
 
-    iput-object v0, p0, Lcom/c/a/a/a;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iput-object v0, p0, Lcom/c/a/a/a;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     .line 30
     new-instance v0, Lcom/c/a/a/b;
 
     invoke-direct {v0, p0}, Lcom/c/a/a/b;-><init>(Lcom/c/a/a/a;)V
 
-    iput-object v0, p0, Lcom/c/a/a/a;->b:Lcom/c/a/a/b;
+    iput-object v0, p0, Lcom/c/a/a/a;->a:Lcom/c/a/a/b;
 
     .line 31
     return-void
+.end method
+
+.method static synthetic a()I
+    .locals 1
+
+    .prologue
+    .line 23
+    sget v0, Lcom/c/a/a/a;->h:I
+
+    return v0
 .end method
 
 .method static synthetic a(Lcom/c/a/a/a;)Landroid/content/Context;
@@ -124,7 +134,7 @@
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/c/a/a/a;->c:Landroid/content/Context;
+    iget-object v0, p0, Lcom/c/a/a/a;->f:Landroid/content/Context;
 
     return-object v0
 .end method
@@ -209,7 +219,7 @@
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/c/a/a/a;->a:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, Lcom/c/a/a/a;->e:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
@@ -266,7 +276,7 @@
 
     .prologue
     .line 23
-    sget v0, Lcom/c/a/a/a;->g:I
+    sget v0, Lcom/c/a/a/a;->c:I
 
     return v0
 .end method
@@ -288,7 +298,7 @@
 
     .prologue
     .line 23
-    sget v0, Lcom/c/a/a/a;->f:I
+    sget v0, Lcom/c/a/a/a;->j:I
 
     return v0
 .end method
@@ -298,7 +308,7 @@
 
     .prologue
     .line 23
-    sget v0, Lcom/c/a/a/a;->i:I
+    sget v0, Lcom/c/a/a/a;->d:I
 
     return v0
 .end method
@@ -308,7 +318,7 @@
 
     .prologue
     .line 23
-    sget v0, Lcom/c/a/a/a;->j:I
+    sget v0, Lcom/c/a/a/a;->g:I
 
     return v0
 .end method
@@ -318,7 +328,7 @@
 
     .prologue
     .line 23
-    sget v0, Lcom/c/a/a/a;->d:I
+    sget v0, Lcom/c/a/a/a;->b:I
 
     return v0
 .end method
@@ -328,73 +338,14 @@
 
     .prologue
     .line 23
-    sget v0, Lcom/c/a/a/a;->e:I
-
-    return v0
-.end method
-
-.method static synthetic h()I
-    .locals 1
-
-    .prologue
-    .line 23
-    sget v0, Lcom/c/a/a/a;->h:I
+    sget v0, Lcom/c/a/a/a;->i:I
 
     return v0
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
-
-    .prologue
-    .line 78
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
-
-    move-result-object v0
-
-    .line 79
-    sget v1, Lcom/c/a/a/a;->f:I
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    .line 81
-    iget-object v1, p0, Lcom/c/a/a/a;->b:Lcom/c/a/a/b;
-
-    invoke-virtual {v1, v0}, Lcom/c/a/a/b;->a(Landroid/os/Message;)V
-
-    .line 82
-    return-void
-.end method
-
 .method public final a(Lorg/json/JSONObject;)V
-    .locals 2
-
-    .prologue
-    .line 62
-    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
-
-    move-result-object v0
-
-    .line 63
-    sget v1, Lcom/c/a/a/a;->e:I
-
-    iput v1, v0, Landroid/os/Message;->what:I
-
-    .line 64
-    iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
-
-    .line 66
-    iget-object v1, p0, Lcom/c/a/a/a;->b:Lcom/c/a/a/b;
-
-    invoke-virtual {v1, v0}, Lcom/c/a/a/b;->a(Landroid/os/Message;)V
-
-    .line 67
-    return-void
-.end method
-
-.method public final b(Lorg/json/JSONObject;)V
     .locals 2
 
     .prologue
@@ -404,7 +355,7 @@
     move-result-object v0
 
     .line 71
-    sget v1, Lcom/c/a/a/a;->d:I
+    sget v1, Lcom/c/a/a/a;->g:I
 
     iput v1, v0, Landroid/os/Message;->what:I
 
@@ -412,7 +363,7 @@
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     .line 74
-    iget-object v1, p0, Lcom/c/a/a/a;->b:Lcom/c/a/a/b;
+    iget-object v1, p0, Lcom/c/a/a/a;->a:Lcom/c/a/a/b;
 
     invoke-virtual {v1, v0}, Lcom/c/a/a/b;->a(Landroid/os/Message;)V
 

@@ -37,7 +37,7 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;J)V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0}, Lcom/google/android/gms/analytics/HitBuilders$TimingBuilder;-><init>()V
 
@@ -83,7 +83,7 @@
 .end method
 
 .method public setValue(J)Lcom/google/android/gms/analytics/HitBuilders$TimingBuilder;
-    .locals 2
+    .locals 3
 
     const-string v0, "&utt"
 

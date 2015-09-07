@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/qk;
 .super Ljava/lang/Object;
-.source "GroupPictureCommentsActivity.java"
+.source "GroupLobbyActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnKeyListener;
+.implements Lcom/bbm/ui/b/ah;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
     .locals 0
 
     .prologue
-    .line 276
-    iput-object p1, p0, Lcom/bbm/ui/activities/qk;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    .line 835
+    iput-object p1, p0, Lcom/bbm/ui/activities/qk;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,63 +25,21 @@
 
 
 # virtual methods
-.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
-    .locals 4
+.method public final a()V
+    .locals 3
 
     .prologue
-    const/4 v1, 0x1
+    .line 839
+    iget-object v0, p0, Lcom/bbm/ui/activities/qk;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    const/4 v2, 0x0
+    const/16 v1, 0x2726
 
-    .line 279
-    iget-object v0, p0, Lcom/bbm/ui/activities/qk;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    iget-object v2, p0, Lcom/bbm/ui/activities/qk;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->h(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)Z
+    iget-object v2, v2, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
 
-    move-result v0
+    invoke-static {v0, v1, v2}, Lcom/bbm/h/aq;->a(Landroid/app/Activity;ILjava/lang/String;)V
 
-    if-eqz v0, :cond_0
-
-    .line 280
-    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
-
-    move-result v0
-
-    if-ne v0, v1, :cond_0
-
-    const/16 v0, 0x42
-
-    if-ne p2, v0, :cond_0
-
-    .line 282
-    iget-object v0, p0, Lcom/bbm/ui/activities/qk;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->i(Lcom/bbm/ui/activities/GroupPictureCommentsActivity;)V
-
-    .line 283
-    iget-object v0, p0, Lcom/bbm/ui/activities/qk;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
-
-    const-string v3, "input_method"
-
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    .line 284
-    const/4 v3, 0x2
-
-    invoke-virtual {v0, v3, v2}, Landroid/view/inputmethod/InputMethodManager;->toggleSoftInput(II)V
-
-    move v0, v1
-
-    .line 288
-    :goto_0
-    return v0
-
-    :cond_0
-    move v0, v2
-
-    goto :goto_0
+    .line 840
+    return-void
 .end method

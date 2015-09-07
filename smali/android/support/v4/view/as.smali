@@ -4,7 +4,7 @@
 
 
 # static fields
-.field static final a:Landroid/support/v4/view/bb;
+.field static final a:Landroid/support/v4/view/bc;
 
 
 # direct methods
@@ -12,131 +12,160 @@
     .locals 2
 
     .prologue
-    .line 548
+    .line 1151
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 549
-    const/16 v1, 0x13
+    .line 1152
+    const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 550
-    new-instance v0, Landroid/support/v4/view/ba;
-
-    invoke-direct {v0}, Landroid/support/v4/view/ba;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
-
-    .line 564
-    :goto_0
-    return-void
-
-    .line 551
-    :cond_0
-    const/16 v1, 0x11
-
-    if-lt v0, v1, :cond_1
-
-    .line 552
-    new-instance v0, Landroid/support/v4/view/az;
-
-    invoke-direct {v0}, Landroid/support/v4/view/az;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
-
-    goto :goto_0
-
-    .line 553
-    :cond_1
-    const/16 v1, 0x10
-
-    if-lt v0, v1, :cond_2
-
-    .line 554
-    new-instance v0, Landroid/support/v4/view/ay;
-
-    invoke-direct {v0}, Landroid/support/v4/view/ay;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
-
-    goto :goto_0
-
-    .line 555
-    :cond_2
-    const/16 v1, 0xe
-
-    if-lt v0, v1, :cond_3
-
-    .line 556
-    new-instance v0, Landroid/support/v4/view/ax;
-
-    invoke-direct {v0}, Landroid/support/v4/view/ax;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
-
-    goto :goto_0
-
-    .line 557
-    :cond_3
-    const/16 v1, 0xb
-
-    if-lt v0, v1, :cond_4
-
-    .line 558
-    new-instance v0, Landroid/support/v4/view/aw;
-
-    invoke-direct {v0}, Landroid/support/v4/view/aw;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
-
-    goto :goto_0
-
-    .line 559
-    :cond_4
-    const/16 v1, 0x9
-
-    if-lt v0, v1, :cond_5
-
-    .line 560
-    new-instance v0, Landroid/support/v4/view/av;
-
-    invoke-direct {v0}, Landroid/support/v4/view/av;-><init>()V
-
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
-
-    goto :goto_0
-
-    .line 562
-    :cond_5
+    .line 1153
     new-instance v0, Landroid/support/v4/view/at;
 
     invoke-direct {v0}, Landroid/support/v4/view/at;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    .line 1171
+    :goto_0
+    return-void
+
+    .line 1154
+    :cond_0
+    const/16 v1, 0x13
+
+    if-lt v0, v1, :cond_1
+
+    .line 1155
+    new-instance v0, Landroid/support/v4/view/bb;
+
+    invoke-direct {v0}, Landroid/support/v4/view/bb;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    goto :goto_0
+
+    .line 1156
+    :cond_1
+    const/16 v1, 0x11
+
+    if-lt v0, v1, :cond_2
+
+    .line 1157
+    new-instance v0, Landroid/support/v4/view/ba;
+
+    invoke-direct {v0}, Landroid/support/v4/view/ba;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    goto :goto_0
+
+    .line 1158
+    :cond_2
+    const/16 v1, 0x10
+
+    if-lt v0, v1, :cond_3
+
+    .line 1159
+    new-instance v0, Landroid/support/v4/view/az;
+
+    invoke-direct {v0}, Landroid/support/v4/view/az;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    goto :goto_0
+
+    .line 1160
+    :cond_3
+    const/16 v1, 0xe
+
+    if-lt v0, v1, :cond_4
+
+    .line 1161
+    new-instance v0, Landroid/support/v4/view/ay;
+
+    invoke-direct {v0}, Landroid/support/v4/view/ay;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    goto :goto_0
+
+    .line 1162
+    :cond_4
+    const/16 v1, 0xb
+
+    if-lt v0, v1, :cond_5
+
+    .line 1163
+    new-instance v0, Landroid/support/v4/view/ax;
+
+    invoke-direct {v0}, Landroid/support/v4/view/ax;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    goto :goto_0
+
+    .line 1164
+    :cond_5
+    const/16 v1, 0x9
+
+    if-lt v0, v1, :cond_6
+
+    .line 1165
+    new-instance v0, Landroid/support/v4/view/aw;
+
+    invoke-direct {v0}, Landroid/support/v4/view/aw;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    goto :goto_0
+
+    .line 1166
+    :cond_6
+    const/4 v1, 0x7
+
+    if-lt v0, v1, :cond_7
+
+    .line 1167
+    new-instance v0, Landroid/support/v4/view/av;
+
+    invoke-direct {v0}, Landroid/support/v4/view/av;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    goto :goto_0
+
+    .line 1169
+    :cond_7
+    new-instance v0, Landroid/support/v4/view/au;
+
+    invoke-direct {v0}, Landroid/support/v4/view/au;-><init>()V
+
+    sput-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
     goto :goto_0
 .end method
 
-.method public static a(Landroid/view/View;)I
+.method public static a(Landroid/view/View;F)V
     .locals 1
 
     .prologue
-    .line 598
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    .line 2056
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bb;->a(Landroid/view/View;)I
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->b(Landroid/view/View;F)V
 
-    move-result v0
-
-    return v0
+    .line 2057
+    return-void
 .end method
 
 .method public static a(Landroid/view/View;IIII)V
     .locals 6
 
     .prologue
-    .line 789
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    .line 1407
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
     move-object v1, p0
 
@@ -148,9 +177,9 @@
 
     move v5, p4
 
-    invoke-interface/range {v0 .. v5}, Landroid/support/v4/view/bb;->a(Landroid/view/View;IIII)V
+    invoke-interface/range {v0 .. v5}, Landroid/support/v4/view/bc;->a(Landroid/view/View;IIII)V
 
-    .line 790
+    .line 1408
     return-void
 .end method
 
@@ -158,12 +187,12 @@
     .locals 1
 
     .prologue
-    .line 953
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    .line 1579
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
-    invoke-interface {v0, p0, p1, p2}, Landroid/support/v4/view/bb;->a(Landroid/view/View;ILandroid/graphics/Paint;)V
+    invoke-interface {v0, p0, p1, p2}, Landroid/support/v4/view/bc;->a(Landroid/view/View;ILandroid/graphics/Paint;)V
 
-    .line 954
+    .line 1580
     return-void
 .end method
 
@@ -171,12 +200,12 @@
     .locals 1
 
     .prologue
-    .line 1029
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    .line 1656
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bb;->a(Landroid/view/View;Landroid/graphics/Paint;)V
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->a(Landroid/view/View;Landroid/graphics/Paint;)V
 
-    .line 1030
+    .line 1657
     return-void
 .end method
 
@@ -184,12 +213,12 @@
     .locals 1
 
     .prologue
-    .line 735
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    .line 1343
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bb;->a(Landroid/view/View;Landroid/support/v4/view/a;)V
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->a(Landroid/view/View;Landroid/support/v4/view/a;)V
 
-    .line 736
+    .line 1344
     return-void
 .end method
 
@@ -197,77 +226,144 @@
     .locals 1
 
     .prologue
-    .line 803
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    .line 1421
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bb;->a(Landroid/view/View;Ljava/lang/Runnable;)V
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->a(Landroid/view/View;Ljava/lang/Runnable;)V
 
-    .line 804
+    .line 1422
     return-void
+.end method
+
+.method public static a(Landroid/view/ViewGroup;)V
+    .locals 1
+
+    .prologue
+    .line 2234
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->a(Landroid/view/ViewGroup;)V
+
+    .line 2235
+    return-void
+.end method
+
+.method public static a(Landroid/view/View;)Z
+    .locals 1
+
+    .prologue
+    .line 1192
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->a(Landroid/view/View;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public static a(Landroid/view/View;I)Z
     .locals 1
 
     .prologue
-    .line 574
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    .line 1181
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bb;->a(Landroid/view/View;I)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static b(Landroid/view/View;)V
-    .locals 1
-
-    .prologue
-    .line 771
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bb;->b(Landroid/view/View;)V
-
-    .line 772
-    return-void
-.end method
-
-.method public static c(Landroid/view/View;)I
-    .locals 1
-
-    .prologue
-    .line 837
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bb;->c(Landroid/view/View;)I
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->a(Landroid/view/View;I)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public static d(Landroid/view/View;)V
+.method public static b(Landroid/view/View;)I
     .locals 1
 
     .prologue
-    .line 854
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    .line 1206
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bb;->d(Landroid/view/View;)V
+    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->b(Landroid/view/View;)I
 
-    .line 855
+    move-result v0
+
+    return v0
+.end method
+
+.method public static b(Landroid/view/View;F)V
+    .locals 1
+
+    .prologue
+    .line 2068
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->c(Landroid/view/View;F)V
+
+    .line 2069
     return-void
+.end method
+
+.method public static b(Landroid/view/View;I)V
+    .locals 1
+
+    .prologue
+    .line 1480
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->b(Landroid/view/View;I)V
+
+    .line 1481
+    return-void
+.end method
+
+.method public static c(Landroid/view/View;)V
+    .locals 1
+
+    .prologue
+    .line 1389
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->c(Landroid/view/View;)V
+
+    .line 1390
+    return-void
+.end method
+
+.method public static c(Landroid/view/View;F)V
+    .locals 1
+
+    .prologue
+    .line 2156
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/bc;->a(Landroid/view/View;F)V
+
+    .line 2157
+    return-void
+.end method
+
+.method public static d(Landroid/view/View;)I
+    .locals 1
+
+    .prologue
+    .line 1456
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->d(Landroid/view/View;)I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public static e(Landroid/view/View;)I
     .locals 1
 
     .prologue
-    .line 973
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    .line 1600
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bb;->e(Landroid/view/View;)I
+    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->e(Landroid/view/View;)I
 
     move-result v0
 
@@ -278,10 +374,10 @@
     .locals 1
 
     .prologue
-    .line 1043
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    .line 1671
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bb;->f(Landroid/view/View;)I
+    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->f(Landroid/view/View;)I
 
     move-result v0
 
@@ -292,10 +388,10 @@
     .locals 1
 
     .prologue
-    .line 1075
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    .line 1703
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bb;->g(Landroid/view/View;)Landroid/view/ViewParent;
+    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->g(Landroid/view/View;)Landroid/view/ViewParent;
 
     move-result-object v0
 
@@ -306,10 +402,38 @@
     .locals 1
 
     .prologue
-    .line 1088
-    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bb;
+    .line 1716
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
 
-    invoke-interface {v0, p0}, Landroid/support/v4/view/bb;->h(Landroid/view/View;)Z
+    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->h(Landroid/view/View;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static i(Landroid/view/View;)F
+    .locals 1
+
+    .prologue
+    .line 2137
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->i(Landroid/view/View;)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static j(Landroid/view/View;)Z
+    .locals 1
+
+    .prologue
+    .line 2242
+    sget-object v0, Landroid/support/v4/view/as;->a:Landroid/support/v4/view/bc;
+
+    invoke-interface {v0, p0}, Landroid/support/v4/view/bc;->j(Landroid/view/View;)Z
 
     move-result v0
 

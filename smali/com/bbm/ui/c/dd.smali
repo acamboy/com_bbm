@@ -1,75 +1,67 @@
 .class final Lcom/bbm/ui/c/dd;
-.super Lcom/bbm/d/b/o;
-.source "GroupUpdatesFragment.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/o",
-        "<",
-        "Lcom/bbm/g/aa;",
-        ">;"
-    }
-.end annotation
+.super Lcom/bbm/j/k;
+.source "DiscoverChannelsFragment.java"
 
 
 # instance fields
-.field final synthetic b:Lcom/bbm/ui/c/db;
+.field final synthetic a:Lcom/bbm/ui/c/da;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/db;Lcom/bbm/j/r;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/c/da;)V
+    .locals 1
 
     .prologue
-    .line 125
-    iput-object p1, p0, Lcom/bbm/ui/c/dd;->b:Lcom/bbm/ui/c/db;
+    .line 209
+    iput-object p1, p0, Lcom/bbm/ui/c/dd;->a:Lcom/bbm/ui/c/da;
 
-    invoke-direct {p0, p2}, Lcom/bbm/d/b/o;-><init>(Lcom/bbm/j/r;)V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 4
+.method protected final a()V
+    .locals 2
 
     .prologue
-    .line 125
-    check-cast p1, Lcom/bbm/g/aa;
+    .line 212
+    iget-object v0, p0, Lcom/bbm/ui/c/dd;->a:Lcom/bbm/ui/c/da;
 
-    check-cast p2, Lcom/bbm/g/aa;
+    iget-object v1, p0, Lcom/bbm/ui/c/dd;->a:Lcom/bbm/ui/c/da;
 
-    iget-wide v0, p1, Lcom/bbm/g/aa;->k:J
+    invoke-static {v1}, Lcom/bbm/ui/c/da;->d(Lcom/bbm/ui/c/da;)Lcom/bbm/d/a;
 
-    iget-wide v2, p2, Lcom/bbm/g/aa;->k:J
+    move-result-object v1
 
-    cmp-long v0, v0, v2
+    invoke-virtual {v1}, Lcom/bbm/d/a;->M()Lcom/bbm/j/w;
 
-    if-gez v0, :cond_0
+    move-result-object v1
 
-    const/4 v0, 0x1
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/da;->a(Lcom/bbm/ui/c/da;Lcom/bbm/j/w;)Lcom/bbm/j/w;
 
-    :goto_0
-    return v0
+    .line 213
+    iget-object v0, p0, Lcom/bbm/ui/c/dd;->a:Lcom/bbm/ui/c/da;
 
+    invoke-static {v0}, Lcom/bbm/ui/c/da;->b(Lcom/bbm/ui/c/da;)Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->b()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 214
+    iget-object v0, p0, Lcom/bbm/ui/c/dd;->a:Lcom/bbm/ui/c/da;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/da;->e(Lcom/bbm/ui/c/da;)V
+
+    .line 216
     :cond_0
-    iget-wide v0, p1, Lcom/bbm/g/aa;->k:J
-
-    iget-wide v2, p2, Lcom/bbm/g/aa;->k:J
-
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_1
-
-    const/4 v0, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return-void
 .end method

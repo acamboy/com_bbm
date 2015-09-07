@@ -1,50 +1,94 @@
-.class public Lcom/glympse/android/lib/iw;
+.class Lcom/glympse/android/lib/iw;
 .super Ljava/lang/Object;
-.source "UrlParserDepr.java"
+.source "TrackBuilder.java"
 
 # interfaces
-.implements Lcom/glympse/android/lib/iv;
+.implements Lcom/glympse/android/api/GTrackBuilder;
+
+
+# instance fields
+.field private oQ:Lcom/glympse/android/lib/GTrackPrivate;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 316
+    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 22
+    new-instance v0, Lcom/glympse/android/lib/iv;
+
+    invoke-direct {v0}, Lcom/glympse/android/lib/iv;-><init>()V
+
+    iput-object v0, p0, Lcom/glympse/android/lib/iw;->oQ:Lcom/glympse/android/lib/GTrackPrivate;
+
+    .line 23
     return-void
 .end method
 
 
 # virtual methods
-.method public a(Lcom/glympse/android/lib/it;Lcom/glympse/android/lib/it;)I
-    .locals 2
-
-    .prologue
-    .line 320
-    iget v0, p1, Lcom/glympse/android/lib/it;->tl:I
-
-    iget v1, p2, Lcom/glympse/android/lib/it;->tl:I
-
-    sub-int/2addr v0, v1
-
-    return v0
-.end method
-
-.method public synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public addLocation(Lcom/glympse/android/core/GLocation;)V
     .locals 1
 
     .prologue
-    .line 316
-    check-cast p1, Lcom/glympse/android/lib/it;
+    .line 31
+    iget-object v0, p0, Lcom/glympse/android/lib/iw;->oQ:Lcom/glympse/android/lib/GTrackPrivate;
 
-    check-cast p2, Lcom/glympse/android/lib/it;
+    invoke-interface {v0, p1}, Lcom/glympse/android/lib/GTrackPrivate;->addCore(Lcom/glympse/android/core/GLocation;)V
 
-    invoke-virtual {p0, p1, p2}, Lcom/glympse/android/lib/iw;->a(Lcom/glympse/android/lib/it;Lcom/glympse/android/lib/it;)I
+    .line 32
+    return-void
+.end method
 
-    move-result v0
+.method public calculateDistance()V
+    .locals 1
 
-    return v0
+    .prologue
+    .line 46
+    iget-object v0, p0, Lcom/glympse/android/lib/iw;->oQ:Lcom/glympse/android/lib/GTrackPrivate;
+
+    invoke-interface {v0}, Lcom/glympse/android/lib/GTrackPrivate;->calculateDistance()V
+
+    .line 47
+    return-void
+.end method
+
+.method public getTrack()Lcom/glympse/android/api/GTrack;
+    .locals 1
+
+    .prologue
+    .line 51
+    iget-object v0, p0, Lcom/glympse/android/lib/iw;->oQ:Lcom/glympse/android/lib/GTrackPrivate;
+
+    return-object v0
+.end method
+
+.method public setDistance(I)V
+    .locals 1
+
+    .prologue
+    .line 41
+    iget-object v0, p0, Lcom/glympse/android/lib/iw;->oQ:Lcom/glympse/android/lib/GTrackPrivate;
+
+    invoke-interface {v0, p1}, Lcom/glympse/android/lib/GTrackPrivate;->setDistance(I)V
+
+    .line 42
+    return-void
+.end method
+
+.method public setSource(I)V
+    .locals 1
+
+    .prologue
+    .line 36
+    iget-object v0, p0, Lcom/glympse/android/lib/iw;->oQ:Lcom/glympse/android/lib/GTrackPrivate;
+
+    invoke-interface {v0, p1}, Lcom/glympse/android/lib/GTrackPrivate;->setSource(I)V
+
+    .line 37
+    return-void
 .end method

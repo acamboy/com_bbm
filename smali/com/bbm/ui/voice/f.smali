@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 478
+    .line 470
     iput-object p1, p0, Lcom/bbm/ui/voice/f;->a:Lcom/bbm/ui/voice/d;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,7 +29,7 @@
     .locals 1
 
     .prologue
-    .line 481
+    .line 473
     iget-object v0, p0, Lcom/bbm/ui/voice/f;->a:Lcom/bbm/ui/voice/d;
 
     iget-object v0, v0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
@@ -40,7 +40,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 482
+    .line 474
     iget-object v0, p0, Lcom/bbm/ui/voice/f;->a:Lcom/bbm/ui/voice/d;
 
     iget-object v0, v0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
@@ -51,12 +51,12 @@
 
     invoke-interface {v0}, Lcom/bbm/ui/voice/g;->a()V
 
-    .line 487
+    .line 478
     :cond_0
     :goto_0
     return-void
 
-    .line 484
+    .line 475
     :cond_1
     iget-object v0, p0, Lcom/bbm/ui/voice/f;->a:Lcom/bbm/ui/voice/d;
 
@@ -68,7 +68,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 485
+    .line 476
     iget-object v0, p0, Lcom/bbm/ui/voice/f;->a:Lcom/bbm/ui/voice/d;
 
     iget-object v0, v0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;

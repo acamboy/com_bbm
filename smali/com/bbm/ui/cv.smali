@@ -1,62 +1,56 @@
 .class final Lcom/bbm/ui/cv;
-.super Ljava/lang/Object;
-.source "LinkifyTextView.java"
+.super Lcom/bbm/j/k;
+.source "GroupedObservableListAdapter.java"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/ListHeaderView;
+
+.field final synthetic b:I
+
+.field final synthetic c:Ljava/util/List;
+
+.field final synthetic d:Lcom/bbm/ui/cu;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/cu;Lcom/bbm/ui/ListHeaderView;ILjava/util/List;)V
+    .locals 1
 
     .prologue
-    .line 32
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 171
+    iput-object p1, p0, Lcom/bbm/ui/cv;->d:Lcom/bbm/ui/cu;
+
+    iput-object p2, p0, Lcom/bbm/ui/cv;->a:Lcom/bbm/ui/ListHeaderView;
+
+    iput p3, p0, Lcom/bbm/ui/cv;->b:I
+
+    iput-object p4, p0, Lcom/bbm/ui/cv;->c:Ljava/util/List;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a()V
+    .locals 4
 
     .prologue
-    .line 36
-    move-object v0, p1
+    .line 174
+    iget-object v0, p0, Lcom/bbm/ui/cv;->d:Lcom/bbm/ui/cu;
 
-    check-cast v0, Lcom/bbm/ui/LinkifyTextView;
+    iget-object v1, p0, Lcom/bbm/ui/cv;->a:Lcom/bbm/ui/ListHeaderView;
 
-    .line 37
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->a(Lcom/bbm/ui/LinkifyTextView;)Landroid/view/View$OnClickListener;
+    iget v2, p0, Lcom/bbm/ui/cv;->b:I
 
-    move-result-object v1
+    iget-object v3, p0, Lcom/bbm/ui/cv;->c:Ljava/util/List;
 
-    if-eqz v1, :cond_0
+    invoke-virtual {v0, v1, v2, v3}, Lcom/bbm/ui/cu;->a(Lcom/bbm/ui/ListHeaderView;ILjava/util/List;)V
 
-    .line 38
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->b(Lcom/bbm/ui/LinkifyTextView;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 39
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->a(Lcom/bbm/ui/LinkifyTextView;)Landroid/view/View$OnClickListener;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
-
-    .line 44
-    :cond_0
-    :goto_0
+    .line 175
     return-void
-
-    .line 41
-    :cond_1
-    invoke-static {v0}, Lcom/bbm/ui/LinkifyTextView;->c(Lcom/bbm/ui/LinkifyTextView;)Z
-
-    goto :goto_0
 .end method

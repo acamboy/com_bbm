@@ -1,67 +1,61 @@
 .class final Lcom/bbm/ui/c/ep;
 .super Ljava/lang/Object;
-.source "OwnProfileDetailsFragment.java"
-
-# interfaces
-.implements Landroid/widget/TextView$OnEditorActionListener;
+.source "GroupsFragment.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/em;
+.field final a:Lcom/bbm/ui/c/eq;
+
+.field final b:Ljava/lang/String;
+
+.field final c:Lcom/bbm/d/a/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/em;)V
-    .locals 0
+.method public constructor <init>(Lcom/bbm/g/a;)V
+    .locals 1
 
     .prologue
-    .line 107
-    iput-object p1, p0, Lcom/bbm/ui/c/ep;->a:Lcom/bbm/ui/c/em;
-
+    .line 131
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 132
+    sget-object v0, Lcom/bbm/ui/c/eq;->a:Lcom/bbm/ui/c/eq;
+
+    iput-object v0, p0, Lcom/bbm/ui/c/ep;->a:Lcom/bbm/ui/c/eq;
+
+    .line 133
+    iget-object v0, p1, Lcom/bbm/g/a;->r:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/bbm/ui/c/ep;->b:Ljava/lang/String;
+
+    .line 134
+    iput-object p1, p0, Lcom/bbm/ui/c/ep;->c:Lcom/bbm/d/a/a;
+
+    .line 135
     return-void
 .end method
 
-
-# virtual methods
-.method public final onEditorAction(Landroid/widget/TextView;ILandroid/view/KeyEvent;)Z
-    .locals 3
+.method public constructor <init>(Lcom/bbm/g/ah;)V
+    .locals 1
 
     .prologue
-    const/4 v2, 0x0
+    .line 137
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 111
-    iget-object v0, p0, Lcom/bbm/ui/c/ep;->a:Lcom/bbm/ui/c/em;
+    .line 138
+    sget-object v0, Lcom/bbm/ui/c/eq;->b:Lcom/bbm/ui/c/eq;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/c/em;->getActivity()Landroid/app/Activity;
+    iput-object v0, p0, Lcom/bbm/ui/c/ep;->a:Lcom/bbm/ui/c/eq;
 
-    move-result-object v0
+    .line 139
+    iget-object v0, p1, Lcom/bbm/g/ah;->a:Ljava/lang/String;
 
-    const-string v1, "input_method"
+    iput-object v0, p0, Lcom/bbm/ui/c/ep;->b:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .line 140
+    iput-object p1, p0, Lcom/bbm/ui/c/ep;->c:Lcom/bbm/d/a/a;
 
-    move-result-object v0
-
-    check-cast v0, Landroid/view/inputmethod/InputMethodManager;
-
-    .line 112
-    invoke-virtual {p1}, Landroid/widget/TextView;->getWindowToken()Landroid/os/IBinder;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
-
-    .line 113
-    iget-object v0, p0, Lcom/bbm/ui/c/ep;->a:Lcom/bbm/ui/c/em;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/em;->d(Lcom/bbm/ui/c/em;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
-
-    .line 114
-    return v2
+    .line 141
+    return-void
 .end method

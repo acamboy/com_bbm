@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/om;
 .super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
+.source "GroupListItemsActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/b/ab;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
     .locals 0
 
     .prologue
-    .line 818
-    iput-object p1, p0, Lcom/bbm/ui/activities/om;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 424
+    iput-object p1, p0, Lcom/bbm/ui/activities/om;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,51 +25,45 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 822
-    new-instance v0, Lcom/bbm/ui/activities/pc;
+    .line 427
+    const-string v0, "SecondarySlideMenu Bottom item Clicked"
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/om;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    const-class v1, Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    const/4 v2, 0x0
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/activities/pc;-><init>(Lcom/bbm/ui/activities/GroupLobbyActivity;B)V
+    .line 429
+    iget-object v0, p0, Lcom/bbm/ui/activities/om;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    .line 823
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    move-result-object v1
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    iget-object v1, v1, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
+    const/4 v1, 0x1
 
-    iget-object v1, v1, Lcom/bbm/g/ad;->a:Lcom/bbm/d/a/f;
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    iget-object v1, v1, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+    .line 430
+    iget-object v0, p0, Lcom/bbm/ui/activities/om;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-interface {v1, v0}, Lcom/bbm/f/a;->a(Lcom/bbm/f/y;)V
+    iget-object v0, v0, Lcom/bbm/ui/activities/GroupListItemsActivity;->a:Lcom/bbm/g/al;
 
-    .line 824
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    iget-object v1, p0, Lcom/bbm/ui/activities/om;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/bbm/d;->c:Lcom/bbm/g/ab;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/om;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupLobbyActivity;->i()Ljava/lang/String;
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupListItemsActivity;->b(Lcom/bbm/ui/activities/GroupListItemsActivity;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/bbm/g/ac;->d(Ljava/lang/String;)Lcom/bbm/g/bv;
+    invoke-static {v1}, Lcom/bbm/g/am;->d(Ljava/lang/String;)Lcom/bbm/g/br;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->a(Lcom/bbm/g/cb;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
 
-    .line 825
+    .line 431
     return-void
 .end method

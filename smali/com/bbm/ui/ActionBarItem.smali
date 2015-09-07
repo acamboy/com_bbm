@@ -53,6 +53,63 @@
     return-void
 .end method
 
+.method public constructor <init>(Landroid/content/Context;III)V
+    .locals 1
+
+    .prologue
+    .line 65
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 67
+    invoke-direct {p0, p1}, Lcom/bbm/ui/ActionBarItem;->a(Landroid/content/Context;)V
+
+    .line 69
+    iget-object v0, p0, Lcom/bbm/ui/ActionBarItem;->b:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p2}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 70
+    iget-object v0, p0, Lcom/bbm/ui/ActionBarItem;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p3}, Landroid/widget/TextView;->setText(I)V
+
+    .line 71
+    iget-object v0, p0, Lcom/bbm/ui/ActionBarItem;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p4}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 72
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;Landroid/graphics/drawable/Drawable;I)V
+    .locals 1
+
+    .prologue
+    .line 75
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/bbm/ui/ActionBarItem;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 77
+    invoke-direct {p0, p1}, Lcom/bbm/ui/ActionBarItem;->a(Landroid/content/Context;)V
+
+    .line 79
+    iget-object v0, p0, Lcom/bbm/ui/ActionBarItem;->b:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 80
+    iget-object v0, p0, Lcom/bbm/ui/ActionBarItem;->c:Landroid/widget/TextView;
+
+    invoke-virtual {v0, p3}, Landroid/widget/TextView;->setText(I)V
+
+    .line 81
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
@@ -85,7 +142,7 @@
     if-eqz p2, :cond_1
 
     .line 37
-    sget-object v1, Lcom/bbm/ac;->ActionBarItem:[I
+    sget-object v1, Lcom/bbm/ae;->ActionBarItem:[I
 
     invoke-virtual {p1, p2, v1, p3, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -149,14 +206,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 91
+    .line 110
     iget-object v0, p0, Lcom/bbm/ui/ActionBarItem;->c:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
 
-    .line 92
+    .line 111
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
@@ -172,7 +229,7 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 93
+    .line 112
     :goto_0
     iget-object v2, p0, Lcom/bbm/ui/ActionBarItem;->c:Landroid/widget/TextView;
 
@@ -183,13 +240,13 @@
     :cond_1
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 94
+    .line 113
     return-void
 
     :cond_2
     move v0, v1
 
-    .line 92
+    .line 111
     goto :goto_0
 .end method
 
@@ -199,20 +256,20 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 65
+    .line 84
     invoke-virtual {p0, v2}, Lcom/bbm/ui/ActionBarItem;->setClickable(Z)V
 
-    .line 67
+    .line 86
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    const v1, 0x7f03011e
+    const v1, 0x7f030135
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 69
-    const v0, 0x7f0a0539
+    .line 88
+    const v0, 0x7f0b05f1
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ActionBarItem;->findViewById(I)Landroid/view/View;
 
@@ -222,8 +279,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ActionBarItem;->a:Landroid/widget/ImageView;
 
-    .line 70
-    const v0, 0x7f0a0538
+    .line 89
+    const v0, 0x7f0b05f0
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ActionBarItem;->findViewById(I)Landroid/view/View;
 
@@ -233,8 +290,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ActionBarItem;->b:Landroid/widget/ImageView;
 
-    .line 71
-    const v0, 0x7f0a04d6
+    .line 90
+    const v0, 0x7f0b056e
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ActionBarItem;->findViewById(I)Landroid/view/View;
 
@@ -244,7 +301,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ActionBarItem;->c:Landroid/widget/TextView;
 
-    .line 72
+    .line 91
     return-void
 .end method
 
@@ -254,20 +311,20 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 95
     invoke-super {p0, p1}, Lcom/bbm/ui/CustomView;->setEnabled(Z)V
 
-    .line 77
+    .line 96
     iget-object v0, p0, Lcom/bbm/ui/ActionBarItem;->b:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
 
-    .line 78
+    .line 97
     iget-object v0, p0, Lcom/bbm/ui/ActionBarItem;->c:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 79
+    .line 98
     return-void
 .end method
 
@@ -275,12 +332,12 @@
     .locals 1
 
     .prologue
-    .line 97
+    .line 116
     iget-object v0, p0, Lcom/bbm/ui/ActionBarItem;->b:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 98
+    .line 117
     return-void
 .end method
 
@@ -288,18 +345,18 @@
     .locals 1
 
     .prologue
-    .line 101
+    .line 120
     iget-boolean v0, p0, Lcom/bbm/ui/ActionBarItem;->d:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 102
+    .line 121
     iput-boolean p1, p0, Lcom/bbm/ui/ActionBarItem;->d:Z
 
-    .line 103
+    .line 122
     invoke-direct {p0}, Lcom/bbm/ui/ActionBarItem;->a()V
 
-    .line 105
+    .line 124
     :cond_0
     return-void
 .end method
@@ -308,7 +365,7 @@
     .locals 1
 
     .prologue
-    .line 86
+    .line 105
     iget-object v0, p0, Lcom/bbm/ui/ActionBarItem;->c:Landroid/widget/TextView;
 
     if-nez p1, :cond_0
@@ -318,9 +375,9 @@
     :cond_0
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 87
+    .line 106
     invoke-direct {p0}, Lcom/bbm/ui/ActionBarItem;->a()V
 
-    .line 88
+    .line 107
     return-void
 .end method

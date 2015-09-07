@@ -1,9 +1,6 @@
 .class final Lcom/bbm/ui/activities/hd;
-.super Ljava/lang/Object;
+.super Lcom/bbm/j/u;
 .source "ConversationActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -15,75 +12,84 @@
     .locals 0
 
     .prologue
-    .line 3362
+    .line 2129
     iput-object p1, p0, Lcom/bbm/ui/activities/hd;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method protected final b()Z
+    .locals 5
 
     .prologue
-    .line 3366
-    const-string v0, "SecondarySlideMenu Bottom Item Clicked"
+    const/4 v1, 0x1
 
-    const-class v1, Lcom/bbm/ui/activities/ConversationActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 3368
+    .line 2133
     iget-object v0, p0, Lcom/bbm/ui/activities/hd;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->v()V
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->w(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/a;
 
-    .line 3370
-    const/4 v1, 0x0
-
-    .line 3372
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/hd;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->b:Lcom/bbm/j/a;
+    move-result-object v0
 
     invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Boolean;
+    check-cast v0, Lcom/bbm/d/eu;
 
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-    :try_end_0
-    .catch Lcom/bbm/j/z; {:try_start_0 .. :try_end_0} :catch_0
+    .line 2135
+    iget-object v2, v0, Lcom/bbm/d/eu;->u:Lcom/bbm/util/bi;
 
-    move-result v0
+    sget-object v3, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
 
-    .line 3380
+    if-ne v2, v3, :cond_0
+
+    .line 2136
+    const/4 v0, 0x0
+
+    .line 2145
     :goto_0
-    new-instance v1, Lcom/bbm/util/d/a;
+    return v0
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/hd;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 2139
+    :cond_0
+    new-instance v2, Landroid/content/Intent;
 
-    new-instance v3, Lcom/bbm/ui/activities/he;
+    iget-object v3, p0, Lcom/bbm/ui/activities/hd;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {v3, p0}, Lcom/bbm/ui/activities/he;-><init>(Lcom/bbm/ui/activities/hd;)V
+    const-class v4, Lcom/bbm/ui/activities/SelectContactActivity;
 
-    invoke-direct {v1, v2, v0, v3}, Lcom/bbm/util/d/a;-><init>(Landroid/content/Context;ZLcom/bbm/util/d/c;)V
+    invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 3388
-    invoke-virtual {v1}, Lcom/bbm/util/d/a;->c()V
+    .line 2140
+    const-string v3, "com.bbm.onlyone"
 
-    .line 3389
-    return-void
+    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    :catch_0
-    move-exception v0
+    .line 2141
+    const-string v3, "com.bbm.excludedcontacts"
+
+    new-instance v4, Ljava/util/ArrayList;
+
+    iget-object v0, v0, Lcom/bbm/d/eu;->r:Ljava/util/List;
+
+    invoke-direct {v4, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
+
+    .line 2143
+    iget-object v0, p0, Lcom/bbm/ui/activities/hd;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v0, v2, v3}, Lcom/bbm/ui/activities/ConversationActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
     move v0, v1
 
+    .line 2145
     goto :goto_0
 .end method

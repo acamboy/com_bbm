@@ -112,7 +112,7 @@
 
 # virtual methods
 .method public final awaitTermination(JLjava/util/concurrent/TimeUnit;)Z
-    .locals 4
+    .locals 5
 
     .prologue
     .line 339

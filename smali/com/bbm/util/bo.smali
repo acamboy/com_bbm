@@ -1,65 +1,69 @@
-.class final Lcom/bbm/util/bo;
+.class final synthetic Lcom/bbm/util/bo;
 .super Ljava/lang/Object;
-.source "HttpLoader.java"
-
-# interfaces
-.implements Ljava/util/Comparator;
+.source "GroupsUtil.java"
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcom/bbm/util/bn;",
-        ">;"
-    }
-.end annotation
+# static fields
+.field static final synthetic a:[I
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 243
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 18
+    invoke-static {}, Lcom/bbm/g/ae;->values()[Lcom/bbm/g/ae;
 
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/util/bo;->a:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/util/bo;->a:[I
+
+    sget-object v1, Lcom/bbm/g/ae;->a:Lcom/bbm/g/ae;
+
+    invoke-virtual {v1}, Lcom/bbm/g/ae;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_1
+
+    :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/util/bo;->a:[I
+
+    sget-object v1, Lcom/bbm/g/ae;->b:Lcom/bbm/g/ae;
+
+    invoke-virtual {v1}, Lcom/bbm/g/ae;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_0
+
+    :goto_1
     return-void
-.end method
 
+    :catch_0
+    move-exception v0
 
-# virtual methods
-.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 4
+    goto :goto_1
 
-    .prologue
-    .line 243
-    check-cast p1, Lcom/bbm/util/bn;
+    :catch_1
+    move-exception v0
 
-    check-cast p2, Lcom/bbm/util/bn;
-
-    iget-object v0, p1, Lcom/bbm/util/bn;->d:Lcom/bbm/util/bm;
-
-    iget-object v1, p2, Lcom/bbm/util/bn;->d:Lcom/bbm/util/bm;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/util/bm;->compareTo(Ljava/lang/Enum;)I
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-wide v0, p1, Lcom/bbm/util/bn;->b:J
-
-    iget-wide v2, p2, Lcom/bbm/util/bn;->b:J
-
-    sub-long/2addr v0, v2
-
-    invoke-static {v0, v1}, Lcom/bbm/util/eo;->a(J)I
-
-    move-result v0
-
-    :cond_0
-    return v0
+    goto :goto_0
 .end method

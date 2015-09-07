@@ -1,118 +1,81 @@
 .class final Lcom/bbm/ui/c/ap;
-.super Lcom/bbm/j/k;
-.source "ChannelPostPreviewFragment.java"
+.super Ljava/lang/Object;
+.source "ChannelDetailsFragment.java"
+
+# interfaces
+.implements Lcom/bbm/ui/c/gn;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/ao;
+.field final synthetic a:Lcom/bbm/ui/c/ag;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/ao;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/c/ag;)V
+    .locals 0
 
     .prologue
-    .line 36
-    iput-object p1, p0, Lcom/bbm/ui/c/ap;->a:Lcom/bbm/ui/c/ao;
+    .line 928
+    iput-object p1, p0, Lcom/bbm/ui/c/ap;->a:Lcom/bbm/ui/c/ag;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 4
+.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+    .locals 3
 
     .prologue
-    const/4 v1, 0x0
+    .line 931
+    iget-object v0, p0, Lcom/bbm/ui/c/ap;->a:Lcom/bbm/ui/c/ag;
 
-    .line 40
-    iget-object v0, p0, Lcom/bbm/ui/c/ap;->a:Lcom/bbm/ui/c/ao;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ao;->a(Lcom/bbm/ui/c/ao;)Lcom/bbm/j/x;
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->h(Lcom/bbm/ui/c/ag;)Lcom/bbm/ui/activities/cq;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/bbm/j/x;->d()Z
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    move-result v0
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    if-eqz v0, :cond_1
+    const/4 v1, 0x1
 
-    iget-object v0, p0, Lcom/bbm/ui/c/ap;->a:Lcom/bbm/ui/c/ao;
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    invoke-static {v0}, Lcom/bbm/ui/c/ao;->a(Lcom/bbm/ui/c/ao;)Lcom/bbm/j/x;
+    .line 933
+    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
 
-    move-result-object v0
+    packed-switch v0, :pswitch_data_0
 
-    invoke-interface {v0}, Lcom/bbm/j/x;->e()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "ChannelNotFound"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/ui/c/ap;->a:Lcom/bbm/ui/c/ao;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/ao;->a(Lcom/bbm/ui/c/ao;)Lcom/bbm/j/x;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/j/x;->e()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v2, "GeneralFailure"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 v0, 0x1
-
-    .line 42
+    .line 938
     :goto_0
-    iget-object v2, p0, Lcom/bbm/ui/c/ap;->a:Lcom/bbm/ui/c/ao;
-
-    invoke-static {v2}, Lcom/bbm/ui/c/ao;->b(Lcom/bbm/ui/c/ao;)Landroid/view/View;
-
-    move-result-object v2
-
-    const v3, 0x7f0a032f
-
-    invoke-virtual {v2, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v2
-
-    if-eqz v0, :cond_2
-
-    :goto_1
-    invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 43
     return-void
 
-    :cond_1
-    move v0, v1
+    .line 935
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/c/ap;->a:Lcom/bbm/ui/c/ag;
 
-    .line 40
+    invoke-static {v0}, Lcom/bbm/ui/c/ag;->a(Lcom/bbm/ui/c/ag;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/c/ap;->a:Lcom/bbm/ui/c/ag;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/ag;->h(Lcom/bbm/ui/c/ag;)Lcom/bbm/ui/activities/cq;
+
+    move-result-object v1
+
+    sget-object v2, Lcom/bbm/util/ax;->a:Lcom/bbm/util/ax;
+
+    invoke-static {v0, v1, v2}, Lcom/bbm/util/ac;->a(Ljava/lang/String;Landroid/app/Activity;Lcom/bbm/util/ax;)V
+
     goto :goto_0
 
-    .line 42
-    :cond_2
-    const/16 v1, 0x8
-
-    goto :goto_1
+    .line 933
+    :pswitch_data_0
+    .packed-switch 0x7f0b001b
+        :pswitch_0
+    .end packed-switch
 .end method

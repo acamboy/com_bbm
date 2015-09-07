@@ -8,11 +8,8 @@
     value = {
         "Lcom/bbm/j/a",
         "<",
-        "Ljava/util/Map",
-        "<",
-        "Ljava/lang/String;",
-        "Ljava/lang/String;",
-        ">;>;"
+        "Ljava/lang/Boolean;",
+        ">;"
     }
 .end annotation
 
@@ -26,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 100
+    .line 1638
     iput-object p1, p0, Lcom/bbm/d/m;->a:Lcom/bbm/d/a;
 
     invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
@@ -37,78 +34,31 @@
 
 # virtual methods
 .method protected final synthetic a()Ljava/lang/Object;
-    .locals 7
+    .locals 3
 
     .prologue
-    const/4 v3, 0x0
-
-    .line 100
+    .line 1638
     iget-object v0, p0, Lcom/bbm/d/m;->a:Lcom/bbm/d/a;
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->E()Lcom/bbm/j/w;
+    const-string v1, "protectionChanged"
+
+    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->E(Ljava/lang/String;)Lcom/bbm/util/bm;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+    iget-object v0, v0, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
+
+    const-string v1, "value"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    check-cast v0, Ljava/util/List;
-
-    new-instance v4, Ljava/util/HashMap;
-
-    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
-
-    move v2, v3
-
-    :goto_0
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v1
-
-    if-ge v2, v1, :cond_1
-
-    invoke-interface {v0, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/bbm/d/dp;
-
-    iget-boolean v5, v1, Lcom/bbm/d/dp;->j:Z
-
-    if-nez v5, :cond_0
-
-    iget-boolean v5, v1, Lcom/bbm/d/dp;->h:Z
-
-    if-nez v5, :cond_0
-
-    iget-object v5, v1, Lcom/bbm/d/dp;->q:Ljava/util/List;
-
-    invoke-interface {v5}, Ljava/util/List;->size()I
-
-    move-result v5
-
-    const/4 v6, 0x1
-
-    if-ne v5, v6, :cond_0
-
-    iget-object v5, v1, Lcom/bbm/d/dp;->q:Ljava/util/List;
-
-    invoke-interface {v5, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v5
-
-    iget-object v1, v1, Lcom/bbm/d/dp;->b:Ljava/lang/String;
-
-    invoke-virtual {v4, v5, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    :cond_0
-    add-int/lit8 v1, v2, 0x1
-
-    move v2, v1
-
-    goto :goto_0
-
-    :cond_1
-    return-object v4
+    return-object v0
 .end method

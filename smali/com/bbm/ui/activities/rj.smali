@@ -1,216 +1,128 @@
 .class final Lcom/bbm/ui/activities/rj;
-.super Ljava/lang/Object;
-.source "GroupSelectNewAdminActivity.java"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.super Lcom/bbm/ui/cn;
+.source "GroupPictureActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureActivity;)V
     .locals 0
 
     .prologue
-    .line 44
-    iput-object p1, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
+    .line 443
+    iput-object p1, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final a()V
+    .locals 1
+
+    .prologue
+    .line 447
+    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupPictureActivity;->finish()V
+
+    .line 448
+    return-void
+.end method
+
+.method public final a(I)V
+    .locals 4
 
     .prologue
     const/4 v1, 0x1
 
-    const/4 v2, 0x0
+    .line 452
+    packed-switch p1, :pswitch_data_0
 
-    .line 48
-    invoke-virtual {p2}, Landroid/view/View;->isActivated()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    move v0, v1
-
+    .line 466
     :goto_0
-    invoke-virtual {p2, v0}, Landroid/view/View;->setActivated(Z)V
-
-    .line 49
-    invoke-virtual {p2}, Landroid/view/View;->isActivated()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 50
-    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->b(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Ljava/util/List;
-
-    move-result-object v0
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->a(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Lcom/bbm/ui/activities/rn;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p3}, Lcom/bbm/ui/activities/rn;->getItem(I)Ljava/lang/Object;
-
-    move-result-object v3
-
-    invoke-interface {v0, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 56
-    :goto_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->c(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
-
-    move-result-object v3
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->b(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_2
-
-    move v0, v1
-
-    :goto_2
-    invoke-virtual {v3, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
-
-    .line 57
-    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->c(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
-
-    move-result-object v3
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->b(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_3
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    const v4, 0x7f0e00e9
-
-    invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    new-array v1, v1, [Ljava/lang/Object;
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-static {v4}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->b(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Ljava/util/List;
-
-    move-result-object v4
-
-    invoke-interface {v4}, Ljava/util/List;->size()I
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v1, v2
-
-    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    :goto_3
-    invoke-virtual {v3, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setTitle(Ljava/lang/String;)V
-
-    .line 61
     return-void
 
-    :cond_0
-    move v0, v2
+    .line 454
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
 
-    .line 48
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
+
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
+
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
+
+    .line 455
+    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureActivity;->h(Lcom/bbm/ui/activities/GroupPictureActivity;)V
+
     goto :goto_0
 
-    .line 53
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
+    .line 458
+    :pswitch_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->b(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Ljava/util/List;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureActivity;->i(Lcom/bbm/ui/activities/GroupPictureActivity;)Z
 
-    move-result-object v0
+    move-result v0
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
+    if-eqz v0, :cond_0
 
-    invoke-static {v3}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->a(Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;)Lcom/bbm/ui/activities/rn;
+    .line 459
+    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
 
-    move-result-object v3
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    invoke-virtual {v3, p3}, Lcom/bbm/ui/activities/rn;->getItem(I)Ljava/lang/Object;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    move-result-object v3
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    invoke-interface {v0, v3}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+    .line 460
+    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
 
-    goto :goto_1
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureActivity;->j(Lcom/bbm/ui/activities/GroupPictureActivity;)V
 
-    :cond_2
-    move v0, v2
+    goto :goto_0
 
-    .line 56
-    goto :goto_2
+    .line 462
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
 
-    .line 57
-    :cond_3
-    iget-object v0, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupSelectNewAdminActivity;->getResources()Landroid/content/res/Resources;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureActivity;->k(Lcom/bbm/ui/activities/GroupPictureActivity;)Landroid/content/Context;
 
     move-result-object v0
 
-    const v1, 0x7f0e00e8
+    iget-object v1, p0, Lcom/bbm/ui/activities/rj;->a:Lcom/bbm/ui/activities/GroupPictureActivity;
 
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupPictureActivity;->getResources()Landroid/content/res/Resources;
 
-    move-result-object v0
+    move-result-object v1
 
-    goto :goto_3
+    const v2, 0x7f0e053a
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x7d0
+
+    const/16 v3, 0x11
+
+    invoke-static {v0, v1, v2, v3}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;II)V
+
+    goto :goto_0
+
+    .line 452
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

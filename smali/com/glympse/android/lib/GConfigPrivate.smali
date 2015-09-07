@@ -52,6 +52,9 @@
 .method public abstract getViewerToken()Ljava/lang/String;
 .end method
 
+.method public abstract hasPrivateGroups()Z
+.end method
+
 .method public abstract hasTicketBeenSent()Z
 .end method
 
@@ -59,9 +62,6 @@
 .end method
 
 .method public abstract isServerSupported(Ljava/lang/String;)Z
-.end method
-
-.method public abstract isStandalone()Z
 .end method
 
 .method public abstract load(Lcom/glympse/android/hal/GContextHolder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -76,13 +76,22 @@
 .method public abstract saveCurrentAccount(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
+.method public abstract saveCurrentDeviceId(Ljava/lang/String;)V
+.end method
+
 .method public abstract saveMotdContext(JLjava/lang/String;)V
 .end method
 
 .method public abstract saveRegistrationToken(Ljava/lang/String;)V
 .end method
 
+.method public abstract setAccountCreationTime(J)V
+.end method
+
 .method public abstract setAccountsLinked(Z)V
+.end method
+
+.method public abstract setMaximumNicknameLength(I)V
 .end method
 
 .method public abstract setMaximumTicketDuration(I)V
@@ -91,7 +100,7 @@
 .method public abstract setPostRatePeriod(I)V
 .end method
 
-.method public abstract setStandalone(Z)V
+.method public abstract setPrivateGroups(Z)V
 .end method
 
 .method public abstract setSupportedServers(Lcom/glympse/android/core/GPrimitive;)V

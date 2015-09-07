@@ -1,14 +1,14 @@
 .class public Lcom/bbm/ui/activities/SelectGroupActivity;
-.super Lcom/bbm/ui/activities/agw;
+.super Lcom/bbm/ui/activities/akz;
 .source "SelectGroupActivity.java"
 
 
 # instance fields
-.field private final a:Lcom/bbm/g/ab;
+.field private final a:Lcom/bbm/g/al;
 
 .field private b:Landroid/widget/ListView;
 
-.field private c:Lcom/bbm/ui/activities/acg;
+.field private c:Lcom/bbm/ui/activities/aga;
 
 .field private d:Lcom/bbm/ui/HeaderButtonActionBar;
 
@@ -43,14 +43,14 @@
 
     .prologue
     .line 56
-    invoke-direct {p0}, Lcom/bbm/ui/activities/agw;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/activities/akz;-><init>()V
 
     .line 46
-    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/g/ab;
+    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->a:Lcom/bbm/g/ab;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->a:Lcom/bbm/g/al;
 
     .line 52
     const/4 v0, 0x0
@@ -65,29 +65,29 @@
     iput-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->g:Ljava/util/ArrayList;
 
     .line 57
-    new-instance v0, Lcom/bbm/ui/fh;
+    new-instance v0, Lcom/bbm/ui/gc;
 
-    invoke-direct {v0}, Lcom/bbm/ui/fh;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/gc;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectGroupActivity;->a(Lcom/bbm/ui/activities/agy;)V
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectGroupActivity;->a(Lcom/bbm/ui/activities/alb;)V
 
     .line 58
-    new-instance v0, Lcom/bbm/ui/voice/m;
+    new-instance v0, Lcom/bbm/ui/voice/o;
 
-    invoke-direct {v0}, Lcom/bbm/ui/voice/m;-><init>()V
+    invoke-direct {v0}, Lcom/bbm/ui/voice/o;-><init>()V
 
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectGroupActivity;->a(Lcom/bbm/ui/activities/agy;)V
+    invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectGroupActivity;->a(Lcom/bbm/ui/activities/alb;)V
 
     .line 59
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/ui/activities/SelectGroupActivity;)Lcom/bbm/ui/activities/acg;
+.method static synthetic a(Lcom/bbm/ui/activities/SelectGroupActivity;)Lcom/bbm/ui/activities/aga;
     .locals 1
 
     .prologue
     .line 39
-    iget-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->c:Lcom/bbm/ui/activities/acg;
+    iget-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->c:Lcom/bbm/ui/activities/aga;
 
     return-object v0
 .end method
@@ -171,17 +171,17 @@
     .locals 7
 
     .prologue
-    const v3, 0x7f0e0167
+    const v3, 0x7f0e0177
 
     const/4 v6, 0x0
 
     const/4 v5, -0x1
 
     .line 63
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/agw;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/akz;->onCreate(Landroid/os/Bundle;)V
 
     .line 64
-    const v0, 0x7f030030
+    const v0, 0x7f030033
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectGroupActivity;->setContentView(I)V
 
@@ -215,9 +215,9 @@
     :goto_0
     iget-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->d:Lcom/bbm/ui/HeaderButtonActionBar;
 
-    new-instance v1, Lcom/bbm/ui/activities/acf;
+    new-instance v1, Lcom/bbm/ui/activities/afz;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/acf;-><init>(Lcom/bbm/ui/activities/SelectGroupActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afz;-><init>(Lcom/bbm/ui/activities/SelectGroupActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setNegativeButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -278,7 +278,7 @@
 
     .line 76
     :cond_0
-    const v0, 0x7f0a01a1
+    const v0, 0x7f0b01f0
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/SelectGroupActivity;->findViewById(I)Landroid/view/View;
 
@@ -289,35 +289,35 @@
     iput-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->b:Landroid/widget/ListView;
 
     .line 77
-    new-instance v0, Lcom/bbm/ui/activities/acg;
+    new-instance v0, Lcom/bbm/ui/activities/aga;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->a:Lcom/bbm/g/ab;
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->a:Lcom/bbm/g/al;
 
-    invoke-virtual {v1}, Lcom/bbm/g/ab;->e()Lcom/bbm/j/w;
+    invoke-virtual {v1}, Lcom/bbm/g/al;->e()Lcom/bbm/j/w;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/acg;-><init>(Lcom/bbm/ui/activities/SelectGroupActivity;Lcom/bbm/j/r;)V
+    invoke-direct {v0, p0, v1}, Lcom/bbm/ui/activities/aga;-><init>(Lcom/bbm/ui/activities/SelectGroupActivity;Lcom/bbm/j/r;)V
 
-    iput-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->c:Lcom/bbm/ui/activities/acg;
+    iput-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->c:Lcom/bbm/ui/activities/aga;
 
     .line 78
     iget-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->b:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->c:Lcom/bbm/ui/activities/acg;
+    iget-object v1, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->c:Lcom/bbm/ui/activities/aga;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 80
     iget-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->b:Landroid/widget/ListView;
 
-    new-instance v1, Lcom/bbm/ui/activities/acd;
+    new-instance v1, Lcom/bbm/ui/activities/afx;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/acd;-><init>(Lcom/bbm/ui/activities/SelectGroupActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afx;-><init>(Lcom/bbm/ui/activities/SelectGroupActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 107
+    .line 105
     return-void
 
     .line 66
@@ -344,7 +344,7 @@
 
     move-result-object v3
 
-    const v4, 0x7f0e05f4
+    const v4, 0x7f0e06a3
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -360,9 +360,9 @@
 
     iget-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->d:Lcom/bbm/ui/HeaderButtonActionBar;
 
-    new-instance v1, Lcom/bbm/ui/activities/ace;
+    new-instance v1, Lcom/bbm/ui/activities/afy;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/ace;-><init>(Lcom/bbm/ui/activities/SelectGroupActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/afy;-><init>(Lcom/bbm/ui/activities/SelectGroupActivity;)V
 
     invoke-virtual {v0, v1}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -373,10 +373,10 @@
     .locals 1
 
     .prologue
-    .line 162
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/agw;->onRestoreInstanceState(Landroid/os/Bundle;)V
+    .line 157
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/akz;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
-    .line 163
+    .line 158
     const-string v0, "com.bbm.selecteduris"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -385,7 +385,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 164
+    .line 159
     const-string v0, "com.bbm.selecteduris"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
@@ -394,7 +394,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->f:Ljava/util/ArrayList;
 
-    .line 166
+    .line 161
     :cond_0
     return-void
 .end method
@@ -403,7 +403,7 @@
     .locals 2
 
     .prologue
-    .line 153
+    .line 149
     iget-object v0, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->f:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -412,17 +412,17 @@
 
     if-lez v0, :cond_0
 
-    .line 154
+    .line 150
     const-string v0, "com.bbm.selecteduris"
 
     iget-object v1, p0, Lcom/bbm/ui/activities/SelectGroupActivity;->f:Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 156
+    .line 152
     :cond_0
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/agw;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/akz;->onSaveInstanceState(Landroid/os/Bundle;)V
 
-    .line 157
+    .line 153
     return-void
 .end method

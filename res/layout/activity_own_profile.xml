@@ -4,7 +4,7 @@
     <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
         <com.bbm.ui.SegmentedControl android:layout_gravity="center_horizontal" android:id="@id/profileFragmentSelector" android:layout_width="fill_parent" android:layout_height="wrap_content" custom:leftOption="@string/profile_selector_details" custom:rightOption="@string/profile_selector_updates" />
         <ImageView android:id="@id/profileDivider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/divider_one_px" android:scaleType="fitXY" android:layout_below="@id/profileFragmentSelector" android:contentDescription="@string/blank" />
-        <FrameLayout android:id="@id/profileFragmentContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/own_profile_fragment_container_margin_top" android:layout_below="@id/profileDivider" />
+        <FrameLayout android:id="@id/profileFragmentContainer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/own_profile_fragment_container_margin_top" android:layout_above="@id/footer_action_bar" android:layout_below="@id/profileDivider" />
         <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/footer_action_bar" android:layout_alignParentBottom="true" layout="@layout/emoticon_picker" />
         <include layout="@layout/view_merge_footer_actionbar_dropshadow" />
     </RelativeLayout>

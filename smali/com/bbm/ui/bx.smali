@@ -3,20 +3,20 @@
 .source "EmoticonStickerPager.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lit/sephiroth/android/library/widget/v;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/bu;
+.field final synthetic a:Lcom/bbm/ui/EmoticonStickerPager;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/bu;)V
+.method constructor <init>(Lcom/bbm/ui/EmoticonStickerPager;)V
     .locals 0
 
     .prologue
-    .line 361
-    iput-object p1, p0, Lcom/bbm/ui/bx;->a:Lcom/bbm/ui/bu;
+    .line 134
+    iput-object p1, p0, Lcom/bbm/ui/bx;->a:Lcom/bbm/ui/EmoticonStickerPager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,33 +25,30 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final a(I)V
     .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
 
     .prologue
-    .line 364
-    iget-object v0, p0, Lcom/bbm/ui/bx;->a:Lcom/bbm/ui/bu;
+    .line 137
+    iget-object v0, p0, Lcom/bbm/ui/bx;->a:Lcom/bbm/ui/EmoticonStickerPager;
 
-    iget-object v0, v0, Lcom/bbm/ui/bu;->c:Lcom/bbm/ui/EmoticonStickerPager;
+    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->c(Lcom/bbm/ui/EmoticonStickerPager;)I
 
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->a(Lcom/bbm/ui/EmoticonStickerPager;)Landroid/view/View$OnClickListener;
+    move-result v0
 
-    move-result-object v0
+    if-eq p1, v0, :cond_0
 
-    if-eqz v0, :cond_0
+    .line 138
+    iget-object v0, p0, Lcom/bbm/ui/bx;->a:Lcom/bbm/ui/EmoticonStickerPager;
 
-    .line 365
-    iget-object v0, p0, Lcom/bbm/ui/bx;->a:Lcom/bbm/ui/bu;
+    invoke-static {v0, p1}, Lcom/bbm/ui/EmoticonStickerPager;->a(Lcom/bbm/ui/EmoticonStickerPager;I)V
 
-    iget-object v0, v0, Lcom/bbm/ui/bu;->c:Lcom/bbm/ui/EmoticonStickerPager;
-
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->a(Lcom/bbm/ui/EmoticonStickerPager;)Landroid/view/View$OnClickListener;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
-
-    .line 367
+    .line 140
     :cond_0
     return-void
 .end method

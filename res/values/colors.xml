@@ -6,7 +6,11 @@
     <color name="actionModeHighlight">#ff000000</color>
     <color name="actionmode_background">#ff000000</color>
     <color name="actionmode_closeButtonColor">#ff000000</color>
+    <color name="add_contacts_fragment_separator">#ffe6e7e8</color>
+    <color name="add_contacts_search_hint_color">#ffd9d9d9</color>
+    <color name="add_contacts_top_button_background">#fff1f1f2</color>
     <color name="album_list_cover_image_frame">#ff000000</color>
+    <color name="app_store_background">#fffafafa</color>
     <color name="attachment_background">#ff333333</color>
     <color name="barDark">#ff444444</color>
     <color name="barDarkBorder">#ff666666</color>
@@ -37,6 +41,9 @@
     <color name="broadcastText">#ff0000ff</color>
     <color name="buttonHighlight">#ffffa443</color>
     <color name="button_disable_text_color">#ffc0c0c0</color>
+    <color name="capture_barcode_background">#ffffffff</color>
+    <color name="capture_viewfinder_divider_edge">#ffcccccc</color>
+    <color name="capture_viewfinder_frame">#ffd7d7d7</color>
     <color name="cascade_button_text_color">#ff000000</color>
     <color name="cascade_button_text_color_disabled">#ff929292</color>
     <color name="cascades_spinner_text_color">#ff000000</color>
@@ -81,6 +88,7 @@
     <color name="chat_bubble_incomming_color_8">#ff5631d1</color>
     <color name="chat_bubble_incomming_color_9">#ff038d3d</color>
     <color name="chat_bubble_outgoing_color">#ff97a7ab</color>
+    <color name="chat_message_hint">#ff83888e</color>
     <color name="chats_empty_color">#ff137bc3</color>
     <color name="clickable_toast_textButton_color">#ff01a8df</color>
     <color name="comment_reply_button_background">#fff2f2f2</color>
@@ -95,6 +103,8 @@
     <color name="common_signin_btn_light_text_disabled">#ffaaaaaa</color>
     <color name="common_signin_btn_light_text_focused">#ff737373</color>
     <color name="common_signin_btn_light_text_pressed">@android:color/white</color>
+    <color name="configureable_system_message_backround">#ffedf3fb</color>
+    <color name="connection_status_background">#fff7941e</color>
     <color name="contacts_contact_name_overlay">#a0000000</color>
     <color name="contacts_search_divider">#ffc8c8c8</color>
     <color name="contents_text">#ff000000</color>
@@ -128,6 +138,12 @@
     <color name="darkstyle_tpaTextColor">#ff00a8df</color>
     <color name="dialogBoxTitleBackground">#dd000000</color>
     <color name="encode_view">#ffffffff</color>
+    <color name="ephemeral_bubble_hint_color">#ff087099</color>
+    <color name="ephemeral_bubble_screenshot_alert_color">#ffff4d42</color>
+    <color name="ephemeral_bubble_text_color">#ff000000</color>
+    <color name="ephemeral_picker_text_color">#ffa8a7a7</color>
+    <color name="ephemeral_picker_text_highlight_color">#ff00a8df</color>
+    <color name="ephemeral_picture_overlay">#cc000000</color>
     <color name="errorText">#ffbb0000</color>
     <color name="feature_popover_bg">#ffeaf3ff</color>
     <color name="feature_popover_border">#ff000000</color>
@@ -207,8 +223,8 @@
     <color name="glympse_row_even_expired">#fff2f2f2</color>
     <color name="glympse_row_odd">#fff1f1f1</color>
     <color name="glympse_row_odd_expired">#ffe6e6e6</color>
-    <color name="glympse_tick_color_primary">#ff1ca9fb</color>
-    <color name="glympse_tick_color_secondary">#ffb5b5b5</color>
+    <color name="glympse_tick_color_primary">#fff59c20</color>
+    <color name="glympse_tick_color_secondary">#ffb8b8b8</color>
     <color name="glympse_user_selector_background">#55000000</color>
     <color name="glympse_white_button_text_disabled">#3f4d4d4d</color>
     <color name="glympse_white_button_text_enabled">#ff4d4d4d</color>
@@ -234,6 +250,7 @@
     <color name="green">#ff00ff00</color>
     <color name="greenButtonText">#ffffffff</color>
     <color name="grey">#ffbbbbbb</color>
+    <color name="grid_header_line_color">#ff50b2e3</color>
     <color name="grid_item_text_color">#ff000000</color>
     <color name="grid_item_text_color_lookup">#ffff0000</color>
     <color name="grid_item_text_color_selected">#ffffffff</color>
@@ -265,6 +282,7 @@
     <color name="incoming_call_declined_gradient_color_start">#ff8c001a</color>
     <color name="incoming_call_text_accept_color">#ff149c4a</color>
     <color name="incoming_call_text_decline_color">#ffef3340</color>
+    <color name="invite_more_background">#fff8f8f8</color>
     <color name="lableColor">#ff000000</color>
     <color name="lightBlueBackground">#fff4faff</color>
     <color name="lightBlueBackground2">#fff2f8fc</color>
@@ -312,12 +330,16 @@
     <color name="passwordStrengthMeterUnlit">#ffe7e7e7</color>
     <color name="passwordStrengthText">#ff58c473</color>
     <color name="passwordStrengthUnlitPhone">#ffe7e7e7</color>
+    <color name="payment_dialog_backround">#ffffffff</color>
+    <color name="payment_dialog_text">#ff666666</color>
     <color name="photoTabBackground">#ffffffff</color>
     <color name="pingText">#ffff0000</color>
     <color name="possible_result_points">#c0ffbd21</color>
     <color name="profile_mood_text_color">#ff000000</color>
     <color name="profile_status_label_color">#ff000000</color>
     <color name="profile_status_text_color">#ff000000</color>
+    <color name="protected_dialog_title">#ff00a8e8</color>
+    <color name="protected_text_color">#ff0092cc</color>
     <color name="pykSeparatorBackground">#ffc4c4c4</color>
     <color name="pykSeparatorBackground1">#ffe5e5e5</color>
     <color name="pykSeparatorBackground2">#ffa2a2a2</color>
@@ -327,6 +349,7 @@
     <color name="quick_share_selected_background">#ff3e64d3</color>
     <color name="quick_share_voice_note_cancel_background">#ff680000</color>
     <color name="quick_share_voice_note_label">#fffafafa</color>
+    <color name="recallText">#ff007aaf</color>
     <color name="red">#ffff0000</color>
     <color name="redButtonText">#ffffffff</color>
     <color name="result_minor_text">#ffc0c0c0</color>
@@ -368,7 +391,7 @@
     <color name="slide_menu_title_text">#ffffffff</color>
     <color name="slide_menu_title_text_disabled">#ff909090</color>
     <color name="slide_menu_top_item">#ff333333</color>
-    <color name="sponsored_ad_background_color">#ffedf3fb</color>
+    <color name="sponsored_ad_call_to_action_color">#ff0092cc</color>
     <color name="sponsored_ad_name_color">#ff0073bc</color>
     <color name="ssLoginText">#ff354045</color>
     <color name="ss_passwordStrengthMeterLit">#ff96a5b2</color>
@@ -384,8 +407,13 @@
     <color name="sticker_pack_text_gray">#ff262626</color>
     <color name="sticker_pack_white_translucent">#bdffffff</color>
     <color name="sticker_picker_no_stickers_purchased">#ff989898</color>
+    <color name="sticker_picker_preview_hint_background">#c0000000</color>
+    <color name="sticker_picker_tab_divider_color">#ff6c6c6c</color>
+    <color name="sticker_promo_text_background">#fff7941e</color>
     <color name="sticker_store_background">#fffafafa</color>
     <color name="sticker_title_black">#ff000000</color>
+    <color name="tech_tip_background">#cc000000</color>
+    <color name="tech_tip_text">#ffffffff</color>
     <color name="text">#ff000000</color>
     <color name="textFieldStroke">#ff359cf8</color>
     <color name="textHighlight">#ff1865a9</color>

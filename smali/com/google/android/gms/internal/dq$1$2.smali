@@ -17,7 +17,7 @@
 
 # direct methods
 .method constructor <init>(Lcom/google/android/gms/internal/dq$1;Ljava/lang/String;DZ)V
-    .locals 0
+    .locals 1
 
     iput-object p1, p0, Lcom/google/android/gms/internal/dq$1$2;->xY:Lcom/google/android/gms/internal/dq$1;
 

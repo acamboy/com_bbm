@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 83
+    .line 82
     iput-object p1, p0, Lcom/bbm/util/a/c;->c:Lcom/bbm/util/a/b;
 
     iput-object p2, p0, Lcom/bbm/util/a/c;->a:Lcom/glympse/android/api/GImage;
@@ -37,17 +37,17 @@
     .locals 2
 
     .prologue
-    .line 88
+    .line 87
     const/4 v0, 0x7
 
     if-ne p2, v0, :cond_1
 
-    .line 89
+    .line 88
     const/4 v0, 0x1
 
     if-ne p3, v0, :cond_1
 
-    .line 90
+    .line 89
     iget-object v0, p0, Lcom/bbm/util/a/c;->a:Lcom/glympse/android/api/GImage;
 
     invoke-interface {v0}, Lcom/glympse/android/api/GImage;->getDrawable()Lcom/glympse/android/core/GDrawable;
@@ -56,15 +56,15 @@
 
     check-cast v0, Lcom/glympse/android/ui/GDrawableExt;
 
-    .line 91
+    .line 90
     if-eqz v0, :cond_0
 
-    .line 92
+    .line 91
     invoke-interface {v0}, Lcom/glympse/android/ui/GDrawableExt;->getImage()Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v0
 
-    .line 93
+    .line 92
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -73,7 +73,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 94
+    .line 93
     iget-object v1, p0, Lcom/bbm/util/a/c;->b:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
@@ -82,13 +82,13 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 97
+    .line 96
     :cond_0
     iget-object v0, p0, Lcom/bbm/util/a/c;->a:Lcom/glympse/android/api/GImage;
 
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GImage;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 100
+    .line 99
     :cond_1
     return-void
 .end method

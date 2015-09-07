@@ -100,6 +100,8 @@
 
 .field public static final INVITE_TYPE_ACCOUNT:I = 0x1
 
+.field public static final INVITE_TYPE_APP:I = 0xb
+
 .field public static final INVITE_TYPE_CLIPBOARD:I = 0x9
 
 .field public static final INVITE_TYPE_EMAIL:I = 0x2
@@ -226,6 +228,8 @@
 
 .field public static final TRAVEL_MODE_WALKING:I = 0x3
 
+.field public static final TRIGGER_TYPE_GEO:I = 0x1
+
 .field public static final USER_TRACKING_MODE_ACTIVE:I = 0x1
 
 .field public static final USER_TRACKING_MODE_ALL:I = 0x2
@@ -246,7 +250,7 @@
     .locals 1
 
     .prologue
-    .line 471
+    .line 516
     const-string v0, "invite_client_send"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
@@ -260,7 +264,7 @@
     .locals 1
 
     .prologue
-    .line 456
+    .line 493
     const-string v0, "evernote"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
@@ -274,8 +278,22 @@
     .locals 1
 
     .prologue
-    .line 440
+    .line 477
     const-string v0, "facebook"
+
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static LINKED_ACCOUNT_TYPE_GOOGLE()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 501
+    const-string v0, "google_plus"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
 
@@ -288,8 +306,64 @@
     .locals 1
 
     .prologue
-    .line 448
+    .line 485
     const-string v0, "twitter"
+
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static TICKET_VISIBILITY_KEY_CONTEXT()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 465
+    const-string v0, "context"
+
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static TICKET_VISIBILITY_KEY_LOCATION()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 457
+    const-string v0, "location"
+
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static TICKET_VISIBILITY_LOCATION_HIDDEN()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 449
+    const-string v0, "hidden"
+
+    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static TICKET_VISIBILITY_LOCATION_VISIBLE()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 441
+    const-string v0, "visible"
 
     invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
 

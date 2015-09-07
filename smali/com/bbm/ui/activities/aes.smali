@@ -1,111 +1,44 @@
-.class final synthetic Lcom/bbm/ui/activities/aes;
+.class final Lcom/bbm/ui/activities/aes;
 .super Ljava/lang/Object;
-.source "SponsoredAdActivity.java"
+.source "SearchResultsChannelsActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
-# static fields
-.field static final synthetic a:[I
+# instance fields
+.field final synthetic a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/bbm/ui/activities/SearchResultsChannelsActivity;)V
+    .locals 0
 
     .prologue
-    .line 238
-    invoke-static {}, Lcom/bbm/ui/activities/aet;->values()[Lcom/bbm/ui/activities/aet;
+    .line 369
+    iput-object p1, p0, Lcom/bbm/ui/activities/aes;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/bbm/ui/activities/aes;->a:[I
-
-    :try_start_0
-    sget-object v0, Lcom/bbm/ui/activities/aes;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/activities/aet;->b:Lcom/bbm/ui/activities/aet;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/aet;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/bbm/ui/activities/aes;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/activities/aet;->d:Lcom/bbm/ui/activities/aet;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/aet;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/bbm/ui/activities/aes;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/activities/aet;->c:Lcom/bbm/ui/activities/aet;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/aet;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
-
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/bbm/ui/activities/aes;->a:[I
-
-    sget-object v1, Lcom/bbm/ui/activities/aet;->a:Lcom/bbm/ui/activities/aet;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/aet;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x4
-
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
-
-    :goto_3
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
 
-    goto :goto_3
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
 
-    :catch_1
-    move-exception v0
+    .prologue
+    .line 372
+    iget-object v0, p0, Lcom/bbm/ui/activities/aes;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    goto :goto_2
+    invoke-static {v0}, Lcom/bbm/util/fh;->b(Landroid/app/Activity;)V
 
-    :catch_2
-    move-exception v0
+    .line 373
+    iget-object v0, p0, Lcom/bbm/ui/activities/aes;->a:Lcom/bbm/ui/activities/SearchResultsChannelsActivity;
 
-    goto :goto_1
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/SearchResultsChannelsActivity;->onBackPressed()V
 
-    :catch_3
-    move-exception v0
-
-    goto :goto_0
+    .line 374
+    return-void
 .end method

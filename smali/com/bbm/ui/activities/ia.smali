@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ia;
 .super Ljava/lang/Object;
-.source "FilePickerActivity.java"
+.source "ConversationActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/fh;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/FilePickerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/FilePickerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 264
-    iput-object p1, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    .line 2977
+    iput-object p1, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,161 +25,76 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final a()V
+    .locals 2
 
     .prologue
-    const v3, 0x7f0e051f
+    .line 2988
+    iget-object v0, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 268
-    const-string v0, "headerActionBar Positive Button Clicked"
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->e:Lcom/bbm/ui/EmoticonInputPanel;
 
-    const-class v1, Lcom/bbm/ui/activities/FilePickerActivity;
+    sget-object v1, Lcom/bbm/ui/bp;->b:Lcom/bbm/ui/bp;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setLowerPanel(Lcom/bbm/ui/bp;)V
 
-    .line 270
-    iget-object v0, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->g(Lcom/bbm/ui/activities/FilePickerActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 271
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 272
-    iget-object v0, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/FilePickerActivity;->f(Lcom/bbm/ui/activities/FilePickerActivity;)Landroid/widget/GridView;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/widget/GridView;->getAdapter()Landroid/widget/ListAdapter;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/ii;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ii;->a(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 273
-    new-instance v0, Lcom/bbm/ui/b/o;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/FilePickerActivity;
-
-    invoke-direct {v0, v2}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
-
-    .line 274
-    const v2, 0x7f0e0311
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/b/o;->setTitle(I)V
-
-    .line 275
-    const v2, 0x7f0e0310
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/b/o;->e(I)V
-
-    .line 276
-    const v2, 0x7f0e0165
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/b/o;->b(I)V
-
-    .line 277
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/b/o;->a(I)V
-
-    .line 278
-    new-instance v2, Lcom/bbm/ui/activities/ib;
-
-    invoke-direct {v2, p0, v1}, Lcom/bbm/ui/activities/ib;-><init>(Lcom/bbm/ui/activities/ia;Ljava/lang/String;)V
-
-    invoke-virtual {v0, v2}, Lcom/bbm/ui/b/o;->a(Landroid/view/View$OnClickListener;)V
-
-    .line 285
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->show()V
-
-    .line 297
-    :goto_0
+    .line 2989
     return-void
+.end method
 
-    .line 287
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+.method public final a(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 2
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    .prologue
+    .line 2981
+    iget-object v0, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    move-result-object v0
 
-    invoke-static {v3}, Lcom/bbm/ui/activities/FilePickerActivity;->h(Lcom/bbm/ui/activities/FilePickerActivity;)Ljava/lang/String;
+    iget-object v1, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    sget-object v3, Ljava/io/File;->separator:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {v0, v1, p2, p1}, Lcom/bbm/util/a/j;->a(Lcom/bbm/d/a;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 2982
+    iget-object v0, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    iget-object v0, v0, Lcom/bbm/ui/activities/ConversationActivity;->e:Lcom/bbm/ui/EmoticonInputPanel;
+
+    sget-object v1, Lcom/bbm/ui/bp;->b:Lcom/bbm/ui/bp;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/EmoticonInputPanel;->setLowerPanel(Lcom/bbm/ui/bp;)V
+
+    .line 2983
+    iget-object v0, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->x(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ListView;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->x(Lcom/bbm/ui/activities/ConversationActivity;)Landroid/widget/ListView;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/FilePickerActivity;->b(Lcom/bbm/ui/activities/FilePickerActivity;Ljava/lang/String;)V
+    invoke-virtual {v1}, Landroid/widget/ListView;->getAdapter()Landroid/widget/ListAdapter;
 
-    goto :goto_0
+    move-result-object v1
 
-    .line 290
-    :cond_1
-    new-instance v0, Lcom/bbm/ui/b/o;
+    invoke-interface {v1}, Landroid/widget/ListAdapter;->getCount()I
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ia;->a:Lcom/bbm/ui/activities/FilePickerActivity;
+    move-result v1
 
-    invoke-direct {v0, v1}, Lcom/bbm/ui/b/o;-><init>(Landroid/content/Context;)V
+    add-int/lit8 v1, v1, -0x1
 
-    .line 291
-    const v1, 0x7f0e0313
+    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setSelection(I)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->setTitle(I)V
-
-    .line 292
-    const v1, 0x7f0e0312
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/b/o;->e(I)V
-
-    .line 293
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->d()V
-
-    .line 294
-    invoke-virtual {v0, v3}, Lcom/bbm/ui/b/o;->b(I)V
-
-    .line 295
-    invoke-virtual {v0}, Lcom/bbm/ui/b/o;->show()V
-
-    goto :goto_0
+    .line 2984
+    return-void
 .end method

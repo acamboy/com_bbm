@@ -25,7 +25,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 145
@@ -68,9 +68,9 @@
 
     invoke-virtual {v1, v2}, Lsun/misc/Unsafe;->objectFieldOffset(Ljava/lang/reflect/Field;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    sput-wide v1, Lcom/google/b/b/ca;->g:J
+    sput-wide v2, Lcom/google/b/b/ca;->g:J
 
     .line 310
     sget-object v1, Lcom/google/b/b/ca;->f:Lsun/misc/Unsafe;
@@ -207,7 +207,7 @@
 .end method
 
 .method final b(JJ)Z
-    .locals 8
+    .locals 9
 
     .prologue
     .line 176

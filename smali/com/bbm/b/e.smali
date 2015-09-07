@@ -1,173 +1,158 @@
-.class final Lcom/bbm/b/e;
+.class public Lcom/bbm/b/e;
 .super Ljava/lang/Object;
-.source "AdUtils.java"
+.source "AdImageData.java"
 
-# interfaces
-.implements Lcom/bbm/f/y;
+
+# static fields
+.field public static final a:Ljava/lang/String;
+
+.field private static g:Lcom/bbm/d/ff;
+
+
+# instance fields
+.field public b:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/bbm/util/ct",
+            "<",
+            "Lcom/bbm/d/ff;",
+            ">;>;"
+        }
+    .end annotation
+.end field
+
+.field public c:Lcom/bbm/ui/ObservingImageView;
+
+.field public d:Ljava/lang/ref/WeakReference;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/ref/WeakReference",
+            "<",
+            "Lcom/bbm/b/g;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field private final e:F
+
+.field private final f:F
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
     .prologue
-    .line 124
+    .line 33
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-class v1, Lcom/bbm/b/e;
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ": "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/bbm/b/e;->a:Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 1
+
+    .prologue
+    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 35
+    const/high16 v0, 0x3f400000
+
+    iput v0, p0, Lcom/bbm/b/e;->e:F
+
+    .line 38
+    const/high16 v0, 0x41c80000
+
+    iput v0, p0, Lcom/bbm/b/e;->f:F
+
     return-void
 .end method
 
-
-# virtual methods
-.method public final a()V
-    .locals 0
+.method public static a()Lcom/bbm/d/ff;
+    .locals 2
 
     .prologue
-    .line 129
-    return-void
-.end method
+    .line 46
+    sget-object v0, Lcom/bbm/b/e;->g:Lcom/bbm/d/ff;
 
-.method public final a(Lcom/bbm/f/x;)V
-    .locals 4
+    if-nez v0, :cond_0
 
-    .prologue
-    .line 134
-    const-string v0, "listAdd"
+    .line 47
+    new-instance v0, Lcom/bbm/d/ff;
 
-    invoke-virtual {p1}, Lcom/bbm/f/x;->f()Ljava/lang/String;
+    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/d/a;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 135
-    invoke-virtual {p1}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    .line 138
-    const-string v1, "elements"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 140
-    :try_start_0
-    const-string v1, "elements"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
-
-    move-result-object v0
-
-    .line 143
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
-
-    move-result-object v0
-
-    .line 144
-    const-string v1, "offerUri"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 146
-    const-string v1, "offerUri"
-
-    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v1}, Lcom/bbm/d/a;->m()Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-direct {v0, v1}, Lcom/bbm/d/ff;-><init>(Landroid/graphics/drawable/Drawable;)V
 
-    move-result-object v1
+    sput-object v0, Lcom/bbm/b/e;->g:Lcom/bbm/d/ff;
 
-    .line 147
-    invoke-static {}, Lcom/bbm/Alaska;->e()Lcom/bbm/f/a;
-
-    move-result-object v2
-
-    invoke-static {}, Lcom/bbm/b/c;->a()Lcom/bbm/f/y;
-
-    move-result-object v3
-
-    invoke-interface {v2, v3}, Lcom/bbm/f/a;->b(Lcom/bbm/f/y;)V
-
-    .line 149
-    invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 151
-    new-instance v2, Landroid/content/Intent;
-
-    const-string v3, "android.intent.action.VIEW"
-
-    invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    invoke-direct {v2, v3, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    .line 152
-    const/high16 v1, 0x10000000
-
-    invoke-virtual {v2, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
-
-    .line 153
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v2}, Lcom/bbm/Alaska;->startActivity(Landroid/content/Intent;)V
-
-    .line 155
+    .line 49
     :cond_0
-    new-instance v1, Ljava/util/LinkedList;
+    sget-object v0, Lcom/bbm/b/e;->g:Lcom/bbm/d/ff;
 
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
+    return-object v0
+.end method
 
-    .line 156
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+.method static synthetic a(Lcom/bbm/b/e;)Ljava/lang/ref/WeakReference;
+    .locals 1
 
-    .line 157
-    invoke-static {}, Lcom/bbm/b/c;->b()Lcom/bbm/b/k;
+    .prologue
+    .line 31
+    iget-object v0, p0, Lcom/bbm/b/e;->d:Ljava/lang/ref/WeakReference;
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    const-string v2, "offer"
+.method static synthetic b(Lcom/bbm/b/e;)Lcom/bbm/ui/ObservingImageView;
+    .locals 1
 
-    new-instance v3, Lcom/bbm/b/x;
+    .prologue
+    .line 31
+    iget-object v0, p0, Lcom/bbm/b/e;->c:Lcom/bbm/ui/ObservingImageView;
 
-    invoke-direct {v3, v1, v2}, Lcom/bbm/b/x;-><init>(Ljava/util/List;Ljava/lang/String;)V
+    return-object v0
+.end method
 
-    invoke-virtual {v0, v3}, Lcom/bbm/b/k;->a(Lcom/bbm/b/aa;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+.method static synthetic b()Ljava/lang/String;
+    .locals 1
 
-    .line 165
-    :cond_1
-    :goto_0
-    return-void
+    .prologue
+    .line 31
+    sget-object v0, Lcom/bbm/b/e;->a:Ljava/lang/String;
 
-    .line 160
-    :catch_0
-    move-exception v0
-
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
-    goto :goto_0
+    return-object v0
 .end method

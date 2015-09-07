@@ -26,9 +26,9 @@
 
     .prologue
     .line 115
-    new-instance v0, Landroid/support/v4/app/u;
+    new-instance v0, Landroid/support/v4/app/ad;
 
-    invoke-direct {v0}, Landroid/support/v4/app/u;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/app/ad;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/FragmentTabHost$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 

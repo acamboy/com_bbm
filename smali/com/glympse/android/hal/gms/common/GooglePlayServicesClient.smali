@@ -22,11 +22,11 @@
     .end annotation
 .end field
 
-.field private static eM:Ljava/lang/reflect/Method;
+.field private static eT:Ljava/lang/reflect/Method;
 
-.field private static eN:Ljava/lang/reflect/Method;
+.field private static eU:Ljava/lang/reflect/Method;
 
-.field private static eO:Ljava/lang/reflect/Method;
+.field private static eV:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -40,16 +40,16 @@
     sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->_ConnectionCallbacks:Ljava/lang/Class;
 
     .line 18
-    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eM:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eT:Ljava/lang/reflect/Method;
 
     .line 19
-    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eN:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eU:Ljava/lang/reflect/Method;
 
     .line 68
     sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->_OnConnectionFailedListener:Ljava/lang/Class;
 
     .line 69
-    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eO:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eV:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -65,32 +65,32 @@
     return-void
 .end method
 
-.method static synthetic M()Ljava/lang/reflect/Method;
-    .locals 1
-
-    .prologue
-    .line 15
-    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eN:Ljava/lang/reflect/Method;
-
-    return-object v0
-.end method
-
 .method static synthetic N()Ljava/lang/reflect/Method;
     .locals 1
 
     .prologue
     .line 15
-    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eO:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eU:Ljava/lang/reflect/Method;
 
     return-object v0
 .end method
 
-.method static synthetic X()Ljava/lang/reflect/Method;
+.method static synthetic O()Ljava/lang/reflect/Method;
     .locals 1
 
     .prologue
     .line 15
-    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eM:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eV:Ljava/lang/reflect/Method;
+
+    return-object v0
+.end method
+
+.method static synthetic Y()Ljava/lang/reflect/Method;
+    .locals 1
+
+    .prologue
+    .line 15
+    sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eT:Ljava/lang/reflect/Method;
 
     return-object v0
 .end method
@@ -129,7 +129,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eM:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eT:Ljava/lang/reflect/Method;
 
     .line 120
     sget-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->_ConnectionCallbacks:Ljava/lang/Class;
@@ -142,7 +142,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eN:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eU:Ljava/lang/reflect/Method;
 
     .line 121
     const-string v0, "com.google.android.gms.common.GooglePlayServicesClient$OnConnectionFailedListener"
@@ -170,7 +170,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eO:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/gms/common/GooglePlayServicesClient;->eV:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 

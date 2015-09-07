@@ -12,7 +12,7 @@
 
 .field private d:I
 
-.field private e:Lcom/bbm/ui/gi;
+.field private e:Lcom/bbm/ui/hg;
 
 .field private final f:Landroid/view/View$OnClickListener;
 
@@ -61,12 +61,12 @@
     .line 28
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/ThreeButtonSegmentedControl;->e:Lcom/bbm/ui/gi;
+    iput-object v0, p0, Lcom/bbm/ui/ThreeButtonSegmentedControl;->e:Lcom/bbm/ui/hg;
 
     .line 123
-    new-instance v0, Lcom/bbm/ui/gh;
+    new-instance v0, Lcom/bbm/ui/hf;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/gh;-><init>(Lcom/bbm/ui/ThreeButtonSegmentedControl;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/hf;-><init>(Lcom/bbm/ui/ThreeButtonSegmentedControl;)V
 
     iput-object v0, p0, Lcom/bbm/ui/ThreeButtonSegmentedControl;->f:Landroid/view/View$OnClickListener;
 
@@ -75,12 +75,12 @@
 
     move-result-object v0
 
-    const v1, 0x7f03013a
+    const v1, 0x7f030154
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 46
-    const v0, 0x7f0a05ce
+    const v0, 0x7f0b0687
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -89,7 +89,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 47
-    const v1, 0x7f0a05e5
+    const v1, 0x7f0b06a3
 
     invoke-virtual {p0, v1}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -98,7 +98,7 @@
     check-cast v1, Landroid/widget/TextView;
 
     .line 48
-    const v2, 0x7f0a05d0
+    const v2, 0x7f0b0689
 
     invoke-virtual {p0, v2}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -111,7 +111,7 @@
 
     move-result-object v3
 
-    sget-object v4, Lcom/bbm/ac;->ThreeButtonSegmentControl:[I
+    sget-object v4, Lcom/bbm/ae;->ThreeButtonSegmentControl:[I
 
     invoke-virtual {v3, p2, v4, p3, v5}, Landroid/content/res/Resources$Theme;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -158,7 +158,7 @@
 
     move-result-object v0
 
-    const v1, 0x7f0b02d2
+    const v1, 0x7f0a0316
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -169,7 +169,7 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b02dd
+    const v2, 0x7f0a0321
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -253,14 +253,14 @@
 
     .line 110
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/ThreeButtonSegmentedControl;->e:Lcom/bbm/ui/gi;
+    iget-object v0, p0, Lcom/bbm/ui/ThreeButtonSegmentedControl;->e:Lcom/bbm/ui/hg;
 
     if-eqz v0, :cond_0
 
     .line 111
-    iget-object v0, p0, Lcom/bbm/ui/ThreeButtonSegmentedControl;->e:Lcom/bbm/ui/gi;
+    iget-object v0, p0, Lcom/bbm/ui/ThreeButtonSegmentedControl;->e:Lcom/bbm/ui/hg;
 
-    invoke-interface {v0, p1}, Lcom/bbm/ui/gi;->a(I)V
+    invoke-interface {v0, p1}, Lcom/bbm/ui/hg;->a(I)V
 
     .line 113
     :cond_0
@@ -317,7 +317,7 @@
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onFinishInflate()V
 
     .line 74
-    const v0, 0x7f0a05cd
+    const v0, 0x7f0b0686
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -335,7 +335,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 77
-    const v0, 0x7f0a05e4
+    const v0, 0x7f0b06a2
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -353,7 +353,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 80
-    const v0, 0x7f0a05cf
+    const v0, 0x7f0b0688
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->findViewById(I)Landroid/view/View;
 
@@ -379,12 +379,12 @@
     return-void
 .end method
 
-.method public setOnOptionSelectedListener(Lcom/bbm/ui/gi;)V
+.method public setOnOptionSelectedListener(Lcom/bbm/ui/hg;)V
     .locals 0
 
     .prologue
     .line 116
-    iput-object p1, p0, Lcom/bbm/ui/ThreeButtonSegmentedControl;->e:Lcom/bbm/ui/gi;
+    iput-object p1, p0, Lcom/bbm/ui/ThreeButtonSegmentedControl;->e:Lcom/bbm/ui/hg;
 
     .line 117
     return-void

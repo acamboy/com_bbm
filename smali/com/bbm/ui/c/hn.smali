@@ -1,6 +1,9 @@
 .class final Lcom/bbm/ui/c/hn;
-.super Lcom/bbm/j/k;
-.source "UpdatesFragment.java"
+.super Ljava/lang/Object;
+.source "StickerDetailsFragment.java"
+
+# interfaces
+.implements Lcom/bbm/l/c/o;
 
 
 # instance fields
@@ -9,174 +12,149 @@
 
 # direct methods
 .method constructor <init>(Lcom/bbm/ui/c/hm;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 66
+    .line 1060
     iput-object p1, p0, Lcom/bbm/ui/c/hn;->a:Lcom/bbm/ui/c/hm;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 13
+.method public final a(I)V
+    .locals 3
 
     .prologue
-    const-wide/16 v11, 0x0
+    .line 1075
+    iget-object v0, p0, Lcom/bbm/ui/c/hn;->a:Lcom/bbm/ui/c/hm;
 
-    const/4 v10, 0x1
+    iget-object v0, v0, Lcom/bbm/ui/c/hm;->a:Lcom/bbm/ui/c/gr;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/gr;->v(Lcom/bbm/ui/c/gr;)Landroid/view/View;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 1076
+    packed-switch p1, :pswitch_data_0
+
+    .line 1086
+    iget-object v0, p0, Lcom/bbm/ui/c/hn;->a:Lcom/bbm/ui/c/hm;
+
+    iget-object v0, v0, Lcom/bbm/ui/c/hm;->a:Lcom/bbm/ui/c/gr;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/gr;->w(Lcom/bbm/ui/c/gr;)Landroid/view/View;
+
+    move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 70
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/d/a;->v()Lcom/bbm/util/au;
-
-    move-result-object v2
-
-    .line 71
-    iget-object v0, p0, Lcom/bbm/ui/c/hn;->a:Lcom/bbm/ui/c/hm;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/hm;->a(Lcom/bbm/ui/c/hm;)Lcom/bbm/ui/ThreeButtonSegmentedControl;
-
-    move-result-object v3
-
-    sget-object v0, Lcom/bbm/util/au;->a:Lcom/bbm/util/au;
-
-    if-ne v2, v0, :cond_2
-
-    const/16 v0, 0x8
-
-    :goto_0
-    invoke-virtual {v3, v0}, Lcom/bbm/ui/ThreeButtonSegmentedControl;->setVisibility(I)V
-
-    .line 72
-    sget-object v0, Lcom/bbm/util/au;->c:Lcom/bbm/util/au;
-
-    if-ne v2, v0, :cond_1
-
-    .line 73
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v2
-
-    .line 74
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/ae;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ae;->r()J
-
-    move-result-wide v4
-
-    .line 75
-    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/ae;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ae;->s()J
-
-    move-result-wide v6
-
-    .line 76
-    iget-object v0, p0, Lcom/bbm/ui/c/hn;->a:Lcom/bbm/ui/c/hm;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/hm;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    invoke-static {v0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 79
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    .line 82
-    cmp-long v8, v4, v11
-
-    if-eqz v8, :cond_0
-
-    cmp-long v8, v6, v11
-
-    if-nez v8, :cond_3
-
-    .line 83
+    .line 1089
     :cond_0
-    const-string v1, "channel_sixty_days_time_stamp"
-
-    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    .line 84
-    const-string v1, "channel_three_days_time_stamp"
-
-    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    .line 85
-    const-string v1, "channel_show_promotion"
-
-    invoke-interface {v0, v1, v10}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    .line 93
-    :goto_1
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
-
-    .line 95
-    :cond_1
+    :goto_0
     return-void
 
-    :cond_2
-    move v0, v1
+    .line 1078
+    :pswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/c/hn;->a:Lcom/bbm/ui/c/hm;
 
-    .line 71
+    iget-object v0, v0, Lcom/bbm/ui/c/hm;->a:Lcom/bbm/ui/c/gr;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/gr;->l(Lcom/bbm/ui/c/gr;)Landroid/content/Context;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/c/hn;->a:Lcom/bbm/ui/c/hm;
+
+    iget-object v1, v1, Lcom/bbm/ui/c/hm;->a:Lcom/bbm/ui/c/gr;
+
+    const v2, 0x7f0e072e
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/c/gr;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 1079
+    iget-object v0, p0, Lcom/bbm/ui/c/hn;->a:Lcom/bbm/ui/c/hm;
+
+    iget-object v0, v0, Lcom/bbm/ui/c/hm;->a:Lcom/bbm/ui/c/gr;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/c/gr;->getActivity()Landroid/app/Activity;
+
+    move-result-object v0
+
+    .line 1080
+    if-eqz v0, :cond_0
+
+    .line 1081
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+
     goto :goto_0
 
-    .line 86
-    :cond_3
-    const-wide v8, 0x134fd9000L
+    .line 1076
+    nop
 
-    add-long/2addr v4, v8
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
 
-    cmp-long v4, v2, v4
+.method public final a(Lcom/bbm/l/b/r;)V
+    .locals 2
 
-    if-gez v4, :cond_4
+    .prologue
+    .line 1064
+    iget-object v0, p0, Lcom/bbm/ui/c/hn;->a:Lcom/bbm/ui/c/hm;
 
-    const-wide/32 v4, 0xf731400
+    iget-object v0, v0, Lcom/bbm/ui/c/hm;->a:Lcom/bbm/ui/c/gr;
 
-    add-long/2addr v4, v6
+    invoke-static {v0}, Lcom/bbm/ui/c/gr;->v(Lcom/bbm/ui/c/gr;)Landroid/view/View;
 
-    cmp-long v4, v2, v4
+    move-result-object v0
 
-    if-lez v4, :cond_4
+    const/16 v1, 0x8
 
-    .line 88
-    const-string v1, "channel_three_days_time_stamp"
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+    .line 1065
+    if-nez p1, :cond_0
 
-    .line 89
-    const-string v1, "channel_show_promotion"
+    .line 1067
+    iget-object v0, p0, Lcom/bbm/ui/c/hn;->a:Lcom/bbm/ui/c/hm;
 
-    invoke-interface {v0, v1, v10}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    iget-object v0, v0, Lcom/bbm/ui/c/hm;->a:Lcom/bbm/ui/c/gr;
 
-    goto :goto_1
+    invoke-static {v0}, Lcom/bbm/ui/c/gr;->w(Lcom/bbm/ui/c/gr;)Landroid/view/View;
 
-    .line 91
-    :cond_4
-    const-string v2, "channel_show_promotion"
+    move-result-object v0
 
-    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    const/4 v1, 0x0
 
-    goto :goto_1
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    .line 1071
+    :goto_0
+    return-void
+
+    .line 1070
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/c/hn;->a:Lcom/bbm/ui/c/hm;
+
+    iget-object v0, v0, Lcom/bbm/ui/c/hm;->a:Lcom/bbm/ui/c/gr;
+
+    invoke-static {v0, p1}, Lcom/bbm/ui/c/gr;->b(Lcom/bbm/ui/c/gr;Lcom/bbm/l/b/r;)V
+
+    goto :goto_0
 .end method

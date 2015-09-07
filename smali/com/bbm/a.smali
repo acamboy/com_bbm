@@ -8,7 +8,7 @@
     value = {
         "Lcom/bbm/j/a",
         "<",
-        "Lcom/bbm/f/ab;",
+        "Lcom/bbm/f/af;",
         ">;"
     }
 .end annotation
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 113
+    .line 121
     iput-object p1, p0, Lcom/bbm/a;->a:Lcom/bbm/Alaska;
 
     invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
@@ -37,10 +37,10 @@
     .locals 1
 
     .prologue
-    .line 113
+    .line 121
     iget-object v0, p0, Lcom/bbm/a;->a:Lcom/bbm/Alaska;
 
-    invoke-static {v0}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/h;
+    invoke-static {v0}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/j;
 
     move-result-object v0
 
@@ -48,11 +48,17 @@
 
     iget-object v0, p0, Lcom/bbm/a;->a:Lcom/bbm/Alaska;
 
-    invoke-static {v0}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/h;
+    invoke-static {v0}, Lcom/bbm/Alaska;->a(Lcom/bbm/Alaska;)Lcom/bbm/j;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/h;->d()Lcom/bbm/f/ab;
+    iget-object v0, v0, Lcom/bbm/j;->a:Lcom/bbm/BbmService;
+
+    invoke-static {v0}, Lcom/bbm/BbmService;->a(Lcom/bbm/BbmService;)Lcom/bbm/f/ad;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/f/ad;->h()Lcom/bbm/f/af;
 
     move-result-object v0
 
@@ -60,7 +66,7 @@
     return-object v0
 
     :cond_0
-    sget-object v0, Lcom/bbm/f/ab;->d:Lcom/bbm/f/ab;
+    sget-object v0, Lcom/bbm/f/af;->e:Lcom/bbm/f/af;
 
     goto :goto_0
 .end method

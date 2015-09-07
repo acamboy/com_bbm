@@ -1,72 +1,43 @@
 .class Lcom/glympse/android/lib/fx;
 .super Ljava/lang/Object;
-.source "ModifyWizardListener.java"
+.source "MemoryCache.java"
 
 # interfaces
-.implements Lcom/glympse/android/hal/GUiControlListener;
+.implements Lcom/glympse/android/core/GCommon;
 
 
 # instance fields
-.field private cC:Lcom/glympse/android/api/GGlympse;
+.field public qo:Lcom/glympse/android/core/GCommon;
 
-.field private nq:Lcom/glympse/android/lite/GTicketLite;
+.field public qp:Lcom/glympse/android/lib/bt;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/glympse/android/lib/bt",
+            "<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lite/GTicketLite;Lcom/glympse/android/api/GGlympse;)V
+.method private constructor <init>()V
     .locals 0
 
     .prologue
-    .line 25
+    .line 124
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
-    iput-object p1, p0, Lcom/glympse/android/lib/fx;->nq:Lcom/glympse/android/lite/GTicketLite;
-
-    .line 27
-    iput-object p2, p0, Lcom/glympse/android/lib/fx;->cC:Lcom/glympse/android/api/GGlympse;
-
-    .line 28
     return-void
 .end method
 
-
-# virtual methods
-.method public onCancelled()V
-    .locals 3
+.method synthetic constructor <init>(Lcom/glympse/android/lib/fv$1;)V
+    .locals 0
 
     .prologue
-    const/4 v2, 0x0
+    .line 124
+    invoke-direct {p0}, Lcom/glympse/android/lib/fx;-><init>()V
 
-    .line 44
-    iget-object v0, p0, Lcom/glympse/android/lib/fx;->nq:Lcom/glympse/android/lite/GTicketLite;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/fx;->cC:Lcom/glympse/android/api/GGlympse;
-
-    invoke-static {v0, v1}, Lcom/glympse/android/lib/hc;->a(Lcom/glympse/android/lite/GTicketLite;Lcom/glympse/android/api/GGlympse;)V
-
-    .line 47
-    iput-object v2, p0, Lcom/glympse/android/lib/fx;->nq:Lcom/glympse/android/lite/GTicketLite;
-
-    .line 48
-    iput-object v2, p0, Lcom/glympse/android/lib/fx;->cC:Lcom/glympse/android/api/GGlympse;
-
-    .line 49
-    return-void
-.end method
-
-.method public onCompleted()V
-    .locals 1
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 37
-    iput-object v0, p0, Lcom/glympse/android/lib/fx;->nq:Lcom/glympse/android/lite/GTicketLite;
-
-    .line 38
-    iput-object v0, p0, Lcom/glympse/android/lib/fx;->cC:Lcom/glympse/android/api/GGlympse;
-
-    .line 39
     return-void
 .end method

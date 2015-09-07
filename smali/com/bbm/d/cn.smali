@@ -1,40 +1,35 @@
 .class public final Lcom/bbm/d/cn;
-.super Lcom/bbm/d/da;
+.super Lcom/bbm/d/dy;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 4240
-    const-string v0, "startChannelChat"
+    .line 3147
+    const-string v0, "pictureRequestHigherQuality"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/da;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
 
-    .line 4242
-    const-string v0, "conversationUri"
+    .line 3149
+    const-string v0, "id"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/cn;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 4243
-    const-string v0, "invitee"
-
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/d/cn;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 4244
+    .line 3150
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a()Lcom/bbm/f/x;
+.method public final bridge synthetic a()Lcom/bbm/f/ab;
     .locals 1
 
     .prologue
-    .line 4238
-    invoke-super {p0}, Lcom/bbm/d/da;->a()Lcom/bbm/f/x;
+    .line 3145
+    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

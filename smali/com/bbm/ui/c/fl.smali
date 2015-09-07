@@ -1,85 +1,106 @@
 .class final Lcom/bbm/ui/c/fl;
-.super Lcom/bbm/d/b/m;
-.source "ProfileUpdatesFragment.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/d/b/m",
-        "<",
-        "Lcom/bbm/d/eh;",
-        ">;"
-    }
-.end annotation
+.super Lcom/bbm/j/k;
+.source "OwnProfileDetailsFragment.java"
 
 
 # instance fields
-.field final synthetic a:Ljava/lang/String;
-
-.field final synthetic b:Lcom/bbm/ui/c/fk;
+.field final synthetic a:Lcom/bbm/ui/c/fg;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/fk;Lcom/bbm/j/r;Ljava/lang/String;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/c/fg;)V
+    .locals 1
 
     .prologue
-    .line 56
-    iput-object p1, p0, Lcom/bbm/ui/c/fl;->b:Lcom/bbm/ui/c/fk;
+    .line 134
+    iput-object p1, p0, Lcom/bbm/ui/c/fl;->a:Lcom/bbm/ui/c/fg;
 
-    iput-object p3, p0, Lcom/bbm/ui/c/fl;->a:Ljava/lang/String;
+    const/4 v0, 0x0
 
-    invoke-direct {p0, p2}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a(Ljava/lang/Object;)Z
+.method protected final a()V
     .locals 2
 
     .prologue
-    .line 56
-    check-cast p1, Lcom/bbm/d/eh;
+    .line 137
+    iget-object v0, p0, Lcom/bbm/ui/c/fl;->a:Lcom/bbm/ui/c/fg;
 
-    iget-object v0, p0, Lcom/bbm/ui/c/fl;->a:Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/c/fg;->d(Lcom/bbm/ui/c/fg;)Landroid/widget/EditText;
 
-    iget-object v1, p1, Lcom/bbm/d/eh;->h:Ljava/lang/String;
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    iget-object v1, p0, Lcom/bbm/ui/c/fl;->a:Lcom/bbm/ui/c/fg;
 
-    move-result v0
+    invoke-static {v1}, Lcom/bbm/ui/c/fg;->e(Lcom/bbm/ui/c/fg;)Lcom/bbm/d/gr;
 
-    if-eqz v0, :cond_1
+    move-result-object v1
 
-    iget-object v0, p1, Lcom/bbm/d/eh;->g:Ljava/lang/String;
+    iget-object v1, v1, Lcom/bbm/d/gr;->p:Ljava/lang/String;
 
-    const-string v1, "PersonalMessage"
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    .line 139
+    iget-object v0, p0, Lcom/bbm/ui/c/fl;->a:Lcom/bbm/ui/c/fg;
 
-    move-result v0
+    invoke-static {v0}, Lcom/bbm/ui/c/fg;->e(Lcom/bbm/ui/c/fg;)Lcom/bbm/d/gr;
+
+    move-result-object v0
+
+    iget-boolean v0, v0, Lcom/bbm/d/gr;->y:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Lcom/bbm/d/eh;->b:Ljava/lang/String;
+    .line 140
+    iget-object v0, p0, Lcom/bbm/ui/c/fl;->a:Lcom/bbm/ui/c/fg;
 
-    invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v0}, Lcom/bbm/ui/c/fg;->f(Lcom/bbm/ui/c/fg;)Lcom/bbm/ui/LocationTimezoneContainer;
 
-    move-result v0
+    move-result-object v0
 
-    if-nez v0, :cond_1
+    const/4 v1, 0x0
 
-    :cond_0
-    const/4 v0, 0x1
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/LocationTimezoneContainer;->setVisibility(I)V
 
+    .line 141
+    iget-object v0, p0, Lcom/bbm/ui/c/fl;->a:Lcom/bbm/ui/c/fg;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/fg;->f(Lcom/bbm/ui/c/fg;)Lcom/bbm/ui/LocationTimezoneContainer;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/c/fl;->a:Lcom/bbm/ui/c/fg;
+
+    invoke-static {v1}, Lcom/bbm/ui/c/fg;->e(Lcom/bbm/ui/c/fg;)Lcom/bbm/d/gr;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/bbm/d/b/a;->c(Lcom/bbm/d/gr;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/LocationTimezoneContainer;->setLocation(Ljava/lang/String;)V
+
+    .line 145
     :goto_0
-    return v0
+    return-void
 
-    :cond_1
-    const/4 v0, 0x0
+    .line 143
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/c/fl;->a:Lcom/bbm/ui/c/fg;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/fg;->f(Lcom/bbm/ui/c/fg;)Lcom/bbm/ui/LocationTimezoneContainer;
+
+    move-result-object v0
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/LocationTimezoneContainer;->setVisibility(I)V
 
     goto :goto_0
 .end method

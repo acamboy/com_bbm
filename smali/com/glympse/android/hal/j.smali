@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static F:Lcom/glympse/android/hal/utils/Rsa;
+.field private static E:Lcom/glympse/android/hal/utils/Rsa;
 
 
 # direct methods
@@ -15,7 +15,7 @@
     .line 83
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/hal/j;->F:Lcom/glympse/android/hal/utils/Rsa;
+    sput-object v0, Lcom/glympse/android/hal/j;->E:Lcom/glympse/android/hal/utils/Rsa;
 
     return-void
 .end method
@@ -111,7 +111,7 @@
     .line 74
     const-string v2, "responder_key_id"
 
-    invoke-static {}, Lcom/glympse/android/hal/bi;->P()Ljava/lang/String;
+    invoke-static {}, Lcom/glympse/android/hal/bj;->Q()Ljava/lang/String;
 
     move-result-object v3
 
@@ -181,7 +181,7 @@
     .line 45
     const-string v2, "requester_key_id"
 
-    invoke-static {}, Lcom/glympse/android/hal/bi;->P()Ljava/lang/String;
+    invoke-static {}, Lcom/glympse/android/hal/bj;->Q()Ljava/lang/String;
 
     move-result-object v3
 
@@ -284,24 +284,24 @@
 
     .prologue
     .line 92
-    sget-object v0, Lcom/glympse/android/hal/j;->F:Lcom/glympse/android/hal/utils/Rsa;
+    sget-object v0, Lcom/glympse/android/hal/j;->E:Lcom/glympse/android/hal/utils/Rsa;
 
     if-nez v0, :cond_0
 
     .line 94
     new-instance v0, Lcom/glympse/android/hal/utils/Rsa;
 
-    invoke-static {}, Lcom/glympse/android/hal/bi;->Q()Ljava/lang/String;
+    invoke-static {}, Lcom/glympse/android/hal/bj;->R()Ljava/lang/String;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/glympse/android/hal/utils/Rsa;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/glympse/android/hal/j;->F:Lcom/glympse/android/hal/utils/Rsa;
+    sput-object v0, Lcom/glympse/android/hal/j;->E:Lcom/glympse/android/hal/utils/Rsa;
 
     .line 98
     :cond_0
-    sget-object v0, Lcom/glympse/android/hal/j;->F:Lcom/glympse/android/hal/utils/Rsa;
+    sget-object v0, Lcom/glympse/android/hal/j;->E:Lcom/glympse/android/hal/utils/Rsa;
 
     invoke-virtual {v0, p0}, Lcom/glympse/android/hal/utils/Rsa;->encrypt(Ljava/lang/String;)Ljava/lang/String;
 

@@ -37,71 +37,9 @@
     return-void
 .end method
 
-.method private a(Ljava/lang/Object;Ljava/lang/Throwable;I)Z
-    .locals 3
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;",
-            "Ljava/lang/Throwable;",
-            "I)Z"
-        }
-    .end annotation
 
-    .prologue
-    const/4 v2, 0x1
-
-    .line 379
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0, v2}, Lcom/google/b/f/a/b;->compareAndSetState(II)Z
-
-    move-result v0
-
-    .line 380
-    if-eqz v0, :cond_2
-
-    .line 383
-    iput-object p1, p0, Lcom/google/b/f/a/b;->a:Ljava/lang/Object;
-
-    .line 385
-    and-int/lit8 v1, p3, 0xc
-
-    if-eqz v1, :cond_0
-
-    new-instance p2, Ljava/util/concurrent/CancellationException;
-
-    const-string v1, "Future.cancel() was called."
-
-    invoke-direct {p2, v1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
-
-    :cond_0
-    iput-object p2, p0, Lcom/google/b/f/a/b;->b:Ljava/lang/Throwable;
-
-    .line 387
-    invoke-virtual {p0, p3}, Lcom/google/b/f/a/b;->releaseShared(I)Z
-
-    .line 393
-    :cond_1
-    :goto_0
-    return v0
-
-    .line 388
-    :cond_2
-    invoke-virtual {p0}, Lcom/google/b/f/a/b;->getState()I
-
-    move-result v1
-
-    if-ne v1, v2, :cond_1
-
-    .line 391
-    const/4 v1, -0x1
-
-    invoke-virtual {p0, v1}, Lcom/google/b/f/a/b;->acquireShared(I)V
-
-    goto :goto_0
-.end method
-
-.method private d()Ljava/lang/Object;
+# virtual methods
+.method final a()Ljava/lang/Object;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -181,123 +119,66 @@
     .end sparse-switch
 .end method
 
-
-# virtual methods
-.method final a()Ljava/lang/Object;
-    .locals 1
+.method final a(Ljava/lang/Object;Ljava/lang/Throwable;I)Z
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "()TV;"
+            "(TV;",
+            "Ljava/lang/Throwable;",
+            "I)Z"
         }
     .end annotation
 
     .prologue
-    .line 292
-    const/4 v0, -0x1
+    const/4 v2, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/google/b/f/a/b;->acquireSharedInterruptibly(I)V
+    .line 379
+    const/4 v0, 0x0
 
-    .line 293
-    invoke-direct {p0}, Lcom/google/b/f/a/b;->d()Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method final a(J)Ljava/lang/Object;
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(J)TV;"
-        }
-    .end annotation
-
-    .prologue
-    .line 275
-    const/4 v0, -0x1
-
-    invoke-virtual {p0, v0, p1, p2}, Lcom/google/b/f/a/b;->tryAcquireSharedNanos(IJ)Z
+    invoke-virtual {p0, v0, v2}, Lcom/google/b/f/a/b;->compareAndSetState(II)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    .line 380
+    if-eqz v0, :cond_2
 
-    .line 276
-    new-instance v0, Ljava/util/concurrent/TimeoutException;
+    .line 383
+    iput-object p1, p0, Lcom/google/b/f/a/b;->a:Ljava/lang/Object;
 
-    const-string v1, "Timeout waiting for task."
+    .line 385
+    and-int/lit8 v1, p3, 0xc
 
-    invoke-direct {v0, v1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
+    if-eqz v1, :cond_0
 
-    throw v0
+    new-instance p2, Ljava/util/concurrent/CancellationException;
 
-    .line 279
+    const-string v1, "Future.cancel() was called."
+
+    invoke-direct {p2, v1}, Ljava/util/concurrent/CancellationException;-><init>(Ljava/lang/String;)V
+
     :cond_0
-    invoke-direct {p0}, Lcom/google/b/f/a/b;->d()Ljava/lang/Object;
+    iput-object p2, p0, Lcom/google/b/f/a/b;->b:Ljava/lang/Throwable;
 
-    move-result-object v0
+    .line 387
+    invoke-virtual {p0, p3}, Lcom/google/b/f/a/b;->releaseShared(I)Z
 
-    return-object v0
-.end method
-
-.method final a(Ljava/lang/Object;)Z
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(TV;)Z"
-        }
-    .end annotation
-
-    .prologue
-    .line 348
-    const/4 v0, 0x0
-
-    const/4 v1, 0x2
-
-    invoke-direct {p0, p1, v0, v1}, Lcom/google/b/f/a/b;->a(Ljava/lang/Object;Ljava/lang/Throwable;I)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method final a(Ljava/lang/Throwable;)Z
-    .locals 2
-
-    .prologue
-    .line 355
-    const/4 v0, 0x0
-
-    const/4 v1, 0x2
-
-    invoke-direct {p0, v0, p1, v1}, Lcom/google/b/f/a/b;->a(Ljava/lang/Object;Ljava/lang/Throwable;I)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method final a(Z)Z
-    .locals 2
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 362
-    if-eqz p1, :cond_0
-
-    const/16 v0, 0x8
-
+    .line 393
+    :cond_1
     :goto_0
-    invoke-direct {p0, v1, v1, v0}, Lcom/google/b/f/a/b;->a(Ljava/lang/Object;Ljava/lang/Throwable;I)Z
-
-    move-result v0
-
     return v0
 
-    :cond_0
-    const/4 v0, 0x4
+    .line 388
+    :cond_2
+    invoke-virtual {p0}, Lcom/google/b/f/a/b;->getState()I
+
+    move-result v1
+
+    if-ne v1, v2, :cond_1
+
+    .line 391
+    const/4 v1, -0x1
+
+    invoke-virtual {p0, v1}, Lcom/google/b/f/a/b;->acquireShared(I)V
 
     goto :goto_0
 .end method

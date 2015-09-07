@@ -1,72 +1,45 @@
 .class final Lcom/bbm/ui/activities/ht;
-.super Lcom/bbm/ui/by;
-.source "EditListItemActivity.java"
+.super Ljava/lang/Object;
+.source "ConversationActivity.java"
+
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/EditListItemActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/hr;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/EditListItemActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/hr;)V
     .locals 0
 
     .prologue
-    .line 53
-    iput-object p1, p0, Lcom/bbm/ui/activities/ht;->a:Lcom/bbm/ui/activities/EditListItemActivity;
+    .line 2757
+    iput-object p1, p0, Lcom/bbm/ui/activities/ht;->a:Lcom/bbm/ui/activities/hr;
 
-    invoke-direct {p0}, Lcom/bbm/ui/by;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 2
+.method public final run()V
+    .locals 1
 
     .prologue
-    .line 57
-    packed-switch p1, :pswitch_data_0
+    .line 2760
+    iget-object v0, p0, Lcom/bbm/ui/activities/ht;->a:Lcom/bbm/ui/activities/hr;
 
-    .line 67
-    :goto_0
+    iget-object v0, v0, Lcom/bbm/ui/activities/hr;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->getActionBar()Landroid/app/ActionBar;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/ActionBar;->show()V
+
+    .line 2761
     return-void
-
-    .line 59
-    :pswitch_0
-    const-string v0, "footer complete onAction"
-
-    const-class v1, Lcom/bbm/ui/activities/EditListItemActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 60
-    iget-object v0, p0, Lcom/bbm/ui/activities/ht;->a:Lcom/bbm/ui/activities/EditListItemActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/EditListItemActivity;->a(Lcom/bbm/ui/activities/EditListItemActivity;)V
-
-    goto :goto_0
-
-    .line 63
-    :pswitch_1
-    const-string v0, "footer delete onAction"
-
-    const-class v1, Lcom/bbm/ui/activities/EditListItemActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 64
-    iget-object v0, p0, Lcom/bbm/ui/activities/ht;->a:Lcom/bbm/ui/activities/EditListItemActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/EditListItemActivity;->b(Lcom/bbm/ui/activities/EditListItemActivity;)V
-
-    goto :goto_0
-
-    .line 57
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
 .end method

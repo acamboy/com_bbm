@@ -36,7 +36,7 @@
 .end method
 
 .method private d(D)Z
-    .locals 6
+    .locals 7
 
     const/4 v0, 0x1
 
@@ -92,7 +92,7 @@
 
 # virtual methods
 .method public final build()Lcom/google/android/gms/maps/model/LatLngBounds;
-    .locals 7
+    .locals 8
 
     iget-wide v0, p0, Lcom/google/android/gms/maps/model/LatLngBounds$Builder;->Qc:D
 
@@ -121,11 +121,11 @@
 
     new-instance v2, Lcom/google/android/gms/maps/model/LatLng;
 
-    iget-wide v3, p0, Lcom/google/android/gms/maps/model/LatLngBounds$Builder;->Qb:D
+    iget-wide v4, p0, Lcom/google/android/gms/maps/model/LatLngBounds$Builder;->Qb:D
 
-    iget-wide v5, p0, Lcom/google/android/gms/maps/model/LatLngBounds$Builder;->Qd:D
+    iget-wide v6, p0, Lcom/google/android/gms/maps/model/LatLngBounds$Builder;->Qd:D
 
-    invoke-direct {v2, v3, v4, v5, v6}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
+    invoke-direct {v2, v4, v5, v6, v7}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
     invoke-direct {v0, v1, v2}, Lcom/google/android/gms/maps/model/LatLngBounds;-><init>(Lcom/google/android/gms/maps/model/LatLng;Lcom/google/android/gms/maps/model/LatLng;)V
 

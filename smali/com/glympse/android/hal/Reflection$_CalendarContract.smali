@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cL:Z
+.field private static cR:Z
 
-.field private static cM:Ljava/lang/Class;
+.field private static cS:Ljava/lang/Class;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/lang/Class",
@@ -15,9 +15,9 @@
     .end annotation
 .end field
 
-.field private static de:Landroid/net/Uri;
+.field private static dk:Landroid/net/Uri;
 
-.field private static dg:Ljava/lang/String;
+.field private static dm:Ljava/lang/String;
 
 
 # direct methods
@@ -30,16 +30,16 @@
     .line 2251
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cR:Z
 
     .line 2252
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cM:Ljava/lang/Class;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cS:Ljava/lang/Class;
 
     .line 2253
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_CalendarContract;->de:Landroid/net/Uri;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dk:Landroid/net/Uri;
 
     .line 2254
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dg:Ljava/lang/String;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dm:Ljava/lang/String;
 
     return-void
 .end method
@@ -62,7 +62,7 @@
     invoke-static {p0}, Lcom/glympse/android/hal/Reflection$_CalendarContract;->a(Landroid/content/ContentResolver;)V
 
     .line 2434
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->de:Landroid/net/Uri;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dk:Landroid/net/Uri;
 
     return-object v0
 .end method
@@ -97,11 +97,11 @@
     invoke-static {p0}, Lcom/glympse/android/hal/Reflection$_CalendarContract;->a(Landroid/content/ContentResolver;)V
 
     .line 2379
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->de:Landroid/net/Uri;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dk:Landroid/net/Uri;
 
     if-eqz v0, :cond_3
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dg:Ljava/lang/String;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dm:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
@@ -110,7 +110,7 @@
     if-nez v0, :cond_3
 
     .line 2382
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->de:Landroid/net/Uri;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dk:Landroid/net/Uri;
 
     const-string v1, "calendars"
 
@@ -120,7 +120,7 @@
 
     new-array v2, v6, [Ljava/lang/String;
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dg:Ljava/lang/String;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dm:Ljava/lang/String;
 
     aput-object v0, v2, v7
 
@@ -218,6 +218,8 @@
     .locals 11
 
     .prologue
+    const/4 v10, 0x2
+
     const/4 v1, 0x1
 
     const/4 v6, 0x0
@@ -225,12 +227,12 @@
     const/4 v5, 0x0
 
     .line 2259
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cL:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cR:Z
 
     if-nez v0, :cond_4
 
     .line 2261
-    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cL:Z
+    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cR:Z
 
     .line 2265
     :try_start_0
@@ -240,19 +242,19 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cM:Ljava/lang/Class;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cS:Ljava/lang/Class;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_3
 
     .line 2271
     :goto_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cS:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
     .line 2275
     :try_start_1
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cS:Ljava/lang/Class;
 
     const-string v2, "CONTENT_URI"
 
@@ -268,14 +270,14 @@
 
     check-cast v0, Landroid/net/Uri;
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->de:Landroid/net/Uri;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dk:Landroid/net/Uri;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
 
     .line 2282
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cM:Ljava/lang/Class;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->cS:Ljava/lang/Class;
 
     const-string v2, "ACCOUNT_NAME"
 
@@ -291,18 +293,18 @@
 
     check-cast v0, Ljava/lang/String;
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dg:Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dm:Ljava/lang/String;
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
 
     .line 2290
     :cond_0
     :goto_2
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->de:Landroid/net/Uri;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dk:Landroid/net/Uri;
 
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dg:Ljava/lang/String;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dm:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
@@ -340,11 +342,9 @@
     move-result-object v3
 
     .line 2304
-    const/4 v2, 0x2
+    new-array v8, v10, [Landroid/net/Uri;
 
-    new-array v8, v2, [Landroid/net/Uri;
-
-    sget-object v2, Lcom/glympse/android/hal/Reflection$_CalendarContract;->de:Landroid/net/Uri;
+    sget-object v2, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dk:Landroid/net/Uri;
 
     if-nez v2, :cond_7
 
@@ -355,7 +355,7 @@
     :goto_4
     aput-object v2, v8, v6
 
-    sget-object v2, Lcom/glympse/android/hal/Reflection$_CalendarContract;->de:Landroid/net/Uri;
+    sget-object v2, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dk:Landroid/net/Uri;
 
     if-nez v2, :cond_9
 
@@ -364,24 +364,22 @@
     :goto_5
     aput-object v4, v8, v1
 
-    .line 2311
-    array-length v9, v8
-
     move v7, v6
 
+    .line 2311
     :goto_6
-    if-ge v7, v9, :cond_4
+    if-ge v7, v10, :cond_4
 
-    aget-object v10, v8, v7
+    aget-object v9, v8, v7
 
     .line 2314
-    if-eqz v10, :cond_c
+    if-eqz v9, :cond_c
 
     .line 2319
     :try_start_3
     const-string v0, "calendars"
 
-    invoke-static {v10, v0}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v9, v0}, Landroid/net/Uri;->withAppendedPath(Landroid/net/Uri;Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
@@ -403,16 +401,16 @@
     if-eqz v1, :cond_c
 
     .line 2325
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->de:Landroid/net/Uri;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dk:Landroid/net/Uri;
 
     if-nez v0, :cond_2
 
     .line 2327
-    sput-object v10, Lcom/glympse/android/hal/Reflection$_CalendarContract;->de:Landroid/net/Uri;
+    sput-object v9, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dk:Landroid/net/Uri;
 
     .line 2331
     :cond_2
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dg:Ljava/lang/String;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dm:Ljava/lang/String;
 
     invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
@@ -445,7 +443,7 @@
     if-eqz v4, :cond_a
 
     .line 2342
-    sput-object v3, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dg:Ljava/lang/String;
+    sput-object v3, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dm:Ljava/lang/String;
 
     .line 2355
     :cond_3
@@ -470,7 +468,7 @@
     goto :goto_4
 
     :cond_7
-    sget-object v2, Lcom/glympse/android/hal/Reflection$_CalendarContract;->de:Landroid/net/Uri;
+    sget-object v2, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dk:Landroid/net/Uri;
 
     goto :goto_4
 
@@ -496,7 +494,7 @@
     if-eqz v4, :cond_b
 
     .line 2349
-    sput-object v3, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dg:Ljava/lang/String;
+    sput-object v3, Lcom/glympse/android/hal/Reflection$_CalendarContract;->dm:Ljava/lang/String;
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_0
 

@@ -1,39 +1,66 @@
 .class final Lcom/bbm/ui/activities/acs;
-.super Ljava/lang/Object;
-.source "SetChannelAvatarActivity.java"
+.super Lcom/bbm/d/b/m;
+.source "ProfileActivity.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/d/b/m",
+        "<",
+        "Lcom/bbm/d/et;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field public final a:I
+.field final synthetic a:Ljava/lang/String;
 
-.field public final b:Ljava/lang/String;
-
-.field public final c:Lcom/bbm/ui/activities/acu;
-
-.field final synthetic d:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
+.field final synthetic b:Lcom/bbm/ui/activities/ProfileActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;Ljava/lang/String;Lcom/bbm/ui/activities/acu;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;Lcom/bbm/j/r;Ljava/lang/String;)V
+    .locals 0
 
     .prologue
-    .line 171
-    iput-object p1, p0, Lcom/bbm/ui/activities/acs;->d:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
+    .line 268
+    iput-object p1, p0, Lcom/bbm/ui/activities/acs;->b:Lcom/bbm/ui/activities/ProfileActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    iput-object p3, p0, Lcom/bbm/ui/activities/acs;->a:Ljava/lang/String;
 
-    .line 172
-    const v0, 0x7f0201e2
+    invoke-direct {p0, p2}, Lcom/bbm/d/b/m;-><init>(Lcom/bbm/j/r;)V
 
-    iput v0, p0, Lcom/bbm/ui/activities/acs;->a:I
-
-    .line 173
-    iput-object p2, p0, Lcom/bbm/ui/activities/acs;->b:Ljava/lang/String;
-
-    .line 174
-    iput-object p3, p0, Lcom/bbm/ui/activities/acs;->c:Lcom/bbm/ui/activities/acu;
-
-    .line 175
     return-void
+.end method
+
+
+# virtual methods
+.method protected final synthetic a(Ljava/lang/Object;)Z
+    .locals 2
+
+    .prologue
+    .line 268
+    check-cast p1, Lcom/bbm/d/et;
+
+    iget-object v0, p1, Lcom/bbm/d/et;->a:Ljava/lang/String;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/acs;->a:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

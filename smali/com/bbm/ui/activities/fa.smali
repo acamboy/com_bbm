@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/fa;
 .super Ljava/lang/Object;
-.source "ConversationActivity.java"
+.source "ChildActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/e/br;
+.implements Lcom/slidingmenu/lib/h;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ey;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ey;)V
     .locals 0
 
     .prologue
-    .line 993
-    iput-object p1, p0, Lcom/bbm/ui/activities/fa;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 64
+    iput-object p1, p0, Lcom/bbm/ui/activities/fa;->a:Lcom/bbm/ui/activities/ey;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,36 +25,15 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/e/bo;)V
-    .locals 2
+.method public final a()V
+    .locals 1
 
     .prologue
-    .line 996
-    iget-object v1, p0, Lcom/bbm/ui/activities/fa;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 67
+    iget-object v0, p0, Lcom/bbm/ui/activities/fa;->a:Lcom/bbm/ui/activities/ey;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/fa;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ey;->g()V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->u(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/r;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/d/dp;
-
-    iget-boolean v0, v0, Lcom/bbm/d/dp;->j:Z
-
-    invoke-virtual {p1, v1, v0}, Lcom/bbm/ui/e/bo;->a(Landroid/app/Activity;Z)V
-
-    .line 997
-    iget-object v0, p0, Lcom/bbm/ui/activities/fa;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ConversationActivity;->b(Lcom/bbm/ui/activities/ConversationActivity;Z)V
-
-    .line 998
+    .line 68
     return-void
 .end method

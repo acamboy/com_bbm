@@ -1,55 +1,36 @@
 .class final Lcom/bbm/ui/activities/el;
-.super Ljava/lang/Object;
-.source "ChildActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
+.super Lcom/bbm/ui/cn;
+.source "ChannelStatsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/eg;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/eg;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelStatsActivity;)V
     .locals 0
 
     .prologue
-    .line 198
-    iput-object p1, p0, Lcom/bbm/ui/activities/el;->a:Lcom/bbm/ui/activities/eg;
+    .line 75
+    iput-object p1, p0, Lcom/bbm/ui/activities/el;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/ui/cn;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+.method public final a()V
     .locals 1
 
     .prologue
-    .line 202
-    iget-object v0, p0, Lcom/bbm/ui/activities/el;->a:Lcom/bbm/ui/activities/eg;
+    .line 78
+    iget-object v0, p0, Lcom/bbm/ui/activities/el;->a:Lcom/bbm/ui/activities/ChannelStatsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/eg;->b(Lcom/bbm/ui/activities/eg;)Landroid/support/v4/view/n;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelStatsActivity;->finish()V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 203
-    iget-object v0, p0, Lcom/bbm/ui/activities/el;->a:Lcom/bbm/ui/activities/eg;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/eg;->b(Lcom/bbm/ui/activities/eg;)Landroid/support/v4/view/n;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p2}, Landroid/support/v4/view/n;->a(Landroid/view/MotionEvent;)Z
-
-    .line 205
-    :cond_0
-    const/4 v0, 0x1
-
-    return v0
+    .line 79
+    return-void
 .end method

@@ -74,14 +74,14 @@
     .prologue
     const/16 v1, 0x10
 
-    .line 211
+    .line 220
     new-array v0, v1, [C
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/glympse/android/hal/Helpers;->ms_acHex:[C
 
-    .line 272
+    .line 281
     const/16 v0, 0x100
 
     new-array v0, v0, [Z
@@ -90,7 +90,7 @@
 
     sput-object v0, Lcom/glympse/android/hal/Helpers;->bP:[Z
 
-    .line 600
+    .line 609
     new-array v0, v1, [Ljava/lang/String;
 
     const/4 v1, 0x0
@@ -191,7 +191,7 @@
 
     sput-object v0, Lcom/glympse/android/hal/Helpers;->_bearingStrings:[Ljava/lang/String;
 
-    .line 768
+    .line 804
     const/16 v0, 0x40
 
     new-array v0, v0, [C
@@ -202,7 +202,7 @@
 
     return-void
 
-    .line 211
+    .line 220
     :array_0
     .array-data 2
         0x30s
@@ -223,7 +223,7 @@
         0x46s
     .end array-data
 
-    .line 272
+    .line 281
     :array_1
     .array-data 1
         0x0t
@@ -484,7 +484,7 @@
         0x0t
     .end array-data
 
-    .line 768
+    .line 804
     :array_2
     .array-data 2
         0x41s
@@ -558,7 +558,7 @@
     .locals 0
 
     .prologue
-    .line 20
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -568,14 +568,14 @@
     .locals 1
 
     .prologue
-    .line 370
+    .line 379
     invoke-static {p1, p2, p3}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 371
+    .line 380
     return-void
 .end method
 
@@ -583,7 +583,7 @@
     .locals 1
 
     .prologue
-    .line 729
+    .line 765
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
@@ -599,7 +599,7 @@
     .locals 5
 
     .prologue
-    .line 735
+    .line 771
     new-instance v1, Ljava/lang/StringBuffer;
 
     array-length v0, p0
@@ -612,7 +612,7 @@
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuffer;-><init>(I)V
 
-    .line 737
+    .line 773
     const/4 v0, 0x0
 
     :goto_0
@@ -620,17 +620,17 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 739
+    .line 775
     array-length v2, p0
 
     sub-int/2addr v2, v0
 
-    .line 741
+    .line 777
     const/4 v3, 0x3
 
     if-lt v2, v3, :cond_0
 
-    .line 743
+    .line 779
     aget-byte v2, p0, v0
 
     and-int/lit16 v2, v2, 0xff
@@ -655,7 +655,7 @@
 
     or-int/2addr v2, v3
 
-    .line 744
+    .line 780
     sget-object v3, Lcom/glympse/android/hal/Helpers;->ms_acBase64Encode:[C
 
     ushr-int/lit8 v4, v2, 0x12
@@ -666,7 +666,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 745
+    .line 781
     sget-object v3, Lcom/glympse/android/hal/Helpers;->ms_acBase64Encode:[C
 
     ushr-int/lit8 v4, v2, 0xc
@@ -677,7 +677,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 746
+    .line 782
     sget-object v3, Lcom/glympse/android/hal/Helpers;->ms_acBase64Encode:[C
 
     ushr-int/lit8 v4, v2, 0x6
@@ -688,7 +688,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 747
+    .line 783
     sget-object v3, Lcom/glympse/android/hal/Helpers;->ms_acBase64Encode:[C
 
     and-int/lit8 v2, v2, 0x3f
@@ -697,19 +697,19 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 737
+    .line 773
     :goto_1
     add-int/lit8 v0, v0, 0x3
 
     goto :goto_0
 
-    .line 749
+    .line 785
     :cond_0
     const/4 v3, 0x2
 
     if-ne v2, v3, :cond_1
 
-    .line 751
+    .line 787
     aget-byte v2, p0, v0
 
     and-int/lit16 v2, v2, 0xff
@@ -726,7 +726,7 @@
 
     or-int/2addr v2, v3
 
-    .line 752
+    .line 788
     sget-object v3, Lcom/glympse/android/hal/Helpers;->ms_acBase64Encode:[C
 
     ushr-int/lit8 v4, v2, 0x12
@@ -737,7 +737,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 753
+    .line 789
     sget-object v3, Lcom/glympse/android/hal/Helpers;->ms_acBase64Encode:[C
 
     ushr-int/lit8 v4, v2, 0xc
@@ -748,7 +748,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 754
+    .line 790
     sget-object v3, Lcom/glympse/android/hal/Helpers;->ms_acBase64Encode:[C
 
     ushr-int/lit8 v2, v2, 0x6
@@ -759,14 +759,14 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 755
+    .line 791
     const/16 v2, 0x3d
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
     goto :goto_1
 
-    .line 759
+    .line 795
     :cond_1
     aget-byte v2, p0, v0
 
@@ -774,7 +774,7 @@
 
     shl-int/lit8 v2, v2, 0x10
 
-    .line 760
+    .line 796
     sget-object v3, Lcom/glympse/android/hal/Helpers;->ms_acBase64Encode:[C
 
     ushr-int/lit8 v4, v2, 0x12
@@ -785,7 +785,7 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 761
+    .line 797
     sget-object v3, Lcom/glympse/android/hal/Helpers;->ms_acBase64Encode:[C
 
     ushr-int/lit8 v2, v2, 0xc
@@ -796,14 +796,14 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 762
+    .line 798
     const-string v2, "=="
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     goto :goto_1
 
-    .line 766
+    .line 802
     :cond_2
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -816,10 +816,10 @@
     .locals 4
 
     .prologue
-    .line 701
+    .line 737
     const/4 v0, 0x0
 
-    .line 707
+    .line 743
     :try_start_0
     new-instance v1, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -833,17 +833,17 @@
 
     invoke-direct {v1, v2, v3}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 710
+    .line 746
     const-string v2, "HmacSHA1"
 
     invoke-static {v2}, Ljavax/crypto/Mac;->getInstance(Ljava/lang/String;)Ljavax/crypto/Mac;
 
     move-result-object v2
 
-    .line 711
+    .line 747
     invoke-virtual {v2, v1}, Ljavax/crypto/Mac;->init(Ljava/security/Key;)V
 
-    .line 714
+    .line 750
     const-string v1, "UTF-8"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
@@ -854,18 +854,18 @@
 
     move-result-object v1
 
-    .line 717
+    .line 753
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->base64Encode([B)Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    .line 723
+    .line 759
     :goto_0
     return-object v0
 
-    .line 719
+    .line 755
     :catch_0
     move-exception v1
 
@@ -880,10 +880,10 @@
     .locals 0
 
     .prologue
-    .line 346
+    .line 355
     invoke-static {p0, p1, p2, p3, p4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 347
+    .line 356
     return-void
 .end method
 
@@ -902,7 +902,7 @@
     .end annotation
 
     .prologue
-    .line 86
+    .line 95
     if-nez p0, :cond_0
 
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -924,14 +924,14 @@
     .end annotation
 
     .prologue
-    .line 93
+    .line 102
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/lang/Object;
 
     check-cast v0, [Ljava/lang/Object;
 
-    .line 94
+    .line 103
     if-nez p0, :cond_0
 
     :goto_0
@@ -947,7 +947,7 @@
     .locals 1
 
     .prologue
-    .line 149
+    .line 158
     const-string v0, ""
 
     return-object v0
@@ -957,29 +957,29 @@
     .locals 5
 
     .prologue
-    .line 299
+    .line 308
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 322
+    .line 331
     :goto_0
     return-object p0
 
-    .line 304
+    .line 313
     :cond_0
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 305
+    .line 314
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 308
+    .line 317
     const/4 v0, 0x0
 
     move v1, v0
@@ -987,33 +987,33 @@
     :goto_1
     if-ge v1, v2, :cond_2
 
-    .line 310
+    .line 319
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 313
+    .line 322
     sget-object v4, Lcom/glympse/android/hal/Helpers;->bP:[Z
 
     aget-boolean v4, v4, v0
 
     if-nez v4, :cond_1
 
-    .line 315
+    .line 324
     const/16 v0, 0x5f
 
-    .line 319
+    .line 328
     :cond_1
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 308
+    .line 317
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_1
 
-    .line 322
+    .line 331
     :cond_2
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1026,7 +1026,7 @@
     .locals 1
 
     .prologue
-    .line 440
+    .line 449
     invoke-static {p0}, Ljava/lang/Float;->floatToIntBits(F)I
 
     move-result v0
@@ -1035,29 +1035,29 @@
 .end method
 
 .method public static formatBearing(FZ)Ljava/lang/String;
-    .locals 7
+    .locals 8
 
     .prologue
-    const-wide v3, 0x4076800000000000L
+    const-wide v4, 0x4076800000000000L
 
-    const-wide v5, 0x4036800000000000L
+    const-wide v6, 0x4036800000000000L
 
-    .line 596
+    .line 605
     if-eqz p1, :cond_0
 
     sget-object v0, Lcom/glympse/android/hal/Helpers;->_bearingStrings:[Ljava/lang/String;
 
-    float-to-double v1, p0
+    float-to-double v2, p0
 
-    add-double/2addr v1, v3
+    add-double/2addr v2, v4
 
-    const-wide v3, 0x4026800000000000L
+    const-wide v4, 0x4026800000000000L
 
-    add-double/2addr v1, v3
+    add-double/2addr v2, v4
 
-    div-double/2addr v1, v5
+    div-double/2addr v2, v6
 
-    double-to-int v1, v1
+    double-to-int v1, v2
 
     rem-int/lit8 v1, v1, 0x10
 
@@ -1069,17 +1069,17 @@
     :cond_0
     sget-object v0, Lcom/glympse/android/hal/Helpers;->_bearingStrings:[Ljava/lang/String;
 
-    float-to-double v1, p0
+    float-to-double v2, p0
 
-    add-double/2addr v1, v3
+    add-double/2addr v2, v4
 
-    add-double/2addr v1, v5
+    add-double/2addr v2, v6
 
-    const-wide v3, 0x4046800000000000L
+    const-wide v4, 0x4046800000000000L
 
-    div-double/2addr v1, v3
+    div-double/2addr v2, v4
 
-    double-to-int v1, v1
+    double-to-int v1, v2
 
     rem-int/lit8 v1, v1, 0x8
 
@@ -1094,34 +1094,34 @@
     .locals 12
 
     .prologue
-    const/4 v11, 0x1
+    const/4 v5, 0x1
 
-    const-wide v9, 0x408f400000000000L
+    const-wide v10, 0x408f400000000000L
 
-    const-wide/high16 v7, 0x4059000000000000L
+    const-wide/high16 v8, 0x4059000000000000L
 
-    const-wide/high16 v5, 0x4024000000000000L
+    const-wide/high16 v6, 0x4024000000000000L
 
     const/4 v4, 0x0
 
-    .line 608
+    .line 617
     if-eqz p1, :cond_3
 
-    .line 611
+    .line 620
     float-to-double v0, p0
 
-    cmpg-double v0, v0, v9
+    cmpg-double v0, v0, v10
 
     if-gez v0, :cond_0
 
-    .line 613
+    .line 622
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    float-to-double v1, p0
+    float-to-double v2, p0
 
-    invoke-static {v1, v2, v4}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
+    invoke-static {v2, v3, v4}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
 
     move-result-object v1
 
@@ -1139,11 +1139,11 @@
 
     move-result-object v0
 
-    .line 657
+    .line 666
     :goto_0
     return-object v0
 
-    .line 619
+    .line 628
     :cond_0
     float-to-double v0, p0
 
@@ -1151,12 +1151,12 @@
 
     mul-double/2addr v0, v2
 
-    .line 620
-    cmpl-double v2, v0, v7
+    .line 629
+    cmpl-double v2, v0, v8
 
     if-ltz v2, :cond_1
 
-    .line 622
+    .line 631
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1181,18 +1181,18 @@
 
     goto :goto_0
 
-    .line 624
+    .line 633
     :cond_1
-    cmpl-double v2, v0, v5
+    cmpl-double v2, v0, v6
 
     if-ltz v2, :cond_2
 
-    .line 626
+    .line 635
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v0, v1, v11}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
+    invoke-static {v0, v1, v5}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1212,7 +1212,7 @@
 
     goto :goto_0
 
-    .line 630
+    .line 639
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1240,7 +1240,7 @@
 
     goto :goto_0
 
-    .line 637
+    .line 646
     :cond_3
     float-to-double v0, p0
 
@@ -1248,12 +1248,12 @@
 
     mul-double/2addr v0, v2
 
-    .line 638
-    cmpg-double v2, v0, v9
+    .line 647
+    cmpg-double v2, v0, v10
 
     if-gez v2, :cond_4
 
-    .line 640
+    .line 649
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1278,7 +1278,7 @@
 
     goto :goto_0
 
-    .line 646
+    .line 655
     :cond_4
     float-to-double v0, p0
 
@@ -1286,12 +1286,12 @@
 
     mul-double/2addr v0, v2
 
-    .line 647
-    cmpl-double v2, v0, v7
+    .line 656
+    cmpl-double v2, v0, v8
 
     if-ltz v2, :cond_5
 
-    .line 649
+    .line 658
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1316,18 +1316,18 @@
 
     goto/16 :goto_0
 
-    .line 651
+    .line 660
     :cond_5
-    cmpl-double v2, v0, v5
+    cmpl-double v2, v0, v6
 
     if-ltz v2, :cond_6
 
-    .line 653
+    .line 662
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {v0, v1, v11}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
+    invoke-static {v0, v1, v5}, Lcom/glympse/android/hal/Helpers;->toString(DI)Ljava/lang/String;
 
     move-result-object v0
 
@@ -1347,7 +1347,7 @@
 
     goto/16 :goto_0
 
-    .line 657
+    .line 666
     :cond_6
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1377,70 +1377,121 @@
 .end method
 
 .method public static formatDuration(J)Ljava/lang/String;
-    .locals 6
+    .locals 2
+
+    .prologue
+    .line 731
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    invoke-static {v0, p0, p1, v1}, Lcom/glympse/android/hal/Helpers;->formatDuration(Landroid/content/Context;JZ)Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static formatDuration(Landroid/content/Context;JZ)Ljava/lang/String;
+    .locals 11
 
     .prologue
     const-wide/16 v0, 0x0
 
-    const/16 v5, 0xa
+    const/4 v6, 0x1
 
-    .line 666
-    cmp-long v2, p0, v0
+    const/16 v9, 0xa
+
+    .line 675
+    cmp-long v2, p1, v0
 
     if-gez v2, :cond_0
 
-    move-wide p0, v0
+    move-wide p1, v0
 
-    .line 671
+    .line 680
     :cond_0
     const-wide/32 v0, 0x5265c00
 
-    div-long v0, p0, v0
+    div-long v0, p1, v0
 
-    long-to-int v0, v0
+    long-to-int v1, v0
 
-    .line 672
-    const-wide/32 v1, 0x36ee80
+    .line 681
+    const-wide/32 v2, 0x36ee80
 
-    div-long v1, p0, v1
+    div-long v2, p1, v2
 
-    long-to-int v1, v1
+    long-to-int v0, v2
 
-    rem-int/lit8 v1, v1, 0x18
+    rem-int/lit8 v2, v0, 0x18
 
-    .line 673
-    const-wide/32 v2, 0xea60
+    .line 682
+    const-wide/32 v4, 0xea60
 
-    div-long v2, p0, v2
+    div-long v4, p1, v4
 
-    long-to-int v2, v2
+    long-to-int v0, v4
 
-    rem-int/lit8 v2, v2, 0x3c
+    rem-int/lit8 v3, v0, 0x3c
 
-    .line 674
-    const-wide/16 v3, 0x3e8
+    .line 683
+    const-wide/16 v4, 0x3e8
 
-    div-long v3, p0, v3
+    div-long v4, p1, v4
 
-    long-to-int v3, v3
+    long-to-int v0, v4
 
-    rem-int/lit8 v3, v3, 0x3c
+    rem-int/lit8 v4, v0, 0x3c
 
-    .line 677
-    if-lt v0, v5, :cond_1
+    .line 687
+    if-eqz p0, :cond_1
 
-    .line 679
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 689
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    const-string v1, " days"
+    sget v5, Lcom/glympse/android/api/R$plurals;->common_days_1d:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v8
+
+    aput-object v8, v6, v7
+
+    invoke-virtual {v0, v5, v1, v6}, Landroid/content/res/Resources;->getQuantityString(II[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 701
+    :goto_0
+    if-lt v1, v9, :cond_3
+
+    .line 725
+    :goto_1
+    return-object v0
+
+    .line 691
+    :cond_1
+    if-le v1, v6, :cond_2
+
+    .line 693
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v5, " days"
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1448,45 +1499,54 @@
 
     move-result-object v0
 
-    .line 695
-    :goto_0
-    return-object v0
+    goto :goto_0
 
-    .line 683
-    :cond_1
-    if-lez v0, :cond_4
+    .line 697
+    :cond_2
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 685
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string v4, " day"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const/4 v4, 0x1
-
-    if-ne v4, v0, :cond_2
-
-    const-string v0, ", "
-
-    :goto_1
-    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    move-result-object v0
+
+    const-string v5, " day"
+
+    invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 707
+    :cond_3
+    if-lez v1, :cond_5
+
+    .line 709
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string v1, ", "
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
     move-result-object v1
 
-    if-ge v2, v5, :cond_3
+    if-ge v3, v9, :cond_4
 
     const-string v0, ":0"
 
@@ -1495,7 +1555,7 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1503,32 +1563,27 @@
 
     move-result-object v0
 
-    goto :goto_0
-
-    :cond_2
-    const-string v0, "s, "
-
     goto :goto_1
 
-    :cond_3
+    :cond_4
     const-string v0, ":"
 
     goto :goto_2
 
-    .line 689
-    :cond_4
-    if-lez v1, :cond_7
+    .line 713
+    :cond_5
+    if-lez v2, :cond_9
 
-    .line 691
+    .line 715
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    if-ge v2, v5, :cond_5
+    if-ge v3, v9, :cond_6
 
     const-string v0, ":0"
 
@@ -1537,20 +1592,26 @@
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    if-ge v3, v5, :cond_6
+    if-eqz p3, :cond_8
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    if-ge v4, v9, :cond_7
 
     const-string v0, ":0"
 
     :goto_4
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -1558,40 +1619,44 @@
 
     move-result-object v0
 
-    goto :goto_0
-
-    :cond_5
-    const-string v0, ":"
-
-    goto :goto_3
-
-    :cond_6
-    const-string v0, ":"
-
-    goto :goto_4
-
-    .line 695
-    :cond_7
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    if-ge v2, v5, :cond_8
-
-    const-string v0, "0"
-
     :goto_5
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v0
 
-    if-ge v3, v5, :cond_9
+    goto/16 :goto_1
 
-    const-string v0, ":0"
+    :cond_6
+    const-string v0, ":"
+
+    goto :goto_3
+
+    :cond_7
+    const-string v0, ":"
+
+    goto :goto_4
+
+    :cond_8
+    const-string v0, ""
+
+    goto :goto_5
+
+    .line 719
+    :cond_9
+    if-eqz p3, :cond_c
+
+    .line 721
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    if-ge v3, v9, :cond_a
+
+    const-string v0, "0"
 
     :goto_6
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -1600,30 +1665,75 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
+    move-result-object v1
+
+    if-ge v4, v9, :cond_b
+
+    const-string v0, ":0"
+
+    :goto_7
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_8
+    :cond_a
     const-string v0, ""
 
-    goto :goto_5
+    goto :goto_6
 
-    :cond_9
+    :cond_b
     const-string v0, ":"
 
-    goto :goto_6
+    goto :goto_7
+
+    .line 725
+    :cond_c
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string v0, "0:"
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    if-ge v3, v9, :cond_d
+
+    const-string v0, "0"
+
+    :goto_8
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto/16 :goto_1
+
+    :cond_d
+    const-string v0, ""
+
+    goto :goto_8
 .end method
 
 .method public static fromCharArray([C)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 352
+    .line 361
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0, p0}, Ljava/lang/String;-><init>([C)V
@@ -1635,14 +1745,14 @@
     .locals 5
 
     .prologue
-    .line 189
+    .line 198
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 192
+    .line 201
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -1651,12 +1761,12 @@
 
     invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 194
+    .line 203
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v2
 
-    .line 195
+    .line 204
     const/4 v0, 0x0
 
     :goto_0
@@ -1664,10 +1774,10 @@
 
     if-ge v0, v3, :cond_3
 
-    .line 197
+    .line 206
     aget-char v3, v2, v0
 
-    .line 199
+    .line 208
     const/16 v4, 0x30
 
     if-lt v3, v4, :cond_0
@@ -1681,23 +1791,23 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 201
+    .line 210
     :cond_1
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 195
+    .line 204
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 205
+    .line 214
     :cond_3
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 207
+    .line 216
     :goto_1
     return-object v0
 
@@ -1711,7 +1821,7 @@
     .locals 1
 
     .prologue
-    .line 358
+    .line 367
     invoke-static {p0}, Ljava/lang/Character;->isDigit(C)Z
 
     move-result v0
@@ -1723,7 +1833,7 @@
     .locals 1
 
     .prologue
-    .line 476
+    .line 485
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -1754,7 +1864,7 @@
 
     const/16 v4, 0x2d
 
-    .line 546
+    .line 555
     const/16 v2, 0x24
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -2188,7 +2298,7 @@
     .locals 1
 
     .prologue
-    .line 588
+    .line 597
     const/16 v0, 0x30
 
     if-lt p0, v0, :cond_0
@@ -2231,7 +2341,7 @@
     .locals 1
 
     .prologue
-    .line 364
+    .line 373
     invoke-static {p0}, Ljava/lang/Character;->isLetter(C)Z
 
     move-result v0
@@ -2245,7 +2355,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 460
+    .line 469
     :try_start_0
     const-string v1, "UTF-7"
 
@@ -2265,12 +2375,12 @@
 
     const/4 v0, 0x1
 
-    .line 466
+    .line 475
     :cond_0
     :goto_0
     return v0
 
-    .line 462
+    .line 471
     :catch_0
     move-exception v1
 
@@ -2283,7 +2393,7 @@
     .locals 1
 
     .prologue
-    .line 452
+    .line 461
     const/16 v0, 0x20
 
     if-gt p0, v0, :cond_0
@@ -2307,50 +2417,50 @@
 
     const/4 v2, 0x0
 
-    .line 219
+    .line 228
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 221
+    .line 230
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 224
+    .line 233
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v5
 
     move v3, v2
 
-    .line 225
+    .line 234
     :goto_0
     if-ge v3, v5, :cond_3
 
-    .line 227
+    .line 236
     invoke-virtual {p0, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
 
-    .line 231
+    .line 240
     sparse-switch v6, :sswitch_data_0
 
     move v0, v2
 
-    .line 244
+    .line 253
     :goto_1
     if-eqz v0, :cond_0
 
-    .line 246
+    .line 255
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 247
+    .line 256
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 225
+    .line 234
     :goto_2
     add-int/lit8 v0, v3, 0x1
 
@@ -2358,7 +2468,7 @@
 
     goto :goto_0
 
-    .line 233
+    .line 242
     :sswitch_0
     const/16 v0, 0x22
 
@@ -2367,46 +2477,46 @@
     :sswitch_1
     move v0, v1
 
-    .line 234
+    .line 243
     goto :goto_1
 
-    .line 235
+    .line 244
     :sswitch_2
     const/16 v0, 0x2f
 
     goto :goto_1
 
-    .line 236
+    .line 245
     :sswitch_3
     const/16 v0, 0x62
 
     goto :goto_1
 
-    .line 237
+    .line 246
     :sswitch_4
     const/16 v0, 0x66
 
     goto :goto_1
 
-    .line 238
+    .line 247
     :sswitch_5
     const/16 v0, 0x6e
 
     goto :goto_1
 
-    .line 239
+    .line 248
     :sswitch_6
     const/16 v0, 0x72
 
     goto :goto_1
 
-    .line 240
+    .line 249
     :sswitch_7
     const/16 v0, 0x74
 
     goto :goto_1
 
-    .line 251
+    .line 260
     :cond_0
     const/16 v0, 0x20
 
@@ -2416,13 +2526,13 @@
 
     if-lt v6, v0, :cond_2
 
-    .line 253
+    .line 262
     :cond_1
     const-string v0, "\\u"
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 254
+    .line 263
     sget-object v0, Lcom/glympse/android/hal/Helpers;->ms_acHex:[C
 
     ushr-int/lit8 v7, v6, 0xc
@@ -2433,7 +2543,7 @@
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 255
+    .line 264
     sget-object v0, Lcom/glympse/android/hal/Helpers;->ms_acHex:[C
 
     ushr-int/lit8 v7, v6, 0x8
@@ -2444,7 +2554,7 @@
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 256
+    .line 265
     sget-object v0, Lcom/glympse/android/hal/Helpers;->ms_acHex:[C
 
     ushr-int/lit8 v7, v6, 0x4
@@ -2455,7 +2565,7 @@
 
     invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 257
+    .line 266
     sget-object v0, Lcom/glympse/android/hal/Helpers;->ms_acHex:[C
 
     and-int/lit8 v6, v6, 0xf
@@ -2466,13 +2576,13 @@
 
     goto :goto_2
 
-    .line 263
+    .line 272
     :cond_2
     invoke-virtual {v4, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 268
+    .line 277
     :cond_3
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -2480,7 +2590,7 @@
 
     return-object v0
 
-    .line 231
+    .line 240
     nop
 
     :sswitch_data_0
@@ -2504,7 +2614,7 @@
 
     const/4 v7, 0x3
 
-    .line 813
+    .line 849
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -2519,7 +2629,7 @@
 
     move-result-object v0
 
-    .line 814
+    .line 850
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
@@ -2534,7 +2644,7 @@
 
     move-result v1
 
-    .line 815
+    .line 851
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v2
@@ -2549,7 +2659,7 @@
 
     move-result-object v2
 
-    .line 816
+    .line 852
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v3
@@ -2564,7 +2674,7 @@
 
     move-result-object v3
 
-    .line 818
+    .line 854
     const-string v4, "at TODO %s.%s (%s:%d)"
 
     const/4 v5, 0x4
@@ -2593,7 +2703,7 @@
 
     invoke-static {v8, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
-    .line 819
+    .line 855
     return-void
 .end method
 
@@ -2605,7 +2715,7 @@
 
     const/4 v7, 0x3
 
-    .line 824
+    .line 860
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -2620,7 +2730,7 @@
 
     move-result-object v0
 
-    .line 825
+    .line 861
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v1
@@ -2635,7 +2745,7 @@
 
     move-result v1
 
-    .line 826
+    .line 862
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v2
@@ -2650,7 +2760,7 @@
 
     move-result-object v2
 
-    .line 827
+    .line 863
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v3
@@ -2665,7 +2775,7 @@
 
     move-result-object v3
 
-    .line 829
+    .line 865
     const-string v4, "at TODO [%s] %s.%s (%s:%d)"
 
     const/4 v5, 0x5
@@ -2698,7 +2808,7 @@
 
     invoke-static {v8, v0}, Lcom/glympse/android/lib/Debug;->log(ILjava/lang/String;)V
 
-    .line 830
+    .line 866
     return-void
 .end method
 
@@ -2706,7 +2816,7 @@
     .locals 2
 
     .prologue
-    .line 497
+    .line 506
     :try_start_0
     invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
     :try_end_0
@@ -2714,7 +2824,7 @@
 
     move-result-wide v0
 
-    .line 502
+    .line 511
     :goto_0
     return-wide v0
 
@@ -2730,7 +2840,7 @@
     .locals 1
 
     .prologue
-    .line 484
+    .line 493
     :try_start_0
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_0
@@ -2738,7 +2848,7 @@
 
     move-result v0
 
-    .line 489
+    .line 498
     :goto_0
     return v0
 
@@ -2767,19 +2877,19 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 783
+    .line 819
     new-instance v2, Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v2}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    .line 786
+    .line 822
     const/16 v0, 0x26
 
     invoke-static {p0, v0}, Lcom/glympse/android/hal/Helpers;->strSplit(Ljava/lang/String;C)Ljava/util/Vector;
 
     move-result-object v0
 
-    .line 789
+    .line 825
     invoke-virtual {v0}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -2798,31 +2908,31 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 792
+    .line 828
     const/16 v1, 0x3d
 
     invoke-static {v0, v1}, Lcom/glympse/android/hal/Helpers;->strSplit(Ljava/lang/String;C)Ljava/util/Vector;
 
     move-result-object v4
 
-    .line 795
+    .line 831
     const/4 v0, 0x0
 
-    .line 796
+    .line 832
     invoke-virtual {v4}, Ljava/util/Vector;->size()I
 
     move-result v1
 
     if-lez v1, :cond_2
 
-    .line 798
+    .line 834
     new-instance v1, Lcom/glympse/android/hal/NameValue;
 
     invoke-direct {v1}, Lcom/glympse/android/hal/NameValue;-><init>()V
 
     invoke-virtual {v2, v1}, Lcom/glympse/android/hal/GVector;->add(Ljava/lang/Object;)Z
 
-    .line 799
+    .line 835
     const/4 v0, 0x0
 
     invoke-virtual {v4, v0}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
@@ -2837,7 +2947,7 @@
 
     iput-object v0, v1, Lcom/glympse/android/hal/NameValue;->_name:Ljava/lang/String;
 
-    .line 801
+    .line 837
     :goto_1
     invoke-virtual {v4}, Ljava/util/Vector;->size()I
 
@@ -2845,7 +2955,7 @@
 
     if-le v0, v5, :cond_0
 
-    .line 803
+    .line 839
     invoke-virtual {v4, v5}, Ljava/util/Vector;->elementAt(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -2860,7 +2970,7 @@
 
     goto :goto_0
 
-    .line 807
+    .line 843
     :cond_1
     return-object v2
 
@@ -2874,7 +2984,7 @@
     .locals 1
 
     .prologue
-    .line 136
+    .line 145
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
@@ -2898,7 +3008,7 @@
     .locals 2
 
     .prologue
-    .line 73
+    .line 76
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->safeStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -2914,11 +3024,31 @@
     return v0
 .end method
 
+.method public static safeEqualsIgnoreCase(Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 2
+
+    .prologue
+    .line 82
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->safeStr(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {p1}, Lcom/glympse/android/hal/Helpers;->safeStr(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
 .method public static safeStr(Ljava/lang/String;)Ljava/lang/String;
     .locals 0
 
     .prologue
-    .line 61
+    .line 64
     if-nez p0, :cond_0
 
     const-string p0, ""
@@ -2931,7 +3061,7 @@
     .locals 1
 
     .prologue
-    .line 67
+    .line 70
     invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
     move-result v0
@@ -2965,17 +3095,17 @@
     .end annotation
 
     .prologue
-    .line 121
+    .line 130
     invoke-virtual {p0, p1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 122
+    .line 131
     new-instance v2, Lcom/glympse/android/hal/GVector;
 
     invoke-direct {v2}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    .line 123
+    .line 132
     const/4 v0, 0x0
 
     :goto_0
@@ -2983,7 +3113,7 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 125
+    .line 134
     aget-object v3, v1, v0
 
     const-string v4, ""
@@ -2994,18 +3124,18 @@
 
     if-nez v3, :cond_0
 
-    .line 127
+    .line 136
     aget-object v3, v1, v0
 
     invoke-virtual {v2, v3}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
-    .line 123
+    .line 132
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 130
+    .line 139
     :cond_1
     return-object v2
 .end method
@@ -3014,7 +3144,7 @@
     .locals 0
 
     .prologue
-    .line 155
+    .line 164
     return-object p0
 .end method
 
@@ -3033,37 +3163,37 @@
     .end annotation
 
     .prologue
-    .line 508
+    .line 517
     new-instance v1, Ljava/util/Vector;
 
     invoke-direct {v1}, Ljava/util/Vector;-><init>()V
 
-    .line 511
+    .line 520
     const/4 v0, 0x0
 
-    .line 515
+    .line 524
     :goto_0
     invoke-virtual {p0, p1, v0}, Ljava/lang/String;->indexOf(II)I
 
     move-result v2
 
-    .line 518
+    .line 527
     if-lt v2, v0, :cond_0
 
-    .line 520
+    .line 529
     invoke-static {p0, v0, v2}, Lcom/glympse/android/hal/Helpers;->substrend(Ljava/lang/String;II)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-virtual {v1, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
-    .line 527
+    .line 536
     add-int/lit8 v0, v2, 0x1
 
-    .line 528
+    .line 537
     goto :goto_0
 
-    .line 531
+    .line 540
     :cond_0
     invoke-static {p0, v0}, Lcom/glympse/android/hal/Helpers;->substr(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -3071,7 +3201,7 @@
 
     invoke-virtual {v1, v0}, Ljava/util/Vector;->addElement(Ljava/lang/Object;)V
 
-    .line 533
+    .line 542
     return-object v1
 .end method
 
@@ -3079,7 +3209,7 @@
     .locals 1
 
     .prologue
-    .line 539
+    .line 548
     invoke-virtual {p0, p1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
@@ -3091,19 +3221,19 @@
     .locals 1
 
     .prologue
-    .line 100
+    .line 109
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-le p2, v0, :cond_0
 
-    .line 102
+    .line 111
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result p2
 
-    .line 104
+    .line 113
     :cond_0
     invoke-virtual {p0, p1, p2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -3116,20 +3246,20 @@
     .locals 2
 
     .prologue
-    .line 110
+    .line 119
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 111
+    .line 120
     add-int v1, p1, p2
 
     if-le v0, v1, :cond_0
 
-    .line 113
+    .line 122
     add-int v0, p1, p2
 
-    .line 115
+    .line 124
     :cond_0
     invoke-virtual {p0, p1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -3142,7 +3272,7 @@
     .locals 1
 
     .prologue
-    .line 340
+    .line 349
     invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
@@ -3154,7 +3284,7 @@
     .locals 1
 
     .prologue
-    .line 334
+    .line 343
     invoke-virtual {p0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v0
@@ -3166,7 +3296,7 @@
     .locals 2
 
     .prologue
-    .line 434
+    .line 443
     invoke-static {p0}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
     move-result-wide v0
@@ -3178,7 +3308,7 @@
     .locals 2
 
     .prologue
-    .line 446
+    .line 455
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v0
@@ -3187,12 +3317,12 @@
 .end method
 
 .method public static toString(DI)Ljava/lang/String;
-    .locals 7
+    .locals 8
 
     .prologue
     const/4 v3, 0x0
 
-    .line 377
+    .line 386
     const-wide/16 v0, 0x0
 
     cmpg-double v0, p0, v0
@@ -3203,29 +3333,29 @@
 
     move v6, v0
 
-    .line 378
+    .line 387
     :goto_0
     if-eqz v6, :cond_8
 
-    .line 380
+    .line 389
     neg-double v0, p0
 
-    .line 384
+    .line 393
     :goto_1
     if-lez p2, :cond_1
 
     move v2, v3
 
-    .line 387
+    .line 396
     :goto_2
     if-ge v2, p2, :cond_1
 
-    .line 389
+    .line 398
     const-wide/high16 v4, 0x4024000000000000L
 
     mul-double/2addr v4, v0
 
-    .line 387
+    .line 396
     add-int/lit8 v0, v2, 0x1
 
     move v2, v0
@@ -3237,10 +3367,10 @@
     :cond_0
     move v6, v3
 
-    .line 377
+    .line 386
     goto :goto_0
 
-    .line 394
+    .line 403
     :cond_1
     const-wide/high16 v4, 0x3fe0000000000000L
 
@@ -3248,7 +3378,7 @@
 
     double-to-long v0, v0
 
-    .line 397
+    .line 406
     const-wide/high16 v4, -0x8000000000000000L
 
     cmp-long v2, v4, v0
@@ -3261,25 +3391,25 @@
 
     if-nez v2, :cond_4
 
-    .line 399
+    .line 408
     :cond_2
     const-string v0, ""
 
-    .line 428
+    .line 437
     :cond_3
     :goto_3
     return-object v0
 
-    .line 403
+    .line 412
     :cond_4
     invoke-static {v0, v1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 406
+    .line 415
     if-lez p2, :cond_6
 
-    .line 410
+    .line 419
     :goto_4
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -3287,7 +3417,7 @@
 
     if-ge v1, p2, :cond_5
 
-    .line 412
+    .line 421
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string v2, "0"
@@ -3304,16 +3434,16 @@
 
     goto :goto_4
 
-    .line 416
+    .line 425
     :cond_5
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    .line 417
+    .line 426
     if-le v1, p2, :cond_7
 
-    .line 419
+    .line 428
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3348,7 +3478,7 @@
 
     move-result-object v0
 
-    .line 427
+    .line 436
     :cond_6
     :goto_5
     if-eqz v6, :cond_3
@@ -3369,7 +3499,7 @@
 
     goto :goto_3
 
-    .line 423
+    .line 432
     :cond_7
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -3394,10 +3524,10 @@
 .end method
 
 .method public static toString(J)Ljava/lang/String;
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 328
+    .line 337
     invoke-static {p0, p1}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
 
     move-result-object v0
@@ -3419,7 +3549,7 @@
     .end annotation
 
     .prologue
-    .line 80
+    .line 89
     invoke-virtual {p1, p0}, Ljava/lang/Class;->isInstance(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3439,7 +3569,7 @@
     .locals 2
 
     .prologue
-    .line 177
+    .line 186
     :try_start_0
     const-string v0, "UTF-8"
 
@@ -3449,11 +3579,11 @@
 
     move-result-object p0
 
-    .line 183
+    .line 192
     :goto_0
     return-object p0
 
-    .line 179
+    .line 188
     :catch_0
     move-exception v0
 
@@ -3468,7 +3598,7 @@
     .locals 2
 
     .prologue
-    .line 163
+    .line 172
     :try_start_0
     const-string v0, "UTF-8"
 
@@ -3478,11 +3608,11 @@
 
     move-result-object p0
 
-    .line 169
+    .line 178
     :goto_0
     return-object p0
 
-    .line 165
+    .line 174
     :catch_0
     move-exception v0
 
@@ -3504,6 +3634,6 @@
     .end annotation
 
     .prologue
-    .line 143
+    .line 152
     return-object p0
 .end method

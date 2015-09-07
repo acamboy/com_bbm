@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 214
+    .line 202
     iput-object p1, p0, Lcom/bbm/ui/activities/l;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,10 +29,10 @@
     .locals 2
 
     .prologue
-    .line 217
+    .line 205
     if-eqz p2, :cond_0
 
-    .line 218
+    .line 206
     iget-object v0, p0, Lcom/bbm/ui/activities/l;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 
     invoke-static {v0}, Lcom/bbm/ui/activities/AddChannelPostActivity;->q(Lcom/bbm/ui/activities/AddChannelPostActivity;)Landroid/widget/TextView;
@@ -43,11 +43,11 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 222
+    .line 210
     :goto_0
     return-void
 
-    .line 220
+    .line 208
     :cond_0
     iget-object v0, p0, Lcom/bbm/ui/activities/l;->a:Lcom/bbm/ui/activities/AddChannelPostActivity;
 

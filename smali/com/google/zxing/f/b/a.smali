@@ -4,17 +4,17 @@
 
 
 # static fields
-.field private static final a:[I
-
 .field private static final b:[I
 
 .field private static final c:[I
 
 .field private static final d:[I
 
+.field private static final e:[I
+
 
 # instance fields
-.field private final e:Lcom/google/zxing/c;
+.field public final a:Lcom/google/zxing/c;
 
 
 # direct methods
@@ -31,28 +31,28 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/google/zxing/f/b/a;->a:[I
+    sput-object v0, Lcom/google/zxing/f/b/a;->b:[I
 
     .line 51
     new-array v0, v1, [I
 
     fill-array-data v0, :array_1
 
-    sput-object v0, Lcom/google/zxing/f/b/a;->b:[I
+    sput-object v0, Lcom/google/zxing/f/b/a;->c:[I
 
     .line 54
     new-array v0, v2, [I
 
     fill-array-data v0, :array_2
 
-    sput-object v0, Lcom/google/zxing/f/b/a;->c:[I
+    sput-object v0, Lcom/google/zxing/f/b/a;->d:[I
 
     .line 58
     new-array v0, v2, [I
 
     fill-array-data v0, :array_3
 
-    sput-object v0, Lcom/google/zxing/f/b/a;->d:[I
+    sput-object v0, Lcom/google/zxing/f/b/a;->e:[I
 
     return-void
 
@@ -121,13 +121,224 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 63
-    iput-object p1, p0, Lcom/google/zxing/f/b/a;->e:Lcom/google/zxing/c;
+    iput-object p1, p0, Lcom/google/zxing/f/b/a;->a:Lcom/google/zxing/c;
 
     .line 64
     return-void
 .end method
 
-.method private static a([Lcom/google/zxing/o;Z)V
+.method public static a([Lcom/google/zxing/o;)F
+    .locals 4
+
+    .prologue
+    .line 375
+    const/4 v0, 0x0
+
+    aget-object v0, p0, v0
+
+    const/4 v1, 0x4
+
+    aget-object v1, p0, v1
+
+    invoke-static {v0, v1}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
+
+    move-result v0
+
+    .line 376
+    const/4 v1, 0x1
+
+    aget-object v1, p0, v1
+
+    const/4 v2, 0x5
+
+    aget-object v2, p0, v2
+
+    invoke-static {v1, v2}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
+
+    move-result v1
+
+    .line 377
+    add-float/2addr v0, v1
+
+    const/high16 v1, 0x42080000
+
+    div-float/2addr v0, v1
+
+    .line 378
+    const/4 v1, 0x6
+
+    aget-object v1, p0, v1
+
+    const/4 v2, 0x2
+
+    aget-object v2, p0, v2
+
+    invoke-static {v1, v2}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
+
+    move-result v1
+
+    .line 379
+    const/4 v2, 0x7
+
+    aget-object v2, p0, v2
+
+    const/4 v3, 0x3
+
+    aget-object v3, p0, v3
+
+    invoke-static {v2, v3}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
+
+    move-result v2
+
+    .line 380
+    add-float/2addr v1, v2
+
+    const/high16 v2, 0x42100000
+
+    div-float/2addr v1, v2
+
+    .line 381
+    add-float/2addr v0, v1
+
+    const/high16 v1, 0x40000000
+
+    div-float/2addr v0, v1
+
+    return v0
+.end method
+
+.method public static a(Lcom/google/zxing/o;Lcom/google/zxing/o;Lcom/google/zxing/o;Lcom/google/zxing/o;F)I
+    .locals 3
+
+    .prologue
+    const/high16 v2, 0x3f000000
+
+    .line 400
+    invoke-static {p0, p1}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
+
+    move-result v0
+
+    div-float/2addr v0, p4
+
+    add-float/2addr v0, v2
+
+    float-to-int v0, v0
+
+    .line 401
+    invoke-static {p2, p3}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
+
+    move-result v1
+
+    div-float/2addr v1, p4
+
+    add-float/2addr v1, v2
+
+    float-to-int v1, v1
+
+    .line 402
+    add-int/2addr v0, v1
+
+    shr-int/lit8 v0, v0, 0x1
+
+    add-int/lit8 v0, v0, 0x8
+
+    div-int/lit8 v0, v0, 0x11
+
+    mul-int/lit8 v0, v0, 0x11
+
+    return v0
+.end method
+
+.method public static a(Lcom/google/zxing/b/b;Lcom/google/zxing/o;Lcom/google/zxing/o;Lcom/google/zxing/o;Lcom/google/zxing/o;II)Lcom/google/zxing/b/b;
+    .locals 21
+
+    .prologue
+    .line 436
+    invoke-static {}, Lcom/google/zxing/b/i;->a()Lcom/google/zxing/b/i;
+
+    move-result-object v1
+
+    .line 438
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    move/from16 v0, p5
+
+    int-to-float v7, v0
+
+    const/4 v8, 0x0
+
+    move/from16 v0, p5
+
+    int-to-float v9, v0
+
+    move/from16 v0, p6
+
+    int-to-float v10, v0
+
+    const/4 v11, 0x0
+
+    move/from16 v0, p6
+
+    int-to-float v12, v0
+
+    move-object/from16 v0, p1
+
+    iget v13, v0, Lcom/google/zxing/o;->a:F
+
+    move-object/from16 v0, p1
+
+    iget v14, v0, Lcom/google/zxing/o;->b:F
+
+    move-object/from16 v0, p3
+
+    iget v15, v0, Lcom/google/zxing/o;->a:F
+
+    move-object/from16 v0, p3
+
+    iget v0, v0, Lcom/google/zxing/o;->b:F
+
+    move/from16 v16, v0
+
+    move-object/from16 v0, p4
+
+    iget v0, v0, Lcom/google/zxing/o;->a:F
+
+    move/from16 v17, v0
+
+    move-object/from16 v0, p4
+
+    iget v0, v0, Lcom/google/zxing/o;->b:F
+
+    move/from16 v18, v0
+
+    move-object/from16 v0, p2
+
+    iget v0, v0, Lcom/google/zxing/o;->a:F
+
+    move/from16 v19, v0
+
+    move-object/from16 v0, p2
+
+    iget v0, v0, Lcom/google/zxing/o;->b:F
+
+    move/from16 v20, v0
+
+    move-object/from16 v2, p0
+
+    move/from16 v3, p5
+
+    move/from16 v4, p6
+
+    invoke-virtual/range {v1 .. v20}, Lcom/google/zxing/b/i;->a(Lcom/google/zxing/b/b;IIFFFFFFFFFFFFFFFF)Lcom/google/zxing/b/b;
+
+    move-result-object v1
+
+    return-object v1
+.end method
+
+.method public static a([Lcom/google/zxing/o;Z)V
     .locals 10
 
     .prologue
@@ -721,982 +932,715 @@
     goto :goto_4
 .end method
 
-
-# virtual methods
-.method public final a()Lcom/google/zxing/b/g;
-    .locals 23
+.method public static a(Lcom/google/zxing/b/b;)[Lcom/google/zxing/o;
+    .locals 13
 
     .prologue
-    .line 73
-    move-object/from16 v0, p0
+    const/4 v7, 0x1
 
-    iget-object v1, v0, Lcom/google/zxing/f/b/a;->e:Lcom/google/zxing/c;
+    const/4 v1, 0x0
 
-    invoke-virtual {v1}, Lcom/google/zxing/c;->a()Lcom/google/zxing/b/b;
+    .line 140
+    iget v9, p0, Lcom/google/zxing/b/b;->b:I
 
-    move-result-object v1
+    .line 141
+    iget v3, p0, Lcom/google/zxing/b/b;->a:I
 
-    iget v10, v1, Lcom/google/zxing/b/b;->b:I
+    .line 143
+    const/16 v0, 0x8
 
-    iget v4, v1, Lcom/google/zxing/b/b;->a:I
+    new-array v8, v0, [Lcom/google/zxing/o;
 
-    const/16 v2, 0x8
+    .line 146
+    sget-object v0, Lcom/google/zxing/f/b/a;->b:[I
 
-    new-array v9, v2, [Lcom/google/zxing/o;
+    array-length v0, v0
 
-    const/4 v8, 0x0
+    new-array v6, v0, [I
 
-    sget-object v2, Lcom/google/zxing/f/b/a;->a:[I
+    .line 148
+    shr-int/lit8 v0, v9, 0x7
+
+    invoke-static {v7, v0}, Ljava/lang/Math;->max(II)I
+
+    move-result v10
+
+    move v2, v1
+
+    .line 151
+    :goto_0
+    if-ge v2, v9, :cond_b
+
+    .line 152
+    sget-object v5, Lcom/google/zxing/f/b/a;->b:[I
+
+    move-object v0, p0
+
+    move v4, v1
+
+    invoke-static/range {v0 .. v6}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
+
+    move-result-object v0
+
+    .line 153
+    if-eqz v0, :cond_2
+
+    .line 154
+    new-instance v4, Lcom/google/zxing/o;
+
+    aget v5, v0, v1
+
+    int-to-float v5, v5
+
+    int-to-float v11, v2
+
+    invoke-direct {v4, v5, v11}, Lcom/google/zxing/o;-><init>(FF)V
+
+    aput-object v4, v8, v1
+
+    .line 155
+    const/4 v4, 0x4
+
+    new-instance v5, Lcom/google/zxing/o;
+
+    aget v0, v0, v7
+
+    int-to-float v0, v0
+
+    int-to-float v2, v2
+
+    invoke-direct {v5, v0, v2}, Lcom/google/zxing/o;-><init>(FF)V
+
+    aput-object v5, v8, v4
+
+    move v0, v7
+
+    .line 161
+    :goto_1
+    if-eqz v0, :cond_0
+
+    .line 163
+    add-int/lit8 v2, v9, -0x1
+
+    :goto_2
+    if-lez v2, :cond_a
+
+    .line 164
+    sget-object v5, Lcom/google/zxing/f/b/a;->b:[I
+
+    move-object v0, p0
+
+    move v4, v1
+
+    invoke-static/range {v0 .. v6}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
+
+    move-result-object v0
+
+    .line 165
+    if-eqz v0, :cond_3
+
+    .line 166
+    new-instance v4, Lcom/google/zxing/o;
+
+    aget v5, v0, v1
+
+    int-to-float v5, v5
+
+    int-to-float v6, v2
+
+    invoke-direct {v4, v5, v6}, Lcom/google/zxing/o;-><init>(FF)V
+
+    aput-object v4, v8, v7
+
+    .line 167
+    const/4 v4, 0x5
+
+    new-instance v5, Lcom/google/zxing/o;
+
+    aget v0, v0, v7
+
+    int-to-float v0, v0
+
+    int-to-float v2, v2
+
+    invoke-direct {v5, v0, v2}, Lcom/google/zxing/o;-><init>(FF)V
+
+    aput-object v5, v8, v4
+
+    move v0, v7
+
+    .line 174
+    :cond_0
+    :goto_3
+    sget-object v2, Lcom/google/zxing/f/b/a;->d:[I
 
     array-length v2, v2
 
-    new-array v7, v2, [I
+    new-array v6, v2, [I
 
-    const/4 v2, 0x1
+    .line 177
+    if-eqz v0, :cond_1
 
-    shr-int/lit8 v3, v10, 0x7
+    move v2, v1
 
-    invoke-static {v2, v3}, Ljava/lang/Math;->max(II)I
-
-    move-result v11
-
-    const/4 v3, 0x0
-
-    :goto_0
-    if-ge v3, v10, :cond_1d
-
-    const/4 v2, 0x0
-
-    const/4 v5, 0x0
-
-    sget-object v6, Lcom/google/zxing/f/b/a;->a:[I
-
-    invoke-static/range {v1 .. v7}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
-
-    move-result-object v2
-
-    if-eqz v2, :cond_5
-
-    const/4 v5, 0x0
-
-    new-instance v6, Lcom/google/zxing/o;
-
-    const/4 v8, 0x0
-
-    aget v8, v2, v8
-
-    int-to-float v8, v8
-
-    int-to-float v12, v3
-
-    invoke-direct {v6, v8, v12}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v6, v9, v5
-
-    const/4 v5, 0x4
-
-    new-instance v6, Lcom/google/zxing/o;
-
-    const/4 v8, 0x1
-
-    aget v2, v2, v8
-
-    int-to-float v2, v2
-
-    int-to-float v3, v3
-
-    invoke-direct {v6, v2, v3}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v6, v9, v5
-
-    const/4 v2, 0x1
-
-    :goto_1
-    if-eqz v2, :cond_0
-
-    const/4 v8, 0x0
-
-    add-int/lit8 v3, v10, -0x1
-
-    :goto_2
-    if-lez v3, :cond_1c
-
-    const/4 v2, 0x0
-
-    const/4 v5, 0x0
-
-    sget-object v6, Lcom/google/zxing/f/b/a;->a:[I
-
-    invoke-static/range {v1 .. v7}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
-
-    move-result-object v2
-
-    if-eqz v2, :cond_6
-
-    const/4 v5, 0x1
-
-    new-instance v6, Lcom/google/zxing/o;
-
-    const/4 v7, 0x0
-
-    aget v7, v2, v7
-
-    int-to-float v7, v7
-
-    int-to-float v8, v3
-
-    invoke-direct {v6, v7, v8}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v6, v9, v5
-
-    const/4 v5, 0x5
-
-    new-instance v6, Lcom/google/zxing/o;
-
-    const/4 v7, 0x1
-
-    aget v2, v2, v7
-
-    int-to-float v2, v2
-
-    int-to-float v3, v3
-
-    invoke-direct {v6, v2, v3}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v6, v9, v5
-
-    const/4 v2, 0x1
-
-    :cond_0
-    :goto_3
-    sget-object v3, Lcom/google/zxing/f/b/a;->c:[I
-
-    array-length v3, v3
-
-    new-array v7, v3, [I
-
-    if-eqz v2, :cond_1
-
-    const/4 v8, 0x0
-
-    const/4 v3, 0x0
-
+    .line 179
     :goto_4
-    if-ge v3, v10, :cond_1b
+    if-ge v2, v9, :cond_9
 
-    const/4 v2, 0x0
+    .line 180
+    sget-object v5, Lcom/google/zxing/f/b/a;->d:[I
 
-    const/4 v5, 0x0
+    move-object v0, p0
 
-    sget-object v6, Lcom/google/zxing/f/b/a;->c:[I
+    move v4, v1
 
-    invoke-static/range {v1 .. v7}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
+    invoke-static/range {v0 .. v6}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
 
-    move-result-object v2
+    move-result-object v0
 
-    if-eqz v2, :cond_7
+    .line 181
+    if-eqz v0, :cond_4
 
-    const/4 v5, 0x2
-
-    new-instance v6, Lcom/google/zxing/o;
-
-    const/4 v8, 0x1
-
-    aget v8, v2, v8
-
-    int-to-float v8, v8
-
-    int-to-float v12, v3
-
-    invoke-direct {v6, v8, v12}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v6, v9, v5
-
-    const/4 v5, 0x6
-
-    new-instance v6, Lcom/google/zxing/o;
-
-    const/4 v8, 0x0
-
-    aget v2, v2, v8
-
-    int-to-float v2, v2
-
-    int-to-float v3, v3
-
-    invoke-direct {v6, v2, v3}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v6, v9, v5
-
-    const/4 v2, 0x1
-
-    :cond_1
-    :goto_5
-    if-eqz v2, :cond_2
-
-    const/4 v8, 0x0
-
-    add-int/lit8 v3, v10, -0x1
-
-    :goto_6
-    if-lez v3, :cond_1a
-
-    const/4 v2, 0x0
-
-    const/4 v5, 0x0
-
-    sget-object v6, Lcom/google/zxing/f/b/a;->c:[I
-
-    invoke-static/range {v1 .. v7}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
-
-    move-result-object v2
-
-    if-eqz v2, :cond_8
-
-    const/4 v4, 0x3
-
-    new-instance v5, Lcom/google/zxing/o;
-
-    const/4 v6, 0x1
-
-    aget v6, v2, v6
-
-    int-to-float v6, v6
-
-    int-to-float v7, v3
-
-    invoke-direct {v5, v6, v7}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v5, v9, v4
-
-    const/4 v4, 0x7
-
-    new-instance v5, Lcom/google/zxing/o;
-
-    const/4 v6, 0x0
-
-    aget v2, v2, v6
-
-    int-to-float v2, v2
-
-    int-to-float v3, v3
-
-    invoke-direct {v5, v2, v3}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v5, v9, v4
-
-    const/4 v2, 0x1
-
-    :cond_2
-    :goto_7
-    if-eqz v2, :cond_9
-
-    move-object v2, v9
-
-    :goto_8
-    if-nez v2, :cond_f
-
-    iget v12, v1, Lcom/google/zxing/b/b;->b:I
-
-    iget v2, v1, Lcom/google/zxing/b/b;->a:I
-
-    shr-int/lit8 v2, v2, 0x1
-
-    const/16 v3, 0x8
-
-    new-array v10, v3, [Lcom/google/zxing/o;
-
-    const/4 v8, 0x0
-
-    sget-object v3, Lcom/google/zxing/f/b/a;->b:[I
-
-    array-length v3, v3
-
-    new-array v7, v3, [I
-
-    const/4 v3, 0x1
-
-    shr-int/lit8 v4, v12, 0x7
-
-    invoke-static {v3, v4}, Ljava/lang/Math;->max(II)I
-
-    move-result v13
-
-    add-int/lit8 v3, v12, -0x1
-
-    :goto_9
-    if-lez v3, :cond_19
-
-    const/4 v5, 0x1
-
-    sget-object v6, Lcom/google/zxing/f/b/a;->b:[I
-
-    move v4, v2
-
-    invoke-static/range {v1 .. v7}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
-
-    move-result-object v4
-
-    if-eqz v4, :cond_a
-
-    const/4 v5, 0x0
-
-    new-instance v6, Lcom/google/zxing/o;
-
-    const/4 v8, 0x1
-
-    aget v8, v4, v8
-
-    int-to-float v8, v8
-
-    int-to-float v9, v3
-
-    invoke-direct {v6, v8, v9}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v6, v10, v5
-
-    const/4 v5, 0x4
-
-    new-instance v6, Lcom/google/zxing/o;
-
-    const/4 v8, 0x0
-
-    aget v4, v4, v8
-
-    int-to-float v4, v4
-
-    int-to-float v3, v3
-
-    invoke-direct {v6, v4, v3}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v6, v10, v5
-
-    const/4 v3, 0x1
-
-    :goto_a
-    if-eqz v3, :cond_3
-
-    const/4 v8, 0x0
-
-    const/4 v3, 0x0
-
-    :goto_b
-    if-ge v3, v12, :cond_18
-
-    const/4 v5, 0x1
-
-    sget-object v6, Lcom/google/zxing/f/b/a;->b:[I
-
-    move v4, v2
-
-    invoke-static/range {v1 .. v7}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
-
-    move-result-object v4
-
-    if-eqz v4, :cond_b
-
-    const/4 v5, 0x1
-
-    new-instance v6, Lcom/google/zxing/o;
-
-    const/4 v7, 0x1
-
-    aget v7, v4, v7
-
-    int-to-float v7, v7
-
-    int-to-float v8, v3
-
-    invoke-direct {v6, v7, v8}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v6, v10, v5
-
-    const/4 v5, 0x5
-
-    new-instance v6, Lcom/google/zxing/o;
-
-    const/4 v7, 0x0
-
-    aget v4, v4, v7
-
-    int-to-float v4, v4
-
-    int-to-float v3, v3
-
-    invoke-direct {v6, v4, v3}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v6, v10, v5
-
-    const/4 v3, 0x1
-
-    :cond_3
-    :goto_c
-    sget-object v4, Lcom/google/zxing/f/b/a;->d:[I
-
-    array-length v4, v4
-
-    new-array v9, v4, [I
-
-    if-eqz v3, :cond_4
-
-    const/4 v11, 0x0
-
-    add-int/lit8 v5, v12, -0x1
-
-    :goto_d
-    if-lez v5, :cond_17
-
-    const/4 v4, 0x0
-
-    const/4 v7, 0x0
-
-    sget-object v8, Lcom/google/zxing/f/b/a;->d:[I
-
-    move-object v3, v1
-
-    move v6, v2
-
-    invoke-static/range {v3 .. v9}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
-
-    move-result-object v3
-
-    if-eqz v3, :cond_c
-
+    .line 182
     const/4 v4, 0x2
 
-    new-instance v6, Lcom/google/zxing/o;
+    new-instance v5, Lcom/google/zxing/o;
 
-    const/4 v7, 0x0
+    aget v11, v0, v7
 
-    aget v7, v3, v7
+    int-to-float v11, v11
 
-    int-to-float v7, v7
+    int-to-float v12, v2
 
-    int-to-float v8, v5
+    invoke-direct {v5, v11, v12}, Lcom/google/zxing/o;-><init>(FF)V
 
-    invoke-direct {v6, v7, v8}, Lcom/google/zxing/o;-><init>(FF)V
+    aput-object v5, v8, v4
 
-    aput-object v6, v10, v4
-
+    .line 183
     const/4 v4, 0x6
 
-    new-instance v6, Lcom/google/zxing/o;
+    new-instance v5, Lcom/google/zxing/o;
 
-    const/4 v7, 0x1
+    aget v0, v0, v1
 
-    aget v3, v3, v7
+    int-to-float v0, v0
 
-    int-to-float v3, v3
+    int-to-float v2, v2
 
-    int-to-float v5, v5
+    invoke-direct {v5, v0, v2}, Lcom/google/zxing/o;-><init>(FF)V
 
-    invoke-direct {v6, v3, v5}, Lcom/google/zxing/o;-><init>(FF)V
+    aput-object v5, v8, v4
 
-    aput-object v6, v10, v4
+    move v0, v7
 
-    const/4 v3, 0x1
+    .line 190
+    :cond_1
+    :goto_5
+    if-eqz v0, :cond_8
 
-    :cond_4
-    :goto_e
-    if-eqz v3, :cond_16
+    .line 192
+    add-int/lit8 v2, v9, -0x1
 
-    const/4 v11, 0x0
+    :goto_6
+    if-lez v2, :cond_7
 
-    const/4 v5, 0x0
+    .line 193
+    sget-object v5, Lcom/google/zxing/f/b/a;->d:[I
 
-    :goto_f
-    if-ge v5, v12, :cond_15
+    move-object v0, p0
 
-    const/4 v4, 0x0
+    move v4, v1
 
-    const/4 v7, 0x0
+    invoke-static/range {v0 .. v6}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
 
-    sget-object v8, Lcom/google/zxing/f/b/a;->d:[I
+    move-result-object v0
 
-    move-object v3, v1
+    .line 194
+    if-eqz v0, :cond_5
 
-    move v6, v2
-
-    invoke-static/range {v3 .. v9}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
-
-    move-result-object v3
-
-    if-eqz v3, :cond_d
-
-    const/4 v2, 0x3
+    .line 195
+    const/4 v3, 0x3
 
     new-instance v4, Lcom/google/zxing/o;
 
-    const/4 v6, 0x0
-
-    aget v6, v3, v6
-
-    int-to-float v6, v6
-
-    int-to-float v7, v5
-
-    invoke-direct {v4, v6, v7}, Lcom/google/zxing/o;-><init>(FF)V
-
-    aput-object v4, v10, v2
-
-    const/4 v2, 0x7
-
-    new-instance v4, Lcom/google/zxing/o;
-
-    const/4 v6, 0x1
-
-    aget v3, v3, v6
-
-    int-to-float v3, v3
+    aget v5, v0, v7
 
     int-to-float v5, v5
 
-    invoke-direct {v4, v3, v5}, Lcom/google/zxing/o;-><init>(FF)V
+    int-to-float v6, v2
 
-    aput-object v4, v10, v2
+    invoke-direct {v4, v5, v6}, Lcom/google/zxing/o;-><init>(FF)V
 
-    const/4 v2, 0x1
+    aput-object v4, v8, v3
 
-    :goto_10
-    if-eqz v2, :cond_e
+    .line 196
+    const/4 v3, 0x7
 
-    move-object v2, v10
+    new-instance v4, Lcom/google/zxing/o;
 
-    :goto_11
-    if-eqz v2, :cond_10
+    aget v0, v0, v1
 
-    const/4 v3, 0x1
+    int-to-float v0, v0
 
-    invoke-static {v2, v3}, Lcom/google/zxing/f/b/a;->a([Lcom/google/zxing/o;Z)V
+    int-to-float v1, v2
 
-    move-object/from16 v22, v2
+    invoke-direct {v4, v0, v1}, Lcom/google/zxing/o;-><init>(FF)V
 
-    :goto_12
-    if-nez v22, :cond_11
+    aput-object v4, v8, v3
 
-    invoke-static {}, Lcom/google/zxing/i;->a()Lcom/google/zxing/i;
+    .line 202
+    :goto_7
+    if-eqz v7, :cond_6
 
-    move-result-object v1
+    move-object v0, v8
 
-    throw v1
+    :goto_8
+    return-object v0
 
-    :cond_5
-    add-int/2addr v3, v11
+    .line 151
+    :cond_2
+    add-int/2addr v2, v10
 
     goto/16 :goto_0
 
-    :cond_6
-    sub-int/2addr v3, v11
+    .line 163
+    :cond_3
+    sub-int/2addr v2, v10
 
     goto/16 :goto_2
 
-    :cond_7
-    add-int/2addr v3, v11
+    .line 179
+    :cond_4
+    add-int/2addr v2, v10
 
-    goto/16 :goto_4
+    goto :goto_4
+
+    .line 192
+    :cond_5
+    sub-int/2addr v2, v10
+
+    goto :goto_6
+
+    .line 202
+    :cond_6
+    const/4 v0, 0x0
+
+    goto :goto_8
+
+    :cond_7
+    move v7, v1
+
+    goto :goto_7
 
     :cond_8
-    sub-int/2addr v3, v11
+    move v7, v0
 
-    goto/16 :goto_6
+    goto :goto_7
 
     :cond_9
-    const/4 v2, 0x0
+    move v0, v1
 
-    goto/16 :goto_8
+    goto :goto_5
 
     :cond_a
-    sub-int/2addr v3, v13
+    move v0, v1
 
-    goto/16 :goto_9
+    goto :goto_3
 
     :cond_b
-    add-int/2addr v3, v13
+    move v0, v1
 
-    goto/16 :goto_b
+    goto/16 :goto_1
+.end method
 
-    :cond_c
-    sub-int/2addr v5, v13
+.method public static b(Lcom/google/zxing/o;Lcom/google/zxing/o;Lcom/google/zxing/o;Lcom/google/zxing/o;F)I
+    .locals 3
 
-    goto :goto_d
+    .prologue
+    const/high16 v2, 0x3f000000
 
-    :cond_d
-    add-int/2addr v5, v13
+    .line 421
+    invoke-static {p0, p2}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
 
-    goto :goto_f
+    move-result v0
 
-    :cond_e
-    const/4 v2, 0x0
+    div-float/2addr v0, p4
 
-    goto :goto_11
+    add-float/2addr v0, v2
 
-    :cond_f
+    float-to-int v0, v0
+
+    .line 422
+    invoke-static {p1, p3}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
+
+    move-result v1
+
+    div-float/2addr v1, p4
+
+    add-float/2addr v1, v2
+
+    float-to-int v1, v1
+
+    .line 423
+    add-int/2addr v0, v1
+
+    shr-int/lit8 v0, v0, 0x1
+
+    return v0
+.end method
+
+.method public static b(Lcom/google/zxing/b/b;)[Lcom/google/zxing/o;
+    .locals 12
+
+    .prologue
+    .line 224
+    iget v10, p0, Lcom/google/zxing/b/b;->b:I
+
+    .line 225
+    iget v0, p0, Lcom/google/zxing/b/b;->a:I
+
+    .line 226
+    shr-int/lit8 v1, v0, 0x1
+
+    .line 228
+    const/16 v0, 0x8
+
+    new-array v9, v0, [Lcom/google/zxing/o;
+
+    .line 229
+    const/4 v7, 0x0
+
+    .line 231
+    sget-object v0, Lcom/google/zxing/f/b/a;->c:[I
+
+    array-length v0, v0
+
+    new-array v6, v0, [I
+
+    .line 233
+    const/4 v0, 0x1
+
+    shr-int/lit8 v2, v10, 0x7
+
+    invoke-static {v0, v2}, Ljava/lang/Math;->max(II)I
+
+    move-result v11
+
+    .line 236
+    add-int/lit8 v2, v10, -0x1
+
+    :goto_0
+    if-lez v2, :cond_9
+
+    .line 237
+    const/4 v4, 0x1
+
+    sget-object v5, Lcom/google/zxing/f/b/a;->c:[I
+
+    move-object v0, p0
+
+    move v3, v1
+
+    invoke-static/range {v0 .. v6}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
+
+    move-result-object v0
+
+    .line 238
+    if-eqz v0, :cond_3
+
+    .line 239
     const/4 v3, 0x0
 
-    invoke-static {v2, v3}, Lcom/google/zxing/f/b/a;->a([Lcom/google/zxing/o;Z)V
+    new-instance v4, Lcom/google/zxing/o;
 
-    :cond_10
-    move-object/from16 v22, v2
+    const/4 v5, 0x1
 
-    goto :goto_12
+    aget v5, v0, v5
 
-    :cond_11
+    int-to-float v5, v5
+
+    int-to-float v7, v2
+
+    invoke-direct {v4, v5, v7}, Lcom/google/zxing/o;-><init>(FF)V
+
+    aput-object v4, v9, v3
+
+    .line 240
+    const/4 v3, 0x4
+
+    new-instance v4, Lcom/google/zxing/o;
+
+    const/4 v5, 0x0
+
+    aget v0, v0, v5
+
+    int-to-float v0, v0
+
+    int-to-float v2, v2
+
+    invoke-direct {v4, v0, v2}, Lcom/google/zxing/o;-><init>(FF)V
+
+    aput-object v4, v9, v3
+
+    .line 241
+    const/4 v0, 0x1
+
+    .line 246
+    :goto_1
+    if-eqz v0, :cond_0
+
+    .line 247
+    const/4 v7, 0x0
+
+    .line 248
     const/4 v2, 0x0
 
-    aget-object v2, v22, v2
+    :goto_2
+    if-ge v2, v10, :cond_8
 
-    const/4 v3, 0x4
+    .line 249
+    const/4 v4, 0x1
 
-    aget-object v3, v22, v3
+    sget-object v5, Lcom/google/zxing/f/b/a;->c:[I
 
-    invoke-static {v2, v3}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
+    move-object v0, p0
 
-    move-result v2
+    move v3, v1
 
+    invoke-static/range {v0 .. v6}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
+
+    move-result-object v0
+
+    .line 250
+    if-eqz v0, :cond_4
+
+    .line 251
     const/4 v3, 0x1
 
-    aget-object v3, v22, v3
+    new-instance v4, Lcom/google/zxing/o;
 
-    const/4 v4, 0x5
+    const/4 v5, 0x1
 
-    aget-object v4, v22, v4
+    aget v5, v0, v5
 
-    invoke-static {v3, v4}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
+    int-to-float v5, v5
 
-    move-result v3
+    int-to-float v6, v2
 
-    add-float/2addr v2, v3
+    invoke-direct {v4, v5, v6}, Lcom/google/zxing/o;-><init>(FF)V
 
-    const/high16 v3, 0x42080000
+    aput-object v4, v9, v3
 
-    div-float/2addr v2, v3
+    .line 252
+    const/4 v3, 0x5
 
-    const/4 v3, 0x6
+    new-instance v4, Lcom/google/zxing/o;
 
-    aget-object v3, v22, v3
+    const/4 v5, 0x0
 
-    const/4 v4, 0x2
+    aget v0, v0, v5
 
-    aget-object v4, v22, v4
+    int-to-float v0, v0
 
-    invoke-static {v3, v4}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
+    int-to-float v2, v2
 
-    move-result v3
+    invoke-direct {v4, v0, v2}, Lcom/google/zxing/o;-><init>(FF)V
 
-    const/4 v4, 0x7
+    aput-object v4, v9, v3
 
-    aget-object v4, v22, v4
+    .line 253
+    const/4 v0, 0x1
 
-    const/4 v5, 0x3
+    .line 259
+    :cond_0
+    :goto_3
+    sget-object v2, Lcom/google/zxing/f/b/a;->e:[I
 
-    aget-object v5, v22, v5
+    array-length v2, v2
 
-    invoke-static {v4, v5}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
+    new-array v8, v2, [I
 
-    move-result v4
+    .line 262
+    if-eqz v0, :cond_1
 
-    add-float/2addr v3, v4
+    .line 263
+    const/4 v0, 0x0
 
-    const/high16 v4, 0x42100000
+    .line 264
+    add-int/lit8 v4, v10, -0x1
 
-    div-float/2addr v3, v4
+    :goto_4
+    if-lez v4, :cond_1
 
-    add-float/2addr v2, v3
-
-    const/high16 v3, 0x40000000
-
-    div-float/2addr v2, v3
-
-    const/high16 v3, 0x3f800000
-
-    cmpg-float v3, v2, v3
-
-    if-gez v3, :cond_12
-
-    invoke-static {}, Lcom/google/zxing/i;->a()Lcom/google/zxing/i;
-
-    move-result-object v1
-
-    throw v1
-
-    :cond_12
-    const/4 v3, 0x4
-
-    aget-object v3, v22, v3
-
-    const/4 v4, 0x6
-
-    aget-object v4, v22, v4
-
-    const/4 v5, 0x5
-
-    aget-object v5, v22, v5
-
-    const/4 v6, 0x7
-
-    aget-object v6, v22, v6
-
-    invoke-static {v3, v4}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
-
-    move-result v3
-
-    div-float/2addr v3, v2
-
-    const/high16 v4, 0x3f000000
-
-    add-float/2addr v3, v4
-
-    float-to-int v3, v3
-
-    invoke-static {v5, v6}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
-
-    move-result v4
-
-    div-float/2addr v4, v2
-
-    const/high16 v5, 0x3f000000
-
-    add-float/2addr v4, v5
-
-    float-to-int v4, v4
-
-    add-int/2addr v3, v4
-
-    shr-int/lit8 v3, v3, 0x1
-
-    add-int/lit8 v3, v3, 0x8
-
-    div-int/lit8 v3, v3, 0x11
-
-    mul-int/lit8 v4, v3, 0x11
-
-    if-gtz v4, :cond_13
-
-    invoke-static {}, Lcom/google/zxing/i;->a()Lcom/google/zxing/i;
-
-    move-result-object v1
-
-    throw v1
-
-    :cond_13
-    const/4 v3, 0x4
-
-    aget-object v3, v22, v3
-
-    const/4 v5, 0x6
-
-    aget-object v5, v22, v5
-
-    const/4 v6, 0x5
-
-    aget-object v6, v22, v6
-
-    const/4 v7, 0x7
-
-    aget-object v7, v22, v7
-
-    invoke-static {v3, v6}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
-
-    move-result v3
-
-    div-float/2addr v3, v2
-
-    const/high16 v6, 0x3f000000
-
-    add-float/2addr v3, v6
-
-    float-to-int v3, v3
-
-    invoke-static {v5, v7}, Lcom/google/zxing/o;->a(Lcom/google/zxing/o;Lcom/google/zxing/o;)F
-
-    move-result v5
-
-    div-float v2, v5, v2
-
-    const/high16 v5, 0x3f000000
-
-    add-float/2addr v2, v5
-
-    float-to-int v2, v2
-
-    add-int/2addr v2, v3
-
-    shr-int/lit8 v5, v2, 0x1
-
-    if-le v5, v4, :cond_14
-
-    :goto_13
-    const/4 v2, 0x4
-
-    aget-object v3, v22, v2
-
-    const/4 v2, 0x5
-
-    aget-object v21, v22, v2
-
-    const/4 v2, 0x6
-
-    aget-object v17, v22, v2
-
-    const/4 v2, 0x7
-
-    aget-object v19, v22, v2
-
-    invoke-static {}, Lcom/google/zxing/b/i;->a()Lcom/google/zxing/b/i;
-
-    move-result-object v2
+    .line 265
+    const/4 v3, 0x0
 
     const/4 v6, 0x0
 
-    const/4 v7, 0x0
+    sget-object v7, Lcom/google/zxing/f/b/a;->e:[I
 
-    int-to-float v8, v4
+    move-object v2, p0
 
-    const/4 v9, 0x0
+    move v5, v1
 
-    int-to-float v10, v4
+    invoke-static/range {v2 .. v8}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
 
-    int-to-float v11, v5
+    move-result-object v2
 
-    const/4 v12, 0x0
+    .line 266
+    if-eqz v2, :cond_5
 
-    int-to-float v13, v5
+    .line 267
+    const/4 v0, 0x2
 
-    iget v14, v3, Lcom/google/zxing/o;->a:F
+    new-instance v3, Lcom/google/zxing/o;
 
-    iget v15, v3, Lcom/google/zxing/o;->b:F
+    const/4 v5, 0x0
 
-    move-object/from16 v0, v17
+    aget v5, v2, v5
 
-    iget v0, v0, Lcom/google/zxing/o;->a:F
+    int-to-float v5, v5
 
-    move/from16 v16, v0
+    int-to-float v6, v4
 
-    move-object/from16 v0, v17
+    invoke-direct {v3, v5, v6}, Lcom/google/zxing/o;-><init>(FF)V
 
-    iget v0, v0, Lcom/google/zxing/o;->b:F
+    aput-object v3, v9, v0
 
-    move/from16 v17, v0
+    .line 268
+    const/4 v0, 0x6
 
-    move-object/from16 v0, v19
+    new-instance v3, Lcom/google/zxing/o;
 
-    iget v0, v0, Lcom/google/zxing/o;->a:F
+    const/4 v5, 0x1
 
-    move/from16 v18, v0
+    aget v2, v2, v5
 
-    move-object/from16 v0, v19
+    int-to-float v2, v2
 
-    iget v0, v0, Lcom/google/zxing/o;->b:F
+    int-to-float v4, v4
 
-    move/from16 v19, v0
+    invoke-direct {v3, v2, v4}, Lcom/google/zxing/o;-><init>(FF)V
 
-    move-object/from16 v0, v21
+    aput-object v3, v9, v0
 
-    iget v0, v0, Lcom/google/zxing/o;->a:F
+    .line 269
+    const/4 v0, 0x1
 
-    move/from16 v20, v0
+    .line 275
+    :cond_1
+    if-eqz v0, :cond_2
 
-    move-object/from16 v0, v21
+    .line 276
+    const/4 v0, 0x0
 
-    iget v0, v0, Lcom/google/zxing/o;->b:F
-
-    move/from16 v21, v0
-
-    move-object v3, v1
-
-    invoke-virtual/range {v2 .. v21}, Lcom/google/zxing/b/i;->a(Lcom/google/zxing/b/b;IIFFFFFFFFFFFFFFFF)Lcom/google/zxing/b/b;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/google/zxing/b/g;
-
-    const/4 v3, 0x4
-
-    new-array v3, v3, [Lcom/google/zxing/o;
-
+    .line 277
     const/4 v4, 0x0
 
-    const/4 v5, 0x5
+    :goto_5
+    if-ge v4, v10, :cond_2
 
-    aget-object v5, v22, v5
+    .line 278
+    const/4 v3, 0x0
 
-    aput-object v5, v3, v4
+    const/4 v6, 0x0
 
-    const/4 v4, 0x1
+    sget-object v7, Lcom/google/zxing/f/b/a;->e:[I
 
-    const/4 v5, 0x4
+    move-object v2, p0
 
-    aget-object v5, v22, v5
+    move v5, v1
 
-    aput-object v5, v3, v4
+    invoke-static/range {v2 .. v8}, Lcom/google/zxing/f/b/a;->a(Lcom/google/zxing/b/b;IIIZ[I[I)[I
 
-    const/4 v4, 0x2
+    move-result-object v2
 
-    const/4 v5, 0x6
+    .line 279
+    if-eqz v2, :cond_6
 
-    aget-object v5, v22, v5
+    .line 280
+    const/4 v0, 0x3
 
-    aput-object v5, v3, v4
+    new-instance v1, Lcom/google/zxing/o;
 
-    const/4 v4, 0x3
+    const/4 v3, 0x0
 
-    const/4 v5, 0x7
+    aget v3, v2, v3
 
-    aget-object v5, v22, v5
+    int-to-float v3, v3
 
-    aput-object v5, v3, v4
+    int-to-float v5, v4
 
-    invoke-direct {v2, v1, v3}, Lcom/google/zxing/b/g;-><init>(Lcom/google/zxing/b/b;[Lcom/google/zxing/o;)V
+    invoke-direct {v1, v3, v5}, Lcom/google/zxing/o;-><init>(FF)V
 
-    return-object v2
+    aput-object v1, v9, v0
 
-    :cond_14
-    move v5, v4
+    .line 281
+    const/4 v0, 0x7
 
-    goto :goto_13
+    new-instance v1, Lcom/google/zxing/o;
 
-    :cond_15
-    move v2, v11
+    const/4 v3, 0x1
 
-    goto/16 :goto_10
+    aget v2, v2, v3
 
-    :cond_16
-    move v2, v3
+    int-to-float v2, v2
 
-    goto/16 :goto_10
+    int-to-float v3, v4
 
-    :cond_17
-    move v3, v11
+    invoke-direct {v1, v2, v3}, Lcom/google/zxing/o;-><init>(FF)V
 
-    goto/16 :goto_e
+    aput-object v1, v9, v0
 
-    :cond_18
-    move v3, v8
+    .line 282
+    const/4 v0, 0x1
 
-    goto/16 :goto_c
+    .line 287
+    :cond_2
+    if-eqz v0, :cond_7
 
-    :cond_19
-    move v3, v8
+    move-object v0, v9
 
-    goto/16 :goto_a
+    :goto_6
+    return-object v0
 
-    :cond_1a
-    move v2, v8
+    .line 236
+    :cond_3
+    sub-int/2addr v2, v11
 
-    goto/16 :goto_7
+    goto/16 :goto_0
 
-    :cond_1b
-    move v2, v8
+    .line 248
+    :cond_4
+    add-int/2addr v2, v11
 
-    goto/16 :goto_5
+    goto/16 :goto_2
 
-    :cond_1c
-    move v2, v8
+    .line 264
+    :cond_5
+    sub-int/2addr v4, v11
 
-    goto/16 :goto_3
+    goto :goto_4
 
-    :cond_1d
-    move v2, v8
+    .line 277
+    :cond_6
+    add-int/2addr v4, v11
+
+    goto :goto_5
+
+    .line 287
+    :cond_7
+    const/4 v0, 0x0
+
+    goto :goto_6
+
+    :cond_8
+    move v0, v7
+
+    goto :goto_3
+
+    :cond_9
+    move v0, v7
 
     goto/16 :goto_1
 .end method

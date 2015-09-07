@@ -1,87 +1,124 @@
-.class final Lcom/bbm/ui/c/dr;
+.class final synthetic Lcom/bbm/ui/c/dr;
 .super Ljava/lang/Object;
-.source "GroupsFragment.java"
-
-# interfaces
-.implements Lcom/bbm/ui/c/fu;
+.source "GroupMembersFragment.java"
 
 
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+# static fields
+.field static final synthetic a:[I
 
-.field final synthetic b:Lcom/bbm/g/a;
-
-.field final synthetic c:Lcom/bbm/ui/c/dg;
+.field static final synthetic b:[I
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dg;Lcom/bbm/ui/activities/MainActivity;Lcom/bbm/g/a;)V
-    .locals 0
-
-    .prologue
-    .line 384
-    iput-object p1, p0, Lcom/bbm/ui/c/dr;->c:Lcom/bbm/ui/c/dg;
-
-    iput-object p2, p0, Lcom/bbm/ui/c/dr;->a:Lcom/bbm/ui/activities/MainActivity;
-
-    iput-object p3, p0, Lcom/bbm/ui/c/dr;->b:Lcom/bbm/g/a;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+.method static constructor <clinit>()V
     .locals 3
 
     .prologue
-    .line 388
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    .line 443
+    invoke-static {}, Lcom/bbm/ui/c/dv;->values()[Lcom/bbm/ui/c/dv;
 
-    packed-switch v0, :pswitch_data_0
+    move-result-object v0
 
-    .line 396
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/c/dr;->b:[I
+
+    :try_start_0
+    sget-object v0, Lcom/bbm/ui/c/dr;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/c/dv;->a:Lcom/bbm/ui/c/dv;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/c/dv;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_0
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_3
+
     :goto_0
+    :try_start_1
+    sget-object v0, Lcom/bbm/ui/c/dr;->b:[I
+
+    sget-object v1, Lcom/bbm/ui/c/dv;->b:Lcom/bbm/ui/c/dv;
+
+    invoke-virtual {v1}, Lcom/bbm/ui/c/dv;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_1
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_2
+
+    .line 93
+    :goto_1
+    invoke-static {}, Lcom/bbm/util/bi;->values()[Lcom/bbm/util/bi;
+
+    move-result-object v0
+
+    array-length v0, v0
+
+    new-array v0, v0, [I
+
+    sput-object v0, Lcom/bbm/ui/c/dr;->a:[I
+
+    :try_start_2
+    sget-object v0, Lcom/bbm/ui/c/dr;->a:[I
+
+    sget-object v1, Lcom/bbm/util/bi;->b:Lcom/bbm/util/bi;
+
+    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x1
+
+    aput v2, v0, v1
+    :try_end_2
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_1
+
+    :goto_2
+    :try_start_3
+    sget-object v0, Lcom/bbm/ui/c/dr;->a:[I
+
+    sget-object v1, Lcom/bbm/util/bi;->c:Lcom/bbm/util/bi;
+
+    invoke-virtual {v1}, Lcom/bbm/util/bi;->ordinal()I
+
+    move-result v1
+
+    const/4 v2, 0x2
+
+    aput v2, v0, v1
+    :try_end_3
+    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_0
+
+    :goto_3
     return-void
 
-    .line 390
-    :pswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/c/dr;->a:Lcom/bbm/ui/activities/MainActivity;
+    :catch_0
+    move-exception v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->v()V
+    goto :goto_3
 
-    .line 391
-    new-instance v0, Landroid/content/Intent;
+    :catch_1
+    move-exception v0
 
-    iget-object v1, p0, Lcom/bbm/ui/c/dr;->a:Lcom/bbm/ui/activities/MainActivity;
+    goto :goto_2
 
-    const-class v2, Lcom/bbm/ui/activities/GroupProfileActivity;
+    :catch_2
+    move-exception v0
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    goto :goto_1
 
-    .line 392
-    const-string v1, "groupUri"
-
-    iget-object v2, p0, Lcom/bbm/ui/c/dr;->b:Lcom/bbm/g/a;
-
-    iget-object v2, v2, Lcom/bbm/g/a;->u:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 393
-    iget-object v1, p0, Lcom/bbm/ui/c/dr;->c:Lcom/bbm/ui/c/dg;
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/c/dg;->startActivity(Landroid/content/Intent;)V
+    :catch_3
+    move-exception v0
 
     goto :goto_0
-
-    .line 388
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x7f0a005e
-        :pswitch_0
-    .end packed-switch
 .end method

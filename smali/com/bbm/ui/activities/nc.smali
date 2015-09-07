@@ -1,52 +1,100 @@
 .class final Lcom/bbm/ui/activities/nc;
-.super Ljava/lang/Object;
-.source "GroupListsActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/k;
+.source "GroupConversationActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupListsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupListsActivity;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+    .locals 1
 
     .prologue
-    .line 219
-    iput-object p1, p0, Lcom/bbm/ui/activities/nc;->a:Lcom/bbm/ui/activities/GroupListsActivity;
+    .line 224
+    iput-object p1, p0, Lcom/bbm/ui/activities/nc;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method protected final a()V
+    .locals 3
 
     .prologue
-    .line 222
-    const-string v0, "add list button onClick"
+    .line 228
+    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
 
-    const-class v1, Lcom/bbm/ui/activities/GroupListsActivity;
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    iget-object v1, p0, Lcom/bbm/ui/activities/nc;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
 
-    .line 223
-    iget-object v0, p0, Lcom/bbm/ui/activities/nc;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/nc;->a:Lcom/bbm/ui/activities/GroupListsActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupListsActivity;->i()Ljava/lang/String;
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->e(Lcom/bbm/ui/activities/GroupConversationActivity;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/GroupListsActivity;->a(Landroid/app/Activity;Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->b(Ljava/lang/String;)Z
 
-    .line 224
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 229
+    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/g/al;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/nc;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->e(Lcom/bbm/ui/activities/GroupConversationActivity;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 230
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 231
+    iget-object v1, p0, Lcom/bbm/ui/activities/nc;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->f(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/widget/EditText;
+
+    move-result-object v1
+
+    const-string v2, ""
+
+    invoke-virtual {v1, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    .line 232
+    iget-object v1, p0, Lcom/bbm/ui/activities/nc;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->f(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/widget/EditText;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/widget/EditText;->append(Ljava/lang/CharSequence;)V
+
+    .line 233
+    iget-object v0, p0, Lcom/bbm/ui/activities/nc;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->g(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+
+    .line 236
+    :cond_0
     return-void
 .end method

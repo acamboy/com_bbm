@@ -18,7 +18,7 @@
 
 # direct methods
 .method constructor <init>(Lcom/google/android/gms/cast/RemoteMediaPlayer;Lcom/google/android/gms/common/api/GoogleApiClient;Lcom/google/android/gms/cast/MediaInfo;ZJLorg/json/JSONObject;)V
-    .locals 0
+    .locals 1
 
     iput-object p1, p0, Lcom/google/android/gms/cast/RemoteMediaPlayer$2;->xk:Lcom/google/android/gms/cast/RemoteMediaPlayer;
 

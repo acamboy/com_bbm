@@ -20,10 +20,10 @@
 
 
 # instance fields
-.field private ba:Ljava/util/Iterator;
+.field private ba:Ljava/util/ListIterator;
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "Ljava/util/Iterator",
+            "Ljava/util/ListIterator",
             "<TT;>;"
         }
     .end annotation
@@ -31,24 +31,24 @@
 
 
 # direct methods
-.method public constructor <init>(Ljava/util/Iterator;)V
+.method public constructor <init>(Ljava/util/ListIterator;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Ljava/util/Iterator",
+            "Ljava/util/ListIterator",
             "<TT;>;)V"
         }
     .end annotation
 
     .prologue
-    .line 56
+    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
-    iput-object p1, p0, Lcom/glympse/android/hal/aa;->ba:Ljava/util/Iterator;
+    .line 77
+    iput-object p1, p0, Lcom/glympse/android/hal/aa;->ba:Ljava/util/ListIterator;
 
-    .line 58
+    .line 78
     return-void
 .end method
 
@@ -58,10 +58,10 @@
     .locals 1
 
     .prologue
-    .line 62
-    iget-object v0, p0, Lcom/glympse/android/hal/aa;->ba:Ljava/util/Iterator;
+    .line 82
+    iget-object v0, p0, Lcom/glympse/android/hal/aa;->ba:Ljava/util/ListIterator;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {v0}, Ljava/util/ListIterator;->hasPrevious()Z
 
     move-result v0
 
@@ -77,10 +77,10 @@
     .end annotation
 
     .prologue
-    .line 67
-    iget-object v0, p0, Lcom/glympse/android/hal/aa;->ba:Ljava/util/Iterator;
+    .line 87
+    iget-object v0, p0, Lcom/glympse/android/hal/aa;->ba:Ljava/util/ListIterator;
 
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    invoke-interface {v0}, Ljava/util/ListIterator;->previous()Ljava/lang/Object;
 
     move-result-object v0
 

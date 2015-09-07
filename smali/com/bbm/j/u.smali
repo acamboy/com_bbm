@@ -78,12 +78,12 @@
     if-eqz v0, :cond_0
 
     .line 14
-    invoke-virtual {p0}, Lcom/bbm/j/u;->d()V
+    invoke-virtual {p0}, Lcom/bbm/j/u;->e()V
 
     .line 16
     :cond_0
     return-void
 .end method
 
-.method protected abstract b()Z
+.method public abstract b()Z
 .end method

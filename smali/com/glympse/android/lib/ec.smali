@@ -1,28 +1,28 @@
 .class Lcom/glympse/android/lib/ec;
-.super Lcom/glympse/android/lib/ex;
+.super Lcom/glympse/android/lib/fb;
 .source "ImageCache.java"
 
 
 # instance fields
-.field private nl:Lcom/glympse/android/lib/dy;
+.field private nM:Lcom/glympse/android/lib/ea;
 
-.field final synthetic nn:Lcom/glympse/android/lib/dy;
+.field final synthetic nO:Lcom/glympse/android/lib/ea;
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/dy;Lcom/glympse/android/lib/dy;)V
+.method public constructor <init>(Lcom/glympse/android/lib/ea;Lcom/glympse/android/lib/ea;)V
     .locals 0
 
     .prologue
-    .line 440
-    iput-object p1, p0, Lcom/glympse/android/lib/ec;->nn:Lcom/glympse/android/lib/dy;
+    .line 425
+    iput-object p1, p0, Lcom/glympse/android/lib/ec;->nO:Lcom/glympse/android/lib/ea;
 
-    invoke-direct {p0}, Lcom/glympse/android/lib/ex;-><init>()V
+    invoke-direct {p0}, Lcom/glympse/android/lib/fb;-><init>()V
 
-    .line 441
-    iput-object p2, p0, Lcom/glympse/android/lib/ec;->nl:Lcom/glympse/android/lib/dy;
+    .line 426
+    iput-object p2, p0, Lcom/glympse/android/lib/ec;->nM:Lcom/glympse/android/lib/ea;
 
-    .line 442
+    .line 427
     return-void
 .end method
 
@@ -32,11 +32,11 @@
     .locals 1
 
     .prologue
-    .line 446
-    iget-object v0, p0, Lcom/glympse/android/lib/ec;->nl:Lcom/glympse/android/lib/dy;
+    .line 431
+    iget-object v0, p0, Lcom/glympse/android/lib/ec;->nM:Lcom/glympse/android/lib/ea;
 
-    invoke-virtual {v0}, Lcom/glympse/android/lib/dy;->bW()V
+    invoke-virtual {v0}, Lcom/glympse/android/lib/ea;->bX()V
 
-    .line 447
+    .line 432
     return-void
 .end method

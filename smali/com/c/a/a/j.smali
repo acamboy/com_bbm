@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static final a:Ljava/text/DateFormat;
+.field private static final c:Ljava/text/DateFormat;
 
-.field private static b:Ljava/util/Map;
+.field private static d:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
@@ -23,21 +23,21 @@
 
 
 # instance fields
-.field private final c:Landroid/content/Context;
+.field public final a:Lcom/c/a/a/l;
 
-.field private final d:Lcom/c/a/a/m;
+.field public b:Ljava/lang/String;
 
-.field private final e:Lcom/c/a/a/a;
+.field private final e:Landroid/content/Context;
 
-.field private final f:Ljava/lang/String;
+.field private final f:Lcom/c/a/a/m;
 
-.field private final g:Lcom/c/a/a/l;
+.field private final g:Lcom/c/a/a/a;
 
-.field private final h:Landroid/content/SharedPreferences;
+.field private final h:Ljava/lang/String;
 
-.field private i:Lorg/json/JSONObject;
+.field private final i:Landroid/content/SharedPreferences;
 
-.field private j:Ljava/lang/String;
+.field private j:Lorg/json/JSONObject;
 
 .field private k:Ljava/lang/String;
 
@@ -57,7 +57,7 @@
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
     .line 1036
-    sput-object v0, Lcom/c/a/a/j;->a:Ljava/text/DateFormat;
+    sput-object v0, Lcom/c/a/a/j;->c:Ljava/text/DateFormat;
 
     const-string v1, "UTC"
 
@@ -72,7 +72,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/c/a/a/j;->b:Ljava/util/Map;
+    sput-object v0, Lcom/c/a/a/j;->d:Ljava/util/Map;
 
     return-void
 .end method
@@ -89,35 +89,35 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 96
-    iput-object p1, p0, Lcom/c/a/a/j;->c:Landroid/content/Context;
+    iput-object p1, p0, Lcom/c/a/a/j;->e:Landroid/content/Context;
 
     .line 97
-    iput-object p2, p0, Lcom/c/a/a/j;->f:Ljava/lang/String;
+    iput-object p2, p0, Lcom/c/a/a/j;->h:Ljava/lang/String;
 
     .line 98
     new-instance v0, Lcom/c/a/a/l;
 
     invoke-direct {v0, p0, v2}, Lcom/c/a/a/l;-><init>(Lcom/c/a/a/j;B)V
 
-    iput-object v0, p0, Lcom/c/a/a/j;->g:Lcom/c/a/a/l;
+    iput-object v0, p0, Lcom/c/a/a/j;->a:Lcom/c/a/a/l;
 
     .line 100
-    iget-object v0, p0, Lcom/c/a/a/j;->c:Landroid/content/Context;
+    iget-object v0, p0, Lcom/c/a/a/j;->e:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/c/a/a/a;->a(Landroid/content/Context;)Lcom/c/a/a/a;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/c/a/a/j;->e:Lcom/c/a/a/a;
+    iput-object v0, p0, Lcom/c/a/a/j;->g:Lcom/c/a/a/a;
 
     .line 101
     new-instance v0, Lcom/c/a/a/m;
 
-    iget-object v1, p0, Lcom/c/a/a/j;->c:Landroid/content/Context;
+    iget-object v1, p0, Lcom/c/a/a/j;->e:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lcom/c/a/a/m;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/c/a/a/j;->d:Lcom/c/a/a/m;
+    iput-object v0, p0, Lcom/c/a/a/j;->f:Lcom/c/a/a/m;
 
     .line 103
     new-instance v0, Ljava/lang/StringBuilder;
@@ -138,10 +138,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/c/a/a/j;->h:Landroid/content/SharedPreferences;
+    iput-object v0, p0, Lcom/c/a/a/j;->i:Landroid/content/SharedPreferences;
 
     .line 104
-    iget-object v0, p0, Lcom/c/a/a/j;->h:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/c/a/a/j;->i:Landroid/content/SharedPreferences;
 
     const-string v1, "super_properties"
 
@@ -156,13 +156,13 @@
 
     invoke-direct {v1, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    iput-object v1, p0, Lcom/c/a/a/j;->i:Lorg/json/JSONObject;
+    iput-object v1, p0, Lcom/c/a/a/j;->j:Lorg/json/JSONObject;
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 105
     :goto_0
-    iget-object v0, p0, Lcom/c/a/a/j;->h:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/c/a/a/j;->i:Landroid/content/SharedPreferences;
 
     const-string v1, "events_distinct_id"
 
@@ -170,9 +170,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/c/a/a/j;->j:Ljava/lang/String;
+    iput-object v0, p0, Lcom/c/a/a/j;->b:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/c/a/a/j;->h:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/c/a/a/j;->i:Landroid/content/SharedPreferences;
 
     const-string v1, "people_distinct_id"
 
@@ -184,7 +184,7 @@
 
     iput-object v3, p0, Lcom/c/a/a/j;->l:Lcom/c/a/a/n;
 
-    iget-object v0, p0, Lcom/c/a/a/j;->h:Landroid/content/SharedPreferences;
+    iget-object v0, p0, Lcom/c/a/a/j;->i:Landroid/content/SharedPreferences;
 
     const-string v1, "waiting_people_record"
 
@@ -209,7 +209,7 @@
 
     :cond_0
     :goto_1
-    iget-object v0, p0, Lcom/c/a/a/j;->j:Ljava/lang/String;
+    iget-object v0, p0, Lcom/c/a/a/j;->b:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
@@ -221,9 +221,9 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/c/a/a/j;->j:Ljava/lang/String;
+    iput-object v0, p0, Lcom/c/a/a/j;->b:Ljava/lang/String;
 
-    invoke-direct {p0}, Lcom/c/a/a/j;->d()V
+    invoke-virtual {p0}, Lcom/c/a/a/j;->b()V
 
     :cond_1
     iget-object v0, p0, Lcom/c/a/a/j;->l:Lcom/c/a/a/n;
@@ -254,15 +254,15 @@
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    iput-object v0, p0, Lcom/c/a/a/j;->i:Lorg/json/JSONObject;
+    iput-object v0, p0, Lcom/c/a/a/j;->j:Lorg/json/JSONObject;
 
-    iget-object v0, p0, Lcom/c/a/a/j;->i:Lorg/json/JSONObject;
+    iget-object v0, p0, Lcom/c/a/a/j;->j:Lorg/json/JSONObject;
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/c/a/a/j;->h:Landroid/content/SharedPreferences;
+    iget-object v1, p0, Lcom/c/a/a/j;->i:Landroid/content/SharedPreferences;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -306,7 +306,7 @@
 
     .prologue
     .line 122
-    sget-object v2, Lcom/c/a/a/j;->b:Ljava/util/Map;
+    sget-object v2, Lcom/c/a/a/j;->d:Ljava/util/Map;
 
     monitor-enter v2
 
@@ -317,7 +317,7 @@
     move-result-object v3
 
     .line 124
-    sget-object v0, Lcom/c/a/a/j;->b:Ljava/util/Map;
+    sget-object v0, Lcom/c/a/a/j;->d:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -334,7 +334,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 127
-    sget-object v1, Lcom/c/a/a/j;->b:Ljava/util/Map;
+    sget-object v1, Lcom/c/a/a/j;->d:Ljava/util/Map;
 
     invoke-interface {v1, p1, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -401,12 +401,42 @@
     return-object p1
 .end method
 
+.method public static a(Landroid/content/Context;)V
+    .locals 3
+
+    .prologue
+    .line 166
+    invoke-static {p0}, Lcom/c/a/a/a;->a(Landroid/content/Context;)Lcom/c/a/a/a;
+
+    move-result-object v0
+
+    .line 167
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+
+    move-result-object v1
+
+    sget v2, Lcom/c/a/a/a;->d:I
+
+    iput v2, v1, Landroid/os/Message;->what:I
+
+    const/4 v2, 0x0
+
+    iput-object v2, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    iget-object v0, v0, Lcom/c/a/a/a;->a:Lcom/c/a/a/b;
+
+    invoke-virtual {v0, v1}, Lcom/c/a/a/b;->a(Landroid/os/Message;)V
+
+    .line 171
+    return-void
+.end method
+
 .method static synthetic a(Lcom/c/a/a/j;)V
     .locals 0
 
     .prologue
     .line 88
-    invoke-direct {p0}, Lcom/c/a/a/j;->d()V
+    invoke-virtual {p0}, Lcom/c/a/a/j;->b()V
 
     return-void
 .end method
@@ -450,12 +480,12 @@
     iget-object v2, v2, Lcom/c/a/a/n;->c:Ljava/util/List;
 
     .line 953
-    iget-object v3, p0, Lcom/c/a/a/j;->g:Lcom/c/a/a/l;
+    iget-object v3, p0, Lcom/c/a/a/j;->a:Lcom/c/a/a/l;
 
     invoke-interface {v3, v0}, Lcom/c/a/a/k;->a(Lorg/json/JSONObject;)V
 
     .line 954
-    iget-object v0, p0, Lcom/c/a/a/j;->g:Lcom/c/a/a/l;
+    iget-object v0, p0, Lcom/c/a/a/j;->a:Lcom/c/a/a/l;
 
     invoke-interface {v0, v1}, Lcom/c/a/a/k;->a(Ljava/util/Map;)V
 
@@ -505,7 +535,7 @@
     move-result-object v4
 
     .line 960
-    iget-object v5, p0, Lcom/c/a/a/j;->g:Lcom/c/a/a/l;
+    iget-object v5, p0, Lcom/c/a/a/j;->a:Lcom/c/a/a/l;
 
     invoke-interface {v5, v0, v4}, Lcom/c/a/a/k;->a(Ljava/lang/String;Ljava/lang/Object;)V
     :try_end_0
@@ -533,7 +563,7 @@
     iput-object v0, p0, Lcom/c/a/a/j;->l:Lcom/c/a/a/n;
 
     .line 969
-    invoke-direct {p0}, Lcom/c/a/a/j;->d()V
+    invoke-virtual {p0}, Lcom/c/a/a/j;->b()V
 
     .line 970
     return-void
@@ -559,69 +589,12 @@
     return-object v0
 .end method
 
-.method private d()V
-    .locals 3
-
-    .prologue
-    .line 1020
-    iget-object v0, p0, Lcom/c/a/a/j;->h:Landroid/content/SharedPreferences;
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    .line 1022
-    const-string v1, "events_distinct_id"
-
-    iget-object v2, p0, Lcom/c/a/a/j;->j:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    .line 1023
-    const-string v1, "people_distinct_id"
-
-    iget-object v2, p0, Lcom/c/a/a/j;->k:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    .line 1024
-    iget-object v1, p0, Lcom/c/a/a/j;->l:Lcom/c/a/a/n;
-
-    if-nez v1, :cond_0
-
-    .line 1025
-    const-string v1, "waiting_people_record"
-
-    invoke-interface {v0, v1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    .line 1030
-    :goto_0
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 1031
-    return-void
-
-    .line 1028
-    :cond_0
-    const-string v1, "waiting_people_record"
-
-    iget-object v2, p0, Lcom/c/a/a/j;->l:Lcom/c/a/a/n;
-
-    invoke-virtual {v2}, Lcom/c/a/a/n;->a()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    goto :goto_0
-.end method
-
 .method static synthetic e(Lcom/c/a/a/j;)Lcom/c/a/a/a;
     .locals 1
 
     .prologue
     .line 88
-    iget-object v0, p0, Lcom/c/a/a/j;->e:Lcom/c/a/a/a;
+    iget-object v0, p0, Lcom/c/a/a/j;->g:Lcom/c/a/a/a;
 
     return-object v0
 .end method
@@ -631,7 +604,7 @@
 
     .prologue
     .line 88
-    iget-object v0, p0, Lcom/c/a/a/j;->f:Ljava/lang/String;
+    iget-object v0, p0, Lcom/c/a/a/j;->h:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -639,29 +612,25 @@
 
 # virtual methods
 .method public final a()V
-    .locals 1
+    .locals 3
 
     .prologue
     .line 266
-    iget-object v0, p0, Lcom/c/a/a/j;->e:Lcom/c/a/a/a;
+    iget-object v0, p0, Lcom/c/a/a/j;->g:Lcom/c/a/a/a;
 
-    invoke-virtual {v0}, Lcom/c/a/a/a;->a()V
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+
+    move-result-object v1
+
+    sget v2, Lcom/c/a/a/a;->c:I
+
+    iput v2, v1, Landroid/os/Message;->what:I
+
+    iget-object v0, v0, Lcom/c/a/a/a;->a:Lcom/c/a/a/b;
+
+    invoke-virtual {v0, v1}, Lcom/c/a/a/b;->a(Landroid/os/Message;)V
 
     .line 267
-    return-void
-.end method
-
-.method public final a(Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 199
-    iput-object p1, p0, Lcom/c/a/a/j;->j:Ljava/lang/String;
-
-    .line 200
-    invoke-direct {p0}, Lcom/c/a/a/j;->d()V
-
-    .line 201
     return-void
 .end method
 
@@ -758,7 +727,7 @@
     :goto_3
     invoke-virtual {v5, v6, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    iget-object v0, p0, Lcom/c/a/a/j;->d:Lcom/c/a/a/m;
+    iget-object v0, p0, Lcom/c/a/a/j;->f:Lcom/c/a/a/m;
 
     iget-object v0, v0, Lcom/c/a/a/m;->d:Landroid/util/DisplayMetrics;
 
@@ -780,7 +749,7 @@
 
     invoke-virtual {v5, v6, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    iget-object v0, p0, Lcom/c/a/a/j;->d:Lcom/c/a/a/m;
+    iget-object v0, p0, Lcom/c/a/a/j;->f:Lcom/c/a/a/m;
 
     iget-object v0, v0, Lcom/c/a/a/m;->e:Ljava/lang/String;
 
@@ -791,7 +760,7 @@
     invoke-virtual {v5, v6, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     :cond_0
-    iget-object v0, p0, Lcom/c/a/a/j;->d:Lcom/c/a/a/m;
+    iget-object v0, p0, Lcom/c/a/a/j;->f:Lcom/c/a/a/m;
 
     iget-object v0, v0, Lcom/c/a/a/m;->b:Ljava/lang/Boolean;
 
@@ -814,7 +783,7 @@
     invoke-virtual {v5, v6, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     :cond_1
-    iget-object v0, p0, Lcom/c/a/a/j;->d:Lcom/c/a/a/m;
+    iget-object v0, p0, Lcom/c/a/a/j;->f:Lcom/c/a/a/m;
 
     iget-object v0, v0, Lcom/c/a/a/m;->c:Ljava/lang/Boolean;
 
@@ -837,7 +806,7 @@
     invoke-virtual {v5, v6, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
 
     :cond_2
-    iget-object v0, p0, Lcom/c/a/a/j;->d:Lcom/c/a/a/m;
+    iget-object v0, p0, Lcom/c/a/a/j;->f:Lcom/c/a/a/m;
 
     iget-object v0, v0, Lcom/c/a/a/m;->a:Landroid/content/Context;
 
@@ -863,7 +832,7 @@
     invoke-virtual {v5, v6, v0}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     :cond_3
-    iget-object v0, p0, Lcom/c/a/a/j;->d:Lcom/c/a/a/m;
+    iget-object v0, p0, Lcom/c/a/a/j;->f:Lcom/c/a/a/m;
 
     iget-object v6, v0, Lcom/c/a/a/m;->a:Landroid/content/Context;
 
@@ -914,7 +883,7 @@
     :cond_4
     const-string v0, "token"
 
-    iget-object v1, p0, Lcom/c/a/a/j;->f:Ljava/lang/String;
+    iget-object v1, p0, Lcom/c/a/a/j;->h:Ljava/lang/String;
 
     invoke-virtual {v5, v0, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
@@ -924,7 +893,7 @@
     invoke-virtual {v5, v0, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
     .line 227
-    iget-object v0, p0, Lcom/c/a/a/j;->i:Lorg/json/JSONObject;
+    iget-object v0, p0, Lcom/c/a/a/j;->j:Lorg/json/JSONObject;
 
     invoke-virtual {v0}, Lorg/json/JSONObject;->keys()Ljava/util/Iterator;
 
@@ -945,7 +914,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 229
-    iget-object v2, p0, Lcom/c/a/a/j;->i:Lorg/json/JSONObject;
+    iget-object v2, p0, Lcom/c/a/a/j;->j:Lorg/json/JSONObject;
 
     invoke-virtual {v2, v0}, Lorg/json/JSONObject;->get(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -1008,7 +977,7 @@
 
     .line 232
     :cond_9
-    iget-object v0, p0, Lcom/c/a/a/j;->j:Ljava/lang/String;
+    iget-object v0, p0, Lcom/c/a/a/j;->b:Ljava/lang/String;
 
     .line 233
     if-eqz v0, :cond_a
@@ -1057,9 +1026,21 @@
     invoke-virtual {v4, v0, v5}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
     .line 246
-    iget-object v0, p0, Lcom/c/a/a/j;->e:Lcom/c/a/a/a;
+    iget-object v0, p0, Lcom/c/a/a/j;->g:Lcom/c/a/a/a;
 
-    invoke-virtual {v0, v4}, Lcom/c/a/a/a;->a(Lorg/json/JSONObject;)V
+    invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
+
+    move-result-object v1
+
+    sget v2, Lcom/c/a/a/a;->b:I
+
+    iput v2, v1, Landroid/os/Message;->what:I
+
+    iput-object v4, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
+
+    iget-object v0, v0, Lcom/c/a/a/a;->a:Lcom/c/a/a/b;
+
+    invoke-virtual {v0, v1}, Lcom/c/a/a/b;->a(Landroid/os/Message;)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -1076,12 +1057,59 @@
     goto/16 :goto_4
 .end method
 
-.method public final b()Lcom/c/a/a/k;
-    .locals 1
+.method public final b()V
+    .locals 3
 
     .prologue
-    .line 386
-    iget-object v0, p0, Lcom/c/a/a/j;->g:Lcom/c/a/a/l;
+    .line 1020
+    iget-object v0, p0, Lcom/c/a/a/j;->i:Landroid/content/SharedPreferences;
 
-    return-object v0
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 1022
+    const-string v1, "events_distinct_id"
+
+    iget-object v2, p0, Lcom/c/a/a/j;->b:Ljava/lang/String;
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 1023
+    const-string v1, "people_distinct_id"
+
+    iget-object v2, p0, Lcom/c/a/a/j;->k:Ljava/lang/String;
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 1024
+    iget-object v1, p0, Lcom/c/a/a/j;->l:Lcom/c/a/a/n;
+
+    if-nez v1, :cond_0
+
+    .line 1025
+    const-string v1, "waiting_people_record"
+
+    invoke-interface {v0, v1}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 1030
+    :goto_0
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 1031
+    return-void
+
+    .line 1028
+    :cond_0
+    const-string v1, "waiting_people_record"
+
+    iget-object v2, p0, Lcom/c/a/a/j;->l:Lcom/c/a/a/n;
+
+    invoke-virtual {v2}, Lcom/c/a/a/n;->a()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    goto :goto_0
 .end method

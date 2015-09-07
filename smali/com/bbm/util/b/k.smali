@@ -1,16 +1,16 @@
 .class public final Lcom/bbm/util/b/k;
-.super Lcom/bbm/util/a;
+.super Lcom/bbm/util/b;
 .source "ImageWorker.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/util/a",
+        "Lcom/bbm/util/b",
         "<",
         "Ljava/lang/Object;",
         "Ljava/lang/Void;",
-        "Lcom/bbm/d/dw;",
+        "Lcom/bbm/d/ff;",
         ">;"
     }
 .end annotation
@@ -34,7 +34,7 @@
 
 .field private final d:I
 
-.field private final i:I
+.field private final e:I
 
 
 # direct methods
@@ -42,25 +42,25 @@
     .locals 1
 
     .prologue
-    .line 347
+    .line 354
     iput-object p1, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
-    invoke-direct {p0}, Lcom/bbm/util/a;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/util/b;-><init>()V
 
-    .line 348
+    .line 355
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p2}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/bbm/util/b/k;->c:Ljava/lang/ref/WeakReference;
 
-    .line 349
+    .line 356
     iput p3, p0, Lcom/bbm/util/b/k;->d:I
 
-    .line 350
-    iput p4, p0, Lcom/bbm/util/b/k;->i:I
+    .line 357
+    iput p4, p0, Lcom/bbm/util/b/k;->e:I
 
-    .line 351
+    .line 358
     return-void
 .end method
 
@@ -68,7 +68,7 @@
     .locals 1
 
     .prologue
-    .line 341
+    .line 348
     iget-object v0, p0, Lcom/bbm/util/b/k;->b:Ljava/lang/Object;
 
     return-object v0
@@ -78,7 +78,7 @@
     .locals 2
 
     .prologue
-    .line 460
+    .line 484
     iget-object v0, p0, Lcom/bbm/util/b/k;->c:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -87,15 +87,15 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 461
+    .line 485
     invoke-static {v0}, Lcom/bbm/util/b/i;->a(Landroid/widget/ImageView;)Lcom/bbm/util/b/k;
 
     move-result-object v1
 
-    .line 463
+    .line 487
     if-ne p0, v1, :cond_0
 
-    .line 467
+    .line 491
     :goto_0
     return-object v0
 
@@ -105,18 +105,18 @@
     goto :goto_0
 .end method
 
-.method private varargs c([Ljava/lang/Object;)Lcom/bbm/d/dw;
-    .locals 8
+.method private varargs c([Ljava/lang/Object;)Lcom/bbm/d/ff;
+    .locals 10
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/4 v7, 0x0
+    const/4 v9, 0x0
 
-    .line 361
+    .line 368
     monitor-enter p0
 
-    .line 362
+    .line 369
     const/4 v0, 0x0
 
     :try_start_0
@@ -124,26 +124,26 @@
 
     iput-object v0, p0, Lcom/bbm/util/b/k;->b:Ljava/lang/Object;
 
-    .line 363
+    .line 370
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 364
+    .line 371
     iget-object v0, p0, Lcom/bbm/util/b/k;->b:Ljava/lang/Object;
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    .line 368
+    .line 375
     iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
-    iget-object v2, v0, Lcom/bbm/util/b/i;->g:Ljava/lang/Object;
+    iget-object v1, v0, Lcom/bbm/util/b/i;->g:Ljava/lang/Object;
 
-    monitor-enter v2
+    monitor-enter v1
 
-    .line 369
+    .line 376
     :goto_0
     :try_start_1
     iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
@@ -152,7 +152,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/bbm/util/a;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, Lcom/bbm/util/b;->j:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
     :try_end_1
@@ -162,7 +162,7 @@
 
     if-nez v0, :cond_0
 
-    .line 371
+    .line 378
     :try_start_2
     iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
@@ -175,13 +175,13 @@
 
     goto :goto_0
 
-    .line 374
+    .line 380
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 363
+    .line 370
     :catchall_0
     move-exception v0
 
@@ -189,54 +189,87 @@
 
     throw v0
 
-    .line 376
+    .line 382
     :cond_0
     :try_start_3
-    monitor-exit v2
+    monitor-exit v1
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 382
+    .line 388
     iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
     iget-object v0, v0, Lcom/bbm/util/b/i;->b:Lcom/bbm/util/b/d;
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/bbm/util/a;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
+    iget-object v0, p0, Lcom/bbm/util/b;->j:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
     move-result v0
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
     invoke-direct {p0}, Lcom/bbm/util/b/k;->c()Landroid/widget/ImageView;
 
     move-result-object v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
     iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
     iget-boolean v0, v0, Lcom/bbm/util/b/i;->e:Z
 
-    if-nez v0, :cond_3
+    if-nez v0, :cond_4
 
-    .line 384
+    .line 390
     iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
     iget-object v0, v0, Lcom/bbm/util/b/i;->b:Lcom/bbm/util/b/d;
 
-    invoke-virtual {v0, v3}, Lcom/bbm/util/b/d;->a(Ljava/lang/String;)Lcom/bbm/d/dw;
+    invoke-virtual {v0, v4}, Lcom/bbm/util/b/d;->a(Ljava/lang/String;)Lcom/bbm/d/ff;
 
-    move-result-object v2
+    move-result-object v0
 
-    .line 391
+    move-object v1, v0
+
+    .line 399
     :goto_1
-    if-nez v2, :cond_2
+    invoke-direct {p0}, Lcom/bbm/util/b/k;->c()Landroid/widget/ImageView;
 
-    iget-object v0, p0, Lcom/bbm/util/a;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
+    move-result-object v0
+
+    .line 402
+    if-nez v0, :cond_1
+
+    iget-object v3, p0, Lcom/bbm/util/b/k;->c:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v3}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_1
+
+    .line 403
+    iget-object v0, p0, Lcom/bbm/util/b/k;->c:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    .line 404
+    invoke-static {v0, p0}, Lcom/bbm/util/b/i;->a(Landroid/widget/ImageView;Lcom/bbm/util/b/k;)V
+
+    :cond_1
+    move-object v3, v0
+
+    .line 406
+    if-nez v1, :cond_2
+
+    iget-object v0, p0, Lcom/bbm/util/b;->j:Ljava/util/concurrent/atomic/AtomicBoolean;
 
     invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
 
@@ -244,11 +277,7 @@
 
     if-nez v0, :cond_2
 
-    invoke-direct {p0}, Lcom/bbm/util/b/k;->c()Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
+    if-eqz v3, :cond_2
 
     iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
@@ -256,109 +285,113 @@
 
     if-nez v0, :cond_2
 
-    .line 394
+    .line 409
     :try_start_4
     iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
-    iget-object v4, p0, Lcom/bbm/util/b/k;->b:Ljava/lang/Object;
+    iget-object v5, p0, Lcom/bbm/util/b/k;->b:Ljava/lang/Object;
 
-    iget v5, p0, Lcom/bbm/util/b/k;->d:I
+    iget v6, p0, Lcom/bbm/util/b/k;->d:I
 
-    iget v6, p0, Lcom/bbm/util/b/k;->i:I
+    iget v7, p0, Lcom/bbm/util/b/k;->e:I
 
-    invoke-virtual {v0, v4, v5, v6}, Lcom/bbm/util/b/i;->a(Ljava/lang/Object;II)Lcom/bbm/d/dw;
+    invoke-virtual {v3}, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
+
+    move-result-object v8
+
+    invoke-virtual {v0, v5, v6, v7, v8}, Lcom/bbm/util/b/i;->a(Ljava/lang/Object;IILandroid/widget/ImageView$ScaleType;)Lcom/bbm/d/ff;
     :try_end_4
     .catch Ljava/lang/OutOfMemoryError; {:try_start_4 .. :try_end_4} :catch_1
 
-    move-result-object v0
+    move-result-object v1
 
-    .line 415
+    .line 429
+    :cond_2
     :goto_2
-    if-eqz v0, :cond_1
+    if-eqz v1, :cond_3
 
-    .line 416
-    iget-object v1, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
+    .line 430
+    iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
-    iget-object v1, v1, Lcom/bbm/util/b/i;->b:Lcom/bbm/util/b/d;
+    iget-object v0, v0, Lcom/bbm/util/b/i;->b:Lcom/bbm/util/b/d;
 
-    if-eqz v1, :cond_1
+    if-eqz v0, :cond_3
 
-    .line 417
-    iget-object v1, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
+    .line 431
+    iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
-    iget-object v1, v1, Lcom/bbm/util/b/i;->b:Lcom/bbm/util/b/d;
+    iget-object v0, v0, Lcom/bbm/util/b/i;->b:Lcom/bbm/util/b/d;
 
-    invoke-virtual {v1, v3, v0}, Lcom/bbm/util/b/d;->a(Ljava/lang/String;Lcom/bbm/d/dw;)V
+    invoke-virtual {v0, v4, v1}, Lcom/bbm/util/b/d;->a(Ljava/lang/String;Lcom/bbm/d/ff;)V
 
-    .line 425
-    :cond_1
-    return-object v0
+    .line 439
+    :cond_3
+    return-object v1
 
-    .line 376
+    .line 382
     :catchall_1
     move-exception v0
 
-    monitor-exit v2
+    monitor-exit v1
 
     throw v0
 
-    .line 395
+    .line 410
     :catch_1
     move-exception v0
 
-    const-string v4, "Out of memory processing image"
+    const-string v5, "Out of memory processing image"
 
-    new-array v5, v7, [Ljava/lang/Object;
+    new-array v6, v9, [Ljava/lang/Object;
 
-    invoke-static {v0, v4, v5}, Lcom/bbm/w;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v5, v6}, Lcom/bbm/y;->a(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 397
+    .line 412
     iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
     iget-object v0, v0, Lcom/bbm/util/b/i;->b:Lcom/bbm/util/b/d;
 
     if-eqz v0, :cond_2
 
-    .line 399
+    .line 414
     iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
     iget-object v0, v0, Lcom/bbm/util/b/i;->b:Lcom/bbm/util/b/d;
 
     invoke-virtual {v0}, Lcom/bbm/util/b/d;->a()V
 
-    .line 401
+    .line 416
     :try_start_5
     iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
-    iget-object v2, p0, Lcom/bbm/util/b/k;->b:Ljava/lang/Object;
+    iget-object v1, p0, Lcom/bbm/util/b/k;->b:Ljava/lang/Object;
 
-    iget v4, p0, Lcom/bbm/util/b/k;->d:I
+    iget v5, p0, Lcom/bbm/util/b/k;->d:I
 
-    iget v5, p0, Lcom/bbm/util/b/k;->i:I
+    iget v6, p0, Lcom/bbm/util/b/k;->e:I
 
-    invoke-virtual {v0, v2, v4, v5}, Lcom/bbm/util/b/i;->a(Ljava/lang/Object;II)Lcom/bbm/d/dw;
+    invoke-virtual {v3}, Landroid/widget/ImageView;->getScaleType()Landroid/widget/ImageView$ScaleType;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v1, v5, v6, v3}, Lcom/bbm/util/b/i;->a(Ljava/lang/Object;IILandroid/widget/ImageView$ScaleType;)Lcom/bbm/d/ff;
     :try_end_5
     .catch Ljava/lang/OutOfMemoryError; {:try_start_5 .. :try_end_5} :catch_2
 
-    move-result-object v0
+    move-result-object v1
 
     goto :goto_2
 
-    .line 404
+    .line 419
     :catch_2
     move-exception v0
 
-    move-object v0, v1
+    move-object v1, v2
 
     goto :goto_2
 
-    :cond_2
-    move-object v0, v2
-
-    goto :goto_2
-
-    :cond_3
-    move-object v2, v1
+    :cond_4
+    move-object v1, v2
 
     goto :goto_1
 .end method
@@ -369,8 +402,8 @@
     .locals 1
 
     .prologue
-    .line 341
-    invoke-direct {p0, p1}, Lcom/bbm/util/b/k;->c([Ljava/lang/Object;)Lcom/bbm/d/dw;
+    .line 348
+    invoke-direct {p0, p1}, Lcom/bbm/util/b/k;->c([Ljava/lang/Object;)Lcom/bbm/d/ff;
 
     move-result-object v0
 
@@ -378,56 +411,13 @@
 .end method
 
 .method protected final synthetic a(Ljava/lang/Object;)V
-    .locals 3
-
-    .prologue
-    .line 341
-    check-cast p1, Lcom/bbm/d/dw;
-
-    iget-object v0, p0, Lcom/bbm/util/a;->h:Ljava/util/concurrent/atomic/AtomicBoolean;
-
-    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
-
-    iget-boolean v0, v0, Lcom/bbm/util/b/i;->e:Z
-
-    if-eqz v0, :cond_1
-
-    :cond_0
-    const/4 p1, 0x0
-
-    :cond_1
-    invoke-direct {p0}, Lcom/bbm/util/b/k;->c()Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    if-eqz p1, :cond_2
-
-    if-eqz v0, :cond_2
-
-    iget-object v1, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
-
-    iget-object v2, p0, Lcom/bbm/util/b/k;->b:Ljava/lang/Object;
-
-    invoke-virtual {v1, v0, p1, v2}, Lcom/bbm/util/b/i;->a(Landroid/widget/ImageView;Lcom/bbm/d/dw;Ljava/lang/Object;)V
-
-    :cond_2
-    return-void
-.end method
-
-.method protected final synthetic b(Ljava/lang/Object;)V
     .locals 2
 
     .prologue
-    .line 341
-    check-cast p1, Lcom/bbm/d/dw;
+    .line 348
+    check-cast p1, Lcom/bbm/d/ff;
 
-    invoke-super {p0, p1}, Lcom/bbm/util/a;->b(Ljava/lang/Object;)V
+    invoke-super {p0, p1}, Lcom/bbm/util/b;->a(Ljava/lang/Object;)V
 
     iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
 
@@ -454,4 +444,68 @@
     monitor-exit v1
 
     throw v0
+.end method
+
+.method protected final synthetic b(Ljava/lang/Object;)V
+    .locals 3
+
+    .prologue
+    .line 348
+    check-cast p1, Lcom/bbm/d/ff;
+
+    iget-object v0, p0, Lcom/bbm/util/b;->j:Ljava/util/concurrent/atomic/AtomicBoolean;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/atomic/AtomicBoolean;->get()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
+
+    iget-boolean v0, v0, Lcom/bbm/util/b/i;->e:Z
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :cond_1
+    invoke-direct {p0}, Lcom/bbm/util/b/k;->c()Landroid/widget/ImageView;
+
+    move-result-object v0
+
+    if-nez v0, :cond_2
+
+    iget-object v1, p0, Lcom/bbm/util/b/k;->c:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_2
+
+    iget-object v0, p0, Lcom/bbm/util/b/k;->c:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    invoke-static {v0, p0}, Lcom/bbm/util/b/i;->a(Landroid/widget/ImageView;Lcom/bbm/util/b/k;)V
+
+    :cond_2
+    if-eqz p1, :cond_3
+
+    if-eqz v0, :cond_3
+
+    iget-object v1, p0, Lcom/bbm/util/b/k;->a:Lcom/bbm/util/b/i;
+
+    iget-object v2, p0, Lcom/bbm/util/b/k;->b:Ljava/lang/Object;
+
+    invoke-virtual {v1, v0, p1, v2}, Lcom/bbm/util/b/i;->a(Landroid/widget/ImageView;Lcom/bbm/d/ff;Ljava/lang/Object;)V
+
+    :cond_3
+    return-void
 .end method

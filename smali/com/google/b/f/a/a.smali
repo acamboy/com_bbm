@@ -90,7 +90,7 @@
 .end method
 
 .method protected a(Ljava/lang/Object;)Z
-    .locals 2
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(TV;)Z"
@@ -101,7 +101,11 @@
     .line 183
     iget-object v0, p0, Lcom/google/b/f/a/a;->a:Lcom/google/b/f/a/b;
 
-    invoke-virtual {v0, p1}, Lcom/google/b/f/a/b;->a(Ljava/lang/Object;)Z
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    invoke-virtual {v0, p1, v1, v2}, Lcom/google/b/f/a/b;->a(Ljava/lang/Object;Ljava/lang/Throwable;I)Z
 
     move-result v0
 
@@ -119,7 +123,7 @@
 .end method
 
 .method protected a(Ljava/lang/Throwable;)Z
-    .locals 2
+    .locals 4
 
     .prologue
     .line 201
@@ -131,7 +135,11 @@
 
     check-cast v0, Ljava/lang/Throwable;
 
-    invoke-virtual {v1, v0}, Lcom/google/b/f/a/b;->a(Ljava/lang/Throwable;)Z
+    const/4 v2, 0x0
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v1, v2, v0, v3}, Lcom/google/b/f/a/b;->a(Ljava/lang/Object;Ljava/lang/Throwable;I)Z
 
     move-result v0
 
@@ -160,27 +168,40 @@
 .end method
 
 .method public cancel(Z)Z
-    .locals 1
+    .locals 3
 
     .prologue
-    .line 131
-    iget-object v0, p0, Lcom/google/b/f/a/a;->a:Lcom/google/b/f/a/b;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0, p1}, Lcom/google/b/f/a/b;->a(Z)Z
+    .line 131
+    iget-object v1, p0, Lcom/google/b/f/a/a;->a:Lcom/google/b/f/a/b;
+
+    if-eqz p1, :cond_0
+
+    const/16 v0, 0x8
+
+    :goto_0
+    invoke-virtual {v1, v2, v2, v0}, Lcom/google/b/f/a/b;->a(Ljava/lang/Object;Ljava/lang/Throwable;I)Z
 
     move-result v0
 
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     .line 132
     const/4 v0, 0x0
 
     .line 135
-    :goto_0
+    :goto_1
     return v0
 
-    .line 134
+    .line 131
     :cond_0
+    const/4 v0, 0x4
+
+    goto :goto_0
+
+    .line 134
+    :cond_1
     iget-object v0, p0, Lcom/google/b/f/a/a;->b:Lcom/google/b/f/a/e;
 
     invoke-virtual {v0}, Lcom/google/b/f/a/e;->a()V
@@ -188,11 +209,11 @@
     .line 135
     const/4 v0, 0x1
 
-    goto :goto_0
+    goto :goto_1
 .end method
 
 .method public get()Ljava/lang/Object;
-    .locals 1
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()TV;"
@@ -203,6 +224,10 @@
     .line 116
     iget-object v0, p0, Lcom/google/b/f/a/a;->a:Lcom/google/b/f/a/b;
 
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1}, Lcom/google/b/f/a/b;->acquireSharedInterruptibly(I)V
+
     invoke-virtual {v0}, Lcom/google/b/f/a/b;->a()Ljava/lang/Object;
 
     move-result-object v0
@@ -211,7 +236,7 @@
 .end method
 
 .method public get(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
-    .locals 3
+    .locals 5
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(J",
@@ -226,9 +251,26 @@
 
     invoke-virtual {p3, p1, p2}, Ljava/util/concurrent/TimeUnit;->toNanos(J)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/b/f/a/b;->a(J)Ljava/lang/Object;
+    const/4 v1, -0x1
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/google/b/f/a/b;->tryAcquireSharedNanos(IJ)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    new-instance v0, Ljava/util/concurrent/TimeoutException;
+
+    const-string v1, "Timeout waiting for task."
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/TimeoutException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    :cond_0
+    invoke-virtual {v0}, Lcom/google/b/f/a/b;->a()Ljava/lang/Object;
 
     move-result-object v0
 

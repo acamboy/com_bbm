@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/ol;
 .super Ljava/lang/Object;
-.source "GroupLobbyActivity.java"
+.source "GroupListItemsActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/b/ab;
+.implements Lcom/bbm/ui/c/gn;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
     .locals 0
 
     .prologue
-    .line 810
-    iput-object p1, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 408
+    iput-object p1, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,62 +25,50 @@
 
 
 # virtual methods
-.method public final a()V
-    .locals 5
+.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+    .locals 2
 
     .prologue
-    .line 814
-    iget-object v0, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    .line 411
+    iget-object v0, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/g/ab;
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/a;->E:Lcom/slidingmenu/lib/a/c;
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/slidingmenu/lib/a/c;->b:Lcom/slidingmenu/lib/SlidingMenu;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+    const/4 v1, 0x1
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupLobbyActivity;->i()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->c(Z)V
 
-    move-result-object v1
+    .line 413
+    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
 
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->t(Ljava/lang/String;)Lcom/bbm/g/a;
+    sparse-switch v0, :sswitch_data_0
 
-    move-result-object v0
-
-    .line 815
-    iget-object v1, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/GroupLobbyActivity;->i()Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v3, v0, Lcom/bbm/g/a;->q:Ljava/lang/String;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->r(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/j/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
-
-    invoke-static {v4}, Lcom/bbm/ui/activities/GroupLobbyActivity;->s(Lcom/bbm/ui/activities/GroupLobbyActivity;)I
-
-    move-result v4
-
-    invoke-static {v1, v2, v3, v0, v4}, Lcom/bbm/h/c;->a(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;II)V
-
-    .line 816
+    .line 422
+    :goto_0
     return-void
+
+    .line 415
+    :sswitch_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->f(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
+
+    goto :goto_0
+
+    .line 419
+    :sswitch_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/ol;->a:Lcom/bbm/ui/activities/GroupListItemsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupListItemsActivity;->c(Lcom/bbm/ui/activities/GroupListItemsActivity;)V
+
+    goto :goto_0
+
+    .line 413
+    :sswitch_data_0
+    .sparse-switch
+        0x7f0b0069 -> :sswitch_1
+        0x7f0b0081 -> :sswitch_0
+    .end sparse-switch
 .end method

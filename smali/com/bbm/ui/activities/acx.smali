@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/acx;
 .super Ljava/lang/Object;
-.source "SettingsActivity.java"
+.source "ProfileDefaultIconActivity.java"
 
 # interfaces
-.implements Landroid/widget/CompoundButton$OnCheckedChangeListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SettingsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ProfileDefaultIconActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SettingsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ProfileDefaultIconActivity;)V
     .locals 0
 
     .prologue
-    .line 295
-    iput-object p1, p0, Lcom/bbm/ui/activities/acx;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 52
+    iput-object p1, p0, Lcom/bbm/ui/activities/acx;->a:Lcom/bbm/ui/activities/ProfileDefaultIconActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,24 +25,22 @@
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/CompoundButton;Z)V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 299
-    const-string v0, "vibrate enabled onCheckedChanged"
+    .line 56
+    const-string v0, "headerActionBar Negative Button Clicked"
 
-    const-class v1, Lcom/bbm/ui/activities/SettingsActivity;
+    const-class v1, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 300
-    iget-object v0, p0, Lcom/bbm/ui/activities/acx;->a:Lcom/bbm/ui/activities/SettingsActivity;
+    .line 58
+    iget-object v0, p0, Lcom/bbm/ui/activities/acx;->a:Lcom/bbm/ui/activities/ProfileDefaultIconActivity;
 
-    const-string v1, "notification_vibrate_enabled"
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ProfileDefaultIconActivity;->finish()V
 
-    invoke-static {v0, v1, p2}, Lcom/bbm/ui/activities/SettingsActivity;->a(Lcom/bbm/ui/activities/SettingsActivity;Ljava/lang/String;Z)V
-
-    .line 301
+    .line 59
     return-void
 .end method

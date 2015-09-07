@@ -1,133 +1,132 @@
-.class final Lcom/bbm/util/bt;
-.super Lcom/bbm/util/a;
+.class public final enum Lcom/bbm/util/bt;
+.super Ljava/lang/Enum;
 .source "HttpLoader.java"
 
 
 # annotations
 .annotation system Ldalvik/annotation/Signature;
     value = {
-        "Lcom/bbm/util/a",
+        "Ljava/lang/Enum",
         "<",
-        "Ljava/lang/Void;",
-        "Ljava/lang/Integer;",
-        "Lcom/bbm/d/dw;",
+        "Lcom/bbm/util/bt;",
         ">;"
     }
 .end annotation
 
 
-# instance fields
-.field private final a:Lcom/bbm/util/bj;
+# static fields
+.field public static final enum a:Lcom/bbm/util/bt;
 
-.field private final b:Ljava/net/URL;
+.field public static final enum b:Lcom/bbm/util/bt;
 
-.field private final c:Lcom/bbm/util/bs;
+.field public static final enum c:Lcom/bbm/util/bt;
+
+.field private static final synthetic d:[Lcom/bbm/util/bt;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/util/bj;Ljava/net/URL;Lcom/bbm/util/bs;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
     .prologue
-    .line 350
-    invoke-direct {p0}, Lcom/bbm/util/a;-><init>()V
+    const/4 v4, 0x2
 
-    .line 351
-    iput-object p1, p0, Lcom/bbm/util/bt;->a:Lcom/bbm/util/bj;
+    const/4 v3, 0x1
 
-    .line 352
-    iput-object p2, p0, Lcom/bbm/util/bt;->b:Ljava/net/URL;
+    const/4 v2, 0x0
 
-    .line 353
-    iput-object p3, p0, Lcom/bbm/util/bt;->c:Lcom/bbm/util/bs;
+    .line 32
+    new-instance v0, Lcom/bbm/util/bt;
 
-    .line 354
+    const-string v1, "HIGH"
+
+    invoke-direct {v0, v1, v2}, Lcom/bbm/util/bt;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/util/bt;->a:Lcom/bbm/util/bt;
+
+    .line 33
+    new-instance v0, Lcom/bbm/util/bt;
+
+    const-string v1, "MEDIUM"
+
+    invoke-direct {v0, v1, v3}, Lcom/bbm/util/bt;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/util/bt;->b:Lcom/bbm/util/bt;
+
+    .line 34
+    new-instance v0, Lcom/bbm/util/bt;
+
+    const-string v1, "LOW"
+
+    invoke-direct {v0, v1, v4}, Lcom/bbm/util/bt;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/util/bt;->c:Lcom/bbm/util/bt;
+
+    .line 31
+    const/4 v0, 0x3
+
+    new-array v0, v0, [Lcom/bbm/util/bt;
+
+    sget-object v1, Lcom/bbm/util/bt;->a:Lcom/bbm/util/bt;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/bbm/util/bt;->b:Lcom/bbm/util/bt;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/bbm/util/bt;->c:Lcom/bbm/util/bt;
+
+    aput-object v1, v0, v4
+
+    sput-object v0, Lcom/bbm/util/bt;->d:[Lcom/bbm/util/bt;
+
     return-void
 .end method
 
-.method private varargs c()Lcom/bbm/d/dw;
-    .locals 3
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
 
     .prologue
-    const/4 v0, 0x0
+    .line 31
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 358
-    .line 360
-    :try_start_0
-    iget-object v1, p0, Lcom/bbm/util/bt;->a:Lcom/bbm/util/bj;
-
-    iget-object v2, p0, Lcom/bbm/util/bt;->b:Ljava/net/URL;
-
-    invoke-virtual {v1, v2}, Lcom/bbm/util/bj;->a(Ljava/net/URL;)[B
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v1
-
-    .line 365
-    :goto_0
-    if-nez v1, :cond_0
-
-    .line 368
-    :goto_1
-    return-object v0
-
-    .line 362
-    :catch_0
-    move-exception v1
-
-    invoke-static {v1}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-
-    move-object v1, v0
-
-    goto :goto_0
-
-    .line 368
-    :cond_0
-    new-instance v0, Lcom/bbm/d/dw;
-
-    invoke-static {}, Lcom/bbm/Alaska;->r()Lcom/bbm/Alaska;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/bbm/Alaska;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    invoke-direct {v0, v2, v1}, Lcom/bbm/d/dw;-><init>(Landroid/content/res/Resources;[B)V
-
-    goto :goto_1
+    return-void
 .end method
 
-
-# virtual methods
-.method protected final synthetic a([Ljava/lang/Object;)Ljava/lang/Object;
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/util/bt;
     .locals 1
 
     .prologue
-    .line 344
-    invoke-direct {p0}, Lcom/bbm/util/bt;->c()Lcom/bbm/d/dw;
+    .line 31
+    const-class v0, Lcom/bbm/util/bt;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
 
+    check-cast v0, Lcom/bbm/util/bt;
+
     return-object v0
 .end method
 
-.method protected final bridge synthetic a(Ljava/lang/Object;)V
+.method public static values()[Lcom/bbm/util/bt;
     .locals 1
 
     .prologue
-    .line 344
-    check-cast p1, Lcom/bbm/d/dw;
+    .line 31
+    sget-object v0, Lcom/bbm/util/bt;->d:[Lcom/bbm/util/bt;
 
-    iget-object v0, p0, Lcom/bbm/util/bt;->c:Lcom/bbm/util/bs;
+    invoke-virtual {v0}, [Lcom/bbm/util/bt;->clone()Ljava/lang/Object;
 
-    if-eqz v0, :cond_0
+    move-result-object v0
 
-    iget-object v0, p0, Lcom/bbm/util/bt;->c:Lcom/bbm/util/bs;
+    check-cast v0, [Lcom/bbm/util/bt;
 
-    invoke-interface {v0, p1}, Lcom/bbm/util/bs;->a(Lcom/bbm/d/dw;)V
-
-    :cond_0
-    return-void
+    return-object v0
 .end method

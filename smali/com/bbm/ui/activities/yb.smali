@@ -1,116 +1,66 @@
 .class final Lcom/bbm/ui/activities/yb;
-.super Ljava/lang/Object;
-.source "OwnProfileActivity.java"
+.super Lcom/bbm/j/a;
+.source "MainActivity.java"
 
-# interfaces
-.implements Landroid/view/View$OnLayoutChangeListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/j/a",
+        "<",
+        "Ljava/lang/Integer;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/OwnProfileActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/OwnProfileActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
     .locals 0
 
     .prologue
-    .line 240
-    iput-object p1, p0, Lcom/bbm/ui/activities/yb;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    .line 468
+    iput-object p1, p0, Lcom/bbm/ui/activities/yb;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
-    .locals 6
+.method protected final synthetic a()Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 247
-    iget-object v0, p0, Lcom/bbm/ui/activities/yb;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    .line 468
+    iget-object v0, p0, Lcom/bbm/ui/activities/yb;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->j(Lcom/bbm/ui/activities/OwnProfileActivity;)Lcom/bbm/ui/FooterActionBar;
+    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->d(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/g/al;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/bbm/g/al;->e()Lcom/bbm/j/w;
 
-    .line 248
-    sub-int v0, p5, p3
+    move-result-object v0
 
-    .line 250
-    new-instance v1, Landroid/graphics/Point;
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
 
-    invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
+    move-result-object v0
 
-    .line 251
-    iget-object v2, p0, Lcom/bbm/ui/activities/yb;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
+    check-cast v0, Ljava/util/List;
 
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/OwnProfileActivity;->getWindowManager()Landroid/view/WindowManager;
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    move-result-object v2
+    move-result v0
 
-    invoke-interface {v2}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v2
+    move-result-object v0
 
-    .line 252
-    invoke-virtual {v2, v1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
-
-    .line 254
-    int-to-double v2, v0
-
-    iget v0, v1, Landroid/graphics/Point;->y:I
-
-    int-to-double v0, v0
-
-    const-wide v4, 0x3fe999999999999aL
-
-    mul-double/2addr v0, v4
-
-    cmpg-double v0, v2, v0
-
-    if-gez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    .line 256
-    :goto_0
-    if-eqz v0, :cond_2
-
-    .line 257
-    iget-object v0, p0, Lcom/bbm/ui/activities/yb;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/OwnProfileActivity;->a(Lcom/bbm/ui/activities/OwnProfileActivity;Z)V
-
-    .line 258
-    iget-object v0, p0, Lcom/bbm/ui/activities/yb;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/OwnProfileActivity;->b()V
-
-    .line 263
-    :cond_0
-    :goto_1
-    return-void
-
-    .line 254
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    .line 260
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/yb;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/OwnProfileActivity;->a(Lcom/bbm/ui/activities/OwnProfileActivity;Z)V
-
-    goto :goto_1
+    return-object v0
 .end method

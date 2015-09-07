@@ -1,67 +1,63 @@
 .class final Lcom/bbm/ui/activities/qd;
-.super Ljava/lang/Object;
-.source "GroupPictureCommentsActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.super Lcom/bbm/j/k;
+.source "GroupLobbyActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/j;
-
-.field final synthetic b:Lcom/bbm/ui/activities/qc;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/qc;Lcom/bbm/ui/b/j;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/GroupLobbyActivity;)V
+    .locals 1
 
     .prologue
-    .line 761
-    iput-object p1, p0, Lcom/bbm/ui/activities/qd;->b:Lcom/bbm/ui/activities/qc;
+    .line 455
+    iput-object p1, p0, Lcom/bbm/ui/activities/qd;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/qd;->a:Lcom/bbm/ui/b/j;
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method protected final a()V
     .locals 2
 
     .prologue
-    .line 765
-    iget-object v0, p0, Lcom/bbm/ui/activities/qd;->b:Lcom/bbm/ui/activities/qc;
+    .line 458
+    iget-object v0, p0, Lcom/bbm/ui/activities/qd;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    iget-object v1, v0, Lcom/bbm/ui/activities/qc;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->a(Lcom/bbm/ui/activities/GroupLobbyActivity;)Lcom/bbm/g/al;
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/qd;->a:Lcom/bbm/ui/b/j;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/b/j;->b()Z
+    iget-object v1, p0, Lcom/bbm/ui/activities/qd;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
+
+    iget-object v1, v1, Lcom/bbm/ui/activities/mj;->c:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->m(Ljava/lang/String;)Lcom/bbm/j/w;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/j/w;->e()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-nez v0, :cond_0
+    .line 459
+    iget-object v1, p0, Lcom/bbm/ui/activities/qd;->a:Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    const/4 v0, 0x1
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupLobbyActivity;->c(Lcom/bbm/ui/activities/GroupLobbyActivity;I)V
 
-    :goto_0
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->c(Z)V
-
-    .line 766
-    iget-object v0, p0, Lcom/bbm/ui/activities/qd;->a:Lcom/bbm/ui/b/j;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/b/j;->dismiss()V
-
-    .line 767
+    .line 460
     return-void
-
-    .line 765
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

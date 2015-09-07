@@ -74,7 +74,7 @@
 
 # virtual methods
 .method public final a(Lorg/json/JSONObject;I)I
-    .locals 11
+    .locals 12
 
     const/4 v6, 0x4
 
@@ -90,15 +90,15 @@
 
     invoke-virtual {p1, v0}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
-    move-result-wide v7
+    move-result-wide v8
 
-    iget-wide v9, p0, Lcom/google/android/gms/cast/MediaStatus;->wY:J
+    iget-wide v10, p0, Lcom/google/android/gms/cast/MediaStatus;->wY:J
 
-    cmp-long v0, v7, v9
+    cmp-long v0, v8, v10
 
     if-eqz v0, :cond_11
 
-    iput-wide v7, p0, Lcom/google/android/gms/cast/MediaStatus;->wY:J
+    iput-wide v8, p0, Lcom/google/android/gms/cast/MediaStatus;->wY:J
 
     move v0, v1
 
@@ -183,15 +183,15 @@
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-wide v3, p0, Lcom/google/android/gms/cast/MediaStatus;->wZ:D
+    iget-wide v4, p0, Lcom/google/android/gms/cast/MediaStatus;->wZ:D
 
-    cmpl-double v3, v3, v1
+    cmpl-double v1, v4, v2
 
-    if-eqz v3, :cond_2
+    if-eqz v1, :cond_2
 
-    iput-wide v1, p0, Lcom/google/android/gms/cast/MediaStatus;->wZ:D
+    iput-wide v2, p0, Lcom/google/android/gms/cast/MediaStatus;->wZ:D
 
     or-int/lit8 v0, v0, 0x2
 
@@ -212,19 +212,19 @@
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-static {v1, v2}, Lcom/google/android/gms/internal/dr;->b(D)J
+    invoke-static {v2, v3}, Lcom/google/android/gms/internal/dr;->b(D)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-wide v3, p0, Lcom/google/android/gms/cast/MediaStatus;->xc:J
+    iget-wide v4, p0, Lcom/google/android/gms/cast/MediaStatus;->xc:J
 
-    cmp-long v3, v1, v3
+    cmp-long v1, v2, v4
 
-    if-eqz v3, :cond_3
+    if-eqz v1, :cond_3
 
-    iput-wide v1, p0, Lcom/google/android/gms/cast/MediaStatus;->xc:J
+    iput-wide v2, p0, Lcom/google/android/gms/cast/MediaStatus;->xc:J
 
     or-int/lit8 v0, v0, 0x2
 
@@ -241,15 +241,15 @@
 
     invoke-virtual {p1, v1}, Lorg/json/JSONObject;->getLong(Ljava/lang/String;)J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iget-wide v3, p0, Lcom/google/android/gms/cast/MediaStatus;->xd:J
+    iget-wide v4, p0, Lcom/google/android/gms/cast/MediaStatus;->xd:J
 
-    cmp-long v3, v1, v3
+    cmp-long v1, v2, v4
 
-    if-eqz v3, :cond_4
+    if-eqz v1, :cond_4
 
-    iput-wide v1, p0, Lcom/google/android/gms/cast/MediaStatus;->xd:J
+    iput-wide v2, p0, Lcom/google/android/gms/cast/MediaStatus;->xd:J
 
     or-int/lit8 v0, v0, 0x2
 
@@ -517,7 +517,7 @@
 .end method
 
 .method public final isMediaCommandSupported(J)Z
-    .locals 4
+    .locals 5
 
     iget-wide v0, p0, Lcom/google/android/gms/cast/MediaStatus;->xd:J
 

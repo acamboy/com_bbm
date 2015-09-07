@@ -79,16 +79,6 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/d/b/f;)V
-    .locals 0
-
-    .prologue
-    .line 14
-    invoke-virtual {p0}, Lcom/bbm/d/b/f;->c()V
-
-    return-void
-.end method
-
 
 # virtual methods
 .method public final a(I)Ljava/lang/Object;
@@ -119,7 +109,7 @@
     return-object v0
 .end method
 
-.method protected abstract a()Ljava/util/List;
+.method public abstract a()Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()",
@@ -157,14 +147,27 @@
 
     .prologue
     .line 14
-    invoke-virtual {p0}, Lcom/bbm/d/b/f;->f()Ljava/util/List;
+    invoke-virtual {p0}, Lcom/bbm/d/b/f;->g()Ljava/util/List;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final f()Ljava/util/List;
+.method public final f()V
+    .locals 1
+
+    .prologue
+    .line 39
+    iget-object v0, p0, Lcom/bbm/d/b/f;->e:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->c()V
+
+    .line 40
+    return-void
+.end method
+
+.method public final g()Ljava/util/List;
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -188,4 +191,24 @@
     check-cast v0, Ljava/util/List;
 
     return-object v0
+.end method
+
+.method public final h()V
+    .locals 2
+
+    .prologue
+    .line 66
+    iget-object v0, p0, Lcom/bbm/d/b/f;->e:Lcom/bbm/j/a;
+
+    iget-object v1, p0, Lcom/bbm/d/b/f;->a:Lcom/bbm/j/h;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/j/a;->b(Lcom/bbm/j/h;)V
+
+    .line 67
+    iget-object v0, p0, Lcom/bbm/d/b/f;->e:Lcom/bbm/j/a;
+
+    invoke-virtual {v0}, Lcom/bbm/j/a;->d()V
+
+    .line 68
+    return-void
 .end method

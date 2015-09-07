@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/afu;
 .super Ljava/lang/Object;
-.source "ViewChannelPostActivity.java"
+.source "SelectContactActivity.java"
 
 # interfaces
 .implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/SelectContactActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/SelectContactActivity;)V
     .locals 0
 
     .prologue
-    .line 677
-    iput-object p1, p0, Lcom/bbm/ui/activities/afu;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 371
+    iput-object p1, p0, Lcom/bbm/ui/activities/afu;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,35 +29,31 @@
     .locals 2
 
     .prologue
-    .line 680
-    iget-object v0, p0, Lcom/bbm/ui/activities/afu;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 375
+    const-string v0, "mSearchCancelMark Clicked"
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->l(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/d/di;
+    const-class v1, Lcom/bbm/ui/activities/SelectContactActivity;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 377
+    iget-object v0, p0, Lcom/bbm/ui/activities/afu;->a:Lcom/bbm/ui/activities/SelectContactActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/SelectContactActivity;->q(Lcom/bbm/ui/activities/SelectContactActivity;)Landroid/widget/EditText;
 
     move-result-object v0
 
-    iget-boolean v0, v0, Lcom/bbm/d/di;->h:Z
+    const-string v1, ""
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 681
-    iget-object v0, p0, Lcom/bbm/ui/activities/afu;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 378
+    iget-object v0, p0, Lcom/bbm/ui/activities/afu;->a:Lcom/bbm/ui/activities/SelectContactActivity;
 
-    const v1, 0x7f0a0031
+    const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b(I)V
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
 
-    .line 685
-    :goto_0
+    .line 379
     return-void
-
-    .line 683
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/afu;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
-
-    const v1, 0x7f0a0035
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->b(I)V
-
-    goto :goto_0
 .end method

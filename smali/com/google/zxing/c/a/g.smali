@@ -4,23 +4,23 @@
 
 
 # static fields
-.field private static final a:[Lcom/google/zxing/c/a/g;
+.field private static final h:[Lcom/google/zxing/c/a/g;
 
 
 # instance fields
-.field private final b:I
+.field final a:I
 
-.field private final c:I
+.field final b:I
 
-.field private final d:I
+.field final c:I
 
-.field private final e:I
+.field final d:I
 
-.field private final f:I
+.field final e:I
 
-.field private final g:Lcom/google/zxing/c/a/i;
+.field final f:Lcom/google/zxing/c/a/i;
 
-.field private final h:I
+.field final g:I
 
 
 # direct methods
@@ -1121,7 +1121,7 @@
 
     aput-object v0, v7, v8
 
-    sput-object v7, Lcom/google/zxing/c/a/g;->a:[Lcom/google/zxing/c/a/g;
+    sput-object v7, Lcom/google/zxing/c/a/g;->h:[Lcom/google/zxing/c/a/g;
 
     return-void
 .end method
@@ -1136,22 +1136,22 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 45
-    iput p1, p0, Lcom/google/zxing/c/a/g;->b:I
+    iput p1, p0, Lcom/google/zxing/c/a/g;->a:I
 
     .line 46
-    iput p2, p0, Lcom/google/zxing/c/a/g;->c:I
+    iput p2, p0, Lcom/google/zxing/c/a/g;->b:I
 
     .line 47
-    iput p3, p0, Lcom/google/zxing/c/a/g;->d:I
+    iput p3, p0, Lcom/google/zxing/c/a/g;->c:I
 
     .line 48
-    iput p4, p0, Lcom/google/zxing/c/a/g;->e:I
+    iput p4, p0, Lcom/google/zxing/c/a/g;->d:I
 
     .line 49
-    iput p5, p0, Lcom/google/zxing/c/a/g;->f:I
+    iput p5, p0, Lcom/google/zxing/c/a/g;->e:I
 
     .line 50
-    iput-object p6, p0, Lcom/google/zxing/c/a/g;->g:Lcom/google/zxing/c/a/i;
+    iput-object p6, p0, Lcom/google/zxing/c/a/g;->f:Lcom/google/zxing/c/a/i;
 
     .line 54
     iget v2, p6, Lcom/google/zxing/c/a/i;->a:I
@@ -1187,7 +1187,7 @@
 
     .line 59
     :cond_0
-    iput v1, p0, Lcom/google/zxing/c/a/g;->h:I
+    iput v1, p0, Lcom/google/zxing/c/a/g;->g:I
 
     .line 60
     return-void
@@ -1216,7 +1216,7 @@
 
     .line 103
     :cond_1
-    sget-object v1, Lcom/google/zxing/c/a/g;->a:[Lcom/google/zxing/c/a/g;
+    sget-object v1, Lcom/google/zxing/c/a/g;->h:[Lcom/google/zxing/c/a/g;
 
     array-length v2, v1
 
@@ -1228,11 +1228,11 @@
     aget-object v3, v1, v0
 
     .line 104
-    iget v4, v3, Lcom/google/zxing/c/a/g;->c:I
+    iget v4, v3, Lcom/google/zxing/c/a/g;->b:I
 
     if-ne v4, p0, :cond_2
 
-    iget v4, v3, Lcom/google/zxing/c/a/g;->d:I
+    iget v4, v3, Lcom/google/zxing/c/a/g;->c:I
 
     if-ne v4, p1, :cond_2
 
@@ -1256,82 +1256,12 @@
 
 
 # virtual methods
-.method public final a()I
-    .locals 1
-
-    .prologue
-    .line 63
-    iget v0, p0, Lcom/google/zxing/c/a/g;->b:I
-
-    return v0
-.end method
-
-.method public final b()I
-    .locals 1
-
-    .prologue
-    .line 67
-    iget v0, p0, Lcom/google/zxing/c/a/g;->c:I
-
-    return v0
-.end method
-
-.method public final c()I
-    .locals 1
-
-    .prologue
-    .line 71
-    iget v0, p0, Lcom/google/zxing/c/a/g;->d:I
-
-    return v0
-.end method
-
-.method public final d()I
-    .locals 1
-
-    .prologue
-    .line 75
-    iget v0, p0, Lcom/google/zxing/c/a/g;->e:I
-
-    return v0
-.end method
-
-.method public final e()I
-    .locals 1
-
-    .prologue
-    .line 79
-    iget v0, p0, Lcom/google/zxing/c/a/g;->f:I
-
-    return v0
-.end method
-
-.method public final f()I
-    .locals 1
-
-    .prologue
-    .line 83
-    iget v0, p0, Lcom/google/zxing/c/a/g;->h:I
-
-    return v0
-.end method
-
-.method final g()Lcom/google/zxing/c/a/i;
-    .locals 1
-
-    .prologue
-    .line 87
-    iget-object v0, p0, Lcom/google/zxing/c/a/g;->g:Lcom/google/zxing/c/a/i;
-
-    return-object v0
-.end method
-
 .method public final toString()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 166
-    iget v0, p0, Lcom/google/zxing/c/a/g;->b:I
+    iget v0, p0, Lcom/google/zxing/c/a/g;->a:I
 
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 

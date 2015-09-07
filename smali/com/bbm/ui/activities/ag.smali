@@ -3,7 +3,7 @@
 .source "BroadcastActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 371
+    .line 96
     iput-object p1, p0, Lcom/bbm/ui/activities/ag;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,44 +25,34 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
     .locals 2
 
     .prologue
-    .line 374
-    const-string v0, "mEmoticonButton Clicked"
+    .line 100
+    const-string v0, "mOnRootTouchListener onTouch"
 
     const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    .line 376
-    iget-object v0, p0, Lcom/bbm/ui/activities/ag;->a:Lcom/bbm/ui/activities/BroadcastActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->n(Lcom/bbm/ui/activities/BroadcastActivity;)Z
+    .line 101
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 377
-    iget-object v0, p0, Lcom/bbm/ui/activities/ag;->a:Lcom/bbm/ui/activities/BroadcastActivity;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/BroadcastActivity;->a(Lcom/bbm/ui/activities/BroadcastActivity;Z)V
-
-    .line 382
-    :goto_0
-    return-void
-
-    .line 380
-    :cond_0
+    .line 102
     iget-object v0, p0, Lcom/bbm/ui/activities/ag;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/BroadcastActivity;->a(Lcom/bbm/ui/activities/BroadcastActivity;Z)V
+    invoke-static {v0, v1}, Lcom/bbm/util/fh;->a(Landroid/app/Activity;Z)V
 
-    goto :goto_0
+    .line 104
+    :cond_0
+    const/4 v0, 0x0
+
+    return v0
 .end method

@@ -25,30 +25,30 @@
     .locals 1
 
     .prologue
-    .line 762
+    .line 769
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 763
+    .line 770
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/a/a/p;->f:I
 
-    .line 764
+    .line 771
     iput-object p1, p0, Lcom/a/a/p;->a:Ljava/lang/String;
 
-    .line 765
+    .line 772
     iput-object p2, p0, Lcom/a/a/p;->b:Ljava/lang/String;
 
-    .line 766
+    .line 773
     iput-object p3, p0, Lcom/a/a/p;->c:Ljava/lang/String;
 
-    .line 767
+    .line 774
     iput-object p4, p0, Lcom/a/a/p;->e:Ljava/lang/String;
 
-    .line 768
+    .line 775
     iput-boolean p5, p0, Lcom/a/a/p;->d:Z
 
-    .line 769
+    .line 776
     return-void
 .end method
 
@@ -58,7 +58,7 @@
     .locals 1
 
     .prologue
-    .line 861
+    .line 868
     sget-object v0, Lcom/a/a/k;->e:Lcom/a/a/k;
 
     return-object v0
@@ -72,15 +72,15 @@
 
     const/4 v1, 0x0
 
-    .line 828
+    .line 835
     if-ne p0, p1, :cond_1
 
-    .line 835
+    .line 842
     :cond_0
     :goto_0
     return v0
 
-    .line 831
+    .line 838
     :cond_1
     instance-of v2, p1, Lcom/a/a/p;
 
@@ -88,14 +88,14 @@
 
     move v0, v1
 
-    .line 832
+    .line 839
     goto :goto_0
 
-    .line 834
+    .line 841
     :cond_2
     check-cast p1, Lcom/a/a/p;
 
-    .line 835
+    .line 842
     iget v2, p0, Lcom/a/a/p;->f:I
 
     iget v3, p1, Lcom/a/a/p;->f:I
@@ -150,10 +150,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 844
+    .line 851
     iget v0, p0, Lcom/a/a/p;->f:I
 
-    .line 845
+    .line 852
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v0, p0, Lcom/a/a/p;->a:Ljava/lang/String;
@@ -169,7 +169,7 @@
     :goto_0
     add-int/2addr v0, v2
 
-    .line 846
+    .line 853
     mul-int/lit8 v2, v0, 0x1f
 
     iget-object v0, p0, Lcom/a/a/p;->b:Ljava/lang/String;
@@ -185,7 +185,7 @@
     :goto_1
     add-int/2addr v0, v2
 
-    .line 847
+    .line 854
     mul-int/lit8 v0, v0, 0x1f
 
     iget-object v2, p0, Lcom/a/a/p;->c:Ljava/lang/String;
@@ -201,7 +201,7 @@
     :cond_0
     add-int/2addr v0, v1
 
-    .line 848
+    .line 855
     mul-int/lit8 v1, v0, 0x1f
 
     iget-boolean v0, p0, Lcom/a/a/p;->d:Z
@@ -213,22 +213,22 @@
     :goto_2
     add-int/2addr v0, v1
 
-    .line 849
+    .line 856
     return v0
 
     :cond_1
     move v0, v1
 
-    .line 845
+    .line 852
     goto :goto_0
 
     :cond_2
     move v0, v1
 
-    .line 846
+    .line 853
     goto :goto_1
 
-    .line 848
+    .line 855
     :cond_3
     const/16 v0, 0x4d5
 
@@ -239,7 +239,7 @@
     .locals 4
 
     .prologue
-    .line 854
+    .line 861
     const-string v0, "type: %d, organization: %s, department: %s, title: %s, isPrimary: %s"
 
     const/4 v1, 0x5

@@ -1,28 +1,23 @@
 .class public final Lcom/bbm/g/bm;
-.super Lcom/bbm/g/cb;
+.super Lcom/bbm/g/cv;
 .source "GroupsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;)V
+.method public constructor <init>(Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 1835
-    const-string v0, "groupMemberRemove"
+    .line 1113
+    const-string v0, "groupDelete"
 
-    invoke-direct {p0, v0}, Lcom/bbm/g/cb;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/g/cv;-><init>(Ljava/lang/String;)V
 
-    .line 1837
-    const-string v0, "contactUri"
+    .line 1115
+    const-string v0, "groupUri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/g/bm;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 1838
-    const-string v0, "groupUri"
-
-    invoke-virtual {p0, v0, p2}, Lcom/bbm/g/bm;->a(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 1839
+    .line 1116
     return-void
 .end method

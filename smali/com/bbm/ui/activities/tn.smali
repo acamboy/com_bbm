@@ -1,138 +1,106 @@
 .class final Lcom/bbm/ui/activities/tn;
-.super Ljava/lang/Object;
-.source "MainActivity.java"
-
-# interfaces
-.implements Landroid/text/TextWatcher;
+.super Lcom/bbm/j/k;
+.source "GroupProfileActivity.java"
 
 
 # instance fields
-.field final synthetic a:Landroid/widget/ImageView;
-
-.field final synthetic b:Landroid/widget/EditText;
-
-.field final synthetic c:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;Landroid/widget/ImageView;Landroid/widget/EditText;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/ui/activities/GroupProfileActivity;)V
+    .locals 1
 
     .prologue
-    .line 635
-    iput-object p1, p0, Lcom/bbm/ui/activities/tn;->c:Lcom/bbm/ui/activities/MainActivity;
+    .line 85
+    iput-object p1, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/tn;->a:Landroid/widget/ImageView;
+    const/4 v0, 0x0
 
-    iput-object p3, p0, Lcom/bbm/ui/activities/tn;->b:Landroid/widget/EditText;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
+.method protected final a()V
     .locals 4
 
     .prologue
-    const/4 v1, 0x3
+    .line 88
+    iget-object v0, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    .line 644
-    iget-object v0, p0, Lcom/bbm/ui/activities/tn;->a:Landroid/widget/ImageView;
-
-    invoke-virtual {v0}, Landroid/widget/ImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
+    const v1, 0x7f0c0018
 
-    .line 645
-    iget v2, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getInteger(I)I
 
-    and-int/lit8 v2, v2, 0x3
+    move-result v0
 
-    if-ne v2, v1, :cond_1
+    .line 89
+    iget-object v1, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    const/4 v2, 0x1
+    invoke-static {v1}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;)Lcom/bbm/g/al;
 
-    move v3, v2
+    move-result-object v1
 
-    .line 646
+    const-string v2, "maxGroupMembersPerGroup"
+
+    invoke-virtual {v1, v2}, Lcom/bbm/g/al;->u(Ljava/lang/String;)Lcom/bbm/util/bm;
+
+    move-result-object v1
+
+    .line 90
+    iget-object v2, v1, Lcom/bbm/util/bm;->b:Lcom/bbm/util/bi;
+
+    sget-object v3, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
+
+    if-ne v2, v3, :cond_1
+
+    .line 91
+    iget-object v1, v1, Lcom/bbm/util/bm;->a:Lorg/json/JSONObject;
+
+    const-string v2, "value"
+
+    invoke-virtual {v1, v2}, Lorg/json/JSONObject;->optJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
+
+    move-result-object v1
+
+    .line 92
+    if-eqz v1, :cond_0
+
+    .line 93
+    iget-object v2, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
+
+    const-string v3, "memberCount"
+
+    invoke-virtual {v1, v3, v0}, Lorg/json/JSONObject;->optInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    invoke-static {v2, v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;I)I
+
+    .line 100
     :goto_0
-    if-eqz p1, :cond_2
-
-    invoke-interface {p1}, Landroid/text/Editable;->length()I
-
-    move-result v2
-
-    if-lez v2, :cond_2
-
-    invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/bbm/util/eo;->a(Ljava/lang/String;)Z
-
-    move-result v2
-
-    .line 647
-    :goto_1
-    if-eq v2, v3, :cond_0
-
-    .line 648
-    if-eqz v2, :cond_3
-
-    :goto_2
-    or-int/lit8 v1, v1, 0x10
-
-    iput v1, v0, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
-
-    .line 649
-    iget-object v0, p0, Lcom/bbm/ui/activities/tn;->b:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->requestLayout()V
-
-    .line 651
-    :cond_0
     return-void
 
-    .line 645
-    :cond_1
-    const/4 v2, 0x0
+    .line 95
+    :cond_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    move v3, v2
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;I)I
 
     goto :goto_0
 
-    .line 646
-    :cond_2
-    invoke-static {}, Lcom/bbm/util/eo;->h()Z
+    .line 98
+    :cond_1
+    iget-object v1, p0, Lcom/bbm/ui/activities/tn;->a:Lcom/bbm/ui/activities/GroupProfileActivity;
 
-    move-result v2
+    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupProfileActivity;->a(Lcom/bbm/ui/activities/GroupProfileActivity;I)I
 
-    goto :goto_1
-
-    .line 648
-    :cond_3
-    const/4 v1, 0x5
-
-    goto :goto_2
-.end method
-
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    .prologue
-    .line 640
-    return-void
-.end method
-
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
-
-    .prologue
-    .line 637
-    return-void
+    goto :goto_0
 .end method

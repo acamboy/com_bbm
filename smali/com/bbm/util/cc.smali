@@ -1,140 +1,130 @@
 .class public final Lcom/bbm/util/cc;
 .super Ljava/lang/Object;
-.source "ListUtils.java"
+.source "IOUtils.java"
 
 
 # direct methods
-.method public static a(Ljava/util/Collection;Ljava/util/Collection;Lcom/bbm/util/ce;)Lcom/bbm/util/cd;
-    .locals 6
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "<T:",
-            "Ljava/lang/Object;",
-            ">(",
-            "Ljava/util/Collection",
-            "<TT;>;",
-            "Ljava/util/Collection",
-            "<TT;>;",
-            "Lcom/bbm/util/ce",
-            "<TT;>;)",
-            "Lcom/bbm/util/cd",
-            "<TT;>;"
-        }
-    .end annotation
+.method public static a(Ljava/io/InputStream;)Ljava/lang/String;
+    .locals 2
 
     .prologue
-    .line 10
-    new-instance v0, Lcom/bbm/util/cd;
+    .line 40
+    new-instance v0, Ljava/util/Scanner;
 
-    new-instance v1, Ljava/util/HashSet;
+    invoke-direct {v0, p0}, Ljava/util/Scanner;-><init>(Ljava/io/InputStream;)V
 
-    invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
+    const-string v1, "\\A"
 
-    new-instance v2, Ljava/util/HashSet;
+    invoke-virtual {v0, v1}, Ljava/util/Scanner;->useDelimiter(Ljava/lang/String;)Ljava/util/Scanner;
 
-    invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
+    move-result-object v0
 
-    invoke-direct {v0, v1, v2}, Lcom/bbm/util/cd;-><init>(Ljava/util/Collection;Ljava/util/Collection;)V
+    .line 46
+    invoke-virtual {v0}, Ljava/util/Scanner;->hasNext()Z
 
-    .line 12
-    new-instance v1, Ljava/util/HashMap;
+    move-result v1
 
-    invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
+    if-eqz v1, :cond_0
 
-    .line 14
-    invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    invoke-virtual {v0}, Ljava/util/Scanner;->next()Ljava/lang/String;
 
-    move-result-object v2
+    move-result-object v0
 
     :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    return-object v0
 
-    move-result v3
-
-    if-eqz v3, :cond_0
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v3
-
-    .line 15
-    invoke-interface {p2, v3}, Lcom/bbm/util/ce;->a(Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v4
-
-    .line 16
-    invoke-virtual {v1, v4, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_0
+    const-string v0, ""
 
     goto :goto_0
+.end method
+
+.method public static a(Ljava/io/Closeable;)V
+    .locals 1
+
+    .prologue
+    .line 13
+    if-eqz p0, :cond_0
+
+    .line 14
+    :try_start_0
+    invoke-interface {p0}, Ljava/io/Closeable;->close()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 19
     :cond_0
-    invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
+    :goto_0
+    return-void
 
-    move-result-object v2
+    :catch_0
+    move-exception v0
 
-    :goto_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    goto :goto_0
+.end method
 
-    move-result v3
+.method public static a(Ljava/io/InputStream;Ljava/io/OutputStream;)V
+    .locals 3
 
-    if-eqz v3, :cond_3
+    .prologue
+    .line 51
+    const/16 v0, 0x1000
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    new-array v0, v0, [B
 
-    move-result-object v3
+    .line 53
+    :goto_0
+    invoke-virtual {p0, v0}, Ljava/io/InputStream;->read([B)I
 
-    .line 20
-    invoke-interface {p2, v3}, Lcom/bbm/util/ce;->a(Ljava/lang/Object;)Ljava/lang/String;
+    move-result v1
 
-    move-result-object v4
+    const/4 v2, -0x1
 
-    .line 22
-    invoke-virtual {v1, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eq v1, v2, :cond_0
 
-    move-result-object v5
+    .line 54
+    const/4 v2, 0x0
 
-    .line 23
-    if-eqz v5, :cond_2
+    invoke-virtual {p1, v0, v2, v1}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 24
-    invoke-virtual {v3, v5}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    goto :goto_0
 
-    move-result v3
+    .line 56
+    :cond_0
+    invoke-virtual {p1}, Ljava/io/OutputStream;->flush()V
 
-    if-nez v3, :cond_1
+    .line 57
+    return-void
+.end method
 
-    .line 25
-    iget-object v3, v0, Lcom/bbm/util/cd;->c:Ljava/util/Collection;
+.method public static a(Ljava/io/InputStream;I)[B
+    .locals 1
 
-    invoke-interface {v3, v5}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+    .prologue
+    const/16 v0, 0x400
 
-    .line 27
-    :cond_1
-    invoke-virtual {v1, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 33
+    if-le p1, v0, :cond_0
 
-    goto :goto_1
+    .line 34
+    :goto_0
+    new-instance v0, Ljava/io/ByteArrayOutputStream;
 
-    .line 30
-    :cond_2
-    iget-object v4, v0, Lcom/bbm/util/cd;->b:Ljava/util/Collection;
-
-    invoke-interface {v4, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
-
-    goto :goto_1
+    invoke-direct {v0, p1}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
     .line 35
-    :cond_3
-    new-instance v2, Ljava/util/HashSet;
+    invoke-static {p0, v0}, Lcom/bbm/util/cc;->a(Ljava/io/InputStream;Ljava/io/OutputStream;)V
 
-    invoke-virtual {v1}, Ljava/util/HashMap;->values()Ljava/util/Collection;
+    .line 36
+    invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-direct {v2, v1}, Ljava/util/HashSet;-><init>(Ljava/util/Collection;)V
-
-    iput-object v2, v0, Lcom/bbm/util/cd;->a:Ljava/util/Collection;
-
-    .line 37
     return-object v0
+
+    :cond_0
+    move p1, v0
+
+    .line 33
+    goto :goto_0
 .end method

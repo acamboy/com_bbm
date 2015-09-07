@@ -1,39 +1,23 @@
-.class final Lcom/bbm/ui/bq;
+.class public interface abstract Lcom/bbm/ui/bq;
 .super Ljava/lang/Object;
-.source "EmoticonStickerPager.java"
-
-# interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
-
-
-# instance fields
-.field final synthetic a:Lcom/bbm/ui/EmoticonStickerPager;
-
-
-# direct methods
-.method constructor <init>(Lcom/bbm/ui/EmoticonStickerPager;)V
-    .locals 0
-
-    .prologue
-    .line 149
-    iput-object p1, p0, Lcom/bbm/ui/bq;->a:Lcom/bbm/ui/EmoticonStickerPager;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+.source "EmoticonInputPanel.java"
 
 
 # virtual methods
-.method public final onGlobalLayout()V
-    .locals 1
+.method public abstract a(I)Lcom/bbm/ui/QuickShareBaseView;
+.end method
 
-    .prologue
-    .line 153
-    iget-object v0, p0, Lcom/bbm/ui/bq;->a:Lcom/bbm/ui/EmoticonStickerPager;
-
-    invoke-static {v0}, Lcom/bbm/ui/EmoticonStickerPager;->b(Lcom/bbm/ui/EmoticonStickerPager;)V
-
-    .line 154
-    return-void
+.method public abstract a()Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/List",
+            "<",
+            "Landroid/util/Pair",
+            "<",
+            "Ljava/lang/Integer;",
+            "Ljava/lang/Integer;",
+            ">;>;"
+        }
+    .end annotation
 .end method

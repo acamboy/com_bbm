@@ -15,13 +15,13 @@
     .line 376
     const-string v0, ", "
 
-    new-instance v1, Lcom/google/b/a/g;
+    invoke-static {v0}, Lcom/google/b/a/g;->a(Ljava/lang/String;)Lcom/google/b/a/g;
 
-    invoke-direct {v1, v0}, Lcom/google/b/a/g;-><init>(Ljava/lang/String;)V
+    move-result-object v0
 
-    const-string v0, "null"
+    const-string v1, "null"
 
-    invoke-virtual {v1, v0}, Lcom/google/b/a/g;->a(Ljava/lang/String;)Lcom/google/b/a/g;
+    invoke-virtual {v0, v1}, Lcom/google/b/a/g;->b(Ljava/lang/String;)Lcom/google/b/a/g;
 
     move-result-object v0
 

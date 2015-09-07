@@ -1,95 +1,122 @@
 .class final Lcom/bbm/ui/activities/ga;
-.super Lcom/bbm/j/u;
+.super Ljava/lang/Object;
 .source "ConversationActivity.java"
+
+# interfaces
+.implements Lcom/bbm/ui/e/bq;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
+.field a:Lcom/bbm/d/fi;
+
+.field final synthetic b:Lcom/bbm/ui/activities/ConversationActivity;
+
+.field private final c:Lcom/bbm/j/u;
 
 
 # direct methods
 .method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 1794
-    iput-object p1, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 1147
+    iput-object p1, p0, Lcom/bbm/ui/activities/ga;->b:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 1151
+    new-instance v0, Lcom/bbm/ui/activities/gb;
+
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/gb;-><init>(Lcom/bbm/ui/activities/ga;)V
+
+    iput-object v0, p0, Lcom/bbm/ui/activities/ga;->c:Lcom/bbm/j/u;
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final b()Z
-    .locals 5
+.method public final a(Lcom/bbm/d/fi;)V
+    .locals 1
 
     .prologue
-    const/4 v1, 0x1
+    .line 1188
+    iput-object p1, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/d/fi;
 
-    .line 1798
-    iget-object v0, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 1189
+    iget-object v0, p0, Lcom/bbm/ui/activities/ga;->c:Lcom/bbm/j/u;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->u(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/j/r;
+    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
+
+    .line 1190
+    return-void
+.end method
+
+.method public final b(Lcom/bbm/d/fi;)V
+    .locals 0
+
+    .prologue
+    .line 1194
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/ga;->c(Lcom/bbm/d/fi;)V
+
+    .line 1195
+    return-void
+.end method
+
+.method public final c(Lcom/bbm/d/fi;)V
+    .locals 3
+
+    .prologue
+    .line 1199
+    iget-object v0, p1, Lcom/bbm/d/fi;->h:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 1200
+    iget-object v0, p0, Lcom/bbm/ui/activities/ga;->b:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
+    iget-object v1, p1, Lcom/bbm/d/fi;->h:Ljava/lang/String;
 
-    move-result-object v0
+    new-instance v2, Lcom/bbm/d/bn;
 
-    check-cast v0, Lcom/bbm/d/dp;
+    invoke-direct {v2, v1}, Lcom/bbm/d/bn;-><init>(Ljava/lang/String;)V
 
-    .line 1800
-    iget-object v2, v0, Lcom/bbm/d/dp;->t:Lcom/bbm/util/bc;
+    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
 
-    sget-object v3, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
-
-    if-ne v2, v3, :cond_0
-
-    .line 1801
-    const/4 v0, 0x0
-
-    .line 1810
-    :goto_0
-    return v0
-
-    .line 1804
+    .line 1202
     :cond_0
-    new-instance v2, Landroid/content/Intent;
+    iget-object v0, p1, Lcom/bbm/d/fi;->m:Ljava/lang/String;
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
 
-    const-class v4, Lcom/bbm/ui/activities/SelectContactActivity;
+    move-result v0
 
-    invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+    if-nez v0, :cond_1
 
-    .line 1805
-    const-string v3, "com.bbm.onlyone"
+    .line 1203
+    iget-object v0, p0, Lcom/bbm/ui/activities/ga;->b:Lcom/bbm/ui/activities/ConversationActivity;
 
-    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
 
-    .line 1806
-    const-string v3, "com.bbm.excludedcontacts"
+    move-result-object v0
 
-    new-instance v4, Ljava/util/ArrayList;
+    iget-object v1, p1, Lcom/bbm/d/fi;->m:Ljava/lang/String;
 
-    iget-object v0, v0, Lcom/bbm/d/dp;->q:Ljava/util/List;
+    new-instance v2, Lcom/bbm/d/cm;
 
-    invoke-direct {v4, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    invoke-direct {v2, v1}, Lcom/bbm/d/cm;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putStringArrayListExtra(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/content/Intent;
+    invoke-virtual {v0, v2}, Lcom/bbm/d/a;->a(Lcom/bbm/d/dy;)V
 
-    .line 1808
-    iget-object v0, p0, Lcom/bbm/ui/activities/ga;->a:Lcom/bbm/ui/activities/ConversationActivity;
-
-    const/4 v3, 0x2
-
-    invoke-virtual {v0, v2, v3}, Lcom/bbm/ui/activities/ConversationActivity;->startActivityForResult(Landroid/content/Intent;I)V
-
-    move v0, v1
-
-    .line 1810
-    goto :goto_0
+    .line 1205
+    :cond_1
+    return-void
 .end method

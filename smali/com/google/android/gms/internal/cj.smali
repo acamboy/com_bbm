@@ -22,52 +22,52 @@
 .end method
 
 .method public static a(Landroid/content/Context;Lcom/google/android/gms/internal/cd;Ljava/lang/String;)Lcom/google/android/gms/internal/cf;
-    .locals 21
+    .locals 20
 
     :try_start_0
-    new-instance v9, Lorg/json/JSONObject;
+    new-instance v11, Lorg/json/JSONObject;
 
     move-object/from16 v0, p2
 
-    invoke-direct {v9, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+    invoke-direct {v11, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
     const-string v2, "ad_base_url"
 
     const/4 v3, 0x0
 
-    invoke-virtual {v9, v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v2, "ad_url"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v9, v2, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string v2, "ad_size"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v9, v2, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v16
-
-    const-string v2, "ad_html"
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v9, v2, v4}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v11, v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    const-wide/16 v17, -0x1
+    const-string v2, "ad_url"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v11, v2, v3}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string v2, "ad_size"
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v11, v2, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v17
+
+    const-string v2, "ad_html"
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v11, v2, v5}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v5
+
+    const-wide/16 v18, -0x1
 
     const-string v2, "interstitial_timeout"
 
-    invoke-virtual {v9, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
+    invoke-virtual {v11, v2}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -75,26 +75,26 @@
 
     const-string v2, "interstitial_timeout"
 
-    invoke-virtual {v9, v2}, Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
+    invoke-virtual {v11, v2}, Lorg/json/JSONObject;->getDouble(Ljava/lang/String;)D
 
     move-result-wide v6
 
-    const-wide v10, 0x408f400000000000L
+    const-wide v8, 0x408f400000000000L
 
-    mul-double/2addr v6, v10
+    mul-double/2addr v6, v8
 
-    double-to-long v7, v6
+    double-to-long v8, v6
 
     :goto_0
     const-string v2, "orientation"
 
     const/4 v6, 0x0
 
-    invoke-virtual {v9, v2, v6}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v11, v2, v6}, Lorg/json/JSONObject;->optString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    const/4 v15, -0x1
+    const/16 v16, -0x1
 
     const-string v6, "portrait"
 
@@ -106,39 +106,39 @@
 
     invoke-static {}, Lcom/google/android/gms/internal/cv;->aU()I
 
-    move-result v15
+    move-result v16
 
     :cond_0
     :goto_1
     const/4 v2, 0x0
 
-    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v6
 
     if-nez v6, :cond_3
 
-    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v5
+    move-result v3
 
-    if-eqz v5, :cond_13
+    if-eqz v3, :cond_13
 
     const-string v2, "Could not parse the mediation config: Missing required ad_base_url field"
 
     invoke-static {v2}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
 
-    new-instance v2, Lcom/google/android/gms/internal/cf;
+    new-instance v3, Lcom/google/android/gms/internal/cf;
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {v2, v3}, Lcom/google/android/gms/internal/cf;-><init>(I)V
+    invoke-direct {v3, v2}, Lcom/google/android/gms/internal/cf;-><init>(I)V
 
     :goto_2
-    return-object v2
+    return-object v3
 
     :cond_1
-    const-wide/16 v7, -0x1
+    const-wide/16 v8, -0x1
 
     goto :goto_0
 
@@ -153,12 +153,12 @@
 
     invoke-static {}, Lcom/google/android/gms/internal/cv;->aT()I
 
-    move-result v15
+    move-result v16
 
     goto :goto_1
 
     :cond_3
-    invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+    invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
@@ -172,24 +172,24 @@
 
     move-object/from16 v0, p0
 
-    invoke-static {v0, v2, v5}, Lcom/google/android/gms/internal/ci;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/internal/cf;
+    invoke-static {v0, v2, v3}, Lcom/google/android/gms/internal/ci;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/google/android/gms/internal/cf;
 
     move-result-object v2
 
-    iget-object v3, v2, Lcom/google/android/gms/internal/cf;->nw:Ljava/lang/String;
+    iget-object v4, v2, Lcom/google/android/gms/internal/cf;->nw:Ljava/lang/String;
 
-    iget-object v4, v2, Lcom/google/android/gms/internal/cf;->oi:Ljava/lang/String;
+    iget-object v5, v2, Lcom/google/android/gms/internal/cf;->oi:Ljava/lang/String;
 
     iget-wide v0, v2, Lcom/google/android/gms/internal/cf;->oo:J
 
-    move-wide/from16 v17, v0
+    move-wide/from16 v18, v0
 
     move-object v10, v2
 
     :goto_3
     const-string v2, "click_urls"
 
-    invoke-virtual {v9, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    invoke-virtual {v11, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v6
 
@@ -207,22 +207,22 @@
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
     :cond_4
-    const/4 v5, 0x0
+    const/4 v3, 0x0
 
     :goto_5
     invoke-virtual {v6}, Lorg/json/JSONArray;->length()I
 
-    move-result v11
+    move-result v7
 
-    if-ge v5, v11, :cond_7
+    if-ge v3, v7, :cond_7
 
-    invoke-virtual {v6, v5}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {v6, v3}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
-    move-result-object v11
+    move-result-object v7
 
-    invoke-interface {v2, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v2, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    add-int/lit8 v5, v5, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_5
 
@@ -231,11 +231,11 @@
 
     invoke-static {v2}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
 
-    new-instance v2, Lcom/google/android/gms/internal/cf;
+    new-instance v3, Lcom/google/android/gms/internal/cf;
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {v2, v3}, Lcom/google/android/gms/internal/cf;-><init>(I)V
+    invoke-direct {v3, v2}, Lcom/google/android/gms/internal/cf;-><init>(I)V
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -264,11 +264,11 @@
 
     invoke-static {v2}, Lcom/google/android/gms/internal/da;->w(Ljava/lang/String;)V
 
-    new-instance v2, Lcom/google/android/gms/internal/cf;
+    new-instance v3, Lcom/google/android/gms/internal/cf;
 
-    const/4 v3, 0x0
+    const/4 v2, 0x0
 
-    invoke-direct {v2, v3}, Lcom/google/android/gms/internal/cf;-><init>(I)V
+    invoke-direct {v3, v2}, Lcom/google/android/gms/internal/cf;-><init>(I)V
 
     goto :goto_2
 
@@ -279,21 +279,21 @@
     goto :goto_4
 
     :cond_7
-    move-object v5, v2
+    move-object v6, v2
 
     :goto_6
     const-string v2, "impression_urls"
 
-    invoke-virtual {v9, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    invoke-virtual {v11, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
-    move-result-object v11
+    move-result-object v7
 
     if-nez v10, :cond_9
 
     const/4 v2, 0x0
 
     :goto_7
-    if-eqz v11, :cond_11
+    if-eqz v7, :cond_11
 
     if-nez v2, :cond_8
 
@@ -302,22 +302,22 @@
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
     :cond_8
-    const/4 v6, 0x0
+    const/4 v3, 0x0
 
     :goto_8
-    invoke-virtual {v11}, Lorg/json/JSONArray;->length()I
+    invoke-virtual {v7}, Lorg/json/JSONArray;->length()I
 
     move-result v12
 
-    if-ge v6, v12, :cond_a
+    if-ge v3, v12, :cond_a
 
-    invoke-virtual {v11, v6}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {v7, v3}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
     move-result-object v12
 
     invoke-interface {v2, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    add-int/lit8 v6, v6, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_8
 
@@ -327,12 +327,12 @@
     goto :goto_7
 
     :cond_a
-    move-object v6, v2
+    move-object v7, v2
 
     :goto_9
     const-string v2, "manual_impression_urls"
 
-    invoke-virtual {v9, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
+    invoke-virtual {v11, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v11
 
@@ -350,22 +350,22 @@
     invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
     :cond_b
-    const/4 v9, 0x0
+    const/4 v3, 0x0
 
     :goto_b
     invoke-virtual {v11}, Lorg/json/JSONArray;->length()I
 
     move-result v12
 
-    if-ge v9, v12, :cond_d
+    if-ge v3, v12, :cond_d
 
-    invoke-virtual {v11, v9}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
+    invoke-virtual {v11, v3}, Lorg/json/JSONArray;->getString(I)Ljava/lang/String;
 
     move-result-object v12
 
     invoke-interface {v2, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    add-int/lit8 v9, v9, 0x1
+    add-int/lit8 v3, v3, 0x1
 
     goto :goto_b
 
@@ -375,57 +375,59 @@
     goto :goto_a
 
     :cond_d
-    move-object v12, v2
+    move-object v13, v2
 
     :goto_c
     if-eqz v10, :cond_f
 
     iget v2, v10, Lcom/google/android/gms/internal/cf;->orientation:I
 
-    const/4 v9, -0x1
+    const/4 v3, -0x1
 
-    if-eq v2, v9, :cond_e
+    if-eq v2, v3, :cond_e
 
-    iget v15, v10, Lcom/google/android/gms/internal/cf;->orientation:I
+    iget v0, v10, Lcom/google/android/gms/internal/cf;->orientation:I
+
+    move/from16 v16, v0
 
     :cond_e
-    iget-wide v13, v10, Lcom/google/android/gms/internal/cf;->oj:J
+    iget-wide v2, v10, Lcom/google/android/gms/internal/cf;->oj:J
 
-    const-wide/16 v19, 0x0
+    const-wide/16 v14, 0x0
 
-    cmp-long v2, v13, v19
+    cmp-long v2, v2, v14
 
     if-lez v2, :cond_f
 
-    iget-wide v7, v10, Lcom/google/android/gms/internal/cf;->oj:J
+    iget-wide v8, v10, Lcom/google/android/gms/internal/cf;->oj:J
 
     :cond_f
-    new-instance v2, Lcom/google/android/gms/internal/cf;
+    new-instance v3, Lcom/google/android/gms/internal/cf;
 
-    const/4 v9, 0x0
+    const/4 v10, 0x0
 
-    const-wide/16 v10, -0x1
+    const-wide/16 v11, -0x1
 
-    const-wide/16 v13, -0x1
+    const-wide/16 v14, -0x1
 
-    invoke-direct/range {v2 .. v18}, Lcom/google/android/gms/internal/cf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;JZJLjava/util/List;JILjava/lang/String;J)V
+    invoke-direct/range {v3 .. v19}, Lcom/google/android/gms/internal/cf;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;JZJLjava/util/List;JILjava/lang/String;J)V
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
     goto/16 :goto_2
 
     :cond_10
-    move-object v12, v2
+    move-object v13, v2
 
     goto :goto_c
 
     :cond_11
-    move-object v6, v2
+    move-object v7, v2
 
     goto :goto_9
 
     :cond_12
-    move-object v5, v2
+    move-object v6, v2
 
     goto :goto_6
 
@@ -806,13 +808,13 @@
 
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
-    move-result-wide v3
+    move-result-wide v4
 
-    mul-double/2addr v3, v6
+    mul-double/2addr v4, v6
 
-    double-to-long v3, v3
+    double-to-long v4, v4
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
@@ -1355,7 +1357,7 @@
 .end method
 
 .method private static a(Ljava/util/HashMap;Lcom/google/android/gms/internal/z;)V
-    .locals 6
+    .locals 7
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -1369,7 +1371,7 @@
         }
     .end annotation
 
-    const/4 v5, -0x1
+    const/4 v6, -0x1
 
     invoke-static {}, Lcom/google/android/gms/internal/cs;->aR()Ljava/lang/String;
 
@@ -1396,9 +1398,9 @@
 
     new-instance v2, Ljava/util/Date;
 
-    iget-wide v3, p1, Lcom/google/android/gms/internal/z;->le:J
+    iget-wide v4, p1, Lcom/google/android/gms/internal/z;->le:J
 
-    invoke-direct {v2, v3, v4}, Ljava/util/Date;-><init>(J)V
+    invoke-direct {v2, v4, v5}, Ljava/util/Date;-><init>(J)V
 
     invoke-virtual {v1, v2}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
@@ -1420,7 +1422,7 @@
     :cond_2
     iget v0, p1, Lcom/google/android/gms/internal/z;->lf:I
 
-    if-eq v0, v5, :cond_3
+    if-eq v0, v6, :cond_3
 
     const-string v0, "cust_gender"
 
@@ -1446,7 +1448,7 @@
     :cond_4
     iget v0, p1, Lcom/google/android/gms/internal/z;->tagForChildDirectedTreatment:I
 
-    if-eq v0, v5, :cond_5
+    if-eq v0, v6, :cond_5
 
     const-string v0, "tag_for_child_directed_treatment"
 

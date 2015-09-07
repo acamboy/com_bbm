@@ -4,13 +4,34 @@
         <item quantity="other">Wiadomość nadawcza została wysłana do %1$s kontaktów.</item>
         <item quantity="one">Wiadomość nadawcza została wysłana do 1 kontaktu.</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d subskrybenta</item>
+        <item quantity="zero">Brak subskrybentów</item>
+        <item quantity="one">%1$d subskrybent</item>
+        <item quantity="few">%1$d subskrybentów</item>
+        <item quantity="many">%1$d subskrybentów</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d członków</item>
+        <item quantity="one">%1$d członek</item>
+        <item quantity="few">%1$d członków</item>
+        <item quantity="many">%1$d członków</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">sek.</item>
+        <item quantity="one">sek.</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Licznik czasu jest ustawiony na %1$d sek.</item>
+        <item quantity="one">Licznik czasu jest ustawiony na %1$d sekundę.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">Elementów: %1$s</item>
         <item quantity="zero">Elementów: 0</item>
         <item quantity="one">1 element</item>
     </plurals>
     <plurals name="invites_received_chat_item_count">
-        <item quantity="other">(Liczba oczekujących zaproszeń: %1$d)</item>
+        <item quantity="other">(Liczba oczekujących: %1$d)</item>
         <item quantity="one">(1 oczekujące zaproszenie)</item>
     </plurals>
     <plurals name="search_number_of_results">
@@ -22,7 +43,7 @@
         <item quantity="one">1 aktywny czat</item>
     </plurals>
     <plurals name="slide_menu_new_channelupdates">
-        <item quantity="other">Nowych powiadomień: %1$s</item>
+        <item quantity="other">Liczba nowych powiadomień: %1$s</item>
         <item quantity="one">1 nowe powiadomienie</item>
     </plurals>
     <plurals name="slide_menu_new_invites">
@@ -44,9 +65,13 @@
     <plurals name="update_channel_stats_comments">
         <item quantity="other">%1$s komentarzy</item>
         <item quantity="one">1 komentarz</item>
+        <item quantity="few">%1$s komentarze</item>
+        <item quantity="many">%1$s komentarzy</item>
     </plurals>
     <plurals name="update_channel_stats_likes">
         <item quantity="other">%1$s oznaczeń Lubię,</item>
         <item quantity="one">1 oznaczenie Lubię,</item>
+        <item quantity="few">%1$s oznaczenia Lubię,</item>
+        <item quantity="many">%1$s oznaczeń Lubię,</item>
     </plurals>
 </resources>

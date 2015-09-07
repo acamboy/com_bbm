@@ -1,5 +1,5 @@
 .class public Lcom/bbm/setup/SetupErrorActivity;
-.super Lcom/bbm/setup/r;
+.super Lcom/bbm/setup/q;
 .source "SetupErrorActivity.java"
 
 
@@ -10,7 +10,9 @@
 
 .field private c:Landroid/widget/Button;
 
-.field private d:Lcom/bbm/j/k;
+.field private d:Lcom/bbm/am;
+
+.field private e:Lcom/bbm/j/k;
 
 
 # direct methods
@@ -18,15 +20,15 @@
     .locals 1
 
     .prologue
-    .line 19
-    invoke-direct {p0}, Lcom/bbm/setup/r;-><init>()V
+    .line 21
+    invoke-direct {p0}, Lcom/bbm/setup/q;-><init>()V
 
-    .line 25
-    new-instance v0, Lcom/bbm/setup/u;
+    .line 28
+    new-instance v0, Lcom/bbm/setup/w;
 
-    invoke-direct {v0, p0}, Lcom/bbm/setup/u;-><init>(Lcom/bbm/setup/SetupErrorActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/setup/w;-><init>(Lcom/bbm/setup/SetupErrorActivity;)V
 
-    iput-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->d:Lcom/bbm/j/k;
+    iput-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->e:Lcom/bbm/j/k;
 
     return-void
 .end method
@@ -35,18 +37,38 @@
     .locals 1
 
     .prologue
-    .line 19
+    .line 21
     iget-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->a:Landroid/widget/TextView;
 
     return-object v0
+.end method
+
+.method static synthetic a(Lcom/bbm/setup/SetupErrorActivity;Lcom/bbm/am;)Lcom/bbm/am;
+    .locals 0
+
+    .prologue
+    .line 21
+    iput-object p1, p0, Lcom/bbm/setup/SetupErrorActivity;->d:Lcom/bbm/am;
+
+    return-object p1
 .end method
 
 .method static synthetic b(Lcom/bbm/setup/SetupErrorActivity;)Landroid/widget/TextView;
     .locals 1
 
     .prologue
-    .line 19
+    .line 21
     iget-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->b:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/bbm/setup/SetupErrorActivity;)Lcom/bbm/am;
+    .locals 1
+
+    .prologue
+    .line 21
+    iget-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->d:Lcom/bbm/am;
 
     return-object v0
 .end method
@@ -57,16 +79,16 @@
     .locals 2
 
     .prologue
-    .line 107
-    invoke-super {p0, p1}, Lcom/bbm/setup/r;->onCreate(Landroid/os/Bundle;)V
+    .line 115
+    invoke-super {p0, p1}, Lcom/bbm/setup/q;->onCreate(Landroid/os/Bundle;)V
 
-    .line 108
-    const v0, 0x7f030053
+    .line 116
+    const v0, 0x7f03005a
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/SetupErrorActivity;->setContentView(I)V
 
-    .line 110
-    const v0, 0x7f0a0293
+    .line 118
+    const v0, 0x7f0b02f7
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/SetupErrorActivity;->findViewById(I)Landroid/view/View;
 
@@ -76,8 +98,8 @@
 
     iput-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->a:Landroid/widget/TextView;
 
-    .line 111
-    const v0, 0x7f0a0294
+    .line 119
+    const v0, 0x7f0b02f8
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/SetupErrorActivity;->findViewById(I)Landroid/view/View;
 
@@ -87,8 +109,8 @@
 
     iput-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->b:Landroid/widget/TextView;
 
-    .line 113
-    const v0, 0x7f0a0296
+    .line 121
+    const v0, 0x7f0b02fa
 
     invoke-virtual {p0, v0}, Lcom/bbm/setup/SetupErrorActivity;->findViewById(I)Landroid/view/View;
 
@@ -98,47 +120,69 @@
 
     iput-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->c:Landroid/widget/Button;
 
-    .line 114
+    .line 122
     iget-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->c:Landroid/widget/Button;
 
-    new-instance v1, Lcom/bbm/setup/v;
+    new-instance v1, Lcom/bbm/setup/x;
 
-    invoke-direct {v1, p0}, Lcom/bbm/setup/v;-><init>(Lcom/bbm/setup/SetupErrorActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/setup/x;-><init>(Lcom/bbm/setup/SetupErrorActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 125
+    .line 147
     return-void
 .end method
 
 .method protected onPause()V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 136
-    invoke-super {p0}, Lcom/bbm/setup/r;->onPause()V
+    .line 159
+    iget-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->e:Lcom/bbm/j/k;
 
-    .line 138
-    iget-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->d:Lcom/bbm/j/k;
+    invoke-virtual {v0}, Lcom/bbm/j/k;->e()V
 
-    invoke-virtual {v0}, Lcom/bbm/j/k;->d()V
+    .line 161
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
 
-    .line 139
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/c/o;->ax:Lcom/bbm/c/o;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->c(Lcom/bbm/c/o;)V
+
+    .line 162
+    invoke-super {p0}, Lcom/bbm/setup/q;->onPause()V
+
+    .line 163
     return-void
 .end method
 
 .method protected onResume()V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 129
-    invoke-super {p0}, Lcom/bbm/setup/r;->onResume()V
+    .line 151
+    invoke-super {p0}, Lcom/bbm/setup/q;->onResume()V
 
-    .line 131
-    iget-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->d:Lcom/bbm/j/k;
+    .line 152
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
+
+    invoke-static {}, Lcom/bbm/Alaska;->g()Lcom/bbm/c/c;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/bbm/c/o;->ax:Lcom/bbm/c/o;
+
+    invoke-virtual {v0, v1}, Lcom/bbm/c/c;->a(Lcom/bbm/c/o;)V
+
+    .line 154
+    iget-object v0, p0, Lcom/bbm/setup/SetupErrorActivity;->e:Lcom/bbm/j/k;
 
     invoke-virtual {v0}, Lcom/bbm/j/k;->c()V
 
-    .line 132
+    .line 155
     return-void
 .end method

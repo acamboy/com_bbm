@@ -4,15 +4,15 @@
 
 
 # static fields
-.field private static cL:Z
+.field private static cR:Z
 
-.field private static cY:Ljava/lang/reflect/Method;
+.field private static de:Ljava/lang/reflect/Method;
 
-.field private static cZ:Ljava/lang/reflect/Method;
+.field private static df:Ljava/lang/reflect/Method;
 
-.field private static da:Ljava/lang/reflect/Method;
+.field private static dg:Ljava/lang/reflect/Method;
 
-.field private static db:Ljava/lang/reflect/Method;
+.field private static dh:Ljava/lang/reflect/Method;
 
 
 # direct methods
@@ -25,19 +25,19 @@
     .line 1470
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cL:Z
+    sput-boolean v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cR:Z
 
     .line 1471
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cY:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActivityManager;->de:Ljava/lang/reflect/Method;
 
     .line 1472
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cZ:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActivityManager;->df:Ljava/lang/reflect/Method;
 
     .line 1473
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActivityManager;->da:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActivityManager;->dg:Ljava/lang/reflect/Method;
 
     .line 1474
-    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActivityManager;->db:Ljava/lang/reflect/Method;
+    sput-object v1, Lcom/glympse/android/hal/Reflection$_ActivityManager;->dh:Ljava/lang/reflect/Method;
 
     return-void
 .end method
@@ -59,12 +59,12 @@
     const/4 v1, 0x1
 
     .line 1480
-    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cL:Z
+    sget-boolean v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cR:Z
 
     if-nez v0, :cond_0
 
     .line 1482
-    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cL:Z
+    sput-boolean v1, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cR:Z
 
     .line 1486
     :try_start_0
@@ -86,7 +86,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cY:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->de:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_3
 
@@ -103,7 +103,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cZ:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->df:Ljava/lang/reflect/Method;
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
 
@@ -120,7 +120,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->da:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->dg:Ljava/lang/reflect/Method;
     :try_end_2
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -145,7 +145,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->db:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->dh:Ljava/lang/reflect/Method;
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
 
@@ -185,13 +185,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActivityManager;->Load()V
 
     .line 1563
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->da:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->dg:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 1567
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->da:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->dg:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -234,13 +234,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActivityManager;->Load()V
 
     .line 1543
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cZ:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->df:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 1547
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cZ:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->df:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -285,7 +285,7 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActivityManager;->Load()V
 
     .line 1583
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->db:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->dh:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
@@ -296,7 +296,7 @@
     invoke-direct {v0}, Landroid/app/ActivityManager$RunningAppProcessInfo;-><init>()V
 
     .line 1588
-    sget-object v2, Lcom/glympse/android/hal/Reflection$_ActivityManager;->db:Ljava/lang/reflect/Method;
+    sget-object v2, Lcom/glympse/android/hal/Reflection$_ActivityManager;->dh:Ljava/lang/reflect/Method;
 
     const/4 v3, 0x0
 
@@ -379,13 +379,13 @@
     invoke-static {}, Lcom/glympse/android/hal/Reflection$_ActivityManager;->Load()V
 
     .line 1523
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cY:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->de:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
     .line 1527
     :try_start_0
-    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->cY:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/glympse/android/hal/Reflection$_ActivityManager;->de:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 

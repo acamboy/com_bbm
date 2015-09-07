@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/ax;
 .super Ljava/lang/Object;
-.source "DateTimePickerView.java"
+.source "CustomActionModeLayout.java"
 
 # interfaces
-.implements Landroid/widget/TimePicker$OnTimeChangedListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/aw;
+.field final synthetic a:Lcom/bbm/ui/CustomActionModeLayout;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/aw;)V
+.method constructor <init>(Lcom/bbm/ui/CustomActionModeLayout;)V
     .locals 0
 
     .prologue
-    .line 214
-    iput-object p1, p0, Lcom/bbm/ui/ax;->a:Lcom/bbm/ui/aw;
+    .line 22
+    iput-object p1, p0, Lcom/bbm/ui/ax;->a:Lcom/bbm/ui/CustomActionModeLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,15 +25,26 @@
 
 
 # virtual methods
-.method public final onTimeChanged(Landroid/widget/TimePicker;II)V
-    .locals 1
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 217
-    iget-object v0, p0, Lcom/bbm/ui/ax;->a:Lcom/bbm/ui/aw;
+    .line 26
+    const-string v0, "Cancel Clicked"
 
-    invoke-static {v0, p1, p2, p3}, Lcom/bbm/ui/aw;->a(Lcom/bbm/ui/aw;Landroid/widget/TimePicker;II)V
+    const-class v1, Lcom/bbm/ui/CustomActionModeLayout;
 
-    .line 218
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
+
+    .line 28
+    iget-object v0, p0, Lcom/bbm/ui/ax;->a:Lcom/bbm/ui/CustomActionModeLayout;
+
+    invoke-static {v0}, Lcom/bbm/ui/CustomActionModeLayout;->a(Lcom/bbm/ui/CustomActionModeLayout;)Lcom/bbm/ui/ay;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/bbm/ui/ay;->a()V
+
+    .line 29
     return-void
 .end method

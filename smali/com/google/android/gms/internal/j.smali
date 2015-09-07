@@ -973,7 +973,7 @@
 
 # virtual methods
 .method protected b(Landroid/content/Context;)V
-    .locals 3
+    .locals 4
 
     const/4 v0, 0x1
 
@@ -1010,9 +1010,9 @@
 
     invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/internal/j;->a(IJ)V
+    invoke-virtual {p0, v0, v2, v3}, Lcom/google/android/gms/internal/j;->a(IJ)V
     :try_end_2
     .catch Lcom/google/android/gms/internal/j$a; {:try_start_2 .. :try_end_2} :catch_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
@@ -1111,17 +1111,17 @@
 
     const/16 v2, 0x11
 
-    sget-wide v3, Lcom/google/android/gms/internal/j;->startTime:J
+    sget-wide v4, Lcom/google/android/gms/internal/j;->startTime:J
 
-    sub-long/2addr v0, v3
+    sub-long/2addr v0, v4
 
     invoke-virtual {p0, v2, v0, v1}, Lcom/google/android/gms/internal/j;->a(IJ)V
 
     const/16 v0, 0x17
 
-    sget-wide v1, Lcom/google/android/gms/internal/j;->startTime:J
+    sget-wide v2, Lcom/google/android/gms/internal/j;->startTime:J
 
-    invoke-virtual {p0, v0, v1, v2}, Lcom/google/android/gms/internal/j;->a(IJ)V
+    invoke-virtual {p0, v0, v2, v3}, Lcom/google/android/gms/internal/j;->a(IJ)V
     :try_end_2
     .catch Lcom/google/android/gms/internal/j$a; {:try_start_2 .. :try_end_2} :catch_4
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
@@ -1149,9 +1149,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {p0, v2, v3, v4}, Lcom/google/android/gms/internal/j;->a(IJ)V
+    invoke-virtual {p0, v2, v4, v5}, Lcom/google/android/gms/internal/j;->a(IJ)V
 
     const/16 v2, 0xf
 
@@ -1165,9 +1165,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    invoke-virtual {p0, v2, v3, v4}, Lcom/google/android/gms/internal/j;->a(IJ)V
+    invoke-virtual {p0, v2, v4, v5}, Lcom/google/android/gms/internal/j;->a(IJ)V
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 

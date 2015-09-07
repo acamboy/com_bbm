@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private final a:Lcom/bbm/g/l;
+.field private final a:Lcom/bbm/g/o;
 
 .field private final b:Lcom/bbm/d/a;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/g/l;Lcom/bbm/d/a;)V
+.method public constructor <init>(Lcom/bbm/g/o;Lcom/bbm/d/a;)V
     .locals 0
 
     .prologue
@@ -18,7 +18,7 @@
     invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     .line 43
-    iput-object p1, p0, Lcom/bbm/util/d/d;->a:Lcom/bbm/g/l;
+    iput-object p1, p0, Lcom/bbm/util/d/d;->a:Lcom/bbm/g/o;
 
     .line 44
     iput-object p2, p0, Lcom/bbm/util/d/d;->b:Lcom/bbm/d/a;
@@ -29,13 +29,13 @@
 
 
 # virtual methods
-.method protected abstract a(Lcom/google/b/a/l;)V
+.method public abstract a(Lcom/google/b/a/l;)V
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Lcom/google/b/a/l",
             "<",
-            "Lcom/bbm/d/eu;",
+            "Lcom/bbm/d/gr;",
             ">;)V"
         }
     .end annotation
@@ -52,20 +52,20 @@
     .line 20
     iget-object v2, p0, Lcom/bbm/util/d/d;->b:Lcom/bbm/d/a;
 
-    iget-object v3, p0, Lcom/bbm/util/d/d;->a:Lcom/bbm/g/l;
+    iget-object v3, p0, Lcom/bbm/util/d/d;->a:Lcom/bbm/g/o;
 
-    iget-object v3, v3, Lcom/bbm/g/l;->e:Ljava/lang/String;
+    iget-object v3, v3, Lcom/bbm/g/o;->e:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/bbm/d/a;->g(Ljava/lang/String;)Lcom/bbm/d/ed;
+    invoke-virtual {v2, v3}, Lcom/bbm/d/a;->h(Ljava/lang/String;)Lcom/bbm/d/fx;
 
     move-result-object v2
 
     .line 22
     sget-object v3, Lcom/bbm/util/d/e;->a:[I
 
-    iget-object v4, v2, Lcom/bbm/d/ed;->c:Lcom/bbm/util/bc;
+    iget-object v4, v2, Lcom/bbm/d/fx;->c:Lcom/bbm/util/bi;
 
-    invoke-virtual {v4}, Lcom/bbm/util/bc;->ordinal()I
+    invoke-virtual {v4}, Lcom/bbm/util/bi;->ordinal()I
 
     move-result v4
 
@@ -81,19 +81,19 @@
 
     .line 26
     :pswitch_1
-    iget-object v2, v2, Lcom/bbm/d/ed;->b:Ljava/lang/String;
+    iget-object v2, v2, Lcom/bbm/d/fx;->b:Ljava/lang/String;
 
     .line 28
     iget-object v3, p0, Lcom/bbm/util/d/d;->b:Lcom/bbm/d/a;
 
-    invoke-virtual {v3, v2}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/eu;
+    invoke-virtual {v3, v2}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/gr;
 
     move-result-object v2
 
     .line 29
-    iget-object v3, v2, Lcom/bbm/d/eu;->y:Lcom/bbm/util/bc;
+    iget-object v3, v2, Lcom/bbm/d/gr;->C:Lcom/bbm/util/bi;
 
-    sget-object v4, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
+    sget-object v4, Lcom/bbm/util/bi;->a:Lcom/bbm/util/bi;
 
     if-ne v3, v4, :cond_0
 

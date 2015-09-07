@@ -1,17 +1,35 @@
 version: 2.0.0-RC3
-apkFileName: com.bbm-2.2.1.40.apk
+apkFileName: com.bbm-2.6.0.30.apk
 isFrameworkApk: false
 usesFramework:
   ids:
   - 1
 sdkInfo:
   minSdkVersion: '14'
-  targetSdkVersion: '17'
+  targetSdkVersion: '21'
 packageInfo:
   forced-package-id: '127'
 versionInfo:
-  versionCode: '490'
-  versionName: 2.2.1.40
+  versionCode: '880'
+  versionName: 2.6.0.30
 compressionType: true
 unknownFiles:
   manifest: '8'
+  com/mapquest/android/maps/icn_compass_bg_hdpi.png: '0'
+  com/mapquest/android/maps/icn_compass_bg_mdpi.png: '0'
+  com/mapquest/android/maps/icn_compass_needle_hdpi.png: '0'
+  com/mapquest/android/maps/icn_compass_needle_mdpi.png: '0'
+  com/mapquest/android/maps/loading.jpg: '8'
+  com/mapquest/android/maps/location_marker_blue_hdpi.png: '0'
+  com/mapquest/android/maps/location_marker_blue_mdpi.png: '0'
+  com/mapquest/android/maps/location_marker_green_hdpi.png: '0'
+  com/mapquest/android/maps/location_marker_green_mdpi.png: '0'
+  com/mapquest/android/maps/location_marker_hdpi.png: '0'
+  com/mapquest/android/maps/location_marker_purple_hdpi.png: '0'
+  com/mapquest/android/maps/location_marker_purple_mdpi.png: '0'
+  com/mapquest/android/maps/location_marker_red_hdpi.png: '0'
+  com/mapquest/android/maps/location_marker_red_mdpi.png: '0'
+  com/mapquest/android/maps/logo_hdpi.png: '8'
+  com/mapquest/android/maps/logo_mdpi.png: '8'
+  com/mapquest/android/maps/poi_hdpi.png: '0'
+  com/mapquest/android/maps/poi_mdpi.png: '0'

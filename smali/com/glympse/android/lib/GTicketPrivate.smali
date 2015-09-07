@@ -186,3 +186,6 @@
 
 .method public abstract updateWatchingState()Z
 .end method
+
+.method public abstract visibilityChanged()V
+.end method

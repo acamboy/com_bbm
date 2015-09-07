@@ -210,38 +210,38 @@
 .end method
 
 .method private declared-synchronized bJ()V
-    .locals 7
+    .locals 8
 
     monitor-enter p0
 
     :try_start_0
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
-    move-result-object v1
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/google/android/gms/analytics/s;->rk:Lcom/google/android/gms/analytics/f;
+
+    invoke-interface {v3}, Lcom/google/android/gms/analytics/f;->getThread()Ljava/lang/Thread;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
 
     iget-object v2, p0, Lcom/google/android/gms/analytics/s;->rk:Lcom/google/android/gms/analytics/f;
 
-    invoke-interface {v2}, Lcom/google/android/gms/analytics/f;->getThread()Ljava/lang/Thread;
+    invoke-interface {v2}, Lcom/google/android/gms/analytics/f;->bs()Ljava/util/concurrent/LinkedBlockingQueue;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+    new-instance v3, Lcom/google/android/gms/analytics/s$2;
 
-    move-result v1
+    invoke-direct {v3, p0}, Lcom/google/android/gms/analytics/s$2;-><init>(Lcom/google/android/gms/analytics/s;)V
 
-    if-nez v1, :cond_1
-
-    iget-object v1, p0, Lcom/google/android/gms/analytics/s;->rk:Lcom/google/android/gms/analytics/f;
-
-    invoke-interface {v1}, Lcom/google/android/gms/analytics/f;->bs()Ljava/util/concurrent/LinkedBlockingQueue;
-
-    move-result-object v1
-
-    new-instance v2, Lcom/google/android/gms/analytics/s$2;
-
-    invoke-direct {v2, p0}, Lcom/google/android/gms/analytics/s$2;-><init>(Lcom/google/android/gms/analytics/s;)V
-
-    invoke-virtual {v1, v2}, Ljava/util/concurrent/LinkedBlockingQueue;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v2, v3}, Ljava/util/concurrent/LinkedBlockingQueue;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -253,102 +253,102 @@
 
     :cond_1
     :try_start_1
-    iget-boolean v1, p0, Lcom/google/android/gms/analytics/s;->rG:Z
+    iget-boolean v2, p0, Lcom/google/android/gms/analytics/s;->rG:Z
 
-    if-eqz v1, :cond_2
+    if-eqz v2, :cond_2
 
     invoke-virtual {p0}, Lcom/google/android/gms/analytics/s;->bk()V
 
     :cond_2
-    sget-object v1, Lcom/google/android/gms/analytics/s$3;->rM:[I
+    sget-object v2, Lcom/google/android/gms/analytics/s$3;->rM:[I
 
-    iget-object v2, p0, Lcom/google/android/gms/analytics/s;->rx:Lcom/google/android/gms/analytics/s$a;
+    iget-object v3, p0, Lcom/google/android/gms/analytics/s;->rx:Lcom/google/android/gms/analytics/s$a;
 
-    invoke-virtual {v2}, Lcom/google/android/gms/analytics/s$a;->ordinal()I
+    invoke-virtual {v3}, Lcom/google/android/gms/analytics/s$a;->ordinal()I
 
-    move-result v2
+    move-result v3
 
-    aget v1, v1, v2
+    aget v2, v2, v3
 
-    packed-switch v1, :pswitch_data_0
+    packed-switch v2, :pswitch_data_0
 
     :pswitch_0
     goto :goto_0
 
     :goto_1
     :pswitch_1
-    iget-object v1, p0, Lcom/google/android/gms/analytics/s;->rB:Ljava/util/Queue;
+    iget-object v2, p0, Lcom/google/android/gms/analytics/s;->rB:Ljava/util/Queue;
 
-    invoke-interface {v1}, Ljava/util/Queue;->isEmpty()Z
+    invoke-interface {v2}, Ljava/util/Queue;->isEmpty()Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_3
+    if-nez v2, :cond_3
 
-    iget-object v1, p0, Lcom/google/android/gms/analytics/s;->rB:Ljava/util/Queue;
+    iget-object v2, p0, Lcom/google/android/gms/analytics/s;->rB:Ljava/util/Queue;
 
-    invoke-interface {v1}, Ljava/util/Queue;->poll()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v0, v1
-
-    check-cast v0, Lcom/google/android/gms/analytics/s$d;
-
-    move-object v6, v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Sending hit to store  "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/google/android/gms/analytics/aa;->v(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/google/android/gms/analytics/s;->rj:Lcom/google/android/gms/analytics/d;
-
-    invoke-virtual {v6}, Lcom/google/android/gms/analytics/s$d;->bO()Ljava/util/Map;
+    invoke-interface {v2}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-virtual {v6}, Lcom/google/android/gms/analytics/s$d;->bP()J
+    move-object v0, v2
 
-    move-result-wide v3
+    check-cast v0, Lcom/google/android/gms/analytics/s$d;
 
-    invoke-virtual {v6}, Lcom/google/android/gms/analytics/s$d;->getPath()Ljava/lang/String;
+    move-object v7, v0
 
-    move-result-object v5
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Lcom/google/android/gms/analytics/s$d;->bQ()Ljava/util/List;
+    const-string v3, "Sending hit to store  "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/google/android/gms/analytics/aa;->v(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/google/android/gms/analytics/s;->rj:Lcom/google/android/gms/analytics/d;
+
+    invoke-virtual {v7}, Lcom/google/android/gms/analytics/s$d;->bO()Ljava/util/Map;
+
+    move-result-object v3
+
+    invoke-virtual {v7}, Lcom/google/android/gms/analytics/s$d;->bP()J
+
+    move-result-wide v4
+
+    invoke-virtual {v7}, Lcom/google/android/gms/analytics/s$d;->getPath()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-interface/range {v1 .. v6}, Lcom/google/android/gms/analytics/d;->a(Ljava/util/Map;JLjava/lang/String;Ljava/util/Collection;)V
+    invoke-virtual {v7}, Lcom/google/android/gms/analytics/s$d;->bQ()Ljava/util/List;
+
+    move-result-object v7
+
+    invoke-interface/range {v2 .. v7}, Lcom/google/android/gms/analytics/d;->a(Ljava/util/Map;JLjava/lang/String;Ljava/util/Collection;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_1
 
     :catchall_0
-    move-exception v1
+    move-exception v2
 
     monitor-exit p0
 
-    throw v1
+    throw v2
 
     :cond_3
     :try_start_2
-    iget-boolean v1, p0, Lcom/google/android/gms/analytics/s;->rm:Z
+    iget-boolean v2, p0, Lcom/google/android/gms/analytics/s;->rm:Z
 
-    if-eqz v1, :cond_0
+    if-eqz v2, :cond_0
 
     invoke-direct {p0}, Lcom/google/android/gms/analytics/s;->bK()V
 
@@ -356,107 +356,107 @@
 
     :goto_2
     :pswitch_2
-    iget-object v1, p0, Lcom/google/android/gms/analytics/s;->rB:Ljava/util/Queue;
+    iget-object v2, p0, Lcom/google/android/gms/analytics/s;->rB:Ljava/util/Queue;
 
-    invoke-interface {v1}, Ljava/util/Queue;->isEmpty()Z
+    invoke-interface {v2}, Ljava/util/Queue;->isEmpty()Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_5
+    if-nez v2, :cond_5
 
-    iget-object v1, p0, Lcom/google/android/gms/analytics/s;->rB:Ljava/util/Queue;
+    iget-object v2, p0, Lcom/google/android/gms/analytics/s;->rB:Ljava/util/Queue;
 
-    invoke-interface {v1}, Ljava/util/Queue;->peek()Ljava/lang/Object;
-
-    move-result-object v1
-
-    move-object v0, v1
-
-    check-cast v0, Lcom/google/android/gms/analytics/s$d;
-
-    move-object v6, v0
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string v2, "Sending hit to service   "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/google/android/gms/analytics/aa;->v(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/google/android/gms/analytics/s;->rA:Lcom/google/android/gms/analytics/GoogleAnalytics;
-
-    invoke-virtual {v1}, Lcom/google/android/gms/analytics/GoogleAnalytics;->isDryRunEnabled()Z
-
-    move-result v1
-
-    if-nez v1, :cond_4
-
-    iget-object v1, p0, Lcom/google/android/gms/analytics/s;->ry:Lcom/google/android/gms/analytics/b;
-
-    invoke-virtual {v6}, Lcom/google/android/gms/analytics/s$d;->bO()Ljava/util/Map;
+    invoke-interface {v2}, Ljava/util/Queue;->peek()Ljava/lang/Object;
 
     move-result-object v2
 
-    invoke-virtual {v6}, Lcom/google/android/gms/analytics/s$d;->bP()J
+    move-object v0, v2
 
-    move-result-wide v3
+    check-cast v0, Lcom/google/android/gms/analytics/s$d;
 
-    invoke-virtual {v6}, Lcom/google/android/gms/analytics/s$d;->getPath()Ljava/lang/String;
+    move-object v7, v0
 
-    move-result-object v5
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6}, Lcom/google/android/gms/analytics/s$d;->bQ()Ljava/util/List;
+    const-string v3, "Sending hit to service   "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/google/android/gms/analytics/aa;->v(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/google/android/gms/analytics/s;->rA:Lcom/google/android/gms/analytics/GoogleAnalytics;
+
+    invoke-virtual {v2}, Lcom/google/android/gms/analytics/GoogleAnalytics;->isDryRunEnabled()Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    iget-object v2, p0, Lcom/google/android/gms/analytics/s;->ry:Lcom/google/android/gms/analytics/b;
+
+    invoke-virtual {v7}, Lcom/google/android/gms/analytics/s$d;->bO()Ljava/util/Map;
+
+    move-result-object v3
+
+    invoke-virtual {v7}, Lcom/google/android/gms/analytics/s$d;->bP()J
+
+    move-result-wide v4
+
+    invoke-virtual {v7}, Lcom/google/android/gms/analytics/s$d;->getPath()Ljava/lang/String;
 
     move-result-object v6
 
-    invoke-interface/range {v1 .. v6}, Lcom/google/android/gms/analytics/b;->a(Ljava/util/Map;JLjava/lang/String;Ljava/util/List;)V
+    invoke-virtual {v7}, Lcom/google/android/gms/analytics/s$d;->bQ()Ljava/util/List;
+
+    move-result-object v7
+
+    invoke-interface/range {v2 .. v7}, Lcom/google/android/gms/analytics/b;->a(Ljava/util/Map;JLjava/lang/String;Ljava/util/List;)V
 
     :goto_3
-    iget-object v1, p0, Lcom/google/android/gms/analytics/s;->rB:Ljava/util/Queue;
+    iget-object v2, p0, Lcom/google/android/gms/analytics/s;->rB:Ljava/util/Queue;
 
-    invoke-interface {v1}, Ljava/util/Queue;->poll()Ljava/lang/Object;
+    invoke-interface {v2}, Ljava/util/Queue;->poll()Ljava/lang/Object;
 
     goto :goto_2
 
     :cond_4
-    const-string v1, "Dry run enabled. Hit not actually sent to service."
+    const-string v2, "Dry run enabled. Hit not actually sent to service."
 
-    invoke-static {v1}, Lcom/google/android/gms/analytics/aa;->v(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/google/android/gms/analytics/aa;->v(Ljava/lang/String;)V
 
     goto :goto_3
 
     :cond_5
-    iget-object v1, p0, Lcom/google/android/gms/analytics/s;->rJ:Lcom/google/android/gms/analytics/i;
+    iget-object v2, p0, Lcom/google/android/gms/analytics/s;->rJ:Lcom/google/android/gms/analytics/i;
 
-    invoke-interface {v1}, Lcom/google/android/gms/analytics/i;->currentTimeMillis()J
+    invoke-interface {v2}, Lcom/google/android/gms/analytics/i;->currentTimeMillis()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, p0, Lcom/google/android/gms/analytics/s;->rw:J
+    iput-wide v2, p0, Lcom/google/android/gms/analytics/s;->rw:J
 
     goto/16 :goto_0
 
     :pswitch_3
-    const-string v1, "Need to reconnect"
+    const-string v2, "Need to reconnect"
 
-    invoke-static {v1}, Lcom/google/android/gms/analytics/aa;->v(Ljava/lang/String;)V
+    invoke-static {v2}, Lcom/google/android/gms/analytics/aa;->v(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/google/android/gms/analytics/s;->rB:Ljava/util/Queue;
+    iget-object v2, p0, Lcom/google/android/gms/analytics/s;->rB:Ljava/util/Queue;
 
-    invoke-interface {v1}, Ljava/util/Queue;->isEmpty()Z
+    invoke-interface {v2}, Ljava/util/Queue;->isEmpty()Z
 
-    move-result v1
+    move-result v2
 
-    if-nez v1, :cond_0
+    if-nez v2, :cond_0
 
     invoke-direct {p0}, Lcom/google/android/gms/analytics/s;->bM()V
     :try_end_2
@@ -858,7 +858,7 @@
 .end method
 
 .method public b(Ljava/util/Map;JLjava/lang/String;Ljava/util/List;)V
-    .locals 7
+    .locals 8
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -925,9 +925,9 @@
 .end method
 
 .method public bk()V
-    .locals 4
+    .locals 5
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     const-string v0, "clearHits called"
 
@@ -959,11 +959,11 @@
     :pswitch_0
     iget-object v0, p0, Lcom/google/android/gms/analytics/s;->rj:Lcom/google/android/gms/analytics/d;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-interface {v0, v1, v2}, Lcom/google/android/gms/analytics/d;->i(J)V
+    invoke-interface {v0, v2, v3}, Lcom/google/android/gms/analytics/d;->i(J)V
 
-    iput-boolean v3, p0, Lcom/google/android/gms/analytics/s;->rG:Z
+    iput-boolean v4, p0, Lcom/google/android/gms/analytics/s;->rG:Z
 
     goto :goto_0
 
@@ -972,7 +972,7 @@
 
     invoke-interface {v0}, Lcom/google/android/gms/analytics/b;->bk()V
 
-    iput-boolean v3, p0, Lcom/google/android/gms/analytics/s;->rG:Z
+    iput-boolean v4, p0, Lcom/google/android/gms/analytics/s;->rG:Z
 
     goto :goto_0
 

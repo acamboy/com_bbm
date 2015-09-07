@@ -604,9 +604,9 @@
 
     const/16 v2, 0x8
 
-    iget-wide v3, p0, Lcom/google/android/gms/internal/d$a;->ge:J
+    iget-wide v4, p0, Lcom/google/android/gms/internal/d$a;->ge:J
 
-    invoke-static {v2, v3, v4}, Lcom/google/android/gms/internal/jz;->d(IJ)I
+    invoke-static {v2, v4, v5}, Lcom/google/android/gms/internal/jz;->d(IJ)I
 
     move-result v2
 
@@ -1550,9 +1550,7 @@
     :goto_9
     if-nez v0, :cond_d
 
-    array-length v3, v5
-
-    if-ne v2, v3, :cond_d
+    if-ne v2, v4, :cond_d
 
     iput-object v5, p0, Lcom/google/android/gms/internal/d$a;->gh:[I
 
@@ -1758,6 +1756,8 @@
     iput-boolean v0, p0, Lcom/google/android/gms/internal/d$a;->gf:Z
 
     goto/16 :goto_0
+
+    nop
 
     :sswitch_data_0
     .sparse-switch

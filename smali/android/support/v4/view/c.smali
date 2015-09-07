@@ -66,7 +66,7 @@
     .line 132
     iget-object v0, p0, Landroid/support/v4/view/c;->a:Landroid/support/v4/view/a;
 
-    invoke-static {p1, p2}, Landroid/support/v4/view/a;->b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
+    invoke-virtual {v0, p1, p2}, Landroid/support/v4/view/a;->b(Landroid/view/View;Landroid/view/accessibility/AccessibilityEvent;)Z
 
     move-result v0
 

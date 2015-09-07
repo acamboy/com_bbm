@@ -191,7 +191,7 @@
 .end method
 
 .method private declared-synchronized a(Lcom/google/android/gms/internal/c$j;)V
-    .locals 3
+    .locals 4
 
     monitor-enter p0
 
@@ -204,9 +204,9 @@
 
     invoke-direct {v0}, Lcom/google/android/gms/internal/jd$a;-><init>()V
 
-    iget-wide v1, p0, Lcom/google/android/gms/tagmanager/o;->TR:J
+    iget-wide v2, p0, Lcom/google/android/gms/tagmanager/o;->TR:J
 
-    iput-wide v1, v0, Lcom/google/android/gms/internal/jd$a;->Yb:J
+    iput-wide v2, v0, Lcom/google/android/gms/internal/jd$a;->Yb:J
 
     new-instance v1, Lcom/google/android/gms/internal/c$f;
 
@@ -374,7 +374,7 @@
 .end method
 
 .method static synthetic a(Lcom/google/android/gms/tagmanager/o;J)V
-    .locals 0
+    .locals 1
 
     invoke-direct {p0, p1, p2}, Lcom/google/android/gms/tagmanager/o;->s(J)V
 
@@ -495,7 +495,7 @@
 .end method
 
 .method private declared-synchronized s(J)V
-    .locals 2
+    .locals 3
 
     monitor-enter p0
 

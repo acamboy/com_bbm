@@ -10,7 +10,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 9
 
     new-instance v0, Lcom/google/android/gms/internal/cu$2;
 
@@ -18,27 +18,27 @@
 
     sput-object v0, Lcom/google/android/gms/internal/cu;->pK:Ljava/util/concurrent/ThreadFactory;
 
-    new-instance v0, Ljava/util/concurrent/ThreadPoolExecutor;
+    new-instance v1, Ljava/util/concurrent/ThreadPoolExecutor;
 
-    const/4 v1, 0x0
+    const/4 v2, 0x0
 
-    const/16 v2, 0xa
+    const/16 v3, 0xa
 
-    const-wide/16 v3, 0x41
+    const-wide/16 v4, 0x41
 
-    sget-object v5, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
+    sget-object v6, Ljava/util/concurrent/TimeUnit;->SECONDS:Ljava/util/concurrent/TimeUnit;
 
-    new-instance v6, Ljava/util/concurrent/SynchronousQueue;
+    new-instance v7, Ljava/util/concurrent/SynchronousQueue;
 
-    const/4 v7, 0x1
+    const/4 v0, 0x1
 
-    invoke-direct {v6, v7}, Ljava/util/concurrent/SynchronousQueue;-><init>(Z)V
+    invoke-direct {v7, v0}, Ljava/util/concurrent/SynchronousQueue;-><init>(Z)V
 
-    sget-object v7, Lcom/google/android/gms/internal/cu;->pK:Ljava/util/concurrent/ThreadFactory;
+    sget-object v8, Lcom/google/android/gms/internal/cu;->pK:Ljava/util/concurrent/ThreadFactory;
 
-    invoke-direct/range {v0 .. v7}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
+    invoke-direct/range {v1 .. v8}, Ljava/util/concurrent/ThreadPoolExecutor;-><init>(IIJLjava/util/concurrent/TimeUnit;Ljava/util/concurrent/BlockingQueue;Ljava/util/concurrent/ThreadFactory;)V
 
-    sput-object v0, Lcom/google/android/gms/internal/cu;->pL:Ljava/util/concurrent/ThreadPoolExecutor;
+    sput-object v1, Lcom/google/android/gms/internal/cu;->pL:Ljava/util/concurrent/ThreadPoolExecutor;
 
     return-void
 .end method

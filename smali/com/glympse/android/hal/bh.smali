@@ -1,144 +1,82 @@
 .class Lcom/glympse/android/hal/bh;
 .super Ljava/lang/Object;
-.source "ResourceGateway.java"
+.source "Reflection.java"
 
 # interfaces
-.implements Lcom/glympse/android/hal/GResourceGateway;
+.implements Ljava/lang/reflect/InvocationHandler;
 
 
-# static fields
-.field private static final ej:[I
+# instance fields
+.field private dQ:Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
-
-    .prologue
-    .line 13
-    const/16 v0, 0xe
-
-    new-array v0, v0, [I
-
-    const/4 v1, 0x0
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_00:I
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x1
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_01:I
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x2
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_02:I
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x3
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_03:I
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x4
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_04:I
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x5
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_05:I
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x6
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_06:I
-
-    aput v2, v0, v1
-
-    const/4 v1, 0x7
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_07:I
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x8
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_08:I
-
-    aput v2, v0, v1
-
-    const/16 v1, 0x9
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_09:I
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xa
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_arrived:I
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xb
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_low_battery:I
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xc
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_received:I
-
-    aput v2, v0, v1
-
-    const/16 v1, 0xd
-
-    sget v2, Lcom/glympse/android/api/R$drawable;->notification_warning:I
-
-    aput v2, v0, v1
-
-    sput-object v0, Lcom/glympse/android/hal/bh;->ej:[I
-
-    return-void
-.end method
-
-.method constructor <init>()V
+.method public constructor <init>(Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;)V
     .locals 0
 
     .prologue
-    .line 11
+    .line 1990
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 1991
+    iput-object p1, p0, Lcom/glympse/android/hal/bh;->dQ:Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;
+
+    .line 1992
     return-void
 .end method
 
 
 # virtual methods
-.method public getDrawable(I)I
-    .locals 1
+.method public invoke(Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
 
     .prologue
-    .line 33
-    sget-object v0, Lcom/glympse/android/hal/bh;->ej:[I
+    const/4 v0, 0x0
 
-    aget v0, v0, p1
+    const/4 v3, 0x0
 
-    return v0
-.end method
+    .line 1999
+    :try_start_0
+    invoke-static {}, Lcom/glympse/android/hal/Reflection$_NfcAdapter;->O()Ljava/lang/reflect/Method;
 
-.method public getString(I)I
-    .locals 1
+    move-result-object v1
 
-    .prologue
-    .line 38
-    const/4 v0, -0x1
+    invoke-virtual {p2, v1}, Ljava/lang/reflect/Method;->equals(Ljava/lang/Object;)Z
 
-    return v0
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 2001
+    iget-object v1, p0, Lcom/glympse/android/hal/bh;->dQ:Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;
+
+    const/4 v2, 0x0
+
+    aget-object v2, p3, v2
+
+    invoke-interface {v1, v2}, Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;->onNdefPushComplete(Ljava/lang/Object;)V
+
+    .line 2010
+    :goto_0
+    return-object v0
+
+    .line 2004
+    :cond_0
+    iget-object v1, p0, Lcom/glympse/android/hal/bh;->dQ:Lcom/glympse/android/hal/Reflection$_OnNdefPushCompleteCallback;
+
+    invoke-virtual {p2, v1, p3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 2006
+    :catch_0
+    move-exception v1
+
+    invoke-static {v1, v3}, Lcom/glympse/android/lib/Debug;->ex(Ljava/lang/Throwable;Z)V
+
+    goto :goto_0
 .end method

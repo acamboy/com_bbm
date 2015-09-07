@@ -1,101 +1,183 @@
 .class final Lcom/bbm/ui/activities/vx;
-.super Ljava/lang/Object;
-.source "NewChannelCategoryActivity.java"
-
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.super Landroid/os/Handler;
+.source "MainActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
     .locals 0
 
     .prologue
-    .line 95
-    iput-object p1, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    .line 536
+    iput-object p1, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final handleMessage(Landroid/os/Message;)V
+    .locals 9
 
     .prologue
-    .line 100
-    const-string v0, "mCategoryListOnItemClickListener onItemClick"
+    .line 539
+    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    const-class v1, Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    check-cast v0, Ljava/util/HashMap;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    .line 541
+    const-string v1, "appId"
 
-    .line 101
-    iget-object v0, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Landroid/widget/RelativeLayout;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout;->setActivated(Z)V
-
-    .line 102
-    iget-object v0, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->b(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Landroid/widget/ListView;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setVisibility(I)V
-
-    .line 103
-    iget-object v0, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->f(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Lcom/bbm/ui/activities/wd;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/wd;->notifyDataSetChanged()V
-
-    .line 104
-    iget-object v0, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->d(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Landroid/widget/ImageView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->c(Lcom/bbm/ui/activities/NewChannelCategoryActivity;)Landroid/view/animation/AnimationSet;
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
+    check-cast v1, Ljava/lang/String;
 
-    .line 105
-    iget-object v0, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/NewChannelCategoryActivity;
+    .line 542
+    const-string v2, "appMessage"
 
-    invoke-static {v0, p3}, Lcom/bbm/ui/activities/NewChannelCategoryActivity;->a(Lcom/bbm/ui/activities/NewChannelCategoryActivity;I)V
+    invoke-interface {v0, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 106
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    .line 543
+    const-string v3, "appContext"
+
+    invoke-interface {v0, v3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/String;
+
+    .line 544
+    const-string v4, "customMessage"
+
+    invoke-interface {v0, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v4
+
+    check-cast v4, Ljava/lang/String;
+
+    .line 545
+    const-string v5, "receiverUri"
+
+    invoke-interface {v0, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/String;
+
+    .line 546
+    const-string v6, "displayName"
+
+    invoke-interface {v0, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v6
+
+    check-cast v6, Ljava/lang/String;
+
+    .line 547
+    const-string v7, "valid"
+
+    invoke-interface {v0, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v7
+
+    check-cast v7, Ljava/lang/String;
+
+    invoke-static {v7}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
+
+    move-result v7
+
+    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v7
+
+    .line 549
+    if-eqz v7, :cond_1
+
+    invoke-virtual {v7}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v7
+
+    if-eqz v7, :cond_1
+
+    .line 550
+    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    const v6, 0x7f0e05a3
+
+    invoke-virtual {v0, v6}, Lcom/bbm/ui/activities/MainActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v6
+
+    .line 553
+    :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    invoke-static {v0, v5}, Lcom/bbm/ui/activities/MainActivity;->a(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 554
+    iget-object v0, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/MainActivity;->b(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/e;
+
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/bbm/e;->b:Lcom/bbm/d/a;
+
+    invoke-static/range {v0 .. v6}, Lcom/bbm/util/ds;->a(Lcom/bbm/d/a;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 560
+    :goto_1
     return-void
+
+    .line 550
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    const v7, 0x7f0e05a4
+
+    invoke-virtual {v0, v7}, Lcom/bbm/ui/activities/MainActivity;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/4 v7, 0x1
+
+    new-array v7, v7, [Ljava/lang/Object;
+
+    const/4 v8, 0x0
+
+    aput-object v6, v7, v8
+
+    invoke-static {v0, v7}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v6
+
+    goto :goto_0
+
+    .line 558
+    :cond_1
+    iget-object v1, p0, Lcom/bbm/ui/activities/vx;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    check-cast v0, Ljava/util/HashMap;
+
+    invoke-static {v1, v5, v0}, Lcom/bbm/ui/activities/MainActivity;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)V
+
+    goto :goto_1
 .end method

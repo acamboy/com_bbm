@@ -4,6 +4,25 @@
         <item quantity="other">Počet kontaktů, kterým byla zaslána hromadná zpráva: %1$s</item>
         <item quantity="one">Hromadná zpráva byla zaslána 1 kontaktu.</item>
     </plurals>
+    <plurals name="caupure_barcode_channel_subscriber_count">
+        <item quantity="other">%1$d odběratelů</item>
+        <item quantity="zero">Žádný odběratel</item>
+        <item quantity="one">%1$d odběratel</item>
+        <item quantity="few">%1$d odběratelé</item>
+    </plurals>
+    <plurals name="caupure_barcode_group_member_count">
+        <item quantity="other">%1$d členů</item>
+        <item quantity="one">%1$d člen</item>
+        <item quantity="few">%1$d členové</item>
+    </plurals>
+    <plurals name="ephemeral_picker_seconds">
+        <item quantity="other">s</item>
+        <item quantity="one">s</item>
+    </plurals>
+    <plurals name="ephemeral_timer_set_seconds">
+        <item quantity="other">Časovač byl nastaven na dobu %1$d s.</item>
+        <item quantity="one">Časovač byl nastaven na dobu %1$d s.</item>
+    </plurals>
     <plurals name="file_picker_items">
         <item quantity="other">Počet položek: %1$s</item>
         <item quantity="zero">0 položek</item>

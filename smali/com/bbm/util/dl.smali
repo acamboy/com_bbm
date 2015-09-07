@@ -1,47 +1,29 @@
 .class final Lcom/bbm/util/dl;
-.super Ljava/lang/Object;
-.source "UpdatesFragmentUtil.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field final synthetic a:Lcom/bbm/util/dv;
-
-.field final synthetic b:Landroid/app/Activity;
+.super Lcom/bbm/util/dj;
+.source "SearchStringMatcher.java"
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/util/dv;Landroid/app/Activity;)V
-    .locals 0
+.method constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 548
-    iput-object p1, p0, Lcom/bbm/util/dl;->a:Lcom/bbm/util/dv;
+    .line 28
+    const/4 v0, 0x0
 
-    iput-object p2, p0, Lcom/bbm/util/dl;->b:Landroid/app/Activity;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lcom/bbm/util/dj;-><init>(B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final b(Ljava/lang/String;)Z
+    .locals 1
 
     .prologue
-    .line 551
-    iget-object v0, p0, Lcom/bbm/util/dl;->a:Lcom/bbm/util/dv;
+    .line 31
+    const/4 v0, 0x0
 
-    iget-object v0, v0, Lcom/bbm/util/dv;->h:Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/bbm/util/dl;->b:Landroid/app/Activity;
-
-    invoke-static {v0, v1}, Lcom/bbm/b/c;->a(Ljava/lang/String;Landroid/app/Activity;)V
-
-    .line 552
-    return-void
+    return v0
 .end method

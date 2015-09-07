@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final glympse_legacy_title_height:I = 0x7f0b036b
+.field public static final glympse_legacy_title_height:I = 0x7f0a03d2
 
 
 # direct methods

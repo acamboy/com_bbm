@@ -12,7 +12,7 @@
     .locals 0
 
     .prologue
-    .line 459
+    .line 451
     iput-object p1, p0, Lcom/bbm/ui/voice/e;->a:Lcom/bbm/ui/voice/d;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -26,7 +26,7 @@
     .locals 1
 
     .prologue
-    .line 466
+    .line 458
     iget-object v0, p0, Lcom/bbm/ui/voice/e;->a:Lcom/bbm/ui/voice/d;
 
     iget-object v0, v0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
@@ -47,7 +47,7 @@
 
     if-nez v0, :cond_0
 
-    .line 467
+    .line 459
     iget-object v0, p0, Lcom/bbm/ui/voice/e;->a:Lcom/bbm/ui/voice/d;
 
     iget-object v0, v0, Lcom/bbm/ui/voice/d;->a:Lcom/bbm/ui/voice/IncomingCallAnswerBar;
@@ -58,7 +58,7 @@
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 469
+    .line 461
     :cond_0
     return-void
 .end method

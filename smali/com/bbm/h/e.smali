@@ -1,102 +1,88 @@
 .class final Lcom/bbm/h/e;
-.super Ljava/lang/Object;
-.source "InviteUtil.java"
-
-# interfaces
-.implements Lcom/bbm/j/s;
+.super Lcom/bbm/h/j;
+.source "AddContactsAdapter.java"
 
 
 # instance fields
-.field final synthetic a:[Ljava/lang/String;
+.field final synthetic a:Lcom/bbm/g/t;
 
-.field final synthetic b:Lcom/bbm/h/c;
+.field final synthetic b:Lcom/bbm/h/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/h/c;[Ljava/lang/String;)V
-    .locals 0
+.method constructor <init>(Lcom/bbm/h/a;Lcom/bbm/g/t;)V
+    .locals 1
 
     .prologue
-    .line 319
-    iput-object p1, p0, Lcom/bbm/h/e;->b:Lcom/bbm/h/c;
+    .line 329
+    iput-object p1, p0, Lcom/bbm/h/e;->b:Lcom/bbm/h/a;
 
-    iput-object p2, p0, Lcom/bbm/h/e;->a:[Ljava/lang/String;
+    iput-object p2, p0, Lcom/bbm/h/e;->a:Lcom/bbm/g/t;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lcom/bbm/h/j;-><init>(Lcom/bbm/h/a;B)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()Z
-    .locals 5
+.method protected final a()V
+    .locals 3
 
     .prologue
-    .line 323
-    invoke-static {}, Lcom/bbm/Alaska;->f()Lcom/bbm/d;
+    .line 332
+    const-string v0, "incoming group invite clicked"
 
-    move-result-object v0
+    const-class v1, Lcom/bbm/h/a;
 
-    iget-object v0, v0, Lcom/bbm/d;->b:Lcom/bbm/d/a;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-virtual {v0}, Lcom/bbm/d/a;->g()Lcom/bbm/d/eu;
+    .line 334
+    new-instance v0, Landroid/content/Intent;
 
-    move-result-object v0
+    iget-object v1, p0, Lcom/bbm/h/e;->b:Lcom/bbm/h/a;
 
-    .line 325
-    iget-object v1, v0, Lcom/bbm/d/eu;->y:Lcom/bbm/util/bc;
-
-    sget-object v2, Lcom/bbm/util/bc;->c:Lcom/bbm/util/bc;
-
-    if-ne v1, v2, :cond_0
-
-    .line 326
-    const/4 v0, 0x0
-
-    .line 330
-    :goto_0
-    return v0
-
-    .line 328
-    :cond_0
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-static {v1}, Lcom/bbm/h/a;->b(Lcom/bbm/h/a;)Landroid/app/Activity;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/bbm/d/aa;->g:Lcom/bbm/d/a/f;
+    const-class v2, Lcom/bbm/ui/activities/ReceivedPendingGroupInviteActivity;
 
-    iget-object v1, v1, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    new-instance v2, Lcom/bbm/h/m;
+    .line 335
+    const-string v1, "invite_id"
 
-    iget-object v3, p0, Lcom/bbm/h/e;->b:Lcom/bbm/h/c;
+    iget-object v2, p0, Lcom/bbm/h/e;->a:Lcom/bbm/g/t;
 
-    invoke-static {v3}, Lcom/bbm/h/c;->d(Lcom/bbm/h/c;)Landroid/content/Context;
+    iget-object v2, v2, Lcom/bbm/g/t;->g:Ljava/lang/String;
 
-    move-result-object v3
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    iget-object v4, p0, Lcom/bbm/h/e;->a:[Ljava/lang/String;
+    .line 336
+    iget-object v1, p0, Lcom/bbm/h/e;->b:Lcom/bbm/h/a;
 
-    invoke-direct {v2, v3, v4, v0}, Lcom/bbm/h/m;-><init>(Landroid/content/Context;[Ljava/lang/String;Lcom/bbm/d/eu;)V
-
-    invoke-interface {v1, v2}, Lcom/bbm/f/a;->a(Lcom/bbm/f/y;)V
-
-    .line 329
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    const-string v1, "Email"
-
-    invoke-static {v1}, Lcom/bbm/d/y;->f(Ljava/lang/String;)Lcom/bbm/d/bk;
+    invoke-static {v1}, Lcom/bbm/h/a;->b(Lcom/bbm/h/a;)Landroid/app/Activity;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
+    invoke-virtual {v1, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 330
-    const/4 v0, 0x1
+    .line 337
+    iget-object v0, p0, Lcom/bbm/h/e;->b:Lcom/bbm/h/a;
 
-    goto :goto_0
+    invoke-static {v0}, Lcom/bbm/h/a;->b(Lcom/bbm/h/a;)Landroid/app/Activity;
+
+    move-result-object v0
+
+    const v1, 0x7f040001
+
+    const v2, 0x7f040004
+
+    invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->overridePendingTransition(II)V
+
+    .line 338
+    return-void
 .end method

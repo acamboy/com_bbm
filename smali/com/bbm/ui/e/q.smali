@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/e/q;
 .super Ljava/lang/Object;
-.source "FileTransferHolder.java"
+.source "EphemeralTextHolder.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/view/View$OnLayoutChangeListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/e/k;
+.field final synthetic a:Lcom/bbm/ui/e/p;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/e/k;)V
+.method constructor <init>(Lcom/bbm/ui/e/p;)V
     .locals 0
 
     .prologue
-    .line 214
-    iput-object p1, p0, Lcom/bbm/ui/e/q;->a:Lcom/bbm/ui/e/k;
+    .line 50
+    iput-object p1, p0, Lcom/bbm/ui/e/q;->a:Lcom/bbm/ui/e/p;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,32 +25,27 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final onLayoutChange(Landroid/view/View;IIIIIIII)V
+    .locals 4
 
     .prologue
-    .line 217
-    const-string v0, "Cancel Clicked"
+    .line 53
+    sub-int v0, p5, p3
 
-    const-class v1, Lcom/bbm/ui/e/k;
+    sub-int v1, p9, p7
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    if-le v0, v1, :cond_0
 
-    .line 219
-    iget-object v0, p0, Lcom/bbm/ui/e/q;->a:Lcom/bbm/ui/e/k;
+    .line 54
+    new-instance v0, Lcom/bbm/ui/e/r;
 
-    invoke-static {v0}, Lcom/bbm/ui/e/k;->g(Lcom/bbm/ui/e/k;)Lcom/bbm/ui/e/ax;
+    invoke-direct {v0, p0}, Lcom/bbm/ui/e/r;-><init>(Lcom/bbm/ui/e/q;)V
 
-    move-result-object v0
+    const-wide/16 v2, 0xc8
 
-    iget-object v1, p0, Lcom/bbm/ui/e/q;->a:Lcom/bbm/ui/e/k;
+    invoke-virtual {p1, v0, v2, v3}, Landroid/view/View;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    invoke-static {v1}, Lcom/bbm/ui/e/k;->a(Lcom/bbm/ui/e/k;)Lcom/bbm/d/dz;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Lcom/bbm/ui/e/ax;->c(Lcom/bbm/d/dz;)V
-
-    .line 220
+    .line 63
+    :cond_0
     return-void
 .end method

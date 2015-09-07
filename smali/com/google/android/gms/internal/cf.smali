@@ -80,39 +80,39 @@
 .end method
 
 .method public constructor <init>(I)V
-    .locals 19
+    .locals 20
 
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
+    const/4 v2, 0x3
 
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
-    const/4 v6, 0x0
+    const/4 v5, 0x0
 
-    const-wide/16 v7, -0x1
+    const/4 v7, 0x0
 
-    const/4 v9, 0x0
+    const-wide/16 v8, -0x1
 
-    const-wide/16 v10, -0x1
+    const/4 v10, 0x0
 
-    const/4 v12, 0x0
+    const-wide/16 v11, -0x1
 
-    const-wide/16 v13, -0x1
+    const/4 v13, 0x0
 
-    const/4 v15, -0x1
+    const-wide/16 v14, -0x1
 
-    const/16 v16, 0x0
+    const/16 v16, -0x1
 
-    const-wide/16 v17, -0x1
+    const/16 v17, 0x0
 
-    move-object/from16 v0, p0
+    const-wide/16 v18, -0x1
 
-    move/from16 v5, p1
+    move-object/from16 v1, p0
 
-    invoke-direct/range {v0 .. v18}, Lcom/google/android/gms/internal/cf;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/util/List;JZJLjava/util/List;JILjava/lang/String;J)V
+    move/from16 v6, p1
+
+    invoke-direct/range {v1 .. v19}, Lcom/google/android/gms/internal/cf;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/util/List;JZJLjava/util/List;JILjava/lang/String;J)V
 
     return-void
 .end method
@@ -219,7 +219,7 @@
 .end method
 
 .method public constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/util/List;Ljava/util/List;JZJLjava/util/List;JILjava/lang/String;J)V
-    .locals 19
+    .locals 21
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -242,37 +242,37 @@
         }
     .end annotation
 
-    const/4 v1, 0x3
+    const/4 v2, 0x3
 
-    const/4 v5, -0x2
+    const/4 v6, -0x2
 
-    move-object/from16 v0, p0
+    move-object/from16 v1, p0
 
-    move-object/from16 v2, p1
+    move-object/from16 v3, p1
 
-    move-object/from16 v3, p2
+    move-object/from16 v4, p2
 
-    move-object/from16 v4, p3
+    move-object/from16 v5, p3
 
-    move-object/from16 v6, p4
+    move-object/from16 v7, p4
 
-    move-wide/from16 v7, p5
+    move-wide/from16 v8, p5
 
-    move/from16 v9, p7
+    move/from16 v10, p7
 
-    move-wide/from16 v10, p8
+    move-wide/from16 v11, p8
 
-    move-object/from16 v12, p10
+    move-object/from16 v13, p10
 
-    move-wide/from16 v13, p11
+    move-wide/from16 v14, p11
 
-    move/from16 v15, p13
+    move/from16 v16, p13
 
-    move-object/from16 v16, p14
+    move-object/from16 v17, p14
 
-    move-wide/from16 v17, p15
+    move-wide/from16 v18, p15
 
-    invoke-direct/range {v0 .. v18}, Lcom/google/android/gms/internal/cf;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/util/List;JZJLjava/util/List;JILjava/lang/String;J)V
+    invoke-direct/range {v1 .. v19}, Lcom/google/android/gms/internal/cf;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/util/List;JZJLjava/util/List;JILjava/lang/String;J)V
 
     return-void
 .end method

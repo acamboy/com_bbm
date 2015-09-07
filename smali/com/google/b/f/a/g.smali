@@ -33,7 +33,7 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 3
 
     .prologue
     .line 940
@@ -52,11 +52,11 @@
 
     invoke-direct {v1}, Lcom/google/b/f/a/i;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/google/b/c/bv;->a(Lcom/google/b/a/f;)Lcom/google/b/c/bv;
+    new-instance v2, Lcom/google/b/c/c;
 
-    move-result-object v0
+    invoke-direct {v2, v1, v0}, Lcom/google/b/c/c;-><init>(Lcom/google/b/a/f;Lcom/google/b/c/bv;)V
 
-    invoke-virtual {v0}, Lcom/google/b/c/bv;->a()Lcom/google/b/c/bv;
+    invoke-virtual {v2}, Lcom/google/b/c/bv;->a()Lcom/google/b/c/bv;
 
     move-result-object v0
 

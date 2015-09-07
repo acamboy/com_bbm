@@ -36,7 +36,7 @@
 
     iput v0, p0, Lcom/bbm/util/b/f;->c:I
 
-    .line 280
+    .line 281
     return-void
 .end method
 
@@ -46,7 +46,7 @@
     .locals 2
 
     .prologue
-    .line 296
+    .line 297
     const v0, 0x3d4ccccd
 
     cmpg-float v0, p1, v0
@@ -59,7 +59,7 @@
 
     if-lez v0, :cond_1
 
-    .line 297
+    .line 298
     :cond_0
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -69,7 +69,7 @@
 
     throw v0
 
-    .line 300
+    .line 301
     :cond_1
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -93,6 +93,6 @@
 
     iput v0, p0, Lcom/bbm/util/b/f;->a:I
 
-    .line 301
+    .line 302
     return-void
 .end method

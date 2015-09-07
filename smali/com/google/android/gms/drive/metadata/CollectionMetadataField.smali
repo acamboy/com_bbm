@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method protected a(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/util/Collection;
+.method public a(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/util/Collection;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -48,7 +48,7 @@
     throw v0
 .end method
 
-.method protected synthetic b(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/lang/Object;
+.method public synthetic b(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/lang/Object;
     .locals 1
 
     invoke-virtual {p0, p1, p2, p3}, Lcom/google/android/gms/drive/metadata/CollectionMetadataField;->a(Lcom/google/android/gms/common/data/DataHolder;II)Ljava/util/Collection;

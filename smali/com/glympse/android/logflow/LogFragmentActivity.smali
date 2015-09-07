@@ -1,5 +1,5 @@
 .class public Lcom/glympse/android/logflow/LogFragmentActivity;
-.super Landroid/support/v4/app/h;
+.super Landroid/support/v4/app/q;
 .source "LogFragmentActivity.java"
 
 
@@ -9,7 +9,7 @@
 
     .prologue
     .line 36
-    invoke-direct {p0}, Landroid/support/v4/app/h;-><init>()V
+    invoke-direct {p0}, Landroid/support/v4/app/q;-><init>()V
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -55,7 +55,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/h;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/q;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
     move-result v0
 
@@ -75,7 +75,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->finish()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->finish()V
 
     return-void
 .end method
@@ -103,7 +103,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->finishActivity(I)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->finishActivity(I)V
 
     return-void
 .end method
@@ -135,7 +135,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->finishActivityFromChild(Landroid/app/Activity;I)V
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->finishActivityFromChild(Landroid/app/Activity;I)V
 
     return-void
 .end method
@@ -159,7 +159,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->finishFromChild(Landroid/app/Activity;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->finishFromChild(Landroid/app/Activity;)V
 
     return-void
 .end method
@@ -187,7 +187,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->moveTaskToBack(Z)Z
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->moveTaskToBack(Z)Z
 
     move-result v0
 
@@ -229,7 +229,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/h;->onActivityResult(IILandroid/content/Intent;)V
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/q;->onActivityResult(IILandroid/content/Intent;)V
 
     return-void
 .end method
@@ -269,7 +269,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/h;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/q;->onApplyThemeResource(Landroid/content/res/Resources$Theme;IZ)V
 
     return-void
 .end method
@@ -293,7 +293,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onAttachFragment(Landroid/support/v4/app/Fragment;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onAttachFragment(Landroid/support/v4/app/Fragment;)V
 
     return-void
 .end method
@@ -311,7 +311,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onBackPressed()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onBackPressed()V
 
     return-void
 .end method
@@ -339,7 +339,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->onChildTitleChanged(Landroid/app/Activity;Ljava/lang/CharSequence;)V
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->onChildTitleChanged(Landroid/app/Activity;Ljava/lang/CharSequence;)V
 
     return-void
 .end method
@@ -363,7 +363,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onConfigurationChanged(Landroid/content/res/Configuration;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
     return-void
 .end method
@@ -381,7 +381,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onContentChanged()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onContentChanged()V
 
     return-void
 .end method
@@ -405,7 +405,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onContextItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onContextItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -431,7 +431,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onContextMenuClosed(Landroid/view/Menu;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onContextMenuClosed(Landroid/view/Menu;)V
 
     return-void
 .end method
@@ -455,7 +455,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onCreate(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -487,7 +487,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/h;->onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/q;->onCreateContextMenu(Landroid/view/ContextMenu;Landroid/view/View;Landroid/view/ContextMenu$ContextMenuInfo;)V
 
     return-void
 .end method
@@ -505,7 +505,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onCreateDescription()Ljava/lang/CharSequence;
+    invoke-super {p0}, Landroid/support/v4/app/q;->onCreateDescription()Ljava/lang/CharSequence;
 
     move-result-object v0
 
@@ -535,7 +535,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onCreateDialog(I)Landroid/app/Dialog;
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onCreateDialog(I)Landroid/app/Dialog;
 
     move-result-object v0
 
@@ -561,7 +561,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onCreateOptionsMenu(Landroid/view/Menu;)Z
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onCreateOptionsMenu(Landroid/view/Menu;)Z
 
     move-result v0
 
@@ -595,7 +595,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->onCreatePanelMenu(ILandroid/view/Menu;)Z
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->onCreatePanelMenu(ILandroid/view/Menu;)Z
 
     move-result v0
 
@@ -625,7 +625,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onCreatePanelView(I)Landroid/view/View;
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onCreatePanelView(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -655,7 +655,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->onCreateThumbnail(Landroid/graphics/Bitmap;Landroid/graphics/Canvas;)Z
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->onCreateThumbnail(Landroid/graphics/Bitmap;Landroid/graphics/Canvas;)Z
 
     move-result v0
 
@@ -675,7 +675,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onDestroy()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onDestroy()V
 
     return-void
 .end method
@@ -707,7 +707,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->onKeyDown(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->onKeyDown(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -749,7 +749,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/h;->onKeyMultiple(IILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/q;->onKeyMultiple(IILandroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -783,7 +783,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->onKeyUp(ILandroid/view/KeyEvent;)Z
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->onKeyUp(ILandroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -803,7 +803,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onLowMemory()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onLowMemory()V
 
     return-void
 .end method
@@ -835,7 +835,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->onMenuItemSelected(ILandroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -869,7 +869,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->onMenuOpened(ILandroid/view/Menu;)Z
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->onMenuOpened(ILandroid/view/Menu;)Z
 
     move-result v0
 
@@ -895,7 +895,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onNewIntent(Landroid/content/Intent;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onNewIntent(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -919,7 +919,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
 
@@ -945,7 +945,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onOptionsMenuClosed(Landroid/view/Menu;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onOptionsMenuClosed(Landroid/view/Menu;)V
 
     return-void
 .end method
@@ -977,7 +977,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->onPanelClosed(ILandroid/view/Menu;)V
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->onPanelClosed(ILandroid/view/Menu;)V
 
     return-void
 .end method
@@ -995,7 +995,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onPause()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onPause()V
 
     return-void
 .end method
@@ -1019,7 +1019,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onPostCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onPostCreate(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -1037,7 +1037,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onPostResume()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onPostResume()V
 
     return-void
 .end method
@@ -1069,7 +1069,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->onPrepareDialog(ILandroid/app/Dialog;)V
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->onPrepareDialog(ILandroid/app/Dialog;)V
 
     return-void
 .end method
@@ -1093,7 +1093,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onPrepareOptionsMenu(Landroid/view/Menu;)Z
 
     move-result v0
 
@@ -1131,7 +1131,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/h;->onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/q;->onPreparePanel(ILandroid/view/View;Landroid/view/Menu;)Z
 
     move-result v0
 
@@ -1151,7 +1151,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onRestart()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onRestart()V
 
     return-void
 .end method
@@ -1175,7 +1175,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onRestoreInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onRestoreInstanceState(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -1193,7 +1193,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onResume()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onResume()V
 
     return-void
 .end method
@@ -1211,7 +1211,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onResumeFragments()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onResumeFragments()V
 
     return-void
 .end method
@@ -1229,7 +1229,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onRetainCustomNonConfigurationInstance()Ljava/lang/Object;
+    invoke-super {p0}, Landroid/support/v4/app/q;->onRetainCustomNonConfigurationInstance()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -1255,7 +1255,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onSaveInstanceState(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onSaveInstanceState(Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -1273,7 +1273,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onSearchRequested()Z
+    invoke-super {p0}, Landroid/support/v4/app/q;->onSearchRequested()Z
 
     move-result v0
 
@@ -1293,7 +1293,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onStart()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onStart()V
 
     return-void
 .end method
@@ -1311,7 +1311,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onStop()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onStop()V
 
     return-void
 .end method
@@ -1343,7 +1343,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->onTitleChanged(Ljava/lang/CharSequence;I)V
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->onTitleChanged(Ljava/lang/CharSequence;I)V
 
     return-void
 .end method
@@ -1367,7 +1367,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onTouchEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -1393,7 +1393,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onTrackballEvent(Landroid/view/MotionEvent;)Z
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onTrackballEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
@@ -1413,7 +1413,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onUserInteraction()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onUserInteraction()V
 
     return-void
 .end method
@@ -1431,7 +1431,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->onUserLeaveHint()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->onUserLeaveHint()V
 
     return-void
 .end method
@@ -1455,7 +1455,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onWindowAttributesChanged(Landroid/view/WindowManager$LayoutParams;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onWindowAttributesChanged(Landroid/view/WindowManager$LayoutParams;)V
 
     return-void
 .end method
@@ -1483,7 +1483,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->onWindowFocusChanged(Z)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->onWindowFocusChanged(Z)V
 
     return-void
 .end method
@@ -1507,7 +1507,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->openContextMenu(Landroid/view/View;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->openContextMenu(Landroid/view/View;)V
 
     return-void
 .end method
@@ -1525,7 +1525,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0}, Landroid/support/v4/app/h;->openOptionsMenu()V
+    invoke-super {p0}, Landroid/support/v4/app/q;->openOptionsMenu()V
 
     return-void
 .end method
@@ -1549,7 +1549,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->sendBroadcast(Landroid/content/Intent;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->sendBroadcast(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -1577,7 +1577,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1605,7 +1605,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -1657,7 +1657,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super/range {p0 .. p7}, Landroid/support/v4/app/h;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
+    invoke-super/range {p0 .. p7}, Landroid/support/v4/app/q;->sendOrderedBroadcast(Landroid/content/Intent;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
     return-void
 .end method
@@ -1681,7 +1681,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->sendStickyBroadcast(Landroid/content/Intent;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->sendStickyBroadcast(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -1709,7 +1709,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->setContentView(I)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->setContentView(I)V
 
     return-void
 .end method
@@ -1733,7 +1733,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->setContentView(Landroid/view/View;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->setContentView(Landroid/view/View;)V
 
     return-void
 .end method
@@ -1761,7 +1761,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
     return-void
 .end method
@@ -1785,7 +1785,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->setIntent(Landroid/content/Intent;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->setIntent(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -1813,7 +1813,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->setRequestedOrientation(I)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->setRequestedOrientation(I)V
 
     return-void
 .end method
@@ -1841,7 +1841,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->setTheme(I)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->setTheme(I)V
 
     return-void
 .end method
@@ -1869,7 +1869,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->setVisible(Z)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->setVisible(Z)V
 
     return-void
 .end method
@@ -1893,7 +1893,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->startActivity(Landroid/content/Intent;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method
@@ -1925,7 +1925,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->startActivityForResult(Landroid/content/Intent;I)V
 
     return-void
 .end method
@@ -1961,7 +1961,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/h;->startActivityFromChild(Landroid/app/Activity;Landroid/content/Intent;I)V
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/q;->startActivityFromChild(Landroid/app/Activity;Landroid/content/Intent;I)V
 
     return-void
 .end method
@@ -1997,7 +1997,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/h;->startActivityFromFragment(Landroid/support/v4/app/Fragment;Landroid/content/Intent;I)V
+    invoke-super {p0, p1, p2, p3}, Landroid/support/v4/app/q;->startActivityFromFragment(Landroid/support/v4/app/Fragment;Landroid/content/Intent;I)V
 
     return-void
 .end method
@@ -2029,7 +2029,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2}, Landroid/support/v4/app/h;->startActivityIfNeeded(Landroid/content/Intent;I)Z
+    invoke-super {p0, p1, p2}, Landroid/support/v4/app/q;->startActivityIfNeeded(Landroid/content/Intent;I)Z
 
     move-result v0
 
@@ -2055,7 +2055,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->startNextMatchingActivity(Landroid/content/Intent;)Z
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->startNextMatchingActivity(Landroid/content/Intent;)Z
 
     move-result v0
 
@@ -2101,7 +2101,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1, p2, p3, p4}, Landroid/support/v4/app/h;->startSearch(Ljava/lang/String;ZLandroid/os/Bundle;Z)V
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/support/v4/app/q;->startSearch(Ljava/lang/String;ZLandroid/os/Bundle;Z)V
 
     return-void
 .end method
@@ -2125,7 +2125,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
     move-result-object v0
 
@@ -2151,7 +2151,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->stopService(Landroid/content/Intent;)Z
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->stopService(Landroid/content/Intent;)Z
 
     move-result v0
 
@@ -2177,7 +2177,7 @@
 
     invoke-static {v0, v1}, Lcom/glympse/android/logflow/LogFlow;->logMethod(Ljava/lang/Class;[Ljava/lang/Object;)V
 
-    invoke-super {p0, p1}, Landroid/support/v4/app/h;->unbindService(Landroid/content/ServiceConnection;)V
+    invoke-super {p0, p1}, Landroid/support/v4/app/q;->unbindService(Landroid/content/ServiceConnection;)V
 
     return-void
 .end method

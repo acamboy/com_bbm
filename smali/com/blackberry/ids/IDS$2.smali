@@ -25,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 591
+    .line 602
     iput-object p1, p0, Lcom/blackberry/ids/IDS$2;->a:Lcom/blackberry/ids/RequestId;
 
     iput-object p2, p0, Lcom/blackberry/ids/IDS$2;->b:Ljava/lang/Object;
@@ -53,7 +53,7 @@
 
     const/4 v5, 0x0
 
-    .line 594
+    .line 605
     const-string v0, "enter IDS.do_get_token request_id=%s"
 
     new-array v1, v6, [Ljava/lang/Object;
@@ -64,7 +64,7 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 596
+    .line 607
     :try_start_0
     iget-object v0, p0, Lcom/blackberry/ids/IDS$2;->b:Ljava/lang/Object;
 
@@ -83,7 +83,7 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 613
+    .line 624
     const-string v0, "exit IDS.do_get_token request_id=%s"
 
     new-array v1, v6, [Ljava/lang/Object;
@@ -94,15 +94,15 @@
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 614
+    .line 625
     :goto_0
     return-void
 
-    .line 604
+    .line 615
     :catch_0
     move-exception v0
 
-    .line 605
+    .line 616
     :try_start_1
     const-string v1, "Uncaught Throwable in IDS.do_get_token request_id=%s"
 
@@ -118,7 +118,7 @@
 
     invoke-static {v0, v1, v2}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 607
+    .line 618
     iget-object v1, p0, Lcom/blackberry/ids/IDS$2;->f:Lcom/blackberry/ids/IFailureCallback;
 
     iget-object v2, p0, Lcom/blackberry/ids/IDS$2;->a:Lcom/blackberry/ids/RequestId;
@@ -137,7 +137,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 613
+    .line 624
     const-string v0, "exit IDS.do_get_token request_id=%s"
 
     new-array v1, v6, [Ljava/lang/Object;

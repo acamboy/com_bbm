@@ -18,50 +18,20 @@
     .locals 0
 
     .prologue
-    .line 26
+    .line 23
     invoke-direct {p0, p1, p2}, Lcom/bbm/ui/MessageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 27
+    .line 24
     return-void
 .end method
 
 
 # virtual methods
-.method public final a_()V
-    .locals 2
-
-    .prologue
-    .line 65
-    const v0, 0x7f0a0442
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelPostMessageView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 66
-    const v0, 0x7f0a044f
-
-    invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelPostMessageView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
-
-    .line 67
-    return-void
-.end method
-
 .method public getChannelPostImage()Lcom/bbm/ui/ObservingImageView;
     .locals 1
 
     .prologue
-    .line 39
+    .line 36
     iget-object v0, p0, Lcom/bbm/ui/ChannelPostMessageView;->a:Lcom/bbm/ui/ObservingImageView;
 
     return-object v0
@@ -71,11 +41,11 @@
     .locals 1
 
     .prologue
-    .line 31
+    .line 28
     invoke-super {p0}, Lcom/bbm/ui/MessageView;->onFinishInflate()V
 
-    .line 32
-    const v0, 0x7f0a03ea
+    .line 29
+    const v0, 0x7f0b046a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelPostMessageView;->findViewById(I)Landroid/view/View;
 
@@ -85,8 +55,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelPostMessageView;->a:Lcom/bbm/ui/ObservingImageView;
 
-    .line 33
-    const v0, 0x7f0a03eb
+    .line 30
+    const v0, 0x7f0b046b
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelPostMessageView;->findViewById(I)Landroid/view/View;
 
@@ -96,8 +66,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelPostMessageView;->b:Landroid/widget/TextView;
 
-    .line 34
-    const v0, 0x7f0a03ec
+    .line 31
+    const v0, 0x7f0b046c
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelPostMessageView;->findViewById(I)Landroid/view/View;
 
@@ -107,8 +77,8 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelPostMessageView;->c:Landroid/widget/TextView;
 
-    .line 35
-    const v0, 0x7f0a0450
+    .line 32
+    const v0, 0x7f0b04d4
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelPostMessageView;->findViewById(I)Landroid/view/View;
 
@@ -118,7 +88,7 @@
 
     iput-object v0, p0, Lcom/bbm/ui/ChannelPostMessageView;->d:Landroid/widget/TextView;
 
-    .line 36
+    .line 33
     return-void
 .end method
 
@@ -126,8 +96,8 @@
     .locals 2
 
     .prologue
-    .line 59
-    const v0, 0x7f0a0442
+    .line 56
+    const v0, 0x7f0b0494
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelPostMessageView;->findViewById(I)Landroid/view/View;
 
@@ -137,8 +107,8 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 60
-    const v0, 0x7f0a044f
+    .line 57
+    const v0, 0x7f0b04d3
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/ChannelPostMessageView;->findViewById(I)Landroid/view/View;
 
@@ -148,10 +118,10 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 61
+    .line 58
     invoke-super {p0, p1}, Lcom/bbm/ui/MessageView;->setBodyText(Ljava/lang/String;)V
 
-    .line 62
+    .line 59
     return-void
 .end method
 
@@ -159,14 +129,14 @@
     .locals 2
 
     .prologue
-    .line 55
+    .line 52
     iget-object v0, p0, Lcom/bbm/ui/ChannelPostMessageView;->d:Landroid/widget/TextView;
 
     sget-object v1, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     invoke-virtual {v0, p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    .line 56
+    .line 53
     return-void
 .end method
 
@@ -174,14 +144,14 @@
     .locals 2
 
     .prologue
-    .line 51
+    .line 48
     iget-object v0, p0, Lcom/bbm/ui/ChannelPostMessageView;->c:Landroid/widget/TextView;
 
     sget-object v1, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     invoke-virtual {v0, p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    .line 52
+    .line 49
     return-void
 .end method
 
@@ -189,14 +159,14 @@
     .locals 2
 
     .prologue
-    .line 43
+    .line 40
     iget-object v0, p0, Lcom/bbm/ui/ChannelPostMessageView;->b:Landroid/widget/TextView;
 
     sget-object v1, Landroid/widget/TextView$BufferType;->SPANNABLE:Landroid/widget/TextView$BufferType;
 
     invoke-virtual {v0, p1, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;Landroid/widget/TextView$BufferType;)V
 
-    .line 44
+    .line 41
     return-void
 .end method
 
@@ -204,12 +174,12 @@
     .locals 1
 
     .prologue
-    .line 47
+    .line 44
     iget-object v0, p0, Lcom/bbm/ui/ChannelPostMessageView;->b:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 48
+    .line 45
     return-void
 .end method
 
@@ -221,10 +191,10 @@
 
     const/4 v4, 0x0
 
-    .line 70
+    .line 67
     if-eqz p1, :cond_0
 
-    .line 71
+    .line 68
     invoke-virtual {p0}, Lcom/bbm/ui/ChannelPostMessageView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -233,13 +203,13 @@
 
     move-result-object v0
 
-    const v1, 0x7f02024a
+    const v1, 0x7f020265
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 72
+    .line 69
     invoke-virtual {p0}, Lcom/bbm/ui/ChannelPostMessageView;->getContext()Landroid/content/Context;
 
     move-result-object v1
@@ -248,13 +218,13 @@
 
     move-result-object v1
 
-    const v2, 0x7f0b0294
+    const v2, 0x7f0a02d3
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    .line 73
+    .line 70
     int-to-float v2, v1
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -265,7 +235,7 @@
 
     div-float/2addr v2, v3
 
-    .line 74
+    .line 71
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v3
@@ -278,16 +248,16 @@
 
     invoke-virtual {v0, v5, v5, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 75
+    .line 72
     iget-object v1, p0, Lcom/bbm/ui/ChannelPostMessageView;->d:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4, v4, v0, v4}, Landroid/widget/TextView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 79
+    .line 76
     :goto_0
     return-void
 
-    .line 77
+    .line 74
     :cond_0
     iget-object v0, p0, Lcom/bbm/ui/ChannelPostMessageView;->d:Landroid/widget/TextView;
 

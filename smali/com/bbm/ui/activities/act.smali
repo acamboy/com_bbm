@@ -1,182 +1,55 @@
 .class final Lcom/bbm/ui/activities/act;
-.super Landroid/widget/BaseAdapter;
-.source "SetChannelAvatarActivity.java"
-
-# interfaces
-.implements Landroid/widget/ListAdapter;
+.super Lcom/bbm/j/k;
+.source "ProfileActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
-
-.field private final b:Landroid/view/LayoutInflater;
+.field final synthetic a:Lcom/bbm/ui/activities/ProfileActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;Landroid/content/Context;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ProfileActivity;)V
     .locals 1
 
     .prologue
-    .line 182
-    iput-object p1, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
+    .line 287
+    iput-object p1, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-    invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
+    const/4 v0, 0x0
 
-    .line 183
-    invoke-static {p2}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
 
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/act;->b:Landroid/view/LayoutInflater;
-
-    .line 184
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(I)Lcom/bbm/ui/activities/acs;
-    .locals 1
-
-    .prologue
-    .line 217
-    iget-object v0, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->c(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/acs;
-
-    return-object v0
-.end method
-
-.method public final getCount()I
-    .locals 1
-
-    .prologue
-    .line 212
-    iget-object v0, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/SetChannelAvatarActivity;->c(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final synthetic getItem(I)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 178
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/act;->a(I)Lcom/bbm/ui/activities/acs;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final getItemId(I)J
+.method protected final a()V
     .locals 2
 
     .prologue
-    .line 222
-    int-to-long v0, p1
+    .line 290
+    iget-object v0, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-    return-wide v0
-.end method
+    iget-object v1, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 4
-
-    .prologue
-    .line 191
-    if-nez p2, :cond_0
-
-    .line 192
-    new-instance v1, Lcom/bbm/ui/activities/acv;
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/SetChannelAvatarActivity;
-
-    invoke-direct {v1, v0}, Lcom/bbm/ui/activities/acv;-><init>(Lcom/bbm/ui/activities/SetChannelAvatarActivity;)V
-
-    .line 193
-    iget-object v0, p0, Lcom/bbm/ui/activities/act;->b:Landroid/view/LayoutInflater;
-
-    const v2, 0x7f0300a7
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v2, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object p2
-
-    .line 194
-    const v0, 0x7f0a03d0
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, v1, Lcom/bbm/ui/activities/acv;->a:Landroid/widget/ImageView;
-
-    .line 195
-    const v0, 0x7f0a03d1
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v1, Lcom/bbm/ui/activities/acv;->b:Landroid/widget/TextView;
-
-    .line 196
-    invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
-
-    move-object v0, v1
-
-    .line 202
-    :goto_0
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/act;->a(I)Lcom/bbm/ui/activities/acs;
+    invoke-static {v1}, Lcom/bbm/ui/activities/ProfileActivity;->c(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/d/gr;
 
     move-result-object v1
 
-    .line 204
-    iget-object v2, v0, Lcom/bbm/ui/activities/acv;->a:Landroid/widget/ImageView;
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->a(Lcom/bbm/ui/activities/ProfileActivity;Lcom/bbm/d/gr;)Lcom/bbm/d/gr;
 
-    iget v3, v1, Lcom/bbm/ui/activities/acs;->a:I
+    .line 292
+    iget-object v0, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
+    iget-object v1, p0, Lcom/bbm/ui/activities/act;->a:Lcom/bbm/ui/activities/ProfileActivity;
 
-    .line 205
-    iget-object v0, v0, Lcom/bbm/ui/activities/acv;->b:Landroid/widget/TextView;
+    invoke-static {v1}, Lcom/bbm/ui/activities/ProfileActivity;->j(Lcom/bbm/ui/activities/ProfileActivity;)Lcom/bbm/d/gr;
 
-    iget-object v1, v1, Lcom/bbm/ui/activities/acs;->b:Ljava/lang/String;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ProfileActivity;->b(Lcom/bbm/ui/activities/ProfileActivity;Lcom/bbm/d/gr;)V
 
-    .line 207
-    return-object p2
-
-    .line 199
-    :cond_0
-    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/acv;
-
-    goto :goto_0
+    .line 293
+    return-void
 .end method

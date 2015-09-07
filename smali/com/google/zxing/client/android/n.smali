@@ -1,4 +1,4 @@
-.class final Lcom/google/zxing/client/android/n;
+.class public final Lcom/google/zxing/client/android/n;
 .super Ljava/lang/Object;
 .source "InactivityTimer.java"
 
@@ -34,7 +34,7 @@
     return-void
 .end method
 
-.method constructor <init>(Landroid/app/Activity;)V
+.method public constructor <init>(Landroid/app/Activity;)V
     .locals 2
 
     .prologue
@@ -78,7 +78,7 @@
 
     .prologue
     .line 34
-    invoke-direct {p0}, Lcom/google/zxing/client/android/n;->f()V
+    invoke-virtual {p0}, Lcom/google/zxing/client/android/n;->d()V
 
     return-void
 .end method
@@ -103,49 +103,9 @@
     return-object v0
 .end method
 
-.method private declared-synchronized f()V
-    .locals 2
-
-    .prologue
-    .line 69
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lcom/google/zxing/client/android/n;->e:Lcom/google/zxing/client/android/o;
-
-    .line 70
-    if-eqz v0, :cond_0
-
-    .line 71
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
-
-    .line 72
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/google/zxing/client/android/n;->e:Lcom/google/zxing/client/android/o;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 74
-    :cond_0
-    monitor-exit p0
-
-    return-void
-
-    .line 69
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
 
 # virtual methods
-.method final declared-synchronized a()V
+.method public final declared-synchronized a()V
     .locals 3
 
     .prologue
@@ -153,7 +113,7 @@
     monitor-enter p0
 
     :try_start_0
-    invoke-direct {p0}, Lcom/google/zxing/client/android/n;->f()V
+    invoke-virtual {p0}, Lcom/google/zxing/client/android/n;->d()V
 
     .line 54
     new-instance v0, Lcom/google/zxing/client/android/o;
@@ -196,7 +156,7 @@
 
     .prologue
     .line 59
-    invoke-direct {p0}, Lcom/google/zxing/client/android/n;->f()V
+    invoke-virtual {p0}, Lcom/google/zxing/client/android/n;->d()V
 
     .line 60
     iget-object v0, p0, Lcom/google/zxing/client/android/n;->b:Landroid/app/Activity;
@@ -233,13 +193,42 @@
     return-void
 .end method
 
-.method final d()V
-    .locals 0
+.method public final declared-synchronized d()V
+    .locals 2
 
     .prologue
-    .line 77
-    invoke-direct {p0}, Lcom/google/zxing/client/android/n;->f()V
+    .line 69
+    monitor-enter p0
 
-    .line 78
+    :try_start_0
+    iget-object v0, p0, Lcom/google/zxing/client/android/n;->e:Lcom/google/zxing/client/android/o;
+
+    .line 70
+    if-eqz v0, :cond_0
+
+    .line 71
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Landroid/os/AsyncTask;->cancel(Z)Z
+
+    .line 72
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/google/zxing/client/android/n;->e:Lcom/google/zxing/client/android/o;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 74
+    :cond_0
+    monitor-exit p0
+
     return-void
+
+    .line 69
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method

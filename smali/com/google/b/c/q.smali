@@ -50,10 +50,10 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 4
 
     .prologue
-    const-wide/16 v1, -0x1
+    const-wide/16 v2, -0x1
 
     const/4 v0, -0x1
 
@@ -70,10 +70,10 @@
     iput v0, p0, Lcom/google/b/c/q;->e:I
 
     .line 126
-    iput-wide v1, p0, Lcom/google/b/c/q;->h:J
+    iput-wide v2, p0, Lcom/google/b/c/q;->h:J
 
     .line 127
-    iput-wide v1, p0, Lcom/google/b/c/q;->i:J
+    iput-wide v2, p0, Lcom/google/b/c/q;->i:J
 
     .line 139
     return-void
@@ -304,10 +304,10 @@
 .end method
 
 .method public final toString()Ljava/lang/String;
-    .locals 7
+    .locals 8
 
     .prologue
-    const-wide/16 v5, -0x1
+    const-wide/16 v6, -0x1
 
     const/4 v3, -0x1
 
@@ -356,9 +356,9 @@
 
     .line 604
     :cond_2
-    iget-wide v1, p0, Lcom/google/b/c/q;->h:J
+    iget-wide v2, p0, Lcom/google/b/c/q;->h:J
 
-    cmp-long v1, v1, v5
+    cmp-long v1, v2, v6
 
     if-eqz v1, :cond_3
 
@@ -369,9 +369,9 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-wide v3, p0, Lcom/google/b/c/q;->h:J
+    iget-wide v4, p0, Lcom/google/b/c/q;->h:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
@@ -389,9 +389,9 @@
 
     .line 607
     :cond_3
-    iget-wide v1, p0, Lcom/google/b/c/q;->i:J
+    iget-wide v2, p0, Lcom/google/b/c/q;->i:J
 
-    cmp-long v1, v1, v5
+    cmp-long v1, v2, v6
 
     if-eqz v1, :cond_4
 
@@ -402,9 +402,9 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-wide v3, p0, Lcom/google/b/c/q;->i:J
+    iget-wide v4, p0, Lcom/google/b/c/q;->i:J
 
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v2
 

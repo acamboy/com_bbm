@@ -1,48 +1,35 @@
 .class final Lcom/bbm/ui/activities/agh;
 .super Ljava/lang/Object;
-.source "ViewChannelPostActivity.java"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
+.source "SetAsActivity.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+.field a:Landroid/widget/ImageView;
+
+.field b:Landroid/widget/TextView;
+
+.field final synthetic c:Lcom/bbm/ui/activities/agg;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
+.method private constructor <init>(Lcom/bbm/ui/activities/agg;)V
     .locals 0
 
     .prologue
-    .line 290
-    iput-object p1, p0, Lcom/bbm/ui/activities/agh;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 233
+    iput-object p1, p0, Lcom/bbm/ui/activities/agh;->c:Lcom/bbm/ui/activities/agg;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 1
+.method synthetic constructor <init>(Lcom/bbm/ui/activities/agg;B)V
+    .locals 0
 
     .prologue
-    .line 293
-    iget-object v0, p0, Lcom/bbm/ui/activities/agh;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
+    .line 233
+    invoke-direct {p0, p1}, Lcom/bbm/ui/activities/agh;-><init>(Lcom/bbm/ui/activities/agg;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->g(Lcom/bbm/ui/activities/ViewChannelPostActivity;)Lcom/bbm/ui/EmoticonInputPanel;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/ui/EmoticonInputPanel;->b()V
-
-    .line 294
-    iget-object v0, p0, Lcom/bbm/ui/activities/agh;->a:Lcom/bbm/ui/activities/ViewChannelPostActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ViewChannelPostActivity;->h(Lcom/bbm/ui/activities/ViewChannelPostActivity;)V
-
-    .line 295
     return-void
 .end method

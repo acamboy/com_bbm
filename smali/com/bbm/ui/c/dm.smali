@@ -1,22 +1,34 @@
 .class final Lcom/bbm/ui/c/dm;
 .super Ljava/lang/Object;
-.source "GroupsFragment.java"
+.source "GroupMembersFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Ljava/util/Comparator",
+        "<",
+        "Lcom/bbm/ui/c/du;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/dg;
+.field final synthetic a:Lcom/bbm/ui/c/dl;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dg;)V
+.method constructor <init>(Lcom/bbm/ui/c/dl;)V
     .locals 0
 
     .prologue
-    .line 251
-    iput-object p1, p0, Lcom/bbm/ui/c/dm;->a:Lcom/bbm/ui/c/dg;
+    .line 314
+    iput-object p1, p0, Lcom/bbm/ui/c/dm;->a:Lcom/bbm/ui/c/dl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,47 +37,22 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
+.method public final synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+    .locals 2
 
     .prologue
-    .line 254
-    const-string v0, "mNewGroupButton Clicked"
+    .line 314
+    check-cast p1, Lcom/bbm/ui/c/du;
 
-    const-class v1, Lcom/bbm/ui/c/dg;
+    check-cast p2, Lcom/bbm/ui/c/du;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    iget-object v0, p1, Lcom/bbm/ui/c/du;->b:Ljava/lang/String;
 
-    .line 256
-    iget-object v0, p0, Lcom/bbm/ui/c/dm;->a:Lcom/bbm/ui/c/dg;
+    iget-object v1, p2, Lcom/bbm/ui/c/du;->b:Ljava/lang/String;
 
-    new-instance v1, Landroid/content/Intent;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->compareToIgnoreCase(Ljava/lang/String;)I
 
-    iget-object v2, p0, Lcom/bbm/ui/c/dm;->a:Lcom/bbm/ui/c/dg;
+    move-result v0
 
-    invoke-virtual {v2}, Lcom/bbm/ui/c/dg;->getActivity()Landroid/app/Activity;
-
-    move-result-object v2
-
-    const-class v3, Lcom/bbm/ui/activities/NewGroupActivity;
-
-    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/c/dg;->startActivity(Landroid/content/Intent;)V
-
-    .line 257
-    iget-object v0, p0, Lcom/bbm/ui/c/dm;->a:Lcom/bbm/ui/c/dg;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/c/dg;->getActivity()Landroid/app/Activity;
-
-    move-result-object v0
-
-    const/high16 v1, 0x7f040000
-
-    const v2, 0x7f040014
-
-    invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->overridePendingTransition(II)V
-
-    .line 258
-    return-void
+    return v0
 .end method

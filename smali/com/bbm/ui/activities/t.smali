@@ -1,67 +1,47 @@
 .class final Lcom/bbm/ui/activities/t;
-.super Lcom/bbm/j/k;
-.source "AvatarViewerActivity.java"
+.super Ljava/lang/Object;
+.source "AudioPlayerActivity.java"
+
+# interfaces
+.implements Landroid/media/MediaPlayer$OnCompletionListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/AudioPlayerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/AvatarViewerActivity;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/ui/activities/AudioPlayerActivity;)V
+    .locals 0
 
     .prologue
-    .line 39
-    iput-object p1, p0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    .line 85
+    iput-object p1, p0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
 
-    const/4 v0, 0x0
-
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
-    .locals 4
+.method public final onCompletion(Landroid/media/MediaPlayer;)V
+    .locals 2
 
     .prologue
-    .line 43
-    iget-object v0, p0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    .line 88
+    iget-object v0, p0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/AvatarViewerActivity;->a(Lcom/bbm/ui/activities/AvatarViewerActivity;)Lcom/bbm/d/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/bbm/d/a;->g()Lcom/bbm/d/eu;
+    invoke-static {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->e(Lcom/bbm/ui/activities/AudioPlayerActivity;)Landroid/os/Handler;
 
     move-result-object v0
 
-    .line 44
-    iget-object v1, p0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    new-instance v1, Lcom/bbm/ui/activities/u;
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/AvatarViewerActivity;->b(Lcom/bbm/ui/activities/AvatarViewerActivity;)Lcom/bbm/ui/ObservingImageView;
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/u;-><init>(Lcom/bbm/ui/activities/t;)V
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/AvatarViewerActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/AvatarViewerActivity;->a(Lcom/bbm/ui/activities/AvatarViewerActivity;)Lcom/bbm/d/a;
-
-    move-result-object v2
-
-    iget-object v3, v0, Lcom/bbm/d/eu;->x:Ljava/lang/String;
-
-    iget-object v0, v0, Lcom/bbm/d/eu;->a:Ljava/lang/String;
-
-    invoke-virtual {v2, v3, v0}, Lcom/bbm/d/a;->a(Ljava/lang/String;Ljava/lang/String;)Lcom/bbm/j/r;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/j/r;)V
-
-    .line 45
+    .line 96
     return-void
 .end method

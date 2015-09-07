@@ -1,50 +1,63 @@
 .class public final Lcom/bbm/d/cp;
-.super Lcom/bbm/d/da;
+.super Lcom/bbm/d/dy;
 .source "BbmdsProtocol.java"
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/util/List;)V
+.method constructor <init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            "Ljava/util/List",
-            "<",
-            "Ljava/lang/String;",
-            ">;)V"
-        }
-    .end annotation
 
     .prologue
-    .line 4307
-    const-string v0, "startConference"
+    .line 3232
+    const-string v0, "postChannelComment"
 
-    invoke-direct {p0, v0}, Lcom/bbm/d/da;-><init>(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/bbm/d/dy;-><init>(Ljava/lang/String;)V
 
-    .line 4309
-    const-string v0, "conversationUri"
+    .line 3234
+    const-string v0, "channelUri"
 
     invoke-virtual {p0, v0, p1}, Lcom/bbm/d/cp;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 4310
-    const-string v0, "invitees"
+    .line 3235
+    const-string v0, "content"
 
     invoke-virtual {p0, v0, p2}, Lcom/bbm/d/cp;->a(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 4311
+    .line 3236
+    const-string v0, "cookie"
+
+    invoke-virtual {p0, v0, p3}, Lcom/bbm/d/cp;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 3237
+    const-string v0, "postId"
+
+    invoke-virtual {p0, v0, p4}, Lcom/bbm/d/cp;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 3238
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic a()Lcom/bbm/f/x;
+.method public final a(Ljava/lang/String;)Lcom/bbm/d/cp;
     .locals 1
 
     .prologue
-    .line 4305
-    invoke-super {p0}, Lcom/bbm/d/da;->a()Lcom/bbm/f/x;
+    .line 3248
+    const-string v0, "parentId"
+
+    invoke-virtual {p0, v0, p1}, Lcom/bbm/d/cp;->a(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 3249
+    return-object p0
+.end method
+
+.method public final bridge synthetic a()Lcom/bbm/f/ab;
+    .locals 1
+
+    .prologue
+    .line 3230
+    invoke-super {p0}, Lcom/bbm/d/dy;->a()Lcom/bbm/f/ab;
 
     move-result-object v0
 

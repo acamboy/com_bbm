@@ -1,22 +1,22 @@
 .class final Lcom/bbm/h/ab;
 .super Ljava/lang/Object;
-.source "InvitesFragment.java"
+.source "AddContactsFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/b/ah;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/h/w;
+.field final synthetic a:Lcom/bbm/h/l;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/h/w;)V
+.method constructor <init>(Lcom/bbm/h/l;)V
     .locals 0
 
     .prologue
-    .line 194
-    iput-object p1, p0, Lcom/bbm/h/ab;->a:Lcom/bbm/h/w;
+    .line 362
+    iput-object p1, p0, Lcom/bbm/h/ab;->a:Lcom/bbm/h/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,28 +25,29 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 2
+.method public final a()V
+    .locals 3
 
     .prologue
-    .line 198
-    const-string v0, "invite button onClick"
-
-    const-class v1, Lcom/bbm/h/w;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 199
-    iget-object v0, p0, Lcom/bbm/h/ab;->a:Lcom/bbm/h/w;
-
-    invoke-virtual {v0}, Lcom/bbm/h/w;->getActivity()Landroid/app/Activity;
+    .line 366
+    invoke-static {}, Lcom/bbm/Alaska;->o()Lcom/bbm/Alaska;
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
+    invoke-static {v0}, Lcom/bbm/h/aq;->a(Landroid/content/Context;)Lcom/bbm/h/aq;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->i()V
+    move-result-object v0
 
-    .line 200
+    iget-object v1, p0, Lcom/bbm/h/ab;->a:Lcom/bbm/h/l;
+
+    invoke-virtual {v1}, Lcom/bbm/h/l;->getActivity()Landroid/app/Activity;
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Lcom/bbm/h/aq;->a(Landroid/content/Context;Ljava/util/List;)V
+
+    .line 367
     return-void
 .end method

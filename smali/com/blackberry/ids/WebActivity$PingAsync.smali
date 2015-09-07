@@ -60,7 +60,7 @@
 
     iget-object v0, p0, Lcom/blackberry/ids/WebActivity$PingAsync;->c:Lcom/blackberry/ids/WebActivity;
 
-    invoke-virtual {v0, v1}, Lcom/blackberry/ids/WebActivity;->a(Z)V
+    iput-boolean v1, v0, Lcom/blackberry/ids/WebActivity;->d:Z
 
     iget-object v0, p0, Lcom/blackberry/ids/WebActivity$PingAsync;->c:Lcom/blackberry/ids/WebActivity;
 
@@ -92,7 +92,7 @@
 
     iget-object v0, p0, Lcom/blackberry/ids/WebActivity$PingAsync;->c:Lcom/blackberry/ids/WebActivity;
 
-    invoke-virtual {v0, v3}, Lcom/blackberry/ids/WebActivity;->a(Z)V
+    iput-boolean v3, v0, Lcom/blackberry/ids/WebActivity;->d:Z
 
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 

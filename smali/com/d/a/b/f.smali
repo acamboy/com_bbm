@@ -131,39 +131,15 @@
     .line 85
     monitor-enter p0
 
-    if-nez p1, :cond_0
-
-    .line 86
     :try_start_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "ImageLoader configuration can not be initialized with null"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 85
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-
-    .line 88
-    :cond_0
-    :try_start_1
     iget-object v0, p0, Lcom/d/a/b/f;->b:Lcom/d/a/b/g;
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
     .line 89
     iget-boolean v0, p1, Lcom/d/a/b/g;->u:Z
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     const-string v0, "Initialize ImageLoader with configuration"
 
@@ -174,7 +150,7 @@
     invoke-static {v0, v1}, Lcom/d/a/c/d;->a(Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 90
-    :cond_1
+    :cond_0
     new-instance v0, Lcom/d/a/b/i;
 
     invoke-direct {v0, p1}, Lcom/d/a/b/i;-><init>(Lcom/d/a/b/g;)V
@@ -183,8 +159,8 @@
 
     .line 91
     iput-object p1, p0, Lcom/d/a/b/f;->b:Lcom/d/a/b/g;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 95
     :goto_0
@@ -193,8 +169,8 @@
     return-void
 
     .line 93
-    :cond_2
-    :try_start_2
+    :cond_1
+    :try_start_1
     const-string v0, "Try to initialize ImageLoader which had already been initialized before. To re-init ImageLoader with new configuration call ImageLoader.destroy() at first."
 
     const/4 v1, 0x0
@@ -202,10 +178,18 @@
     new-array v1, v1, [Ljava/lang/Object;
 
     invoke-static {v0, v1}, Lcom/d/a/c/d;->c(Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
+
+    .line 85
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
 .end method
 
 .method public final a(Ljava/lang/String;Landroid/widget/ImageView;)V

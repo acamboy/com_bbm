@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/abf;
 .super Ljava/lang/Object;
-.source "SelectCategoryActivity.java"
+.source "OwnProfileActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/SelectCategoryActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/OwnProfileActivity;)V
     .locals 0
 
     .prologue
-    .line 68
-    iput-object p1, p0, Lcom/bbm/ui/activities/abf;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+    .line 417
+    iput-object p1, p0, Lcom/bbm/ui/activities/abf;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,56 +25,30 @@
 
 
 # virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
 
     .prologue
-    .line 71
-    iget-object v0, p0, Lcom/bbm/ui/activities/abf;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+    .line 420
+    const-string v0, "mAvatarView Clicked"
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/SelectCategoryActivity;->a(Lcom/bbm/ui/activities/SelectCategoryActivity;)Lcom/bbm/ui/activities/abm;
+    const-class v1, Lcom/bbm/ui/activities/OwnProfileActivity;
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/abm;->getItem(I)Ljava/lang/Object;
+    .line 422
+    iget-object v0, p0, Lcom/bbm/ui/activities/abf;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
-    move-result-object v0
+    new-instance v1, Landroid/content/Intent;
 
-    check-cast v0, Lcom/bbm/d/dc;
+    iget-object v2, p0, Lcom/bbm/ui/activities/abf;->a:Lcom/bbm/ui/activities/OwnProfileActivity;
 
-    .line 72
-    invoke-static {}, Lcom/bbm/ui/activities/SelectCategoryActivity;->a()Lcom/bbm/d/a;
+    const-class v3, Lcom/bbm/ui/activities/AvatarViewerActivity;
 
-    move-result-object v1
+    invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/abf;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/OwnProfileActivity;->startActivity(Landroid/content/Intent;)V
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/SelectCategoryActivity;->b(Lcom/bbm/ui/activities/SelectCategoryActivity;)Ljava/util/ArrayList;
-
-    move-result-object v2
-
-    iget-wide v3, v0, Lcom/bbm/d/dc;->b:J
-
-    invoke-static {v2, v3, v4}, Lcom/bbm/d/y;->a(Ljava/util/List;J)Lcom/bbm/d/cc;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-
-    .line 73
-    iget-object v0, p0, Lcom/bbm/ui/activities/abf;->a:Lcom/bbm/ui/activities/SelectCategoryActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/SelectCategoryActivity;->finish()V
-
-    .line 74
+    .line 423
     return-void
 .end method

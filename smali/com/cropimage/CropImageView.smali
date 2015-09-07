@@ -1,6 +1,6 @@
-.class Lcom/cropimage/CropImageView;
+.class public Lcom/cropimage/CropImageView;
 .super Lcom/cropimage/i;
-.source "CropImage.java"
+.source "CropImageView.java"
 
 
 # instance fields
@@ -31,38 +31,38 @@
     .locals 1
 
     .prologue
-    .line 438
+    .line 35
     invoke-direct {p0, p1, p2}, Lcom/cropimage/i;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 415
+    .line 12
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/cropimage/CropImageView;->a:Ljava/util/ArrayList;
 
-    .line 416
+    .line 13
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/cropimage/CropImageView;->b:Lcom/cropimage/g;
 
-    .line 439
+    .line 36
     iput-object p1, p0, Lcom/cropimage/CropImageView;->m:Landroid/content/Context;
 
-    .line 440
+    .line 37
     return-void
 .end method
 
-.method private c(Lcom/cropimage/g;)V
+.method private b(Lcom/cropimage/g;)V
     .locals 6
 
     .prologue
     const/4 v5, 0x0
 
-    .line 552
+    .line 150
     iget-object v1, p1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    .line 554
+    .line 152
     invoke-virtual {p0}, Lcom/cropimage/CropImageView;->getLeft()I
 
     move-result v0
@@ -75,7 +75,7 @@
 
     move-result v2
 
-    .line 555
+    .line 153
     invoke-virtual {p0}, Lcom/cropimage/CropImageView;->getRight()I
 
     move-result v0
@@ -88,7 +88,7 @@
 
     move-result v3
 
-    .line 557
+    .line 155
     invoke-virtual {p0}, Lcom/cropimage/CropImageView;->getTop()I
 
     move-result v0
@@ -101,7 +101,7 @@
 
     move-result v0
 
-    .line 558
+    .line 156
     invoke-virtual {p0}, Lcom/cropimage/CropImageView;->getBottom()I
 
     move-result v4
@@ -114,20 +114,20 @@
 
     move-result v1
 
-    .line 560
+    .line 158
     if-eqz v2, :cond_2
 
-    .line 561
+    .line 159
     :goto_0
     if-eqz v0, :cond_3
 
-    .line 563
+    .line 161
     :goto_1
     if-nez v2, :cond_0
 
     if-eqz v0, :cond_1
 
-    .line 564
+    .line 162
     :cond_0
     int-to-float v1, v2
 
@@ -135,95 +135,95 @@
 
     invoke-virtual {p0, v1, v0}, Lcom/cropimage/CropImageView;->b(FF)V
 
-    .line 566
+    .line 164
     :cond_1
     return-void
 
     :cond_2
     move v2, v3
 
-    .line 560
+    .line 158
     goto :goto_0
 
     :cond_3
     move v0, v1
 
-    .line 561
+    .line 159
     goto :goto_1
 .end method
 
-.method private d(Lcom/cropimage/g;)V
-    .locals 7
+.method private c(Lcom/cropimage/g;)V
+    .locals 8
 
     .prologue
-    const/4 v6, 0x1
+    const/4 v7, 0x1
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
     const v4, 0x3f19999a
 
-    .line 571
+    .line 169
     iget-object v0, p1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    .line 573
+    .line 171
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
 
     move-result v1
 
     int-to-float v1, v1
 
-    .line 574
+    .line 172
     invoke-virtual {v0}, Landroid/graphics/Rect;->height()I
 
     move-result v0
 
     int-to-float v0, v0
 
-    .line 576
+    .line 174
     invoke-virtual {p0}, Lcom/cropimage/CropImageView;->getWidth()I
 
     move-result v2
 
     int-to-float v2, v2
 
-    .line 577
+    .line 175
     invoke-virtual {p0}, Lcom/cropimage/CropImageView;->getHeight()I
 
     move-result v3
 
     int-to-float v3, v3
 
-    .line 579
+    .line 177
     div-float v1, v2, v1
 
     mul-float/2addr v1, v4
 
-    .line 580
+    .line 178
     div-float v0, v3, v0
 
     mul-float/2addr v0, v4
 
-    .line 582
+    .line 180
     invoke-static {v1, v0}, Ljava/lang/Math;->min(FF)F
 
     move-result v0
 
-    .line 583
-    invoke-virtual {p0}, Lcom/cropimage/CropImageView;->b()F
+    .line 181
+    invoke-virtual {p0}, Lcom/cropimage/CropImageView;->getScale()F
 
     move-result v1
 
     mul-float/2addr v0, v1
 
-    .line 584
+    .line 182
     const/high16 v1, 0x3f800000
 
     invoke-static {v1, v0}, Ljava/lang/Math;->max(FF)F
 
     move-result v0
 
-    .line 585
-    invoke-virtual {p0}, Lcom/cropimage/CropImageView;->b()F
+    .line 183
+    invoke-virtual {p0}, Lcom/cropimage/CropImageView;->getScale()F
 
     move-result v1
 
@@ -235,15 +235,15 @@
 
     div-float/2addr v1, v0
 
-    float-to-double v1, v1
+    float-to-double v2, v1
 
-    const-wide v3, 0x3fb999999999999aL
+    const-wide v4, 0x3fb999999999999aL
 
-    cmpl-double v1, v1, v3
+    cmpl-double v1, v2, v4
 
     if-lez v1, :cond_0
 
-    .line 586
+    .line 184
     const/4 v1, 0x2
 
     new-array v1, v1, [F
@@ -254,7 +254,7 @@
 
     move-result v2
 
-    aput v2, v1, v5
+    aput v2, v1, v6
 
     iget-object v2, p1, Lcom/cropimage/g;->g:Landroid/graphics/RectF;
 
@@ -262,27 +262,27 @@
 
     move-result v2
 
-    aput v2, v1, v6
+    aput v2, v1, v7
 
-    .line 588
+    .line 186
     invoke-virtual {p0}, Lcom/cropimage/CropImageView;->getImageMatrix()Landroid/graphics/Matrix;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Landroid/graphics/Matrix;->mapPoints([F)V
 
-    .line 589
-    aget v2, v1, v5
+    .line 187
+    aget v2, v1, v6
 
-    aget v1, v1, v6
+    aget v1, v1, v7
 
     invoke-virtual {p0, v0, v2, v1}, Lcom/cropimage/CropImageView;->b(FFF)V
 
-    .line 592
+    .line 190
     :cond_0
-    invoke-direct {p0, p1}, Lcom/cropimage/CropImageView;->c(Lcom/cropimage/g;)V
+    invoke-direct {p0, p1}, Lcom/cropimage/CropImageView;->b(Lcom/cropimage/g;)V
 
-    .line 593
+    .line 191
     return-void
 .end method
 
@@ -292,10 +292,10 @@
     .locals 3
 
     .prologue
-    .line 471
+    .line 68
     invoke-super {p0, p1, p2}, Lcom/cropimage/i;->a(FF)V
 
-    .line 472
+    .line 69
     const/4 v0, 0x0
 
     move v1, v0
@@ -309,7 +309,7 @@
 
     if-ge v1, v0, :cond_0
 
-    .line 473
+    .line 70
     iget-object v0, p0, Lcom/cropimage/CropImageView;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -318,22 +318,22 @@
 
     check-cast v0, Lcom/cropimage/g;
 
-    .line 474
+    .line 71
     iget-object v2, v0, Lcom/cropimage/g;->h:Landroid/graphics/Matrix;
 
     invoke-virtual {v2, p1, p2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 475
+    .line 72
     invoke-virtual {v0}, Lcom/cropimage/g;->b()V
 
-    .line 472
+    .line 69
     add-int/lit8 v0, v1, 0x1
 
     move v1, v0
 
     goto :goto_0
 
-    .line 477
+    .line 74
     :cond_0
     return-void
 .end method
@@ -342,10 +342,10 @@
     .locals 4
 
     .prologue
-    .line 444
+    .line 41
     invoke-super {p0, p1, p2, p3}, Lcom/cropimage/i;->a(FFF)V
 
-    .line 445
+    .line 42
     iget-object v0, p0, Lcom/cropimage/CropImageView;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -365,7 +365,7 @@
 
     check-cast v0, Lcom/cropimage/g;
 
-    .line 446
+    .line 43
     iget-object v2, v0, Lcom/cropimage/g;->h:Landroid/graphics/Matrix;
 
     invoke-virtual {p0}, Lcom/cropimage/CropImageView;->getImageMatrix()Landroid/graphics/Matrix;
@@ -374,12 +374,12 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
-    .line 447
+    .line 44
     invoke-virtual {v0}, Lcom/cropimage/g;->b()V
 
     goto :goto_0
 
-    .line 449
+    .line 46
     :cond_0
     return-void
 .end method
@@ -388,441 +388,417 @@
     .locals 1
 
     .prologue
-    .line 604
-    iget-object v0, p0, Lcom/cropimage/CropImageView;->a:Ljava/util/ArrayList;
-
-    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 605
-    invoke-virtual {p0}, Lcom/cropimage/CropImageView;->invalidate()V
-
-    .line 606
-    return-void
-.end method
-
-.method public final b(Lcom/cropimage/g;)V
-    .locals 1
-
-    .prologue
-    .line 609
+    .line 207
     iget-object v0, p0, Lcom/cropimage/CropImageView;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 610
+    .line 208
     invoke-virtual {p0}, Lcom/cropimage/CropImageView;->invalidate()V
 
-    .line 611
+    .line 209
     return-void
 .end method
 
 .method protected onDraw(Landroid/graphics/Canvas;)V
-    .locals 17
+    .locals 18
 
     .prologue
-    .line 597
+    .line 195
     invoke-super/range {p0 .. p1}, Lcom/cropimage/i;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 598
-    const/4 v1, 0x0
+    .line 196
+    const/4 v2, 0x0
 
-    move v2, v1
+    move v3, v2
 
     :goto_0
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/cropimage/CropImageView;->a:Ljava/util/ArrayList;
+    iget-object v2, v0, Lcom/cropimage/CropImageView;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
-    move-result v1
+    move-result v2
 
-    if-ge v2, v1, :cond_7
+    if-ge v3, v2, :cond_7
 
-    .line 599
+    .line 197
     move-object/from16 v0, p0
 
-    iget-object v1, v0, Lcom/cropimage/CropImageView;->a:Ljava/util/ArrayList;
+    iget-object v2, v0, Lcom/cropimage/CropImageView;->a:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v2, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v2
 
-    check-cast v1, Lcom/cropimage/g;
+    check-cast v2, Lcom/cropimage/g;
 
-    iget-boolean v3, v1, Lcom/cropimage/g;->c:Z
+    iget-boolean v4, v2, Lcom/cropimage/g;->c:Z
 
-    if-nez v3, :cond_0
+    if-nez v4, :cond_0
 
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    new-instance v4, Landroid/graphics/Path;
+    new-instance v5, Landroid/graphics/Path;
 
-    invoke-direct {v4}, Landroid/graphics/Path;-><init>()V
+    invoke-direct {v5}, Landroid/graphics/Path;-><init>()V
 
-    iget-boolean v3, v1, Lcom/cropimage/g;->b:Z
+    iget-boolean v4, v2, Lcom/cropimage/g;->b:Z
 
-    if-nez v3, :cond_1
+    if-nez v4, :cond_1
 
-    iget-object v3, v1, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
+    iget-object v4, v2, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
 
-    const/high16 v4, -0x1000000
+    const/high16 v5, -0x1000000
 
-    invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object v3, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+    iget-object v4, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    iget-object v1, v1, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
+    iget-object v2, v2, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v3, v1}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+    invoke-virtual {v0, v4, v2}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 598
+    .line 196
     :cond_0
     :goto_1
-    add-int/lit8 v1, v2, 0x1
+    add-int/lit8 v2, v3, 0x1
 
-    move v2, v1
+    move v3, v2
 
     goto :goto_0
 
-    .line 599
+    .line 197
     :cond_1
-    new-instance v5, Landroid/graphics/Rect;
+    new-instance v6, Landroid/graphics/Rect;
 
-    invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
+    invoke-direct {v6}, Landroid/graphics/Rect;-><init>()V
 
-    iget-object v3, v1, Lcom/cropimage/g;->a:Landroid/view/View;
+    iget-object v4, v2, Lcom/cropimage/g;->a:Landroid/view/View;
 
-    invoke-virtual {v3, v5}, Landroid/view/View;->getDrawingRect(Landroid/graphics/Rect;)V
+    invoke-virtual {v4, v6}, Landroid/view/View;->getDrawingRect(Landroid/graphics/Rect;)V
 
-    iget-boolean v3, v1, Lcom/cropimage/g;->k:Z
+    iget-boolean v4, v2, Lcom/cropimage/g;->k:Z
 
-    if-eqz v3, :cond_2
+    if-eqz v4, :cond_2
 
-    iget-object v3, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+    iget-object v4, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    invoke-virtual {v3}, Landroid/graphics/Rect;->width()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    iget-object v6, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
-
-    invoke-virtual {v6}, Landroid/graphics/Rect;->height()I
-
-    move-result v6
-
-    int-to-float v6, v6
-
-    iget-object v7, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
-
-    iget v7, v7, Landroid/graphics/Rect;->left:I
-
-    int-to-float v7, v7
-
-    const/high16 v8, 0x40000000
-
-    div-float v8, v3, v8
-
-    add-float/2addr v7, v8
-
-    iget-object v8, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
-
-    iget v8, v8, Landroid/graphics/Rect;->top:I
-
-    int-to-float v8, v8
-
-    const/high16 v9, 0x40000000
-
-    div-float/2addr v6, v9
-
-    add-float/2addr v6, v8
-
-    const/high16 v8, 0x40000000
-
-    div-float/2addr v3, v8
-
-    sget-object v8, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
-
-    invoke-virtual {v4, v7, v6, v3, v8}, Landroid/graphics/Path;->addCircle(FFFLandroid/graphics/Path$Direction;)V
-
-    iget-object v3, v1, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
-
-    const v6, -0x10fb2a
-
-    invoke-virtual {v3, v6}, Landroid/graphics/Paint;->setColor(I)V
-
-    :goto_2
-    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->isHardwareAccelerated()Z
-
-    move-result v3
-
-    if-nez v3, :cond_4
-
-    sget-object v3, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v4, v3}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
-
-    iget-boolean v3, v1, Lcom/cropimage/g;->b:Z
-
-    if-eqz v3, :cond_3
-
-    iget-object v3, v1, Lcom/cropimage/g;->o:Landroid/graphics/Paint;
-
-    :goto_3
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v5, v3}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
-
-    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
-
-    iget-object v3, v1, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v0, v4, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    :goto_4
-    iget-object v3, v1, Lcom/cropimage/g;->d:Lcom/cropimage/h;
-
-    sget-object v4, Lcom/cropimage/h;->c:Lcom/cropimage/h;
-
-    if-ne v3, v4, :cond_0
-
-    iget-boolean v3, v1, Lcom/cropimage/g;->k:Z
-
-    if-eqz v3, :cond_6
-
-    iget-object v3, v1, Lcom/cropimage/g;->n:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
-
-    move-result v3
-
-    iget-object v4, v1, Lcom/cropimage/g;->n:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+    invoke-virtual {v4}, Landroid/graphics/Rect;->width()I
 
     move-result v4
 
-    const-wide v5, 0x3fe921fb54442d18L
+    int-to-float v4, v4
 
-    invoke-static {v5, v6}, Ljava/lang/Math;->cos(D)D
-
-    move-result-wide v5
-
-    iget-object v7, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
-
-    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
-
-    move-result v7
-
-    int-to-double v7, v7
-
-    const-wide/high16 v9, 0x4000000000000000L
-
-    div-double/2addr v7, v9
-
-    mul-double/2addr v5, v7
-
-    invoke-static {v5, v6}, Ljava/lang/Math;->round(D)J
-
-    move-result-wide v5
-
-    long-to-int v5, v5
-
-    iget-object v6, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
-
-    iget v6, v6, Landroid/graphics/Rect;->left:I
-
-    iget-object v7, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
-
-    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
-
-    move-result v7
-
-    div-int/lit8 v7, v7, 0x2
-
-    add-int/2addr v6, v7
-
-    add-int/2addr v6, v5
-
-    div-int/lit8 v3, v3, 0x2
-
-    sub-int v3, v6, v3
-
-    iget-object v6, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
-
-    iget v6, v6, Landroid/graphics/Rect;->top:I
-
-    iget-object v7, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+    iget-object v7, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
     invoke-virtual {v7}, Landroid/graphics/Rect;->height()I
 
     move-result v7
 
-    div-int/lit8 v7, v7, 0x2
+    int-to-float v7, v7
 
-    add-int/2addr v6, v7
+    iget-object v8, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    sub-int v5, v6, v5
+    iget v8, v8, Landroid/graphics/Rect;->left:I
+
+    int-to-float v8, v8
+
+    const/high16 v9, 0x40000000
+
+    div-float v9, v4, v9
+
+    add-float/2addr v8, v9
+
+    iget-object v9, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+
+    iget v9, v9, Landroid/graphics/Rect;->top:I
+
+    int-to-float v9, v9
+
+    const/high16 v10, 0x40000000
+
+    div-float/2addr v7, v10
+
+    add-float/2addr v7, v9
+
+    const/high16 v9, 0x40000000
+
+    div-float/2addr v4, v9
+
+    sget-object v9, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
+
+    invoke-virtual {v5, v8, v7, v4, v9}, Landroid/graphics/Path;->addCircle(FFFLandroid/graphics/Path$Direction;)V
+
+    iget-object v4, v2, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
+
+    const v7, -0x10fb2a
+
+    invoke-virtual {v4, v7}, Landroid/graphics/Paint;->setColor(I)V
+
+    :goto_2
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->isHardwareAccelerated()Z
+
+    move-result v4
+
+    if-nez v4, :cond_4
+
+    sget-object v4, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v5, v4}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
+
+    iget-boolean v4, v2, Lcom/cropimage/g;->b:Z
+
+    if-eqz v4, :cond_3
+
+    iget-object v4, v2, Lcom/cropimage/g;->o:Landroid/graphics/Paint;
+
+    :goto_3
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v6, v4}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+
+    invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
+
+    iget-object v4, v2, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v0, v5, v4}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
+
+    :goto_4
+    iget-object v4, v2, Lcom/cropimage/g;->d:Lcom/cropimage/h;
+
+    sget-object v5, Lcom/cropimage/h;->c:Lcom/cropimage/h;
+
+    if-ne v4, v5, :cond_0
+
+    iget-boolean v4, v2, Lcom/cropimage/g;->k:Z
+
+    if-eqz v4, :cond_6
+
+    iget-object v4, v2, Lcom/cropimage/g;->n:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+
+    move-result v4
+
+    iget-object v5, v2, Lcom/cropimage/g;->n:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v5}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v5
+
+    const-wide v6, 0x3fe921fb54442d18L
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->cos(D)D
+
+    move-result-wide v6
+
+    iget-object v8, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+
+    invoke-virtual {v8}, Landroid/graphics/Rect;->width()I
+
+    move-result v8
+
+    int-to-double v8, v8
+
+    const-wide/high16 v10, 0x4000000000000000L
+
+    div-double/2addr v8, v10
+
+    mul-double/2addr v6, v8
+
+    invoke-static {v6, v7}, Ljava/lang/Math;->round(D)J
+
+    move-result-wide v6
+
+    long-to-int v6, v6
+
+    iget-object v7, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+
+    iget v7, v7, Landroid/graphics/Rect;->left:I
+
+    iget-object v8, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+
+    invoke-virtual {v8}, Landroid/graphics/Rect;->width()I
+
+    move-result v8
+
+    div-int/lit8 v8, v8, 0x2
+
+    add-int/2addr v7, v8
+
+    add-int/2addr v7, v6
 
     div-int/lit8 v4, v4, 0x2
 
-    sub-int v4, v5, v4
+    sub-int v4, v7, v4
 
-    iget-object v5, v1, Lcom/cropimage/g;->n:Landroid/graphics/drawable/Drawable;
+    iget-object v7, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    iget-object v6, v1, Lcom/cropimage/g;->n:Landroid/graphics/drawable/Drawable;
+    iget v7, v7, Landroid/graphics/Rect;->top:I
 
-    invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    iget-object v8, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    move-result v6
+    invoke-virtual {v8}, Landroid/graphics/Rect;->height()I
 
-    add-int/2addr v6, v3
+    move-result v8
 
-    iget-object v7, v1, Lcom/cropimage/g;->n:Landroid/graphics/drawable/Drawable;
+    div-int/lit8 v8, v8, 0x2
 
-    invoke-virtual {v7}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+    add-int/2addr v7, v8
+
+    sub-int v6, v7, v6
+
+    div-int/lit8 v5, v5, 0x2
+
+    sub-int v5, v6, v5
+
+    iget-object v6, v2, Lcom/cropimage/g;->n:Landroid/graphics/drawable/Drawable;
+
+    iget-object v7, v2, Lcom/cropimage/g;->n:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v7}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v7
 
     add-int/2addr v7, v4
 
-    invoke-virtual {v5, v3, v4, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    iget-object v8, v2, Lcom/cropimage/g;->n:Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, v1, Lcom/cropimage/g;->n:Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v8}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+
+    move-result v8
+
+    add-int/2addr v8, v5
+
+    invoke-virtual {v6, v4, v5, v7, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iget-object v2, v2, Lcom/cropimage/g;->n:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto/16 :goto_1
 
     :cond_2
-    new-instance v3, Landroid/graphics/RectF;
+    new-instance v4, Landroid/graphics/RectF;
 
-    iget-object v6, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+    iget-object v7, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    invoke-direct {v3, v6}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
+    invoke-direct {v4, v7}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
 
-    sget-object v6, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
+    sget-object v7, Landroid/graphics/Path$Direction;->CW:Landroid/graphics/Path$Direction;
 
-    invoke-virtual {v4, v3, v6}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
+    invoke-virtual {v5, v4, v7}, Landroid/graphics/Path;->addRect(Landroid/graphics/RectF;Landroid/graphics/Path$Direction;)V
 
-    iget-object v3, v1, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
+    iget-object v4, v2, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
 
-    const/16 v6, -0x7600
+    const/16 v7, -0x7600
 
-    invoke-virtual {v3, v6}, Landroid/graphics/Paint;->setColor(I)V
+    invoke-virtual {v4, v7}, Landroid/graphics/Paint;->setColor(I)V
 
     goto/16 :goto_2
 
     :cond_3
-    iget-object v3, v1, Lcom/cropimage/g;->p:Landroid/graphics/Paint;
+    iget-object v4, v2, Lcom/cropimage/g;->p:Landroid/graphics/Paint;
 
     goto/16 :goto_3
 
     :cond_4
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->getWidth()I
 
-    move-result v3
+    move-result v4
 
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->getHeight()I
 
-    move-result v6
+    move-result v7
 
-    sget-object v7, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
+    sget-object v8, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
-    invoke-static {v3, v6, v7}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
+    invoke-static {v4, v7, v8}, Landroid/graphics/Bitmap;->createBitmap(IILandroid/graphics/Bitmap$Config;)Landroid/graphics/Bitmap;
 
-    move-result-object v6
+    move-result-object v7
 
-    new-instance v7, Landroid/graphics/Canvas;
+    new-instance v8, Landroid/graphics/Canvas;
 
-    invoke-direct {v7, v6}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
+    invoke-direct {v8, v7}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    sget-object v3, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
+    sget-object v4, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
 
-    invoke-virtual {v7, v4, v3}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
+    invoke-virtual {v8, v5, v4}, Landroid/graphics/Canvas;->clipPath(Landroid/graphics/Path;Landroid/graphics/Region$Op;)Z
 
-    iget-boolean v3, v1, Lcom/cropimage/g;->b:Z
+    iget-boolean v4, v2, Lcom/cropimage/g;->b:Z
 
-    if-eqz v3, :cond_5
+    if-eqz v4, :cond_5
 
-    iget-object v3, v1, Lcom/cropimage/g;->o:Landroid/graphics/Paint;
+    iget-object v4, v2, Lcom/cropimage/g;->o:Landroid/graphics/Paint;
 
     :goto_5
-    invoke-virtual {v7, v5, v3}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
+    invoke-virtual {v8, v6, v4}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    iget-object v3, v1, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
+    iget-object v4, v2, Lcom/cropimage/g;->q:Landroid/graphics/Paint;
 
-    invoke-virtual {v7, v4, v3}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
-
-    const/4 v3, 0x0
+    invoke-virtual {v8, v5, v4}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
     const/4 v4, 0x0
 
     const/4 v5, 0x0
 
+    const/4 v6, 0x0
+
     move-object/from16 v0, p1
 
-    invoke-virtual {v0, v6, v3, v4, v5}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
+    invoke-virtual {v0, v7, v4, v5, v6}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
     goto/16 :goto_4
 
     :cond_5
-    iget-object v3, v1, Lcom/cropimage/g;->p:Landroid/graphics/Paint;
+    iget-object v4, v2, Lcom/cropimage/g;->p:Landroid/graphics/Paint;
 
     goto :goto_5
 
     :cond_6
-    iget-object v3, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+    iget-object v4, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    iget v3, v3, Landroid/graphics/Rect;->left:I
-
-    add-int/lit8 v3, v3, 0x1
-
-    iget-object v4, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
-
-    iget v4, v4, Landroid/graphics/Rect;->right:I
+    iget v4, v4, Landroid/graphics/Rect;->left:I
 
     add-int/lit8 v4, v4, 0x1
 
-    iget-object v5, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+    iget-object v5, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    iget v5, v5, Landroid/graphics/Rect;->top:I
+    iget v5, v5, Landroid/graphics/Rect;->right:I
 
-    add-int/lit8 v5, v5, 0x4
+    add-int/lit8 v5, v5, 0x1
 
-    iget-object v6, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+    iget-object v6, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    iget v6, v6, Landroid/graphics/Rect;->bottom:I
+    iget v6, v6, Landroid/graphics/Rect;->top:I
 
-    add-int/lit8 v6, v6, 0x3
+    add-int/lit8 v6, v6, 0x4
 
-    iget-object v7, v1, Lcom/cropimage/g;->l:Landroid/graphics/drawable/Drawable;
+    iget-object v7, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    invoke-virtual {v7}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    iget v7, v7, Landroid/graphics/Rect;->bottom:I
 
-    move-result v7
+    add-int/lit8 v7, v7, 0x3
 
-    div-int/lit8 v7, v7, 0x2
+    iget-object v8, v2, Lcom/cropimage/g;->l:Landroid/graphics/drawable/Drawable;
 
-    iget-object v8, v1, Lcom/cropimage/g;->l:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v8}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
+    invoke-virtual {v8}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v8
 
     div-int/lit8 v8, v8, 0x2
 
-    iget-object v9, v1, Lcom/cropimage/g;->m:Landroid/graphics/drawable/Drawable;
+    iget-object v9, v2, Lcom/cropimage/g;->l:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v9}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -830,43 +806,33 @@
 
     div-int/lit8 v9, v9, 0x2
 
-    iget-object v10, v1, Lcom/cropimage/g;->m:Landroid/graphics/drawable/Drawable;
+    iget-object v10, v2, Lcom/cropimage/g;->m:Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v10}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
+    invoke-virtual {v10}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v10
 
     div-int/lit8 v10, v10, 0x2
 
-    iget-object v11, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+    iget-object v11, v2, Lcom/cropimage/g;->m:Landroid/graphics/drawable/Drawable;
 
-    iget v11, v11, Landroid/graphics/Rect;->left:I
+    invoke-virtual {v11}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
-    iget-object v12, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+    move-result v11
 
-    iget v12, v12, Landroid/graphics/Rect;->right:I
+    div-int/lit8 v11, v11, 0x2
 
-    iget-object v13, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+    iget-object v12, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    iget v13, v13, Landroid/graphics/Rect;->left:I
+    iget v12, v12, Landroid/graphics/Rect;->left:I
 
-    sub-int/2addr v12, v13
+    iget-object v13, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    div-int/lit8 v12, v12, 0x2
+    iget v13, v13, Landroid/graphics/Rect;->right:I
 
-    add-int/2addr v11, v12
+    iget-object v14, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    iget-object v12, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
-
-    iget v12, v12, Landroid/graphics/Rect;->top:I
-
-    iget-object v13, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
-
-    iget v13, v13, Landroid/graphics/Rect;->bottom:I
-
-    iget-object v14, v1, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
-
-    iget v14, v14, Landroid/graphics/Rect;->top:I
+    iget v14, v14, Landroid/graphics/Rect;->left:I
 
     sub-int/2addr v13, v14
 
@@ -874,102 +840,146 @@
 
     add-int/2addr v12, v13
 
-    iget-object v13, v1, Lcom/cropimage/g;->l:Landroid/graphics/drawable/Drawable;
+    iget-object v13, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    sub-int v14, v3, v7
+    iget v13, v13, Landroid/graphics/Rect;->top:I
 
-    sub-int v15, v12, v8
+    iget-object v14, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
-    add-int/2addr v3, v7
+    iget v14, v14, Landroid/graphics/Rect;->bottom:I
 
-    add-int v16, v12, v8
+    iget-object v15, v2, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
+
+    iget v15, v15, Landroid/graphics/Rect;->top:I
+
+    sub-int/2addr v14, v15
+
+    div-int/lit8 v14, v14, 0x2
+
+    add-int/2addr v13, v14
+
+    iget-object v14, v2, Lcom/cropimage/g;->l:Landroid/graphics/drawable/Drawable;
+
+    sub-int v15, v4, v8
+
+    sub-int v16, v13, v9
+
+    add-int/2addr v4, v8
+
+    add-int v17, v13, v9
 
     move/from16 v0, v16
 
-    invoke-virtual {v13, v14, v15, v3, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    move/from16 v1, v17
 
-    iget-object v3, v1, Lcom/cropimage/g;->l:Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v14, v15, v0, v4, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    move-object/from16 v0, p1
-
-    invoke-virtual {v3, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    iget-object v3, v1, Lcom/cropimage/g;->l:Landroid/graphics/drawable/Drawable;
-
-    sub-int v13, v4, v7
-
-    sub-int v14, v12, v8
-
-    add-int/2addr v4, v7
-
-    add-int v7, v12, v8
-
-    invoke-virtual {v3, v13, v14, v4, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    iget-object v3, v1, Lcom/cropimage/g;->l:Landroid/graphics/drawable/Drawable;
+    iget-object v4, v2, Lcom/cropimage/g;->l:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v3, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v4, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    iget-object v3, v1, Lcom/cropimage/g;->m:Landroid/graphics/drawable/Drawable;
+    iget-object v4, v2, Lcom/cropimage/g;->l:Landroid/graphics/drawable/Drawable;
 
-    sub-int v4, v11, v10
+    sub-int v14, v5, v8
 
-    sub-int v7, v5, v9
+    sub-int v15, v13, v9
 
-    add-int v8, v11, v10
+    add-int/2addr v5, v8
 
-    add-int/2addr v5, v9
+    add-int v8, v13, v9
 
-    invoke-virtual {v3, v4, v7, v8, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+    invoke-virtual {v4, v14, v15, v5, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    iget-object v3, v1, Lcom/cropimage/g;->m:Landroid/graphics/drawable/Drawable;
-
-    move-object/from16 v0, p1
-
-    invoke-virtual {v3, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
-
-    iget-object v3, v1, Lcom/cropimage/g;->m:Landroid/graphics/drawable/Drawable;
-
-    sub-int v4, v11, v10
-
-    sub-int v5, v6, v9
-
-    add-int v7, v11, v10
-
-    add-int/2addr v6, v9
-
-    invoke-virtual {v3, v4, v5, v7, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
-
-    iget-object v1, v1, Lcom/cropimage/g;->m:Landroid/graphics/drawable/Drawable;
+    iget-object v4, v2, Lcom/cropimage/g;->l:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v0, p1
 
-    invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+    invoke-virtual {v4, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    iget-object v4, v2, Lcom/cropimage/g;->m:Landroid/graphics/drawable/Drawable;
+
+    sub-int v5, v12, v11
+
+    sub-int v8, v6, v10
+
+    add-int v9, v12, v11
+
+    add-int/2addr v6, v10
+
+    invoke-virtual {v4, v5, v8, v9, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iget-object v4, v2, Lcom/cropimage/g;->m:Landroid/graphics/drawable/Drawable;
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v4, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
+
+    iget-object v4, v2, Lcom/cropimage/g;->m:Landroid/graphics/drawable/Drawable;
+
+    sub-int v5, v12, v11
+
+    sub-int v6, v7, v10
+
+    add-int v8, v12, v11
+
+    add-int/2addr v7, v10
+
+    invoke-virtual {v4, v5, v6, v8, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
+
+    iget-object v2, v2, Lcom/cropimage/g;->m:Landroid/graphics/drawable/Drawable;
+
+    move-object/from16 v0, p1
+
+    invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto/16 :goto_1
 
-    .line 601
+    .line 199
     :cond_7
     return-void
+.end method
+
+.method public bridge synthetic onKeyDown(ILandroid/view/KeyEvent;)Z
+    .locals 1
+
+    .prologue
+    .line 11
+    invoke-super {p0, p1, p2}, Lcom/cropimage/i;->onKeyDown(ILandroid/view/KeyEvent;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public bridge synthetic onKeyUp(ILandroid/view/KeyEvent;)Z
+    .locals 1
+
+    .prologue
+    .line 11
+    invoke-super {p0, p1, p2}, Lcom/cropimage/i;->onKeyUp(ILandroid/view/KeyEvent;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method protected onLayout(ZIIII)V
     .locals 4
 
     .prologue
-    .line 425
+    .line 22
     invoke-super/range {p0 .. p5}, Lcom/cropimage/i;->onLayout(ZIIII)V
 
-    .line 426
+    .line 23
     iget-object v0, p0, Lcom/cropimage/CropImageView;->h:Lcom/cropimage/m;
 
     iget-object v0, v0, Lcom/cropimage/m;->a:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    .line 427
+    .line 24
     iget-object v0, p0, Lcom/cropimage/CropImageView;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -990,7 +1000,7 @@
 
     check-cast v0, Lcom/cropimage/g;
 
-    .line 428
+    .line 25
     iget-object v2, v0, Lcom/cropimage/g;->h:Landroid/graphics/Matrix;
 
     invoke-virtual {p0}, Lcom/cropimage/CropImageView;->getImageMatrix()Landroid/graphics/Matrix;
@@ -999,20 +1009,20 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
-    .line 429
+    .line 26
     invoke-virtual {v0}, Lcom/cropimage/g;->b()V
 
-    .line 430
+    .line 27
     iget-boolean v2, v0, Lcom/cropimage/g;->b:Z
 
     if-eqz v2, :cond_0
 
-    .line 431
-    invoke-direct {p0, v0}, Lcom/cropimage/CropImageView;->d(Lcom/cropimage/g;)V
+    .line 28
+    invoke-direct {p0, v0}, Lcom/cropimage/CropImageView;->c(Lcom/cropimage/g;)V
 
     goto :goto_0
 
-    .line 435
+    .line 32
     :cond_1
     return-void
 .end method
@@ -1031,25 +1041,25 @@
 
     const/4 v6, 0x0
 
-    .line 481
+    .line 78
     iget-object v0, p0, Lcom/cropimage/CropImageView;->m:Landroid/content/Context;
 
     check-cast v0, Lcom/cropimage/CropImage;
 
-    .line 482
+    .line 79
     iget-boolean v0, v0, Lcom/cropimage/CropImage;->a:Z
 
     if-eqz v0, :cond_1
 
-    .line 483
+    .line 80
     const/4 v3, 0x0
 
-    .line 547
+    .line 145
     :cond_0
     :goto_0
     return v3
 
-    .line 486
+    .line 83
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -1057,7 +1067,7 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 532
+    .line 130
     :cond_2
     :goto_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -1068,13 +1078,13 @@
 
     goto :goto_0
 
-    .line 534
+    .line 132
     :pswitch_0
     invoke-virtual {p0}, Lcom/cropimage/CropImageView;->a()V
 
     goto :goto_0
 
-    .line 488
+    .line 85
     :pswitch_1
     const/4 v0, 0x0
 
@@ -1089,7 +1099,7 @@
 
     if-ge v1, v0, :cond_2
 
-    .line 489
+    .line 86
     iget-object v0, p0, Lcom/cropimage/CropImageView;->a:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1098,7 +1108,7 @@
 
     check-cast v0, Lcom/cropimage/g;
 
-    .line 490
+    .line 87
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v7
@@ -1137,13 +1147,13 @@
 
     add-float/2addr v5, v7
 
-    float-to-double v7, v5
+    float-to-double v8, v5
 
-    invoke-static {v7, v8}, Ljava/lang/Math;->sqrt(D)D
+    invoke-static {v8, v9}, Ljava/lang/Math;->sqrt(D)D
 
-    move-result-wide v7
+    move-result-wide v8
 
-    double-to-int v5, v7
+    double-to-int v5, v8
 
     iget-object v7, v0, Lcom/cropimage/g;->e:Landroid/graphics/Rect;
 
@@ -1183,32 +1193,32 @@
 
     const/16 v2, 0x8
 
-    .line 491
+    .line 88
     :cond_3
     :goto_3
     if-eq v2, v3, :cond_f
 
-    .line 492
+    .line 89
     iput v2, p0, Lcom/cropimage/CropImageView;->e:I
 
-    .line 493
+    .line 90
     iput-object v0, p0, Lcom/cropimage/CropImageView;->b:Lcom/cropimage/g;
 
-    .line 494
+    .line 91
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v0
 
     iput v0, p0, Lcom/cropimage/CropImageView;->c:F
 
-    .line 495
+    .line 92
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
     iput v0, p0, Lcom/cropimage/CropImageView;->d:F
 
-    .line 496
+    .line 93
     iget-object v1, p0, Lcom/cropimage/CropImageView;->b:Lcom/cropimage/g;
 
     const/16 v0, 0x20
@@ -1222,7 +1232,7 @@
 
     goto/16 :goto_1
 
-    .line 490
+    .line 87
     :cond_4
     const/16 v2, 0x10
 
@@ -1405,13 +1415,13 @@
 
     goto :goto_6
 
-    .line 496
+    .line 93
     :cond_e
     sget-object v0, Lcom/cropimage/h;->c:Lcom/cropimage/h;
 
     goto/16 :goto_4
 
-    .line 488
+    .line 85
     :cond_f
     add-int/lit8 v0, v1, 0x1
 
@@ -1419,25 +1429,25 @@
 
     goto/16 :goto_2
 
-    .line 505
+    .line 103
     :pswitch_2
     iget-object v0, p0, Lcom/cropimage/CropImageView;->b:Lcom/cropimage/g;
 
     if-eqz v0, :cond_10
 
-    .line 506
+    .line 104
     iget-object v0, p0, Lcom/cropimage/CropImageView;->b:Lcom/cropimage/g;
 
-    invoke-direct {p0, v0}, Lcom/cropimage/CropImageView;->d(Lcom/cropimage/g;)V
+    invoke-direct {p0, v0}, Lcom/cropimage/CropImageView;->c(Lcom/cropimage/g;)V
 
-    .line 507
+    .line 105
     iget-object v0, p0, Lcom/cropimage/CropImageView;->b:Lcom/cropimage/g;
 
     sget-object v1, Lcom/cropimage/h;->a:Lcom/cropimage/h;
 
     invoke-virtual {v0, v1}, Lcom/cropimage/g;->a(Lcom/cropimage/h;)V
 
-    .line 510
+    .line 108
     :cond_10
     const/4 v0, 0x0
 
@@ -1445,13 +1455,13 @@
 
     goto/16 :goto_1
 
-    .line 513
+    .line 111
     :pswitch_3
     iget-object v0, p0, Lcom/cropimage/CropImageView;->b:Lcom/cropimage/g;
 
     if-eqz v0, :cond_2
 
-    .line 514
+    .line 112
     iget-object v5, p0, Lcom/cropimage/CropImageView;->b:Lcom/cropimage/g;
 
     iget v2, p0, Lcom/cropimage/CropImageView;->e:I
@@ -1608,7 +1618,7 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->invalidate(Landroid/graphics/Rect;)V
 
-    .line 517
+    .line 115
     :cond_11
     :goto_9
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -1617,21 +1627,21 @@
 
     iput v0, p0, Lcom/cropimage/CropImageView;->c:F
 
-    .line 518
+    .line 116
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v0
 
     iput v0, p0, Lcom/cropimage/CropImageView;->d:F
 
-    .line 526
+    .line 124
     iget-object v0, p0, Lcom/cropimage/CropImageView;->b:Lcom/cropimage/g;
 
-    invoke-direct {p0, v0}, Lcom/cropimage/CropImageView;->c(Lcom/cropimage/g;)V
+    invoke-direct {p0, v0}, Lcom/cropimage/CropImageView;->b(Lcom/cropimage/g;)V
 
     goto/16 :goto_1
 
-    .line 514
+    .line 112
     :cond_12
     and-int/lit8 v8, v2, 0x6
 
@@ -2011,9 +2021,9 @@
 
     goto :goto_f
 
-    .line 541
+    .line 139
     :pswitch_4
-    invoke-virtual {p0}, Lcom/cropimage/CropImageView;->b()F
+    invoke-virtual {p0}, Lcom/cropimage/CropImageView;->getScale()F
 
     move-result v0
 
@@ -2023,7 +2033,7 @@
 
     if-nez v0, :cond_0
 
-    .line 542
+    .line 140
     invoke-virtual {p0}, Lcom/cropimage/CropImageView;->a()V
 
     goto/16 :goto_0
@@ -2045,7 +2055,7 @@
 
     goto/16 :goto_7
 
-    .line 486
+    .line 83
     nop
 
     :pswitch_data_0
@@ -2055,10 +2065,50 @@
         :pswitch_3
     .end packed-switch
 
-    .line 532
+    .line 130
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_0
         :pswitch_4
     .end packed-switch
+.end method
+
+.method public bridge synthetic setImageBitmap(Landroid/graphics/Bitmap;)V
+    .locals 0
+
+    .prologue
+    .line 11
+    invoke-super {p0, p1}, Lcom/cropimage/i;->setImageBitmap(Landroid/graphics/Bitmap;)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setImageBitmapResetBase(Landroid/graphics/Bitmap;Z)V
+    .locals 0
+
+    .prologue
+    .line 11
+    invoke-super {p0, p1, p2}, Lcom/cropimage/i;->setImageBitmapResetBase(Landroid/graphics/Bitmap;Z)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setImageRotateBitmapResetBase(Lcom/cropimage/m;Z)V
+    .locals 0
+
+    .prologue
+    .line 11
+    invoke-super {p0, p1, p2}, Lcom/cropimage/i;->setImageRotateBitmapResetBase(Lcom/cropimage/m;Z)V
+
+    return-void
+.end method
+
+.method public bridge synthetic setRecycler(Lcom/cropimage/l;)V
+    .locals 0
+
+    .prologue
+    .line 11
+    invoke-super {p0, p1}, Lcom/cropimage/i;->setRecycler(Lcom/cropimage/l;)V
+
+    return-void
 .end method

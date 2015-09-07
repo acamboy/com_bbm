@@ -1,207 +1,259 @@
-.class final Lcom/bbm/ui/activities/sz;
-.super Ljava/lang/Object;
-.source "InviteActivity.java"
+.class public final Lcom/bbm/ui/activities/sz;
+.super Lcom/bbm/ui/ei;
+.source "GroupPictureShareActivity.java"
 
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lcom/bbm/ui/ei",
+        "<",
+        "Lcom/bbm/g/a;",
+        ">;"
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/InviteActivity;
+.field final b:Lcom/bbm/j/w;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lcom/bbm/j/w",
+            "<",
+            "Lcom/bbm/g/a;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field final synthetic c:Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/InviteActivity;)V
+.method public constructor <init>(Lcom/bbm/ui/activities/GroupPictureShareActivity;Lcom/bbm/j/w;)V
     .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/bbm/j/w",
+            "<",
+            "Lcom/bbm/g/a;",
+            ">;)V"
+        }
+    .end annotation
 
     .prologue
-    .line 396
-    iput-object p1, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
+    .line 120
+    iput-object p1, p0, Lcom/bbm/ui/activities/sz;->c:Lcom/bbm/ui/activities/GroupPictureShareActivity;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 121
+    invoke-direct {p0, p2}, Lcom/bbm/ui/ei;-><init>(Lcom/bbm/j/j;)V
 
+    .line 122
+    iput-object p2, p0, Lcom/bbm/ui/activities/sz;->b:Lcom/bbm/j/w;
+
+    .line 123
     return-void
 .end method
 
 
 # virtual methods
-.method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 5
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
+.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 3
 
     .prologue
-    const/16 v1, 0x8
+    .line 134
+    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->c:Lcom/bbm/ui/activities/GroupPictureShareActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupPictureShareActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f0300b0
 
     const/4 v2, 0x0
 
-    .line 400
-    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
+    invoke-virtual {v0, v1, p3, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    invoke-static {v0, p3}, Lcom/bbm/ui/activities/InviteActivity;->a(Lcom/bbm/ui/activities/InviteActivity;I)I
+    move-result-object v1
 
-    .line 401
-    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
+    .line 140
+    new-instance v2, Lcom/bbm/ui/activities/ta;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->m(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->c:Lcom/bbm/ui/activities/GroupPictureShareActivity;
+
+    invoke-direct {v2, v0}, Lcom/bbm/ui/activities/ta;-><init>(Lcom/bbm/ui/activities/GroupPictureShareActivity;)V
+
+    .line 141
+    const v0, 0x7f0b044e
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/ObservingImageView;
+
+    iput-object v0, v2, Lcom/bbm/ui/activities/ta;->a:Lcom/bbm/ui/ObservingImageView;
+
+    .line 142
+    const v0, 0x7f0b044f
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, v2, Lcom/bbm/ui/activities/ta;->b:Landroid/widget/TextView;
+
+    .line 143
+    invoke-virtual {v1, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    .line 145
+    return-object v1
+.end method
+
+.method public final a(I)Lcom/bbm/g/a;
+    .locals 1
+
+    .prologue
+    .line 128
+    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->b:Lcom/bbm/j/w;
+
+    invoke-interface {v0, p1}, Lcom/bbm/j/w;->a(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/g/a;
+
+    return-object v0
+.end method
+
+.method protected final synthetic a(Landroid/view/View;Ljava/lang/Object;)V
+    .locals 6
+
+    .prologue
+    .line 116
+    check-cast p2, Lcom/bbm/g/a;
+
+    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/ta;
+
+    iget-object v1, p2, Lcom/bbm/g/a;->r:Ljava/lang/String;
+
+    :try_start_0
+    iget-object v2, p2, Lcom/bbm/g/a;->d:Ljava/lang/String;
+
+    invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    iget-wide v2, p2, Lcom/bbm/g/a;->h:J
+
+    long-to-int v2, v2
+
+    iget-object v3, p0, Lcom/bbm/ui/activities/sz;->c:Lcom/bbm/ui/activities/GroupPictureShareActivity;
+
+    invoke-virtual {v3}, Lcom/bbm/ui/activities/GroupPictureShareActivity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
+    const v4, 0x7f070007
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->l(Lcom/bbm/ui/activities/InviteActivity;)Lcom/bbm/ui/activities/tc;
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->obtainTypedArray(I)Landroid/content/res/TypedArray;
 
-    move-result-object v0
+    move-result-object v3
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/tc;->a(I)Ljava/lang/String;
+    iget-object v4, v0, Lcom/bbm/ui/activities/ta;->a:Lcom/bbm/ui/ObservingImageView;
 
-    move-result-object v0
+    const/4 v5, 0x0
 
-    const-string v4, "None"
+    invoke-virtual {v3, v2, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    move-result v2
 
-    move-result v0
+    invoke-virtual {v4, v2}, Lcom/bbm/ui/ObservingImageView;->setImageResource(I)V
 
-    if-eqz v0, :cond_0
-
-    move v0, v1
+    invoke-virtual {v3}, Landroid/content/res/TypedArray;->recycle()V
 
     :goto_0
-    invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    iget-object v2, v0, Lcom/bbm/ui/activities/ta;->b:Landroid/widget/TextView;
 
-    .line 404
-    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
+    invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->o(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/bbm/ui/activities/ta;->b:Landroid/widget/TextView;
 
-    move-result-object v0
+    const/high16 v1, -0x1000000
 
-    iget-object v3, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/InviteActivity;->n(Lcom/bbm/ui/activities/InviteActivity;)[Ljava/lang/String;
-
-    move-result-object v3
-
-    aget-object v3, v3, p3
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 405
-    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->o(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/TextView;
-
-    move-result-object v3
-
-    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->l(Lcom/bbm/ui/activities/InviteActivity;)Lcom/bbm/ui/activities/tc;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/tc;->a(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v4, "None"
-
-    invoke-virtual {v0, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    move v0, v1
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
     :goto_1
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 408
-    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->p(Lcom/bbm/ui/activities/InviteActivity;)Landroid/widget/EditText;
-
-    move-result-object v0
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/InviteActivity;->l(Lcom/bbm/ui/activities/InviteActivity;)Lcom/bbm/ui/activities/tc;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p3}, Lcom/bbm/ui/activities/tc;->a(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    const-string v4, "Custom"
-
-    invoke-virtual {v3, v4}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-eqz v3, :cond_2
-
-    :goto_2
-    invoke-virtual {v0, v2}, Landroid/widget/EditText;->setVisibility(I)V
-
-    .line 411
-    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->e(Lcom/bbm/ui/activities/InviteActivity;)V
-
-    .line 412
     return-void
 
     :cond_0
-    move v0, v2
+    iget-object v2, p2, Lcom/bbm/g/a;->d:Ljava/lang/String;
 
-    .line 401
+    invoke-static {v2}, Landroid/graphics/drawable/Drawable;->createFromPath(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    if-nez v2, :cond_1
+
+    iget-object v2, v0, Lcom/bbm/ui/activities/ta;->a:Lcom/bbm/ui/ObservingImageView;
+
+    const v3, 0x7f0200da
+
+    invoke-virtual {v2, v3}, Lcom/bbm/ui/ObservingImageView;->setImageResource(I)V
+    :try_end_0
+    .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
+
     goto :goto_0
 
-    :cond_1
-    move v0, v2
+    :catch_0
+    move-exception v0
 
-    .line 405
+    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->c:Lcom/bbm/ui/activities/GroupPictureShareActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/GroupPictureShareActivity;->finish()V
+
     goto :goto_1
 
-    :cond_2
-    move v2, v1
+    :cond_1
+    :try_start_1
+    new-instance v3, Lcom/bbm/util/ct;
 
-    .line 408
-    goto :goto_2
+    new-instance v4, Lcom/bbm/d/ff;
+
+    invoke-direct {v4, v2}, Lcom/bbm/d/ff;-><init>(Landroid/graphics/drawable/Drawable;)V
+
+    invoke-direct {v3, v4}, Lcom/bbm/util/ct;-><init>(Ljava/lang/Object;)V
+
+    iget-object v2, v0, Lcom/bbm/ui/activities/ta;->a:Lcom/bbm/ui/ObservingImageView;
+
+    invoke-virtual {v2, v3}, Lcom/bbm/ui/ObservingImageView;->setObservableImage(Lcom/bbm/j/r;)V
+    :try_end_1
+    .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto :goto_0
 .end method
 
-.method public final onNothingSelected(Landroid/widget/AdapterView;)V
-    .locals 2
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;)V"
-        }
-    .end annotation
+.method public final synthetic getItem(I)Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 416
-    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
+    .line 116
+    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/sz;->a(I)Lcom/bbm/g/a;
 
-    const/4 v1, 0x0
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/InviteActivity;->a(Lcom/bbm/ui/activities/InviteActivity;I)I
-
-    .line 417
-    iget-object v0, p0, Lcom/bbm/ui/activities/sz;->a:Lcom/bbm/ui/activities/InviteActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/InviteActivity;->e(Lcom/bbm/ui/activities/InviteActivity;)V
-
-    .line 418
-    return-void
+    return-object v0
 .end method

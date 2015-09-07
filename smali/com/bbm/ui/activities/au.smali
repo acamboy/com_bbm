@@ -1,156 +1,80 @@
-.class public final Lcom/bbm/ui/activities/au;
-.super Lcom/bbm/ui/dt;
+.class final Lcom/bbm/ui/activities/au;
+.super Ljava/lang/Object;
 .source "BroadcastActivity.java"
 
 # interfaces
-.implements Landroid/widget/ListAdapter;
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/ui/dt",
-        "<",
-        "Lcom/bbm/d/do;",
-        "Ljava/lang/String;",
-        ">;",
-        "Landroid/widget/ListAdapter;"
-    }
-.end annotation
+.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic b:Lcom/bbm/ui/activities/BroadcastActivity;
-
-.field private final c:Landroid/view/LayoutInflater;
+.field final synthetic a:Lcom/bbm/ui/activities/BroadcastActivity;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/ui/activities/BroadcastActivity;Lcom/bbm/j/r;Landroid/content/Context;)V
-    .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Lcom/bbm/j/r",
-            "<",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/d/do;",
-            ">;>;",
-            "Landroid/content/Context;",
-            ")V"
-        }
-    .end annotation
+.method constructor <init>(Lcom/bbm/ui/activities/BroadcastActivity;)V
+    .locals 0
 
     .prologue
-    .line 509
-    iput-object p1, p0, Lcom/bbm/ui/activities/au;->b:Lcom/bbm/ui/activities/BroadcastActivity;
+    .line 196
+    iput-object p1, p0, Lcom/bbm/ui/activities/au;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    .line 510
-    invoke-direct {p0, p2}, Lcom/bbm/ui/dt;-><init>(Lcom/bbm/j/r;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 512
-    invoke-static {p3}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/bbm/ui/activities/au;->c:Landroid/view/LayoutInflater;
-
-    .line 513
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 4
+.method public final afterTextChanged(Landroid/text/Editable;)V
+    .locals 2
 
     .prologue
-    .line 522
-    new-instance v1, Lcom/bbm/ui/activities/av;
+    .line 210
+    const-string v0, "afterTextChanged"
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/av;-><init>(Lcom/bbm/ui/activities/au;)V
+    const-class v1, Lcom/bbm/ui/activities/BroadcastActivity;
 
-    .line 527
-    iget-object v0, p0, Lcom/bbm/ui/activities/au;->c:Landroid/view/LayoutInflater;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    const v2, 0x7f0300aa
+    .line 212
+    iget-object v0, p0, Lcom/bbm/ui/activities/au;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    const/4 v3, 0x0
-
-    invoke-virtual {v0, v2, p3, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v2
-
-    .line 528
-    const v0, 0x7f0a03d8
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {v0}, Lcom/bbm/ui/activities/BroadcastActivity;->f(Lcom/bbm/ui/activities/BroadcastActivity;)Lcom/bbm/util/ct;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/RelativeLayout;
+    iget-object v1, p0, Lcom/bbm/ui/activities/au;->a:Lcom/bbm/ui/activities/BroadcastActivity;
 
-    iput-object v0, v1, Lcom/bbm/ui/activities/av;->a:Landroid/widget/RelativeLayout;
-
-    .line 529
-    const v0, 0x7f0a03d9
-
-    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, v1, Lcom/bbm/ui/activities/av;->b:Landroid/widget/TextView;
-
-    .line 530
-    invoke-virtual {v2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
-
-    .line 532
-    return-object v2
-.end method
-
-.method protected final bridge synthetic a(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 505
-    check-cast p1, Lcom/bbm/d/do;
-
-    iget-object v0, p1, Lcom/bbm/d/do;->a:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method protected final synthetic a(Landroid/view/View;Ljava/lang/Object;)V
-    .locals 3
-
-    .prologue
-    .line 505
-    check-cast p2, Lcom/bbm/d/do;
-
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/av;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/au;->b:Lcom/bbm/ui/activities/BroadcastActivity;
-
-    iget-object v1, v1, Lcom/bbm/ui/activities/BroadcastActivity;->a:Lcom/bbm/d/a;
-
-    iget-object v2, p2, Lcom/bbm/d/do;->a:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->b(Ljava/lang/String;)Lcom/bbm/d/eu;
+    invoke-static {v1}, Lcom/bbm/ui/activities/BroadcastActivity;->e(Lcom/bbm/ui/activities/BroadcastActivity;)Landroid/widget/EditText;
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/av;->b:Landroid/widget/TextView;
+    invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
-    iget-object v1, v1, Lcom/bbm/d/eu;->d:Ljava/lang/String;
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
+
+    .line 213
+    return-void
+.end method
+
+.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .prologue
+    .line 206
+    return-void
+.end method
+
+.method public final onTextChanged(Ljava/lang/CharSequence;III)V
+    .locals 0
+
+    .prologue
+    .line 201
     return-void
 .end method

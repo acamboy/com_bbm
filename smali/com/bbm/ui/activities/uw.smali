@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/uw;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "InAppUpgradeActivity.java"
 
 # interfaces
-.implements Lcom/bbm/ui/ac;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/InAppUpgradeActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/InAppUpgradeActivity;)V
     .locals 0
 
     .prologue
-    .line 339
-    iput-object p1, p0, Lcom/bbm/ui/activities/uw;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 70
+    iput-object p1, p0, Lcom/bbm/ui/activities/uw;->a:Lcom/bbm/ui/activities/InAppUpgradeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,15 +25,41 @@
 
 
 # virtual methods
-.method public final a(I)V
-    .locals 1
+.method public final onClick(Landroid/content/DialogInterface;I)V
+    .locals 4
 
     .prologue
-    .line 342
-    iget-object v0, p0, Lcom/bbm/ui/activities/uw;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 73
+    iget-object v0, p0, Lcom/bbm/ui/activities/uw;->a:Lcom/bbm/ui/activities/InAppUpgradeActivity;
 
-    invoke-virtual {v0, p1}, Lcom/bbm/ui/activities/MainActivity;->a(I)V
+    invoke-static {v0}, Lcom/bbm/ui/activities/InAppUpgradeActivity;->a(Lcom/bbm/ui/activities/InAppUpgradeActivity;)Z
 
-    .line 343
+    .line 75
+    invoke-static {}, Lcom/bbm/Alaska;->h()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string v1, "inapp_upgrade_notification_last_show_timestamp"
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    invoke-interface {v0, v1, v2, v3}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 79
+    iget-object v0, p0, Lcom/bbm/ui/activities/uw;->a:Lcom/bbm/ui/activities/InAppUpgradeActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/InAppUpgradeActivity;->b(Lcom/bbm/ui/activities/InAppUpgradeActivity;)V
+
+    .line 80
     return-void
 .end method

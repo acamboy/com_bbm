@@ -1,5 +1,5 @@
 .class public Lcom/bbm/ui/activities/LegalActivity;
-.super Lcom/bbm/ui/activities/eg;
+.super Lcom/bbm/ui/activities/ey;
 .source "LegalActivity.java"
 
 
@@ -15,12 +15,12 @@
     .line 37
     const-class v0, Lcom/bbm/ui/activities/SettingsActivity;
 
-    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/eg;-><init>(Ljava/lang/Class;)V
+    invoke-direct {p0, v0}, Lcom/bbm/ui/activities/ey;-><init>(Ljava/lang/Class;)V
 
     .line 22
-    new-instance v0, Lcom/bbm/ui/activities/tf;
+    new-instance v0, Lcom/bbm/ui/activities/vr;
 
-    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/tf;-><init>(Lcom/bbm/ui/activities/LegalActivity;)V
+    invoke-direct {v0, p0}, Lcom/bbm/ui/activities/vr;-><init>(Lcom/bbm/ui/activities/LegalActivity;)V
 
     iput-object v0, p0, Lcom/bbm/ui/activities/LegalActivity;->a:Landroid/view/View$OnClickListener;
 
@@ -37,10 +37,10 @@
     const/4 v4, 0x0
 
     .line 42
-    invoke-super {p0, p1}, Lcom/bbm/ui/activities/eg;->onCreate(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/bbm/ui/activities/ey;->onCreate(Landroid/os/Bundle;)V
 
     .line 43
-    const v0, 0x7f030039
+    const v0, 0x7f03003e
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/LegalActivity;->setContentView(I)V
 
@@ -67,7 +67,7 @@
     move-result-object v6
 
     .line 48
-    const v0, 0x7f0a01d8
+    const v0, 0x7f0b022a
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/LegalActivity;->findViewById(I)Landroid/view/View;
 
@@ -110,7 +110,7 @@
     check-cast v1, Landroid/view/LayoutInflater;
 
     .line 53
-    const v2, 0x7f030112
+    const v2, 0x7f030127
 
     const/4 v7, 0x0
 
@@ -121,7 +121,7 @@
     check-cast v1, Landroid/widget/LinearLayout;
 
     .line 55
-    const v2, 0x7f0a0515
+    const v2, 0x7f0b05be
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->findViewById(I)Landroid/view/View;
 
@@ -161,7 +161,7 @@
     move-result-object v1
 
     .line 66
-    const v0, 0x7f030108
+    const v0, 0x7f03011a
 
     invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setCustomView(I)V
 
@@ -170,7 +170,7 @@
 
     move-result-object v0
 
-    const v2, 0x7f0a04f3
+    const v2, 0x7f0b058e
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -183,7 +183,7 @@
 
     move-result-object v2
 
-    const v3, 0x7f0e049e
+    const v3, 0x7f0e04fd
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -197,7 +197,7 @@
     invoke-virtual {v1, v0}, Landroid/app/ActionBar;->setDisplayOptions(I)V
 
     .line 71
-    const v0, 0x7f0a00a0
+    const v0, 0x7f0b00bf
 
     invoke-virtual {p0, v0}, Lcom/bbm/ui/activities/LegalActivity;->findViewById(I)Landroid/view/View;
 
@@ -209,11 +209,11 @@
     invoke-virtual {v0, v4}, Lcom/bbm/ui/FooterActionBar;->setOverflowEnabled(Z)V
 
     .line 73
-    new-instance v1, Lcom/bbm/ui/activities/tg;
+    new-instance v1, Lcom/bbm/ui/activities/vs;
 
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/tg;-><init>(Lcom/bbm/ui/activities/LegalActivity;)V
+    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/vs;-><init>(Lcom/bbm/ui/activities/LegalActivity;)V
 
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/by;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/FooterActionBar;->setFooterActionBarListener(Lcom/bbm/ui/cn;)V
 
     .line 81
     return-void
@@ -224,7 +224,7 @@
 
     .prologue
     .line 90
-    invoke-super {p0}, Lcom/bbm/ui/activities/eg;->onPause()V
+    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onPause()V
 
     .line 91
     return-void
@@ -235,7 +235,7 @@
 
     .prologue
     .line 85
-    invoke-super {p0}, Lcom/bbm/ui/activities/eg;->onResume()V
+    invoke-super {p0}, Lcom/bbm/ui/activities/ey;->onResume()V
 
     .line 86
     return-void

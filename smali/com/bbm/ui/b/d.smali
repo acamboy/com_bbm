@@ -3,20 +3,20 @@
 .source "BBChannelDateOfBirthDialog.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemSelectedListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/b/b;
+.field final synthetic a:Lcom/bbm/ui/b/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/b/b;)V
+.method constructor <init>(Lcom/bbm/ui/b/a;)V
     .locals 0
 
     .prologue
-    .line 113
-    iput-object p1, p0, Lcom/bbm/ui/b/d;->a:Lcom/bbm/ui/b/b;
+    .line 128
+    iput-object p1, p0, Lcom/bbm/ui/b/d;->a:Lcom/bbm/ui/b/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,39 +25,38 @@
 
 
 # virtual methods
-.method public final onItemSelected(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+.method public final onClick(Landroid/view/View;)V
     .locals 1
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)V"
-        }
-    .end annotation
 
     .prologue
-    .line 116
-    iget-object v0, p0, Lcom/bbm/ui/b/d;->a:Lcom/bbm/ui/b/b;
+    .line 132
+    iget-object v0, p0, Lcom/bbm/ui/b/d;->a:Lcom/bbm/ui/b/a;
 
-    invoke-static {v0}, Lcom/bbm/ui/b/b;->c(Lcom/bbm/ui/b/b;)V
+    invoke-static {v0}, Lcom/bbm/ui/b/a;->d(Lcom/bbm/ui/b/a;)Landroid/widget/TextView;
 
-    .line 117
+    move-result-object v0
+
+    if-ne p1, v0, :cond_0
+
+    .line 133
+    iget-object v0, p0, Lcom/bbm/ui/b/d;->a:Lcom/bbm/ui/b/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/a;->e(Lcom/bbm/ui/b/a;)V
+
+    .line 134
+    iget-object v0, p0, Lcom/bbm/ui/b/d;->a:Lcom/bbm/ui/b/a;
+
+    invoke-static {v0}, Lcom/bbm/ui/b/a;->f(Lcom/bbm/ui/b/a;)V
+
+    .line 138
+    :goto_0
     return-void
-.end method
 
-.method public final onNothingSelected(Landroid/widget/AdapterView;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;)V"
-        }
-    .end annotation
+    .line 136
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/b/d;->a:Lcom/bbm/ui/b/a;
 
-    .prologue
-    .line 122
-    return-void
+    invoke-virtual {v0}, Lcom/bbm/ui/b/a;->dismiss()V
+
+    goto :goto_0
 .end method

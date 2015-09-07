@@ -1,132 +1,83 @@
 .class final Lcom/bbm/l/b;
-.super Lcom/bbm/j/k;
-.source "MediaCallManager.java"
+.super Lcom/bbm/j/u;
+.source "PaymentController.java"
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/l/a;
+.field final synthetic a:Lcom/bbm/l/d/b/c;
+
+.field final synthetic b:Lcom/bbm/l/a;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/l/a;)V
-    .locals 1
+.method constructor <init>(Lcom/bbm/l/a;Lcom/bbm/l/d/b/c;)V
+    .locals 0
 
     .prologue
-    .line 135
-    iput-object p1, p0, Lcom/bbm/l/b;->a:Lcom/bbm/l/a;
+    .line 92
+    iput-object p1, p0, Lcom/bbm/l/b;->b:Lcom/bbm/l/a;
 
-    const/4 v0, 0x0
+    iput-object p2, p0, Lcom/bbm/l/b;->a:Lcom/bbm/l/d/b/c;
 
-    invoke-direct {p0, v0}, Lcom/bbm/j/k;-><init>(B)V
+    invoke-direct {p0}, Lcom/bbm/j/u;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a()V
+.method protected final b()Z
     .locals 3
 
     .prologue
-    const/4 v2, -0x1
-
-    .line 138
-    iget-object v0, p0, Lcom/bbm/l/b;->a:Lcom/bbm/l/a;
-
-    invoke-static {v0}, Lcom/bbm/l/a;->d(Lcom/bbm/l/a;)Lcom/bbm/util/cq;
+    .line 96
+    invoke-static {}, Lcom/bbm/Alaska;->j()Lcom/bbm/f/ae;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/cq;->a()Z
+    .line 97
+    iget-boolean v1, v0, Lcom/bbm/f/ae;->i:Z
 
-    move-result v0
+    if-eqz v1, :cond_0
 
-    if-eqz v0, :cond_0
+    .line 98
+    iget-object v1, p0, Lcom/bbm/l/b;->a:Lcom/bbm/l/d/b/c;
 
-    .line 141
-    iget-object v0, p0, Lcom/bbm/l/b;->a:Lcom/bbm/l/a;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-static {v0}, Lcom/bbm/l/a;->a(Lcom/bbm/l/a;)Lcom/bbm/j/t;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    move-result-object v0
+    iget-object v0, v0, Lcom/bbm/f/ae;->e:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/bbm/j/t;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    .line 142
-    packed-switch v0, :pswitch_data_0
-
-    move v1, v2
-
-    .line 153
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/l/b;->a:Lcom/bbm/l/a;
-
-    invoke-static {v0}, Lcom/bbm/l/a;->e(Lcom/bbm/l/a;)I
-
-    move-result v0
-
-    if-eq v0, v2, :cond_0
-
-    if-eq v1, v2, :cond_0
-
-    .line 154
-    iget-object v0, p0, Lcom/bbm/l/b;->a:Lcom/bbm/l/a;
-
-    invoke-static {v0}, Lcom/bbm/l/a;->f(Lcom/bbm/l/a;)Lcom/google/b/a/l;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+    const-string v2, "AndroidBlackBerryBBM"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Lcom/rim/bbm/BbmMediaCallService;
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/bbm/l/b;->a:Lcom/bbm/l/a;
+    move-result-object v0
 
-    invoke-static {v2}, Lcom/bbm/l/a;->e(Lcom/bbm/l/a;)I
+    invoke-static {v0}, Lcom/blackberry/ids/IDS;->hashEcoId(Ljava/lang/String;)Ljava/lang/String;
 
-    move-result v2
+    move-result-object v0
 
-    invoke-virtual {v0, v2, v1}, Lcom/rim/bbm/BbmMediaCallService;->endCall(II)I
+    iput-object v0, v1, Lcom/bbm/l/d/b/c;->c:Ljava/lang/String;
 
-    .line 157
-    :cond_0
-    return-void
-
-    .line 146
-    :pswitch_0
-    const/4 v0, 0x0
-
-    move v1, v0
-
-    .line 147
-    goto :goto_0
-
-    .line 149
-    :pswitch_1
+    .line 99
     const/4 v0, 0x1
 
-    move v1, v0
+    .line 101
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
-
-    .line 142
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_1
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-    .end packed-switch
 .end method

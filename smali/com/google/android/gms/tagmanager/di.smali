@@ -43,11 +43,11 @@
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 6
+    .locals 8
 
-    const-wide/16 v4, 0x0
+    const-wide/16 v6, 0x0
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
     const/4 v0, 0x0
 
@@ -55,19 +55,19 @@
 
     new-instance v0, Ljava/lang/Long;
 
-    invoke-direct {v0, v4, v5}, Ljava/lang/Long;-><init>(J)V
+    invoke-direct {v0, v6, v7}, Ljava/lang/Long;-><init>(J)V
 
     sput-object v0, Lcom/google/android/gms/tagmanager/di;->XJ:Ljava/lang/Long;
 
     new-instance v0, Ljava/lang/Double;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    invoke-direct {v0, v1, v2}, Ljava/lang/Double;-><init>(D)V
+    invoke-direct {v0, v2, v3}, Ljava/lang/Double;-><init>(D)V
 
     sput-object v0, Lcom/google/android/gms/tagmanager/di;->XK:Ljava/lang/Double;
 
-    invoke-static {v4, v5}, Lcom/google/android/gms/tagmanager/dh;->v(J)Lcom/google/android/gms/tagmanager/dh;
+    invoke-static {v6, v7}, Lcom/google/android/gms/tagmanager/dh;->v(J)Lcom/google/android/gms/tagmanager/dh;
 
     move-result-object v0
 
@@ -83,13 +83,13 @@
 
     new-instance v0, Ljava/lang/Boolean;
 
-    invoke-direct {v0, v3}, Ljava/lang/Boolean;-><init>(Z)V
+    invoke-direct {v0, v4}, Ljava/lang/Boolean;-><init>(Z)V
 
     sput-object v0, Lcom/google/android/gms/tagmanager/di;->XN:Ljava/lang/Boolean;
 
     new-instance v0, Ljava/util/ArrayList;
 
-    invoke-direct {v0, v3}, Ljava/util/ArrayList;-><init>(I)V
+    invoke-direct {v0, v4}, Ljava/util/ArrayList;-><init>(I)V
 
     sput-object v0, Lcom/google/android/gms/tagmanager/di;->XO:Ljava/util/List;
 

@@ -1,9 +1,9 @@
 .class final Lcom/bbm/ui/c/he;
 .super Ljava/lang/Object;
-.source "StoreFragment.java"
+.source "StickerDetailsFragment.java"
 
 # interfaces
-.implements Lcom/bbm/store/b/i;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 188
+    .line 899
     iput-object p1, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -25,150 +25,58 @@
 
 
 # virtual methods
-.method public final a(Ljava/util/List;)V
+.method public final onClick(Landroid/view/View;)V
     .locals 4
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/util/List",
-            "<",
-            "Lcom/bbm/store/dataobjects/WebStickerPack;",
-            ">;)V"
-        }
-    .end annotation
 
     .prologue
-    const/4 v3, 0x0
-
-    const/16 v2, 0x8
-
-    .line 191
+    .line 902
     iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->a(Lcom/bbm/ui/c/hc;)Landroid/view/View;
+    invoke-virtual {v0}, Lcom/bbm/ui/c/hc;->dismiss()V
+
+    .line 903
+    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
+
+    iget-object v0, v0, Lcom/bbm/ui/c/hc;->a:Lcom/bbm/ui/c/gr;
+
+    invoke-static {v0}, Lcom/bbm/ui/c/gr;->k(Lcom/bbm/ui/c/gr;)Landroid/os/Handler;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    iget-object v1, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
 
-    .line 192
-    if-eqz p1, :cond_0
+    iget-object v1, v1, Lcom/bbm/ui/c/hc;->a:Lcom/bbm/ui/c/gr;
 
-    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+    invoke-static {v1}, Lcom/bbm/ui/c/gr;->j(Lcom/bbm/ui/c/gr;)Ljava/lang/Runnable;
 
-    move-result v0
+    move-result-object v1
 
-    if-nez v0, :cond_0
+    const-wide/16 v2, 0x7530
 
-    .line 193
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 904
     iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->e(Lcom/bbm/ui/c/hc;)I
+    iget-object v0, v0, Lcom/bbm/ui/c/hc;->a:Lcom/bbm/ui/c/gr;
 
-    .line 194
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->f(Lcom/bbm/ui/c/hc;)Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
+    invoke-virtual {v0}, Lcom/bbm/ui/c/gr;->getActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setVisibility(I)V
+    const/4 v1, 0x0
 
-    .line 195
+    invoke-static {v0, v1}, Lcom/bbm/l/a;->a(Landroid/app/Activity;Z)V
+
+    .line 908
     iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->b(Lcom/bbm/ui/c/hc;)Landroid/view/View;
+    iget-object v0, v0, Lcom/bbm/ui/c/hc;->a:Lcom/bbm/ui/c/gr;
 
-    move-result-object v0
+    sget-object v1, Lcom/bbm/ui/c/hv;->c:Lcom/bbm/ui/c/hv;
 
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
+    invoke-static {v0, v1}, Lcom/bbm/ui/c/gr;->a(Lcom/bbm/ui/c/gr;Lcom/bbm/ui/c/hv;)V
 
-    .line 196
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    iput-object p1, v0, Lcom/bbm/ui/c/hc;->a:Ljava/util/List;
-
-    .line 197
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    iget-object v0, v0, Lcom/bbm/ui/c/hc;->b:Lcom/bbm/d/b/f;
-
-    iget-object v0, v0, Lcom/bbm/d/b/f;->e:Lcom/bbm/j/a;
-
-    invoke-virtual {v0}, Lcom/bbm/j/a;->c()V
-
-    .line 210
-    :goto_0
+    .line 909
     return-void
-
-    .line 199
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->f(Lcom/bbm/ui/c/hc;)Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersGridView;->setVisibility(I)V
-
-    .line 200
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->b(Lcom/bbm/ui/c/hc;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    .line 201
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->g(Lcom/bbm/ui/c/hc;)I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ge v0, v1, :cond_1
-
-    .line 202
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->h(Lcom/bbm/ui/c/hc;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
-
-    .line 203
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->i(Lcom/bbm/ui/c/hc;)Landroid/widget/Button;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/widget/Button;->setVisibility(I)V
-
-    goto :goto_0
-
-    .line 206
-    :cond_1
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->h(Lcom/bbm/ui/c/hc;)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
-
-    .line 207
-    iget-object v0, p0, Lcom/bbm/ui/c/he;->a:Lcom/bbm/ui/c/hc;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/hc;->i(Lcom/bbm/ui/c/hc;)Landroid/widget/Button;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Landroid/widget/Button;->setVisibility(I)V
-
-    goto :goto_0
 .end method

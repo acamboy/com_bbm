@@ -385,7 +385,7 @@
     .line 177
     iget-object v0, p0, Lcom/glympse/android/controls/ClearableEditText;->_editText:Lcom/glympse/android/controls/EditText;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/glympse/android/controls/EditText;->toString()Ljava/lang/String;
 
     move-result-object v0
 

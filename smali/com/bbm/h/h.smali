@@ -1,29 +1,27 @@
 .class final Lcom/bbm/h/h;
 .super Ljava/lang/Object;
-.source "InviteUtil.java"
+.source "AddContactsAdapter.java"
 
 # interfaces
-.implements Ljava/util/Comparator;
+.implements Landroid/view/View$OnLongClickListener;
 
 
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Ljava/lang/Object;",
-        "Ljava/util/Comparator",
-        "<",
-        "Lcom/bbm/h/a;",
-        ">;"
-    }
-.end annotation
+# instance fields
+.field final synthetic a:Lcom/bbm/b/a;
+
+.field final synthetic b:Lcom/bbm/h/a;
 
 
 # direct methods
-.method constructor <init>()V
+.method constructor <init>(Lcom/bbm/h/a;Lcom/bbm/b/a;)V
     .locals 0
 
     .prologue
-    .line 720
+    .line 415
+    iput-object p1, p0, Lcom/bbm/h/h;->b:Lcom/bbm/h/a;
+
+    iput-object p2, p0, Lcom/bbm/h/h;->a:Lcom/bbm/b/a;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,39 +29,25 @@
 
 
 # virtual methods
-.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 5
+.method public final onLongClick(Landroid/view/View;)Z
+    .locals 2
 
     .prologue
-    .line 720
-    check-cast p1, Lcom/bbm/h/a;
+    .line 418
+    iget-object v1, p0, Lcom/bbm/h/h;->a:Lcom/bbm/b/a;
 
-    check-cast p2, Lcom/bbm/h/a;
+    iget-object v0, p0, Lcom/bbm/h/h;->b:Lcom/bbm/h/a;
 
-    iget-wide v0, p1, Lcom/bbm/h/a;->b:J
+    invoke-static {v0}, Lcom/bbm/h/a;->b(Lcom/bbm/h/a;)Landroid/app/Activity;
 
-    iget-wide v2, p2, Lcom/bbm/h/a;->b:J
+    move-result-object v0
 
-    cmp-long v4, v0, v2
+    check-cast v0, Lcom/bbm/ui/activities/MainActivity;
 
-    if-gez v4, :cond_0
+    invoke-static {v1, v0}, Lcom/bbm/b/j;->a(Lcom/bbm/b/a;Lcom/bbm/ui/activities/MainActivity;)V
 
+    .line 419
     const/4 v0, 0x1
 
-    :goto_0
     return v0
-
-    :cond_0
-    cmp-long v0, v0, v2
-
-    if-lez v0, :cond_1
-
-    const/4 v0, -0x1
-
-    goto :goto_0
-
-    :cond_1
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

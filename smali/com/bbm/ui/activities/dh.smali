@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/dh;
 .super Ljava/lang/Object;
-.source "ChannelReportsActivity.java"
+.source "ChannelPickerActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.implements Landroid/widget/AdapterView$OnItemClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelReportsActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelPickerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelReportsActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelPickerActivity;)V
     .locals 0
 
     .prologue
-    .line 512
-    iput-object p1, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
+    .line 118
+    iput-object p1, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,125 +25,57 @@
 
 
 # virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 5
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 3
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
             "Landroid/widget/AdapterView",
             "<*>;",
             "Landroid/view/View;",
-            "IJ)Z"
+            "IJ)V"
         }
     .end annotation
 
     .prologue
-    .line 516
-    const-string v0, "Flagged post long clicked"
+    .line 122
+    iget-object v0, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
 
-    const-class v1, Lcom/bbm/ui/activities/ChannelReportsActivity;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
-
-    .line 517
-    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/activities/dk;
-
-    .line 518
-    iget-object v0, v0, Lcom/bbm/ui/activities/dk;->b:Lcom/bbm/ui/activities/dl;
-
-    .line 520
-    if-eqz v0, :cond_0
-
-    iget-object v1, v0, Lcom/bbm/ui/activities/dl;->a:Ljava/lang/String;
-
-    invoke-static {v1}, Lcom/bbm/util/df;->b(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 521
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
-
-    const v2, 0x7f0e01e6
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/ChannelReportsActivity;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    const/4 v2, 0x0
+    .line 123
+    const-string v2, "picked channel"
 
-    invoke-static {v0, v1, v2}, Lcom/bbm/util/eo;->a(Landroid/content/Context;Ljava/lang/String;I)V
+    iget-object v0, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
 
-    .line 533
-    :goto_0
-    const/4 v0, 0x1
-
-    return v0
-
-    .line 523
-    :cond_1
-    iget-object v1, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
-
-    invoke-virtual {v1, p2}, Lcom/bbm/ui/activities/ChannelReportsActivity;->setHighlightedRow$5359dc9a(Landroid/view/View;)V
-
-    .line 524
-    iget-object v1, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/ChannelReportsActivity;->k()Lcom/bbm/ui/c/fq;
-
-    move-result-object v1
-
-    .line 526
-    iget-object v2, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelReportsActivity;->l(Lcom/bbm/ui/activities/ChannelReportsActivity;)Lcom/bbm/ui/activities/dm;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_2
-
-    .line 527
-    iget-object v2, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelReportsActivity;->l(Lcom/bbm/ui/activities/ChannelReportsActivity;)Lcom/bbm/ui/activities/dm;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/dm;->d()V
-
-    .line 529
-    :cond_2
-    iget-object v2, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
-
-    new-instance v3, Lcom/bbm/ui/activities/dm;
-
-    iget-object v4, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
-
-    invoke-direct {v3, v4, v1, v0}, Lcom/bbm/ui/activities/dm;-><init>(Lcom/bbm/ui/activities/ChannelReportsActivity;Lcom/bbm/ui/c/fq;Lcom/bbm/ui/activities/dl;)V
-
-    invoke-static {v2, v3}, Lcom/bbm/ui/activities/ChannelReportsActivity;->a(Lcom/bbm/ui/activities/ChannelReportsActivity;Lcom/bbm/ui/activities/dm;)Lcom/bbm/ui/activities/dm;
-
-    .line 530
-    iget-object v0, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->l(Lcom/bbm/ui/activities/ChannelReportsActivity;)Lcom/bbm/ui/activities/dm;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->c(Lcom/bbm/ui/activities/ChannelPickerActivity;)Lcom/bbm/ui/activities/dj;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/dm;->c()V
+    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/dj;->getItem(I)Ljava/lang/Object;
 
-    .line 531
-    iget-object v0, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelReportsActivity;
+    move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelReportsActivity;->w()V
+    check-cast v0, Lcom/bbm/d/ee;
 
-    goto :goto_0
+    iget-object v0, v0, Lcom/bbm/d/ee;->O:Ljava/lang/String;
+
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 124
+    iget-object v0, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
+
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2, v1}, Lcom/bbm/ui/activities/ChannelPickerActivity;->setResult(ILandroid/content/Intent;)V
+
+    .line 125
+    iget-object v0, p0, Lcom/bbm/ui/activities/dh;->a:Lcom/bbm/ui/activities/ChannelPickerActivity;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/ChannelPickerActivity;->finish()V
+
+    .line 126
+    return-void
 .end method

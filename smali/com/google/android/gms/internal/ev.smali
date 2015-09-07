@@ -402,7 +402,7 @@
     throw v0
 .end method
 
-.method protected sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
     .annotation system Ldalvik/annotation/Signature;
         value = {

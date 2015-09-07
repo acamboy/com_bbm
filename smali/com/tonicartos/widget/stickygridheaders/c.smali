@@ -16,17 +16,17 @@
     .locals 0
 
     .prologue
-    .line 484
+    .line 514
     iput-object p1, p0, Lcom/tonicartos/widget/stickygridheaders/c;->c:Lcom/tonicartos/widget/stickygridheaders/StickyGridHeadersBaseAdapterWrapper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 485
+    .line 515
     iput p2, p0, Lcom/tonicartos/widget/stickygridheaders/c;->b:I
 
-    .line 486
+    .line 516
     iput p3, p0, Lcom/tonicartos/widget/stickygridheaders/c;->a:I
 
-    .line 487
+    .line 517
     return-void
 .end method

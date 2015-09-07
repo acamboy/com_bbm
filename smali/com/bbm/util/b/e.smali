@@ -9,7 +9,7 @@
         "Landroid/util/LruCache",
         "<",
         "Ljava/lang/String;",
-        "Lcom/bbm/d/dw;",
+        "Lcom/bbm/d/ff;",
         ">;"
     }
 .end annotation
@@ -39,30 +39,30 @@
 
     .prologue
     .line 115
-    check-cast p3, Lcom/bbm/d/dw;
+    check-cast p3, Lcom/bbm/d/ff;
 
-    instance-of v0, p3, Lcom/bbm/util/cw;
+    instance-of v0, p3, Lcom/bbm/util/dh;
 
     if-eqz v0, :cond_1
 
-    check-cast p3, Lcom/bbm/util/cw;
+    check-cast p3, Lcom/bbm/util/dh;
 
     const/4 v0, 0x0
 
-    invoke-virtual {p3, v0}, Lcom/bbm/util/cw;->a(Z)V
+    invoke-virtual {p3, v0}, Lcom/bbm/util/dh;->a(Z)V
 
     :cond_0
     :goto_0
     return-void
 
     :cond_1
-    invoke-static {}, Lcom/bbm/util/eo;->b()Z
+    invoke-static {}, Lcom/bbm/util/fh;->b()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p3}, Lcom/bbm/d/dw;->b()Landroid/graphics/drawable/BitmapDrawable;
+    invoke-virtual {p3}, Lcom/bbm/d/ff;->b()Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v0
 
@@ -76,7 +76,7 @@
 
     new-instance v1, Ljava/lang/ref/SoftReference;
 
-    invoke-virtual {p3}, Lcom/bbm/d/dw;->b()Landroid/graphics/drawable/BitmapDrawable;
+    invoke-virtual {p3}, Lcom/bbm/d/ff;->b()Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v2
 
@@ -98,35 +98,35 @@
     const/4 v1, 0x1
 
     .line 115
-    check-cast p2, Lcom/bbm/d/dw;
+    check-cast p2, Lcom/bbm/d/ff;
 
-    iget-boolean v0, p2, Lcom/bbm/d/dw;->a:Z
+    iget-boolean v0, p2, Lcom/bbm/d/ff;->a:Z
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {p2}, Lcom/bbm/d/dw;->a()Lcom/bbm/ui/ca;
+    invoke-virtual {p2}, Lcom/bbm/d/ff;->a()Lcom/bbm/ui/cp;
 
     move-result-object v2
 
     if-eqz v2, :cond_3
 
-    invoke-virtual {v2}, Lcom/bbm/ui/ca;->getIntrinsicWidth()I
+    invoke-virtual {v2}, Lcom/bbm/ui/cp;->getIntrinsicWidth()I
 
     move-result v0
 
     if-lez v0, :cond_3
 
-    invoke-virtual {v2}, Lcom/bbm/ui/ca;->getIntrinsicHeight()I
+    invoke-virtual {v2}, Lcom/bbm/ui/cp;->getIntrinsicHeight()I
 
     move-result v0
 
     if-lez v0, :cond_3
 
-    invoke-virtual {v2}, Lcom/bbm/ui/ca;->getIntrinsicWidth()I
+    invoke-virtual {v2}, Lcom/bbm/ui/cp;->getIntrinsicWidth()I
 
     move-result v0
 
-    invoke-virtual {v2}, Lcom/bbm/ui/ca;->getIntrinsicHeight()I
+    invoke-virtual {v2}, Lcom/bbm/ui/cp;->getIntrinsicHeight()I
 
     move-result v3
 
@@ -137,7 +137,7 @@
     div-int/lit16 v0, v0, 0x400
 
     :goto_0
-    invoke-virtual {v2}, Lcom/bbm/ui/ca;->a()[B
+    invoke-virtual {v2}, Lcom/bbm/ui/cp;->a()[B
 
     move-result-object v2
 
@@ -156,7 +156,7 @@
     return v1
 
     :cond_1
-    invoke-virtual {p2}, Lcom/bbm/d/dw;->b()Landroid/graphics/drawable/BitmapDrawable;
+    invoke-virtual {p2}, Lcom/bbm/d/ff;->b()Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v0
 

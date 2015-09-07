@@ -1,77 +1,86 @@
 .class final Landroid/support/v4/widget/s;
 .super Ljava/lang/Object;
-.source "SlidingPaneLayout.java"
+.source "EdgeEffectCompat.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final a:Landroid/view/View;
-
-.field final synthetic b:Landroid/support/v4/widget/SlidingPaneLayout;
+.implements Landroid/support/v4/widget/u;
 
 
 # direct methods
-.method constructor <init>(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
+.method constructor <init>()V
     .locals 0
 
     .prologue
-    .line 1484
-    iput-object p1, p0, Landroid/support/v4/widget/s;->b:Landroid/support/v4/widget/SlidingPaneLayout;
-
+    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1485
-    iput-object p2, p0, Landroid/support/v4/widget/s;->a:Landroid/view/View;
-
-    .line 1486
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final a(Landroid/content/Context;)Ljava/lang/Object;
+    .locals 1
 
     .prologue
-    .line 1490
-    iget-object v0, p0, Landroid/support/v4/widget/s;->a:Landroid/view/View;
+    .line 60
+    const/4 v0, 0x0
 
-    invoke-virtual {v0}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final a(Ljava/lang/Object;II)V
+    .locals 0
 
-    iget-object v1, p0, Landroid/support/v4/widget/s;->b:Landroid/support/v4/widget/SlidingPaneLayout;
-
-    if-ne v0, v1, :cond_0
-
-    .line 1491
-    iget-object v0, p0, Landroid/support/v4/widget/s;->a:Landroid/view/View;
-
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-static {v0, v1, v2}, Landroid/support/v4/view/as;->a(Landroid/view/View;ILandroid/graphics/Paint;)V
-
-    .line 1492
-    iget-object v0, p0, Landroid/support/v4/widget/s;->b:Landroid/support/v4/widget/SlidingPaneLayout;
-
-    iget-object v1, p0, Landroid/support/v4/widget/s;->a:Landroid/view/View;
-
-    invoke-static {v0, v1}, Landroid/support/v4/widget/SlidingPaneLayout;->a(Landroid/support/v4/widget/SlidingPaneLayout;Landroid/view/View;)V
-
-    .line 1494
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/widget/s;->b:Landroid/support/v4/widget/SlidingPaneLayout;
-
-    invoke-static {v0}, Landroid/support/v4/widget/SlidingPaneLayout;->f(Landroid/support/v4/widget/SlidingPaneLayout;)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
-
-    .line 1495
+    .prologue
+    .line 64
     return-void
+.end method
+
+.method public final a(Ljava/lang/Object;)Z
+    .locals 1
+
+    .prologue
+    .line 67
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final a(Ljava/lang/Object;F)Z
+    .locals 1
+
+    .prologue
+    .line 74
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
+    .locals 1
+
+    .prologue
+    .line 86
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final b(Ljava/lang/Object;)V
+    .locals 0
+
+    .prologue
+    .line 71
+    return-void
+.end method
+
+.method public final c(Ljava/lang/Object;)Z
+    .locals 1
+
+    .prologue
+    .line 78
+    const/4 v0, 0x0
+
+    return v0
 .end method

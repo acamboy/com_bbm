@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/br;
 .super Ljava/lang/Object;
-.source "ChannelChatListActivity.java"
+.source "ChangeStatusActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Landroid/widget/AdapterView$OnItemLongClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ChannelChatListActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelChatListActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChangeStatusActivity;)V
     .locals 0
 
     .prologue
-    .line 153
-    iput-object p1, p0, Lcom/bbm/ui/activities/br;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
+    .line 81
+    iput-object p1, p0, Lcom/bbm/ui/activities/br;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,68 +25,83 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)Z"
+        }
+    .end annotation
 
     .prologue
-    .line 159
-    :try_start_0
-    new-instance v0, Lorg/json/JSONObject;
+    .line 85
+    const-string v0, "mItemLongClickListener onItemLongClick"
 
-    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+    const-class v1, Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    .line 160
-    const-string v1, "chatEnabled"
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    const/4 v2, 0x1
+    .line 86
+    iget-object v1, p0, Lcom/bbm/ui/activities/br;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Z)Lorg/json/JSONObject;
+    iget-object v0, p0, Lcom/bbm/ui/activities/br;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    .line 161
-    const-string v1, "uri"
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/br;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/ChannelChatListActivity;->b()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
-
-    .line 162
-    new-instance v1, Ljava/util/LinkedList;
-
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
-
-    .line 163
-    invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 164
-    iget-object v0, p0, Lcom/bbm/ui/activities/br;->a:Lcom/bbm/ui/activities/ChannelChatListActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelChatListActivity;->a(Lcom/bbm/ui/activities/ChannelChatListActivity;)Lcom/bbm/d/a;
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->a(Lcom/bbm/ui/activities/ChangeStatusActivity;)Lcom/bbm/ui/activities/cb;
 
     move-result-object v0
 
-    const-string v2, "channel"
+    invoke-virtual {v0, p3}, Lcom/bbm/ui/activities/cb;->getItem(I)Ljava/lang/Object;
 
-    invoke-static {v1, v2}, Lcom/bbm/d/y;->b(Ljava/util/List;Ljava/lang/String;)Lcom/bbm/d/cg;
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/d/gg;
+
+    iget-wide v2, v0, Lcom/bbm/d/gg;->a:J
+
+    invoke-static {v1, v2, v3}, Lcom/bbm/ui/activities/ChangeStatusActivity;->a(Lcom/bbm/ui/activities/ChangeStatusActivity;J)J
+
+    .line 87
+    iget-object v0, p0, Lcom/bbm/ui/activities/br;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->b(Lcom/bbm/ui/activities/ChangeStatusActivity;)Landroid/view/ActionMode;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    .line 88
+    iget-object v0, p0, Lcom/bbm/ui/activities/br;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/br;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
+
+    iget-object v2, p0, Lcom/bbm/ui/activities/br;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/ChangeStatusActivity;->c(Lcom/bbm/ui/activities/ChangeStatusActivity;)Landroid/view/ActionMode$Callback;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/ChangeStatusActivity;->startActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/d/a;->a(Lcom/bbm/d/da;)V
-    :try_end_0
-    .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChangeStatusActivity;->a(Lcom/bbm/ui/activities/ChangeStatusActivity;Landroid/view/ActionMode;)Landroid/view/ActionMode;
 
-    .line 168
-    :goto_0
-    return-void
+    .line 90
+    :cond_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/br;->a:Lcom/bbm/ui/activities/ChangeStatusActivity;
 
-    .line 165
-    :catch_0
-    move-exception v0
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChangeStatusActivity;->a(Lcom/bbm/ui/activities/ChangeStatusActivity;)Lcom/bbm/ui/activities/cb;
 
-    invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
+    move-result-object v0
 
-    goto :goto_0
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/cb;->notifyDataSetChanged()V
+
+    .line 91
+    const/4 v0, 0x0
+
+    return v0
 .end method

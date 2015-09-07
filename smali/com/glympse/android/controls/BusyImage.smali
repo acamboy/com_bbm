@@ -250,9 +250,9 @@
     invoke-virtual {v0, v1}, Landroid/view/animation/RotateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     .line 107
-    const-wide/32 v1, 0x1adb0
+    const-wide/32 v4, 0x1adb0
 
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/RotateAnimation;->setDuration(J)V
+    invoke-virtual {v0, v4, v5}, Landroid/view/animation/RotateAnimation;->setDuration(J)V
 
     .line 108
     invoke-virtual {p0, v0}, Lcom/glympse/android/controls/BusyImage;->startAnimation(Landroid/view/animation/Animation;)V

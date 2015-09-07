@@ -41,7 +41,7 @@
     .locals 3
 
     .prologue
-    .line 46
+    .line 45
     iget-object v0, p0, Lcom/bbm/d/a/h;->a:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -50,10 +50,10 @@
 
     check-cast v0, Lcom/bbm/d/a/c;
 
-    .line 47
+    .line 46
     if-nez v0, :cond_0
 
-    .line 48
+    .line 47
     new-instance v0, Ljava/lang/IllegalStateException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -74,19 +74,17 @@
 
     throw v0
 
-    .line 50
+    .line 49
     :cond_0
     return-object v0
 .end method
 
-.method public final a(Lcom/bbm/f/x;)Lcom/bbm/d/a/d;
+.method public final a(Lcom/bbm/f/ab;)Lcom/bbm/d/a/d;
     .locals 4
 
     .prologue
     .line 15
-    invoke-virtual {p1}, Lcom/bbm/f/x;->e()Lorg/json/JSONObject;
-
-    move-result-object v2
+    iget-object v2, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
     .line 16
     const-string v0, "type"
@@ -135,7 +133,7 @@
 
     invoke-direct {v0, v3, v1}, Lcom/bbm/d/a/d;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 34
+    .line 33
     :goto_1
     return-object v0
 
@@ -156,13 +154,13 @@
     .locals 2
 
     .prologue
-    .line 54
+    .line 53
     iget-object v0, p0, Lcom/bbm/d/a/h;->a:Ljava/util/Map;
 
     iget-object v1, p1, Lcom/bbm/d/a/c;->a:Ljava/lang/String;
 
     invoke-interface {v0, v1, p1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 55
+    .line 54
     return-void
 .end method

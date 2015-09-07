@@ -1,28 +1,39 @@
-.class public final Lcom/bbm/ui/views/r;
+.class final Lcom/bbm/ui/views/r;
 .super Ljava/lang/Object;
-.source "QuickActionAttachmentsView.java"
+.source "EphemeralPickerPagerV2.java"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final a:I
-
-.field final b:Landroid/view/View$OnClickListener;
+.field final synthetic a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
 
 
 # direct methods
-.method public constructor <init>(ILandroid/view/View$OnClickListener;)V
+.method constructor <init>(Lcom/bbm/ui/views/EphemeralPickerPagerV2;)V
     .locals 0
 
     .prologue
-    .line 56
+    .line 119
+    iput-object p1, p0, Lcom/bbm/ui/views/r;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
-    iput p1, p0, Lcom/bbm/ui/views/r;->a:I
+    return-void
+.end method
 
-    .line 58
-    iput-object p2, p0, Lcom/bbm/ui/views/r;->b:Landroid/view/View$OnClickListener;
 
-    .line 59
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 1
+
+    .prologue
+    .line 122
+    iget-object v0, p0, Lcom/bbm/ui/views/r;->a:Lcom/bbm/ui/views/EphemeralPickerPagerV2;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/views/EphemeralPickerPagerV2;->a()V
+
+    .line 123
     return-void
 .end method

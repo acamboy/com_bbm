@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/activities/sj;
 .super Ljava/lang/Object;
-.source "ImageViewerActivity.java"
+.source "GroupPictureCommentsActivity.java"
 
 # interfaces
-.implements Lcom/slidingmenu/lib/a/b;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/ImageViewerActivity;
+.field final synthetic a:Lcom/bbm/ui/b/i;
+
+.field final synthetic b:Lcom/bbm/ui/activities/si;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ImageViewerActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/si;Lcom/bbm/ui/b/i;)V
     .locals 0
 
     .prologue
-    .line 248
-    iput-object p1, p0, Lcom/bbm/ui/activities/sj;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+    .line 765
+    iput-object p1, p0, Lcom/bbm/ui/activities/sj;->b:Lcom/bbm/ui/activities/si;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/sj;->a:Lcom/bbm/ui/b/i;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,44 +29,41 @@
 
 
 # virtual methods
-.method public final a()V
+.method public final onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 252
-    const-string v0, "onHardwareMenuButtonClicked"
+    .line 769
+    iget-object v0, p0, Lcom/bbm/ui/activities/sj;->b:Lcom/bbm/ui/activities/si;
 
-    const-class v1, Lcom/bbm/ui/activities/ImageViewerActivity;
+    iget-object v1, v0, Lcom/bbm/ui/activities/si;->a:Lcom/bbm/ui/activities/GroupPictureCommentsActivity;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->b(Ljava/lang/String;Ljava/lang/Class;)V
+    iget-object v0, p0, Lcom/bbm/ui/activities/sj;->a:Lcom/bbm/ui/b/i;
 
-    .line 253
-    iget-object v0, p0, Lcom/bbm/ui/activities/sj;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+    iget-object v0, v0, Lcom/bbm/ui/b/i;->e:Landroid/widget/CheckBox;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->t()Lcom/slidingmenu/lib/SlidingMenu;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/slidingmenu/lib/SlidingMenu;->h()Z
+    invoke-virtual {v0}, Landroid/widget/CheckBox;->isChecked()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 254
-    iget-object v0, p0, Lcom/bbm/ui/activities/sj;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->v()V
-
-    .line 259
     :goto_0
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/GroupPictureCommentsActivity;->a(Z)V
+
+    .line 770
+    iget-object v0, p0, Lcom/bbm/ui/activities/sj;->a:Lcom/bbm/ui/b/i;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/b/i;->dismiss()V
+
+    .line 771
     return-void
 
-    .line 257
+    .line 769
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/sj;->a:Lcom/bbm/ui/activities/ImageViewerActivity;
-
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ImageViewerActivity;->w()V
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method

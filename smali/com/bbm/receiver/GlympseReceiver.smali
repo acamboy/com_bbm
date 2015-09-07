@@ -38,7 +38,7 @@
     if-eqz v0, :cond_1
 
     .line 28
-    invoke-static {}, Lcom/bbm/n;->a()Lcom/bbm/n;
+    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
 
     move-result-object v0
 
@@ -46,14 +46,14 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/bbm/n;->a(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/p;->a(Landroid/content/Context;)V
 
-    .line 34
+    .line 33
     :cond_0
     :goto_0
     return-void
 
-    .line 30
+    .line 29
     :cond_1
     const-string v0, "com.glympse.android.hal.service.NOTIFICATION"
 
@@ -67,10 +67,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 31
+    .line 30
     iput-object p1, p0, Lcom/bbm/receiver/GlympseReceiver;->a:Landroid/content/Context;
 
-    .line 32
+    .line 31
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
@@ -79,15 +79,19 @@
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {}, Lcom/bbm/n;->a()Lcom/bbm/n;
+    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/n;->d()Lcom/bbm/util/a/a;
+    iget-object v5, v0, Lcom/bbm/p;->b:Lcom/bbm/util/a/a;
 
-    move-result-object v5
+    iget-object v0, v5, Lcom/bbm/util/a/a;->b:Lcom/glympse/android/core/GPrimitive;
 
-    invoke-virtual {v5}, Lcom/bbm/util/a/a;->a()Ljava/util/ArrayList;
+    invoke-interface {v0}, Lcom/glympse/android/core/GPrimitive;->getKeys()Ljava/util/Enumeration;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/util/Collections;->list(Ljava/util/Enumeration;)Ljava/util/ArrayList;
 
     move-result-object v6
 
@@ -129,7 +133,7 @@
 
     invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
@@ -233,7 +237,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/f/q;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
+    invoke-static {v0, v1}, Lcom/bbm/ui/f/r;->a(Landroid/content/Context;Ljava/lang/String;)Landroid/app/PendingIntent;
 
     move-result-object v0
 

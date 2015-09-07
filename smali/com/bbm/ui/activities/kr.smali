@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/kr;
 .super Ljava/lang/Object;
-.source "GroupConversationActivity.java"
+.source "GlympseViewerActivity.java"
 
 # interfaces
-.implements Landroid/widget/AdapterView$OnItemLongClickListener;
+.implements Lcom/bbm/f/ac;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/GlympseViewerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupConversationActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/GlympseViewerActivity;)V
     .locals 0
 
     .prologue
-    .line 488
-    iput-object p1, p0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 109
+    iput-object p1, p0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,128 +25,81 @@
 
 
 # virtual methods
-.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
-    .locals 7
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Landroid/widget/AdapterView",
-            "<*>;",
-            "Landroid/view/View;",
-            "IJ)Z"
-        }
-    .end annotation
+.method public final a()V
+    .locals 0
 
     .prologue
-    .line 492
-    iget-object v0, p0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 114
+    return-void
+.end method
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->q(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/ui/a/s;
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 4
 
-    move-result-object v0
+    .prologue
+    .line 118
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
-    invoke-virtual {v0, p3}, Lcom/bbm/ui/a/s;->a(I)Lcom/bbm/g/v;
+    .line 119
+    const-string v1, "type"
 
-    move-result-object v5
-
-    .line 493
-    iget-object v0, v5, Lcom/bbm/g/v;->f:Lcom/bbm/util/bc;
-
-    sget-object v1, Lcom/bbm/util/bc;->a:Lcom/bbm/util/bc;
-
-    if-ne v0, v1, :cond_0
-
-    .line 494
-    iget-object v1, p0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    const v0, 0x7f0a0442
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    invoke-static {v1, v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->a(Lcom/bbm/ui/activities/GroupConversationActivity;Landroid/widget/TextView;)Landroid/widget/TextView;
-
-    .line 495
-    iget-object v0, p0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->r(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    const-string v1, "#7fd2ee"
-
-    invoke-static {v1}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundColor(I)V
-
-    .line 496
-    iget-object v0, p0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->r(Lcom/bbm/ui/activities/GroupConversationActivity;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/GroupConversationActivity;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    const v2, 0x7f090198
+    .line 120
+    iget-object v2, p1, Lcom/bbm/f/ab;->b:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+    const-string v3, "listChunk"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string v2, "message"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    if-eqz v1, :cond_0
 
-    .line 498
-    iget-object v0, p0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    .line 121
+    iget-object v1, p0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->e(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/g/ab;
+    const-string v2, "elements"
 
-    move-result-object v0
-
-    iget-object v1, v5, Lcom/bbm/g/v;->d:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/bbm/g/ab;->q(Ljava/lang/String;)Lcom/bbm/g/l;
+    invoke-virtual {v0, v2}, Lorg/json/JSONObject;->optJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v2
 
-    .line 500
-    iget-object v6, p0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
+    invoke-static {v1, v2}, Lcom/bbm/ui/activities/GlympseViewerActivity;->a(Lcom/bbm/ui/activities/GlympseViewerActivity;Lorg/json/JSONArray;)V
 
-    new-instance v0, Lcom/bbm/ui/activities/ks;
+    .line 122
+    const-string v1, "last"
 
-    invoke-static {}, Lcom/bbm/Alaska;->h()Lcom/bbm/d/a;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optBoolean(Ljava/lang/String;)Z
 
-    move-result-object v3
+    move-result v0
 
-    move-object v1, p0
+    if-eqz v0, :cond_0
 
-    move-object v4, v2
+    .line 123
+    iget-object v0, p0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GlympseViewerActivity;
 
-    invoke-direct/range {v0 .. v5}, Lcom/bbm/ui/activities/ks;-><init>(Lcom/bbm/ui/activities/kr;Lcom/bbm/g/l;Lcom/bbm/d/a;Lcom/bbm/g/l;Lcom/bbm/g/v;)V
-
-    invoke-static {v6, v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->a(Lcom/bbm/ui/activities/GroupConversationActivity;Lcom/bbm/util/d/d;)Lcom/bbm/util/d/d;
-
-    .line 517
-    iget-object v0, p0, Lcom/bbm/ui/activities/kr;->a:Lcom/bbm/ui/activities/GroupConversationActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupConversationActivity;->s(Lcom/bbm/ui/activities/GroupConversationActivity;)Lcom/bbm/util/d/d;
+    invoke-static {v0}, Lcom/bbm/ui/activities/GlympseViewerActivity;->b(Lcom/bbm/ui/activities/GlympseViewerActivity;)Lcom/bbm/d/a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/util/d/d;->c()V
+    iget-object v0, v0, Lcom/bbm/d/ac;->h:Lcom/bbm/d/a/f;
 
-    .line 521
+    iget-object v0, v0, Lcom/bbm/d/a/f;->a:Lcom/bbm/f/a;
+
+    invoke-interface {v0, p0}, Lcom/bbm/f/a;->b(Lcom/bbm/f/ac;)V
+
+    .line 126
     :cond_0
-    const/4 v0, 0x1
-
-    return v0
+    return-void
 .end method

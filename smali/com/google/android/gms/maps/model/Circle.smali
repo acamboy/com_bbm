@@ -346,7 +346,7 @@
 .end method
 
 .method public final setRadius(D)V
-    .locals 2
+    .locals 3
 
     :try_start_0
     iget-object v0, p0, Lcom/google/android/gms/maps/model/Circle;->PJ:Lcom/google/android/gms/maps/model/internal/b;

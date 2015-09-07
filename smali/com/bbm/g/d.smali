@@ -1,6 +1,6 @@
-.class final enum Lcom/bbm/g/d;
+.class public final enum Lcom/bbm/g/d;
 .super Ljava/lang/Enum;
-.source "GroupCalendarManager.java"
+.source "GroupCalendarAppointment.java"
 
 
 # annotations
@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field private final d:I
+.field private final d:Ljava/lang/String;
 
 
 # direct methods
@@ -39,36 +39,40 @@
 
     const/4 v3, 0x0
 
-    .line 154
+    .line 55
     new-instance v0, Lcom/bbm/g/d;
 
-    const-string v1, "Busy"
+    const-string v1, "Private"
 
-    invoke-direct {v0, v1, v3, v3}, Lcom/bbm/g/d;-><init>(Ljava/lang/String;II)V
+    const-string v2, "private"
+
+    invoke-direct {v0, v1, v3, v2}, Lcom/bbm/g/d;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/g/d;->a:Lcom/bbm/g/d;
 
-    .line 155
+    .line 56
     new-instance v0, Lcom/bbm/g/d;
 
-    const-string v1, "Free"
+    const-string v1, "Public"
 
-    invoke-direct {v0, v1, v4, v4}, Lcom/bbm/g/d;-><init>(Ljava/lang/String;II)V
+    const-string v2, "public"
+
+    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/g/d;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/g/d;->b:Lcom/bbm/g/d;
 
-    .line 157
+    .line 57
     new-instance v0, Lcom/bbm/g/d;
 
-    const-string v1, "Invalid"
+    const-string v1, "Unspecified"
 
-    const/4 v2, -0x1
+    const-string v2, ""
 
-    invoke-direct {v0, v1, v5, v2}, Lcom/bbm/g/d;-><init>(Ljava/lang/String;II)V
+    invoke-direct {v0, v1, v5, v2}, Lcom/bbm/g/d;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
     sput-object v0, Lcom/bbm/g/d;->c:Lcom/bbm/g/d;
 
-    .line 153
+    .line 54
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/bbm/g/d;
@@ -90,40 +94,74 @@
     return-void
 .end method
 
-.method private constructor <init>(Ljava/lang/String;II)V
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(I)V"
+            "(",
+            "Ljava/lang/String;",
+            ")V"
         }
     .end annotation
 
     .prologue
-    .line 161
+    .line 61
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 162
-    iput p3, p0, Lcom/bbm/g/d;->d:I
+    .line 62
+    iput-object p3, p0, Lcom/bbm/g/d;->d:Ljava/lang/String;
 
-    .line 163
+    .line 63
     return-void
 .end method
 
-.method static synthetic a(Lcom/bbm/g/d;)I
+.method public static a(Ljava/lang/String;)Lcom/bbm/g/d;
     .locals 1
 
     .prologue
-    .line 153
-    iget v0, p0, Lcom/bbm/g/d;->d:I
+    .line 66
+    const-string v0, "private"
 
-    return v0
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 67
+    sget-object v0, Lcom/bbm/g/d;->a:Lcom/bbm/g/d;
+
+    .line 72
+    :goto_0
+    return-object v0
+
+    .line 69
+    :cond_0
+    const-string v0, "public"
+
+    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 70
+    sget-object v0, Lcom/bbm/g/d;->b:Lcom/bbm/g/d;
+
+    goto :goto_0
+
+    .line 72
+    :cond_1
+    sget-object v0, Lcom/bbm/g/d;->c:Lcom/bbm/g/d;
+
+    goto :goto_0
 .end method
 
 .method public static valueOf(Ljava/lang/String;)Lcom/bbm/g/d;
     .locals 1
 
     .prologue
-    .line 153
+    .line 54
     const-class v0, Lcom/bbm/g/d;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -139,7 +177,7 @@
     .locals 1
 
     .prologue
-    .line 153
+    .line 54
     sget-object v0, Lcom/bbm/g/d;->e:[Lcom/bbm/g/d;
 
     invoke-virtual {v0}, [Lcom/bbm/g/d;->clone()Ljava/lang/Object;
@@ -147,6 +185,18 @@
     move-result-object v0
 
     check-cast v0, [Lcom/bbm/g/d;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 75
+    iget-object v0, p0, Lcom/bbm/g/d;->d:Ljava/lang/String;
 
     return-object v0
 .end method

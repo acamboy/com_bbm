@@ -1,22 +1,26 @@
 .class final Lcom/bbm/ui/activities/ur;
 .super Ljava/lang/Object;
-.source "MainActivity.java"
+.source "ImageViewerActivity.java"
 
 # interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
+.implements Lcom/slidingmenu/lib/k;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
+.field final synthetic a:Lcom/slidingmenu/lib/SlidingMenu;
+
+.field final synthetic b:Lcom/bbm/ui/activities/ImageViewerActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ImageViewerActivity;Lcom/slidingmenu/lib/SlidingMenu;)V
     .locals 0
 
     .prologue
-    .line 2226
-    iput-object p1, p0, Lcom/bbm/ui/activities/ur;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 231
+    iput-object p1, p0, Lcom/bbm/ui/activities/ur;->b:Lcom/bbm/ui/activities/ImageViewerActivity;
+
+    iput-object p2, p0, Lcom/bbm/ui/activities/ur;->a:Lcom/slidingmenu/lib/SlidingMenu;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,19 +29,17 @@
 
 
 # virtual methods
-.method public final onDismiss(Landroid/content/DialogInterface;)V
+.method public final a()V
     .locals 2
 
     .prologue
-    .line 2229
-    iget-object v0, p0, Lcom/bbm/ui/activities/ur;->a:Lcom/bbm/ui/activities/MainActivity;
+    .line 235
+    iget-object v0, p0, Lcom/bbm/ui/activities/ur;->a:Lcom/slidingmenu/lib/SlidingMenu;
 
-    invoke-static {}, Lcom/google/b/a/l;->d()Lcom/google/b/a/l;
+    const/4 v1, 0x1
 
-    move-result-object v1
+    invoke-virtual {v0, v1}, Lcom/slidingmenu/lib/SlidingMenu;->setTouchInterceptEnabled(Z)V
 
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/MainActivity;->a(Lcom/bbm/ui/activities/MainActivity;Lcom/google/b/a/l;)Lcom/google/b/a/l;
-
-    .line 2230
+    .line 236
     return-void
 .end method

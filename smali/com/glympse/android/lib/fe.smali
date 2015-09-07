@@ -1,61 +1,55 @@
 .class Lcom/glympse/android/lib/fe;
 .super Ljava/lang/Object;
-.source "LCP.java"
+.source "JobQueue.java"
+
+# interfaces
+.implements Lcom/glympse/android/core/GCommon;
+.implements Ljava/lang/Runnable;
 
 
-# static fields
-.field public static final CLIENT_API_BUILD:I = 0x5
-
-.field public static final CLIENT_API_MAJOR:I = 0x1
-
-.field public static final CLIENT_API_MINOR:I = 0x0
-
-.field public static final CONTEXT_INTERNAL:J = 0x1000000000000L
-
-.field public static final oX:Z = true
-
-.field public static final oY:J = 0x1L
-
-.field public static final oZ:J = 0x1000000001001L
-
-.field public static final pa:J = 0x1000000001001L
+# instance fields
+.field final synthetic px:Lcom/glympse/android/lib/fc;
 
 
 # direct methods
-.method constructor <init>()V
+.method private constructor <init>(Lcom/glympse/android/lib/fc;)V
     .locals 0
 
     .prologue
-    .line 16
+    .line 418
+    iput-object p1, p0, Lcom/glympse/android/lib/fe;->px:Lcom/glympse/android/lib/fc;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static ci()Ljava/lang/String;
+.method synthetic constructor <init>(Lcom/glympse/android/lib/fc;Lcom/glympse/android/lib/fc$1;)V
+    .locals 0
+
+    .prologue
+    .line 418
+    invoke-direct {p0, p1}, Lcom/glympse/android/lib/fe;-><init>(Lcom/glympse/android/lib/fc;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public ck()Lcom/glympse/android/lib/GJob;
     .locals 1
 
     .prologue
-    .line 23
-    const-string v0, "lite"
-
-    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
+    .line 422
+    const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public static cj()Ljava/lang/String;
-    .locals 1
+.method public run()V
+    .locals 0
 
     .prologue
-    .line 54
-    const-string v0, "gl.introVer"
-
-    invoke-static {v0}, Lcom/glympse/android/core/CoreFactory;->createString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    .line 427
+    return-void
 .end method

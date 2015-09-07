@@ -89,7 +89,7 @@
 .end method
 
 .method public b(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
+    .locals 4
 
     const-string v0, "ga_trackingId"
 
@@ -120,9 +120,9 @@
 
     invoke-static {p2}, Ljava/lang/Double;->parseDouble(Ljava/lang/String;)D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    iput-wide v1, v0, Lcom/google/android/gms/analytics/aj;->uL:D
+    iput-wide v2, v0, Lcom/google/android/gms/analytics/aj;->uL:D
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -1805,17 +1805,13 @@
 
     invoke-virtual {p4, v0, v1, v2}, Lcom/google/zxing/g/c/b;->a(III)V
 
-    invoke-virtual {p2}, Lcom/google/zxing/g/a/q;->a()I
-
-    move-result v0
+    iget v0, p2, Lcom/google/zxing/g/a/q;->a:I
 
     const/4 v1, 0x2
 
     if-lt v0, v1, :cond_6
 
-    invoke-virtual {p2}, Lcom/google/zxing/g/a/q;->a()I
-
-    move-result v0
+    iget v0, p2, Lcom/google/zxing/g/a/q;->a:I
 
     add-int/lit8 v0, v0, -0x1
 
@@ -1997,9 +1993,7 @@
     goto :goto_7
 
     :cond_b
-    invoke-virtual {p1}, Lcom/google/zxing/g/a/n;->a()I
-
-    move-result v0
+    iget v0, p1, Lcom/google/zxing/g/a/n;->e:I
 
     shl-int/lit8 v0, v0, 0x3
 
@@ -2192,9 +2186,7 @@
     const/4 v1, 0x0
 
     .line 198
-    invoke-virtual {p0}, Lcom/google/zxing/g/a/q;->a()I
-
-    move-result v0
+    iget v0, p0, Lcom/google/zxing/g/a/q;->a:I
 
     const/4 v2, 0x7
 
@@ -2211,15 +2203,11 @@
     invoke-direct {v4}, Lcom/google/zxing/b/a;-><init>()V
 
     .line 202
-    invoke-virtual {p0}, Lcom/google/zxing/g/a/q;->a()I
-
-    move-result v0
+    iget v0, p0, Lcom/google/zxing/g/a/q;->a:I
 
     invoke-virtual {v4, v0, v7}, Lcom/google/zxing/b/a;->b(II)V
 
-    invoke-virtual {p0}, Lcom/google/zxing/g/a/q;->a()I
-
-    move-result v0
+    iget v0, p0, Lcom/google/zxing/g/a/q;->a:I
 
     const/16 v2, 0x1f25
 

@@ -13,7 +13,13 @@
 .method public abstract anyActive(Z)Z
 .end method
 
+.method public abstract anyActive(ZZ)Z
+.end method
+
 .method public abstract arePreSyncEventsEnabled()Z
+.end method
+
+.method public abstract canSend(Lcom/glympse/android/api/GInvite;)Z
 .end method
 
 .method public abstract enableCancellationTimer(Z)V

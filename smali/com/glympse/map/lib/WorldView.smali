@@ -12,14 +12,14 @@
 
 .field _mapCommon:Lcom/glympse/map/lib/MapCommon;
 
-.field private mConversation:Lcom/bbm/d/dp;
+.field private mConversation:Lcom/bbm/d/eu;
 
 .field private mUserMappingInvite:Ljava/util/List;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/ix;",
+            "Lcom/bbm/ui/activities/kt;",
             ">;"
         }
     .end annotation
@@ -27,42 +27,42 @@
 
 
 # direct methods
-.method public constructor <init>(Lcom/google/android/gms/maps/GoogleMap;Landroid/content/Context;)V
+.method public constructor <init>(Lcom/bbm/compat/maps/c;Landroid/content/Context;)V
     .locals 1
 
     .prologue
     const/4 v0, 0x0
 
-    .line 29
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
+    .line 19
     iput-object v0, p0, Lcom/glympse/map/lib/WorldView;->_mapCommon:Lcom/glympse/map/lib/MapCommon;
 
-    .line 23
+    .line 20
     iput-object v0, p0, Lcom/glympse/map/lib/WorldView;->_followedMarkerCode:Ljava/lang/String;
 
-    .line 30
+    .line 26
     new-instance v0, Lcom/glympse/map/lib/MapCommon;
 
-    invoke-direct {v0, p1, p2}, Lcom/glympse/map/lib/MapCommon;-><init>(Lcom/google/android/gms/maps/GoogleMap;Landroid/content/Context;)V
+    invoke-direct {v0, p1, p2}, Lcom/glympse/map/lib/MapCommon;-><init>(Lcom/bbm/compat/maps/c;Landroid/content/Context;)V
 
     iput-object v0, p0, Lcom/glympse/map/lib/WorldView;->_mapCommon:Lcom/glympse/map/lib/MapCommon;
 
-    .line 31
+    .line 27
     return-void
 .end method
 
 
 # virtual methods
-.method public attachConversation(Lcom/bbm/d/dp;)V
+.method public attachConversation(Lcom/bbm/d/eu;)V
     .locals 0
 
     .prologue
-    .line 160
-    iput-object p1, p0, Lcom/glympse/map/lib/WorldView;->mConversation:Lcom/bbm/d/dp;
+    .line 129
+    iput-object p1, p0, Lcom/glympse/map/lib/WorldView;->mConversation:Lcom/bbm/d/eu;
 
-    .line 161
+    .line 130
     return-void
 .end method
 
@@ -73,16 +73,16 @@
             "(",
             "Ljava/util/List",
             "<",
-            "Lcom/bbm/ui/activities/ix;",
+            "Lcom/bbm/ui/activities/kt;",
             ">;)V"
         }
     .end annotation
 
     .prologue
-    .line 156
+    .line 125
     iput-object p1, p0, Lcom/glympse/map/lib/WorldView;->mUserMappingInvite:Ljava/util/List;
 
-    .line 157
+    .line 126
     return-void
 .end method
 
@@ -90,12 +90,12 @@
     .locals 1
 
     .prologue
-    .line 59
+    .line 55
     iget-object v0, p0, Lcom/glympse/map/lib/WorldView;->_mapCommon:Lcom/glympse/map/lib/MapCommon;
 
     invoke-virtual {v0, p1}, Lcom/glympse/map/lib/MapCommon;->centerOnAllMarkers(Z)V
 
-    .line 60
+    .line 56
     return-void
 .end method
 
@@ -103,12 +103,12 @@
     .locals 1
 
     .prologue
-    .line 69
+    .line 63
     iget-object v0, p0, Lcom/glympse/map/lib/WorldView;->_mapCommon:Lcom/glympse/map/lib/MapCommon;
 
     invoke-virtual {v0, p1}, Lcom/glympse/map/lib/MapCommon;->centerOnTicketCode(Ljava/lang/String;)V
 
-    .line 70
+    .line 64
     return-void
 .end method
 
@@ -116,12 +116,12 @@
     .locals 1
 
     .prologue
-    .line 64
+    .line 59
     iget-object v0, p0, Lcom/glympse/map/lib/WorldView;->_mapCommon:Lcom/glympse/map/lib/MapCommon;
 
     invoke-virtual {v0, p1, p2}, Lcom/glympse/map/lib/MapCommon;->centerOnUser(Lcom/glympse/android/api/GUser;Z)V
 
-    .line 65
+    .line 60
     return-void
 .end method
 
@@ -129,12 +129,12 @@
     .locals 1
 
     .prologue
-    .line 74
+    .line 67
     iget-object v0, p0, Lcom/glympse/map/lib/WorldView;->_mapCommon:Lcom/glympse/map/lib/MapCommon;
 
     invoke-virtual {v0}, Lcom/glympse/map/lib/MapCommon;->clearTrails()V
 
-    .line 76
+    .line 69
     return-void
 .end method
 
@@ -142,7 +142,7 @@
     .locals 7
 
     .prologue
-    .line 35
+    .line 31
     iget-object v0, p0, Lcom/glympse/map/lib/WorldView;->mUserMappingInvite:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -161,23 +161,23 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/bbm/ui/activities/ix;
+    check-cast v0, Lcom/bbm/ui/activities/kt;
 
-    .line 39
+    .line 35
     invoke-interface {p1}, Lcom/glympse/android/api/GGlympse;->getHistoryManager()Lcom/glympse/android/api/GHistoryManager;
 
     move-result-object v1
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/ix;->b:Ljava/lang/String;
+    iget-object v2, v0, Lcom/bbm/ui/activities/kt;->b:Ljava/lang/String;
 
     invoke-interface {v1, v2}, Lcom/glympse/android/api/GHistoryManager;->findTicketByInviteCode(Ljava/lang/String;)Lcom/glympse/android/api/GTicket;
 
     move-result-object v1
 
-    .line 40
+    .line 36
     if-eqz v1, :cond_1
 
-    .line 41
+    .line 37
     invoke-interface {p1}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
     move-result-object v0
@@ -186,74 +186,70 @@
 
     move-result-object v2
 
-    .line 42
+    .line 38
     invoke-interface {v2}, Lcom/glympse/android/api/GUser;->getActive()Lcom/glympse/android/api/GTicket;
 
     move-result-object v1
 
-    .line 48
+    .line 44
     :goto_1
     if-eqz v2, :cond_0
 
     if-eqz v1, :cond_0
 
-    .line 49
+    .line 45
     iget-object v0, p0, Lcom/glympse/map/lib/WorldView;->_mapCommon:Lcom/glympse/map/lib/MapCommon;
 
     iget-object v4, p0, Lcom/glympse/map/lib/WorldView;->mUserMappingInvite:Ljava/util/List;
 
-    iget-object v5, p0, Lcom/glympse/map/lib/WorldView;->mConversation:Lcom/bbm/d/dp;
+    iget-object v5, p0, Lcom/glympse/map/lib/WorldView;->mConversation:Lcom/bbm/d/eu;
 
     move v3, p2
 
-    invoke-virtual/range {v0 .. v5}, Lcom/glympse/map/lib/MapCommon;->draw(Lcom/glympse/android/api/GTicket;Lcom/glympse/android/api/GUser;ILjava/util/List;Lcom/bbm/d/dp;)V
+    invoke-virtual/range {v0 .. v5}, Lcom/glympse/map/lib/MapCommon;->draw(Lcom/glympse/android/api/GTicket;Lcom/glympse/android/api/GUser;ILjava/util/List;Lcom/bbm/d/eu;)V
 
-    .line 50
+    .line 46
     iget-object v0, p0, Lcom/glympse/map/lib/WorldView;->_followedMarkerCode:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 51
+    .line 47
     iget-object v0, p0, Lcom/glympse/map/lib/WorldView;->_followedMarkerCode:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/glympse/map/lib/WorldView;->centerOnTicketCode(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 44
+    .line 40
     :cond_1
-    invoke-static {}, Lcom/bbm/n;->a()Lcom/bbm/n;
+    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/bbm/n;->c()Lcom/glympse/android/api/GGlympse;
-
-    move-result-object v1
+    iget-object v1, v1, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v1}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
     move-result-object v1
 
-    iget-object v2, v0, Lcom/bbm/ui/activities/ix;->b:Ljava/lang/String;
+    iget-object v2, v0, Lcom/bbm/ui/activities/kt;->b:Ljava/lang/String;
 
     invoke-interface {v1, v2}, Lcom/glympse/android/api/GUserManager;->findUserByInviteCode(Ljava/lang/String;)Lcom/glympse/android/api/GUser;
 
     move-result-object v2
 
-    .line 45
-    invoke-static {}, Lcom/bbm/n;->a()Lcom/bbm/n;
+    .line 41
+    invoke-static {}, Lcom/bbm/p;->a()Lcom/bbm/p;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/bbm/n;->c()Lcom/glympse/android/api/GGlympse;
-
-    move-result-object v1
+    iget-object v1, v1, Lcom/bbm/p;->a:Lcom/glympse/android/api/GGlympse;
 
     invoke-interface {v1}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/bbm/ui/activities/ix;->b:Ljava/lang/String;
+    iget-object v0, v0, Lcom/bbm/ui/activities/kt;->b:Ljava/lang/String;
 
     invoke-interface {v1, v0}, Lcom/glympse/android/api/GUserManager;->findTicketByInviteCode(Ljava/lang/String;)Lcom/glympse/android/api/GTicket;
 
@@ -261,7 +257,7 @@
 
     goto :goto_1
 
-    .line 55
+    .line 51
     :cond_2
     return-void
 .end method
@@ -270,70 +266,70 @@
     .locals 1
 
     .prologue
-    .line 80
+    .line 73
     const/4 v0, 0x1
 
     if-ne v0, p2, :cond_4
 
-    .line 82
+    .line 74
     and-int/lit16 v0, p3, 0x2000
 
     if-eqz v0, :cond_2
 
-    .line 84
+    .line 75
     check-cast p4, Lcom/glympse/android/api/GUser;
 
-    .line 85
+    .line 76
     invoke-interface {p4, p0}, Lcom/glympse/android/api/GUser;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 86
+    .line 77
     invoke-interface {p4}, Lcom/glympse/android/api/GUser;->getActive()Lcom/glympse/android/api/GTicket;
 
     move-result-object v0
 
-    .line 87
+    .line 78
     if-eqz v0, :cond_0
 
-    .line 89
+    .line 79
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GTicket;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 91
+    .line 81
     :cond_0
     const/4 v0, 0x0
 
     invoke-virtual {p0, p4, v0}, Lcom/glympse/map/lib/WorldView;->centerOnUser(Lcom/glympse/android/api/GUser;Z)V
 
-    .line 141
+    .line 114
     :cond_1
     :goto_0
     return-void
 
-    .line 93
+    .line 82
     :cond_2
     and-int/lit16 v0, p3, 0x4000
 
     if-eqz v0, :cond_3
 
-    .line 95
+    .line 83
     check-cast p4, Lcom/glympse/android/api/GUser;
 
-    .line 96
+    .line 84
     invoke-interface {p4, p0}, Lcom/glympse/android/api/GUser;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .line 97
+    .line 85
     invoke-interface {p4}, Lcom/glympse/android/api/GUser;->getActive()Lcom/glympse/android/api/GTicket;
 
     move-result-object v0
 
-    .line 98
+    .line 86
     if-eqz v0, :cond_1
 
-    .line 100
+    .line 87
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GTicket;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
     goto :goto_0
 
-    .line 103
+    .line 89
     :cond_3
     const v0, 0x8000
 
@@ -341,117 +337,105 @@
 
     if-eqz v0, :cond_1
 
-    .line 105
+    .line 90
     sget v0, Lcom/glympse/map/lib/Map;->flags:I
 
     invoke-virtual {p0, p1, v0}, Lcom/glympse/map/lib/WorldView;->draw(Lcom/glympse/android/api/GGlympse;I)V
 
     goto :goto_0
 
-    .line 108
+    .line 92
     :cond_4
     const/4 v0, 0x3
 
     if-ne v0, p2, :cond_7
 
-    .line 110
+    .line 93
     and-int/lit8 v0, p3, 0x2
 
     if-eqz v0, :cond_5
 
-    .line 112
+    .line 94
     check-cast p4, Lcom/glympse/android/api/GUser;
 
-    .line 113
+    .line 95
     invoke-interface {p4}, Lcom/glympse/android/api/GUser;->isSelf()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 115
+    .line 96
     invoke-interface {p4}, Lcom/glympse/android/api/GUser;->getActive()Lcom/glympse/android/api/GTicket;
 
     move-result-object v0
 
-    .line 116
+    .line 97
     if-eqz v0, :cond_1
 
-    .line 118
+    .line 98
     invoke-interface {v0, p0}, Lcom/glympse/android/api/GTicket;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
     goto :goto_0
 
-    .line 122
+    .line 101
     :cond_5
     and-int/lit8 v0, p3, 0x4
 
     if-eqz v0, :cond_6
 
-    .line 124
+    .line 102
     check-cast p4, Lcom/glympse/android/api/GTicket;
 
-    .line 125
+    .line 103
     invoke-interface {p4, p0}, Lcom/glympse/android/api/GTicket;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
     goto :goto_0
 
-    .line 127
+    .line 104
     :cond_6
     and-int/lit8 v0, p3, 0x8
 
     if-eqz v0, :cond_1
 
-    .line 129
+    .line 105
     check-cast p4, Lcom/glympse/android/api/GTicket;
 
-    .line 130
+    .line 106
     invoke-interface {p4, p0}, Lcom/glympse/android/api/GTicket;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
     goto :goto_0
 
-    .line 133
+    .line 108
     :cond_7
     const/4 v0, 0x4
 
     if-ne v0, p2, :cond_1
 
-    .line 135
+    .line 109
     and-int/lit8 v0, p3, 0x4
 
     if-eqz v0, :cond_1
 
-    .line 137
+    .line 110
     check-cast p4, Lcom/glympse/android/api/GTicket;
 
-    .line 138
+    .line 111
     invoke-interface {p4, p0}, Lcom/glympse/android/api/GTicket;->addListener(Lcom/glympse/android/api/GEventListener;)Z
 
     goto :goto_0
 .end method
 
-.method public startFollowing(Lcom/google/android/gms/maps/model/Marker;)V
+.method public startFollowing(Ljava/lang/Object;)V
     .locals 1
 
     .prologue
-    .line 145
-    invoke-virtual {p1}, Lcom/google/android/gms/maps/model/Marker;->showInfoWindow()V
-
-    .line 146
+    .line 117
     iget-object v0, p0, Lcom/glympse/map/lib/WorldView;->_mapCommon:Lcom/glympse/map/lib/MapCommon;
 
-    invoke-virtual {v0, p1}, Lcom/glympse/map/lib/MapCommon;->getTicketCodeForMarker(Lcom/google/android/gms/maps/model/Marker;)Ljava/lang/String;
+    invoke-virtual {v0, p1}, Lcom/glympse/map/lib/MapCommon;->startFollowing(Ljava/lang/Object;)V
 
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/glympse/map/lib/WorldView;->_followedMarkerCode:Ljava/lang/String;
-
-    .line 147
-    iget-object v0, p0, Lcom/glympse/map/lib/WorldView;->_followedMarkerCode:Ljava/lang/String;
-
-    invoke-virtual {p0, v0}, Lcom/glympse/map/lib/WorldView;->centerOnTicketCode(Ljava/lang/String;)V
-
-    .line 148
+    .line 118
     return-void
 .end method
 
@@ -459,11 +443,11 @@
     .locals 1
 
     .prologue
-    .line 152
-    const/4 v0, 0x0
+    .line 121
+    iget-object v0, p0, Lcom/glympse/map/lib/WorldView;->_mapCommon:Lcom/glympse/map/lib/MapCommon;
 
-    iput-object v0, p0, Lcom/glympse/map/lib/WorldView;->_followedMarkerCode:Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/glympse/map/lib/MapCommon;->stopFollowing()V
 
-    .line 153
+    .line 122
     return-void
 .end method

@@ -91,7 +91,7 @@
 .end method
 
 .method public setValue(J)Lcom/google/android/gms/analytics/HitBuilders$EventBuilder;
-    .locals 2
+    .locals 3
 
     const-string v0, "&ev"
 

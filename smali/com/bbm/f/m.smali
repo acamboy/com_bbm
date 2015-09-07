@@ -7,16 +7,16 @@
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/f/k;
+.field final synthetic a:Lcom/bbm/f/l;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/f/k;)V
+.method constructor <init>(Lcom/bbm/f/l;)V
     .locals 0
 
     .prologue
-    .line 276
-    iput-object p1, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/k;
+    .line 229
+    iput-object p1, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -26,64 +26,222 @@
 
 # virtual methods
 .method public final run()V
-    .locals 3
+    .locals 8
 
     .prologue
-    const/4 v2, 0x0
+    const/4 v7, 0x0
 
-    .line 279
-    iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/k;
+    const/4 v6, 0x1
 
-    iget-object v0, v0, Lcom/bbm/f/k;->a:Lcom/bbm/f/i;
+    const/4 v5, 0x0
 
-    invoke-static {v0}, Lcom/bbm/f/i;->a(Lcom/bbm/f/i;)Lcom/bbm/util/cm;
+    .line 232
+    iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
+
+    iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
+
+    invoke-static {v0}, Lcom/bbm/f/j;->c(Lcom/bbm/f/j;)Z
+
+    .line 233
+    iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
+
+    iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
+
+    invoke-static {v0}, Lcom/bbm/f/j;->a(Lcom/bbm/f/j;)Lcom/bbm/util/ct;
 
     move-result-object v0
 
-    sget-object v1, Lcom/bbm/f/b;->b:Lcom/bbm/f/b;
+    sget-object v1, Lcom/bbm/f/b;->c:Lcom/bbm/f/b;
 
-    invoke-virtual {v0, v1}, Lcom/bbm/util/cm;->b(Ljava/lang/Object;)V
+    invoke-virtual {v0, v1}, Lcom/bbm/util/ct;->b(Ljava/lang/Object;)V
 
-    .line 280
-    const-string v0, "Service layer status: connected"
+    .line 234
+    const-string v0, "Service layer status: disconnected"
 
-    new-array v1, v2, [Ljava/lang/Object;
+    new-array v1, v5, [Ljava/lang/Object;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
 
-    .line 281
-    iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/k;
+    .line 237
+    iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
 
-    iget-object v0, v0, Lcom/bbm/f/k;->a:Lcom/bbm/f/i;
+    iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
 
-    invoke-static {v0}, Lcom/bbm/f/i;->i(Lcom/bbm/f/i;)Z
+    invoke-static {v0}, Lcom/bbm/f/j;->d(Lcom/bbm/f/j;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 282
-    const-string v0, "Resynch with bbmcore"
+    .line 238
+    iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
 
-    new-array v1, v2, [Ljava/lang/Object;
+    iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
 
-    invoke-static {v0, v1}, Lcom/bbm/w;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+    invoke-static {}, Lcom/bbm/f/j;->k()J
 
-    .line 283
-    iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/k;
+    move-result-wide v0
 
-    iget-object v0, v0, Lcom/bbm/f/k;->a:Lcom/bbm/f/i;
+    .line 239
+    const-string v2, "Unsolicited shutdown of bbmcore attempting to restart in %d ms"
 
-    invoke-static {v0}, Lcom/bbm/f/i;->j(Lcom/bbm/f/i;)V
+    new-array v3, v6, [Ljava/lang/Object;
 
-    .line 285
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/k;
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    iget-object v0, v0, Lcom/bbm/f/k;->a:Lcom/bbm/f/i;
+    move-result-object v4
 
-    invoke-static {v0}, Lcom/bbm/f/i;->k(Lcom/bbm/f/i;)Z
+    aput-object v4, v3, v5
 
-    .line 286
+    invoke-static {v7, v2, v3}, Lcom/bbm/y;->d(Ljava/lang/Throwable;Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 240
+    iget-object v2, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
+
+    iget-object v2, v2, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
+
+    invoke-static {v2, v6}, Lcom/bbm/f/j;->a(Lcom/bbm/f/j;Z)Z
+
+    .line 241
+    iget-object v2, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
+
+    iget-object v2, v2, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
+
+    invoke-static {v2}, Lcom/bbm/f/j;->f(Lcom/bbm/f/j;)Lcom/bbm/util/di;
+
+    move-result-object v2
+
+    iget-object v3, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
+
+    iget-object v3, v3, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
+
+    invoke-static {v3}, Lcom/bbm/f/j;->e(Lcom/bbm/f/j;)Ljava/lang/Runnable;
+
+    move-result-object v3
+
+    invoke-interface {v2, v3, v0, v1}, Lcom/bbm/util/di;->a(Ljava/lang/Runnable;J)V
+
+    .line 268
+    :goto_0
     return-void
+
+    .line 245
+    :cond_0
+    invoke-static {}, Lcom/bbm/f/j;->l()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 246
+    const-string v0, "Stopping Platform"
+
+    new-array v1, v5, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 247
+    invoke-static {}, Lcom/rim/bbm/BbmPlatformService;->stopPlatform()V
+
+    .line 248
+    invoke-static {v7}, Lcom/rim/bbm/BbmPlatformService;->setPlatformDelegate(Lcom/rim/bbm/BbmPlatformService$PlatformDelegate;)V
+
+    .line 249
+    const-string v0, "StopPlatform returned."
+
+    new-array v1, v5, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 250
+    invoke-static {}, Lcom/bbm/f/j;->m()Z
+
+    .line 253
+    :cond_1
+    invoke-static {}, Lcom/bbm/f/j;->n()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
+
+    iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
+
+    invoke-static {v0}, Lcom/bbm/f/j;->g(Lcom/bbm/f/j;)Lcom/google/b/a/l;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->a()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 254
+    const-string v0, "Stopping MediaCallService"
+
+    new-array v1, v5, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 255
+    iget-object v0, p0, Lcom/bbm/f/m;->a:Lcom/bbm/f/l;
+
+    iget-object v0, v0, Lcom/bbm/f/l;->a:Lcom/bbm/f/j;
+
+    invoke-static {v0}, Lcom/bbm/f/j;->g(Lcom/bbm/f/j;)Lcom/google/b/a/l;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/google/b/a/l;->b()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/rim/bbm/BbmMediaCallService;
+
+    invoke-virtual {v0}, Lcom/rim/bbm/BbmMediaCallService;->stop()Z
+
+    move-result v0
+
+    .line 256
+    if-eqz v0, :cond_3
+
+    .line 257
+    const-string v0, "MediaCallService stopped successfully."
+
+    new-array v1, v5, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 261
+    :goto_1
+    invoke-static {}, Lcom/bbm/f/j;->o()Z
+
+    .line 264
+    :cond_2
+    const-string v0, "NativeServiceLayer Stopped"
+
+    new-array v1, v5, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 267
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v0
+
+    invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
+
+    goto :goto_0
+
+    .line 259
+    :cond_3
+    const-string v0, "Fatal error stopping MediaCallService"
+
+    new-array v1, v5, [Ljava/lang/Object;
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->f(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    goto :goto_1
 .end method

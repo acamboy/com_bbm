@@ -1,238 +1,100 @@
-.class public final Lcom/bbm/f/w;
+.class final Lcom/bbm/f/w;
 .super Ljava/lang/Object;
-.source "ProtocolListenerList.java"
+.source "NativeServiceLayer.java"
 
-
-# static fields
-.field private static final b:Ljava/lang/Object;
+# interfaces
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field private a:Ljava/util/WeakHashMap;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "Ljava/util/WeakHashMap",
-            "<",
-            "Lcom/bbm/f/y;",
-            "Ljava/lang/Object;",
-            ">;"
-        }
-    .end annotation
-.end field
+.field final synthetic a:Lcom/bbm/f/y;
+
+.field final synthetic b:Lcom/bbm/f/ab;
+
+.field final synthetic c:Lcom/bbm/f/v;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method constructor <init>(Lcom/bbm/f/v;Lcom/bbm/f/y;Lcom/bbm/f/ab;)V
+    .locals 0
 
     .prologue
-    .line 8
-    new-instance v0, Ljava/lang/Object;
+    .line 343
+    iput-object p1, p0, Lcom/bbm/f/w;->c:Lcom/bbm/f/v;
 
-    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+    iput-object p2, p0, Lcom/bbm/f/w;->a:Lcom/bbm/f/y;
 
-    sput-object v0, Lcom/bbm/f/w;->b:Ljava/lang/Object;
+    iput-object p3, p0, Lcom/bbm/f/w;->b:Lcom/bbm/f/ab;
 
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 1
-
-    .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
-    new-instance v0, Ljava/util/WeakHashMap;
-
-    invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
-
-    iput-object v0, p0, Lcom/bbm/f/w;->a:Ljava/util/WeakHashMap;
-
-    .line 12
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 2
-
-    .prologue
-    .line 54
-    iget-object v0, p0, Lcom/bbm/f/w;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v0}, Ljava/util/WeakHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/f/y;
-
-    .line 55
-    invoke-interface {v0}, Lcom/bbm/f/y;->a()V
-
-    goto :goto_0
-
-    .line 57
-    :cond_0
-    return-void
-.end method
-
-.method public final a(Lcom/bbm/f/x;)V
-    .locals 2
-
-    .prologue
-    .line 48
-    iget-object v0, p0, Lcom/bbm/f/w;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v0}, Ljava/util/WeakHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/f/y;
-
-    .line 49
-    invoke-interface {v0, p1}, Lcom/bbm/f/y;->a(Lcom/bbm/f/x;)V
-
-    goto :goto_0
-
-    .line 51
-    :cond_0
-    return-void
-.end method
-
-.method public final a(Lcom/bbm/f/y;)V
+.method public final run()V
     .locals 4
 
     .prologue
-    .line 22
-    new-instance v1, Ljava/util/WeakHashMap;
+    .line 346
+    iget-object v0, p0, Lcom/bbm/f/w;->c:Lcom/bbm/f/v;
 
-    invoke-direct {v1}, Ljava/util/WeakHashMap;-><init>()V
+    iget-object v0, v0, Lcom/bbm/f/v;->a:Lcom/bbm/f/j;
 
-    .line 23
-    iget-object v0, p0, Lcom/bbm/f/w;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v0}, Ljava/util/WeakHashMap;->keySet()Ljava/util/Set;
+    invoke-static {v0}, Lcom/bbm/f/j;->m(Lcom/bbm/f/j;)Ljava/util/EnumMap;
 
     move-result-object v0
 
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    iget-object v1, p0, Lcom/bbm/f/w;->a:Lcom/bbm/f/y;
 
-    move-result-object v2
+    iget-object v1, v1, Lcom/bbm/f/y;->a:Lcom/rim/bbm/BbmCoreService$MessageType;
 
+    invoke-virtual {v0, v1}, Ljava/util/EnumMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/f/x;
+
+    .line 348
+    iget-object v1, p0, Lcom/bbm/f/w;->c:Lcom/bbm/f/v;
+
+    iget-object v1, v1, Lcom/bbm/f/v;->a:Lcom/bbm/f/j;
+
+    invoke-static {v1}, Lcom/bbm/f/j;->m(Lcom/bbm/f/j;)Ljava/util/EnumMap;
+
+    move-result-object v1
+
+    if-nez v1, :cond_0
+
+    .line 349
+    const-string v0, "Unknown broker type for message type: %s, message discarded."
+
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    iget-object v3, p0, Lcom/bbm/f/w;->a:Lcom/bbm/f/y;
+
+    iget-object v3, v3, Lcom/bbm/f/y;->a:Lcom/rim/bbm/BbmCoreService$MessageType;
+
+    aput-object v3, v1, v2
+
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/Object;[Ljava/lang/Object;)V
+
+    .line 354
     :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+    return-void
 
-    move-result v0
+    .line 353
+    :cond_0
+    iget-object v1, p0, Lcom/bbm/f/w;->b:Lcom/bbm/f/ab;
 
-    if-eqz v0, :cond_0
+    iget-object v0, v0, Lcom/bbm/f/x;->b:Lcom/bbm/f/aa;
 
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/f/y;
-
-    .line 24
-    sget-object v3, Lcom/bbm/f/w;->b:Ljava/lang/Object;
-
-    invoke-virtual {v1, v0, v3}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/bbm/f/aa;->a(Lcom/bbm/f/ab;)V
 
     goto :goto_0
-
-    .line 27
-    :cond_0
-    sget-object v0, Lcom/bbm/f/w;->b:Ljava/lang/Object;
-
-    invoke-virtual {v1, p1, v0}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 28
-    iput-object v1, p0, Lcom/bbm/f/w;->a:Ljava/util/WeakHashMap;
-
-    .line 29
-    return-void
-.end method
-
-.method public final b(Lcom/bbm/f/y;)V
-    .locals 4
-
-    .prologue
-    .line 37
-    new-instance v1, Ljava/util/WeakHashMap;
-
-    invoke-direct {v1}, Ljava/util/WeakHashMap;-><init>()V
-
-    .line 38
-    iget-object v0, p0, Lcom/bbm/f/w;->a:Ljava/util/WeakHashMap;
-
-    invoke-virtual {v0}, Ljava/util/WeakHashMap;->keySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_0
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/f/y;
-
-    .line 39
-    if-eq v0, p1, :cond_0
-
-    .line 40
-    sget-object v3, Lcom/bbm/f/w;->b:Ljava/lang/Object;
-
-    invoke-virtual {v1, v0, v3}, Ljava/util/WeakHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    .line 44
-    :cond_1
-    iput-object v1, p0, Lcom/bbm/f/w;->a:Ljava/util/WeakHashMap;
-
-    .line 45
-    return-void
 .end method

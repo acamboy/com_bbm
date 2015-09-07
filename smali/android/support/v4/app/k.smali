@@ -1,34 +1,69 @@
-.class final Landroid/support/v4/app/k;
+.class public final Landroid/support/v4/app/k;
 .super Ljava/lang/Object;
-.source "FragmentActivity.java"
+.source "BackStackRecord.java"
 
 
-# static fields
-.field public static final a:[I
+# instance fields
+.field public a:Landroid/support/v4/b/a;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/support/v4/b/a",
+            "<",
+            "Ljava/lang/String;",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public b:Ljava/util/ArrayList;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/ArrayList",
+            "<",
+            "Landroid/view/View;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public c:Landroid/support/v4/app/al;
+
+.field public d:Landroid/view/View;
+
+.field final synthetic e:Landroid/support/v4/app/f;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>(Landroid/support/v4/app/f;)V
     .locals 1
 
     .prologue
-    .line 135
-    const/4 v0, 0x3
+    .line 1452
+    iput-object p1, p0, Landroid/support/v4/app/k;->e:Landroid/support/v4/app/f;
 
-    new-array v0, v0, [I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    fill-array-data v0, :array_0
+    .line 1453
+    new-instance v0, Landroid/support/v4/b/a;
 
-    sput-object v0, Landroid/support/v4/app/k;->a:[I
+    invoke-direct {v0}, Landroid/support/v4/b/a;-><init>()V
+
+    iput-object v0, p0, Landroid/support/v4/app/k;->a:Landroid/support/v4/b/a;
+
+    .line 1454
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Landroid/support/v4/app/k;->b:Ljava/util/ArrayList;
+
+    .line 1456
+    new-instance v0, Landroid/support/v4/app/al;
+
+    invoke-direct {v0}, Landroid/support/v4/app/al;-><init>()V
+
+    iput-object v0, p0, Landroid/support/v4/app/k;->c:Landroid/support/v4/app/al;
 
     return-void
-
-    nop
-
-    :array_0
-    .array-data 4
-        0x1010003
-        0x10100d0
-        0x10100d1
-    .end array-data
 .end method

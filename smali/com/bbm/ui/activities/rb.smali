@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/rb;
 .super Ljava/lang/Object;
-.source "GroupPictureUploadActivity.java"
+.source "GroupLobbyActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/qy;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/qy;)V
     .locals 0
 
     .prologue
-    .line 225
-    iput-object p1, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+    .line 1053
+    iput-object p1, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/qy;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,292 +25,101 @@
 
 
 # virtual methods
-.method public final run()V
-    .locals 5
+.method public final onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    const/4 v4, 0x0
+    .line 1057
+    const-string v0, "mOnRightButtonClickListener Clicked"
 
-    .line 231
-    :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+    const-class v1, Lcom/bbm/ui/activities/GroupLobbyActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->j(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    move-result-object v0
+    .line 1059
+    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/qy;
 
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v0
-
-    .line 233
-    new-instance v1, Landroid/graphics/Point;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->f(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Landroid/widget/ImageView;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/widget/ImageView;->getWidth()I
-
-    move-result v2
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->f(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Landroid/widget/ImageView;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/widget/ImageView;->getHeight()I
-
-    move-result v3
-
-    invoke-direct {v1, v2, v3}, Landroid/graphics/Point;-><init>(II)V
-
-    .line 234
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string v3, "Image view dimensions to sample to "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Landroid/graphics/Point;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-static {v2, v3}, Lcom/bbm/w;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 236
-    iget-object v2, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v3, v0}, Lcom/bbm/util/bd;->a(Landroid/content/Context;Landroid/net/Uri;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/bbm/ui/activities/qy;->d(Lcom/bbm/ui/activities/qy;)Lcom/bbm/j/r;
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->b(Lcom/bbm/ui/activities/GroupPictureUploadActivity;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 238
-    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->j(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Ljava/lang/String;
+    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
 
     move-result-object v0
 
-    const/4 v2, 0x0
+    check-cast v0, Ljava/util/List;
 
-    const/4 v3, 0x1
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
-    invoke-static {v0, v1, v2, v3}, Lcom/bbm/util/b/h;->a(Ljava/lang/String;Landroid/graphics/Point;Lcom/bbm/util/b/d;Z)Landroid/graphics/Bitmap;
+    move-result v0
 
-    move-result-object v0
+    const/4 v1, 0x1
 
-    .line 240
-    iget-object v1, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+    if-le v0, v1, :cond_1
 
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->f(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Landroid/widget/ImageView;
+    .line 1060
+    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/qy;
 
-    move-result-object v1
+    invoke-static {v0}, Lcom/bbm/ui/activities/qy;->e(Lcom/bbm/ui/activities/qy;)V
 
-    new-instance v2, Lcom/bbm/ui/activities/rc;
-
-    invoke-direct {v2, p0, v0}, Lcom/bbm/ui/activities/rc;-><init>(Lcom/bbm/ui/activities/rb;Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {v1, v2}, Landroid/widget/ImageView;->post(Ljava/lang/Runnable;)Z
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_2
-
-    .line 251
-    const-string v0, "done saving bitmap locally"
-
-    new-array v1, v4, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 252
-    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->n(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Z
-
-    .line 253
-    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->i(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    monitor-enter v1
-
-    .line 254
-    :try_start_1
-    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->i(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
-
-    .line 255
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 256
-    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    new-instance v1, Lcom/bbm/ui/activities/rd;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/rd;-><init>(Lcom/bbm/ui/activities/rb;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    .line 263
+    .line 1067
     :goto_0
+    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/qy;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/qy;->f(Lcom/bbm/ui/activities/qy;)Lcom/bbm/j/u;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/bbm/j/u;->c()V
+
+    .line 1069
+    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/qy;
+
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/qy;->dismiss()V
+
+    .line 1070
+    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/qy;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/qy;->g(Lcom/bbm/ui/activities/qy;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 1071
+    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/qy;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/qy;->h(Lcom/bbm/ui/activities/qy;)Landroid/app/Activity;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/Activity;->finish()V
+
+    .line 1073
+    :cond_0
     return-void
 
-    .line 255
-    :catchall_0
-    move-exception v0
+    .line 1063
+    :cond_1
+    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/qy;
 
-    monitor-exit v1
-
-    throw v0
-
-    .line 247
-    :catch_0
-    move-exception v0
-
-    :try_start_2
-    invoke-static {v0}, Lcom/bbm/w;->a(Ljava/lang/Throwable;)V
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_2
-
-    .line 251
-    const-string v0, "done saving bitmap locally"
-
-    new-array v1, v4, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 252
-    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->n(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Z
-
-    .line 253
-    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->i(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    monitor-enter v1
-
-    .line 254
-    :try_start_3
-    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->i(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/bbm/ui/activities/qy;->a(Lcom/bbm/ui/activities/qy;)Lcom/bbm/g/al;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
+    iget-object v1, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/qy;
 
-    .line 255
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 256
-    iget-object v0, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    new-instance v1, Lcom/bbm/ui/activities/rd;
-
-    invoke-direct {v1, p0}, Lcom/bbm/ui/activities/rd;-><init>(Lcom/bbm/ui/activities/rb;)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    goto :goto_0
-
-    .line 255
-    :catchall_1
-    move-exception v0
-
-    monitor-exit v1
-
-    throw v0
-
-    .line 251
-    :catchall_2
-    move-exception v0
-
-    const-string v1, "done saving bitmap locally"
-
-    new-array v2, v4, [Ljava/lang/Object;
-
-    invoke-static {v1, v2}, Lcom/bbm/w;->e(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 252
-    iget-object v1, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->n(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Z
-
-    .line 253
-    iget-object v1, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    invoke-static {v1}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->i(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Ljava/lang/Object;
+    invoke-static {v1}, Lcom/bbm/ui/activities/qy;->b(Lcom/bbm/ui/activities/qy;)Lcom/bbm/g/a;
 
     move-result-object v1
 
-    monitor-enter v1
+    iget-object v1, v1, Lcom/bbm/g/a;->v:Ljava/lang/String;
 
-    .line 254
-    :try_start_4
-    iget-object v2, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
+    invoke-static {v1}, Lcom/bbm/g/am;->c(Ljava/lang/String;)Lcom/bbm/g/bq;
 
-    invoke-static {v2}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->i(Lcom/bbm/ui/activities/GroupPictureUploadActivity;)Ljava/lang/Object;
+    move-result-object v1
 
-    move-result-object v2
+    invoke-virtual {v0, v1}, Lcom/bbm/g/al;->a(Lcom/bbm/g/cv;)V
 
-    invoke-virtual {v2}, Ljava/lang/Object;->notifyAll()V
-
-    .line 255
-    monitor-exit v1
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_3
-
-    .line 256
-    iget-object v1, p0, Lcom/bbm/ui/activities/rb;->a:Lcom/bbm/ui/activities/GroupPictureUploadActivity;
-
-    new-instance v2, Lcom/bbm/ui/activities/rd;
-
-    invoke-direct {v2, p0}, Lcom/bbm/ui/activities/rd;-><init>(Lcom/bbm/ui/activities/rb;)V
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/GroupPictureUploadActivity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    throw v0
-
-    .line 255
-    :catchall_3
-    move-exception v0
-
-    monitor-exit v1
-
-    throw v0
+    goto :goto_0
 .end method

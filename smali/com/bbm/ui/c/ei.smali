@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/c/ei;
 .super Ljava/lang/Object;
-.source "MyChannelsFragment.java"
+.source "GroupsFragment.java"
 
 # interfaces
-.implements Lcom/bbm/ui/c/fu;
+.implements Landroid/widget/AdapterView$OnItemLongClickListener;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/d/de;
-
-.field final synthetic b:Lcom/bbm/ui/c/dx;
+.field final synthetic a:Lcom/bbm/ui/c/eb;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/dx;Lcom/bbm/d/de;)V
+.method constructor <init>(Lcom/bbm/ui/c/eb;)V
     .locals 0
 
     .prologue
-    .line 340
-    iput-object p1, p0, Lcom/bbm/ui/c/ei;->b:Lcom/bbm/ui/c/dx;
-
-    iput-object p2, p0, Lcom/bbm/ui/c/ei;->a:Lcom/bbm/d/de;
+    .line 240
+    iput-object p1, p0, Lcom/bbm/ui/c/ei;->a:Lcom/bbm/ui/c/eb;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,66 +25,82 @@
 
 
 # virtual methods
-.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+.method public final onItemLongClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)Z
     .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/widget/AdapterView",
+            "<*>;",
+            "Landroid/view/View;",
+            "IJ)Z"
+        }
+    .end annotation
 
     .prologue
-    .line 345
-    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
+    .line 244
+    iget-object v0, p0, Lcom/bbm/ui/c/ei;->a:Lcom/bbm/ui/c/eb;
 
-    sparse-switch v0, :sswitch_data_0
+    invoke-static {v0}, Lcom/bbm/ui/c/eb;->c(Lcom/bbm/ui/c/eb;)Lcom/bbm/ui/ei;
 
-    .line 353
+    move-result-object v0
+
+    invoke-virtual {v0, p3}, Lcom/bbm/ui/ei;->getItem(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/c/ep;
+
+    .line 245
+    sget-object v1, Lcom/bbm/ui/c/ef;->a:[I
+
+    iget-object v2, v0, Lcom/bbm/ui/c/ep;->a:Lcom/bbm/ui/c/eq;
+
+    invoke-virtual {v2}, Lcom/bbm/ui/c/eq;->ordinal()I
+
+    move-result v2
+
+    aget v1, v1, v2
+
+    packed-switch v1, :pswitch_data_0
+
+    .line 254
     :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/c/ei;->b:Lcom/bbm/ui/c/dx;
+    const/4 v0, 0x1
 
-    invoke-static {v0}, Lcom/bbm/ui/c/dx;->j(Lcom/bbm/ui/c/dx;)Lcom/bbm/ui/activities/MainActivity;
+    return v0
 
-    move-result-object v0
+    .line 247
+    :pswitch_0
+    iget-object v0, v0, Lcom/bbm/ui/c/ep;->c:Lcom/bbm/d/a/a;
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/MainActivity;->v()V
+    check-cast v0, Lcom/bbm/g/a;
 
-    .line 354
-    return-void
+    .line 248
+    iget-object v1, p0, Lcom/bbm/ui/c/ei;->a:Lcom/bbm/ui/c/eb;
 
-    .line 347
-    :sswitch_0
-    iget-object v0, p0, Lcom/bbm/ui/c/ei;->b:Lcom/bbm/ui/c/dx;
-
-    iget-object v1, p0, Lcom/bbm/ui/c/ei;->a:Lcom/bbm/d/de;
-
-    iget-object v1, v1, Lcom/bbm/d/de;->N:Ljava/lang/String;
-
-    iget-object v2, p0, Lcom/bbm/ui/c/ei;->a:Lcom/bbm/d/de;
-
-    iget-boolean v2, v2, Lcom/bbm/d/de;->q:Z
-
-    invoke-static {v0, v1, v2}, Lcom/bbm/ui/c/dx;->a(Lcom/bbm/ui/c/dx;Ljava/lang/String;Z)V
+    invoke-static {v1, v0}, Lcom/bbm/ui/c/eb;->a(Lcom/bbm/ui/c/eb;Lcom/bbm/g/a;)V
 
     goto :goto_0
 
-    .line 350
-    :sswitch_1
-    iget-object v0, p0, Lcom/bbm/ui/c/ei;->b:Lcom/bbm/ui/c/dx;
+    .line 251
+    :pswitch_1
+    iget-object v1, p0, Lcom/bbm/ui/c/ei;->a:Lcom/bbm/ui/c/eb;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/dx;->d(Lcom/bbm/ui/c/dx;)Landroid/content/Context;
+    iget-object v0, v0, Lcom/bbm/ui/c/ep;->c:Lcom/bbm/d/a/a;
 
-    move-result-object v0
+    check-cast v0, Lcom/bbm/g/ah;
 
-    iget-object v1, p0, Lcom/bbm/ui/c/ei;->a:Lcom/bbm/d/de;
-
-    iget-object v1, v1, Lcom/bbm/d/de;->N:Ljava/lang/String;
-
-    invoke-static {v0, v1}, Lcom/bbm/util/x;->c(Landroid/content/Context;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/bbm/ui/c/eb;->a(Lcom/bbm/ui/c/eb;Lcom/bbm/g/ah;)V
 
     goto :goto_0
 
-    .line 345
+    .line 245
     nop
 
-    :sswitch_data_0
-    .sparse-switch
-        0x7f0a0029 -> :sswitch_0
-        0x7f0a003a -> :sswitch_1
-    .end sparse-switch
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

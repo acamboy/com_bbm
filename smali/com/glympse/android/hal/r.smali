@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field final synthetic am:Lcom/glympse/android/hal/ConnectivityListener;
+.field final synthetic al:Lcom/glympse/android/hal/ConnectivityListener;
 
 
 # direct methods
@@ -13,7 +13,7 @@
 
     .prologue
     .line 85
-    iput-object p1, p0, Lcom/glympse/android/hal/r;->am:Lcom/glympse/android/hal/ConnectivityListener;
+    iput-object p1, p0, Lcom/glympse/android/hal/r;->al:Lcom/glympse/android/hal/ConnectivityListener;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
@@ -51,7 +51,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/glympse/android/hal/r;->am:Lcom/glympse/android/hal/ConnectivityListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/r;->al:Lcom/glympse/android/hal/ConnectivityListener;
 
     invoke-static {v0}, Lcom/glympse/android/hal/ConnectivityListener;->a(Lcom/glympse/android/hal/ConnectivityListener;)Z
 
@@ -84,7 +84,7 @@
     if-eqz v0, :cond_0
 
     .line 105
-    iget-object v0, p0, Lcom/glympse/android/hal/r;->am:Lcom/glympse/android/hal/ConnectivityListener;
+    iget-object v0, p0, Lcom/glympse/android/hal/r;->al:Lcom/glympse/android/hal/ConnectivityListener;
 
     invoke-static {v0}, Lcom/glympse/android/hal/ConnectivityListener;->b(Lcom/glympse/android/hal/ConnectivityListener;)V
     :try_end_0

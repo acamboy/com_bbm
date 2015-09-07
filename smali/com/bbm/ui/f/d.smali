@@ -27,7 +27,7 @@
     .locals 0
 
     .prologue
-    .line 315
+    .line 404
     iput-object p1, p0, Lcom/bbm/ui/f/d;->a:Lcom/bbm/ui/f/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,16 +41,16 @@
     .locals 2
 
     .prologue
-    .line 315
+    .line 404
     check-cast p1, Lcom/bbm/ui/f/e;
 
     check-cast p2, Lcom/bbm/ui/f/e;
 
-    invoke-interface {p2}, Lcom/bbm/ui/f/e;->g()Ljava/lang/Long;
+    invoke-interface {p1}, Lcom/bbm/ui/f/e;->g()Ljava/lang/Long;
 
     move-result-object v0
 
-    invoke-interface {p1}, Lcom/bbm/ui/f/e;->g()Ljava/lang/Long;
+    invoke-interface {p2}, Lcom/bbm/ui/f/e;->g()Ljava/lang/Long;
 
     move-result-object v1
 

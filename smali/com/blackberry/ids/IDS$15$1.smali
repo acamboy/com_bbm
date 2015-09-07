@@ -15,7 +15,7 @@
     .locals 0
 
     .prologue
-    .line 2313
+    .line 2324
     iput-object p1, p0, Lcom/blackberry/ids/IDS$15$1;->a:Lcom/blackberry/ids/IDS$15;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -29,14 +29,14 @@
     .locals 2
 
     .prologue
-    .line 2316
+    .line 2327
     iget-object v0, p0, Lcom/blackberry/ids/IDS$15$1;->a:Lcom/blackberry/ids/IDS$15;
 
     iget-object v0, v0, Lcom/blackberry/ids/IDS$15;->b:Lcom/blackberry/ids/IChallengeCallback;
 
     invoke-interface {v0, p1, p2}, Lcom/blackberry/ids/IChallengeCallback;->call(II)V
 
-    .line 2317
+    .line 2328
     iget-object v0, p0, Lcom/blackberry/ids/IDS$15$1;->a:Lcom/blackberry/ids/IDS$15;
 
     iget-object v0, v0, Lcom/blackberry/ids/IDS$15;->c:Ljava/util/concurrent/ArrayBlockingQueue;
@@ -49,11 +49,11 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/ArrayBlockingQueue;->add(Ljava/lang/Object;)Z
 
-    .line 2318
+    .line 2329
     sget-object v0, Lcom/blackberry/ids/UserAuthState$AuthState;->AUTHENTICATED:Lcom/blackberry/ids/UserAuthState$AuthState;
 
     invoke-static {v0}, Lcom/blackberry/ids/UserAuthState;->b(Lcom/blackberry/ids/UserAuthState$AuthState;)V
 
-    .line 2319
+    .line 2330
     return-void
 .end method

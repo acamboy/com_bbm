@@ -518,7 +518,7 @@
 .end method
 
 .method public requestActivityUpdates(JLandroid/app/PendingIntent;)V
-    .locals 3
+    .locals 5
 
     const/4 v0, 0x1
 
@@ -526,9 +526,9 @@
 
     invoke-static {p3}, Lcom/google/android/gms/internal/er;->f(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
-    cmp-long v1, p1, v1
+    cmp-long v1, p1, v2
 
     if-ltz v1, :cond_0
 

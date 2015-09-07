@@ -1,58 +1,88 @@
-.class final Lcom/bbm/f;
-.super Lcom/bbm/j/a;
-.source "BbmService.java"
-
-
-# annotations
-.annotation system Ldalvik/annotation/Signature;
-    value = {
-        "Lcom/bbm/j/a",
-        "<",
-        "Lcom/bbm/f/aa;",
-        ">;"
-    }
-.end annotation
-
-
-# instance fields
-.field final synthetic a:Lcom/bbm/BbmService;
+.class public final Lcom/bbm/f;
+.super Landroid/accounts/AbstractAccountAuthenticator;
+.source "BBMAuthenticator.java"
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/BbmService;)V
+.method public constructor <init>(Landroid/content/Context;)V
     .locals 0
 
     .prologue
-    .line 64
-    iput-object p1, p0, Lcom/bbm/f;->a:Lcom/bbm/BbmService;
+    .line 15
+    invoke-direct {p0, p1}, Landroid/accounts/AbstractAccountAuthenticator;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0}, Lcom/bbm/j/a;-><init>()V
-
+    .line 16
     return-void
 .end method
 
 
 # virtual methods
-.method protected final synthetic a()Ljava/lang/Object;
+.method public final addAccount(Landroid/accounts/AccountAuthenticatorResponse;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
     .locals 1
 
     .prologue
-    .line 64
-    iget-object v0, p0, Lcom/bbm/f;->a:Lcom/bbm/BbmService;
+    .line 24
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/bbm/BbmService;->a(Lcom/bbm/BbmService;)Lcom/bbm/f/z;
+    return-object v0
+.end method
 
-    move-result-object v0
+.method public final confirmCredentials(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Landroid/os/Bundle;)Landroid/os/Bundle;
+    .locals 1
 
-    invoke-interface {v0}, Lcom/bbm/f/z;->f()Lcom/bbm/j/r;
+    .prologue
+    .line 31
+    const/4 v0, 0x0
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    invoke-interface {v0}, Lcom/bbm/j/r;->e()Ljava/lang/Object;
+.method public final editProperties(Landroid/accounts/AccountAuthenticatorResponse;Ljava/lang/String;)Landroid/os/Bundle;
+    .locals 1
 
-    move-result-object v0
+    .prologue
+    .line 38
+    const/4 v0, 0x0
 
-    check-cast v0, Lcom/bbm/f/aa;
+    return-object v0
+.end method
+
+.method public final getAuthToken(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    .locals 1
+
+    .prologue
+    .line 46
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final getAuthTokenLabel(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 51
+    const-string v0, "com.bbm.account"
+
+    return-object v0
+.end method
+
+.method public final hasFeatures(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;[Ljava/lang/String;)Landroid/os/Bundle;
+    .locals 1
+
+    .prologue
+    .line 58
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public final updateCredentials(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
+    .locals 1
+
+    .prologue
+    .line 66
+    const/4 v0, 0x0
 
     return-object v0
 .end method

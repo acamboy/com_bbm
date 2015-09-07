@@ -26,25 +26,25 @@
 
 .field public static final _levelCodes:[C
 
-.field private static ie:Lcom/glympse/android/hal/GContextHolder;
+.field private static iC:Lcom/glympse/android/hal/GContextHolder;
 
-.field private static je:Z
+.field private static jC:Z
 
-.field private static jf:I
+.field private static jD:I
 
-.field private static jg:I
+.field private static jE:I
 
-.field private static jh:Ljava/lang/String;
+.field private static jF:Ljava/lang/String;
 
-.field private static ji:Z
+.field private static jG:Z
 
-.field private static jj:Ljava/lang/String;
+.field private static jH:Ljava/lang/String;
 
-.field private static jk:Ljava/lang/String;
+.field private static jI:Ljava/lang/String;
 
-.field private static jl:Z
+.field private static jJ:Z
 
-.field private static jm:Lcom/glympse/android/hal/GVector;
+.field private static jK:Lcom/glympse/android/hal/GVector;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Lcom/glympse/android/hal/GVector",
@@ -55,11 +55,11 @@
     .end annotation
 .end field
 
-.field private static jn:Lcom/glympse/android/hal/GMutex;
+.field private static jL:Lcom/glympse/android/hal/GMutex;
 
-.field private static jo:Ljava/lang/String;
+.field private static jM:Ljava/lang/String;
 
-.field private static jp:Z
+.field private static jN:Z
 
 
 # direct methods
@@ -72,25 +72,25 @@
     .line 54
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/lib/Debug;->je:Z
+    sput-boolean v0, Lcom/glympse/android/lib/Debug;->jC:Z
 
     .line 59
-    sput v1, Lcom/glympse/android/lib/Debug;->jf:I
+    sput v1, Lcom/glympse/android/lib/Debug;->jD:I
 
     .line 64
-    sput v1, Lcom/glympse/android/lib/Debug;->jg:I
+    sput v1, Lcom/glympse/android/lib/Debug;->jE:I
 
     .line 99
     invoke-static {}, Lcom/glympse/android/hal/HalFactory;->createMutex()Lcom/glympse/android/hal/GMutex;
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sput-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     .line 109
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/glympse/android/lib/Debug;->jp:Z
+    sput-boolean v0, Lcom/glympse/android/lib/Debug;->jN:Z
 
     .line 512
     new-array v0, v1, [C
@@ -132,7 +132,7 @@
     const/4 v2, 0x0
 
     .line 520
-    sget-boolean v0, Lcom/glympse/android/lib/Debug;->ji:Z
+    sget-boolean v0, Lcom/glympse/android/lib/Debug;->jG:Z
 
     if-eqz v0, :cond_0
 
@@ -144,10 +144,10 @@
     :cond_0
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/glympse/android/lib/Debug;->ji:Z
+    sput-boolean v0, Lcom/glympse/android/lib/Debug;->jG:Z
 
     .line 525
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
@@ -155,17 +155,17 @@
     :try_start_0
     invoke-static {}, Lcom/glympse/android/hal/Concurrent;->getTime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
     .line 532
     const-string v0, "\n"
 
     invoke-static {p3, v0}, Lcom/glympse/android/hal/Helpers;->split(Ljava/lang/String;Ljava/lang/String;)Lcom/glympse/android/hal/GVector;
 
-    move-result-object v5
+    move-result-object v3
 
     .line 533
-    invoke-virtual {v5}, Lcom/glympse/android/hal/GVector;->length()I
+    invoke-virtual {v3}, Lcom/glympse/android/hal/GVector;->length()I
 
     move-result v6
 
@@ -176,7 +176,7 @@
     if-ge v1, v6, :cond_3
 
     .line 536
-    invoke-virtual {v5, v1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
+    invoke-virtual {v3, v1}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -236,12 +236,12 @@
     .line 549
     if-eqz p2, :cond_1
 
-    sget-object v7, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v7, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     if-eqz v7, :cond_1
 
     .line 551
-    invoke-static {v3, v4, v0}, Lcom/glympse/android/lib/Debug;->logToFile(JLjava/lang/String;)V
+    invoke-static {v4, v5, v0}, Lcom/glympse/android/lib/Debug;->logToFile(JLjava/lang/String;)V
 
     .line 555
     :cond_1
@@ -265,12 +265,12 @@
 
     .line 566
     :cond_3
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
     .line 567
-    sput-boolean v2, Lcom/glympse/android/lib/Debug;->ji:Z
+    sput-boolean v2, Lcom/glympse/android/lib/Debug;->jG:Z
 
     goto :goto_0
 .end method
@@ -318,18 +318,18 @@
     goto :goto_0
 .end method
 
-.method private static aD()V
+.method private static aE()V
     .locals 4
 
     .prologue
     .line 817
     :try_start_0
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jm:Lcom/glympse/android/hal/GVector;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jK:Lcom/glympse/android/hal/GVector;
 
     if-eqz v0, :cond_1
 
     .line 819
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jm:Lcom/glympse/android/hal/GVector;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jK:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0}, Lcom/glympse/android/hal/GVector;->size()I
 
@@ -344,7 +344,7 @@
     if-ge v2, v3, :cond_1
 
     .line 822
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jm:Lcom/glympse/android/hal/GVector;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jK:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, v2}, Lcom/glympse/android/hal/GVector;->elementAt(I)Ljava/lang/Object;
 
@@ -408,7 +408,7 @@
 
     .prologue
     .line 349
-    sget-boolean v0, Lcom/glympse/android/lib/Debug;->jp:Z
+    sget-boolean v0, Lcom/glympse/android/lib/Debug;->jN:Z
 
     return v0
 .end method
@@ -427,7 +427,7 @@
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 608
-    sget-object v1, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     invoke-interface {v1}, Lcom/glympse/android/hal/GContextHolder;->getContext()Landroid/content/Context;
 
@@ -490,7 +490,7 @@
     const/4 v2, 0x0
 
     .line 380
-    sget v0, Lcom/glympse/android/lib/Debug;->jf:I
+    sget v0, Lcom/glympse/android/lib/Debug;->jD:I
 
     if-lt v4, v0, :cond_0
 
@@ -498,7 +498,7 @@
 
     .line 381
     :goto_0
-    sget v3, Lcom/glympse/android/lib/Debug;->jg:I
+    sget v3, Lcom/glympse/android/lib/Debug;->jE:I
 
     if-lt v4, v3, :cond_1
 
@@ -555,7 +555,7 @@
 
     .line 364
     :cond_1
-    sget v0, Lcom/glympse/android/lib/Debug;->jf:I
+    sget v0, Lcom/glympse/android/lib/Debug;->jD:I
 
     if-lt v6, v0, :cond_3
 
@@ -563,7 +563,7 @@
 
     .line 365
     :goto_1
-    sget v3, Lcom/glympse/android/lib/Debug;->jg:I
+    sget v3, Lcom/glympse/android/lib/Debug;->jE:I
 
     if-lt v6, v3, :cond_4
 
@@ -651,16 +651,16 @@
 
     .prologue
     .line 600
-    sget-object v0, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, p0, p1, v1}, Lcom/glympse/android/lib/hq;->a(Lcom/glympse/android/hal/GContextHolder;JZ)Ljava/lang/String;
+    invoke-static {v0, p0, p1, v1}, Lcom/glympse/android/lib/hx;->a(Lcom/glympse/android/hal/GContextHolder;JZ)Ljava/lang/String;
 
     move-result-object v0
 
     .line 601
-    sput-object v0, Lcom/glympse/android/lib/Debug;->jj:Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/lib/Debug;->jH:Ljava/lang/String;
 
     const-string v1, "log"
 
@@ -672,7 +672,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/lib/Debug;->jk:Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/lib/Debug;->jI:Ljava/lang/String;
 
     .line 602
     return-void
@@ -683,16 +683,16 @@
 
     .prologue
     .line 341
-    sget-boolean v0, Lcom/glympse/android/lib/Debug;->jp:Z
+    sget-boolean v0, Lcom/glympse/android/lib/Debug;->jN:Z
 
     if-eq v0, p0, :cond_0
 
-    sget-object v0, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     if-nez v0, :cond_0
 
     .line 343
-    sput-boolean p0, Lcom/glympse/android/lib/Debug;->jp:Z
+    sput-boolean p0, Lcom/glympse/android/lib/Debug;->jN:Z
 
     .line 345
     :cond_0
@@ -719,7 +719,7 @@
 
     .line 465
     :cond_1
-    sget v0, Lcom/glympse/android/lib/Debug;->jf:I
+    sget v0, Lcom/glympse/android/lib/Debug;->jD:I
 
     if-lt v4, v0, :cond_4
 
@@ -727,7 +727,7 @@
 
     .line 466
     :goto_1
-    sget v3, Lcom/glympse/android/lib/Debug;->jg:I
+    sget v3, Lcom/glympse/android/lib/Debug;->jE:I
 
     if-lt v4, v3, :cond_2
 
@@ -829,7 +829,7 @@
 .end method
 
 .method public static formatLocation(Lcom/glympse/android/core/GLocation;)Ljava/lang/String;
-    .locals 3
+    .locals 4
 
     .prologue
     .line 392
@@ -847,9 +847,9 @@
     .line 394
     invoke-interface {p0}, Lcom/glympse/android/core/GLocation;->getTime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     .line 395
     const-string v1, " lat:"
@@ -859,9 +859,9 @@
     .line 396
     invoke-interface {p0}, Lcom/glympse/android/core/GLocation;->getLatitude()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     .line 397
     const-string v1, " lng:"
@@ -871,9 +871,9 @@
     .line 398
     invoke-interface {p0}, Lcom/glympse/android/core/GLocation;->getLongitude()D
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
     .line 399
     const-string v1, " sp:"
@@ -936,7 +936,7 @@
 
     .prologue
     .line 282
-    sget v0, Lcom/glympse/android/lib/Debug;->jf:I
+    sget v0, Lcom/glympse/android/lib/Debug;->jD:I
 
     return v0
 .end method
@@ -946,7 +946,7 @@
 
     .prologue
     .line 293
-    sget v0, Lcom/glympse/android/lib/Debug;->jg:I
+    sget v0, Lcom/glympse/android/lib/Debug;->jE:I
 
     return v0
 .end method
@@ -956,19 +956,19 @@
 
     .prologue
     .line 301
-    sget v0, Lcom/glympse/android/lib/Debug;->jg:I
+    sget v0, Lcom/glympse/android/lib/Debug;->jE:I
 
-    sget v1, Lcom/glympse/android/lib/Debug;->jf:I
+    sget v1, Lcom/glympse/android/lib/Debug;->jD:I
 
     if-ge v0, v1, :cond_0
 
-    sget v0, Lcom/glympse/android/lib/Debug;->jg:I
+    sget v0, Lcom/glympse/android/lib/Debug;->jE:I
 
     :goto_0
     return v0
 
     :cond_0
-    sget v0, Lcom/glympse/android/lib/Debug;->jf:I
+    sget v0, Lcom/glympse/android/lib/Debug;->jD:I
 
     goto :goto_0
 .end method
@@ -978,13 +978,13 @@
 
     .prologue
     .line 311
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
     .line 314
     :try_start_0
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jk:Ljava/lang/String;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jI:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -992,37 +992,37 @@
     invoke-static {p0, p1}, Lcom/glympse/android/lib/Debug;->e(J)V
 
     .line 320
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jj:Ljava/lang/String;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jH:Ljava/lang/String;
 
-    sget-object v1, Lcom/glympse/android/lib/Debug;->jo:Ljava/lang/String;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->jM:Ljava/lang/String;
 
     const/4 v2, 0x0
 
-    invoke-static {v0, p0, p1, v1, v2}, Lcom/glympse/android/lib/hq;->a(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, p0, p1, v1, v2}, Lcom/glympse/android/lib/hx;->a(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 323
-    sget-object v1, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     invoke-interface {v1}, Lcom/glympse/android/hal/GContextHolder;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget-object v2, Lcom/glympse/android/lib/Debug;->jk:Ljava/lang/String;
+    sget-object v2, Lcom/glympse/android/lib/Debug;->jI:Ljava/lang/String;
 
     const/4 v3, 0x0
 
     invoke-static {v1, v2, v0, v3}, Lcom/glympse/android/hal/DebugBase;->writeTextFile(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Z)V
 
     .line 324
-    sget-object v0, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GContextHolder;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget-object v1, Lcom/glympse/android/lib/Debug;->jk:Ljava/lang/String;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->jI:Ljava/lang/String;
 
     const-string v2, "\n\n-----------------------------------------------------------------------\n"
 
@@ -1042,12 +1042,12 @@
 
     .line 333
     :goto_0
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
     .line 335
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jk:Ljava/lang/String;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jI:Ljava/lang/String;
 
     return-object v0
 
@@ -1062,56 +1062,56 @@
 
     .prologue
     .line 120
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
     .line 123
     :try_start_0
-    sget-object v0, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     if-nez v0, :cond_0
 
     .line 126
-    sput-object p0, Lcom/glympse/android/lib/hq;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sput-object p0, Lcom/glympse/android/lib/hx;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     .line 129
-    sput-object p0, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sput-object p0, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     .line 130
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/lib/Debug;->ji:Z
+    sput-boolean v0, Lcom/glympse/android/lib/Debug;->jG:Z
 
     .line 131
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/glympse/android/lib/Debug;->jl:Z
+    sput-boolean v0, Lcom/glympse/android/lib/Debug;->jJ:Z
 
     .line 132
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/lib/Debug;->jo:Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/lib/Debug;->jM:Ljava/lang/String;
 
     .line 135
     const/4 v0, 0x7
 
-    sput v0, Lcom/glympse/android/lib/Debug;->jf:I
+    sput v0, Lcom/glympse/android/lib/Debug;->jD:I
 
     .line 136
     const/4 v0, 0x7
 
-    sput v0, Lcom/glympse/android/lib/Debug;->jg:I
+    sput v0, Lcom/glympse/android/lib/Debug;->jE:I
 
     .line 137
     invoke-static {}, Lcom/glympse/android/lib/StaticConfig;->LOG_URL()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/lib/Debug;->jh:Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/lib/Debug;->jF:Ljava/lang/String;
 
     .line 141
-    sget-object v0, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GContextHolder;->getContext()Landroid/content/Context;
 
@@ -1128,7 +1128,7 @@
     if-nez v0, :cond_0
 
     .line 143
-    sget-object v0, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GContextHolder;->getContext()Landroid/content/Context;
 
@@ -1145,7 +1145,7 @@
     .line 151
     :cond_0
     :goto_0
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
@@ -1199,7 +1199,7 @@
 
     .line 498
     :cond_2
-    sget v3, Lcom/glympse/android/lib/Debug;->jf:I
+    sget v3, Lcom/glympse/android/lib/Debug;->jD:I
 
     if-lt v4, v3, :cond_4
 
@@ -1214,7 +1214,7 @@
     and-int/2addr v0, v3
 
     .line 499
-    sget v3, Lcom/glympse/android/lib/Debug;->jg:I
+    sget v3, Lcom/glympse/android/lib/Debug;->jE:I
 
     if-lt v4, v3, :cond_6
 
@@ -1254,7 +1254,7 @@
     .prologue
     .line 575
     :try_start_0
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jk:Ljava/lang/String;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jI:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -1295,13 +1295,13 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
     .line 587
-    sget-object v1, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     invoke-interface {v1}, Lcom/glympse/android/hal/GContextHolder;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget-object v2, Lcom/glympse/android/lib/Debug;->jk:Ljava/lang/String;
+    sget-object v2, Lcom/glympse/android/lib/Debug;->jI:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1328,12 +1328,12 @@
 
     .prologue
     .line 276
-    sput p0, Lcom/glympse/android/lib/Debug;->jf:I
+    sput p0, Lcom/glympse/android/lib/Debug;->jD:I
 
     .line 277
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/glympse/android/lib/Debug;->je:Z
+    sput-boolean v0, Lcom/glympse/android/lib/Debug;->jC:Z
 
     .line 278
     return-void
@@ -1344,12 +1344,12 @@
 
     .prologue
     .line 287
-    sput p0, Lcom/glympse/android/lib/Debug;->jg:I
+    sput p0, Lcom/glympse/android/lib/Debug;->jE:I
 
     .line 288
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/glympse/android/lib/Debug;->je:Z
+    sput-boolean v0, Lcom/glympse/android/lib/Debug;->jC:Z
 
     .line 289
     return-void
@@ -1360,15 +1360,15 @@
 
     .prologue
     .line 269
-    sput p0, Lcom/glympse/android/lib/Debug;->jg:I
+    sput p0, Lcom/glympse/android/lib/Debug;->jE:I
 
     .line 270
-    sput p1, Lcom/glympse/android/lib/Debug;->jf:I
+    sput p1, Lcom/glympse/android/lib/Debug;->jD:I
 
     .line 271
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/glympse/android/lib/Debug;->je:Z
+    sput-boolean v0, Lcom/glympse/android/lib/Debug;->jC:Z
 
     .line 272
     return-void
@@ -1452,20 +1452,20 @@
 .end method
 
 .method public static reportError(Ljava/lang/String;Ljava/lang/String;Z)V
-    .locals 4
+    .locals 5
 
     .prologue
+    const/4 v4, 0x1
+
     .line 629
     invoke-static {}, Lcom/glympse/android/hal/Concurrent;->getTime()J
 
     move-result-wide v0
 
     .line 632
-    sget-object v2, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v2, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
-    const/4 v3, 0x1
-
-    invoke-static {v2, v0, v1, v3}, Lcom/glympse/android/lib/hq;->a(Lcom/glympse/android/hal/GContextHolder;JZ)Ljava/lang/String;
+    invoke-static {v2, v0, v1, v4}, Lcom/glympse/android/lib/hx;->a(Lcom/glympse/android/hal/GContextHolder;JZ)Ljava/lang/String;
 
     move-result-object v2
 
@@ -1473,13 +1473,13 @@
     if-eqz p2, :cond_0
 
     .line 638
-    sget-object v3, Lcom/glympse/android/lib/Debug;->jm:Lcom/glympse/android/hal/GVector;
+    sget-object v3, Lcom/glympse/android/lib/Debug;->jK:Lcom/glympse/android/hal/GVector;
 
-    invoke-static {v3}, Lcom/glympse/android/lib/hq;->g(Lcom/glympse/android/hal/GVector;)Ljava/lang/String;
+    invoke-static {v3, v4}, Lcom/glympse/android/lib/hx;->a(Lcom/glympse/android/hal/GVector;Z)Ljava/lang/String;
 
     move-result-object v3
 
-    sput-object v3, Lcom/glympse/android/lib/Debug;->jo:Ljava/lang/String;
+    sput-object v3, Lcom/glympse/android/lib/Debug;->jM:Ljava/lang/String;
 
     .line 642
     :cond_0
@@ -1496,14 +1496,14 @@
 
     .line 648
     :cond_2
-    sget-object v3, Lcom/glympse/android/lib/Debug;->jo:Ljava/lang/String;
+    sget-object v3, Lcom/glympse/android/lib/Debug;->jM:Ljava/lang/String;
 
-    invoke-static {v2, v0, v1, v3, p0}, Lcom/glympse/android/lib/hq;->a(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v0, v1, v3, p0}, Lcom/glympse/android/lib/hx;->a(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 651
-    sget-object v1, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     invoke-interface {v1}, Lcom/glympse/android/hal/GContextHolder;->getContext()Landroid/content/Context;
 
@@ -1521,7 +1521,7 @@
     if-eqz p2, :cond_1
 
     .line 658
-    invoke-static {}, Lcom/glympse/android/lib/Debug;->aD()V
+    invoke-static {}, Lcom/glympse/android/lib/Debug;->aE()V
 
     .line 661
     invoke-static {}, Lcom/glympse/android/lib/Debug;->uploadCrashReports()V
@@ -1530,20 +1530,19 @@
 .end method
 
 .method public static start(Lcom/glympse/android/lib/GGlympsePrivate;)V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 159
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
-
-    invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
-
-    .line 164
     const/4 v0, 0x0
+
+    .line 159
+    sget-object v1, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
+
+    invoke-interface {v1}, Lcom/glympse/android/hal/GMutex;->block()V
 
     .line 167
     :try_start_0
-    sget-object v1, Lcom/glympse/android/lib/Debug;->jm:Lcom/glympse/android/hal/GVector;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->jK:Lcom/glympse/android/hal/GVector;
 
     if-nez v1, :cond_0
 
@@ -1555,11 +1554,11 @@
 
     invoke-direct {v1}, Lcom/glympse/android/hal/GVector;-><init>()V
 
-    sput-object v1, Lcom/glympse/android/lib/Debug;->jm:Lcom/glympse/android/hal/GVector;
+    sput-object v1, Lcom/glympse/android/lib/Debug;->jK:Lcom/glympse/android/hal/GVector;
 
     .line 176
     :cond_0
-    sget-object v1, Lcom/glympse/android/lib/Debug;->jm:Lcom/glympse/android/hal/GVector;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->jK:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v1, p0}, Lcom/glympse/android/hal/GVector;->addElement(Ljava/lang/Object;)V
 
@@ -1574,27 +1573,27 @@
     check-cast v0, Lcom/glympse/android/lib/GConfigPrivate;
 
     .line 183
-    sget-boolean v1, Lcom/glympse/android/lib/Debug;->je:Z
+    sget-boolean v1, Lcom/glympse/android/lib/Debug;->jC:Z
 
     if-nez v1, :cond_1
 
     .line 185
     invoke-interface {v0}, Lcom/glympse/android/lib/GConfigPrivate;->getDebugLevel()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
-    sput v1, Lcom/glympse/android/lib/Debug;->jf:I
+    sput v1, Lcom/glympse/android/lib/Debug;->jD:I
 
     .line 186
     invoke-interface {v0}, Lcom/glympse/android/lib/GConfigPrivate;->getFileLevel()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    long-to-int v1, v1
+    long-to-int v1, v2
 
-    sput v1, Lcom/glympse/android/lib/Debug;->jg:I
+    sput v1, Lcom/glympse/android/lib/Debug;->jE:I
 
     .line 188
     :cond_1
@@ -1602,23 +1601,25 @@
 
     move-result-object v1
 
-    sput-object v1, Lcom/glympse/android/lib/Debug;->jh:Ljava/lang/String;
+    sput-object v1, Lcom/glympse/android/lib/Debug;->jF:Ljava/lang/String;
 
     .line 189
     invoke-interface {v0}, Lcom/glympse/android/lib/GConfigPrivate;->getDeviceId()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/lib/hq;->gH:Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/lib/hx;->gO:Ljava/lang/String;
 
     .line 193
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jm:Lcom/glympse/android/hal/GVector;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jK:Lcom/glympse/android/hal/GVector;
 
-    invoke-static {v0}, Lcom/glympse/android/lib/hq;->g(Lcom/glympse/android/hal/GVector;)Ljava/lang/String;
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/glympse/android/lib/hx;->a(Lcom/glympse/android/hal/GVector;Z)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/lib/Debug;->jo:Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/lib/Debug;->jM:Ljava/lang/String;
 
     .line 196
     invoke-static {}, Lcom/glympse/android/lib/Debug;->uploadLogsOnBackgroundThread()V
@@ -1628,7 +1629,7 @@
     .line 203
     :cond_2
     :goto_0
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
@@ -1646,13 +1647,13 @@
 
     .prologue
     .line 211
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
     .line 215
     :try_start_0
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jm:Lcom/glympse/android/hal/GVector;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jK:Lcom/glympse/android/hal/GVector;
 
     invoke-virtual {v0, p0}, Lcom/glympse/android/hal/GVector;->removeElement(Ljava/lang/Object;)Z
     :try_end_0
@@ -1660,7 +1661,7 @@
 
     .line 220
     :goto_0
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
@@ -1674,35 +1675,37 @@
 .end method
 
 .method public static updateLevels(IILjava/lang/String;)V
-    .locals 1
+    .locals 2
 
     .prologue
     .line 231
-    sget-boolean v0, Lcom/glympse/android/lib/Debug;->je:Z
+    sget-boolean v0, Lcom/glympse/android/lib/Debug;->jC:Z
 
     if-nez v0, :cond_1
 
     .line 233
     if-eqz p0, :cond_0
 
-    sget v0, Lcom/glympse/android/lib/Debug;->jg:I
+    sget v0, Lcom/glympse/android/lib/Debug;->jE:I
 
     if-eq v0, p0, :cond_0
 
     .line 235
-    sput p0, Lcom/glympse/android/lib/Debug;->jg:I
+    sput p0, Lcom/glympse/android/lib/Debug;->jE:I
 
     .line 238
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jm:Lcom/glympse/android/hal/GVector;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jK:Lcom/glympse/android/hal/GVector;
 
-    invoke-static {v0}, Lcom/glympse/android/lib/hq;->g(Lcom/glympse/android/hal/GVector;)Ljava/lang/String;
+    const/4 v1, 0x1
+
+    invoke-static {v0, v1}, Lcom/glympse/android/lib/hx;->a(Lcom/glympse/android/hal/GVector;Z)Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/glympse/android/lib/Debug;->jo:Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/lib/Debug;->jM:Ljava/lang/String;
 
     .line 242
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
@@ -1710,13 +1713,13 @@
     const/4 v0, 0x0
 
     :try_start_0
-    sput-object v0, Lcom/glympse/android/lib/Debug;->jk:Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/lib/Debug;->jI:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 250
     :goto_0
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
@@ -1725,7 +1728,7 @@
     if-eqz p1, :cond_1
 
     .line 254
-    sput p1, Lcom/glympse/android/lib/Debug;->jf:I
+    sput p1, Lcom/glympse/android/lib/Debug;->jD:I
 
     .line 257
     :cond_1
@@ -1736,7 +1739,7 @@
     if-nez v0, :cond_2
 
     .line 259
-    sput-object p2, Lcom/glympse/android/lib/Debug;->jh:Ljava/lang/String;
+    sput-object p2, Lcom/glympse/android/lib/Debug;->jF:Ljava/lang/String;
 
     .line 261
     :cond_2
@@ -1755,7 +1758,7 @@
     .line 668
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/glympse/android/lib/Debug;->jk:Ljava/lang/String;
+    sput-object v0, Lcom/glympse/android/lib/Debug;->jI:Ljava/lang/String;
 
     .line 669
     invoke-static {}, Lcom/glympse/android/lib/Debug;->uploadLogsOnCurrentThread()V
@@ -1769,11 +1772,11 @@
 
     .prologue
     .line 675
-    new-instance v0, Lcom/glympse/android/lib/ar;
+    new-instance v0, Lcom/glympse/android/lib/au;
 
     const/4 v1, 0x0
 
-    invoke-direct {v0, v1}, Lcom/glympse/android/lib/ar;-><init>(Lcom/glympse/android/lib/Debug$1;)V
+    invoke-direct {v0, v1}, Lcom/glympse/android/lib/au;-><init>(Lcom/glympse/android/lib/Debug$1;)V
 
     invoke-static {v0}, Lcom/glympse/android/hal/DebugBase;->runInBackground(Ljava/lang/Runnable;)V
 
@@ -1791,17 +1794,17 @@
 
     .line 690
     :try_start_0
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
     .line 691
-    sget-boolean v0, Lcom/glympse/android/lib/Debug;->jl:Z
+    sget-boolean v0, Lcom/glympse/android/lib/Debug;->jJ:Z
 
     if-eqz v0, :cond_0
 
     .line 693
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
@@ -1811,7 +1814,7 @@
 
     .line 696
     :cond_0
-    sget-object v0, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GContextHolder;->getContext()Landroid/content/Context;
 
@@ -1829,7 +1832,7 @@
     if-nez v5, :cond_2
 
     .line 699
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
     :try_end_0
@@ -1845,15 +1848,15 @@
 
     .line 782
     :cond_1
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->block()V
 
     .line 783
-    sput-boolean v3, Lcom/glympse/android/lib/Debug;->jl:Z
+    sput-boolean v3, Lcom/glympse/android/lib/Debug;->jJ:Z
 
     .line 784
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
@@ -1864,10 +1867,10 @@
     const/4 v0, 0x1
 
     :try_start_1
-    sput-boolean v0, Lcom/glympse/android/lib/Debug;->jl:Z
+    sput-boolean v0, Lcom/glympse/android/lib/Debug;->jJ:Z
 
     .line 703
-    sget-object v0, Lcom/glympse/android/lib/Debug;->jn:Lcom/glympse/android/hal/GMutex;
+    sget-object v0, Lcom/glympse/android/lib/Debug;->jL:Lcom/glympse/android/hal/GMutex;
 
     invoke-interface {v0}, Lcom/glympse/android/hal/GMutex;->unblock()V
 
@@ -1925,7 +1928,7 @@
 
     if-eqz v1, :cond_5
 
-    sget-object v1, Lcom/glympse/android/lib/Debug;->jk:Ljava/lang/String;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->jI:Ljava/lang/String;
 
     invoke-static {v1}, Lcom/glympse/android/hal/Helpers;->isEmpty(Ljava/lang/String;)Z
 
@@ -1933,7 +1936,7 @@
 
     if-nez v1, :cond_4
 
-    sget-object v1, Lcom/glympse/android/lib/Debug;->jk:Ljava/lang/String;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->jI:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
 
@@ -1943,7 +1946,7 @@
 
     .line 728
     :cond_4
-    sget-object v1, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     invoke-static {v1, v0}, Lcom/glympse/android/lib/Debug;->a(Lcom/glympse/android/hal/GContextHolder;Ljava/lang/String;)Z
 
@@ -1978,7 +1981,7 @@
     invoke-direct {v8, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
     .line 740
-    sget-object v1, Lcom/glympse/android/lib/Debug;->jh:Ljava/lang/String;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->jF:Ljava/lang/String;
 
     invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2030,7 +2033,7 @@
     invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 751
-    sget-object v1, Lcom/glympse/android/lib/Debug;->ie:Lcom/glympse/android/hal/GContextHolder;
+    sget-object v1, Lcom/glympse/android/lib/Debug;->iC:Lcom/glympse/android/hal/GContextHolder;
 
     invoke-interface {v1}, Lcom/glympse/android/hal/GContextHolder;->getContext()Landroid/content/Context;
 

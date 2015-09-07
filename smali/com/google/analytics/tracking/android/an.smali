@@ -1,5 +1,5 @@
 .class public Lcom/google/analytics/tracking/android/an;
-.super Lcom/google/analytics/tracking/android/bf;
+.super Lcom/google/analytics/tracking/android/bh;
 .source "GoogleAnalytics.java"
 
 
@@ -8,27 +8,27 @@
 
 
 # instance fields
-.field private a:Z
+.field a:Z
 
-.field private b:Lcom/google/analytics/tracking/android/h;
+.field volatile b:Ljava/lang/Boolean;
 
-.field private c:Landroid/content/Context;
+.field c:Lcom/google/analytics/tracking/android/ar;
 
-.field private volatile d:Ljava/lang/Boolean;
+.field private d:Lcom/google/analytics/tracking/android/h;
 
-.field private final e:Ljava/util/Map;
+.field private e:Landroid/content/Context;
+
+.field private final f:Ljava/util/Map;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Map",
             "<",
             "Ljava/lang/String;",
-            "Lcom/google/analytics/tracking/android/be;",
+            "Lcom/google/analytics/tracking/android/bg;",
             ">;"
         }
     .end annotation
 .end field
-
-.field private f:Lcom/google/analytics/tracking/android/ar;
 
 
 # direct methods
@@ -54,7 +54,7 @@
 
     .prologue
     .line 51
-    invoke-direct {p0}, Lcom/google/analytics/tracking/android/bf;-><init>()V
+    invoke-direct {p0}, Lcom/google/analytics/tracking/android/bh;-><init>()V
 
     .line 38
     const/4 v0, 0x0
@@ -63,14 +63,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/analytics/tracking/android/an;->d:Ljava/lang/Boolean;
+    iput-object v0, p0, Lcom/google/analytics/tracking/android/an;->b:Ljava/lang/Boolean;
 
     .line 41
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/google/analytics/tracking/android/an;->e:Ljava/util/Map;
+    iput-object v0, p0, Lcom/google/analytics/tracking/android/an;->f:Ljava/util/Map;
 
     .line 52
     if-nez p1, :cond_0
@@ -90,23 +90,23 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/analytics/tracking/android/an;->c:Landroid/content/Context;
+    iput-object v0, p0, Lcom/google/analytics/tracking/android/an;->e:Landroid/content/Context;
 
     .line 56
-    iput-object p2, p0, Lcom/google/analytics/tracking/android/an;->b:Lcom/google/analytics/tracking/android/h;
+    iput-object p2, p0, Lcom/google/analytics/tracking/android/an;->d:Lcom/google/analytics/tracking/android/h;
 
     .line 58
-    iget-object v0, p0, Lcom/google/analytics/tracking/android/an;->c:Landroid/content/Context;
+    iget-object v0, p0, Lcom/google/analytics/tracking/android/an;->e:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/i;->a(Landroid/content/Context;)V
 
     .line 59
-    iget-object v0, p0, Lcom/google/analytics/tracking/android/an;->c:Landroid/content/Context;
+    iget-object v0, p0, Lcom/google/analytics/tracking/android/an;->e:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/google/analytics/tracking/android/az;->a(Landroid/content/Context;)V
+    invoke-static {v0}, Lcom/google/analytics/tracking/android/ba;->a(Landroid/content/Context;)V
 
     .line 60
-    iget-object v0, p0, Lcom/google/analytics/tracking/android/an;->c:Landroid/content/Context;
+    iget-object v0, p0, Lcom/google/analytics/tracking/android/an;->e:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/google/analytics/tracking/android/j;->a(Landroid/content/Context;)V
 
@@ -115,7 +115,7 @@
 
     invoke-direct {v0}, Lcom/google/analytics/tracking/android/m;-><init>()V
 
-    iput-object v0, p0, Lcom/google/analytics/tracking/android/an;->f:Lcom/google/analytics/tracking/android/ar;
+    iput-object v0, p0, Lcom/google/analytics/tracking/android/an;->c:Lcom/google/analytics/tracking/android/ar;
 
     .line 63
     return-void
@@ -210,57 +210,33 @@
     monitor-enter p0
 
     .line 236
-    if-nez p1, :cond_0
-
-    .line 238
     :try_start_0
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string v1, "hit cannot be null"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 248
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-
-    .line 241
-    :cond_0
-    :try_start_1
     const-string v0, "&ul"
 
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/google/analytics/tracking/android/bg;->a(Ljava/util/Locale;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/google/analytics/tracking/android/bi;->a(Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p1, v0, v1}, Lcom/google/analytics/tracking/android/bg;->a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0, v1}, Lcom/google/analytics/tracking/android/bi;->a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 242
     const-string v0, "&sr"
 
-    invoke-static {}, Lcom/google/analytics/tracking/android/az;->a()Lcom/google/analytics/tracking/android/az;
+    invoke-static {}, Lcom/google/analytics/tracking/android/ba;->a()Lcom/google/analytics/tracking/android/ba;
 
     move-result-object v1
 
     const-string v2, "&sr"
 
-    invoke-virtual {v1, v2}, Lcom/google/analytics/tracking/android/az;->a(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Lcom/google/analytics/tracking/android/ba;->a(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {p1, v0, v1}, Lcom/google/analytics/tracking/android/bg;->a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p1, v0, v1}, Lcom/google/analytics/tracking/android/bi;->a(Ljava/util/Map;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 244
     const-string v0, "&_u"
@@ -283,36 +259,23 @@
     invoke-virtual {v0}, Lcom/google/analytics/tracking/android/al;->b()Ljava/lang/String;
 
     .line 247
-    iget-object v0, p0, Lcom/google/analytics/tracking/android/an;->b:Lcom/google/analytics/tracking/android/h;
+    iget-object v0, p0, Lcom/google/analytics/tracking/android/an;->d:Lcom/google/analytics/tracking/android/h;
 
     invoke-interface {v0, p1}, Lcom/google/analytics/tracking/android/h;->a(Ljava/util/Map;)V
 
     .line 248
     monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     return-void
-.end method
 
-.method public final a(Z)V
-    .locals 2
+    :catchall_0
+    move-exception v0
 
-    .prologue
-    .line 135
-    invoke-static {}, Lcom/google/analytics/tracking/android/al;->a()Lcom/google/analytics/tracking/android/al;
+    monitor-exit p0
 
-    move-result-object v0
-
-    sget-object v1, Lcom/google/analytics/tracking/android/am;->ac:Lcom/google/analytics/tracking/android/am;
-
-    invoke-virtual {v0, v1}, Lcom/google/analytics/tracking/android/al;->a(Lcom/google/analytics/tracking/android/am;)V
-
-    .line 136
-    iput-boolean p1, p0, Lcom/google/analytics/tracking/android/an;->a:Z
-
-    .line 137
-    return-void
+    throw v0
 .end method
 
 .method public final b()Z
@@ -332,37 +295,4 @@
     iget-boolean v0, p0, Lcom/google/analytics/tracking/android/an;->a:Z
 
     return v0
-.end method
-
-.method public final c()Z
-    .locals 2
-
-    .prologue
-    .line 274
-    invoke-static {}, Lcom/google/analytics/tracking/android/al;->a()Lcom/google/analytics/tracking/android/al;
-
-    move-result-object v0
-
-    sget-object v1, Lcom/google/analytics/tracking/android/am;->R:Lcom/google/analytics/tracking/android/am;
-
-    invoke-virtual {v0, v1}, Lcom/google/analytics/tracking/android/al;->a(Lcom/google/analytics/tracking/android/am;)V
-
-    .line 275
-    iget-object v0, p0, Lcom/google/analytics/tracking/android/an;->d:Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final d()Lcom/google/analytics/tracking/android/ar;
-    .locals 1
-
-    .prologue
-    .line 282
-    iget-object v0, p0, Lcom/google/analytics/tracking/android/an;->f:Lcom/google/analytics/tracking/android/ar;
-
-    return-object v0
 .end method

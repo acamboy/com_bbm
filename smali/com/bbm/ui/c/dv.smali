@@ -1,61 +1,115 @@
-.class final Lcom/bbm/ui/c/dv;
-.super Ljava/lang/Object;
-.source "GroupsFragment.java"
+.class public final enum Lcom/bbm/ui/c/dv;
+.super Ljava/lang/Enum;
+.source "GroupMembersFragment.java"
 
 
-# instance fields
-.field final a:Lcom/bbm/ui/c/dw;
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/ui/c/dv;",
+        ">;"
+    }
+.end annotation
 
-.field final b:Ljava/lang/String;
 
-.field final c:Lcom/bbm/d/a/a;
+# static fields
+.field public static final enum a:Lcom/bbm/ui/c/dv;
+
+.field public static final enum b:Lcom/bbm/ui/c/dv;
+
+.field private static final synthetic c:[Lcom/bbm/ui/c/dv;
 
 
 # direct methods
-.method public constructor <init>(Lcom/bbm/g/a;)V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 4
 
     .prologue
-    .line 167
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v3, 0x1
 
-    .line 168
-    sget-object v0, Lcom/bbm/ui/c/dw;->a:Lcom/bbm/ui/c/dw;
+    const/4 v2, 0x0
 
-    iput-object v0, p0, Lcom/bbm/ui/c/dv;->a:Lcom/bbm/ui/c/dw;
+    .line 254
+    new-instance v0, Lcom/bbm/ui/c/dv;
 
-    .line 169
-    iget-object v0, p1, Lcom/bbm/g/a;->q:Ljava/lang/String;
+    const-string v1, "ACTIVE_MEMBER"
 
-    iput-object v0, p0, Lcom/bbm/ui/c/dv;->b:Ljava/lang/String;
+    invoke-direct {v0, v1, v2}, Lcom/bbm/ui/c/dv;-><init>(Ljava/lang/String;I)V
 
-    .line 170
-    iput-object p1, p0, Lcom/bbm/ui/c/dv;->c:Lcom/bbm/d/a/a;
+    sput-object v0, Lcom/bbm/ui/c/dv;->a:Lcom/bbm/ui/c/dv;
 
-    .line 171
+    .line 255
+    new-instance v0, Lcom/bbm/ui/c/dv;
+
+    const-string v1, "INACTIVE_MEMBER"
+
+    invoke-direct {v0, v1, v3}, Lcom/bbm/ui/c/dv;-><init>(Ljava/lang/String;I)V
+
+    sput-object v0, Lcom/bbm/ui/c/dv;->b:Lcom/bbm/ui/c/dv;
+
+    .line 253
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lcom/bbm/ui/c/dv;
+
+    sget-object v1, Lcom/bbm/ui/c/dv;->a:Lcom/bbm/ui/c/dv;
+
+    aput-object v1, v0, v2
+
+    sget-object v1, Lcom/bbm/ui/c/dv;->b:Lcom/bbm/ui/c/dv;
+
+    aput-object v1, v0, v3
+
+    sput-object v0, Lcom/bbm/ui/c/dv;->c:[Lcom/bbm/ui/c/dv;
+
     return-void
 .end method
 
-.method public constructor <init>(Lcom/bbm/g/z;)V
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    .prologue
+    .line 253
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/ui/c/dv;
     .locals 1
 
     .prologue
-    .line 173
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 253
+    const-class v0, Lcom/bbm/ui/c/dv;
 
-    .line 174
-    sget-object v0, Lcom/bbm/ui/c/dw;->b:Lcom/bbm/ui/c/dw;
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
 
-    iput-object v0, p0, Lcom/bbm/ui/c/dv;->a:Lcom/bbm/ui/c/dw;
+    move-result-object v0
 
-    .line 175
-    iget-object v0, p1, Lcom/bbm/g/z;->a:Ljava/lang/String;
+    check-cast v0, Lcom/bbm/ui/c/dv;
 
-    iput-object v0, p0, Lcom/bbm/ui/c/dv;->b:Ljava/lang/String;
+    return-object v0
+.end method
 
-    .line 176
-    iput-object p1, p0, Lcom/bbm/ui/c/dv;->c:Lcom/bbm/d/a/a;
+.method public static values()[Lcom/bbm/ui/c/dv;
+    .locals 1
 
-    .line 177
-    return-void
+    .prologue
+    .line 253
+    sget-object v0, Lcom/bbm/ui/c/dv;->c:[Lcom/bbm/ui/c/dv;
+
+    invoke-virtual {v0}, [Lcom/bbm/ui/c/dv;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/ui/c/dv;
+
+    return-object v0
 .end method

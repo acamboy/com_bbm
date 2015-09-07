@@ -6,12 +6,14 @@
     <integer name="actionbar_two_buttons_button_weight">262</integer>
     <integer name="actionbar_two_buttons_text_weight">422</integer>
     <integer name="actionbar_weight_sum">1000</integer>
+    <integer name="app_store_grid_columns_count">3</integer>
     <integer name="contacts_grid_column_count">3</integer>
     <integer name="conversation_input_box_row_count">4</integer>
     <integer name="dbx_max_action_buttons">2</integer>
     <integer name="dialog_button_max_lines">2</integer>
     <integer name="emoticon_picker_column_count">8</integer>
     <integer name="emoticon_picker_visible_columns_count">8</integer>
+    <integer name="ephemeral_image_black_overlay_transparency">204</integer>
     <integer name="file_picker_grid_column_count">3</integer>
     <integer name="first_launch_overlay_animation_alpha_duration">250</integer>
     <integer name="first_launch_overlay_animation_translate_duration">500</integer>
@@ -21,6 +23,7 @@
     <integer name="footer_actionbar_weight_sum">1000</integer>
     <integer name="glympse_cancellation_timeout">30000</integer>
     <integer name="google_play_services_version">4323000</integer>
+    <integer name="group_max_failsafe">30</integer>
     <integer name="group_max_membership_failsafe">50</integer>
     <integer name="group_picture_grid_columns_count">3</integer>
     <integer name="incoming_call_answerbar_hint_duration">150</integer>
@@ -33,6 +36,7 @@
     <integer name="incoming_call_answerbar_midpoint">256</integer>
     <integer name="incoming_call_answerbar_right_threshold">384</integer>
     <integer name="main_tab_bar_view_tab_count">5</integer>
+    <integer name="max_system_messages_before_scroll_enabled">3</integer>
     <integer name="quick_action_attachments_grid_column_count">4</integer>
     <integer name="quick_action_camera_grid_column_count">3</integer>
     <integer name="quick_action_camera_max_photos_to_load">5</integer>
@@ -43,6 +47,9 @@
     <integer name="sticker_pack_rows_count">5</integer>
     <integer name="sticker_picker_column_count">4</integer>
     <integer name="sticker_store_grid_columns_count">3</integer>
+    <integer name="store_home_page_grid_columns_count">3</integer>
+    <integer name="store_sticker_packs_count">6</integer>
+    <integer name="store_vg_count">3</integer>
     <integer name="wingman_left_angle">-15</integer>
     <integer name="wingman_right_angle">15</integer>
 </resources>

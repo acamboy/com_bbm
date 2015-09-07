@@ -7,17 +7,17 @@
 
 
 # static fields
-.field public static final gP:I = 0xf4240
+.field public static final gY:I = 0xf4240
 
-.field public static final gQ:I = 0x64
+.field public static final gZ:I = 0x64
 
-.field public static final gR:I = 0x8
+.field public static final ha:I = 0x8
 
-.field public static final gS:I = 0xfffffff
+.field public static final hb:I = 0xfffffff
 
 
 # instance fields
-.field public gT:Lcom/glympse/android/lib/k;
+.field public hc:Lcom/glympse/android/lib/k;
 
 
 # direct methods
@@ -158,9 +158,9 @@
 
     .prologue
     .line 107
-    iget-object v0, p0, Lcom/glympse/android/lib/j;->gT:Lcom/glympse/android/lib/k;
+    iget-object v0, p0, Lcom/glympse/android/lib/j;->hc:Lcom/glympse/android/lib/k;
 
-    iget-object v0, v0, Lcom/glympse/android/lib/k;->gX:Ljava/lang/String;
+    iget-object v0, v0, Lcom/glympse/android/lib/k;->hg:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -170,9 +170,9 @@
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/glympse/android/lib/j;->gT:Lcom/glympse/android/lib/k;
+    iget-object v0, p0, Lcom/glympse/android/lib/j;->hc:Lcom/glympse/android/lib/k;
 
-    iget-object v0, v0, Lcom/glympse/android/lib/k;->gY:Ljava/lang/String;
+    iget-object v0, v0, Lcom/glympse/android/lib/k;->hh:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -182,12 +182,12 @@
 
     .prologue
     .line 86
-    iget-object v0, p0, Lcom/glympse/android/lib/j;->gT:Lcom/glympse/android/lib/k;
+    iget-object v0, p0, Lcom/glympse/android/lib/j;->hc:Lcom/glympse/android/lib/k;
 
-    iput-object p1, v0, Lcom/glympse/android/lib/k;->gU:Lcom/glympse/android/lib/json/GJsonHandlerStack;
+    iput-object p1, v0, Lcom/glympse/android/lib/k;->hd:Lcom/glympse/android/lib/json/GJsonHandlerStack;
 
     .line 87
-    iget-object v0, p0, Lcom/glympse/android/lib/j;->gT:Lcom/glympse/android/lib/k;
+    iget-object v0, p0, Lcom/glympse/android/lib/j;->hc:Lcom/glympse/android/lib/k;
 
     return-object v0
 .end method
@@ -197,9 +197,9 @@
 
     .prologue
     .line 102
-    iget-object v0, p0, Lcom/glympse/android/lib/j;->gT:Lcom/glympse/android/lib/k;
+    iget-object v0, p0, Lcom/glympse/android/lib/j;->hc:Lcom/glympse/android/lib/k;
 
-    iget-object v0, v0, Lcom/glympse/android/lib/k;->gW:Ljava/lang/String;
+    iget-object v0, v0, Lcom/glympse/android/lib/k;->hf:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -209,7 +209,7 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Lcom/glympse/android/lib/j;->gT:Lcom/glympse/android/lib/k;
+    iget-object v0, p0, Lcom/glympse/android/lib/j;->hc:Lcom/glympse/android/lib/k;
 
     iget-wide v0, v0, Lcom/glympse/android/lib/k;->_time:J
 

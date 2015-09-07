@@ -1211,11 +1211,11 @@
 
     invoke-static {v0, v5, v1, v2}, Lcom/google/zxing/client/a/af;->a(Ljava/lang/CharSequence;Ljava/lang/String;ZZ)Ljava/util/List;
 
-    move-result-object v4
+    move-result-object v2
 
-    if-eqz v4, :cond_3
+    if-eqz v2, :cond_3
 
-    invoke-interface {v4}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
+    invoke-interface {v2}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
 
@@ -1240,75 +1240,73 @@
 
     check-cast v1, Ljava/lang/String;
 
-    const/4 v2, 0x5
+    const/4 v3, 0x5
 
-    new-array v7, v2, [Ljava/lang/String;
+    new-array v7, v3, [Ljava/lang/String;
+
+    const/4 v4, 0x0
 
     const/4 v3, 0x0
 
-    const/4 v2, 0x0
-
     :goto_2
-    array-length v8, v7
+    const/4 v8, 0x4
 
-    add-int/lit8 v8, v8, -0x1
-
-    if-ge v2, v8, :cond_2
+    if-ge v3, v8, :cond_2
 
     const/16 v8, 0x3b
 
-    invoke-virtual {v1, v8, v3}, Ljava/lang/String;->indexOf(II)I
+    invoke-virtual {v1, v8, v4}, Ljava/lang/String;->indexOf(II)I
 
     move-result v8
 
     if-lez v8, :cond_2
 
-    invoke-virtual {v1, v3, v8}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    invoke-virtual {v1, v4, v8}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v4
 
-    aput-object v3, v7, v2
+    aput-object v4, v7, v3
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v3, v3, 0x1
 
-    add-int/lit8 v3, v8, 0x1
+    add-int/lit8 v4, v8, 0x1
 
     goto :goto_2
 
     :cond_2
-    invoke-virtual {v1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+    invoke-virtual {v1, v4}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v1
 
-    aput-object v1, v7, v2
+    aput-object v1, v7, v3
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const/16 v2, 0x64
+    const/16 v3, 0x64
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
+    invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    const/4 v2, 0x3
+    const/4 v3, 0x3
 
-    invoke-static {v7, v2, v1}, Lcom/google/zxing/client/a/af;->a([Ljava/lang/String;ILjava/lang/StringBuilder;)V
+    invoke-static {v7, v3, v1}, Lcom/google/zxing/client/a/af;->a([Ljava/lang/String;ILjava/lang/StringBuilder;)V
 
-    const/4 v2, 0x1
+    const/4 v3, 0x1
 
-    invoke-static {v7, v2, v1}, Lcom/google/zxing/client/a/af;->a([Ljava/lang/String;ILjava/lang/StringBuilder;)V
+    invoke-static {v7, v3, v1}, Lcom/google/zxing/client/a/af;->a([Ljava/lang/String;ILjava/lang/StringBuilder;)V
 
-    const/4 v2, 0x2
+    const/4 v3, 0x2
 
-    invoke-static {v7, v2, v1}, Lcom/google/zxing/client/a/af;->a([Ljava/lang/String;ILjava/lang/StringBuilder;)V
+    invoke-static {v7, v3, v1}, Lcom/google/zxing/client/a/af;->a([Ljava/lang/String;ILjava/lang/StringBuilder;)V
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    invoke-static {v7, v2, v1}, Lcom/google/zxing/client/a/af;->a([Ljava/lang/String;ILjava/lang/StringBuilder;)V
+    invoke-static {v7, v3, v1}, Lcom/google/zxing/client/a/af;->a([Ljava/lang/String;ILjava/lang/StringBuilder;)V
 
-    const/4 v2, 0x4
+    const/4 v3, 0x4
 
-    invoke-static {v7, v2, v1}, Lcom/google/zxing/client/a/af;->a([Ljava/lang/String;ILjava/lang/StringBuilder;)V
+    invoke-static {v7, v3, v1}, Lcom/google/zxing/client/a/af;->a([Ljava/lang/String;ILjava/lang/StringBuilder;)V
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1318,12 +1316,12 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v2, v1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
+    invoke-interface {v0, v3, v1}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_1
 
     :cond_3
-    move-object v1, v4
+    move-object v1, v2
 
     :goto_3
     const-string v0, "TEL"

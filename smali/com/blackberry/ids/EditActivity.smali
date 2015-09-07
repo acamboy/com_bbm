@@ -1071,7 +1071,7 @@
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 125
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v1
 
@@ -1079,18 +1079,18 @@
 
     .line 127
     :try_start_0
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->n()V
+    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->g()V
 
     .line 129
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->g()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->d()Ljava/lang/String;
 
     move-result-object v4
 
@@ -1139,38 +1139,36 @@
     .line 135
     :cond_3
     :try_start_1
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
+
+    move-result-object v0
+
+    iget-object v6, v0, Lcom/blackberry/ids/BBIDStorage;->b:Ljava/lang/String;
+
+    .line 136
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->a()Ljava/lang/String;
+
+    move-result-object v5
+
+    .line 137
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->b()Ljava/lang/String;
 
-    move-result-object v6
+    move-result-object v3
 
-    .line 136
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
+    .line 138
+    invoke-static {}, Lcom/blackberry/ids/IDS;->b()Lcom/blackberry/ids/BBIDStorage;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->c()Ljava/lang/String;
-
-    move-result-object v5
-
-    .line 137
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->e()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 138
-    invoke-static {}, Lcom/blackberry/ids/IDS;->a()Lcom/blackberry/ids/BBIDStorage;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/blackberry/ids/BBIDStorage;->f()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1180,17 +1178,17 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     .line 141
-    invoke-static {}, Lcom/blackberry/ids/IDS;->c()Ljava/lang/String;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->d()Ljava/lang/String;
 
     move-result-object v1
 
     .line 142
-    invoke-static {}, Lcom/blackberry/ids/IDS;->d()Landroid/net/Uri;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->e()Landroid/net/Uri;
 
     move-result-object v7
 
     .line 143
-    invoke-static {}, Lcom/blackberry/ids/IDS;->e()Ljava/lang/String;
+    invoke-static {}, Lcom/blackberry/ids/IDS;->f()Ljava/lang/String;
 
     move-result-object v0
 

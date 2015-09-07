@@ -16,19 +16,19 @@
     .locals 0
 
     .prologue
-    .line 398
+    .line 375
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 399
+    .line 376
     iput-object p1, p0, Lcom/bbm/util/c/f;->a:Lcom/bbm/util/c/g;
 
-    .line 400
+    .line 377
     iput p2, p0, Lcom/bbm/util/c/f;->b:I
 
-    .line 401
+    .line 378
     iput p3, p0, Lcom/bbm/util/c/f;->c:F
 
-    .line 402
+    .line 379
     return-void
 .end method
 
@@ -42,24 +42,24 @@
 
     const/4 v1, 0x0
 
-    .line 416
+    .line 393
     if-ne p0, p1, :cond_1
 
-    .line 435
+    .line 412
     :cond_0
     :goto_0
     return v0
 
-    .line 419
+    .line 396
     :cond_1
     if-nez p1, :cond_2
 
     move v0, v1
 
-    .line 420
+    .line 397
     goto :goto_0
 
-    .line 422
+    .line 399
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -73,14 +73,14 @@
 
     move v0, v1
 
-    .line 423
+    .line 400
     goto :goto_0
 
-    .line 425
+    .line 402
     :cond_3
     check-cast p1, Lcom/bbm/util/c/f;
 
-    .line 426
+    .line 403
     iget v2, p0, Lcom/bbm/util/c/f;->b:I
 
     iget v3, p1, Lcom/bbm/util/c/f;->b:I
@@ -89,10 +89,10 @@
 
     move v0, v1
 
-    .line 427
+    .line 404
     goto :goto_0
 
-    .line 429
+    .line 406
     :cond_4
     iget v2, p0, Lcom/bbm/util/c/f;->c:F
 
@@ -110,10 +110,10 @@
 
     move v0, v1
 
-    .line 430
+    .line 407
     goto :goto_0
 
-    .line 432
+    .line 409
     :cond_5
     iget-object v2, p0, Lcom/bbm/util/c/f;->a:Lcom/bbm/util/c/g;
 
@@ -123,7 +123,7 @@
 
     move v0, v1
 
-    .line 433
+    .line 410
     goto :goto_0
 .end method
 
@@ -131,12 +131,12 @@
     .locals 2
 
     .prologue
-    .line 406
+    .line 383
     iget v0, p0, Lcom/bbm/util/c/f;->b:I
 
     add-int/lit8 v0, v0, 0x1f
 
-    .line 409
+    .line 386
     mul-int/lit8 v0, v0, 0x1f
 
     iget v1, p0, Lcom/bbm/util/c/f;->c:F
@@ -147,7 +147,7 @@
 
     add-int/2addr v0, v1
 
-    .line 410
+    .line 387
     mul-int/lit8 v1, v0, 0x1f
 
     iget-object v0, p0, Lcom/bbm/util/c/f;->a:Lcom/bbm/util/c/g;
@@ -159,10 +159,10 @@
     :goto_0
     add-int/2addr v0, v1
 
-    .line 411
+    .line 388
     return v0
 
-    .line 410
+    .line 387
     :cond_0
     iget-object v0, p0, Lcom/bbm/util/c/f;->a:Lcom/bbm/util/c/g;
 

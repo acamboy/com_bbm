@@ -144,13 +144,13 @@
 
     rem-int/lit16 v3, v3, 0x168
 
-    int-to-double v3, v3
+    int-to-double v4, v3
 
-    int-to-double v5, v2
+    int-to-double v2, v2
 
-    sub-double/2addr v0, v5
+    sub-double/2addr v0, v2
 
-    add-double/2addr v0, v3
+    add-double/2addr v0, v4
 
     return-wide v0
 .end method
@@ -352,10 +352,10 @@
 .end method
 
 .method public static isValid(DD)Z
-    .locals 3
+    .locals 4
 
     .prologue
-    const-wide/16 v1, 0x0
+    const-wide/16 v2, 0x0
 
     .line 90
     invoke-static {p0, p1}, Ljava/lang/Double;->isNaN(D)Z
@@ -370,11 +370,11 @@
 
     if-nez v0, :cond_1
 
-    cmpl-double v0, p0, v1
+    cmpl-double v0, p0, v2
 
     if-nez v0, :cond_0
 
-    cmpl-double v0, p2, v1
+    cmpl-double v0, p2, v2
 
     if-eqz v0, :cond_1
 
@@ -543,31 +543,31 @@
 .end method
 
 .method public clone()Lcom/glympse/android/core/GLocation;
-    .locals 12
+    .locals 13
 
     .prologue
     .line 298
-    new-instance v0, Lcom/glympse/android/lib/Location;
+    new-instance v1, Lcom/glympse/android/lib/Location;
 
-    iget-wide v1, p0, Lcom/glympse/android/lib/Location;->_time:J
+    iget-wide v2, p0, Lcom/glympse/android/lib/Location;->_time:J
 
-    iget-wide v3, p0, Lcom/glympse/android/lib/Location;->_latitude:D
+    iget-wide v4, p0, Lcom/glympse/android/lib/Location;->_latitude:D
 
-    iget-wide v5, p0, Lcom/glympse/android/lib/Location;->_longitude:D
+    iget-wide v6, p0, Lcom/glympse/android/lib/Location;->_longitude:D
 
-    iget v7, p0, Lcom/glympse/android/lib/Location;->_speed:F
+    iget v8, p0, Lcom/glympse/android/lib/Location;->_speed:F
 
-    iget v8, p0, Lcom/glympse/android/lib/Location;->_bearing:F
+    iget v9, p0, Lcom/glympse/android/lib/Location;->_bearing:F
 
-    iget v9, p0, Lcom/glympse/android/lib/Location;->_altitude:F
+    iget v10, p0, Lcom/glympse/android/lib/Location;->_altitude:F
 
-    iget v10, p0, Lcom/glympse/android/lib/Location;->_haccuracy:F
+    iget v11, p0, Lcom/glympse/android/lib/Location;->_haccuracy:F
 
-    iget v11, p0, Lcom/glympse/android/lib/Location;->_vaccuracy:F
+    iget v12, p0, Lcom/glympse/android/lib/Location;->_vaccuracy:F
 
-    invoke-direct/range {v0 .. v11}, Lcom/glympse/android/lib/Location;-><init>(JDDFFFFF)V
+    invoke-direct/range {v1 .. v12}, Lcom/glympse/android/lib/Location;-><init>(JDDFFFFF)V
 
-    return-object v0
+    return-object v1
 .end method
 
 .method public bridge synthetic clone()Ljava/lang/Object;
@@ -671,7 +671,7 @@
 .end method
 
 .method public encode(Lcom/glympse/android/core/GPrimitive;I)V
-    .locals 3
+    .locals 4
 
     .prologue
     .line 342
@@ -681,9 +681,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/glympse/android/lib/Location;->_latitude:D
+    iget-wide v2, p0, Lcom/glympse/android/lib/Location;->_latitude:D
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
 
     .line 343
     const-string v0, "ln"
@@ -692,9 +692,9 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/glympse/android/lib/Location;->_longitude:D
+    iget-wide v2, p0, Lcom/glympse/android/lib/Location;->_longitude:D
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
 
     .line 344
     const-string v0, "hd"
@@ -705,9 +705,9 @@
 
     iget v1, p0, Lcom/glympse/android/lib/Location;->_bearing:F
 
-    float-to-double v1, v1
+    float-to-double v2, v1
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;D)V
 
     .line 345
     const-string v0, "ts"
@@ -716,16 +716,16 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/glympse/android/lib/Location;->_time:J
+    iget-wide v2, p0, Lcom/glympse/android/lib/Location;->_time:J
 
-    invoke-interface {p1, v0, v1, v2}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
+    invoke-interface {p1, v0, v2, v3}, Lcom/glympse/android/core/GPrimitive;->put(Ljava/lang/String;J)V
 
     .line 346
     return-void
 .end method
 
 .method public equals(Ljava/lang/Object;)Z
-    .locals 5
+    .locals 6
 
     .prologue
     const/4 v0, 0x0
@@ -744,13 +744,13 @@
     :cond_1
     invoke-virtual {p1}, Lcom/glympse/android/lib/Location;->getTime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
     invoke-virtual {p0}, Lcom/glympse/android/lib/Location;->getTime()J
 
-    move-result-wide v3
+    move-result-wide v4
 
-    cmp-long v1, v1, v3
+    cmp-long v1, v2, v4
 
     if-nez v1, :cond_0
 
@@ -1098,44 +1098,44 @@
 .end method
 
 .method public hashCode()I
-    .locals 3
+    .locals 4
 
     .prologue
     .line 376
-    new-instance v0, Lcom/glympse/android/lib/do;
+    new-instance v0, Lcom/glympse/android/lib/dq;
 
-    invoke-direct {v0}, Lcom/glympse/android/lib/do;-><init>()V
+    invoke-direct {v0}, Lcom/glympse/android/lib/dq;-><init>()V
 
     .line 377
     invoke-virtual {p0}, Lcom/glympse/android/lib/Location;->getTime()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/glympse/android/lib/do;->f(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/glympse/android/lib/dq;->f(J)V
 
     .line 378
     invoke-virtual {p0}, Lcom/glympse/android/lib/Location;->getLatitudeE6()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/do;->append(I)V
+    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/dq;->append(I)V
 
     .line 379
     invoke-virtual {p0}, Lcom/glympse/android/lib/Location;->getLongitudeE6()I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/do;->append(I)V
+    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/dq;->append(I)V
 
     .line 380
     invoke-virtual {p0}, Lcom/glympse/android/lib/Location;->getAltitude()F
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/do;->a(F)V
+    invoke-virtual {v0, v1}, Lcom/glympse/android/lib/dq;->a(F)V
 
     .line 381
-    invoke-virtual {v0}, Lcom/glympse/android/lib/do;->bM()I
+    invoke-virtual {v0}, Lcom/glympse/android/lib/dq;->bP()I
 
     move-result v0
 
@@ -1176,7 +1176,7 @@
 .end method
 
 .method public setLocation(DD)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 312
@@ -1201,7 +1201,7 @@
 .end method
 
 .method public setTime(J)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 307

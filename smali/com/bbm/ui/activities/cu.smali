@@ -1,270 +1,173 @@
 .class final Lcom/bbm/ui/activities/cu;
-.super Lcom/bbm/util/em;
-.source "ChannelPostPhotoGalleryActivity.java"
+.super Ljava/lang/Object;
+.source "ChannelOfficeHoursSettingsActivity.java"
+
+# interfaces
+.implements Lcom/bbm/ui/be;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/TouchImageView;
-
-.field final synthetic b:Landroid/widget/ProgressBar;
-
-.field final synthetic c:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;Landroid/content/Context;Lcom/bbm/ui/TouchImageView;Landroid/widget/ProgressBar;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)V
     .locals 0
 
     .prologue
-    .line 120
-    iput-object p1, p0, Lcom/bbm/ui/activities/cu;->c:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+    .line 86
+    iput-object p1, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
-    iput-object p3, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/TouchImageView;
-
-    iput-object p4, p0, Lcom/bbm/ui/activities/cu;->b:Landroid/widget/ProgressBar;
-
-    invoke-direct {p0, p2}, Lcom/bbm/util/em;-><init>(Landroid/content/Context;)V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final a(Lcom/bbm/d/dw;)V
-    .locals 7
+.method public final a(Ljava/util/Date;Ljava/util/Date;)V
+    .locals 6
 
     .prologue
-    const/4 v6, 0x1
-
-    .line 123
-    invoke-super {p0, p1}, Lcom/bbm/util/em;->a(Lcom/bbm/d/dw;)V
-
-    .line 124
-    if-eqz p1, :cond_1
-
-    .line 125
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->c:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
-
-    invoke-virtual {p1}, Lcom/bbm/d/dw;->c()[B
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->a(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;[B)[B
-
-    .line 126
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->c:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->c(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)[B
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 127
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->c:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
-
-    invoke-static {v0}, Lcom/bbm/util/b/h;->a(Landroid/content/Context;)I
-
-    move-result v0
-
-    .line 128
-    iget-object v1, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/TouchImageView;
-
-    invoke-virtual {v1}, Lcom/bbm/ui/TouchImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
-
-    .line 129
-    int-to-double v1, v0
-
-    iget-object v3, p1, Lcom/bbm/d/dw;->b:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
-
-    move-result v3
-
-    int-to-double v3, v3
-
-    div-double/2addr v1, v3
-
-    .line 130
-    iget-object v3, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/TouchImageView;
-
-    invoke-virtual {v3}, Lcom/bbm/ui/TouchImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v3
-
-    iget-object v4, p1, Lcom/bbm/d/dw;->b:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
-
-    move-result v4
-
-    int-to-double v4, v4
-
-    mul-double/2addr v1, v4
-
-    invoke-static {v1, v2}, Ljava/lang/Math;->ceil(D)D
-
-    move-result-wide v1
-
-    double-to-int v1, v1
-
-    iput v1, v3, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    .line 131
-    iget-object v1, p1, Lcom/bbm/d/dw;->b:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
-
-    move-result v1
-
-    if-le v1, v0, :cond_2
-
-    iget-object v0, p1, Lcom/bbm/d/dw;->b:Landroid/graphics/drawable/Drawable;
-
-    instance-of v0, v0, Landroid/graphics/drawable/BitmapDrawable;
-
-    if-eqz v0, :cond_2
-
-    .line 133
+    .line 90
     :try_start_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->c:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
+    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->c(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)[B
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Lcom/bbm/ui/activities/cy;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/TouchImageView;
+    iget v1, v0, Lcom/bbm/ui/activities/cy;->a:I
 
-    invoke-virtual {v1}, Lcom/bbm/ui/TouchImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 91
+    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
-    move-result-object v1
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Lcom/bbm/ui/activities/cy;
 
-    iget v1, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/TouchImageView;
+    iget-object v2, v0, Lcom/bbm/ui/activities/cy;->b:Lcom/bbm/ui/activities/da;
 
-    invoke-virtual {v2}, Lcom/bbm/ui/TouchImageView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+    .line 92
+    new-instance v3, Lorg/json/JSONObject;
+
+    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/json/JSONObject;
+
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v3, v0}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
+
+    .line 93
+    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->c(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/text/SimpleDateFormat;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v4
+
+    .line 95
+    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+
+    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->d(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/ui/activities/cz;
+
+    .line 97
+    sget-object v5, Lcom/bbm/ui/activities/da;->a:Lcom/bbm/ui/activities/da;
+
+    if-ne v2, v5, :cond_1
+
+    .line 98
+    const-string v2, "startTime"
+
+    invoke-virtual {v3, v2, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 99
+    iget-object v2, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    iget v2, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
+    invoke-virtual {v2, v1, v3}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v3, 0x0
+    .line 100
+    iget-object v0, v0, Lcom/bbm/ui/activities/cz;->d:Lcom/bbm/ui/DateTimePickerView;
 
-    const/4 v4, 0x0
+    iget-object v1, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
 
-    const/4 v5, 0x1
+    invoke-static {p2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->a(Ljava/util/Date;)Ljava/util/Date;
 
-    invoke-static/range {v0 .. v5}, Lcom/bbm/util/b/a;->a([BIILcom/bbm/util/b/d;ZZ)Landroid/graphics/Bitmap;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/DateTimePickerView;->setMinDateTime(Ljava/util/Date;)V
 
-    .line 134
-    iget-object v1, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/TouchImageView;
-
-    new-instance v2, Lcom/bbm/d/dw;
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/cu;->c:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
-
-    invoke-virtual {v3}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v3
-
-    invoke-direct {v2, v3, v0}, Lcom/bbm/d/dw;-><init>(Landroid/content/res/Resources;Landroid/graphics/Bitmap;)V
-
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/TouchImageView;->setObservableImage(Lcom/bbm/d/dw;)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-    .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_1
-
-    .line 143
-    :goto_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->c:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->d(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)Lcom/bbm/ui/ActionBarItem;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v6}, Lcom/bbm/ui/ActionBarItem;->setEnabled(Z)V
-
-    .line 144
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->c:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
-
-    invoke-static {v0}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->e(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)Z
-
-    .line 146
+    .line 109
     :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->b:Landroid/widget/ProgressBar;
-
-    const/16 v1, 0x8
-
-    invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setVisibility(I)V
-
-    .line 148
-    :cond_1
+    :goto_0
     return-void
 
-    .line 135
+    .line 101
+    :cond_1
+    sget-object v5, Lcom/bbm/ui/activities/da;->b:Lcom/bbm/ui/activities/da;
+
+    if-ne v2, v5, :cond_0
+
+    .line 102
+    const-string v2, "endTime"
+
+    invoke-virtual {v3, v2, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 103
+    iget-object v2, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+
+    invoke-static {v2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;)Ljava/util/ArrayList;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1, v3}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    .line 104
+    iget-object v0, v0, Lcom/bbm/ui/activities/cz;->c:Lcom/bbm/ui/DateTimePickerView;
+
+    iget-object v1, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;
+
+    invoke-static {p2}, Lcom/bbm/ui/activities/ChannelOfficeHoursSettingsActivity;->b(Ljava/util/Date;)Ljava/util/Date;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/bbm/ui/DateTimePickerView;->setMaxDateTime(Ljava/util/Date;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 106
     :catch_0
     move-exception v0
 
-    invoke-static {v0}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Throwable;)V
+    invoke-static {v0}, Lcom/bbm/y;->a(Ljava/lang/Throwable;)V
 
     goto :goto_0
-
-    .line 137
-    :catch_1
-    move-exception v0
-
-    invoke-static {v0}, Lcom/blackberry/ids/Ln;->e(Ljava/lang/Throwable;)V
-
-    goto :goto_0
-
-    .line 141
-    :cond_2
-    iget-object v0, p0, Lcom/bbm/ui/activities/cu;->a:Lcom/bbm/ui/TouchImageView;
-
-    new-instance v1, Lcom/bbm/d/dw;
-
-    iget-object v2, p0, Lcom/bbm/ui/activities/cu;->c:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
-
-    invoke-virtual {v2}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->getBaseContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/bbm/ui/activities/cu;->c:Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;
-
-    invoke-static {v3}, Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;->c(Lcom/bbm/ui/activities/ChannelPostPhotoGalleryActivity;)[B
-
-    move-result-object v3
-
-    invoke-direct {v1, v2, v3}, Lcom/bbm/d/dw;-><init>(Landroid/content/res/Resources;[B)V
-
-    invoke-virtual {v0, v1}, Lcom/bbm/ui/TouchImageView;->setObservableImage(Lcom/bbm/d/dw;)V
-
-    goto :goto_0
-.end method
-
-.method protected final bridge synthetic a(Ljava/lang/Object;)V
-    .locals 0
-
-    .prologue
-    .line 120
-    check-cast p1, Lcom/bbm/d/dw;
-
-    invoke-virtual {p0, p1}, Lcom/bbm/ui/activities/cu;->a(Lcom/bbm/d/dw;)V
-
-    return-void
 .end method

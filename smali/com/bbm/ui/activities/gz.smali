@@ -1,75 +1,92 @@
 .class final Lcom/bbm/ui/activities/gz;
-.super Lcom/bbm/util/ci;
+.super Ljava/lang/Object;
 .source "ConversationActivity.java"
+
+# interfaces
+.implements Landroid/view/View$OnKeyListener;
 
 
 # instance fields
-.field final synthetic a:Landroid/app/ProgressDialog;
-
-.field final synthetic b:Lcom/bbm/ui/activities/ConversationActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/ConversationActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;Landroid/app/ProgressDialog;)V
+.method constructor <init>(Lcom/bbm/ui/activities/ConversationActivity;)V
     .locals 0
 
     .prologue
-    .line 2637
-    iput-object p1, p0, Lcom/bbm/ui/activities/gz;->b:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 1950
+    iput-object p1, p0, Lcom/bbm/ui/activities/gz;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    iput-object p2, p0, Lcom/bbm/ui/activities/gz;->a:Landroid/app/ProgressDialog;
-
-    invoke-direct {p0}, Lcom/bbm/util/ci;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a()V
-    .locals 3
+.method public final onKey(Landroid/view/View;ILandroid/view/KeyEvent;)Z
+    .locals 4
 
     .prologue
-    .line 2640
-    iget-object v0, p0, Lcom/bbm/ui/activities/gz;->a:Landroid/app/ProgressDialog;
+    const/16 v3, 0x42
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+    const/4 v0, 0x1
 
-    .line 2641
-    iget-object v0, p0, Lcom/bbm/ui/activities/gz;->b:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 1954
+    const-string v1, "mOnKeyListener onKey"
 
-    invoke-virtual {v0}, Lcom/bbm/ui/activities/ConversationActivity;->getApplicationContext()Landroid/content/Context;
+    const-class v2, Lcom/bbm/ui/activities/ConversationActivity;
 
-    move-result-object v0
+    invoke-static {v1, v2}, Lcom/bbm/y;->b(Ljava/lang/String;Ljava/lang/Class;)V
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/gz;->b:Lcom/bbm/ui/activities/ConversationActivity;
+    .line 1955
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
-    const v2, 0x7f0e04a7
+    move-result v1
 
-    invoke-virtual {v1, v2}, Lcom/bbm/ui/activities/ConversationActivity;->getString(I)Ljava/lang/String;
+    if-ne v1, v0, :cond_1
+
+    if-ne p2, v3, :cond_1
+
+    .line 1957
+    iget-object v1, p0, Lcom/bbm/ui/activities/gz;->a:Lcom/bbm/ui/activities/ConversationActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/ConversationActivity;->j(Lcom/bbm/ui/activities/ConversationActivity;)Lcom/bbm/d/a;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/bbm/util/eo;->b(Landroid/content/Context;Ljava/lang/String;)V
+    iget-object v2, p0, Lcom/bbm/ui/activities/gz;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 2642
-    return-void
-.end method
+    invoke-static {v2}, Lcom/bbm/ui/activities/ConversationActivity;->k(Lcom/bbm/ui/activities/ConversationActivity;)Ljava/lang/String;
 
-.method public final a(Landroid/location/Location;)V
-    .locals 1
+    move-result-object v2
 
-    .prologue
-    .line 2646
-    iget-object v0, p0, Lcom/bbm/ui/activities/gz;->b:Lcom/bbm/ui/activities/ConversationActivity;
+    invoke-virtual {v1, v2}, Lcom/bbm/d/a;->k(Ljava/lang/String;)V
 
-    invoke-static {v0, p1}, Lcom/bbm/ui/activities/ConversationActivity;->a(Lcom/bbm/ui/activities/ConversationActivity;Landroid/location/Location;)V
+    .line 1958
+    iget-object v1, p0, Lcom/bbm/ui/activities/gz;->a:Lcom/bbm/ui/activities/ConversationActivity;
 
-    .line 2647
-    iget-object v0, p0, Lcom/bbm/ui/activities/gz;->a:Landroid/app/ProgressDialog;
+    invoke-virtual {v1}, Lcom/bbm/ui/activities/ConversationActivity;->b()V
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+    .line 1965
+    :cond_0
+    :goto_0
+    return v0
 
-    .line 2648
-    return-void
+    .line 1960
+    :cond_1
+    invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    if-eq p2, v3, :cond_0
+
+    .line 1965
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method

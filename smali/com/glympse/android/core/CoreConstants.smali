@@ -36,6 +36,10 @@
 
 .field public static final ERROR:I = 0x5
 
+.field public static final GEOFENCE_TRANSITION_ENTER:I = 0x1
+
+.field public static final GEOFENCE_TRANSITION_EXIT:I = 0x2
+
 .field public static final INFO:I = 0x1
 
 .field public static final LOCATION_MODE_DEFAULT:I = 0x0

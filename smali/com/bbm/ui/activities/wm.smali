@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/activities/wm;
 .super Ljava/lang/Object;
-.source "NewGroupActivity.java"
+.source "MainActivity.java"
 
 # interfaces
-.implements Landroid/text/TextWatcher;
+.implements Lcom/bbm/ui/c/gn;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/activities/NewGroupActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/MainActivity;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/NewGroupActivity;)V
+.method constructor <init>(Lcom/bbm/ui/activities/MainActivity;)V
     .locals 0
 
     .prologue
-    .line 149
-    iput-object p1, p0, Lcom/bbm/ui/activities/wm;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    .line 1095
+    iput-object p1, p0, Lcom/bbm/ui/activities/wm;->a:Lcom/bbm/ui/activities/MainActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,56 +25,44 @@
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 0
+.method public final a(Lcom/bbm/ui/slidingmenu/a;I)V
+    .locals 3
 
     .prologue
-    .line 154
-    return-void
-.end method
+    .line 1098
+    iget v0, p1, Lcom/bbm/ui/slidingmenu/a;->a:I
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    .line 1099
+    const v1, 0x7f0b005f
 
-    .prologue
-    .line 159
-    return-void
-.end method
+    if-eq v0, v1, :cond_0
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 2
+    const v1, 0x7f0b0060
 
-    .prologue
-    .line 163
-    iget-object v0, p0, Lcom/bbm/ui/activities/wm;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    if-eq v0, v1, :cond_0
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewGroupActivity;->e(Lcom/bbm/ui/activities/NewGroupActivity;)Lcom/bbm/ui/HeaderButtonActionBar;
+    const v1, 0x7f0b0062
+
+    if-ne v0, v1, :cond_1
+
+    .line 1100
+    :cond_0
+    iget-object v1, p0, Lcom/bbm/ui/activities/wm;->a:Lcom/bbm/ui/activities/MainActivity;
+
+    invoke-static {v1}, Lcom/bbm/ui/activities/MainActivity;->h(Lcom/bbm/ui/activities/MainActivity;)Lcom/bbm/ui/MainTabBarView;
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/bbm/ui/activities/wm;->a:Lcom/bbm/ui/activities/NewGroupActivity;
+    const/4 v2, 0x7
 
-    invoke-static {v0}, Lcom/bbm/ui/activities/NewGroupActivity;->d(Lcom/bbm/ui/activities/NewGroupActivity;)Landroid/widget/EditText;
+    invoke-virtual {v1, v2}, Lcom/bbm/ui/MainTabBarView;->setLeftTabVisibility(I)V
 
-    move-result-object v0
+    .line 1102
+    :cond_1
+    iget-object v1, p0, Lcom/bbm/ui/activities/wm;->a:Lcom/bbm/ui/activities/MainActivity;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->length()I
+    invoke-virtual {v1, v0}, Lcom/bbm/ui/activities/MainActivity;->b(I)V
 
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-virtual {v1, v0}, Lcom/bbm/ui/HeaderButtonActionBar;->setPositiveButtonEnabled(Z)V
-
-    .line 164
+    .line 1103
     return-void
-
-    .line 163
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method

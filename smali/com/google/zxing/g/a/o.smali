@@ -4,15 +4,15 @@
 
 
 # static fields
-.field private static final a:[[I
+.field private static final c:[[I
 
-.field private static final b:[I
+.field private static final d:[I
 
 
 # instance fields
-.field private final c:Lcom/google/zxing/g/a/n;
+.field final a:Lcom/google/zxing/g/a/n;
 
-.field private final d:B
+.field final b:B
 
 
 # direct methods
@@ -281,14 +281,14 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/google/zxing/g/a/o;->a:[[I
+    sput-object v0, Lcom/google/zxing/g/a/o;->c:[[I
 
     .line 72
     new-array v0, v4, [I
 
     fill-array-data v0, :array_20
 
-    sput-object v0, Lcom/google/zxing/g/a/o;->b:[I
+    sput-object v0, Lcom/google/zxing/g/a/o;->d:[I
 
     return-void
 
@@ -523,14 +523,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/google/zxing/g/a/o;->c:Lcom/google/zxing/g/a/n;
+    iput-object v0, p0, Lcom/google/zxing/g/a/o;->a:Lcom/google/zxing/g/a/n;
 
     .line 82
     and-int/lit8 v0, p1, 0x7
 
     int-to-byte v0, v0
 
-    iput-byte v0, p0, Lcom/google/zxing/g/a/o;->d:B
+    iput-byte v0, p0, Lcom/google/zxing/g/a/o;->b:B
 
     .line 83
     return-void
@@ -544,13 +544,13 @@
     xor-int v0, p0, p1
 
     .line 88
-    sget-object v1, Lcom/google/zxing/g/a/o;->b:[I
+    sget-object v1, Lcom/google/zxing/g/a/o;->d:[I
 
     and-int/lit8 v2, v0, 0xf
 
     aget v1, v1, v2
 
-    sget-object v2, Lcom/google/zxing/g/a/o;->b:[I
+    sget-object v2, Lcom/google/zxing/g/a/o;->d:[I
 
     ushr-int/lit8 v3, v0, 0x4
 
@@ -560,7 +560,7 @@
 
     add-int/2addr v1, v2
 
-    sget-object v2, Lcom/google/zxing/g/a/o;->b:[I
+    sget-object v2, Lcom/google/zxing/g/a/o;->d:[I
 
     ushr-int/lit8 v3, v0, 0x8
 
@@ -570,7 +570,7 @@
 
     add-int/2addr v1, v2
 
-    sget-object v2, Lcom/google/zxing/g/a/o;->b:[I
+    sget-object v2, Lcom/google/zxing/g/a/o;->d:[I
 
     ushr-int/lit8 v3, v0, 0xc
 
@@ -580,7 +580,7 @@
 
     add-int/2addr v1, v2
 
-    sget-object v2, Lcom/google/zxing/g/a/o;->b:[I
+    sget-object v2, Lcom/google/zxing/g/a/o;->d:[I
 
     ushr-int/lit8 v3, v0, 0x10
 
@@ -590,7 +590,7 @@
 
     add-int/2addr v1, v2
 
-    sget-object v2, Lcom/google/zxing/g/a/o;->b:[I
+    sget-object v2, Lcom/google/zxing/g/a/o;->d:[I
 
     ushr-int/lit8 v3, v0, 0x14
 
@@ -600,7 +600,7 @@
 
     add-int/2addr v1, v2
 
-    sget-object v2, Lcom/google/zxing/g/a/o;->b:[I
+    sget-object v2, Lcom/google/zxing/g/a/o;->d:[I
 
     ushr-int/lit8 v3, v0, 0x18
 
@@ -610,7 +610,7 @@
 
     add-int/2addr v1, v2
 
-    sget-object v2, Lcom/google/zxing/g/a/o;->b:[I
+    sget-object v2, Lcom/google/zxing/g/a/o;->d:[I
 
     ushr-int/lit8 v0, v0, 0x1c
 
@@ -663,7 +663,7 @@
     const v0, 0x7fffffff
 
     .line 121
-    sget-object v5, Lcom/google/zxing/g/a/o;->a:[[I
+    sget-object v5, Lcom/google/zxing/g/a/o;->c:[[I
 
     array-length v6, v5
 
@@ -771,26 +771,6 @@
 
 
 # virtual methods
-.method final a()Lcom/google/zxing/g/a/n;
-    .locals 1
-
-    .prologue
-    .line 150
-    iget-object v0, p0, Lcom/google/zxing/g/a/o;->c:Lcom/google/zxing/g/a/n;
-
-    return-object v0
-.end method
-
-.method final b()B
-    .locals 1
-
-    .prologue
-    .line 154
-    iget-byte v0, p0, Lcom/google/zxing/g/a/o;->d:B
-
-    return v0
-.end method
-
 .method public final equals(Ljava/lang/Object;)Z
     .locals 3
 
@@ -812,15 +792,15 @@
     check-cast p1, Lcom/google/zxing/g/a/o;
 
     .line 168
-    iget-object v1, p0, Lcom/google/zxing/g/a/o;->c:Lcom/google/zxing/g/a/n;
+    iget-object v1, p0, Lcom/google/zxing/g/a/o;->a:Lcom/google/zxing/g/a/n;
 
-    iget-object v2, p1, Lcom/google/zxing/g/a/o;->c:Lcom/google/zxing/g/a/n;
+    iget-object v2, p1, Lcom/google/zxing/g/a/o;->a:Lcom/google/zxing/g/a/n;
 
     if-ne v1, v2, :cond_0
 
-    iget-byte v1, p0, Lcom/google/zxing/g/a/o;->d:B
+    iget-byte v1, p0, Lcom/google/zxing/g/a/o;->b:B
 
-    iget-byte v2, p1, Lcom/google/zxing/g/a/o;->d:B
+    iget-byte v2, p1, Lcom/google/zxing/g/a/o;->b:B
 
     if-ne v1, v2, :cond_0
 
@@ -834,7 +814,7 @@
 
     .prologue
     .line 159
-    iget-object v0, p0, Lcom/google/zxing/g/a/o;->c:Lcom/google/zxing/g/a/n;
+    iget-object v0, p0, Lcom/google/zxing/g/a/o;->a:Lcom/google/zxing/g/a/n;
 
     invoke-virtual {v0}, Lcom/google/zxing/g/a/n;->ordinal()I
 
@@ -842,7 +822,7 @@
 
     shl-int/lit8 v0, v0, 0x3
 
-    iget-byte v1, p0, Lcom/google/zxing/g/a/o;->d:B
+    iget-byte v1, p0, Lcom/google/zxing/g/a/o;->b:B
 
     or-int/2addr v0, v1
 

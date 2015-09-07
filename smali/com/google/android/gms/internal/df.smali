@@ -359,7 +359,7 @@
 .end method
 
 .method public final onExceededDatabaseQuota(Ljava/lang/String;Ljava/lang/String;JJJLandroid/webkit/WebStorage$QuotaUpdater;)V
-    .locals 4
+    .locals 5
 
     const-wide/32 v0, 0x500000
 
@@ -577,7 +577,7 @@
 .end method
 
 .method public final onReachedMaxAppCacheSize(JJLandroid/webkit/WebStorage$QuotaUpdater;)V
-    .locals 4
+    .locals 5
 
     const-wide/32 v0, 0x500000
 

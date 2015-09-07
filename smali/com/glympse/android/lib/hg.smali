@@ -1,48 +1,60 @@
 .class Lcom/glympse/android/lib/hg;
-.super Ljava/lang/Object;
-.source "ServerPost.java"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field private kC:Lcom/glympse/android/lib/GServerPost;
-
-.field private ry:Lcom/glympse/android/lib/GApiEndpoint;
+.super Lcom/glympse/android/lib/j;
+.source "SearchJob.java"
 
 
 # direct methods
-.method public constructor <init>(Lcom/glympse/android/lib/GServerPost;Lcom/glympse/android/lib/GApiEndpoint;)V
+.method private constructor <init>()V
     .locals 0
 
     .prologue
-    .line 1211
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 48
+    invoke-direct {p0}, Lcom/glympse/android/lib/j;-><init>()V
 
-    .line 1212
-    iput-object p1, p0, Lcom/glympse/android/lib/hg;->kC:Lcom/glympse/android/lib/GServerPost;
+    return-void
+.end method
 
-    .line 1213
-    iput-object p2, p0, Lcom/glympse/android/lib/hg;->ry:Lcom/glympse/android/lib/GApiEndpoint;
+.method synthetic constructor <init>(Lcom/glympse/android/lib/hf$1;)V
+    .locals 0
 
-    .line 1214
+    .prologue
+    .line 48
+    invoke-direct {p0}, Lcom/glympse/android/lib/hg;-><init>()V
+
     return-void
 .end method
 
 
 # virtual methods
-.method public run()V
-    .locals 2
+.method public cancel()V
+    .locals 0
 
     .prologue
-    .line 1218
-    iget-object v0, p0, Lcom/glympse/android/lib/hg;->kC:Lcom/glympse/android/lib/GServerPost;
-
-    iget-object v1, p0, Lcom/glympse/android/lib/hg;->ry:Lcom/glympse/android/lib/GApiEndpoint;
-
-    invoke-interface {v0, v1}, Lcom/glympse/android/lib/GServerPost;->removeEndpoint(Lcom/glympse/android/lib/GApiEndpoint;)Z
-
-    .line 1219
+    .line 63
     return-void
+.end method
+
+.method public process()Z
+    .locals 1
+
+    .prologue
+    .line 58
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public url(Ljava/lang/StringBuilder;)Z
+    .locals 1
+
+    .prologue
+    .line 52
+    const-string v0, "/places/search"
+
+    invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 53
+    const/4 v0, 0x0
+
+    return v0
 .end method

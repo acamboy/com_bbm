@@ -25,7 +25,7 @@
 
 # virtual methods
 .method protected a(Landroid/os/Bundle;Ljava/lang/Long;)V
-    .locals 3
+    .locals 4
 
     invoke-virtual {p0}, Lcom/google/android/gms/drive/metadata/internal/e;->getName()Ljava/lang/String;
 
@@ -33,9 +33,9 @@
 
     invoke-virtual {p2}, Ljava/lang/Long;->longValue()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {p1, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
+    invoke-virtual {p1, v0, v2, v3}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
     return-void
 .end method

@@ -5,6 +5,7 @@
 # interfaces
 .implements Lcom/glympse/android/core/GComparable;
 .implements Lcom/glympse/android/core/GLatLng;
+.implements Lcom/glympse/android/core/GPersistable;
 
 
 # virtual methods

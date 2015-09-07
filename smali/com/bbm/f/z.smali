@@ -1,41 +1,16 @@
-.class public interface abstract Lcom/bbm/f/z;
-.super Ljava/lang/Object;
-.source "ServiceLayer.java"
+.class public final Lcom/bbm/f/z;
+.super Ljava/lang/RuntimeException;
+.source "ProtocolException.java"
 
 
-# virtual methods
-.method public abstract a()V
-.end method
+# direct methods
+.method public constructor <init>(Ljava/lang/Exception;)V
+    .locals 0
 
-.method public abstract b()V
-.end method
+    .prologue
+    .line 9
+    invoke-direct {p0, p1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
 
-.method public abstract c()Lcom/bbm/f/a;
-.end method
-
-.method public abstract d()Lcom/bbm/f/a;
-.end method
-
-.method public abstract e()Lcom/bbm/f/a;
-.end method
-
-.method public abstract f()Lcom/bbm/j/r;
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "()",
-            "Lcom/bbm/j/r",
-            "<",
-            "Lcom/bbm/f/aa;",
-            ">;"
-        }
-    .end annotation
-.end method
-
-.method public abstract g()Lcom/bbm/f/ab;
-.end method
-
-.method public abstract h()V
-.end method
-
-.method public abstract i()V
+    .line 10
+    return-void
 .end method

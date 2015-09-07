@@ -1,10 +1,10 @@
-.class final Lcom/google/zxing/client/android/g;
+.class public final Lcom/google/zxing/client/android/g;
 .super Ljava/lang/Object;
 .source "DecodeFormatManager.java"
 
 
 # static fields
-.field static final a:Ljava/util/Collection;
+.field public static final a:Ljava/util/Collection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Collection",
@@ -15,7 +15,7 @@
     .end annotation
 .end field
 
-.field static final b:Ljava/util/Collection;
+.field public static final b:Ljava/util/Collection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Collection",
@@ -26,7 +26,7 @@
     .end annotation
 .end field
 
-.field static final c:Ljava/util/Collection;
+.field public static final c:Ljava/util/Collection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Collection",
@@ -37,7 +37,7 @@
     .end annotation
 .end field
 
-.field static final d:Ljava/util/Collection;
+.field public static final d:Ljava/util/Collection;
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "Ljava/util/Collection",
@@ -126,7 +126,7 @@
     return-void
 .end method
 
-.method static a(Landroid/content/Intent;)Ljava/util/Collection;
+.method public static a(Landroid/content/Intent;)Ljava/util/Collection;
     .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -180,7 +180,7 @@
     return-object v0
 .end method
 
-.method static a(Landroid/net/Uri;)Ljava/util/Collection;
+.method public static a(Landroid/net/Uri;)Ljava/util/Collection;
     .locals 4
     .annotation system Ldalvik/annotation/Signature;
         value = {

@@ -1,26 +1,22 @@
 .class final Lcom/bbm/ui/activities/u;
 .super Ljava/lang/Object;
-.source "AvatarViewerActivity.java"
+.source "AudioPlayerActivity.java"
 
 # interfaces
-.implements Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;
+.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic a:Landroid/widget/RelativeLayout;
-
-.field final synthetic b:Lcom/bbm/ui/activities/AvatarViewerActivity;
+.field final synthetic a:Lcom/bbm/ui/activities/t;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/activities/AvatarViewerActivity;Landroid/widget/RelativeLayout;)V
+.method constructor <init>(Lcom/bbm/ui/activities/t;)V
     .locals 0
 
     .prologue
-    .line 59
-    iput-object p1, p0, Lcom/bbm/ui/activities/u;->b:Lcom/bbm/ui/activities/AvatarViewerActivity;
-
-    iput-object p2, p0, Lcom/bbm/ui/activities/u;->a:Landroid/widget/RelativeLayout;
+    .line 88
+    iput-object p1, p0, Lcom/bbm/ui/activities/u;->a:Lcom/bbm/ui/activities/t;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,30 +25,24 @@
 
 
 # virtual methods
-.method public final onGlobalLayout()V
-    .locals 2
+.method public final run()V
+    .locals 1
 
     .prologue
-    .line 62
-    iget-object v0, p0, Lcom/bbm/ui/activities/u;->a:Landroid/widget/RelativeLayout;
+    .line 91
+    iget-object v0, p0, Lcom/bbm/ui/activities/u;->a:Lcom/bbm/ui/activities/t;
 
-    invoke-virtual {v0}, Landroid/widget/RelativeLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    iget-object v0, v0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
 
-    move-result-object v0
+    invoke-static {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->d(Lcom/bbm/ui/activities/AudioPlayerActivity;)V
 
-    invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeGlobalOnLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    .line 93
+    iget-object v0, p0, Lcom/bbm/ui/activities/u;->a:Lcom/bbm/ui/activities/t;
 
-    .line 63
-    iget-object v0, p0, Lcom/bbm/ui/activities/u;->b:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    iget-object v0, v0, Lcom/bbm/ui/activities/t;->a:Lcom/bbm/ui/activities/AudioPlayerActivity;
 
-    iget-object v1, p0, Lcom/bbm/ui/activities/u;->b:Lcom/bbm/ui/activities/AvatarViewerActivity;
+    invoke-virtual {v0}, Lcom/bbm/ui/activities/AudioPlayerActivity;->finish()V
 
-    invoke-virtual {v1}, Lcom/bbm/ui/activities/AvatarViewerActivity;->j()Lcom/bbm/ui/c/fq;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/bbm/ui/activities/AvatarViewerActivity;->a(Lcom/bbm/ui/activities/AvatarViewerActivity;Lcom/bbm/ui/c/fq;)V
-
-    .line 64
+    .line 94
     return-void
 .end method

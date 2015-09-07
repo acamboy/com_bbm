@@ -38,17 +38,17 @@
 
 # virtual methods
 .method public run()V
-    .locals 10
+    .locals 11
 
     .prologue
-    const/4 v9, 0x1
+    const/4 v10, 0x1
 
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
     .line 14
     const-string v0, "enter GetTokenCallback request_id=%d"
 
-    new-array v1, v9, [Ljava/lang/Object;
+    new-array v1, v10, [Ljava/lang/Object;
 
     iget v2, p0, Lcom/blackberry/ids/GetTokenCallback$1;->a:I
 
@@ -56,7 +56,7 @@
 
     move-result-object v2
 
-    aput-object v2, v1, v8
+    aput-object v2, v1, v9
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->i(Ljava/lang/Object;[Ljava/lang/Object;)V
 
@@ -73,40 +73,40 @@
 
     move-result-object v2
 
-    aput-object v2, v1, v8
+    aput-object v2, v1, v9
 
     iget-object v2, p0, Lcom/blackberry/ids/GetTokenCallback$1;->b:[Lcom/blackberry/ids/TokenParam;
 
-    aput-object v2, v1, v9
+    aput-object v2, v1, v10
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->d(Ljava/lang/Object;[Ljava/lang/Object;)V
 
     .line 18
     :try_start_0
-    iget-object v0, p0, Lcom/blackberry/ids/GetTokenCallback$1;->d:Lcom/blackberry/ids/GetTokenCallback;
-
     iget-object v1, p0, Lcom/blackberry/ids/GetTokenCallback$1;->d:Lcom/blackberry/ids/GetTokenCallback;
 
-    iget-wide v1, v1, Lcom/blackberry/ids/GetTokenCallback;->a:J
+    iget-object v0, p0, Lcom/blackberry/ids/GetTokenCallback$1;->d:Lcom/blackberry/ids/GetTokenCallback;
 
-    iget-object v3, p0, Lcom/blackberry/ids/GetTokenCallback$1;->d:Lcom/blackberry/ids/GetTokenCallback;
+    iget-wide v2, v0, Lcom/blackberry/ids/GetTokenCallback;->a:J
 
-    iget-wide v3, v3, Lcom/blackberry/ids/GetTokenCallback;->b:J
+    iget-object v0, p0, Lcom/blackberry/ids/GetTokenCallback$1;->d:Lcom/blackberry/ids/GetTokenCallback;
 
-    iget v5, p0, Lcom/blackberry/ids/GetTokenCallback$1;->a:I
+    iget-wide v4, v0, Lcom/blackberry/ids/GetTokenCallback;->b:J
 
-    iget-object v6, p0, Lcom/blackberry/ids/GetTokenCallback$1;->c:Ljava/lang/String;
+    iget v6, p0, Lcom/blackberry/ids/GetTokenCallback$1;->a:I
 
-    iget-object v7, p0, Lcom/blackberry/ids/GetTokenCallback$1;->b:[Lcom/blackberry/ids/TokenParam;
+    iget-object v7, p0, Lcom/blackberry/ids/GetTokenCallback$1;->c:Ljava/lang/String;
 
-    invoke-static/range {v0 .. v7}, Lcom/blackberry/ids/GetTokenCallback;->a(Lcom/blackberry/ids/GetTokenCallback;JJILjava/lang/String;[Lcom/blackberry/ids/TokenParam;)V
+    iget-object v8, p0, Lcom/blackberry/ids/GetTokenCallback$1;->b:[Lcom/blackberry/ids/TokenParam;
+
+    invoke-static/range {v1 .. v8}, Lcom/blackberry/ids/GetTokenCallback;->a(Lcom/blackberry/ids/GetTokenCallback;JJILjava/lang/String;[Lcom/blackberry/ids/TokenParam;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 21
     const-string v0, "exit GetTokenCallback request_id=%d"
 
-    new-array v1, v9, [Ljava/lang/Object;
+    new-array v1, v10, [Ljava/lang/Object;
 
     iget v2, p0, Lcom/blackberry/ids/GetTokenCallback$1;->a:I
 
@@ -114,7 +114,7 @@
 
     move-result-object v2
 
-    aput-object v2, v1, v8
+    aput-object v2, v1, v9
 
     invoke-static {v0, v1}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 
@@ -127,7 +127,7 @@
 
     const-string v1, "exit GetTokenCallback request_id=%d"
 
-    new-array v2, v9, [Ljava/lang/Object;
+    new-array v2, v10, [Ljava/lang/Object;
 
     iget v3, p0, Lcom/blackberry/ids/GetTokenCallback$1;->a:I
 
@@ -135,7 +135,7 @@
 
     move-result-object v3
 
-    aput-object v3, v2, v8
+    aput-object v3, v2, v9
 
     invoke-static {v1, v2}, Lcom/blackberry/ids/Ln;->t(Ljava/lang/Object;[Ljava/lang/Object;)V
 

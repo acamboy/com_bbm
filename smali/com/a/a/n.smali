@@ -15,13 +15,13 @@
     .locals 0
 
     .prologue
-    .line 1087
+    .line 1094
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1088
+    .line 1095
     iput-object p1, p0, Lcom/a/a/n;->a:Ljava/lang/String;
 
-    .line 1089
+    .line 1096
     return-void
 .end method
 
@@ -31,7 +31,7 @@
     .locals 1
 
     .prologue
-    .line 1129
+    .line 1136
     sget-object v0, Lcom/a/a/k;->j:Lcom/a/a/k;
 
     return-object v0
@@ -41,23 +41,23 @@
     .locals 2
 
     .prologue
-    .line 1110
+    .line 1117
     instance-of v0, p1, Lcom/a/a/n;
 
     if-nez v0, :cond_0
 
-    .line 1111
+    .line 1118
     const/4 v0, 0x0
 
-    .line 1114
+    .line 1121
     :goto_0
     return v0
 
-    .line 1113
+    .line 1120
     :cond_0
     check-cast p1, Lcom/a/a/n;
 
-    .line 1114
+    .line 1121
     iget-object v0, p0, Lcom/a/a/n;->a:Ljava/lang/String;
 
     iget-object v1, p1, Lcom/a/a/n;->a:Ljava/lang/String;
@@ -73,7 +73,7 @@
     .locals 1
 
     .prologue
-    .line 1119
+    .line 1126
     iget-object v0, p0, Lcom/a/a/n;->a:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -97,7 +97,7 @@
     .locals 2
 
     .prologue
-    .line 1124
+    .line 1131
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string v1, "nickname: "

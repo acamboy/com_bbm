@@ -1,22 +1,22 @@
 .class final Lcom/bbm/ui/c/fe;
 .super Ljava/lang/Object;
-.source "PeopleYouKnowFragment.java"
+.source "MyChannelsFragment.java"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/bbm/ui/d/c;
 
 
 # instance fields
-.field final synthetic a:Lcom/bbm/ui/c/fb;
+.field final synthetic a:Lcom/bbm/ui/c/er;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/ui/c/fb;)V
+.method constructor <init>(Lcom/bbm/ui/c/er;)V
     .locals 0
 
     .prologue
-    .line 139
-    iput-object p1, p0, Lcom/bbm/ui/c/fe;->a:Lcom/bbm/ui/c/fb;
+    .line 381
+    iput-object p1, p0, Lcom/bbm/ui/c/fe;->a:Lcom/bbm/ui/c/er;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -25,97 +25,65 @@
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final a(Lcom/bbm/f/ab;)V
+    .locals 7
 
     .prologue
-    .line 143
-    iget-object v0, p0, Lcom/bbm/ui/c/fe;->a:Lcom/bbm/ui/c/fb;
+    const/4 v6, 0x1
 
-    invoke-static {v0}, Lcom/bbm/ui/c/fb;->e(Lcom/bbm/ui/c/fb;)Lcom/bbm/util/cm;
+    .line 385
+    iget-object v0, p1, Lcom/bbm/f/ab;->a:Lorg/json/JSONObject;
 
-    move-result-object v0
+    const-string v1, "channelUri"
 
-    invoke-virtual {v0}, Lcom/bbm/util/cm;->e()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Boolean;
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 145
-    iget-object v0, p0, Lcom/bbm/ui/c/fe;->a:Lcom/bbm/ui/c/fb;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/fb;->a(Lcom/bbm/ui/c/fb;)Lcom/bbm/i/b;
+    invoke-virtual {v0, v1}, Lorg/json/JSONObject;->optString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/bbm/i/b;->d()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    .line 148
-    iget-object v0, p0, Lcom/bbm/ui/c/fe;->a:Lcom/bbm/ui/c/fb;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/fb;->a(Lcom/bbm/ui/c/fb;)Lcom/bbm/i/b;
-
-    move-result-object v0
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Lcom/bbm/i/b;->a(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/bbm/ui/fz;
-
-    .line 149
-    iget-object v1, v0, Lcom/bbm/ui/fz;->b:Ljava/lang/Object;
-
-    sget-object v2, Lcom/bbm/ui/c/hl;->b:Lcom/bbm/ui/c/hl;
-
-    if-ne v1, v2, :cond_0
-
-    .line 151
-    iget-object v1, p0, Lcom/bbm/ui/c/fe;->a:Lcom/bbm/ui/c/fb;
-
-    invoke-static {v1}, Lcom/bbm/ui/c/fb;->f(Lcom/bbm/ui/c/fb;)Lcom/bbm/h/c;
+    .line 386
+    invoke-static {}, Lcom/bbm/Alaska;->c()Lcom/bbm/e;
 
     move-result-object v1
 
-    iget-object v0, v0, Lcom/bbm/ui/fz;->a:Ljava/util/List;
+    iget-object v1, v1, Lcom/bbm/e;->b:Lcom/bbm/d/a;
 
-    invoke-virtual {v1, v0}, Lcom/bbm/h/c;->b(Ljava/util/List;)V
-
-    .line 155
-    :cond_0
-    iget-object v0, p0, Lcom/bbm/ui/c/fe;->a:Lcom/bbm/ui/c/fb;
-
-    invoke-static {v0}, Lcom/bbm/ui/c/fb;->g(Lcom/bbm/ui/c/fb;)Landroid/view/View$OnClickListener;
+    invoke-virtual {v1, v0}, Lcom/bbm/d/a;->U(Ljava/lang/String;)Lcom/bbm/d/ee;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    iget-object v0, v0, Lcom/bbm/d/ee;->k:Ljava/lang/String;
 
-    .line 157
-    iget-object v0, p0, Lcom/bbm/ui/c/fe;->a:Lcom/bbm/ui/c/fb;
+    .line 387
+    iget-object v1, p0, Lcom/bbm/ui/c/fe;->a:Lcom/bbm/ui/c/er;
 
-    invoke-static {v0}, Lcom/bbm/ui/c/fb;->g(Lcom/bbm/ui/c/fb;)Landroid/view/View$OnClickListener;
+    invoke-static {v1}, Lcom/bbm/ui/c/er;->g(Lcom/bbm/ui/c/er;)Lcom/bbm/ui/activities/MainActivity;
+
+    move-result-object v1
+
+    iget-object v2, p0, Lcom/bbm/ui/c/fe;->a:Lcom/bbm/ui/c/er;
+
+    invoke-static {v2}, Lcom/bbm/ui/c/er;->b(Lcom/bbm/ui/c/er;)Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0e01b3
+
+    new-array v4, v6, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    aput-object v0, v4, v5
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/res/Resources;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
+    invoke-static {v1, v0, v6}, Lcom/bbm/util/fh;->a(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 159
-    :cond_1
+    .line 390
     return-void
 .end method

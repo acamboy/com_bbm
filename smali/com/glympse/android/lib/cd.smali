@@ -1,93 +1,121 @@
 .class Lcom/glympse/android/lib/cd;
 .super Ljava/lang/Object;
-.source "GogoConstants.java"
+.source "GlympseLite.java"
+
+# interfaces
+.implements Lcom/glympse/android/api/GEventListener;
 
 
-# static fields
-.field public static final lk:I = 0x2710
-
-.field public static final ll:I = 0x2710
-
-.field public static final lm:I = 0x2710
+# instance fields
+.field final synthetic lO:Lcom/glympse/android/lib/cb;
 
 
 # direct methods
-.method constructor <init>()V
+.method private constructor <init>(Lcom/glympse/android/lib/cb;)V
     .locals 0
 
     .prologue
-    .line 16
+    .line 393
+    iput-object p1, p0, Lcom/glympse/android/lib/cd;->lO:Lcom/glympse/android/lib/cb;
+
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static bo()Ljava/lang/String;
-    .locals 1
+.method synthetic constructor <init>(Lcom/glympse/android/lib/cb;Lcom/glympse/android/lib/cb$1;)V
+    .locals 0
 
     .prologue
-    .line 23
-    const-string v0, "gogoinflight"
+    .line 393
+    invoke-direct {p0, p1}, Lcom/glympse/android/lib/cd;-><init>(Lcom/glympse/android/lib/cb;)V
 
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method
 
-.method public static bp()Ljava/lang/String;
-    .locals 1
+
+# virtual methods
+.method public eventsOccurred(Lcom/glympse/android/api/GGlympse;IILjava/lang/Object;)V
+    .locals 2
 
     .prologue
-    .line 31
-    const-string v0, "gogo"
+    .line 398
+    move-object v0, p1
 
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    check-cast v0, Lcom/glympse/android/lib/GGlympsePrivate;
+
+    .line 399
+    invoke-interface {v0}, Lcom/glympse/android/lib/GGlympsePrivate;->isStarted()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 432
+    :cond_0
+    :goto_0
+    :pswitch_0
+    return-void
+
+    .line 404
+    :cond_1
+    and-int/lit8 v0, p3, 0x1
+
+    if-eqz v0, :cond_0
+
+    .line 406
+    check-cast p4, Lcom/glympse/android/api/GImage;
+
+    .line 407
+    invoke-interface {p4}, Lcom/glympse/android/api/GImage;->getState()I
+
+    move-result v0
+
+    .line 408
+    packed-switch v0, :pswitch_data_0
+
+    .line 427
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    check-cast v0, Lcom/glympse/android/api/GEventListener;
 
-.method public static bq()Ljava/lang/String;
-    .locals 1
+    invoke-interface {p4, v0}, Lcom/glympse/android/api/GImage;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
 
-    .prologue
-    .line 39
-    const-string v0, "http://airborne.gogoinflight.com/abp/service/statusTray.do"
+    goto :goto_0
 
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    .line 418
+    :pswitch_1
+    invoke-interface {p1}, Lcom/glympse/android/api/GGlympse;->getUserManager()Lcom/glympse/android/api/GUserManager;
 
     move-result-object v0
 
-    return-object v0
-.end method
-
-.method public static br()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 47
-    const-string v0, "https://inflight.glympse.com"
-
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    invoke-interface {v0}, Lcom/glympse/android/api/GUserManager;->getSelf()Lcom/glympse/android/api/GUser;
 
     move-result-object v0
 
-    return-object v0
-.end method
+    invoke-interface {p4}, Lcom/glympse/android/api/GImage;->getDrawable()Lcom/glympse/android/core/GDrawable;
 
-.method public static bs()Ljava/lang/String;
-    .locals 1
+    move-result-object v1
 
-    .prologue
-    .line 66
-    const-string v0, "flight"
+    invoke-interface {v0, v1}, Lcom/glympse/android/api/GUser;->setAvatar(Lcom/glympse/android/core/GDrawable;)Z
 
-    invoke-static {v0}, Lcom/glympse/android/hal/Helpers;->staticString(Ljava/lang/String;)Ljava/lang/String;
+    .line 421
+    invoke-static {p0}, Lcom/glympse/android/hal/Helpers;->wrapThis(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    return-object v0
+    check-cast v0, Lcom/glympse/android/api/GEventListener;
+
+    invoke-interface {p4, v0}, Lcom/glympse/android/api/GImage;->removeListener(Lcom/glympse/android/api/GEventListener;)Z
+
+    goto :goto_0
+
+    .line 408
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+    .end packed-switch
 .end method

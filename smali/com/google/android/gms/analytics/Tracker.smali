@@ -131,7 +131,7 @@
 
 # virtual methods
 .method a(Landroid/content/Context;Lcom/google/android/gms/analytics/aj;)V
-    .locals 3
+    .locals 4
 
     const-string v0, "Loading Tracker config values."
 
@@ -239,9 +239,9 @@
 
     invoke-virtual {p0}, Lcom/google/android/gms/analytics/Tracker;->cu()J
 
-    move-result-wide v1
+    move-result-wide v2
 
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -887,7 +887,7 @@
 .end method
 
 .method public setSampleRate(D)V
-    .locals 2
+    .locals 3
 
     const-string v0, "&sf"
 
@@ -965,15 +965,15 @@
 .end method
 
 .method public setSessionTimeout(J)V
-    .locals 3
+    .locals 5
 
     iget-object v0, p0, Lcom/google/android/gms/analytics/Tracker;->uw:Lcom/google/android/gms/analytics/Tracker$a;
 
-    const-wide/16 v1, 0x3e8
+    const-wide/16 v2, 0x3e8
 
-    mul-long/2addr v1, p1
+    mul-long/2addr v2, p1
 
-    invoke-virtual {v0, v1, v2}, Lcom/google/android/gms/analytics/Tracker$a;->setSessionTimeout(J)V
+    invoke-virtual {v0, v2, v3}, Lcom/google/android/gms/analytics/Tracker$a;->setSessionTimeout(J)V
 
     return-void
 .end method

@@ -1,75 +1,141 @@
-.class final Lcom/bbm/l/e;
-.super Ljava/lang/Object;
-.source "MediaCallManager.java"
+.class public final enum Lcom/bbm/l/e;
+.super Ljava/lang/Enum;
+.source "PaymentController.java"
 
-# interfaces
-.implements Landroid/media/MediaPlayer$OnCompletionListener;
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Enum",
+        "<",
+        "Lcom/bbm/l/e;",
+        ">;"
+    }
+.end annotation
+
+
+# static fields
+.field public static final enum a:Lcom/bbm/l/e;
+
+.field public static final enum b:Lcom/bbm/l/e;
+
+.field private static final synthetic d:[Lcom/bbm/l/e;
 
 
 # instance fields
-.field final synthetic a:Landroid/media/MediaPlayer;
-
-.field final synthetic b:Lcom/bbm/l/a;
+.field private c:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/bbm/l/a;Landroid/media/MediaPlayer;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 5
 
     .prologue
-    .line 510
-    iput-object p1, p0, Lcom/bbm/l/e;->b:Lcom/bbm/l/a;
+    const/4 v4, 0x1
 
-    iput-object p2, p0, Lcom/bbm/l/e;->a:Landroid/media/MediaPlayer;
+    const/4 v3, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 241
+    new-instance v0, Lcom/bbm/l/e;
+
+    const-string v1, "Purchase"
+
+    const-string v2, "purchase"
+
+    invoke-direct {v0, v1, v3, v2}, Lcom/bbm/l/e;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/l/e;->a:Lcom/bbm/l/e;
+
+    .line 242
+    new-instance v0, Lcom/bbm/l/e;
+
+    const-string v1, "Restore"
+
+    const-string v2, "restore"
+
+    invoke-direct {v0, v1, v4, v2}, Lcom/bbm/l/e;-><init>(Ljava/lang/String;ILjava/lang/String;)V
+
+    sput-object v0, Lcom/bbm/l/e;->b:Lcom/bbm/l/e;
+
+    .line 240
+    const/4 v0, 0x2
+
+    new-array v0, v0, [Lcom/bbm/l/e;
+
+    sget-object v1, Lcom/bbm/l/e;->a:Lcom/bbm/l/e;
+
+    aput-object v1, v0, v3
+
+    sget-object v1, Lcom/bbm/l/e;->b:Lcom/bbm/l/e;
+
+    aput-object v1, v0, v4
+
+    sput-object v0, Lcom/bbm/l/e;->d:[Lcom/bbm/l/e;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onCompletion(Landroid/media/MediaPlayer;)V
-    .locals 3
+.method private constructor <init>(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            ")V"
+        }
+    .end annotation
 
     .prologue
-    const/4 v2, 0x0
+    .line 246
+    invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 513
-    iget-object v0, p0, Lcom/bbm/l/e;->a:Landroid/media/MediaPlayer;
+    .line 247
+    iput-object p3, p0, Lcom/bbm/l/e;->c:Ljava/lang/String;
 
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
-
-    .line 514
-    iget-object v0, p0, Lcom/bbm/l/e;->a:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
-
-    .line 518
-    const-string v0, "Setting speaker to disabled"
-
-    new-array v1, v2, [Ljava/lang/Object;
-
-    invoke-static {v0, v1}, Lcom/bbm/w;->c(Ljava/lang/Object;[Ljava/lang/Object;)V
-
-    .line 519
-    iget-object v0, p0, Lcom/bbm/l/e;->b:Lcom/bbm/l/a;
-
-    invoke-static {v0}, Lcom/bbm/l/a;->c(Lcom/bbm/l/a;)Landroid/content/Context;
-
-    move-result-object v0
-
-    const-string v1, "audio"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/media/AudioManager;
-
-    .line 520
-    invoke-virtual {v0, v2}, Landroid/media/AudioManager;->setSpeakerphoneOn(Z)V
-
-    .line 521
+    .line 248
     return-void
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/bbm/l/e;
+    .locals 1
+
+    .prologue
+    .line 240
+    const-class v0, Lcom/bbm/l/e;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/bbm/l/e;
+
+    return-object v0
+.end method
+
+.method public static values()[Lcom/bbm/l/e;
+    .locals 1
+
+    .prologue
+    .line 240
+    sget-object v0, Lcom/bbm/l/e;->d:[Lcom/bbm/l/e;
+
+    invoke-virtual {v0}, [Lcom/bbm/l/e;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/bbm/l/e;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final toString()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 251
+    iget-object v0, p0, Lcom/bbm/l/e;->c:Ljava/lang/String;
+
+    return-object v0
 .end method
